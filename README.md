@@ -1,6 +1,6 @@
 # Interview Help
 
-**Mohammad Bilal's zero-to-hero interview preparation roadmaps** — self-paced paths from first principles to hire-ready skill, told as one continuous chain of discoveries.
+**Mohammad Bilal's zero-to-hero interview preparation roadmaps** - self-paced paths from first principles to hire-ready skill, told as one continuous chain of discoveries.
 
 This repo is not a bag of random notes. Each concept exists because the previous one hit a wall. You learn *why* something was invented, how it works, what it costs, and what limitation forces the next idea.
 
@@ -13,12 +13,16 @@ There are **no week clocks**. Progress means: *can I explain why the last concep
 | File | Track | Who it's for |
 |------|--------|--------------|
 | [`CS.md`](./CS.md) | Computer Science & Software Engineering | Backend / full-stack / general SWE interviews |
+| [`OOP.md`](./OOP.md) | Programming Fundamentals + OOP | Absolute beginners through SOLID, patterns, LLD (before CS Phase 3) |
 | [`Data.md`](./Data.md) | Data Analyst & Data Engineer | Analytics, SQL, pipelines, warehouses, Spark/Kafka |
 | [`Networks.md`](./Networks.md) | Computer Networks | Network/infra engineers and SWEs who must understand the stack |
 | [`AI.md`](./AI.md) | Artificial Intelligence & Machine Learning | ML practitioners and AI engineers shipping LLM apps |
-| [`Interview.md`](./Interview.md) | Combined Interview Playbook | Spoken Q&A drill across all four tracks |
+| [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) | ICT / Cybersecurity Engineer | Security engineers, SOC/blue team, and junior pentesters |
+| [`ODOO.md`](./ODOO.md) | Odoo Engineer / ERP Developer | Custom modules, ORM, XML, OWL, PostgreSQL, integrations |
+| [`Projects.md`](./Projects.md) | Projects Playbook | Small builds that cement every roadmap |
+| [`Interview.md`](./Interview.md) | Combined Interview Playbook | Spoken Q&A drill across the roadmaps |
 
-All four roadmaps use the **same teaching rhythm**. [`Interview.md`](./Interview.md) is the speak-aloud gym built from those tracks.
+All roadmaps use the **same teaching rhythm**. [`Projects.md`](./Projects.md) is how you prove it. [`Interview.md`](./Interview.md) is the speak-aloud gym.
 
 ---
 
@@ -41,15 +45,41 @@ Each roadmap section follows the same shape so you always know where to look:
 | **Practice problems** | Easy → Medium → Hard |
 | **The bridge** | The crack that forces the next concept |
 
-**First pass:** read in order — the document is one argument, not a wiki.  
-**Revision:** jump straight to *Why this exists* and *The bridge*; those two rebuild the reasoning.
+**First pass:** read in order - the document is one argument, not a wiki.  
+**Revision:** jump straight to *Why this exists* and *The bridge*; those two rebuild the reasoning.  
+**Proof:** pick 1-2 builds from [`Projects.md`](./Projects.md) per phase cluster and ship a README.
 
 ---
 
-## Track 1 — Computer Science & Software Engineering
+## Suggested learning order
+
+**SWE path**
+
+```
+CS Phases 1-2  →  OOP.md (Part 0 fundamentals + Phases 1-20)  →  CS Phase 3+
+                 →  Projects.md along the way
+                 →  Networks.md essentials when systems start
+                 →  Interview.md before applications
+```
+
+**Odoo path:** finish [`OOP.md`](./OOP.md) (including Part 0), then [`ODOO.md`](./ODOO.md), ship ODOO projects from [`Projects.md`](./Projects.md).
+
+**Cybersecurity path:** start [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) Phase 1. Pair with [`Networks.md`](./Networks.md) when packets get deep. Practice only on authorized labs (PortSwigger, TryHackMe, HTB, home lab). Ship writeups and detections from Phase 19, then drill Phase 20 interviews.
+
+```
+Mindset → Networks/OS → Crypto/IAM → Web/Defend → Detect/Respond → Cloud → Portfolio → Hire
+```
+
+- **SOC / blue:** Phases 1-6, 8-10, 13-14, 19-20 (skim 7 and 11 for attacker empathy).  
+- **Security engineer:** Phases 1-10, 15-16, 18-20 (heavy AppSec + cloud + DevSecOps).  
+- **Pentest / red:** Phases 1-7, 10-12, 19-20 (never skip ethics; certs after lab hours).
+
+---
+
+## Track 1 - Computer Science & Software Engineering
 
 **File:** [`CS.md`](./CS.md)  
-**Scope:** ~53 concepts across **20 phases** — programming foundations through distributed systems and mock interviews.
+**Scope:** ~53 concepts across **20 phases** - programming foundations through distributed systems and mock interviews.
 
 ```
 Foundations → Data structures & algorithms → Systems → Web & data → Design → Hire
@@ -59,14 +89,15 @@ Foundations → Data structures & algorithms → Systems → Web & data → Desi
 |--:|-------|------|
 | 01 | Programming Foundations | What happens when code runs |
 | 02 | Complexity Analysis | Big O as a measuring stick |
+| - | → park here and do [`OOP.md`](./OOP.md) | Fundamentals + classes before Node/List/Tree types |
 | 03 | Linear Data Structures | Arrays, lists, stacks, queues |
 | 04 | Recursion | Call stack and base cases |
 | 05 | Hierarchical & Priority Structures | Trees, BSTs, heaps |
-| 06 | Hashing | O(1) “have I seen this?” |
+| 06 | Hashing | O(1) "have I seen this?" |
 | 07 | Sorting & Binary Search | Impose and exploit order |
 | 08 | Graphs | BFS, DFS, relationships |
 | 09 | Algorithmic Patterns | DP, greedy, backtracking |
-| 10 | OOP & Low-Level Design | SOLID and class design |
+| 10 | OOP & Low-Level Design | Revision if you already finished [`OOP.md`](./OOP.md) |
 | 11 | Operating Systems | Processes, threads, memory |
 | 12 | Computer Networks | Packets, TCP/UDP, DNS |
 | 13 | Web, HTTP & APIs | REST and the request path |
@@ -80,17 +111,56 @@ Foundations → Data structures & algorithms → Systems → Web & data → Desi
 
 ---
 
-## Track 2 — Data Analyst & Data Engineer
+## Companion - Programming Fundamentals & OOP
+
+**File:** [`OOP.md`](./OOP.md)  
+**Scope:** **Part 0 fundamentals** + **40 OOP concepts · 20 phases** - from first Python script through SOLID, patterns, LLD, and interviews.
+
+```
+Code basics → Think → Pillars → SOLID → Patterns → LLD → Hire
+```
+
+**When to use it:** start here if you are new to coding (Part 0). Otherwise after [`CS.md`](./CS.md) Phases 1-2, **before** CS Phase 3. CS Phase 10 then becomes revision, not first exposure.
+
+| # | Phase | Goal |
+|--:|-------|------|
+| F1 | How Programs Run | Interpreter, variables, types |
+| F2 | Control Flow | if/else and loops |
+| F3 | Functions & Modules | Reuse and organize files |
+| 01 | Object Thinking | Why procedural hits a wall |
+| 02 | Classes & Objects | Blueprint vs instance on the heap |
+| 03 | State & Behavior | Attrs, methods, `__init__`, `self` |
+| 04 | Encapsulation | Hide state; protect invariants |
+| 05 | Abstraction | ABCs / contracts; what vs how |
+| 06 | Inheritance | is-a reuse and MRO - carefully |
+| 07 | Polymorphism | Same call, different behavior |
+| 08 | Composition over Inheritance | Prefer has-a when coupling hurts |
+| 09 | Python Power Tools | Dunders, properties, classmethods |
+| 10 | Relationships & Modeling | CRC cards and lightweight UML |
+| 11 | Smells & Refactoring | Spot God objects early |
+| 12 | SOLID | Five principles that localize change |
+| 13 | Creational Patterns | Factory, Singleton, Builder |
+| 14 | Structural Patterns | Adapter, Decorator, Facade |
+| 15 | Behavioral Patterns | Strategy, Observer, Command |
+| 16 | Testing OOP | Fakes via dependency inversion |
+| 17 | Layers & Clean-ish Architecture | Keep policy independent of I/O |
+| 18 | LLD Method | Design under interview pressure |
+| 19 | Portfolio | Ship designs with write-ups |
+| 20 | Interviews | Speak pillars, SOLID, and trade-offs |
+
+---
+
+## Track 2 - Data Analyst & Data Engineer
 
 **File:** [`Data.md`](./Data.md)  
-**Scope:** **20 phases** — from data thinking to portfolio and interviews.
+**Scope:** **20 phases** - from data thinking to portfolio and interviews.
 
 ```
-Analyst core (1–10) → Engineering depth (11–18) → Portfolio & hire (19–20)
+Analyst core (1-10) → Engineering depth (11-18) → Portfolio & hire (19-20)
 ```
 
-- **Analyst path:** finish through Phase 10, skim 11–12, then jump to 19–20.  
-- **Engineer path:** do not skip the analyst phases — pipelines without metric literacy produce data nobody trusts.
+- **Analyst path:** finish through Phase 10, skim 11-12, then jump to 19-20.  
+- **Engineer path:** do not skip the analyst phases - pipelines without metric literacy produce data nobody trusts.
 
 | # | Phase | Goal |
 |--:|-------|------|
@@ -117,17 +187,17 @@ Analyst core (1–10) → Engineering depth (11–18) → Portfolio & hire (19�
 
 ---
 
-## Track 3 — Computer Networks
+## Track 3 - Computer Networks
 
 **File:** [`Networks.md`](./Networks.md)  
-**Scope:** **40 concepts · 20 phases** — packet switching through BGP, labs, and interviews.
+**Scope:** **40 concepts · 20 phases** - packet switching through BGP, labs, and interviews.
 
 ```
 Bits → Packets → Routes → Apps → Scale → Hire
 ```
 
-- **Software engineer path:** finish through Phase 14 carefully, then skim 15–18 for production vocabulary.  
-- **Network / infra path:** do not skip sockets and HTTP — apps and networks fail together.
+- **Software engineer path:** finish through Phase 14 carefully, then skim 15-18 for production vocabulary.  
+- **Network / infra path:** do not skip sockets and HTTP - apps and networks fail together.
 
 | # | Phase | Goal |
 |--:|-------|------|
@@ -150,21 +220,21 @@ Bits → Packets → Routes → Apps → Scale → Hire
 | 17 | CDN, LB & Edge | Scale services at the edge |
 | 18 | BGP & Internet | AS, peering, policy over shortest path |
 | 19 | Labs & Portfolio | Captures, labs, public write-ups |
-| 20 | Interviews | Narrate “what happens when you type a URL” |
+| 20 | Interviews | Narrate "what happens when you type a URL" |
 
 ---
 
-## Track 4 — Artificial Intelligence & Machine Learning
+## Track 4 - Artificial Intelligence & Machine Learning
 
 **File:** [`AI.md`](./AI.md)  
-**Scope:** **40 concepts · 20 phases** — math intuition through transformers, RAG, agents, MLOps, and hire.
+**Scope:** **40 concepts · 20 phases** - math intuition through transformers, RAG, agents, MLOps, and hire.
 
 ```
 Data → Learn → Deep → Transformers → Ship → Hire
 ```
 
-- **AI engineer (LLM apps) path:** do not skip Phases 4–8 — loss and overfitting still kill demos.  
-- **ML / research path:** still finish eval and shipping phases — models that never meet users are incomplete.
+- **AI engineer (LLM apps) path:** do not skip Phases 4-8 - loss and overfitting still kill demos.  
+- **ML / research path:** still finish eval and shipping phases - models that never meet users are incomplete.
 
 | # | Phase | Goal |
 |--:|-------|------|
@@ -191,10 +261,102 @@ Data → Learn → Deep → Transformers → Ship → Hire
 
 ---
 
+## Track 5 - ICT / Cybersecurity Engineer
+
+**File:** [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md)  
+**Scope:** **40 concepts · 20 phases** - security mindset through networking, crypto, identity, OWASP, pentest, AD, SOC/SIEM, DFIR, cloud/K8s, GRC, and hire.
+
+```
+Foundations → Defend → Attack → Detect → Respond → Hire
+```
+
+- **SOC / blue path:** heavy on Phases 13-14; still learn web and identity so alerts make sense.  
+- **Security engineer path:** heavy on 7, 15-16, 18; still practice authorized labs.  
+- **Red / pentest path:** heavy on 7, 11-12; never skip ethics and scope. Practice only on authorized targets.
+
+| # | Phase | Goal |
+|--:|-------|------|
+| 01 | Security Mindset | CIA, AAA, risk, ethics |
+| 02 | Networking for Security | Packets, ports, segmentation |
+| 03 | Linux & Windows | CLI, permissions, logs |
+| 04 | Cryptography | Hash, encrypt, sign, TLS |
+| 05 | Identity & Access | AuthN/AuthZ, MFA, least privilege |
+| 06 | Threat Modeling & ATT&CK | STRIDE + shared TTP map |
+| 07 | Web App Security | OWASP, PortSwigger labs |
+| 08 | Network Defenses | Firewalls, VPN, IDS/IPS |
+| 09 | Hardening & Endpoints | Baselines, EDR intuition |
+| 10 | Vuln Management | Scan, prioritize, patch |
+| 11 | Pentest Methodology | Scoped recon → report |
+| 12 | Active Directory | Kerberos, lateral themes, defenses |
+| 13 | SOC / SIEM / Detection | Logs, Sigma, ATT&CK rules |
+| 14 | DFIR | Triage, forensics, IR lifecycle |
+| 15 | Cloud Security | Shared responsibility, IAM |
+| 16 | Containers & DevSecOps | K8s hardening, CI gates |
+| 17 | Malware Basics | Safe static/dynamic triage |
+| 18 | GRC & Risk | Policies, frameworks, registers |
+| 19 | Portfolio & Labs | Writeups, home lab, detections |
+| 20 | Interviews | Technical drills + security design |
+
+**Anchor labs / refs:** [PortSwigger Academy](https://portswigger.net/web-security) · [OWASP Top 10](https://owasp.org/Top10/) · [MITRE ATT&CK](https://attack.mitre.org/) · TryHackMe / HTB · HackTricks · Sigma · Juice Shop
+
+---
+
+## Track 6 - Odoo Engineer (ERP)
+
+**File:** [`ODOO.md`](./ODOO.md)  
+**Scope:** **40 concepts · 20 phases** - ERP thinking through modules, ORM, security, views, HTTP, OWL, PostgreSQL, and hire.
+
+```
+ERP → Modules → ORM → UI → HTTP → Ship → Hire
+```
+
+**Prerequisites:** Python + [`OOP.md`](./OOP.md). Odoo is Python OOP at scale with XML, JS (OWL), and PostgreSQL.
+
+| # | Phase | Goal |
+|--:|-------|------|
+| 01 | Odoo Thinking / What ERP Is | Why companies need modular business apps |
+| 02 | Architecture (3-tier) | PostgreSQL, Python server, web client |
+| 03 | Dev Environment Setup | Local Odoo you can restart and debug |
+| 04 | Module Anatomy | `__manifest__`, structure, installable addons |
+| 05 | Models & Fields | ORM models that map to tables |
+| 06 | ORM Queries | search, browse, create, write, unlink |
+| 07 | Record Rules & Access | Security CSV and ir.model.access |
+| 08 | Views XML | form, tree, search, kanban |
+| 09 | Actions & Menus | How users reach your screens |
+| 10 | Business Logic | computed, related, onchange, constraints |
+| 11 | Inheritance | Python `_inherit` and XML xpath |
+| 12 | Wizards & Transient Models | Short-lived UI workflows |
+| 13 | Controllers & HTTP / Webhooks | Inbound HTTP into Odoo |
+| 14 | External API | XML-RPC / JSON patterns to talk to Odoo |
+| 15 | Integrations & Payment Gateways | Third-party systems and payments |
+| 16 | OWL / JavaScript Frontend | Dynamic client UI |
+| 17 | PostgreSQL for Odoo | Indexes, performance, psql literacy |
+| 18 | Testing, Debugging, Upgrades | Keep modules alive across versions |
+| 19 | Portfolio Modules | Public proof of Odoo skill |
+| 20 | Interviews / Hire | Narrate design and trade-offs |
+
+---
+
+## Projects Playbook
+
+**File:** [`Projects.md`](./Projects.md)  
+**Scope:** Small-to-medium builds mapped to the roadmaps (fundamentals/OOP, CS, Data, Networks, AI, Cybersecurity, Odoo, capstones, interview drills).
+
+```
+Build → Explain → Ship README → Drill Interview.md
+```
+
+- Pick **1-2 projects per phase cluster**, not a pile of abandoned repos.  
+- Each card has: goal, concepts, difficulty, steps, done-when, stretch.  
+- Capstones combine tracks (for example ERP-lite inventory, Odoo + API, RAG on your own notes).  
+- **Cybersecurity proof:** lab writeups, home SIEM + detections (Sigma), Juice Shop remediations, cloud IAM harden notes - see [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) Phase 19.
+
+---
+
 ## Interview Playbook
 
 **File:** [`Interview.md`](./Interview.md)  
-**Scope:** Combined spoken Q&A across all four roadmaps — strong answers, speak-aloud structure, follow-ups, and traps.
+**Scope:** Combined spoken Q&A across the roadmaps - strong answers, speak-aloud structure, follow-ups, and traps.
 
 | Track | Focus | Approx. Q count |
 |-------|--------|----------------:|
@@ -205,36 +367,44 @@ Data → Learn → Deep → Transformers → Ship → Hire
 | E | Cross-cutting classics (URL bar, debug, design) | 6 |
 | F | Behavioral / STAR | 5 |
 
-**How to practice:** cover the answer → speak 60–120 seconds → check structure → answer one follow-up cold. If you cannot explain *why it exists*, return to the linked roadmap phase.
+**Cybersecurity interviews:** drill [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) Phase 20 (TLS, IAM, OWASP, ATT&CK, IR, cloud misconfig, security system design) plus Networks track C for packet fluency.
+
+**How to practice:** cover the answer → speak 60-120 seconds → check structure → answer one follow-up cold. If you cannot explain *why it exists*, return to the linked roadmap phase.
 
 ---
 
 ## How to use this repo
 
-1. Pick a primary track: [`CS.md`](./CS.md), [`Data.md`](./Data.md), [`Networks.md`](./Networks.md), or [`AI.md`](./AI.md).
-2. Start at Phase 1. Do not skip bridges on the first pass.
-3. Use mastery checkpoints before moving on.
-4. When revising, search by phase title or jump via the phase index at the top of each file.
-5. Drill spoken answers in [`Interview.md`](./Interview.md) — interview sections are meant to be spoken, not only read.
+1. Pick a primary track: [`CS.md`](./CS.md), [`Data.md`](./Data.md), [`Networks.md`](./Networks.md), [`AI.md`](./AI.md), [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md), or [`ODOO.md`](./ODOO.md).
+2. If new to coding, start [`OOP.md`](./OOP.md) **Part 0**. On the SWE path: after CS Phases 1-2, finish OOP before CS Phase 3.
+3. Start at Phase 1 (or Part 0). Do not skip bridges on the first pass.
+4. After each phase cluster, ship 1-2 items from [`Projects.md`](./Projects.md) (or cybersecurity writeups/detections from Phase 19).
+5. Use mastery checkpoints before moving on.
+6. Drill spoken answers in [`Interview.md`](./Interview.md) (or Cyber Phase 20 for security roles).
 
 **Role routing (quick)**
 
 | Role | Start with | Then drill |
 |------|------------|------------|
-| Software Engineer | `CS.md` | `Networks.md` essentials + `Interview.md` A/C/F |
-| Data Analyst | `Data.md` (through Phase 10) | `Interview.md` B |
-| Data Engineer | `Data.md` full | `Interview.md` B + reliability |
-| Network / Infra | `Networks.md` | `Interview.md` C + F |
-| AI / ML Engineer | `AI.md` | `Interview.md` D + A complexity literacy |
+| Absolute beginner | `OOP.md` Part 0 → Phases 1+ | `Projects.md` fundamentals + `Interview.md` A |
+| Software Engineer | `CS.md` → `OOP.md` → CS Phase 3+ | `Networks.md` essentials + `Projects.md` + `Interview.md` A/C/F |
+| Data Analyst | `Data.md` (through Phase 10) | `Projects.md` data + `Interview.md` B |
+| Data Engineer | `Data.md` full | `Projects.md` data + `Interview.md` B |
+| Network / Infra | `Networks.md` | `Projects.md` networks + `Interview.md` C/F |
+| AI / ML Engineer | `AI.md` | `Projects.md` AI + `Interview.md` D |
+| SOC Analyst | `ICT_Cybersecurity.md` (blue path) | Phase 13-14 labs + Security+ / CySA+ |
+| Security Engineer | `ICT_Cybersecurity.md` (SecEng path) | AppSec + cloud projects + Phase 20 |
+| Junior Pentester | `ICT_Cybersecurity.md` (red path) | PortSwigger/HTB writeups → eJPT/PNPT |
+| Odoo / ERP Engineer | `OOP.md` → `ODOO.md` | `Projects.md` Odoo section + integrations |
 
 ---
 
 ## Philosophy in one line
 
-> Every topic is a *reaction* to the topic before it — not a checklist item to cover.
+> Every topic is a *reaction* to the topic before it - not a checklist item to cover.
 
 ---
 
 ## Author
 
-**Mohammad Bilal** — Interview Help roadmaps for software engineering, data, networks, and AI careers.
+**Mohammad Bilal** - Interview Help roadmaps for software engineering, OOP, data, networks, AI, cybersecurity, and Odoo careers.

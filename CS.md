@@ -3762,6 +3762,8 @@ DNS shows up in three predictable places. First, inside "what happens when you t
 
 **PREREQUISITES:** Phase 12 (TCP gives HTTP a reliable connection to build on).
 
+**COMPANION DEEP-DIVE:** This phase establishes the protocol and API-design foundation. Continue with [`Web.md`](./Web.md) for the complete web-developer path: semantic HTML, CSS, JavaScript/TypeScript, browser APIs, frontend and backend frameworks, databases, REST/OpenAPI, authentication, web security, testing, performance, realtime systems, deployment, observability, projects, and interviews.
+
 ## 13.1 HTTP - The Protocol Underneath Every Website
 
 **WHY THIS EXISTS:** TCP (Phase 12) guarantees bytes arrive reliably and in order, but it has no concept of "a request for a web page" or "a response containing HTML." HTTP is the application-layer protocol built on top of TCP that defines exactly that: a client sends a structured **request** (a method, a target resource, headers, optionally a body), and a server sends back a structured **response** (a status code, headers, a body) - a simple, human-readable, text-based exchange that every browser, mobile app, and server understands the same way.

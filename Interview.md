@@ -1,10 +1,10 @@
 # The Combined Interview Playbook
 
-*Mohammad Bilal's interview Q&A companion to the four roadmaps - [CS.md](CS.md), [Data.md](Data.md), [Networks.md](Networks.md), and [AI.md](AI.md). High-frequency questions with strong answers, follow-ups, and traps - not a trivia dump.*
+*Mohammad Bilal's interview Q&A companion to the roadmaps - [CS.md](CS.md), [Data.md](Data.md), [Networks.md](Networks.md), [AI.md](AI.md), [Web.md](Web.md), [cloud.md](cloud.md), and [devops.md](devops.md). High-frequency questions with strong answers, follow-ups, and traps - not a trivia dump.*
 
-*Curated with Composio (web search + DeepWiki on `mlabonne/llm-course`) against 2026 interview guides for DSA, SQL/DE, networking, and AI engineering.*
+*Curated with Composio (web search + DeepWiki on `mlabonne/llm-course`) against 2026 interview guides for DSA, SQL/DE, networking, and AI engineering, plus official web-platform, OpenAPI, OAuth, and OWASP documentation.*
 
-**Scope:** CS × Data × Networks × AI · speak trade-offs out loud.
+**Scope:** CS × Data × Networks × AI × Web × Cloud × DevOps · speak trade-offs out loud.
 
 ```
 Question → Strong answer → Follow-ups → Traps
@@ -24,7 +24,7 @@ Question → Strong answer → Follow-ups → Traps
 
 ## How to Use This Document
 
-This is not a list of sentences to memorize. It is a **spoken-answer gym** built from the same chain-of-discovery logic as the four roadmaps. Every strong answer names: (1) the problem the idea solves, (2) the mechanics, (3) a trade-off, (4) a failure mode.
+This is not a list of sentences to memorize. It is a **spoken-answer gym** built from the same chain-of-discovery logic as the connected roadmaps. Every strong answer names: (1) the problem the idea solves, (2) the mechanics, (3) a trade-off, (4) a failure mode.
 
 **How to practice**
 
@@ -54,6 +54,10 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 | Backend / Infra | A + C deep, F |
 | AI / ML Engineer | D full, A complexity literacy, C HTTP/DNS for serving |
 | Full-stack / Generalist | A + C URL tour + B SQL + D LLM apps |
+| Frontend Web Developer | W1-W8 + C12-C15 + E1/E6 + F |
+| Backend / API Web Developer | W1, W7-W16 + A14-A17 + C12-C15 + F |
+| Cloud Engineer | G full + C3-C16 + A12/A16/A17 + F |
+| DevOps Engineer | H full + G1-G8 + C + F |
 
 ---
 
@@ -65,6 +69,9 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 | [B. Data Analyst & Data Engineer](#track-b) | SQL, metrics, modeling, pipelines | 16 |
 | [C. Computer Networks](#track-c) | Layers, TCP/UDP, DNS, HTTP, TLS | 16 |
 | [D. AI / ML / LLM Engineering](#track-d) | Classical ML → transformers → RAG/agents | 18 |
+| [W. Web Development](#track-w) | Browser, frontend, backend, REST, security, production | 16 |
+| [G. Cloud Engineering](#track-g) | Architecture, IAM, networks, data, reliability, FinOps | 10 |
+| [H. DevOps Engineering](#track-h) | Linux, delivery, containers, Kubernetes, IaC, SRE | 12 |
 | [E. Cross-Cutting Classics](#track-e) | URL bar, debug ladders, design prompts | 6 |
 | [F. Behavioral / STAR](#track-f) | Stories that prove judgment | 5 |
 
@@ -1054,6 +1061,468 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 ---
 
+<a id="track-w"></a>
+
+# Track W - Web Development
+
+**Source roadmap:** Web.md (+ CS/Networks/Data foundations)
+
+## W1. Trace a page from URL to interactive pixels
+
+**Level:** Core · **Source:** Web.md Phases 1, 5, 12
+
+**QUESTION:** What happens from entering a URL until the page is interactive?
+
+**STRONG ANSWER:** Parse URL; resolve DNS; establish TCP/QUIC and TLS; send HTTP request; receive headers/body; parse HTML to DOM and CSS to CSSOM; build render tree, layout, paint, and composite; discover/fetch subresources; run JavaScript tasks and hydrate/attach behavior if needed. Name caches and failure points at each boundary. “Interactive” is user-facing: required JS has executed and the main thread can respond, not merely `load` fired.
+
+**FOLLOW-UPS:** Where can head-of-line blocking occur? What changes with SSR or HTTP/3?
+
+**TRAP:** Saying “DNS then server returns HTML” and skipping rendering, TLS, assets, or main-thread work.
+
+---
+
+## W2. Semantic HTML and accessibility first response
+
+**Level:** Screen · **Source:** Web.md Phases 2-4
+
+**QUESTION:** How do you make a custom interface accessible?
+
+**STRONG ANSWER:** Begin with the correct native element and document structure because semantics supply keyboard behavior and an accessibility-tree role/name/state. Ensure labels, heading/landmark order, focus visibility/order, keyboard operation, contrast/reflow, error/status announcements, and reduced motion. Add ARIA only when native HTML cannot express the widget, then implement its full keyboard/focus pattern. Verify with keyboard, accessibility tree, automation, zoom, and screen-reader spot checks.
+
+**FOLLOW-UPS:** How would you manage focus in a modal? Is passing axe enough?
+
+**TRAP:** “Add aria-label everywhere” or treating accessibility as a final automated score.
+
+---
+
+## W3. Explain the CSS cascade and a layout choice
+
+**Level:** Screen · **Source:** Web.md Phases 3-4
+
+**QUESTION:** Why is a CSS rule not applying, and when do you choose Grid vs Flexbox?
+
+**STRONG ANSWER:** Inspect whether the property applies, then cascade origin/importance, layer, specificity, scoping proximity, and source order; also check inheritance, shorthand overrides, media/container conditions, and invalid values. Use normal flow by default, Flexbox for one-dimensional distribution/alignment, and Grid for two-dimensional tracks. Avoid raising specificity blindly; fix ownership/layers or selector design.
+
+**FOLLOW-UPS:** What creates a stacking context? Why `min-width: 0` in flex children?
+
+**TRAP:** Reaching for `!important` or absolute positioning as the primary layout system.
+
+---
+
+## W4. JavaScript closure, event loop, and async ordering
+
+**Level:** Core · **Source:** Web.md Phase 5
+
+**QUESTION:** Explain a closure and why Promise callbacks run before a timer.
+
+**STRONG ANSWER:** A closure is a function retaining access to its lexical environment after the outer call returns. The runtime executes the current task to completion; resolved-Promise reactions enter the microtask queue, which drains before the browser takes the next task such as a timer and generally before the next rendering opportunity. Excess microtasks or long synchronous work can starve rendering/input. Use the model to explain stale captured state and cleanup leaks.
+
+**FOLLOW-UPS:** What does `await` do? How do you cancel a fetch and avoid stale responses?
+
+**TRAP:** Calling JavaScript “multithreaded because async” or memorizing output order without the queue model.
+
+---
+
+## W5. Component state, effects, and rendering
+
+**Level:** Core · **Source:** Web.md Phases 8-10
+
+**QUESTION:** Where should frontend state live, and when is an effect appropriate?
+
+**STRONG ANSWER:** Put shareable navigation state in the URL, remote truth in a server-state cache, truly cross-cutting client state in context/store, and transient state in the nearest component. Derive values during render rather than synchronizing duplicates. An effect is for synchronizing with an external system—subscription, timer, DOM API, or network side effect—with dependency correctness, cleanup, and race handling. Stable keys preserve identity; rendering should remain pure.
+
+**FOLLOW-UPS:** Controlled vs uncontrolled form? Optimistic update rollback? Why can an effect loop?
+
+**TRAP:** A global store for everything or fetching/mirroring derived values in effects by default.
+
+---
+
+## W6. CSR vs SSR vs SSG and framework choice
+
+**Level:** Core · **Source:** Web.md Phases 9-10
+
+**QUESTION:** How do you choose a rendering strategy and frontend framework?
+
+**STRONG ANSWER:** Start with product constraints: public crawlable content, personalization/freshness, interactivity, latency, hosting, team skill, and operations. CSR shifts startup to the browser; SSR improves first content/dynamic HTML but adds server/hydration work; SSG is fast/resilient for build-time content but has freshness/build costs; streaming/islands can reduce all-or-nothing work. Choose React/Next, Vue/Nuxt, Angular, SvelteKit, Astro, or no framework based on those constraints and ecosystem longevity—not benchmarks alone.
+
+**FOLLOW-UPS:** What causes hydration mismatch? When is a server component useful?
+
+**TRAP:** “SSR is always better for SEO” or picking a framework only because it is popular.
+
+---
+
+## W7. TypeScript and runtime validation
+
+**Level:** Screen · **Source:** Web.md Phase 7
+
+**QUESTION:** If an API response has a TypeScript type, why validate it?
+
+**STRONG ANSWER:** TypeScript types disappear at runtime and cannot make an untrusted response conform. Parse unknown input at the boundary with a schema/guard, reject or normalize invalid data, then expose the validated typed value internally. Use unions to make invalid application states unrepresentable, prefer inference/narrowing, and avoid `any` because it disables the proof chain.
+
+**FOLLOW-UPS:** `unknown` vs `any`? Structural typing risk? Generated OpenAPI types?
+
+**TRAP:** Casting `response.json() as User` and calling that validation.
+
+---
+
+## W8. Frontend test strategy
+
+**Level:** Core · **Source:** Web.md Phase 15
+
+**QUESTION:** What should you test in a frontend application?
+
+**STRONG ANSWER:** Static checks catch type/rule/build failures; unit tests cover pure domain logic; component/integration tests assert user-visible behavior and accessibility through public interactions; a small E2E set covers critical cross-system journeys; add automated accessibility and performance budgets. Mock at external boundaries with contract-faithful responses, avoid testing private component state, and keep tests deterministic. Put a regression test at the cheapest layer that proves each bug.
+
+**FOLLOW-UPS:** When use Playwright instead of Testing Library? How test race conditions?
+
+**TRAP:** Snapshot-everything coverage or an enormous flaky E2E suite.
+
+---
+
+## W9. Backend request lifecycle and framework selection
+
+**Level:** Core · **Source:** Web.md Phase 11
+
+**QUESTION:** Walk through an API request and choose a backend framework.
+
+**STRONG ANSWER:** Listener accepts request; middleware handles cross-cutting concerns; router selects handler; boundary validates/authenticates; authorization checks action/object; application use case coordinates domain and repositories/external clients; transaction preserves invariants; serializer maps a safe response; centralized error mapping/logging records correlation. Choose Node, Django/FastAPI, Laravel, Rails, Spring, ASP.NET, or Go using team/domain/library/runtime/operations constraints. Architecture boundaries matter more than framework brand.
+
+**FOLLOW-UPS:** Where start a transaction? How handle graceful shutdown or CPU-heavy work in Node?
+
+**TRAP:** Putting all business rules in controllers or declaring one framework “the fastest” without workload context.
+
+---
+
+## W10. SQL schema, indexes, transactions, and ORM
+
+**Level:** Core · **Source:** Web.md Phase 13
+
+**QUESTION:** A list endpoint is slow and concurrent updates lose data. What do you inspect?
+
+**STRONG ANSWER:** Confirm query and parameters; inspect actual plan, row estimates, scan type, joins/sorts, and N+1 calls; align a selective composite/partial index with filter and order while considering write cost. For lost updates, define the invariant and use a transaction plus version/conditional update, appropriate locking, or a single atomic statement; keep database constraints as the final guard. Inspect ORM-generated SQL rather than bypassing understanding.
+
+**FOLLOW-UPS:** Offset vs cursor pagination? Isolation levels? Cache invalidation?
+
+**TRAP:** Add Redis or an index to every column before measuring the query.
+
+---
+
+## W11. Design a production REST API
+
+**Level:** Core · **Source:** Web.md Phase 12
+
+**QUESTION:** Design project/task CRUD for multiple clients.
+
+**STRONG ANSWER:** Clarify resources, actors, permissions, workflows, scale, and compatibility. Use noun routes and HTTP semantics; define schemas, stable IDs/time/money, validation, machine-readable errors, filtering/sorting, deterministic cursor pagination, optimistic concurrency, idempotency for retried creates, rate limits, and request IDs. Publish OpenAPI with security and examples, generate/test clients where useful, evolve additively, and run a measured deprecation process.
+
+**FOLLOW-UPS:** `PUT` vs `PATCH`? `401` vs `403`? When GraphQL/gRPC/webhook?
+
+**TRAP:** A route list without errors, authorization, pagination, retries, or lifecycle policy.
+
+---
+
+## W12. Sessions vs JWT and OAuth/OIDC
+
+**Level:** Core · **Source:** Web.md Phase 14
+
+**QUESTION:** How would you authenticate a browser app and a third-party client?
+
+**STRONG ANSWER:** Separate authentication from authorization. For a first-party browser, an opaque server session in Secure/HttpOnly/appropriate SameSite cookie gives simple revocation and keeps credentials out of JS; add CSRF defense where needed. For delegated third-party access use OAuth Authorization Code with PKCE; OIDC supplies identity. JWT access tokens are useful for verifiable distributed claims but require strict algorithm/signature/issuer/audience/expiry/key validation, short lifetimes, and a revocation/rotation story. Never store passwords reversibly.
+
+**FOLLOW-UPS:** Where store refresh tokens? Cookie theft vs XSS? Why PKCE?
+
+**TRAP:** “JWT is more secure and stateless” without threat model or revocation cost.
+
+---
+
+## W13. Authorization and common web attacks
+
+**Level:** Core · **Source:** Web.md Phase 14
+
+**QUESTION:** How do you prevent XSS, CSRF, injection, SSRF, and IDOR/BOLA?
+
+**STRONG ANSWER:** XSS: contextual output encoding, safe DOM APIs, sanitization only where rich HTML is required, and CSP defense-in-depth. CSRF: SameSite plus token/origin checks and no state-changing GET. SQLi: parameters and allowlists for identifiers. SSRF: strict outbound destinations, resolved-IP checks, redirect control, and egress policy. IDOR/BOLA: server-side action and object/tenant authorization on every request with negative tests. Add secure headers, limits, logging, secret hygiene, and dependency updates.
+
+**FOLLOW-UPS:** Is CORS a security boundary? Secure file upload? Multi-tenant test cases?
+
+**TRAP:** Client-side role checks or input “sanitization” as a universal security answer.
+
+---
+
+## W14. Webhooks, queues, retries, and exactly-once claims
+
+**Level:** Senior · **Source:** Web.md Phase 18
+
+**QUESTION:** A payment webhook may arrive twice or out of order. Design processing.
+
+**STRONG ANSWER:** Verify signature over raw body plus timestamp; reject stale/invalid events; persist provider event ID under a unique constraint; acknowledge quickly; enqueue durable work; make business transition idempotent and monotonic; bound retries with jitter and dead-letter/operator replay; log/measure age, attempts, and outcomes. Use an outbox for local commit plus event publication. Do not promise end-to-end exactly once—combine at-least-once delivery with idempotent effects.
+
+**FOLLOW-UPS:** What if response is lost? Poison message? Ordering per aggregate?
+
+**TRAP:** Retrying indefinitely or deduplicating only in process memory.
+
+---
+
+## W15. Diagnose a slow web application end to end
+
+**Level:** Senior · **Source:** Web.md Phases 16-17
+
+**QUESTION:** Users say the app became slow after a deploy. What do you do?
+
+**STRONG ANSWER:** Define affected users/actions/time and compare deploy/traffic/config changes. Trace one slow interaction: real-user Web Vitals and browser waterfall/main thread; network/CDN/TLS; API p50/p95/p99 and saturation; trace spans through dependencies; DB plan/locks/pool; cache hit rate; queue delay. Reproduce with controlled inputs, mitigate/rollback if impact is active, then fix the measured bottleneck and add a regression budget/alert. Preserve evidence and avoid changing multiple variables.
+
+**FOLLOW-UPS:** High LCP but fast API? Good average but bad p99? Memory grows over time?
+
+**TRAP:** Scale pods, add cache, or minify code before locating the latency.
+
+---
+
+## W16. Design and operate a full-stack SaaS slice
+
+**Level:** Senior · **Source:** Web.md Phases 17-20
+
+**QUESTION:** Design a multi-tenant project management application.
+
+**STRONG ANSWER:** Clarify roles, tenant isolation, core workflow, traffic, consistency, latency, compliance, and non-goals. Start modular monolith: CDN/reverse proxy, server-rendered or SPA UI, API, Postgres with tenant constraints/indexes, object storage, queue/worker, optional Redis. Define REST/OpenAPI, session/OAuth needs, object authorization, audit events, rate limits, async notifications, test layers, CI/migrations, HTTPS/secrets, logs/metrics/traces, SLO/alerts, backup/restore, and rollback. Scale measured walls with cache/read replica/partition/service extraction—not preemptive microservices.
+
+**FOLLOW-UPS:** Tenant migration? Noisy neighbor? Zero-downtime schema change? Regional failure?
+
+**TRAP:** Starting with Kubernetes/microservices and omitting isolation, recovery, or operations.
+
+---
+
+<a id="track-g"></a>
+
+# Track G - Cloud Engineering
+
+**Source roadmap:** cloud.md (+ Networks/CS foundations)
+
+## G1. Regions, zones, and shared responsibility
+
+**Level:** Screen · **Source:** cloud.md Phases 1, 3
+
+**STRONG ANSWER:** A region is a geographic failure and data-residency boundary; an availability zone is an isolated location inside it. I spread a service across zones for routine infrastructure failures and add another region only when recovery objectives, regulation, or user latency justify the cost and complexity. The provider secures the cloud's physical and managed-service foundation; I still own identities, data, configuration, application code, and service-specific controls.
+
+**FOLLOW-UPS:** What still fails across multiple zones? When is multi-region wasteful? · **TRAP:** Saying the provider owns all security or treating a region as automatic disaster recovery.
+
+---
+
+## G2. Design least-privilege cloud identity
+
+**Level:** Core · **Source:** cloud.md Phase 4
+
+**STRONG ANSWER:** Begin with human and workload identities, not long-lived access keys. Federate humans through SSO with MFA; give workloads roles or managed identities and short-lived credentials. Policies should allow only required actions on required resources under useful conditions, with explicit boundaries, separation of duties, centralized audit logs, and a tested emergency path. Review actual use and remove permissions continuously.
+
+**FOLLOW-UPS:** Role vs user? How do you investigate an access denial? · **TRAP:** Administrator access plus secret keys stored in CI.
+
+---
+
+## G3. Design a public web service inside a VPC/VNet
+
+**Level:** Core · **Source:** cloud.md Phase 5
+
+**STRONG ANSWER:** Put the public load balancer at controlled internet-facing subnets and application/database workloads in private subnets across zones. Routes decide reachability; stateful security groups or NSGs express workload intent, while network ACLs are coarse subnet guards. Private workloads use NAT only for required outbound internet access and private endpoints for provider services where possible. DNS, flow logs, egress control, and no public database complete the design.
+
+**FOLLOW-UPS:** NAT gateway vs internet gateway? How does a private endpoint help? · **TRAP:** Calling a subnet private merely because its name says private.
+
+---
+
+## G4. Choose compute, scaling, and load balancing
+
+**Level:** Core · **Source:** cloud.md Phase 6
+
+**STRONG ANSWER:** Choose VMs when OS/runtime control matters, containers for portable long-running services, and functions for event-driven work with bounded execution. Keep instances replaceable, externalize durable state, health-check real readiness, scale on a signal tied to saturation or demand, and load-balance across zones. Account for cold starts, connection draining, quotas, slow dependencies, and the difference between scaling out and recovering safely.
+
+**FOLLOW-UPS:** Why can CPU autoscaling fail? L4 vs L7 load balancer? · **TRAP:** Autoscaling a stateful bottleneck without capacity or dependency analysis.
+
+---
+
+## G5. Choose cloud storage and databases
+
+**Level:** Core · **Source:** cloud.md Phases 8-9
+
+**STRONG ANSWER:** Start from access pattern and guarantees. Object storage fits immutable blobs and data lakes; block storage fits mounted low-latency volumes; file storage fits shared filesystem semantics. Use relational databases for constraints, joins, and transactions; key-value/document systems for known high-scale access patterns; caches for derived hot data, never as unexplained truth. Define encryption, retention, versioning, backup, restore tests, replication, and consistency before choosing a product name.
+
+**FOLLOW-UPS:** Backup vs replication? Strong vs eventual consistency? · **TRAP:** Selecting NoSQL only because the system may grow.
+
+---
+
+## G6. Build a reliable event-driven/serverless workflow
+
+**Level:** Senior · **Source:** cloud.md Phases 7, 10
+
+**STRONG ANSWER:** Accept the event durably, acknowledge quickly, and let bounded workers process it. Assume at-least-once delivery: deduplicate by stable event ID, make state transitions idempotent, use exponential backoff with jitter, isolate poison messages in a dead-letter queue, and expose age/attempt/outcome metrics. Preserve ordering only where the business invariant requires it, and use an outbox when a database commit and event publication must move together.
+
+**FOLLOW-UPS:** What if processing succeeds but acknowledgement is lost? · **TRAP:** Claiming a queue gives end-to-end exactly-once execution.
+
+---
+
+## G7. Explain infrastructure as code, state, and drift
+
+**Level:** Core · **Source:** cloud.md Phase 12
+
+**STRONG ANSWER:** IaC makes desired infrastructure reviewable, repeatable, testable, and recoverable. The engine compares configuration, stored state, and provider reality to build a plan, then converges resources. Protect remote state with locking, encryption, restricted access, and backups; separate environments and ownership boundaries; pin versions; review plans; detect drift; and import or intentionally replace manual resources instead of hiding differences.
+
+**FOLLOW-UPS:** Why is state sensitive? Module boundaries? · **TRAP:** Editing production manually and assuming the next apply will harmlessly reconcile it.
+
+---
+
+## G8. Turn reliability goals into architecture
+
+**Level:** Senior · **Source:** cloud.md Phases 15-16
+
+**STRONG ANSWER:** Translate business impact into SLI/SLO, RTO, RPO, and failure assumptions. Then choose health checks, multi-zone placement, timeouts, retries with budgets, circuit breaking, load shedding, backups, replication, and a tested recovery runbook. Logs, metrics, and traces must answer user-impact questions. I prove the design with restore tests and game days; redundancy without detection, failover, and data recovery evidence is only a diagram.
+
+**FOLLOW-UPS:** RTO vs RPO? When do retries amplify an outage? · **TRAP:** Equating high availability with backup or disaster recovery.
+
+---
+
+## G9. Secure and control cloud cost
+
+**Level:** Senior · **Source:** cloud.md Phases 14, 17
+
+**STRONG ANSWER:** Security and FinOps are feedback systems. Establish identity, encryption, secret management, network boundaries, audit/config findings, patch and vulnerability ownership, then prioritize by exposure and blast radius. For cost, enforce tagging/allocation, budgets and anomaly alerts, unit economics, right-sizing, lifecycle policies, commitment coverage, and architectural review. Optimize waste without buying fragility or hiding shared costs.
+
+**FOLLOW-UPS:** Which finding gets fixed first? Reserved capacity vs autoscaling? · **TRAP:** Treating cost optimization as simply turning resources off.
+
+---
+
+## G10. Design a migration and production landing zone
+
+**Level:** Senior · **Source:** cloud.md Phases 18-20
+
+**STRONG ANSWER:** Inventory dependencies, data classification, traffic, licensing, compliance, and recovery targets; create a governed landing zone for identity, accounts/subscriptions, networks, logging, policy, budgets, and break-glass access. Choose rehost, replatform, refactor, repurchase, retain, or retire per workload. Migrate in observable waves with data validation, performance baselines, cutover/rollback criteria, ownership, and a post-migration optimization period.
+
+**FOLLOW-UPS:** How do you minimize database cutover? What belongs in a landing zone? · **TRAP:** A big-bang lift-and-shift with no rollback or operating model.
+
+---
+
+<a id="track-h"></a>
+
+# Track H - DevOps Engineering
+
+**Source roadmap:** devops.md (+ cloud/Networks/CS foundations)
+
+## H1. What is DevOps, and how do you measure it?
+
+**Level:** Screen · **Source:** devops.md Phase 1
+
+**STRONG ANSWER:** DevOps is an operating model in which product, development, security, and operations shorten and stabilize the path from change to user value through shared ownership, automation, and feedback. I watch deployment frequency and lead time for flow, change failure rate and failed-deployment recovery time for stability, plus product and reliability outcomes. The metrics diagnose constraints; they are not quotas for gaming teams.
+
+**FOLLOW-UPS:** Can speed and stability improve together? · **TRAP:** Defining DevOps as a job title or a list of tools.
+
+---
+
+## H2. Troubleshoot a failing Linux service
+
+**Level:** Core · **Source:** devops.md Phases 2-3
+
+**STRONG ANSWER:** Define impact and recent change, then inspect service state and logs, process ownership, exit code, resource pressure, filesystem/inodes, permissions, environment/config, listening sockets, DNS and dependency reachability. Follow the request path with `systemctl`, `journalctl`, `ps`, `ss`, `curl`, `dig`, and targeted tracing. Mitigate first when impact is active, preserve evidence, change one variable, verify recovery, and record a prevention action.
+
+**FOLLOW-UPS:** Process exists but port is closed—next checks? · **TRAP:** Restarting repeatedly until evidence disappears.
+
+---
+
+## H3. Git strategy and safe collaboration
+
+**Level:** Screen · **Source:** devops.md Phase 4
+
+**STRONG ANSWER:** Git stores a graph of immutable commits and movable references. Prefer small changes, protected main, fast review, automated checks, and short-lived branches or trunk-based development when the team can sustain it. Merge preserves branch topology; rebase rewrites local ancestry for a linear story and should not rewrite shared history casually. A revert creates an auditable inverse change and is safer than erasing published commits.
+
+**FOLLOW-UPS:** When squash? How recover a lost commit? · **TRAP:** Long-lived environment branches and force-pushing shared history.
+
+---
+
+## H4. Write reliable operational automation
+
+**Level:** Core · **Source:** devops.md Phase 5
+
+**STRONG ANSWER:** Automation should be idempotent, observable, bounded, and safe to rerun. Validate inputs and preconditions; quote variables; use strict error handling thoughtfully; write to a temporary target and atomically replace; set timeouts; retry only transient idempotent work; emit useful exit codes/logs; clean up; and support dry-run where consequences matter. Test the failure path, not just the happy path.
+
+**FOLLOW-UPS:** How do you prevent two runs colliding? · **TRAP:** A script that works only from one directory with one user's environment.
+
+---
+
+## H5. Explain the build artifact and software-supply chain
+
+**Level:** Core · **Source:** devops.md Phase 6
+
+**STRONG ANSWER:** Resolve pinned dependencies, compile/package, test, scan, generate metadata, sign or attest, and publish one immutable artifact. Promote that same digest through environments instead of rebuilding. Record source revision, toolchain and dependencies with provenance/SBOM, restrict publisher identity, protect the registry, and verify signatures/policy before deployment. Reproducibility and traceability make rollback and incident scope credible.
+
+**FOLLOW-UPS:** Why not rebuild for production? · **TRAP:** Using a mutable `latest` tag as release identity.
+
+---
+
+## H6. Design a secure, fast CI pipeline
+
+**Level:** Core · **Source:** devops.md Phase 7
+
+**STRONG ANSWER:** Trigger deterministic checks from versioned configuration; fail fast on format/type/unit tests, parallelize independent integration/security work, cache by safe content keys, and publish immutable results. Use isolated ephemeral runners, least-privilege short-lived cloud identity, masked secrets, protected environments, concurrency cancellation, and required checks. Track duration, queue time, flake rate, and failure cause; quarantine only with an owner and deadline.
+
+**FOLLOW-UPS:** How can forked PRs access secrets? · **TRAP:** Retrying flaky tests until the pipeline turns green.
+
+---
+
+## H7. Choose a deployment and rollback strategy
+
+**Level:** Senior · **Source:** devops.md Phase 8
+
+**STRONG ANSWER:** Separate deployment from release when useful. Rolling is resource-efficient but mixes versions; blue-green gives fast switchback but doubles capacity and complicates state; canary limits blast radius but needs representative traffic and automatic health gates. Use immutable artifacts, backward-compatible expand/migrate/contract schema changes, readiness and graceful drain, progressive verification, and a rehearsed rollback or roll-forward decision.
+
+**FOLLOW-UPS:** What cannot be rolled back? · **TRAP:** Calling a deployment successful because pods started.
+
+---
+
+## H8. Explain a production container
+
+**Level:** Core · **Source:** devops.md Phase 9
+
+**STRONG ANSWER:** A container is an isolated process using kernel namespaces and cgroups, packaged with an immutable layered filesystem—not a small VM. Build from a pinned minimal base with multi-stage builds, run as non-root, exclude secrets, scan and sign, set resource expectations, send logs to stdout/stderr, keep state external, handle PID 1 signals, expose truthful readiness, and identify releases by digest.
+
+**FOLLOW-UPS:** Image vs container? Why does PID 1 matter? · **TRAP:** Baking credentials or production data into an image.
+
+---
+
+## H9. Debug a Kubernetes deployment
+
+**Level:** Senior · **Source:** devops.md Phase 10
+
+**STRONG ANSWER:** Start from user symptom and desired controller state. Inspect rollout and events, pod phase/restarts, current and previous logs, readiness/liveness/startup probes, requests/limits and OOM/eviction, image/config/secret mounts, service selectors/endpoints, DNS and network policy, then node/scheduler conditions. Fix the narrow cause, verify traffic and error rate, and improve the probe, limit, policy, alert, or runbook that allowed it.
+
+**FOLLOW-UPS:** Pending vs CrashLoopBackOff? Service has no endpoints? · **TRAP:** Deleting pods repeatedly without reading events or previous logs.
+
+---
+
+## H10. Terraform versus configuration management
+
+**Level:** Core · **Source:** devops.md Phases 11-13
+
+**STRONG ANSWER:** Terraform-like IaC manages infrastructure resources through a dependency graph, provider APIs, and state; Ansible-like configuration management converges packages, files, and services on hosts, preferably idempotently. Keep small ownership-aligned modules/roles, protected remote state, pinned versions, reviewed plans, secret indirection, policy/testing, and drift detection. Use cloud-native immutable images or managed services when they remove host configuration entirely.
+
+**FOLLOW-UPS:** What belongs in a module? How handle drift? · **TRAP:** One giant state file and manual fixes between applies.
+
+---
+
+## H11. Observability, SLOs, and alerting
+
+**Level:** Senior · **Source:** devops.md Phases 14-15
+
+**STRONG ANSWER:** Metrics show trends and saturation, logs explain discrete events, and traces connect latency across boundaries; correlate them with stable IDs and controlled cardinality. Define user-centered SLIs and SLOs, calculate an error budget, alert on actionable symptoms or burn rate, and attach ownership plus a runbook. Dashboards support investigation; pages demand action. Instrument the critical path before collecting everything.
+
+**FOLLOW-UPS:** High-cardinality label risk? Why multi-window burn alerts? · **TRAP:** Paging on raw CPU or every logged error without user-impact context.
+
+---
+
+## H12. DevSecOps, GitOps, incidents, and platform engineering
+
+**Level:** Senior · **Source:** devops.md Phases 16-20
+
+**STRONG ANSWER:** Put fast security feedback near the change—secret, dependency, SAST, IaC, image and policy checks—then prioritize exploitable risk and preserve exception ownership. With GitOps, reviewed Git state is reconciled continuously and drift is visible; protect promotion and emergency procedures. During incidents establish command, communication, mitigation, evidence, and recovery; follow with a blameless causal review. A platform packages these paved roads as a product with adoption and outcome metrics, not a ticket wall.
+
+**FOLLOW-UPS:** Git is unavailable during an incident? How avoid security gate fatigue? · **TRAP:** More tools and gates without ownership, developer usability, or recovery practice.
+
+---
+
 <a id="track-e"></a>
 
 # Track E - Cross-Cutting Classics
@@ -1174,13 +1643,13 @@ Use **Situation → Task → Action → Result**, and end with **what you would 
 
 | Day | Drill (speak aloud, timed) |
 | --- | --- |
-| 1 | A1–A9 + one coding pattern |
-| 2 | B2–B7 live SQL + metric memo |
-| 3 | C3–C14 + E1 URL tour (5 & 12 min) |
-| 4 | D1–D12 ML + attention |
-| 5 | D14–D18 RAG/agent/eval design |
-| 6 | E4–E6 system design prompts |
-| 7 | Full mock: coding + SQL/URL + behavioral |
+| 1 | A1–A9 or W1–W4 + one coding pattern |
+| 2 | B2–B7 live SQL + W10 data/API follow-ups |
+| 3 | C3–C14 + E1/W1 URL tour (5 & 12 min) |
+| 4 | D1–D12 ML, W5–W8 frontend, or G1–G5 cloud foundations |
+| 5 | D14–D18 AI, W9–W14 backend, or H1–H8 delivery/runtime loop |
+| 6 | E4–E6 + W15–W16, G6–G10, or H9–H12 system design/debug prompts |
+| 7 | Full mock: coding + role track + URL/design + behavioral |
 
 ---
 
@@ -1215,9 +1684,31 @@ Use **Situation → Task → Action → Result**, and end with **what you would 
 - [RAG & Agent System Design Questions (Towards AI)](https://towardsai.com/p/machine-learning/7-rag-agent-system-design-questions-you-will-face-in-every-ai-engineer-interview-with-answers)
 - DeepWiki on [mlabonne/llm-course](https://github.com/mlabonne/llm-course) - fundamentals, RAG, fine-tuning, agents, evaluation tracks
 
+### Web Development
+
+- [MDN Web Platform](https://developer.mozilla.org/en-US/docs/Web) and [Web Performance](https://developer.mozilla.org/en-US/docs/Web/Performance)
+- [React Learn](https://react.dev/learn) and [Next.js Docs](https://nextjs.org/docs)
+- [OpenAPI Specification](https://spec.openapis.org/oas/latest)
+- [OAuth 2.0 Security Best Current Practice](https://www.rfc-editor.org/rfc/rfc9700.html)
+- [OWASP REST Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html)
+
+### Cloud Engineering
+
+- [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html)
+- [Microsoft Azure Well-Architected Framework](https://learn.microsoft.com/azure/well-architected/)
+- [Google Cloud Architecture Framework](https://cloud.google.com/architecture/framework)
+- [Cloud Native Computing Foundation](https://www.cncf.io/)
+
+### DevOps Engineering
+
+- [DORA research and metrics](https://dora.dev/)
+- [Kubernetes Documentation](https://kubernetes.io/docs/)
+- [Terraform Documentation](https://developer.hashicorp.com/terraform/docs)
+- [Google SRE Books](https://sre.google/books/)
+
 ### Your roadmaps (primary depth)
 
-- [CS.md](CS.md) · [Data.md](Data.md) · [Networks.md](Networks.md) · [AI.md](AI.md)
+- [CS.md](CS.md) · [Data.md](Data.md) · [Networks.md](Networks.md) · [AI.md](AI.md) · [Web.md](Web.md) · [cloud.md](cloud.md) · [devops.md](devops.md)
 
 ---
 

@@ -2,7 +2,7 @@
 
 *Mohammad Bilal's hands-on project guide for the Interview Help repo - small-to-medium builds that cement concepts from each roadmap. Pair every project with a public README that explains what broke, what you built, and what you would change next.*
 
-*Project inspiration curated with Composio (web search, GitHub) against beginner Python repos, OOP practice collections, Odoo tutorials, and structured project lists. See [Curated inspiration](#curated-inspiration) at the bottom.*
+*Project inspiration curated with Composio (web search, GitHub) against beginner Python repos, OOP practice collections, Odoo tutorials, structured project lists, and official web-platform/API/security documentation. See [Curated inspiration](#curated-inspiration) at the bottom.*
 
 **Scope:** One project cements one bridge · no mega-apps · public proof.
 
@@ -79,6 +79,9 @@ Read phase → hit mastery checkpoint → pick 1 project from that cluster → s
 | [`AI.md`](./AI.md) | Classical + Deep (1-11) | AI-01 to AI-05 |
 | [`AI.md`](./AI.md) | LLM + Ship (12-18) | AI-06 to AI-09 |
 | [`ODOO.md`](./ODOO.md) | Module to integration | ODOO-01 to ODOO-08 |
+| [`Web.md`](./Web.md) | Browser to production (1-19) | WEB-01 to WEB-06 |
+| [`cloud.md`](./cloud.md) | Cloud foundations to production (1-19) | CLOUD-01 to CLOUD-04 |
+| [`devops.md`](./devops.md) | Delivery foundations to production (1-19) | DEVOPS-01 to DEVOPS-05 |
 | Cross-cutting | Capstones | CAP-01 to CAP-06 |
 | [`Interview.md`](./Interview.md) | Timed speak + build | INT-01 to INT-07 |
 
@@ -88,6 +91,8 @@ Read phase → hit mastery checkpoint → pick 1 project from that cluster → s
 - Skipping README until "later" (later never ships)
 - Copy-pasting LLD solutions without drawing your own class diagram first
 - Building Odoo modules before you can explain `__init__` and encapsulation
+- Deploying Kubernetes before you can diagnose a Linux process, network path, or container
+- Clicking cloud resources into existence without an identity, cost, recovery, and IaC story
 
 ---
 
@@ -1994,7 +1999,460 @@ Read phase → hit mastery checkpoint → pick 1 project from that cluster → s
 
 ---
 
-## 8. Cross-cutting / Portfolio Capstones
+## 8. Web Developer (`Web.md`)
+
+**File:** [`Web.md`](./Web.md)
+
+**Scope:** Progressive proof from standards-based frontend work to a secured, observable full-stack deployment. Build in order; later cards may reuse the domain from earlier ones.
+
+### Foundations and browser cluster (Web Phases 1-8)
+
+#### WEB-01: Accessible Responsive Product Page
+
+| Field | Detail |
+| --- | --- |
+| **Roadmap** | [`Web.md`](./Web.md) Phases 2-4 |
+| **Difficulty** | Easy |
+
+**Goal:** Ship a standards-based page that remains usable without JavaScript and across keyboard, zoom, and narrow screens.
+
+**Concepts practiced:** semantic HTML, forms, responsive images, cascade layers, Flexbox/Grid, accessibility, metadata
+
+**Steps:**
+
+1. Write the information architecture and HTML landmarks before styling
+2. Add product media, pricing, variant selection, reviews, and a native purchase form
+3. Build mobile-first layout with Grid/Flexbox and content-driven breakpoints
+4. Add focus, hover, disabled, error, loading, and reduced-motion styles
+5. Test keyboard order, accessible names, 200% zoom, 320px width, and long text
+6. Record Lighthouse/axe results and fix meaningful findings
+
+**Done when:**
+
+- Page works with CSS or JavaScript disabled where applicable
+- No horizontal scroll at 320px or 200% zoom
+- Form controls have labels and errors are understandable
+- README contains before/after accessibility evidence
+
+**Stretch (optional):** Add RTL and dark themes using logical properties and design tokens.
+
+---
+
+#### WEB-02: Vanilla TypeScript Task Board
+
+| Field | Detail |
+| --- | --- |
+| **Roadmap** | [`Web.md`](./Web.md) Phases 5-7 |
+| **Difficulty** | Medium |
+
+**Goal:** Prove browser and language fundamentals before a UI framework abstracts them.
+
+**Concepts practiced:** TypeScript, DOM, event delegation, modules, async/fetch, abort, storage, runtime validation, tooling
+
+**Steps:**
+
+1. Model task states with TypeScript discriminated unions
+2. Render lists with DOM APIs and delegated events
+3. Persist drafts locally and load seed data from a mock API
+4. Support loading, empty, error, retry, and offline states
+5. Cancel stale searches with `AbortController` and prevent race-condition overwrites
+6. Add format, lint, typecheck, unit-test, and build commands in CI
+
+**Done when:**
+
+- No framework and no `any` escape hatches in application code
+- Reload restores valid local state and rejects corrupt stored data safely
+- Keyboard interaction and status announcements work
+- A deterministic test proves the stale-response race is handled
+
+**Stretch (optional):** Add a service worker with a documented cache strategy.
+
+---
+
+### Frontend application cluster (Web Phases 9-11, 16)
+
+#### WEB-03: Framework Admin Dashboard
+
+| Field | Detail |
+| --- | --- |
+| **Roadmap** | [`Web.md`](./Web.md) Phases 8-10, 15-16 |
+| **Difficulty** | Hard |
+
+**Goal:** Build a production-style frontend in React/Next, Vue/Nuxt, Angular, or SvelteKit and justify the choice.
+
+**Concepts practiced:** routing, rendering strategy, server state, forms, URL state, component APIs, accessibility, tests, performance
+
+**Steps:**
+
+1. Write an ADR comparing at least two framework/rendering options
+2. Build protected-looking routes against a mock server without pretending UI checks are authorization
+3. Put search/filter/page state in the URL and cache remote data correctly
+4. Implement schema-validated create/edit forms with server-style field errors
+5. Add optimistic mutation with rollback and explicit stale/refetch behavior
+6. Create reusable table, dialog, form-field, toast, and empty-state components
+7. Add component/integration tests plus one Playwright critical journey
+8. Profile bundle and interaction performance; document one measured improvement
+
+**Done when:**
+
+- Refresh/deep links work and every route has loading/error/not-found behavior
+- Keyboard focus is correct through dialogs and validation failures
+- Tests assert behavior rather than private implementation
+- README explains state ownership and client/server boundaries
+
+**Stretch (optional):** Rebuild one route in a second framework and compare developer/runtime trade-offs.
+
+---
+
+### Backend, data, and API cluster (Web Phases 12-15)
+
+#### WEB-04: OpenAPI Project Service
+
+| Field | Detail |
+| --- | --- |
+| **Roadmap** | [`Web.md`](./Web.md) Phases 12-15, [`Data.md`](./Data.md) SQL phases |
+| **Difficulty** | Hard |
+
+**Goal:** Deliver a relational, documented REST API whose validation, authorization, and concurrency behavior are testable.
+
+**Concepts practiced:** backend framework, PostgreSQL, migrations, transactions, REST, OpenAPI, cursor pagination, sessions/tokens, object authorization
+
+**Steps:**
+
+1. Model users, organizations, projects, memberships, and tasks with DB constraints
+2. Implement migrations, seed data, and indexed access patterns verified with query plans
+3. Publish OpenAPI for CRUD, filters, cursor pagination, errors, and security schemes
+4. Validate inputs at the transport boundary and centralize safe error responses
+5. Implement authentication plus tenant/object-level authorization on every route
+6. Add ETags or version fields for conflicting edits and idempotency keys for creates
+7. Write unit, database integration, API contract, and negative authorization tests
+8. Add structured request logs, rate limiting, and graceful shutdown
+
+**Done when:**
+
+- Fresh setup runs migrations and contract tests from one documented command
+- Cross-tenant IDs never expose or modify another tenant's data
+- OpenAPI examples match actual responses
+- Duplicate idempotency keys return the original safe outcome
+
+**Stretch (optional):** Generate a typed client and verify compatibility in CI.
+
+---
+
+#### WEB-05: Secure Webhook and Background Job Processor
+
+| Field | Detail |
+| --- | --- |
+| **Roadmap** | [`Web.md`](./Web.md) Phases 14-15, 17-18 |
+| **Difficulty** | Hard |
+
+**Goal:** Integrate an unreliable third party without losing, duplicating, or blindly trusting events.
+
+**Concepts practiced:** webhook signatures, raw bodies, replay protection, queues, retries, dead letters, idempotency, outbox, observability
+
+**Steps:**
+
+1. Receive a provider-shaped webhook and verify signature/timestamp before parsing
+2. Persist event ID and raw audit metadata with unique deduplication constraint
+3. Return quickly, enqueue processing, and make the consumer idempotent
+4. Add bounded exponential backoff, dead-letter state, and an operator replay endpoint
+5. Publish outbound webhook events through a transactional outbox
+6. Simulate duplicate, delayed, reordered, malformed, and dependency-down events
+7. Build metrics for accepted, processed, retried, dead-lettered, and age-of-oldest job
+
+**Done when:**
+
+- Duplicate delivery changes business state once
+- Invalid/stale signatures are rejected and secrets are redacted
+- A failed job can be inspected and safely replayed
+- Tests prove the database-commit/publish-failure boundary
+
+**Stretch (optional):** Add SSE progress updates to an operator dashboard.
+
+---
+
+### Production capstone cluster (Web Phases 16-19)
+
+#### WEB-06: Production Full-Stack SaaS Slice
+
+| Field | Detail |
+| --- | --- |
+| **Roadmap** | [`Web.md`](./Web.md) Phases 16-19 |
+| **Difficulty** | Hard |
+
+**Goal:** Ship one narrow product workflow with the security, test, performance, delivery, and operations evidence expected of production work.
+
+**Concepts practiced:** full-stack architecture, auth, REST, SQL, cache, jobs/realtime, test strategy, CI/CD, Docker, cloud, observability, recovery
+
+**Steps:**
+
+1. Define users, success metric, non-goals, threat model, and architecture ADR
+2. Build responsive accessible UI, authenticated API, relational schema, and one background/realtime feature
+3. Add unit, integration, contract, E2E, accessibility, and lightweight load tests
+4. Enforce secure headers, object authorization, validation, upload/secret/rate-limit policy
+5. Containerize and deploy through CI with migrations, health checks, and progressive verification
+6. Add structured logs, metrics, traces, dashboard, actionable alert, and runbook
+7. Measure Web Vitals/API percentiles and fix one evidenced bottleneck
+8. Rehearse rollback plus database backup restoration and write the result
+
+**Done when:**
+
+- Public demo and clean-machine local setup both work
+- CI blocks a deliberate test/type/security regression
+- Dashboard links one slow browser action to API and database evidence
+- README explains limits, cost, security decisions, incident exercise, and next bridge
+
+**Stretch (optional):** Add feature-flagged canary delivery and an SLO/error-budget report.
+
+---
+
+## 9. Cloud Engineer (`cloud.md`)
+
+**File:** [`cloud.md`](./cloud.md)
+
+**Scope:** Architecture-first projects that prove identity, networking, managed services, reliability, security, cost control, and recovery—not provider-console tourism.
+
+#### CLOUD-01: Multi-Zone Cloud Foundation
+
+| Field | Detail |
+| --- | --- |
+| **Roadmap** | [`cloud.md`](./cloud.md) Phases 3-6, 12-14 |
+| **Difficulty** | Medium |
+
+**Goal:** Create a secure, reproducible network and compute foundation for a small web service.
+
+**Concepts practiced:** accounts/subscriptions, IAM, VPC/VNet, subnets, routes, load balancing, autoscaling, IaC, secrets, audit logs
+
+**Steps:**
+
+1. Write the workload, data, threat, availability, and monthly-cost assumptions
+2. Build public load-balancer and private application subnets across two zones with IaC
+3. Use federated human access and a least-privilege workload role; store no static cloud keys
+4. Deploy a tiny service with readiness checks, replacement, and autoscaling boundaries
+5. Enable audit/config/network logs, encryption, tags, a budget, and a teardown command
+6. Draw request, management, and egress paths and review the IaC plan in CI
+
+**Done when:** A fresh environment is reproducible, the database/workload has no unnecessary public path, one zone can be removed without losing the service, and the README records cost plus security decisions.
+
+**Stretch (optional):** Replace NAT traffic to provider services with private endpoints and compare cost.
+
+---
+
+#### CLOUD-02: Event-Driven Image or Job Pipeline
+
+| Field | Detail |
+| --- | --- |
+| **Roadmap** | [`cloud.md`](./cloud.md) Phases 7-10, 14-15 |
+| **Difficulty** | Hard |
+
+**Goal:** Process uploaded work safely despite duplicates, retries, malformed inputs, and downstream failure.
+
+**Concepts practiced:** object storage, events, functions/containers, queues, idempotency, dead letters, IAM, encryption, observability
+
+**Steps:**
+
+1. Accept a presigned upload or job submission and record a stable request ID
+2. Publish durable work to a queue and process it with a least-privilege worker
+3. Make the state transition idempotent and add bounded retry with jitter
+4. Route poison work to a dead-letter queue with an inspected replay procedure
+5. Add size/type limits, encryption, lifecycle rules, structured logs, and age/error metrics
+6. Test duplicate, reordered, corrupt, dependency-down, and lost-ack scenarios
+
+**Done when:** Duplicate delivery creates one business result, bad work is recoverable without editing production data, and a dashboard shows throughput, failures, retries, and age of oldest work.
+
+**Stretch (optional):** Compare function and container cost/latency for the same workload.
+
+---
+
+#### CLOUD-03: Reliability and FinOps Game Day
+
+| Field | Detail |
+| --- | --- |
+| **Roadmap** | [`cloud.md`](./cloud.md) Phases 15-18 |
+| **Difficulty** | Hard |
+
+**Goal:** Turn a deployed service into measured recovery evidence and an explainable unit-cost model.
+
+**Concepts practiced:** SLI/SLO, alerts, RTO/RPO, backup/restore, zone failure, capacity, tags, budgets, right-sizing, runbooks
+
+**Steps:**
+
+1. Define one user SLI/SLO, error budget, RTO, RPO, and unit-cost denominator
+2. Build logs/metrics/traces, a symptom alert, and a runbook with ownership
+3. Back up data and restore it into an isolated environment; measure actual RTO/RPO
+4. Inject dependency latency, instance loss, quota pressure, and a zone-style failure
+5. Capture detection, mitigation, recovery, data correctness, and missed telemetry
+6. Produce a tagged cost report and one right-sizing/lifecycle improvement without reducing the SLO
+
+**Done when:** Restore and failover are demonstrated rather than claimed, the alert leads to a usable runbook, and before/after reliability and cost evidence is public.
+
+**Stretch (optional):** Use a second region for backup recovery and document the real complexity premium.
+
+---
+
+#### CLOUD-04: Governed Migration Capstone
+
+| Field | Detail |
+| --- | --- |
+| **Roadmap** | [`cloud.md`](./cloud.md) Phases 11-20 |
+| **Difficulty** | Hard |
+
+**Goal:** Migrate a small stateful application into a governed cloud landing zone with reversible cutover.
+
+**Concepts practiced:** landing zone, service choice, IaC, security, migration waves, data validation, DNS cutover, rollback, operations, FinOps
+
+**Steps:**
+
+1. Inventory dependencies/data and write RTO/RPO, regulatory, latency, cost, and non-goals
+2. Choose rehost/replatform/refactor per component in an architecture decision record
+3. Provision identity, network, logging, policy, budget, compute, data, and backup foundations as code
+4. Rehearse data copy and validate counts/checksums and application behavior
+5. Run a low-risk migration wave, then a timed cutover with DNS/traffic and rollback thresholds
+6. Operate for a measurement window and publish performance, incident, security, and cost findings
+
+**Done when:** The old path can be restored within the declared window, data validation passes, ownership/runbooks exist, and the architecture/cost model explains every managed service.
+
+**Stretch (optional):** Re-express the architecture for a second provider and compare primitives instead of brand names.
+
+---
+
+## 10. DevOps Engineer (`devops.md`)
+
+**File:** [`devops.md`](./devops.md)
+
+**Scope:** Delivery and operations projects that begin with Linux and flow, then earn containers, orchestration, IaC, observability, SRE, security, and platform abstractions.
+
+#### DEVOPS-01: Linux Service and Incident Lab
+
+| Field | Detail |
+| --- | --- |
+| **Roadmap** | [`devops.md`](./devops.md) Phases 2-5 |
+| **Difficulty** | Medium |
+
+**Goal:** Package, operate, break, and diagnose a real service without hiding behind an orchestrator.
+
+**Concepts practiced:** Linux processes, systemd, permissions, filesystems, DNS/TCP/HTTP, shell automation, logs, runbooks
+
+**Steps:**
+
+1. Install a small HTTP service under a dedicated non-login user and systemd unit
+2. Add environment/config separation, log rotation, health check, resource limits, and graceful stop
+3. Write idempotent install, verify, backup, and rollback scripts with useful exit codes
+4. Inject wrong permissions, port conflict, DNS failure, full disk, bad config, and killed dependency
+5. Diagnose with service/process/socket/filesystem/network evidence and record a timeline
+6. Turn each failure into a check, alert, test, or runbook improvement
+
+**Done when:** A clean host can be configured twice safely, another person can resolve two injected failures from the runbook, and no secret is committed.
+
+**Stretch (optional):** Add a read-only operator command that collects a safe diagnostic bundle.
+
+---
+
+#### DEVOPS-02: Secure CI Artifact Pipeline
+
+| Field | Detail |
+| --- | --- |
+| **Roadmap** | [`devops.md`](./devops.md) Phases 6-8, 16 |
+| **Difficulty** | Hard |
+
+**Goal:** Convert a commit into one traceable, policy-checked artifact promoted through environments.
+
+**Concepts practiced:** Git, build systems, CI, testing, caching, SBOM, signing, provenance, secrets, release strategies
+
+**Steps:**
+
+1. Pin dependencies and create deterministic lint, test, integration, package, and scan commands
+2. Build once, generate SBOM/provenance, sign the digest, and publish to a protected registry
+3. Use isolated runners and short-lived identity rather than stored cloud keys
+4. Promote the same digest to staging and production behind approval and health gates
+5. Add concurrency cancellation, safe caches, artifact retention, and flake ownership
+6. Rehearse rollback and deliberately block a vulnerable dependency, leaked secret, and tampered artifact
+
+**Done when:** Source-to-running digest is auditable, a failed gate cannot publish/promote, median pipeline time is measured, and rollback uses the prior immutable artifact.
+
+**Stretch (optional):** Produce a verifiable SLSA-style provenance statement.
+
+---
+
+#### DEVOPS-03: Container and Kubernetes GitOps Delivery
+
+| Field | Detail |
+| --- | --- |
+| **Roadmap** | [`devops.md`](./devops.md) Phases 9-11, 17 |
+| **Difficulty** | Hard |
+
+**Goal:** Operate a containerized service on Kubernetes through reviewed desired state and progressive delivery.
+
+**Concepts practiced:** Docker, image hardening, Kubernetes controllers/services, probes, resources, policies, Helm/Kustomize, GitOps, canary
+
+**Steps:**
+
+1. Build a pinned multi-stage non-root image that handles signals and contains no secret
+2. Declare Deployment, Service, config/secret references, probes, requests/limits, disruption and network policy
+3. Package environment differences without copying entire manifests
+4. Reconcile deployment state from a protected Git branch and expose drift/status
+5. Add canary or blue-green promotion using application health, not pod count alone
+6. Inject CrashLoop, Pending, OOM, bad selector, failed readiness, and DNS/policy faults
+
+**Done when:** Git history identifies every release, manual drift is detected/reconciled, rollback is timed, and the troubleshooting guide maps symptoms to controller/network evidence.
+
+**Stretch (optional):** Add policy-as-code that blocks privileged, unpinned, or resource-less workloads.
+
+---
+
+#### DEVOPS-04: Observable SLO and Incident Platform
+
+| Field | Detail |
+| --- | --- |
+| **Roadmap** | [`devops.md`](./devops.md) Phases 14-18 |
+| **Difficulty** | Hard |
+
+**Goal:** Build the feedback and response loop around a service, then prove it during a game day.
+
+**Concepts practiced:** metrics, logs, traces, OpenTelemetry, SLI/SLO, burn alerts, on-call, incidents, postmortems, capacity
+
+**Steps:**
+
+1. Instrument a critical user path with correlated metrics, structured logs, and traces
+2. Define availability/latency SLIs, an SLO, error budget, and cardinality/retention limits
+3. Create a service dashboard plus multi-window burn and saturation alerts with runbooks
+4. Load test to find the first bottleneck and create a capacity forecast
+5. Run an incident with commander, operations, communications, timeline, and recovery roles
+6. Write a blameless causal review whose actions have owners, dates, and verification
+
+**Done when:** A page corresponds to user impact, evidence finds the fault across a dependency boundary, and one corrective action prevents or shortens a repeated incident.
+
+**Stretch (optional):** Add automated rollback guarded by error-budget burn and a manual override.
+
+---
+
+#### DEVOPS-05: Production Delivery Platform Capstone
+
+| Field | Detail |
+| --- | --- |
+| **Roadmap** | [`devops.md`](./devops.md) Phases 1-20 |
+| **Difficulty** | Hard |
+
+**Goal:** Offer one paved road from repository creation to a secure, observable production service without hiding escape hatches.
+
+**Concepts practiced:** platform product, templates, CI/CD, IaC, cloud, Kubernetes, secrets, policy, GitOps, SRE, documentation, adoption metrics
+
+**Steps:**
+
+1. Interview two developer personas and define the repeated delivery problem and success metrics
+2. Create a service template with build/test, signed artifact, IaC, deployment, telemetry, SLO, and runbook defaults
+3. Provide self-service environment creation through scoped identity, quotas, budgets, and policy
+4. Implement promotion, rollback, break-glass, drift, secret rotation, and deprecation workflows
+5. Onboard two example services, measure time-to-first-deploy and developer friction, then improve the road
+6. Publish ownership, support model, escape hatch, versioning, adoption, reliability, security, and cost evidence
+
+**Done when:** A new service reaches a test environment from documented steps, production change is auditable/reversible, platform failure does not trap teams, and outcomes—not tool count—show value.
+
+**Stretch (optional):** Add a scorecard that gives actionable feedback without becoming a vanity ranking.
+
+---
+
+## 11. Cross-cutting / Portfolio Capstones
 
 **Purpose:** Combine two or more tracks after you have shipped cluster projects. These are still bounded - not production ERP replacements.
 
@@ -2195,7 +2653,7 @@ Read phase → hit mastery checkpoint → pick 1 project from that cluster → s
 
 ---
 
-## 9. Interview Drill Projects
+## 12. Interview Drill Projects
 
 **File:** [`Interview.md`](./Interview.md)
 
@@ -2441,6 +2899,15 @@ Project prompts curated with **Composio** (web search, GitHub). Use for extra id
 | [muhammadwaheedairi/python-oop-practice](https://github.com/muhammadwaheedairi/python-oop-practice) | OOP-P*, class design |
 | [yusufcore/python_practise](https://github.com/yusufcore/python_practise) | CS-D* drills |
 | [odoo/tutorials](https://github.com/odoo/tutorials) | ODOO-* module layout |
+| [MDN Learn Web Development](https://developer.mozilla.org/en-US/docs/Learn_web_development) | WEB-01/02 platform fundamentals |
+| [OpenAPI Specification](https://spec.openapis.org/oas/latest) | WEB-04 API contract |
+| [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/) | WEB-04/05/06 security verification |
+| [AWS Architecture Center](https://aws.amazon.com/architecture/) | CLOUD-* architecture patterns |
+| [Azure Architecture Center](https://learn.microsoft.com/azure/architecture/) | CLOUD-* provider comparison |
+| [Google Cloud Architecture Framework](https://cloud.google.com/architecture/framework) | CLOUD-03/04 reliability and operations |
+| [CNCF Landscape](https://landscape.cncf.io/) | DEVOPS-* ecosystem discovery after fundamentals |
+| [DORA](https://dora.dev/) | DEVOPS-02/05 delivery measurements |
+| [Google SRE Books](https://sre.google/books/) | CLOUD-03 and DEVOPS-04 reliability practice |
 
 ---
 
@@ -2507,6 +2974,21 @@ Project prompts curated with **Composio** (web search, GitHub). Use for extra id
 | ODOO-06 | QWeb PDF Report | Odoo | Medium |
 | ODOO-07 | Test Suite | Odoo | Medium |
 | ODOO-08 | External API Cron | Odoo | Hard |
+| WEB-01 | Accessible Product Page | Web | Easy |
+| WEB-02 | Vanilla TypeScript Task Board | Web | Medium |
+| WEB-03 | Framework Admin Dashboard | Web | Hard |
+| WEB-04 | OpenAPI Project Service | Web / Data | Hard |
+| WEB-05 | Webhook & Job Processor | Web | Hard |
+| WEB-06 | Production Full-Stack SaaS Slice | Web / Cross | Hard |
+| CLOUD-01 | Multi-Zone Cloud Foundation | Cloud | Medium |
+| CLOUD-02 | Event-Driven Job Pipeline | Cloud | Hard |
+| CLOUD-03 | Reliability and FinOps Game Day | Cloud | Hard |
+| CLOUD-04 | Governed Migration Capstone | Cloud | Hard |
+| DEVOPS-01 | Linux Service and Incident Lab | DevOps | Medium |
+| DEVOPS-02 | Secure CI Artifact Pipeline | DevOps | Hard |
+| DEVOPS-03 | Container and Kubernetes GitOps Delivery | DevOps | Hard |
+| DEVOPS-04 | Observable SLO and Incident Platform | DevOps | Hard |
+| DEVOPS-05 | Production Delivery Platform Capstone | DevOps | Hard |
 | CAP-01 | ERP-Lite Inventory | Cross | Medium |
 | CAP-02 | Analytics on App DB | Cross | Hard |
 | CAP-03 | App + Packet Capture | Cross | Hard |
@@ -2521,7 +3003,7 @@ Project prompts curated with **Composio** (web search, GitHub). Use for extra id
 | INT-06 | STAR + Repo | Interview | Easy |
 | INT-07 | Debug Microservice | Interview | Hard |
 
-**Total:** 72 projects across 9 sections.
+**Total:** 87 projects across 12 sections.
 
 ---
 
@@ -2533,8 +3015,13 @@ Project prompts curated with **Composio** (web search, GitHub). Use for extra id
 | Data analyst | DATA-A01, DATA-A03, DATA-A05 | DATA-A04, INT-03 |
 | Data engineer | DATA-A01, DATA-E01, DATA-E03 | DATA-E04, CAP-02 |
 | Network/infrastructure | NET-01, NET-03, NET-04 | NET-07, CAP-03, INT-02 |
+| Cloud engineer | CLOUD-01, CLOUD-02, CLOUD-03 | CLOUD-04, DEVOPS-02, INT-07 |
+| DevOps engineer | DEVOPS-01, DEVOPS-02, DEVOPS-03 | DEVOPS-04, DEVOPS-05, CLOUD-01 |
 | AI/ML engineer | AI-01, AI-03, AI-06 | AI-07, CAP-04, INT-05 |
 | Odoo developer | OOP-P02, ODOO-01, ODOO-03 | ODOO-04, CAP-05 |
+| Frontend developer | WEB-01, WEB-02, WEB-03 | CAP-06, INT-02 |
+| Backend/API developer | CS-S01, WEB-04, WEB-05 | WEB-06, INT-07 |
+| Full-stack developer | WEB-01, WEB-03, WEB-04 | WEB-06, INT-06 |
 | Portfolio sprint | CAP-06 + best README from each track | INT-06 |
 
 ---
@@ -2543,4 +3030,4 @@ Project prompts curated with **Composio** (web search, GitHub). Use for extra id
 
 **Mohammad Bilal** - Projects playbook for the Interview Help repo. Theory lives in the roadmaps; proof lives in your repos. Ship small, explain clearly, drill out loud.
 
-*Pair with:* [`README.md`](./README.md) · [`OOP.md`](./OOP.md) · [`CS.md`](./CS.md) · [`Data.md`](./Data.md) · [`Networks.md`](./Networks.md) · [`AI.md`](./AI.md) · [`ODOO.md`](./ODOO.md) · [`Interview.md`](./Interview.md)
+*Pair with:* [`README.md`](./README.md) · [`OOP.md`](./OOP.md) · [`CS.md`](./CS.md) · [`Data.md`](./Data.md) · [`Networks.md`](./Networks.md) · [`AI.md`](./AI.md) · [`ODOO.md`](./ODOO.md) · [`Web.md`](./Web.md) · [`cloud.md`](./cloud.md) · [`devops.md`](./devops.md) · [`Interview.md`](./Interview.md)

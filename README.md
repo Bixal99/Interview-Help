@@ -19,6 +19,9 @@ There are **no week clocks**. Progress means: *can I explain why the last concep
 | [`AI.md`](./AI.md) | Artificial Intelligence & Machine Learning | ML practitioners and AI engineers shipping LLM apps |
 | [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) | ICT / Cybersecurity Engineer | Security engineers, SOC/blue team, and junior pentesters |
 | [`ODOO.md`](./ODOO.md) | Odoo Engineer / ERP Developer | Custom modules, ORM, XML, OWL, PostgreSQL, integrations |
+| [`Web.md`](./Web.md) | Web Developer | Frontend, backend, full-stack, REST API, and production web roles |
+| [`cloud.md`](./cloud.md) | Cloud Engineer | Provider-aware cloud architecture, operations, security, reliability, FinOps, and migration |
+| [`devops.md`](./devops.md) | DevOps Engineer | Linux, delivery automation, CI/CD, containers, Kubernetes, IaC, SRE, and platform engineering |
 | [`Projects.md`](./Projects.md) | Projects Playbook | Small builds that cement every roadmap |
 | [`Interview.md`](./Interview.md) | Combined Interview Playbook | Spoken Q&A drill across the roadmaps |
 
@@ -63,6 +66,12 @@ CS Phases 1-2  →  OOP.md (Part 0 fundamentals + Phases 1-20)  →  CS Phase 3+
 ```
 
 **Odoo path:** finish [`OOP.md`](./OOP.md) (including Part 0), then [`ODOO.md`](./ODOO.md), ship ODOO projects from [`Projects.md`](./Projects.md).
+
+**Web developer path:** learn programming fundamentals in [`OOP.md`](./OOP.md) Part 0, then follow [`Web.md`](./Web.md) from browser fundamentals through frontend/backend frameworks, REST APIs, security, testing, and deployment. Pair Phase 1/6 with [`Networks.md`](./Networks.md), Phase 13 with [`Data.md`](./Data.md), and ship the `WEB-*` builds in [`Projects.md`](./Projects.md).
+
+**Cloud engineer path:** learn Linux and network fundamentals in [`cloud.md`](./cloud.md) Phases 1-2, deepen packet and systems reasoning with [`Networks.md`](./Networks.md) and [`CS.md`](./CS.md) Phases 11-12, then complete cloud identity, networking, data, security, reliability, FinOps, and migration. Ship the `CLOUD-*` builds and drill Interview Track G.
+
+**DevOps engineer path:** follow [`devops.md`](./devops.md) from delivery flow through Linux, Git, automation, CI/CD, containers, Kubernetes, IaC, observability, SRE, DevSecOps, GitOps, and incidents. Pair Phase 13 with [`cloud.md`](./cloud.md), ship `DEVOPS-*`, and drill Interview Track H.
 
 **Cybersecurity path:** start [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) Phase 1. Pair with [`Networks.md`](./Networks.md) when packets get deep. Practice only on authorized labs (PortSwigger, TryHackMe, HTB, home lab). Ship writeups and detections from Phase 19, then drill Phase 20 interviews.
 
@@ -337,10 +346,116 @@ ERP → Modules → ORM → UI → HTTP → Ship → Hire
 
 ---
 
+## Track 7 - Web Developer
+
+**File:** [`Web.md`](./Web.md)
+**Scope:** **40 concepts · 20 phases** - browser fundamentals through React/Next.js, Node/Express, REST/OpenAPI, databases, authentication, testing, performance, deployment, GraphQL/realtime, and hire.
+
+```text
+Browser -> HTML/CSS -> JavaScript -> Frameworks -> Server -> Data -> APIs -> Security -> Production -> Hire
+```
+
+- **Frontend path:** read Phases 1-10, 15-16, and 19-20 deeply; skim 11-14 for API literacy.
+- **Backend/API path:** read Phases 1-7 quickly, then 11-18 deeply; still ship one React interface.
+- **Full-stack path:** complete all phases in order and ship the Phase 19 capstone.
+
+| # | Phase | Goal |
+|--:|-------|------|
+| 01 | Web Thinking | Browser/server contract and request path |
+| 02 | HTML Foundations | Semantics, forms, media, accessibility |
+| 03 | CSS Fundamentals | Cascade, box model, type, color, variables |
+| 04 | CSS Layout & Responsive Design | Flexbox, Grid, mobile-first interfaces |
+| 05 | JavaScript Fundamentals | Language, DOM, events, fetch, async |
+| 06 | Browser APIs & Tooling | DevTools, npm, Vite, environment config |
+| 07 | TypeScript for Web | Strict contracts, generics, project config |
+| 08 | React Fundamentals | Components, props, state, effects, forms |
+| 09 | React Patterns & State | Routing, Context, TanStack Query |
+| 10 | Next.js & Full-Stack React | App Router, rendering, route handlers |
+| 11 | Node.js & Express | Runtime, middleware, validation, logging |
+| 12 | REST API Design | Resources, methods, status, OpenAPI, pagination |
+| 13 | Databases for Web Apps | PostgreSQL, Prisma, migrations, transactions |
+| 14 | Authentication & Authorization | Sessions, JWT, OAuth, RBAC, OWASP |
+| 15 | Testing Web Applications | Vitest, Testing Library, SuperTest, Playwright |
+| 16 | Performance & Web Vitals | LCP/INP/CLS, caching, compression, bundles |
+| 17 | Deployment & CI/CD | Hosting, Docker, GitHub Actions, rollback |
+| 18 | GraphQL, WebSockets & Modern APIs | GraphQL, SSE, WebSocket, webhooks |
+| 19 | Portfolio & Capstone Projects | Public, deployed, documented proof |
+| 20 | Web Developer Interviews | Frontend, backend, design, behavioral |
+
+---
+
+## Track 8 - Cloud Engineer
+
+**File:** [`cloud.md`](./cloud.md)
+**Scope:** **20 phases** - provider-aware foundations through identity, networking, compute, storage, data, serverless, Kubernetes, IaC, governance, security, reliability, FinOps, migration, projects, and interviews.
+
+```text
+Linux/Networks -> Cloud Core -> Data/Traffic -> Cloud Native -> Governance/Security -> Reliability/FinOps -> Hire
+```
+
+| # | Phase | Goal |
+|--:|-------|------|
+| 01 | Cloud Engineer Ground Floor | Linux, networking, scripting, and role boundaries |
+| 02 | Virtualization & Service Models | VM, container, IaaS/PaaS/SaaS/serverless responsibility |
+| 03 | Providers, Regions & Zones | AWS/Azure/GCP vocabulary and failure domains |
+| 04 | Identity & Access Management | Federation, roles, policies, short-lived least privilege |
+| 05 | Cloud Networking | VPC/VNet, subnets, routes, NAT, endpoints, security groups |
+| 06 | Compute & Autoscaling | Images, load balancing, health, elasticity, immutable groups |
+| 07 | Cloud Storage | Object, block, file, durability, lifecycle, restore |
+| 08 | Managed Databases & Caching | SQL/NoSQL, replication, backup, cache correctness |
+| 09 | DNS, CDN & Edge | Traffic steering, TLS, load balancing, cache policy |
+| 10 | Serverless & Events | Functions, queues, topics, idempotency, dead letters |
+| 11 | Containers & Managed Kubernetes | ECS/EKS/AKS/GKE and workload responsibility |
+| 12 | Infrastructure as Code | Terraform/native tools, plans, modules, state, drift |
+| 13 | Landing Zones & Governance | Organizations, account vending, guardrails, audit |
+| 14 | Secrets & Encryption | Secret managers, KMS, envelope encryption, rotation |
+| 15 | Cloud Observability | Metrics, logs, traces, alerts, operational evidence |
+| 16 | Cloud Security & Compliance | Threat models, posture, zero trust, control evidence |
+| 17 | Reliability & Disaster Recovery | HA, RTO/RPO, backup, failover, game days |
+| 18 | FinOps | Allocation, unit cost, anomaly, rightsizing, commitments |
+| 19 | Hybrid/Multi-Cloud & Migration | Dependency discovery, 7Rs, cutover, rollback |
+| 20 | Projects & Cloud Interviews | Architecture proof, provider mapping, hire-ready narration |
+
+---
+
+## Track 9 - DevOps Engineer
+
+**File:** [`devops.md`](./devops.md)
+**Scope:** **20 phases** - delivery flow through Linux, troubleshooting, Git, automation, artifacts, CI/CD, Docker, Kubernetes, IaC, cloud, observability, SRE, DevSecOps, platform engineering, incidents, projects, and interviews.
+
+```text
+Flow -> Linux/Git/Automation -> Artifact/CI/CD -> Containers/Kubernetes -> IaC/Cloud -> SRE/Security/Platform -> Hire
+```
+
+| # | Phase | Goal |
+|--:|-------|------|
+| 01 | DevOps Delivery System | Value stream, feedback, small batches, DORA signals |
+| 02 | Linux & Services | Files, permissions, processes, systemd, journal |
+| 03 | Troubleshooting | DNS-to-dependency evidence ladder and safe mitigation |
+| 04 | Git & Collaboration | Commit graph, merge/rebase/revert, trunk and review |
+| 05 | Shell & Python Automation | Validation, idempotency, dry-run, failure handling |
+| 06 | Builds & Artifacts | Reproducibility, dependency locks, registries, digests |
+| 07 | Continuous Integration | Fast protected checks, caches, flakes, branch gates |
+| 08 | Continuous Delivery | Rolling/blue-green/canary, compatibility, rollback |
+| 09 | Docker | Images, layers, isolation, networking, volumes, security |
+| 10 | Kubernetes Operations | Controllers, workloads, services, health, debugging |
+| 11 | Terraform | Desired infrastructure, state, modules, plans, drift |
+| 12 | Ansible | Inventory, roles, templates, handlers, convergence |
+| 13 | Cloud for DevOps | Federated CI identity, VPC, managed runtime, cloud cost |
+| 14 | Observability | OpenTelemetry, Prometheus/Grafana, actionable alerts |
+| 15 | SRE | SLIs/SLOs, error budgets, burn rates, toil |
+| 16 | DevSecOps | SBOM, scanning, signing, provenance, admission |
+| 17 | GitOps & Platform Engineering | Argo CD, reconciliation, self-service golden paths |
+| 18 | Incidents & Chaos | Command, postmortems, game days, resilience experiments |
+| 19 | DevOps Portfolio | Complete delivery system with telemetry and recovery proof |
+| 20 | DevOps Interviews | Troubleshooting, system design, operational stories |
+
+---
+
 ## Projects Playbook
 
 **File:** [`Projects.md`](./Projects.md)  
-**Scope:** Small-to-medium builds mapped to the roadmaps (fundamentals/OOP, CS, Data, Networks, AI, Cybersecurity, Odoo, capstones, interview drills).
+**Scope:** Small-to-medium builds mapped to the roadmaps (fundamentals/OOP, CS, Data, Networks, AI, Cybersecurity, Odoo, Web, Cloud, DevOps, capstones, interview drills).
 
 ```
 Build → Explain → Ship README → Drill Interview.md
@@ -364,6 +479,9 @@ Build → Explain → Ship README → Drill Interview.md
 | B | Data Analyst & Data Engineer | 16 |
 | C | Computer Networks | 16 |
 | D | AI / ML / LLM Engineering | 18 |
+| W | Web Development | 16 |
+| G | Cloud Engineering | 10 |
+| H | DevOps Engineering | 12 |
 | E | Cross-cutting classics (URL bar, debug, design) | 6 |
 | F | Behavioral / STAR | 5 |
 
@@ -375,7 +493,7 @@ Build → Explain → Ship README → Drill Interview.md
 
 ## How to use this repo
 
-1. Pick a primary track: [`CS.md`](./CS.md), [`Data.md`](./Data.md), [`Networks.md`](./Networks.md), [`AI.md`](./AI.md), [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md), or [`ODOO.md`](./ODOO.md).
+1. Pick a primary track: [`CS.md`](./CS.md), [`Data.md`](./Data.md), [`Networks.md`](./Networks.md), [`AI.md`](./AI.md), [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md), [`ODOO.md`](./ODOO.md), [`Web.md`](./Web.md), [`cloud.md`](./cloud.md), or [`devops.md`](./devops.md).
 2. If new to coding, start [`OOP.md`](./OOP.md) **Part 0**. On the SWE path: after CS Phases 1-2, finish OOP before CS Phase 3.
 3. Start at Phase 1 (or Part 0). Do not skip bridges on the first pass.
 4. After each phase cluster, ship 1-2 items from [`Projects.md`](./Projects.md) (or cybersecurity writeups/detections from Phase 19).
@@ -388,9 +506,14 @@ Build → Explain → Ship README → Drill Interview.md
 |------|------------|------------|
 | Absolute beginner | `OOP.md` Part 0 → Phases 1+ | `Projects.md` fundamentals + `Interview.md` A |
 | Software Engineer | `CS.md` → `OOP.md` → CS Phase 3+ | `Networks.md` essentials + `Projects.md` + `Interview.md` A/C/F |
+| Frontend Developer | `OOP.md` Part 0 → `Web.md` Phases 1-10, 15-16 | `Projects.md` WEB-01 to WEB-03 + `Interview.md` W |
+| Backend/API Developer | `CS.md` foundations → `Web.md` Phases 11-18 | `Data.md` SQL + `Projects.md` WEB-04/05 + `Interview.md` W/A |
+| Full-stack Developer | `OOP.md` Part 0 → `Web.md` full | `Projects.md` WEB-01 to WEB-06 + `Interview.md` W/C/F |
 | Data Analyst | `Data.md` (through Phase 10) | `Projects.md` data + `Interview.md` B |
 | Data Engineer | `Data.md` full | `Projects.md` data + `Interview.md` B |
 | Network / Infra | `Networks.md` | `Projects.md` networks + `Interview.md` C/F |
+| Cloud Engineer | `cloud.md` | `Networks.md` essentials + `Projects.md` CLOUD-* + `Interview.md` G/F |
+| DevOps Engineer | `devops.md` | `cloud.md` foundations + `Projects.md` DEVOPS-* + `Interview.md` H/G/F |
 | AI / ML Engineer | `AI.md` | `Projects.md` AI + `Interview.md` D |
 | SOC Analyst | `ICT_Cybersecurity.md` (blue path) | Phase 13-14 labs + Security+ / CySA+ |
 | Security Engineer | `ICT_Cybersecurity.md` (SecEng path) | AppSec + cloud projects + Phase 20 |
@@ -407,4 +530,4 @@ Build → Explain → Ship README → Drill Interview.md
 
 ## Author
 
-**Mohammad Bilal** - Interview Help roadmaps for software engineering, OOP, data, networks, AI, cybersecurity, and Odoo careers.
+**Mohammad Bilal** - Interview Help roadmaps for software engineering, OOP, data, networks, AI, cybersecurity, Odoo, web development, cloud engineering, and DevOps careers.

@@ -119,26 +119,26 @@ Those questions are answered in the same order every single time. Once you have 
 
 | # | Phase | Goal | You'll be ready to move on when you can... |
 | --- | --- | --- | --- |
-| 01 | [Security Mindset](#phase-1) | Think in risk and CIA | Explain confidentiality vs integrity vs availability with examples |
-| 02 | [Networking for Security](#phase-2) | Read traffic like a defender | Map a packet path and name common ports |
-| 03 | [Linux & Windows](#phase-3) | Operate systems under pressure | Navigate CLI, permissions, and logs on both OS families |
-| 04 | [Cryptography](#phase-4) | Use crypto correctly | Contrast hash vs encrypt vs sign, and explain TLS at a high level |
-| 05 | [Identity & Auth](#phase-5) | Control who can do what | Design MFA + least privilege for a simple app |
-| 06 | [Threat Modeling](#phase-6) | Anticipate abuse | Draw a STRIDE/ATT&CK-backed model for a web app |
-| 07 | [Web App Security](#phase-7) | Find and fix web bugs | Exploit and remediate SQLi/XSS in a lab legally |
-| 08 | [Network Defenses](#phase-8) | Segment and filter | Propose firewall rules and VPN placement |
-| 09 | [Hardening](#phase-9) | Shrink attack surface | Apply a CIS-style baseline to a VM |
-| 10 | [Vuln Management](#phase-10) | Prioritize risk | Rank findings by exploitability and business impact |
-| 11 | [Pentest Methodology](#phase-11) | Attack with process | Run a scoped lab engagement and write a report outline |
-| 12 | [Active Directory](#phase-12) | Break and defend AD | Explain Kerberos auth and a lateral movement path |
-| 13 | [SOC & Detection](#phase-13) | Detect with evidence | Write a Sigma-style rule mapped to ATT&CK |
-| 14 | [DFIR](#phase-14) | Respond and investigate | Triage an alert into containment steps |
-| 15 | [Cloud Security](#phase-15) | Secure shared clouds | Harden IAM and logging on AWS/Azure-style accounts |
-| 16 | [Containers & DevSecOps](#phase-16) | Secure the pipeline | Spot risky Docker/K8s defaults and add a CI scan |
-| 17 | [Malware Basics](#phase-17) | Analyze safely | Static-scan a sample in an isolated lab |
-| 18 | [GRC & Risk](#phase-18) | Speak risk language | Map controls to a simple NIST/ISO-style framework |
-| 19 | [Portfolio](#phase-19) | Prove skill with artifacts | Publish labs, writeups, and detections |
-| 20 | [Interviews](#phase-20) | Get hired | Tell security stories end-to-end under pressure |
+| 01 | [Security Mindset](#phase-1---security-mindset-risk-before-tools) | Think in risk and CIA | Explain confidentiality vs integrity vs availability with examples |
+| 02 | [Networking for Security](#phase-2---networking-for-security) | Read traffic like a defender | Map a packet path and name common ports |
+| 03 | [Linux & Windows](#phase-3---linux-and-windows-for-security) | Operate systems under pressure | Navigate CLI, permissions, and logs on both OS families |
+| 04 | [Cryptography](#phase-4---cryptography-for-defenders-and-builders) | Use crypto correctly | Contrast hash vs encrypt vs sign, and explain TLS at a high level |
+| 05 | [Identity & Auth](#phase-5---identity-and-access-management) | Control who can do what | Design MFA + least privilege for a simple app |
+| 06 | [Threat Modeling](#phase-6---threat-modeling-and-mitre-attck) | Anticipate abuse | Draw a STRIDE/ATT&CK-backed model for a web app |
+| 07 | [Web App Security](#phase-7---web-application-security-owasp) | Find and fix web bugs | Exploit and remediate SQLi/XSS in a lab legally |
+| 08 | [Network Defenses](#phase-8---network-defenses) | Segment and filter | Propose firewall rules and VPN placement |
+| 09 | [Hardening](#phase-9---hardening-and-endpoint-security) | Shrink attack surface | Apply a CIS-style baseline to a VM |
+| 10 | [Vuln Management](#phase-10---vulnerability-management) | Prioritize risk | Rank findings by exploitability and business impact |
+| 11 | [Pentest Methodology](#phase-11---penetration-testing-methodology) | Attack with process | Run a scoped lab engagement and write a report outline |
+| 12 | [Active Directory](#phase-12---active-directory-attacks-and-defenses) | Break and defend AD | Explain Kerberos auth and a lateral movement path |
+| 13 | [SOC & Detection](#phase-13---soc-siem-and-detection-engineering) | Detect with evidence | Write a Sigma-style rule mapped to ATT&CK |
+| 14 | [DFIR](#phase-14---digital-forensics-and-incident-response) | Respond and investigate | Triage an alert into containment steps |
+| 15 | [Cloud Security](#phase-15---cloud-security-fundamentals) | Secure shared clouds | Harden IAM and logging on AWS/Azure-style accounts |
+| 16 | [Containers & DevSecOps](#phase-16---containers-kubernetes-and-devsecops) | Secure the pipeline | Spot risky Docker/K8s defaults and add a CI scan |
+| 17 | [Malware Basics](#phase-17---malware-analysis-basics) | Analyze safely | Static-scan a sample in an isolated lab |
+| 18 | [GRC & Risk](#phase-18---governance-risk-and-compliance) | Speak risk language | Map controls to a simple NIST/ISO-style framework |
+| 19 | [Portfolio](#phase-19---portfolio-and-labs) | Prove skill with artifacts | Publish labs, writeups, and detections |
+| 20 | [Interviews](#phase-20---interview-mastery-for-cybersecurity-roles) | Get hired | Tell security stories end-to-end under pressure |
 
 ### Anchor Resources (bookmark these)
 
@@ -301,6 +301,8 @@ print("proceed:", target)
 
 ---
 
+> **Phase 1 complete?** [Build the aligned project](./Projects.md#L3998) · [Continue to Phase 2](#phase-2---networking-for-security)
+
 <a id="phase-2"></a>
 
 # PHASE 2 - Networking for Security
@@ -436,6 +438,8 @@ print("allow" if any(True for _ in acl if dst == "10.0.2.5" and port == 5432) el
 **THE BRIDGE:** Zone diagrams are useless if you cannot log into the boxes and see processes, users, and files - OS skill next.
 
 ---
+
+> **Phase 2 complete?** [Build the aligned project](./Projects.md#L4019) · [Continue to Phase 3](#phase-3---linux-and-windows-for-security)
 
 <a id="phase-3"></a>
 
@@ -575,6 +579,8 @@ print(windows_logs["Security"])
 
 ---
 
+> **Phase 3 complete?** [Build the aligned project](./Projects.md#L4040) · [Continue to Phase 4](#phase-4---cryptography-for-defenders-and-builders)
+
 <a id="phase-4"></a>
 
 # PHASE 4 - Cryptography for Defenders and Builders
@@ -711,6 +717,8 @@ print("Broken if: HTTP, expired cert, wrong hostname, untrusted CA")
 
 ---
 
+> **Phase 4 complete?** [Build the aligned project](./Projects.md#L4061) · [Continue to Phase 5](#phase-5---identity-and-access-management)
+
 <a id="phase-5"></a>
 
 # PHASE 5 - Identity and Access Management
@@ -846,6 +854,8 @@ print(can_read_invoice(7, {"owner_id": 9, "roles": []}))
 **THE BRIDGE:** Access rules need a catalog of how adversaries actually move - threat modeling and MITRE ATT&CK.
 
 ---
+
+> **Phase 5 complete?** [Build the aligned project](./Projects.md#L4082) · [Continue to Phase 6](#phase-6---threat-modeling-and-mitre-attck)
 
 <a id="phase-6"></a>
 
@@ -989,6 +999,8 @@ print(technique)
 **THE BRIDGE:** ATT&CK tells you what adversaries do. The most common internet-facing battlefield is still the web application - OWASP next.
 
 ---
+
+> **Phase 6 complete?** [Build the aligned project](./Projects.md#L4103) · [Continue to Phase 7](#phase-7---web-application-security-owasp)
 
 <a id="phase-7"></a>
 
@@ -1136,6 +1148,8 @@ print(safe_fetch_url("http://169.254.169.254/latest/meta-data/"))
 
 ---
 
+> **Phase 7 complete?** [Build the aligned project](./Projects.md#L4124) · [Continue to Phase 8](#phase-8---network-defenses)
+
 <a id="phase-8"></a>
 
 # PHASE 8 - Network Defenses
@@ -1262,6 +1276,8 @@ print("patterns:", ["bastion", "egress allow-list", "prod/nonprod split", "deny 
 
 ---
 
+> **Phase 8 complete?** [Build the aligned project](./Projects.md#L4145) · [Continue to Phase 9](#phase-9---hardening-and-endpoint-security)
+
 <a id="phase-9"></a>
 
 # PHASE 9 - Hardening and Endpoint Security
@@ -1386,6 +1402,8 @@ print("Still need: patching, least privilege, backups, IR plan")
 **THE BRIDGE:** You hardened and instrumented. Now continuously find and fix weaknesses - vuln management.
 
 ---
+
+> **Phase 9 complete?** [Build the aligned project](./Projects.md#L4166) · [Continue to Phase 10](#phase-10---vulnerability-management)
 
 <a id="phase-10"></a>
 
@@ -1514,6 +1532,8 @@ print("exception fields:", ["reason", "owner", "compensating_control", "expiry",
 **THE BRIDGE:** Programs find known issues. Offensive methodology finds what scanners miss - pentest process next.
 
 ---
+
+> **Phase 10 complete?** [Build the aligned project](./Projects.md#L4187) · [Continue to Phase 11](#phase-11---penetration-testing-methodology)
 
 <a id="phase-11"></a>
 
@@ -1655,6 +1675,8 @@ print(finding)
 
 ---
 
+> **Phase 11 complete?** [Build the aligned project](./Projects.md#L4208) · [Continue to Phase 12](#phase-12---active-directory-attacks-and-defenses)
+
 <a id="phase-12"></a>
 
 # PHASE 12 - Active Directory Attacks and Defenses
@@ -1782,6 +1804,8 @@ print("defender checklist: tiering, LAPS, MFA, logon anomalies, admin workstatio
 **THE BRIDGE:** You can describe attacks. Now build the detection factory - SOC, SIEM, Sigma.
 
 ---
+
+> **Phase 12 complete?** [Build the aligned project](./Projects.md#L4229) · [Continue to Phase 13](#phase-13---soc-siem-and-detection-engineering)
 
 <a id="phase-13"></a>
 
@@ -1918,6 +1942,8 @@ print(sigma_like)
 
 ---
 
+> **Phase 13 complete?** [Build the aligned project](./Projects.md#L4250) · [Continue to Phase 14](#phase-14---digital-forensics-and-incident-response)
+
 <a id="phase-14"></a>
 
 # PHASE 14 - Digital Forensics and Incident Response
@@ -2050,6 +2076,8 @@ print("sha256", hashlib.sha256(blob).hexdigest())
 
 ---
 
+> **Phase 14 complete?** [Build the aligned project](./Projects.md#L4271) · [Continue to Phase 15](#phase-15---cloud-security-fundamentals)
+
 <a id="phase-15"></a>
 
 # PHASE 15 - Cloud Security Fundamentals
@@ -2180,6 +2208,8 @@ print("hunt:", misconfigs)
 
 ---
 
+> **Phase 15 complete?** [Build the aligned project](./Projects.md#L4292) · [Continue to Phase 16](#phase-16---containers-kubernetes-and-devsecops)
+
 <a id="phase-16"></a>
 
 # PHASE 16 - Containers, Kubernetes, and DevSecOps
@@ -2307,6 +2337,8 @@ print("CI gates:", ["gitleaks", "sca", "sast", "image scan", "iac scan"])
 
 ---
 
+> **Phase 16 complete?** [Build the aligned project](./Projects.md#L4313) · [Continue to Phase 17](#phase-17---malware-analysis-basics)
+
 <a id="phase-17"></a>
 
 # PHASE 17 - Malware Analysis Basics
@@ -2429,6 +2461,8 @@ print("dynamic checklist: isolated nic, snapshot, time sync, capture, revert")
 **THE BRIDGE:** Technical controls need organizational glue - policies, risk registers, compliance maps.
 
 ---
+
+> **Phase 17 complete?** [Build the aligned project](./Projects.md#L4334) · [Continue to Phase 18](#phase-18---governance-risk-and-compliance)
 
 <a id="phase-18"></a>
 
@@ -2554,6 +2588,8 @@ print(risk)
 **THE BRIDGE:** Knowledge without artifacts does not hire. Portfolio labs prove you can do the work.
 
 ---
+
+> **Phase 18 complete?** [Build the aligned project](./Projects.md#L4355) · [Continue to Phase 19](#phase-19---portfolio-and-labs)
 
 <a id="phase-19"></a>
 
@@ -2687,6 +2723,8 @@ print(paths["seceng"])
 
 ---
 
+> **Phase 19 complete?** [Build the aligned project](./Projects.md#L4376) · [Continue to Phase 20](#phase-20---interview-mastery-for-cybersecurity-roles)
+
 <a id="phase-20"></a>
 
 # PHASE 20 - Interview Mastery for Cybersecurity Roles
@@ -2807,6 +2845,10 @@ print(" -> ".join(checklist))
 | Hard | Full loop: design + ATT&CK coverage + IR runbook outline |
 
 **THE BRIDGE:** Production invents the next limitation - a new SaaS integration, a zero-day, a cloud region outage - and that limitation becomes your next concept. Keep the habit: what broke, why, what we invent next.
+
+---
+
+> **Phase 20 complete?** [Build the aligned project](./Projects.md#L4397) · [Return to the phase index](#phase-index)
 
 ---
 

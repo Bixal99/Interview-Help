@@ -141,26 +141,26 @@ Every arrow above is a real dependency that gets argued for in the text - not ju
 
 | # | Phase | Goal | You'll be ready to move on when you can... |
 | ---: | --- | --- | --- |
-| 01 | [Programming Foundations](#phase-1) | Understand what actually happens when code runs | Explain source code -> compiler/interpreter -> machine code, and where a variable physically lives |
-| 02 | [Complexity Analysis](#phase-2) | Get a ruler for comparing solutions | State the Big O of your own code, unprompted, and justify it |
-| 03 | [Linear Data Structures](#phase-3) | Store and access collections | Implement array-backed and linked-list-backed stacks/queues from scratch |
-| 04 | [Recursion](#phase-4) | Let structure branch | Write a correct base case on the first try, and trace a call stack by hand |
-| 05 | [Hierarchical & Priority Structures](#phase-5) | Model hierarchy and priority | Implement tree traversal, validate a BST, and solve a "top-k" problem with a heap |
-| 06 | [Hashing](#phase-6) | Answer "have I seen this" in O(1) | Reach for a hash map by instinct when you catch yourself writing a nested "have I seen this" loop |
-| 07 | [Order: Sorting & Binary Search](#phase-7) | Impose and exploit order | Implement merge sort by hand and explain why binary search needs sorted input |
-| 08 | [Graphs](#phase-8) | Model arbitrary relationships | Implement BFS and DFS from an adjacency list and know when to use each |
-| 09 | [Algorithmic Patterns](#phase-9) | Solve problems with repeated substructure or choices | Recognize when a brute-force recursive solution should become DP, and when greedy is provably correct |
-| 10 | [OOP & Low-Level Design](#phase-10) | Structure large codebases | Explain each of the 4 pillars with a concrete example and design a small class hierarchy that respects SOLID |
-| 11 | [Operating Systems](#phase-11) | Understand what's running your code | Explain the difference between a process and a thread, and why a deadlock happens |
-| 12 | [Computer Networks](#phase-12) | Understand how machines talk | Trace a packet from your laptop to a server through the OSI layers |
-| 13 | [Web, HTTP & APIs](#phase-13) | Build things that talk over the web | Design a REST API with correct verbs, status codes, and resource naming |
-| 14 | [Databases & Data Modeling](#phase-14) | Persist and query data correctly and fast | Design a normalized schema, write a multi-table JOIN, and explain why an index speeds up one query and slows down another |
-| 15 | [Authentication & Security](#phase-15) | Protect what you built | Explain how a password should be stored, how a JWT differs from a session cookie, and how to stop a SQL injection |
-| 16 | [Software Engineering & Testing](#phase-16) | Build things that last and are safe to change | Write a test pyramid for a small service and explain what each layer catches that the others don't |
-| 17 | [System Design & Scalability](#phase-17) | Design systems that survive real traffic | Walk a system from one server to a sharded, cached, load-balanced architecture, explaining *why* each piece was added |
-| 18 | [Distributed Systems](#phase-18) | Reason about failure across machines | Explain the CAP theorem with a concrete example and describe what a consensus algorithm buys you |
-| 19 | [Projects](#phase-19) | Prove it with something built | Point to a working project that uses concepts from at least three different phases |
-| 20 | [Interview Mastery](#phase-20) | Communicate what you know, under pressure | Run a full mock interview - coding, system design, and behavioral - without notes |
+| 01 | [Programming Foundations](#phase-1---programming-foundations--how-programs-execute) | Understand what actually happens when code runs | Explain source code -> compiler/interpreter -> machine code, and where a variable physically lives |
+| 02 | [Complexity Analysis](#phase-2---complexity-analysis) | Get a ruler for comparing solutions | State the Big O of your own code, unprompted, and justify it |
+| 03 | [Linear Data Structures](#phase-3---linear-data-structures) | Store and access collections | Implement array-backed and linked-list-backed stacks/queues from scratch |
+| 04 | [Recursion](#phase-4---recursion) | Let structure branch | Write a correct base case on the first try, and trace a call stack by hand |
+| 05 | [Hierarchical & Priority Structures](#phase-5---hierarchical--priority-structures) | Model hierarchy and priority | Implement tree traversal, validate a BST, and solve a "top-k" problem with a heap |
+| 06 | [Hashing](#phase-6---hashing) | Answer "have I seen this" in O(1) | Reach for a hash map by instinct when you catch yourself writing a nested "have I seen this" loop |
+| 07 | [Order: Sorting & Binary Search](#phase-7---order-sorting--binary-search) | Impose and exploit order | Implement merge sort by hand and explain why binary search needs sorted input |
+| 08 | [Graphs](#phase-8---graphs) | Model arbitrary relationships | Implement BFS and DFS from an adjacency list and know when to use each |
+| 09 | [Algorithmic Patterns](#phase-9---algorithmic-patterns) | Solve problems with repeated substructure or choices | Recognize when a brute-force recursive solution should become DP, and when greedy is provably correct |
+| 10 | [OOP & Low-Level Design](#phase-10---object-oriented-programming--low-level-design) | Structure large codebases | Explain each of the 4 pillars with a concrete example and design a small class hierarchy that respects SOLID |
+| 11 | [Operating Systems](#phase-11---operating-systems) | Understand what's running your code | Explain the difference between a process and a thread, and why a deadlock happens |
+| 12 | [Computer Networks](#phase-12---computer-networks) | Understand how machines talk | Trace a packet from your laptop to a server through the OSI layers |
+| 13 | [Web, HTTP & APIs](#phase-13---web-http--apis) | Build things that talk over the web | Design a REST API with correct verbs, status codes, and resource naming |
+| 14 | [Databases & Data Modeling](#phase-14---databases--data-modeling) | Persist and query data correctly and fast | Design a normalized schema, write a multi-table JOIN, and explain why an index speeds up one query and slows down another |
+| 15 | [Authentication & Security](#phase-15---authentication--security) | Protect what you built | Explain how a password should be stored, how a JWT differs from a session cookie, and how to stop a SQL injection |
+| 16 | [Software Engineering & Testing](#phase-16---software-engineering--testing) | Build things that last and are safe to change | Write a test pyramid for a small service and explain what each layer catches that the others don't |
+| 17 | [System Design & Scalability](#phase-17---system-design--scalability) | Design systems that survive real traffic | Walk a system from one server to a sharded, cached, load-balanced architecture, explaining *why* each piece was added |
+| 18 | [Distributed Systems](#phase-18---distributed-systems) | Reason about failure across machines | Explain the CAP theorem with a concrete example and describe what a consensus algorithm buys you |
+| 19 | [Projects](#phase-19---projects) | Prove it with something built | Point to a working project that uses concepts from at least three different phases |
+| 20 | [Interview Mastery](#phase-20---interview-mastery) | Communicate what you know, under pressure | Run a full mock interview - coding, system design, and behavioral - without notes |
 
 ---
 
@@ -306,6 +306,8 @@ To watch the compiled version of this idea, paste any small C function into [Com
 
 ---
 
+> **Phase 1 complete?** [Build the aligned project](./Projects.md#L598) · [Continue to Phase 2](#phase-2---complexity-analysis)
+
 <a id="phase-2"></a>
 
 # PHASE 2 - Complexity Analysis
@@ -407,6 +409,8 @@ An interviewer almost never asks "what is Big O" directly - they expect you to s
 **THE BRIDGE to Linear Data Structures:** Big O gives you the ruler. Now you need something to measure - the simplest possible way to store a collection of values in memory. That's an array.
 
 ---
+
+> **Phase 2 complete?** [Build the aligned project](./Projects.md#L619) · [Continue to Phase 3](#phase-3---linear-data-structures)
 
 <a id="phase-3"></a>
 
@@ -714,6 +718,8 @@ Queues rarely star on their own - they're the *engine* underneath breadth-first 
 
 ---
 
+> **Phase 3 complete?** [Build the aligned project](./Projects.md#L640) · [Continue to Phase 4](#phase-4---recursion)
+
 <a id="phase-4"></a>
 
 # PHASE 4 - Recursion
@@ -798,6 +804,8 @@ Interviewers watch for two things: can you state a correct base case on the firs
 **MASTERY CHECKPOINT FOR PHASES 1-4:** Implement a stack and a queue from scratch (array-backed AND linked-list-backed), and write a recursive function that reverses a linked list without using a loop. If you can do this without looking anything up, move on.
 
 ---
+
+> **Phase 4 complete?** [Build the aligned project](./Projects.md#L661) · [Continue to Phase 5](#phase-5---hierarchical--priority-structures)
 
 <a id="phase-5"></a>
 
@@ -1025,6 +1033,8 @@ def k_largest(nums, k):
 
 ---
 
+> **Phase 5 complete?** [Build the aligned project](./Projects.md#L682) · [Continue to Phase 6](#phase-6---hashing)
+
 <a id="phase-6"></a>
 
 # PHASE 6 - Hashing
@@ -1107,6 +1117,8 @@ The single most common upgrade path in an interview is "brute force with nested 
 **THE BRIDGE to Sorting:** A hash table gives O(1) lookup but no ordering whatsoever. Plenty of problems genuinely need order (find the median, remove duplicates from a range, binary search), and the tool for imposing order on a collection is sorting.
 
 ---
+
+> **Phase 6 complete?** [Build the aligned project](./Projects.md#L703) · [Continue to Phase 7](#phase-7---order-sorting--binary-search)
 
 <a id="phase-7"></a>
 
@@ -1267,6 +1279,8 @@ Binary search is deceptively easy to state and notoriously easy to get wrong at 
 **THE BRIDGE to Graphs:** Every structure so far has one thing in common - each element points to at most two neighbors (a linked list's "next," a tree's two children). What happens when an element needs to connect to *any number* of other elements, in *any* pattern - friends on a social network, cities on a map, dependencies in a build system?
 
 ---
+
+> **Phase 7 complete?** [Build the aligned project](./Projects.md#L724) · [Continue to Phase 8](#phase-8---graphs)
 
 <a id="phase-8"></a>
 
@@ -1577,6 +1591,8 @@ def dfs(graph, start, visited=None, order=None):
 **THE BRIDGE to Algorithmic Patterns:** Graphs, trees, and recursion all share a hidden cost you haven't confronted yet: naive recursion can revisit the *same subproblem* many times (naive Fibonacci does this - Phase 4 flagged it as O(2^n) and promised a fix). The fix - remembering answers you've already computed - is the first algorithmic pattern: Dynamic Programming.
 
 ---
+
+> **Phase 8 complete?** [Build the aligned project](./Projects.md#L745) · [Continue to Phase 9](#phase-9---algorithmic-patterns)
 
 <a id="phase-9"></a>
 
@@ -2033,6 +2049,8 @@ class Trie:
 
 ---
 
+> **Phase 9 complete?** [Build the aligned project](./Projects.md#L766) · [Continue to Phase 10](#phase-10---object-oriented-programming--low-level-design)
+
 <a id="phase-10"></a>
 
 # PHASE 10 - Object-Oriented Programming & Low-Level Design
@@ -2359,6 +2377,8 @@ Design a small library-management or parking-lot system on paper or in code: cla
 **THE BRIDGE to Operating Systems:** OOP organizes *your* code so it stays maintainable. But your code doesn't run in a vacuum - it runs as a process, sharing a CPU, memory, and I/O devices with every other program on the machine, managed by software you didn't write and usually don't think about: the operating system.
 
 ---
+
+> **Phase 10 complete?** [Build the aligned project](./Projects.md#L787) · [Continue to Phase 11](#phase-11---operating-systems)
 
 <a id="phase-11"></a>
 
@@ -3027,6 +3047,8 @@ Write a small multi-threaded counter increment program without a lock, observe t
 **THE BRIDGE to Computer Networks:** Everything up to this point happens on a single machine. The moment two processes need to talk across *different* machines - a browser and a server, two microservices, a phone and a database - the OS's process isolation and shared memory tricks no longer apply. You need an entirely different mechanism for two programs that don't share any memory at all to exchange information reliably.
 
 ---
+
+> **Phase 11 complete?** [Build the aligned project](./Projects.md#L808) · [Continue to Phase 12](#phase-12---computer-networks)
 
 <a id="phase-12"></a>
 
@@ -3752,6 +3774,8 @@ DNS shows up in three predictable places. First, inside "what happens when you t
 
 ---
 
+> **Phase 12 complete?** [Build the aligned project](./Projects.md#L829) · [Continue to Phase 13](#phase-13---web-http--apis)
+
 <a id="phase-13"></a>
 
 # PHASE 13 - Web, HTTP & APIs
@@ -4357,6 +4381,8 @@ Design the full REST API surface (all endpoints, methods, and status codes) for 
 **THE BRIDGE to Databases:** An API's job is to expose data and let it be created, read, updated, and deleted. Where does that data actually live between requests, given that HTTP itself remembers nothing? It has to be written somewhere durable - and the naive first answer, a plain file, breaks down almost immediately at any real scale.
 
 ---
+
+> **Phase 13 complete?** [Build the aligned project](./Projects.md#L850) · [Continue to Phase 14](#phase-14---databases--data-modeling)
 
 <a id="phase-14"></a>
 
@@ -6709,6 +6735,8 @@ Design a normalized schema (Phase 14.3) for a small e-commerce system (users, pr
 
 ---
 
+> **Phase 14 complete?** [Build the aligned project](./Projects.md#L871) · [Continue to Phase 15](#phase-15---authentication--security)
+
 <a id="phase-15"></a>
 
 # PHASE 15 - Authentication & Security
@@ -8383,6 +8411,8 @@ Take the REST API you designed in Phase 13.2's mini-project and, for each endpoi
 
 ---
 
+> **Phase 15 complete?** [Build the aligned project](./Projects.md#L892) · [Continue to Phase 16](#phase-16---software-engineering--testing)
+
 <a id="phase-16"></a>
 
 # PHASE 16 - Software Engineering & Testing
@@ -9644,6 +9674,8 @@ git log --format='%H %aI' main | head -50        # deployment frequency
 **THE BRIDGE to System Design:** Everything so far has assumed a system running comfortably within one machine's limits. The next problem has nothing to do with correctness - the system works *perfectly* and everything to do with what happens when far more traffic arrives than one machine, however well-engineered, can handle.
 
 ---
+
+> **Phase 16 complete?** [Build the aligned project](./Projects.md#L913) · [Continue to Phase 17](#phase-17---system-design--scalability)
 
 <a id="phase-17"></a>
 
@@ -11011,6 +11043,8 @@ System design interviews are explicitly graded on process, not a single correct 
 
 ---
 
+> **Phase 17 complete?** [Build the aligned project](./Projects.md#L934) · [Continue to Phase 18](#phase-18---distributed-systems)
+
 <a id="phase-18"></a>
 
 # PHASE 18 - Distributed Systems
@@ -11953,6 +11987,8 @@ Deep distributed-systems questions ("how would you build a leader-election mecha
 
 ---
 
+> **Phase 18 complete?** [Build the aligned project](./Projects.md#L955) · [Continue to Phase 19](#phase-19---projects)
+
 <a id="phase-19"></a>
 
 # PHASE 19 - Projects
@@ -12409,6 +12445,8 @@ Each project should end with you writing a short explanation of every trade-off 
 **THE BRIDGE to Interview Mastery:** Everything above builds understanding and proof of that understanding. The last piece is entirely different: communicating what you know, clearly, under time pressure, to someone evaluating you in real time.
 
 ---
+
+> **Phase 19 complete?** [Build the aligned project](./Projects.md#L976) · [Continue to Phase 20](#phase-20---interview-mastery)
 
 <a id="phase-20"></a>
 
@@ -13838,6 +13876,10 @@ The thing worth carrying from this section into the real interview is a change i
 | Hard | Interview four different people on the same system design prompt and write down what the range of answers taught you about there being no single correct one |
 
 **THE BRIDGE past the last concept:** There is no next section, and that is itself the final limitation worth naming. Every bridge in this document pointed at a concept whose absence made the previous one incomplete, and the chain has to stop somewhere. It stops here not because there is nothing further but because what comes next is no longer a concept: it is the specific system you are handed on your first day, whose real constraints nobody wrote down, and which will teach you things this document cannot. The habit to carry forward is the one every section was built to install. When you meet something new, ask what it replaced, what broke in the thing before it, what this costs, and what its own limitation will turn out to be. That question is the actual content of this roadmap. The concepts were the worked examples.
+
+---
+
+> **Phase 20 complete?** [Build the aligned project](./Projects.md#L997) · [Return to the phase index](#phase-index)
 
 ---
 

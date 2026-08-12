@@ -110,26 +110,26 @@ Those questions are answered in the same order every single time. Once you have 
 
 | # | Phase | Goal | You'll be ready to move on when you can... |
 | --- | --- | --- | --- |
-| 01 | [AI Thinking](#phase-1) | See learning as fitting from data | Contrast rules vs learning and name train/test |
-| 02 | [Math for ML](#phase-2) | Own the minimum math that unlocks papers | Explain gradient as "direction of steepest ascent" |
-| 03 | [Python for AI](#phase-3) | Manipulate arrays and datasets fluently | Build a clean train matrix without thinking |
-| 04 | [Classical ML](#phase-4) | Solve tabular problems first | Fit linear/logistic models and talk overfitting |
-| 05 | [Evaluation](#phase-5) | Measure what matters | Choose metrics and spot leakage |
-| 06 | [Trees & Ensembles](#phase-6) | Strong baselines for structured data | Explain bagging vs boosting |
-| 07 | [Neural Nets Basics](#phase-7) | Compose differentiable layers | Draw an MLP forward pass |
-| 08 | [Backprop & Optimizers](#phase-8) | Train by gradient descent | Implement GD and explain Adam intuition |
-| 09 | [PyTorch Practice](#phase-9) | Train real models in code | Write a training loop with autograd |
-| 10 | [CNNs & Vision](#phase-10) | Learn spatial structure | Explain convolution + transfer learning |
-| 11 | [Sequences](#phase-11) | Model ordered data historically | State RNN limits that force transformers |
-| 12 | [Embeddings](#phase-12) | Represent meaning as vectors | Use cosine similarity meaningfully |
-| 13 | [Transformers](#phase-13) | Master attention | Walk Q/K/V and multi-head attention |
-| 14 | [LLMs & Prompting](#phase-14) | Use foundation models well | Design prompts with failure modes named |
-| 15 | [RAG](#phase-15) | Ground models in your data | Build chunk→embed→retrieve→generate |
-| 16 | [Fine-tuning](#phase-16) | Specialize models efficiently | Justify LoRA vs full FT vs RAG |
-| 17 | [Agents](#phase-17) | Tool-using loops | Implement a ReAct-style agent safely |
-| 18 | [Eval, Safety & MLOps](#phase-18) | Ship and operate | Design evals, tracing, and guardrails |
-| 19 | [Portfolio](#phase-19) | Prove skill with artifacts | Publish projects with metrics |
-| 20 | [Interviews](#phase-20) | Get hired | Explain systems end-to-end under pressure |
+| 01 | [AI Thinking](#phase-1---ai-thinking-programs-that-improve-from-examples) | See learning as fitting from data | Contrast rules vs learning and name train/test |
+| 02 | [Math for ML](#phase-2---math-for-ml-the-useful-slice) | Own the minimum math that unlocks papers | Explain gradient as "direction of steepest ascent" |
+| 03 | [Python for AI](#phase-3---python-for-ai) | Manipulate arrays and datasets fluently | Build a clean train matrix without thinking |
+| 04 | [Classical ML](#phase-4---classical-machine-learning) | Solve tabular problems first | Fit linear/logistic models and talk overfitting |
+| 05 | [Evaluation](#phase-5---evaluation-and-generalization) | Measure what matters | Choose metrics and spot leakage |
+| 06 | [Trees & Ensembles](#phase-6---trees-and-ensembles) | Strong baselines for structured data | Explain bagging vs boosting |
+| 07 | [Neural Nets Basics](#phase-7---neural-network-basics) | Compose differentiable layers | Draw an MLP forward pass |
+| 08 | [Backprop & Optimizers](#phase-8---backpropagation-and-optimizers) | Train by gradient descent | Implement GD and explain Adam intuition |
+| 09 | [PyTorch Practice](#phase-9---pytorch-deep-practice) | Train real models in code | Write a training loop with autograd |
+| 10 | [CNNs & Vision](#phase-10---cnns-and-computer-vision) | Learn spatial structure | Explain convolution + transfer learning |
+| 11 | [Sequences](#phase-11---sequence-models-rnnlstm-era) | Model ordered data historically | State RNN limits that force transformers |
+| 12 | [Embeddings](#phase-12---embeddings-and-representation-learning) | Represent meaning as vectors | Use cosine similarity meaningfully |
+| 13 | [Transformers](#phase-13---transformers) | Master attention | Walk Q/K/V and multi-head attention |
+| 14 | [LLMs & Prompting](#phase-14---llms-and-prompting) | Use foundation models well | Design prompts with failure modes named |
+| 15 | [RAG](#phase-15---retrieval-augmented-generation) | Ground models in your data | Build chunk→embed→retrieve→generate |
+| 16 | [Fine-tuning](#phase-16---fine-tuning-and-alignment-basics) | Specialize models efficiently | Justify LoRA vs full FT vs RAG |
+| 17 | [Agents](#phase-17---agents-and-tool-use) | Tool-using loops | Implement a ReAct-style agent safely |
+| 18 | [Eval, Safety & MLOps](#phase-18---evaluation-safety-and-mlops) | Ship and operate | Design evals, tracing, and guardrails |
+| 19 | [Portfolio](#phase-19---portfolio-and-projects) | Prove skill with artifacts | Publish projects with metrics |
+| 20 | [Interviews](#phase-20---interviews) | Get hired | Explain systems end-to-end under pressure |
 
 ### Anchor Resources (bookmark these)
 
@@ -305,6 +305,8 @@ print(len(X_train), len(X_val), len(X_test))
 
 ---
 
+> **Phase 1 complete?** [Build the aligned project](./Projects.md#L1873) · [Continue to Phase 2](#phase-2---math-for-ml-the-useful-slice)
+
 <a id="phase-2"></a>
 
 # PHASE 2 - Math for ML (The Useful Slice)
@@ -448,6 +450,8 @@ print(theta)
 
 ---
 
+> **Phase 2 complete?** [Build the aligned project](./Projects.md#L1894) · [Continue to Phase 3](#phase-3---python-for-ai)
+
 <a id="phase-3"></a>
 
 # PHASE 3 - Python for AI
@@ -581,6 +585,8 @@ df["age"] = df["age"].fillna(df["age"].median())
 **THE BRIDGE to Classical ML:** Clean tables demand simple strong baselines - linear/logistic models - before deep learning theater.
 
 ---
+
+> **Phase 3 complete?** [Build the aligned project](./Projects.md#L1915) · [Continue to Phase 4](#phase-4---classical-machine-learning)
 
 <a id="phase-4"></a>
 
@@ -726,6 +732,8 @@ print(clf.score(Xte, yte))
 
 ---
 
+> **Phase 4 complete?** [Build the aligned project](./Projects.md#L1936) · [Continue to Phase 5](#phase-5---evaluation-and-generalization)
+
 <a id="phase-5"></a>
 
 # PHASE 5 - Evaluation and Generalization
@@ -862,6 +870,8 @@ print(cross_val_score(pipe, X, y, cv=5).mean())
 **THE BRIDGE to Trees:** Linear models miss nonlinear interactions. Decision trees carve the space with axes-aligned splits - next classical power tool.
 
 ---
+
+> **Phase 5 complete?** [Build the aligned project](./Projects.md#L1957) · [Continue to Phase 6](#phase-6---trees-and-ensembles)
 
 <a id="phase-6"></a>
 
@@ -1002,6 +1012,8 @@ print(gb.score(Xte, yte))
 **THE BRIDGE to Neural Nets:** Trees excel on mixed tabular features but struggle to learn hierarchical representations for raw sensory data. Neural nets compose differentiable features end-to-end.
 
 ---
+
+> **Phase 6 complete?** [Build the aligned project](./Projects.md#L1978) · [Continue to Phase 7](#phase-7---neural-network-basics)
 
 <a id="phase-7"></a>
 
@@ -1154,6 +1166,8 @@ for epoch, val_loss in enumerate([1.0, 0.8, 0.75, 0.76, 0.79, 0.81]):
 
 ---
 
+> **Phase 7 complete?** [Build the aligned project](./Projects.md#L1999) · [Continue to Phase 8](#phase-8---backpropagation-and-optimizers)
+
 <a id="phase-8"></a>
 
 # PHASE 8 - Backpropagation and Optimizers
@@ -1297,6 +1311,8 @@ print("Use torch.optim.Adam in practice; know the story above.")
 **THE BRIDGE to PyTorch:** Theory is ready. Professional practice uses a framework with tensors, autograd, and GPU - PyTorch.
 
 ---
+
+> **Phase 8 complete?** [Build the aligned project](./Projects.md#L2020) · [Continue to Phase 9](#phase-9---pytorch-deep-practice)
 
 <a id="phase-9"></a>
 
@@ -1446,6 +1462,8 @@ print("batch ok", xb.shape)
 
 ---
 
+> **Phase 9 complete?** [Build the aligned project](./Projects.md#L2041) · [Continue to Phase 10](#phase-10---cnns-and-computer-vision)
+
 <a id="phase-10"></a>
 
 # PHASE 10 - CNNs and Computer Vision
@@ -1587,6 +1605,8 @@ print(m.fc)
 
 ---
 
+> **Phase 10 complete?** [Build the aligned project](./Projects.md#L2062) · [Continue to Phase 11](#phase-11---sequence-models-rnnlstm-era)
+
 <a id="phase-11"></a>
 
 # PHASE 11 - Sequence Models (RNN/LSTM Era)
@@ -1718,6 +1738,8 @@ print(nn.GRU(32, 64, batch_first=True))
 **THE BRIDGE to Embeddings:** Before attention transformers, we need the idea that discrete tokens become continuous vectors that capture similarity - embeddings.
 
 ---
+
+> **Phase 11 complete?** [Build the aligned project](./Projects.md#L2083) · [Continue to Phase 12](#phase-12---embeddings-and-representation-learning)
 
 <a id="phase-12"></a>
 
@@ -1859,6 +1881,8 @@ print(docs @ q)  # cosine similarities
 **THE BRIDGE to Transformers:** We need a model that produces contextual embeddings with long-range links and training parallelism - attention.
 
 ---
+
+> **Phase 12 complete?** [Build the aligned project](./Projects.md#L2104) · [Continue to Phase 13](#phase-13---transformers)
 
 <a id="phase-13"></a>
 
@@ -2005,6 +2029,8 @@ print(mask)
 
 ---
 
+> **Phase 13 complete?** [Build the aligned project](./Projects.md#L2125) · [Continue to Phase 14](#phase-14---llms-and-prompting)
+
 <a id="phase-14"></a>
 
 # PHASE 14 - LLMs and Prompting
@@ -2147,6 +2173,8 @@ print(build_prompt("What is refund window?", "Refunds accepted within 30 days.")
 **THE BRIDGE to RAG:** Prompting alone cannot know your private docs or yesterday's facts reliably. Retrieval-augmented generation grounds answers in evidence.
 
 ---
+
+> **Phase 14 complete?** [Build the aligned project](./Projects.md#L2146) · [Continue to Phase 15](#phase-15---retrieval-augmented-generation)
 
 <a id="phase-15"></a>
 
@@ -2307,6 +2335,8 @@ print(merge_candidates(["a", "b"], ["b", "c"]))
 
 ---
 
+> **Phase 15 complete?** [Build the aligned project](./Projects.md#L2167) · [Continue to Phase 16](#phase-16---fine-tuning-and-alignment-basics)
+
 <a id="phase-16"></a>
 
 # PHASE 16 - Fine-Tuning and Alignment Basics
@@ -2440,6 +2470,8 @@ print("Preference data is policy. Treat it like production code reviews.")
 **THE BRIDGE to Agents:** Aligned LLMs still only text-predict. Products need side effects - search, code, APIs - via tool-calling agents.
 
 ---
+
+> **Phase 16 complete?** [Build the aligned project](./Projects.md#L2188) · [Continue to Phase 17](#phase-17---agents-and-tool-use)
 
 <a id="phase-17"></a>
 
@@ -2590,6 +2622,8 @@ print(s)
 
 ---
 
+> **Phase 17 complete?** [Build the aligned project](./Projects.md#L2209) · [Continue to Phase 18](#phase-18---evaluation-safety-and-mlops)
+
 <a id="phase-18"></a>
 
 # PHASE 18 - Evaluation, Safety, and MLOps
@@ -2736,6 +2770,8 @@ print("used", used)
 
 ---
 
+> **Phase 18 complete?** [Build the aligned project](./Projects.md#L2230) · [Continue to Phase 19](#phase-19---portfolio-and-projects)
+
 <a id="phase-19"></a>
 
 # PHASE 19 - Portfolio and Projects
@@ -2873,6 +2909,8 @@ print(meta)
 
 ---
 
+> **Phase 19 complete?** [Build the aligned project](./Projects.md#L2251) · [Continue to Phase 20](#phase-20---interviews)
+
 <a id="phase-20"></a>
 
 # PHASE 20 - Interviews
@@ -2997,6 +3035,10 @@ print(", ".join(checklist))
 | Hard | Full loop: design + threat model + eval metrics |
 
 **THE BRIDGE BEYOND This Document:** Production invents the next limitation - a new jailbreak, a cost cliff, a multimodal requirement - and that limitation becomes your next concept. Keep the habit: what broke, why, what we invent next.
+
+---
+
+> **Phase 20 complete?** [Build the aligned project](./Projects.md#L2272) · [Return to the phase index](#phase-index)
 
 ---
 

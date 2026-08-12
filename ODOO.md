@@ -108,26 +108,26 @@ Phases 1-10 build platform fluency (think ERP, ship modules). Phases 11-18 build
 
 | # | Phase | Goal | Move on when you can... |
 | --- | --- | --- | --- |
-| 01 | [Odoo Thinking / What ERP is](#phase-1) | See ERP as shared truth | Contrast spreadsheet chaos vs modular monolith |
-| 02 | [Architecture (3-tier)](#phase-2) | Picture client, server, DB | Trace one button click through tiers |
-| 03 | [Dev Environment Setup](#phase-3) | Run Odoo locally | Use addons-path, `-i`, `-u`, dev mode correctly |
-| 04 | [Module Anatomy](#phase-4) | Read module folders | Explain manifest data load order |
-| 05 | [Models & Fields](#phase-5) | Declare models and fields | Model relations, computes, SQL constraints |
-| 06 | [ORM Queries](#phase-6) | Search and CRUD fluently | Write domains and batch recordset ops |
-| 07 | [Record Rules & Access](#phase-7) | Secure models and rows | Configure groups, ACL CSV, ir.rule |
-| 08 | [Views XML](#phase-8) | Build UI in XML | Author views and xpath inherit |
-| 09 | [Actions & Menus](#phase-9) | Wire navigation | Create act_window, menus, smart contexts |
-| 10 | [Business Logic](#phase-10) | Enforce workflows | Implement constrains, computes, action methods |
-| 11 | [Inheritance](#phase-11) | Extend without forking | Use `_inherit` and `_inherits` with super() |
-| 12 | [Wizards & Transient Models](#phase-12) | Multi-step dialogs | Build TransientModel wizards with bindings |
-| 13 | [Controllers & HTTP / Webhooks](#phase-13) | HTTP endpoints | Secure routes and idempotent webhooks |
-| 14 | [External API](#phase-14) | Remote ORM access | Use RPC safely with integration users |
-| 15 | [Integrations & Payment Gateways](#phase-15) | Connect external systems | Explain payment flow and SaaS sync |
-| 16 | [OWL / JavaScript Frontend](#phase-16) | Extend web client | Register assets and patch OWL components |
-| 17 | [PostgreSQL for Odoo](#phase-17) | Tune data layer | Inspect schema and fix N+1 / indexes |
-| 18 | [Testing, Debugging, Upgrades](#phase-18) | Ship quality | Write TransactionCase and migration scripts |
-| 19 | [Portfolio Modules](#phase-19) | Prove skill | Ship README + tests mapped to Projects.md |
-| 20 | [Interviews / Hire](#phase-20) | Get hired | Debug AccessError and design module live |
+| 01 | [Odoo Thinking / What ERP is](#phase-1---odoo-thinking--what-erp-is) | See ERP as shared truth | Contrast spreadsheet chaos vs modular monolith |
+| 02 | [Architecture (3-tier)](#phase-2---architecture-3-tier) | Picture client, server, DB | Trace one button click through tiers |
+| 03 | [Dev Environment Setup](#phase-3---dev-environment-setup) | Run Odoo locally | Use addons-path, `-i`, `-u`, dev mode correctly |
+| 04 | [Module Anatomy](#phase-4---module-anatomy) | Read module folders | Explain manifest data load order |
+| 05 | [Models & Fields](#phase-5---models--fields) | Declare models and fields | Model relations, computes, SQL constraints |
+| 06 | [ORM Queries](#phase-6---orm-queries) | Search and CRUD fluently | Write domains and batch recordset ops |
+| 07 | [Record Rules & Access](#phase-7---record-rules--access) | Secure models and rows | Configure groups, ACL CSV, ir.rule |
+| 08 | [Views XML](#phase-8---views-xml) | Build UI in XML | Author views and xpath inherit |
+| 09 | [Actions & Menus](#phase-9---actions--menus) | Wire navigation | Create act_window, menus, smart contexts |
+| 10 | [Business Logic](#phase-10---business-logic) | Enforce workflows | Implement constrains, computes, action methods |
+| 11 | [Inheritance](#phase-11---inheritance) | Extend without forking | Use `_inherit` and `_inherits` with super() |
+| 12 | [Wizards & Transient Models](#phase-12---wizards--transient-models) | Multi-step dialogs | Build TransientModel wizards with bindings |
+| 13 | [Controllers & HTTP / Webhooks](#phase-13---controllers--http--webhooks) | HTTP endpoints | Secure routes and idempotent webhooks |
+| 14 | [External API](#phase-14---external-api) | Remote ORM access | Use RPC safely with integration users |
+| 15 | [Integrations & Payment Gateways](#phase-15---integrations--payment-gateways) | Connect external systems | Explain payment flow and SaaS sync |
+| 16 | [OWL / JavaScript Frontend](#phase-16---owl--javascript-frontend) | Extend web client | Register assets and patch OWL components |
+| 17 | [PostgreSQL for Odoo](#phase-17---postgresql-for-odoo) | Tune data layer | Inspect schema and fix N+1 / indexes |
+| 18 | [Testing, Debugging, Upgrades](#phase-18---testing-debugging-upgrades) | Ship quality | Write TransactionCase and migration scripts |
+| 19 | [Portfolio Modules](#phase-19---portfolio-modules) | Prove skill | Ship README + tests mapped to Projects.md |
+| 20 | [Interviews / Hire](#phase-20---interviews--hire) | Get hired | Debug AccessError and design module live |
 
 ### Anchor Resources (bookmark these)
 
@@ -329,6 +329,8 @@ class ResPartner(models.Model):
 
 **MASTERY CHECKPOINT - Phase 1:** Explain ERP as shared master data plus workflows, and contrast ORM-module work with ad hoc SQL scripts.
 
+> **Phase 1 complete?** [Build the aligned project](./Projects.md#L2298) · [Continue to Phase 2](#phase-2---architecture-3-tier)
+
 <a id="phase-2"></a>
 
 # PHASE 2 - Architecture (3-tier)
@@ -506,6 +508,8 @@ class LibraryBook(models.Model):
 
 **MASTERY CHECKPOINT - Phase 2:** Draw browser, server/registry, and PostgreSQL, and explain how a model becomes a table.
 
+> **Phase 2 complete?** [Build the aligned project](./Projects.md#L2319) · [Continue to Phase 3](#phase-3---dev-environment-setup)
+
 <a id="phase-3"></a>
 
 # PHASE 3 - Dev Environment Setup
@@ -664,6 +668,8 @@ House renovation: installing a room (install) vs remodeling existing wiring (upg
 ---
 
 **MASTERY CHECKPOINT - Phase 3:** Launch Odoo with custom addons path and correctly choose `-i`, `-u`, and dev mode.
+
+> **Phase 3 complete?** [Build the aligned project](./Projects.md#L2340) · [Continue to Phase 4](#phase-4---module-anatomy)
 
 <a id="phase-4"></a>
 
@@ -846,6 +852,8 @@ Lego set numbers on the box: build 10234 before wing addon 10234-1.
 
 **MASTERY CHECKPOINT - Phase 4:** Scaffold a module manifest with ordered security and views; explain depends and versioning.
 
+> **Phase 4 complete?** [Build the aligned project](./Projects.md#L2361) · [Continue to Phase 5](#phase-5---models--fields)
+
 <a id="phase-5"></a>
 
 # PHASE 5 - Models & Fields
@@ -1015,6 +1023,8 @@ def _compute_loan_count(self):
 
 **MASTERY CHECKPOINT - Phase 5:** Define models with scalar and relational fields, constraints, and computed fields correctly.
 
+> **Phase 5 complete?** [Build the aligned project](./Projects.md#L2382) · [Continue to Phase 6](#phase-6---orm-queries)
+
 <a id="phase-6"></a>
 
 # PHASE 6 - ORM Queries
@@ -1182,6 +1192,8 @@ rows = self.env["library.loan"].search_read(domain, ["book_id", "partner_id", "r
 
 **MASTERY CHECKPOINT - Phase 6:** Write domains, batch CRUD on recordsets, and explain env, sudo, and search_read.
 
+> **Phase 6 complete?** [Build the aligned project](./Projects.md#L2403) · [Continue to Phase 7](#phase-7---record-rules--access)
+
 <a id="phase-7"></a>
 
 # PHASE 7 - Record Rules & Access
@@ -1341,6 +1353,8 @@ Open office vs locked drawer: ACL is building entry; record rule is desk drawer 
 ---
 
 **MASTERY CHECKPOINT - Phase 7:** Configure groups, access CSV, and record rules; test with non-admin users.
+
+> **Phase 7 complete?** [Build the aligned project](./Projects.md#L2424) · [Continue to Phase 8](#phase-8---views-xml)
 
 <a id="phase-8"></a>
 
@@ -1523,6 +1537,8 @@ Adding a power outlet on existing wall (xpath) vs rebuilding the house (copy-pas
 
 **MASTERY CHECKPOINT - Phase 8:** Author form/list/search views and extend standard views with xpath inheritance.
 
+> **Phase 8 complete?** [Build the aligned project](./Projects.md#L2445) · [Continue to Phase 9](#phase-9---actions--menus)
+
 <a id="phase-9"></a>
 
 # PHASE 9 - Actions & Menus
@@ -1686,6 +1702,8 @@ Store directory map: departments (menus) point to service desks (actions), not v
 ---
 
 **MASTERY CHECKPOINT - Phase 9:** Define act_window records, contexts, and menu trees with group-aware visibility.
+
+> **Phase 9 complete?** [Build the aligned project](./Projects.md#L2466) · [Continue to Phase 10](#phase-10---business-logic)
 
 <a id="phase-10"></a>
 
@@ -1868,6 +1886,8 @@ def action_confirm(self):
 
 **MASTERY CHECKPOINT - Phase 10:** Implement constrains, computed fields, onchange, and stateful action methods.
 
+> **Phase 10 complete?** [Build the aligned project](./Projects.md#L2487) · [Continue to Phase 11](#phase-11---inheritance)
+
 <a id="phase-11"></a>
 
 # PHASE 11 - Inheritance
@@ -2032,6 +2052,8 @@ class LibraryMember(models.Model):
 ---
 
 **MASTERY CHECKPOINT - Phase 11:** Extend models with `_inherit` and compose with `_inherits`; override using super().
+
+> **Phase 11 complete?** [Build the aligned project](./Projects.md#L2508) · [Continue to Phase 12](#phase-12---wizards--transient-models)
 
 <a id="phase-12"></a>
 
@@ -2200,6 +2222,8 @@ Pop-up confirmation at checkout vs walking to back office separate desk.
 ---
 
 **MASTERY CHECKPOINT - Phase 12:** Build TransientModel wizards with modal actions and list bindings.
+
+> **Phase 12 complete?** [Build the aligned project](./Projects.md#L2529) · [Continue to Phase 13](#phase-13---controllers--http--webhooks)
 
 <a id="phase-13"></a>
 
@@ -2370,6 +2394,8 @@ def stripe_webhook(self):
 ---
 
 **MASTERY CHECKPOINT - Phase 13:** Implement secured controllers and idempotent webhook handlers.
+
+> **Phase 13 complete?** [Build the aligned project](./Projects.md#L2550) · [Continue to Phase 14](#phase-14---external-api)
 
 <a id="phase-14"></a>
 
@@ -2547,6 +2573,8 @@ def books_v1(self, limit=50, offset=0):
 
 **MASTERY CHECKPOINT - Phase 14:** Use RPC safely and design versioned, paginated integration contracts.
 
+> **Phase 14 complete?** [Build the aligned project](./Projects.md#L2571) · [Continue to Phase 15](#phase-15---integrations--payment-gateways)
+
 <a id="phase-15"></a>
 
 # PHASE 15 - Integrations & Payment Gateways
@@ -2723,6 +2751,8 @@ class LibraryShipment(models.Model):
 
 **MASTERY CHECKPOINT - Phase 15:** Explain payment provider flow and design SaaS integrations with cron and settings.
 
+> **Phase 15 complete?** [Build the aligned project](./Projects.md#L2592) · [Continue to Phase 16](#phase-16---owl--javascript-frontend)
+
 <a id="phase-16"></a>
 
 # PHASE 16 - OWL / JavaScript Frontend
@@ -2893,6 +2923,8 @@ Loading truck compartments: backend CSS in wrong compartment never reaches store
 
 **MASTERY CHECKPOINT - Phase 16:** Register backend assets and patch OWL components without forking web client.
 
+> **Phase 16 complete?** [Build the aligned project](./Projects.md#L2613) · [Continue to Phase 17](#phase-17---postgresql-for-odoo)
+
 <a id="phase-17"></a>
 
 # PHASE 17 - PostgreSQL for Odoo
@@ -3048,6 +3080,8 @@ partners = self.env["res.partner"].search([("email", "=", email)], limit=1)
 ---
 
 **MASTERY CHECKPOINT - Phase 17:** Inspect PostgreSQL schema for models and apply index/prefetch performance habits.
+
+> **Phase 17 complete?** [Build the aligned project](./Projects.md#L2634) · [Continue to Phase 18](#phase-18---testing-debugging-upgrades)
 
 <a id="phase-18"></a>
 
@@ -3217,6 +3251,8 @@ def migrate(cr, version):
 
 **MASTERY CHECKPOINT - Phase 18:** Write TransactionCase tests and plan module migrations with staged upgrades.
 
+> **Phase 18 complete?** [Build the aligned project](./Projects.md#L2655) · [Continue to Phase 19](#phase-19---portfolio-modules)
+
 <a id="phase-19"></a>
 
 # PHASE 19 - Portfolio Modules
@@ -3385,6 +3421,8 @@ steps:
 
 **MASTERY CHECKPOINT - Phase 19:** Ship a versioned module with README, tests, and optional Odoo.sh CI story.
 
+> **Phase 19 complete?** [Build the aligned project](./Projects.md#L2676) · [Continue to Phase 20](#phase-20---interviews--hire)
+
 <a id="phase-20"></a>
 
 # PHASE 20 - Interviews / Hire
@@ -3546,6 +3584,10 @@ Medical license: continuing education credits each year, not one exam forever.
 ---
 
 **MASTERY CHECKPOINT - Phase 20:** Run mock Odoo interviews with live debugging narrative and portfolio proof.
+
+---
+
+> **Phase 20 complete?** [Build the aligned project](./Projects.md#L2697) · [Return to the phase index](#phase-index)
 
 ---
 

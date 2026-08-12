@@ -116,26 +116,26 @@ Every arrow above is a real dependency that gets argued for in the text - not ju
 
 | # | Phase | Goal | You'll be ready to move on when you can... |
 | --- | --- | --- | --- |
-| 01 | [Data Thinking](#phase-1) | Know what problem each role solves | Explain the path from raw event to decision, and where analyst vs engineer sits |
-| 02 | [Spreadsheets & Literacy](#phase-2) | See data as typed, messy tables | Clean a dirty sheet and answer a business question with a PivotTable |
-| 03 | [Python for Data](#phase-3) | Automate what spreadsheets cannot | Read a CSV, loop over rows, write a function that returns a summary |
-| 04 | [SQL Foundations](#phase-4) | Ask questions of tables | Write SELECT / WHERE / ORDER BY / LIMIT from a blank editor |
-| 05 | [Joins & Aggregations](#phase-5) | Combine and summarize tables | Explain INNER vs LEFT JOIN and when GROUP BY collapses rows |
-| 06 | [Advanced SQL](#phase-6) | Answer time-aware analytic questions | Write a window function for running totals and a CTE that is readable |
-| 07 | [Statistics](#phase-7) | Separate signal from noise | Explain mean vs median, sampling bias, and what a p-value is *not* |
-| 08 | [Pandas](#phase-8) | Wrangle data programmatically | Clean, join, group, and reshape a messy dataset without Excel |
-| 09 | [Visualization](#phase-9) | Make charts that change minds | Choose the right chart for the question and avoid common lies |
-| 10 | [EDA & Metrics](#phase-10) | Turn curiosity into decisions | Define a metric, explore a dataset, and write a short insight memo |
-| 11 | [Relational Modeling](#phase-11) | Design correct OLTP schemas | Normalize to 3NF and explain when an index helps a query plan |
-| 12 | [Warehouse & Dimensional](#phase-12) | Model for analytics at scale | Draw a star schema and choose an SCD strategy for a changing attribute |
-| 13 | [ETL/ELT & Formats](#phase-13) | Move and store data efficiently | Contrast ETL vs ELT and justify Parquet over CSV for a warehouse load |
-| 14 | [Orchestration & Containers](#phase-14) | Run pipelines reliably | Write an Airflow DAG with retries and explain why Docker freezes the runtime |
-| 15 | [dbt & Analytics Eng](#phase-15) | Transform in the warehouse like software | Build staged/mart models with tests and docs on a sample project |
-| 16 | [Cloud Platforms](#phase-16) | Deploy the stack where companies run | Map batch/lake/warehouse pieces onto one cloud you can demo |
-| 17 | [Spark](#phase-17) | Process data beyond one machine | Explain partitions, shuffles, and a simple Spark job end to end |
-| 18 | [Kafka Streaming](#phase-18) | Move events in near real time | Explain topics, consumer groups, and at-least-once vs exactly-once trade-offs |
-| 19 | [Portfolio & Quality](#phase-19) | Prove skill and protect trust | Ship a public project with lineage notes and data-quality checks |
-| 20 | [Interviews](#phase-20) | Get hired | Solve SQL + case + design prompts out loud with clear trade-offs |
+| 01 | [Data Thinking](#phase-1---data-thinking-how-decisions-get-made-from-raw-events) | Know what problem each role solves | Explain the path from raw event to decision, and where analyst vs engineer sits |
+| 02 | [Spreadsheets & Literacy](#phase-2---spreadsheets--data-literacy) | See data as typed, messy tables | Clean a dirty sheet and answer a business question with a PivotTable |
+| 03 | [Python for Data](#phase-3---python-for-data) | Automate what spreadsheets cannot | Read a CSV, loop over rows, write a function that returns a summary |
+| 04 | [SQL Foundations](#phase-4---sql-foundations) | Ask questions of tables | Write SELECT / WHERE / ORDER BY / LIMIT from a blank editor |
+| 05 | [Joins & Aggregations](#phase-5---sql-joins--aggregations) | Combine and summarize tables | Explain INNER vs LEFT JOIN and when GROUP BY collapses rows |
+| 06 | [Advanced SQL](#phase-6---advanced-sql) | Answer time-aware analytic questions | Write a window function for running totals and a CTE that is readable |
+| 07 | [Statistics](#phase-7---statistics-for-analysts) | Separate signal from noise | Explain mean vs median, sampling bias, and what a p-value is *not* |
+| 08 | [Pandas](#phase-8---pandas--wrangling) | Wrangle data programmatically | Clean, join, group, and reshape a messy dataset without Excel |
+| 09 | [Visualization](#phase-9---visualization--storytelling) | Make charts that change minds | Choose the right chart for the question and avoid common lies |
+| 10 | [EDA & Metrics](#phase-10---eda-metrics--analytics) | Turn curiosity into decisions | Define a metric, explore a dataset, and write a short insight memo |
+| 11 | [Relational Modeling](#phase-11---relational-modeling-oltp) | Design correct OLTP schemas | Normalize to 3NF and explain when an index helps a query plan |
+| 12 | [Warehouse & Dimensional](#phase-12---warehouses--dimensional-modeling) | Model for analytics at scale | Draw a star schema and choose an SCD strategy for a changing attribute |
+| 13 | [ETL/ELT & Formats](#phase-13---etl--elt-pipelines) | Move and store data efficiently | Contrast ETL vs ELT and justify Parquet over CSV for a warehouse load |
+| 14 | [Orchestration & Containers](#phase-14---orchestration-airflow--containers) | Run pipelines reliably | Write an Airflow DAG with retries and explain why Docker freezes the runtime |
+| 15 | [dbt & Analytics Eng](#phase-15---analytics-engineering-with-dbt) | Transform in the warehouse like software | Build staged/mart models with tests and docs on a sample project |
+| 16 | [Cloud Platforms](#phase-16---cloud-data-platforms) | Deploy the stack where companies run | Map batch/lake/warehouse pieces onto one cloud you can demo |
+| 17 | [Spark](#phase-17---big-data-with-spark) | Process data beyond one machine | Explain partitions, shuffles, and a simple Spark job end to end |
+| 18 | [Kafka Streaming](#phase-18---streaming-with-apache-kafka) | Move events in near real time | Explain topics, consumer groups, and at-least-once vs exactly-once trade-offs |
+| 19 | [Portfolio & Quality](#phase-19---projects-data-quality--portfolio) | Prove skill and protect trust | Ship a public project with lineage notes and data-quality checks |
+| 20 | [Interviews](#phase-20---interview-mastery) | Get hired | Solve SQL + case + design prompts out loud with clear trade-offs |
 
 ### Anchor Resources (bookmark these)
 
@@ -437,6 +437,8 @@ print(dataset_product["grain"])
 
 **THE BRIDGE to Spreadsheets & Data Literacy:** Product thinking and shape awareness still leave most humans' first contact with data as a grid of cells. That grid teaches types, filters, and aggregation - and also teaches every bad habit (merged cells, colors-as-data, `final_final_v3.xlsx`) that later tools exist to fix. Spreadsheets are the next stop.
 
+> **Phase 1 complete?** [Build the aligned project](./Projects.md#L1023) · [Continue to Phase 2](#phase-2---spreadsheets--data-literacy)
+
 <a id="phase-2"></a>
 
 # PHASE 2 - Spreadsheets & Data Literacy
@@ -663,6 +665,8 @@ print([(o["order_id"], lookup_segment(o, customers)) for o in order_keys])
 | Hard | Document the exact moment your current workbook should migrate to code/SQL |
 
 **THE BRIDGE to Python for Data:** Spreadsheets stop scaling when cleaning needs ten steps repeated daily, when files exceed memory comfort, or when you need tests and version control. That is the moment a programming language becomes the spreadsheet that can run itself.
+
+> **Phase 2 complete?** [Build the aligned project](./Projects.md#L1044) · [Continue to Phase 3](#phase-3---python-for-data)
 
 <a id="phase-3"></a>
 
@@ -922,6 +926,8 @@ if __name__ == "__main__":
 | Hard | Add pagination handling and basic retry/backoff to an API puller |
 
 **THE BRIDGE to SQL Foundations:** Python can filter lists of dicts, but organizations store critical data in relational databases designed for declarative querying, concurrency, and huge tables. The language of those tables is SQL - and it is not optional for serious data work.
+
+> **Phase 3 complete?** [Build the aligned project](./Projects.md#L1065) · [Continue to Phase 4](#phase-4---sql-foundations)
 
 <a id="phase-4"></a>
 
@@ -1185,6 +1191,8 @@ print(enrich({"id": 1, "amount": "100", "country": " us ", "created_at": "2026-0
 | Hard | Write a query that safely casts mixed-type unclean columns and reports failures |
 
 **THE BRIDGE to SQL Joins & Aggregations:** Single-table queries break as soon as the answer needs columns from more than one table, or needs "total by region" collapse. Joins and `GROUP BY` are the tools that unlock multi-table and summary questions.
+
+> **Phase 4 complete?** [Build the aligned project](./Projects.md#L1086) · [Continue to Phase 5](#phase-5---sql-joins--aggregations)
 
 <a id="phase-5"></a>
 
@@ -1452,6 +1460,8 @@ for region, g in grouped.items():
 | Hard | Multi-level rollup query with correct distinct metrics |
 
 **THE BRIDGE to Advanced SQL (Subqueries and CTEs):** Complex grain fixes and multi-step logic become unreadable as nested subqueries. Named temporary result sets - CTEs - and nested questions need a cleaner structure. That is Phase 6.
+
+> **Phase 5 complete?** [Build the aligned project](./Projects.md#L1107) · [Continue to Phase 6](#phase-6---advanced-sql)
 
 <a id="phase-6"></a>
 
@@ -1742,6 +1752,8 @@ for r in rows:
 
 **THE BRIDGE to Statistics for Analysts:** SQL can compute averages, ranks, and changes precisely - and still mislead you. A higher average may be noise; a conversion lift may be sampling luck. Statistics is the literacy that keeps pretty queries from becoming false confidence.
 
+> **Phase 6 complete?** [Build the aligned project](./Projects.md#L1128) · [Continue to Phase 7](#phase-7---statistics-for-analysts)
+
 <a id="phase-7"></a>
 
 # PHASE 7 - Statistics for Analysts
@@ -1985,6 +1997,8 @@ print({"c_rate": conversion_rate(s1, n), "t_rate": conversion_rate(s2, n), "z": 
 
 **THE BRIDGE to Pandas & Wrangling:** Statistics tells you what to look for. You still need a fast, programmable way to clean, join, group, and reshape tables outside the database - especially for files, notebooks, and iterative exploration. Pandas is that tool.
 
+> **Phase 7 complete?** [Build the aligned project](./Projects.md#L1149) · [Continue to Phase 8](#phase-8---pandas--wrangling)
+
 <a id="phase-8"></a>
 
 # PHASE 8 - Pandas & Wrangling
@@ -2220,6 +2234,8 @@ print(back)
 
 **THE BRIDGE to Visualization & Storytelling:** Clean aggregated tables still do not change minds by themselves. Humans need honest charts and a narrative. Visualization is how analysis becomes communication - and how lies can sneak in through axis tricks.
 
+> **Phase 8 complete?** [Build the aligned project](./Projects.md#L1170) · [Continue to Phase 9](#phase-9---visualization--storytelling)
+
 <a id="phase-9"></a>
 
 # PHASE 9 - Visualization & Storytelling
@@ -2431,6 +2447,8 @@ fig.update_layout(yaxis_title="Revenue", xaxis_title="Region")
 | Hard | Document a semantic definition + owner + source query for each KPI tile |
 
 **THE BRIDGE to EDA, Metrics & Analytics:** Charts and dashboards assume you already know what to look for. Exploratory Data Analysis is the disciplined curiosity that discovers structure, and metric design is how you decide what "better" means before you draw it.
+
+> **Phase 9 complete?** [Build the aligned project](./Projects.md#L1191) · [Continue to Phase 10](#phase-10---eda-metrics--analytics)
 
 <a id="phase-10"></a>
 
@@ -2716,6 +2734,8 @@ print(
 
 ---
 
+> **Phase 10 complete?** [Build the aligned project](./Projects.md#L1212) · [Continue to Phase 11](#phase-11---relational-modeling-oltp)
+
 <a id="phase-11"></a>
 
 # PHASE 11 - Relational Modeling (OLTP)
@@ -2985,6 +3005,8 @@ print({"selectivity": matching / n_rows, "index_likely_helps": matching / n_rows
 | Hard | Find a write-heavy table where an extra index hurts more than it helps |
 
 **THE BRIDGE to Warehouses & Dimensional Modeling:** OLTP 3NF plus indexes is optimized for correct, fast transactions - not for scanning years of history across dozens of joins for every dashboard. Analytics needs a different shape: warehouses and dimensional models built for OLAP-style questions.
+
+> **Phase 11 complete?** [Build the aligned project](./Projects.md#L1233) · [Continue to Phase 12](#phase-12---warehouses--dimensional-modeling)
 
 <a id="phase-12"></a>
 
@@ -3349,6 +3371,8 @@ JOIN dim_customer d
 
 **THE BRIDGE to ETL / ELT Pipelines:** Dimensional models do not fill themselves. You need reliable extract/transform/load (or load-then-transform) pipelines that can rerun safely and scale - Phase 13.
 
+> **Phase 12 complete?** [Build the aligned project](./Projects.md#L1254) · [Continue to Phase 13](#phase-13---etl--elt-pipelines)
+
 <a id="phase-13"></a>
 
 # PHASE 13 - ETL / ELT Pipelines
@@ -3591,6 +3615,8 @@ SELECT * FROM staging_orders WHERE order_date = DATE '2026-08-01';
 | Hard | Specify MERGE keys and partition layout for a slowly changing fact |
 
 **THE BRIDGE to Orchestration (Airflow) & Containers:** A correct pipeline function still needs scheduling, dependency graphs, retries, and reproducible runtimes. Orchestrators and containers turn scripts into operable systems.
+
+> **Phase 13 complete?** [Build the aligned project](./Projects.md#L1275) · [Continue to Phase 14](#phase-14---orchestration-airflow--containers)
 
 <a id="phase-14"></a>
 
@@ -3839,6 +3865,8 @@ services:
 | Hard | Slim an image and document base digest pinning for CI |
 
 **THE BRIDGE to Analytics Engineering with dbt:** Orchestration runs steps; containers make them reproducible. The dominant pattern for in-warehouse SQL transforms - models, tests, docs, ref graphs - is dbt, which turns ELT SQL into software engineering.
+
+> **Phase 14 complete?** [Build the aligned project](./Projects.md#L1296) · [Continue to Phase 15](#phase-15---analytics-engineering-with-dbt)
 
 <a id="phase-15"></a>
 
@@ -4100,6 +4128,8 @@ jobs:
 
 **THE BRIDGE to Cloud Data Platforms:** dbt needs somewhere to run SQL at scale. Cloud warehouses and lakehouses - BigQuery, Snowflake, Databricks-style platforms - plus cost/access/environment discipline - are the next layer.
 
+> **Phase 15 complete?** [Build the aligned project](./Projects.md#L1317) · [Continue to Phase 16](#phase-16---cloud-data-platforms)
+
 <a id="phase-16"></a>
 
 # PHASE 16 - Cloud Data Platforms
@@ -4320,6 +4350,8 @@ except ValueError as e:
 
 **THE BRIDGE to Big Data with Spark:** Warehouses handle a huge share of analytics SQL. When transforms need general distributed compute, custom multi-language pipelines, or massive joins beyond comfortable warehouse patterns, Spark-style engines enter - Phase 17.
 
+> **Phase 16 complete?** [Build the aligned project](./Projects.md#L1338) · [Continue to Phase 17](#phase-17---big-data-with-spark)
+
 <a id="phase-17"></a>
 
 # PHASE 17 - Big Data with Spark
@@ -4529,6 +4561,8 @@ except ImportError:
 
 ---
 
+> **Phase 17 complete?** [Build the aligned project](./Projects.md#L1359) · [Continue to Phase 18](#phase-18---streaming-with-apache-kafka)
+
 <a id="phase-18"></a>
 
 # PHASE 18 - Streaming with Apache Kafka
@@ -4707,6 +4741,8 @@ def apply_business_logic(payload: dict) -> None:
 **THE BRIDGE to Projects & Quality:** Tools are not a career. You prove the chain with shipped projects and explicit quality gates - tests, freshness, reconciliation - that make stakeholders trust the numbers.
 
 ---
+
+> **Phase 18 complete?** [Build the aligned project](./Projects.md#L1380) · [Continue to Phase 19](#phase-19---projects-data-quality--portfolio)
 
 <a id="phase-19"></a>
 
@@ -4890,6 +4926,8 @@ assert reconcile(1000.0, 998.0, tol=0.01)
 **THE BRIDGE to Interview Mastery:** Projects and quality create stories. Interviews test whether you can reproduce the thinking live - SQL, cases, pipeline design, and behavior - under time pressure.
 
 ---
+
+> **Phase 19 complete?** [Build the aligned project](./Projects.md#L1401) · [Continue to Phase 20](#phase-20---interview-mastery)
 
 <a id="phase-20"></a>
 
@@ -5174,6 +5212,10 @@ for s in stories:
 | Hard | Full loop: SQL + case or DE design + behavioral |
 
 **THE BRIDGE BEYOND This Document:** The roadmap ends; the job does not. Production invents the next limitation - a broken SLA, a new source, a privacy rule - and that limitation becomes your next concept. Keep the habit: what broke, why, what we invent next.
+
+---
+
+> **Phase 20 complete?** [Build the aligned project](./Projects.md#L1422) · [Return to the phase index](#phase-index)
 
 ---
 

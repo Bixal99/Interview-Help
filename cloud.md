@@ -68,26 +68,26 @@ FOUNDATIONS -> CLOUD CORE -> DATA SERVICES -> TRAFFIC & EVENTS
 
 | # | Phase | Goal | Ready to move on when you can... |
 | ---: | --- | --- | --- |
-| 01 | [The Cloud Engineer's Ground Floor](#phase-1) | Build the operating-system, networking, and automation base that every cloud console hides. | Trace a request from a shell process through DNS and a network interface, and automate the trace with a small script. |
-| 02 | [Virtualization and Cloud Service Models](#phase-2) | Understand what a provider pools, what you still operate, and how IaaS, PaaS, SaaS, containers, and serverless move the boundary. | Place compute, network, OS, runtime, data, and application responsibilities correctly for five service models. |
-| 03 | [Providers, Regions, Zones, and Shared Responsibility](#phase-3) | Read global infrastructure as a failure map and map AWS, Azure, and GCP vocabulary without confusing names for capabilities. | Choose a region and zone topology from latency, residency, service availability, failure, and cost requirements. |
-| 04 | [Identity and Access Management](#phase-4) | Make every human and workload prove identity and receive only the permissions required for the current task. | Explain authentication, authorization, federation, roles, policies, resource policies, and short-lived credentials with a denied-request trace. |
-| 05 | [Cloud Networking: VPCs, Subnets, Routes, and Private Access](#phase-5) | Build an address and routing plan in which every allowed path is intentional and every forbidden path is testable. | Draw a multi-zone VPC/VNet with public and private subnets, egress, endpoints, load balancing, and security controls, then trace one packet. |
-| 06 | [Compute, Images, Load Balancing, and Autoscaling](#phase-6) | Run stateless workloads as replaceable groups that scale from measured demand and survive instance or zone failure. | Build an image, place instances behind health-checked load balancing, and explain scaling signals, warm-up, draining, and failure behavior. |
-| 07 | [Object, Block, and File Storage](#phase-7) | Choose storage from access pattern, durability, consistency, throughput, sharing, lifecycle, and recovery rather than from familiar filesystem habits. | Explain where an uploaded object, VM disk, and shared application file belong and prove retention and restore behavior. |
-| 08 | [Managed Databases, NoSQL, Replication, and Caching](#phase-8) | Select a data service from consistency, query, transaction, scale, and recovery requirements, then operate its failure modes. | Defend a relational or NoSQL choice, inspect one query, design backups, and explain cache invalidation and failover. |
-| 09 | [DNS, Load Balancing, CDN, and Edge Delivery](#phase-9) | Route users to healthy origins and cache safe content near demand while preserving correctness and observability. | Trace authoritative DNS to edge cache to origin and explain TTL, cache key, TLS, health, and failover behavior. |
-| 10 | [Serverless and Event-Driven Architecture](#phase-10) | Decouple producers from work using events, queues, topics, functions, retries, and dead-letter handling. | Design an idempotent event consumer and explain delivery semantics, ordering, backpressure, retries, and poison messages. |
-| 11 | [Containers and Managed Kubernetes](#phase-11) | Choose between managed containers and Kubernetes from scheduling, portability, team maturity, and operational needs. | Deploy a container with health, identity, configuration, limits, and a safe rollout, then explain what the managed control plane does not own. |
-| 12 | [Infrastructure as Code with Terraform and Native Tools](#phase-12) | Represent infrastructure as versioned desired state with plans, modules, remote state, policy, and controlled delivery. | Create a module, review a plan, explain state locking and drift, and recover safely from an interrupted change. |
-| 13 | [Landing Zones, Accounts, Governance, and Policy](#phase-13) | Create a scalable organization boundary with identity, logging, network, policy, billing, and workload vending built in. | Draw an account/subscription/project hierarchy and show where audit, security, networking, budgets, and exceptions are owned. |
-| 14 | [Secrets, Encryption, and Key Management](#phase-14) | Keep credentials out of code, encrypt data with controlled keys, and rotate access without redeploying permanent secrets. | Trace envelope encryption and a workload-identity secret retrieval, including audit, rotation, revocation, and recovery. |
-| 15 | [Cloud Observability and Operations](#phase-15) | Turn metrics, logs, traces, events, and configuration changes into fast detection and evidence-based diagnosis. | Instrument one request end to end, define a useful alert, and move from symptom to responsible dependency with a trace and correlated logs. |
-| 16 | [Cloud Security, Governance, and Compliance](#phase-16) | Continuously reduce attack paths with posture controls, segmentation, detection, evidence, and risk-based remediation. | Threat-model a cloud workload and connect each risk to a preventive, detective, and recovery control with an owner. |
-| 17 | [Reliability, High Availability, and Disaster Recovery](#phase-17) | Design failure containment and tested recovery from component, zone, region, dependency, and operator failures. | Derive topology and recovery procedures from availability, RTO, RPO, integrity, dependency, and cost requirements. |
-| 18 | [FinOps and Cloud Cost Engineering](#phase-18) | Make unit cost, ownership, budgets, anomalies, and optimization part of architecture and daily operation. | Allocate spend, calculate one unit metric, find waste, and defend an optimization without transferring unacceptable reliability or labor cost. |
-| 19 | [Hybrid Cloud, Multi-Cloud, and Migration](#phase-19) | Move or connect workloads from business constraints while avoiding accidental lowest-common-denominator architecture. | Assess one workload, select a migration strategy, map dependencies and data movement, and define cutover and rollback evidence. |
-| 20 | [Cloud Projects, Architecture Interviews, and Career Proof](#phase-20) | Turn the full chain into operated projects, architecture decisions, incident stories, and concise interview reasoning. | Present a deployed architecture with IaC, security, observability, cost, recovery evidence, and a five-minute design narrative. |
+| 01 | [The Cloud Engineer's Ground Floor](#phase-1---the-cloud-engineers-ground-floor) | Build the operating-system, networking, and automation base that every cloud console hides. | Trace a request from a shell process through DNS and a network interface, and automate the trace with a small script. |
+| 02 | [Virtualization and Cloud Service Models](#phase-2---virtualization-and-cloud-service-models) | Understand what a provider pools, what you still operate, and how IaaS, PaaS, SaaS, containers, and serverless move the boundary. | Place compute, network, OS, runtime, data, and application responsibilities correctly for five service models. |
+| 03 | [Providers, Regions, Zones, and Shared Responsibility](#phase-3---providers-regions-zones-and-shared-responsibility) | Read global infrastructure as a failure map and map AWS, Azure, and GCP vocabulary without confusing names for capabilities. | Choose a region and zone topology from latency, residency, service availability, failure, and cost requirements. |
+| 04 | [Identity and Access Management](#phase-4---identity-and-access-management) | Make every human and workload prove identity and receive only the permissions required for the current task. | Explain authentication, authorization, federation, roles, policies, resource policies, and short-lived credentials with a denied-request trace. |
+| 05 | [Cloud Networking: VPCs, Subnets, Routes, and Private Access](#phase-5---cloud-networking-vpcs-subnets-routes-and-private-access) | Build an address and routing plan in which every allowed path is intentional and every forbidden path is testable. | Draw a multi-zone VPC/VNet with public and private subnets, egress, endpoints, load balancing, and security controls, then trace one packet. |
+| 06 | [Compute, Images, Load Balancing, and Autoscaling](#phase-6---compute-images-load-balancing-and-autoscaling) | Run stateless workloads as replaceable groups that scale from measured demand and survive instance or zone failure. | Build an image, place instances behind health-checked load balancing, and explain scaling signals, warm-up, draining, and failure behavior. |
+| 07 | [Object, Block, and File Storage](#phase-7---object-block-and-file-storage) | Choose storage from access pattern, durability, consistency, throughput, sharing, lifecycle, and recovery rather than from familiar filesystem habits. | Explain where an uploaded object, VM disk, and shared application file belong and prove retention and restore behavior. |
+| 08 | [Managed Databases, NoSQL, Replication, and Caching](#phase-8---managed-databases-nosql-replication-and-caching) | Select a data service from consistency, query, transaction, scale, and recovery requirements, then operate its failure modes. | Defend a relational or NoSQL choice, inspect one query, design backups, and explain cache invalidation and failover. |
+| 09 | [DNS, Load Balancing, CDN, and Edge Delivery](#phase-9---dns-load-balancing-cdn-and-edge-delivery) | Route users to healthy origins and cache safe content near demand while preserving correctness and observability. | Trace authoritative DNS to edge cache to origin and explain TTL, cache key, TLS, health, and failover behavior. |
+| 10 | [Serverless and Event-Driven Architecture](#phase-10---serverless-and-event-driven-architecture) | Decouple producers from work using events, queues, topics, functions, retries, and dead-letter handling. | Design an idempotent event consumer and explain delivery semantics, ordering, backpressure, retries, and poison messages. |
+| 11 | [Containers and Managed Kubernetes](#phase-11---containers-and-managed-kubernetes) | Choose between managed containers and Kubernetes from scheduling, portability, team maturity, and operational needs. | Deploy a container with health, identity, configuration, limits, and a safe rollout, then explain what the managed control plane does not own. |
+| 12 | [Infrastructure as Code with Terraform and Native Tools](#phase-12---infrastructure-as-code-with-terraform-and-native-tools) | Represent infrastructure as versioned desired state with plans, modules, remote state, policy, and controlled delivery. | Create a module, review a plan, explain state locking and drift, and recover safely from an interrupted change. |
+| 13 | [Landing Zones, Accounts, Governance, and Policy](#phase-13---landing-zones-accounts-governance-and-policy) | Create a scalable organization boundary with identity, logging, network, policy, billing, and workload vending built in. | Draw an account/subscription/project hierarchy and show where audit, security, networking, budgets, and exceptions are owned. |
+| 14 | [Secrets, Encryption, and Key Management](#phase-14---secrets-encryption-and-key-management) | Keep credentials out of code, encrypt data with controlled keys, and rotate access without redeploying permanent secrets. | Trace envelope encryption and a workload-identity secret retrieval, including audit, rotation, revocation, and recovery. |
+| 15 | [Cloud Observability and Operations](#phase-15---cloud-observability-and-operations) | Turn metrics, logs, traces, events, and configuration changes into fast detection and evidence-based diagnosis. | Instrument one request end to end, define a useful alert, and move from symptom to responsible dependency with a trace and correlated logs. |
+| 16 | [Cloud Security, Governance, and Compliance](#phase-16---cloud-security-governance-and-compliance) | Continuously reduce attack paths with posture controls, segmentation, detection, evidence, and risk-based remediation. | Threat-model a cloud workload and connect each risk to a preventive, detective, and recovery control with an owner. |
+| 17 | [Reliability, High Availability, and Disaster Recovery](#phase-17---reliability-high-availability-and-disaster-recovery) | Design failure containment and tested recovery from component, zone, region, dependency, and operator failures. | Derive topology and recovery procedures from availability, RTO, RPO, integrity, dependency, and cost requirements. |
+| 18 | [FinOps and Cloud Cost Engineering](#phase-18---finops-and-cloud-cost-engineering) | Make unit cost, ownership, budgets, anomalies, and optimization part of architecture and daily operation. | Allocate spend, calculate one unit metric, find waste, and defend an optimization without transferring unacceptable reliability or labor cost. |
+| 19 | [Hybrid Cloud, Multi-Cloud, and Migration](#phase-19---hybrid-cloud-multi-cloud-and-migration) | Move or connect workloads from business constraints while avoiding accidental lowest-common-denominator architecture. | Assess one workload, select a migration strategy, map dependencies and data movement, and define cutover and rollback evidence. |
+| 20 | [Cloud Projects, Architecture Interviews, and Career Proof](#phase-20---cloud-projects-architecture-interviews-and-career-proof) | Turn the full chain into operated projects, architecture decisions, incident stories, and concise interview reasoning. | Present a deployed architecture with IaC, security, observability, cost, recovery evidence, and a five-minute design narrative. |
 
 ---
 
@@ -182,6 +182,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 1 complete?** [Build the aligned project](./Projects.md#L3148) · [Continue to Phase 2](#phase-2---virtualization-and-cloud-service-models)
+
 <a id="phase-2"></a>
 
 # PHASE 2 - Virtualization and Cloud Service Models
@@ -270,6 +272,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 **THE BRIDGE:** Renting compute solves acquisition, but workloads still fail together if location and ownership boundaries are vague. Regions, availability zones, and shared responsibility define those boundaries.
 
 ---
+
+> **Phase 2 complete?** [Build the aligned project](./Projects.md#L3169) · [Continue to Phase 3](#phase-3---providers-regions-zones-and-shared-responsibility)
 
 <a id="phase-3"></a>
 
@@ -363,6 +367,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 3 complete?** [Build the aligned project](./Projects.md#L3190) · [Continue to Phase 4](#phase-4---identity-and-access-management)
+
 <a id="phase-4"></a>
 
 # PHASE 4 - Identity and Access Management
@@ -453,6 +459,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 **THE BRIDGE:** Identity controls who may ask. Cloud networking now controls which paths exist between the caller, workloads, managed services, and the internet.
 
 ---
+
+> **Phase 4 complete?** [Build the aligned project](./Projects.md#L3211) · [Continue to Phase 5](#phase-5---cloud-networking-vpcs-subnets-routes-and-private-access)
 
 <a id="phase-5"></a>
 
@@ -549,6 +557,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 5 complete?** [Build the aligned project](./Projects.md#L3232) · [Continue to Phase 6](#phase-6---compute-images-load-balancing-and-autoscaling)
+
 <a id="phase-6"></a>
 
 # PHASE 6 - Compute, Images, Load Balancing, and Autoscaling
@@ -640,6 +650,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 6 complete?** [Build the aligned project](./Projects.md#L3253) · [Continue to Phase 7](#phase-7---object-block-and-file-storage)
+
 <a id="phase-7"></a>
 
 # PHASE 7 - Object, Block, and File Storage
@@ -726,6 +738,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 **THE BRIDGE:** Durable bytes are useful, but applications need indexed queries, transactions, and low-latency shared state. Managed databases and caches provide those higher-level semantics.
 
 ---
+
+> **Phase 7 complete?** [Build the aligned project](./Projects.md#L3274) · [Continue to Phase 8](#phase-8---managed-databases-nosql-replication-and-caching)
 
 <a id="phase-8"></a>
 
@@ -814,6 +828,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 **THE BRIDGE:** Data is now queryable, but global users still need a fast route to the correct endpoint and cached content near them. DNS, load balancing, and edge delivery solve the traffic path.
 
 ---
+
+> **Phase 8 complete?** [Build the aligned project](./Projects.md#L3295) · [Continue to Phase 9](#phase-9---dns-load-balancing-cdn-and-edge-delivery)
 
 <a id="phase-9"></a>
 
@@ -904,6 +920,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 **THE BRIDGE:** Request-response traffic works, but some work is bursty, asynchronous, or naturally event-driven. Queues, topics, and functions decouple that work.
 
 ---
+
+> **Phase 9 complete?** [Build the aligned project](./Projects.md#L3316) · [Continue to Phase 10](#phase-10---serverless-and-event-driven-architecture)
 
 <a id="phase-10"></a>
 
@@ -996,6 +1014,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 10 complete?** [Build the aligned project](./Projects.md#L3337) · [Continue to Phase 11](#phase-11---containers-and-managed-kubernetes)
+
 <a id="phase-11"></a>
 
 # PHASE 11 - Containers and Managed Kubernetes
@@ -1083,6 +1103,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 **THE BRIDGE:** Declarative workloads still depend on manually created networks, clusters, roles, and databases. Infrastructure as code makes the environment reproducible and reviewable.
 
 ---
+
+> **Phase 11 complete?** [Build the aligned project](./Projects.md#L3358) · [Continue to Phase 12](#phase-12---infrastructure-as-code-with-terraform-and-native-tools)
 
 <a id="phase-12"></a>
 
@@ -1175,6 +1197,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 **THE BRIDGE:** IaC can create resources, but large estates need account structure, policy inheritance, network baselines, and controlled exceptions. That is the landing-zone problem.
 
 ---
+
+> **Phase 12 complete?** [Build the aligned project](./Projects.md#L3379) · [Continue to Phase 13](#phase-13---landing-zones-accounts-governance-and-policy)
 
 <a id="phase-13"></a>
 
@@ -1270,6 +1294,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 13 complete?** [Build the aligned project](./Projects.md#L3400) · [Continue to Phase 14](#phase-14---secrets-encryption-and-key-management)
+
 <a id="phase-14"></a>
 
 # PHASE 14 - Secrets, Encryption, and Key Management
@@ -1356,6 +1382,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 14 complete?** [Build the aligned project](./Projects.md#L3421) · [Continue to Phase 15](#phase-15---cloud-observability-and-operations)
+
 <a id="phase-15"></a>
 
 # PHASE 15 - Cloud Observability and Operations
@@ -1441,6 +1469,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 **THE BRIDGE:** Signals reveal failures, but architecture must limit their impact and restore service within explicit targets. Reliability and disaster recovery formalize that work.
 
 ---
+
+> **Phase 15 complete?** [Build the aligned project](./Projects.md#L3442) · [Continue to Phase 16](#phase-16---cloud-security-governance-and-compliance)
 
 <a id="phase-16"></a>
 
@@ -1530,6 +1560,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 **THE BRIDGE:** A secure design can still fail during zone, region, dependency, or operator loss. Reliability architecture makes recovery targets executable.
 
 ---
+
+> **Phase 16 complete?** [Build the aligned project](./Projects.md#L3463) · [Continue to Phase 17](#phase-17---reliability-high-availability-and-disaster-recovery)
 
 <a id="phase-17"></a>
 
@@ -1621,6 +1653,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 17 complete?** [Build the aligned project](./Projects.md#L3484) · [Continue to Phase 18](#phase-18---finops-and-cloud-cost-engineering)
+
 <a id="phase-18"></a>
 
 # PHASE 18 - FinOps and Cloud Cost Engineering
@@ -1708,6 +1742,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 **THE BRIDGE:** A well-operated single provider may still face migration, acquisition, regulation, latency, or on-premises constraints. Hybrid and multi-cloud decisions must be made from those pressures.
 
 ---
+
+> **Phase 18 complete?** [Build the aligned project](./Projects.md#L3505) · [Continue to Phase 19](#phase-19---hybrid-cloud-multi-cloud-and-migration)
 
 <a id="phase-19"></a>
 
@@ -1798,6 +1834,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 19 complete?** [Build the aligned project](./Projects.md#L3526) · [Continue to Phase 20](#phase-20---cloud-projects-architecture-interviews-and-career-proof)
+
 <a id="phase-20"></a>
 
 # PHASE 20 - Cloud Projects, Architecture Interviews, and Career Proof
@@ -1886,6 +1924,10 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 20 complete?** [Build the aligned project](./Projects.md#L3547) · [Return to the phase index](#phase-index)
+
+---
+
 # A Closing Note on How This Roadmap Was Built
 
 The sequence follows dependency and pressure, not product marketing. Provider names appear only after the provider-neutral mechanism is clear. Every lab is intentionally small enough to repeat and substantial enough to produce evidence for a portfolio or interview story.
@@ -1907,4 +1949,3 @@ Videos provide visual entry, primary documentation owns current behavior, GitHub
 ## Author
 
 **Mohammad Bilal** - zero-to-hero engineering roadmap for the Interview Help repo. Learn the mechanism, automate the evidence, narrate the trade-off.
-

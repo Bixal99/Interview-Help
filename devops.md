@@ -68,26 +68,26 @@ FLOW/CULTURE -> LINUX/TROUBLESHOOTING -> GIT/AUTOMATION
 
 | # | Phase | Goal | Ready to move on when you can... |
 | ---: | --- | --- | --- |
-| 01 | [DevOps as a Delivery System](#phase-1) | Understand DevOps as a sociotechnical feedback system rather than a job title or tool list. | Map one change from idea to verified customer outcome and identify queues, handoffs, feedback, ownership, and the next bottleneck. |
-| 02 | [Linux, the Shell, Files, Permissions, and Services](#phase-2) | Operate Linux confidently through processes, files, permissions, services, packages, and logs. | Create a service, grant minimum access, inspect its process and journal, and explain every permission involved. |
-| 03 | [Systems and Network Troubleshooting](#phase-3) | Diagnose from user symptom through DNS, route, transport, process, resource, and dependency using falsifiable checks. | Resolve a broken service without changing multiple variables and preserve a timeline of evidence and hypotheses. |
-| 04 | [Git, Collaboration, and Change History](#phase-4) | Use Git as a reviewable graph of small changes and choose branching practices that support continuous integration. | Recover from a bad commit, explain merge versus rebase, resolve a conflict, and preserve a readable rationale. |
-| 05 | [Shell and Python Automation](#phase-5) | Replace fragile runbooks with validated, idempotent, testable automation that fails visibly and cleans up safely. | Write a script with inputs, logs, exit codes, dry-run behavior, error handling, and a repeatable second execution. |
-| 06 | [Builds, Dependencies, Artifacts, and Registries](#phase-6) | Produce immutable, traceable artifacts once and promote the same bytes through every environment. | Build an artifact with version and provenance, publish it, verify its digest, and explain dependency and retention policy. |
-| 07 | [Continuous Integration](#phase-7) | Integrate every small change through fast, deterministic, security-aware feedback and produce one trusted artifact. | Design a pipeline ordered by feedback value and explain cache, flake, secret, and branch-protection behavior. |
-| 08 | [Continuous Delivery and Deployment Strategies](#phase-8) | Promote immutable artifacts with progressive exposure, automated verification, database compatibility, and a rehearsed rollback. | Compare rolling, blue-green, and canary delivery and execute a rollback from service evidence. |
-| 09 | [Docker and Container Engineering](#phase-9) | Build small, non-root, reproducible images and operate container networking, storage, resources, and lifecycle correctly. | Explain image layers and isolation, debug a container, reduce its image, and preserve data outside its writable layer. |
-| 10 | [Kubernetes Operations](#phase-10) | Operate declarative workloads through controllers, scheduling, networking, storage, health, policy, and upgrades. | Debug a workload from pod through Service and Ingress, then perform a safe rollout and recovery. |
-| 11 | [Terraform and Infrastructure Lifecycle](#phase-11) | Plan and reconcile versioned infrastructure through protected state, modules, policy, drift handling, and CI. | Review a plan, explain every replacement, and recover from state lock or drift without blind edits. |
-| 12 | [Ansible and Configuration Management](#phase-12) | Converge host configuration through inventories, variables, roles, handlers, templates, idempotent modules, and protected secrets. | Run a playbook twice with no second change and limit a safe rollout to a controlled host batch. |
-| 13 | [Cloud Infrastructure for DevOps](#phase-13) | Automate cloud identity, VPC paths, compute, storage, DNS, and managed services without confusing provider names for architecture. | Trace a deployment identity through IaC to a private workload and explain region, network, state, and cost boundaries. |
-| 14 | [Observability: Metrics, Logs, Traces, and Alerts](#phase-14) | Instrument delivery and runtime so one user symptom correlates with version, dependency, resource, and change. | Follow a trace, write a structured log, query a metric, and define an actionable alert with owner and runbook. |
-| 15 | [SRE, SLIs, SLOs, Error Budgets, and Toil](#phase-15) | Define reliability from user outcomes and balance feature velocity against measured risk. | Write an SLI and SLO from events, calculate budget consumption, and propose action from burn rather than intuition. |
-| 16 | [DevSecOps and Software Supply-Chain Security](#phase-16) | Protect source, dependencies, CI identities, artifacts, deployments, and runtime with verifiable provenance and least privilege. | Produce an SBOM, scan and sign an image, verify policy before deployment, and explain each control's limit. |
-| 17 | [GitOps and Platform Engineering](#phase-17) | Provide a self-service paved road where Git declares runtime state and platform capabilities reduce cognitive load. | Trace a pull request through reconciliation, drift repair, policy, and developer self-service. |
-| 18 | [Incident Response, Postmortems, and Chaos Engineering](#phase-18) | Mitigate impact, preserve evidence, coordinate clearly, learn without blame, and test resilience hypotheses. | Run a tabletop incident with roles and timeline, write a causal postmortem, and design one bounded chaos experiment. |
-| 19 | [DevOps Projects and Portfolio Evidence](#phase-19) | Build complete delivery and operations systems whose claims are backed by code, telemetry, failure tests, and runbooks. | Show a commit reaching a monitored environment through a secured pipeline, then induce failure, recover, and explain evidence. |
-| 20 | [DevOps Interviews and Career Mastery](#phase-20) | Communicate systems reasoning through troubleshooting, delivery design, reliability, security, and behavioral evidence. | Run a 45-minute design and troubleshooting mock using only project evidence and a hypothesis-driven process. |
+| 01 | [DevOps as a Delivery System](#phase-1---devops-as-a-delivery-system) | Understand DevOps as a sociotechnical feedback system rather than a job title or tool list. | Map one change from idea to verified customer outcome and identify queues, handoffs, feedback, ownership, and the next bottleneck. |
+| 02 | [Linux, the Shell, Files, Permissions, and Services](#phase-2---linux-the-shell-files-permissions-and-services) | Operate Linux confidently through processes, files, permissions, services, packages, and logs. | Create a service, grant minimum access, inspect its process and journal, and explain every permission involved. |
+| 03 | [Systems and Network Troubleshooting](#phase-3---systems-and-network-troubleshooting) | Diagnose from user symptom through DNS, route, transport, process, resource, and dependency using falsifiable checks. | Resolve a broken service without changing multiple variables and preserve a timeline of evidence and hypotheses. |
+| 04 | [Git, Collaboration, and Change History](#phase-4---git-collaboration-and-change-history) | Use Git as a reviewable graph of small changes and choose branching practices that support continuous integration. | Recover from a bad commit, explain merge versus rebase, resolve a conflict, and preserve a readable rationale. |
+| 05 | [Shell and Python Automation](#phase-5---shell-and-python-automation) | Replace fragile runbooks with validated, idempotent, testable automation that fails visibly and cleans up safely. | Write a script with inputs, logs, exit codes, dry-run behavior, error handling, and a repeatable second execution. |
+| 06 | [Builds, Dependencies, Artifacts, and Registries](#phase-6---builds-dependencies-artifacts-and-registries) | Produce immutable, traceable artifacts once and promote the same bytes through every environment. | Build an artifact with version and provenance, publish it, verify its digest, and explain dependency and retention policy. |
+| 07 | [Continuous Integration](#phase-7---continuous-integration) | Integrate every small change through fast, deterministic, security-aware feedback and produce one trusted artifact. | Design a pipeline ordered by feedback value and explain cache, flake, secret, and branch-protection behavior. |
+| 08 | [Continuous Delivery and Deployment Strategies](#phase-8---continuous-delivery-and-deployment-strategies) | Promote immutable artifacts with progressive exposure, automated verification, database compatibility, and a rehearsed rollback. | Compare rolling, blue-green, and canary delivery and execute a rollback from service evidence. |
+| 09 | [Docker and Container Engineering](#phase-9---docker-and-container-engineering) | Build small, non-root, reproducible images and operate container networking, storage, resources, and lifecycle correctly. | Explain image layers and isolation, debug a container, reduce its image, and preserve data outside its writable layer. |
+| 10 | [Kubernetes Operations](#phase-10---kubernetes-operations) | Operate declarative workloads through controllers, scheduling, networking, storage, health, policy, and upgrades. | Debug a workload from pod through Service and Ingress, then perform a safe rollout and recovery. |
+| 11 | [Terraform and Infrastructure Lifecycle](#phase-11---terraform-and-infrastructure-lifecycle) | Plan and reconcile versioned infrastructure through protected state, modules, policy, drift handling, and CI. | Review a plan, explain every replacement, and recover from state lock or drift without blind edits. |
+| 12 | [Ansible and Configuration Management](#phase-12---ansible-and-configuration-management) | Converge host configuration through inventories, variables, roles, handlers, templates, idempotent modules, and protected secrets. | Run a playbook twice with no second change and limit a safe rollout to a controlled host batch. |
+| 13 | [Cloud Infrastructure for DevOps](#phase-13---cloud-infrastructure-for-devops) | Automate cloud identity, VPC paths, compute, storage, DNS, and managed services without confusing provider names for architecture. | Trace a deployment identity through IaC to a private workload and explain region, network, state, and cost boundaries. |
+| 14 | [Observability: Metrics, Logs, Traces, and Alerts](#phase-14---observability-metrics-logs-traces-and-alerts) | Instrument delivery and runtime so one user symptom correlates with version, dependency, resource, and change. | Follow a trace, write a structured log, query a metric, and define an actionable alert with owner and runbook. |
+| 15 | [SRE, SLIs, SLOs, Error Budgets, and Toil](#phase-15---sre-slis-slos-error-budgets-and-toil) | Define reliability from user outcomes and balance feature velocity against measured risk. | Write an SLI and SLO from events, calculate budget consumption, and propose action from burn rather than intuition. |
+| 16 | [DevSecOps and Software Supply-Chain Security](#phase-16---devsecops-and-software-supply-chain-security) | Protect source, dependencies, CI identities, artifacts, deployments, and runtime with verifiable provenance and least privilege. | Produce an SBOM, scan and sign an image, verify policy before deployment, and explain each control's limit. |
+| 17 | [GitOps and Platform Engineering](#phase-17---gitops-and-platform-engineering) | Provide a self-service paved road where Git declares runtime state and platform capabilities reduce cognitive load. | Trace a pull request through reconciliation, drift repair, policy, and developer self-service. |
+| 18 | [Incident Response, Postmortems, and Chaos Engineering](#phase-18---incident-response-postmortems-and-chaos-engineering) | Mitigate impact, preserve evidence, coordinate clearly, learn without blame, and test resilience hypotheses. | Run a tabletop incident with roles and timeline, write a causal postmortem, and design one bounded chaos experiment. |
+| 19 | [DevOps Projects and Portfolio Evidence](#phase-19---devops-projects-and-portfolio-evidence) | Build complete delivery and operations systems whose claims are backed by code, telemetry, failure tests, and runbooks. | Show a commit reaching a monitored environment through a secured pipeline, then induce failure, recover, and explain evidence. |
+| 20 | [DevOps Interviews and Career Mastery](#phase-20---devops-interviews-and-career-mastery) | Communicate systems reasoning through troubleshooting, delivery design, reliability, security, and behavioral evidence. | Run a 45-minute design and troubleshooting mock using only project evidence and a hypothesis-driven process. |
 
 ---
 
@@ -174,6 +174,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 **THE BRIDGE:** Once flow is the goal, engineers need direct control of the machines running build and production work. Linux is the operational ground floor.
 
 ---
+
+> **Phase 1 complete?** [Build the aligned project](./Projects.md#L3573) · [Continue to Phase 2](#phase-2---linux-the-shell-files-permissions-and-services)
 
 <a id="phase-2"></a>
 
@@ -263,6 +265,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 2 complete?** [Build the aligned project](./Projects.md#L3594) · [Continue to Phase 3](#phase-3---systems-and-network-troubleshooting)
+
 <a id="phase-3"></a>
 
 # PHASE 3 - Systems and Network Troubleshooting
@@ -351,6 +355,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 3 complete?** [Build the aligned project](./Projects.md#L3615) · [Continue to Phase 4](#phase-4---git-collaboration-and-change-history)
+
 <a id="phase-4"></a>
 
 # PHASE 4 - Git, Collaboration, and Change History
@@ -438,6 +444,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 **THE BRIDGE:** Versioned changes still need repeatable execution. Shell and Python automation turn instructions into tested, idempotent tools.
 
 ---
+
+> **Phase 4 complete?** [Build the aligned project](./Projects.md#L3636) · [Continue to Phase 5](#phase-5---shell-and-python-automation)
 
 <a id="phase-5"></a>
 
@@ -528,6 +536,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 5 complete?** [Build the aligned project](./Projects.md#L3657) · [Continue to Phase 6](#phase-6---builds-dependencies-artifacts-and-registries)
+
 <a id="phase-6"></a>
 
 # PHASE 6 - Builds, Dependencies, Artifacts, and Registries
@@ -614,6 +624,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 6 complete?** [Build the aligned project](./Projects.md#L3678) · [Continue to Phase 7](#phase-7---continuous-integration)
+
 <a id="phase-7"></a>
 
 # PHASE 7 - Continuous Integration
@@ -699,6 +711,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 **THE BRIDGE:** CI proves an artifact; continuous delivery must move it through environments safely and reverse course when production evidence disagrees.
 
 ---
+
+> **Phase 7 complete?** [Build the aligned project](./Projects.md#L3699) · [Continue to Phase 8](#phase-8---continuous-delivery-and-deployment-strategies)
 
 <a id="phase-8"></a>
 
@@ -788,6 +802,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 8 complete?** [Build the aligned project](./Projects.md#L3720) · [Continue to Phase 9](#phase-9---docker-and-container-engineering)
+
 <a id="phase-9"></a>
 
 # PHASE 9 - Docker and Container Engineering
@@ -876,6 +892,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 9 complete?** [Build the aligned project](./Projects.md#L3741) · [Continue to Phase 10](#phase-10---kubernetes-operations)
+
 <a id="phase-10"></a>
 
 # PHASE 10 - Kubernetes Operations
@@ -963,6 +981,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 **THE BRIDGE:** Clusters still need networks, identities, and infrastructure across environments. Terraform makes those dependencies reviewable.
 
 ---
+
+> **Phase 10 complete?** [Build the aligned project](./Projects.md#L3762) · [Continue to Phase 11](#phase-11---terraform-and-infrastructure-lifecycle)
 
 <a id="phase-11"></a>
 
@@ -1053,6 +1073,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 11 complete?** [Build the aligned project](./Projects.md#L3783) · [Continue to Phase 12](#phase-12---ansible-and-configuration-management)
+
 <a id="phase-12"></a>
 
 # PHASE 12 - Ansible and Configuration Management
@@ -1140,6 +1162,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 12 complete?** [Build the aligned project](./Projects.md#L3804) · [Continue to Phase 13](#phase-13---cloud-infrastructure-for-devops)
+
 <a id="phase-13"></a>
 
 # PHASE 13 - Cloud Infrastructure for DevOps
@@ -1225,6 +1249,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 **THE BRIDGE:** Infrastructure and delivery are automated, but without correlated telemetry the team cannot know whether releases improved service. Observability closes the loop.
 
 ---
+
+> **Phase 13 complete?** [Build the aligned project](./Projects.md#L3825) · [Continue to Phase 14](#phase-14---observability-metrics-logs-traces-and-alerts)
 
 <a id="phase-14"></a>
 
@@ -1312,6 +1338,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 **THE BRIDGE:** Telemetry shows reliability, but teams need explicit objectives and a budget for risk. SRE turns reliability into a control loop.
 
 ---
+
+> **Phase 14 complete?** [Build the aligned project](./Projects.md#L3846) · [Continue to Phase 15](#phase-15---sre-slis-slos-error-budgets-and-toil)
 
 <a id="phase-15"></a>
 
@@ -1401,6 +1429,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 15 complete?** [Build the aligned project](./Projects.md#L3867) · [Continue to Phase 16](#phase-16---devsecops-and-software-supply-chain-security)
+
 <a id="phase-16"></a>
 
 # PHASE 16 - DevSecOps and Software Supply-Chain Security
@@ -1487,6 +1517,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 **THE BRIDGE:** Secure pipelines still leave teams assembling delivery paths repeatedly. GitOps and platform engineering create a supported paved road.
 
 ---
+
+> **Phase 16 complete?** [Build the aligned project](./Projects.md#L3888) · [Continue to Phase 17](#phase-17---gitops-and-platform-engineering)
 
 <a id="phase-17"></a>
 
@@ -1575,6 +1607,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 17 complete?** [Build the aligned project](./Projects.md#L3909) · [Continue to Phase 18](#phase-18---incident-response-postmortems-and-chaos-engineering)
+
 <a id="phase-18"></a>
 
 # PHASE 18 - Incident Response, Postmortems, and Chaos Engineering
@@ -1660,6 +1694,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 **THE BRIDGE:** Operational learning must become visible career evidence. Projects combine the chain into systems a reviewer can run and question.
 
 ---
+
+> **Phase 18 complete?** [Build the aligned project](./Projects.md#L3930) · [Continue to Phase 19](#phase-19---devops-projects-and-portfolio-evidence)
 
 <a id="phase-19"></a>
 
@@ -1747,6 +1783,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
+> **Phase 19 complete?** [Build the aligned project](./Projects.md#L3951) · [Continue to Phase 20](#phase-20---devops-interviews-and-career-mastery)
+
 <a id="phase-20"></a>
 
 # PHASE 20 - DevOps Interviews and Career Mastery
@@ -1832,6 +1870,10 @@ A strong answer begins with requirements and the previous limitation, traces the
 | Hard | Build a small provider-neutral artifact, map it to AWS/Azure/GCP where relevant, measure one trade-off, and defend the design in five minutes. |
 
 **THE BRIDGE:** There is no final tool. Repeat the loop with harder constraints: reduce toil, shorten feedback, secure the chain, improve reliability, and teach.
+
+---
+
+> **Phase 20 complete?** [Build the aligned project](./Projects.md#L3972) · [Return to the phase index](#phase-index)
 
 ---
 

@@ -89,26 +89,26 @@ PHASE 1                 PHASE 2               PHASE 3                PHASE 4
 
 | # | Phase | Goal | You'll be ready to move on when you can... |
 | --- | --- | --- | --- |
-| 01 | [Web Thinking](#phase-1) | See the browser-server contract and the request path before touching frameworks. | Explain client vs server, URL parts, and why the web is stateless HTTP on TCP. |
-| 02 | [HTML Foundations](#phase-2) | Structure content so machines and humans both understand it. | Write semantic HTML, forms, and accessible markup without div soup. |
-| 03 | [CSS Fundamentals](#phase-3) | Style and space content predictably. | Use cascade, specificity, and the box model without fighting layouts. |
-| 04 | [CSS Layout & Responsive Design](#phase-4) | Layout pages for phones, tablets, and desktops without brittle floats. | Build responsive UIs with Flexbox, Grid, and mobile-first media queries. |
-| 05 | [JavaScript Fundamentals](#phase-5) | Add behavior: events, DOM updates, and async I/O. | Write modern JS: types, functions, arrays, objects, and DOM APIs. |
-| 06 | [Browser APIs & Tooling](#phase-6) | Debug like a pro; package code with npm and bundlers. | Use DevTools, npm, Vite, and environment variables. |
-| 07 | [TypeScript for Web](#phase-7) | Add static types to JavaScript for safer refactors at scale. | Use interfaces, generics, and strict mode in frontend code. |
-| 08 | [React Fundamentals](#phase-8) | Build UIs from components with declarative state. | Create React apps with components, props, state, and hooks. |
-| 09 | [React Patterns & State](#phase-9) | Scale UI logic with routing, context, and server state libraries. | Route pages, share state safely, and fetch data in React apps. |
-| 10 | [Next.js & Full-Stack React](#phase-10) | Ship React with routing, SSR, and API routes in one framework. | Build with Next.js App Router, server components, and server actions. |
-| 11 | [Node.js & Express](#phase-11) | Run JavaScript on the server with an HTTP framework. | Build REST servers with Node, Express, middleware, and error handling. |
-| 12 | [REST API Design](#phase-12) | Design resources, status codes, and versioning developers trust. | Model nouns as resources; use HTTP methods correctly; document with OpenAPI. |
-| 13 | [Databases for Web Apps](#phase-13) | Persist data with relational schemas and an ORM. | Model entities in PostgreSQL/SQLite with Prisma or Drizzle. |
-| 14 | [Authentication & Authorization](#phase-14) | Know who the user is and what they may do. | Implement sessions, JWT, password hashing, and RBAC basics. |
-| 15 | [Testing Web Applications](#phase-15) | Automate confidence: unit, integration, and end-to-end. | Test React with Vitest/RTL; API with supertest; E2E with Playwright. |
-| 16 | [Performance & Web Vitals](#phase-16) | Fast sites convert; slow sites lose users and SEO rank. | Optimize LCP, INP, CLS; lazy-load; cache HTTP and CDN. |
-| 17 | [Deployment & CI/CD](#phase-17) | Ship reliably: build pipelines, hosting, containers, env separation. | Deploy to Vercel/Railway/Fly; Docker basics; GitHub Actions CI. |
-| 18 | [GraphQL, WebSockets & Modern APIs](#phase-18) | When REST is not enough: typed graphs, realtime, and webhooks. | Contrast GraphQL vs REST; use subscriptions/WebSockets; secure webhooks. |
-| 19 | [Portfolio & Capstone Projects](#phase-19) | Public repos with READMEs beat certificate collections. | Ship 2-3 full-stack apps documented for recruiters. |
-| 20 | [Web Developer Interviews](#phase-20) | Speak HTML→deploy fluently under time pressure. | Drill frontend, backend, system design lite, and behavioral stories. |
+| 01 | [Web Thinking](#phase-1---web-thinking) | See the browser-server contract and the request path before touching frameworks. | Explain client vs server, URL parts, and why the web is stateless HTTP on TCP. |
+| 02 | [HTML Foundations](#phase-2---html-foundations) | Structure content so machines and humans both understand it. | Write semantic HTML, forms, and accessible markup without div soup. |
+| 03 | [CSS Fundamentals](#phase-3---css-fundamentals) | Style and space content predictably. | Use cascade, specificity, and the box model without fighting layouts. |
+| 04 | [CSS Layout & Responsive Design](#phase-4---css-layout--responsive-design) | Layout pages for phones, tablets, and desktops without brittle floats. | Build responsive UIs with Flexbox, Grid, and mobile-first media queries. |
+| 05 | [JavaScript Fundamentals](#phase-5---javascript-fundamentals) | Add behavior: events, DOM updates, and async I/O. | Write modern JS: types, functions, arrays, objects, and DOM APIs. |
+| 06 | [Browser APIs & Tooling](#phase-6---browser-apis--tooling) | Debug like a pro; package code with npm and bundlers. | Use DevTools, npm, Vite, and environment variables. |
+| 07 | [TypeScript for Web](#phase-7---typescript-for-web) | Add static types to JavaScript for safer refactors at scale. | Use interfaces, generics, and strict mode in frontend code. |
+| 08 | [React Fundamentals](#phase-8---react-fundamentals) | Build UIs from components with declarative state. | Create React apps with components, props, state, and hooks. |
+| 09 | [React Patterns & State](#phase-9---react-patterns--state) | Scale UI logic with routing, context, and server state libraries. | Route pages, share state safely, and fetch data in React apps. |
+| 10 | [Next.js & Full-Stack React](#phase-10---nextjs--full-stack-react) | Ship React with routing, SSR, and API routes in one framework. | Build with Next.js App Router, server components, and server actions. |
+| 11 | [Node.js & Express](#phase-11---nodejs--express) | Run JavaScript on the server with an HTTP framework. | Build REST servers with Node, Express, middleware, and error handling. |
+| 12 | [REST API Design](#phase-12---rest-api-design) | Design resources, status codes, and versioning developers trust. | Model nouns as resources; use HTTP methods correctly; document with OpenAPI. |
+| 13 | [Databases for Web Apps](#phase-13---databases-for-web-apps) | Persist data with relational schemas and an ORM. | Model entities in PostgreSQL/SQLite with Prisma or Drizzle. |
+| 14 | [Authentication & Authorization](#phase-14---authentication--authorization) | Know who the user is and what they may do. | Implement sessions, JWT, password hashing, and RBAC basics. |
+| 15 | [Testing Web Applications](#phase-15---testing-web-applications) | Automate confidence: unit, integration, and end-to-end. | Test React with Vitest/RTL; API with supertest; E2E with Playwright. |
+| 16 | [Performance & Web Vitals](#phase-16---performance--web-vitals) | Fast sites convert; slow sites lose users and SEO rank. | Optimize LCP, INP, CLS; lazy-load; cache HTTP and CDN. |
+| 17 | [Deployment & CI/CD](#phase-17---deployment--cicd) | Ship reliably: build pipelines, hosting, containers, env separation. | Deploy to Vercel/Railway/Fly; Docker basics; GitHub Actions CI. |
+| 18 | [GraphQL, WebSockets & Modern APIs](#phase-18---graphql-websockets--modern-apis) | When REST is not enough: typed graphs, realtime, and webhooks. | Contrast GraphQL vs REST; use subscriptions/WebSockets; secure webhooks. |
+| 19 | [Portfolio & Capstone Projects](#phase-19---portfolio--capstone-projects) | Public repos with READMEs beat certificate collections. | Ship 2-3 full-stack apps documented for recruiters. |
+| 20 | [Web Developer Interviews](#phase-20---web-developer-interviews) | Speak HTML→deploy fluently under time pressure. | Drill frontend, backend, system design lite, and behavioral stories. |
 
 ### Anchor Resources (bookmark these)
 
@@ -290,6 +290,8 @@ Scaffold Vite + React or plain HTML repo with npm scripts documented.
 
 ---
 
+> **Phase 1 complete?** [Build the aligned project](./Projects.md#L2723) · [Continue to Phase 2](#phase-2---html-foundations)
+
 <a id="phase-2"></a>
 
 # PHASE 2 - HTML Foundations
@@ -449,6 +451,8 @@ Contact form with client hints + documented server rules (even if mocked).
 
 ---
 
+> **Phase 2 complete?** [Build the aligned project](./Projects.md#L2744) · [Continue to Phase 3](#phase-3---css-fundamentals)
+
 <a id="phase-3"></a>
 
 # PHASE 3 - CSS Fundamentals
@@ -598,6 +602,8 @@ Light/dark toggle using only CSS variables + one class on html.
 **THE BRIDGE:** Flexbox and grid handle layout. What you have built is now useful enough to expose that limitation clearly. The next concept is not a fashionable addition; it is the smallest answer to this new pressure.
 
 ---
+
+> **Phase 3 complete?** [Build the aligned project](./Projects.md#L2765) · [Continue to Phase 4](#phase-4---css-layout--responsive-design)
 
 <a id="phase-4"></a>
 
@@ -750,6 +756,8 @@ Dashboard layout: sidebar collapses to drawer under 768px.
 **THE BRIDGE:** JavaScript makes pages interactive. What you have built is now useful enough to expose that limitation clearly. The next concept is not a fashionable addition; it is the smallest answer to this new pressure.
 
 ---
+
+> **Phase 4 complete?** [Build the aligned project](./Projects.md#L2786) · [Continue to Phase 5](#phase-5---javascript-fundamentals)
 
 <a id="phase-5"></a>
 
@@ -917,6 +925,8 @@ Weather widget: fetch public API, render loading/error/data states.
 
 ---
 
+> **Phase 5 complete?** [Build the aligned project](./Projects.md#L2807) · [Continue to Phase 6](#phase-6---browser-apis--tooling)
+
 <a id="phase-6"></a>
 
 # PHASE 6 - Browser APIs & Tooling
@@ -1074,6 +1084,8 @@ Vite project with dev/build/preview scripts and .env.example.
 
 ---
 
+> **Phase 6 complete?** [Build the aligned project](./Projects.md#L2828) · [Continue to Phase 7](#phase-7---typescript-for-web)
+
 <a id="phase-7"></a>
 
 # PHASE 7 - TypeScript for Web
@@ -1223,6 +1235,8 @@ Typed fetch helper ApiResponse<T> used in two endpoints.
 **THE BRIDGE:** React is the dominant component model. What you have built is now useful enough to expose that limitation clearly. The next concept is not a fashionable addition; it is the smallest answer to this new pressure.
 
 ---
+
+> **Phase 7 complete?** [Build the aligned project](./Projects.md#L2849) · [Continue to Phase 8](#phase-8---react-fundamentals)
 
 <a id="phase-8"></a>
 
@@ -1393,6 +1407,8 @@ Login form controlled fields + fetch on submit + error state.
 
 ---
 
+> **Phase 8 complete?** [Build the aligned project](./Projects.md#L2870) · [Continue to Phase 9](#phase-9---react-patterns--state)
+
 <a id="phase-9"></a>
 
 # PHASE 9 - React Patterns & State
@@ -1556,6 +1572,8 @@ Theme context + useQuery list/detail with loading/error UI.
 
 ---
 
+> **Phase 9 complete?** [Build the aligned project](./Projects.md#L2891) · [Continue to Phase 10](#phase-10---nextjs--full-stack-react)
+
 <a id="phase-10"></a>
 
 # PHASE 10 - Next.js & Full-Stack React
@@ -1718,6 +1736,8 @@ CRUD notes app with route handlers + SQLite/Prisma.
 **THE BRIDGE:** Node/Express still essential for microservices. What you have built is now useful enough to expose that limitation clearly. The next concept is not a fashionable addition; it is the smallest answer to this new pressure.
 
 ---
+
+> **Phase 10 complete?** [Build the aligned project](./Projects.md#L2912) · [Continue to Phase 11](#phase-11---nodejs--express)
 
 <a id="phase-11"></a>
 
@@ -1894,6 +1914,8 @@ Users API: CRUD routes, Zod validation, structured logs.
 
 ---
 
+> **Phase 11 complete?** [Build the aligned project](./Projects.md#L2933) · [Continue to Phase 12](#phase-12---rest-api-design)
+
 <a id="phase-12"></a>
 
 # PHASE 12 - REST API Design
@@ -2051,6 +2073,8 @@ Paginated search endpoint with stable sort key.
 
 ---
 
+> **Phase 12 complete?** [Build the aligned project](./Projects.md#L2954) · [Continue to Phase 13](#phase-13---databases-for-web-apps)
+
 <a id="phase-13"></a>
 
 # PHASE 13 - Databases for Web Apps
@@ -2201,6 +2225,8 @@ Fix N+1 in list endpoint; add transfer transaction test.
 **THE BRIDGE:** Auth builds on user table + tokens. What you have built is now useful enough to expose that limitation clearly. The next concept is not a fashionable addition; it is the smallest answer to this new pressure.
 
 ---
+
+> **Phase 13 complete?** [Build the aligned project](./Projects.md#L2975) · [Continue to Phase 14](#phase-14---authentication--authorization)
 
 <a id="phase-14"></a>
 
@@ -2368,6 +2394,8 @@ Protected routes: user vs admin role middleware tests.
 
 ---
 
+> **Phase 14 complete?** [Build the aligned project](./Projects.md#L2996) · [Continue to Phase 15](#phase-15---testing-web-applications)
+
 <a id="phase-15"></a>
 
 # PHASE 15 - Testing Web Applications
@@ -2534,6 +2562,8 @@ One supertest CRUD suite + one Playwright happy path.
 
 ---
 
+> **Phase 15 complete?** [Build the aligned project](./Projects.md#L3017) · [Continue to Phase 16](#phase-16---performance--web-vitals)
+
 <a id="phase-16"></a>
 
 # PHASE 16 - Performance & Web Vitals
@@ -2696,6 +2726,8 @@ Add cache headers to static assets; lazy route split admin page.
 **THE BRIDGE:** Deployment puts optimizations live. What you have built is now useful enough to expose that limitation clearly. The next concept is not a fashionable addition; it is the smallest answer to this new pressure.
 
 ---
+
+> **Phase 16 complete?** [Build the aligned project](./Projects.md#L3038) · [Continue to Phase 17](#phase-17---deployment--cicd)
 
 <a id="phase-17"></a>
 
@@ -2869,6 +2901,8 @@ Dockerize API; GitHub Action runs tests on push.
 
 ---
 
+> **Phase 17 complete?** [Build the aligned project](./Projects.md#L3059) · [Continue to Phase 18](#phase-18---graphql-websockets--modern-apis)
+
 <a id="phase-18"></a>
 
 # PHASE 18 - GraphQL, WebSockets & Modern APIs
@@ -3025,6 +3059,8 @@ SSE notifications endpoint + signed webhook receiver stub.
 **THE BRIDGE:** Portfolio proves full-stack depth. What you have built is now useful enough to expose that limitation clearly. The next concept is not a fashionable addition; it is the smallest answer to this new pressure.
 
 ---
+
+> **Phase 18 complete?** [Build the aligned project](./Projects.md#L3080) · [Continue to Phase 19](#phase-19---portfolio--capstone-projects)
 
 <a id="phase-19"></a>
 
@@ -3185,6 +3221,8 @@ Plan capstone scope doc before coding week 2.
 **THE BRIDGE:** Interviews test narration of your builds. What you have built is now useful enough to expose that limitation clearly. The next concept is not a fashionable addition; it is the smallest answer to this new pressure.
 
 ---
+
+> **Phase 19 complete?** [Build the aligned project](./Projects.md#L3101) · [Continue to Phase 20](#phase-20---web-developer-interviews)
 
 <a id="phase-20"></a>
 
@@ -3355,6 +3393,10 @@ Architect explaining building before picking marble.
 | Hard | Build a small artifact that combines this concept with the previous phase, measure one trade-off above, and defend the design without naming a library until after the requirement is clear. |
 
 **THE BRIDGE:** You are hire-ready when you teach the chain back to Phase 1. What you have built is now useful enough to expose that limitation clearly. The next concept is not a fashionable addition; it is the smallest answer to this new pressure.
+
+---
+
+> **Phase 20 complete?** [Build the aligned project](./Projects.md#L3122) · [Return to the phase index](#phase-index)
 
 ---
 

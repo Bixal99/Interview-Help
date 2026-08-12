@@ -112,26 +112,26 @@ Those questions are answered in the same order every single time. Once you have 
 
 | # | Phase | Goal | You'll be ready to move on when you can... |
 | --- | --- | --- | --- |
-| 01 | [Network Thinking](#phase-1) | See networks as shared unreliable pipes | Contrast circuit vs packet switching and name latency vs bandwidth |
-| 02 | [Physical Layer](#phase-2) | Know how bits actually move | Explain why media choice bounds speed and distance |
-| 03 | [Data Link & Ethernet](#phase-3) | Move frames on one segment | Draw a frame, explain MAC + CRC, and when CRC fails |
-| 04 | [Switching & VLANs](#phase-4) | Scale a LAN without flooding forever | Explain MAC learning and why VLANs split broadcast domains |
-| 05 | [IP & Subnetting](#phase-5) | Address hosts globally | Compute network/broadcast for a CIDR and justify a subnet plan |
-| 06 | [Routing](#phase-6) | Move packets between networks | Trace longest-prefix match and contrast RIP/OSPF/BGP roles |
-| 07 | [ARP / DHCP / ICMP / NAT](#phase-7) | Make IP usable on real LANs | Explain why NAT breaks inbound connects and what ICMP is for |
-| 08 | [Layered Models](#phase-8) | Hold the whole stack in one mental model | Walk encapsulation for one HTTP request hop by hop |
-| 09 | [UDP](#phase-9) | Ship datagrams with minimal ceremony | Know when UDP is the right trade and what you must handle yourself |
-| 10 | [TCP](#phase-10) | Get reliable ordered streams | Explain handshake, ACKs, flow vs congestion control, HOL blocking |
-| 11 | [Sockets](#phase-11) | Program the transport | Write a TCP echo client/server and print the four-tuple |
-| 12 | [DNS](#phase-12) | Resolve names | Trace a recursive lookup and read common record types |
-| 13 | [HTTP](#phase-13) | Speak the web's application protocol | Craft a raw HTTP/1.1 exchange and contrast HTTP/2 and /3 |
-| 14 | [TLS & HTTPS](#phase-14) | Encrypt and authenticate channels | Explain handshake goals and what a certificate actually proves |
-| 15 | [Wireshark](#phase-15) | See the truth on the wire | Capture a handshake and filter to the failing exchange |
-| 16 | [Wireless](#phase-16) | Understand shared-medium networks | Explain association, interference, and why Wi-Fi loss ≠ congestion |
-| 17 | [CDN, LB & Edge](#phase-17) | Scale services at the edge | Contrast CDN, reverse proxy, and load balancer jobs |
-| 18 | [BGP & Internet](#phase-18) | See how the Internet is glued | Explain AS, peering, and why BGP is policy more than shortest path |
-| 19 | [Labs & Portfolio](#phase-19) | Prove skill with artifacts | Ship captures, labs, and a public write-up |
-| 20 | [Interviews](#phase-20) | Get hired | Narrate "what happens when you type a URL" with trade-offs |
+| 01 | [Network Thinking](#phase-1---network-thinking-shared-pipes-shared-failure) | See networks as shared unreliable pipes | Contrast circuit vs packet switching and name latency vs bandwidth |
+| 02 | [Physical Layer](#phase-2---physical-layer-putting-bits-on-a-medium) | Know how bits actually move | Explain why media choice bounds speed and distance |
+| 03 | [Data Link & Ethernet](#phase-3---data-link--ethernet-frames-on-a-segment) | Move frames on one segment | Draw a frame, explain MAC + CRC, and when CRC fails |
+| 04 | [Switching & VLANs](#phase-4---switching--vlans) | Scale a LAN without flooding forever | Explain MAC learning and why VLANs split broadcast domains |
+| 05 | [IP & Subnetting](#phase-5---ip-addressing--subnetting) | Address hosts globally | Compute network/broadcast for a CIDR and justify a subnet plan |
+| 06 | [Routing](#phase-6---routing--forwarding) | Move packets between networks | Trace longest-prefix match and contrast RIP/OSPF/BGP roles |
+| 07 | [ARP / DHCP / ICMP / NAT](#phase-7---arp-dhcp-icmp-and-nat) | Make IP usable on real LANs | Explain why NAT breaks inbound connects and what ICMP is for |
+| 08 | [Layered Models](#phase-8---layered-models-osi-and-tcpip) | Hold the whole stack in one mental model | Walk encapsulation for one HTTP request hop by hop |
+| 09 | [UDP](#phase-9---udp-user-datagram-protocol) | Ship datagrams with minimal ceremony | Know when UDP is the right trade and what you must handle yourself |
+| 10 | [TCP](#phase-10---tcp-transmission-control-protocol) | Get reliable ordered streams | Explain handshake, ACKs, flow vs congestion control, HOL blocking |
+| 11 | [Sockets](#phase-11---sockets-programming-the-network) | Program the transport | Write a TCP echo client/server and print the four-tuple |
+| 12 | [DNS](#phase-12---dns-the-internets-phonebook) | Resolve names | Trace a recursive lookup and read common record types |
+| 13 | [HTTP](#phase-13---http-and-the-web) | Speak the web's application protocol | Craft a raw HTTP/1.1 exchange and contrast HTTP/2 and /3 |
+| 14 | [TLS & HTTPS](#phase-14---tls-and-https) | Encrypt and authenticate channels | Explain handshake goals and what a certificate actually proves |
+| 15 | [Wireshark](#phase-15---wireshark-and-packet-analysis) | See the truth on the wire | Capture a handshake and filter to the failing exchange |
+| 16 | [Wireless](#phase-16---wireless-and-wi-fi) | Understand shared-medium networks | Explain association, interference, and why Wi-Fi loss ≠ congestion |
+| 17 | [CDN, LB & Edge](#phase-17---cdn-load-balancers-and-edge) | Scale services at the edge | Contrast CDN, reverse proxy, and load balancer jobs |
+| 18 | [BGP & Internet](#phase-18---bgp-and-internet-architecture) | See how the Internet is glued | Explain AS, peering, and why BGP is policy more than shortest path |
+| 19 | [Labs & Portfolio](#phase-19---labs-portfolio-and-automation) | Prove skill with artifacts | Ship captures, labs, and a public write-up |
+| 20 | [Interviews](#phase-20---interviews) | Get hired | Narrate "what happens when you type a URL" with trade-offs |
 
 ### Anchor Resources (bookmark these)
 
@@ -372,6 +372,8 @@ for size in (64, 1500, 65535):
 
 ---
 
+> **Phase 1 complete?** [Build the aligned project](./Projects.md#L1448) · [Continue to Phase 2](#phase-2---physical-layer-putting-bits-on-a-medium)
+
 <a id="phase-2"></a>
 
 # PHASE 2 - Physical Layer: Putting Bits on a Medium
@@ -540,6 +542,8 @@ print("BDP bytes:", int(bdp_bytes(1000, 40)))  # ~5_000_000
 
 ---
 
+> **Phase 2 complete?** [Build the aligned project](./Projects.md#L1469) · [Continue to Phase 3](#phase-3---data-link--ethernet-frames-on-a-segment)
+
 <a id="phase-3"></a>
 
 # PHASE 3 - Data Link & Ethernet: Frames on a Segment
@@ -694,6 +698,8 @@ print(len(segments(b"x" * 4000)))  # how many L3/L4 chunks needed
 **THE BRIDGE to Switching & VLANs:** Switches scale Ethernet - but floods, loops, and flat broadcast domains create the next set of problems.
 
 ---
+
+> **Phase 3 complete?** [Build the aligned project](./Projects.md#L1490) · [Continue to Phase 4](#phase-4---switching--vlans)
 
 <a id="phase-4"></a>
 
@@ -850,6 +856,8 @@ print(vlan_tag(10).hex())
 
 ---
 
+> **Phase 4 complete?** [Build the aligned project](./Projects.md#L1511) · [Continue to Phase 5](#phase-5---ip-addressing--subnetting)
+
 <a id="phase-5"></a>
 
 # PHASE 5 - IP Addressing & Subnetting
@@ -995,6 +1003,8 @@ print(addr.is_link_local, addr.version)
 **THE BRIDGE to Routing:** Addresses name networks. Something must decide *which next hop* receives a packet toward that network - routing and forwarding.
 
 ---
+
+> **Phase 5 complete?** [Build the aligned project](./Projects.md#L1532) · [Continue to Phase 6](#phase-6---routing--forwarding)
 
 <a id="phase-6"></a>
 
@@ -1157,6 +1167,8 @@ print(dist)  # A0 B1 C2
 **THE BRIDGE to ARP/DHCP/ICMP/NAT:** Routing assumes we can deliver to a *next hop IP on a local link* and that hosts can obtain addresses and diagnose failures. The glue protocols make that real.
 
 ---
+
+> **Phase 6 complete?** [Build the aligned project](./Projects.md#L1553) · [Continue to Phase 7](#phase-7---arp-dhcp-icmp-and-nat)
 
 <a id="phase-7"></a>
 
@@ -1322,6 +1334,8 @@ print(n.inbound(40000))
 
 ---
 
+> **Phase 7 complete?** [Build the aligned project](./Projects.md#L1574) · [Continue to Phase 8](#phase-8---layered-models-osi-and-tcpip)
+
 <a id="phase-8"></a>
 
 # PHASE 8 - Layered Models: OSI and TCP/IP
@@ -1465,6 +1479,8 @@ s.close()
 **THE BRIDGE to UDP:** With ports in hand, the simplest transport is a datagram with almost no promises - UDP.
 
 ---
+
+> **Phase 8 complete?** [Build the aligned project](./Projects.md#L1595) · [Continue to Phase 9](#phase-9---udp-user-datagram-protocol)
 
 <a id="phase-9"></a>
 
@@ -1612,6 +1628,8 @@ print("HTTP/3 stack: App -> QUIC -> UDP -> IP")
 **THE BRIDGE to TCP:** Most of the Internet still runs on TCP. Master its handshake, reliability machine, and congestion control next.
 
 ---
+
+> **Phase 9 complete?** [Build the aligned project](./Projects.md#L1616) · [Continue to Phase 10](#phase-10---tcp-transmission-control-protocol)
 
 <a id="phase-10"></a>
 
@@ -1776,6 +1794,8 @@ for round in range(20):
 **THE BRIDGE to Sockets:** Theory is useless until you bind it to the OS API programmers actually call - sockets.
 
 ---
+
+> **Phase 10 complete?** [Build the aligned project](./Projects.md#L1637) · [Continue to Phase 11](#phase-11---sockets-programming-the-network)
 
 <a id="phase-11"></a>
 
@@ -1953,6 +1973,8 @@ def recv_msg(conn: socket.socket) -> bytes:
 
 ---
 
+> **Phase 11 complete?** [Build the aligned project](./Projects.md#L1658) · [Continue to Phase 12](#phase-12---dns-the-internets-phonebook)
+
 <a id="phase-12"></a>
 
 # PHASE 12 - DNS: The Internet's Phonebook
@@ -2085,6 +2107,8 @@ print(ips)
 **THE BRIDGE to HTTP:** Names now resolve. Browsers still need an application protocol for "GET me this document" - HTTP.
 
 ---
+
+> **Phase 12 complete?** [Build the aligned project](./Projects.md#L1679) · [Continue to Phase 13](#phase-13---http-and-the-web)
 
 <a id="phase-13"></a>
 
@@ -2224,6 +2248,8 @@ print(urllib.request.urlopen("https://example.com", timeout=5).status)
 
 ---
 
+> **Phase 13 complete?** [Build the aligned project](./Projects.md#L1700) · [Continue to Phase 14](#phase-14---tls-and-https)
+
 <a id="phase-14"></a>
 
 # PHASE 14 - TLS and HTTPS
@@ -2357,6 +2383,8 @@ print("Ops rule: alert 30 days before cert expiry; prefer ACME auto-renew.")
 **THE BRIDGE to Wireshark:** When TLS or TCP fails in the wild, packet captures settle arguments - learn to capture and filter next.
 
 ---
+
+> **Phase 14 complete?** [Build the aligned project](./Projects.md#L1721) · [Continue to Phase 15](#phase-15---wireshark-and-packet-analysis)
 
 <a id="phase-15"></a>
 
@@ -2509,6 +2537,8 @@ check("example.com")
 
 ---
 
+> **Phase 15 complete?** [Build the aligned project](./Projects.md#L1742) · [Continue to Phase 16](#phase-16---wireless-and-wi-fi)
+
 <a id="phase-16"></a>
 
 # PHASE 16 - Wireless and Wi-Fi
@@ -2634,6 +2664,8 @@ print("seconds", time.perf_counter() - t0)
 **THE BRIDGE to CDN/LB:** Access networks deliver users to the edge. Global apps still need scale-out delivery - CDNs and load balancers.
 
 ---
+
+> **Phase 16 complete?** [Build the aligned project](./Projects.md#L1763) · [Continue to Phase 17](#phase-17---cdn-load-balancers-and-edge)
 
 <a id="phase-17"></a>
 
@@ -2773,6 +2805,8 @@ print("cache forever:", versioned)
 
 ---
 
+> **Phase 17 complete?** [Build the aligned project](./Projects.md#L1784) · [Continue to Phase 18](#phase-18---bgp-and-internet-architecture)
+
 <a id="phase-18"></a>
 
 # PHASE 18 - BGP and Internet Architecture
@@ -2906,6 +2940,8 @@ print(accept("203.0.113.0/24", 64501), accept("203.0.113.0/24", 666))
 
 ---
 
+> **Phase 18 complete?** [Build the aligned project](./Projects.md#L1805) · [Continue to Phase 19](#phase-19---labs-portfolio-and-automation)
+
 <a id="phase-19"></a>
 
 # PHASE 19 - Labs, Portfolio, and Automation
@@ -3037,6 +3073,8 @@ for device, conf in desired.items():
 **THE BRIDGE to Interviews:** Artifacts ready - train the oral exam next: URL bar walkthroughs, design prompts, debugging narratives.
 
 ---
+
+> **Phase 19 complete?** [Build the aligned project](./Projects.md#L1826) · [Continue to Phase 20](#phase-20---interviews)
 
 <a id="phase-20"></a>
 
@@ -3170,6 +3208,10 @@ print("Design prompt checklist:", ", ".join(checklist))
 | Hard | Full loop: debugging pcap + design + behavioral |
 
 **THE BRIDGE BEYOND This Document:** Production invents the next limitation - a BGP incident, a bufferbloat mystery, a QUIC middlebox - and that limitation becomes your next concept. Keep the habit: what broke, why, what we invent next.
+
+---
+
+> **Phase 20 complete?** [Build the aligned project](./Projects.md#L1847) · [Return to the phase index](#phase-index)
 
 ---
 

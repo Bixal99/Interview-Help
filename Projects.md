@@ -2,7 +2,7 @@
 
 *Mohammad Bilal's hands-on project guide for the Interview Help repo - small-to-medium builds that cement concepts from each roadmap. Pair every project with a public README that explains what broke, what you built, and what you would change next.*
 
-*Project inspiration curated with Composio (web search, GitHub) against beginner Python repos, OOP practice collections, Odoo tutorials, structured project lists, and official web-platform/API/security documentation. See [Curated inspiration](#curated-inspiration) at the bottom.*
+*Project inspiration curated with Composio (YouTube and GitHub search) against hands-on tutorials, maintained repositories, Odoo examples, structured project collections, and official platform/API/security documentation. See [Curated inspiration](#curated-inspiration) at the bottom.*
 
 **Scope:** One project cements one bridge · no mega-apps · public proof.
 
@@ -78,12 +78,4346 @@ Read phase → hit mastery checkpoint → pick 1 project from that cluster → s
 | [`Networks.md`](./Networks.md) | Core stack (1-14) | NET-01 to NET-05 |
 | [`AI.md`](./AI.md) | Classical + Deep (1-11) | AI-01 to AI-05 |
 | [`AI.md`](./AI.md) | LLM + Ship (12-18) | AI-06 to AI-09 |
+| [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) | Defensive and authorized security labs (1-20) | CYBER phase navigator below |
 | [`ODOO.md`](./ODOO.md) | Module to integration | ODOO-01 to ODOO-08 |
 | [`Web.md`](./Web.md) | Browser to production (1-19) | WEB-01 to WEB-06 |
 | [`cloud.md`](./cloud.md) | Cloud foundations to production (1-19) | CLOUD-01 to CLOUD-04 |
 | [`devops.md`](./devops.md) | Delivery foundations to production (1-19) | DEVOPS-01 to DEVOPS-05 |
 | Cross-cutting | Capstones | CAP-01 to CAP-06 |
 | [`Interview.md`](./Interview.md) | Timed speak + build | INT-01 to INT-07 |
+
+## Phase-by-phase project navigator
+
+Use this navigator at the end of **every phase**. Each phase section is a focused build specification, not a command to copy the linked repository. The external repositories and videos are public inspiration; implement your own version from the phase knowledge, cite anything you reuse, and obey repository licenses.
+
+**Definition of done for every project section:** the artifact runs from a clean checkout, its verification evidence is committed, and its README links back to the matching roadmap phase.
+
+- [Programming Fundamentals & OOP](#oop-phase-projects)
+- [Computer Science](#cs-phase-projects)
+- [Data Analyst & Engineer](#data-phase-projects)
+- [Computer Networks](#networks-phase-projects)
+- [Artificial Intelligence & Machine Learning](#ai-phase-projects)
+- [Odoo Engineer](#odoo-phase-projects)
+- [Web Developer](#web-phase-projects)
+- [Cloud Engineer](#cloud-phase-projects)
+- [DevOps Engineer](#devops-phase-projects)
+- [ICT / Cybersecurity](#cyber-phase-projects)
+
+### OOP Phase Projects
+
+Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent portfolio artifact.
+
+#### OOP Phase F1 Project
+
+**Recommended build — Execution Trace Notebook**
+
+**Why this project now:** it applies the material covered through [OOP Phase F1](./OOP.md#L167) without requiring later phases.
+
+**Build specification**
+
+- Build **Execution Trace Notebook** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Execution Trace Notebook Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [How to Build a Python CLI Tool People Actually Want to Use — ArjanCodes](https://www.youtube.com/watch?v=FWacanslfFM)
+
+> **When this project is complete:** [Resume your study at OOP Phase F2](./OOP.md#L311) · [Review Phase F1](./OOP.md#L167)
+
+---
+#### OOP Phase F2 Project
+
+**Recommended build — CLI Rule Engine**
+
+**Why this project now:** it applies the material covered through [OOP Phase F2](./OOP.md#L311) without requiring later phases.
+
+**Build specification**
+
+- Build **CLI Rule Engine** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — CLI Rule Engine Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [How to Build a Python CLI Tool People Actually Want to Use — ArjanCodes](https://www.youtube.com/watch?v=FWacanslfFM)
+
+> **When this project is complete:** [Resume your study at OOP Phase F3](./OOP.md#L459) · [Review Phase F2](./OOP.md#L311)
+
+---
+#### OOP Phase F3 Project
+
+**Recommended build — Modular Text Statistics**
+
+**Why this project now:** it applies the material covered through [OOP Phase F3](./OOP.md#L459) without requiring later phases.
+
+**Build specification**
+
+- Build **Modular Text Statistics** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Modular Text Statistics Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [How to Build a Python CLI Tool People Actually Want to Use — ArjanCodes](https://www.youtube.com/watch?v=FWacanslfFM)
+
+> **When this project is complete:** [Resume your study at OOP Phase 1](./OOP.md#L608) · [Review Phase F3](./OOP.md#L459)
+
+---
+#### OOP Phase 1 Project
+
+**Recommended build — Procedural-to-Objects Refactor**
+
+**Why this project now:** it applies the material covered through [OOP Phase 1](./OOP.md#L608) without requiring later phases.
+
+**Build specification**
+
+- Build **Procedural-to-Objects Refactor** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Procedural-to-Objects Refactor Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
+
+> **When this project is complete:** [Resume your study at OOP Phase 2](./OOP.md#L806) · [Review Phase 1](./OOP.md#L608)
+
+---
+#### OOP Phase 2 Project
+
+**Recommended build — Class & Instance Registry**
+
+**Why this project now:** it applies the material covered through [OOP Phase 2](./OOP.md#L806) without requiring later phases.
+
+**Build specification**
+
+- Build **Class & Instance Registry** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Class & Instance Registry Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
+
+> **When this project is complete:** [Resume your study at OOP Phase 3](./OOP.md#L989) · [Review Phase 2](./OOP.md#L806)
+
+---
+#### OOP Phase 3 Project
+
+**Recommended build — Bank Account State Machine**
+
+**Why this project now:** it applies the material covered through [OOP Phase 3](./OOP.md#L989) without requiring later phases.
+
+**Build specification**
+
+- Build **Bank Account State Machine** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Bank Account State Machine Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
+
+> **When this project is complete:** [Resume your study at OOP Phase 4](./OOP.md#L1172) · [Review Phase 3](./OOP.md#L989)
+
+---
+#### OOP Phase 4 Project
+
+**Recommended build — Validated Wallet API**
+
+**Why this project now:** it applies the material covered through [OOP Phase 4](./OOP.md#L1172) without requiring later phases.
+
+**Build specification**
+
+- Build **Validated Wallet API** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Validated Wallet API Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
+
+> **When this project is complete:** [Resume your study at OOP Phase 5](./OOP.md#L1380) · [Review Phase 4](./OOP.md#L1172)
+
+---
+#### OOP Phase 5 Project
+
+**Recommended build — Pluggable Shape Calculator**
+
+**Why this project now:** it applies the material covered through [OOP Phase 5](./OOP.md#L1380) without requiring later phases.
+
+**Build specification**
+
+- Build **Pluggable Shape Calculator** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Pluggable Shape Calculator Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
+
+> **When this project is complete:** [Resume your study at OOP Phase 6](./OOP.md#L1582) · [Review Phase 5](./OOP.md#L1380)
+
+---
+#### OOP Phase 6 Project
+
+**Recommended build — Employee Payroll Hierarchy**
+
+**Why this project now:** it applies the material covered through [OOP Phase 6](./OOP.md#L1582) without requiring later phases.
+
+**Build specification**
+
+- Build **Employee Payroll Hierarchy** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Employee Payroll Hierarchy Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
+
+> **When this project is complete:** [Resume your study at OOP Phase 7](./OOP.md#L1775) · [Review Phase 6](./OOP.md#L1582)
+
+---
+#### OOP Phase 7 Project
+
+**Recommended build — Polymorphic Exporter**
+
+**Why this project now:** it applies the material covered through [OOP Phase 7](./OOP.md#L1775) without requiring later phases.
+
+**Build specification**
+
+- Build **Polymorphic Exporter** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Polymorphic Exporter Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
+
+> **When this project is complete:** [Resume your study at OOP Phase 8](./OOP.md#L1964) · [Review Phase 7](./OOP.md#L1775)
+
+---
+#### OOP Phase 8 Project
+
+**Recommended build — Composed Order Service**
+
+**Why this project now:** it applies the material covered through [OOP Phase 8](./OOP.md#L1964) without requiring later phases.
+
+**Build specification**
+
+- Build **Composed Order Service** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Composed Order Service Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
+
+> **When this project is complete:** [Resume your study at OOP Phase 9](./OOP.md#L2159) · [Review Phase 8](./OOP.md#L1964)
+
+---
+#### OOP Phase 9 Project
+
+**Recommended build — Pythonic Collection Wrapper**
+
+**Why this project now:** it applies the material covered through [OOP Phase 9](./OOP.md#L2159) without requiring later phases.
+
+**Build specification**
+
+- Build **Pythonic Collection Wrapper** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Pythonic Collection Wrapper Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
+
+> **When this project is complete:** [Resume your study at OOP Phase 10](./OOP.md#L2355) · [Review Phase 9](./OOP.md#L2159)
+
+---
+#### OOP Phase 10 Project
+
+**Recommended build — Library Relationship Model**
+
+**Why this project now:** it applies the material covered through [OOP Phase 10](./OOP.md#L2355) without requiring later phases.
+
+**Build specification**
+
+- Build **Library Relationship Model** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Library Relationship Model Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
+
+> **When this project is complete:** [Resume your study at OOP Phase 11](./OOP.md#L2542) · [Review Phase 10](./OOP.md#L2355)
+
+---
+#### OOP Phase 11 Project
+
+**Recommended build — God-Object Rescue**
+
+**Why this project now:** it applies the material covered through [OOP Phase 11](./OOP.md#L2542) without requiring later phases.
+
+**Build specification**
+
+- Build **God-Object Rescue** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — God-Object Rescue Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
+
+> **When this project is complete:** [Resume your study at OOP Phase 12](./OOP.md#L2732) · [Review Phase 11](./OOP.md#L2542)
+
+---
+#### OOP Phase 12 Project
+
+**Recommended build — SOLID Notification Service**
+
+**Why this project now:** it applies the material covered through [OOP Phase 12](./OOP.md#L2732) without requiring later phases.
+
+**Build specification**
+
+- Build **SOLID Notification Service** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — SOLID Notification Service Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
+
+> **When this project is complete:** [Resume your study at OOP Phase 13](./OOP.md#L2932) · [Review Phase 12](./OOP.md#L2732)
+
+---
+#### OOP Phase 13 Project
+
+**Recommended build — Configurable Object Factory**
+
+**Why this project now:** it applies the material covered through [OOP Phase 13](./OOP.md#L2932) without requiring later phases.
+
+**Build specification**
+
+- Build **Configurable Object Factory** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Configurable Object Factory Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [python-patterns](https://github.com/faif/python-patterns)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
+
+> **When this project is complete:** [Resume your study at OOP Phase 14](./OOP.md#L3131) · [Review Phase 13](./OOP.md#L2932)
+
+---
+#### OOP Phase 14 Project
+
+**Recommended build — Legacy Payment Adapter**
+
+**Why this project now:** it applies the material covered through [OOP Phase 14](./OOP.md#L3131) without requiring later phases.
+
+**Build specification**
+
+- Build **Legacy Payment Adapter** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Legacy Payment Adapter Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [python-patterns](https://github.com/faif/python-patterns)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
+
+> **When this project is complete:** [Resume your study at OOP Phase 15](./OOP.md#L3323) · [Review Phase 14](./OOP.md#L3131)
+
+---
+#### OOP Phase 15 Project
+
+**Recommended build — Event-Driven Task Board**
+
+**Why this project now:** it applies the material covered through [OOP Phase 15](./OOP.md#L3323) without requiring later phases.
+
+**Build specification**
+
+- Build **Event-Driven Task Board** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Event-Driven Task Board Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [python-patterns](https://github.com/faif/python-patterns)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
+
+> **When this project is complete:** [Resume your study at OOP Phase 16](./OOP.md#L3549) · [Review Phase 15](./OOP.md#L3323)
+
+---
+#### OOP Phase 16 Project
+
+**Recommended build — Testable Domain Model**
+
+**Why this project now:** it applies the material covered through [OOP Phase 16](./OOP.md#L3549) without requiring later phases.
+
+**Build specification**
+
+- Build **Testable Domain Model** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Testable Domain Model Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
+
+> **When this project is complete:** [Resume your study at OOP Phase 17](./OOP.md#L3754) · [Review Phase 16](./OOP.md#L3549)
+
+---
+#### OOP Phase 17 Project
+
+**Recommended build — Layered Inventory App**
+
+**Why this project now:** it applies the material covered through [OOP Phase 17](./OOP.md#L3754) without requiring later phases.
+
+**Build specification**
+
+- Build **Layered Inventory App** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Layered Inventory App Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
+
+> **When this project is complete:** [Resume your study at OOP Phase 18](./OOP.md#L3953) · [Review Phase 17](./OOP.md#L3754)
+
+---
+#### OOP Phase 18 Project
+
+**Recommended build — Parking Lot LLD**
+
+**Why this project now:** it applies the material covered through [OOP Phase 18](./OOP.md#L3953) without requiring later phases.
+
+**Build specification**
+
+- Build **Parking Lot LLD** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Parking Lot LLD Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [Parking Lot Design — Think Software](https://www.youtube.com/watch?v=tVRyb4HaHgw)
+
+> **When this project is complete:** [Resume your study at OOP Phase 19](./OOP.md#L4153) · [Review Phase 18](./OOP.md#L3953)
+
+---
+#### OOP Phase 19 Project
+
+**Recommended build — Design Portfolio Pack**
+
+**Why this project now:** it applies the material covered through [OOP Phase 19](./OOP.md#L4153) without requiring later phases.
+
+**Build specification**
+
+- Build **Design Portfolio Pack** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Design Portfolio Pack Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [Parking Lot Design — Think Software](https://www.youtube.com/watch?v=tVRyb4HaHgw)
+
+> **When this project is complete:** [Resume your study at OOP Phase 20](./OOP.md#L4314) · [Review Phase 19](./OOP.md#L4153)
+
+---
+#### OOP Phase 20 Project
+
+**Recommended build — Timed OOP Design Kata**
+
+**Why this project now:** it applies the material covered through [OOP Phase 20](./OOP.md#L4314) without requiring later phases.
+
+**Build specification**
+
+- Build **Timed OOP Design Kata** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Timed OOP Design Kata Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [python-patterns](https://github.com/faif/python-patterns)
+- **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
+- **YouTube build/lab:** [Parking Lot Design — Think Software](https://www.youtube.com/watch?v=tVRyb4HaHgw)
+
+> **When this project is complete:** [Return to the OOP phase index](./OOP.md#L111) · [Review Phase 20](./OOP.md#L4314)
+
+---
+
+### CS Phase Projects
+
+Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent portfolio artifact.
+
+#### CS Phase 1 Project
+
+**Recommended build — Mini Expression Runtime**
+
+**Why this project now:** it applies the material covered through [CS Phase 1](./CS.md#L169) without requiring later phases.
+
+**Build specification**
+
+- Build **Mini Expression Runtime** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Mini Expression Runtime Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Data Structure and Algorithm Patterns — freeCodeCamp.org](https://www.youtube.com/watch?v=Z_c4byLrNBU)
+
+> **When this project is complete:** [Resume your study at CS Phase 2](./CS.md#L313) · [Review Phase 1](./CS.md#L169)
+
+---
+#### CS Phase 2 Project
+
+**Recommended build — Algorithm Growth Profiler**
+
+**Why this project now:** it applies the material covered through [CS Phase 2](./CS.md#L313) without requiring later phases.
+
+**Build specification**
+
+- Build **Algorithm Growth Profiler** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Algorithm Growth Profiler Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Data Structure and Algorithm Patterns — freeCodeCamp.org](https://www.youtube.com/watch?v=Z_c4byLrNBU)
+
+> **When this project is complete:** [Resume your study at CS Phase 3](./CS.md#L417) · [Review Phase 2](./CS.md#L313)
+
+---
+#### CS Phase 3 Project
+
+**Recommended build — Data Structures Toolkit**
+
+**Why this project now:** it applies the material covered through [CS Phase 3](./CS.md#L417) without requiring later phases.
+
+**Build specification**
+
+- Build **Data Structures Toolkit** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Data Structures Toolkit Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Data Structure and Algorithm Patterns — freeCodeCamp.org](https://www.youtube.com/watch?v=Z_c4byLrNBU)
+
+> **When this project is complete:** [Resume your study at CS Phase 4](./CS.md#L725) · [Review Phase 3](./CS.md#L417)
+
+---
+#### CS Phase 4 Project
+
+**Recommended build — Recursive Filesystem Walker**
+
+**Why this project now:** it applies the material covered through [CS Phase 4](./CS.md#L725) without requiring later phases.
+
+**Build specification**
+
+- Build **Recursive Filesystem Walker** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Recursive Filesystem Walker Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Data Structure and Algorithm Patterns — freeCodeCamp.org](https://www.youtube.com/watch?v=Z_c4byLrNBU)
+
+> **When this project is complete:** [Resume your study at CS Phase 5](./CS.md#L812) · [Review Phase 4](./CS.md#L725)
+
+---
+#### CS Phase 5 Project
+
+**Recommended build — Priority Task Scheduler**
+
+**Why this project now:** it applies the material covered through [CS Phase 5](./CS.md#L812) without requiring later phases.
+
+**Build specification**
+
+- Build **Priority Task Scheduler** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Priority Task Scheduler Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Data Structure and Algorithm Patterns — freeCodeCamp.org](https://www.youtube.com/watch?v=Z_c4byLrNBU)
+
+> **When this project is complete:** [Resume your study at CS Phase 6](./CS.md#L1040) · [Review Phase 5](./CS.md#L812)
+
+---
+#### CS Phase 6 Project
+
+**Recommended build — Hash Table and LRU Cache**
+
+**Why this project now:** it applies the material covered through [CS Phase 6](./CS.md#L1040) without requiring later phases.
+
+**Build specification**
+
+- Build **Hash Table and LRU Cache** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Hash Table and LRU Cache Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Four Systems Projects Worth Building — Alexa Fazio](https://www.youtube.com/watch?v=6CJiM3E2mAA)
+
+> **When this project is complete:** [Resume your study at CS Phase 7](./CS.md#L1125) · [Review Phase 6](./CS.md#L1040)
+
+---
+#### CS Phase 7 Project
+
+**Recommended build — Sorting Benchmark Explorer**
+
+**Why this project now:** it applies the material covered through [CS Phase 7](./CS.md#L1125) without requiring later phases.
+
+**Build specification**
+
+- Build **Sorting Benchmark Explorer** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Sorting Benchmark Explorer Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Four Systems Projects Worth Building — Alexa Fazio](https://www.youtube.com/watch?v=6CJiM3E2mAA)
+
+> **When this project is complete:** [Resume your study at CS Phase 8](./CS.md#L1287) · [Review Phase 7](./CS.md#L1125)
+
+---
+#### CS Phase 8 Project
+
+**Recommended build — Graph Route Planner**
+
+**Why this project now:** it applies the material covered through [CS Phase 8](./CS.md#L1287) without requiring later phases.
+
+**Build specification**
+
+- Build **Graph Route Planner** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Graph Route Planner Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Four Systems Projects Worth Building — Alexa Fazio](https://www.youtube.com/watch?v=6CJiM3E2mAA)
+
+> **When this project is complete:** [Resume your study at CS Phase 9](./CS.md#L1599) · [Review Phase 8](./CS.md#L1287)
+
+---
+#### CS Phase 9 Project
+
+**Recommended build — Algorithm Pattern Workbook**
+
+**Why this project now:** it applies the material covered through [CS Phase 9](./CS.md#L1599) without requiring later phases.
+
+**Build specification**
+
+- Build **Algorithm Pattern Workbook** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Algorithm Pattern Workbook Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Four Systems Projects Worth Building — Alexa Fazio](https://www.youtube.com/watch?v=6CJiM3E2mAA)
+
+> **When this project is complete:** [Resume your study at CS Phase 10](./CS.md#L2056) · [Review Phase 9](./CS.md#L1599)
+
+---
+#### CS Phase 10 Project
+
+**Recommended build — Parking Lot LLD**
+
+**Why this project now:** it applies the material covered through [CS Phase 10](./CS.md#L2056) without requiring later phases.
+
+**Build specification**
+
+- Build **Parking Lot LLD** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Parking Lot LLD Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [python-patterns](https://github.com/faif/python-patterns)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Four Systems Projects Worth Building — Alexa Fazio](https://www.youtube.com/watch?v=6CJiM3E2mAA)
+
+> **When this project is complete:** [Resume your study at CS Phase 11](./CS.md#L2385) · [Review Phase 10](./CS.md#L2056)
+
+---
+#### CS Phase 11 Project
+
+**Recommended build — Shell and Scheduler Simulator**
+
+**Why this project now:** it applies the material covered through [CS Phase 11](./CS.md#L2385) without requiring later phases.
+
+**Build specification**
+
+- Build **Shell and Scheduler Simulator** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Shell and Scheduler Simulator Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Build a Production-Ready Backend API — JavaScript Mastery](https://www.youtube.com/watch?v=rOpEN1JDaD0)
+
+> **When this project is complete:** [Resume your study at CS Phase 12](./CS.md#L3055) · [Review Phase 11](./CS.md#L2385)
+
+---
+#### CS Phase 12 Project
+
+**Recommended build — TCP Chat Service**
+
+**Why this project now:** it applies the material covered through [CS Phase 12](./CS.md#L3055) without requiring later phases.
+
+**Build specification**
+
+- Build **TCP Chat Service** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — TCP Chat Service Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Build a Production-Ready Backend API — JavaScript Mastery](https://www.youtube.com/watch?v=rOpEN1JDaD0)
+
+> **When this project is complete:** [Resume your study at CS Phase 13](./CS.md#L3781) · [Review Phase 12](./CS.md#L3055)
+
+---
+#### CS Phase 13 Project
+
+**Recommended build — Raw HTTP API Server**
+
+**Why this project now:** it applies the material covered through [CS Phase 13](./CS.md#L3781) without requiring later phases.
+
+**Build specification**
+
+- Build **Raw HTTP API Server** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Raw HTTP API Server Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Build a Production-Ready Backend API — JavaScript Mastery](https://www.youtube.com/watch?v=rOpEN1JDaD0)
+
+> **When this project is complete:** [Resume your study at CS Phase 14](./CS.md#L4389) · [Review Phase 13](./CS.md#L3781)
+
+---
+#### CS Phase 14 Project
+
+**Recommended build — Transactional Library Database**
+
+**Why this project now:** it applies the material covered through [CS Phase 14](./CS.md#L4389) without requiring later phases.
+
+**Build specification**
+
+- Build **Transactional Library Database** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Transactional Library Database Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Build a Production-Ready Backend API — JavaScript Mastery](https://www.youtube.com/watch?v=rOpEN1JDaD0)
+
+> **When this project is complete:** [Resume your study at CS Phase 15](./CS.md#L6742) · [Review Phase 14](./CS.md#L4389)
+
+---
+#### CS Phase 15 Project
+
+**Recommended build — Secure Auth Service**
+
+**Why this project now:** it applies the material covered through [CS Phase 15](./CS.md#L6742) without requiring later phases.
+
+**Build specification**
+
+- Build **Secure Auth Service** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Secure Auth Service Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [OWASP NodeGoat](https://github.com/OWASP/NodeGoat)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Build a Production-Ready Backend API — JavaScript Mastery](https://www.youtube.com/watch?v=rOpEN1JDaD0)
+
+> **When this project is complete:** [Resume your study at CS Phase 16](./CS.md#L8418) · [Review Phase 15](./CS.md#L6742)
+
+---
+#### CS Phase 16 Project
+
+**Recommended build — Tested CI-Ready Service**
+
+**Why this project now:** it applies the material covered through [CS Phase 16](./CS.md#L8418) without requiring later phases.
+
+**Build specification**
+
+- Build **Tested CI-Ready Service** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Tested CI-Ready Service Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [System Design Primer: Distributed Systems — Gaurav Sen](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
+
+> **When this project is complete:** [Resume your study at CS Phase 17](./CS.md#L9682) · [Review Phase 16](./CS.md#L8418)
+
+---
+#### CS Phase 17 Project
+
+**Recommended build — Scalable URL Shortener Design**
+
+**Why this project now:** it applies the material covered through [CS Phase 17](./CS.md#L9682) without requiring later phases.
+
+**Build specification**
+
+- Build **Scalable URL Shortener Design** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Scalable URL Shortener Design Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [System Design Primer](https://github.com/donnemartin/system-design-primer)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [System Design Primer: Distributed Systems — Gaurav Sen](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
+
+> **When this project is complete:** [Resume your study at CS Phase 18](./CS.md#L11050) · [Review Phase 17](./CS.md#L9682)
+
+---
+#### CS Phase 18 Project
+
+**Recommended build — Replicated Ledger Simulator**
+
+**Why this project now:** it applies the material covered through [CS Phase 18](./CS.md#L11050) without requiring later phases.
+
+**Build specification**
+
+- Build **Replicated Ledger Simulator** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Replicated Ledger Simulator Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [System Design Primer](https://github.com/donnemartin/system-design-primer)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [System Design Primer: Distributed Systems — Gaurav Sen](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
+
+> **When this project is complete:** [Resume your study at CS Phase 19](./CS.md#L11994) · [Review Phase 18](./CS.md#L11050)
+
+---
+#### CS Phase 19 Project
+
+**Recommended build — Integrated Systems Capstone**
+
+**Why this project now:** it applies the material covered through [CS Phase 19](./CS.md#L11994) without requiring later phases.
+
+**Build specification**
+
+- Build **Integrated Systems Capstone** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Integrated Systems Capstone Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [System Design Primer: Distributed Systems — Gaurav Sen](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
+
+> **When this project is complete:** [Resume your study at CS Phase 20](./CS.md#L12453) · [Review Phase 19](./CS.md#L11994)
+
+---
+#### CS Phase 20 Project
+
+**Recommended build — Timed Interview Harness**
+
+**Why this project now:** it applies the material covered through [CS Phase 20](./CS.md#L12453) without requiring later phases.
+
+**Build specification**
+
+- Build **Timed Interview Harness** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Timed Interview Harness Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Coding Interview University](https://github.com/jwasham/coding-interview-university)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [System Design Primer: Distributed Systems — Gaurav Sen](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
+
+> **When this project is complete:** [Return to the CS phase index](./CS.md#L140) · [Review Phase 20](./CS.md#L12453)
+
+---
+
+### Data Phase Projects
+
+Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent portfolio artifact.
+
+#### DATA Phase 1 Project
+
+**Recommended build — Decision Metric Brief**
+
+**Why this project now:** it applies the material covered through [DATA Phase 1](./Data.md#L156) without requiring later phases.
+
+**Build specification**
+
+- Build **Decision Metric Brief** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Decision Metric Brief Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
+- **YouTube build/lab:** [Building Your First Data Analytics Portfolio — CareerFoundry](https://www.youtube.com/watch?v=j9Q84_Gn_T0)
+
+> **When this project is complete:** [Resume your study at DATA Phase 2](./Data.md#L444) · [Review Phase 1](./Data.md#L156)
+
+---
+#### DATA Phase 2 Project
+
+**Recommended build — Spreadsheet KPI Dashboard**
+
+**Why this project now:** it applies the material covered through [DATA Phase 2](./Data.md#L444) without requiring later phases.
+
+**Build specification**
+
+- Build **Spreadsheet KPI Dashboard** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Spreadsheet KPI Dashboard Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
+- **YouTube build/lab:** [Building Your First Data Analytics Portfolio — CareerFoundry](https://www.youtube.com/watch?v=j9Q84_Gn_T0)
+
+> **When this project is complete:** [Resume your study at DATA Phase 3](./Data.md#L673) · [Review Phase 2](./Data.md#L444)
+
+---
+#### DATA Phase 3 Project
+
+**Recommended build — Reproducible Data CLI**
+
+**Why this project now:** it applies the material covered through [DATA Phase 3](./Data.md#L673) without requiring later phases.
+
+**Build specification**
+
+- Build **Reproducible Data CLI** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Reproducible Data CLI Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
+- **YouTube build/lab:** [Building Your First Data Analytics Portfolio — CareerFoundry](https://www.youtube.com/watch?v=j9Q84_Gn_T0)
+
+> **When this project is complete:** [Resume your study at DATA Phase 4](./Data.md#L934) · [Review Phase 3](./Data.md#L673)
+
+---
+#### DATA Phase 4 Project
+
+**Recommended build — SQL Bookstore Database**
+
+**Why this project now:** it applies the material covered through [DATA Phase 4](./Data.md#L934) without requiring later phases.
+
+**Build specification**
+
+- Build **SQL Bookstore Database** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — SQL Bookstore Database Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
+- **YouTube build/lab:** [Building Your First Data Analytics Portfolio — CareerFoundry](https://www.youtube.com/watch?v=j9Q84_Gn_T0)
+
+> **When this project is complete:** [Resume your study at DATA Phase 5](./Data.md#L1199) · [Review Phase 4](./Data.md#L934)
+
+---
+#### DATA Phase 5 Project
+
+**Recommended build — Sales Cohort Analysis**
+
+**Why this project now:** it applies the material covered through [DATA Phase 5](./Data.md#L1199) without requiring later phases.
+
+**Build specification**
+
+- Build **Sales Cohort Analysis** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Sales Cohort Analysis Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
+- **YouTube build/lab:** [Building Your First Data Analytics Portfolio — CareerFoundry](https://www.youtube.com/watch?v=j9Q84_Gn_T0)
+
+> **When this project is complete:** [Resume your study at DATA Phase 6](./Data.md#L1468) · [Review Phase 5](./Data.md#L1199)
+
+---
+#### DATA Phase 6 Project
+
+**Recommended build — Window Function Analytics Pack**
+
+**Why this project now:** it applies the material covered through [DATA Phase 6](./Data.md#L1468) without requiring later phases.
+
+**Build specification**
+
+- Build **Window Function Analytics Pack** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Window Function Analytics Pack Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
+- **YouTube build/lab:** [SQL Data Analyst Portfolio Project with Real Data — Amlan Mohanty](https://www.youtube.com/watch?v=x8dfQkKTyP0)
+
+> **When this project is complete:** [Resume your study at DATA Phase 7](./Data.md#L1759) · [Review Phase 6](./Data.md#L1468)
+
+---
+#### DATA Phase 7 Project
+
+**Recommended build — A/B Test Analyzer**
+
+**Why this project now:** it applies the material covered through [DATA Phase 7](./Data.md#L1759) without requiring later phases.
+
+**Build specification**
+
+- Build **A/B Test Analyzer** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — A/B Test Analyzer Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
+- **YouTube build/lab:** [SQL Data Analyst Portfolio Project with Real Data — Amlan Mohanty](https://www.youtube.com/watch?v=x8dfQkKTyP0)
+
+> **When this project is complete:** [Resume your study at DATA Phase 8](./Data.md#L2004) · [Review Phase 7](./Data.md#L1759)
+
+---
+#### DATA Phase 8 Project
+
+**Recommended build — Dirty Dataset Cleaner**
+
+**Why this project now:** it applies the material covered through [DATA Phase 8](./Data.md#L2004) without requiring later phases.
+
+**Build specification**
+
+- Build **Dirty Dataset Cleaner** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Dirty Dataset Cleaner Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
+- **YouTube build/lab:** [SQL Data Analyst Portfolio Project with Real Data — Amlan Mohanty](https://www.youtube.com/watch?v=x8dfQkKTyP0)
+
+> **When this project is complete:** [Resume your study at DATA Phase 9](./Data.md#L2241) · [Review Phase 8](./Data.md#L2004)
+
+---
+#### DATA Phase 9 Project
+
+**Recommended build — Executive Data Story**
+
+**Why this project now:** it applies the material covered through [DATA Phase 9](./Data.md#L2241) without requiring later phases.
+
+**Build specification**
+
+- Build **Executive Data Story** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Executive Data Story Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
+- **YouTube build/lab:** [SQL Data Analyst Portfolio Project with Real Data — Amlan Mohanty](https://www.youtube.com/watch?v=x8dfQkKTyP0)
+
+> **When this project is complete:** [Resume your study at DATA Phase 10](./Data.md#L2455) · [Review Phase 9](./Data.md#L2241)
+
+---
+#### DATA Phase 10 Project
+
+**Recommended build — Product Funnel EDA**
+
+**Why this project now:** it applies the material covered through [DATA Phase 10](./Data.md#L2455) without requiring later phases.
+
+**Build specification**
+
+- Build **Product Funnel EDA** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Product Funnel EDA Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
+- **YouTube build/lab:** [SQL Data Analyst Portfolio Project with Real Data — Amlan Mohanty](https://www.youtube.com/watch?v=x8dfQkKTyP0)
+
+> **When this project is complete:** [Resume your study at DATA Phase 11](./Data.md#L2741) · [Review Phase 10](./Data.md#L2455)
+
+---
+#### DATA Phase 11 Project
+
+**Recommended build — Normalized Order Database**
+
+**Why this project now:** it applies the material covered through [DATA Phase 11](./Data.md#L2741) without requiring later phases.
+
+**Build specification**
+
+- Build **Normalized Order Database** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Normalized Order Database Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
+- **YouTube build/lab:** [Build an ELT Pipeline with dbt, Snowflake, and Airflow — jayzern](https://www.youtube.com/watch?v=OLXkGB7krGo)
+
+> **When this project is complete:** [Resume your study at DATA Phase 12](./Data.md#L3013) · [Review Phase 11](./Data.md#L2741)
+
+---
+#### DATA Phase 12 Project
+
+**Recommended build — Star Schema Warehouse**
+
+**Why this project now:** it applies the material covered through [DATA Phase 12](./Data.md#L3013) without requiring later phases.
+
+**Build specification**
+
+- Build **Star Schema Warehouse** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Star Schema Warehouse Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
+- **YouTube build/lab:** [Build an ELT Pipeline with dbt, Snowflake, and Airflow — jayzern](https://www.youtube.com/watch?v=OLXkGB7krGo)
+
+> **When this project is complete:** [Resume your study at DATA Phase 13](./Data.md#L3378) · [Review Phase 12](./Data.md#L3013)
+
+---
+#### DATA Phase 13 Project
+
+**Recommended build — Incremental ETL Pipeline**
+
+**Why this project now:** it applies the material covered through [DATA Phase 13](./Data.md#L3378) without requiring later phases.
+
+**Build specification**
+
+- Build **Incremental ETL Pipeline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Incremental ETL Pipeline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
+- **YouTube build/lab:** [Build an ELT Pipeline with dbt, Snowflake, and Airflow — jayzern](https://www.youtube.com/watch?v=OLXkGB7krGo)
+
+> **When this project is complete:** [Resume your study at DATA Phase 14](./Data.md#L3623) · [Review Phase 13](./Data.md#L3378)
+
+---
+#### DATA Phase 14 Project
+
+**Recommended build — Scheduled Airflow Pipeline**
+
+**Why this project now:** it applies the material covered through [DATA Phase 14](./Data.md#L3623) without requiring later phases.
+
+**Build specification**
+
+- Build **Scheduled Airflow Pipeline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Scheduled Airflow Pipeline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Apache Airflow](https://github.com/apache/airflow)
+- **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
+- **YouTube build/lab:** [Build an ELT Pipeline with dbt, Snowflake, and Airflow — jayzern](https://www.youtube.com/watch?v=OLXkGB7krGo)
+
+> **When this project is complete:** [Resume your study at DATA Phase 15](./Data.md#L3873) · [Review Phase 14](./Data.md#L3623)
+
+---
+#### DATA Phase 15 Project
+
+**Recommended build — dbt Analytics Project**
+
+**Why this project now:** it applies the material covered through [DATA Phase 15](./Data.md#L3873) without requiring later phases.
+
+**Build specification**
+
+- Build **dbt Analytics Project** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — dbt Analytics Project Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [dbt Jaffle Shop](https://github.com/dbt-labs/jaffle_shop)
+- **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
+- **YouTube build/lab:** [Build an ELT Pipeline with dbt, Snowflake, and Airflow — jayzern](https://www.youtube.com/watch?v=OLXkGB7krGo)
+
+> **When this project is complete:** [Resume your study at DATA Phase 16](./Data.md#L4135) · [Review Phase 15](./Data.md#L3873)
+
+---
+#### DATA Phase 16 Project
+
+**Recommended build — Cloud Warehouse Migration**
+
+**Why this project now:** it applies the material covered through [DATA Phase 16](./Data.md#L4135) without requiring later phases.
+
+**Build specification**
+
+- Build **Cloud Warehouse Migration** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Cloud Warehouse Migration Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
+- **YouTube build/lab:** [Spark, Kafka, and Cassandra End-to-End Streaming Project — Data Engineering](https://www.youtube.com/watch?v=wNnTNTVdglM)
+
+> **When this project is complete:** [Resume your study at DATA Phase 17](./Data.md#L4357) · [Review Phase 16](./Data.md#L4135)
+
+---
+#### DATA Phase 17 Project
+
+**Recommended build — Distributed Spark Batch Job**
+
+**Why this project now:** it applies the material covered through [DATA Phase 17](./Data.md#L4357) without requiring later phases.
+
+**Build specification**
+
+- Build **Distributed Spark Batch Job** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Distributed Spark Batch Job Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Apache Spark](https://github.com/apache/spark)
+- **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
+- **YouTube build/lab:** [Spark, Kafka, and Cassandra End-to-End Streaming Project — Data Engineering](https://www.youtube.com/watch?v=wNnTNTVdglM)
+
+> **When this project is complete:** [Resume your study at DATA Phase 18](./Data.md#L4568) · [Review Phase 17](./Data.md#L4357)
+
+---
+#### DATA Phase 18 Project
+
+**Recommended build — Kafka Streaming Metrics**
+
+**Why this project now:** it applies the material covered through [DATA Phase 18](./Data.md#L4568) without requiring later phases.
+
+**Build specification**
+
+- Build **Kafka Streaming Metrics** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Kafka Streaming Metrics Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
+- **YouTube build/lab:** [Spark, Kafka, and Cassandra End-to-End Streaming Project — Data Engineering](https://www.youtube.com/watch?v=wNnTNTVdglM)
+
+> **When this project is complete:** [Resume your study at DATA Phase 19](./Data.md#L4749) · [Review Phase 18](./Data.md#L4568)
+
+---
+#### DATA Phase 19 Project
+
+**Recommended build — Data Quality Portfolio**
+
+**Why this project now:** it applies the material covered through [DATA Phase 19](./Data.md#L4749) without requiring later phases.
+
+**Build specification**
+
+- Build **Data Quality Portfolio** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Data Quality Portfolio Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
+- **YouTube build/lab:** [Spark, Kafka, and Cassandra End-to-End Streaming Project — Data Engineering](https://www.youtube.com/watch?v=wNnTNTVdglM)
+
+> **When this project is complete:** [Resume your study at DATA Phase 20](./Data.md#L4934) · [Review Phase 19](./Data.md#L4749)
+
+---
+#### DATA Phase 20 Project
+
+**Recommended build — Timed Analytics Case Study**
+
+**Why this project now:** it applies the material covered through [DATA Phase 20](./Data.md#L4934) without requiring later phases.
+
+**Build specification**
+
+- Build **Timed Analytics Case Study** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Timed Analytics Case Study Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
+- **YouTube build/lab:** [Spark, Kafka, and Cassandra End-to-End Streaming Project — Data Engineering](https://www.youtube.com/watch?v=wNnTNTVdglM)
+
+> **When this project is complete:** [Return to the DATA phase index](./Data.md#L115) · [Review Phase 20](./Data.md#L4934)
+
+---
+
+### Networks Phase Projects
+
+Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent portfolio artifact.
+
+#### NETWORKS Phase 1 Project
+
+**Recommended build — Latency vs Throughput Lab**
+
+**Why this project now:** it applies the material covered through [NETWORKS Phase 1](./Networks.md#L159) without requiring later phases.
+
+**Build specification**
+
+- Build **Latency vs Throughput Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Latency vs Throughput Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
+- **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
+- **YouTube build/lab:** [Free CCNA: Subnetting Lab — Jeremy's IT Lab](https://www.youtube.com/watch?v=bQ8sdpGQu8c)
+
+> **When this project is complete:** [Resume your study at NETWORKS Phase 2](./Networks.md#L379) · [Review Phase 1](./Networks.md#L159)
+
+---
+#### NETWORKS Phase 2 Project
+
+**Recommended build — Noisy Link Simulator**
+
+**Why this project now:** it applies the material covered through [NETWORKS Phase 2](./Networks.md#L379) without requiring later phases.
+
+**Build specification**
+
+- Build **Noisy Link Simulator** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Noisy Link Simulator Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
+- **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
+- **YouTube build/lab:** [Free CCNA: Subnetting Lab — Jeremy's IT Lab](https://www.youtube.com/watch?v=bQ8sdpGQu8c)
+
+> **When this project is complete:** [Resume your study at NETWORKS Phase 3](./Networks.md#L549) · [Review Phase 2](./Networks.md#L379)
+
+---
+#### NETWORKS Phase 3 Project
+
+**Recommended build — Ethernet Frame Encoder**
+
+**Why this project now:** it applies the material covered through [NETWORKS Phase 3](./Networks.md#L549) without requiring later phases.
+
+**Build specification**
+
+- Build **Ethernet Frame Encoder** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Ethernet Frame Encoder Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
+- **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
+- **YouTube build/lab:** [Free CCNA: Subnetting Lab — Jeremy's IT Lab](https://www.youtube.com/watch?v=bQ8sdpGQu8c)
+
+> **When this project is complete:** [Resume your study at NETWORKS Phase 4](./Networks.md#L706) · [Review Phase 3](./Networks.md#L549)
+
+---
+#### NETWORKS Phase 4 Project
+
+**Recommended build — Learning Switch Simulator**
+
+**Why this project now:** it applies the material covered through [NETWORKS Phase 4](./Networks.md#L706) without requiring later phases.
+
+**Build specification**
+
+- Build **Learning Switch Simulator** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Learning Switch Simulator Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
+- **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
+- **YouTube build/lab:** [Free CCNA: Subnetting Lab — Jeremy's IT Lab](https://www.youtube.com/watch?v=bQ8sdpGQu8c)
+
+> **When this project is complete:** [Resume your study at NETWORKS Phase 5](./Networks.md#L863) · [Review Phase 4](./Networks.md#L706)
+
+---
+#### NETWORKS Phase 5 Project
+
+**Recommended build — Subnet Calculator**
+
+**Why this project now:** it applies the material covered through [NETWORKS Phase 5](./Networks.md#L863) without requiring later phases.
+
+**Build specification**
+
+- Build **Subnet Calculator** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Subnet Calculator Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
+- **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
+- **YouTube build/lab:** [Free CCNA: Subnetting Lab — Jeremy's IT Lab](https://www.youtube.com/watch?v=bQ8sdpGQu8c)
+
+> **When this project is complete:** [Resume your study at NETWORKS Phase 6](./Networks.md#L1011) · [Review Phase 5](./Networks.md#L863)
+
+---
+#### NETWORKS Phase 6 Project
+
+**Recommended build — Longest-Prefix Router**
+
+**Why this project now:** it applies the material covered through [NETWORKS Phase 6](./Networks.md#L1011) without requiring later phases.
+
+**Build specification**
+
+- Build **Longest-Prefix Router** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Longest-Prefix Router Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
+- **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
+- **YouTube build/lab:** [Python Socket Programming Tutorial — Tech With Tim](https://www.youtube.com/watch?v=3QiPPX-KeSc)
+
+> **When this project is complete:** [Resume your study at NETWORKS Phase 7](./Networks.md#L1175) · [Review Phase 6](./Networks.md#L1011)
+
+---
+#### NETWORKS Phase 7 Project
+
+**Recommended build — DHCP/NAT Table Simulator**
+
+**Why this project now:** it applies the material covered through [NETWORKS Phase 7](./Networks.md#L1175) without requiring later phases.
+
+**Build specification**
+
+- Build **DHCP/NAT Table Simulator** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — DHCP/NAT Table Simulator Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
+- **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
+- **YouTube build/lab:** [Python Socket Programming Tutorial — Tech With Tim](https://www.youtube.com/watch?v=3QiPPX-KeSc)
+
+> **When this project is complete:** [Resume your study at NETWORKS Phase 8](./Networks.md#L1341) · [Review Phase 7](./Networks.md#L1175)
+
+---
+#### NETWORKS Phase 8 Project
+
+**Recommended build — Packet Encapsulation Visualizer**
+
+**Why this project now:** it applies the material covered through [NETWORKS Phase 8](./Networks.md#L1341) without requiring later phases.
+
+**Build specification**
+
+- Build **Packet Encapsulation Visualizer** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Packet Encapsulation Visualizer Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
+- **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
+- **YouTube build/lab:** [Python Socket Programming Tutorial — Tech With Tim](https://www.youtube.com/watch?v=3QiPPX-KeSc)
+
+> **When this project is complete:** [Resume your study at NETWORKS Phase 9](./Networks.md#L1487) · [Review Phase 8](./Networks.md#L1341)
+
+---
+#### NETWORKS Phase 9 Project
+
+**Recommended build — Reliable UDP Chat**
+
+**Why this project now:** it applies the material covered through [NETWORKS Phase 9](./Networks.md#L1487) without requiring later phases.
+
+**Build specification**
+
+- Build **Reliable UDP Chat** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Reliable UDP Chat Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
+- **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
+- **YouTube build/lab:** [Python Socket Programming Tutorial — Tech With Tim](https://www.youtube.com/watch?v=3QiPPX-KeSc)
+
+> **When this project is complete:** [Resume your study at NETWORKS Phase 10](./Networks.md#L1636) · [Review Phase 9](./Networks.md#L1487)
+
+---
+#### NETWORKS Phase 10 Project
+
+**Recommended build — TCP State Trace**
+
+**Why this project now:** it applies the material covered through [NETWORKS Phase 10](./Networks.md#L1636) without requiring later phases.
+
+**Build specification**
+
+- Build **TCP State Trace** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — TCP State Trace Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
+- **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
+- **YouTube build/lab:** [Python Socket Programming Tutorial — Tech With Tim](https://www.youtube.com/watch?v=3QiPPX-KeSc)
+
+> **When this project is complete:** [Resume your study at NETWORKS Phase 11](./Networks.md#L1802) · [Review Phase 10](./Networks.md#L1636)
+
+---
+#### NETWORKS Phase 11 Project
+
+**Recommended build — Multi-client Socket Server**
+
+**Why this project now:** it applies the material covered through [NETWORKS Phase 11](./Networks.md#L1802) without requiring later phases.
+
+**Build specification**
+
+- Build **Multi-client Socket Server** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Multi-client Socket Server Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
+- **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
+- **YouTube build/lab:** [Network Protocols: ARP through TLS and DNS — Practical Networking](https://www.youtube.com/watch?v=E5bSumTAHZE)
+
+> **When this project is complete:** [Resume your study at NETWORKS Phase 12](./Networks.md#L1980) · [Review Phase 11](./Networks.md#L1802)
+
+---
+#### NETWORKS Phase 12 Project
+
+**Recommended build — Recursive DNS Resolver**
+
+**Why this project now:** it applies the material covered through [NETWORKS Phase 12](./Networks.md#L1980) without requiring later phases.
+
+**Build specification**
+
+- Build **Recursive DNS Resolver** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Recursive DNS Resolver Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
+- **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
+- **YouTube build/lab:** [Network Protocols: ARP through TLS and DNS — Practical Networking](https://www.youtube.com/watch?v=E5bSumTAHZE)
+
+> **When this project is complete:** [Resume your study at NETWORKS Phase 13](./Networks.md#L2115) · [Review Phase 12](./Networks.md#L1980)
+
+---
+#### NETWORKS Phase 13 Project
+
+**Recommended build — Raw HTTP Exchange**
+
+**Why this project now:** it applies the material covered through [NETWORKS Phase 13](./Networks.md#L2115) without requiring later phases.
+
+**Build specification**
+
+- Build **Raw HTTP Exchange** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Raw HTTP Exchange Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
+- **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
+- **YouTube build/lab:** [Network Protocols: ARP through TLS and DNS — Practical Networking](https://www.youtube.com/watch?v=E5bSumTAHZE)
+
+> **When this project is complete:** [Resume your study at NETWORKS Phase 14](./Networks.md#L2255) · [Review Phase 13](./Networks.md#L2115)
+
+---
+#### NETWORKS Phase 14 Project
+
+**Recommended build — TLS Certificate Inspector**
+
+**Why this project now:** it applies the material covered through [NETWORKS Phase 14](./Networks.md#L2255) without requiring later phases.
+
+**Build specification**
+
+- Build **TLS Certificate Inspector** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — TLS Certificate Inspector Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
+- **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
+- **YouTube build/lab:** [Network Protocols: ARP through TLS and DNS — Practical Networking](https://www.youtube.com/watch?v=E5bSumTAHZE)
+
+> **When this project is complete:** [Resume your study at NETWORKS Phase 15](./Networks.md#L2391) · [Review Phase 14](./Networks.md#L2255)
+
+---
+#### NETWORKS Phase 15 Project
+
+**Recommended build — Packet Forensics Report**
+
+**Why this project now:** it applies the material covered through [NETWORKS Phase 15](./Networks.md#L2391) without requiring later phases.
+
+**Build specification**
+
+- Build **Packet Forensics Report** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Packet Forensics Report Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Wireshark](https://github.com/wireshark/wireshark)
+- **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
+- **YouTube build/lab:** [Network Protocols: ARP through TLS and DNS — Practical Networking](https://www.youtube.com/watch?v=E5bSumTAHZE)
+
+> **When this project is complete:** [Resume your study at NETWORKS Phase 16](./Networks.md#L2544) · [Review Phase 15](./Networks.md#L2391)
+
+---
+#### NETWORKS Phase 16 Project
+
+**Recommended build — Wi-Fi Survey and Heatmap**
+
+**Why this project now:** it applies the material covered through [NETWORKS Phase 16](./Networks.md#L2544) without requiring later phases.
+
+**Build specification**
+
+- Build **Wi-Fi Survey and Heatmap** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Wi-Fi Survey and Heatmap Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
+- **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
+- **YouTube build/lab:** [Wireshark Packet Analysis Lab — Concepts & Tricks](https://www.youtube.com/watch?v=2SYknklVHqU)
+
+> **When this project is complete:** [Resume your study at NETWORKS Phase 17](./Networks.md#L2672) · [Review Phase 16](./Networks.md#L2544)
+
+---
+#### NETWORKS Phase 17 Project
+
+**Recommended build — Reverse Proxy Load Lab**
+
+**Why this project now:** it applies the material covered through [NETWORKS Phase 17](./Networks.md#L2672) without requiring later phases.
+
+**Build specification**
+
+- Build **Reverse Proxy Load Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Reverse Proxy Load Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
+- **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
+- **YouTube build/lab:** [Wireshark Packet Analysis Lab — Concepts & Tricks](https://www.youtube.com/watch?v=2SYknklVHqU)
+
+> **When this project is complete:** [Resume your study at NETWORKS Phase 18](./Networks.md#L2812) · [Review Phase 17](./Networks.md#L2672)
+
+---
+#### NETWORKS Phase 18 Project
+
+**Recommended build — BGP Policy Simulator**
+
+**Why this project now:** it applies the material covered through [NETWORKS Phase 18](./Networks.md#L2812) without requiring later phases.
+
+**Build specification**
+
+- Build **BGP Policy Simulator** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — BGP Policy Simulator Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
+- **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
+- **YouTube build/lab:** [Wireshark Packet Analysis Lab — Concepts & Tricks](https://www.youtube.com/watch?v=2SYknklVHqU)
+
+> **When this project is complete:** [Resume your study at NETWORKS Phase 19](./Networks.md#L2947) · [Review Phase 18](./Networks.md#L2812)
+
+---
+#### NETWORKS Phase 19 Project
+
+**Recommended build — Automated Network Lab Portfolio**
+
+**Why this project now:** it applies the material covered through [NETWORKS Phase 19](./Networks.md#L2947) without requiring later phases.
+
+**Build specification**
+
+- Build **Automated Network Lab Portfolio** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Automated Network Lab Portfolio Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
+- **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
+- **YouTube build/lab:** [Wireshark Packet Analysis Lab — Concepts & Tricks](https://www.youtube.com/watch?v=2SYknklVHqU)
+
+> **When this project is complete:** [Resume your study at NETWORKS Phase 20](./Networks.md#L3081) · [Review Phase 19](./Networks.md#L2947)
+
+---
+#### NETWORKS Phase 20 Project
+
+**Recommended build — Timed Troubleshooting Drill**
+
+**Why this project now:** it applies the material covered through [NETWORKS Phase 20](./Networks.md#L3081) without requiring later phases.
+
+**Build specification**
+
+- Build **Timed Troubleshooting Drill** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Timed Troubleshooting Drill Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
+- **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
+- **YouTube build/lab:** [Wireshark Packet Analysis Lab — Concepts & Tricks](https://www.youtube.com/watch?v=2SYknklVHqU)
+
+> **When this project is complete:** [Return to the NETWORKS phase index](./Networks.md#L111) · [Review Phase 20](./Networks.md#L3081)
+
+---
+
+### AI Phase Projects
+
+Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent portfolio artifact.
+
+#### AI Phase 1 Project
+
+**Recommended build — Rule vs Learner Benchmark**
+
+**Why this project now:** it applies the material covered through [AI Phase 1](./AI.md#L154) without requiring later phases.
+
+**Build specification**
+
+- Build **Rule vs Learner Benchmark** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Rule vs Learner Benchmark Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
+- **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
+- **YouTube build/lab:** [Build a Machine Learning Web App with scikit-learn — Patrick Loeber](https://www.youtube.com/watch?v=Klqn--Mu2pE)
+
+> **When this project is complete:** [Resume your study at AI Phase 2](./AI.md#L312) · [Review Phase 1](./AI.md#L154)
+
+---
+#### AI Phase 2 Project
+
+**Recommended build — Gradient Descent Visualizer**
+
+**Why this project now:** it applies the material covered through [AI Phase 2](./AI.md#L312) without requiring later phases.
+
+**Build specification**
+
+- Build **Gradient Descent Visualizer** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Gradient Descent Visualizer Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [micrograd](https://github.com/karpathy/micrograd)
+- **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
+- **YouTube build/lab:** [Build a Machine Learning Web App with scikit-learn — Patrick Loeber](https://www.youtube.com/watch?v=Klqn--Mu2pE)
+
+> **When this project is complete:** [Resume your study at AI Phase 3](./AI.md#L457) · [Review Phase 2](./AI.md#L312)
+
+---
+#### AI Phase 3 Project
+
+**Recommended build — NumPy/Pandas Dataset Lab**
+
+**Why this project now:** it applies the material covered through [AI Phase 3](./AI.md#L457) without requiring later phases.
+
+**Build specification**
+
+- Build **NumPy/Pandas Dataset Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — NumPy/Pandas Dataset Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
+- **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
+- **YouTube build/lab:** [Build a Machine Learning Web App with scikit-learn — Patrick Loeber](https://www.youtube.com/watch?v=Klqn--Mu2pE)
+
+> **When this project is complete:** [Resume your study at AI Phase 4](./AI.md#L593) · [Review Phase 3](./AI.md#L457)
+
+---
+#### AI Phase 4 Project
+
+**Recommended build — Regression and Classification Baseline**
+
+**Why this project now:** it applies the material covered through [AI Phase 4](./AI.md#L593) without requiring later phases.
+
+**Build specification**
+
+- Build **Regression and Classification Baseline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Regression and Classification Baseline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
+- **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
+- **YouTube build/lab:** [Build a Machine Learning Web App with scikit-learn — Patrick Loeber](https://www.youtube.com/watch?v=Klqn--Mu2pE)
+
+> **When this project is complete:** [Resume your study at AI Phase 5](./AI.md#L739) · [Review Phase 4](./AI.md#L593)
+
+---
+#### AI Phase 5 Project
+
+**Recommended build — Leakage-Proof Evaluation Harness**
+
+**Why this project now:** it applies the material covered through [AI Phase 5](./AI.md#L739) without requiring later phases.
+
+**Build specification**
+
+- Build **Leakage-Proof Evaluation Harness** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Leakage-Proof Evaluation Harness Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
+- **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
+- **YouTube build/lab:** [Build a Machine Learning Web App with scikit-learn — Patrick Loeber](https://www.youtube.com/watch?v=Klqn--Mu2pE)
+
+> **When this project is complete:** [Resume your study at AI Phase 6](./AI.md#L878) · [Review Phase 5](./AI.md#L739)
+
+---
+#### AI Phase 6 Project
+
+**Recommended build — Ensemble Model Showdown**
+
+**Why this project now:** it applies the material covered through [AI Phase 6](./AI.md#L878) without requiring later phases.
+
+**Build specification**
+
+- Build **Ensemble Model Showdown** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Ensemble Model Showdown Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
+- **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
+- **YouTube build/lab:** [Build Your First PyTorch Model — Rob Mulla](https://www.youtube.com/watch?v=tHL5STNJKag)
+
+> **When this project is complete:** [Resume your study at AI Phase 7](./AI.md#L1020) · [Review Phase 6](./AI.md#L878)
+
+---
+#### AI Phase 7 Project
+
+**Recommended build — Neural Network from Scratch**
+
+**Why this project now:** it applies the material covered through [AI Phase 7](./AI.md#L1020) without requiring later phases.
+
+**Build specification**
+
+- Build **Neural Network from Scratch** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Neural Network from Scratch Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [PyTorch Examples](https://github.com/pytorch/examples)
+- **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
+- **YouTube build/lab:** [Build Your First PyTorch Model — Rob Mulla](https://www.youtube.com/watch?v=tHL5STNJKag)
+
+> **When this project is complete:** [Resume your study at AI Phase 8](./AI.md#L1173) · [Review Phase 7](./AI.md#L1020)
+
+---
+#### AI Phase 8 Project
+
+**Recommended build — Tiny Autograd Engine**
+
+**Why this project now:** it applies the material covered through [AI Phase 8](./AI.md#L1173) without requiring later phases.
+
+**Build specification**
+
+- Build **Tiny Autograd Engine** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Tiny Autograd Engine Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [PyTorch Examples](https://github.com/pytorch/examples)
+- **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
+- **YouTube build/lab:** [Build Your First PyTorch Model — Rob Mulla](https://www.youtube.com/watch?v=tHL5STNJKag)
+
+> **When this project is complete:** [Resume your study at AI Phase 9](./AI.md#L1319) · [Review Phase 8](./AI.md#L1173)
+
+---
+#### AI Phase 9 Project
+
+**Recommended build — Reusable PyTorch Trainer**
+
+**Why this project now:** it applies the material covered through [AI Phase 9](./AI.md#L1319) without requiring later phases.
+
+**Build specification**
+
+- Build **Reusable PyTorch Trainer** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Reusable PyTorch Trainer Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [PyTorch Examples](https://github.com/pytorch/examples)
+- **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
+- **YouTube build/lab:** [Build Your First PyTorch Model — Rob Mulla](https://www.youtube.com/watch?v=tHL5STNJKag)
+
+> **When this project is complete:** [Resume your study at AI Phase 10](./AI.md#L1469) · [Review Phase 9](./AI.md#L1319)
+
+---
+#### AI Phase 10 Project
+
+**Recommended build — Transfer-Learning Image Classifier**
+
+**Why this project now:** it applies the material covered through [AI Phase 10](./AI.md#L1469) without requiring later phases.
+
+**Build specification**
+
+- Build **Transfer-Learning Image Classifier** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Transfer-Learning Image Classifier Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [PyTorch Examples](https://github.com/pytorch/examples)
+- **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
+- **YouTube build/lab:** [Build Your First PyTorch Model — Rob Mulla](https://www.youtube.com/watch?v=tHL5STNJKag)
+
+> **When this project is complete:** [Resume your study at AI Phase 11](./AI.md#L1612) · [Review Phase 10](./AI.md#L1469)
+
+---
+#### AI Phase 11 Project
+
+**Recommended build — Sequence Sentiment Classifier**
+
+**Why this project now:** it applies the material covered through [AI Phase 11](./AI.md#L1612) without requiring later phases.
+
+**Build specification**
+
+- Build **Sequence Sentiment Classifier** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Sequence Sentiment Classifier Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [PyTorch Examples](https://github.com/pytorch/examples)
+- **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
+- **YouTube build/lab:** [Learn RAG from Scratch — freeCodeCamp.org](https://www.youtube.com/watch?v=sVcwVQRHIc8)
+
+> **When this project is complete:** [Resume your study at AI Phase 12](./AI.md#L1746) · [Review Phase 11](./AI.md#L1612)
+
+---
+#### AI Phase 12 Project
+
+**Recommended build — Semantic Search Engine**
+
+**Why this project now:** it applies the material covered through [AI Phase 12](./AI.md#L1746) without requiring later phases.
+
+**Build specification**
+
+- Build **Semantic Search Engine** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Semantic Search Engine Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Transformers](https://github.com/huggingface/transformers)
+- **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
+- **YouTube build/lab:** [Learn RAG from Scratch — freeCodeCamp.org](https://www.youtube.com/watch?v=sVcwVQRHIc8)
+
+> **When this project is complete:** [Resume your study at AI Phase 13](./AI.md#L1889) · [Review Phase 12](./AI.md#L1746)
+
+---
+#### AI Phase 13 Project
+
+**Recommended build — Tiny Transformer Explainer**
+
+**Why this project now:** it applies the material covered through [AI Phase 13](./AI.md#L1889) without requiring later phases.
+
+**Build specification**
+
+- Build **Tiny Transformer Explainer** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Tiny Transformer Explainer Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Transformers](https://github.com/huggingface/transformers)
+- **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
+- **YouTube build/lab:** [Learn RAG from Scratch — freeCodeCamp.org](https://www.youtube.com/watch?v=sVcwVQRHIc8)
+
+> **When this project is complete:** [Resume your study at AI Phase 14](./AI.md#L2036) · [Review Phase 13](./AI.md#L1889)
+
+---
+#### AI Phase 14 Project
+
+**Recommended build — Prompt Experiment Matrix**
+
+**Why this project now:** it applies the material covered through [AI Phase 14](./AI.md#L2036) without requiring later phases.
+
+**Build specification**
+
+- Build **Prompt Experiment Matrix** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Prompt Experiment Matrix Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Transformers](https://github.com/huggingface/transformers)
+- **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
+- **YouTube build/lab:** [Learn RAG from Scratch — freeCodeCamp.org](https://www.youtube.com/watch?v=sVcwVQRHIc8)
+
+> **When this project is complete:** [Resume your study at AI Phase 15](./AI.md#L2181) · [Review Phase 14](./AI.md#L2036)
+
+---
+#### AI Phase 15 Project
+
+**Recommended build — Citation-First RAG**
+
+**Why this project now:** it applies the material covered through [AI Phase 15](./AI.md#L2181) without requiring later phases.
+
+**Build specification**
+
+- Build **Citation-First RAG** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Citation-First RAG Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Transformers](https://github.com/huggingface/transformers)
+- **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
+- **YouTube build/lab:** [Learn RAG from Scratch — freeCodeCamp.org](https://www.youtube.com/watch?v=sVcwVQRHIc8)
+
+> **When this project is complete:** [Resume your study at AI Phase 16](./AI.md#L2342) · [Review Phase 15](./AI.md#L2181)
+
+---
+#### AI Phase 16 Project
+
+**Recommended build — LoRA Fine-Tuning Report**
+
+**Why this project now:** it applies the material covered through [AI Phase 16](./AI.md#L2342) without requiring later phases.
+
+**Build specification**
+
+- Build **LoRA Fine-Tuning Report** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — LoRA Fine-Tuning Report Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Transformers](https://github.com/huggingface/transformers)
+- **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
+- **YouTube build/lab:** [AI Agent Evaluation Crash Course — DSwithBappy](https://www.youtube.com/watch?v=rwxcoEglXA4)
+
+> **When this project is complete:** [Resume your study at AI Phase 17](./AI.md#L2478) · [Review Phase 16](./AI.md#L2342)
+
+---
+#### AI Phase 17 Project
+
+**Recommended build — Safe Tool-Using Agent**
+
+**Why this project now:** it applies the material covered through [AI Phase 17](./AI.md#L2478) without requiring later phases.
+
+**Build specification**
+
+- Build **Safe Tool-Using Agent** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Safe Tool-Using Agent Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Transformers](https://github.com/huggingface/transformers)
+- **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
+- **YouTube build/lab:** [AI Agent Evaluation Crash Course — DSwithBappy](https://www.youtube.com/watch?v=rwxcoEglXA4)
+
+> **When this project is complete:** [Resume your study at AI Phase 18](./AI.md#L2629) · [Review Phase 17](./AI.md#L2478)
+
+---
+#### AI Phase 18 Project
+
+**Recommended build — Model Eval and Monitoring Pipeline**
+
+**Why this project now:** it applies the material covered through [AI Phase 18](./AI.md#L2629) without requiring later phases.
+
+**Build specification**
+
+- Build **Model Eval and Monitoring Pipeline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Model Eval and Monitoring Pipeline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
+- **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
+- **YouTube build/lab:** [AI Agent Evaluation Crash Course — DSwithBappy](https://www.youtube.com/watch?v=rwxcoEglXA4)
+
+> **When this project is complete:** [Resume your study at AI Phase 19](./AI.md#L2777) · [Review Phase 18](./AI.md#L2629)
+
+---
+#### AI Phase 19 Project
+
+**Recommended build — Reproducible AI Portfolio**
+
+**Why this project now:** it applies the material covered through [AI Phase 19](./AI.md#L2777) without requiring later phases.
+
+**Build specification**
+
+- Build **Reproducible AI Portfolio** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Reproducible AI Portfolio Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
+- **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
+- **YouTube build/lab:** [AI Agent Evaluation Crash Course — DSwithBappy](https://www.youtube.com/watch?v=rwxcoEglXA4)
+
+> **When this project is complete:** [Resume your study at AI Phase 20](./AI.md#L2916) · [Review Phase 19](./AI.md#L2777)
+
+---
+#### AI Phase 20 Project
+
+**Recommended build — ML System Design Drill**
+
+**Why this project now:** it applies the material covered through [AI Phase 20](./AI.md#L2916) without requiring later phases.
+
+**Build specification**
+
+- Build **ML System Design Drill** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — ML System Design Drill Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
+- **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
+- **YouTube build/lab:** [AI Agent Evaluation Crash Course — DSwithBappy](https://www.youtube.com/watch?v=rwxcoEglXA4)
+
+> **When this project is complete:** [Return to the AI phase index](./AI.md#L109) · [Review Phase 20](./AI.md#L2916)
+
+---
+
+### ODOO Phase Projects
+
+Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent portfolio artifact.
+
+#### ODOO Phase 1 Project
+
+**Recommended build — ERP Process Map**
+
+**Why this project now:** it applies the material covered through [ODOO Phase 1](./ODOO.md#L152) without requiring later phases.
+
+**Build specification**
+
+- Build **ERP Process Map** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — ERP Process Map Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
+- **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
+- **YouTube build/lab:** [Create a Custom Module in Odoo 17/18 — OdooVerse](https://www.youtube.com/watch?v=A61AyJRzLB8)
+
+> **When this project is complete:** [Resume your study at ODOO Phase 2](./ODOO.md#L336) · [Review Phase 1](./ODOO.md#L152)
+
+---
+#### ODOO Phase 2 Project
+
+**Recommended build — Request-to-Database Trace**
+
+**Why this project now:** it applies the material covered through [ODOO Phase 2](./ODOO.md#L336) without requiring later phases.
+
+**Build specification**
+
+- Build **Request-to-Database Trace** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Request-to-Database Trace Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
+- **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
+- **YouTube build/lab:** [Create a Custom Module in Odoo 17/18 — OdooVerse](https://www.youtube.com/watch?v=A61AyJRzLB8)
+
+> **When this project is complete:** [Resume your study at ODOO Phase 3](./ODOO.md#L515) · [Review Phase 2](./ODOO.md#L336)
+
+---
+#### ODOO Phase 3 Project
+
+**Recommended build — Reproducible Odoo Dev Stack**
+
+**Why this project now:** it applies the material covered through [ODOO Phase 3](./ODOO.md#L515) without requiring later phases.
+
+**Build specification**
+
+- Build **Reproducible Odoo Dev Stack** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Reproducible Odoo Dev Stack Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
+- **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
+- **YouTube build/lab:** [Create a Custom Module in Odoo 17/18 — OdooVerse](https://www.youtube.com/watch?v=A61AyJRzLB8)
+
+> **When this project is complete:** [Resume your study at ODOO Phase 4](./ODOO.md#L676) · [Review Phase 3](./ODOO.md#L515)
+
+---
+#### ODOO Phase 4 Project
+
+**Recommended build — Minimal Todo Addon**
+
+**Why this project now:** it applies the material covered through [ODOO Phase 4](./ODOO.md#L676) without requiring later phases.
+
+**Build specification**
+
+- Build **Minimal Todo Addon** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Minimal Todo Addon Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
+- **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
+- **YouTube build/lab:** [Create a Custom Module in Odoo 17/18 — OdooVerse](https://www.youtube.com/watch?v=A61AyJRzLB8)
+
+> **When this project is complete:** [Resume your study at ODOO Phase 5](./ODOO.md#L859) · [Review Phase 4](./ODOO.md#L676)
+
+---
+#### ODOO Phase 5 Project
+
+**Recommended build — Library Domain Models**
+
+**Why this project now:** it applies the material covered through [ODOO Phase 5](./ODOO.md#L859) without requiring later phases.
+
+**Build specification**
+
+- Build **Library Domain Models** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Library Domain Models Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
+- **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
+- **YouTube build/lab:** [Create a Custom Module in Odoo 17/18 — OdooVerse](https://www.youtube.com/watch?v=A61AyJRzLB8)
+
+> **When this project is complete:** [Resume your study at ODOO Phase 6](./ODOO.md#L1030) · [Review Phase 5](./ODOO.md#L859)
+
+---
+#### ODOO Phase 6 Project
+
+**Recommended build — Recordset Query Explorer**
+
+**Why this project now:** it applies the material covered through [ODOO Phase 6](./ODOO.md#L1030) without requiring later phases.
+
+**Build specification**
+
+- Build **Recordset Query Explorer** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Recordset Query Explorer Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
+- **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
+- **YouTube build/lab:** [Odoo Module Structure: Models, Views, and Security — EasyDev](https://www.youtube.com/watch?v=ov-ReGkIxIg)
+
+> **When this project is complete:** [Resume your study at ODOO Phase 7](./ODOO.md#L1199) · [Review Phase 6](./ODOO.md#L1030)
+
+---
+#### ODOO Phase 7 Project
+
+**Recommended build — Multi-company Access Lab**
+
+**Why this project now:** it applies the material covered through [ODOO Phase 7](./ODOO.md#L1199) without requiring later phases.
+
+**Build specification**
+
+- Build **Multi-company Access Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Multi-company Access Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
+- **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
+- **YouTube build/lab:** [Odoo Module Structure: Models, Views, and Security — EasyDev](https://www.youtube.com/watch?v=ov-ReGkIxIg)
+
+> **When this project is complete:** [Resume your study at ODOO Phase 8](./ODOO.md#L1361) · [Review Phase 7](./ODOO.md#L1199)
+
+---
+#### ODOO Phase 8 Project
+
+**Recommended build — Inherited Library Views**
+
+**Why this project now:** it applies the material covered through [ODOO Phase 8](./ODOO.md#L1361) without requiring later phases.
+
+**Build specification**
+
+- Build **Inherited Library Views** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Inherited Library Views Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
+- **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
+- **YouTube build/lab:** [Odoo Module Structure: Models, Views, and Security — EasyDev](https://www.youtube.com/watch?v=ov-ReGkIxIg)
+
+> **When this project is complete:** [Resume your study at ODOO Phase 9](./ODOO.md#L1544) · [Review Phase 8](./ODOO.md#L1361)
+
+---
+#### ODOO Phase 9 Project
+
+**Recommended build — Role-Aware Navigation Module**
+
+**Why this project now:** it applies the material covered through [ODOO Phase 9](./ODOO.md#L1544) without requiring later phases.
+
+**Build specification**
+
+- Build **Role-Aware Navigation Module** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Role-Aware Navigation Module Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
+- **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
+- **YouTube build/lab:** [Odoo Module Structure: Models, Views, and Security — EasyDev](https://www.youtube.com/watch?v=ov-ReGkIxIg)
+
+> **When this project is complete:** [Resume your study at ODOO Phase 10](./ODOO.md#L1710) · [Review Phase 9](./ODOO.md#L1544)
+
+---
+#### ODOO Phase 10 Project
+
+**Recommended build — Validated Order Workflow**
+
+**Why this project now:** it applies the material covered through [ODOO Phase 10](./ODOO.md#L1710) without requiring later phases.
+
+**Build specification**
+
+- Build **Validated Order Workflow** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Validated Order Workflow Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
+- **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
+- **YouTube build/lab:** [Odoo Module Structure: Models, Views, and Security — EasyDev](https://www.youtube.com/watch?v=ov-ReGkIxIg)
+
+> **When this project is complete:** [Resume your study at ODOO Phase 11](./ODOO.md#L1893) · [Review Phase 10](./ODOO.md#L1710)
+
+---
+#### ODOO Phase 11 Project
+
+**Recommended build — Sale Order Extension**
+
+**Why this project now:** it applies the material covered through [ODOO Phase 11](./ODOO.md#L1893) without requiring later phases.
+
+**Build specification**
+
+- Build **Sale Order Extension** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Sale Order Extension Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
+- **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
+- **YouTube build/lab:** [Odoo 19 Webhook Automation — VeeVee Infotech](https://www.youtube.com/watch?v=ndt8OCP_uG8)
+
+> **When this project is complete:** [Resume your study at ODOO Phase 12](./ODOO.md#L2060) · [Review Phase 11](./ODOO.md#L1893)
+
+---
+#### ODOO Phase 12 Project
+
+**Recommended build — Bulk Update Wizard**
+
+**Why this project now:** it applies the material covered through [ODOO Phase 12](./ODOO.md#L2060) without requiring later phases.
+
+**Build specification**
+
+- Build **Bulk Update Wizard** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Bulk Update Wizard Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
+- **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
+- **YouTube build/lab:** [Odoo 19 Webhook Automation — VeeVee Infotech](https://www.youtube.com/watch?v=ndt8OCP_uG8)
+
+> **When this project is complete:** [Resume your study at ODOO Phase 13](./ODOO.md#L2230) · [Review Phase 12](./ODOO.md#L2060)
+
+---
+#### ODOO Phase 13 Project
+
+**Recommended build — Idempotent Webhook Module**
+
+**Why this project now:** it applies the material covered through [ODOO Phase 13](./ODOO.md#L2230) without requiring later phases.
+
+**Build specification**
+
+- Build **Idempotent Webhook Module** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Idempotent Webhook Module Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [OCA Connector](https://github.com/OCA/connector)
+- **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
+- **YouTube build/lab:** [Odoo 19 Webhook Automation — VeeVee Infotech](https://www.youtube.com/watch?v=ndt8OCP_uG8)
+
+> **When this project is complete:** [Resume your study at ODOO Phase 14](./ODOO.md#L2402) · [Review Phase 13](./ODOO.md#L2230)
+
+---
+#### ODOO Phase 14 Project
+
+**Recommended build — External Sync Client**
+
+**Why this project now:** it applies the material covered through [ODOO Phase 14](./ODOO.md#L2402) without requiring later phases.
+
+**Build specification**
+
+- Build **External Sync Client** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — External Sync Client Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [OCA Connector](https://github.com/OCA/connector)
+- **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
+- **YouTube build/lab:** [Odoo 19 Webhook Automation — VeeVee Infotech](https://www.youtube.com/watch?v=ndt8OCP_uG8)
+
+> **When this project is complete:** [Resume your study at ODOO Phase 15](./ODOO.md#L2580) · [Review Phase 14](./ODOO.md#L2402)
+
+---
+#### ODOO Phase 15 Project
+
+**Recommended build — Payment Sandbox Integration**
+
+**Why this project now:** it applies the material covered through [ODOO Phase 15](./ODOO.md#L2580) without requiring later phases.
+
+**Build specification**
+
+- Build **Payment Sandbox Integration** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Payment Sandbox Integration Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [OCA Connector](https://github.com/OCA/connector)
+- **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
+- **YouTube build/lab:** [Odoo 19 Webhook Automation — VeeVee Infotech](https://www.youtube.com/watch?v=ndt8OCP_uG8)
+
+> **When this project is complete:** [Resume your study at ODOO Phase 16](./ODOO.md#L2758) · [Review Phase 15](./ODOO.md#L2580)
+
+---
+#### ODOO Phase 16 Project
+
+**Recommended build — OWL KPI Widget**
+
+**Why this project now:** it applies the material covered through [ODOO Phase 16](./ODOO.md#L2758) without requiring later phases.
+
+**Build specification**
+
+- Build **OWL KPI Widget** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — OWL KPI Widget Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
+- **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
+- **YouTube build/lab:** [Odoo Custom Dashboard with OWL — AJScript Media](https://www.youtube.com/watch?v=CJvaY-VGqwk)
+
+> **When this project is complete:** [Resume your study at ODOO Phase 17](./ODOO.md#L2930) · [Review Phase 16](./ODOO.md#L2758)
+
+---
+#### ODOO Phase 17 Project
+
+**Recommended build — ORM Query Tuning Report**
+
+**Why this project now:** it applies the material covered through [ODOO Phase 17](./ODOO.md#L2930) without requiring later phases.
+
+**Build specification**
+
+- Build **ORM Query Tuning Report** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — ORM Query Tuning Report Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
+- **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
+- **YouTube build/lab:** [Odoo Custom Dashboard with OWL — AJScript Media](https://www.youtube.com/watch?v=CJvaY-VGqwk)
+
+> **When this project is complete:** [Resume your study at ODOO Phase 18](./ODOO.md#L3088) · [Review Phase 17](./ODOO.md#L2930)
+
+---
+#### ODOO Phase 18 Project
+
+**Recommended build — Upgrade-Safe Test Suite**
+
+**Why this project now:** it applies the material covered through [ODOO Phase 18](./ODOO.md#L3088) without requiring later phases.
+
+**Build specification**
+
+- Build **Upgrade-Safe Test Suite** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Upgrade-Safe Test Suite Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
+- **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
+- **YouTube build/lab:** [Odoo Custom Dashboard with OWL — AJScript Media](https://www.youtube.com/watch?v=CJvaY-VGqwk)
+
+> **When this project is complete:** [Resume your study at ODOO Phase 19](./ODOO.md#L3258) · [Review Phase 18](./ODOO.md#L3088)
+
+---
+#### ODOO Phase 19 Project
+
+**Recommended build — Portfolio-Ready Business Module**
+
+**Why this project now:** it applies the material covered through [ODOO Phase 19](./ODOO.md#L3258) without requiring later phases.
+
+**Build specification**
+
+- Build **Portfolio-Ready Business Module** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Portfolio-Ready Business Module Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
+- **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
+- **YouTube build/lab:** [Odoo Custom Dashboard with OWL — AJScript Media](https://www.youtube.com/watch?v=CJvaY-VGqwk)
+
+> **When this project is complete:** [Resume your study at ODOO Phase 20](./ODOO.md#L3428) · [Review Phase 19](./ODOO.md#L3258)
+
+---
+#### ODOO Phase 20 Project
+
+**Recommended build — Timed Odoo Debug Drill**
+
+**Why this project now:** it applies the material covered through [ODOO Phase 20](./ODOO.md#L3428) without requiring later phases.
+
+**Build specification**
+
+- Build **Timed Odoo Debug Drill** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Timed Odoo Debug Drill Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
+- **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
+- **YouTube build/lab:** [Odoo Custom Dashboard with OWL — AJScript Media](https://www.youtube.com/watch?v=CJvaY-VGqwk)
+
+> **When this project is complete:** [Return to the ODOO phase index](./ODOO.md#L107) · [Review Phase 20](./ODOO.md#L3428)
+
+---
+
+### Web Phase Projects
+
+Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent portfolio artifact.
+
+#### WEB Phase 1 Project
+
+**Recommended build — Client-Server Request Explorer**
+
+**Why this project now:** it applies the material covered through [WEB Phase 1](./Web.md#L129) without requiring later phases.
+
+**Build specification**
+
+- Build **Client-Server Request Explorer** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Client-Server Request Explorer Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Responsive HTML, CSS, and JavaScript Website Project — Brian Design](https://www.youtube.com/watch?v=FazgJVnrVuI)
+
+> **When this project is complete:** [Resume your study at WEB Phase 2](./Web.md#L297) · [Review Phase 1](./Web.md#L129)
+
+---
+#### WEB Phase 2 Project
+
+**Recommended build — Accessible Profile Page**
+
+**Why this project now:** it applies the material covered through [WEB Phase 2](./Web.md#L297) without requiring later phases.
+
+**Build specification**
+
+- Build **Accessible Profile Page** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Accessible Profile Page Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Responsive HTML, CSS, and JavaScript Website Project — Brian Design](https://www.youtube.com/watch?v=FazgJVnrVuI)
+
+> **When this project is complete:** [Resume your study at WEB Phase 3](./Web.md#L458) · [Review Phase 2](./Web.md#L297)
+
+---
+#### WEB Phase 3 Project
+
+**Recommended build — Design Token Style Guide**
+
+**Why this project now:** it applies the material covered through [WEB Phase 3](./Web.md#L458) without requiring later phases.
+
+**Build specification**
+
+- Build **Design Token Style Guide** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Design Token Style Guide Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Responsive HTML, CSS, and JavaScript Website Project — Brian Design](https://www.youtube.com/watch?v=FazgJVnrVuI)
+
+> **When this project is complete:** [Resume your study at WEB Phase 4](./Web.md#L610) · [Review Phase 3](./Web.md#L458)
+
+---
+#### WEB Phase 4 Project
+
+**Recommended build — Responsive Product Landing**
+
+**Why this project now:** it applies the material covered through [WEB Phase 4](./Web.md#L610) without requiring later phases.
+
+**Build specification**
+
+- Build **Responsive Product Landing** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Responsive Product Landing Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Responsive HTML, CSS, and JavaScript Website Project — Brian Design](https://www.youtube.com/watch?v=FazgJVnrVuI)
+
+> **When this project is complete:** [Resume your study at WEB Phase 5](./Web.md#L764) · [Review Phase 4](./Web.md#L610)
+
+---
+#### WEB Phase 5 Project
+
+**Recommended build — Interactive Expense Tracker**
+
+**Why this project now:** it applies the material covered through [WEB Phase 5](./Web.md#L764) without requiring later phases.
+
+**Build specification**
+
+- Build **Interactive Expense Tracker** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Interactive Expense Tracker Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Responsive HTML, CSS, and JavaScript Website Project — Brian Design](https://www.youtube.com/watch?v=FazgJVnrVuI)
+
+> **When this project is complete:** [Resume your study at WEB Phase 6](./Web.md#L932) · [Review Phase 5](./Web.md#L764)
+
+---
+#### WEB Phase 6 Project
+
+**Recommended build — Offline-Capable Notes App**
+
+**Why this project now:** it applies the material covered through [WEB Phase 6](./Web.md#L932) without requiring later phases.
+
+**Build specification**
+
+- Build **Offline-Capable Notes App** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Offline-Capable Notes App Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Beginner React and TypeScript Project — Web Dev Simplified](https://www.youtube.com/watch?v=-ONUyenGnWw)
+
+> **When this project is complete:** [Resume your study at WEB Phase 7](./Web.md#L1091) · [Review Phase 6](./Web.md#L932)
+
+---
+#### WEB Phase 7 Project
+
+**Recommended build — Typed API Client**
+
+**Why this project now:** it applies the material covered through [WEB Phase 7](./Web.md#L1091) without requiring later phases.
+
+**Build specification**
+
+- Build **Typed API Client** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Typed API Client Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Beginner React and TypeScript Project — Web Dev Simplified](https://www.youtube.com/watch?v=-ONUyenGnWw)
+
+> **When this project is complete:** [Resume your study at WEB Phase 8](./Web.md#L1243) · [Review Phase 7](./Web.md#L1091)
+
+---
+#### WEB Phase 8 Project
+
+**Recommended build — React Habit Tracker**
+
+**Why this project now:** it applies the material covered through [WEB Phase 8](./Web.md#L1243) without requiring later phases.
+
+**Build specification**
+
+- Build **React Habit Tracker** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — React Habit Tracker Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Beginner React and TypeScript Project — Web Dev Simplified](https://www.youtube.com/watch?v=-ONUyenGnWw)
+
+> **When this project is complete:** [Resume your study at WEB Phase 9](./Web.md#L1414) · [Review Phase 8](./Web.md#L1243)
+
+---
+#### WEB Phase 9 Project
+
+**Recommended build — Cached Admin Dashboard**
+
+**Why this project now:** it applies the material covered through [WEB Phase 9](./Web.md#L1414) without requiring later phases.
+
+**Build specification**
+
+- Build **Cached Admin Dashboard** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Cached Admin Dashboard Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Bulletproof React](https://github.com/alan2207/bulletproof-react)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Beginner React and TypeScript Project — Web Dev Simplified](https://www.youtube.com/watch?v=-ONUyenGnWw)
+
+> **When this project is complete:** [Resume your study at WEB Phase 10](./Web.md#L1579) · [Review Phase 9](./Web.md#L1414)
+
+---
+#### WEB Phase 10 Project
+
+**Recommended build — Full-Stack Issue Tracker**
+
+**Why this project now:** it applies the material covered through [WEB Phase 10](./Web.md#L1579) without requiring later phases.
+
+**Build specification**
+
+- Build **Full-Stack Issue Tracker** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Full-Stack Issue Tracker Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Bulletproof React](https://github.com/alan2207/bulletproof-react)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Beginner React and TypeScript Project — Web Dev Simplified](https://www.youtube.com/watch?v=-ONUyenGnWw)
+
+> **When this project is complete:** [Resume your study at WEB Phase 11](./Web.md#L1744) · [Review Phase 10](./Web.md#L1579)
+
+---
+#### WEB Phase 11 Project
+
+**Recommended build — Express Service Starter**
+
+**Why this project now:** it applies the material covered through [WEB Phase 11](./Web.md#L1744) without requiring later phases.
+
+**Build specification**
+
+- Build **Express Service Starter** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Express Service Starter Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Node, Express, MongoDB API with Auth, JWT, and CRUD — Programming with Adil](https://www.youtube.com/watch?v=EMv8pc5Xo88)
+
+> **When this project is complete:** [Resume your study at WEB Phase 12](./Web.md#L1921) · [Review Phase 11](./Web.md#L1744)
+
+---
+#### WEB Phase 12 Project
+
+**Recommended build — Contract-First REST API**
+
+**Why this project now:** it applies the material covered through [WEB Phase 12](./Web.md#L1921) without requiring later phases.
+
+**Build specification**
+
+- Build **Contract-First REST API** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Contract-First REST API Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Node, Express, MongoDB API with Auth, JWT, and CRUD — Programming with Adil](https://www.youtube.com/watch?v=EMv8pc5Xo88)
+
+> **When this project is complete:** [Resume your study at WEB Phase 13](./Web.md#L2080) · [Review Phase 12](./Web.md#L1921)
+
+---
+#### WEB Phase 13 Project
+
+**Recommended build — Transactional Project Database**
+
+**Why this project now:** it applies the material covered through [WEB Phase 13](./Web.md#L2080) without requiring later phases.
+
+**Build specification**
+
+- Build **Transactional Project Database** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Transactional Project Database Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Node, Express, MongoDB API with Auth, JWT, and CRUD — Programming with Adil](https://www.youtube.com/watch?v=EMv8pc5Xo88)
+
+> **When this project is complete:** [Resume your study at WEB Phase 14](./Web.md#L2233) · [Review Phase 13](./Web.md#L2080)
+
+---
+#### WEB Phase 14 Project
+
+**Recommended build — Secure Session Auth App**
+
+**Why this project now:** it applies the material covered through [WEB Phase 14](./Web.md#L2233) without requiring later phases.
+
+**Build specification**
+
+- Build **Secure Session Auth App** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Secure Session Auth App Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [OWASP NodeGoat](https://github.com/OWASP/NodeGoat)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Node, Express, MongoDB API with Auth, JWT, and CRUD — Programming with Adil](https://www.youtube.com/watch?v=EMv8pc5Xo88)
+
+> **When this project is complete:** [Resume your study at WEB Phase 15](./Web.md#L2401) · [Review Phase 14](./Web.md#L2233)
+
+---
+#### WEB Phase 15 Project
+
+**Recommended build — Full-Stack Test Pyramid**
+
+**Why this project now:** it applies the material covered through [WEB Phase 15](./Web.md#L2401) without requiring later phases.
+
+**Build specification**
+
+- Build **Full-Stack Test Pyramid** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Full-Stack Test Pyramid Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Node, Express, MongoDB API with Auth, JWT, and CRUD — Programming with Adil](https://www.youtube.com/watch?v=EMv8pc5Xo88)
+
+> **When this project is complete:** [Resume your study at WEB Phase 16](./Web.md#L2569) · [Review Phase 15](./Web.md#L2401)
+
+---
+#### WEB Phase 16 Project
+
+**Recommended build — Web Vitals Optimization Case**
+
+**Why this project now:** it applies the material covered through [WEB Phase 16](./Web.md#L2569) without requiring later phases.
+
+**Build specification**
+
+- Build **Web Vitals Optimization Case** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Web Vitals Optimization Case Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Real-Time WebSockets Project — JavaScript Mastery](https://www.youtube.com/watch?v=pbOXOY78dNA)
+
+> **When this project is complete:** [Resume your study at WEB Phase 17](./Web.md#L2734) · [Review Phase 16](./Web.md#L2569)
+
+---
+#### WEB Phase 17 Project
+
+**Recommended build — Preview-to-Production Pipeline**
+
+**Why this project now:** it applies the material covered through [WEB Phase 17](./Web.md#L2734) without requiring later phases.
+
+**Build specification**
+
+- Build **Preview-to-Production Pipeline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Preview-to-Production Pipeline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Real-Time WebSockets Project — JavaScript Mastery](https://www.youtube.com/watch?v=pbOXOY78dNA)
+
+> **When this project is complete:** [Resume your study at WEB Phase 18](./Web.md#L2908) · [Review Phase 17](./Web.md#L2734)
+
+---
+#### WEB Phase 18 Project
+
+**Recommended build — Real-Time Collaboration Board**
+
+**Why this project now:** it applies the material covered through [WEB Phase 18](./Web.md#L2908) without requiring later phases.
+
+**Build specification**
+
+- Build **Real-Time Collaboration Board** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Real-Time Collaboration Board Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Real-Time WebSockets Project — JavaScript Mastery](https://www.youtube.com/watch?v=pbOXOY78dNA)
+
+> **When this project is complete:** [Resume your study at WEB Phase 19](./Web.md#L3067) · [Review Phase 18](./Web.md#L2908)
+
+---
+#### WEB Phase 19 Project
+
+**Recommended build — Production SaaS Slice**
+
+**Why this project now:** it applies the material covered through [WEB Phase 19](./Web.md#L3067) without requiring later phases.
+
+**Build specification**
+
+- Build **Production SaaS Slice** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Production SaaS Slice Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Real-Time WebSockets Project — JavaScript Mastery](https://www.youtube.com/watch?v=pbOXOY78dNA)
+
+> **When this project is complete:** [Resume your study at WEB Phase 20](./Web.md#L3229) · [Review Phase 19](./Web.md#L3067)
+
+---
+#### WEB Phase 20 Project
+
+**Recommended build — Timed Web Interview Lab**
+
+**Why this project now:** it applies the material covered through [WEB Phase 20](./Web.md#L3229) without requiring later phases.
+
+**Build specification**
+
+- Build **Timed Web Interview Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Timed Web Interview Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
+- **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- **YouTube build/lab:** [Real-Time WebSockets Project — JavaScript Mastery](https://www.youtube.com/watch?v=pbOXOY78dNA)
+
+> **When this project is complete:** [Return to the WEB phase index](./Web.md#L88) · [Review Phase 20](./Web.md#L3229)
+
+---
+
+### Cloud Phase Projects
+
+Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent portfolio artifact.
+
+#### CLOUD Phase 1 Project
+
+**Recommended build — Linux Service Baseline**
+
+**Why this project now:** it applies the material covered through [CLOUD Phase 1](./cloud.md#L96) without requiring later phases.
+
+**Build specification**
+
+- Build **Linux Service Baseline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Linux Service Baseline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
+- **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
+- **YouTube build/lab:** [Create an AWS VPC with Terraform — Cloud Champ](https://www.youtube.com/watch?v=4IFW5dXMW1Y)
+
+> **When this project is complete:** [Resume your study at CLOUD Phase 2](./cloud.md#L189) · [Review Phase 1](./cloud.md#L96)
+
+---
+#### CLOUD Phase 2 Project
+
+**Recommended build — VM vs Container Benchmark**
+
+**Why this project now:** it applies the material covered through [CLOUD Phase 2](./cloud.md#L189) without requiring later phases.
+
+**Build specification**
+
+- Build **VM vs Container Benchmark** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — VM vs Container Benchmark Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
+- **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
+- **YouTube build/lab:** [Create an AWS VPC with Terraform — Cloud Champ](https://www.youtube.com/watch?v=4IFW5dXMW1Y)
+
+> **When this project is complete:** [Resume your study at CLOUD Phase 3](./cloud.md#L280) · [Review Phase 2](./cloud.md#L189)
+
+---
+#### CLOUD Phase 3 Project
+
+**Recommended build — Multi-Provider Architecture Matrix**
+
+**Why this project now:** it applies the material covered through [CLOUD Phase 3](./cloud.md#L280) without requiring later phases.
+
+**Build specification**
+
+- Build **Multi-Provider Architecture Matrix** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Multi-Provider Architecture Matrix Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
+- **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
+- **YouTube build/lab:** [Create an AWS VPC with Terraform — Cloud Champ](https://www.youtube.com/watch?v=4IFW5dXMW1Y)
+
+> **When this project is complete:** [Resume your study at CLOUD Phase 4](./cloud.md#L374) · [Review Phase 3](./cloud.md#L280)
+
+---
+#### CLOUD Phase 4 Project
+
+**Recommended build — Least-Privilege IAM Lab**
+
+**Why this project now:** it applies the material covered through [CLOUD Phase 4](./cloud.md#L374) without requiring later phases.
+
+**Build specification**
+
+- Build **Least-Privilege IAM Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Least-Privilege IAM Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
+- **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
+- **YouTube build/lab:** [Create an AWS VPC with Terraform — Cloud Champ](https://www.youtube.com/watch?v=4IFW5dXMW1Y)
+
+> **When this project is complete:** [Resume your study at CLOUD Phase 5](./cloud.md#L467) · [Review Phase 4](./cloud.md#L374)
+
+---
+#### CLOUD Phase 5 Project
+
+**Recommended build — Multi-Tier VPC**
+
+**Why this project now:** it applies the material covered through [CLOUD Phase 5](./cloud.md#L467) without requiring later phases.
+
+**Build specification**
+
+- Build **Multi-Tier VPC** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Multi-Tier VPC Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
+- **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
+- **YouTube build/lab:** [Create an AWS VPC with Terraform — Cloud Champ](https://www.youtube.com/watch?v=4IFW5dXMW1Y)
+
+> **When this project is complete:** [Resume your study at CLOUD Phase 6](./cloud.md#L564) · [Review Phase 5](./cloud.md#L467)
+
+---
+#### CLOUD Phase 6 Project
+
+**Recommended build — Autoscaled Web Tier**
+
+**Why this project now:** it applies the material covered through [CLOUD Phase 6](./cloud.md#L564) without requiring later phases.
+
+**Build specification**
+
+- Build **Autoscaled Web Tier** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Autoscaled Web Tier Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cloud Resume Challenge Projects](https://github.com/cloudresumechallenge/projects)
+- **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
+- **YouTube build/lab:** [Build an Event-Driven Serverless App — Google Cloud Tech](https://www.youtube.com/watch?v=pSdD28cY6r8)
+
+> **When this project is complete:** [Resume your study at CLOUD Phase 7](./cloud.md#L657) · [Review Phase 6](./cloud.md#L564)
+
+---
+#### CLOUD Phase 7 Project
+
+**Recommended build — Versioned Object Backup**
+
+**Why this project now:** it applies the material covered through [CLOUD Phase 7](./cloud.md#L657) without requiring later phases.
+
+**Build specification**
+
+- Build **Versioned Object Backup** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Versioned Object Backup Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cloud Resume Challenge Projects](https://github.com/cloudresumechallenge/projects)
+- **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
+- **YouTube build/lab:** [Build an Event-Driven Serverless App — Google Cloud Tech](https://www.youtube.com/watch?v=pSdD28cY6r8)
+
+> **When this project is complete:** [Resume your study at CLOUD Phase 8](./cloud.md#L746) · [Review Phase 7](./cloud.md#L657)
+
+---
+#### CLOUD Phase 8 Project
+
+**Recommended build — Resilient Managed Data Tier**
+
+**Why this project now:** it applies the material covered through [CLOUD Phase 8](./cloud.md#L746) without requiring later phases.
+
+**Build specification**
+
+- Build **Resilient Managed Data Tier** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Resilient Managed Data Tier Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cloud Resume Challenge Projects](https://github.com/cloudresumechallenge/projects)
+- **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
+- **YouTube build/lab:** [Build an Event-Driven Serverless App — Google Cloud Tech](https://www.youtube.com/watch?v=pSdD28cY6r8)
+
+> **When this project is complete:** [Resume your study at CLOUD Phase 9](./cloud.md#L836) · [Review Phase 8](./cloud.md#L746)
+
+---
+#### CLOUD Phase 9 Project
+
+**Recommended build — CDN Delivery Benchmark**
+
+**Why this project now:** it applies the material covered through [CLOUD Phase 9](./cloud.md#L836) without requiring later phases.
+
+**Build specification**
+
+- Build **CDN Delivery Benchmark** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — CDN Delivery Benchmark Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cloud Resume Challenge Projects](https://github.com/cloudresumechallenge/projects)
+- **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
+- **YouTube build/lab:** [Build an Event-Driven Serverless App — Google Cloud Tech](https://www.youtube.com/watch?v=pSdD28cY6r8)
+
+> **When this project is complete:** [Resume your study at CLOUD Phase 10](./cloud.md#L928) · [Review Phase 9](./cloud.md#L836)
+
+---
+#### CLOUD Phase 10 Project
+
+**Recommended build — Event-Driven Image Pipeline**
+
+**Why this project now:** it applies the material covered through [CLOUD Phase 10](./cloud.md#L928) without requiring later phases.
+
+**Build specification**
+
+- Build **Event-Driven Image Pipeline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Event-Driven Image Pipeline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [AWS Serverless Workshops](https://github.com/aws-samples/aws-serverless-workshops)
+- **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
+- **YouTube build/lab:** [Build an Event-Driven Serverless App — Google Cloud Tech](https://www.youtube.com/watch?v=pSdD28cY6r8)
+
+> **When this project is complete:** [Resume your study at CLOUD Phase 11](./cloud.md#L1021) · [Review Phase 10](./cloud.md#L928)
+
+---
+#### CLOUD Phase 11 Project
+
+**Recommended build — Managed Kubernetes Service**
+
+**Why this project now:** it applies the material covered through [CLOUD Phase 11](./cloud.md#L1021) without requiring later phases.
+
+**Build specification**
+
+- Build **Managed Kubernetes Service** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Managed Kubernetes Service Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cloud Resume Challenge Projects](https://github.com/cloudresumechallenge/projects)
+- **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
+- **YouTube build/lab:** [Kubernetes Microservice Application — KodeKloud](https://www.youtube.com/watch?v=XuSQU5Grv1g)
+
+> **When this project is complete:** [Resume your study at CLOUD Phase 12](./cloud.md#L1111) · [Review Phase 11](./cloud.md#L1021)
+
+---
+#### CLOUD Phase 12 Project
+
+**Recommended build — Reusable Terraform Environment**
+
+**Why this project now:** it applies the material covered through [CLOUD Phase 12](./cloud.md#L1111) without requiring later phases.
+
+**Build specification**
+
+- Build **Reusable Terraform Environment** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Reusable Terraform Environment Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
+- **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
+- **YouTube build/lab:** [Kubernetes Microservice Application — KodeKloud](https://www.youtube.com/watch?v=XuSQU5Grv1g)
+
+> **When this project is complete:** [Resume your study at CLOUD Phase 13](./cloud.md#L1205) · [Review Phase 12](./cloud.md#L1111)
+
+---
+#### CLOUD Phase 13 Project
+
+**Recommended build — Governed Landing Zone**
+
+**Why this project now:** it applies the material covered through [CLOUD Phase 13](./cloud.md#L1205) without requiring later phases.
+
+**Build specification**
+
+- Build **Governed Landing Zone** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Governed Landing Zone Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
+- **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
+- **YouTube build/lab:** [Kubernetes Microservice Application — KodeKloud](https://www.youtube.com/watch?v=XuSQU5Grv1g)
+
+> **When this project is complete:** [Resume your study at CLOUD Phase 14](./cloud.md#L1301) · [Review Phase 13](./cloud.md#L1205)
+
+---
+#### CLOUD Phase 14 Project
+
+**Recommended build — Encrypted Secret Rotation**
+
+**Why this project now:** it applies the material covered through [CLOUD Phase 14](./cloud.md#L1301) without requiring later phases.
+
+**Build specification**
+
+- Build **Encrypted Secret Rotation** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Encrypted Secret Rotation Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
+- **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
+- **YouTube build/lab:** [Kubernetes Microservice Application — KodeKloud](https://www.youtube.com/watch?v=XuSQU5Grv1g)
+
+> **When this project is complete:** [Resume your study at CLOUD Phase 15](./cloud.md#L1389) · [Review Phase 14](./cloud.md#L1301)
+
+---
+#### CLOUD Phase 15 Project
+
+**Recommended build — Observable Cloud Service**
+
+**Why this project now:** it applies the material covered through [CLOUD Phase 15](./cloud.md#L1389) without requiring later phases.
+
+**Build specification**
+
+- Build **Observable Cloud Service** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Observable Cloud Service Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
+- **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
+- **YouTube build/lab:** [Kubernetes Microservice Application — KodeKloud](https://www.youtube.com/watch?v=XuSQU5Grv1g)
+
+> **When this project is complete:** [Resume your study at CLOUD Phase 16](./cloud.md#L1477) · [Review Phase 15](./cloud.md#L1389)
+
+---
+#### CLOUD Phase 16 Project
+
+**Recommended build — Policy-as-Code Guardrails**
+
+**Why this project now:** it applies the material covered through [CLOUD Phase 16](./cloud.md#L1477) without requiring later phases.
+
+**Build specification**
+
+- Build **Policy-as-Code Guardrails** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Policy-as-Code Guardrails Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
+- **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
+- **YouTube build/lab:** [Cloud Cost Optimization and FinOps — The Executive Briefing](https://www.youtube.com/watch?v=EiX2OQRB_Dk)
+
+> **When this project is complete:** [Resume your study at CLOUD Phase 17](./cloud.md#L1568) · [Review Phase 16](./cloud.md#L1477)
+
+---
+#### CLOUD Phase 17 Project
+
+**Recommended build — Disaster Recovery Game Day**
+
+**Why this project now:** it applies the material covered through [CLOUD Phase 17](./cloud.md#L1568) without requiring later phases.
+
+**Build specification**
+
+- Build **Disaster Recovery Game Day** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Disaster Recovery Game Day Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
+- **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
+- **YouTube build/lab:** [Cloud Cost Optimization and FinOps — The Executive Briefing](https://www.youtube.com/watch?v=EiX2OQRB_Dk)
+
+> **When this project is complete:** [Resume your study at CLOUD Phase 18](./cloud.md#L1660) · [Review Phase 17](./cloud.md#L1568)
+
+---
+#### CLOUD Phase 18 Project
+
+**Recommended build — Cloud Cost Optimizer**
+
+**Why this project now:** it applies the material covered through [CLOUD Phase 18](./cloud.md#L1660) without requiring later phases.
+
+**Build specification**
+
+- Build **Cloud Cost Optimizer** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Cloud Cost Optimizer Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
+- **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
+- **YouTube build/lab:** [Cloud Cost Optimization and FinOps — The Executive Briefing](https://www.youtube.com/watch?v=EiX2OQRB_Dk)
+
+> **When this project is complete:** [Resume your study at CLOUD Phase 19](./cloud.md#L1750) · [Review Phase 18](./cloud.md#L1660)
+
+---
+#### CLOUD Phase 19 Project
+
+**Recommended build — Migration Runbook and Pilot**
+
+**Why this project now:** it applies the material covered through [CLOUD Phase 19](./cloud.md#L1750) without requiring later phases.
+
+**Build specification**
+
+- Build **Migration Runbook and Pilot** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Migration Runbook and Pilot Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
+- **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
+- **YouTube build/lab:** [Cloud Cost Optimization and FinOps — The Executive Briefing](https://www.youtube.com/watch?v=EiX2OQRB_Dk)
+
+> **When this project is complete:** [Resume your study at CLOUD Phase 20](./cloud.md#L1841) · [Review Phase 19](./cloud.md#L1750)
+
+---
+#### CLOUD Phase 20 Project
+
+**Recommended build — Cloud Architecture Portfolio**
+
+**Why this project now:** it applies the material covered through [CLOUD Phase 20](./cloud.md#L1841) without requiring later phases.
+
+**Build specification**
+
+- Build **Cloud Architecture Portfolio** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Cloud Architecture Portfolio Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Cloud Resume Challenge Projects](https://github.com/cloudresumechallenge/projects)
+- **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
+- **YouTube build/lab:** [Cloud Cost Optimization and FinOps — The Executive Briefing](https://www.youtube.com/watch?v=EiX2OQRB_Dk)
+
+> **When this project is complete:** [Return to the CLOUD phase index](./cloud.md#L67) · [Review Phase 20](./cloud.md#L1841)
+
+---
+
+### DevOps Phase Projects
+
+Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent portfolio artifact.
+
+#### DEVOPS Phase 1 Project
+
+**Recommended build — Value Stream Delivery Map**
+
+**Why this project now:** it applies the material covered through [DEVOPS Phase 1](./devops.md#L96) without requiring later phases.
+
+**Build specification**
+
+- Build **Value Stream Delivery Map** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Value Stream Delivery Map Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
+- **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
+- **YouTube build/lab:** [Home Lab Automation with Terraform, Ansible, and CI/CD — VirtualizationHowto](https://www.youtube.com/watch?v=r5RckLwzkfc)
+
+> **When this project is complete:** [Resume your study at DEVOPS Phase 2](./devops.md#L182) · [Review Phase 1](./devops.md#L96)
+
+---
+#### DEVOPS Phase 2 Project
+
+**Recommended build — Hardened Linux Service**
+
+**Why this project now:** it applies the material covered through [DEVOPS Phase 2](./devops.md#L182) without requiring later phases.
+
+**Build specification**
+
+- Build **Hardened Linux Service** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Hardened Linux Service Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
+- **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
+- **YouTube build/lab:** [Home Lab Automation with Terraform, Ansible, and CI/CD — VirtualizationHowto](https://www.youtube.com/watch?v=r5RckLwzkfc)
+
+> **When this project is complete:** [Resume your study at DEVOPS Phase 3](./devops.md#L272) · [Review Phase 2](./devops.md#L182)
+
+---
+#### DEVOPS Phase 3 Project
+
+**Recommended build — Incident Troubleshooting Toolkit**
+
+**Why this project now:** it applies the material covered through [DEVOPS Phase 3](./devops.md#L272) without requiring later phases.
+
+**Build specification**
+
+- Build **Incident Troubleshooting Toolkit** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Incident Troubleshooting Toolkit Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
+- **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
+- **YouTube build/lab:** [Home Lab Automation with Terraform, Ansible, and CI/CD — VirtualizationHowto](https://www.youtube.com/watch?v=r5RckLwzkfc)
+
+> **When this project is complete:** [Resume your study at DEVOPS Phase 4](./devops.md#L362) · [Review Phase 3](./devops.md#L272)
+
+---
+#### DEVOPS Phase 4 Project
+
+**Recommended build — Pull-Request Git Workflow**
+
+**Why this project now:** it applies the material covered through [DEVOPS Phase 4](./devops.md#L362) without requiring later phases.
+
+**Build specification**
+
+- Build **Pull-Request Git Workflow** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Pull-Request Git Workflow Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
+- **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
+- **YouTube build/lab:** [Home Lab Automation with Terraform, Ansible, and CI/CD — VirtualizationHowto](https://www.youtube.com/watch?v=r5RckLwzkfc)
+
+> **When this project is complete:** [Resume your study at DEVOPS Phase 5](./devops.md#L452) · [Review Phase 4](./devops.md#L362)
+
+---
+#### DEVOPS Phase 5 Project
+
+**Recommended build — Operations Automation CLI**
+
+**Why this project now:** it applies the material covered through [DEVOPS Phase 5](./devops.md#L452) without requiring later phases.
+
+**Build specification**
+
+- Build **Operations Automation CLI** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Operations Automation CLI Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
+- **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
+- **YouTube build/lab:** [Home Lab Automation with Terraform, Ansible, and CI/CD — VirtualizationHowto](https://www.youtube.com/watch?v=r5RckLwzkfc)
+
+> **When this project is complete:** [Resume your study at DEVOPS Phase 6](./devops.md#L543) · [Review Phase 5](./devops.md#L452)
+
+---
+#### DEVOPS Phase 6 Project
+
+**Recommended build — Reproducible Artifact Pipeline**
+
+**Why this project now:** it applies the material covered through [DEVOPS Phase 6](./devops.md#L543) without requiring later phases.
+
+**Build specification**
+
+- Build **Reproducible Artifact Pipeline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Reproducible Artifact Pipeline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
+- **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
+- **YouTube build/lab:** [Deploy a Monitoring Application on Kubernetes — Cloud Champ](https://www.youtube.com/watch?v=kBWCsHEcWnc)
+
+> **When this project is complete:** [Resume your study at DEVOPS Phase 7](./devops.md#L631) · [Review Phase 6](./devops.md#L543)
+
+---
+#### DEVOPS Phase 7 Project
+
+**Recommended build — Quality-Gated CI Pipeline**
+
+**Why this project now:** it applies the material covered through [DEVOPS Phase 7](./devops.md#L631) without requiring later phases.
+
+**Build specification**
+
+- Build **Quality-Gated CI Pipeline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Quality-Gated CI Pipeline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
+- **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
+- **YouTube build/lab:** [Deploy a Monitoring Application on Kubernetes — Cloud Champ](https://www.youtube.com/watch?v=kBWCsHEcWnc)
+
+> **When this project is complete:** [Resume your study at DEVOPS Phase 8](./devops.md#L719) · [Review Phase 7](./devops.md#L631)
+
+---
+#### DEVOPS Phase 8 Project
+
+**Recommended build — Canary Deployment Simulator**
+
+**Why this project now:** it applies the material covered through [DEVOPS Phase 8](./devops.md#L719) without requiring later phases.
+
+**Build specification**
+
+- Build **Canary Deployment Simulator** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Canary Deployment Simulator Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
+- **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
+- **YouTube build/lab:** [Deploy a Monitoring Application on Kubernetes — Cloud Champ](https://www.youtube.com/watch?v=kBWCsHEcWnc)
+
+> **When this project is complete:** [Resume your study at DEVOPS Phase 9](./devops.md#L809) · [Review Phase 8](./devops.md#L719)
+
+---
+#### DEVOPS Phase 9 Project
+
+**Recommended build — Hardened Multi-Stage Container**
+
+**Why this project now:** it applies the material covered through [DEVOPS Phase 9](./devops.md#L809) without requiring later phases.
+
+**Build specification**
+
+- Build **Hardened Multi-Stage Container** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Hardened Multi-Stage Container Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Docker Getting Started](https://github.com/docker/getting-started)
+- **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
+- **YouTube build/lab:** [Deploy a Monitoring Application on Kubernetes — Cloud Champ](https://www.youtube.com/watch?v=kBWCsHEcWnc)
+
+> **When this project is complete:** [Resume your study at DEVOPS Phase 10](./devops.md#L899) · [Review Phase 9](./devops.md#L809)
+
+---
+#### DEVOPS Phase 10 Project
+
+**Recommended build — Kubernetes Operations Lab**
+
+**Why this project now:** it applies the material covered through [DEVOPS Phase 10](./devops.md#L899) without requiring later phases.
+
+**Build specification**
+
+- Build **Kubernetes Operations Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Kubernetes Operations Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Kubernetes Examples](https://github.com/kubernetes/examples)
+- **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
+- **YouTube build/lab:** [Deploy a Monitoring Application on Kubernetes — Cloud Champ](https://www.youtube.com/watch?v=kBWCsHEcWnc)
+
+> **When this project is complete:** [Resume your study at DEVOPS Phase 11](./devops.md#L989) · [Review Phase 10](./devops.md#L899)
+
+---
+#### DEVOPS Phase 11 Project
+
+**Recommended build — Terraform State Lifecycle Lab**
+
+**Why this project now:** it applies the material covered through [DEVOPS Phase 11](./devops.md#L989) without requiring later phases.
+
+**Build specification**
+
+- Build **Terraform State Lifecycle Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Terraform State Lifecycle Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
+- **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
+- **YouTube build/lab:** [Terraform and Ansible Full DevOps Project — Pravesh Sudha](https://www.youtube.com/watch?v=tKlGTGye_hk)
+
+> **When this project is complete:** [Resume your study at DEVOPS Phase 12](./devops.md#L1080) · [Review Phase 11](./devops.md#L989)
+
+---
+#### DEVOPS Phase 12 Project
+
+**Recommended build — Idempotent Ansible Baseline**
+
+**Why this project now:** it applies the material covered through [DEVOPS Phase 12](./devops.md#L1080) without requiring later phases.
+
+**Build specification**
+
+- Build **Idempotent Ansible Baseline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Idempotent Ansible Baseline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
+- **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
+- **YouTube build/lab:** [Terraform and Ansible Full DevOps Project — Pravesh Sudha](https://www.youtube.com/watch?v=tKlGTGye_hk)
+
+> **When this project is complete:** [Resume your study at DEVOPS Phase 13](./devops.md#L1169) · [Review Phase 12](./devops.md#L1080)
+
+---
+#### DEVOPS Phase 13 Project
+
+**Recommended build — Cloud Delivery Foundation**
+
+**Why this project now:** it applies the material covered through [DEVOPS Phase 13](./devops.md#L1169) without requiring later phases.
+
+**Build specification**
+
+- Build **Cloud Delivery Foundation** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Cloud Delivery Foundation Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
+- **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
+- **YouTube build/lab:** [Terraform and Ansible Full DevOps Project — Pravesh Sudha](https://www.youtube.com/watch?v=tKlGTGye_hk)
+
+> **When this project is complete:** [Resume your study at DEVOPS Phase 14](./devops.md#L1257) · [Review Phase 13](./devops.md#L1169)
+
+---
+#### DEVOPS Phase 14 Project
+
+**Recommended build — Observable Demo Service**
+
+**Why this project now:** it applies the material covered through [DEVOPS Phase 14](./devops.md#L1257) without requiring later phases.
+
+**Build specification**
+
+- Build **Observable Demo Service** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Observable Demo Service Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
+- **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
+- **YouTube build/lab:** [Terraform and Ansible Full DevOps Project — Pravesh Sudha](https://www.youtube.com/watch?v=tKlGTGye_hk)
+
+> **When this project is complete:** [Resume your study at DEVOPS Phase 15](./devops.md#L1346) · [Review Phase 14](./devops.md#L1257)
+
+---
+#### DEVOPS Phase 15 Project
+
+**Recommended build — SLO and Error Budget Dashboard**
+
+**Why this project now:** it applies the material covered through [DEVOPS Phase 15](./devops.md#L1346) without requiring later phases.
+
+**Build specification**
+
+- Build **SLO and Error Budget Dashboard** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — SLO and Error Budget Dashboard Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
+- **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
+- **YouTube build/lab:** [Terraform and Ansible Full DevOps Project — Pravesh Sudha](https://www.youtube.com/watch?v=tKlGTGye_hk)
+
+> **When this project is complete:** [Resume your study at DEVOPS Phase 16](./devops.md#L1436) · [Review Phase 15](./devops.md#L1346)
+
+---
+#### DEVOPS Phase 16 Project
+
+**Recommended build — Signed Software Supply Chain**
+
+**Why this project now:** it applies the material covered through [DEVOPS Phase 16](./devops.md#L1436) without requiring later phases.
+
+**Build specification**
+
+- Build **Signed Software Supply Chain** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Signed Software Supply Chain Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
+- **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
+- **YouTube build/lab:** [Chaos Engineering Workflow Resiliency Tutorial — LitmusChaos](https://www.youtube.com/watch?v=OuB3dS05DHU)
+
+> **When this project is complete:** [Resume your study at DEVOPS Phase 17](./devops.md#L1525) · [Review Phase 16](./devops.md#L1436)
+
+---
+#### DEVOPS Phase 17 Project
+
+**Recommended build — GitOps Application Platform**
+
+**Why this project now:** it applies the material covered through [DEVOPS Phase 17](./devops.md#L1525) without requiring later phases.
+
+**Build specification**
+
+- Build **GitOps Application Platform** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — GitOps Application Platform Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Argo CD](https://github.com/argoproj/argo-cd)
+- **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
+- **YouTube build/lab:** [Chaos Engineering Workflow Resiliency Tutorial — LitmusChaos](https://www.youtube.com/watch?v=OuB3dS05DHU)
+
+> **When this project is complete:** [Resume your study at DEVOPS Phase 18](./devops.md#L1614) · [Review Phase 17](./devops.md#L1525)
+
+---
+#### DEVOPS Phase 18 Project
+
+**Recommended build — Chaos Game Day and Postmortem**
+
+**Why this project now:** it applies the material covered through [DEVOPS Phase 18](./devops.md#L1614) without requiring later phases.
+
+**Build specification**
+
+- Build **Chaos Game Day and Postmortem** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Chaos Game Day and Postmortem Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
+- **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
+- **YouTube build/lab:** [Chaos Engineering Workflow Resiliency Tutorial — LitmusChaos](https://www.youtube.com/watch?v=OuB3dS05DHU)
+
+> **When this project is complete:** [Resume your study at DEVOPS Phase 19](./devops.md#L1702) · [Review Phase 18](./devops.md#L1614)
+
+---
+#### DEVOPS Phase 19 Project
+
+**Recommended build — Production Delivery Platform**
+
+**Why this project now:** it applies the material covered through [DEVOPS Phase 19](./devops.md#L1702) without requiring later phases.
+
+**Build specification**
+
+- Build **Production Delivery Platform** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Production Delivery Platform Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
+- **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
+- **YouTube build/lab:** [Chaos Engineering Workflow Resiliency Tutorial — LitmusChaos](https://www.youtube.com/watch?v=OuB3dS05DHU)
+
+> **When this project is complete:** [Resume your study at DEVOPS Phase 20](./devops.md#L1790) · [Review Phase 19](./devops.md#L1702)
+
+---
+#### DEVOPS Phase 20 Project
+
+**Recommended build — Timed DevOps Incident Drill**
+
+**Why this project now:** it applies the material covered through [DEVOPS Phase 20](./devops.md#L1790) without requiring later phases.
+
+**Build specification**
+
+- Build **Timed DevOps Incident Drill** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Timed DevOps Incident Drill Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
+- **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
+- **YouTube build/lab:** [Chaos Engineering Workflow Resiliency Tutorial — LitmusChaos](https://www.youtube.com/watch?v=OuB3dS05DHU)
+
+> **When this project is complete:** [Return to the DEVOPS phase index](./devops.md#L67) · [Review Phase 20](./devops.md#L1790)
+
+---
+
+### Cyber Phase Projects
+
+Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent portfolio artifact.
+
+#### CYBER Phase 1 Project
+
+**Recommended build — Risk Register and Treatment Plan**
+
+**Why this project now:** it applies the material covered through [CYBER Phase 1](./ICT_Cybersecurity.md#L160) without requiring later phases.
+
+**Build specification**
+
+- Build **Risk Register and Treatment Plan** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Risk Register and Treatment Plan Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
+- **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
+- **YouTube build/lab:** [Build a Basic Cybersecurity Home Lab — MyDFIR](https://www.youtube.com/watch?v=Zgiw-4z51NI)
+
+> **When this project is complete:** [Resume your study at CYBER Phase 2](./ICT_Cybersecurity.md#L308) · [Review Phase 1](./ICT_Cybersecurity.md#L160)
+
+---
+#### CYBER Phase 2 Project
+
+**Recommended build — Network Attack Surface Map**
+
+**Why this project now:** it applies the material covered through [CYBER Phase 2](./ICT_Cybersecurity.md#L308) without requiring later phases.
+
+**Build specification**
+
+- Build **Network Attack Surface Map** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Network Attack Surface Map Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
+- **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
+- **YouTube build/lab:** [Build a Basic Cybersecurity Home Lab — MyDFIR](https://www.youtube.com/watch?v=Zgiw-4z51NI)
+
+> **When this project is complete:** [Resume your study at CYBER Phase 3](./ICT_Cybersecurity.md#L446) · [Review Phase 2](./ICT_Cybersecurity.md#L308)
+
+---
+#### CYBER Phase 3 Project
+
+**Recommended build — Host Hardening Baseline**
+
+**Why this project now:** it applies the material covered through [CYBER Phase 3](./ICT_Cybersecurity.md#L446) without requiring later phases.
+
+**Build specification**
+
+- Build **Host Hardening Baseline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Host Hardening Baseline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
+- **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
+- **YouTube build/lab:** [Build a Basic Cybersecurity Home Lab — MyDFIR](https://www.youtube.com/watch?v=Zgiw-4z51NI)
+
+> **When this project is complete:** [Resume your study at CYBER Phase 4](./ICT_Cybersecurity.md#L586) · [Review Phase 3](./ICT_Cybersecurity.md#L446)
+
+---
+#### CYBER Phase 4 Project
+
+**Recommended build — Secure File Vault**
+
+**Why this project now:** it applies the material covered through [CYBER Phase 4](./ICT_Cybersecurity.md#L586) without requiring later phases.
+
+**Build specification**
+
+- Build **Secure File Vault** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Secure File Vault Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
+- **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
+- **YouTube build/lab:** [Build a Basic Cybersecurity Home Lab — MyDFIR](https://www.youtube.com/watch?v=Zgiw-4z51NI)
+
+> **When this project is complete:** [Resume your study at CYBER Phase 5](./ICT_Cybersecurity.md#L724) · [Review Phase 4](./ICT_Cybersecurity.md#L586)
+
+---
+#### CYBER Phase 5 Project
+
+**Recommended build — Least-Privilege IAM Review**
+
+**Why this project now:** it applies the material covered through [CYBER Phase 5](./ICT_Cybersecurity.md#L724) without requiring later phases.
+
+**Build specification**
+
+- Build **Least-Privilege IAM Review** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Least-Privilege IAM Review Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
+- **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
+- **YouTube build/lab:** [Build a Basic Cybersecurity Home Lab — MyDFIR](https://www.youtube.com/watch?v=Zgiw-4z51NI)
+
+> **When this project is complete:** [Resume your study at CYBER Phase 6](./ICT_Cybersecurity.md#L862) · [Review Phase 5](./ICT_Cybersecurity.md#L724)
+
+---
+#### CYBER Phase 6 Project
+
+**Recommended build — Threat Model and ATT&CK Map**
+
+**Why this project now:** it applies the material covered through [CYBER Phase 6](./ICT_Cybersecurity.md#L862) without requiring later phases.
+
+**Build specification**
+
+- Build **Threat Model and ATT&CK Map** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Threat Model and ATT&CK Map Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+- **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
+- **YouTube build/lab:** [OWASP Juice Shop Web Penetration Testing Lab — Woman in WhiteHat](https://www.youtube.com/watch?v=0XIzwlhWO3g)
+
+> **When this project is complete:** [Resume your study at CYBER Phase 7](./ICT_Cybersecurity.md#L1007) · [Review Phase 6](./ICT_Cybersecurity.md#L862)
+
+---
+#### CYBER Phase 7 Project
+
+**Recommended build — OWASP Remediation Lab**
+
+**Why this project now:** it applies the material covered through [CYBER Phase 7](./ICT_Cybersecurity.md#L1007) without requiring later phases.
+
+**Build specification**
+
+- Build **OWASP Remediation Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — OWASP Remediation Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [OWASP Juice Shop](https://github.com/juice-shop/juice-shop)
+- **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
+- **YouTube build/lab:** [OWASP Juice Shop Web Penetration Testing Lab — Woman in WhiteHat](https://www.youtube.com/watch?v=0XIzwlhWO3g)
+
+> **When this project is complete:** [Resume your study at CYBER Phase 8](./ICT_Cybersecurity.md#L1155) · [Review Phase 7](./ICT_Cybersecurity.md#L1007)
+
+---
+#### CYBER Phase 8 Project
+
+**Recommended build — Firewall and IDS Validation**
+
+**Why this project now:** it applies the material covered through [CYBER Phase 8](./ICT_Cybersecurity.md#L1155) without requiring later phases.
+
+**Build specification**
+
+- Build **Firewall and IDS Validation** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Firewall and IDS Validation Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
+- **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
+- **YouTube build/lab:** [OWASP Juice Shop Web Penetration Testing Lab — Woman in WhiteHat](https://www.youtube.com/watch?v=0XIzwlhWO3g)
+
+> **When this project is complete:** [Resume your study at CYBER Phase 9](./ICT_Cybersecurity.md#L1283) · [Review Phase 8](./ICT_Cybersecurity.md#L1155)
+
+---
+#### CYBER Phase 9 Project
+
+**Recommended build — Endpoint Hardening Pack**
+
+**Why this project now:** it applies the material covered through [CYBER Phase 9](./ICT_Cybersecurity.md#L1283) without requiring later phases.
+
+**Build specification**
+
+- Build **Endpoint Hardening Pack** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Endpoint Hardening Pack Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
+- **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
+- **YouTube build/lab:** [OWASP Juice Shop Web Penetration Testing Lab — Woman in WhiteHat](https://www.youtube.com/watch?v=0XIzwlhWO3g)
+
+> **When this project is complete:** [Resume your study at CYBER Phase 10](./ICT_Cybersecurity.md#L1410) · [Review Phase 9](./ICT_Cybersecurity.md#L1283)
+
+---
+#### CYBER Phase 10 Project
+
+**Recommended build — Vulnerability Triage Program**
+
+**Why this project now:** it applies the material covered through [CYBER Phase 10](./ICT_Cybersecurity.md#L1410) without requiring later phases.
+
+**Build specification**
+
+- Build **Vulnerability Triage Program** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Vulnerability Triage Program Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
+- **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
+- **YouTube build/lab:** [OWASP Juice Shop Web Penetration Testing Lab — Woman in WhiteHat](https://www.youtube.com/watch?v=0XIzwlhWO3g)
+
+> **When this project is complete:** [Resume your study at CYBER Phase 11](./ICT_Cybersecurity.md#L1540) · [Review Phase 10](./ICT_Cybersecurity.md#L1410)
+
+---
+#### CYBER Phase 11 Project
+
+**Recommended build — Authorized Web Pentest Report**
+
+**Why this project now:** it applies the material covered through [CYBER Phase 11](./ICT_Cybersecurity.md#L1540) without requiring later phases.
+
+**Build specification**
+
+- Build **Authorized Web Pentest Report** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Authorized Web Pentest Report Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [OWASP Juice Shop](https://github.com/juice-shop/juice-shop)
+- **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
+- **YouTube build/lab:** [Build a SOC Home Lab with Elastic SIEM — Prabh Nair](https://www.youtube.com/watch?v=HsLpZCbiasA)
+
+> **When this project is complete:** [Resume your study at CYBER Phase 12](./ICT_Cybersecurity.md#L1682) · [Review Phase 11](./ICT_Cybersecurity.md#L1540)
+
+---
+#### CYBER Phase 12 Project
+
+**Recommended build — Active Directory Detection Lab**
+
+**Why this project now:** it applies the material covered through [CYBER Phase 12](./ICT_Cybersecurity.md#L1682) without requiring later phases.
+
+**Build specification**
+
+- Build **Active Directory Detection Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Active Directory Detection Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
+- **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
+- **YouTube build/lab:** [Build a SOC Home Lab with Elastic SIEM — Prabh Nair](https://www.youtube.com/watch?v=HsLpZCbiasA)
+
+> **When this project is complete:** [Resume your study at CYBER Phase 13](./ICT_Cybersecurity.md#L1812) · [Review Phase 12](./ICT_Cybersecurity.md#L1682)
+
+---
+#### CYBER Phase 13 Project
+
+**Recommended build — SIEM Detection Engineering Pack**
+
+**Why this project now:** it applies the material covered through [CYBER Phase 13](./ICT_Cybersecurity.md#L1812) without requiring later phases.
+
+**Build specification**
+
+- Build **SIEM Detection Engineering Pack** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — SIEM Detection Engineering Pack Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
+- **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
+- **YouTube build/lab:** [Build a SOC Home Lab with Elastic SIEM — Prabh Nair](https://www.youtube.com/watch?v=HsLpZCbiasA)
+
+> **When this project is complete:** [Resume your study at CYBER Phase 14](./ICT_Cybersecurity.md#L1949) · [Review Phase 13](./ICT_Cybersecurity.md#L1812)
+
+---
+#### CYBER Phase 14 Project
+
+**Recommended build — Incident Forensics Case**
+
+**Why this project now:** it applies the material covered through [CYBER Phase 14](./ICT_Cybersecurity.md#L1949) without requiring later phases.
+
+**Build specification**
+
+- Build **Incident Forensics Case** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Incident Forensics Case Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
+- **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
+- **YouTube build/lab:** [Build a SOC Home Lab with Elastic SIEM — Prabh Nair](https://www.youtube.com/watch?v=HsLpZCbiasA)
+
+> **When this project is complete:** [Resume your study at CYBER Phase 15](./ICT_Cybersecurity.md#L2083) · [Review Phase 14](./ICT_Cybersecurity.md#L1949)
+
+---
+#### CYBER Phase 15 Project
+
+**Recommended build — Cloud IAM Attack-Path Review**
+
+**Why this project now:** it applies the material covered through [CYBER Phase 15](./ICT_Cybersecurity.md#L2083) without requiring later phases.
+
+**Build specification**
+
+- Build **Cloud IAM Attack-Path Review** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Cloud IAM Attack-Path Review Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
+- **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
+- **YouTube build/lab:** [Build a SOC Home Lab with Elastic SIEM — Prabh Nair](https://www.youtube.com/watch?v=HsLpZCbiasA)
+
+> **When this project is complete:** [Resume your study at CYBER Phase 16](./ICT_Cybersecurity.md#L2215) · [Review Phase 15](./ICT_Cybersecurity.md#L2083)
+
+---
+#### CYBER Phase 16 Project
+
+**Recommended build — Container Supply-Chain Lab**
+
+**Why this project now:** it applies the material covered through [CYBER Phase 16](./ICT_Cybersecurity.md#L2215) without requiring later phases.
+
+**Build specification**
+
+- Build **Container Supply-Chain Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Container Supply-Chain Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
+- **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
+- **YouTube build/lab:** [Cybersecurity Portfolio Project Ideas — Cyber Culture Interface](https://www.youtube.com/watch?v=0LxVcNJUSdY)
+
+> **When this project is complete:** [Resume your study at CYBER Phase 17](./ICT_Cybersecurity.md#L2344) · [Review Phase 16](./ICT_Cybersecurity.md#L2215)
+
+---
+#### CYBER Phase 17 Project
+
+**Recommended build — Static Malware Triage**
+
+**Why this project now:** it applies the material covered through [CYBER Phase 17](./ICT_Cybersecurity.md#L2344) without requiring later phases.
+
+**Build specification**
+
+- Build **Static Malware Triage** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Static Malware Triage Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
+- **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
+- **YouTube build/lab:** [Cybersecurity Portfolio Project Ideas — Cyber Culture Interface](https://www.youtube.com/watch?v=0LxVcNJUSdY)
+
+> **When this project is complete:** [Resume your study at CYBER Phase 18](./ICT_Cybersecurity.md#L2469) · [Review Phase 17](./ICT_Cybersecurity.md#L2344)
+
+---
+#### CYBER Phase 18 Project
+
+**Recommended build — Control-to-Evidence Audit Pack**
+
+**Why this project now:** it applies the material covered through [CYBER Phase 18](./ICT_Cybersecurity.md#L2469) without requiring later phases.
+
+**Build specification**
+
+- Build **Control-to-Evidence Audit Pack** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Control-to-Evidence Audit Pack Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
+- **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
+- **YouTube build/lab:** [Cybersecurity Portfolio Project Ideas — Cyber Culture Interface](https://www.youtube.com/watch?v=0LxVcNJUSdY)
+
+> **When this project is complete:** [Resume your study at CYBER Phase 19](./ICT_Cybersecurity.md#L2596) · [Review Phase 18](./ICT_Cybersecurity.md#L2469)
+
+---
+#### CYBER Phase 19 Project
+
+**Recommended build — Defensive Security Portfolio**
+
+**Why this project now:** it applies the material covered through [CYBER Phase 19](./ICT_Cybersecurity.md#L2596) without requiring later phases.
+
+**Build specification**
+
+- Build **Defensive Security Portfolio** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Defensive Security Portfolio Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
+- **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
+- **YouTube build/lab:** [Cybersecurity Portfolio Project Ideas — Cyber Culture Interface](https://www.youtube.com/watch?v=0LxVcNJUSdY)
+
+> **When this project is complete:** [Resume your study at CYBER Phase 20](./ICT_Cybersecurity.md#L2730) · [Review Phase 19](./ICT_Cybersecurity.md#L2596)
+
+---
+#### CYBER Phase 20 Project
+
+**Recommended build — Timed SOC Investigation**
+
+**Why this project now:** it applies the material covered through [CYBER Phase 20](./ICT_Cybersecurity.md#L2730) without requiring later phases.
+
+**Build specification**
+
+- Build **Timed SOC Investigation** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
+- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
+- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+
+**Alternative project — Timed SOC Investigation Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+
+- **Similar implementation on GitHub:** [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+- **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
+- **YouTube build/lab:** [Cybersecurity Portfolio Project Ideas — Cyber Culture Interface](https://www.youtube.com/watch?v=0LxVcNJUSdY)
+
+> **When this project is complete:** [Return to the CYBER phase index](./ICT_Cybersecurity.md#L118) · [Review Phase 20](./ICT_Cybersecurity.md#L2730)
+
+---
+
+---
+
 
 ### Anti-patterns (do not do this)
 
@@ -2890,7 +7224,7 @@ Read phase → hit mastery checkpoint → pick 1 project from that cluster → s
 
 ## Curated Inspiration
 
-Project prompts curated with **Composio** (web search, GitHub). Use for extra ideas - implement your own code and README.
+Project prompts curated with **Composio** (YouTube and GitHub). The phase navigator uses 40 validated public videos plus track-specific repositories and project collections. Use them for inspiration—implement your own code and README.
 
 | Resource | Best for |
 | --- | --- |

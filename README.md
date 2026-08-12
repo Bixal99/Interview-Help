@@ -457,11 +457,14 @@ Flow -> Linux/Git/Automation -> Artifact/CI/CD -> Containers/Kubernetes -> IaC/C
 **File:** [`Projects.md`](./Projects.md)  
 **Scope:** Small-to-medium builds mapped to the roadmaps (fundamentals/OOP, CS, Data, Networks, AI, Cybersecurity, Odoo, Web, Cloud, DevOps, capstones, interview drills).
 
+Every roadmap phase ends with an exact link into the [phase-by-phase project navigator](./Projects.md#L89). Each heading-based project section contains a recommended build, an alternative project, specifications, GitHub examples, a YouTube build or lab, a review link, and a link that resumes the next roadmap phase.
+
 ```
 Build → Explain → Ship README → Drill Interview.md
 ```
 
 - Pick **1-2 projects per phase cluster**, not a pile of abandoned repos.  
+- Use the phase-end project link when you want one build aligned exactly to what you just learned.
 - Each card has: goal, concepts, difficulty, steps, done-when, stretch.  
 - Capstones combine tracks (for example ERP-lite inventory, Odoo + API, RAG on your own notes).  
 - **Cybersecurity proof:** lab writeups, home SIEM + detections (Sigma), Juice Shop remediations, cloud IAM harden notes - see [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) Phase 19.

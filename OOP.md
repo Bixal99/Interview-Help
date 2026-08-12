@@ -112,29 +112,29 @@ Phases 1-10 build language + modeling fluency. Phases 11-18 build design judgmen
 
 | # | Phase | Goal | Move on when you can... |
 | --- | --- | --- | --- |
-| F1 | [How Programs Run](#phase-f1) | Source, interpreter, variables | Run a script and explain a traceback |
-| F2 | [Control Flow](#phase-f2) | if/else and loops | Write nested decisions without panic |
-| F3 | [Functions & Modules](#phase-f3) | Reuse and organize | Split a script across two files |
-| 01 | [Object Thinking](#phase-1) | See why OOP exists | Contrast procedural vs OOP failure modes |
-| 02 | [Classes & Objects](#phase-2) | Blueprint vs instance | Draw heap picture of two objects |
-| 03 | [State & Behavior](#phase-3) | Attrs, methods, `self` | Write a correct `__init__` without guessing |
-| 04 | [Encapsulation](#phase-4) | Protect invariants | Make invalid state unreachable |
-| 05 | [Abstraction](#phase-5) | Expose what, hide how | Design an ABC callers can trust |
-| 06 | [Inheritance](#phase-6) | Reuse by is-a | Explain MRO for a small hierarchy |
-| 07 | [Polymorphism](#phase-7) | One interface, many forms | Replace an if/elif type chain |
-| 08 | [Composition](#phase-8) | Prefer has-a | Rewrite inheritance as composition |
-| 09 | [Python Power Tools](#phase-9) | Idiomatic OOP | Use `@property` and `__repr__` correctly |
-| 10 | [Relationships](#phase-10) | Model the domain | Sketch a UML-ish class diagram |
-| 11 | [Smells & Refactor](#phase-11) | Spot bad design early | Name a smell and the refactor |
-| 12 | [SOLID](#phase-12) | Localize change | Apply each letter with a before/after |
-| 13 | [Creational Patterns](#phase-13) | Control construction | Justify Factory vs direct `new` |
-| 14 | [Structural Patterns](#phase-14) | Shape object graphs | Apply Adapter or Decorator once |
-| 15 | [Behavioral Patterns](#phase-15) | Shape collaboration | Apply Strategy and Observer |
-| 16 | [Testing OOP](#phase-16) | Prove designs | Unit-test with a fake collaborator |
-| 17 | [Layers](#phase-17) | Keep policy independent | Separate domain from I/O |
-| 18 | [LLD Method](#phase-18) | Design under pressure | Run the LLD checklist on a prompt |
-| 19 | [Portfolio](#phase-19) | Prove skill | Publish designs with write-ups |
-| 20 | [Interviews](#phase-20) | Get hired | Narrate trade-offs out loud |
+| F1 | [How Programs Run](#f1---how-programs-run) | Source, interpreter, variables | Run a script and explain a traceback |
+| F2 | [Control Flow](#f2---control-flow) | if/else and loops | Write nested decisions without panic |
+| F3 | [Functions & Modules](#f3---functions-and-modules) | Reuse and organize | Split a script across two files |
+| 01 | [Object Thinking](#phase-1---object-thinking) | See why OOP exists | Contrast procedural vs OOP failure modes |
+| 02 | [Classes & Objects](#phase-2---classes--objects) | Blueprint vs instance | Draw heap picture of two objects |
+| 03 | [State & Behavior](#phase-3---state--behavior) | Attrs, methods, `self` | Write a correct `__init__` without guessing |
+| 04 | [Encapsulation](#phase-4---encapsulation) | Protect invariants | Make invalid state unreachable |
+| 05 | [Abstraction](#phase-5---abstraction) | Expose what, hide how | Design an ABC callers can trust |
+| 06 | [Inheritance](#phase-6---inheritance) | Reuse by is-a | Explain MRO for a small hierarchy |
+| 07 | [Polymorphism](#phase-7---polymorphism) | One interface, many forms | Replace an if/elif type chain |
+| 08 | [Composition](#phase-8---composition-over-inheritance) | Prefer has-a | Rewrite inheritance as composition |
+| 09 | [Python Power Tools](#phase-9---python-power-tools) | Idiomatic OOP | Use `@property` and `__repr__` correctly |
+| 10 | [Relationships](#phase-10---relationships--modeling) | Model the domain | Sketch a UML-ish class diagram |
+| 11 | [Smells & Refactor](#phase-11---smells--refactoring) | Spot bad design early | Name a smell and the refactor |
+| 12 | [SOLID](#phase-12---solid) | Localize change | Apply each letter with a before/after |
+| 13 | [Creational Patterns](#phase-13---creational-patterns) | Control construction | Justify Factory vs direct `new` |
+| 14 | [Structural Patterns](#phase-14---structural-patterns) | Shape object graphs | Apply Adapter or Decorator once |
+| 15 | [Behavioral Patterns](#phase-15---behavioral-patterns) | Shape collaboration | Apply Strategy and Observer |
+| 16 | [Testing OOP](#phase-16---testing-oop) | Prove designs | Unit-test with a fake collaborator |
+| 17 | [Layers](#phase-17---layers--clean-ish-architecture) | Keep policy independent | Separate domain from I/O |
+| 18 | [LLD Method](#phase-18---lld-method) | Design under pressure | Run the LLD checklist on a prompt |
+| 19 | [Portfolio](#phase-19---portfolio) | Prove skill | Publish designs with write-ups |
+| 20 | [Interviews](#phase-20---interviews) | Get hired | Narrate trade-offs out loud |
 
 ### Anchor Resources (bookmark these)
 
@@ -304,6 +304,8 @@ Be ready for `is` vs `==` later; for now, explain mutable vs immutable with a li
 
 **THE BRIDGE:** Fixed sequences of statements are not enough. Programs must **choose and repeat** - control flow.
 
+> **Phase F1 complete?** [Build the aligned project](./Projects.md#L110) · [Continue to Phase F2](#f2---control-flow)
+
 <a id="phase-f2"></a>
 
 ## F2 - Control Flow
@@ -449,6 +451,8 @@ Know `range`, `enumerate`, and how to avoid mutating a list while iterating it c
 | Hard | Nested loop multiplication table |
 
 **THE BRIDGE:** Copy-pasted loop bodies become unmaintainable. Package reusable logic as **functions**.
+
+> **Phase F2 complete?** [Build the aligned project](./Projects.md#L131) · [Continue to Phase F3](#f3---functions-and-modules)
 
 <a id="phase-f3"></a>
 
@@ -596,6 +600,8 @@ if __name__ == "__main__":
 **MASTERY CHECKPOINT - Part 0:** Build a tiny CLI (guessing game or expense adder) using variables, if/else, loops, and at least two functions in two files. Then begin Phase 1.
 
 ---
+
+> **Phase F3 complete?** [Build the aligned project](./Projects.md#L152) · [Continue to Phase 1](#phase-1---object-thinking)
 
 <a id="phase-1"></a>
 
@@ -793,6 +799,8 @@ In LLD prompts, start by listing entities and illegal states out loud. Interview
 
 ---
 
+> **Phase 1 complete?** [Build the aligned project](./Projects.md#L173) · [Continue to Phase 2](#phase-2---classes--objects)
+
 <a id="phase-2"></a>
 
 # PHASE 2 - Classes & Objects
@@ -974,6 +982,8 @@ If they ask `is` vs `==`, give a one-liner and a micro-example.
 
 ---
 
+> **Phase 2 complete?** [Build the aligned project](./Projects.md#L194) · [Continue to Phase 3](#phase-3---state--behavior)
+
 <a id="phase-3"></a>
 
 # PHASE 3 - State & Behavior
@@ -1154,6 +1164,8 @@ Interviewers love: "What should happen if construction fails?" Answer: raise; ne
 **MASTERY CHECKPOINT - Phase 3:** Write a class whose `__init__` rejects invalid input and explain what Python does if `__init__` raises.
 
 ---
+
+> **Phase 3 complete?** [Build the aligned project](./Projects.md#L215) · [Continue to Phase 4](#phase-4---encapsulation)
 
 <a id="phase-4"></a>
 
@@ -1361,6 +1373,8 @@ LLD interview gold: state invariants out loud before drawing classes. "What ille
 
 ---
 
+> **Phase 4 complete?** [Build the aligned project](./Projects.md#L236) · [Continue to Phase 5](#phase-5---abstraction)
+
 <a id="phase-5"></a>
 
 # PHASE 5 - Abstraction
@@ -1561,6 +1575,8 @@ ISP interview: give a fat interface example and show the split. Mention callers 
 
 ---
 
+> **Phase 5 complete?** [Build the aligned project](./Projects.md#L257) · [Continue to Phase 6](#phase-6---inheritance)
+
 <a id="phase-6"></a>
 
 # PHASE 6 - Inheritance
@@ -1752,6 +1768,8 @@ They may show broken inheritance (Square/Rectangle). Explain *why* callers break
 
 ---
 
+> **Phase 6 complete?** [Build the aligned project](./Projects.md#L278) · [Continue to Phase 7](#phase-7---polymorphism)
+
 <a id="phase-7"></a>
 
 # PHASE 7 - Polymorphism
@@ -1938,6 +1956,8 @@ Show before/after of if/elif vs polymorphism on a whiteboard. Count how many fil
 **MASTERY CHECKPOINT - Phase 7:** Refactor a three-branch type check into polymorphic method calls and count files touched when adding a fourth type.
 
 ---
+
+> **Phase 7 complete?** [Build the aligned project](./Projects.md#L299) · [Continue to Phase 8](#phase-8---composition-over-inheritance)
 
 <a id="phase-8"></a>
 
@@ -2131,6 +2151,8 @@ Explain delegation vs inheritance in one sentence: "Inheritance is being; delega
 **MASTERY CHECKPOINT - Phase 8:** Convert one bad is-a hierarchy into has-a composition and explain what became easier to test.
 
 ---
+
+> **Phase 8 complete?** [Build the aligned project](./Projects.md#L320) · [Continue to Phase 9](#phase-9---python-power-tools)
 
 <a id="phase-9"></a>
 
@@ -2326,6 +2348,8 @@ MRO question appears in senior loops. Bonus: `@classmethod` factory vs `__init__
 
 ---
 
+> **Phase 9 complete?** [Build the aligned project](./Projects.md#L341) · [Continue to Phase 10](#phase-10---relationships--modeling)
+
 <a id="phase-10"></a>
 
 # PHASE 10 - Relationships & Modeling
@@ -2510,6 +2534,8 @@ LLD round: spend first 5 minutes on CRC/entities. Weak candidates start with `cl
 **MASTERY CHECKPOINT - Phase 10:** Produce CRC cards for one LLD prompt and label composition vs aggregation edges.
 
 ---
+
+> **Phase 10 complete?** [Build the aligned project](./Projects.md#L362) · [Continue to Phase 11](#phase-11---smells--refactoring)
 
 <a id="phase-11"></a>
 
@@ -2698,6 +2724,8 @@ Live refactor question: show Extract Class on whiteboard without naming SOLID ye
 **MASTERY CHECKPOINT - Phase 11:** Name one smell in sample code and demonstrate Extract Class in under fifteen minutes.
 
 ---
+
+> **Phase 11 complete?** [Build the aligned project](./Projects.md#L383) · [Continue to Phase 12](#phase-12---solid)
 
 <a id="phase-12"></a>
 
@@ -2897,6 +2925,8 @@ Connect SOLID to testing (Phase 16): DIP is *why* fakes work. Warn against SOLID
 
 ---
 
+> **Phase 12 complete?** [Build the aligned project](./Projects.md#L404) · [Continue to Phase 13](#phase-13---creational-patterns)
+
 <a id="phase-13"></a>
 
 # PHASE 13 - Creational Patterns
@@ -3094,6 +3124,8 @@ Strong candidates criticize Singleton as global state and suggest DI instead. Bu
 
 ---
 
+> **Phase 13 complete?** [Build the aligned project](./Projects.md#L425) · [Continue to Phase 14](#phase-14---structural-patterns)
+
 <a id="phase-14"></a>
 
 # PHASE 14 - Structural Patterns
@@ -3283,6 +3315,8 @@ Compare Decorator vs Proxy vs Middleware. Python `@functools.wraps` is related b
 **MASTERY CHECKPOINT - Phase 14:** Build an Adapter and a two-layer Decorator; explain difference from Facade.
 
 ---
+
+> **Phase 14 complete?** [Build the aligned project](./Projects.md#L446) · [Continue to Phase 15](#phase-15---behavioral-patterns)
 
 <a id="phase-15"></a>
 
@@ -3508,6 +3542,8 @@ Observer vs Pub/Sub vs Mediator - concise compare. Mention weak references for c
 
 ---
 
+> **Phase 15 complete?** [Build the aligned project](./Projects.md#L467) · [Continue to Phase 16](#phase-16---testing-oop)
+
 <a id="phase-16"></a>
 
 # PHASE 16 - Testing OOP
@@ -3711,6 +3747,8 @@ Explain how you would test a service that sends email and charges card - name fa
 
 ---
 
+> **Phase 16 complete?** [Build the aligned project](./Projects.md#L488) · [Continue to Phase 17](#phase-17---layers--clean-ish-architecture)
+
 <a id="phase-17"></a>
 
 # PHASE 17 - Layers & Clean-ish Architecture
@@ -3907,6 +3945,8 @@ Architecture interview: label arrows on diagram. Fix one backward dependency alo
 **MASTERY CHECKPOINT - Phase 17:** Sketch domain vs infra for one app and mark allowed dependency arrows.
 
 ---
+
+> **Phase 17 complete?** [Build the aligned project](./Projects.md#L509) · [Continue to Phase 18](#phase-18---lld-method)
 
 <a id="phase-18"></a>
 
@@ -4106,6 +4146,8 @@ Closing LLD: recap extensibility + tests + one trade-off you deferred (e.g., per
 
 ---
 
+> **Phase 18 complete?** [Build the aligned project](./Projects.md#L530) · [Continue to Phase 19](#phase-19---portfolio)
+
 <a id="phase-19"></a>
 
 # PHASE 19 - Portfolio
@@ -4264,6 +4306,8 @@ Bring one portfolio project to interviews on a branch you can extend live.
 **MASTERY CHECKPOINT - Phase 19:** Publish one LLD README with diagram, patterns, trade-offs, and tests listed.
 
 ---
+
+> **Phase 19 complete?** [Build the aligned project](./Projects.md#L551) · [Continue to Phase 20](#phase-20---interviews)
 
 <a id="phase-20"></a>
 
@@ -4425,6 +4469,10 @@ Close interviews by linking pillars → SOLID → one pattern → one LLD → CS
 **THE BRIDGE:** Production keeps changing - [`CS.md`](CS.md) Phase 10 and real repos become your continuing revision loop.
 
 **MASTERY CHECKPOINT - Phase 20:** Deliver a two-minute trade-off story and state your next step: CS.md Phase 3 vs Interview.md Track A.
+
+---
+
+> **Phase 20 complete?** [Build the aligned project](./Projects.md#L572) · [Return to the phase index](#phase-index)
 
 ---
 

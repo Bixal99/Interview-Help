@@ -65,15 +65,15 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 | Track | Focus | Q count |
 | --- | --- | --- |
-| [A. Computer Science & Software Engineering](#track-a) | DSA, OOP, OS, DB, design | 18 |
-| [B. Data Analyst & Data Engineer](#track-b) | SQL, metrics, modeling, pipelines | 16 |
-| [C. Computer Networks](#track-c) | Layers, TCP/UDP, DNS, HTTP, TLS | 16 |
-| [D. AI / ML / LLM Engineering](#track-d) | Classical ML → transformers → RAG/agents | 18 |
-| [W. Web Development](#track-w) | Browser, frontend, backend, REST, security, production | 16 |
-| [G. Cloud Engineering](#track-g) | Architecture, IAM, networks, data, reliability, FinOps | 10 |
-| [H. DevOps Engineering](#track-h) | Linux, delivery, containers, Kubernetes, IaC, SRE | 12 |
-| [E. Cross-Cutting Classics](#track-e) | URL bar, debug ladders, design prompts | 6 |
-| [F. Behavioral / STAR](#track-f) | Stories that prove judgment | 5 |
+| [A. Computer Science & Software Engineering](#track-a---computer-science--software-engineering) | DSA, OOP, OS, DB, design | 18 |
+| [B. Data Analyst & Data Engineer](#track-b---data-analyst--data-engineer) | SQL, metrics, modeling, pipelines | 16 |
+| [C. Computer Networks](#track-c---computer-networks) | Layers, TCP/UDP, DNS, HTTP, TLS | 16 |
+| [D. AI / ML / LLM Engineering](#track-d---ai--ml--llm-engineering) | Classical ML → transformers → RAG/agents | 18 |
+| [W. Web Development](#track-w---web-development) | Browser, frontend, backend, REST, security, production | 16 |
+| [G. Cloud Engineering](#track-g---cloud-engineering) | Architecture, IAM, networks, data, reliability, FinOps | 10 |
+| [H. DevOps Engineering](#track-h---devops-engineering) | Linux, delivery, containers, Kubernetes, IaC, SRE | 12 |
+| [E. Cross-Cutting Classics](#track-e---cross-cutting-classics) | URL bar, debug ladders, design prompts | 6 |
+| [F. Behavioral / STAR](#track-f---behavioral-star-anchored-to-your-roadmaps) | Stories that prove judgment | 5 |
 
 ---
 

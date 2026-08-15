@@ -1,12 +1,12 @@
 # The Zero-to-Hero Odoo Engineer Roadmap
 
-*Mohammad Bilal's complete, self-paced path from ERP thinking to hire-ready Odoo development - architecture, modules, ORM, security, views, workflows, HTTP integrations, OWL frontend, PostgreSQL, testing, portfolio modules, and interview fluency - told as one continuous chain of discoveries.*
+*Mohammad Bilal's complete, self-paced path from ERP thinking to hire-ready Odoo development - architecture, modules, ORM, security, views, workflows, HTTP integrations, OWL frontend, PostgreSQL, testing, portfolio modules, and interview confident working knowledge - told as a connected story in which each new idea solves a problem left by the previous one.*
 
 *Resources curated with Composio (web search, YouTube, GitHub) against [Odoo 18 Server Framework 101](https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101/01_architecture.html), [Odoo developer tutorials](https://www.odoo.com/documentation/18.0/developer/tutorials.html), [backend reference](https://www.odoo.com/documentation/18.0/developer/reference/backend.html), [view architectures](https://www.odoo.com/documentation/18.0/developer/reference/user_interface/view_architectures.html), [data model](https://www.odoo.com/documentation/18.0/developer/reference/backend/data.html), [OWL components](https://www.odoo.com/documentation/18.0/developer/reference/frontend/owl_components.html), [Odoo 17 developer docs](https://www.odoo.com/documentation/17.0/developer.html), Ecosire/DeployMonkey/Braincuber/GetKnit/Cybrosys guides, [odoo/tutorials](https://github.com/odoo/tutorials), [odoo/odoo](https://github.com/odoo/odoo), [ged-odoo/odoo-js-training-public](https://github.com/ged-odoo/odoo-js-training-public), [NodenHQ/awesome-odoo](https://github.com/NodenHQ/awesome-odoo), [Bladefidz/learn-odoo](https://github.com/Bladefidz/learn-odoo), and [yavy-odoo/odoo-module-boilerplate](https://github.com/yavy-odoo/odoo-module-boilerplate).*
 
-*Where this sits:* do this **after** solid Python and [`OOP.md`](./OOP.md) (classes, inheritance, composition). Odoo is Python OOP at scale with XML, PostgreSQL, and JS. Pair shipping with [`Projects.md`](./Projects.md) **ODOO-01 to ODOO-08** and drill [`Interview.md`](./Interview.md) for speak-under-pressure loops.*
+*Where this sits:* do this **after** solid Python and [`OOP.md`](./OOP.md) (classes, inheritance, composition). Odoo is Python OOP when the amount of work grows with XML, PostgreSQL, and JS. Pair shipping with [`Projects.md`](./Projects.md) **ODOO-01 to ODOO-08** and drill [`Interview.md`](./Interview.md) for practice explaining ideas clearly under interview pressure.*
 
-**Scope:** 40 concepts · 20 phases · bridge-driven, no week clocks.
+**Scope:** 40 concepts · 20 phases · connected step by step, with no artificial weekly deadline.
 
 ```
 ERP → Modules → ORM → UI → HTTP → Ship → Hire
@@ -16,7 +16,15 @@ ERP → Modules → ORM → UI → HTTP → Ship → Hire
 
 ## How to Read This Document
 
-This is not a glossary of Odoo buzzwords. It is one long argument: every section exists because the section before it hit a wall. ERP thinking only matters once spreadsheet chaos burned you. Record rules only matter once model ACLs let users see rows they should not. OWL patches only matter once pure XML could not express the UX.
+### Start here if Odoo and ERP are completely new to you
+
+**ERP** means enterprise resource planning: one connected business system for work such as sales, inventory, accounting, and staff records. **Odoo** is an ERP platform. A **module** adds or changes a business feature, a **model** describes a kind of business record, the **ORM** lets Python code work with database records, a **view** controls what the user sees, and a **record** is one stored item such as a customer or sales order.
+
+Keep one small business story in mind as you read—for example, a library lending books or a shop selling products. Ask how each Odoo feature changes that story. Build the smallest version, enter a few records by hand, and check what appears in the database and on the screen. The framework vocabulary becomes manageable when every term is tied to a visible business action.
+
+**Words you will meet often:** an **addon** is an Odoo module found on an addons path; a **manifest** is the file that describes a module and its dependencies; a **field** is one named value on a model; a **domain** is a list of conditions used to find records; an **ACL** grants model-level permissions; a **record rule** limits which individual rows a user may access; a **controller** receives web requests; a **webhook** is an HTTP message sent when an event occurs; **RPC** lets another program call Odoo operations remotely; **OWL** is Odoo's component system for interactive browser code; **QWeb** is its template system; and a **migration** changes existing data or code so it works with a newer version.
+
+This is not a glossary of Odoo buzzwords. It is one connected explanation: every section exists because the section before it reached a practical limit. ERP thinking only matters once spreadsheet chaos burned you. Record rules only matter once model ACLs let users see rows they should not. OWL patches only matter once pure XML could not express the UX.
 
 **There is no clock on this document.** Move when you can explain *why the previous idea was not enough*. That is the only unit of progress.
 
@@ -25,34 +33,34 @@ Every concept answers the same questions:
 - What is it, in plain language?
 - Why does it exist - what problem forced someone to invent it?
 - What did people do before, and what broke?
-- How does it work mechanically?
+- What happens inside, one step at a time?
 - What does it cost?
 - What limitation forces the next idea?
 
-### Two Lenses, One Spine
+### Two Ways to Use the Same Foundation
 
 | Role | Primary question |
 | --- | --- |
 | **Backend Odoo** | Models, ORM, security, workflows, upgrades? |
 | **Full-stack Odoo** | Views, HTTP, RPC, payments, OWL, PostgreSQL tuning? |
 
-Phases 1-10 build platform fluency (think ERP, ship modules). Phases 11-18 build extension and quality (inherit, integrate, test, tune). Phases 19-20 are portfolio and hiring. Skip neither - integrations without security are breaches; security without UX never gets adopted.
+Phases 1-10 build platform confident working knowledge (think ERP, ship modules). Phases 11-18 build extension and quality (inherit, integrate, test, tune). Phases 19-20 are portfolio and hiring. Skip neither - integrations without security are breaches; security without UX never gets adopted.
 
-### The Rhythm Every Concept Follows
+### The Beginner-Friendly Pattern Every Topic Follows
 
 | Element | What it gives you |
 | --- | --- |
-| **Why This Concept Exists** | The previous limitation, stated plainly |
-| **Visual Learning** | Videos, interactive tools, docs, GitHub, practice |
-| **Detailed Explanation** | Mechanics in prose |
-| **The Idea That Fixed It** | The compact insight |
-| **Internal Working** | ASCII "animation" of what happens |
-| **Real-World Analogy** | Picture it without a screen |
-| **Trade-offs** | Gain vs cost |
+| **Why You Are Learning This** | The previous limitation, stated plainly |
+| **See It Before You Memorize It** | Videos, interactive tools, docs, GitHub, practice |
+| **Step-by-Step Explanation** | A step-by-step explanation in words |
+| **The Idea That Fixed It** | The main idea in one clear sentence |
+| **What Happens Inside** | ASCII "animation" of what happens |
+| **Picture It Like This** | An everyday comparison you can picture without a screen |
+| **Trade-offs** | What you gain and what you give up |
 | **Code** | Minimal runnable Odoo patterns |
-| **Interview** | How it gets tested |
+| **Interview** | How an interviewer may ask about it |
 | **Practice** | Easy → Medium → Hard |
-| **The Bridge** | Why the next concept must exist |
+| **Why the Next Topic Is Needed** | The remaining problem that makes the next topic useful |
 
 **Diagram conventions.** `|` and `v` mean sequence, `+--` joins paths, `-->` means a call or dependency, `X` marks a failure, boxes are models or tiers. Time usually runs downward.
 
@@ -153,17 +161,17 @@ Phases 1-10 build platform fluency (think ERP, ship modules). Phases 11-18 build
 
 **Track:** Foundations
 
-**GOAL:** See ERP as one database of truth before any module syntax
+**WHAT YOU WILL BE ABLE TO DO:** See ERP as one database of truth before any module syntax
 
-**PREREQUISITES:** See phase index and prior mastery checkpoints.
+**WHAT YOU SHOULD KNOW FIRST:** See phase index and prior mastery checkpoints.
 
 ## 1.1 What ERP Really Is
 
-**WHY THIS EXISTS:** Business software stopped being a pile of spreadsheets the moment companies needed sales, inventory, accounting, and HR to agree on the same customer and product records without manual re-entry.
+**WHY YOU ARE LEARNING THIS:** Business software stopped being a pile of spreadsheets the moment companies needed sales, inventory, accounting, and HR to agree on the same customer and product records without manual re-entry.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Sales logged deals in CRM, warehouse shipped from another sheet, finance invoiced from a third export, and every month someone reconciled three truths that should have been one.
+**THE PROBLEM THIS SOLVES:** Sales logged deals in CRM, warehouse shipped from another sheet, finance invoiced from a third export, and every month someone reconciled three truths that should have been one.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo ERP overview - what one system replaces](https://www.youtube.com/watch?v=s-4zNx7wCFk)
 - [Odoo basics for beginners](https://www.youtube.com/watch?v=5YIwP9-55Qk)
@@ -174,7 +182,7 @@ Phases 1-10 build platform fluency (think ERP, ship modules). Phases 11-18 build
 - [odoo/odoo - see how apps share models](https://github.com/odoo/odoo)
 - List three duplicate data points between Sales and Inventory in a spreadsheet company, then name the Odoo app that owns each once.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Enterprise Resource Planning (ERP) is not a buzzword for big software. It is the decision that **operational data has owners and workflows**, not files. When a quotation becomes a sales order, stock moves, manufacturing orders, and invoice lines should trace back to the same product, partner, and unit of measure without copy-paste.
 
@@ -184,9 +192,9 @@ For a developer, ERP thinking means asking: *Which model owns this fact?* *Which
 
 Odoo's open-source core plus optional enterprise apps is why startups and manufacturers both adopt it: you customize with modules instead of forking entire products. Your job is to extend the registry safely, not to reinvent accounting in a standalone script.
 
-**THE IDEA THAT FIXED IT:** Treat the company as one coherent model graph, not isolated apps.
+**THE MAIN IDEA IN SIMPLE WORDS:** Treat the company as one coherent model graph, not isolated apps.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 SPREADSHEET CHAOS                    ODOO SINGLE TRUTH
@@ -201,19 +209,19 @@ SPREADSHEET CHAOS                    ODOO SINGLE TRUTH
         X                               one partner_id everywhere
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A hospital chart where every department reads the same patient ID beats three clipboards with slightly different spellings of the name.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
 | Best-of-breed tools per dept | Best tool per team | Integration tax and drift |
 | Single ERP (Odoo) | One partner/product truth | Customization discipline required |
-| Spreadsheets forever | Zero license cost | Audit nightmares at scale |
+| Spreadsheets forever | Zero license cost | Audit nightmares when the amount of work grows |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Mental model: apps are namespaces over shared models (not separate databases)
@@ -226,9 +234,9 @@ SHARED = ["res.partner", "product.product", "res.company"]
 # Odoo modules declare dependencies so stock loads after product exists.
 ```
 
-**INTERVIEW PERSPECTIVE:** Expect 'Explain ERP vs CRM vs accounting module' and 'Why one database?' in junior Odoo screens.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Expect 'Explain ERP vs CRM vs accounting module' and 'Why one database?' in junior Odoo screens.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -236,17 +244,17 @@ SHARED = ["res.partner", "product.product", "res.company"]
 | Medium | Trace quote to invoice data flow in Odoo terms. |
 | Hard | Argue when NOT to customize ERP (integrate instead). |
 
-**THE BRIDGE:** Knowing *why* one database exists forces the next question: how does Odoo physically run that database and UI?
+**WHY THE NEXT TOPIC IS NEEDED:** Knowing *why* one database exists forces the next question: how does Odoo physically run that database and UI?
 
 ---
 
 ## 1.2 Odoo Developer Mindset vs Script Thinking
 
-**WHY THIS EXISTS:** Odoo rewards developers who think in **declarative modules, security groups, and ORM transactions**, not one-off scripts that bypass access rules and upgrade paths.
+**WHY YOU ARE LEARNING THIS:** Odoo rewards developers who think in **declarative modules, security groups, and ORM transactions**, not one-off scripts that bypass access rules and upgrade paths.
 
-**THE PROBLEM BEFORE THIS EXISTED:** A freelancer pasted SQL updates into production, bypassed ORM constraints, and the next module upgrade dropped columns their script assumed permanent.
+**THE PROBLEM THIS SOLVES:** A freelancer pasted SQL updates into production, bypassed ORM constraints, and the next module upgrade dropped columns their script assumed permanent.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo development introduction](https://www.youtube.com/watch?v=zKIKCtq9PfM)
 - [Custom Odoo module walkthrough](https://www.youtube.com/watch?v=uJPjmS5Arug)
@@ -257,7 +265,7 @@ SHARED = ["res.partner", "product.product", "res.company"]
 - [odoo/tutorials official learning repos](https://github.com/odoo/tutorials)
 - Rewrite a fake `UPDATE res_partner SET credit_limit=0` script as a secured ORM method with a reason logged in chatter.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Script thinking says: fetch rows, mutate, commit. Odoo thinking says: **declare models**, let the framework create SQL, enforce ACLs and record rules, trigger computed fields, post messages, and survive upgrades with `-u module` migrations.
 
@@ -267,9 +275,9 @@ Security is not an afterthought: groups on menus, `ir.model.access` for CRUD, re
 
 Finally, Odoo is **transactional**: public methods run in environments (`env`) tied to a cursor, user, and context. Side effects belong in explicit business methods, constraints, or overridden `create/write`, not scattered across cron and SQL.
 
-**THE IDEA THAT FIXED IT:** Extend the framework through modules and the ORM; never fight the registry with raw shortcuts.
+**THE MAIN IDEA IN SIMPLE WORDS:** Extend the framework through modules and the ORM; never fight the registry with raw shortcuts.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 SCRIPT PATH (fragile)                 MODULE PATH (Odoo-native)
@@ -285,11 +293,11 @@ SCRIPT PATH (fragile)                 MODULE PATH (Odoo-native)
   upgrade breaks                       manifest version + migrate
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Renting a room by picking the lock versus getting a key from the building manager: one works until the locks change.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -297,7 +305,7 @@ Renting a room by picking the lock versus getting a key from the building manage
 | ORM + module | Survives upgrades; respects ACL | More files and ceremony |
 | External ETL only | Loose coupling | Latency and duplicate masters |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Odoo-native: business method on model (runs with user ACLs)
@@ -313,9 +321,9 @@ class ResPartner(models.Model):
         return True
 ```
 
-**INTERVIEW PERSPECTIVE:** Interviewers probe 'Would you ever write raw SQL in Odoo?' - answer with migrations, `env.cr.execute` in tests, and ORM first.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Interviewers probe 'Would you ever write raw SQL in Odoo?' - answer with migrations, `env.cr.execute` in tests, and ORM first.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -323,13 +331,13 @@ class ResPartner(models.Model):
 | Medium | Contrast cron script vs `@api.model` method. |
 | Hard | Design audit trail for manual credit limit changes. |
 
-**THE BRIDGE:** Developer mindset is useless without knowing where Python, PostgreSQL, and the browser sit in Odoo's three-tier layout.
+**WHY THE NEXT TOPIC IS NEEDED:** Developer mindset is useless without knowing where Python, PostgreSQL, and the browser sit in Odoo's three-tier layout.
 
 ---
 
-**MASTERY CHECKPOINT - Phase 1:** Explain ERP as shared master data plus workflows, and contrast ORM-module work with ad hoc SQL scripts.
+**CHECK YOUR UNDERSTANDING AFTER PHASE 1:** Explain ERP as shared master data plus workflows, and contrast ORM-module work with ad hoc SQL scripts.
 
-> **Phase 1 complete?** [Build the aligned project](./Projects.md#L2298) · [Continue to Phase 2](#phase-2---architecture-3-tier)
+> **Phase 1 complete?** [Build the aligned project](./Projects.md#odoo-phase-1-project) · [Continue to Phase 2](#phase-2---architecture-3-tier)
 
 <a id="phase-2"></a>
 
@@ -337,17 +345,17 @@ class ResPartner(models.Model):
 
 **Track:** Foundations
 
-**GOAL:** Picture client, server, and database before editing a line of module code
+**WHAT YOU WILL BE ABLE TO DO:** Picture client, server, and database before editing a line of module code
 
-**PREREQUISITES:** See phase index and prior mastery checkpoints.
+**WHAT YOU SHOULD KNOW FIRST:** See phase index and prior mastery checkpoints.
 
 ## 2.1 Three-Tier Odoo Architecture
 
-**WHY THIS EXISTS:** Odoo separates **presentation**, **application logic**, and **persistence** so teams can scale, cache, and secure each layer with clear boundaries.
+**WHY YOU ARE LEARNING THIS:** Odoo separates **presentation**, **application logic**, and **persistence** so teams can scale, cache, and secure each layer with clear boundaries.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Teams edited production XML views directly in the filestore, restarted workers randomly, and could not tell whether bugs lived in JS, Python, or SQL.
+**THE PROBLEM THIS SOLVES:** Teams edited production XML views directly in the filestore, restarted workers randomly, and could not tell whether bugs lived in JS, Python, or SQL.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo architecture overview](https://www.youtube.com/watch?v=WnsYmsq4Qr8)
 - [How Odoo request flows](https://www.youtube.com/watch?v=k-hKNUZQi2o)
@@ -358,7 +366,7 @@ class ResPartner(models.Model):
 - [odoo/odoo tree - addons, odoo/service, odoo/http](https://github.com/odoo/odoo)
 - Sketch tier boundaries for one button click that creates a sale order.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 **Tier 1 - Web client:** The browser loads OWL/JavaScript assets, talks JSON-RPC to the server, renders views described in XML (forms, lists, kanban). Users never touch PostgreSQL directly.
 
@@ -370,9 +378,9 @@ A single HTTP request typically: authenticates session, resolves route, builds `
 
 Deployment adds reverse proxies, worker counts, and filestore for attachments, but the mental three-tier picture stays stable.
 
-**THE IDEA THAT FIXED IT:** Browser talks to Python registry; registry talks to PostgreSQL; never skip the middle.
+**THE MAIN IDEA IN SIMPLE WORDS:** Browser talks to Python registry; registry talks to PostgreSQL; never skip the middle.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 [ Browser / OWL client ]
@@ -384,11 +392,11 @@ Deployment adds reverse proxies, worker counts, and filestore for attachments, b
 [ PostgreSQL + filestore attachments ]
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Restaurant: dining room (UI), kitchen (server/rules), pantry (database). Patrons do not walk into the pantry.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -396,7 +404,7 @@ Restaurant: dining room (UI), kitchen (server/rules), pantry (database). Patrons
 | Server ORM logic | One rule set; ACL enforced | Round trips for heavy UI |
 | Direct DB access | Fast reports | Bypasses business invariants |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Simplified request path (conceptual)
@@ -411,9 +419,9 @@ class QuickPing(http.Controller):
         return {"user": request.env.user.login, "db": request.env.cr.dbname}
 ```
 
-**INTERVIEW PERSPECTIVE:** Be ready to whiteboard tiers and where custom Python vs XML vs JS belongs.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Be ready to whiteboard tiers and where custom Python vs XML vs JS belongs.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -421,17 +429,17 @@ class QuickPing(http.Controller):
 | Medium | Trace login to opening a form view. |
 | Hard | Explain multi-worker registry invalidation. |
 
-**THE BRIDGE:** Three tiers collapse into one running dev machine once you install Odoo and add addons paths.
+**WHY THE NEXT TOPIC IS NEEDED:** Three tiers collapse into one running dev machine once you install Odoo and add addons paths.
 
 ---
 
 ## 2.2 Registry, ORM, and PostgreSQL Together
 
-**WHY THIS EXISTS:** The **registry** is the in-memory map of merged models; the **ORM** translates record operations to SQL; **PostgreSQL** stores rows the ORM defines.
+**WHY YOU ARE LEARNING THIS:** The **registry** is the in-memory map of merged models; the **ORM** translates record operations to SQL; **PostgreSQL** stores rows the ORM defines.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Developers created tables manually, then wondered why Odoo's upgrade deleted them or why `search` returned empty (wrong model name, no module load).
+**THE PROBLEM THIS SOLVES:** Developers created tables manually, then wondered why Odoo's upgrade deleted them or why `search` returned empty (wrong model name, no module load).
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo ORM deep dive intro](https://www.youtube.com/watch?v=RzQPI_lFKL8)
 - [Models and fields tutorial angle](https://www.youtube.com/watch?v=zq4aw99kv48)
@@ -442,7 +450,7 @@ class QuickPing(http.Controller):
 - [NodenHQ/awesome-odoo curated links](https://github.com/NodenHQ/awesome-odoo)
 - Install a module and locate its table in PostgreSQL with `\d table_name`.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 When Odoo starts (or after `-u`), it loads Python classes inheriting `models.Model`, merges `_inherit` chains, computes fields, validates views, and caches the result as the **registry** for that database.
 
@@ -452,9 +460,9 @@ PostgreSQL features matter: constraints, indexes, JSONB for translations, and se
 
 Multi-company and multi-language ride on context keys (`allowed_company_ids`, `lang`) the ORM injects into domains and computed fields. Understanding registry + ORM explains why **module load order** and **dependencies** are not bureaucracy, they are correctness.
 
-**THE IDEA THAT FIXED IT:** Models declare intent; registry merges; ORM materializes SQL; PostgreSQL persists.
+**THE MAIN IDEA IN SIMPLE WORDS:** Models declare intent; registry merges; ORM materializes SQL; PostgreSQL persists.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 Module Python                Registry merge              PostgreSQL
@@ -464,11 +472,11 @@ class SaleOrder(Model)    ->   model 'sale.order'     ->   table sale_order
   partner_id = fields...      access + rules              indexes
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 City zoning map (registry), building permits (ORM API), land records office (PostgreSQL).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -476,7 +484,7 @@ City zoning map (registry), building permits (ORM API), land records office (Pos
 | ORM models | Integrated security and UI | Must learn framework rules |
 | NoSQL side store | Flexible events | Split brain with ERP truth |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 from odoo import fields, models
@@ -492,9 +500,9 @@ class LibraryBook(models.Model):
 # After -i library: SELECT * FROM library_book;
 ```
 
-**INTERVIEW PERSPECTIVE:** 'What happens when you install a module?' and 'Where do fields live in SQL?' are core screening questions.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** 'What happens when you install a module?' and 'Where do fields live in SQL?' are core screening questions.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -502,13 +510,13 @@ class LibraryBook(models.Model):
 | Medium | Explain registry rebuild after `-u`. |
 | Hard | Trace many2many through relation table. |
 
-**THE BRIDGE:** Architecture on paper becomes real when you install Odoo locally with your addons path.
+**WHY THE NEXT TOPIC IS NEEDED:** Architecture on paper becomes real when you install Odoo locally with your addons path.
 
 ---
 
-**MASTERY CHECKPOINT - Phase 2:** Draw browser, server/registry, and PostgreSQL, and explain how a model becomes a table.
+**CHECK YOUR UNDERSTANDING AFTER PHASE 2:** Draw browser, server/registry, and PostgreSQL, and explain how a model becomes a table.
 
-> **Phase 2 complete?** [Build the aligned project](./Projects.md#L2319) · [Continue to Phase 3](#phase-3---dev-environment-setup)
+> **Phase 2 complete?** [Build the aligned project](./Projects.md#odoo-phase-2-project) · [Continue to Phase 3](#phase-3---dev-environment-setup)
 
 <a id="phase-3"></a>
 
@@ -516,17 +524,17 @@ class LibraryBook(models.Model):
 
 **Track:** Foundations
 
-**GOAL:** Run Odoo locally with an addons path you control
+**WHAT YOU WILL BE ABLE TO DO:** Run Odoo locally with an addons path you control
 
-**PREREQUISITES:** See phase index and prior mastery checkpoints.
+**WHAT YOU SHOULD KNOW FIRST:** See phase index and prior mastery checkpoints.
 
 ## 3.1 Source, Docker, and Odoo.sh Mindset
 
-**WHY THIS EXISTS:** You need a **repeatable dev environment** before custom modules: same version, same PostgreSQL major, same addons path every teammate uses.
+**WHY YOU ARE LEARNING THIS:** You need a **repeatable dev environment** before custom modules: same version, same PostgreSQL major, same addons path every teammate uses.
 
-**THE PROBLEM BEFORE THIS EXISTED:** A tutorial used Odoo 16 snippets on a 17 database; views failed silently and ORM field types mismatched until the database was rebuilt.
+**THE PROBLEM THIS SOLVES:** A tutorial used Odoo 16 snippets on a 17 database; views failed silently and ORM field types mismatched until the database was rebuilt.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo installation and setup walkthrough](https://www.youtube.com/watch?v=uJPjmS5Arug)
 - [Local Odoo dev environment tips](https://www.youtube.com/watch?v=zKIKCtq9PfM)
@@ -537,7 +545,7 @@ class LibraryBook(models.Model):
 - [odoo/tutorials - official exercise modules](https://github.com/odoo/tutorials)
 - Document your exact version, Python, and PostgreSQL in a TEAM_SETUP.md snippet.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Common paths: **source install** (git clone odoo/odoo, pip requirements, `./odoo-bin -d dev`), **Docker Compose** (official or community images with mounted addons), **Odoo.sh** (Git branches map to staging/production with built-in CI).
 
@@ -547,9 +555,9 @@ Requirements typically include Python 3.10+, PostgreSQL 12+, node tooling for as
 
 Create a dedicated database per experiment (`dev_bilal`, not `postgres`). Never develop against a copy of production without anonymized data and legal approval.
 
-**THE IDEA THAT FIXED IT:** Pin versions, isolate databases, mount your addons path, then install modules with `-i`.
+**THE MAIN IDEA IN SIMPLE WORDS:** Pin versions, isolate databases, mount your addons path, then install modules with `-i`.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 git clone odoo/odoo
@@ -557,11 +565,11 @@ pip install -r requirements.txt
 ./odoo-bin -d dev_bilal --addons-path=addons,custom_addons -i base --dev=all
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Shared kitchen: everyone uses the same oven temperature (version) or cakes fail for mysterious reasons.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -569,7 +577,7 @@ Shared kitchen: everyone uses the same oven temperature (version) or cakes fail 
 | Docker | Fast spin-up | Volume/path confusion |
 | Odoo.sh | Prod-like pipeline | Less low-level access |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```bash
 # Minimal dev launch (adjust paths)
@@ -580,9 +588,9 @@ Shared kitchen: everyone uses the same oven temperature (version) or cakes fail 
   -i base
 ```
 
-**INTERVIEW PERSPECTIVE:** Expect 'How do you run Odoo locally?' and 'How do addons-path and `-u` differ?'
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Expect 'How do you run Odoo locally?' and 'How do addons-path and `-u` differ?'
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -590,17 +598,17 @@ Shared kitchen: everyone uses the same oven temperature (version) or cakes fail 
 | Medium | Compare Docker vs source for a team of three. |
 | Hard | Plan dev/staging/prod DB promotion safely. |
 
-**THE BRIDGE:** A running server is empty until you understand module folders and manifests.
+**WHY THE NEXT TOPIC IS NEEDED:** A running server is empty until you understand module folders and manifests.
 
 ---
 
 ## 3.2 Addons Path, `-i`, `-u`, and Dev Mode
 
-**WHY THIS EXISTS:** Odoo discovers modules from **addons-path**; **install** creates schema, **upgrade** reapplies data and migrations, **dev flags** shorten feedback loops.
+**WHY YOU ARE LEARNING THIS:** Odoo discovers modules from **addons-path**; **install** creates schema, **upgrade** reapplies data and migrations, **dev flags** shorten feedback loops.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Developers edited Python but forgot `-u`, watched stale registry code run, and blamed Odoo for 'random' behavior.
+**THE PROBLEM THIS SOLVES:** Developers edited Python but forgot `-u`, watched stale registry code run, and blamed Odoo for 'random' behavior.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Module install and upgrade explained](https://www.youtube.com/watch?v=ASPjB-WowBU)
 - [Odoo developer mode features](https://www.youtube.com/watch?v=RzQPI_lFKL8)
@@ -611,7 +619,7 @@ Shared kitchen: everyone uses the same oven temperature (version) or cakes fail 
 - [Bladefidz/learn-odoo module examples](https://github.com/Bladefidz/learn-odoo)
 - Change a field label, `-u` your module, confirm UI updates without full restart.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 The **addons path** is an ordered list of directories Odoo scans for folders containing `__manifest__.py`. Your custom code lives outside core `addons/` so upgrades to Odoo source do not overwrite your work.
 
@@ -621,9 +629,9 @@ The **addons path** is an ordered list of directories Odoo scans for folders con
 
 Log files (`odoo.log`) and `--log-level=debug_sql` are your friends when domains fail or access is denied.
 
-**THE IDEA THAT FIXED IT:** Treat install vs upgrade as schema/data lifecycle events, not interchangeable restart buttons.
+**THE MAIN IDEA IN SIMPLE WORDS:** Treat install vs upgrade as schema/data lifecycle events, not interchangeable restart buttons.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 edit models.py --> --dev=reload (python)
@@ -631,11 +639,11 @@ edit views.xml  --> -u my_module (registry merge)
 edit security   --> -u my_module + re-login user
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 House renovation: installing a room (install) vs remodeling existing wiring (upgrade).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -643,7 +651,7 @@ House renovation: installing a room (install) vs remodeling existing wiring (upg
 | `-u` after structural change | Correct registry | Slower; test data quirks |
 | Drop database | Clean slate | Loses fixtures |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```bash
 # Install new module
@@ -653,9 +661,9 @@ House renovation: installing a room (install) vs remodeling existing wiring (upg
 ./odoo-bin -d dev_bilal -u library_mgmt --stop-after-init
 ```
 
-**INTERVIEW PERSPECTIVE:** Screening question: 'You changed a view XML; what command do you run?'
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Screening question: 'You changed a view XML; what command do you run?'
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -663,13 +671,13 @@ House renovation: installing a room (install) vs remodeling existing wiring (upg
 | Medium | Debug 'Module not found' on addons path. |
 | Hard | Design team convention for init vs update scripts. |
 
-**THE BRIDGE:** With a running dev loop, you can open the anatomy of a single module folder.
+**WHY THE NEXT TOPIC IS NEEDED:** With a running dev loop, you can open the anatomy of a single module folder.
 
 ---
 
-**MASTERY CHECKPOINT - Phase 3:** Launch Odoo with custom addons path and correctly choose `-i`, `-u`, and dev mode.
+**CHECK YOUR UNDERSTANDING AFTER PHASE 3:** Launch Odoo with custom addons path and correctly choose `-i`, `-u`, and dev mode.
 
-> **Phase 3 complete?** [Build the aligned project](./Projects.md#L2340) · [Continue to Phase 4](#phase-4---module-anatomy)
+> **Phase 3 complete?** [Build the aligned project](./Projects.md#odoo-phase-3-project) · [Continue to Phase 4](#phase-4---module-anatomy)
 
 <a id="phase-4"></a>
 
@@ -677,17 +685,17 @@ House renovation: installing a room (install) vs remodeling existing wiring (upg
 
 **Track:** Module Core
 
-**GOAL:** Read every file in a minimal module and know its job
+**WHAT YOU WILL BE ABLE TO DO:** Read every file in a minimal module and know its job
 
-**PREREQUISITES:** See phase index and prior mastery checkpoints.
+**WHAT YOU SHOULD KNOW FIRST:** See phase index and prior mastery checkpoints.
 
 ## 4.1 Manifest, Package Layout, and Loading Order
 
-**WHY THIS EXISTS:** A module is a **versioned package** whose manifest tells Odoo what to load, in what order, and what it depends on.
+**WHY YOU ARE LEARNING THIS:** A module is a **versioned package** whose manifest tells Odoo what to load, in what order, and what it depends on.
 
-**THE PROBLEM BEFORE THIS EXISTED:** A team shipped views before security CSV; users saw menus but hit AccessError on every click.
+**THE PROBLEM THIS SOLVES:** A team shipped views before security CSV; users saw menus but hit AccessError on every click.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo module structure tutorial](https://www.youtube.com/watch?v=zKIKCtq9PfM)
 - [Build your first Odoo module](https://www.youtube.com/watch?v=uJPjmS5Arug)
@@ -698,7 +706,7 @@ House renovation: installing a room (install) vs remodeling existing wiring (upg
 - [odoo/tutorials estate module sample](https://github.com/odoo/tutorials)
 - Scaffold `my_library` with models, views, security, data folders and empty `__init__.py` chain.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Standard layout:
 
@@ -717,9 +725,9 @@ my_library/
 
 Python loads through `__init__.py` importing subpackages. Missing import means models never register even if XML exists.
 
-**THE IDEA THAT FIXED IT:** Manifest declares dependencies and ordered data; Python package imports register code.
+**THE MAIN IDEA IN SIMPLE WORDS:** Manifest declares dependencies and ordered data; Python package imports register code.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 depends: ['base','mail']
@@ -731,11 +739,11 @@ data:
 --> user opens menu with ACL already present
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Recipe card listing ingredients (depends) and steps (data load order).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -743,7 +751,7 @@ Recipe card listing ingredients (depends) and steps (data load order).
 | Structured module | Team-ready | More folders |
 | Monolithic depends on everything | Fast prototype | Upgrade coupling |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # __manifest__.py
@@ -761,9 +769,9 @@ Recipe card listing ingredients (depends) and steps (data load order).
 }
 ```
 
-**INTERVIEW PERSPECTIVE:** 'Walk me through your last module folder' is standard; they listen for load order discipline.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** 'Walk me through your last module folder' is standard; they listen for load order discipline.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -771,17 +779,17 @@ Recipe card listing ingredients (depends) and steps (data load order).
 | Medium | Fix load order for security vs views. |
 | Hard | Split module into base + report without circular depends. |
 
-**THE BRIDGE:** Skeleton exists to hold models and fields, the ORM vocabulary.
+**WHY THE NEXT TOPIC IS NEEDED:** Skeleton exists to hold models and fields, the ORM vocabulary.
 
 ---
 
 ## 4.2 Dependencies, Auto-install, and Version Strings
 
-**WHY THIS EXISTS:** Correct **`depends`** prevent half-registered models; **version** strings drive migrations and Odoo.sh builds.
+**WHY YOU ARE LEARNING THIS:** Correct **`depends`** prevent half-registered models; **version** strings drive migrations and Odoo.sh builds.
 
-**THE PROBLEM BEFORE THIS EXISTED:** A payment customization depended on `website_sale` implicitly; fresh installs crashed because ecommerce was not installed.
+**THE PROBLEM THIS SOLVES:** A payment customization depended on `website_sale` implicitly; fresh installs crashed because ecommerce was not installed.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Module dependencies in Odoo](https://www.youtube.com/watch?v=ASPjB-WowBU)
 - [Odoo versioning and upgrades](https://www.youtube.com/watch?v=RzQPI_lFKL8)
@@ -792,7 +800,7 @@ Recipe card listing ingredients (depends) and steps (data load order).
 - [odoo/odoo official addons manifests for examples](https://github.com/odoo/odoo/tree/master/addons)
 - Create two modules where `library_loans` depends on `library_core` only.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Declare every module that defines models or views you reference. If your view inherits `sale.order` form, depend on `sale`. Transitive depends are not guaranteed across Odoo versions.
 
@@ -802,9 +810,9 @@ Version format `18.0.x.y.z` ties to Odoo series. Bump when you ship migration sc
 
 For enterprise features, mark dependency explicitly and document license expectations for clients.
 
-**THE IDEA THAT FIXED IT:** Explicit depends and series-aligned versions make installs reproducible.
+**THE MAIN IDEA IN SIMPLE WORDS:** Explicit depends and series-aligned versions make installs reproducible.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 library_loans/__manifest__.py
@@ -813,11 +821,11 @@ library_loans/__manifest__.py
 Odoo loads library_core first --> models exist --> loans views validate
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Lego set numbers on the box: build 10234 before wing addon 10234-1.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -825,7 +833,7 @@ Lego set numbers on the box: build 10234 before wing addon 10234-1.
 | Explicit minimal depends | Reliable installs | Must refactor when splitting |
 | Over-broad depends | Works everywhere | Heavier install footprint |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 {
@@ -836,9 +844,9 @@ Lego set numbers on the box: build 10234 before wing addon 10234-1.
 }
 ```
 
-**INTERVIEW PERSPECTIVE:** They ask 'What happens if depends is wrong?' - expect answer: ImportError, missing model, broken view arch.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** They ask 'What happens if depends is wrong?' - expect answer: ImportError, missing model, broken view arch.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -846,13 +854,13 @@ Lego set numbers on the box: build 10234 before wing addon 10234-1.
 | Medium | Design depends for optional website feature. |
 | Hard | Plan migration folder for renamed field. |
 
-**THE BRIDGE:** Module shell ready: time to define models and fields inside it.
+**WHY THE NEXT TOPIC IS NEEDED:** Module shell ready: time to define models and fields inside it.
 
 ---
 
-**MASTERY CHECKPOINT - Phase 4:** Scaffold a module manifest with ordered security and views; explain depends and versioning.
+**CHECK YOUR UNDERSTANDING AFTER PHASE 4:** Scaffold a module manifest with ordered security and views; explain depends and versioning.
 
-> **Phase 4 complete?** [Build the aligned project](./Projects.md#L2361) · [Continue to Phase 5](#phase-5---models--fields)
+> **Phase 4 complete?** [Build the aligned project](./Projects.md#odoo-phase-4-project) · [Continue to Phase 5](#phase-5---models--fields)
 
 <a id="phase-5"></a>
 
@@ -860,17 +868,17 @@ Lego set numbers on the box: build 10234 before wing addon 10234-1.
 
 **Track:** Orm Core
 
-**GOAL:** Declare `_name`, fields, and relations the ORM can enforce
+**WHAT YOU WILL BE ABLE TO DO:** Declare `_name`, fields, and relations the ORM can enforce
 
-**PREREQUISITES:** See phase index and prior mastery checkpoints.
+**WHAT YOU SHOULD KNOW FIRST:** See phase index and prior mastery checkpoints.
 
 ## 5.1 Models, `_name`, and Model Attributes
 
-**WHY THIS EXISTS:** Every persistent entity is a **Model** class; `_name` is the global identifier every view, rule, and relation uses.
+**WHY YOU ARE LEARNING THIS:** Every persistent entity is a **Model** class; `_name` is the global identifier every view, rule, and relation uses.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Copy-paste renamed the class but not `_name`, causing duplicate model registration or views targeting a ghost model.
+**THE PROBLEM THIS SOLVES:** Copy-paste renamed the class but not `_name`, causing duplicate model registration or views targeting a ghost model.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo models introduction](https://www.youtube.com/watch?v=zq4aw99kv48)
 - [Create Odoo model step by step](https://www.youtube.com/watch?v=zKIKCtq9PfM)
@@ -881,7 +889,7 @@ Lego set numbers on the box: build 10234 before wing addon 10234-1.
 - [odoo/tutorials - estate models](https://github.com/odoo/tutorials)
 - Create `library.book` with `_description`, `_order`, and SQL constraint on ISBN format.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Subclass `models.Model` (persistent), `TransientModel` (wizard tables), or `AbstractModel` (mixins). Set `_name` dotted lowercase: `library.book`. Optional: `_description`, `_order`, `_rec_name`, `_sql_constraints`, `_check_company_auto`.
 
@@ -891,9 +899,9 @@ Model methods receive recordsets (`self`) not raw ids. Single record vs multi-re
 
 Naming conventions: models grouped by prefix (`library.book`, `library.author`) aid discovery and ACL CSV rows.
 
-**THE IDEA THAT FIXED IT:** `_name` registers the model; attributes tune SQL, ordering, and UX defaults.
+**THE MAIN IDEA IN SIMPLE WORDS:** `_name` registers the model; attributes tune SQL, ordering, and UX defaults.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 class LibraryBook(models.Model):
@@ -903,11 +911,11 @@ class LibraryBook(models.Model):
 registry['library.book'] --> table library_book + ir_model row
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 DMV form code (`library.book`) links every desk (view, rule, report) to the same record type.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -915,7 +923,7 @@ DMV form code (`library.book`) links every desk (view, rule, report) to the same
 | Prefix convention | Greppable modules | Longer names |
 | Abstract mixins | DRY for mail/sequence | MRO complexity later |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 from odoo import fields, models
@@ -931,9 +939,9 @@ class LibraryBook(models.Model):
     ]
 ```
 
-**INTERVIEW PERSPECTIVE:** 'Difference between Model and TransientModel?' and 'What is `_rec_name`?' appear often.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** 'Difference between Model and TransientModel?' and 'What is `_rec_name`?' appear often.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -941,17 +949,17 @@ class LibraryBook(models.Model):
 | Medium | Add SQL constraint for positive page count. |
 | Hard | Design mixin abstract model for audit fields. |
 
-**THE BRIDGE:** Models hold fields; field types encode business structure and SQL shape.
+**WHY THE NEXT TOPIC IS NEEDED:** Models hold fields; field types encode business structure and SQL shape.
 
 ---
 
 ## 5.2 Field Types, Parameters, and Relations
 
-**WHY THIS EXISTS:** Fields map to columns or relation tables; **required**, **index**, **tracking**, and **related** parameters shape behavior and performance.
+**WHY YOU ARE LEARNING THIS:** Fields map to columns or relation tables; **required**, **index**, **tracking**, and **related** parameters shape behavior and performance.
 
-**THE PROBLEM BEFORE THIS EXISTED:** A `many2one` without `ondelete` blocked partner deletion; a stored computed field without dependencies never updated.
+**THE PROBLEM THIS SOLVES:** A `many2one` without `ondelete` blocked partner deletion; a stored computed field without dependencies never updated.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo fields and relations](https://www.youtube.com/watch?v=RzQPI_lFKL8)
 - [Many2one One2many Many2many explained](https://www.youtube.com/watch?v=YJg7dvwXQF8)
@@ -962,7 +970,7 @@ class LibraryBook(models.Model):
 - [Bladefidz/learn-odoo field examples](https://github.com/Bladefidz/learn-odoo)
 - Model author with One2many books and Many2many tags; test ondelete cascade rules.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Scalars: `Char`, `Text`, `Integer`, `Float`, `Boolean`, `Date`, `Datetime`, `Selection`, `Html`, `Binary`, `Monetary` (needs `currency_field`).
 
@@ -972,9 +980,9 @@ Computed: `compute=`, optional `store=True`, `@api.depends`. Related: `related=`
 
 Use `tracking=True` on fields when inheriting `mail.thread` for audit UX. Use `groups=` to hide sensitive fields from unauthorized users in UI (not a security substitute).
 
-**THE IDEA THAT FIXED IT:** Pick the smallest field type that preserves invariants; relations express foreign keys explicitly.
+**THE MAIN IDEA IN SIMPLE WORDS:** Pick the smallest field type that preserves invariants; relations express foreign keys explicitly.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 library.book                library.author
@@ -982,19 +990,19 @@ library.book                library.author
   tag_ids (Many2many) <-----> library_book_tag_rel
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Form fields on a paper contract: single values, references to other forms, or checklists linking many parties.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
 | Char for everything | Fast prototyping | No type validation |
 | Proper Monetary + company currency | Correct totals | More setup |
-| Unstored computed in list view | Always fresh | Slow at scale |
+| Unstored computed in list view | Always fresh | Slow when the amount of work grows |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 author_id = fields.Many2one("library.author", ondelete="restrict")
@@ -1007,9 +1015,9 @@ def _compute_loan_count(self):
         book.loan_count = len(book.loan_ids)
 ```
 
-**INTERVIEW PERSPECTIVE:** Expect relation diagram questions and 'What happens on delete?' scenarios.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Expect relation diagram questions and 'What happens on delete?' scenarios.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1017,13 +1025,13 @@ def _compute_loan_count(self):
 | Medium | Stored computed total pages read. |
 | Hard | Model company-dependent Monetary with validation. |
 
-**THE BRIDGE:** Fields exist to be queried; the ORM search API is next.
+**WHY THE NEXT TOPIC IS NEEDED:** Fields exist to be queried; the ORM search API is next.
 
 ---
 
-**MASTERY CHECKPOINT - Phase 5:** Define models with scalar and relational fields, constraints, and computed fields correctly.
+**CHECK YOUR UNDERSTANDING AFTER PHASE 5:** Define models with scalar and relational fields, constraints, and computed fields correctly.
 
-> **Phase 5 complete?** [Build the aligned project](./Projects.md#L2382) · [Continue to Phase 6](#phase-6---orm-queries)
+> **Phase 5 complete?** [Build the aligned project](./Projects.md#odoo-phase-5-project) · [Continue to Phase 6](#phase-6---orm-queries)
 
 <a id="phase-6"></a>
 
@@ -1031,17 +1039,17 @@ def _compute_loan_count(self):
 
 **Track:** Orm Core
 
-**GOAL:** Search, read, write, and unlink with domains and environments
+**WHAT YOU WILL BE ABLE TO DO:** Search, read, write, and unlink with domains and environments
 
-**PREREQUISITES:** See phase index and prior mastery checkpoints.
+**WHAT YOU SHOULD KNOW FIRST:** See phase index and prior mastery checkpoints.
 
 ## 6.1 CRUD, Recordsets, and Environment
 
-**WHY THIS EXISTS:** The ORM exposes **recordsets** (ordered sets of ids + model) and an **Environment** binding user, context, and cursor.
+**WHY YOU ARE LEARNING THIS:** The ORM exposes **recordsets** (ordered sets of ids + model) and an **Environment** binding user, context, and cursor.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Code called `browse(5).write()` on wrong model, or used sudo() everywhere and shipped a critical IDOR vulnerability.
+**THE PROBLEM THIS SOLVES:** Code called `browse(5).write()` on wrong model, or used sudo() everywhere and shipped a critical IDOR vulnerability.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo ORM CRUD operations](https://www.youtube.com/watch?v=ASPjB-WowBU)
 - [Recordsets explained](https://www.youtube.com/watch?v=zq4aw99kv48)
@@ -1052,7 +1060,7 @@ def _compute_loan_count(self):
 - [odoo/odoo tests using create/search patterns](https://github.com/odoo/odoo)
 - In odoo shell, create 3 books, search unread, batch write category.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 `create(vals_list)` returns recordset of new rows. `search(domain, limit=, order=)` returns ids matching domain. `browse(ids)` attaches ids without SQL until read/write. `write(vals)` updates; `unlink()` deletes (respects ondelete and rules).
 
@@ -1062,9 +1070,9 @@ Recordsets support Python iteration, filtering, mapped fields: `books.mapped('au
 
 Batch operations: create accepts list of dicts; write/unlink on multi-record set is one SQL where possible.
 
-**THE IDEA THAT FIXED IT:** Think in recordsets and env, not loose ids and cursors.
+**THE MAIN IDEA IN SIMPLE WORDS:** Think in recordsets and env, not loose ids and cursors.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 env['library.book'].search([('active','=',True)])
@@ -1075,11 +1083,11 @@ recordset library.book(1, 4, 7)
         +-> .write({'active': False})  # one UPDATE ... WHERE id IN (1,4,7)
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Library cart (recordset) pushed by one librarian (env/user) with one checkout policy (ACL).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -1087,7 +1095,7 @@ Library cart (recordset) pushed by one librarian (env/user) with one checkout po
 | Batch search/write | Efficient | Must understand domains |
 | sudo() everywhere | Quick admin fixes | Security disaster |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 Book = self.env["library.book"]
@@ -1096,9 +1104,9 @@ draft.write({"state": "available"})
 new_ids = Book.create([{"name": "Dune"}, {"name": "Foundation"}])
 ```
 
-**INTERVIEW PERSPECTIVE:** 'Difference search vs browse?' and 'When is sudo acceptable?' are frequent.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** 'Difference search vs browse?' and 'When is sudo acceptable?' are frequent.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1106,17 +1114,17 @@ new_ids = Book.create([{"name": "Dune"}, {"name": "Foundation"}])
 | Medium | Refactor loop of writes to batch. |
 | Hard | Implement safe sudo helper with explicit checks. |
 
-**THE BRIDGE:** CRUD without domains is like SQL without WHERE: domains are the filter language.
+**WHY THE NEXT TOPIC IS NEEDED:** CRUD without domains is like SQL without WHERE: domains are the filter language.
 
 ---
 
 ## 6.2 Domains, Operators, and search_read
 
-**WHY THIS EXISTS:** **Domains** are Polish-notation lists filtering rows; **`search_read`** fetches fields in one round trip for APIs and reports.
+**WHY YOU ARE LEARNING THIS:** **Domains** are Polish-notation lists filtering rows; **`search_read`** fetches fields in one round trip for APIs and reports.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Developers fetched all records then filtered in Python, timing out production on ten thousand partners.
+**THE PROBLEM THIS SOLVES:** Developers fetched all records then filtered in Python, timing out production on ten thousand partners.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo domains tutorial](https://www.youtube.com/watch?v=k-hKNUZQi2o)
 - [search_read for external apps](https://www.youtube.com/watch?v=WnsYmsq4Qr8)
@@ -1127,7 +1135,7 @@ new_ids = Book.create([{"name": "Dune"}, {"name": "Foundation"}])
 - [odoo/tutorials RPC examples](https://github.com/odoo/tutorials)
 - Write domain for books available OR due back this week with late fees.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Domain syntax: list of tuples `(field, operator, value)` and prefix operators `'&'`, `'|'`, `'!'`. Example OR: `['|', ('state','=','available'), ('state','=','loan')]`.
 
@@ -1137,9 +1145,9 @@ Relational traversals: `('author_id.country_id.code', '=', 'QA')`. Many2many: `(
 
 Dynamic domains in views use strings evaluated safely in UI; in Python use real lists. Combine with **`active_test=False`** in context to include archived records when needed.
 
-**THE IDEA THAT FIXED IT:** Push filtering to SQL via domains; fetch only needed columns with search_read.
+**THE MAIN IDEA IN SIMPLE WORDS:** Push filtering to SQL via domains; fetch only needed columns with search_read.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 Domain: [('active','=',True), ('loan_count','>',0)]
@@ -1151,11 +1159,11 @@ SQL WHERE active AND loan_count > 0
 search_read(..., fields=['name','isbn']) --> minimal payload
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Library catalog search filters (domain) vs pulling every book into the hall (Python filter).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -1163,7 +1171,7 @@ Library catalog search filters (domain) vs pulling every book into the hall (Pyt
 | Domain + search_read | Fast; index-friendly | Steep syntax learning |
 | Raw SQL reports | Maximum speed | Bypasses ORM rules |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 domain = [
@@ -1176,9 +1184,9 @@ domain = [
 rows = self.env["library.loan"].search_read(domain, ["book_id", "partner_id", "return_date"])
 ```
 
-**INTERVIEW PERSPECTIVE:** Live coding: build domain for last month's sales over 5000 in user's company.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Live coding: build domain for last month's sales over 5000 in user's company.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1186,13 +1194,13 @@ rows = self.env["library.loan"].search_read(domain, ["book_id", "partner_id", "r
 | Medium | AND/OR domain on related field. |
 | Hard | read_group monthly loan counts by author. |
 
-**THE BRIDGE:** Queries return rows users may not be allowed to see; access layers come next.
+**WHY THE NEXT TOPIC IS NEEDED:** Queries return rows users may not be allowed to see; access layers come next.
 
 ---
 
-**MASTERY CHECKPOINT - Phase 6:** Write domains, batch CRUD on recordsets, and explain env, sudo, and search_read.
+**CHECK YOUR UNDERSTANDING AFTER PHASE 6:** Write domains, batch CRUD on recordsets, and explain env, sudo, and search_read.
 
-> **Phase 6 complete?** [Build the aligned project](./Projects.md#L2403) · [Continue to Phase 7](#phase-7---record-rules--access)
+> **Phase 6 complete?** [Build the aligned project](./Projects.md#odoo-phase-6-project) · [Continue to Phase 7](#phase-7---record-rules--access)
 
 <a id="phase-7"></a>
 
@@ -1200,17 +1208,17 @@ rows = self.env["library.loan"].search_read(domain, ["book_id", "partner_id", "r
 
 **Track:** Security
 
-**GOAL:** Model ACLs plus row-level rules before exposing menus
+**WHAT YOU WILL BE ABLE TO DO:** Model ACLs plus row-level rules before exposing menus
 
-**PREREQUISITES:** See phase index and prior mastery checkpoints.
+**WHAT YOU SHOULD KNOW FIRST:** See phase index and prior mastery checkpoints.
 
 ## 7.1 ir.model.access and Groups
 
-**WHY THIS EXISTS:** **Access rights** grant model-level CRUD per security group; without CSV rows, even admins may lack intended user flows.
+**WHY YOU ARE LEARNING THIS:** **Access rights** grant model-level CRUD per security group; without CSV rows, even admins may lack intended user flows.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Views and menus shipped; users got AccessError on `library.book` because CSV was missing read perm for Library User group.
+**THE PROBLEM THIS SOLVES:** Views and menus shipped; users got AccessError on `library.book` because CSV was missing read perm for Library User group.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo security access rights](https://www.youtube.com/watch?v=uJPjmS5Arug)
 - [Security groups explained](https://www.youtube.com/watch?v=zKIKCtq9PfM)
@@ -1221,7 +1229,7 @@ rows = self.env["library.loan"].search_read(domain, ["book_id", "partner_id", "r
 - [yavy-odoo module boilerplate security folder](https://github.com/yavy-odoo/odoo-module-boilerplate)
 - Create Manager vs User groups; CSV perm read/write/create/unlink matrix.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Define groups in XML (`res.groups`) with implied ids for hierarchy (User inherits Employee). **`ir.model.access.csv`** columns: id, name, model_id:id, group_id:id, perm_read, perm_write, perm_create, perm_unlink.
 
@@ -1231,9 +1239,9 @@ Menu items and buttons use `groups=` attribute to show/hide UI; this is not auth
 
 Admin bypasses ACL checks but record rules still apply unless superuser flag in rare cases - do not rely on admin-only testing.
 
-**THE IDEA THAT FIXED IT:** Groups + ir.model.access.csv = who may touch which model at all.
+**THE MAIN IDEA IN SIMPLE WORDS:** Groups + ir.model.access.csv = who may touch which model at all.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 User (library.group_user)
@@ -1243,11 +1251,11 @@ Manager (library.group_manager)
   all perm=1 on library.book
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Building badge levels: lobby access vs vault access, not just hiding elevator buttons.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -1255,7 +1263,7 @@ Building badge levels: lobby access vs vault access, not just hiding elevator bu
 | ACL CSV complete | ORM enforces CRUD | Must maintain matrix |
 | Single super group | Simple | Over-privileged users |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```csv
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
@@ -1263,9 +1271,9 @@ access_library_book_user,library.book.user,model_library_book,library.group_user
 access_library_book_manager,library.book.manager,model_library_book,library.group_manager,1,1,1,1
 ```
 
-**INTERVIEW PERSPECTIVE:** 'Difference groups vs access rights?' and 'Why AccessError after install?' debugging.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** 'Difference groups vs access rights?' and 'Why AccessError after install?' debugging.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1273,17 +1281,17 @@ access_library_book_manager,library.book.manager,model_library_book,library.grou
 | Medium | Design group hierarchy for loan approvers. |
 | Hard | Audit least-privilege for 5 models. |
 
-**THE BRIDGE:** Model-level CRUD is not enough when users should only see their branch rows.
+**WHY THE NEXT TOPIC IS NEEDED:** Model-level CRUD is not enough when users should only see their branch rows.
 
 ---
 
 ## 7.2 Record Rules and Multi-company Isolation
 
-**WHY THIS EXISTS:** **Record rules** append domain filters per model/group, enabling row-level security and company scoping.
+**WHY YOU ARE LEARNING THIS:** **Record rules** append domain filters per model/group, enabling row-level security and company scoping.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Sales reps saw every quotation worldwide because record rules were missing on `sale.order` custom model.
+**THE PROBLEM THIS SOLVES:** Sales reps saw every quotation worldwide because record rules were missing on `sale.order` custom model.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Record rules in Odoo](https://www.youtube.com/watch?v=ASPjB-WowBU)
 - [Multi-company rules](https://www.youtube.com/watch?v=EHiH7hp0PBU)
@@ -1294,7 +1302,7 @@ access_library_book_manager,library.book.manager,model_library_book,library.grou
 - [odoo/odoo base record rules examples](https://github.com/odoo/odoo/tree/master/odoo/addons/base/security)
 - Rule: loan officers see loans where `user_id = user.id` only.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 `ir.rule` records: model, domain_force (string evaluated with user/time), groups (optional), perm read/write/create/unlink flags.
 
@@ -1304,9 +1312,9 @@ Test rules with `user.with_user(test_user).search(...)`. Debugging: `--log-level
 
 sudo() skips record rules - another reason to treat it as hazardous. For controllers, use explicit env user or token auth mapping to real users.
 
-**THE IDEA THAT FIXED IT:** ACL asks 'may you touch this model?'; record rules ask 'which rows?'.
+**THE MAIN IDEA IN SIMPLE WORDS:** ACL asks 'may you touch this model?'; record rules ask 'which rows?'.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 search sale.order
@@ -1315,11 +1323,11 @@ search sale.order
   --> SQL adds AND user_id = current_user
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Open office vs locked drawer: ACL is building entry; record rule is desk drawer key.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -1327,7 +1335,7 @@ Open office vs locked drawer: ACL is building entry; record rule is desk drawer 
 | Record rules | Row isolation | Harder debugging |
 | Python filter in views | Quick hide | Leaks via RPC |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```xml
 <record id="library_loan_rule_officer" model="ir.rule">
@@ -1338,9 +1346,9 @@ Open office vs locked drawer: ACL is building entry; record rule is desk drawer 
 </record>
 ```
 
-**INTERVIEW PERSPECTIVE:** Scenario: 'User sees empty list but admin sees data' - walk through rules and company context.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Scenario: 'User sees empty list but admin sees data' - walk through rules and company context.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1348,13 +1356,13 @@ Open office vs locked drawer: ACL is building entry; record rule is desk drawer 
 | Medium | Debug rule AND vs OR stacking. |
 | Hard | Design multi-company library with shared catalog. |
 
-**THE BRIDGE:** Secure models deserve views that expose fields without leaking hidden data.
+**WHY THE NEXT TOPIC IS NEEDED:** Secure models deserve views that expose fields without leaking hidden data.
 
 ---
 
-**MASTERY CHECKPOINT - Phase 7:** Configure groups, access CSV, and record rules; test with non-admin users.
+**CHECK YOUR UNDERSTANDING AFTER PHASE 7:** Configure groups, access CSV, and record rules; test with non-admin users.
 
-> **Phase 7 complete?** [Build the aligned project](./Projects.md#L2424) · [Continue to Phase 8](#phase-8---views-xml)
+> **Phase 7 complete?** [Build the aligned project](./Projects.md#odoo-phase-7-project) · [Continue to Phase 8](#phase-8---views-xml)
 
 <a id="phase-8"></a>
 
@@ -1362,17 +1370,17 @@ Open office vs locked drawer: ACL is building entry; record rule is desk drawer 
 
 **Track:** Ui Layer
 
-**GOAL:** Declare form, list, kanban, and search views in XML
+**WHAT YOU WILL BE ABLE TO DO:** Declare form, list, kanban, and search views in XML
 
-**PREREQUISITES:** See phase index and prior mastery checkpoints.
+**WHAT YOU SHOULD KNOW FIRST:** See phase index and prior mastery checkpoints.
 
 ## 8.1 Form, List, Kanban, and Search Views
 
-**WHY THIS EXISTS:** Views are **declarative XML** describing UI layout; Odoo merges them at registry load and renders in OWL client.
+**WHY YOU ARE LEARNING THIS:** Views are **declarative XML** describing UI layout; Odoo merges them at registry load and renders in OWL client.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Developers hard-coded HTML in QWeb for standard CRUD screens and fought every upgrade on stock views.
+**THE PROBLEM THIS SOLVES:** Developers hard-coded HTML in QWeb for standard CRUD screens and fought every upgrade on stock views.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo views XML tutorial](https://www.youtube.com/watch?v=zKIKCtq9PfM)
 - [Form and list view basics](https://www.youtube.com/watch?v=uJPjmS5Arug)
@@ -1383,7 +1391,7 @@ Open office vs locked drawer: ACL is building entry; record rule is desk drawer 
 - [odoo/tutorials estate views XML](https://github.com/odoo/tutorials)
 - Build form + tree + search with filters for available vs loaned books.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Core types: **form** (detail/edit), **list** (tree rows, formerly tree), **kanban** (cards by stage), **search** (filters/group by), **graph/pivot** for analytics.
 
@@ -1393,9 +1401,9 @@ List: `editable="bottom"` for inline edit. Kanban: `<templates><t t-name="card">
 
 Field widgets change UX: `widget="many2many_tags"`, `statusbar`, `monetary`. Domain on field: `domain="[('active','=',True)]"`.
 
-**THE IDEA THAT FIXED IT:** Describe UI in XML; bind fields by name to model columns.
+**THE MAIN IDEA IN SIMPLE WORDS:** Describe UI in XML; bind fields by name to model columns.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 ir.ui.view (form)
@@ -1409,11 +1417,11 @@ ir.ui.view (form)
 --> OWL client renders bound inputs
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Floor plan (view arch) vs furniture (model fields): move walls in XML, not by hiding chairs with CSS only.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -1421,7 +1429,7 @@ Floor plan (view arch) vs furniture (model fields): move walls in XML, not by hi
 | Form+list+search+kanban | Complete UX | More XML maintenance |
 | JS-only UI | Custom feel | Fights standard actions |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```xml
 <record id="view_library_book_form" model="ir.ui.view">
@@ -1441,9 +1449,9 @@ Floor plan (view arch) vs furniture (model fields): move walls in XML, not by hi
 </record>
 ```
 
-**INTERVIEW PERSPECTIVE:** 'Name main view types' and 'How do you add a button opening a wizard?'
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** 'Name main view types' and 'How do you add a button opening a wizard?'
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1451,17 +1459,17 @@ Floor plan (view arch) vs furniture (model fields): move walls in XML, not by hi
 | Medium | Kanban by book state with badges. |
 | Hard | Search panel with custom filter domains. |
 
-**THE BRIDGE:** Standard views rarely fit forever; inheritance xpath patches them surgically.
+**WHY THE NEXT TOPIC IS NEEDED:** Standard views rarely fit forever; inheritance xpath patches them surgically.
 
 ---
 
 ## 8.2 View Inheritance with xpath
 
-**WHY THIS EXISTS:** **View inheritance** injects or replaces nodes in existing arch without copying entire upstream XML.
+**WHY YOU ARE LEARNING THIS:** **View inheritance** injects or replaces nodes in existing arch without copying entire upstream XML.
 
-**THE PROBLEM BEFORE THIS EXISTED:** A developer duplicated the whole sale order form; every Odoo upgrade broke their forked 400-line XML.
+**THE PROBLEM THIS SOLVES:** A developer duplicated the whole sale order form; every Odoo upgrade broke their forked 400-line XML.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [View inheritance xpath](https://www.youtube.com/watch?v=ASPjB-WowBU)
 - [Extend standard views safely](https://www.youtube.com/watch?v=RzQPI_lFKL8)
@@ -1472,7 +1480,7 @@ Floor plan (view arch) vs furniture (model fields): move walls in XML, not by hi
 - [odoo/odoo sale view inherit examples](https://github.com/odoo/odoo/tree/master/addons/sale/views)
 - Inherit partner form; add library card field after phone with xpath.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Inherit record sets `inherit_id` ref to parent view, same model. Inside arch, `<xpath expr="..." position="after|before|inside|replace|attributes">`.
 
@@ -1482,9 +1490,9 @@ Multiple modules inherit same view; Odoo merges in dependency order. Conflicts s
 
 Use **`optional="hide"`** on list columns for user toggles. Studio generates similar inherit views - know the raw XML anyway.
 
-**THE IDEA THAT FIXED IT:** Patch views with xpath, never fork entire standard arch unless unavoidable.
+**THE MAIN IDEA IN SIMPLE WORDS:** Patch views with xpath, never fork entire standard arch unless unavoidable.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 sale.view_order_form (base)
@@ -1494,11 +1502,11 @@ my_sale.view_order_form_inherit (xpath after partner_id)
 merged arch in registry --> single form in UI
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Adding a power outlet on existing wall (xpath) vs rebuilding the house (copy-paste view).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -1506,7 +1514,7 @@ Adding a power outlet on existing wall (xpath) vs rebuilding the house (copy-pas
 | xpath inherit | Survives upstream tweaks | Breaks if anchor removed |
 | Only JS hide | Fast | Data still exposed in RPC |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```xml
 <record id="view_partner_form_library" model="ir.ui.view">
@@ -1521,9 +1529,9 @@ Adding a power outlet on existing wall (xpath) vs rebuilding the house (copy-pas
 </record>
 ```
 
-**INTERVIEW PERSPECTIVE:** 'Explain xpath positions' and 'What if inherit xpath fails after upgrade?'
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** 'Explain xpath positions' and 'What if inherit xpath fails after upgrade?'
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1531,13 +1539,13 @@ Adding a power outlet on existing wall (xpath) vs rebuilding the house (copy-pas
 | Medium | Make field readonly when state done. |
 | Hard | Chain two modules inheriting same anchor safely. |
 
-**THE BRIDGE:** Views need actions and menus to become reachable navigation.
+**WHY THE NEXT TOPIC IS NEEDED:** Views need actions and menus to become reachable navigation.
 
 ---
 
-**MASTERY CHECKPOINT - Phase 8:** Author form/list/search views and extend standard views with xpath inheritance.
+**CHECK YOUR UNDERSTANDING AFTER PHASE 8:** Author form/list/search views and extend standard views with xpath inheritance.
 
-> **Phase 8 complete?** [Build the aligned project](./Projects.md#L2445) · [Continue to Phase 9](#phase-9---actions--menus)
+> **Phase 8 complete?** [Build the aligned project](./Projects.md#odoo-phase-8-project) · [Continue to Phase 9](#phase-9---actions--menus)
 
 <a id="phase-9"></a>
 
@@ -1545,17 +1553,17 @@ Adding a power outlet on existing wall (xpath) vs rebuilding the house (copy-pas
 
 **Track:** Ui Layer
 
-**GOAL:** Wire window actions, menus, and security groups into navigation
+**WHAT YOU WILL BE ABLE TO DO:** Wire window actions, menus, and security groups into navigation
 
-**PREREQUISITES:** See phase index and prior mastery checkpoints.
+**WHAT YOU SHOULD KNOW FIRST:** See phase index and prior mastery checkpoints.
 
 ## 9.1 Window Actions and Binding
 
-**WHY THIS EXISTS:** **Act_window** records connect models to views, defaults, domains, and context for opening screens.
+**WHY YOU ARE LEARNING THIS:** **Act_window** records connect models to views, defaults, domains, and context for opening screens.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Menu clicked but opened wrong model because action `res_model` typo pointed to old technical name.
+**THE PROBLEM THIS SOLVES:** Menu clicked but opened wrong model because action `res_model` typo pointed to old technical name.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo actions and menus](https://www.youtube.com/watch?v=s-4zNx7wCFk)
 - [Window action deep dive](https://www.youtube.com/watch?v=5YIwP9-55Qk)
@@ -1566,7 +1574,7 @@ Adding a power outlet on existing wall (xpath) vs rebuilding the house (copy-pas
 - [odoo/tutorials menu XML samples](https://github.com/odoo/tutorials)
 - Action opening loans defaulting to current user as officer.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 `ir.actions.act_window` fields: `name`, `res_model`, `view_mode` (list,form,kanban,...), optional `domain`, `context`, `limit`.
 
@@ -1576,9 +1584,9 @@ Server actions (`ir.actions.server`) run Python snippets or triggers - use for a
 
 Actions can be **bound** to models (Print / Action menu). `binding_model_id` + `binding_view_types` controls placement.
 
-**THE IDEA THAT FIXED IT:** Actions are typed shortcuts: which model, which views, with what defaults.
+**THE MAIN IDEA IN SIMPLE WORDS:** Actions are typed shortcuts: which model, which views, with what defaults.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 Menu -> action id 42 -> act_window
@@ -1588,11 +1596,11 @@ Menu -> action id 42 -> act_window
 --> client opens book list filtered
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Elevator button panel: menu label, action is which floor (model/view) and default lighting (context).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -1600,7 +1608,7 @@ Elevator button panel: menu label, action is which floor (model/view) and defaul
 | Declarative act_window | Discoverable in UI | JSON context syntax quirks |
 | Many duplicate actions | Per-role tweaks | Maintenance debt |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```xml
 <record id="action_library_book" model="ir.actions.act_window">
@@ -1611,9 +1619,9 @@ Elevator button panel: menu label, action is which floor (model/view) and defaul
 </record>
 ```
 
-**INTERVIEW PERSPECTIVE:** 'How smart buttons work?' ties to actions returning act_window dicts from Python.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** 'How smart buttons work?' ties to actions returning act_window dicts from Python.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1621,17 +1629,17 @@ Elevator button panel: menu label, action is which floor (model/view) and defaul
 | Medium | Smart button opening filtered loans. |
 | Hard | Server action vs cron choice for bulk email. |
 
-**THE BRIDGE:** Actions without menus are hidden; menus need groups and sequence discipline.
+**WHY THE NEXT TOPIC IS NEEDED:** Actions without menus are hidden; menus need groups and sequence discipline.
 
 ---
 
 ## 9.2 Menus, Submenus, and Group Visibility
 
-**WHY THIS EXISTS:** **Menuitems** build app navigation trees; **`groups`** on menus align UX with security groups.
+**WHY YOU ARE LEARNING THIS:** **Menuitems** build app navigation trees; **`groups`** on menus align UX with security groups.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Every user saw Admin settings because menu XML omitted `groups` even though ACL blocked access (confusing UX).
+**THE PROBLEM THIS SOLVES:** Every user saw Admin settings because menu XML omitted `groups` even though ACL blocked access (confusing UX).
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo menu structure](https://www.youtube.com/watch?v=uJPjmS5Arug)
 - [Apps vs menus vs groups](https://www.youtube.com/watch?v=EHiH7hp0PBU)
@@ -1642,7 +1650,7 @@ Elevator button panel: menu label, action is which floor (model/view) and defaul
 - [Bladefidz/learn-odoo navigation examples](https://github.com/Bladefidz/learn-odoo)
 - Root app menu Library with Books, Authors, Configuration submenus.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 `<menuitem id="" name="" parent="" action="" sequence="" groups=""/>` . Root menus often set `web_icon` on module for app switcher.
 
@@ -1652,9 +1660,9 @@ Hide menus from groups with `groups="library.group_manager"` - still enforce ACL
 
 Settings integration: inherit `res.config.settings` views for toggles, not random config menus scattered everywhere.
 
-**THE IDEA THAT FIXED IT:** Menus are navigation; security groups on menus reduce clutter, not authorization alone.
+**THE MAIN IDEA IN SIMPLE WORDS:** Menus are navigation; security groups on menus reduce clutter, not authorization alone.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 App: Library (sequence 10)
@@ -1664,11 +1672,11 @@ App: Library (sequence 10)
         +- Tags
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Store directory map: departments (menus) point to service desks (actions), not vault keys (ACL).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -1676,7 +1684,7 @@ Store directory map: departments (menus) point to service desks (actions), not v
 | Grouped menus + ACL | Clean UX + safe | More XML |
 | Studio-only menus | Fast | Hard to version-control |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```xml
 <menuitem id="menu_library_root" name="Library" sequence="10"
@@ -1687,9 +1695,9 @@ Store directory map: departments (menus) point to service desks (actions), not v
           groups="library.group_manager" sequence="99"/>
 ```
 
-**INTERVIEW PERSPECTIVE:** 'Walk through menu to SQL' narrative connects UI to ORM - practice out loud.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** 'Walk through menu to SQL' narrative connects UI to ORM - practice out loud.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1697,13 +1705,13 @@ Store directory map: departments (menus) point to service desks (actions), not v
 | Medium | Manager-only config menu pattern. |
 | Hard | Multi-company menu visibility design. |
 
-**THE BRIDGE:** Navigation skeleton done; business rules live in Python constraints and computes.
+**WHY THE NEXT TOPIC IS NEEDED:** Navigation skeleton done; business rules live in Python constraints and computes.
 
 ---
 
-**MASTERY CHECKPOINT - Phase 9:** Define act_window records, contexts, and menu trees with group-aware visibility.
+**CHECK YOUR UNDERSTANDING AFTER PHASE 9:** Define act_window records, contexts, and menu trees with group-aware visibility.
 
-> **Phase 9 complete?** [Build the aligned project](./Projects.md#L2466) · [Continue to Phase 10](#phase-10---business-logic)
+> **Phase 9 complete?** [Build the aligned project](./Projects.md#odoo-phase-9-project) · [Continue to Phase 10](#phase-10---business-logic)
 
 <a id="phase-10"></a>
 
@@ -1711,17 +1719,17 @@ Store directory map: departments (menus) point to service desks (actions), not v
 
 **Track:** Orm Core
 
-**GOAL:** Constraints, computed fields, onchange, and workflow methods
+**WHAT YOU WILL BE ABLE TO DO:** Constraints, computed fields, onchange, and workflow methods
 
-**PREREQUISITES:** See phase index and prior mastery checkpoints.
+**WHAT YOU SHOULD KNOW FIRST:** See phase index and prior mastery checkpoints.
 
 ## 10.1 Python Constraints and Computed Fields
 
-**WHY THIS EXISTS:** **@api.constrains** enforce invariants; **computed fields** derive values with explicit dependencies.
+**WHY YOU ARE LEARNING THIS:** **@api.constrains** enforce invariants; **computed fields** derive values with explicit dependencies.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Loan return date before checkout date slipped through because only UI hid the error, no Python constraint existed.
+**THE PROBLEM THIS SOLVES:** Loan return date before checkout date slipped through because only UI hid the error, no Python constraint existed.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Constraints and computes](https://www.youtube.com/watch?v=k-hKNUZQi2o)
 - [Stored vs non-stored computed](https://www.youtube.com/watch?v=RzQPI_lFKL8)
@@ -1732,7 +1740,7 @@ Store directory map: departments (menus) point to service desks (actions), not v
 - [odoo/odoo constraint examples in addons](https://github.com/odoo/odoo)
 - Constraint: return_date >= checkout_date; computed late_fee from dates.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 `@api.constrains('field1', 'field2')` runs on write/create when listed fields appear in vals. Raise `ValidationError` with user message. SQL constraints (`_sql_constraints`) catch duplicates at DB level.
 
@@ -1742,9 +1750,9 @@ Computed: method `_compute_x` with `@api.depends`. Non-stored recalculates on re
 
 Avoid side effects in compute methods (no create/write other records). Keep constraints fast (no heavy search loops without batching).
 
-**THE IDEA THAT FIXED IT:** Constraints guard truth; computes cache derived truth with declared dependencies.
+**THE MAIN IDEA IN SIMPLE WORDS:** Constraints guard truth; computes cache derived truth with declared dependencies.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 write({'return_date': '2020-01-01'})  # checkout 2024
@@ -1755,11 +1763,11 @@ write({'return_date': '2020-01-01'})  # checkout 2024
         X  commit blocked
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Airplane weight limits checked at gate (constraint), not only painted on brochure (label).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -1767,7 +1775,7 @@ Airplane weight limits checked at gate (constraint), not only painted on brochur
 | Python + SQL constraints | Defense in depth | Error message UX work |
 | Unstored compute in reports | Always correct | Performance cost |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 from odoo.exceptions import ValidationError
@@ -1786,9 +1794,9 @@ def _compute_late_days(self):
         loan.late_days = max(0, (end - loan.checkout_date).days - 14)
 ```
 
-**INTERVIEW PERSPECTIVE:** 'Difference constrains vs onchange?' and 'When store computed fields?'
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** 'Difference constrains vs onchange?' and 'When store computed fields?'
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1796,17 +1804,17 @@ def _compute_late_days(self):
 | Medium | Stored computed searchable field. |
 | Hard | Constraint referencing related records efficiently. |
 
-**THE BRIDGE:** Constraints fire on save; onchange shapes interactive forms before save.
+**WHY THE NEXT TOPIC IS NEEDED:** Constraints fire on save; onchange shapes interactive forms before save.
 
 ---
 
 ## 10.2 onchange, Workflow Actions, and State Fields
 
-**WHY THIS EXISTS:** **@api.onchange** updates form UX live; **action methods** transition **`Selection` state** fields with side effects.
+**WHY YOU ARE LEARNING THIS:** **@api.onchange** updates form UX live; **action methods** transition **`Selection` state** fields with side effects.
 
-**THE PROBLEM BEFORE THIS EXISTED:** State changed to 'done' in write() without checks, skipping invoice creation and leaving stock inconsistent.
+**THE PROBLEM THIS SOLVES:** State changed to 'done' in write() without checks, skipping invoice creation and leaving stock inconsistent.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [onchange and workflows](https://www.youtube.com/watch?v=zq4aw99kv48)
 - [Statusbar and action buttons](https://www.youtube.com/watch?v=zKIKCtq9PfM)
@@ -1817,7 +1825,7 @@ def _compute_late_days(self):
 - [odoo/tutorials workflow buttons](https://github.com/odoo/tutorials)
 - Loan: onchange partner sets default due date; button action_confirm locks book.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 `@api.onchange('partner_id')` returns dict warning/domain/value updates for UI only - not persisted until save. Never rely on onchange for authorization.
 
@@ -1827,9 +1835,9 @@ Override **`create`/`write`** for cross-field invariants affecting API/RPC too. 
 
 Return action dicts from buttons to open related records when UX needs navigation after server action.
 
-**THE IDEA THAT FIXED IT:** onchange guides the form; action methods commit business transitions.
+**THE MAIN IDEA IN SIMPLE WORDS:** onchange guides the form; action methods commit business transitions.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 User clicks Confirm
@@ -1841,11 +1849,11 @@ User clicks Confirm
   -> UI refreshes via client
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Checkout lane scanner beeps suggestions (onchange); paying completes order (action method).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -1853,7 +1861,7 @@ Checkout lane scanner beeps suggestions (onchange); paying completes order (acti
 | action methods + constraints | Reliable workflow | More code paths |
 | Automated state in write | DRY | Harder to trace UX |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 @api.onchange("partner_id")
@@ -1870,9 +1878,9 @@ def action_confirm(self):
     return True
 ```
 
-**INTERVIEW PERSPECTIVE:** 'Design loan workflow states and buttons' is a classic live exercise.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** 'Design loan workflow states and buttons' is a classic live exercise.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1880,13 +1888,13 @@ def action_confirm(self):
 | Medium | Return act_window after confirm. |
 | Hard | Idempotent confirm safe for RPC retry. |
 
-**THE BRIDGE:** Extending standard apps without copying models requires inheritance patterns.
+**WHY THE NEXT TOPIC IS NEEDED:** Extending standard apps without copying models requires inheritance patterns.
 
 ---
 
-**MASTERY CHECKPOINT - Phase 10:** Implement constrains, computed fields, onchange, and stateful action methods.
+**CHECK YOUR UNDERSTANDING AFTER PHASE 10:** Implement constrains, computed fields, onchange, and stateful action methods.
 
-> **Phase 10 complete?** [Build the aligned project](./Projects.md#L2487) · [Continue to Phase 11](#phase-11---inheritance)
+> **Phase 10 complete?** [Build the aligned project](./Projects.md#odoo-phase-10-project) · [Continue to Phase 11](#phase-11---inheritance)
 
 <a id="phase-11"></a>
 
@@ -1894,17 +1902,17 @@ def action_confirm(self):
 
 **Track:** Extension
 
-**GOAL:** Extend models and views with `_inherit` and delegation
+**WHAT YOU WILL BE ABLE TO DO:** Extend models and views with `_inherit` and delegation
 
-**PREREQUISITES:** See phase index and prior mastery checkpoints.
+**WHAT YOU SHOULD KNOW FIRST:** See phase index and prior mastery checkpoints.
 
 ## 11.1 Classical `_inherit` Model Extension
 
-**WHY THIS EXISTS:** **`_inherit`** merges your Python/XML into an existing model's registry entry without duplicating tables.
+**WHY YOU ARE LEARNING THIS:** **`_inherit`** merges your Python/XML into an existing model's registry entry without duplicating tables.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Developer copied `sale.order` model with new `_name`, forked data model, and lost every standard report.
+**THE PROBLEM THIS SOLVES:** Developer copied `sale.order` model with new `_name`, forked data model, and lost every standard report.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo inheritance explained](https://www.youtube.com/watch?v=ASPjB-WowBU)
 - [_inherit vs _inherits](https://www.youtube.com/watch?v=RzQPI_lFKL8)
@@ -1915,7 +1923,7 @@ def action_confirm(self):
 - [odoo/odoo sale extensions in addons](https://github.com/odoo/odoo/tree/master/addons/sale)
 - Extend `res.partner` with library membership dates; inherit form view.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Pattern: `_name = 'sale.order'` AND `_inherit = 'sale.order'` in same class adds fields/methods to existing model. Multiple modules extend same model; MRO determines super calls.
 
@@ -1925,9 +1933,9 @@ View inheritance (phase 8) pairs with model inheritance. Security: new fields ma
 
 Avoid naming collisions on methods; prefix custom public methods if exposing to many modules.
 
-**THE IDEA THAT FIXED IT:** Same `_name`, add `_inherit`: extend table and behavior in place.
+**THE MAIN IDEA IN SIMPLE WORDS:** Same `_name`, add `_inherit`: extend table and behavior in place.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 module A: sale.order fields
@@ -1937,19 +1945,19 @@ module B: _inherit sale.order adds x_studio_fee
 one model sale.order, one table, merged Python MRO
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Adding rooms to existing house (extend) vs building duplicate house next door (new `_name`).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
 | New `_name` copy | Isolated | Breaks integrations |
-| `_inherit` extend | Keeps ecosystem | Upgrade coupling to upstream |
+| Extend with `_inherit` | Keeps compatibility with Odoo and its modules | Your extension may need changes when the original module changes during an upgrade |
 | Monkey patch | Quick hack | Undefined order |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 class SaleOrder(models.Model):
@@ -1963,9 +1971,9 @@ class SaleOrder(models.Model):
         return res
 ```
 
-**INTERVIEW PERSPECTIVE:** 'Explain _inherit with super()' and 'What is MRO in Odoo context?'
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** 'Explain _inherit with super()' and 'What is MRO in Odoo context?'
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1973,17 +1981,17 @@ class SaleOrder(models.Model):
 | Medium | Extend confirm with super call. |
 | Hard | Resolve conflict two modules override same method. |
 
-**THE BRIDGE:** Sometimes you want composition: `_inherits` delegation instead of widening one table.
+**WHY THE NEXT TOPIC IS NEEDED:** Sometimes you want composition: `_inherits` delegation instead of widening one table.
 
 ---
 
 ## 11.2 `_inherits` Delegation Inheritance
 
-**WHY THIS EXISTS:** **`_inherits`** links a model to delegate fields to a parent record (composition), creating linked rows automatically.
+**WHY YOU ARE LEARNING THIS:** **`_inherits`** links a model to delegate fields to a parent record (composition), creating linked rows automatically.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Profile data duplicated partner columns until `_inherits` kept one `res.partner` source of truth.
+**THE PROBLEM THIS SOLVES:** Profile data duplicated partner columns until `_inherits` kept one `res.partner` source of truth.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Delegation inheritance](https://www.youtube.com/watch?v=zKIKCtq9PfM)
 - [When to use _inherits](https://www.youtube.com/watch?v=5YIwP9-55Qk)
@@ -1994,7 +2002,7 @@ class SaleOrder(models.Model):
 - [odoo/odoo product.product inherits product.template pattern](https://github.com/odoo/odoo/tree/master/addons/product/models)
 - Model `library.member` delegating to partner with member-specific fields.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Define `_inherits = {'res.partner': 'partner_id'}` plus required Many2one delegate field. Creating member auto-creates partner; reading `member.email` proxies partner field.
 
@@ -2002,9 +2010,9 @@ Use when extending a core model without altering its table width for optional fe
 
 Contrast **`_inherit` extension** (same model/table) vs **`_inherits` composition** (new table + linked parent). Mail mixins (`mail.thread`, `mail.activity.mixin`) use `_inherit` on abstract models - different pattern, know both.
 
-**THE IDEA THAT FIXED IT:** Delegate storage to parent model; child model adds specialized fields and behavior.
+**THE MAIN IDEA IN SIMPLE WORDS:** Delegate storage to parent model; child model adds specialized fields and behavior.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 library.member                res.partner
@@ -2013,11 +2021,11 @@ library.member                res.partner
   create({name: 'Ali'}) --> creates both rows
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Employee badge links to person file: specialist record, identity stored once in HR master.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -2025,7 +2033,7 @@ Employee badge links to person file: specialist record, identity stored once in 
 | `_inherits` delegation | Single partner truth | Complex create/unlink |
 | Only _inherit partner | One table | Pollutes partner for all apps |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 class LibraryMember(models.Model):
@@ -2037,9 +2045,9 @@ class LibraryMember(models.Model):
     membership_level = fields.Selection([("bronze", "Bronze"), ("gold", "Gold")])
 ```
 
-**INTERVIEW PERSPECTIVE:** Compare `_inherit` vs `_inherits` with partner example - frequent senior question.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Compare `_inherit` vs `_inherits` with partner example - frequent senior question.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2047,13 +2055,13 @@ class LibraryMember(models.Model):
 | Medium | Create member via ORM and trace partner row. |
 | Hard | Choose inherit vs inherits for clinic patient model. |
 
-**THE BRIDGE:** Short-lived UI flows use transient models and wizards instead of permanent tables.
+**WHY THE NEXT TOPIC IS NEEDED:** Short-lived UI flows use transient models and wizards instead of permanent tables.
 
 ---
 
-**MASTERY CHECKPOINT - Phase 11:** Extend models with `_inherit` and compose with `_inherits`; override using super().
+**CHECK YOUR UNDERSTANDING AFTER PHASE 11:** Extend models with `_inherit` and compose with `_inherits`; override using super().
 
-> **Phase 11 complete?** [Build the aligned project](./Projects.md#L2508) · [Continue to Phase 12](#phase-12---wizards--transient-models)
+> **Phase 11 complete?** [Build the aligned project](./Projects.md#odoo-phase-11-project) · [Continue to Phase 12](#phase-12---wizards--transient-models)
 
 <a id="phase-12"></a>
 
@@ -2061,17 +2069,17 @@ class LibraryMember(models.Model):
 
 **Track:** Ui Layer
 
-**GOAL:** Build multi-step dialogs with TransientModel and actions
+**WHAT YOU WILL BE ABLE TO DO:** Build multi-step dialogs with TransientModel and actions
 
-**PREREQUISITES:** See phase index and prior mastery checkpoints.
+**WHAT YOU SHOULD KNOW FIRST:** See phase index and prior mastery checkpoints.
 
 ## 12.1 TransientModel and Wizard Records
 
-**WHY THIS EXISTS:** **TransientModel** tables are vacuumed automatically; perfect for wizards collecting input before one-shot server actions.
+**WHY YOU ARE LEARNING THIS:** **TransientModel** tables are vacuumed automatically; perfect for wizards collecting input before one-shot server actions.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Permanent `library.wizard.log` table grew to millions of rows because developers used Model instead of TransientModel.
+**THE PROBLEM THIS SOLVES:** Permanent `library.wizard.log` table grew to millions of rows because developers used Model instead of TransientModel.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo wizards introduction](https://www.youtube.com/watch?v=uJPjmS5Arug)
 - [Transient models explained](https://www.youtube.com/watch?v=zKIKCtq9PfM)
@@ -2082,7 +2090,7 @@ class LibraryMember(models.Model):
 - [odoo/odoo wizard examples in addons](https://github.com/odoo/odoo/tree/master/addons)
 - Wizard to bulk-set book category from list view selection.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Subclass `models.TransientModel`. Records expire via autovacuum cron based on age and count limits. Access often wide for managers because data is ephemeral.
 
@@ -2092,9 +2100,9 @@ Methods like `action_apply` validate, call business logic on real models, return
 
 Use **`@api.model`** defaults pulling `self.env.context.get('active_model')` for generic wizards.
 
-**THE IDEA THAT FIXED IT:** Collect input in transient rows; apply once; let vacuum discard leftovers.
+**THE MAIN IDEA IN SIMPLE WORDS:** Collect input in transient rows; apply once; let vacuum discard leftovers.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 List view select 5 books
@@ -2104,11 +2112,11 @@ List view select 5 books
   -> close dialog + optional reload
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Sticky note draft before filing official form: toss note after filing.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -2116,7 +2124,7 @@ Sticky note draft before filing official form: toss note after filing.
 | TransientModel | Self-cleaning | Not for long audit trail |
 | Client-only JS wizard | No server round trip | No ACL on apply path |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 class BookCategoryWizard(models.TransientModel):
@@ -2131,9 +2139,9 @@ class BookCategoryWizard(models.TransientModel):
         return {"type": "ir.actions.act_window_close"}
 ```
 
-**INTERVIEW PERSPECTIVE:** 'Why TransientModel?' and 'How active_ids reach wizard?'
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** 'Why TransientModel?' and 'How active_ids reach wizard?'
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2141,17 +2149,17 @@ class BookCategoryWizard(models.TransientModel):
 | Medium | default_get from active records. |
 | Hard | Wizard spanning two models with validation. |
 
-**THE BRIDGE:** Wizards need form views and actions opening as modal dialogs.
+**WHY THE NEXT TOPIC IS NEEDED:** Wizards need form views and actions opening as modal dialogs.
 
 ---
 
 ## 12.2 Wizard Views, Actions, and Bindings
 
-**WHY THIS EXISTS:** Open wizards with **`target='new'`** actions bound to list/form **Action** menus via context keys.
+**WHY YOU ARE LEARNING THIS:** Open wizards with **`target='new'`** actions bound to list/form **Action** menus via context keys.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Wizard opened full screen and lost list selection because action target was current, not new dialog.
+**THE PROBLEM THIS SOLVES:** Wizard opened full screen and lost list selection because action target was current, not new dialog.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Wizard UI patterns](https://www.youtube.com/watch?v=5YIwP9-55Qk)
 - [Action bindings](https://www.youtube.com/watch?v=RzQPI_lFKL8)
@@ -2162,7 +2170,7 @@ class BookCategoryWizard(models.TransientModel):
 - [odoo/tutorials wizard XML samples](https://github.com/odoo/tutorials)
 - Bind wizard to book list Action menu; footer Apply/Cancel buttons.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Action: `res_model` wizard, `view_mode=form`, **`target=new`**. Binding: `binding_model_id` ref to `library.book`, `binding_view_types=list,form`.
 
@@ -2172,9 +2180,9 @@ Pass context in action XML: `{'default_book_id': active_id}` for single-record w
 
 Chained wizards: return another act_window from first wizard step for rare multi-page flows (keep steps minimal).
 
-**THE IDEA THAT FIXED IT:** Action target new + binding places wizard where users already work.
+**THE MAIN IDEA IN SIMPLE WORDS:** Action target new + binding places wizard where users already work.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 list select rows -> Action menu -> act_window(target=new)
@@ -2182,11 +2190,11 @@ list select rows -> Action menu -> act_window(target=new)
   -> Apply -> server method -> close / reload parent
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Pop-up confirmation at checkout vs walking to back office separate desk.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -2194,7 +2202,7 @@ Pop-up confirmation at checkout vs walking to back office separate desk.
 | target=new modal | Focused UX | Mobile layout quirks |
 | Inline list editable only | Fast edits | No complex validation UI |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```xml
 <record id="action_book_category_wizard" model="ir.actions.act_window">
@@ -2207,9 +2215,9 @@ Pop-up confirmation at checkout vs walking to back office separate desk.
 </record>
 ```
 
-**INTERVIEW PERSPECTIVE:** Demo: extend list view Action menu - common technical interview task.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Demo: extend list view Action menu - common technical interview task.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2217,13 +2225,13 @@ Pop-up confirmation at checkout vs walking to back office separate desk.
 | Medium | Bind wizard to form smart action. |
 | Hard | Wizard returning notification + reload list. |
 
-**THE BRIDGE:** Not every integration fits UI; HTTP controllers expose routes and webhooks.
+**WHY THE NEXT TOPIC IS NEEDED:** Not every integration fits UI; HTTP controllers expose routes and webhooks.
 
 ---
 
-**MASTERY CHECKPOINT - Phase 12:** Build TransientModel wizards with modal actions and list bindings.
+**CHECK YOUR UNDERSTANDING AFTER PHASE 12:** Build TransientModel wizards with modal actions and list bindings.
 
-> **Phase 12 complete?** [Build the aligned project](./Projects.md#L2529) · [Continue to Phase 13](#phase-13---controllers--http--webhooks)
+> **Phase 12 complete?** [Build the aligned project](./Projects.md#odoo-phase-12-project) · [Continue to Phase 13](#phase-13---controllers--http--webhooks)
 
 <a id="phase-13"></a>
 
@@ -2231,17 +2239,17 @@ Pop-up confirmation at checkout vs walking to back office separate desk.
 
 **Track:** Integration
 
-**GOAL:** Serve JSON, HTTP, and webhook endpoints with auth discipline
+**WHAT YOU WILL BE ABLE TO DO:** Serve JSON, HTTP, and webhook endpoints with auth discipline
 
-**PREREQUISITES:** See phase index and prior mastery checkpoints.
+**WHAT YOU SHOULD KNOW FIRST:** See phase index and prior mastery checkpoints.
 
 ## 13.1 HTTP Controllers and Routes
 
-**WHY THIS EXISTS:** **@http.route** maps URLs to Python callables returning HTML, JSON, or werkzeug responses.
+**WHY YOU ARE LEARNING THIS:** **@http.route** maps URLs to Python callables returning HTML, JSON, or werkzeug responses.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Public route without auth let anyone dump partner data; CSRF missing on form route enabled forged posts.
+**THE PROBLEM THIS SOLVES:** Public route without auth let anyone dump partner data; CSRF missing on form route enabled forged posts.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo controllers tutorial](https://www.youtube.com/watch?v=WnsYmsq4Qr8)
 - [HTTP routing types json vs http](https://www.youtube.com/watch?v=YJg7dvwXQF8)
@@ -2252,7 +2260,7 @@ Pop-up confirmation at checkout vs walking to back office separate desk.
 - [odoo/odoo http.py and controller samples](https://github.com/odoo/odoo)
 - JSON route returning book count for authenticated user only.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Define `class MyController(http.Controller):` with routes like `@http.route('/library/status', type='json', auth='user')`.
 
@@ -2262,9 +2270,9 @@ Define `class MyController(http.Controller):` with routes like `@http.route('/li
 
 Use `request.env` for ORM. Validate input; never trust query params for ids without access checks.
 
-**THE IDEA THAT FIXED IT:** Controllers are the HTTP front door; auth and CSRF are not optional details.
+**THE MAIN IDEA IN SIMPLE WORDS:** Controllers are the HTTP front door; auth and CSRF are not optional details.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 POST /library/webhook
@@ -2274,11 +2282,11 @@ POST /library/webhook
   -> 200 JSON
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Reception desk window (controller) with ID check (auth) before handing files (records).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -2286,7 +2294,7 @@ Reception desk window (controller) with ID check (auth) before handing files (re
 | auth=user + ACL ORM | Secure default | Needs login/session |
 | auth=none custom token | Machine clients | You own all validation |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 from odoo import http
@@ -2299,9 +2307,9 @@ class LibraryController(http.Controller):
         return {"count": count}
 ```
 
-**INTERVIEW PERSPECTIVE:** 'Difference type http vs json?' and 'When auth public?'
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** 'Difference type http vs json?' and 'When auth public?'
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2309,17 +2317,17 @@ class LibraryController(http.Controller):
 | Medium | QWeb page listing public events. |
 | Hard | Rate-limited public JSON with API key header. |
 
-**THE BRIDGE:** External systems often call Odoo via RPC rather than custom controllers.
+**WHY THE NEXT TOPIC IS NEEDED:** External systems often call Odoo via RPC rather than custom controllers.
 
 ---
 
 ## 13.2 Webhooks, CSRF, and Idempotent Handlers
 
-**WHY THIS EXISTS:** **Webhooks** push events to Odoo routes; design **signature verification**, **idempotency keys**, and **fast 200 responses**.
+**WHY YOU ARE LEARNING THIS:** **Webhooks** push events to Odoo routes; design **signature verification**, **idempotency keys**, and **fast 200 responses**.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Stripe double-charged because webhook handler created two payments when provider retried the same event id.
+**THE PROBLEM THIS SOLVES:** Stripe double-charged because webhook handler created two payments when provider retried the same event id.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Webhooks in Odoo overview](https://www.youtube.com/watch?v=k-hKNUZQi2o)
 - [External event ingestion](https://www.youtube.com/watch?v=ASPjB-WowBU)
@@ -2330,7 +2338,7 @@ class LibraryController(http.Controller):
 - [Ecosire Stripe integration references](https://www.ecosire.com/blog/odoo-stripe-integration)
 - Log webhook payload to transient table; process async via cron queue model.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Pattern: `@http.route('/payment/stripe/webhook', auth='public', csrf=False, methods=['POST'])`. Read raw body for HMAC signature compare with secret. Map event type to handler methods.
 
@@ -2340,9 +2348,9 @@ Never expose stack traces to callers. Log correlation ids. Use separate database
 
 Align with [`Networks.md`](./Networks.md) HTTP/TLS basics: terminate TLS at proxy, validate certificates on outbound calls too.
 
-**THE IDEA THAT FIXED IT:** Verify, dedupe, process, acknowledge - in that order.
+**THE MAIN IDEA IN SIMPLE WORDS:** Verify, dedupe, process, acknowledge - in that order.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 Stripe POST webhook
@@ -2352,11 +2360,11 @@ Stripe POST webhook
   else: create tx, enqueue processing, return 200
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Registered mail slot: ignore duplicate tracking numbers; only process each letter once.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -2364,7 +2372,7 @@ Registered mail slot: ignore duplicate tracking numbers; only process each lette
 | Idempotent + queue | Reliable | More moving parts |
 | Skip signature verify | Fast test | Forged events |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 @http.route("/payment/stripe/webhook", type="http", auth="public", csrf=False, methods=["POST"])
@@ -2379,9 +2387,9 @@ def stripe_webhook(self):
     return "OK"
 ```
 
-**INTERVIEW PERSPECTIVE:** Webhook debugging story is interview gold: signatures, retries, idempotency.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Webhook debugging story is interview gold: signatures, retries, idempotency.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2389,13 +2397,13 @@ def stripe_webhook(self):
 | Medium | Design idempotency table fields. |
 | Hard | Handle out-of-order payment events safely. |
 
-**THE BRIDGE:** Partners also pull data via XML-RPC/JSON-RPC external API.
+**WHY THE NEXT TOPIC IS NEEDED:** Partners also pull data via XML-RPC/JSON-RPC external API.
 
 ---
 
-**MASTERY CHECKPOINT - Phase 13:** Implement secured controllers and idempotent webhook handlers.
+**CHECK YOUR UNDERSTANDING AFTER PHASE 13:** Implement secured controllers and idempotent webhook handlers.
 
-> **Phase 13 complete?** [Build the aligned project](./Projects.md#L2550) · [Continue to Phase 14](#phase-14---external-api)
+> **Phase 13 complete?** [Build the aligned project](./Projects.md#odoo-phase-13-project) · [Continue to Phase 14](#phase-14---external-api)
 
 <a id="phase-14"></a>
 
@@ -2403,17 +2411,17 @@ def stripe_webhook(self):
 
 **Track:** Integration
 
-**GOAL:** Integrate via RPC, API keys, and documented contracts
+**WHAT YOU WILL BE ABLE TO DO:** Integrate via RPC, API keys, and documented contracts
 
-**PREREQUISITES:** See phase index and prior mastery checkpoints.
+**WHAT YOU SHOULD KNOW FIRST:** See phase index and prior mastery checkpoints.
 
 ## 14.1 XML-RPC and JSON-RPC Basics
 
-**WHY THIS EXISTS:** Odoo exposes **RPC endpoints** (`/xmlrpc/2`, `/jsonrpc`) for authenticate, execute_kw CRUD from external apps.
+**WHY YOU ARE LEARNING THIS:** Odoo exposes **RPC endpoints** (`/xmlrpc/2`, `/jsonrpc`) for authenticate, execute_kw CRUD from external apps.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Integration hard-coded admin password in mobile app; leaked git repo became full database compromise.
+**THE PROBLEM THIS SOLVES:** Integration hard-coded admin password in mobile app; leaked git repo became full database compromise.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo external API intro](https://www.youtube.com/watch?v=WnsYmsq4Qr8)
 - [XML-RPC Python client](https://www.youtube.com/watch?v=5YIwP9-55Qk)
@@ -2424,7 +2432,7 @@ def stripe_webhook(self):
 - [odoo/odoo doc/cla/external API examples](https://github.com/odoo/odoo)
 - Python script: authenticate, search_read partners, create book via RPC.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Flow: `common.authenticate(db, login, password, {})` returns uid. `object.execute_kw(db, uid, password, model, method, args, kwargs)` calls ORM methods remotely.
 
@@ -2434,9 +2442,9 @@ Security: dedicated integration user, minimal groups, strong password or better 
 
 For greenfield mobile, consider custom JSON controllers with OAuth2 proxy instead of raw RPC if you need finer auth.
 
-**THE IDEA THAT FIXED IT:** RPC is remote ORM: same ACL/rules apply to integration user.
+**THE MAIN IDEA IN SIMPLE WORDS:** RPC is remote ORM: same ACL/rules apply to integration user.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 External Python app
@@ -2447,11 +2455,11 @@ External Python app
 Odoo ORM (same as UI) -> PostgreSQL
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Phone banking app calling bank core: same account rules, different channel.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -2459,7 +2467,7 @@ Phone banking app calling bank core: same account rules, different channel.
 | Least-privilege integration user | Contained damage | Group design work |
 | Custom REST layer | Tailored auth | More code to maintain |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import xmlrpc.client
@@ -2476,9 +2484,9 @@ books = models.execute_kw(
 )
 ```
 
-**INTERVIEW PERSPECTIVE:** 'How external app creates sale order?' walkthrough expected.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** 'How external app creates sale order?' walkthrough expected.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2486,17 +2494,17 @@ books = models.execute_kw(
 | Medium | Create record with relational ids. |
 | Hard | Compare RPC vs controller for mobile backend. |
 
-**THE BRIDGE:** RPC covers data sync; payment and SaaS tools need richer integration modules.
+**WHY THE NEXT TOPIC IS NEEDED:** RPC covers data sync; payment and SaaS tools need richer integration modules.
 
 ---
 
 ## 14.2 API Design, Pagination, and Error Contracts
 
-**WHY THIS EXISTS:** Production integrations need **stable field contracts**, **pagination**, **versioned modules**, and **structured errors**.
+**WHY YOU ARE LEARNING THIS:** Production integrations need **stable field contracts**, **pagination**, **versioned modules**, and **structured errors**.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Mobile app broke when module upgrade renamed field; no versioning, no changelog, no compatibility layer.
+**THE PROBLEM THIS SOLVES:** Mobile app broke when module upgrade renamed field; no versioning, no changelog, no compatibility layer.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Integration architecture for Odoo](https://www.youtube.com/watch?v=zKIKCtq9PfM)
 - [API pagination strategies](https://www.youtube.com/watch?v=RzQPI_lFKL8)
@@ -2507,7 +2515,7 @@ books = models.execute_kw(
 - [NodenHQ/awesome-odoo integration links](https://github.com/NodenHQ/awesome-odoo)
 - Document JSON schema for `/library/api/books` v1 with limit/offset.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Publish integration guide: model names, required fields, state enums, idempotency rules. Use **`limit`/`offset`** or search on write_date watermark for sync.
 
@@ -2517,9 +2525,9 @@ Version modules (`18.0.2.0.0`) when breaking RPC consumers; maintain read compat
 
 Monitor with logs and heartbeat transactions. Align retries with [`Networks.md`](./Networks.md) timeout guidance.
 
-**THE IDEA THAT FIXED IT:** Treat integration surface like a public API product, not a private script.
+**THE MAIN IDEA IN SIMPLE WORDS:** Treat integration surface like a public API product, not a private script.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 Client sync loop:
@@ -2530,11 +2538,11 @@ Client sync loop:
   advance watermark
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Newspaper edition numbering: subscribers know when layout changes and can adapt.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -2542,7 +2550,7 @@ Newspaper edition numbering: subscribers know when layout changes and can adapt.
 | Documented contract + versioning | Partner trust | Process overhead |
 | Full GraphQL rewrite | Flexible queries | Overkill for many ERP syncs |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 @http.route("/library/api/v1/books", type="json", auth="user")
@@ -2557,9 +2565,9 @@ def books_v1(self, limit=50, offset=0):
     return {"ok": True, "data": rows, "limit": limit, "offset": offset}
 ```
 
-**INTERVIEW PERSPECTIVE:** System design: 'Sync 50k products nightly from Odoo' - discuss pagination and watermarks.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** System design: 'Sync 50k products nightly from Odoo' - discuss pagination and watermarks.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2567,13 +2575,13 @@ def books_v1(self, limit=50, offset=0):
 | Medium | Watermark sync design on write_date. |
 | Hard | Backward compatible field rename plan. |
 
-**THE BRIDGE:** Payments and SaaS connectors build on these API patterns with acquirer modules.
+**WHY THE NEXT TOPIC IS NEEDED:** Payments and SaaS connectors build on these API patterns with acquirer modules.
 
 ---
 
-**MASTERY CHECKPOINT - Phase 14:** Use RPC safely and design versioned, paginated integration contracts.
+**CHECK YOUR UNDERSTANDING AFTER PHASE 14:** Use RPC safely and design versioned, paginated integration contracts.
 
-> **Phase 14 complete?** [Build the aligned project](./Projects.md#L2571) · [Continue to Phase 15](#phase-15---integrations--payment-gateways)
+> **Phase 14 complete?** [Build the aligned project](./Projects.md#odoo-phase-14-project) · [Continue to Phase 15](#phase-15---integrations--payment-gateways)
 
 <a id="phase-15"></a>
 
@@ -2581,17 +2589,17 @@ def books_v1(self, limit=50, offset=0):
 
 **Track:** Integration
 
-**GOAL:** Wire payment acquirers and third-party SaaS with Odoo patterns
+**WHAT YOU WILL BE ABLE TO DO:** Wire payment acquirers and third-party SaaS with Odoo patterns
 
-**PREREQUISITES:** See phase index and prior mastery checkpoints.
+**WHAT YOU SHOULD KNOW FIRST:** See phase index and prior mastery checkpoints.
 
 ## 15.1 Payment Acquirer Architecture
 
-**WHY THIS EXISTS:** Odoo **`payment.provider`** modules implement tokenization, redirect flows, webhooks, and transaction state machines.
+**WHY YOU ARE LEARNING THIS:** Odoo **`payment.provider`** modules implement tokenization, redirect flows, webhooks, and transaction state machines.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Custom checkout iframed card fields without PCI scope review; audit failed, project rolled back.
+**THE PROBLEM THIS SOLVES:** Custom checkout iframed card fields without PCI scope review; audit failed, project rolled back.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo payment providers overview](https://www.youtube.com/watch?v=s-4zNx7wCFk)
 - [Stripe with Odoo concepts](https://www.youtube.com/watch?v=5YIwP9-55Qk)
@@ -2602,7 +2610,7 @@ def books_v1(self, limit=50, offset=0):
 - [odoo/odoo payment_stripe module source](https://github.com/odoo/odoo/tree/master/addons/payment_stripe)
 - Trace transaction states draft pending done cancel on test Stripe checkout.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Extend `payment.provider` with code `_code = 'mygateway'`. Implement rendering, communication, webhook handling referencing **`payment.transaction`** states.
 
@@ -2612,9 +2620,9 @@ Reuse Odoo's refund/capture abstractions where possible instead of parallel paym
 
 Document PCI boundaries: never log PAN/CVV; use provider tokens.
 
-**THE IDEA THAT FIXED IT:** Plug into payment.transaction lifecycle; do not invent parallel payment tables.
+**THE MAIN IDEA IN SIMPLE WORDS:** Plug into payment.transaction lifecycle; do not invent parallel payment tables.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 checkout -> payment.transaction pending
@@ -2623,11 +2631,11 @@ checkout -> payment.transaction pending
   -> reconcile invoice payment state
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Hotel front desk swipe terminal: Odoo records stay, provider handles card vault.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -2635,7 +2643,7 @@ Hotel front desk swipe terminal: Odoo records stay, provider handles card vault.
 | payment.provider extension | Compatible UX | Must learn abstract API |
 | Manual mark paid only | Simple B2B | No online capture |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 class PaymentProvider(models.Model):
@@ -2651,9 +2659,9 @@ class PaymentProvider(models.Model):
         return "https://api.sandbox.mygateway.com/v1/charges"
 ```
 
-**INTERVIEW PERSPECTIVE:** 'Explain payment flow in Odoo ecommerce' plus webhook idempotency tie-in.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** 'Explain payment flow in Odoo ecommerce' plus webhook idempotency tie-in.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2661,17 +2669,17 @@ class PaymentProvider(models.Model):
 | Medium | Sandbox test end-to-end checkout. |
 | Hard | Partial capture refund flow design. |
 
-**THE BRIDGE:** Non-payment SaaS (CRM, shipping, analytics) uses similar module boundaries.
+**WHY THE NEXT TOPIC IS NEEDED:** Non-payment SaaS (CRM, shipping, analytics) uses similar module boundaries.
 
 ---
 
 ## 15.2 Third-Party SaaS Integrations
 
-**WHY THIS EXISTS:** Integrate shipping, SMS, or analytics via **abstract interfaces**, **scheduled sync**, and **config settings**.
+**WHY YOU ARE LEARNING THIS:** Integrate shipping, SMS, or analytics via **abstract interfaces**, **scheduled sync**, and **config settings**.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Every method called ShipEngine directly; vendor switch required rewriting twelve models.
+**THE PROBLEM THIS SOLVES:** Every method called ShipEngine directly; vendor switch required rewriting twelve models.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo integration patterns](https://www.youtube.com/watch?v=EHiH7hp0PBU)
 - [Scheduled actions for sync](https://www.youtube.com/watch?v=ASPjB-WowBU)
@@ -2682,7 +2690,7 @@ class PaymentProvider(models.Model):
 - [dreispt/awesome-odoo community modules list](https://github.com/dreispt/awesome-odoo)
 - Settings page API key + cron sync carriers nightly with error chatter.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Pattern: `res.company` or settings transient stores API keys (`config_parameter` ir.config_parameter). Service class wraps HTTP client with timeouts/retries.
 
@@ -2692,9 +2700,9 @@ Use **`queue_job`** community pattern mentally even if not installed: async for 
 
 Map external ids on Odoo models (`shipengine_label_id`) for idempotent upsert.
 
-**THE IDEA THAT FIXED IT:** Hide vendor SDKs behind your module service layer and config settings.
+**THE MAIN IDEA IN SIMPLE WORDS:** Hide vendor SDKs behind your module service layer and config settings.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 Settings store API key
@@ -2705,11 +2713,11 @@ Settings store API key
          -> write tracking refs
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Universal power adapter: Odoo socket, swappable plug for each vendor.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -2717,7 +2725,7 @@ Universal power adapter: Odoo socket, swappable plug for each vendor.
 | Connector service class | Swappable vendors | Initial abstraction cost |
 | iPaaS only outside Odoo | No Odoo dev | Split business logic |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 class ResConfigSettings(models.TransientModel):
@@ -2735,9 +2743,9 @@ class LibraryShipment(models.Model):
             connector.refresh_tracking(ship)
 ```
 
-**INTERVIEW PERSPECTIVE:** Design integration module interview: settings, cron, webhook, error handling.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Design integration module interview: settings, cron, webhook, error handling.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2745,13 +2753,13 @@ class LibraryShipment(models.Model):
 | Medium | Cron sync with try/except per record. |
 | Hard | Swap vendors with adapter interface. |
 
-**THE BRIDGE:** Backend logic eventually meets users in OWL-powered web client assets.
+**WHY THE NEXT TOPIC IS NEEDED:** Backend logic eventually meets users in OWL-powered web client assets.
 
 ---
 
-**MASTERY CHECKPOINT - Phase 15:** Explain payment provider flow and design SaaS integrations with cron and settings.
+**CHECK YOUR UNDERSTANDING AFTER PHASE 15:** Explain payment provider flow and design SaaS integrations with cron and settings.
 
-> **Phase 15 complete?** [Build the aligned project](./Projects.md#L2592) · [Continue to Phase 16](#phase-16---owl--javascript-frontend)
+> **Phase 15 complete?** [Build the aligned project](./Projects.md#odoo-phase-15-project) · [Continue to Phase 16](#phase-16---owl--javascript-frontend)
 
 <a id="phase-16"></a>
 
@@ -2759,17 +2767,17 @@ class LibraryShipment(models.Model):
 
 **Track:** Frontend
 
-**GOAL:** Extend backend UI with OWL components and assets bundles
+**WHAT YOU WILL BE ABLE TO DO:** Extend backend UI with OWL components and assets bundles
 
-**PREREQUISITES:** See phase index and prior mastery checkpoints.
+**WHAT YOU SHOULD KNOW FIRST:** See phase index and prior mastery checkpoints.
 
 ## 16.1 OWL Components and the Odoo Web Client
 
-**WHY THIS EXISTS:** Odoo 17+ web client uses **OWL** (Odoo Web Library) components; assets declare JS/XML in manifest **`assets`** key.
+**WHY YOU ARE LEARNING THIS:** Odoo 17+ web client uses **OWL** (Odoo Web Library) components; assets declare JS/XML in manifest **`assets`** key.
 
-**THE PROBLEM BEFORE THIS EXISTED:** jQuery patch broke every upgrade because it fought internal component lifecycle and module bundling.
+**THE PROBLEM THIS SOLVES:** jQuery patch broke every upgrade because it fought internal component lifecycle and module bundling.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [OWL Odoo introduction](https://www.youtube.com/watch?v=YJg7dvwXQF8)
 - [Odoo JS training public course angle](https://www.youtube.com/watch?v=zq4aw99kv48)
@@ -2780,7 +2788,7 @@ class LibraryShipment(models.Model):
 - [odoo/odoo web/static/src owl sources](https://github.com/odoo/odoo/tree/master/addons/web/static/src)
 - Register small widget showing loan count on partner form via patch.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 OWL components: class extending Component, static template xml, props, state, hooks. Registered in registry alongside legacy widgets where still supported.
 
@@ -2790,9 +2798,9 @@ Prefer **patching existing components** (`patch(FormController.prototype, {...})
 
 Know when XML views suffice vs JS needed: custom kanban card layout, specialized onchange UX, client-side validation hints.
 
-**THE IDEA THAT FIXED IT:** Declare assets; patch or register OWL components; let bundler serve ES modules.
+**THE MAIN IDEA IN SIMPLE WORDS:** Declare assets; patch or register OWL components; let bundler serve ES modules.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 manifest assets -> backend bundle
@@ -2801,11 +2809,11 @@ manifest assets -> backend bundle
   -> browser loads with web client
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Adding custom dashboard gauge to car cockpit (OWL) vs rewiring entire engine (fork web client).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -2813,7 +2821,7 @@ Adding custom dashboard gauge to car cockpit (OWL) vs rewiring entire engine (fo
 | Targeted OWL patch | Powerful extension | Breaks if upstream renames |
 | Fork web client | Total UI freedom | Unmergeable |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```javascript
 /** @odoo-module **/
@@ -2830,9 +2838,9 @@ patch(FormController.prototype, {
 });
 ```
 
-**INTERVIEW PERSPECTIVE:** 'When do you need JS vs XML?' distinguishes backend vs full-stack Odoo devs.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** 'When do you need JS vs XML?' distinguishes backend vs full-stack Odoo devs.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2840,17 +2848,17 @@ patch(FormController.prototype, {
 | Medium | Patch form controller for one model. |
 | Hard | Custom OWL widget with props from field. |
 
-**THE BRIDGE:** Assets and patches must load in correct bundle order.
+**WHY THE NEXT TOPIC IS NEEDED:** Assets and patches must load in correct bundle order.
 
 ---
 
 ## 16.2 Asset Bundges, QWeb, and Legacy Interop
 
-**WHY THIS EXISTS:** **Asset bundles** group JS/CSS; **QWeb** templates still render server HTML and some client templates.
+**WHY YOU ARE LEARNING THIS:** **Asset bundles** group JS/CSS; **QWeb** templates still render server HTML and some client templates.
 
-**THE PROBLEM BEFORE THIS EXISTED:** CSS loaded in wrong bundle never styled backend forms; developer cleared browser cache for days unnecessarily.
+**THE PROBLEM THIS SOLVES:** CSS loaded in wrong bundle never styled backend forms; developer cleared browser cache for days unnecessarily.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo assets and bundling](https://www.youtube.com/watch?v=RzQPI_lFKL8)
 - [QWeb templates basics](https://www.youtube.com/watch?v=WnsYmsq4Qr8)
@@ -2861,7 +2869,7 @@ patch(FormController.prototype, {
 - [ged-odoo odoo-js-training exercises](https://github.com/ged-odoo/odoo-js-training-public)
 - Add SCSS snippet coloring late loan kanban cards in backend bundle.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Common bundles: `web.assets_backend`, `web.assets_frontend`, `web.assets_qweb`. Order matters; use `'before'`/`'after'`/`'replace'` directives in manifest tuples.
 
@@ -2871,9 +2879,9 @@ Debug assets: `--dev=assets` or disable asset minification in debug mode. Hard r
 
 Legacy public widgets fade; read existing module JS before copying StackOverflow snippets from Odoo 13 era.
 
-**THE IDEA THAT FIXED IT:** Pick correct bundle; use manifest directives; separate report QWeb from OWL XML.
+**THE MAIN IDEA IN SIMPLE WORDS:** Pick correct bundle; use manifest directives; separate report QWeb from OWL XML.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 __manifest__ assets:
@@ -2883,11 +2891,11 @@ __manifest__ assets:
   -> compiled CSS in backend UI
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Loading truck compartments: backend CSS in wrong compartment never reaches store shelves.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -2895,7 +2903,7 @@ Loading truck compartments: backend CSS in wrong compartment never reaches store
 | Manifest assets | Supported path | Learning curve |
 | Copy minified web assets | Forbidden anti-pattern | Upgrade nightmare |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # __manifest__.py excerpt
@@ -2907,9 +2915,9 @@ Loading truck compartments: backend CSS in wrong compartment never reaches store
 },
 ```
 
-**INTERVIEW PERSPECTIVE:** Frontend Odoo interviews ask asset bundles and OWL vs jQuery history.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Frontend Odoo interviews ask asset bundles and OWL vs jQuery history.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2917,13 +2925,13 @@ Loading truck compartments: backend CSS in wrong compartment never reaches store
 | Medium | Add SCSS with manifest order directive. |
 | Hard | Debug missing asset after upgrade path. |
 
-**THE BRIDGE:** Frontend renders data stored in PostgreSQL; knowing schema helps performance tuning.
+**WHY THE NEXT TOPIC IS NEEDED:** Frontend renders data stored in PostgreSQL; knowing schema helps performance tuning.
 
 ---
 
-**MASTERY CHECKPOINT - Phase 16:** Register backend assets and patch OWL components without forking web client.
+**CHECK YOUR UNDERSTANDING AFTER PHASE 16:** Register backend assets and patch OWL components without forking web client.
 
-> **Phase 16 complete?** [Build the aligned project](./Projects.md#L2613) · [Continue to Phase 17](#phase-17---postgresql-for-odoo)
+> **Phase 16 complete?** [Build the aligned project](./Projects.md#odoo-phase-16-project) · [Continue to Phase 17](#phase-17---postgresql-for-odoo)
 
 <a id="phase-17"></a>
 
@@ -2931,17 +2939,17 @@ Loading truck compartments: backend CSS in wrong compartment never reaches store
 
 **Track:** Data Layer
 
-**GOAL:** Read Odoo's schema, indexes, and query patterns in PostgreSQL
+**WHAT YOU WILL BE ABLE TO DO:** Read Odoo's schema, indexes, and query patterns in PostgreSQL
 
-**PREREQUISITES:** See phase index and prior mastery checkpoints.
+**WHAT YOU SHOULD KNOW FIRST:** See phase index and prior mastery checkpoints.
 
 ## 17.1 Tables, JSONB, and ir_* Metadata
 
-**WHY THIS EXISTS:** Odoo creates **`model_table`** per model plus **`ir_*`** system tables tracking models, fields, views, and attachments metadata.
+**WHY YOU ARE LEARNING THIS:** Odoo creates **`model_table`** per model plus **`ir_*`** system tables tracking models, fields, views, and attachments metadata.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Developer searched wrong table `library_books` plural; hours lost because Odoo uses singular underscored `_table` names.
+**THE PROBLEM THIS SOLVES:** Developer searched wrong table `library_books` plural; hours lost because Odoo uses singular underscored `_table` names.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [PostgreSQL for Odoo devs](https://www.youtube.com/watch?v=ASPjB-WowBU)
 - [Inspect schema after install](https://www.youtube.com/watch?v=zKIKCtq9PfM)
@@ -2952,7 +2960,7 @@ Loading truck compartments: backend CSS in wrong compartment never reaches store
 - [odoo/odoo ORM sql generation code](https://github.com/odoo/odoo/tree/master/odoo/tools)
 - `\d library_book` and query ir_model_fields for your custom fields.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Custom models -> `library_book`. Many2many -> rel table `library_book_tag_rel`. Translations store in JSONB columns on translatable fields. Attachments in `ir_attachment` with filestore path.
 
@@ -2962,9 +2970,9 @@ Sequences: `ir_sequence` for human-readable numbers. UUIDs rare; integer id stan
 
 Use **`--log-level=debug_sql`** sparingly to learn ORM SQL without guessing.
 
-**THE IDEA THAT FIXED IT:** PostgreSQL holds business rows and ir_* configuration; respect both layers.
+**THE MAIN IDEA IN SIMPLE WORDS:** PostgreSQL holds business rows and ir_* configuration; respect both layers.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 library_book table
@@ -2973,11 +2981,11 @@ ir_model row: model=library.book, model=library.book
 ir_model_fields rows for each field definition
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 City land registry (PostgreSQL) plus zoning office filing cabinets (ir tables).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -2985,7 +2993,7 @@ City land registry (PostgreSQL) plus zoning office filing cabinets (ir tables).
 | ORM + module uninstall | Clean removal | Slower iteration |
 | Read-only SQL analytics | BI speed | Must mirror rules manually |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```sql
 -- After installing library_mgmt (read-only inspection)
@@ -2994,9 +3002,9 @@ SELECT name, ttype FROM ir_model_fields WHERE model = 'library.book';
 SELECT id, name, isbn FROM library_book LIMIT 5;
 ```
 
-**INTERVIEW PERSPECTIVE:** 'How find table for model?' -> `_table` default or model def.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** 'How find table for model?' -> `_table` default or model def.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3004,17 +3012,17 @@ SELECT id, name, isbn FROM library_book LIMIT 5;
 | Medium | Find M2M relation table name pattern. |
 | Hard | Explain ir_model purpose to DBA. |
 
-**THE BRIDGE:** Schema without indexes yields slow lists and reports at scale.
+**WHY THE NEXT TOPIC IS NEEDED:** Schema without indexes yields slow lists and reports when the amount of work grows.
 
 ---
 
 ## 17.2 Indexes, EXPLAIN, and ORM Performance
 
-**WHY THIS EXISTS:** **Index=True** on fields, smart domains, and **`read_group`** keep list views snappy; **`EXPLAIN ANALYZE`** validates SQL.
+**WHY YOU ARE LEARNING THIS:** **Index=True** on fields, smart domains, and **`read_group`** keep list views snappy; **`EXPLAIN ANALYZE`** validates SQL.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Partner search on unindexed email column timed out at 200k partners until index added.
+**THE PROBLEM THIS SOLVES:** Partner search on unindexed email column timed out at 200k partners until index added.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo performance tips](https://www.youtube.com/watch?v=k-hKNUZQi2o)
 - [Avoid N+1 in ORM](https://www.youtube.com/watch?v=RzQPI_lFKL8)
@@ -3025,17 +3033,17 @@ SELECT id, name, isbn FROM library_book LIMIT 5;
 - [odoo/odoo performance tests](https://github.com/odoo/odoo/tree/master/odoo/tests)
 - Enable debug_sql; compare search with/without index on custom Char field.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Add **`index=True`** on fields used in domains and joins. Store computed fields you filter on. Prefetch: reading related fields in loop may batch if recordset built correctly; avoid repeated `search` in compute constraints.
 
-Use **`mapped`**, **`filtered`**, **`sorted`** on recordsets before Python loops hit SQL repeatedly. For reports at scale, consider SQL views (`_auto = False` models) with DBA review.
+Use **`mapped`**, **`filtered`**, **`sorted`** on recordsets before Python loops hit SQL repeatedly. For reports when the amount of work grows, consider SQL views (`_auto = False` models) with DBA review.
 
 Pagination: default limits on actions; never `search([])` unbounded in cron. **`EXPLAIN`** on logged slow queries during staging load tests.
 
-**THE IDEA THAT FIXED IT:** Make SQL cheap: index filter columns, batch ORM, paginate everything.
+**THE MAIN IDEA IN SIMPLE WORDS:** Make SQL cheap: index filter columns, batch ORM, paginate everything.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 Bad: for line in order_lines: line.product_id.name  # N+1
@@ -3043,11 +3051,11 @@ Better: names = order_lines.mapped('product_id.name')
 SQL: JOIN product_product IN one query
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Checkout scanner reading barcodes in one pass (prefetch) vs walking to warehouse per item (N+1).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -3055,7 +3063,7 @@ Checkout scanner reading barcodes in one pass (prefetch) vs walking to warehouse
 | index=True + stored compute | Searchable fast fields | Storage + recompute cost |
 | Raw SQL everywhere | Tune max speed | Skips business rules |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 partner_email = fields.Char(index=True)
@@ -3065,9 +3073,9 @@ partners = self.env["res.partner"].search([("email", "=", email)], limit=1)
 # Shell: self.env.cr.execute('EXPLAIN ANALYZE SELECT ...')
 ```
 
-**INTERVIEW PERSPECTIVE:** Performance question: 'List view slow on 100k rows - what do you check?'
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Performance question: 'List view slow on 100k rows - what do you check?'
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3075,13 +3083,13 @@ partners = self.env["res.partner"].search([("email", "=", email)], limit=1)
 | Medium | Fix N+1 in loop using mapped. |
 | Hard | Design read_group pivot without loading all rows. |
 
-**THE BRIDGE:** Performance regressions surface in tests and upgrades if you automate both.
+**WHY THE NEXT TOPIC IS NEEDED:** Performance regressions surface in tests and upgrades if you automate both.
 
 ---
 
-**MASTERY CHECKPOINT - Phase 17:** Inspect PostgreSQL schema for models and apply index/prefetch performance habits.
+**CHECK YOUR UNDERSTANDING AFTER PHASE 17:** Inspect PostgreSQL schema for models and apply index/prefetch performance habits.
 
-> **Phase 17 complete?** [Build the aligned project](./Projects.md#L2634) · [Continue to Phase 18](#phase-18---testing-debugging-upgrades)
+> **Phase 17 complete?** [Build the aligned project](./Projects.md#odoo-phase-17-project) · [Continue to Phase 18](#phase-18---testing-debugging-upgrades)
 
 <a id="phase-18"></a>
 
@@ -3089,17 +3097,17 @@ partners = self.env["res.partner"].search([("email", "=", email)], limit=1)
 
 **Track:** Quality
 
-**GOAL:** Test modules, debug access errors, and migrate across Odoo versions
+**WHAT YOU WILL BE ABLE TO DO:** Test modules, debug access errors, and migrate across Odoo versions
 
-**PREREQUISITES:** See phase index and prior mastery checkpoints.
+**WHAT YOU SHOULD KNOW FIRST:** See phase index and prior mastery checkpoints.
 
 ## 18.1 TransactionCase, tags, and Test Data
 
-**WHY THIS EXISTS:** Odoo **`TransactionCase`** rolls back DB changes per test; use **`@tagged`** to slice suites in CI.
+**WHY YOU ARE LEARNING THIS:** Odoo **`TransactionCase`** rolls back DB changes per test; use **`@tagged`** to slice suites in CI.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Tests mutated shared demo database, flaked nightly, and team disabled CI entirely.
+**THE PROBLEM THIS SOLVES:** Tests mutated shared demo database, flaked nightly, and team disabled CI entirely.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo testing framework](https://www.youtube.com/watch?v=zq4aw99kv48)
 - [Writing module tests](https://www.youtube.com/watch?v=ASPjB-WowBU)
@@ -3110,7 +3118,7 @@ partners = self.env["res.partner"].search([("email", "=", email)], limit=1)
 - [yavy-odoo module boilerplate tests folder](https://github.com/yavy-odoo/odoo-module-boilerplate)
 - Test loan confirm sets book state and raises ValidationError on bad dates.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Place tests in `tests/` package imported from `tests/__init__.py`. Subclass `TransactionCase` or `SavepointCase` for faster isolation.
 
@@ -3120,9 +3128,9 @@ Tag slow tests `@tagged('post_install', '-at_install')`. Run: `odoo-bin --test-e
 
 HttpCase hits routes with test client for controller auth tests.
 
-**THE IDEA THAT FIXED IT:** Automated tests lock business rules; rollback keeps DB clean.
+**THE MAIN IDEA IN SIMPLE WORDS:** Automated tests lock business rules; rollback keeps DB clean.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 test_create_loan
@@ -3132,11 +3140,11 @@ test_create_loan
   rollback cursor after test
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Fire drill with reset button: prove hose works without flooding town (DB).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -3144,7 +3152,7 @@ Fire drill with reset button: prove hose works without flooding town (DB).
 | TransactionCase suite | Regression net | Upfront time |
 | Copy production DB to test | Realistic data | Privacy + flake risk |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 from odoo.tests import TransactionCase, tagged
@@ -3161,9 +3169,9 @@ class TestLibraryLoan(TransactionCase):
         self.assertEqual(book.state, "loan")
 ```
 
-**INTERVIEW PERSPECTIVE:** 'How test access rules?' -> with_user(simple_user).
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** 'How test access rules?' -> with_user(simple_user).
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3171,17 +3179,17 @@ class TestLibraryLoan(TransactionCase):
 | Medium | Test constraint raises ValidationError. |
 | Hard | HttpCase webhook signature test. |
 
-**THE BRIDGE:** Tests pass today; upgrades break tomorrow without migration discipline.
+**WHY THE NEXT TOPIC IS NEEDED:** Tests pass today; upgrades break tomorrow without migration discipline.
 
 ---
 
 ## 18.2 Upgrades, Migrations, and Debugging Toolkit
 
-**WHY THIS EXISTS:** **`-u` module**, **`migrations/` scripts**, and **logging** solve upgrade pain; **developer mode** inspects fields and rules live.
+**WHY YOU ARE LEARNING THIS:** **`-u` module**, **`migrations/` scripts**, and **logging** solve upgrade pain; **developer mode** inspects fields and rules live.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Skipped migration renamed column; production `-u` failed mid-transaction, needed DBA restore.
+**THE PROBLEM THIS SOLVES:** Skipped migration renamed column; production `-u` failed mid-transaction, needed DBA restore.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo module migration basics](https://www.youtube.com/watch?v=RzQPI_lFKL8)
 - [Debugging AccessError](https://www.youtube.com/watch?v=uJPjmS5Arug)
@@ -3192,7 +3200,7 @@ class TestLibraryLoan(TransactionCase):
 - [odoo/odoo openupgrade community references via awesome-odoo](https://github.com/NodenHQ/awesome-odoo)
 - Write pre-migration script renaming column; test `-u` on copy DB.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Bump version in manifest; add `migrations/18.0.1.0.1/pre-migrate.py` or use upgrade scripts API per series docs. Always test upgrade on **staging clone** with production-scale data sample.
 
@@ -3200,9 +3208,9 @@ Debug AccessError: read traceback model/method, check groups, ir.model.access, r
 
 Use **`pdb` / `breakpoint()`** in dev workers; `--dev=reload` for python changes. For view errors, `-u` and read full ParseError xpath line.
 
-**THE IDEA THAT FIXED IT:** Versioned migrations plus staged `-u` beat heroic production SQL.
+**THE MAIN IDEA IN SIMPLE WORDS:** Versioned migrations plus staged `-u` beat heroic production SQL.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 staging DB clone
@@ -3212,11 +3220,11 @@ staging DB clone
   promote to prod maintenance window
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Building renovation schedule: move furniture (data) before wall move (schema), not during opening hours.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -3224,7 +3232,7 @@ Building renovation schedule: move furniture (data) before wall move (schema), n
 | Migration scripts in module | Repeatable | Must test edge data |
 | Skip version bumps | Lazy | Blocks automated deploy |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # migrations/18.0.1.0.1/pre-migrate.py
@@ -3235,9 +3243,9 @@ def migrate(cr, version):
     )
 ```
 
-**INTERVIEW PERSPECTIVE:** 'Walk through upgrade you performed' and 'Debug AccessError steps' are senior staples.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** 'Walk through upgrade you performed' and 'Debug AccessError steps' are senior staples.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3245,13 +3253,13 @@ def migrate(cr, version):
 | Medium | Write pre-migrate SQL script. |
 | Hard | Plan zero-downtime upgrade strategy outline. |
 
-**THE BRIDGE:** Quality modules become portfolio proof for hiring.
+**WHY THE NEXT TOPIC IS NEEDED:** Quality modules become portfolio proof for hiring.
 
 ---
 
-**MASTERY CHECKPOINT - Phase 18:** Write TransactionCase tests and plan module migrations with staged upgrades.
+**CHECK YOUR UNDERSTANDING AFTER PHASE 18:** Write TransactionCase tests and plan module migrations with staged upgrades.
 
-> **Phase 18 complete?** [Build the aligned project](./Projects.md#L2655) · [Continue to Phase 19](#phase-19---portfolio-modules)
+> **Phase 18 complete?** [Build the aligned project](./Projects.md#odoo-phase-18-project) · [Continue to Phase 19](#phase-19---portfolio-modules)
 
 <a id="phase-19"></a>
 
@@ -3259,17 +3267,17 @@ def migrate(cr, version):
 
 **Track:** Ship
 
-**GOAL:** Ship demonstrable modules linked to Projects.md ODOO IDs
+**WHAT YOU WILL BE ABLE TO DO:** Ship demonstrable modules linked to Projects.md ODOO IDs
 
-**PREREQUISITES:** See phase index and prior mastery checkpoints.
+**WHAT YOU SHOULD KNOW FIRST:** See phase index and prior mastery checkpoints.
 
 ## 19.1 Designing a Demonstrable Odoo Module
 
-**WHY THIS EXISTS:** Portfolio modules should show **model design, security, views, workflow, tests**, and a README tracing phases 1-18.
+**WHY YOU ARE LEARNING THIS:** Portfolio modules should show **model design, security, views, workflow, tests**, and a README tracing phases 1-18.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Candidate demoed hello world field on partner; interviewer could not assess ORM, rules, or integration depth.
+**THE PROBLEM THIS SOLVES:** Candidate demoed hello world field on partner; interviewer could not assess ORM, rules, or integration depth.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Build portfolio Odoo module](https://www.youtube.com/watch?v=s-4zNx7wCFk)
 - [Module case study walkthrough](https://www.youtube.com/watch?v=zKIKCtq9PfM)
@@ -3280,7 +3288,7 @@ def migrate(cr, version):
 - [yavy-odoo/odoo-module-boilerplate README structure](https://github.com/yavy-odoo/odoo-module-boilerplate)
 - Pick Projects.md ODOO-03 scope; write design doc before coding.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Strong examples: **Library loans** (workflow, rules), **Helpdesk SLA** (computed fields, cron), **Payment webhook stub** (controller + idempotency), **OWL dashboard widget** (frontend patch).
 
@@ -3290,9 +3298,9 @@ Keep scope shippable in days not months. Include screenshots/GIF of UI and test 
 
 Tag repo with Odoo version series (`18.0`) prominently.
 
-**THE IDEA THAT FIXED IT:** One polished module beats five half-finished forks on GitHub.
+**THE MAIN IDEA IN SIMPLE WORDS:** One polished module beats five half-finished forks on GitHub.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 README
@@ -3302,11 +3310,11 @@ README
 Recruiter skims in 3 minutes
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Driving test: examiner watches parallel park (workflow), not just engine start (install).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -3314,7 +3322,7 @@ Driving test: examiner watches parallel park (workflow), not just engine start (
 | End-to-end vertical slice | Proves competence | Needs time discipline |
 | Forked OCA module tweak | Shows git skill | Hard to attribute |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```markdown
 ## Library Loans (Odoo 18)
@@ -3329,9 +3337,9 @@ Driving test: examiner watches parallel park (workflow), not just engine start (
 - Phase 18: tests/test_loan.py
 ```
 
-**INTERVIEW PERSPECTIVE:** Bring portfolio repo to interview; live `-u` and test run impresses.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Bring portfolio repo to interview; live `-u` and test run impresses.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3339,17 +3347,17 @@ Driving test: examiner watches parallel park (workflow), not just engine start (
 | Medium | Record 3-min demo GIF. |
 | Hard | OCA contribution PR with tests. |
 
-**THE BRIDGE:** Public code needs hosting story: GitHub plus optional Odoo.sh deploy.
+**WHY THE NEXT TOPIC IS NEEDED:** Public code needs hosting story: GitHub plus optional Odoo.sh deploy.
 
 ---
 
 ## 19.2 Odoo.sh, CI, and Open Source Hygiene
 
-**WHY THIS EXISTS:** **Odoo.sh** builds branches; **OCA conventions** teach lint, manifest, and translation hygiene for professional repos.
+**WHY YOU ARE LEARNING THIS:** **Odoo.sh** builds branches; **OCA conventions** teach lint, manifest, and translation hygiene for professional repos.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Module worked locally but failed Odoo.sh build because manifest missing license and tests never ran in CI.
+**THE PROBLEM THIS SOLVES:** Module worked locally but failed Odoo.sh build because manifest missing license and tests never ran in CI.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo.sh workflow overview](https://www.youtube.com/watch?v=5YIwP9-55Qk)
 - [Git branch staging production](https://www.youtube.com/watch?v=EHiH7hp0PBU)
@@ -3360,7 +3368,7 @@ Driving test: examiner watches parallel park (workflow), not just engine start (
 - [OCA/maintainer-tools conventions](https://github.com/OCA/maintainer-tools)
 - Connect GitHub repo to Odoo.sh trial; run test suite on push.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Odoo.sh: development branch auto installs changed modules; staging for UAT; production pinned. Learn `.odoo.sh` config if present in repo.
 
@@ -3370,9 +3378,9 @@ Add **`LICENSE`**, **`README`**, **`static/description/index.html`** for Apps st
 
 Link portfolio pieces to [`Projects.md`](./Projects.md) IDs **ODOO-01..08** in README for curriculum coherence.
 
-**THE IDEA THAT FIXED IT:** Ship like OCA: license, tests, CI, staged deploy.
+**THE MAIN IDEA IN SIMPLE WORDS:** Ship like OCA: license, tests, CI, staged deploy.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 git push origin feature/library
@@ -3382,11 +3390,11 @@ git push origin feature/library
   -> manual promote prod
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Theater rehearsal (staging) before opening night (production).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -3394,7 +3402,7 @@ Theater rehearsal (staging) before opening night (production).
 | Odoo.sh Git flow | Managed builds | Subscription cost |
 | Docker prod only self-host | Control | You own ops burden |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```yaml
 # .github/workflows/odoo-test.yml (sketch)
@@ -3405,9 +3413,9 @@ steps:
   - run: odoo-bin -d test --test-enable -i library_mgmt --stop-after-init
 ```
 
-**INTERVIEW PERSPECTIVE:** Discuss Odoo.sh vs on-prem with trade-offs for consulting clients.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Discuss Odoo.sh vs on-prem with trade-offs for consulting clients.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3415,13 +3423,13 @@ steps:
 | Medium | GitHub Action test job sketch. |
 | Hard | Multi-module repo dependency install order in CI. |
 
-**THE BRIDGE:** Portfolio unlocks interview performance in phase 20.
+**WHY THE NEXT TOPIC IS NEEDED:** Portfolio unlocks interview performance in phase 20.
 
 ---
 
-**MASTERY CHECKPOINT - Phase 19:** Ship a versioned module with README, tests, and optional Odoo.sh CI story.
+**CHECK YOUR UNDERSTANDING AFTER PHASE 19:** Ship a versioned module with README, tests, and optional Odoo.sh CI story.
 
-> **Phase 19 complete?** [Build the aligned project](./Projects.md#L2676) · [Continue to Phase 20](#phase-20---interviews--hire)
+> **Phase 19 complete?** [Build the aligned project](./Projects.md#odoo-phase-19-project) · [Continue to Phase 20](#phase-20---interviews--hire)
 
 <a id="phase-20"></a>
 
@@ -3429,17 +3437,17 @@ steps:
 
 **Track:** Hire
 
-**GOAL:** Speak Odoo architecture, debug live, and map to Interview.md drills
+**WHAT YOU WILL BE ABLE TO DO:** Speak Odoo architecture, debug live, and map to Interview.md drills
 
-**PREREQUISITES:** See phase index and prior mastery checkpoints.
+**WHAT YOU SHOULD KNOW FIRST:** See phase index and prior mastery checkpoints.
 
 ## 20.1 Odoo Technical Interview Loop
 
-**WHY THIS EXISTS:** Typical loop: **Python/OOP screen**, **Odoo ORM + module design**, **debugging AccessError**, **integration scenario**, sometimes **frontend OWL**.
+**WHY YOU ARE LEARNING THIS:** Typical loop: **Python/OOP screen**, **Odoo ORM + module design**, **debugging AccessError**, **integration scenario**, sometimes **frontend OWL**.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Candidate memorized field types but could not trace menu to model to rule when AccessError appeared in live exercise.
+**THE PROBLEM THIS SOLVES:** Candidate memorized field types but could not trace menu to model to rule when AccessError appeared in live exercise.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Odoo developer career tips](https://www.youtube.com/watch?v=s-4zNx7wCFk)
 - [Technical interview preparation](https://www.youtube.com/watch?v=RzQPI_lFKL8)
@@ -3450,7 +3458,7 @@ steps:
 - [dreispt/awesome-odoo hiring resources](https://github.com/dreispt/awesome-odoo)
 - 45-min mock: design library app modules, security, workflow, tests.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Prepare stories aligned with [`Interview.md`](./Interview.md): STAR for production bug, migration, performance win. Whiteboard: manifest load order, inherit vs inherits, payment webhook idempotency.
 
@@ -3460,9 +3468,9 @@ Consultancies test client communication: estimate module scope, mention upgrade 
 
 Bring laptop with docker/source Odoo ready; verify demo DB installs your module offline.
 
-**THE IDEA THAT FIXED IT:** Interview is narrated trade-offs plus live trace through stack you built in phases 1-19.
+**THE MAIN IDEA IN SIMPLE WORDS:** Interview is narrated trade-offs plus live trace through stack you built in phases 1-19.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 Screen: Python + OOP
@@ -3472,11 +3480,11 @@ Behavioral: STAR migration story
   -> offer
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Pilot exam: checklist plus simulator, not trivia flashcards only.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -3484,7 +3492,7 @@ Pilot exam: checklist plus simulator, not trivia flashcards only.
 | Portfolio + narration | Strong signal | Prep time investment |
 | Overclaim ERP expertise | Bold resume | Fails on accounting follow-up |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```text
 Mock answer outline (AccessError):
@@ -3495,9 +3503,9 @@ Mock answer outline (AccessError):
 5. Fix CSV/rule; add test with with_user
 ```
 
-**INTERVIEW PERSPECTIVE:** Recruiters often assign take-home: scoped module in 4-8 hours - reuse portfolio patterns.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Recruiters often assign take-home: scoped module in 4-8 hours - reuse portfolio patterns.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3505,17 +3513,17 @@ Mock answer outline (AccessError):
 | Medium | 45-min mock module design out loud. |
 | Hard | Debug provided broken xpath + rule repo. |
 
-**THE BRIDGE:** Hiring docs connect outward to Interview.md ongoing drills.
+**WHY THE NEXT TOPIC IS NEEDED:** Hiring docs connect outward to Interview.md ongoing drills.
 
 ---
 
 ## 20.2 Offer, Growth, and Continuous Learning
 
-**WHY THIS EXISTS:** Landing role is start: **OCA**, **release notes**, and **client upgrade cycles** keep skills current across Odoo versions.
+**WHY YOU ARE LEARNING THIS:** Landing role is start: **OCA**, **release notes**, and **client upgrade cycles** keep skills current across Odoo versions.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Developer learned only 14.0 patterns; 18.0 OWL client changes felt like starting over because release notes were ignored.
+**THE PROBLEM THIS SOLVES:** Developer learned only 14.0 patterns; 18.0 OWL client changes felt like starting over because release notes were ignored.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Stay current with Odoo releases](https://www.youtube.com/watch?v=k-hKNUZQi2o)
 - [OCA community contribution path](https://www.youtube.com/watch?v=YJg7dvwXQF8)
@@ -3526,7 +3534,7 @@ Mock answer outline (AccessError):
 - [odoo/odoo changelog on GitHub](https://github.com/odoo/odoo)
 - Subscribe release notes; upgrade one portfolio module per major series.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Junior path: customize modules, fix bugs, write tests. Mid: integrations, performance, OWL. Senior: architecture, upgrades, scoping, mentoring.
 
@@ -3534,11 +3542,11 @@ Join OCA GitHub, read PRs on modules you use. Follow [`Interview.md`](./Intervie
 
 Specialize vertically (inventory, manufacturing, accounting) once platform skills solid - recruiters pay for domain plus Odoo.
 
-Give back: blog a bridge concept from this roadmap; teaching cements hire-level fluency.
+Give back: blog a bridge concept from this roadmap; teaching cements hire-level confident working knowledge.
 
-**THE IDEA THAT FIXED IT:** Treat Odoo as evolving platform; budget learning time each release.
+**THE MAIN IDEA IN SIMPLE WORDS:** Treat Odoo as evolving platform; budget learning time each release.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
 Hired -> client projects -> upgrade season
@@ -3548,11 +3556,11 @@ Hired -> client projects -> upgrade season
   -> next interview cycle easier
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Medical license: continuing education credits each year, not one exam forever.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -3560,7 +3568,7 @@ Medical license: continuing education credits each year, not one exam forever.
 | Release note habit + OCA | Career longevity | Weekly time cost |
 | Jump frameworks yearly | Resume buzz | No depth for senior Odoo |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```markdown
 ## Post-hire 90-day plan (example)
@@ -3569,9 +3577,9 @@ Medical license: continuing education credits each year, not one exam forever.
 - Week 9-12: present internal lunch on record rules + upgrade checklist
 ```
 
-**INTERVIEW PERSPECTIVE:** Where do you see yourself: functional consultant vs technical lead vs integration specialist?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Where do you see yourself: functional consultant vs technical lead vs integration specialist?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3579,15 +3587,15 @@ Medical license: continuing education credits each year, not one exam forever.
 | Medium | Plan upgrade portfolio 17->18 steps. |
 | Hard | OCA PR proposal outline for bugfix. |
 
-**THE BRIDGE:** Continue cross-training in [`Interview.md`](./Interview.md) and ship capstones in [`Projects.md`](./Projects.md) ODOO section.
+**WHY THE NEXT TOPIC IS NEEDED:** Continue cross-training in [`Interview.md`](./Interview.md) and ship capstones in [`Projects.md`](./Projects.md) ODOO section.
 
 ---
 
-**MASTERY CHECKPOINT - Phase 20:** Run mock Odoo interviews with live debugging narrative and portfolio proof.
+**CHECK YOUR UNDERSTANDING AFTER PHASE 20:** Run mock Odoo interviews with live debugging narrative and portfolio proof.
 
 ---
 
-> **Phase 20 complete?** [Build the aligned project](./Projects.md#L2697) · [Return to the phase index](#phase-index)
+> **Phase 20 complete?** [Build the aligned project](./Projects.md#odoo-phase-20-project) · [Return to the phase index](#phase-index)
 
 ---
 
@@ -3626,7 +3634,7 @@ Finish OOP Phases 4-8 (encapsulation, inheritance, composition) -> **ODOO Phase 
 
 | Resource | Use for |
 | --- | --- |
-| [Server Framework 101](https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101/01_architecture.html) | Architecture, modules, ORM spine |
+| [Server Framework 101](https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101/01_architecture.html) | Architecture, modules, ORM foundation |
 | [Developer tutorials](https://www.odoo.com/documentation/18.0/developer/tutorials.html) | Structured exercises |
 | [Backend reference](https://www.odoo.com/documentation/18.0/developer/reference/backend.html) | ORM, security, actions |
 | [View architectures](https://www.odoo.com/documentation/18.0/developer/reference/user_interface/view_architectures.html) | XML views, xpath |

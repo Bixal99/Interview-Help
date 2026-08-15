@@ -1,10 +1,10 @@
 # The Zero-to-Hero Computer Networks Roadmap
 
-*Mohammad Bilal's complete, self-paced path from first principles to professional-level networking - packet switching, Ethernet, IP, routing, TCP/UDP, sockets, DNS, HTTP, TLS, Wireshark, Wi-Fi, CDNs, load balancers, BGP, and hiring readiness - told as one continuous chain of discoveries.*
+*Mohammad Bilal's complete, self-paced path from first principles to professional-level networking - packet switching, Ethernet, IP, routing, TCP/UDP, sockets, DNS, HTTP, TLS, Wireshark, Wi-Fi, CDNs, load balancers, BGP, and hiring readiness - told as a connected story in which each new idea solves a problem left by the previous one.*
 
 *Resources curated with Composio (web search, YouTube, GitHub) against [AlgoMaster CN roadmap](https://algomaster.io/roadmaps/cn), [Stanford CS144](https://cs144.github.io/), [Beej's Guide](https://beej.us/guide/bgnet/), and production learning centers.*
 
-**Scope:** 40 concepts · 20 phases · bridge-driven, no week clocks.
+**Scope:** 40 concepts · 20 phases · connected step by step, with no artificial weekly deadline.
 
 ```
 Bits → Packets → Routes → Apps → Scale → Hire
@@ -14,7 +14,15 @@ Bits → Packets → Routes → Apps → Scale → Hire
 
 ## How to Read This Document
 
-This is not a stack of unrelated notes you can jump around in. It is one long argument, and every section exists because the section before it hit a wall. Each stop opens by explaining **why what you just learned wasn't enough**, and closes by showing you **the crack that the next concept was invented to fill**. Read it in order the first time through - TCP only makes sense because of what broke with bare IP datagrams, and HTTPS only makes sense because of what broke with cleartext HTTP.
+### Start here if computer networks are completely new to you
+
+A **network** lets devices exchange information. A **packet** is a small labeled piece of that information. A **protocol** is an agreed set of rules for the exchange. An **address** identifies where information should go, a **port** identifies the program that should receive it, a **switch** connects devices on a local network, and a **router** moves packets between networks.
+
+When a section feels abstract, picture one message traveling from your laptop to another machine. At each step ask: What information was added? Which device read it? What choice did that device make? Use the diagrams, capture real traffic in the safe labs, and repeat the explanation until you can tell the story without reciting a list of layers.
+
+**Words you will meet often:** a **frame** carries data across one local link; a **MAC address** identifies a network interface on that local link; an **IP address** identifies a network destination; **DNS** translates names such as `example.com` into addresses; **TCP** provides an ordered, reliable byte stream; **UDP** sends separate messages without promising delivery; **HTTP** defines web requests and responses; **TLS** protects data while it travels and verifies the server; **NAT** translates addresses at a network boundary; **bandwidth** is the available carrying capacity; **latency** is delay; **throughput** is the amount successfully delivered over time; and a **CDN** keeps copies of suitable content closer to users.
+
+The sections are connected. Read them in order the first time because each one begins with a problem that the previous idea could not solve. Each section begins by explaining **why what you just learned wasn't enough**, and closes by showing you **the remaining problem that leads to the next idea**. Read it in order the first time through - TCP only makes sense because of what broke with bare IP datagrams, and HTTPS only makes sense because of what broke with cleartext HTTP.
 
 **There is no clock on this document.** No week numbers, no day-by-day plan, no "finish by." Networking knowledge does not compress into a fixed number of days, and pretending otherwise is how people memorize layer lists instead of building understanding. Move at the pace your own understanding requires. The only valid unit of progress here is: *can I now explain why the previous concept wasn't enough, and how this one fixes it?*
 
@@ -23,40 +31,40 @@ Every concept in this roadmap answers the same set of questions, because that se
 - What is it, in plain language?
 - Why does it exist - what problem forced someone to invent it?
 - What did people do before it existed, and what broke?
-- How does it solve that problem, mechanically, underneath the hood?
+- How does it solve that problem, step by step, inside the computer or system?
 - What does it cost? (Every solution trades something for something.)
 - Where does its own limitation show up - and what does *that* limitation force us to invent next?
 
 That last question is the engine of the whole roadmap. Nothing here is "just a topic to cover." Every topic is a *reaction* to the topic before it.
 
-### Two Crafts, One Stack
+### Two Kinds of Work, One Shared Foundation
 
-This document covers both **Network Engineer / Infrastructure** depth and **Software Engineer who must understand networks** depth, because they share a spine (packets, addressing, reliability, naming) and then diverge:
+This document covers both **Network Engineer / Infrastructure** depth and **Software Engineer who must understand networks** depth, because they share the same basic knowledge (packets, addressing, reliability, naming) and then diverge:
 
-| Role | Primary question | Primary craft |
+| Role | Primary question | Main work |
 | --- | --- | --- |
-| **Network / Infra Engineer** | How does traffic *get there*, reliably, at scale? | Switching, routing, BGP, Wireshark, firewalls, automation |
+| **Network / Infra Engineer** | How does traffic *get there*, reliably, when the amount of work grows? | Switching, routing, BGP, Wireshark, firewalls, automation |
 | **Software Engineer** | How do my programs *talk* across machines correctly? | Sockets, HTTP, TLS, DNS, timeouts, retries, observability |
 
 Phases 1-14 build the shared foundation. Phases 15-18 deepen ops and internet-scale design. Phases 19-20 are portfolio and hiring. If you only write application code, finish through Phase 14 carefully, then skim 15-18 for the vocabulary of production failures. If you want infrastructure, do not skip sockets and HTTP - engineers who cannot think in applications misconfigure the networks that serve them.
 
-### The Rhythm Every Concept Follows
+### The Beginner-Friendly Pattern Every Topic Follows
 
 Those questions are answered in the same order every single time. Once you have read one section you know the shape of all of them:
 
 | Element | What it gives you |
 | --- | --- |
-| **Why This Concept Exists** | The previous concept's limitation, stated plainly |
-| **Visual Learning** | Videos, interactive tools, docs, GitHub, practice - placed *here* |
-| **Detailed Explanation** | The mechanics, precisely, in prose |
-| **The Idea That Fixed It** | The compact insight that made the concept stick |
+| **Why You Are Learning This** | The previous concept's limitation, stated plainly |
+| **See It Before You Memorize It** | Videos, interactive tools, docs, GitHub, practice - placed *here* |
+| **Step-by-Step Explanation** | A precise, step-by-step explanation in words |
+| **The Idea That Fixed It** | The main idea in one clear sentence that made the concept stick |
 | **Internal Working, Step by Step** | A prose and diagram "animation" of what happens underneath |
-| **Real-World Analogy** | Something you can picture without a screen |
+| **Picture It Like This** | Something you can picture without a screen |
 | **Complexity / Trade-offs** | What improved, what it cost, and why |
-| **Code Implementation** | A minimal, working version you can run |
-| **Interview Perspective** | What the concept looks like when it is tested |
+| **Small Working Example** | A minimal, working version you can run |
+| **How to Explain This in an Interview** | What the concept looks like when it is tested |
 | **Practice** | Problems graded easy to hard |
-| **The Bridge** | The exact limitation that makes the next concept necessary |
+| **Why the Next Topic Is Needed** | The exact limitation that makes the next concept necessary |
 
 **Diagram conventions.** Diagrams are plain ASCII inside code fences. `|` and `v` mean "then this happens", `+--` joins related paths, `-->` and `->` mean packet movement, `X` marks a failure point, and boxes drawn with `+---+` are hosts, routers, or headers. Time runs downward.
 
@@ -160,17 +168,17 @@ Those questions are answered in the same order every single time. Once you have 
 
 **Track:** Foundations
 
-**GOAL:** Understand *why* we network at all, what metrics matter, and why the Internet is built on packet switching rather than dedicated circuits.
+**WHAT YOU WILL BE ABLE TO DO:** Understand *why* we network at all, what metrics matter, and why the Internet is built on packet switching rather than dedicated circuits.
 
-**PREREQUISITES:** Curiosity and a machine that can run a terminal. No prior networking required.
+**WHAT YOU SHOULD KNOW FIRST:** Curiosity and a machine that can run a terminal. No prior networking required.
 
 ## 1.1 What a Network Is - Hosts, Links, and the Job to Be Done
 
-**WHY THIS EXISTS - WHERE EVERYTHING STARTS:** Two programs on different machines share no memory. The only way they can cooperate is by sending messages across some physical medium. Every later protocol - Ethernet, IP, TCP, HTTP - exists to make that message exchange *possible*, then *scalable*, then *reliable*, then *named*, then *secure*. If you never see that single job clearly, you will treat networking as trivia instead of engineering.
+**WHY YOU ARE LEARNING THIS - WHERE THE ROADMAP STARTS:** Two programs on different machines share no memory. The only way they can cooperate is by sending messages across some physical medium. Every later protocol - Ethernet, IP, TCP, HTTP - exists to make that message exchange *possible*, then *scalable*, then *reliable*, then *named*, then *secure*. If you never see that single job clearly, you will treat networking as trivia instead of engineering.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Dedicated point-to-point wires between every pair of machines do not scale. Telephone-style **circuit switching** reserved a path for the duration of a call: great for continuous voice, catastrophic for bursty computer traffic that sits idle most of the time and then spikes. Without a shared network abstraction, every application would reinvent addressing, routing, and failure handling.
+**THE PROBLEM THIS SOLVES:** Dedicated point-to-point wires between every pair of machines do not scale. Telephone-style **circuit switching** reserved a path for the duration of a call: great for continuous voice, catastrophic for bursty computer traffic that sits idle most of the time and then spikes. Without a shared network abstraction, every application would reinvent addressing, routing, and failure handling.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [What is OSI Model | Real World Examples (ByteByteGo)](https://www.youtube.com/watch?v=0y6FtKsg6J4) - anchors "network" to devices you already use
 - Alternative: [TCP / IP in 50 seconds (NeetCodeIO)](https://www.youtube.com/watch?v=zDmIuTl6Wmg) - the stack as a one-breath overview before we unpack it
@@ -181,7 +189,7 @@ Those questions are answered in the same order every single time. Once you have 
 - GitHub: [nyquist/awesome-networking](https://github.com/nyquist/awesome-networking) - curated resource index
 - Practice: Draw your home network: modem/ONT → router → Wi-Fi → laptop/phone. Label which boxes you control.
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 A **computer network** is a set of **hosts** (end systems: phones, laptops, servers) connected by **links** (copper, fiber, radio) through optional **middleboxes** (switches, routers, firewalls, load balancers). The unit of work is not "keep a continuous channel open." It is "deliver discrete messages under constraints." Those constraints are physical (finite speed of light and bandwidth), economic (shared infrastructure), and adversarial (loss, delay, reordering, eavesdropping).
 
@@ -193,9 +201,9 @@ Three metrics dominate every design conversation:
 
 Applications care about different mixes. A file download loves bandwidth. A game loves latency. A bank transfer loves reliability. Networking is the art of sharing one physical world among applications with incompatible wishes.
 
-**THE IDEA THAT FIXED IT:** Stop thinking "a wire between two programs." Think "a shared unreliable messenger service with addresses." Once that model is in place, protocols become policies for how the messenger should behave.
+**THE MAIN IDEA IN SIMPLE WORDS:** Stop thinking "a wire between two programs." Think "a shared unreliable messenger service with addresses." Once that model is in place, protocols become policies for how the messenger should behave.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Without a network abstraction:
@@ -223,11 +231,11 @@ Applications care about different mixes. A file download loves bandwidth. A game
     I may lose, delay, reorder, or duplicate."
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A city road system: cars (packets) share streets (links). Traffic lights and signs (protocols) coordinate. Rush hour (congestion) slows everyone. A private driveway between every house would "work" and bankrupt the city.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -236,7 +244,7 @@ A city road system: cars (packets) share streets (links). Traffic lights and sig
 | Optimize only for bandwidth | Fat pipes | Interactive apps feel terrible |
 | Optimize only for latency | Snappy UX | Waste capacity on tiny messages |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Networking starts as a thought experiment you can still measure locally.
@@ -256,9 +264,9 @@ print(f"approx RTT+transfer: {rtt*1000:.1f} ms, bytes: {n}")
 # real "speed" is always a mix of latency and bandwidth.
 ```
 
-**INTERVIEW PERSPECTIVE:** "What is a computer network?" Weak answer: devices connected together. Strong answer: hosts exchanging messages over shared links under loss/delay constraints, with protocols providing addresses, multiplexing, and reliability *as needed*. Follow-up: "Why not circuit switching for the Internet?" - bursty traffic and scale.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "What is a computer network?" Weak answer: devices connected together. Strong answer: hosts exchanging messages over shared links under loss/delay constraints, with protocols providing addresses, multiplexing, and reliability *as needed*. Follow-up: "Why not circuit switching for the Internet?" - bursty traffic and scale.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -267,17 +275,17 @@ print(f"approx RTT+transfer: {rtt*1000:.1f} ms, bytes: {n}")
 | Medium | Estimate: 1 MB over a 100 ms RTT, 10 Mbps link - is latency or bandwidth the bottleneck? |
 | Hard | Read AlgoMaster's Foundations section and rewrite it as a bridge chain (each topic forces the next) |
 
-**THE BRIDGE to Metrics & Packet Switching:** Knowing that machines share a messenger is not enough. We still need precise language for *how well* the messenger works, and a decisive answer to circuit vs packet switching - the fork that created the Internet.
+**WHY THE NEXT TOPIC IS NEEDED - Metrics & Packet Switching:** Knowing that machines share a messenger is not enough. We still need precise language for *how well* the messenger works, and a decisive answer to circuit vs packet switching - the fork that created the Internet.
 
 ---
 
 ## 1.2 Bandwidth, Latency, Throughput - and Packet Switching
 
-**WHY THIS EXISTS:** People say "the network is slow" and mean three different failures. Separately, circuit switching cannot economically serve bursty computer traffic. **Packet switching** chops messages into independently routed chunks so links can be shared statistically. That choice is the root of nearly every later headache (loss, reordering, congestion) and nearly every later invention (TCP, buffers, QoS).
+**WHY YOU ARE LEARNING THIS:** People say "the network is slow" and mean three different failures. Separately, circuit switching cannot economically serve bursty computer traffic. **Packet switching** chops messages into independently routed chunks so links can be shared statistically. That choice is the root of nearly every later headache (loss, reordering, congestion) and nearly every later invention (TCP, buffers, QoS).
 
-**THE PROBLEM BEFORE THIS EXISTED:** Phone networks reserved end-to-end circuits. Fine for continuous voice. Computer traffic is silent, then floods. Reserved circuits sat idle while other users waited. Message switching (store whole messages at hops) added huge delay. Something had to multiplex better.
+**THE PROBLEM THIS SOLVES:** Phone networks reserved end-to-end circuits. Fine for continuous voice. Computer traffic is silent, then floods. Reserved circuits sat idle while other users waited. Message switching (store whole messages at hops) added huge delay. Something had to multiplex better.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated: [Understanding Routing! (Sabin Civil Engineering)](https://www.youtube.com/watch?v=gQtgtKtvRdo) - packets traveling a path (routing comes later; the *packet* idea is visible here)
 - Alternative: [Routers, Switches, Packets and Frames (NGT Academy)](https://www.youtube.com/watch?v=zhlMLRNY5-4) - vocabulary of chunks on the wire
@@ -287,7 +295,7 @@ print(f"approx RTT+transfer: {rtt*1000:.1f} ms, bytes: {n}")
 - GitHub: [OfekiAlm/practical-networking-from-zero-to-hero](https://github.com/OfekiAlm/practical-networking-from-zero-to-hero/)
 - Practice: Compare `ping example.com` RTT to downloading a large file; write one paragraph on which limit you hit
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 **Latency** is delay. Propagation delay is distance / signal speed. Serialization delay is packet size / bandwidth. Queuing delay is waiting in buffers. Processing delay is device compute. **Bandwidth** is capacity. **Throughput** is what you actually achieve after loss and protocol overhead. **Goodput** is application-useful bytes per second.
 
@@ -295,9 +303,9 @@ print(f"approx RTT+transfer: {rtt*1000:.1f} ms, bytes: {n}")
 
 Circuit switching still appears inside networks (optical wavelengths, telephone cores, some QoS reservations), but the Internet's *service model* to applications is packet-switched best effort.
 
-**THE IDEA THAT FIXED IT:** Chop communication into addressed packets and share links statistically. Accept unreliability at the bottom; add reliability only where applications need it (the end-to-end argument).
+**THE MAIN IDEA IN SIMPLE WORDS:** Chop communication into addressed packets and share links statistically. Accept unreliability at the bottom; add reliability only where applications need it (the end-to-end argument).
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Delay budget for one packet:
@@ -330,11 +338,11 @@ Circuit switching still appears inside networks (optical wavelengths, telephone 
    Burst from A uses the link; then burst from B; nobody holds it idle.
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A highway vs a private rail car reserved for your whole trip. Highways waste less when traffic is bursty; they also have jams, accidents, and unpredictable arrival times. TCP is the seatbelt and the re-drive-when-crashed policy.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -343,7 +351,7 @@ A highway vs a private rail car reserved for your whole trip. Highways waste les
 | Tiny packets | Lower per-packet delay | Header bloat, more PPS load |
 | Big router buffers | Absorb bursts | Bufferbloat (latency inflation) |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Feel serialization delay vs bandwidth with a toy model.
@@ -357,9 +365,9 @@ for size in (64, 1500, 65535):
     print(size, "B @ 1Gbps ->", round(serialization_delay_ms(size, 1000), 6), "ms")
 ```
 
-**INTERVIEW PERSPECTIVE:** "Difference between bandwidth and latency?" and "Why packet switching?" are classic screens. Add bufferbloat if you want senior signal: big buffers raise latency under load even when throughput looks fine.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "Difference between bandwidth and latency?" and "Why packet switching?" are classic screens. Add bufferbloat if you want senior signal: big buffers raise latency under load even when throughput looks fine.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -368,11 +376,11 @@ for size in (64, 1500, 65535):
 | Medium | Two paths: 10ms RTT 1Mbps vs 100ms RTT 100Mbps - which wins for a 1KB RPC? for a 1GB file? |
 | Hard | Read HPBN latency chapter and explain why mobile networks feel "slow" even on "fast" links |
 
-**THE BRIDGE to the Physical Layer:** Packet switching assumes we can put bits onto a medium and get them off. We have not yet asked what that medium *is*, what noise does to bits, or why distance and frequency bound everything above. That is the Physical layer.
+**WHY THE NEXT TOPIC IS NEEDED - the Physical Layer:** Packet switching assumes we can put bits onto a medium and get them off. We have not yet asked what that medium *is*, what noise does to bits, or why distance and frequency bound everything above. That is the Physical layer.
 
 ---
 
-> **Phase 1 complete?** [Build the aligned project](./Projects.md#L1448) · [Continue to Phase 2](#phase-2---physical-layer-putting-bits-on-a-medium)
+> **Phase 1 complete?** [Build the aligned project](./Projects.md#networks-phase-1-project) · [Continue to Phase 2](#phase-2---physical-layer-putting-bits-on-a-medium)
 
 <a id="phase-2"></a>
 
@@ -380,17 +388,17 @@ for size in (64, 1500, 65535):
 
 **Track:** Foundations
 
-**GOAL:** Understand how bits become signals, why media choice matters, and which limits no protocol above can wish away.
+**WHAT YOU WILL BE ABLE TO DO:** Understand how bits become signals, why media choice matters, and which limits no protocol above can wish away.
 
-**PREREQUISITES:** Phase 1 (packet switching and metrics).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 1 (packet switching and metrics).
 
 ## 2.1 Transmission Media, Signals, and Noise
 
-**WHY THIS EXISTS:** Packets are logical. The universe is physical. Before Ethernet or IP can mean anything, energy must travel as voltage, light pulses, or radio waves. The Physical layer turns bits into signals and back, under noise, attenuation, and regulatory limits.
+**WHY YOU ARE LEARNING THIS:** Packets are logical. The universe is physical. Before Ethernet or IP can mean anything, energy must travel as voltage, light pulses, or radio waves. The Physical layer turns bits into signals and back, under noise, attenuation, and regulatory limits.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Ideal "bit pipes" do not exist. Copper attenuates. Fiber needs optics and careful connectors. Radio is shared, regulated, and hostile. Ignoring the medium produces fantasy designs ("just send faster") that physics rejects.
+**THE PROBLEM THIS SOLVES:** Ideal "bit pipes" do not exist. Copper attenuates. Fiber needs optics and careful connectors. Radio is shared, regulated, and hostile. Ignoring the medium produces fantasy designs ("just send faster") that physics rejects.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated: [How a Switch & Router work? (NETWORK WALKS)](https://www.youtube.com/watch?v=F1O8qs8hkm4) - devices sit on physical links; notice the cables/air as first-class
 - Alternative: Professor Messer Network+ physical media segments (search "Professor Messer copper fiber")
@@ -400,15 +408,15 @@ for size in (64, 1500, 65535):
 - GitHub: [CiscoDevNet/netprog_basics](https://github.com/CiscoDevNet/netprog_basics)
 - Practice: Categorize last-mile access at home: DSL, cable DOCSIS, fiber ONT, 4G/5G, satellite
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 **Guided media** (twisted pair, coax, fiber) confine the signal. **Unguided media** (radio, microwave, free-space optical) radiate into space. Encoding maps bit patterns to signal patterns (NRZ, Manchester, PAM, QAM). **Modulation** moves baseband signals onto carriers for radio and optics.
 
 Noise and attenuation force **repeaters/amplifiers** and limit distance-bandwidth products. Shannon capacity says: channel capacity depends on bandwidth and signal-to-noise ratio. No clever framing layer beats that ceiling; it can only approach it.
 
-**THE IDEA THAT FIXED IT:** Treat the Physical layer as a bit service with known error rates and delay. Design upper layers assuming bits flip and links fail.
+**THE MAIN IDEA IN SIMPLE WORDS:** Treat the Physical layer as a bit service with known error rates and delay. Design upper layers assuming bits flip and links fail.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  App bytes
@@ -427,11 +435,11 @@ Noise and attenuation force **repeaters/amplifiers** and limit distance-bandwidt
  Receiver samples signal --> estimates bits --> hands up
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Shouting across a crowded room (radio), talking through a paper cup string (copper), or flashing a flashlight in Morse through a dark tube (fiber). Same message idea; different physics and failure modes.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Media | Strength | Weakness |
 | --- | --- | --- |
@@ -439,7 +447,7 @@ Shouting across a crowded room (radio), talking through a paper cup string (copp
 | Fiber | Distance, bandwidth, immune to EMI | Cost, fragility, no PoE itself |
 | Wi-Fi / cellular | Mobility | Shared spectrum, interference, variable loss |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # You cannot simulate electromagnetics in ten lines, but you can model BER impact.
@@ -460,9 +468,9 @@ print("received", transmit(msg, 0.05))
 # Upper layers must detect/correct or retransmit — Phase 3.
 ```
 
-**INTERVIEW PERSPECTIVE:** Rarely deep physics in SE interviews; infra interviews may ask copper vs fiber vs wireless trade-offs, or why fiber for data center spines. Tie answers to latency, bandwidth, and failure domains.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Rarely deep physics in SE interviews; infra interviews may ask copper vs fiber vs wireless trade-offs, or why fiber for data center spines. Tie answers to latency, bandwidth, and failure domains.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -470,32 +478,32 @@ print("received", transmit(msg, 0.05))
 | Medium | Why does Wi-Fi throughput collapse in a crowded apartment building? |
 | Hard | Explain Shannon capacity qualitatively and what "better encoding" can and cannot do |
 
-**THE BRIDGE to Framing:** The Physical layer delivers a stream of bits that may be wrong or unsynchronized. Applications need *messages* with boundaries and integrity checks. That requires framing - the Data Link layer.
+**WHY THE NEXT TOPIC IS NEEDED - Framing:** The Physical layer delivers a stream of bits that may be wrong or unsynchronized. Applications need *messages* with boundaries and integrity checks. That requires framing - the Data Link layer.
 
 ---
 
 ## 2.2 Bandwidth-Delay, Encoding Limits, and Why Links Still Fail
 
-**WHY THIS EXISTS:** Even a perfect encoding cannot erase distance. The **bandwidth-delay product** tells you how many bits are "in flight" on a fat long pipe - which later forces TCP window sizing. Physical links also fail: cuts, fading, congestion at the radio layer. Upper layers must assume failure is normal.
+**WHY YOU ARE LEARNING THIS:** Even a perfect encoding cannot erase distance. The **bandwidth-delay product** tells you how many bits are "in flight" on a fat long pipe - which later forces TCP window sizing. Physical links also fail: cuts, fading, congestion at the radio layer. Upper layers must assume failure is normal.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Designers treated links as infinite reliable wires. Protocols then under-buffered long fat networks or panicked on wireless loss. Understanding BDP and link failure modes prevents those mistakes.
+**THE PROBLEM THIS SOLVES:** Designers treated links as infinite reliable wires. Protocols then under-buffered long fat networks or panicked on wireless loss. Understanding BDP and link failure modes prevents those mistakes.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [HPBN - latency and bandwidth primer](https://hpbn.co/primer-on-latency-and-bandwidth/)
 - [Subnetting / addressing comes later; for now watch link lights and `ethtool`/`ip link` output]
 - [Cloudflare - bandwidth vs latency](https://www.cloudflare.com/learning/performance/glossary/what-is-latency/)
 - [caesar0301/awesome-pcaptools](https://github.com/caesar0301/awesome-pcaptools) - later you will capture link-level frames
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Bandwidth-delay product (BDP) = bandwidth × RTT. A 1 Gbps path with 40 ms RTT has about 5 MB in flight if fully utilized. A sender that cannot keep that much unacknowledged data outstanding will never fill the pipe. This Physical/metric fact becomes a Transport requirement in Phase 10.
 
 Links "fail soft" too: Ethernet may renegotiate speed; Wi-Fi may rate-adapt downward; cellular may change towers. From IP's perspective the next hop sometimes just drops more packets.
 
-**THE IDEA THAT FIXED IT:** Measure the pipe (bandwidth, delay, loss). Size protocols to the pipe. Never assume a link is binary perfect.
+**THE MAIN IDEA IN SIMPLE WORDS:** Measure the pipe (bandwidth, delay, loss). Size protocols to the pipe. Never assume a link is binary perfect.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  BDP example:
@@ -507,11 +515,11 @@ Links "fail soft" too: Ethernet may renegotiate speed; Wi-Fi may rate-adapt down
    If TCP window << 5 MB, throughput << capacity.
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A long freight train: the track can be "fast" (many cars per hour) and still take a long time for the first car to arrive (latency). How many cars are on the track at once is the BDP.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Reality | Consequence |
 | --- | --- |
@@ -519,7 +527,7 @@ A long freight train: the track can be "fast" (many cars per hour) and still tak
 | Wireless loss | Must not always treat loss as congestion |
 | Physical cuts | Need redundant paths (routing, Phase 6) |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 def bdp_bytes(bandwidth_mbps: float, rtt_ms: float) -> float:
@@ -528,9 +536,9 @@ def bdp_bytes(bandwidth_mbps: float, rtt_ms: float) -> float:
 print("BDP bytes:", int(bdp_bytes(1000, 40)))  # ~5_000_000
 ```
 
-**INTERVIEW PERSPECTIVE:** "What is bandwidth-delay product and why does TCP care?" is a strong systems question. Answer with the in-flight bytes intuition.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "What is bandwidth-delay product and why does TCP care?" is a strong systems question. Answer with the in-flight bytes intuition.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -538,11 +546,11 @@ print("BDP bytes:", int(bdp_bytes(1000, 40)))  # ~5_000_000
 | Medium | Why might a satellite link with huge bandwidth still feel laggy for SSH? |
 | Hard | Relate BDP to bufferbloat: when are large buffers helpful vs harmful? |
 
-**THE BRIDGE to Data Link:** Bits on a wire are not yet useful messages. We need frame boundaries, hardware addresses on a local segment, and error detection - Ethernet's world.
+**WHY THE NEXT TOPIC IS NEEDED - Data Link:** Bits on a wire are not yet useful messages. We need frame boundaries, hardware addresses on a local segment, and error detection - Ethernet's world.
 
 ---
 
-> **Phase 2 complete?** [Build the aligned project](./Projects.md#L1469) · [Continue to Phase 3](#phase-3---data-link--ethernet-frames-on-a-segment)
+> **Phase 2 complete?** [Build the aligned project](./Projects.md#networks-phase-2-project) · [Continue to Phase 3](#phase-3---data-link--ethernet-frames-on-a-segment)
 
 <a id="phase-3"></a>
 
@@ -550,17 +558,17 @@ print("BDP bytes:", int(bdp_bytes(1000, 40)))  # ~5_000_000
 
 **Track:** Local Networks
 
-**GOAL:** Understand framing, MAC addressing, error detection, and Ethernet as the dominant LAN technology.
+**WHAT YOU WILL BE ABLE TO DO:** Understand framing, MAC addressing, error detection, and Ethernet as the dominant LAN technology.
 
-**PREREQUISITES:** Phases 1-2.
+**WHAT YOU SHOULD KNOW FIRST:** Phases 1-2.
 
 ## 3.1 Framing, MAC Addresses, and CRC
 
-**WHY THIS EXISTS:** A raw bit stream has no message boundaries. The Data Link layer packages bits into **frames**, identifies source/destination on the *local* segment with **MAC addresses**, and often adds a **CRC** so corrupted frames can be discarded.
+**WHY YOU ARE LEARNING THIS:** A raw bit stream has no message boundaries. The Data Link layer packages bits into **frames**, identifies source/destination on the *local* segment with **MAC addresses**, and often adds a **CRC** so corrupted frames can be discarded.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Receivers could not tell where a message ended. Noise flipped bits silently. On a shared cable, nobody knew who should accept a transmission. Local delivery was chaos.
+**THE PROBLEM THIS SOLVES:** Receivers could not tell where a message ended. Noise flipped bits silently. On a shared cable, nobody knew who should accept a transmission. Local delivery was chaos.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Routers, Switches, Packets and Frames (NGT Academy)](https://www.youtube.com/watch?v=zhlMLRNY5-4)
 - [Network Ports Explained (PowerCert)](https://www.youtube.com/watch?v=g2fT-g9PX9o) - ports are L4; still useful contrast vs MAC
@@ -569,13 +577,13 @@ print("BDP bytes:", int(bdp_bytes(1000, 40)))  # ~5_000_000
 - [smoltcp](https://github.com/smoltcp-rs/smoltcp) - link-layer modules in a real stack
 - [Wireshark Sample Captures](https://wiki.wireshark.org/SampleCaptures)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 A typical Ethernet frame: destination MAC, source MAC, EtherType (what payload is - IPv4, IPv6, ARP...), payload, FCS/CRC. MAC addresses are 48-bit link-layer identifiers. They are meaningful **only on the local segment**. The CRC detects (most) corruption; Ethernet usually drops bad frames rather than repairing them - recovery is left upward (TCP) or to retransmission strategies at other layers.
 
-**THE IDEA THAT FIXED IT:** Put boundaries and local addresses around payloads, checksum the frame, and drop garbage early.
+**THE MAIN IDEA IN SIMPLE WORDS:** Put boundaries and local addresses around payloads, checksum the frame, and drop garbage early.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Ethernet frame (simplified):
@@ -590,11 +598,11 @@ A typical Ethernet frame: destination MAC, source MAC, EtherType (what payload i
    3. Hand payload to type demux (IP, ARP, ...).
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A sealed envelope with building-local room numbers (MAC), a "contents type" sticker (EtherType), and a wax seal (CRC). The postal truck route across cities is IP - a different address system.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Buys | Costs |
 | --- | --- | --- |
@@ -602,7 +610,7 @@ A sealed envelope with building-local room numbers (MAC), a "contents type" stic
 | Global unique MACs | Plug-and-play local delivery | Privacy concerns; MACs can be randomized |
 | Variable payload size | Efficiency | Need MTU discipline later |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import struct, zlib
@@ -617,9 +625,9 @@ frame = header + payload
 print(hex(fake_fcs(frame)))
 ```
 
-**INTERVIEW PERSPECTIVE:** "What is a MAC address vs IP address?" Link-local vs routable. "What happens if CRC fails?" Frame dropped.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "What is a MAC address vs IP address?" Link-local vs routable. "What happens if CRC fails?" Frame dropped.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -627,29 +635,29 @@ print(hex(fake_fcs(frame)))
 | Medium | Why can't you use MAC addresses to route across the Internet? |
 | Hard | Read smoltcp ethernet module and summarize how it demuxes EtherTypes |
 
-**THE BRIDGE to Ethernet LANs & Switching:** Framing delivers to one segment. Modern buildings have hundreds of hosts. A single shared bus does not scale - we need switches and MAC learning.
+**WHY THE NEXT TOPIC IS NEEDED - Ethernet LANs & Switching:** Framing delivers to one segment. Modern buildings have hundreds of hosts. A single shared bus does not scale - we need switches and MAC learning.
 
 ---
 
 ## 3.2 Ethernet Evolution, MTU, and Collision Domains (Then vs Now)
 
-**WHY THIS EXISTS:** Classic Ethernet shared a cable with CSMA/CD. Today's Ethernet is mostly switched full-duplex links - collisions are largely historical, but **MTU**, broadcasts, and segment thinking remain.
+**WHY YOU ARE LEARNING THIS:** Classic Ethernet shared a cable with CSMA/CD. Today's Ethernet is mostly switched full-duplex links - collisions are largely historical, but **MTU**, broadcasts, and segment thinking remain.
 
 **THE PROBLEM BEFORE SWITCHING DOMINATED:** Shared media meant collisions, contention, and one chatty host ruining everyone's day. Understanding the old model explains why switches were revolutionary.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [How a Switch & Router work?](https://www.youtube.com/watch?v=F1O8qs8hkm4)
 - [Cloudflare - MTU](https://www.cloudflare.com/learning/network-layer/what-is-mtu/)
 - Packet Tracer: hub vs switch topologies
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 **MTU** (Maximum Transmission Unit) caps frame payload (commonly 1500 bytes on Ethernet). Exceed it and IP must fragment (discouraged) or TCP must segment. **Jumbo frames** raise MTU in controlled DCs. Modern full-duplex switched Ethernet eliminates CSMA/CD on those links; Wi-Fi remains a shared-medium spiritual cousin (Phase 16).
 
-**THE IDEA THAT FIXED IT:** Replace shared collision domains with point-to-point switched links; keep a sane MTU as a contract.
+**THE MAIN IDEA IN SIMPLE WORDS:** Replace shared collision domains with point-to-point switched links; keep a sane MTU as a contract.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Old: Hub (one collision domain)
@@ -662,11 +670,11 @@ print(hex(fake_fcs(frame)))
    Frames forwarded only to needed ports (Phase 4)
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A party where everyone shouts in one room (hub) vs a receptionist who opens only the right door for each message (switch).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Design | Trade-off |
 | --- | --- |
@@ -674,7 +682,7 @@ A party where everyone shouts in one room (hub) vs a receptionist who opens only
 | Jumbo MTU | Higher efficiency vs fragile mixed paths |
 | Switched Ethernet | Scale vs need for spanning tree / loop prevention |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Path MTU discovery is ICMP-driven in real life; here, a policy stub.
@@ -685,9 +693,9 @@ def segments(payload: bytes, mtu: int = 1500, header: int = 40) -> list[bytes]:
 print(len(segments(b"x" * 4000)))  # how many L3/L4 chunks needed
 ```
 
-**INTERVIEW PERSPECTIVE:** "What is MTU? What breaks if one hop has a smaller MTU?" Black holes without PMTUD; classic debugging story.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "What is MTU? What breaks if one hop has a smaller MTU?" Black holes without PMTUD; classic debugging story.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -695,11 +703,11 @@ print(len(segments(b"x" * 4000)))  # how many L3/L4 chunks needed
 | Medium | Explain why VPN encapsulation sometimes causes unexpected fragmentation |
 | Hard | Lab: change MTU on a VM interface and observe TCP behavior with Wireshark |
 
-**THE BRIDGE to Switching & VLANs:** Switches scale Ethernet - but floods, loops, and flat broadcast domains create the next set of problems.
+**WHY THE NEXT TOPIC IS NEEDED - Switching & VLANs:** Switches scale Ethernet - but floods, loops, and flat broadcast domains create the next set of problems.
 
 ---
 
-> **Phase 3 complete?** [Build the aligned project](./Projects.md#L1490) · [Continue to Phase 4](#phase-4---switching--vlans)
+> **Phase 3 complete?** [Build the aligned project](./Projects.md#networks-phase-3-project) · [Continue to Phase 4](#phase-4---switching--vlans)
 
 <a id="phase-4"></a>
 
@@ -707,17 +715,17 @@ print(len(segments(b"x" * 4000)))  # how many L3/L4 chunks needed
 
 **Track:** Local Networks
 
-**GOAL:** Explain how switches forward frames, why flooding exists, and how VLANs segment broadcast domains.
+**WHAT YOU WILL BE ABLE TO DO:** Explain how switches forward frames, why flooding exists, and how VLANs segment broadcast domains.
 
-**PREREQUISITES:** Phase 3.
+**WHAT YOU SHOULD KNOW FIRST:** Phase 3.
 
 ## 4.1 MAC Learning, Flooding, and Forwarding
 
-**WHY THIS EXISTS:** A switch must decide which port should receive a frame. It learns source MACs passively into a **MAC address table**. Unknown unicasts are **flooded**. This builds a LAN that scales far beyond a hub without configuring every host.
+**WHY YOU ARE LEARNING THIS:** A switch must decide which port should receive a frame. It learns source MACs passively into a **MAC address table**. Unknown unicasts are **flooded**. This builds a LAN that scales far beyond a hub without configuring every host.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Hubs repeated bits everywhere. Bandwidth shared; security none; collisions frequent. Manual wiring of every pair was impossible.
+**THE PROBLEM THIS SOLVES:** Hubs repeated bits everywhere. Bandwidth shared; security none; collisions frequent. Manual wiring of every pair was impossible.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [How a Switch & Router work?](https://www.youtube.com/watch?v=F1O8qs8hkm4)
 - [How do Routers work? What is a Routing Table? (Practical Networking)](https://www.youtube.com/watch?v=FzfrSDaWeLE) - contrast L2 forward vs L3 route
@@ -725,13 +733,13 @@ print(len(segments(b"x" * 4000)))  # how many L3/L4 chunks needed
 - Vendor docs on CAM/MAC tables (Cisco, etc.)
 - [networktocode/awesome-network-automation](https://github.com/networktocode/awesome-network-automation)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 On each frame: learn `src MAC -> ingress port`. If `dst MAC` known, forward out that port; else flood all ports except ingress. Broadcasts always flood. MAC entries age out. Loops without spanning tree multiply broadcasts into storms - catastrophic.
 
-**THE IDEA THAT FIXED IT:** Learn by observation; forward selectively; flood only when necessary.
+**THE MAIN IDEA IN SIMPLE WORDS:** Learn by observation; forward selectively; flood only when necessary.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Empty table. A sends to B (unknown):
@@ -744,11 +752,11 @@ On each frame: learn `src MAC -> ingress port`. If `dst MAC` known, forward out 
    B replies. Learn B@p2. Future A<->B is unicast switched, not flooded.
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A receptionist who writes down where each employee sits when they first speak, then delivers mail to the right desk - unless unknown, then ask everyone.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Behavior | Buys | Costs |
 | --- | --- | --- |
@@ -756,7 +764,7 @@ A receptionist who writes down where each employee sits when they first speak, t
 | Aging | Adapt to moves | Brief re-floods |
 | No loop control | Simplicity | Broadcast storms |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 class Switch:
@@ -775,9 +783,9 @@ s.handle("BBB", "AAA", "p2")
 print(s.handle("AAA", "BBB", "p1"))  # ["p2"]
 ```
 
-**INTERVIEW PERSPECTIVE:** Walk through unknown unicast vs broadcast. Mention spanning tree if asked about loops.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Walk through unknown unicast vs broadcast. Mention spanning tree if asked about loops.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -785,29 +793,29 @@ print(s.handle("AAA", "BBB", "p1"))  # ["p2"]
 | Medium | Why do MAC flaps happen and what do they indicate? |
 | Hard | Packet Tracer: create a loop without STP and observe the storm (carefully) |
 
-**THE BRIDGE to VLANs:** One flat LAN means one broadcast domain - noisy, insecure, too large. VLANs carve multiple logical LANs onto one physical switch fabric.
+**WHY THE NEXT TOPIC IS NEEDED - VLANs:** One flat LAN means one broadcast domain - noisy, insecure, too large. VLANs carve multiple logical LANs onto one physical switch fabric.
 
 ---
 
 ## 4.2 VLANs, Trunks, and Broadcast Domains
 
-**WHY THIS EXISTS:** Security and scale demand isolation: guests should not see finance servers' broadcasts. **VLANs** tag frames (802.1Q) so one switch can host many logical L2 networks. Routers (or L3 switches) interconnect VLANs.
+**WHY YOU ARE LEARNING THIS:** Security and scale demand isolation: guests should not see finance servers' broadcasts. **VLANs** tag frames (802.1Q) so one switch can host many logical L2 networks. Routers (or L3 switches) interconnect VLANs.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Separate physical switches per department - expensive. One big LAN - dangerous and chatty. No middle ground.
+**THE PROBLEM THIS SOLVES:** Separate physical switches per department - expensive. One big LAN - dangerous and chatty. No middle ground.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Search "VLAN explained animated CertBros" / NetworkChuck VLAN videos
 - [Cloudflare - What is a VLAN?](https://www.cloudflare.com/learning/network-layer/what-is-a-lan/) (LAN primer + VLAN articles in learning center)
 - Packet Tracer VLAN labs
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Access ports belong to one VLAN. Trunk ports carry multiple VLANs with tags. Broadcasts stay inside a VLAN. Inter-VLAN traffic requires L3 routing. Misconfigured trunks (native VLAN mismatches) are classic outage sources.
 
-**THE IDEA THAT FIXED IT:** Virtualize the LAN with tags; route between the virtual LANs intentionally.
+**THE MAIN IDEA IN SIMPLE WORDS:** Virtualize the LAN with tags; route between the virtual LANs intentionally.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  PC-A (VLAN 10) --access-- SWITCH --trunk-- SWITCH --access-- PC-B (VLAN 10)
@@ -819,11 +827,11 @@ Access ports belong to one VLAN. Trunk ports carry multiple VLANs with tags. Bro
  Same VLAN: L2 switched. Different VLAN: must L3 route.
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Colored badges at a conference: same hall (physical switch), different rooms you are allowed to enter (VLANs). Security guards between rooms are routers.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
@@ -831,7 +839,7 @@ Colored badges at a conference: same hall (physical switch), different rooms you
 | Flat L2 everywhere | Simple vs huge failure domains |
 | L3 to the access | Scalability vs more routing design work |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # 802.1Q tag conceptually: TPID 0x8100 + VLAN ID bits.
@@ -842,9 +850,9 @@ def vlan_tag(vlan_id: int) -> bytes:
 print(vlan_tag(10).hex())
 ```
 
-**INTERVIEW PERSPECTIVE:** "How do hosts on different VLANs communicate?" Through a router/L3 gateway. "What is a trunk?" Tagged multi-VLAN link.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "How do hosts on different VLANs communicate?" Through a router/L3 gateway. "What is a trunk?" Tagged multi-VLAN link.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -852,11 +860,11 @@ print(vlan_tag(10).hex())
 | Medium | Design VLANs for corp / guests / cameras on one switch stack |
 | Hard | Explain VLAN hopping at a high level and how to mitigate |
 
-**THE BRIDGE to IP Addressing:** L2 gets you across a LAN/VLAN. It does not get you across the world. We need a *logical* global address space - IP - and a way to carve it into networks: subnetting.
+**WHY THE NEXT TOPIC IS NEEDED - IP Addressing:** L2 gets you across a LAN/VLAN. It does not get you across the world. We need a *logical* global address space - IP - and a way to carve it into networks: subnetting.
 
 ---
 
-> **Phase 4 complete?** [Build the aligned project](./Projects.md#L1511) · [Continue to Phase 5](#phase-5---ip-addressing--subnetting)
+> **Phase 4 complete?** [Build the aligned project](./Projects.md#networks-phase-4-project) · [Continue to Phase 5](#phase-5---ip-addressing--subnetting)
 
 <a id="phase-5"></a>
 
@@ -864,17 +872,17 @@ print(vlan_tag(10).hex())
 
 **Track:** Internetworking
 
-**GOAL:** Master IPv4 addressing, CIDR notation, subnet math, and why IPv6 exists.
+**WHAT YOU WILL BE ABLE TO DO:** Master IPv4 addressing, CIDR notation, subnet math, and why IPv6 exists.
 
-**PREREQUISITES:** Phase 4 (you leave the LAN via a gateway IP).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 4 (you leave the LAN via a gateway IP).
 
 ## 5.1 IPv4 Addresses, CIDR, and Subnet Math
 
-**WHY THIS EXISTS:** MAC addresses do not scale globally and are not topological. **IP addresses** are logical and hierarchical so routers can aggregate paths. **CIDR** (`a.b.c.d/n`) splits network vs host bits without old classful waste.
+**WHY YOU ARE LEARNING THIS:** MAC addresses do not scale globally and are not topological. **IP addresses** are logical and hierarchical so routers can aggregate paths. **CIDR** (`a.b.c.d/n`) splits network vs host bits without old classful waste.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Classful A/B/C wastes (a Class B for 300 hosts). Flat tables cannot hold every host on Earth. Hierarchy is mandatory.
+**THE PROBLEM THIS SOLVES:** Classful A/B/C wastes (a Class B for 300 hosts). Flat tables cannot hold every host on Earth. Hierarchy is mandatory.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Subnet Mask - Explained (PowerCert)](https://www.youtube.com/watch?v=s_Ntt6eTn94)
 - [What is Subnetting? - Subnetting Mastery Part 1 (Practical Networking)](https://www.youtube.com/watch?v=BWZ-MHIhqjM)
@@ -883,13 +891,13 @@ print(vlan_tag(10).hex())
 - [Cloudflare - What is an IP address?](https://www.cloudflare.com/learning/dns/glossary/what-is-my-ip-address/)
 - Practice repos / cheatsheets via [nyquist/awesome-networking](https://github.com/nyquist/awesome-networking)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 IPv4: 32-bit address. `/24` means 24 network bits, 8 host bits → 256 addresses (254 usable typically, minus network/broadcast). Private ranges (RFC1918): `10/8`, `172.16/12`, `192.168/16`. Subnetting carves a prefix into smaller prefixes for departments or security zones. **Longest prefix match** (Phase 6) depends on this hierarchy.
 
-**THE IDEA THAT FIXED IT:** Addresses are hierarchical prefixes, not flat names - so routing scales by aggregation.
+**THE MAIN IDEA IN SIMPLE WORDS:** Addresses are hierarchical prefixes, not flat names - so routing scales by aggregation.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  192.168.1.10/24
@@ -903,11 +911,11 @@ IPv4: 32-bit address. `/24` means 24 network bits, 8 host bits → 256 addresses
  Gateway is usually .1 on small LANs — convention, not magic.
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 ZIP+street: the ZIP aggregates a region (prefix); the street address is the host. Mail trucks route on ZIP first.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Plan | Buys | Costs |
 | --- | --- | --- |
@@ -915,7 +923,7 @@ ZIP+street: the ZIP aggregates a region (prefix); the street address is the host
 | Tiny subnets | Tight security/growth control | More routes, operational overhead |
 | Overlapping private IP across sites | Easy locally | VPN/merge nightmares |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import ipaddress
@@ -929,9 +937,9 @@ for sub in net.subnets(new_prefix=25):
     print(sub)
 ```
 
-**INTERVIEW PERSPECTIVE:** Live subnetting still appears. Practice: given `10.0.5.37/24`, network, broadcast, usable range. Bonus: plan subnets for 5 depts with growth.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Live subnetting still appears. Practice: given `10.0.5.37/24`, network, broadcast, usable range. Bonus: plan subnets for 5 depts with growth.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -939,29 +947,29 @@ for sub in net.subnets(new_prefix=25):
 | Medium | Split 10.0.0.0/24 into equal halves; give ranges |
 | Hard | Design addressing for HQ + 20 branches with summarizable aggregates |
 
-**THE BRIDGE to IPv6 & Special Addresses:** IPv4 exhaustion and NAT kludges force the next address chapter - IPv6 and the special addresses you must recognize on sight.
+**WHY THE NEXT TOPIC IS NEEDED - IPv6 & Special Addresses:** IPv4 exhaustion and NAT kludges force the next address chapter - IPv6 and the special addresses you must recognize on sight.
 
 ---
 
 ## 5.2 IPv6, Special Addresses, and Why Hierarchy Matters
 
-**WHY THIS EXISTS:** IPv4's 32 bits were not enough for every device. **IPv6** uses 128-bit addresses, simpler header ideas, and SLAAC/link-local behaviors. Even on IPv4-only networks, you must know loopback, link-local, multicast, and private space.
+**WHY YOU ARE LEARNING THIS:** IPv4's 32 bits were not enough for every device. **IPv6** uses 128-bit addresses, simpler header ideas, and SLAAC/link-local behaviors. Even on IPv4-only networks, you must know loopback, link-local, multicast, and private space.
 
-**THE PROBLEM BEFORE THIS EXISTED:** NAT delayed the pain but broke end-to-end connectivity assumptions. Exhaustion made hierarchical public addressing political and expensive.
+**THE PROBLEM THIS SOLVES:** NAT delayed the pain but broke end-to-end connectivity assumptions. Exhaustion made hierarchical public addressing political and expensive.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - PowerCert / NetworkChuck IPv6 primers
 - [Cloudflare - What is IPv6?](https://www.cloudflare.com/learning/dns/what-is-ipv6/)
 - Beej concepts guide addressing chapters
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Know on sight: `127.0.0.0/8` loopback, `169.254.0.0/16` link-local (APIPA), multicast `224.0.0.0/4`, RFC1918 private. IPv6: `::1` loopback, `fe80::/10` link-local, global unicast typically `2000::/3`. Dual-stack and tunneling still matter in transition.
 
-**THE IDEA THAT FIXED IT:** Expand the address space and restore the chance of global end-to-end addressing - while keeping hierarchical routing.
+**THE MAIN IDEA IN SIMPLE WORDS:** Expand the address space and restore the chance of global end-to-end addressing - while keeping hierarchical routing.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  IPv4 private + public NAT (Phase 7) was the band-aid.
@@ -969,11 +977,11 @@ Know on sight: `127.0.0.0/8` loopback, `169.254.0.0/16` link-local (APIPA), mult
  Reality: enterprise adoption uneven; dual-stack common.
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Running out of phone numbers in a city - add digits (IPv6) or share lines with extensions (NAT).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Approach | Trade-off |
 | --- | --- |
@@ -981,7 +989,7 @@ Running out of phone numbers in a city - add digits (IPv6) or share lines with e
 | Dual-stack | Compatibility vs two planes to secure |
 | IPv6-only + translation | Future-proof vs app breakage risk |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import ipaddress
@@ -990,9 +998,9 @@ addr = ipaddress.ip_address("fe80::1")
 print(addr.is_link_local, addr.version)
 ```
 
-**INTERVIEW PERSPECTIVE:** "Why IPv6?" Exhaustion + end-to-end. "What is 169.254?" DHCP failed. Know RFC1918 cold.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "Why IPv6?" Exhaustion + end-to-end. "What is 169.254?" DHCP failed. Know RFC1918 cold.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1000,11 +1008,11 @@ print(addr.is_link_local, addr.version)
 | Medium | Explain why link-local IPv6 exists |
 | Hard | Sketch a dual-stack data-center addressing plan |
 
-**THE BRIDGE to Routing:** Addresses name networks. Something must decide *which next hop* receives a packet toward that network - routing and forwarding.
+**WHY THE NEXT TOPIC IS NEEDED - Routing:** Addresses name networks. Something must decide *which next hop* receives a packet toward that network - routing and forwarding.
 
 ---
 
-> **Phase 5 complete?** [Build the aligned project](./Projects.md#L1532) · [Continue to Phase 6](#phase-6---routing--forwarding)
+> **Phase 5 complete?** [Build the aligned project](./Projects.md#networks-phase-5-project) · [Continue to Phase 6](#phase-6---routing--forwarding)
 
 <a id="phase-6"></a>
 
@@ -1012,17 +1020,17 @@ print(addr.is_link_local, addr.version)
 
 **Track:** Internetworking
 
-**GOAL:** Separate forwarding (data plane) from routing (control plane); understand longest-prefix match and protocol roles.
+**WHAT YOU WILL BE ABLE TO DO:** Separate forwarding (data plane) from routing (control plane); understand longest-prefix match and protocol roles.
 
-**PREREQUISITES:** Phase 5.
+**WHAT YOU SHOULD KNOW FIRST:** Phase 5.
 
 ## 6.1 Forwarding Tables and Longest Prefix Match
 
-**WHY THIS EXISTS:** A router connects networks. For each packet it must choose an outgoing interface/next hop using the destination IP. **Longest prefix match** picks the most specific route. Default routes (`0.0.0.0/0`) catch the rest.
+**WHY YOU ARE LEARNING THIS:** A router connects networks. For each packet it must choose an outgoing interface/next hop using the destination IP. **Longest prefix match** picks the most specific route. Default routes (`0.0.0.0/0`) catch the rest.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Bridges flood globally - impossible at Internet scale. Hosts cannot know every path. Hierarchy + local decisions are required.
+**THE PROBLEM THIS SOLVES:** Bridges flood globally - impossible at Internet scale. Hosts cannot know every path. Hierarchy + local decisions are required.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Understanding Routing!](https://www.youtube.com/watch?v=gQtgtKtvRdo)
 - [How Routers Actually Work (TechVision Animated)](https://www.youtube.com/watch?v=FAY43J3FvZk)
@@ -1030,13 +1038,13 @@ print(addr.is_link_local, addr.version)
 - Kurose/Ross network layer chapters; Loyola textbook routing chapters
 - Packet Tracer static routing labs
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 **Forwarding** is per-packet table lookup. **Routing** is how the table is built (static or dynamic protocols). TTL decrements each hop; at 0, packet dies and ICMP Time Exceeded may return (traceroute). Control plane vs data plane split lets hardware forward fast while software computes routes slowly.
 
-**THE IDEA THAT FIXED IT:** Route on prefixes, not hosts; decide hop-by-hop with the most specific match.
+**THE MAIN IDEA IN SIMPLE WORDS:** Route on prefixes, not hosts; decide hop-by-hop with the most specific match.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Packet dst = 10.1.5.9
@@ -1051,11 +1059,11 @@ print(addr.is_link_local, addr.version)
  Decrement TTL. If 0: drop (+ ICMP).
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Highway signs: "City Center" vs "Downtown - Main St" vs "Everywhere else →". You follow the most specific sign that applies.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
@@ -1063,7 +1071,7 @@ Highway signs: "City Center" vs "Downtown - Main St" vs "Everywhere else →". Y
 | Specific routes | Precise control vs table bloat |
 | Default-only edge | Tiny tables vs dependency on upstream |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import ipaddress
@@ -1082,9 +1090,9 @@ table = [("10.1.5.0/24", "eth0"), ("10.1.0.0/16", "eth1"), ("0.0.0.0/0", "eth2")
 print(longest_prefix_match("10.1.5.9", table))
 ```
 
-**INTERVIEW PERSPECTIVE:** Explain traceroute via TTL. Explain LPM. Contrast switch (MAC) vs router (IP).
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Explain traceroute via TTL. Explain LPM. Contrast switch (MAC) vs router (IP).
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1092,29 +1100,29 @@ print(longest_prefix_match("10.1.5.9", table))
 | Medium | Interpret a `tracert`/`traceroute` output hop by hop |
 | Hard | Build a 4-router Packet Tracer topology with static routes both ways |
 
-**THE BRIDGE to Routing Protocols:** Static routes do not scale across organizations. Networks need distributed algorithms - distance vector, link state - and eventually BGP policy.
+**WHY THE NEXT TOPIC IS NEEDED - Routing Protocols:** Static routes do not scale across organizations. Networks need distributed algorithms - distance vector, link state - and eventually BGP policy.
 
 ---
 
 ## 6.2 RIP, OSPF, and the Role of BGP (Preview)
 
-**WHY THIS EXISTS:** Inside an organization (**AS**), IGPs like **OSPF** (link state) or older **RIP** (distance vector) compute loop-free paths automatically. Between organizations, **BGP** exchanges reachability with *policy* first (Phase 18 deep dive). You need the map of who does what now.
+**WHY YOU ARE LEARNING THIS:** Inside an organization (**AS**), IGPs like **OSPF** (link state) or older **RIP** (distance vector) compute loop-free paths automatically. Between organizations, **BGP** exchanges reachability with *policy* first (Phase 18 deep dive). You need the map of who does what now.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Manual routes on thousands of routers - unmaintainable. Link failures needed human reaction. The Internet needed a different protocol between ISPs than inside a campus.
+**THE PROBLEM THIS SOLVES:** Manual routes on thousands of routers - unmaintainable. Link failures needed human reaction. The Internet needed a different protocol between ISPs than inside a campus.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - ByteByteGo / Practical Networking BGP intro videos (deeper in Phase 18)
 - [Cloudflare - What is BGP?](https://www.cloudflare.com/learning/security/glossary/what-is-bgp/)
 - CS144 and textbook routing algorithm animations (Bellman-Ford / Dijkstra)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Distance vector: share tables with neighbors; risk count-to-infinity (mitigations exist). Link state: flood topology, run Dijkstra locally - faster convergence, more CPU/memory. OSPF areas hierarchical. BGP: path-vector with AS paths; chooses by policy attributes more than pure shortest path. Do not confuse "BGP makes the Internet work" with "BGP is OSPF at Earth scale" - different goals.
 
-**THE IDEA THAT FIXED IT:** Automate intradomain routing with topology-aware IGPs; glue domains with policy-aware BGP.
+**THE MAIN IDEA IN SIMPLE WORDS:** Automate intradomain routing with topology-aware IGPs; glue domains with policy-aware BGP.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Campus:  OSPF builds map -> shortest path trees -> forwarding tables
@@ -1122,11 +1130,11 @@ Distance vector: share tables with neighbors; risk count-to-infinity (mitigation
            iBGP distributes external routes inside an AS
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 City GPS (OSPF) vs international shipping contracts between companies (BGP) - contracts can prefer a partner even if the road is longer.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Protocol class | Strength | Weakness |
 | --- | --- | --- |
@@ -1134,7 +1142,7 @@ City GPS (OSPF) vs international shipping contracts between companies (BGP) - co
 | OSPF | Fast convergence | Complexity, flooding scope |
 | BGP | Policy, scale of Internet | Misconfig can blackhole the planet |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Toy Bellman-Ford relaxation (distance vector spirit)
@@ -1154,9 +1162,9 @@ while changed:
 print(dist)  # A0 B1 C2
 ```
 
-**INTERVIEW PERSPECTIVE:** "OSPF vs BGP?" Interior vs exterior; cost vs policy. Senior: convergence, areas, route reflectors (later).
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "OSPF vs BGP?" Interior vs exterior; cost vs policy. Senior: convergence, areas, route reflectors (later).
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1164,11 +1172,11 @@ print(dist)  # A0 B1 C2
 | Medium | Why is BGP not just "Dijkstra on the world graph"? |
 | Hard | Read Cloudflare BGP article; summarize a famous BGP leak at high level |
 
-**THE BRIDGE to ARP/DHCP/ICMP/NAT:** Routing assumes we can deliver to a *next hop IP on a local link* and that hosts can obtain addresses and diagnose failures. The glue protocols make that real.
+**WHY THE NEXT TOPIC IS NEEDED - ARP/DHCP/ICMP/NAT:** Routing assumes we can deliver to a *next hop IP on a local link* and that hosts can obtain addresses and diagnose failures. The glue protocols make that real.
 
 ---
 
-> **Phase 6 complete?** [Build the aligned project](./Projects.md#L1553) · [Continue to Phase 7](#phase-7---arp-dhcp-icmp-and-nat)
+> **Phase 6 complete?** [Build the aligned project](./Projects.md#networks-phase-6-project) · [Continue to Phase 7](#phase-7---arp-dhcp-icmp-and-nat)
 
 <a id="phase-7"></a>
 
@@ -1176,17 +1184,17 @@ print(dist)  # A0 B1 C2
 
 **Track:** Internetworking
 
-**GOAL:** Explain how hosts discover MAC addresses, get IPs automatically, diagnose paths, and share public IPv4 via NAT.
+**WHAT YOU WILL BE ABLE TO DO:** Explain how hosts discover MAC addresses, get IPs automatically, diagnose paths, and share public IPv4 via NAT.
 
-**PREREQUISITES:** Phases 5-6.
+**WHAT YOU SHOULD KNOW FIRST:** Phases 5-6.
 
 ## 7.1 ARP, DHCP, and ICMP
 
-**WHY THIS EXISTS:** You know the next hop's IP. Frames need a MAC. **ARP** answers "who has this IP?" on IPv4 LANs. Hosts also need addresses without manual typing - **DHCP**. When things break, **ICMP** (ping, traceroute helpers) carries control and error messages.
+**WHY YOU ARE LEARNING THIS:** You know the next hop's IP. Frames need a MAC. **ARP** answers "who has this IP?" on IPv4 LANs. Hosts also need addresses without manual typing - **DHCP**. When things break, **ICMP** (ping, traceroute helpers) carries control and error messages.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Static IP+MAC tables - brittle. No ping - blind debugging. Every laptop configured by hand - operational nightmare.
+**THE PROBLEM THIS SOLVES:** Static IP+MAC tables - brittle. No ping - blind debugging. Every laptop configured by hand - operational nightmare.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [DNS video later; for ARP watch Chris Greer Wireshark ARP filters](https://www.youtube.com/watch?v=OU-A2EmVrKQ)
 - NetworkChuck / PowerCert DHCP explainers
@@ -1194,13 +1202,13 @@ print(dist)  # A0 B1 C2
 - [Cloudflare - What is ICMP?](https://www.cloudflare.com/learning/ddos/glossary/internet-control-message-protocol-icmp/)
 - Capture ARP in Wireshark sample sets
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 ARP: broadcast request, unicast reply, cache entries. Gratuitous ARP updates. Spoofing risk on open L2. DHCP: DORA - Discover, Offer, Request, Acknowledge - leases IP, mask, gateway, DNS. ICMP: Echo Request/Reply (ping); Destination Unreachable; Time Exceeded (traceroute). ICMP is not "ping only" - it is the IP plane's error channel.
 
-**THE IDEA THAT FIXED IT:** Automate local resolution and host config; expose a lightweight control protocol for errors and probes.
+**THE MAIN IDEA IN SIMPLE WORDS:** Automate local resolution and host config; expose a lightweight control protocol for errors and probes.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Send to 8.8.8.8:
@@ -1213,11 +1221,11 @@ ARP: broadcast request, unicast reply, cache entries. Gratuitous ARP updates. Sp
    Discover (broadcast) -> Offer -> Request -> Ack (lease)
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 ARP is asking across the office "who sits at desk 192?" DHCP is hotel check-in assigning room+wifi info. ICMP is the "return to sender / delayed / no such address" stamps.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Mechanism | Risk |
 | --- | --- |
@@ -1225,7 +1233,7 @@ ARP is asking across the office "who sits at desk 192?" DHCP is hotel check-in a
 | Long DHCP leases | Stale mappings vs chatty renewals |
 | Blocking ICMP | "Security" that breaks PMTUD and diagnosis |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import subprocess, platform
@@ -1238,9 +1246,9 @@ def ping_once(host: str) -> str:
 print(ping_once("127.0.0.1"))
 ```
 
-**INTERVIEW PERSPECTIVE:** "What happens before the first packet to a new gateway leaves?" ARP. "Why did traceroute stop showing names?" ICMP filtered. DHCP DORA order is a common quiz.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "What happens before the first packet to a new gateway leaves?" ARP. "Why did traceroute stop showing names?" ICMP filtered. DHCP DORA order is a common quiz.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1248,30 +1256,30 @@ print(ping_once("127.0.0.1"))
 | Medium | Capture DHCP on a lab VM join; label DORA packets |
 | Hard | Explain why filtering all ICMP breaks large-packet transfers |
 
-**THE BRIDGE to NAT:** Private IPv4 plus one public address at the edge - how do many hosts share? NAT rewrites, and that rewrite has deep consequences.
+**WHY THE NEXT TOPIC IS NEEDED - NAT:** Private IPv4 plus one public address at the edge - how do many hosts share? NAT rewrites, and that rewrite has deep consequences.
 
 ---
 
 ## 7.2 NAT, PAT, and the End of Easy Peer Connectivity
 
-**WHY THIS EXISTS:** IPv4 scarcity forced **Network Address Translation**. Home routers map many private internals to one public IP using port rewriting (**PAT**/NAPT). The Internet kept growing. Direct inbound connections became hard - shaping WebRTC, gaming, and P2P forever.
+**WHY YOU ARE LEARNING THIS:** IPv4 scarcity forced **Network Address Translation**. Home routers map many private internals to one public IP using port rewriting (**PAT**/NAPT). The Internet kept growing. Direct inbound connections became hard - shaping WebRTC, gaming, and P2P forever.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Not enough public IPv4 for every laptop. Giving every device a public IP also expanded attack surface without perimeter devices.
+**THE PROBLEM THIS SOLVES:** Not enough public IPv4 for every laptop. Giving every device a public IP also expanded attack surface without perimeter devices.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [How Routers Actually Work — NAT Explained](https://www.youtube.com/watch?v=FAY43J3FvZk)
 - ByteByteGo NAT explainers
 - [Cloudflare - What is NAT?](https://www.cloudflare.com/learning/network-layer/what-is-nat/)
 - Observe your public IP via a "what is my IP" site vs `ipconfig` private IP
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Outbound: rewrite src IP/port; keep a mapping table; reverse on replies. Inbound unsolicited packets have no mapping - dropped unless port forwarded. Carrier-grade NAT worsens this. STUN/TURN/hole punching exist because NAT exists. NAT is not security by design, but it acts as a default inbound filter.
 
-**THE IDEA THAT FIXED IT:** Multiplex many private hosts onto scarce public IPv4 by rewriting transport identifiers - accept broken end-to-end as the price.
+**THE MAIN IDEA IN SIMPLE WORDS:** Multiplex many private hosts onto scarce public IPv4 by rewriting transport identifiers - accept broken end-to-end as the price.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Laptop 192.168.1.10:52344 -> 93.184.216.34:443
@@ -1284,11 +1292,11 @@ Outbound: rewrite src IP/port; keep a mapping table; reverse on replies. Inbound
  Random inbound to :40001 with no map -> drop.
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 An apartment mailroom: many residents, one street address. Outbound packages get tracked with a slot number (port). Random mail addressed only to the building without a slot cannot find a person.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Buys | Costs |
 | --- | --- |
@@ -1296,7 +1304,7 @@ An apartment mailroom: many residents, one street address. Outbound packages get
 | Cheap home networks | Harder P2P, extra failure mode |
 | CGNAT | Even less control for subscribers |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Toy NAT table
@@ -1320,9 +1328,9 @@ print(n.outbound("192.168.1.10", 52344, "1.2.3.4", 443))
 print(n.inbound(40000))
 ```
 
-**INTERVIEW PERSPECTIVE:** "Why can't two phones on LTE easily host servers?" CGNAT. "How does video calling work anyway?" Relays/STUN/TURN. Distinguish NAT from firewall.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "Why can't two phones on LTE easily host servers?" CGNAT. "How does video calling work anyway?" Relays/STUN/TURN. Distinguish NAT from firewall.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1330,11 +1338,11 @@ print(n.inbound(40000))
 | Medium | Explain port forwarding and its risks |
 | Hard | Read about hole punching; summarize when it fails |
 
-**THE BRIDGE to Layered Models:** You now have L1-L3 pieces and glue. Before Transport, pause and unify: encapsulation, OSI vs TCP/IP - the mental model that makes the rest teachable.
+**WHY THE NEXT TOPIC IS NEEDED - Layered Models:** You now have L1-L3 pieces and glue. Before Transport, pause and unify: encapsulation, OSI vs TCP/IP - the mental model that makes the rest teachable.
 
 ---
 
-> **Phase 7 complete?** [Build the aligned project](./Projects.md#L1574) · [Continue to Phase 8](#phase-8---layered-models-osi-and-tcpip)
+> **Phase 7 complete?** [Build the aligned project](./Projects.md#networks-phase-7-project) · [Continue to Phase 8](#phase-8---layered-models-osi-and-tcpip)
 
 <a id="phase-8"></a>
 
@@ -1342,17 +1350,17 @@ print(n.inbound(40000))
 
 **Track:** Synthesis
 
-**GOAL:** Unify what you built into OSI vs TCP/IP models and practice encapsulation end to end.
+**WHAT YOU WILL BE ABLE TO DO:** Unify what you built into OSI vs TCP/IP models and practice encapsulation end to end.
 
-**PREREQUISITES:** Phases 1-7.
+**WHAT YOU SHOULD KNOW FIRST:** Phases 1-7.
 
 ## 8.1 OSI vs TCP/IP and Why Layering Won
 
-**WHY THIS EXISTS:** Bundling bit signaling, local delivery, global routing, reliability, and application meaning into one blob would freeze innovation. **Layering** lets Wi-Fi replace copper without rewriting HTTP. OSI is the 7-layer teaching model; TCP/IP is the 4-layer model the Internet actually implements.
+**WHY YOU ARE LEARNING THIS:** Bundling bit signaling, local delivery, global routing, reliability, and application meaning into one blob would freeze innovation. **Layering** lets Wi-Fi replace copper without rewriting HTTP. OSI is the 7-layer teaching model; TCP/IP is the 4-layer model the Internet actually implements.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Monolithic protocols tied apps to media. Vendors locked stacks. Interoperability failed.
+**THE PROBLEM THIS SOLVES:** Monolithic protocols tied apps to media. Vendors locked stacks. Interoperability failed.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [MASTER the OSI Model in Just 5 Minutes (KnowledgeCatch)](https://www.youtube.com/watch?v=8YkL_qc6ozc)
 - [What is OSI Model | Real World Examples (ByteByteGo)](https://www.youtube.com/watch?v=0y6FtKsg6J4)
@@ -1361,13 +1369,13 @@ print(n.inbound(40000))
 - [Cloudflare OSI model](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/)
 - [smoltcp](https://github.com/smoltcp-rs/smoltcp)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 OSI: Physical, Data Link, Network, Transport, Session, Presentation, Application. TCP/IP: Link, Internet, Transport, Application (Session/Presentation folded up). PDU names: bits, frames, packets, segments/datagrams, messages. Engineers debug by naming the layer that failed: DNS vs TCP vs IP vs cable.
 
-**THE IDEA THAT FIXED IT:** Each layer solves one job and exposes a narrow interface upward - encapsulation hides the rest.
+**THE MAIN IDEA IN SIMPLE WORDS:** Each layer solves one job and exposes a narrow interface upward - encapsulation hides the rest.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  SEND:
@@ -1381,18 +1389,18 @@ OSI: Physical, Data Link, Network, Transport, Session, Presentation, Application
  Hop-by-hop: MAC changes. End-to-end: IP src/dst (usually) stay.
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Nested envelopes: letter (app), certified-mail tracking (transport), city address (IP), local courier bag tag (MAC).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Layering | Cost |
 | --- | --- |
 | Independence | Header overhead, duplication |
 | Strict boundaries | Sometimes hide useful cross-layer info (wireless loss vs congestion) |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import socket
@@ -1405,9 +1413,9 @@ print(s.recv(200))
 s.close()
 ```
 
-**INTERVIEW PERSPECTIVE:** "What happens when you type a URL?" is a layer tour. Memorizing 7 names is weak; mapping failures to layers is strong.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "What happens when you type a URL?" is a layer tour. Memorizing 7 names is weak; mapping failures to layers is strong.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1415,29 +1423,29 @@ s.close()
 | Medium | In Wireshark, screenshot one packet's layer tree and label PDUs |
 | Hard | Argue one case where strict layering hurts (e.g., TCP over Wi-Fi) |
 
-**THE BRIDGE to UDP:** Layering says Transport must move bytes between processes. The first design choice: do we promise reliability, or just ship datagrams fast? Start with UDP.
+**WHY THE NEXT TOPIC IS NEEDED - UDP:** Layering says Transport must move bytes between processes. The first design choice: do we promise reliability, or just ship datagrams fast? Start with UDP.
 
 ---
 
 ## 8.2 Ports, Sockets Preview, and Multiplexing
 
-**WHY THIS EXISTS:** IP gets a packet to a machine. **Ports** get it to a process. The 4-tuple (src IP, src port, dst IP, dst port) + protocol demultiplexes connections. This is why one server IP serves millions of clients on port 443.
+**WHY YOU ARE LEARNING THIS:** IP gets a packet to a machine. **Ports** get it to a process. The 4-tuple (src IP, src port, dst IP, dst port) + protocol demultiplexes connections. This is why one server IP serves millions of clients on port 443.
 
-**THE PROBLEM BEFORE THIS EXISTED:** One service per machine, or custom demux hacks. No standard way to multiplex apps.
+**THE PROBLEM THIS SOLVES:** One service per machine, or custom demux hacks. No standard way to multiplex apps.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Network Ports Explained (PowerCert)](https://www.youtube.com/watch?v=g2fT-g9PX9o)
 - [Beej's Guide](https://beej.us/guide/bgnet/html/) - sockets intro
 - `netstat -an` / `ss -tan` view established tuples
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Well-known ports (80, 443, 53, 22). Ephemeral client ports. UDP and TCP port spaces are independent. Sockets are the OS abstraction binding an app to a local tuple.
 
-**THE IDEA THAT FIXED IT:** A 16-bit port namespace per transport protocol, combined into connection 4-tuples.
+**THE MAIN IDEA IN SIMPLE WORDS:** A 16-bit port namespace per transport protocol, combined into connection 4-tuples.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Browser tab1: (you:52344) <-> (server:443)
@@ -1445,18 +1453,18 @@ Well-known ports (80, 443, 53, 22). Ephemeral client ports. UDP and TCP port spa
  Same server port; different client ports => different sockets.
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Apartment number (port) inside a building (IP). Many visitors can talk to the same apartment using different return addresses.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Limit | Implication |
 | --- | --- |
 | 65535 ports | NAT and load balancer connection limits are real |
 | Privileged ports <1024 | Security/policy convention on Unix |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import socket
@@ -1466,9 +1474,9 @@ print("remote", s.getpeername())
 s.close()
 ```
 
-**INTERVIEW PERSPECTIVE:** "How can one process serve many clients?" - 4-tuple uniqueness + accept loop / async IO.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "How can one process serve many clients?" - 4-tuple uniqueness + accept loop / async IO.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1476,11 +1484,11 @@ s.close()
 | Medium | Open two connections; prove local ports differ |
 | Hard | Explain TIME_WAIT and port exhaustion under load |
 
-**THE BRIDGE to UDP:** With ports in hand, the simplest transport is a datagram with almost no promises - UDP.
+**WHY THE NEXT TOPIC IS NEEDED - UDP:** With ports in hand, the simplest transport is a datagram with almost no promises - UDP.
 
 ---
 
-> **Phase 8 complete?** [Build the aligned project](./Projects.md#L1595) · [Continue to Phase 9](#phase-9---udp-user-datagram-protocol)
+> **Phase 8 complete?** [Build the aligned project](./Projects.md#networks-phase-8-project) · [Continue to Phase 9](#phase-9---udp-user-datagram-protocol)
 
 <a id="phase-9"></a>
 
@@ -1488,17 +1496,17 @@ s.close()
 
 **Track:** Transport
 
-**GOAL:** Know UDP's guarantees (almost none), when to use it, and how QUIC rides on it.
+**WHAT YOU WILL BE ABLE TO DO:** Know UDP's guarantees (almost none), when to use it, and how QUIC rides on it.
 
-**PREREQUISITES:** Phase 8.
+**WHAT YOU SHOULD KNOW FIRST:** Phase 8.
 
 ## 9.1 Datagrams, Use Cases, and What You Must Handle Yourself
 
-**WHY THIS EXISTS:** Not every app wants a reliable ordered stream. Real-time audio would rather drop late packets than stall. DNS wants a quick request/response. **UDP** offers ports + optional checksum and little else.
+**WHY YOU ARE LEARNING THIS:** Not every app wants a reliable ordered stream. Real-time audio would rather drop late packets than stall. DNS wants a quick request/response. **UDP** offers ports + optional checksum and little else.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Forcing TCP everywhere adds handshake RTT, head-of-line blocking, and retry delays that hurt real-time and simple query protocols.
+**THE PROBLEM THIS SOLVES:** Forcing TCP everywhere adds handshake RTT, head-of-line blocking, and retry delays that hurt real-time and simple query protocols.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [TCP vs UDP Comparison (PowerCert)](https://www.youtube.com/watch?v=uwoD5YsGACg)
 - [TCP vs UDP Explained Visually (ByteQuest)](https://www.youtube.com/watch?v=Xu85vTSZRWs)
@@ -1506,13 +1514,13 @@ s.close()
 - [Beej on datagram sockets](https://beej.us/guide/bgnet/html/)
 - [brandon-rhodes/fopnp](https://github.com/brandon-rhodes/fopnp)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 UDP header: src port, dst port, length, checksum (~8 bytes). No connection, no ACK, no ordering, no congestion control (app/QUIC may add). Preserves message boundaries: one `sendto` ≈ one `recvfrom` (or loss). Applications must handle loss, duplication, and congestion ethics (or use QUIC/HTTP3).
 
-**THE IDEA THAT FIXED IT:** Offer a thin demultiplexed datagram service; let apps choose reliability policy.
+**THE MAIN IDEA IN SIMPLE WORDS:** Offer a thin demultiplexed datagram service; let apps choose reliability policy.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  CLIENT                         SERVER
@@ -1523,11 +1531,11 @@ UDP header: src port, dst port, length, checksum (~8 bytes). No connection, no A
  No handshake. First packet is data.
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Postcard vs certified letter. Postcard is UDP: cheap, may never arrive, no signature required.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Use UDP when | Avoid UDP when |
 | --- | --- |
@@ -1535,7 +1543,7 @@ Postcard vs certified letter. Postcard is UDP: cheap, may never arrive, no signa
 | Simple query/response | You do not want to invent reliability |
 | Building custom transports (QUIC) | Middleboxes expect TCP (sometimes) |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import socket
@@ -1552,9 +1560,9 @@ except socket.timeout:
 sock.close()
 ```
 
-**INTERVIEW PERSPECTIVE:** Contrast TCP vs UDP with concrete app examples. Mention QUIC-over-UDP as modern plot twist.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Contrast TCP vs UDP with concrete app examples. Mention QUIC-over-UDP as modern plot twist.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1562,29 +1570,29 @@ sock.close()
 | Medium | Implement UDP echo server + client locally |
 | Hard | Explain why HTTP/3 uses UDP |
 
-**THE BRIDGE to TCP:** UDP's honesty about unreliability pushes the hard problem upward. Most apps still want a reliable stream - TCP's job.
+**WHY THE NEXT TOPIC IS NEEDED - TCP:** UDP's honesty about unreliability pushes the hard problem upward. Most apps still want a reliable stream - TCP's job.
 
 ---
 
 ## 9.2 QUIC Preview and Congestion Responsibility
 
-**WHY THIS EXISTS:** UDP's lack of congestion control is dangerous if apps blast the network. Responsible UDP apps implement pacing/CC - or adopt **QUIC**, which puts reliability+TLS+streams over UDP to evolve without kernel TCP ossification.
+**WHY YOU ARE LEARNING THIS:** UDP's lack of congestion control is dangerous if apps blast the network. Responsible UDP apps implement pacing/CC - or adopt **QUIC**, which puts reliability+TLS+streams over UDP to evolve without kernel TCP ossification.
 
-**THE PROBLEM BEFORE THIS EXISTED:** TCP in kernel is hard to upgrade globally. Middleboxes ossify TCP options. HTTP/2 multiplex over one TCP connection suffers HOL blocking.
+**THE PROBLEM THIS SOLVES:** TCP in kernel is hard to upgrade globally. Middleboxes ossify TCP options. HTTP/2 multiplex over one TCP connection suffers HOL blocking.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Cloudflare - What is QUIC?](https://www.cloudflare.com/learning/performance/what-is-http3/)
 - NeetCode / ByteByteGo HTTP/3 explainers
 - HPBN and IETF QUIC overviews
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 QUIC = modern transport features in user space over UDP: crypto handshake fused with transport, multiple streams without TCP HOL, connection IDs for migration. Remember: UDP did not become "reliable"; QUIC added reliability on top.
 
-**THE IDEA THAT FIXED IT:** Use UDP as an escape hatch from kernel/middlebox ossification; implement a better transport above it.
+**THE MAIN IDEA IN SIMPLE WORDS:** Use UDP as an escape hatch from kernel/middlebox ossification; implement a better transport above it.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  HTTP/3
@@ -1596,11 +1604,11 @@ QUIC = modern transport features in user space over UDP: crypto handshake fused 
   IP
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 If the post office (kernel TCP) refuses to update rules, you invent a private courier service that still uses public roads (UDP/IP).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Approach | Trade-off |
 | --- | --- |
@@ -1608,16 +1616,16 @@ If the post office (kernel TCP) refuses to update rules, you invent a private co
 | QUIC | Modern features vs CPU/debug complexity |
 | TCP | Ubiquity vs ossification / HOL |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Conceptual only — real QUIC needs a library (aioquic, quic-go, etc.)
 print("HTTP/3 stack: App -> QUIC -> UDP -> IP")
 ```
 
-**INTERVIEW PERSPECTIVE:** "Why is HTTP/3 over UDP?" User-space evolution + stream multiplexing without TCP HOL. Not "UDP is faster" as a slogan.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "Why is HTTP/3 over UDP?" User-space evolution + stream multiplexing without TCP HOL. Not "UDP is faster" as a slogan.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1625,11 +1633,11 @@ print("HTTP/3 stack: App -> QUIC -> UDP -> IP")
 | Medium | Compare HOL blocking TCP+HTTP/2 vs QUIC streams |
 | Hard | Capture HTTP/3 if available; identify UDP 443 traffic |
 
-**THE BRIDGE to TCP:** Most of the Internet still runs on TCP. Master its handshake, reliability machine, and congestion control next.
+**WHY THE NEXT TOPIC IS NEEDED - TCP:** Most of the Internet still runs on TCP. Master its handshake, reliability machine, and congestion control next.
 
 ---
 
-> **Phase 9 complete?** [Build the aligned project](./Projects.md#L1616) · [Continue to Phase 10](#phase-10---tcp-transmission-control-protocol)
+> **Phase 9 complete?** [Build the aligned project](./Projects.md#networks-phase-9-project) · [Continue to Phase 10](#phase-10---tcp-transmission-control-protocol)
 
 <a id="phase-10"></a>
 
@@ -1637,17 +1645,17 @@ print("HTTP/3 stack: App -> QUIC -> UDP -> IP")
 
 **Track:** Transport
 
-**GOAL:** Understand TCP's connection lifecycle, reliability machinery, flow vs congestion control, and stream framing pitfalls.
+**WHAT YOU WILL BE ABLE TO DO:** Understand TCP's connection lifecycle, reliability machinery, flow vs congestion control, and stream framing pitfalls.
 
-**PREREQUISITES:** Phases 8-9.
+**WHAT YOU SHOULD KNOW FIRST:** Phases 8-9.
 
 ## 10.1 Handshake, Reliability, and Streams
 
-**WHY THIS EXISTS:** IP can lose, reorder, and duplicate packets. Applications like file transfer and HTTP need a **reliable, ordered byte stream**. TCP provides connections, sequence numbers, ACKs, retransmits, and teardown - at the cost of latency and complexity.
+**WHY YOU ARE LEARNING THIS:** IP can lose, reorder, and duplicate packets. Applications like file transfer and HTTP need a **reliable, ordered byte stream**. TCP provides connections, sequence numbers, ACKs, retransmits, and teardown - at the cost of latency and complexity.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Every app reinvented reliability poorly. The network needed a shared, good-enough transport so apps could assume a sane pipe.
+**THE PROBLEM THIS SOLVES:** Every app reinvented reliability poorly. The network needed a shared, good-enough transport so apps could assume a sane pipe.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [TCP vs UDP Comparison (PowerCert)](https://www.youtube.com/watch?v=uwoD5YsGACg)
 - [TCP Three-way Handshake (Sunny Classroom)](https://www.youtube.com/watch?v=xMtP5ZB3wSk)
@@ -1657,13 +1665,13 @@ print("HTTP/3 stack: App -> QUIC -> UDP -> IP")
 - [Stanford CS144](https://cs144.github.io/) · [PKUFlyingPig/CS144-Computer-Network](https://github.com/PKUFlyingPig/CS144-Computer-Network)
 - [smoltcp tcp.rs](https://github.com/smoltcp-rs/smoltcp)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Three-way handshake: SYN, SYN-ACK, ACK. Sequence numbers number bytes. ACKs cumulatively confirm receipt; loss triggers retransmit (RTO or fast retransmit on dup ACKs). TCP is a **stream**: `send` boundaries ≠ `recv` boundaries - apps must frame (length prefix / delimiters). Teardown is FIN/ACK each direction; TIME_WAIT holds the tuple.
 
-**THE IDEA THAT FIXED IT:** Number every byte, ACK progress, retransmit holes, present a clean stream API upward.
+**THE MAIN IDEA IN SIMPLE WORDS:** Number every byte, ACK progress, retransmit holes, present a clean stream API upward.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  CLIENT                                   SERVER
@@ -1678,11 +1686,11 @@ Three-way handshake: SYN, SYN-ACK, ACK. Sequence numbers number bytes. ACKs cumu
    |-- ACK ------------------------------->|
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Certified mail with page numbers: if page 4 is missing, resend page 4 before the reader continues the novel in order.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Feature | Cost |
 | --- | --- |
@@ -1690,7 +1698,7 @@ Certified mail with page numbers: if page 4 is missing, resend page 4 before the
 | Ordered stream | HOL blocking for multiplexed messages |
 | Reliability | Buffering, timers, complexity |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import socket
@@ -1709,9 +1717,9 @@ def fetch_headers(host: str) -> bytes:
 print(fetch_headers("example.com").decode())
 ```
 
-**INTERVIEW PERSPECTIVE:** Draw the handshake. Explain SEQ/ACK. Mention stream vs message. TIME_WAIT "address already in use."
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Draw the handshake. Explain SEQ/ACK. Mention stream vs message. TIME_WAIT "address already in use."
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1719,30 +1727,30 @@ print(fetch_headers("example.com").decode())
 | Medium | TCP echo server; send three small writes; show coalesced reads |
 | Hard | CS144 labs: byte stream + TCP sender/receiver |
 
-**THE BRIDGE to Congestion Control:** Reliability alone can still melt the network if senders blast. TCP must share - congestion control is the social contract.
+**WHY THE NEXT TOPIC IS NEEDED - Congestion Control:** Reliability alone can still melt the network if senders blast. TCP must share - congestion control is the social contract.
 
 ---
 
 ## 10.2 Flow Control, Congestion Control, and HOL Blocking
 
-**WHY THIS EXISTS:** Fast senders overwhelm slow receivers (**flow control** / window). Independent senders overwhelm shared links (**congestion control**). Classic loss-based CC assumes loss = congestion - shaky on Wi-Fi. Multiplexed apps on one TCP connection suffer **head-of-line blocking**.
+**WHY YOU ARE LEARNING THIS:** Fast senders overwhelm slow receivers (**flow control** / window). Independent senders overwhelm shared links (**congestion control**). Classic loss-based CC assumes loss = congestion - shaky on Wi-Fi. Multiplexed apps on one TCP connection suffer **head-of-line blocking**.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Early networks collapsed under load (congestion collapse). Without windows, hosts flooded links.
+**THE PROBLEM THIS SOLVES:** Early networks collapsed under load (congestion collapse). Without windows, hosts flooded links.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - PowerCert / KnowledgeCatch TCP animations
 - [Chris Greer TCP Wireshark series](https://www.youtube.com/watch?v=xdQ9sgpkrX8)
 - HPBN congestion chapters · BBR papers (optional deep)
 - CS144 measuring networks checkpoints
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Flow control: receiver advertises window. Congestion control: sender cwnd - slow start (exponential), congestion avoidance (linear), cut on loss (or use delay/bandwidth signals in BBR). AIMD produces the sawtooth. HOL: one lost TCP segment blocks later bytes even if they belong to unrelated HTTP/2 streams - motivating QUIC.
 
-**THE IDEA THAT FIXED IT:** Probe carefully, back off on congestion signals, treat the network as a shared commons.
+**THE MAIN IDEA IN SIMPLE WORDS:** Probe carefully, back off on congestion signals, treat the network as a shared commons.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  cwnd
@@ -1756,11 +1764,11 @@ Flow control: receiver advertises window. Congestion control: sender cwnd - slow
     start
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Entering a highway on-ramp meter (slow start/AIMD) so the freeway does not gridlock - even if your car can go faster.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Algorithm mindset | Trade-off |
 | --- | --- |
@@ -1768,7 +1776,7 @@ Entering a highway on-ramp meter (slow start/AIMD) so the freeway does not gridl
 | Delay-based / BBR | Better utilization vs harder reasoning |
 | One TCP conn for many streams | Efficient vs HOL |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Toy AIMD
@@ -1781,9 +1789,9 @@ for round in range(20):
     print(round, round(cwnd, 2))
 ```
 
-**INTERVIEW PERSPECTIVE:** Separate flow vs congestion clearly. Explain slow start. Mention HOL as HTTP/2 limitation.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Separate flow vs congestion clearly. Explain slow start. Mention HOL as HTTP/2 limitation.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1791,11 +1799,11 @@ for round in range(20):
 | Medium | Sketch cwnd under slow start then loss |
 | Hard | Read CS144 or HPBN; explain why bufferbloat hurts CC |
 
-**THE BRIDGE to Sockets:** Theory is useless until you bind it to the OS API programmers actually call - sockets.
+**WHY THE NEXT TOPIC IS NEEDED - Sockets:** Theory is useless until you bind it to the OS API programmers actually call - sockets.
 
 ---
 
-> **Phase 10 complete?** [Build the aligned project](./Projects.md#L1637) · [Continue to Phase 11](#phase-11---sockets-programming-the-network)
+> **Phase 10 complete?** [Build the aligned project](./Projects.md#networks-phase-10-project) · [Continue to Phase 11](#phase-11---sockets-programming-the-network)
 
 <a id="phase-11"></a>
 
@@ -1803,17 +1811,17 @@ for round in range(20):
 
 **Track:** Programming
 
-**GOAL:** Write real TCP/UDP clients and servers, understand blocking I/O, and frame messages on TCP streams.
+**WHAT YOU WILL BE ABLE TO DO:** Write real TCP/UDP clients and servers, understand blocking I/O, and frame messages on TCP streams.
 
-**PREREQUISITES:** Phase 10 (TCP) and Phase 9 (UDP).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 10 (TCP) and Phase 9 (UDP).
 
 ## 11.1 The Socket API - Client and Server Patterns
 
-**WHY THIS EXISTS:** Kernels implement TCP/UDP. Applications need a portable API: **sockets**. `socket/bind/listen/accept/connect/send/recv/close` is the lingua franca from Beej to cloud microservices.
+**WHY YOU ARE LEARNING THIS:** Kernels implement TCP/UDP. Applications need a portable API: **sockets**. `socket/bind/listen/accept/connect/send/recv/close` is the lingua franca from Beej to cloud microservices.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Each OS exposed different networking calls. Without a standard abstraction, portable networked software was rare.
+**THE PROBLEM THIS SOLVES:** Each OS exposed different networking calls. Without a standard abstraction, portable networked software was rare.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/html/) - *the* classic
 - [beejjorgensen/bgnet](https://github.com/beejjorgensen/bgnet) · [brandon-rhodes/fopnp](https://github.com/brandon-rhodes/fopnp) · [unpbook/unpv13e](https://github.com/unpbook/unpv13e)
@@ -1821,13 +1829,13 @@ for round in range(20):
 - Pair with any "TCP sockets in Python" lab while reading Beej chapters 4-6
 - Implement echo, then a tiny HTTP server
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 TCP server: `socket -> bind -> listen -> accept` loop. TCP client: `socket -> connect -> send/recv`. UDP: `sendto/recvfrom` without connect (or connected UDP). Blocking sockets stall threads; production uses threads, `select/poll/epoll`, or async. Errors are normal: timeouts, resets, broken pipes - handle them.
 
-**THE IDEA THAT FIXED IT:** One file-descriptor-like object representing an endpoint of communication, with a tiny set of verbs.
+**THE MAIN IDEA IN SIMPLE WORDS:** One file-descriptor-like object representing an endpoint of communication, with a tiny set of verbs.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  SERVER                         CLIENT
@@ -1839,11 +1847,11 @@ TCP server: `socket -> bind -> listen -> accept` loop. TCP client: `socket -> co
  close                          close
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A phone: bind is publishing your number, listen is waiting for calls, accept is picking up a specific call, connect is dialing.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Model | Buys | Costs |
 | --- | --- | --- |
@@ -1851,7 +1859,7 @@ A phone: bind is publishing your number, listen is waiting for calls, accept is 
 | select/epoll | Huge concurrency | Complexity |
 | Blocking + timeout | Predictable failure | Easy to get timeouts wrong |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # tcp_echo_server.py — run in one terminal
@@ -1881,9 +1889,9 @@ with socket.create_connection(("127.0.0.1", 7001)) as s:
     print(s.recv(1024))
 ```
 
-**INTERVIEW PERSPECTIVE:** Explain accept vs connect. Discuss SO_REUSEADDR. Mention non-blocking and why reverse proxies exist.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Explain accept vs connect. Discuss SO_REUSEADDR. Mention non-blocking and why reverse proxies exist.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1891,29 +1899,29 @@ with socket.create_connection(("127.0.0.1", 7001)) as s:
 | Medium | Concurrent server with threads handling 2 clients |
 | Hard | Work Beej examples in C, or CS144 warmup sockets |
 
-**THE BRIDGE to Framing & Hardening:** TCP gives bytes, not messages. Production code must frame, timeout, and bound resources - or it hangs and melts.
+**WHY THE NEXT TOPIC IS NEEDED - Framing & Hardening:** TCP gives bytes, not messages. Production code must frame, timeout, and bound resources - or it hangs and melts.
 
 ---
 
 ## 11.2 Framing, Timeouts, and Graceful Failure
 
-**WHY THIS EXISTS:** `recv` returning `"HEL"` then `"LO"` is correct TCP behavior. Protocols need **framing**. Without **timeouts**, a stalled peer freezes you. Without limits, a client can OOM your server.
+**WHY YOU ARE LEARNING THIS:** `recv` returning `"HEL"` then `"LO"` is correct TCP behavior. Protocols need **framing**. Without **timeouts**, a stalled peer freezes you. Without limits, a client can OOM your server.
 
-**THE PROBLEM BEFORE THIS EXISTED:** First socket programs assumed one `send` = one `recv`. They worked on localhost and failed on real networks.
+**THE PROBLEM THIS SOLVES:** First socket programs assumed one `send` = one `recv`. They worked on localhost and failed on real networks.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Beej - "slightly advanced techniques" / partial sends
 - [shuveb/zerohttpd](https://github.com/shuveb/zerohttpd) - tiny HTTP server architectures
 - Chris Greer - watching retransmits when you pull a cable mid-transfer
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Framing strategies: length prefix, delimiter (`\n`), or self-describing codecs. Always loop on `send`/`recv` until done or error. Set timeouts. Decide idempotency for retries (Phase 13 HTTP). Close vs shutdown semantics matter for half-open connections.
 
-**THE IDEA THAT FIXED IT:** Treat TCP as a hose of bytes; impose your own message boundaries and deadlines.
+**THE MAIN IDEA IN SIMPLE WORDS:** Treat TCP as a hose of bytes; impose your own message boundaries and deadlines.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Want message "HELLO\n":
@@ -1923,19 +1931,19 @@ Framing strategies: length prefix, delimiter (`\n`), or self-describing codecs. 
    [4-byte len][payload...] read exactly len bytes
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A phone call is a continuous audio stream; words are framed by silence and language - TCP won't tell you where sentences end.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Framing | Trade-off |
 | --- | --- |
 | Newline ASCII | Easy vs binary unsafe |
-| Length prefix | Robust vs endian/max-size checks |
+| Length prefix | reliable vs endian/max-size checks |
 | Fixed size | Simple vs inflexible |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import socket, struct
@@ -1959,9 +1967,9 @@ def recv_msg(conn: socket.socket) -> bytes:
     return recvall(conn, n)
 ```
 
-**INTERVIEW PERSPECTIVE:** "Does one send equal one recv?" No. Follow-up: how design a protocol on TCP.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "Does one send equal one recv?" No. Follow-up: how design a protocol on TCP.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1969,11 +1977,11 @@ def recv_msg(conn: socket.socket) -> bytes:
 | Medium | Length-prefixed chat between two processes |
 | Hard | Add timeouts + max message size + clean error logs |
 
-**THE BRIDGE to DNS:** Sockets connect to IPs. Humans use names. Something must map `example.com` → addresses - DNS.
+**WHY THE NEXT TOPIC IS NEEDED - DNS:** Sockets connect to IPs. Humans use names. Something must map `example.com` → addresses - DNS.
 
 ---
 
-> **Phase 11 complete?** [Build the aligned project](./Projects.md#L1658) · [Continue to Phase 12](#phase-12---dns-the-internets-phonebook)
+> **Phase 11 complete?** [Build the aligned project](./Projects.md#networks-phase-11-project) · [Continue to Phase 12](#phase-12---dns-the-internets-phonebook)
 
 <a id="phase-12"></a>
 
@@ -1981,17 +1989,17 @@ def recv_msg(conn: socket.socket) -> bytes:
 
 **Track:** Application Foundations
 
-**GOAL:** Trace a DNS lookup, know major record types, and understand caching/TTL failure modes.
+**WHAT YOU WILL BE ABLE TO DO:** Trace a DNS lookup, know major record types, and understand caching/TTL failure modes.
 
-**PREREQUISITES:** UDP/TCP basics; IP addressing.
+**WHAT YOU SHOULD KNOW FIRST:** UDP/TCP basics; IP addressing.
 
 ## 12.1 Resolution Path - Stub, Recursive, Authoritative
 
-**WHY THIS EXISTS:** Humans cannot memorize IPs. **DNS** distributes a hierarchical namespace. Your stub resolver asks a recursive resolver, which walks root → TLD → authoritative nameservers.
+**WHY YOU ARE LEARNING THIS:** Humans cannot memorize IPs. **DNS** distributes a hierarchical namespace. Your stub resolver asks a recursive resolver, which walks root → TLD → authoritative nameservers.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Hosts files (`HOSTS.TXT`) centrally distributed - could not scale to the global Internet.
+**THE PROBLEM THIS SOLVES:** Hosts files (`HOSTS.TXT`) centrally distributed - could not scale to the global Internet.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [How a DNS Server works (PowerCert)](https://www.youtube.com/watch?v=mpQZVYPuDGU)
 - [DNS Explained in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=UVR9lhUGAyU)
@@ -1999,13 +2007,13 @@ def recv_msg(conn: socket.socket) -> bytes:
 - [Cloudflare - What is DNS?](https://www.cloudflare.com/learning/dns/what-is-dns/) · [ByteByteGo DNS crash course](https://www.youtube.com/watch?v=27r4Bzuj5NQ)
 - `nslookup`, `dig`, [dns.google](https://dns.google/)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Query types: A/AAAA (addresses), CNAME (alias), MX (mail), NS (nameserver), TXT (arbitrary), SRV. TTL controls cache lifetime. NXDOMAIN vs SERVFAIL matter for clients. DNS usually UDP/53; TCP for large responses/zone transfers. DNS is critical path for nearly every connection.
 
-**THE IDEA THAT FIXED IT:** Hierarchical delegation + caching beats any central host file.
+**THE MAIN IDEA IN SIMPLE WORDS:** Hierarchical delegation + caching beats any central host file.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  App -> Stub -> Recursive Resolver
@@ -2015,11 +2023,11 @@ Query types: A/AAAA (addresses), CNAME (alias), MX (mail), NS (nameserver), TXT 
               <- answer (+ cache until TTL)
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Directory assistance: local desk (stub) calls a research librarian (recursive) who consults publishers (authoritative) and remembers the answer for a while (TTL).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
@@ -2027,16 +2035,16 @@ Directory assistance: local desk (stub) calls a research librarian (recursive) w
 | DNS UDP | Low latency vs amplification attack risk |
 | Low TTL | Agile failover vs higher query load |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import socket
 print(socket.getaddrinfo("example.com", 443, type=socket.SOCK_STREAM)[:2])
 ```
 
-**INTERVIEW PERSPECTIVE:** Walk recursive resolution. Explain TTL for failover. CNAME vs A. Why DNS outages look like "the Internet is down."
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Walk recursive resolution. Explain TTL for failover. CNAME vs A. Why DNS outages look like "the Internet is down."
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2044,40 +2052,40 @@ print(socket.getaddrinfo("example.com", 443, type=socket.SOCK_STREAM)[:2])
 | Medium | Compare TTL effects after a hypothetical IP change |
 | Hard | Build a tiny UDP DNS stub that queries 8.8.8.8 (educational) |
 
-**THE BRIDGE to Records & Security:** Resolution path is not enough - you need fluency in records and awareness of DNS spoofing/DNSSEC/DoH as the trust problem.
+**WHY THE NEXT TOPIC IS NEEDED - Records & Security:** Resolution path is not enough - you need confident working knowledge in records and awareness of DNS spoofing/DNSSEC/DoH as the trust problem.
 
 ---
 
 ## 12.2 Records, Caching Pitfalls, and Trust
 
-**WHY THIS EXISTS:** Misread records cause subtle outages (MX pointed wrong, dangling CNAME). Caches delay fixes. Plain DNS is not authenticated by default - hence DNSSEC, DoT, DoH.
+**WHY YOU ARE LEARNING THIS:** Misread records cause subtle outages (MX pointed wrong, dangling CNAME). Caches delay fixes. Plain DNS is not authenticated by default - hence DNSSEC, DoT, DoH.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Teams "updated DNS" and wondered why half the world still hit old IPs - TTLs. Attackers spoofed answers on path.
+**THE PROBLEM THIS SOLVES:** Teams "updated DNS" and wondered why half the world still hit old IPs - TTLs. Attackers spoofed answers on path.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [DNS Records Explained (PowerCert)](https://www.youtube.com/watch?v=HnUDtycXSNE)
 - Cloudflare Learning DNS record articles
 - Study public zone examples; practice with dig
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Glue records, apex CNAME restrictions, split-horizon DNS, and anycast resolvers appear in real ops. DoH/DoT encrypt client-resolver path; DNSSEC authenticates zone data. Know the difference.
 
-**THE IDEA THAT FIXED IT:** Treat DNS as a eventually-consistent distributed database with trust add-ons - not a instant global switch.
+**THE MAIN IDEA IN SIMPLE WORDS:** Treat DNS as a eventually-consistent distributed database with trust add-ons - not a instant global switch.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Change A record TTL 3600 -> wait up to 1 hour for caches.
  For fast failover: lower TTL *before* maintenance, then switch.
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Changing your phone number but old business cards (caches) still circulate until their "reprint date" (TTL).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
@@ -2085,7 +2093,7 @@ Changing your phone number but old business cards (caches) still circulate until
 | DNSSEC | Authenticity vs operational complexity |
 | Short TTL | Agility vs load |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Illustrative: many answers possible (round-robin)
@@ -2094,9 +2102,9 @@ ips = {ai[4][0] for ai in socket.getaddrinfo("example.com", 80)}
 print(ips)
 ```
 
-**INTERVIEW PERSPECTIVE:** "Site moves IPs but users still broken" - TTL/caching. "Is DNS encrypted?" - traditionally no; DoT/DoH optional.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "Site moves IPs but users still broken" - TTL/caching. "Is DNS encrypted?" - traditionally no; DoT/DoH optional.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2104,11 +2112,11 @@ print(ips)
 | Medium | Design DNS for blue/green cutover |
 | Hard | Summarize DNSSEC chain of trust at a high level |
 
-**THE BRIDGE to HTTP:** Names now resolve. Browsers still need an application protocol for "GET me this document" - HTTP.
+**WHY THE NEXT TOPIC IS NEEDED - HTTP:** Names now resolve. Browsers still need an application protocol for "GET me this document" - HTTP.
 
 ---
 
-> **Phase 12 complete?** [Build the aligned project](./Projects.md#L1679) · [Continue to Phase 13](#phase-13---http-and-the-web)
+> **Phase 12 complete?** [Build the aligned project](./Projects.md#networks-phase-12-project) · [Continue to Phase 13](#phase-13---http-and-the-web)
 
 <a id="phase-13"></a>
 
@@ -2116,17 +2124,17 @@ print(ips)
 
 **Track:** Application Protocols
 
-**GOAL:** Speak HTTP/1.1 fluently and know what HTTP/2 and HTTP/3 changed.
+**WHAT YOU WILL BE ABLE TO DO:** Speak HTTP/1.1 fluently and know what HTTP/2 and HTTP/3 changed.
 
-**PREREQUISITES:** TCP sockets + DNS.
+**WHAT YOU SHOULD KNOW FIRST:** TCP sockets + DNS.
 
 ## 13.1 HTTP/1.1 - Methods, Status Codes, Headers, Bodies
 
-**WHY THIS EXISTS:** TCP moves bytes. The Web needs a standard **request/response** language: method, path, headers, body, status codes. **HTTP** is that language - simple enough to type by hand, powerful enough to run the economy.
+**WHY YOU ARE LEARNING THIS:** TCP moves bytes. The Web needs a standard **request/response** language: method, path, headers, body, status codes. **HTTP** is that language - simple enough to type by hand, powerful enough to run the economy.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Ad hoc application protocols everywhere. No uniform caching, content types, or intermediary rules (proxies).
+**THE PROBLEM THIS SOLVES:** Ad hoc application protocols everywhere. No uniform caching, content types, or intermediary rules (proxies).
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [HTTP Explained (NeetCodeIO)](https://www.youtube.com/watch?v=wOPrIhmi7l0)
 - [What Is REST API? (ByteByteGo)](https://www.youtube.com/watch?v=-mN3VyJuCjM)
@@ -2134,13 +2142,13 @@ print(ips)
 - MDN HTTP docs · HPBN HTTP chapters
 - [shuveb/zerohttpd](https://github.com/shuveb/zerohttpd)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Request line + headers + optional body. Response status (2xx success, 3xx redirect, 4xx client, 5xx server) + headers + body. Idempotent methods matter for retries (GET/PUT vs POST). Host header enables virtual hosting. Content-Length vs chunked encoding. Cookies carry state on a stateless protocol. Connection keep-alive reuses TCP.
 
-**THE IDEA THAT FIXED IT:** A text-friendly, extensible request/response convention on top of a reliable stream.
+**THE MAIN IDEA IN SIMPLE WORDS:** A text-friendly, extensible request/response convention on top of a reliable stream.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  CLIENT                                  SERVER
@@ -2152,11 +2160,11 @@ Request line + headers + optional body. Response status (2xx success, 3xx redire
    |   <html>...                         |
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A standardized order form: verb (GET/POST), item path, sticky notes (headers), package (body), and a stamped result code.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Feature | Trade-off |
 | --- | --- |
@@ -2164,7 +2172,7 @@ A standardized order form: verb (GET/POST), item path, sticky notes (headers), p
 | Keep-alive | Less handshake cost vs idle connections |
 | Proxies/caches | Performance vs freshness bugs |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import socket
@@ -2174,9 +2182,9 @@ with socket.create_connection(("example.com", 80), timeout=5) as s:
     print(s.recv(500).decode(errors="replace"))
 ```
 
-**INTERVIEW PERSPECTIVE:** Status code classes. Idempotency. Why Host header exists. Cookies vs tokens at a high level.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Status code classes. Idempotency. Why Host header exists. Cookies vs tokens at a high level.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2184,29 +2192,29 @@ with socket.create_connection(("example.com", 80), timeout=5) as s:
 | Medium | Tiny static-file HTTP server in Python |
 | Hard | Implement chunked responses |
 
-**THE BRIDGE to HTTP/2 & /3:** HTTP/1.1's many parallel connections and HOL issues forced new versions on better transports.
+**WHY THE NEXT TOPIC IS NEEDED - HTTP/2 & /3:** HTTP/1.1's many parallel connections and HOL issues forced new versions on better transports.
 
 ---
 
 ## 13.2 HTTP/2, HTTP/3, and Evolution Pressures
 
-**WHY THIS EXISTS:** HTTP/1.1 opened many TCP connections to reduce HOL and head-of-line browser blocking. **HTTP/2** multiplexes streams over one TCP connection with binary framing. **HTTP/3** moves to QUIC to fix TCP HOL and improve handshake latency.
+**WHY YOU ARE LEARNING THIS:** HTTP/1.1 opened many TCP connections to reduce HOL and head-of-line browser blocking. **HTTP/2** multiplexes streams over one TCP connection with binary framing. **HTTP/3** moves to QUIC to fix TCP HOL and improve handshake latency.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Six connections per host hacks, head-of-line stalls, and slow crypto+TCP handshakes on mobile RTTs.
+**THE PROBLEM THIS SOLVES:** Six connections per host hacks, head-of-line stalls, and slow crypto+TCP handshakes on mobile RTTs.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Cloudflare HTTP/3](https://www.cloudflare.com/learning/performance/what-is-http3/)
 - ByteByteGo HTTP/2 vs HTTP/3 animations
 - NeetCode TCP/IP + HTTP series
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 H2: binary frames, streams, HPACK header compression, server push (rarely used now). Still suffers TCP HOL. H3: QUIC streams, typically UDP/443, integrated TLS. From an app view, still HTTP semantics (methods, status, headers).
 
-**THE IDEA THAT FIXED IT:** Keep HTTP semantics; change the framing/transport underneath as networks and RTTs demand.
+**THE MAIN IDEA IN SIMPLE WORDS:** Keep HTTP semantics; change the framing/transport underneath as networks and RTTs demand.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  HTTP/1.1: many TCP conns, text
@@ -2214,11 +2222,11 @@ H2: binary frames, streams, HPACK header compression, server push (rarely used n
  HTTP/3:   QUIC/UDP, many streams — loss isolates better
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Same language of ordering food (HTTP semantics), but upgrading from one-lane roads with pileups (H1/H2+TCP) to multi-lane managed highways (H3/QUIC).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Version | Wins | Costs |
 | --- | --- | --- |
@@ -2226,7 +2234,7 @@ Same language of ordering food (HTTP semantics), but upgrading from one-lane roa
 | H2 | Multiplex on TCP | TCP HOL, more complex |
 | H3 | Latency, stream isolation | UDP blocking, harder capture |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Prefer stdlib/urllib or requests; HTTP/2 often needs httpx/h2 stacks.
@@ -2234,9 +2242,9 @@ import urllib.request
 print(urllib.request.urlopen("https://example.com", timeout=5).status)
 ```
 
-**INTERVIEW PERSPECTIVE:** "Difference HTTP/1.1 vs 2 vs 3?" Multiplexing and transport. Do not claim H2 is "always faster."
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "Difference HTTP/1.1 vs 2 vs 3?" Multiplexing and transport. Do not claim H2 is "always faster."
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2244,11 +2252,11 @@ print(urllib.request.urlopen("https://example.com", timeout=5).status)
 | Medium | Explain why one lost TCP packet hurts H2 streams |
 | Hard | Compare waterfall charts H1 vs H2 in DevTools |
 
-**THE BRIDGE to TLS:** HTTP on port 80 is readable by anyone on path. Confidentiality and authentication require TLS - HTTPS.
+**WHY THE NEXT TOPIC IS NEEDED - TLS:** HTTP on port 80 is readable by anyone on path. Confidentiality and authentication require TLS - HTTPS.
 
 ---
 
-> **Phase 13 complete?** [Build the aligned project](./Projects.md#L1700) · [Continue to Phase 14](#phase-14---tls-and-https)
+> **Phase 13 complete?** [Build the aligned project](./Projects.md#networks-phase-13-project) · [Continue to Phase 14](#phase-14---tls-and-https)
 
 <a id="phase-14"></a>
 
@@ -2256,17 +2264,17 @@ print(urllib.request.urlopen("https://example.com", timeout=5).status)
 
 **Track:** Security
 
-**GOAL:** Explain what TLS guarantees, how certificates work at a high level, and how HTTPS composes TCP + TLS + HTTP.
+**WHAT YOU WILL BE ABLE TO DO:** Explain what TLS guarantees, how certificates work at a high level, and how HTTPS composes TCP + TLS + HTTP.
 
-**PREREQUISITES:** HTTP + TCP.
+**WHAT YOU SHOULD KNOW FIRST:** HTTP + TCP.
 
 ## 14.1 Confidentiality, Integrity, Authentication
 
-**WHY THIS EXISTS:** Cleartext HTTP exposes passwords and cookies on any shared path. Attackers can also modify bytes. **TLS** provides encryption, integrity, and server authentication (usually). **HTTPS** is HTTP over TLS.
+**WHY YOU ARE LEARNING THIS:** Cleartext HTTP exposes passwords and cookies on any shared path. Attackers can also modify bytes. **TLS** provides encryption, integrity, and server authentication (usually). **HTTPS** is HTTP over TLS.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Coffee-shop Wi-Fi could read your sessions. ISP middleboxes could inject ads. Users had no cryptographic proof they reached the real bank.
+**THE PROBLEM THIS SOLVES:** Coffee-shop Wi-Fi could read your sessions. ISP middleboxes could inject ads. Users had no cryptographic proof they reached the real bank.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [SSL, TLS, HTTP, HTTPS Explained (PowerCert)](https://www.youtube.com/watch?v=hExRDVZHhig)
 - [SSL, TLS, HTTPS Explained (ByteByteGo)](https://www.youtube.com/watch?v=j9QmMEWmcfo)
@@ -2274,13 +2282,13 @@ print(urllib.request.urlopen("https://example.com", timeout=5).status)
 - [Cloudflare - What is TLS?](https://www.cloudflare.com/learning/ssl/what-is-tls/)
 - Browser padlock / certificate viewer
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 TLS handshake negotiates keys; modern TLS 1.3 is leaner (fewer RTTs). Certificates bind a public key to a name, signed by a Certificate Authority in a trust store. Asymmetric crypto authenticates/exchanges; symmetric encrypts bulk data. Forward secrecy protects past sessions if long-term keys leak later. HTTPS failures are often auth problems (name mismatch, expired, untrusted CA), not "encryption broken."
 
-**THE IDEA THAT FIXED IT:** Layer a cryptographic session on TCP (or inside QUIC) so HTTP can stay simple while the channel becomes hostile-network-safe.
+**THE MAIN IDEA IN SIMPLE WORDS:** Layer a cryptographic session on TCP (or inside QUIC) so HTTP can stay simple while the channel becomes hostile-network-safe.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  TCP handshake
@@ -2288,11 +2296,11 @@ TLS handshake negotiates keys; modern TLS 1.3 is leaner (fewer RTTs). Certificat
      then HTTP request bytes (encrypted records)
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A courier verifies the store's official seal (certificate), agrees a secret code (keys), then speaks in a language eavesdroppers cannot understand (encryption).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Feature | Cost |
 | --- | --- |
@@ -2300,7 +2308,7 @@ A courier verifies the store's official seal (certificate), agrees a secret code
 | Cert management | Ops burden / outage if expired |
 | MITM proxies | Enterprise visibility vs trust/breakage |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import ssl, socket
@@ -2312,9 +2320,9 @@ with socket.create_connection(("example.com", 443), timeout=5) as raw:
         print(ssock.recv(300))
 ```
 
-**INTERVIEW PERSPECTIVE:** HTTPS vs HTTP. What a cert proves. Why both asymmetric and symmetric. Certificate warning causes.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** HTTPS vs HTTP. What a cert proves. Why both asymmetric and symmetric. Certificate warning causes.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2322,40 +2330,40 @@ with socket.create_connection(("example.com", 443), timeout=5) as raw:
 | Medium | Explain hostname verification |
 | Hard | Summarize TLS 1.2 vs 1.3 handshake differences |
 
-**THE BRIDGE to Wireshark:** You can describe stacks - now learn to *see* them on the wire when production lies to you.
+**WHY THE NEXT TOPIC IS NEEDED - Wireshark:** You can describe stacks - now learn to *see* them on the wire when production lies to you.
 
 ---
 
 ## 14.2 PKI Pitfalls and Operational Reality
 
-**WHY THIS EXISTS:** Most HTTPS outages are operational: expired certs, wrong SANs, incomplete chains, clock skew. Understanding PKI failure modes is as important as the handshake diagram.
+**WHY YOU ARE LEARNING THIS:** Most HTTPS outages are operational: expired certs, wrong SANs, incomplete chains, clock skew. Understanding PKI failure modes is as important as the handshake diagram.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Teams enabled TLS once and forgot renewal. Mobile clients with pinned certs broke on rotation.
+**THE PROBLEM THIS SOLVES:** Teams enabled TLS once and forgot renewal. Mobile clients with pinned certs broke on rotation.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Let's Encrypt / ACME docs
 - Certificate error debugging walkthroughs
 - [SSL Labs server test](https://www.ssllabs.com/ssltest/)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Chain building, intermediate certs, OCSP/CRL revocation (imperfect), CT logs, and ACME automation. Mutual TLS (mTLS) authenticates clients too - common in service meshes.
 
-**THE IDEA THAT FIXED IT:** Automate issuance/renewal; monitor expiry; treat certificates as production dependencies.
+**THE MAIN IDEA IN SIMPLE WORDS:** Automate issuance/renewal; monitor expiry; treat certificates as production dependencies.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  leaf cert --signed by--> intermediate --signed by--> root (in trust store)
  If intermediate missing on server: some clients fail.
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A passport (leaf) issued by a country office (intermediate) recognized because your border agent trusts that country's root authority.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
@@ -2363,16 +2371,16 @@ A passport (leaf) issued by a country office (intermediate) recognized because y
 | Long-lived certs | Less churn vs bigger compromise window |
 | Short-lived certs | Safer vs harder offline devices |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Always pass server_hostname for SNI + verification (see prior snippet).
 print("Ops rule: alert 30 days before cert expiry; prefer ACME auto-renew.")
 ```
 
-**INTERVIEW PERSPECTIVE:** Walk a certificate warning. Mention SNI. mTLS for microservices.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Walk a certificate warning. Mention SNI. mTLS for microservices.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2380,11 +2388,11 @@ print("Ops rule: alert 30 days before cert expiry; prefer ACME auto-renew.")
 | Medium | Cause a local hostname mismatch with a self-signed cert and observe the error |
 | Hard | Outline an ACME deployment for a fleet of services |
 
-**THE BRIDGE to Wireshark:** When TLS or TCP fails in the wild, packet captures settle arguments - learn to capture and filter next.
+**WHY THE NEXT TOPIC IS NEEDED - Wireshark:** When TLS or TCP fails in the wild, packet captures settle arguments - learn to capture and filter next.
 
 ---
 
-> **Phase 14 complete?** [Build the aligned project](./Projects.md#L1721) · [Continue to Phase 15](#phase-15---wireshark-and-packet-analysis)
+> **Phase 14 complete?** [Build the aligned project](./Projects.md#networks-phase-14-project) · [Continue to Phase 15](#phase-15---wireshark-and-packet-analysis)
 
 <a id="phase-15"></a>
 
@@ -2392,17 +2400,17 @@ print("Ops rule: alert 30 days before cert expiry; prefer ACME auto-renew.")
 
 **Track:** Observability
 
-**GOAL:** Capture traffic, write useful display filters, and diagnose handshake/DNS/TLS problems from packets.
+**WHAT YOU WILL BE ABLE TO DO:** Capture traffic, write useful display filters, and diagnose handshake/DNS/TLS problems from packets.
 
-**PREREQUISITES:** Layers 2-4 vocabulary; HTTP/TLS awareness.
+**WHAT YOU SHOULD KNOW FIRST:** Layers 2-4 vocabulary; HTTP/TLS awareness.
 
 ## 15.1 Capture Workflow and Display Filters
 
-**WHY THIS EXISTS:** Logs lie; dashboards lag; users paraphrase. **Packets** are primary evidence. Wireshark (and `tshark`/`tcpdump`) turns the abstract stack into expandable bytes.
+**WHY YOU ARE LEARNING THIS:** Logs lie; dashboards lag; users paraphrase. **Packets** are primary evidence. Wireshark (and `tshark`/`tcpdump`) turns the abstract stack into expandable bytes.
 
-**THE PROBLEM BEFORE THIS EXISTED:** "The network is slow" debates with no artifacts. Engineers guessed instead of measured.
+**THE PROBLEM THIS SOLVES:** "The network is slow" debates with no artifacts. Engineers guessed instead of measured.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Learn Wireshark! Tutorial for BEGINNERS (Chris Greer)](https://www.youtube.com/watch?v=OU-A2EmVrKQ)
 - [Wireshark for BEGINNERS // Capture Network Traffic](https://www.youtube.com/watch?v=nWvscuxqais)
@@ -2410,13 +2418,13 @@ print("Ops rule: alert 30 days before cert expiry; prefer ACME auto-renew.")
 - [Wireshark](https://www.wireshark.org/) · [Sample Captures](https://wiki.wireshark.org/SampleCaptures)
 - [caesar0301/awesome-pcaptools](https://github.com/caesar0301/awesome-pcaptools)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Capture on the right interface; avoid capturing yourself into a loop. Use capture filters (BPF) to reduce volume; display filters to explore. Essential filters: `ip.addr==`, `tcp.port==443`, `dns`, `tcp.flags.syn==1`, `tcp.analysis.retransmission`. Follow TCP stream to rebuild application data (cleartext). For TLS, you often see only handshake plaintext unless keys are available.
 
-**THE IDEA THAT FIXED IT:** Make the layered model clickable - each header a tree node - then filter ruthlessly.
+**THE MAIN IDEA IN SIMPLE WORDS:** Make the layered model clickable - each header a tree node - then filter ruthlessly.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  1. Reproduce issue
@@ -2426,11 +2434,11 @@ Capture on the right interface; avoid capturing yourself into a loop. Use captur
  5. Save pcap + notes for the incident ticket
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A flight data recorder for conversations on the wire - not opinions about what was said.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
@@ -2438,7 +2446,7 @@ A flight data recorder for conversations on the wire - not opinions about what w
 | SPAN/TAP | Visibility vs setup cost |
 | Decrypt TLS | Deep app debug vs key handling risk |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Prefer tcpdump/tshark in shell; Python example using scapy if installed:
@@ -2450,9 +2458,9 @@ print(pkts.summary())
 print("Use: tcpdump -i any -w lab.pcap host example.com")
 ```
 
-**INTERVIEW PERSPECTIVE:** Describe how you would debug "can't reach API" with packets. Name filters. Distinguish loss vs server refuse (RST) vs timeout.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Describe how you would debug "can't reach API" with packets. Name filters. Distinguish loss vs server refuse (RST) vs timeout.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2460,28 +2468,28 @@ print("Use: tcpdump -i any -w lab.pcap host example.com")
 | Medium | Filter retransmissions during a large download |
 | Hard | Diagnose a forced TLS intercept lab and explain certificate errors via capture |
 
-**THE BRIDGE to Diagnosis Patterns:** Capturing is not enough - you need a playbook mapping symptoms to layers.
+**WHY THE NEXT TOPIC IS NEEDED - Diagnosis Patterns:** Capturing is not enough - you need a playbook mapping symptoms to layers.
 
 ---
 
 ## 15.2 A Layered Debugging Playbook
 
-**WHY THIS EXISTS:** Random packet staring wastes hours. A disciplined path - L1 up or symptom down - finds root causes fast.
+**WHY YOU ARE LEARNING THIS:** Random packet staring wastes hours. A disciplined path - L1 up or symptom down - finds root causes fast.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Junior engineers jump to "maybe MTU" or "maybe DNS" without evidence ordering.
+**THE PROBLEM THIS SOLVES:** Junior engineers jump to "maybe MTU" or "maybe DNS" without evidence ordering.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Chris Greer name resolution / dumpcap lessons
 - Company runbooks; your own checklist in portfolio (Phase 19)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Quick ladder: link up? ARP/neigh for gateway? ping gateway? ping public IP? DNS resolve? TCP connect? TLS? HTTP code? Each "yes" eliminates a layer. Correlate OS errors (`ECONNREFUSED`, `ETIMEDOUT`) with packet evidence (RST vs silence).
 
-**THE IDEA THAT FIXED IT:** Debug by elimination along the same layered model you learned.
+**THE MAIN IDEA IN SIMPLE WORDS:** Debug by elimination along the same layered model you learned.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Symptom: browser spin
@@ -2492,18 +2500,18 @@ Quick ladder: link up? ARP/neigh for gateway? ping gateway? ping public IP? DNS 
    HTTP 503? -> app/upstream
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A medic's ABC checklist - airway before surgery. Layers before exotic theories.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Blind restarts | Sometimes works vs no learning, recurring outages |
 | Packet-first | Truth vs need for access/privacy controls |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import socket
@@ -2523,9 +2531,9 @@ def check(host, port=443):
 check("example.com")
 ```
 
-**INTERVIEW PERSPECTIVE:** Narrate this ladder out loud - it is most of "how do you debug networks?"
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Narrate this ladder out loud - it is most of "how do you debug networks?"
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2533,11 +2541,11 @@ check("example.com")
 | Medium | Break DNS on purpose in a VM; follow the ladder |
 | Hard | Blind-debug a pcap from Wireshark SampleCaptures |
 
-**THE BRIDGE to Wireless:** Wired captures are clean compared to radio. Wi-Fi reintroduces shared media, interference, and rate adaptation - Phase 16.
+**WHY THE NEXT TOPIC IS NEEDED - Wireless:** Wired captures are clean compared to radio. Wi-Fi reintroduces shared media, interference, and rate adaptation - Phase 16.
 
 ---
 
-> **Phase 15 complete?** [Build the aligned project](./Projects.md#L1742) · [Continue to Phase 16](#phase-16---wireless-and-wi-fi)
+> **Phase 15 complete?** [Build the aligned project](./Projects.md#networks-phase-15-project) · [Continue to Phase 16](#phase-16---wireless-and-wi-fi)
 
 <a id="phase-16"></a>
 
@@ -2545,39 +2553,39 @@ check("example.com")
 
 **Track:** Access Networks
 
-**GOAL:** Understand Wi-Fi as a shared-medium access network and how it stresses TCP assumptions.
+**WHAT YOU WILL BE ABLE TO DO:** Understand Wi-Fi as a shared-medium access network and how it stresses TCP assumptions.
 
-**PREREQUISITES:** Physical + link layers; TCP congestion caveats.
+**WHAT YOU SHOULD KNOW FIRST:** Physical + link layers; TCP congestion caveats.
 
 ## 16.1 802.11 Basics - SSIDs, Association, Frames
 
-**WHY THIS EXISTS:** Mobility demands radio. **Wi-Fi (802.11)** connects hosts without Ethernet cables using access points, associations, and its own frame types - still carrying IP above.
+**WHY YOU ARE LEARNING THIS:** Mobility demands radio. **Wi-Fi (802.11)** connects hosts without Ethernet cables using access points, associations, and its own frame types - still carrying IP above.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Untethered devices could not join LANs. Proprietary wireless links did not interoperate.
+**THE PROBLEM THIS SOLVES:** Untethered devices could not join LANs. Proprietary wireless links did not interoperate.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - NetworkChuck / PowerCert Wi-Fi explainers
 - [AlgoMaster wireless section](https://algomaster.io/roadmaps/cn)
 - InSSIDer / OS Wi-Fi diagnostics; AP channel maps
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 STA associates with AP; authentication/association states; encryption (WPA2/WPA3). Management vs data frames. Channels overlap; 2.4 GHz is crowded; 5/6 GHz trade range for airtime. CSMA/CA and airtime fairness matter. Roaming between APs can interrupt flows.
 
-**THE IDEA THAT FIXED IT:** Pretend to be Ethernet from IP's view, while managing a hostile shared RF medium underneath.
+**THE MAIN IDEA IN SIMPLE WORDS:** Pretend to be Ethernet from IP's view, while managing a hostile shared RF medium underneath.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Device scan -> pick SSID -> auth/assoc -> 4-way handshake (WPA) -> get IP (DHCP) -> IP traffic
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A busy cafe conversation: everyone shares air; talking over each other forces retries; moving rooms (roaming) briefly loses the thread.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
@@ -2585,15 +2593,15 @@ A busy cafe conversation: everyone shares air; talking over each other forces re
 | 5/6 GHz | Speed vs walls |
 | Dense APs | Coverage vs co-channel interference |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 print("Measure, don't guess: RSSI, channel utilization, retries — AP controllers expose these.")
 ```
 
-**INTERVIEW PERSPECTIVE:** Why wireless feels flaky vs Ethernet. WPA2 vs open. Enterprise vs PSK at high level.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Why wireless feels flaky vs Ethernet. WPA2 vs open. Enterprise vs PSK at high level.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2601,28 +2609,28 @@ print("Measure, don't guess: RSSI, channel utilization, retries — AP controlle
 | Medium | Explain hidden node problem conceptually |
 | Hard | Site-survey a small apartment; recommend channels |
 
-**THE BRIDGE to TCP-over-Wi-Fi:** Radio loss tricks congestion control - the next concept ties Phases 10 and 16 together.
+**WHY THE NEXT TOPIC IS NEEDED - TCP-over-Wi-Fi:** Radio loss tricks congestion control - the next concept ties Phases 10 and 16 together.
 
 ---
 
 ## 16.2 Interference, Retries, and TCP on Wi-Fi
 
-**WHY THIS EXISTS:** 802.11 retries mask some loss, but residual loss and delay variation still make TCP shrink `cwnd` as if the Internet core were congested. Understanding this prevents false "WAN congestion" diagnoses.
+**WHY YOU ARE LEARNING THIS:** 802.11 retries mask some loss, but residual loss and delay variation still make TCP shrink `cwnd` as if the Internet core were congested. Understanding this prevents false "WAN congestion" diagnoses.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Operators blamed backhaul when the airtime was the bottleneck. TCP "optimized" for wired loss semantics.
+**THE PROBLEM THIS SOLVES:** Operators blamed backhaul when the airtime was the bottleneck. TCP "optimized" for wired loss semantics.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - HPBN mobile/wireless chapters
 - Chris Greer captures on Wi-Fi pathologies (search)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Airtime is the scarce resource, not only Mbps peak PHY rate. Low RSSI → lower MCS → more airtime per byte → queueing. Neighboring networks collide. Cellular adds its own buffering (bufferbloat). Modern stacks use better CC (BBR) and QUIC; still measure RF first.
 
-**THE IDEA THAT FIXED IT:** Separate wireless loss/airtime problems from Internet congestion before you tune TCP.
+**THE MAIN IDEA IN SIMPLE WORDS:** Separate wireless loss/airtime problems from Internet congestion before you tune TCP.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Low RSSI -> rate down -> each TCP segment costs more airtime
@@ -2630,18 +2638,18 @@ Airtime is the scarce resource, not only Mbps peak PHY rate. Low RSSI → lower 
  Looks like "Internet congestion" but fix is RF/channel/AP placement
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Blaming the highway for traffic when the parking garage exit is jammed.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Aggressive TCP retries | App recovery vs worse airtime collapse |
 | Band-steering | Better client rates vs sticky client issues |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import time, urllib.request
@@ -2651,9 +2659,9 @@ print("seconds", time.perf_counter() - t0)
 # Compare on Ethernet vs Wi-Fi vs phone hotspot — interpret deltas carefully.
 ```
 
-**INTERVIEW PERSPECTIVE:** "Users on Wi-Fi slow, Ethernet fine - what check?" RF, channel, airtime, not only WAN.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "Users on Wi-Fi slow, Ethernet fine - what check?" RF, channel, airtime, not only WAN.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2661,11 +2669,11 @@ print("seconds", time.perf_counter() - t0)
 | Medium | Correlate retry counters with user complaints |
 | Hard | Write a one-page incident postmortem template for "Wi-Fi congestion" |
 
-**THE BRIDGE to CDN/LB:** Access networks deliver users to the edge. Global apps still need scale-out delivery - CDNs and load balancers.
+**WHY THE NEXT TOPIC IS NEEDED - CDN/LB:** Access networks deliver users to the edge. Global apps still need scale-out delivery - CDNs and load balancers.
 
 ---
 
-> **Phase 16 complete?** [Build the aligned project](./Projects.md#L1763) · [Continue to Phase 17](#phase-17---cdn-load-balancers-and-edge)
+> **Phase 16 complete?** [Build the aligned project](./Projects.md#networks-phase-16-project) · [Continue to Phase 17](#phase-17---cdn-load-balancers-and-edge)
 
 <a id="phase-17"></a>
 
@@ -2673,30 +2681,30 @@ print("seconds", time.perf_counter() - t0)
 
 **Track:** Scale
 
-**GOAL:** Contrast reverse proxies, load balancers, API gateways, and CDNs; know what problem each solves.
+**WHAT YOU WILL BE ABLE TO DO:** Contrast reverse proxies, load balancers, API gateways, and CDNs; know what problem each solves.
 
-**PREREQUISITES:** DNS, HTTP, TLS.
+**WHAT YOU SHOULD KNOW FIRST:** DNS, HTTP, TLS.
 
 ## 17.1 Reverse Proxies and Load Balancing
 
-**WHY THIS EXISTS:** One origin server dies under popularity. **Load balancers** distribute connections across healthy backends. **Reverse proxies** terminate TLS, route, cache, and shield origins.
+**WHY YOU ARE LEARNING THIS:** One origin server dies under popularity. **Load balancers** distribute connections across healthy backends. **Reverse proxies** terminate TLS, route, cache, and shield origins.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Clients hit a single IP/server. Failures were binary. Scaling meant bigger boxes (vertical) until that failed too.
+**THE PROBLEM THIS SOLVES:** Clients hit a single IP/server. Failures were binary. Scaling meant bigger boxes (vertical) until that failed too.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Reverse Proxy vs API Gateway vs Load Balancer (ByteByteGo)](https://www.youtube.com/watch?v=RqfaTIWc3LQ)
 - [Top 6 Load Balancing Algorithms (ByteByteGo)](https://www.youtube.com/watch?v=dBmxNsS3BGE)
 - [What is a Load Balancer? (IBM Technology)](https://www.youtube.com/watch?v=sCR3SAVdyCc) · [Proxy vs Reverse Proxy](https://www.youtube.com/watch?v=4NB0NDtOwIQ)
 - Cloudflare Learning reverse proxy / load balancing articles
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 L4 LB balances TCP/UDP tuples; L7 LB routes on HTTP host/path and can do sticky sessions, canary, WAF. Algorithms: round robin, least connections, consistent hashing. Health checks remove bad backends. API gateways add auth/rate-limit concerns on top of reverse proxy duties. Distinguish forward proxy (client side) vs reverse (server side).
 
-**THE IDEA THAT FIXED IT:** Put an indirection hop in front of many backends with health-aware distribution.
+**THE MAIN IDEA IN SIMPLE WORDS:** Put an indirection hop in front of many backends with health-aware distribution.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Client -> DNS -> LB VIP
@@ -2704,11 +2712,11 @@ L4 LB balances TCP/UDP tuples; L7 LB routes on HTTP host/path and can do sticky 
  Health check fail on B -> remove from pool
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A restaurant host seating guests across waiters, skipping a waiter who called out sick (health check).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
@@ -2716,7 +2724,7 @@ A restaurant host seating guests across waiters, skipping a waiter who called ou
 | L7 routing | Power vs CPU cost |
 | More hops | Features vs latency |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 backends = ["a", "b", "c"]
@@ -2731,9 +2739,9 @@ def pick():
 print([pick() for _ in range(5)])
 ```
 
-**INTERVIEW PERSPECTIVE:** L4 vs L7. How health checks work. Idempotency when LB retries.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** L4 vs L7. How health checks work. Idempotency when LB retries.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2741,40 +2749,40 @@ print([pick() for _ in range(5)])
 | Medium | Design LB for blue/green deploy |
 | Hard | Explain consistent hashing for cache-friendly LB |
 
-**THE BRIDGE to CDN:** LB scales one region. Global users need content nearby - CDNs and anycast.
+**WHY THE NEXT TOPIC IS NEEDED - CDN:** LB scales one region. Global users need content nearby - CDNs and anycast.
 
 ---
 
 ## 17.2 CDNs, Anycast, and Edge Caching
 
-**WHY THIS EXISTS:** Speed of light is a hard limit. **CDNs** cache static (and sometimes dynamic) content at PoPs near users. DNS or anycast steers clients to a nearby edge. Origins see less traffic; users see less latency.
+**WHY YOU ARE LEARNING THIS:** Speed of light is a hard limit. **CDNs** cache static (and sometimes dynamic) content at PoPs near users. DNS or anycast steers clients to a nearby edge. Origins see less traffic; users see less latency.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Every hit slammed a central origin across oceans. Flash crowds melted single regions.
+**THE PROBLEM THIS SOLVES:** Every hit slammed a central origin across oceans. Flash crowds melted single regions.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [What Is A CDN? How Does It Work? (ByteByteGo)](https://www.youtube.com/watch?v=RI9np1LWzqw)
 - [Cloudflare - What is a CDN?](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)
 - DNS + CDN steering case studies
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Cache-Control headers decide what can be stored. Cache HIT/MISS/BYPASS. Purge/invalidate after deploy. TLS often terminates at edge. Anycast announces the same IP from many PoPs; BGP delivers to nearby announcement. CDNs also absorb some DDoS.
 
-**THE IDEA THAT FIXED IT:** Move bytes closer to users; keep origins authoritative but not overwhelmed.
+**THE MAIN IDEA IN SIMPLE WORDS:** Move bytes closer to users; keep origins authoritative but not overwhelmed.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  User -> edge PoP (HIT? return : fetch origin, maybe cache)
  Deploy new asset -> purge or versioned URL (better)
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Neighborhood mini-warehouses for popular products instead of shipping every order from one factory.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
@@ -2782,7 +2790,7 @@ Neighborhood mini-warehouses for popular products instead of shipping every orde
 | Versioned URLs | Safe caching vs app discipline |
 | Edge logic | Features vs complexity/debug difficulty |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Versioned URL pattern beats purge races
@@ -2791,9 +2799,9 @@ versioned = "/static/app.3f2a1c.js"
 print("cache forever:", versioned)
 ```
 
-**INTERVIEW PERSPECTIVE:** How CDN works with DNS. Cache key pitfalls (query strings). Why `index.html` often short TTL while hashed JS long TTL.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** How CDN works with DNS. Cache key pitfalls (query strings). Why `index.html` often short TTL while hashed JS long TTL.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2801,11 +2809,11 @@ print("cache forever:", versioned)
 | Medium | Design cache policy for SPA |
 | Hard | Explain an anycast outage failure mode |
 
-**THE BRIDGE to BGP:** CDN anycast and multi-homing sit on the real Internet's interdomain routing - BGP.
+**WHY THE NEXT TOPIC IS NEEDED - BGP:** CDN anycast and multi-homing sit on the real Internet's interdomain routing - BGP.
 
 ---
 
-> **Phase 17 complete?** [Build the aligned project](./Projects.md#L1784) · [Continue to Phase 18](#phase-18---bgp-and-internet-architecture)
+> **Phase 17 complete?** [Build the aligned project](./Projects.md#networks-phase-17-project) · [Continue to Phase 18](#phase-18---bgp-and-internet-architecture)
 
 <a id="phase-18"></a>
 
@@ -2813,30 +2821,30 @@ print("cache forever:", versioned)
 
 **Track:** Interdomain
 
-**GOAL:** Explain ASes, peering vs transit, and why BGP is policy-driven; recognize leak/hijack failure modes.
+**WHAT YOU WILL BE ABLE TO DO:** Explain ASes, peering vs transit, and why BGP is policy-driven; recognize leak/hijack failure modes.
 
-**PREREQUISITES:** Routing Phase 6; DNS/CDN curiosity.
+**WHAT YOU SHOULD KNOW FIRST:** Routing Phase 6; DNS/CDN curiosity.
 
 ## 18.1 Autonomous Systems, Peering, and Transit
 
-**WHY THIS EXISTS:** No single organization owns the Internet. **Autonomous Systems (AS)** exchange reachability with **BGP**. Relationships - transit (pay for access) vs peering (settlement-free traffic exchange) - dominate path selection more than pure hop count.
+**WHY YOU ARE LEARNING THIS:** No single organization owns the Internet. **Autonomous Systems (AS)** exchange reachability with **BGP**. Relationships - transit (pay for access) vs peering (settlement-free traffic exchange) - dominate path selection more than pure hop count.
 
-**THE PROBLEM BEFORE THIS EXISTED:** An IGP cannot administer independent companies with conflicting business goals. Interdomain routing needs policy.
+**THE PROBLEM THIS SOLVES:** An IGP cannot administer independent companies with conflicting business goals. Interdomain routing needs policy.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Cloudflare - What is BGP?](https://www.cloudflare.com/learning/security/glossary/what-is-bgp/)
 - ByteByteGo BGP videos
 - [Hurricane Electric BGP toolkit](https://bgp.he.net/) look up ASNs
-- Cloudflare Learning Center Internet ecosystem articles
+- Cloudflare Learning Center articles about how the Internet's parts work together
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
-eBGP between ASes; iBGP inside. AS paths loop-prevent. Attributes (local pref, MED, AS path length) implement policy. Default-free zone carries many prefixes. IXPs facilitate peering. Content providers peer aggressively to reduce transit costs and latency.
+eBGP between ASes; iBGP inside. AS paths loop-prevent. Attributes (local pref, MED, AS path length) implement policy. Default-free zone carries many prefixes. IXPs help peering. Content providers peer aggressively to reduce transit costs and latency.
 
-**THE IDEA THAT FIXED IT:** Exchange routes as business relationships, not as a single global SPF computation.
+**THE MAIN IDEA IN SIMPLE WORDS:** Exchange routes as business relationships, not as a single global SPF computation.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  AS64500 (ISP) --transit--> AS64501 (enterprise)
@@ -2844,18 +2852,18 @@ eBGP between ASes; iBGP inside. AS paths loop-prevent. Attributes (local pref, M
  Traffic prefers policy: local pref to peer may beat shorter AS path via transit
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Airlines: codeshares and alliances (peering) vs buying tickets through a competitor's network (transit). The "shortest" path is not always the contracted one.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Rich peering | Latency/cost wins vs complex relationships |
 | Single transit | Simple vs expensive, weaker redundancy |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Toy policy: higher local_pref wins
@@ -2866,9 +2874,9 @@ candidates = [
 print(sorted(candidates, key=lambda c: (-c["local_pref"], len(c["path"])))[0])
 ```
 
-**INTERVIEW PERSPECTIVE:** What is an AS? Peering vs transit. Why BGP matters to HTTPS/CDN performance.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** What is an AS? Peering vs transit. Why BGP matters to HTTPS/CDN performance.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2876,46 +2884,46 @@ print(sorted(candidates, key=lambda c: (-c["local_pref"], len(c["path"])))[0])
 | Medium | Explain why a longer AS path might still win |
 | Hard | Read a BGP leak postmortem and summarize safeguards (RPKI, filters) |
 
-**THE BRIDGE to Hijacks & Security:** BGP's trust assumptions fail catastrophically when routes are leaked or hijacked - know the risk surface.
+**WHY THE NEXT TOPIC IS NEEDED - Hijacks & Security:** BGP's trust assumptions fail catastrophically when routes are leaked or hijacked - know the risk surface.
 
 ---
 
 ## 18.2 Leaks, Hijacks, RPKI - and Why Filtering Matters
 
-**WHY THIS EXISTS:** A mistaken announcement can blackhole a chunk of the Internet. **Route leaks** and **hijacks** are recurring global incidents. Defenses include prefix filtering, IRR, and **RPKI**/ROA validation - imperfect but necessary.
+**WHY YOU ARE LEARNING THIS:** A mistaken announcement can blackhole a chunk of the Internet. **Route leaks** and **hijacks** are recurring global incidents. Defenses include prefix filtering, IRR, and **RPKI**/ROA validation - imperfect but necessary.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Early BGP assumed trustworthy neighbors. That does not scale to the modern Internet.
+**THE PROBLEM THIS SOLVES:** Early BGP assumed trustworthy neighbors. That does not scale to the modern Internet.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Cloudflare/MANRS materials on RPKI
 - Postmortems of famous BGP incidents (YouTube/conference talks)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Operators should announce only their prefixes. Customers should not be used as transit accidentally. RPKI cryptographically attests which AS may originate a prefix. Adoption is partial - defense in depth still required.
 
-**THE IDEA THAT FIXED IT:** Constrain what BGP *will accept*, not only what it *can* compute.
+**THE MAIN IDEA IN SIMPLE WORDS:** Constrain what BGP *will accept*, not only what it *can* compute.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Without filters: AS evil announces 0.0.0.0/0 or victim prefix -> traffic redirects
  With filters + RPKI: invalid origins dropped/rejected per policy
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Anyone can print fake road signs unless cities authenticate official signage - RPKI is the authentication attempt.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Strict RPKI | Safety vs risk of mis-ROA outages |
 | Loose filters | Availability vs hijack exposure |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 allowed = {"203.0.113.0/24": 64501}
@@ -2926,9 +2934,9 @@ def accept(prefix, origin_asn):
 print(accept("203.0.113.0/24", 64501), accept("203.0.113.0/24", 666))
 ```
 
-**INTERVIEW PERSPECTIVE:** Explain a hijack at high level. Mention RPKI. Show humility - this is deep ops territory.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Explain a hijack at high level. Mention RPKI. Show humility - this is deep ops territory.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2936,11 +2944,11 @@ print(accept("203.0.113.0/24", 64501), accept("203.0.113.0/24", 666))
 | Medium | Why can a more-specific prefix steal traffic? |
 | Hard | Draft a checklist for a new BGP customer session |
 
-**THE BRIDGE to Labs & Portfolio:** Theory without artifacts will not hire you. Build captures, labs, and write-ups next.
+**WHY THE NEXT TOPIC IS NEEDED - Labs & Portfolio:** Theory without artifacts will not hire you. Build captures, labs, and write-ups next.
 
 ---
 
-> **Phase 18 complete?** [Build the aligned project](./Projects.md#L1805) · [Continue to Phase 19](#phase-19---labs-portfolio-and-automation)
+> **Phase 18 complete?** [Build the aligned project](./Projects.md#networks-phase-18-project) · [Continue to Phase 19](#phase-19---labs-portfolio-and-automation)
 
 <a id="phase-19"></a>
 
@@ -2948,17 +2956,17 @@ print(accept("203.0.113.0/24", 64501), accept("203.0.113.0/24", 666))
 
 **Track:** Proof
 
-**GOAL:** Produce public proof of skill: labs, pcaps, write-ups, and basic automation.
+**WHAT YOU WILL BE ABLE TO DO:** Produce public proof of skill: labs, pcaps, write-ups, and basic automation.
 
-**PREREQUISITES:** Phases 1-18 spine.
+**WHAT YOU SHOULD KNOW FIRST:** the knowledge from Phases 1-18.
 
 ## 19.1 Build a Portfolio That Proves Networking Skill
 
-**WHY THIS EXISTS:** Saying "I know TCP" is cheap. A repo with an echo server, a Wireshark challenge write-up, a Packet Tracer diagram, and CS144 progress is expensive - in the good way.
+**WHY YOU ARE LEARNING THIS:** Saying "I know TCP" is cheap. A repo with an echo server, a Wireshark challenge write-up, a Packet Tracer diagram, and CS144 progress is expensive - in the good way.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Resumes list certifications or buzzwords without artifacts. Hiring managers cannot validate.
+**THE PROBLEM THIS SOLVES:** Resumes list certifications or buzzwords without artifacts. Hiring managers cannot validate.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Stanford CS144](https://cs144.github.io/)
 - [OfekiAlm/practical-networking-from-zero-to-hero](https://github.com/OfekiAlm/practical-networking-from-zero-to-hero/)
@@ -2967,13 +2975,13 @@ print(accept("203.0.113.0/24", 64501), accept("203.0.113.0/24", 666))
 - [AlgoMaster CN projects list](https://algomaster.io/roadmaps/cn)
 - [Beej](https://beej.us/guide/bgnet/html/) exercises
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Minimum viable portfolio: (1) TCP/UDP socket project with framing; (2) annotated pcap of DNS+TCP+TLS; (3) subnetting cheat-sheet you wrote; (4) small write-up "what happens when I curl my site"; (5) optional CS144 checkpoint notes. Quality of explanation > quantity of tools.
 
-**THE IDEA THAT FIXED IT:** Treat learning output as products with READMEs, diagrams, and reproduction steps.
+**THE MAIN IDEA IN SIMPLE WORDS:** Treat learning output as products with READMEs, diagrams, and reproduction steps.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  For each lab:
@@ -2981,18 +2989,18 @@ Minimum viable portfolio: (1) TCP/UDP socket project with framing; (2) annotated
  Publish to GitHub; link from resume.
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A chef's tasting menu vs claiming "I can cook."
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Broad shallow labs | Coverage vs no depth signal |
 | One deep CS144 track | Strong signal vs time |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Portfolio README skeleton generator
@@ -3000,9 +3008,9 @@ sections = ["Goal", "Topology", "Steps", "Packets", "Failure injection", "Lesson
 print("\n".join(f"## {s}" for s in sections))
 ```
 
-**INTERVIEW PERSPECTIVE:** Walk your own pcap in the interview. It beats whiteboard-only candidates.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Walk your own pcap in the interview. It beats whiteboard-only candidates.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3010,46 +3018,46 @@ print("\n".join(f"## {s}" for s in sections))
 | Medium | Annotated pcap write-up |
 | Hard | Finish CS144 through TCP sender/receiver |
 
-**THE BRIDGE to Automation:** Manual CLI does not scale. Network automation is how infra teams ship changes safely.
+**WHY THE NEXT TOPIC IS NEEDED - Automation:** Manual CLI does not scale. Network automation is how infra teams ship changes safely.
 
 ---
 
 ## 19.2 Network Automation Literacy
 
-**WHY THIS EXISTS:** Clicky UI changes drift and do not audit well. **Automation** (Python, Ansible, NAPALM, Terraform for cloud nets, NetBox as source of truth) makes changes repeatable.
+**WHY YOU ARE LEARNING THIS:** Clicky UI changes drift and do not audit well. **Automation** (Python, Ansible, NAPALM, Terraform for cloud nets, NetBox as source of truth) makes changes repeatable.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Snowflake routers. Nobody knew why a route existed. Outages from "temporary" ACL fixes.
+**THE PROBLEM THIS SOLVES:** Snowflake routers. Nobody knew why a route existed. Outages from "temporary" ACL fixes.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [networktocode/awesome-network-automation](https://github.com/networktocode/awesome-network-automation)
 - [CiscoDevNet/netprog_basics](https://github.com/CiscoDevNet/netprog_basics)
 - DevNet / NTC blogs
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Start with: inventory source of truth, intentional config generation, dry-run diffs, staged rollout, rollback. Even software engineers benefit: understand why "the network team" demands tickets and change windows.
 
-**THE IDEA THAT FIXED IT:** Apply software engineering to network state - version, test, review, deploy.
+**THE MAIN IDEA IN SIMPLE WORDS:** Apply software engineering to network state - version, test, review, deploy.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  NetBox inventory -> generate config -> review diff -> push N devices -> validate tests
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Infrastructure as code for buildings: blueprints over improvisational remodeling.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Full automation | Speed vs blast radius if buggy |
 | Manual + docs | Careful vs drift |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Fake inventory diff
@@ -3060,9 +3068,9 @@ for device, conf in desired.items():
         print(f"CHANGE {device}: {actual.get(device)} -> {conf}")
 ```
 
-**INTERVIEW PERSPECTIVE:** How would you safely update ACLs on 200 routers? Mention canaries, diffs, source of truth.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** How would you safely update ACLs on 200 routers? Mention canaries, diffs, source of truth.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3070,11 +3078,11 @@ for device, conf in desired.items():
 | Medium | Ansible ping module against lab VMs |
 | Hard | Generate interface configs from a YAML inventory |
 
-**THE BRIDGE to Interviews:** Artifacts ready - train the oral exam next: URL bar walkthroughs, design prompts, debugging narratives.
+**WHY THE NEXT TOPIC IS NEEDED - Interviews:** Artifacts ready - train the oral exam next: URL bar walkthroughs, design prompts, debugging narratives.
 
 ---
 
-> **Phase 19 complete?** [Build the aligned project](./Projects.md#L1826) · [Continue to Phase 20](#phase-20---interviews)
+> **Phase 19 complete?** [Build the aligned project](./Projects.md#networks-phase-19-project) · [Continue to Phase 20](#phase-20---interviews)
 
 <a id="phase-20"></a>
 
@@ -3082,29 +3090,29 @@ for device, conf in desired.items():
 
 **Track:** Hire
 
-**GOAL:** Narrate networking clearly under pressure with correct layering and honest trade-offs.
+**WHAT YOU WILL BE ABLE TO DO:** Narrate networking clearly under pressure with correct layering and honest trade-offs.
 
-**PREREQUISITES:** Portfolio from Phase 19; fluency in Phases 1-18.
+**WHAT YOU SHOULD KNOW FIRST:** Portfolio from Phase 19; confident working knowledge in Phases 1-18.
 
 ## 20.1 The URL Bar Walkthrough and Core Drills
 
-**WHY THIS EXISTS:** "What happens when you type a URL and press Enter?" is the canonical systems networking question. It tests whether your knowledge is a chain or a trivia pile.
+**WHY YOU ARE LEARNING THIS:** "What happens when you type a URL and press Enter?" is the canonical systems networking question. It tests whether your knowledge is a chain or a trivia pile.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Candidates recite "DNS then TCP then HTTP" without ports, TLS, caching, or failure modes - and freeze on follow-ups.
+**THE PROBLEM THIS SOLVES:** Candidates recite "DNS then TCP then HTTP" without ports, TLS, caching, or failure modes - and freeze on follow-ups.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Review your own Phase 8/12/13/14 notes
 - NeetCode HTTP + ByteByteGo TLS/CDN playlist
 - HPBN as interview depth booster
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 A strong answer: browser cache/HSTS → DNS (stub/recursive/records) → connect (TCP or QUIC) → TLS (cert verify) → HTTP request → proxies/CDN/LB → server → response → rendering. Mention parallel connections, Keep-Alive, and where failure shows up. Then invite follow-ups: "want me to go deeper on TLS or routing?"
 
-**THE IDEA THAT FIXED IT:** Answer as a story of protocols reacting to limitations - the same bridges as this document.
+**THE MAIN IDEA IN SIMPLE WORDS:** Answer as a story of protocols reacting to limitations - the same bridges as this document.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Type URL
@@ -3117,18 +3125,18 @@ A strong answer: browser cache/HSTS → DNS (stub/recursive/records) → connect
  At each step: name one failure mode
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A tour guide who knows the city route and the alleys when a street is blocked - not someone who memorized street names from a list.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Too shallow | Fails screen |
 | Too deep on crypto math | Misses time; read the interviewer |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 steps = [
@@ -3142,9 +3150,9 @@ for i, s in enumerate(steps, 1):
     print(f"{i}. {s} — failure mode: ?")
 ```
 
-**INTERVIEW PERSPECTIVE:** This *is* the interview perspective. Practice aloud with a timer (5 and 12 minutes versions).
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** This *is* the interview perspective. Practice aloud with a timer (5 and 12 minutes versions).
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3152,54 +3160,54 @@ for i, s in enumerate(steps, 1):
 | Medium | Add CDN + LB to the story |
 | Hard | Answer follow-ups on NAT, HOL, BGP without notes |
 
-**THE BRIDGE to Design & Behavioral:** Networking interviews also include design prompts and stories about incidents - prepare those explicitly.
+**WHY THE NEXT TOPIC IS NEEDED - Design & Behavioral:** Networking interviews also include design prompts and stories about incidents - prepare those explicitly.
 
 ---
 
 ## 20.2 Design Prompts, Debugging Stories, and Soft Signals
 
-**WHY THIS EXISTS:** Senior roles ask you to design a global API edge, or recount an outage. They test judgment: metrics, failure domains, rollbacks - not only RFC trivia.
+**WHY YOU ARE LEARNING THIS:** Senior roles ask you to design a global API edge, or recount an outage. They test judgment: metrics, failure domains, rollbacks - not only RFC trivia.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Candidates who can define SYN but cannot choose between anycast CDN vs multi-region LB under constraints.
+**THE PROBLEM THIS SOLVES:** Candidates who can define SYN but cannot choose between anycast CDN vs multi-region LB under constraints.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - ByteByteGo system design networking episodes (CDN, LB, DNS)
 - Your Phase 19 postmortems
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Design prompt checklist: requirements (latency, RPS, consistency), assumptions, high-level diagram, DNS plan, TLS termination, LB strategy, caching, health checks, observability (pcaps/metrics/logs), abuse/DDoS, rollout. Behavioral: STAR stories from labs ("I misconfigured NAT and learned...").
 
-**THE IDEA THAT FIXED IT:** Tie every design choice to a failure mode you can name from earlier phases.
+**THE MAIN IDEA IN SIMPLE WORDS:** Tie every design choice to a failure mode you can name from earlier phases.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Clarify -> Diagram -> Data plane path -> Control plane (DNS/BGP) -> Failure drills -> Metrics
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Architect plus firefighter: draw the building and explain the sprinkler test.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Over-design | Impressive diagram vs ignores constraints |
 | Under-design | Ships but dies on day 2 traffic |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 checklist = ["SLA", "regions", "DNS TTL", "TLS", "LB", "cache", "health", "ddos", "o11y", "rollback"]
 print("Design prompt checklist:", ", ".join(checklist))
 ```
 
-**INTERVIEW PERSPECTIVE:** Ask clarifying questions first. State trade-offs explicitly. Admit unknowns; describe how you would verify with packets.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Ask clarifying questions first. State trade-offs explicitly. Admit unknowns; describe how you would verify with packets.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3207,11 +3215,11 @@ print("Design prompt checklist:", ", ".join(checklist))
 | Medium | 45-minute mock: URL + design a URL shortener edge |
 | Hard | Full loop: debugging pcap + design + behavioral |
 
-**THE BRIDGE BEYOND This Document:** Production invents the next limitation - a BGP incident, a bufferbloat mystery, a QUIC middlebox - and that limitation becomes your next concept. Keep the habit: what broke, why, what we invent next.
+**WHY THE NEXT TOPIC IS NEEDED BEYOND This Document:** Production invents the next limitation - a BGP incident, a bufferbloat mystery, a QUIC middlebox - and that limitation becomes your next concept. Keep the habit: what broke, why, what we invent next.
 
 ---
 
-> **Phase 20 complete?** [Build the aligned project](./Projects.md#L1847) · [Return to the phase index](#phase-index)
+> **Phase 20 complete?** [Build the aligned project](./Projects.md#networks-phase-20-project) · [Return to the phase index](#phase-index)
 
 ---
 

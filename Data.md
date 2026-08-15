@@ -1,8 +1,8 @@
 # The Zero-to-Hero Data Analyst & Data Engineer Roadmap
 
-*Mohammad Bilal's complete, self-paced path from first principles to professional-level data work - spreadsheets, SQL, Python, statistics, visualization, warehousing, ETL/ELT, orchestration, dbt, Spark, Kafka, and cloud platforms - told as one continuous chain of discoveries.*
+*Mohammad Bilal's complete, self-paced path from first principles to professional-level data work - spreadsheets, SQL, Python, statistics, visualization, warehousing, ETL/ELT, orchestration, dbt, Spark, Kafka, and cloud platforms - told as a connected story in which each new idea solves a problem left by the previous one.*
 
-**Scope:** Data analyst × data engineer · 20 phases · no week clocks.
+**Scope:** Data analyst × data engineer · 20 phases · no artificial weekly deadline.
 
 ```
 First principles → SQL → Stats → Pipelines → Spark → Kafka → Hire
@@ -12,7 +12,15 @@ First principles → SQL → Stats → Pipelines → Spark → Kafka → Hire
 
 ## How to Read This Document
 
-This is not a stack of unrelated notes you can jump around in. It is one long argument, and every section exists because the section before it hit a wall. Each stop opens by explaining **why what you just learned wasn't enough**, and closes by showing you **the crack that the next concept was invented to fill**. Read it in order the first time through - window functions only make sense because of what broke in basic `GROUP BY`.
+### Start here if data work is completely new to you
+
+**Data** is recorded information: a sale, a click, a temperature, a name, or any other fact you can store. A **data analyst** uses recorded facts to answer questions and support decisions. A **data engineer** builds the paths that collect, clean, store, and deliver those facts. A **query** is a precise request for information, a **pipeline** is a repeatable series of data-moving steps, and a **data model** describes how the stored facts relate to one another.
+
+Begin each topic with a small table you can inspect with your own eyes. Predict the result before you run a formula, query, or script. Then compare your prediction with the output and explain any difference. That habit matters more than remembering tool names because it teaches you to notice when data is incomplete, duplicated, or misleading.
+
+**Words you will meet often:** a **schema** describes the expected shape of stored data; **SQL** is a language for asking relational databases questions; a **metric** is a defined measurement used to track something; **grain** states what one row represents; a **warehouse** stores data prepared for analysis; **ETL** means extract, transform, then load, while **ELT** transforms after loading; **orchestration** schedules and coordinates data jobs; **batch** processing handles a collected group at once; **stream** processing handles continuing events; and a **partition** is one deliberately separated part of a larger dataset.
+
+The sections are connected. Read them in order the first time because each one begins with a problem that the previous idea could not solve. Each section begins by explaining **why what you just learned wasn't enough**, and closes by showing you **the remaining problem that leads to the next idea**. Read it in order the first time through - window functions only make sense because of what broke in basic `GROUP BY`.
 
 **There is no clock on this document.** No week numbers, no day-by-day plan, no "finish by." Data skills do not compress into a fixed number of days, and pretending otherwise is how people memorize disconnected tool names instead of building understanding. Move at the pace your own understanding requires. The only valid unit of progress here is: *can I now explain why the previous concept wasn't enough, and how this one fixes it?*
 
@@ -21,40 +29,40 @@ Every concept in this roadmap answers the same set of questions, because that se
 - What is it, in plain language?
 - Why does it exist - what problem forced someone to invent it?
 - What did people do before it existed, and what broke?
-- How does it solve that problem, mechanically, underneath the hood?
+- How does it solve that problem, step by step, inside the computer or system?
 - What does it cost? (Every solution trades something for something.)
 - Where does its own limitation show up - and what does *that* limitation force us to invent next?
 
 That last question is the engine of the whole roadmap. Nothing here is "just a topic to cover." Every topic is a *reaction* to the topic before it.
 
-### Two Roles, One Pipeline
+### Two Jobs, One Shared Flow of Data
 
-This document covers both **Data Analyst** and **Data Engineer** paths because they share a spine (SQL, modeling, Python, metrics) and then diverge:
+This document covers both **Data Analyst** and **Data Engineer** paths because they share the same basic knowledge (SQL, modeling, Python, metrics) and then diverge:
 
-| Role | Primary question | Primary craft |
+| Role | Primary question | Main work |
 | --- | --- | --- |
 | **Data Analyst** | What does the data *mean*, and what should we *do*? | Querying, stats, visualization, storytelling, metrics |
-| **Data Engineer** | How does trustworthy data *get here*, reliably, at scale? | Pipelines, warehouses, orchestration, quality, platforms |
+| **Data Engineer** | How does trustworthy data *get here*, reliably, when the amount of work grows? | Pipelines, warehouses, orchestration, quality, platforms |
 
 Phases 1-10 build the shared foundation and take you to a strong analyst. Phases 11-20 deepen modeling, warehouses, pipelines, platforms, and hiring readiness. If you only want analysis, finish through Phase 10, then skim 11-12 and jump to 19-20. If you want engineering, do not skip the analyst phases - engineers who cannot think in metrics build pipelines nobody trusts.
 
-### The Rhythm Every Concept Follows
+### The Beginner-Friendly Pattern Every Topic Follows
 
 Those questions are answered in the same order every single time. Once you have read one section you know the shape of all of them:
 
 | Element | What it gives you |
 | --- | --- |
-| **Why This Concept Exists** | The previous concept's limitation, stated plainly, before any new machinery is introduced |
-| **Visual Learning** | Videos, interactive tools, written docs, a GitHub implementation, and a practice platform - placed *here*, not in a dead list at the bottom |
-| **Detailed Explanation** | The mechanics, precisely, in prose |
-| **The Idea That Fixed It** | The compact insight that made the concept stick |
+| **Why You Are Learning This** | The previous concept's limitation, stated plainly, before any new machinery is introduced |
+| **See It Before You Memorize It** | Videos, interactive tools, written docs, a GitHub implementation, and a practice platform - placed *here*, not in a dead list at the bottom |
+| **Step-by-Step Explanation** | A precise, step-by-step explanation in words |
+| **The Idea That Fixed It** | The main idea in one clear sentence that made the concept stick |
 | **Internal Working, Step by Step** | A prose and diagram "animation" of exactly what happens underneath |
-| **Real-World Analogy** | Something you can picture without a screen |
+| **Picture It Like This** | Something you can picture without a screen |
 | **Complexity / Trade-offs** | What improved, what it cost, and why |
-| **Code Implementation** | A minimal, working version you can run |
-| **Interview Perspective** | What the concept looks like when it is tested |
+| **Small Working Example** | A minimal, working version you can run |
+| **How to Explain This in an Interview** | What the concept looks like when it is tested |
 | **Practice** | Problems graded easy to hard |
-| **The Bridge** | The exact limitation that makes the next concept necessary |
+| **Why the Next Topic Is Needed** | The exact limitation that makes the next concept necessary |
 
 **Diagram conventions.** Diagrams are plain ASCII inside code fences. `|` and `v` mean "then this happens", `+--` joins related paths, `-->` and `->` mean data movement, `X` marks a failure point, and boxes drawn with `+---+` are systems or tables. Time runs downward.
 
@@ -127,7 +135,7 @@ Every arrow above is a real dependency that gets argued for in the text - not ju
 | 09 | [Visualization](#phase-9---visualization--storytelling) | Make charts that change minds | Choose the right chart for the question and avoid common lies |
 | 10 | [EDA & Metrics](#phase-10---eda-metrics--analytics) | Turn curiosity into decisions | Define a metric, explore a dataset, and write a short insight memo |
 | 11 | [Relational Modeling](#phase-11---relational-modeling-oltp) | Design correct OLTP schemas | Normalize to 3NF and explain when an index helps a query plan |
-| 12 | [Warehouse & Dimensional](#phase-12---warehouses--dimensional-modeling) | Model for analytics at scale | Draw a star schema and choose an SCD strategy for a changing attribute |
+| 12 | [Warehouse & Dimensional](#phase-12---warehouses--dimensional-modeling) | Model for analytics when the amount of work grows | Draw a star schema and choose an SCD strategy for a changing attribute |
 | 13 | [ETL/ELT & Formats](#phase-13---etl--elt-pipelines) | Move and store data efficiently | Contrast ETL vs ELT and justify Parquet over CSV for a warehouse load |
 | 14 | [Orchestration & Containers](#phase-14---orchestration-airflow--containers) | Run pipelines reliably | Write an Airflow DAG with retries and explain why Docker freezes the runtime |
 | 15 | [dbt & Analytics Eng](#phase-15---analytics-engineering-with-dbt) | Transform in the warehouse like software | Build staged/mart models with tests and docs on a sample project |
@@ -157,17 +165,17 @@ Every arrow above is a real dependency that gets argued for in the text - not ju
 
 **Track:** Shared Foundation
 
-**GOAL:** Understand the path from a click, transaction, or sensor reading to a business decision - and where analysts and engineers sit on that path.
+**WHAT YOU WILL BE ABLE TO DO:** Understand the path from a click, transaction, or sensor reading to a business decision - and where analysts and engineers sit on that path.
 
-**PREREQUISITES:** None - this is the ground floor.
+**WHAT YOU SHOULD KNOW FIRST:** None - this is the ground floor.
 
 ## 1.1 Data Lifecycle & Analyst vs Engineer
 
-**WHY THIS EXISTS - WHERE EVERYTHING STARTS:** Every later tool - SQL, Pandas, Airflow, Spark - exists to move one step of this lifecycle. If you never see the whole path, you will confuse *tools* with *jobs*. Analysts who skip this invent dashboards nobody uses. Engineers who skip this build pipelines that deliver garbage on time. This phase exists to remove that ambiguity before it can compound.
+**WHY YOU ARE LEARNING THIS - WHERE THE ROADMAP STARTS:** Every later tool - SQL, Pandas, Airflow, Spark - exists to move one step of this lifecycle. If you never see the whole path, you will confuse *tools* with *jobs*. Analysts who skip this invent dashboards nobody uses. Engineers who skip this build pipelines that deliver garbage on time. This phase exists to remove that ambiguity before it can compound.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Organizations made decisions from gut feel, paper ledgers, and one-off Excel exports emailed around as `final_v3.xlsx`. That worked for a shop with twenty customers. It collapses when you have millions of events, multiple teams asking conflicting questions, and regulators asking "where did this number come from?" Without a shared map of how raw events become decisions, every team invents its own private definition of "revenue," and the company argues about numbers instead of acting on them.
+**THE PROBLEM THIS SOLVES:** Organizations made decisions from gut feel, paper ledgers, and one-off Excel exports emailed around as `final_v3.xlsx`. That worked for a shop with twenty customers. It collapses when you have millions of events, multiple teams asking conflicting questions, and regulators asking "where did this number come from?" Without a shared map of how raw events become decisions, every team invents its own private definition of "revenue," and the company argues about numbers instead of acting on them.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [What is Data Pipeline? (ByteByteGo)](https://www.youtube.com/watch?v=kGT4PcTEPP8) - builds the end-to-end path from source systems to decisions with clear animation
 - Alternative: [How I'd Learn Data Engineering in 2026 (Data with Baraa)](https://www.youtube.com/watch?v=1nVGaNbvuXg) - role map and learning order from a practicing engineer
@@ -178,15 +186,15 @@ Every arrow above is a real dependency that gets argued for in the text - not ju
 - GitHub implementation: [DataTalksClub/data-engineering-zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) - a full free course that walks the lifecycle with real tools
 - Practice platform: [Exercism](https://exercism.org/) - pick a language track and practice writing small, testable transforms (the micro-skill every lifecycle step needs)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Data work is a pipeline of trust, not a pile of tools. Something happens in the world - an order is placed, a page is viewed, a payment fails. An application or device captures that event as a row, log line, or API payload. Batch or stream jobs move that data toward systems built for analysis. Messy source tables become clean, documented, tested tables with a declared grain. Humans then ask questions with SQL, Python, or BI tools and produce metrics, charts, and recommendations. A team changes a product, price, process, or forecast. That decision creates new events, and the loop continues.
 
-**Data Engineers** own reliability of capture, movement, and modeling at scale: freshness, schema contracts, failure recovery, and cost. **Data Analysts** own rigor of questioning and decision support: metric definitions, statistical caution, visualization that does not lie, and memos that change minds. Analytics engineers often sit in the middle, using SQL plus software habits to make modeled tables trustworthy for analysts. The important point is not the job title on a LinkedIn profile. It is which failure mode you own when the number is wrong or late.
+**Data Engineers** own reliability of capture, movement, and modeling when the amount of work grows: freshness, schema contracts, failure recovery, and cost. **Data Analysts** own rigor of questioning and decision support: metric definitions, statistical caution, visualization that does not lie, and memos that change minds. Analytics engineers often sit in the middle, using SQL plus software habits to make modeled tables trustworthy for analysts. The important point is not the job title on a LinkedIn profile. It is which failure mode you own when the number is wrong or late.
 
-**THE IDEA THAT FIXED IT:** Stop treating "data work" as a single skill. Treat it as a lifecycle with clear handoffs. Once you can point to where an event is generated, where it is stored, how it is moved, how it is modeled, and how it is decided upon, every later tool has a home. Tools then become answers to specific lifecycle failures instead of fashion accessories.
+**THE MAIN IDEA IN SIMPLE WORDS:** Stop treating "data work" as a single skill. Treat it as a lifecycle with clear handoffs. Once you can point to where an event is generated, where it is stored, how it is moved, how it is modeled, and how it is decided upon, every later tool has a home. Tools then become answers to specific lifecycle failures instead of fashion accessories.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  User clicks "Buy"
@@ -223,11 +231,11 @@ Data work is a pipeline of trust, not a pile of tools. Something happens in the 
 
 Follow one purchase through that diagram and you will see why "the dashboard is wrong" is almost never a chart problem. The bug might be capture (event never fired), movement (job failed silently), modeling (double-counted refunds), analysis (wrong filter), or decision (metric looked at without context). Engineers and analysts debug different boxes. Professionals can name which box failed.
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A restaurant: cooks and prep (engineers) keep ingredients flowing from suppliers to the kitchen with consistent prep and temperature control. Servers and the chef tasting the plate (analysts) decide whether the menu is working and what to change tomorrow. If the kitchen is chaotic, no amount of elegant plating saves dinner. If the kitchen is perfect but nobody tastes, you serve food nobody ordered. Both crafts are required; confusing them produces either beautiful nonsense or reliable irrelevance.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -237,7 +245,7 @@ A restaurant: cooks and prep (engineers) keep ingredients flowing from suppliers
 | Perfect models before any dashboard | Clean foundation, fewer rewrites | Months with zero business value |
 | One "data person" doing both roles | Simple org chart early on | Burnout and shallow ownership of both crafts |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # A tiny lifecycle sketch - not production, just the idea made runnable.
@@ -294,9 +302,9 @@ print(revenue_by_user(facts))
 # {'u1': 49.0, 'u2': 20.0}
 ```
 
-**INTERVIEW PERSPECTIVE:** "What's the difference between a data analyst and a data engineer?" Answer in lifecycle terms, not tool lists. Mention that both care about metric definitions and data quality, but own different failure modes: engineers own late/missing/duplicated pipes; analysts own misleading definitions, bad segments, and charts that imply causation they cannot support. Strong candidates also say where the two must collaborate - usually on the metric contract.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "What's the difference between a data analyst and a data engineer?" Answer in lifecycle terms, not tool lists. Mention that both care about metric definitions and data quality, but own different failure modes: engineers own late/missing/duplicated pipes; analysts own misleading definitions, bad segments, and charts that imply causation they cannot support. Strong candidates also say where the two must collaborate - usually on the metric contract.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -306,17 +314,17 @@ print(revenue_by_user(facts))
 | Medium | Take any Kaggle dataset and write: decision supported, owner of capture, owner of analysis |
 | Hard | Read the Zoomcamp README and map each week to a lifecycle step, noting gaps |
 
-**THE BRIDGE to Structured / Semi-structured / Unstructured Data:** Knowing the lifecycle tells you *that* data must move from world to decision. It does not yet tell you *what shapes* that data comes in - tables, JSON documents, images, logs - and why those shapes force different tools. That is the next crack.
+**WHY THE NEXT TOPIC IS NEEDED - Structured / Semi-structured / Unstructured Data:** Knowing the lifecycle tells you *that* data must move from world to decision. It does not yet tell you *what shapes* that data comes in - tables, JSON documents, images, logs - and why those shapes force different tools. That is the next crack.
 
 ---
 
 ## 1.2 Structured, Semi-structured, Unstructured Data & Data as a Product
 
-**WHY THIS EXISTS:** "We have data" is not a useful sentence until you know the shape. A relational table, a JSON API payload, and a folder of PDFs are all "data," but they demand different storage, different queries, and different quality checks. Separately, modern teams treat datasets as *products* with owners, SLAs, and consumers - because orphaned tables become landfill.
+**WHY YOU ARE LEARNING THIS:** "We have data" is not a useful sentence until you know the shape. A relational table, a JSON API payload, and a folder of PDFs are all "data," but they demand different storage, different queries, and different quality checks. Separately, modern teams treat datasets as *products* with owners, SLAs, and consumers - because orphaned tables become landfill.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Teams dumped everything into shared folders and databases with names like `data2_new`. Nobody knew whether a field was required, who owned freshness, or whether yesterday's CSV matched today's schema. Analysts spent more time archaeology-digging than analyzing. Engineers could not promise reliability because "the data" had no contract. Semi-structured logs and nested JSON made this worse: the data looked flexible until the first dashboard assumed a field that sometimes was an object and sometimes a string.
+**THE PROBLEM THIS SOLVES:** Teams dumped everything into shared folders and databases with names like `data2_new`. Nobody knew whether a field was required, who owned freshness, or whether yesterday's CSV matched today's schema. Analysts spent more time archaeology-digging than analyzing. Engineers could not promise reliability because "the data" had no contract. Semi-structured logs and nested JSON made this worse: the data looked flexible until the first dashboard assumed a field that sometimes was an object and sometimes a string.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [Data Pipeline Overview thinking (ByteByteGo)](https://www.youtube.com/watch?v=kGT4PcTEPP8) - revisit with an eye for source *shapes*, not only pipes
 - Alternative: [ETL explained with a clear example (Chandoo)](https://www.youtube.com/watch?v=wDTzxdShbd8) - transform thinking before you meet warehouses
@@ -327,15 +335,15 @@ print(revenue_by_user(facts))
 - GitHub implementation: [DataExpert-io/data-engineer-handbook](https://github.com/DataExpert-io/data-engineer-handbook) - glossary and stack notes for source types
 - Practice platform: [Kaggle](https://www.kaggle.com/) - open one CSV (structured), one JSON-lines dataset, and one text/image set; write the shape of each
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 **Structured data** fits a predefined schema: rows and columns with types, primary keys, and relationships. SQL databases and tidy spreadsheets live here. **Semi-structured data** has organization (keys, nesting, tags) without a rigid global schema: JSON, XML, many application logs. You can query it, but you often discover schema at read time, and fields may be missing or differently typed across records. **Unstructured data** has no tabular schema for free: text documents, images, audio, video. Useful signal exists, but you must extract features or use specialized models before classical analytics applies.
 
 **Data as a product** means a dataset has a product owner, a declared grain, a quality SLA (freshness, completeness, uniqueness), documentation of fields, and known consumers. It is the opposite of a side-effect table left behind by a one-off script. When data is a product, analysts stop guessing what `status = 3` means, and engineers stop changing column names without a versioning conversation.
 
-**THE IDEA THAT FIXED IT:** Match storage and tooling to shape, then wrap the result in a product contract. Structured facts go into tables with schemas. Semi-structured events are parsed into structured columns as early as it is safe. Unstructured sources get an extraction step before they enter metric pipelines. Ownership and SLAs turn "a table that exists" into "a dataset you can trust."
+**THE MAIN IDEA IN SIMPLE WORDS:** Match storage and tooling to shape, then wrap the result in a product contract. Structured facts go into tables with schemas. Semi-structured events are parsed into structured columns as early as it is safe. Unstructured sources get an extraction step before they enter metric pipelines. Ownership and SLAs turn "a table that exists" into "a dataset you can trust."
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Sources
@@ -357,11 +365,11 @@ print(revenue_by_user(facts))
 
 Notice the asymmetry: everything *ends* rectangular if you want classical BI metrics. The work is different on the left. Structured sources need modeling and keys. Semi-structured sources need schema-on-read discipline and careful null handling. Unstructured sources need extraction that can fail, so quality checks matter even more.
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A city archive: tax records in labeled binders (structured), sticky-note-filled envelopes with labeled flaps (semi-structured), and a box of unlabeled photographs (unstructured). You can answer "total tax by district" from the binders immediately. Sticky-note envelopes need sorting rules before they join the binders. Photographs need a cataloger to tag them before they support any count. Calling all three "the archive" without saying which shelf you mean is how meetings waste an hour.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -371,7 +379,7 @@ A city archive: tax records in labeled binders (structured), sticky-note-filled 
 | Ignore unstructured until "later" | Focus on quick wins | Blind spots in support tickets, contracts, images |
 | One mega-table for all entities | Simple to find "the" table | Ambiguous grain, null spam, unusable joins |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import json
@@ -423,9 +431,9 @@ print(flatten_event(event))
 print(dataset_product["grain"])
 ```
 
-**INTERVIEW PERSPECTIVE:** Interviewers love "how would you model this clickstream?" Strong answers name the source shape, say what must be parsed into columns, declare grain, and mention ownership/quality. Weak answers jump straight to a favorite tool. Bonus points for distinguishing raw landing zones (keep fidelity) from consumer marts (enforce structure).
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Interviewers love "how would you model this clickstream?" Strong answers name the source shape, say what must be parsed into columns, declare grain, and mention ownership/quality. Weak answers jump straight to a favorite tool. Bonus points for distinguishing raw landing zones (keep fidelity) from consumer marts (enforce structure).
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -435,9 +443,9 @@ print(dataset_product["grain"])
 | Medium | Find two public Kaggle datasets of different shapes and compare query readiness |
 | Hard | Design a landing + mart layout for mixed CSV + JSON API sources with ownership |
 
-**THE BRIDGE to Spreadsheets & Data Literacy:** Product thinking and shape awareness still leave most humans' first contact with data as a grid of cells. That grid teaches types, filters, and aggregation - and also teaches every bad habit (merged cells, colors-as-data, `final_final_v3.xlsx`) that later tools exist to fix. Spreadsheets are the next stop.
+**WHY THE NEXT TOPIC IS NEEDED - Spreadsheets & Data Literacy:** Product thinking and shape awareness still leave most humans' first contact with data as a grid of cells. That grid teaches types, filters, and aggregation - and also teaches every bad habit (merged cells, colors-as-data, `final_final_v3.xlsx`) that later tools exist to fix. Spreadsheets are the next stop.
 
-> **Phase 1 complete?** [Build the aligned project](./Projects.md#L1023) · [Continue to Phase 2](#phase-2---spreadsheets--data-literacy)
+> **Phase 1 complete?** [Build the aligned project](./Projects.md#data-phase-1-project) · [Continue to Phase 2](#phase-2---spreadsheets--data-literacy)
 
 <a id="phase-2"></a>
 
@@ -445,17 +453,17 @@ print(dataset_product["grain"])
 
 **Track:** Shared Foundation
 
-**GOAL:** Treat tables as typed, filterable facts - and learn the hygiene that makes later SQL and Python saner.
+**WHAT YOU WILL BE ABLE TO DO:** Treat tables as typed, filterable facts - and learn the hygiene that makes later SQL and Python saner.
 
-**PREREQUISITES:** Phase 1 (lifecycle and data shapes).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 1 (lifecycle and data shapes).
 
 ## 2.1 Tidy Tables, Types, and Dirty Data
 
-**WHY THIS EXISTS:** If you cannot answer a question in a clean spreadsheet, SQL will only help you get the wrong answer faster. Spreadsheets are the smallest complete analytics environment: rows, columns, filters, aggregations, charts. They are also where most dirty-data habits are learned. This section exists to install the hygiene that every later tool assumes.
+**WHY YOU ARE LEARNING THIS:** If you cannot answer a question in a clean spreadsheet, SQL will only help you get the wrong answer faster. Spreadsheets are the smallest complete analytics environment: rows, columns, filters, aggregations, charts. They are also where most dirty-data habits are learned. This section exists to install the hygiene that every later tool assumes.
 
-**THE PROBLEM BEFORE THIS EXISTED:** People stored "reports" that looked like slides: merged title cells, blank spacer rows, colors meaning "urgent," and monthly columns stretching sideways forever (`Jan`, `Feb`, `Mar`...). Humans could read those sheets. Machines - and future you writing a PivotTable or a SQL load - could not. Types were decorative: a column mixed `100`, `"N/A"`, and `""` and still got summed until it silently skipped values. Duplicate entity names (`NY`, `New York`, `new york`) shattered every group-by.
+**THE PROBLEM THIS SOLVES:** People stored "reports" that looked like slides: merged title cells, blank spacer rows, colors meaning "urgent," and monthly columns stretching sideways forever (`Jan`, `Feb`, `Mar`...). Humans could read those sheets. Machines - and future you writing a PivotTable or a SQL load - could not. Types were decorative: a column mixed `100`, `"N/A"`, and `""` and still got summed until it silently skipped values. Duplicate entity names (`NY`, `New York`, `new york`) shattered every group-by.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [What is ETL with a clear example (Chandoo)](https://www.youtube.com/watch?v=wDTzxdShbd8) - transform thinking with a concrete business example before pipelines
 - Alternative: [Data Analysis with Python (freeCodeCamp)](https://www.youtube.com/watch?v=r-uOLxNrNk8) - early modules reinforce tabular thinking even when the tool is Python
@@ -466,15 +474,15 @@ print(dataset_product["grain"])
 - GitHub implementation: [guipsamora/pandas_exercises](https://github.com/guipsamora/pandas_exercises) - later you will automate this hygiene; skim an exercise now to see the end state
 - Practice platform: [Exercism](https://exercism.org/) - practice pure cleaning functions (trim, parse, validate) without a spreadsheet UI
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 A useful table has one row equal to one thing at a declared grain (one order, one daily user, one ticket), and one column equal to one attribute with one type (date, number, category, boolean). There are no merged cells, no colors-as-data, and no subtotal rows mixed into the fact rows. Hadley Wickham's "tidy data" idea captures the same law: each variable is a column, each observation is a row, each value is a cell.
 
 Dirty data is not a moral failing; it is the default state of human-entered and system-exported files. The recurring dirt patterns are: missing values disguised as sentinels (`-999`, `"n/a"`), inconsistent categories, broken dates (`01/02/03` with unknown locale), leading/trailing spaces, duplicate keys, and wide layouts that encode a dimension (month) as many columns instead of one. Cleaning is the act of making the table match its claimed grain and types so that filters and aggregations mean something.
 
-**THE IDEA THAT FIXED IT:** Separate *presentation* from *data*. Keep a tidy fact table that machines can aggregate. Build pretty summary sheets as outputs that never feed other calculations. Once that split is real, PivotTables, SQL, and Pandas stop fighting you.
+**THE MAIN IDEA IN SIMPLE WORDS:** Separate *presentation* from *data*. Keep a tidy fact table that machines can aggregate. Build pretty summary sheets as outputs that never feed other calculations. Once that split is real, PivotTables, SQL, and Pandas stop fighting you.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Raw sheet (dirty)                     Tidy table
@@ -501,11 +509,11 @@ Cleaning pipeline in practice:
 
 Each arrow is a rule you can write down. If you cannot write the rule, you do not yet understand the dirt.
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A library card catalog: each card is a row; author, title, and year are columns. If someone staples three books onto one card and writes "misc" in the year field, the catalog still *looks* full - and every search lies. Tidying is rewriting the catalog so one card means one book, and year is always a year.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -515,7 +523,7 @@ A library card catalog: each card is a row; author, title, and year are columns.
 | Deleting "bad" rows quickly | Clean-looking sheet today | Silent bias; lost audit trail |
 | Keeping a raw + clean copy | Reproducible cleaning | Discipline and storage |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Tidy a tiny wide table into long form (preview of Pandas later)
@@ -537,9 +545,9 @@ print(long)
 print(cleaned)
 ```
 
-**INTERVIEW PERSPECTIVE:** Expect "how would you clean this Excel dump?" Talk grain, types, missing-value policy, duplicates, and tidy shape *before* any fancy model. Interviewers listen for whether you preserve raw data and document rules, or proudly describe irreversible deletes.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Expect "how would you clean this Excel dump?" Talk grain, types, missing-value policy, duplicates, and tidy shape *before* any fancy model. Interviewers listen for whether you preserve raw data and document rules, or proudly describe irreversible deletes.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -549,17 +557,17 @@ print(cleaned)
 | Medium | Document a cleaning checklist your team could reuse |
 | Hard | Rebuild a "report-looking" sheet into raw tidy + presentation layers |
 
-**THE BRIDGE to PivotTables, Lookups, and Automation Limits:** A tidy table is necessary, but analysis means slicing and combining tables - region by month, customer to order, SKU to price list. Spreadsheets give you PivotTables and lookups for that. They also show you exactly where the grid stops scaling.
+**WHY THE NEXT TOPIC IS NEEDED - PivotTables, Lookups, and Automation Limits:** A tidy table is necessary, but analysis means slicing and combining tables - region by month, customer to order, SKU to price list. Spreadsheets give you PivotTables and lookups for that. They also show you exactly where the grid stops scaling.
 
 ---
 
 ## 2.2 PivotTables, Lookups, and Spreadsheet Automation Limits
 
-**WHY THIS EXISTS:** Aggregation and combination are the core verbs of analysis. PivotTables are the first aggregation engine most people meet: they `GROUP BY` dimensions and compute `SUM` / `COUNT` / `AVG` measures visually. Lookups (`VLOOKUP` / `XLOOKUP` / `INDEX-MATCH`) are the first joins. Mastering them builds intuition you will later formalize in SQL. Hitting their limits is what justifies Python and databases.
+**WHY YOU ARE LEARNING THIS:** Aggregation and combination are the core verbs of analysis. PivotTables are the first aggregation engine most people meet: they `GROUP BY` dimensions and compute `SUM` / `COUNT` / `AVG` measures visually. Lookups (`VLOOKUP` / `XLOOKUP` / `INDEX-MATCH`) are the first joins. Mastering them builds intuition you will later formalize in SQL. Hitting their limits is what justifies Python and databases.
 
-**THE PROBLEM BEFORE THIS EXISTED:** With only filtered rows and hand-written `SUM` formulas, every new question meant a new fragile formula block. People copied summary tables by hand into slide decks. When the source refreshed, nothing recomputed safely. Multi-table questions ("orders with customer segment") became nested lookups that broke when columns moved. Files grew to tens of megabytes, shared drives filled with conflicting copies, and "who changed the formula?" became unanswerable.
+**THE PROBLEM THIS SOLVES:** With only filtered rows and hand-written `SUM` formulas, every new question meant a new fragile formula block. People copied summary tables by hand into slide decks. When the source refreshed, nothing recomputed safely. Multi-table questions ("orders with customer segment") became nested lookups that broke when columns moved. Files grew to tens of megabytes, shared drives filled with conflicting copies, and "who changed the formula?" became unanswerable.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [ETL with a clear example (Chandoo)](https://www.youtube.com/watch?v=wDTzxdShbd8) - watch as "transform" thinking, then recreate the summary as a PivotTable
 - Alternative: [SQL in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=zsjvFFKOm3c) - preview of the language that replaces brittle spreadsheet aggregation
@@ -570,15 +578,15 @@ print(cleaned)
 - GitHub implementation: [WebDevSimplified/Learn-SQL](https://github.com/WebDevSimplified/Learn-SQL) - see the SQL form of the same ideas
 - Practice platform: [SQLBolt](https://sqlbolt.com/) - Lessons on filtering and grouping mirror Pivot filters and value fields
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 A PivotTable has four field roles: rows (group labels), columns (optional second group axis), values (aggregated measures), and filters (slice predicates). Under the hood it is the same operation SQL expresses as `GROUP BY` plus aggregate functions. Lookups attach attributes from a second table by matching a key - a manual, often many-to-one join. `XLOOKUP` improves on classic `VLOOKUP` by not requiring the key to be in the leftmost column and by handling missing keys more cleanly.
 
 Spreadsheet automation - recorded macros, Apps Script, Power Query - can repeat cleaning steps. It helps until logic branches, tests matter, code review matters, or data volume exceeds comfortable grid size. Collaboration is another hard limit: databases and git-backed code handle concurrent work and history better than a binary workbook emailed around.
 
-**THE IDEA THAT FIXED IT:** Use spreadsheets as a sharp knife for exploration and small reporting, not as the system of record for large analytical workloads. Learn PivotTables and lookups deeply so SQL feels familiar, then notice which pain (volume, reproducibility, multi-user concurrency, complex transforms) is telling you to graduate.
+**THE MAIN IDEA IN SIMPLE WORDS:** Use spreadsheets as a sharp knife for exploration and small reporting, not as the system of record for large analytical workloads. Learn PivotTables and lookups deeply so SQL feels familiar, then notice which pain (volume, reproducibility, multi-user concurrency, complex transforms) is telling you to graduate.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  orders tidy                  Pivot layout
@@ -605,11 +613,11 @@ Spreadsheet automation - recorded macros, Apps Script, Power Query - can repeat 
 
 When lookup keys duplicate on the right table, spreadsheets quietly return the first match. That single behavior is the ancestor of a whole class of SQL fan-out bugs you will meet in Phase 5.
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A PivotTable is a set of labeled bins on a warehouse floor: toss each invoice into the bin for its region, then weigh each bin. A lookup is asking the customer service desk for the segment tag of a customer ID and stapling that tag onto every invoice. The bins and tags work until overnight trucks dump a million invoices on the floor - then you need a sorting machine (a database) and a written procedure (code).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -619,7 +627,7 @@ A PivotTable is a set of labeled bins on a warehouse floor: toss each invoice in
 | Macros / Power Query | Repeatable cleaning in-tool | Harder testing/review than real code |
 | Staying in sheets too long | Familiarity | Version chaos, performance walls, hidden errors |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 from collections import defaultdict
@@ -652,9 +660,9 @@ print(pivot_sum(orders, "2026-01"))
 print([(o["order_id"], lookup_segment(o, customers)) for o in order_keys])
 ```
 
-**INTERVIEW PERSPECTIVE:** "Walk me through how you would summarize messy sales data for leadership." Good answers start with tidy grain, then Pivot or SQL aggregation, then caveats (refunds, timezone, duplicates). Mentioning when you would abandon spreadsheets - size, reproducibility, concurrent editors - signals maturity.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "Walk me through how you would summarize messy sales data for leadership." Good answers start with tidy grain, then Pivot or SQL aggregation, then caveats (refunds, timezone, duplicates). Mentioning when you would abandon spreadsheets - size, reproducibility, concurrent editors - signals maturity.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -664,9 +672,9 @@ print([(o["order_id"], lookup_segment(o, customers)) for o in order_keys])
 | Medium | Break a lookup on purpose with duplicate keys and explain what happened |
 | Hard | Document the exact moment your current workbook should migrate to code/SQL |
 
-**THE BRIDGE to Python for Data:** Spreadsheets stop scaling when cleaning needs ten steps repeated daily, when files exceed memory comfort, or when you need tests and version control. That is the moment a programming language becomes the spreadsheet that can run itself.
+**WHY THE NEXT TOPIC IS NEEDED - Python for Data:** Spreadsheets stop scaling when cleaning needs ten steps repeated daily, when files exceed memory comfort, or when you need tests and version control. That is the moment a programming language becomes the spreadsheet that can run itself.
 
-> **Phase 2 complete?** [Build the aligned project](./Projects.md#L1044) · [Continue to Phase 3](#phase-3---python-for-data)
+> **Phase 2 complete?** [Build the aligned project](./Projects.md#data-phase-2-project) · [Continue to Phase 3](#phase-3---python-for-data)
 
 <a id="phase-3"></a>
 
@@ -674,17 +682,17 @@ print([(o["order_id"], lookup_segment(o, customers)) for o in order_keys])
 
 **Track:** Shared Foundation
 
-**GOAL:** Use Python as a tool for reading files, transforming rows, and automating boring cleaning - not as software engineering for its own sake.
+**WHAT YOU WILL BE ABLE TO DO:** Use Python as a tool for reading files, transforming rows, and automating boring cleaning - not as software engineering for its own sake.
 
-**PREREQUISITES:** Phase 2 (comfort with tables, types, and aggregation ideas).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 2 (comfort with tables, types, and aggregation ideas).
 
 ## 3.1 Python Foundations for Analysis and Pipelines
 
-**WHY THIS EXISTS:** Analysts and engineers both live in Python. Analysts use it for wrangling and analysis; engineers use it for pipelines and orchestration. The shared floor is types, functions, control flow, and clear transforms you can test. Without that floor, Pandas becomes copy-paste magic and Airflow DAGs become unreadable.
+**WHY YOU ARE LEARNING THIS:** Analysts and engineers both live in Python. Analysts use it for wrangling and analysis; engineers use it for pipelines and orchestration. The shared floor is types, functions, control flow, and clear transforms you can test. Without that floor, Pandas becomes copy-paste magic and Airflow DAGs become unreadable.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Spreadsheet macros and ad-hoc SQL did not compose. You could not reliably reuse a cleaning step across twenty files, write a unit test for a metric, or hand a teammate a script that produced the same result on their machine. People re-did the same clicks daily. When logic grew branches ("if region is EU, apply VAT rules"), formula sheets became impossible to audit.
+**THE PROBLEM THIS SOLVES:** Spreadsheet macros and ad-hoc SQL did not compose. You could not reliably reuse a cleaning step across twenty files, write a unit test for a metric, or hand a teammate a script that produced the same result on their machine. People re-did the same clicks daily. When logic grew branches ("if region is EU, apply VAT rules"), formula sheets became impossible to audit.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [How to Learn Python for Data Engineers Fast (Data with Baraa)](https://www.youtube.com/watch?v=GRo-HX_Ova8) - pragmatic Python scoped to data work
 - Alternative: [Data Analysis with Python (freeCodeCamp)](https://www.youtube.com/watch?v=r-uOLxNrNk8) - full path through Numpy, Pandas, and plotting
@@ -695,15 +703,15 @@ print([(o["order_id"], lookup_segment(o, customers)) for o in order_keys])
 - GitHub implementation: [donnemartin/data-science-ipython-notebooks](https://github.com/donnemartin/data-science-ipython-notebooks)
 - Practice platform: [Exercism Python track](https://exercism.org/tracks/python)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
-For data work you need fluency in scalars and collections (`int`, `float`, `str`, `bool`, `list`, `dict`, `set`), control flow (`if`, `for`, comprehensions), and functions that behave like contracts: given this input shape, return that output shape. Mutating global state makes pipelines undebuggable; prefer pure functions for transforms and keep I/O at the edges.
+For data work you need confident working knowledge in scalars and collections (`int`, `float`, `str`, `bool`, `list`, `dict`, `set`), control flow (`if`, `for`, comprehensions), and functions that behave like contracts: given this input shape, return that output shape. Mutating global state makes pipelines undebuggable; prefer pure functions for transforms and keep I/O at the edges.
 
-Python's popularity in data is not mysticism. It has readable syntax, a massive ecosystem (Pandas, requests, DB drivers), and is "good enough" fast for the volumes analysts usually touch before Spark. Engineers also use it because orchestration tools and cloud SDKs speak it. The goal of this phase is not to become a backend engineer. It is to make repetition cheap and logic testable.
+Python is popular in data work for practical reasons. Its syntax is readable, and useful libraries such as Pandas, Requests, and database drivers are readily available. It is fast enough for the amount of data an analyst usually handles before a distributed tool such as Spark is needed. Engineers also use Python because scheduling tools and cloud software development kits support it. This phase is not asking you to become a backend engineer. It teaches you to automate repeated work and test your logic.
 
-**THE IDEA THAT FIXED IT:** Treat cleaning and metric logic as small functions with examples. Once `normalize_country(" usa ") == "US"` is a tested function, every spreadsheet click that used to fix country names becomes a line you can run over a million rows.
+**THE MAIN IDEA IN SIMPLE WORDS:** Treat cleaning and metric logic as small functions with examples. Once `normalize_country(" usa ") == "US"` is a tested function, every spreadsheet click that used to fix country names becomes a line you can run over a million rows.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  CSV rows on disk
@@ -737,11 +745,11 @@ Memory picture for a simple loop (what Python Tutor draws):
  +------------------------+
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A bakery recipe card that says "mix until right" cannot scale to a factory. A recipe that says "mix 12 minutes at speed 2, batter temperature 24C" can. Python functions are recipe cards with exact steps. Spreadsheet clicking is "mix until right."
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -751,7 +759,7 @@ A bakery recipe card that says "mix until right" cannot scale to a factory. A re
 | Learning only Pandas syntax first | Quick charts | Hollow understanding when bugs appear |
 | Over-engineering classes early | Feels "pro" | Slows analysis; hard for teammates |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 from collections import defaultdict
@@ -787,9 +795,9 @@ assert normalize_country(" usa ") == "US"
 print(revenue_by_country(sample))  # {'US': 17.0, 'GB': 5.0}
 ```
 
-**INTERVIEW PERSPECTIVE:** Interviewers may ask you to whiteboard a small cleaning function or explain how you would structure a script vs a notebook. They are testing whether you can turn a messy business rule into clear logic with edge cases named out loud (nulls, aliases, bad types).
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Interviewers may ask you to whiteboard a small cleaning function or explain how you would structure a script vs a notebook. They are testing whether you can turn a messy business rule into clear logic with edge cases named out loud (nulls, aliases, bad types).
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -799,17 +807,17 @@ print(revenue_by_country(sample))  # {'US': 17.0, 'GB': 5.0}
 | Medium | Refactor a messy script into pure functions + a thin `main` |
 | Hard | Implement a tiny validation report: count nulls and bad types per field |
 
-**THE BRIDGE to Files, APIs, Virtual Environments, Notebooks vs Scripts:** Core Python lets you express transforms. Real data work must also *acquire* data from files and APIs, isolate dependencies so scripts run on other machines, and choose the right interface - notebook for exploration, script for repetition. That operational layer is next.
+**WHY THE NEXT TOPIC IS NEEDED - Files, APIs, Virtual Environments, Notebooks vs Scripts:** Core Python lets you express transforms. Real data work must also *acquire* data from files and APIs, isolate dependencies so scripts run on other machines, and choose the right interface - notebook for exploration, script for repetition. That operational layer is next.
 
 ---
 
 ## 3.2 Files, APIs, Virtual Environments, Notebooks vs Scripts
 
-**WHY THIS EXISTS:** Analysis does not start with a clean DataFrame already in memory. It starts with a CSV on disk, a JSON API, or a database export. Dependency hell and "works on my machine" waste weeks. Notebooks are wonderful for thinking and dangerous as production artifacts. This section exists to make acquisition and reproducibility part of the craft.
+**WHY YOU ARE LEARNING THIS:** Analysis does not start with a clean DataFrame already in memory. It starts with a CSV on disk, a JSON API, or a database export. Dependency hell and "works on my machine" waste weeks. Notebooks are wonderful for thinking and dangerous as production artifacts. This section exists to make acquisition and reproducibility part of the craft.
 
-**THE PROBLEM BEFORE THIS EXISTED:** People downloaded files manually, double-clicked them into Excel, and called it a pipeline. API data was copied from browser tools. Packages were installed globally until two projects needed different versions of Pandas. Notebooks with cells executed out of order produced numbers nobody could reproduce Friday afternoon. When an analyst left the company, the process left with them.
+**THE PROBLEM THIS SOLVES:** People downloaded files manually, double-clicked them into Excel, and called it a pipeline. API data was copied from browser tools. Packages were installed globally until two projects needed different versions of Pandas. Notebooks with cells executed out of order produced numbers nobody could reproduce Friday afternoon. When an analyst left the company, the process left with them.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [Data Analysis with Python (freeCodeCamp)](https://www.youtube.com/watch?v=r-uOLxNrNk8) - file-based analysis workflow in practice
 - Alternative: [How to Learn Python for Data Engineers Fast (Data with Baraa)](https://www.youtube.com/watch?v=GRo-HX_Ova8) - environment and project habits for data work
@@ -820,15 +828,15 @@ print(revenue_by_country(sample))  # {'US': 17.0, 'GB': 5.0}
 - GitHub implementation: [DataTalksClub/data-engineering-zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) - project layout, dependencies, and data ingestion patterns
 - Practice platform: [Exercism](https://exercism.org/) plus building a tiny local project with `requirements.txt`
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Files: prefer `pathlib.Path` over string paths; use the `csv` and `json` modules before reaching for heavier tools; always think encoding (`utf-8`) and newlines. APIs: HTTP GETs return text that you parse as JSON; handle status codes, pagination, and rate limits; never hardcode secrets in source. Virtual environments: `python -m venv .venv` then install project packages so versions are pinned in `requirements.txt` or a lock file.
 
 Notebooks vs scripts: notebooks excel at narrative exploration - plots, digressions, mid-stream hypotheses. Scripts excel at repetition - scheduled jobs, CI, clear entry points. A healthy habit is explore in a notebook, then extract stable functions into `.py` modules the notebook (or pipeline) imports. Out-of-order notebook execution is a reproducibility bug, not a quirky style.
 
-**THE IDEA THAT FIXED IT:** Separate acquisition, transformation, and presentation into stages you can rerun. Pin the environment. Promote explored logic into scripts when it must be trusted twice.
+**THE MAIN IDEA IN SIMPLE WORDS:** Separate acquisition, transformation, and presentation into stages you can rerun. Pin the environment. Promote explored logic into scripts when it must be trusted twice.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  External world
@@ -861,11 +869,11 @@ Notebooks vs scripts: notebooks excel at narrative exploration - plots, digressi
    notebooks/explore.ipynb
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A notebook is a chef's messy R&D kitchen where recipes are invented. A script in a virtual environment is the laminated procedure posted on the factory wall, with the exact brand of flour specified. Both are necessary. Shipping the R&D kitchen to customers every night is how food poisoning happens - metaphorically, how wrong metrics ship.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -876,7 +884,7 @@ A notebook is a chef's messy R&D kitchen where recipes are invented. A script in
 | Manual downloads in UI | Zero code | Not automatable; no audit trail |
 | Secrets in source code | Convenience | Security incidents |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import csv
@@ -913,9 +921,9 @@ if __name__ == "__main__":
     main()
 ```
 
-**INTERVIEW PERSPECTIVE:** "How do you make an analysis reproducible?" Talk environment pinning, raw data snapshots, seed/parameters, and extracting logic from notebooks. For API data, mention idempotent pulls and storing raw payloads before parsing - a very engineer-literate analyst answer.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "How do you make an analysis reproducible?" Talk environment pinning, raw data snapshots, seed/parameters, and extracting logic from notebooks. For API data, mention idempotent pulls and storing raw payloads before parsing - a very engineer-literate analyst answer.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -925,9 +933,9 @@ if __name__ == "__main__":
 | Medium | Convert a messy notebook into `transforms.py` + thin notebook |
 | Hard | Add pagination handling and basic retry/backoff to an API puller |
 
-**THE BRIDGE to SQL Foundations:** Python can filter lists of dicts, but organizations store critical data in relational databases designed for declarative querying, concurrency, and huge tables. The language of those tables is SQL - and it is not optional for serious data work.
+**WHY THE NEXT TOPIC IS NEEDED - SQL Foundations:** Python can filter lists of dicts, but organizations store critical data in relational databases designed for declarative querying, concurrency, and huge tables. The language of those tables is SQL - and it is not optional for serious data work.
 
-> **Phase 3 complete?** [Build the aligned project](./Projects.md#L1065) · [Continue to Phase 4](#phase-4---sql-foundations)
+> **Phase 3 complete?** [Build the aligned project](./Projects.md#data-phase-3-project) · [Continue to Phase 4](#phase-4---sql-foundations)
 
 <a id="phase-4"></a>
 
@@ -935,17 +943,17 @@ if __name__ == "__main__":
 
 **Track:** Shared Foundation
 
-**GOAL:** Ask precise questions of tables using `SELECT`, filters, ordering, and expressions - including the strange logic of NULLs.
+**WHAT YOU WILL BE ABLE TO DO:** Ask precise questions of tables using `SELECT`, filters, ordering, and expressions - including the strange logic of NULLs.
 
-**PREREQUISITES:** Phase 3 (can think in rows/columns and write small transforms).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 3 (can think in rows/columns and write small transforms).
 
 ## 4.1 SELECT, WHERE, ORDER BY, LIMIT, and NULLs
 
-**WHY THIS EXISTS:** SQL is the shared language of analysts, analytics engineers, and data engineers. Spreadsheets hide the query behind clicks; Python loops make you spell out *how* to scan rows. SQL lets you declare *what* result you want from a table, and the database decides how to get it. Every later topic - joins, windows, warehouses - assumes you can write a correct `SELECT`.
+**WHY YOU ARE LEARNING THIS:** SQL is the shared language of analysts, analytics engineers, and data engineers. Spreadsheets hide the query behind clicks; Python loops make you spell out *how* to scan rows. SQL lets you declare *what* result you want from a table, and the database decides how to get it. Every later topic - joins, windows, warehouses - assumes you can write a correct `SELECT`.
 
-**THE PROBLEM BEFORE THIS EXISTED:** People exported giant CSVs and filtered in Excel until files crashed. Application databases were queried with one-off scripts that pulled entire tables into memory. There was no standard way to say "the top 10 customers by spend last week" that both a PM and a database engine understood. NULLs - the database representation of "unknown / missing" - created silent wrong answers when people treated them like zeros or empty strings.
+**THE PROBLEM THIS SOLVES:** People exported giant CSVs and filtered in Excel until files crashed. Application databases were queried with one-off scripts that pulled entire tables into memory. There was no standard way to say "the top 10 customers by spend last week" that both a PM and a database engine understood. NULLs - the database representation of "unknown / missing" - created silent wrong answers when people treated them like zeros or empty strings.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [SQL in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=zsjvFFKOm3c) - dense mental model of what SQL is for
 - Alternative: [SQL for Beginners (freeCodeCamp / freeCodeCamp.org)](https://www.youtube.com/watch?v=HXV3zeQKqGY) - long-form foundations with practice
@@ -956,15 +964,15 @@ if __name__ == "__main__":
 - GitHub implementation: [WebDevSimplified/Learn-SQL](https://github.com/WebDevSimplified/Learn-SQL)
 - Practice platform: [LeetCode Database](https://leetcode.com/problemset/database)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 A relational table is a set of rows with named columns. `SELECT` chooses columns (or expressions). `FROM` names the table. `WHERE` keeps rows that match a predicate. `ORDER BY` sorts the result. `LIMIT` (or `FETCH` / `TOP` depending on dialect) truncates the result for inspection or top-N style questions. Execution order is not the same as written order: conceptually, databases go `FROM` -> `WHERE` -> `SELECT` -> `ORDER BY` -> `LIMIT`, which is why aliases defined in `SELECT` are often unavailable in `WHERE`.
 
 NULLs propagate through expressions: `1 + NULL` is NULL; `NULL = NULL` is not true. Use `IS NULL` / `IS NOT NULL`, and learn `COALESCE` to supply defaults intentionally. Confusing NULL with zero causes undercounts and broken averages. Confusing NULL with empty string causes messy text filters.
 
-**THE IDEA THAT FIXED IT:** Declarative querying over typed tables, with three-valued logic (true / false / unknown) for missing data. You describe the result set; the engine chooses scans, indexes, and joins (later) to produce it.
+**THE MAIN IDEA IN SIMPLE WORDS:** Declarative querying over typed tables, with three-valued logic (true / false / unknown) for missing data. You describe the result set; the engine chooses scans, indexes, and joins (later) to produce it.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Written SQL                         Conceptual order
@@ -995,21 +1003,21 @@ NULLs propagate through expressions: `1 + NULL` is NULL; `NULL = NULL` is not tr
  Bekele 80
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 SQL is a library request form: "Give me titles published after 2020, sorted by most borrowed, first five." You do not walk the shelves yourself (unless the librarian's plan is a full scan). NULL is a card that says "publication year unknown" - it is not year zero, and it should not sort or compare as if it were.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
 | `SELECT *` while exploring | Speed of curiosity | Breaks when schemas change; over-fetches |
 | Explicit column lists | Stable contracts | More typing |
 | Filtering in SQL (`WHERE`) | Less data moved over the network | Must understand NULL logic |
-| Filtering in Python after pull | Familiar language | Slow and expensive at scale |
+| Filtering in Python after pull | Familiar language | Slow and expensive when the amount of work grows |
 | `LIMIT` during exploration | Safe peeking | Forgetting it in production reports |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```sql
 -- SQLite / Postgres-flavored foundations
@@ -1051,9 +1059,9 @@ filtered.sort(key=lambda r: r["amount"], reverse=True)
 print(filtered[:3])
 ```
 
-**INTERVIEW PERSPECTIVE:** Live SQL screens almost always start here. Narrate as you write: grain of the table, what `WHERE` excludes, how NULLs behave, why you `ORDER BY` before `LIMIT`. Mentioning written vs logical clause order is a quiet seniority signal.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Live SQL screens almost always start here. Narrate as you write: grain of the table, what `WHERE` excludes, how NULLs behave, why you `ORDER BY` before `LIMIT`. Mentioning written vs logical clause order is a quiet seniority signal.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1063,17 +1071,17 @@ print(filtered[:3])
 | Medium | Mode SQL Tutorial: basic filtering exercises |
 | Hard | LeetCode Database easy problems that require careful NULL handling |
 
-**THE BRIDGE to Expressions, Casting, CASE, and Functions:** Filtering rows is not enough. Real questions need derived columns - tax-inclusive price, year extracted from a timestamp, buckets like "high/medium/low." SQL expressions and functions are the next layer.
+**WHY THE NEXT TOPIC IS NEEDED - Expressions, Casting, CASE, and Functions:** Filtering rows is not enough. Real questions need derived columns - tax-inclusive price, year extracted from a timestamp, buckets like "high/medium/low." SQL expressions and functions are the next layer.
 
 ---
 
 ## 4.2 Expressions, Casting, CASE, and String/Date Functions
 
-**WHY THIS EXISTS:** Raw columns rarely match the shape of a business question. You need calculated fields, type conversions, conditional logic, and string/date surgery. Doing that in SQL pushes work to the engine and keeps pipelines thinner. Doing it blindly creates subtle bugs - timezone mistakes, integer division, locale-specific date parses.
+**WHY YOU ARE LEARNING THIS:** Raw columns rarely match the shape of a business question. You need calculated fields, type conversions, conditional logic, and string/date surgery. Doing that in SQL pushes work to the engine and keeps pipelines thinner. Doing it blindly creates subtle bugs - timezone mistakes, integer division, locale-specific date parses.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Analysts exported data and created helper columns in Excel for every variant: `amount * 1.1`, `LEFT(code,2)`, nested `IF`s. Those helper columns drifted from the warehouse. Databases already knew how to cast types and apply functions set-wise; people just were not using them. `CASE` expressions - SQL's structured conditional - were underused, so logic lived in BI tools as opaque calculated fields.
+**THE PROBLEM THIS SOLVES:** Analysts exported data and created helper columns in Excel for every variant: `amount * 1.1`, `LEFT(code,2)`, nested `IF`s. Those helper columns drifted from the warehouse. Databases already knew how to cast types and apply functions set-wise; people just were not using them. `CASE` expressions - SQL's structured conditional - were underused, so logic lived in BI tools as opaque calculated fields.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [SQL Full Course for Beginners (Alex The Analyst)](https://www.youtube.com/watch?v=OT1RErkfLNQ) - practical expressions and cleaning-in-SQL patterns
 - Alternative: [freeCodeCamp SQL](https://www.youtube.com/watch?v=HXV3zeQKqGY) - functions and CASE in a structured course flow
@@ -1084,15 +1092,15 @@ print(filtered[:3])
 - GitHub implementation: [WebDevSimplified/Learn-SQL](https://github.com/WebDevSimplified/Learn-SQL)
 - Practice platform: [LeetCode Database](https://leetcode.com/problemset/database) and [Mode SQL Tutorial](https://mode.com/sql-tutorial)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Expressions combine columns, literals, and operators. Casting (`CAST(x AS DATE)`, `x::date` in Postgres) converts types explicitly when implicit conversion is dangerous. `CASE WHEN ... THEN ... ELSE ... END` is the portable conditional. String functions (`LOWER`, `TRIM`, `SUBSTRING`, `||` or `CONCAT`) normalize text. Date functions extract parts (`DATE_TRUNC`, `EXTRACT`), compute differences, and align time zones when the dialect supports it.
 
 Dialect differences matter more here than in basic `SELECT`. Always check docs for your warehouse. The analytical habit is the same everywhere: push deterministic, row-local transforms into SQL; keep ambiguous business interpretation documented next to the query.
 
-**THE IDEA THAT FIXED IT:** Make derived fields first-class in the query, using explicit casts and `CASE`, so the result set arrives analysis-ready without a second dirty pass in Excel.
+**THE MAIN IDEA IN SIMPLE WORDS:** Make derived fields first-class in the query, using explicit casts and `CASE`, so the result set arrives analysis-ready without a second dirty pass in Excel.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  orders
@@ -1121,11 +1129,11 @@ Dialect differences matter more here than in basic `SELECT`. Always check docs f
  +----+------------------+--------------+--------+------------+
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Raw columns are ingredients. Expressions are mise en place: trim the herbs, convert cups to grams, separate spicy vs mild into labeled bowls (`CASE`). If each cook converts units differently every night, the restaurant's recipes mean nothing. Centralizing conversion in SQL (or in a modeled mart later) is how the kitchen stays consistent.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -1135,7 +1143,7 @@ Raw columns are ingredients. Expressions are mise en place: trim the herbs, conv
 | Explicit `CAST` / `CASE` | Clarity, safer logic | Verbosity |
 | Timezone-naive timestamps | Simplicity | Incorrect day boundaries for global products |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```sql
 SELECT
@@ -1178,9 +1186,9 @@ def enrich(row: dict) -> dict:
 print(enrich({"id": 1, "amount": "100", "country": " us ", "created_at": "2026-08-01"}))
 ```
 
-**INTERVIEW PERSPECTIVE:** You will be asked to derive buckets, parse dates, or clean strings in SQL during take-homes. Speak about NULL-safe `CASE`, why you `TRIM/LOWER` before joining later, and that you will confirm dialect functions rather than inventing them.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** You will be asked to derive buckets, parse dates, or clean strings in SQL during take-homes. Speak about NULL-safe `CASE`, why you `TRIM/LOWER` before joining later, and that you will confirm dialect functions rather than inventing them.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1190,9 +1198,9 @@ print(enrich({"id": 1, "amount": "100", "country": " us ", "created_at": "2026-0
 | Medium | Extract year-month from timestamps for monthly reporting |
 | Hard | Write a query that safely casts mixed-type unclean columns and reports failures |
 
-**THE BRIDGE to SQL Joins & Aggregations:** Single-table queries break as soon as the answer needs columns from more than one table, or needs "total by region" collapse. Joins and `GROUP BY` are the tools that unlock multi-table and summary questions.
+**WHY THE NEXT TOPIC IS NEEDED - SQL Joins & Aggregations:** Single-table queries break as soon as the answer needs columns from more than one table, or needs "total by region" collapse. Joins and `GROUP BY` are the tools that unlock multi-table and summary questions.
 
-> **Phase 4 complete?** [Build the aligned project](./Projects.md#L1086) · [Continue to Phase 5](#phase-5---sql-joins--aggregations)
+> **Phase 4 complete?** [Build the aligned project](./Projects.md#data-phase-4-project) · [Continue to Phase 5](#phase-5---sql-joins--aggregations)
 
 <a id="phase-5"></a>
 
@@ -1200,17 +1208,17 @@ print(enrich({"id": 1, "amount": "100", "country": " us ", "created_at": "2026-0
 
 **Track:** Shared Foundation
 
-**GOAL:** Combine tables correctly and summarize rows without lying to yourself about grain.
+**WHAT YOU WILL BE ABLE TO DO:** Combine tables correctly and summarize rows without lying to yourself about grain.
 
-**PREREQUISITES:** Phase 4 (solid single-table SQL, NULL literacy).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 4 (solid single-table SQL, NULL literacy).
 
 ## 5.1 INNER, LEFT, RIGHT, FULL Joins and Fan-out
 
-**WHY THIS EXISTS:** Normalized databases split reality across tables - customers, orders, items - to avoid update anomalies. Analysis has to stitch them back together. Joins are that stitch. Without a precise mental model of join types and fan-out, you will inflate revenue, drop customers, and not notice until a meeting goes badly.
+**WHY YOU ARE LEARNING THIS:** Normalized databases split reality across tables - customers, orders, items - to avoid update anomalies. Analysis has to stitch them back together. Joins are that stitch. Without a precise mental model of join types and fan-out, you will inflate revenue, drop customers, and not notice until a meeting goes badly.
 
-**THE PROBLEM BEFORE THIS EXISTED:** People ran lookups in spreadsheets and hoped keys were unique. Or they denormalized everything into one wide table that went stale. Multi-table SQL without join literacy produced Cartesian products: every order paired with every customer accidentally, and totals quietly multiplied. "We joined the tables" became a sentence that hid fatal ambiguity.
+**THE PROBLEM THIS SOLVES:** People ran lookups in spreadsheets and hoped keys were unique. Or they denormalized everything into one wide table that went stale. Multi-table SQL without join literacy produced Cartesian products: every order paired with every customer accidentally, and totals quietly multiplied. "We joined the tables" became a sentence that hid fatal ambiguity.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [SQL Joins Explained Visually (Data with Baraa)](https://www.youtube.com/watch?v=aY7z4HcHm5M) - set diagrams that stick
 - Alternative: [Animated SQL Joins (Anton Putra)](https://www.youtube.com/watch?v=Yh4CrPHVBdE) - motion builds intuition for match behavior
@@ -1221,15 +1229,15 @@ print(enrich({"id": 1, "amount": "100", "country": " us ", "created_at": "2026-0
 - GitHub implementation: [WebDevSimplified/Learn-SQL](https://github.com/WebDevSimplified/Learn-SQL)
 - Practice platform: [LeetCode Database](https://leetcode.com/problemset/database)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 An **INNER JOIN** keeps only key matches present in both tables. A **LEFT JOIN** keeps every row from the left table and fills right columns with NULL when missing. **RIGHT JOIN** is the mirror image (less common; often rewritten as a left join with flipped tables). **FULL OUTER JOIN** keeps rows from either side, with NULLs opposite unmatched keys (support varies by dialect). A **CROSS JOIN** pairs every row with every row - rarely what you want unless building a scaffold (e.g., all dates x all stores).
 
 **Fan-out** happens when the match key is not unique on one side. One customer with three orders produces three rows after joining customer attributes onto orders - expected. One order accidentally matching two customer dimension rows with the same ID produces duplicated order revenue - a bug. Always know the grain of each table and the expected relationship (one-to-one, one-to-many, many-to-many via a bridge).
 
-**THE IDEA THAT FIXED IT:** Treat joins as set operations with an explicit relationship cardinality check. Choose join type based on which unmatched rows must survive, and validate row counts before and after joining.
+**THE MAIN IDEA IN SIMPLE WORDS:** Treat joins as set operations with an explicit relationship cardinality check. Choose join type based on which unmatched rows must survive, and validate row counts before and after joining.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  customers            orders
@@ -1266,11 +1274,11 @@ Row-count checklist:
  after join to dim with dup keys: 1000 -> 1300 unexpected? investigate
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 INNER JOIN is a party that only admits people who brought both RSVP and ticket. LEFT JOIN admits everyone on the guest list (left) and notes who forgot their ticket. Fan-out is when the printer accidentally produces two name tags for one guest ID - the catering count doubles and nobody notices until the bill.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -1280,7 +1288,7 @@ INNER JOIN is a party that only admits people who brought both RSVP and ticket. 
 | Joining before aggregating carefully | Detailed rows | Easy revenue double-count |
 | Pre-deduplicating dimensions | Safer joins | Extra modeling work |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```sql
 SELECT c.name, o.id AS order_id, o.amount
@@ -1318,9 +1326,9 @@ print(inner)
 print(left)
 ```
 
-**INTERVIEW PERSPECTIVE:** "What's the difference between INNER and LEFT JOIN?" is table stakes. Strong candidates continue into fan-out and how they validate counts. Drawing a tiny two-table example on a whiteboard beats reciting definitions.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "What's the difference between INNER and LEFT JOIN?" is table stakes. Strong candidates continue into fan-out and how they validate counts. Drawing a tiny two-table example on a whiteboard beats reciting definitions.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1330,17 +1338,17 @@ print(left)
 | Medium | Detect duplicate keys that would fan out a fact table |
 | Hard | LeetCode problems combining multi-table joins with careful grain |
 
-**THE BRIDGE to GROUP BY, HAVING, and Aggregation Correctness:** Joins produce row-level detail. Business questions usually need collapsed summaries - revenue by region, active users by week. `GROUP BY` is the collapse. Doing it on the wrong grain after a fan-out join is how dashboards lie with perfect SQL syntax.
+**WHY THE NEXT TOPIC IS NEEDED - GROUP BY, HAVING, and Aggregation Correctness:** Joins produce row-level detail. Business questions usually need collapsed summaries - revenue by region, active users by week. `GROUP BY` is the collapse. Doing it on the wrong grain after a fan-out join is how dashboards lie with perfect SQL syntax.
 
 ---
 
 ## 5.2 GROUP BY, HAVING, and Aggregation Correctness
 
-**WHY THIS EXISTS:** Aggregation answers "how many / how much / typical" across groups. `GROUP BY` defines the buckets; aggregate functions (`SUM`, `COUNT`, `AVG`, `MIN`, `MAX`) compute measures; `HAVING` filters *after* aggregation. Correctness depends on grain discipline: aggregate facts once, attach dimensions carefully, never sum a pre-aggregated metric without understanding weight.
+**WHY YOU ARE LEARNING THIS:** Aggregation answers "how many / how much / typical" across groups. `GROUP BY` defines the buckets; aggregate functions (`SUM`, `COUNT`, `AVG`, `MIN`, `MAX`) compute measures; `HAVING` filters *after* aggregation. Correctness depends on grain discipline: aggregate facts once, attach dimensions carefully, never sum a pre-aggregated metric without understanding weight.
 
-**THE PROBLEM BEFORE THIS EXISTED:** People summed the same order multiple times after joining line items, then celebrated record revenue. Or they used `WHERE` when they meant `HAVING`, filtering raw rows instead of groups. `COUNT(*)` vs `COUNT(column)` vs `COUNT(DISTINCT ...)` were mixed casually, so NULLs and duplicates changed numbers mysteriously. Average-of-averages produced executive slides that failed a gut check.
+**THE PROBLEM THIS SOLVES:** People summed the same order multiple times after joining line items, then celebrated record revenue. Or they used `WHERE` when they meant `HAVING`, filtering raw rows instead of groups. `COUNT(*)` vs `COUNT(column)` vs `COUNT(DISTINCT ...)` were mixed casually, so NULLs and duplicates changed numbers mysteriously. Average-of-averages produced executive slides that failed a gut check.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [SQL Joins visual (Data with Baraa)](https://www.youtube.com/watch?v=aY7z4HcHm5M) - then mentally place GROUP BY after the join
 - Alternative: [Alex The Analyst SQL course](https://www.youtube.com/watch?v=OT1RErkfLNQ) - group by and reporting patterns
@@ -1351,15 +1359,15 @@ print(left)
 - GitHub implementation: [WebDevSimplified/Learn-SQL](https://github.com/WebDevSimplified/Learn-SQL)
 - Practice platform: [LeetCode Database](https://leetcode.com/problemset/database)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 After `WHERE` filters rows, `GROUP BY` partitions remaining rows into groups sharing the same values of grouping columns. Aggregates collapse each partition to one output row. In strict SQL modes, every selected non-aggregated column must appear in `GROUP BY`. `HAVING` applies predicates to aggregated results (e.g., keep regions with `SUM(amount) > 1000`). `WHERE` cannot see aggregate results because it runs earlier.
 
 Correctness patterns: aggregate to the fact grain before joining exploding dimensions when needed; use `COUNT(DISTINCT user_id)` for unique users; prefer summing from the correct grain table (`orders`, not duplicated join output); remember `AVG` ignores NULLs but is sensitive to outliers (stats phase deepens this).
 
-**THE IDEA THAT FIXED IT:** Separate row filtering (`WHERE`), grouping keys (`GROUP BY`), and group filtering (`HAVING`), and always ask "what does one output row represent?" before trusting a `SUM`.
+**THE MAIN IDEA IN SIMPLE WORDS:** Separate row filtering (`WHERE`), grouping keys (`GROUP BY`), and group filtering (`HAVING`), and always ask "what does one output row represent?" before trusting a `SUM`.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  orders after join (detail rows)
@@ -1387,11 +1395,11 @@ Correctness patterns: aggregate to the fact grain before joining exploding dimen
  FROM -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY -> LIMIT
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Grouping is sorting contest ballots into piles by candidate, then counting each pile. `WHERE` excludes invalid ballots before piles form. `HAVING` throws away piles that did not meet a threshold after counting. If someone photocopies ballots (fan-out join) before counting, the election looks unanimous and wrong.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -1401,7 +1409,7 @@ Grouping is sorting contest ballots into piles by candidate, then counting each 
 | `COUNT(DISTINCT ...)` | Unique entities | More expensive; still not a magic uniqueness guarantee across days |
 | Nested subqueries to fix grain | Correct totals | Readability hit (CTEs help next phase) |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```sql
 SELECT
@@ -1447,9 +1455,9 @@ for region, g in grouped.items():
     print(region, g["revenue"], len(g["customers"]))
 ```
 
-**INTERVIEW PERSPECTIVE:** Aggregation questions test whether you protect grain. Say the grain out loud, choose `COUNT` carefully, and use `HAVING` correctly. If you join first, explain why the `SUM` is still valid - or how you would restructure with a subquery/CTE.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Aggregation questions test whether you protect grain. Say the grain out loud, choose `COUNT` carefully, and use `HAVING` correctly. If you join first, explain why the `SUM` is still valid - or how you would restructure with a subquery/CTE.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1459,9 +1467,9 @@ for region, g in grouped.items():
 | Medium | Fix an inflated total caused by join fan-out |
 | Hard | Multi-level rollup query with correct distinct metrics |
 
-**THE BRIDGE to Advanced SQL (Subqueries and CTEs):** Complex grain fixes and multi-step logic become unreadable as nested subqueries. Named temporary result sets - CTEs - and nested questions need a cleaner structure. That is Phase 6.
+**WHY THE NEXT TOPIC IS NEEDED - Advanced SQL (Subqueries and CTEs):** Complex grain fixes and multi-step logic become unreadable as nested subqueries. Named temporary result sets - CTEs - and nested questions need a cleaner structure. That is Phase 6.
 
-> **Phase 5 complete?** [Build the aligned project](./Projects.md#L1107) · [Continue to Phase 6](#phase-6---advanced-sql)
+> **Phase 5 complete?** [Build the aligned project](./Projects.md#data-phase-5-project) · [Continue to Phase 6](#phase-6---advanced-sql)
 
 <a id="phase-6"></a>
 
@@ -1469,17 +1477,17 @@ for region, g in grouped.items():
 
 **Track:** Shared Foundation
 
-**GOAL:** Structure multi-step queries clearly and answer time-aware analytic questions without destroying grain.
+**WHAT YOU WILL BE ABLE TO DO:** Structure multi-step queries clearly and answer time-aware analytic questions without destroying grain.
 
-**PREREQUISITES:** Phase 5 (joins, group by, grain discipline).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 5 (joins, group by, grain discipline).
 
 ## 6.1 Subqueries and CTEs
 
-**WHY THIS EXISTS:** Real analytical questions are multi-step: filter a cohort, aggregate it, then join back to details; find top regions, then list their customers. You can nest subqueries inside `FROM` / `WHERE` / `SELECT`, but readability collapses. Common Table Expressions (CTEs, the `WITH` clause) name those steps so humans can follow the argument.
+**WHY YOU ARE LEARNING THIS:** Real analytical questions are multi-step: filter a cohort, aggregate it, then join back to details; find top regions, then list their customers. You can nest subqueries inside `FROM` / `WHERE` / `SELECT`, but readability collapses. Common Table Expressions (CTEs, the `WITH` clause) name those steps so humans can follow the argument.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Analysts pasted intermediate results into new temporary tables by hand, or wrote subqueries six layers deep that only the author could edit. Business logic was invisible. Code review was impossible. The same intermediate aggregation was recomputed inconsistently across dashboards because it had no name.
+**THE PROBLEM THIS SOLVES:** Analysts pasted intermediate results into new temporary tables by hand, or wrote subqueries six layers deep that only the author could edit. Business logic was invisible. Code review was impossible. The same intermediate aggregation was recomputed inconsistently across dashboards because it had no name.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [Data with Baraa SQL playlist](https://www.youtube.com/playlist?list=PLNcg_FV9n7qZY_2eAtUzEUulNjTJREhQe) - CTEs and structured query design in context
 - Alternative: [Alex The Analyst SQL course](https://www.youtube.com/watch?v=OT1RErkfLNQ) - subquery patterns in practical reporting
@@ -1490,15 +1498,15 @@ for region, g in grouped.items():
 - GitHub implementation: [WebDevSimplified/Learn-SQL](https://github.com/WebDevSimplified/Learn-SQL)
 - Practice platform: [LeetCode Database](https://leetcode.com/problemset/database)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 A **subquery** is a query used inside another query. In `WHERE id IN (SELECT ...)`, it provides a set for membership tests. In `FROM (SELECT ...) AS t`, it provides a derived table. Correlated subqueries reference outer columns and can be powerful but expensive if misunderstood.
 
 A **CTE** introduces a named result: `WITH cohort AS (...), totals AS (...) SELECT ...`. Engines may inline or materialize CTEs depending on dialect and version; write for clarity first, optimize with evidence second. CTEs also enable recursive patterns (org charts, graph walks) in databases that support `WITH RECURSIVE`.
 
-**THE IDEA THAT FIXED IT:** Give each logical step a name. Queries become essays with sections instead of nested puzzles.
+**THE MAIN IDEA IN SIMPLE WORDS:** Give each logical step a name. Queries become essays with sections instead of nested puzzles.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Question: customers whose 2026 spend > 500, with their email
@@ -1537,11 +1545,11 @@ Equivalent nested form (harder to read):
  JOIN customers c ON c.id = t.customer_id;
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A CTE is a labeled mise-en-place bowl: "bowl A = washed greens, bowl B = sliced almonds." A deeply nested subquery is a sentence with six parenthetical asides. Both can produce the same salad; only one lets another cook finish the recipe.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -1551,7 +1559,7 @@ A CTE is a labeled mise-en-place bowl: "bowl A = washed greens, bowl B = sliced 
 | Correlated subqueries | Expressive row-wise logic | Can be slow vs joins/window functions |
 | One giant query without names | Fewer lines | Bus-factor of 1 |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```sql
 WITH monthly AS (
@@ -1598,9 +1606,9 @@ for cid, m in first_month.items():
 print(dict(cohort_counts))
 ```
 
-**INTERVIEW PERSPECTIVE:** Take-homes reward CTEs. Interviewers skim structure before details. Name CTEs after business ideas (`eligible_users`, `weekly_revenue`), not `t1` / `t2`. Be ready to discuss when a subquery in `WHERE` should become a join.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Take-homes reward CTEs. Interviewers skim structure before details. Name CTEs after business ideas (`eligible_users`, `weekly_revenue`), not `t1` / `t2`. Be ready to discuss when a subquery in `WHERE` should become a join.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1610,17 +1618,17 @@ print(dict(cohort_counts))
 | Medium | Compare correlated subquery vs join for "orders above customer average" |
 | Hard | LeetCode medium SQL problems solved with readable CTEs only |
 
-**THE BRIDGE to Window Functions:** CTEs help you stage aggregations, but classic `GROUP BY` still collapses rows. Many questions need both detail and aggregate context on the same row - rank within region, running total, previous day's value. Window functions keep the grain and add perspective.
+**WHY THE NEXT TOPIC IS NEEDED - Window Functions:** CTEs help you stage aggregations, but classic `GROUP BY` still collapses rows. Many questions need both detail and aggregate context on the same row - rank within region, running total, previous day's value. Window functions keep the grain and add perspective.
 
 ---
 
 ## 6.2 Window Functions (Ranking, Running Totals, LAG/LEAD)
 
-**WHY THIS EXISTS:** `GROUP BY` destroys detail rows. Window functions compute aggregates and rankings *across related rows* while keeping each input row visible. That unlocks running totals, share of total, first/last in group, and period-over-period change - the bread and butter of analytics SQL.
+**WHY YOU ARE LEARNING THIS:** `GROUP BY` destroys detail rows. Window functions compute aggregates and rankings *across related rows* while keeping each input row visible. That unlocks running totals, share of total, first/last in group, and period-over-period change - the bread and butter of analytics SQL.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Analysts self-joined a table to itself for "yesterday's value," or ran multiple queries and stitched results in Excel. Ranking required sorting exports and manually numbering. Running totals used fragile spreadsheet formulas. Self-join approaches were slow and easy to get wrong on ties and missing days.
+**THE PROBLEM THIS SOLVES:** Analysts self-joined a table to itself for "yesterday's value," or ran multiple queries and stitched results in Excel. Ranking required sorting exports and manually numbering. Running totals used fragile spreadsheet formulas. Self-join approaches were slow and easy to get wrong on ties and missing days.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [SQL Window Functions (Data with Baraa)](https://www.youtube.com/watch?v=o666k19mZwE) - visual framing of partitions and frames
 - Alternative: [Window Functions course-style walkthrough (Data with Baraa)](https://www.youtube.com/watch?v=Wvg4PjbMTO8)
@@ -1631,15 +1639,15 @@ print(dict(cohort_counts))
 - GitHub implementation: [WebDevSimplified/Learn-SQL](https://github.com/WebDevSimplified/Learn-SQL)
 - Practice platform: [LeetCode Database](https://leetcode.com/problemset/database)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 A window function looks like `SUM(amount) OVER (PARTITION BY region ORDER BY day ROWS UNBOUNDED PRECEDING)`. **PARTITION BY** is the group boundary (like `GROUP BY` keys) but does not collapse rows. **ORDER BY** inside `OVER` defines ordering for ranking and framing. The **frame** clause controls which peer rows contribute to the aggregate (e.g., running sum vs whole-partition sum).
 
 Core families: ranking (`ROW_NUMBER`, `RANK`, `DENSE_RANK`); analytic aggregates (`SUM`, `AVG`, `COUNT` over windows); offset (`LAG`, `LEAD`); distribution (`NTILE`). Ties behave differently across ranking functions - know which you want before you ship a "top 3" leaderboard.
 
-**THE IDEA THAT FIXED IT:** Keep the row grain, add columns that look sideways across related rows. Aggregation becomes a perspective, not a collapse.
+**THE MAIN IDEA IN SIMPLE WORDS:** Keep the row grain, add columns that look sideways across related rows. Aggregation becomes a perspective, not a collapse.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  day | region | amount
@@ -1674,11 +1682,11 @@ Core families: ranking (`ROW_NUMBER`, `RANK`, `DENSE_RANK`); analytic aggregates
    5) write result onto the current row
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 `GROUP BY` is asking each classroom to send only the class average to the principal - individual students disappear. A window function is writing each student's score *and* the class average on every report card. `LAG` is looking at yesterday's attendance sheet for the same class.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -1688,7 +1696,7 @@ Core families: ranking (`ROW_NUMBER`, `RANK`, `DENSE_RANK`); analytic aggregates
 | `ROW_NUMBER` for top-N | Deterministic unique ranks | Arbitrary ordering among ties unless you add keys |
 | `RANK` for competition style | Shared places on ties | Gaps in ranking numbers |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```sql
 SELECT
@@ -1738,9 +1746,9 @@ for r in rows:
     prev = r["amount"]
 ```
 
-**INTERVIEW PERSPECTIVE:** Window functions separate strong SQL candidates from average ones. Practice explaining `PARTITION BY` vs `GROUP BY`, and when you want `ROW_NUMBER` vs `RANK`. On a whiteboard, sketch three rows and fill running sum by hand before coding.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Window functions separate strong SQL candidates from average ones. Practice explaining `PARTITION BY` vs `GROUP BY`, and when you want `ROW_NUMBER` vs `RANK`. On a whiteboard, sketch three rows and fill running sum by hand before coding.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1750,9 +1758,9 @@ for r in rows:
 | Medium | Share of total: `amount / SUM(amount) OVER (PARTITION BY region)` |
 | Hard | Gaps-and-islands or sessionization-style window problem on LeetCode |
 
-**THE BRIDGE to Statistics for Analysts:** SQL can compute averages, ranks, and changes precisely - and still mislead you. A higher average may be noise; a conversion lift may be sampling luck. Statistics is the literacy that keeps pretty queries from becoming false confidence.
+**WHY THE NEXT TOPIC IS NEEDED - Statistics for Analysts:** SQL can compute averages, ranks, and changes precisely - and still mislead you. A higher average may be noise; a conversion lift may be sampling luck. Statistics is the literacy that keeps pretty queries from becoming false confidence.
 
-> **Phase 6 complete?** [Build the aligned project](./Projects.md#L1128) · [Continue to Phase 7](#phase-7---statistics-for-analysts)
+> **Phase 6 complete?** [Build the aligned project](./Projects.md#data-phase-6-project) · [Continue to Phase 7](#phase-7---statistics-for-analysts)
 
 <a id="phase-7"></a>
 
@@ -1760,17 +1768,17 @@ for r in rows:
 
 **Track:** Analyst Depth
 
-**GOAL:** Separate signal from noise with descriptive statistics, sampling literacy, and a sane relationship to hypothesis tests and A/B experiments.
+**WHAT YOU WILL BE ABLE TO DO:** Separate signal from noise with descriptive statistics, sampling literacy, and a sane relationship to hypothesis tests and A/B experiments.
 
-**PREREQUISITES:** Phase 6 (you can compute metrics in SQL); basic algebra comfort.
+**WHAT YOU SHOULD KNOW FIRST:** Phase 6 (you can compute metrics in SQL); basic algebra comfort.
 
 ## 7.1 Descriptive Statistics and Distributions
 
-**WHY THIS EXISTS:** A single number - especially a mean - is often a lie of omission. Distributions tell you shape: skew, spread, multimodality, outliers. Analysts who only ship averages miss that "average revenue" rose while most customers spent less and a few whales spent more. Descriptive statistics are how you characterize a column before you model or test anything.
+**WHY YOU ARE LEARNING THIS:** A single number - especially a mean - is often a lie of omission. Distributions tell you shape: skew, spread, multimodality, outliers. Analysts who only ship averages miss that "average revenue" rose while most customers spent less and a few whales spent more. Descriptive statistics are how you characterize a column before you model or test anything.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Reports led with means because they were easy. Leadership optimized metrics that moved because of outliers or mix shifts. People compared medians and means casually without knowing when each is appropriate. Histograms were skipped; so teams argued about "the number" while looking at different realities.
+**THE PROBLEM THIS SOLVES:** Reports led with means because they were easy. Leadership optimized metrics that moved because of outliers or mix shifts. People compared medians and means casually without knowing when each is appropriate. Histograms were skipped; so teams argued about "the number" while looking at different realities.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [StatQuest: Mean, Median, Mode (Josh Starmer)](https://www.youtube.com/watch?v=SzZ6GpcfoQY) - crystal-clear center-of-data intuition
 - Alternative: [TED-Ed on visualization / seeing data](https://www.youtube.com/watch?v=5Zg-C8AAIGg) - why pictures of distributions beat tables of means
@@ -1781,15 +1789,15 @@ for r in rows:
 - GitHub implementation: [donnemartin/data-science-ipython-notebooks](https://github.com/donnemartin/data-science-ipython-notebooks) - statistics notebooks to skim
 - Practice platform: [Kaggle](https://www.kaggle.com/) - compute describe-stats on a real dataset
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
-Center: **mean** (sensitive to outliers), **median** (robust midpoint), **mode** (most frequent; more natural for categories). Spread: **range**, **IQR** (interquartile range), **variance** / **standard deviation**. Shape: skew (long right tail is common in revenue), kurtosis (tail heaviness), multimodal mixtures (e.g., free vs paid users). Always plot: histogram or box plot beats a table of moments.
+Center: **mean** (sensitive to outliers), **median** (reliable midpoint), **mode** (most frequent; more natural for categories). Spread: **range**, **IQR** (interquartile range), **variance** / **standard deviation**. Shape: skew (long right tail is common in revenue), kurtosis (tail heaviness), multimodal mixtures (e.g., free vs paid users). Always plot: histogram or box plot beats a table of moments.
 
 For analysis practice: start with `COUNT`, null rate, distinct count, mean/median, percentiles (p50/p90/p99), and a quick segmented compare (by platform, country). Percentiles matter for product performance (latency) as much as finance (spend). Correlation measures linear association - it is not causation, and it misses nonlinear patterns; that is why guessing correlation by eye is a useful humbling exercise.
 
-**THE IDEA THAT FIXED IT:** Describe the distribution before you debate the mean. Prefer a small pack of numbers (median, IQR, p90) plus a plot over a single average.
+**THE MAIN IDEA IN SIMPLE WORDS:** Describe the distribution before you debate the mean. Prefer a small pack of numbers (median, IQR, p90) plus a plot over a single average.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Sample amounts: 4, 5, 6, 7, 100
@@ -1822,21 +1830,21 @@ For analysis practice: start with `COUNT`, null rate, distinct count, mean/media
  +------------------+
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 City "average income" can rise because a few billionaires moved in while typical families got poorer. The median household is the family in the middle of the lined-up neighborhood. If you only quote the mean, you are quoting the billionaires' gravitational pull.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
 | Mean | Familiar, algebraic convenience | Distorted by outliers / skew |
-| Median | Robust center | Less nice mathematically for some models |
+| Median | reliable center | Less nice mathematically for some models |
 | Std deviation | Spread for roughly symmetric data | Misleads on heavy skew |
 | Percentiles / IQR | Actionable tail and middle view | Need more explanation for some audiences |
 | Reporting only one number | Simple slides | Hidden shape risk |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import statistics as stats
@@ -1874,9 +1882,9 @@ WHERE amount IS NOT NULL;
 -- Exact percentile syntax varies by warehouse; concept does not.
 ```
 
-**INTERVIEW PERSPECTIVE:** Case interviews often hand you a metric movement. Ask about distribution and mix before inventing a story. Saying "I'd check median and a histogram, not only average" is a high-signal analyst habit.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Case interviews often hand you a metric movement. Ask about distribution and mix before inventing a story. Saying "I'd check median and a histogram, not only average" is a high-signal analyst habit.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1886,17 +1894,17 @@ WHERE amount IS NOT NULL;
 | Medium | Find a multimodal column by plotting; explain why mean misleads |
 | Hard | Explain a real metric move using mix shift vs true distribution shift |
 
-**THE BRIDGE to Sampling, Inference, and A/B Testing Literacy:** Describing *this* dataset is not the same as claiming what is true about the world or that an experiment "worked." Inference and experiment literacy stop you from overfitting noise.
+**WHY THE NEXT TOPIC IS NEEDED - Sampling, Inference, and A/B Testing Literacy:** Describing *this* dataset is not the same as claiming what is true about the world or that an experiment "worked." Inference and experiment literacy stop you from overfitting noise.
 
 ---
 
 ## 7.2 Sampling, Inference, and A/B Testing Literacy
 
-**WHY THIS EXISTS:** Most analytics claims jump from "in our sample / in our dashboard window" to "therefore the product change worked" without a bridge. Sampling bias, underpowered tests, p-hacking, and peeking destroy trust. You do not need to become a research statistician, but you must know what a p-value is *not*, why random assignment matters, and when to say "we cannot conclude that."
+**WHY YOU ARE LEARNING THIS:** Most analytics claims jump from "in our sample / in our dashboard window" to "therefore the product change worked" without a bridge. Sampling bias, underpowered tests, p-hacking, and peeking destroy trust. You do not need to become a research statistician, but you must know what a p-value is *not*, why random assignment matters, and when to say "we cannot conclude that."
 
-**THE PROBLEM BEFORE THIS EXISTED:** Teams shipped features because a metric ticked up the next day. Analysts dug until they found a segment that looked significant (multiple comparisons). Experiments were stopped early when charts looked good. Biased samples - survey only happy users, logs only successful requests - produced confident wrong strategies.
+**THE PROBLEM THIS SOLVES:** Teams shipped features because a metric ticked up the next day. Analysts dug until they found a segment that looked significant (multiple comparisons). Experiments were stopped early when charts looked good. Biased samples - survey only happy users, logs only successful requests - produced confident wrong strategies.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [StatQuest: p-values explained](https://www.youtube.com/watch?v=vemZtEM63GY)
 - Alternative: [StatQuest: Hypothesis Testing](https://www.youtube.com/watch?v=0oc49DyA3hU)
@@ -1907,15 +1915,15 @@ WHERE amount IS NOT NULL;
 - GitHub implementation: [donnemartin/data-science-ipython-notebooks](https://github.com/donnemartin/data-science-ipython-notebooks)
 - Practice platform: [Kaggle](https://www.kaggle.com/) - critique an experiment writeup in a public notebook discussion
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 **Population** vs **sample**: your warehouse often *is* the population of logged events, but product truth still involves users who did not appear, cookies that reset, and bots. **Bias** is systematic error from how data was collected. **Variance** is noise from randomness; larger samples reduce variance but do not fix bias.
 
-**Hypothesis testing** (literacy level): you assume a null (e.g., no difference in conversion), compute how surprising the observed difference would be under that null, and get a p-value. A small p-value means "surprising under the null," not "probability the null is true," and not "effect is large." Practical significance (effect size) matters as much as statistical significance. **A/B tests** use random assignment to make treatment groups comparable; without randomization, selection effects confound you. Guardrails: pre-register primary metric, power the test for a minimum detectable effect, avoid unlimited peeking, watch novelty effects and SRM (sample ratio mismatch).
+**Hypothesis testing** (literacy level): you assume a null (e.g., no difference in conversion), compute how surprising the observed difference would be under that null, and get a p-value. A small p-value means "surprising under the null," not "probability the null is true," and not "effect is large." Practical significance (effect size) matters as much as statistical significance. **A/B tests** use random assignment to make treatment groups comparable; without randomization, selection effects confound you. Safety checks and limits: pre-register primary metric, power the test for a minimum detectable effect, avoid unlimited peeking, watch novelty effects and SRM (sample ratio mismatch).
 
-**THE IDEA THAT FIXED IT:** Randomize when you can, measure uncertainty explicitly, and separate "statistically noticeable" from "worth shipping."
+**THE MAIN IDEA IN SIMPLE WORDS:** Randomize when you can, measure uncertainty explicitly, and separate "statistically noticeable" from "worth shipping."
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  A/B sketch
@@ -1940,11 +1948,11 @@ WHERE amount IS NOT NULL;
  Survey link in app settings -> only power users answer -> "everyone loves feature"
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Judging a restaurant by asking only people who finished a 10-course tasting menu is sampling bias. Flipping a coin ten times and stopping when you see a streak of heads is peeking. A p-value is not a trophy; it is a "how weird is this if nothing real happened?" meter - and weirdness can come from fishing across twenty metrics.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -1954,7 +1962,7 @@ Judging a restaurant by asking only people who finished a 10-course tasting menu
 | Many metrics without correction | More "wins" | False discoveries |
 | Large samples | Detect small effects | May detect trivial effects; still biased if collection is biased |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import math
@@ -1983,9 +1991,9 @@ print({"c_rate": conversion_rate(s1, n), "t_rate": conversion_rate(s2, n), "z": 
 # |z| around 0-2 typically under null; do not treat one simulation as truth
 ```
 
-**INTERVIEW PERSPECTIVE:** "How would you evaluate a feature launch?" Talk primary metric, guardrails, randomization, novelty, segments as exploratory not conclusive, and practical significance. Calling out peeking and multiple comparisons marks you as safe to own experiments.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "How would you evaluate a feature launch?" Talk primary metric, safety checks and limits, randomization, novelty, segments as exploratory not conclusive, and practical significance. Calling out peeking and multiple comparisons marks you as safe to own experiments.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1995,9 +2003,9 @@ print({"c_rate": conversion_rate(s1, n), "t_rate": conversion_rate(s2, n), "z": 
 | Medium | Critique a fake result that peeked daily until p<0.05 |
 | Hard | Compute a simple two-proportion test and interpret effect size vs significance |
 
-**THE BRIDGE to Pandas & Wrangling:** Statistics tells you what to look for. You still need a fast, programmable way to clean, join, group, and reshape tables outside the database - especially for files, notebooks, and iterative exploration. Pandas is that tool.
+**WHY THE NEXT TOPIC IS NEEDED - Pandas & Wrangling:** Statistics tells you what to look for. You still need a fast, programmable way to clean, join, group, and reshape tables outside the database - especially for files, notebooks, and iterative exploration. Pandas is that tool.
 
-> **Phase 7 complete?** [Build the aligned project](./Projects.md#L1149) · [Continue to Phase 8](#phase-8---pandas--wrangling)
+> **Phase 7 complete?** [Build the aligned project](./Projects.md#data-phase-7-project) · [Continue to Phase 8](#phase-8---pandas--wrangling)
 
 <a id="phase-8"></a>
 
@@ -2005,17 +2013,17 @@ print({"c_rate": conversion_rate(s1, n), "t_rate": conversion_rate(s2, n), "z": 
 
 **Track:** Analyst Depth
 
-**GOAL:** Wrangle tabular data programmatically - clean types, handle missingness, join/group/reshape - without Excel.
+**WHAT YOU WILL BE ABLE TO DO:** Wrangle tabular data programmatically - clean types, handle missingness, join/group/reshape - without Excel.
 
-**PREREQUISITES:** Phase 3 (Python), Phase 5 ideas (joins/group by), Phase 7 (what clean distributions look like).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 3 (Python), Phase 5 ideas (joins/group by), Phase 7 (what clean distributions look like).
 
 ## 8.1 DataFrames, Cleaning, Types, Missing Data
 
-**WHY THIS EXISTS:** Pandas gives you a DataFrame - a labeled, column-typed table in memory - with expressive operations for the dirty work analysts do daily. SQL is still king inside warehouses; Pandas shines for files, API payloads, notebook exploration, and glue code. Ignoring dtypes and missing-data semantics is how silent bugs enter Python analyses.
+**WHY YOU ARE LEARNING THIS:** Pandas gives you a DataFrame - a labeled, column-typed table in memory - with expressive operations for the dirty work analysts do daily. SQL is still king inside warehouses; Pandas shines for files, API payloads, notebook exploration, and glue code. Ignoring dtypes and missing-data semantics is how silent bugs enter Python analyses.
 
-**THE PROBLEM BEFORE THIS EXISTED:** People looped over lists of dicts for everything, reinventing joins and group-bys badly. Or they stayed in Excel until files were 200MB and crashing. CSV loads inferred strings for everything; dates stayed text; `"NA"` was not null; numeric columns with one bad cell became `object` dtype and refused to sum correctly.
+**THE PROBLEM THIS SOLVES:** People looped over lists of dicts for everything, reinventing joins and group-bys badly. Or they stayed in Excel until files were 200MB and crashing. CSV loads inferred strings for everything; dates stayed text; `"NA"` was not null; numeric columns with one bad cell became `object` dtype and refused to sum correctly.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [Pandas explained with animation (Manim / related explainers)](https://www.youtube.com/watch?v=J5JcKZr9Bys) - mental model for DataFrame operations
 - Alternative: [Pandas for Data Science (Rob Mulla)](https://www.youtube.com/watch?v=DkjCaAMBGWM) - practical analyst workflow
@@ -2026,15 +2034,15 @@ print({"c_rate": conversion_rate(s1, n), "t_rate": conversion_rate(s2, n), "z": 
 - GitHub implementation: [pandas-dev/pandas](https://github.com/pandas-dev/pandas) and exercises at [guipsamora/pandas_exercises](https://github.com/guipsamora/pandas_exercises)
 - Practice platform: [Kaggle Pandas course](https://www.kaggle.com/learn/pandas)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 A DataFrame is a collection of columns (Series) sharing an index. Operations are usually column-oriented and vectorized: prefer `df["amount"] * 1.1` over row loops. Cleaning workflow: load with explicit options (`parse_dates`, `na_values`), inspect with `info` / `head` / `describe`, fix dtypes (`astype`, `to_numeric`, `to_datetime`), standardize categories, and decide a missing-data policy.
 
 Missing data in Pandas uses `NaN` / `NaT` / `NA` depending on version and dtype. Know the difference between dropping (`dropna`), filling (`fillna`), and keeping nulls for upstream honesty. A filled zero is a business claim ("we treat unknown as zero") - make it explicit.
 
-**THE IDEA THAT FIXED IT:** Put tables into a structure that knows columns and types, then clean with vectorized, testable operations instead of cell clicking.
+**THE MAIN IDEA IN SIMPLE WORDS:** Put tables into a structure that knows columns and types, then clean with vectorized, testable operations instead of cell clicking.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  CSV text
@@ -2069,11 +2077,11 @@ Missing data in Pandas uses `NaN` / `NaT` / `NA` depending on version and dtype.
  )
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A DataFrame is a well-labeled shipping pallet: each column is a labeled stack of the same kind of box. Cleaning is refusing to stack a "maybe number maybe text" column under the "amount" label. Missing boxes get a clear empty marker, not a fake zero brick that makes the weight look real.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -2083,7 +2091,7 @@ A DataFrame is a well-labeled shipping pallet: each column is a labeled stack of
 | Dropping null rows | Simple models/plots | Selection bias |
 | Filling with mean/zero | Complete grids | Distorts distributions and metrics |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import pandas as pd
@@ -2106,9 +2114,9 @@ print(df)
 print(df["amount"].isna().mean())  # fraction missing
 ```
 
-**INTERVIEW PERSPECTIVE:** Take-homes often include a dirty CSV. Narrate dtype fixes and null policy before fancy modeling. Mentioning `errors="coerce"` plus a quality report (count of coerced nulls) shows production sense.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Take-homes often include a dirty CSV. Narrate dtype fixes and null policy before fancy modeling. Mentioning `errors="coerce"` plus a quality report (count of coerced nulls) shows production sense.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2118,17 +2126,17 @@ print(df["amount"].isna().mean())  # fraction missing
 | Medium | Visualize a column in Pandas Tutor and explain each step |
 | Hard | Parse a messy date column with multiple formats robustly |
 
-**THE BRIDGE to GroupBy, Merge, Concat, Melt/Pivot:** Clean single tables are not enough. Analysis needs combining tables and changing shapes - wide to long, long to wide - the same verbs you met as PivotTables and SQL joins, now in Python.
+**WHY THE NEXT TOPIC IS NEEDED - GroupBy, Merge, Concat, Melt/Pivot:** Clean single tables are not enough. Analysis needs combining tables and changing shapes - wide to long, long to wide - the same verbs you met as PivotTables and SQL joins, now in Python.
 
 ---
 
 ## 8.2 GroupBy, Merge, Concat, Melt/Pivot
 
-**WHY THIS EXISTS:** Wrangling is mostly four verbs: aggregate (`groupby`), join (`merge`), stack datasets (`concat`), and reshape (`melt` / `pivot`). Mastering them makes Pandas a complete spreadsheet+SQL hybrid for in-memory work. Misusing them recreates fan-out bugs and untidy layouts from Phase 2/5.
+**WHY YOU ARE LEARNING THIS:** Wrangling is mostly four verbs: aggregate (`groupby`), join (`merge`), stack datasets (`concat`), and reshape (`melt` / `pivot`). Mastering them makes Pandas a complete spreadsheet+SQL hybrid for in-memory work. Misusing them recreates fan-out bugs and untidy layouts from Phase 2/5.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Analysts wrote nested loops to combine files, or copy-pasted sheets below each other until columns misaligned. Wide month columns returned. People used `merge` with default inner joins and lost rows unknowingly. `groupby` without understanding `as_index` / aggregation dicts produced shapeless results that broke the next step.
+**THE PROBLEM THIS SOLVES:** Analysts wrote nested loops to combine files, or copy-pasted sheets below each other until columns misaligned. Wide month columns returned. People used `merge` with default inner joins and lost rows unknowingly. `groupby` without understanding `as_index` / aggregation dicts produced shapeless results that broke the next step.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [Complete Python Pandas Data Science Tutorial (Keith Galli)](https://www.youtube.com/watch?v=2uvysYbKdjM) - groupby/merge in practical flow
 - Alternative: [Pandas freeCodeCamp course](https://www.youtube.com/watch?v=gtjxAH8uaP0)
@@ -2139,15 +2147,15 @@ print(df["amount"].isna().mean())  # fraction missing
 - GitHub implementation: [guipsamora/pandas_exercises](https://github.com/guipsamora/pandas_exercises)
 - Practice platform: [Kaggle](https://www.kaggle.com/) + Exercism for supporting Python skills
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 `groupby(keys).agg(...)` partitions rows and computes aggregates - SQL `GROUP BY` in Python. `merge(left, right, on=..., how=...)` is join with explicit `how` (`inner`, `left`, `right`, `outer`). Always check shapes before and after. `concat` stacks along rows or columns; align columns deliberately. `melt` turns wide data tidy (long); `pivot_table` builds spreadsheet-like summaries (with aggregation). Prefer `pivot_table` over `pivot` when duplicates exist.
 
 Chaining these verbs cleanly beats one enormous expression nobody can debug. Validate with row counts, null rates on key columns after merges, and spot checks against SQL when the source of truth is a warehouse.
 
-**THE IDEA THAT FIXED IT:** Reuse the relational verbs you already know - join, aggregate, reshape - inside a programmable DataFrame API with explicit `how` and aggregation functions.
+**THE MAIN IDEA IN SIMPLE WORDS:** Reuse the relational verbs you already know - join, aggregate, reshape - inside a programmable DataFrame API with explicit `how` and aggregation functions.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  merge how='left'
@@ -2175,11 +2183,11 @@ Chaining these verbs cleanly beats one enormous expression nobody can debug. Val
  if 1300 -> duplicate keys on right -> investigate
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 `merge` is stapling customer info onto each order slip. `groupby` is rubber-banding slips by region and writing a total on the band. `melt` is rewriting a wall calendar (months as columns) into a diary (one date per line). `concat` is stacking this week's slips under last week's - only if both use the same column labels.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -2189,7 +2197,7 @@ Chaining these verbs cleanly beats one enormous expression nobody can debug. Val
 | Giant pivot with many dims | Compact report | Sparse tables; slow; hard to test |
 | Reshaping to tidy long form | Tool-friendly data | Slightly less "human printable" |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import pandas as pd
@@ -2220,9 +2228,9 @@ print(long)
 print(back)
 ```
 
-**INTERVIEW PERSPECTIVE:** Expect a wrangling exercise: multiple CSVs, a messy wide table, a required summary. Speak join type and grain, show shape asserts, and reshape to tidy before aggregating. Pandas fluency plus SQL fluency is a common hiring bar.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Expect a wrangling exercise: multiple CSVs, a messy wide table, a required summary. Speak join type and grain, show shape asserts, and reshape to tidy before aggregating. Pandas confident working knowledge plus SQL confident working knowledge is a common hiring bar.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2232,9 +2240,9 @@ print(back)
 | Medium | Complete merge/groupby exercises in pandas_exercises |
 | Hard | Combine concat of monthly files + merge + groupby into one reproducible script |
 
-**THE BRIDGE to Visualization & Storytelling:** Clean aggregated tables still do not change minds by themselves. Humans need honest charts and a narrative. Visualization is how analysis becomes communication - and how lies can sneak in through axis tricks.
+**WHY THE NEXT TOPIC IS NEEDED - Visualization & Storytelling:** Clean aggregated tables still do not change minds by themselves. Humans need honest charts and a narrative. Visualization is how analysis becomes communication - and how lies can sneak in through axis tricks.
 
-> **Phase 8 complete?** [Build the aligned project](./Projects.md#L1170) · [Continue to Phase 9](#phase-9---visualization--storytelling)
+> **Phase 8 complete?** [Build the aligned project](./Projects.md#data-phase-8-project) · [Continue to Phase 9](#phase-9---visualization--storytelling)
 
 <a id="phase-9"></a>
 
@@ -2242,17 +2250,17 @@ print(back)
 
 **Track:** Analyst Depth
 
-**GOAL:** Choose charts that answer questions honestly, then package them into dashboards and narratives people can act on.
+**WHAT YOU WILL BE ABLE TO DO:** Choose charts that answer questions honestly, then package them into dashboards and narratives people can act on.
 
-**PREREQUISITES:** Phase 8 (you can produce clean summary tables); Phase 7 (distributions and uncertainty literacy).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 8 (you can produce clean summary tables); Phase 7 (distributions and uncertainty literacy).
 
 ## 9.1 Choosing Honest Charts
 
-**WHY THIS EXISTS:** A chart is an argument. The same table can support insight or deception depending on geometry: truncated axes, dual axes, cherry-picked ranges, area charts that imply precision they lack. Visualization literacy is part of analytics ethics, not decoration.
+**WHY YOU ARE LEARNING THIS:** A chart is an argument. The same table can support insight or deception depending on geometry: truncated axes, dual axes, cherry-picked ranges, area charts that imply precision they lack. Visualization literacy is part of analytics ethics, not decoration.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Default chart buttons turned everything into 3D exploding pies. People compared magnitudes with mismatched baselines. Line charts connected categorical nonsense. Color encoded four different things at once. Stakeholders "saw" trends that were visual artifacts. Trust died when someone rebuilt the chart correctly.
+**THE PROBLEM THIS SOLVES:** Default chart buttons turned everything into 3D exploding pies. People compared magnitudes with mismatched baselines. Line charts connected categorical nonsense. Color encoded four different things at once. Stakeholders "saw" trends that were visual artifacts. Trust died when someone rebuilt the chart correctly.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [TED-Ed: How to spot a misleading graph](https://www.youtube.com/watch?v=5Zg-C8AAIGg)
 - Alternative: [HBR storytelling with data ideas](https://www.youtube.com/watch?v=r5_34YnCmMY) - narrative framing around visuals
@@ -2263,15 +2271,15 @@ print(back)
 - GitHub implementation: [donnemartin/data-science-ipython-notebooks](https://github.com/donnemartin/data-science-ipython-notebooks)
 - Practice platform: [Kaggle](https://www.kaggle.com/) - recreate a chart honestly from a public dataset
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Match chart to question: comparison among categories -> bar; trend over ordered time -> line; distribution -> histogram/box; relationship of two numerics -> scatter; part-to-whole -> careful stacked bar or (rarely) pie with few slices. Encode magnitude with position/length first; color second; avoid 3D. Start baselines at zero for bar magnitudes unless you have a strong annotated reason. Show uncertainty when sample size is small. Label axes with units and dates. Prefer one message per chart.
 
 Honesty checklist: Does the visual ranking match the data ranking? Is the time window justified? Are colors colorblind-safe? Is the grain clear in the subtitle ("weekly active users, WhatsApp Android, May-Jul 2026")?
 
-**THE IDEA THAT FIXED IT:** Choose encodings that make accurate comparisons easy, and annotate the caveats that geometry cannot show (NULLs excluded, incomplete month, definition changes).
+**THE MAIN IDEA IN SIMPLE WORDS:** Choose encodings that make accurate comparisons easy, and annotate the caveats that geometry cannot show (NULLs excluded, incomplete month, definition changes).
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Question: which region sold more?
@@ -2295,11 +2303,11 @@ Honesty checklist: Does the visual ranking match the data ranking? Is the time w
  composition         -> stacked bar (ordered), few-slice pie only if forced
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A map that stretches Greenland to the size of Africa is still "a map," but it is a bad argument about area. Charts are maps of data. Using the wrong projection (encoding) makes people believe wrong geography (business conclusions).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -2309,7 +2317,7 @@ A map that stretches Greenland to the size of Africa is still "a map," but it is
 | Interactive hover tooltips | Detail on demand | Can hide context if static export is what leaders see |
 | Many series in one chart | Density | Spaghetti; cognitive overload |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Honest bar comparison with Matplotlib
@@ -2329,9 +2337,9 @@ fig.tight_layout()
 # fig.savefig("revenue_by_region.png")
 ```
 
-**INTERVIEW PERSPECTIVE:** Case interviews may show a misleading chart and ask what is wrong. Practice naming the violation (baseline, cherry-pick, wrong chart type, omitted denominator). Offering a redraw plan beats aesthetic critique.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Case interviews may show a misleading chart and ask what is wrong. Practice naming the violation (baseline, cherry-pick, wrong chart type, omitted denominator). Offering a redraw plan beats aesthetic critique.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2341,17 +2349,17 @@ fig.tight_layout()
 | Medium | Use data-to-viz to pick a chart for a dataset you already cleaned |
 | Hard | Create before/after visuals of the same data: deceptive vs honest |
 
-**THE BRIDGE to Dashboards and BI Tools:** One honest chart answers one question. Organizations need living collections of charts with filters, ownership, and refresh - dashboards - plus tools that non-Python stakeholders can use. That operational layer is next.
+**WHY THE NEXT TOPIC IS NEEDED - Dashboards and BI Tools:** One honest chart answers one question. Organizations need living collections of charts with filters, ownership, and refresh - dashboards - plus tools that non-Python stakeholders can use. That operational layer is next.
 
 ---
 
 ## 9.2 Dashboards and BI Tools (Tableau / Power BI / Plotly)
 
-**WHY THIS EXISTS:** Dashboards are productized analytics: curated metrics, controlled filters, scheduled refresh, and a shared place to look. BI tools (Tableau, Power BI) and code-first dashboards (Plotly Dash, Streamlit) exist so insights are not trapped in personal notebooks. Bad dashboards become metric cemeteries; good ones become decision surfaces.
+**WHY YOU ARE LEARNING THIS:** Dashboards are productized analytics: curated metrics, controlled filters, scheduled refresh, and a shared place to look. BI tools (Tableau, Power BI) and code-first dashboards (Plotly Dash, Streamlit) exist so insights are not trapped in personal notebooks. Bad dashboards become metric cemeteries; good ones become decision surfaces.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Every stakeholder received a different Excel attachment. Definitions drifted. Refresh meant someone re-ran a query on Monday. Mobile executives screenshot partial charts without filters visible. Teams built 40-chart walls with no hierarchy of importance, so nobody knew what mattered.
+**THE PROBLEM THIS SOLVES:** Every stakeholder received a different Excel attachment. Definitions drifted. Refresh meant someone re-ran a query on Monday. Mobile executives screenshot partial charts without filters visible. Teams built 40-chart walls with no hierarchy of importance, so nobody knew what mattered.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [HBR / storytelling focus](https://www.youtube.com/watch?v=r5_34YnCmMY) - structure the narrative a dashboard should support
 - Alternative: [Data Analysis with Python (freeCodeCamp)](https://www.youtube.com/watch?v=r-uOLxNrNk8) - plotting foundations that transfer to Plotly
@@ -2362,15 +2370,15 @@ fig.tight_layout()
 - GitHub implementation: [donnemartin/data-science-ipython-notebooks](https://github.com/donnemartin/data-science-ipython-notebooks)
 - Practice platform: [Kaggle](https://www.kaggle.com/) - publish a notebook "dashboard" section with clear hierarchy
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Dashboard design principles: one page, one job; north-star metric near top; filters that match real decisions (date, region, platform); avoid dual meanings for the same color; show last refresh time and metric definitions; link to the SQL/model source. BI tools excel at governed semantic layers and click-explore for business users. Code-first dashboards excel when visuals must live next to custom Python logic or version control.
 
 Plotly (and similar) bridges code and interactivity: hover, zoom, filter callbacks. Tableau/Power BI emphasize drag-and-drop plus enterprise distribution. The tool is secondary to metric contracts and honest charts. A beautiful dashboard on a wrong grain is still wrong.
 
-**THE IDEA THAT FIXED IT:** Treat a dashboard as a product with users, a job-to-be-done, and an owner - not as a dumping ground for every chart anyone requested in 2024.
+**THE MAIN IDEA IN SIMPLE WORDS:** Treat a dashboard as a product with users, a job-to-be-done, and an owner - not as a dumping ground for every chart anyone requested in 2024.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Data models / warehouse marts
@@ -2398,11 +2406,11 @@ Plotly (and similar) bridges code and interactivity: hover, zoom, filter callbac
  +--------------------------------------+
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A car dashboard does not show every sensor in the engine. It shows speed, fuel, and warning lights - the few things a driver must act on. The OBD port exists for mechanics (deep dive notebooks/SQL). If you bolt forty gauges onto the windshield, you cause accidents.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -2413,7 +2421,7 @@ A car dashboard does not show every sensor in the engine. It shows speed, fuel, 
 | Live query every view | Freshness | Cost/latency spikes |
 | Extracts / materializations | Speed, cost control | Staleness |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Tiny Plotly bar "dashboard tile" from a summary table
@@ -2434,9 +2442,9 @@ fig.update_layout(yaxis_title="Revenue", xaxis_title="Region")
 # In Dash/Streamlit you would wrap this figure in a filterable app layout.
 ```
 
-**INTERVIEW PERSPECTIVE:** "Design a dashboard for X" is a product sense question. Clarify users and decisions, pick 3-5 metrics, define grain/freshness, sketch layout, and mention how you prevent metric sprawl. Tool fanboying without definitions is a weak answer.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "Design a dashboard for X" is a product sense question. Clarify users and decisions, pick 3-5 metrics, define grain/freshness, sketch layout, and mention how you prevent metric sprawl. Tool fanboying without definitions is a weak answer.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2446,9 +2454,9 @@ fig.update_layout(yaxis_title="Revenue", xaxis_title="Region")
 | Medium | Cut a 20-chart dashboard to 5; write why each survivor earns space |
 | Hard | Document a semantic definition + owner + source query for each KPI tile |
 
-**THE BRIDGE to EDA, Metrics & Analytics:** Charts and dashboards assume you already know what to look for. Exploratory Data Analysis is the disciplined curiosity that discovers structure, and metric design is how you decide what "better" means before you draw it.
+**WHY THE NEXT TOPIC IS NEEDED - EDA, Metrics & Analytics:** Charts and dashboards assume you already know what to look for. Exploratory Data Analysis is the disciplined curiosity that discovers structure, and metric design is how you decide what "better" means before you draw it.
 
-> **Phase 9 complete?** [Build the aligned project](./Projects.md#L1191) · [Continue to Phase 10](#phase-10---eda-metrics--analytics)
+> **Phase 9 complete?** [Build the aligned project](./Projects.md#data-phase-9-project) · [Continue to Phase 10](#phase-10---eda-metrics--analytics)
 
 <a id="phase-10"></a>
 
@@ -2456,17 +2464,17 @@ fig.update_layout(yaxis_title="Revenue", xaxis_title="Region")
 
 **Track:** Analyst Depth
 
-**GOAL:** Turn curiosity into decisions: explore datasets systematically, design metrics that match product reality, and write insight memos that change minds.
+**WHAT YOU WILL BE ABLE TO DO:** Turn curiosity into decisions: explore datasets systematically, design metrics that match product reality, and write insight memos that change minds.
 
-**PREREQUISITES:** Phases 4-9 (SQL/Pandas/stats/viz literacy).
+**WHAT YOU SHOULD KNOW FIRST:** Phases 4-9 (SQL/Pandas/stats/viz literacy).
 
 ## 10.1 Exploratory Data Analysis Workflow
 
-**WHY THIS EXISTS:** EDA is structured skepticism. Before modeling, dashboarding, or claiming a trend, you learn what is in the data: grain, coverage, weird values, seasonality, join fan-out, definition traps. Skipping EDA is how teams industrialize first impressions.
+**WHY YOU ARE LEARNING THIS:** EDA is structured skepticism. Before modeling, dashboarding, or claiming a trend, you learn what is in the data: grain, coverage, weird values, seasonality, join fan-out, definition traps. Skipping EDA is how teams industrialize first impressions.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Analysts jumped to a cool chart or a machine learning model on day one. They discovered mid-presentation that 30% of rows were test users, timestamps were UTC vs local mixed, and the "customer_id" was null for guest checkout. Cleanup then invalidated all prior charts. There was no shared checklist, so quality depended on individual heroics.
+**THE PROBLEM THIS SOLVES:** Analysts jumped to a cool chart or a machine learning model on day one. They discovered mid-presentation that 30% of rows were test users, timestamps were UTC vs local mixed, and the "customer_id" was null for guest checkout. Cleanup then invalidated all prior charts. There was no shared checklist, so quality depended on individual heroics.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [Data Analysis with Python (freeCodeCamp)](https://www.youtube.com/watch?v=r-uOLxNrNk8) - end-to-end exploration habits
 - Alternative: [Rob Mulla Pandas workflow](https://www.youtube.com/watch?v=DkjCaAMBGWM) - practical EDA pacing
@@ -2477,15 +2485,15 @@ fig.update_layout(yaxis_title="Revenue", xaxis_title="Region")
 - GitHub implementation: [guipsamora/pandas_exercises](https://github.com/guipsamora/pandas_exercises) and [donnemartin/data-science-ipython-notebooks](https://github.com/donnemartin/data-science-ipython-notebooks)
 - Practice platform: [Kaggle](https://www.kaggle.com/) - publish an EDA notebook with a clear question
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 A durable EDA workflow: (1) Write the question and decision at stake. (2) Identify tables and claimed grain. (3) Measure row counts, time range, null rates, duplicate keys. (4) Univariate describe + plots. (5) Bivariate relationships that matter to the question. (6) Segment checks (platform, country, new vs returning). (7) Data quality traps (bots, spikes on deploy days, timezone seams). (8) Only then finalize metrics/charts for communication.
 
 EDA is not endless wandering. Time-box it. Capture findings in a short log: "Guest checkouts lack customer_id - 18% of orders." Those notes become the appendix that saves your future self.
 
-**THE IDEA THAT FIXED IT:** Explore with a checklist tied to a decision, not with vibes. Stop when you can state caveats and a next analytical step clearly.
+**THE MAIN IDEA IN SIMPLE WORDS:** Explore with a checklist tied to a decision, not with vibes. Stop when you can state caveats and a next analytical step clearly.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Decision question
@@ -2523,11 +2531,11 @@ EDA is not endless wandering. Time-box it. Capture findings in a short log: "Gue
   +-------------------------> day
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 EDA is walking a used house with a flashlight before you buy: water stains, crooked floors, breaker box labels. Skipping the walkthrough because the listing photos were pretty is how you buy a flooded basement. Dashboards are listing photos. EDA is the inspection.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -2537,7 +2545,7 @@ EDA is walking a used house with a flashlight before you buy: water stains, croo
 | Endless exploration | Lots of plots | No decision; analysis paralysis |
 | Logging caveats | Trust and reuse | Discipline |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import pandas as pd
@@ -2569,9 +2577,9 @@ print(eda_sanity(orders, "created_at"))
 print("duplicate order_id rows:", orders["order_id"].duplicated().sum())
 ```
 
-**INTERVIEW PERSPECTIVE:** "How would you start with a new dataset?" is a classic. Walk the checklist. Ask about grain and the business decision. Interviewers are listening for whether you seek failure modes before insights.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "How would you start with a new dataset?" is a classic. Walk the checklist. Ask about grain and the business decision. Interviewers are listening for whether you seek failure modes before insights.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2581,17 +2589,17 @@ print("duplicate order_id rows:", orders["order_id"].duplicated().sum())
 | Medium | Explain a volume spike using deploy/marketing calendar context |
 | Hard | Full EDA memo that changes a stakeholder's prior belief with caveats |
 
-**THE BRIDGE to Metric Design, Funnels, Cohorts, and Insight Memos:** Exploration finds structure. Organizations still need stable definitions of success - metrics, funnel stages, cohort lenses - and a writing format that turns analysis into action.
+**WHY THE NEXT TOPIC IS NEEDED - Metric Design, Funnels, Cohorts, and Insight Memos:** Exploration finds structure. Organizations still need stable definitions of success - metrics, funnel stages, cohort lenses - and a writing format that turns analysis into action.
 
 ---
 
 ## 10.2 Metric Design, Funnels, Cohorts, and Insight Memos
 
-**WHY THIS EXISTS:** Metrics are compressed strategy. A bad north-star creates local optima (optimize clicks, destroy trust). Funnels locate drop-offs in multi-step behaviors. Cohorts separate lifecycle effects from calendar effects. Insight memos are how analysts ship decisions, not just charts. This section closes the analyst foundation by tying numbers to action.
+**WHY YOU ARE LEARNING THIS:** Metrics are compressed strategy. A bad north-star creates local optima (optimize clicks, destroy trust). Funnels locate drop-offs in multi-step behaviors. Cohorts separate lifecycle effects from calendar effects. Insight memos are how analysts ship decisions, not just charts. This section closes the analyst foundation by tying numbers to action.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Teams tracked whatever was easy to log. Vanity metrics rose while revenue fell. Funnels mixed platforms with different step names. Cohorts were ignored, so retention looked like a product failure when it was a mix of old vs new users. Analyses ended as slide dumps without a recommended decision, owner, or expected follow-up.
+**THE PROBLEM THIS SOLVES:** Teams tracked whatever was easy to log. Vanity metrics rose while revenue fell. Funnels mixed platforms with different step names. Cohorts were ignored, so retention looked like a product failure when it was a mix of old vs new users. Analyses ended as slide dumps without a recommended decision, owner, or expected follow-up.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [HBR storytelling](https://www.youtube.com/watch?v=r5_34YnCmMY) - structure the memo like a story with a point
 - Alternative: [Data with Baraa DE 2026](https://www.youtube.com/watch?v=1nVGaNbvuXg) - how metrics connect to platform work
@@ -2602,17 +2610,17 @@ print("duplicate order_id rows:", orders["order_id"].duplicated().sum())
 - GitHub implementation: [DataTalksClub/data-engineering-zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) - see how analytics depends on solid upstream data
 - Practice platform: [LeetCode Database](https://leetcode.com/problemset/database) for SQL muscle; Kaggle for end-to-end memos
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
-**Metric design:** define name, business purpose, formula, grain, filters (who is included), owner, and known failure modes. Prefer rates with clear denominators over naked counts when comparing unequal populations. Guardrail metrics catch harmful optimization (e.g., refund rate beside conversion).
+**Metric design:** define name, business purpose, formula, grain, filters (who is included), owner, and known failure modes. Prefer rates with clear denominators over naked counts when comparing unequal populations. Safety check metrics catch harmful optimization (e.g., refund rate beside conversion).
 
 **Funnels:** ordered stages with counts and conversion rates between stages. Watch for step definition mismatch and users who skip steps. **Cohorts:** groups sharing a start event (signup week); track retention/revenue by age. Cohort charts stop you from mistaking composition shifts for product changes.
 
 **Insight memos:** lead with the answer, then evidence, then caveats, then recommended action and how you would measure success. Put charts after the claim they support. Write for a busy reader who will skim eight sentences.
 
-**THE IDEA THAT FIXED IT:** Define the metric contract before the dashboard art; use funnels and cohorts as diagnostic lenses; ship writing that forces a decision.
+**THE MAIN IDEA IN SIMPLE WORDS:** Define the metric contract before the dashboard art; use funnels and cohorts as diagnostic lenses; ship writing that forces a decision.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Metric contract card
@@ -2653,21 +2661,21 @@ FROM events
 WHERE event_date BETWEEN DATE '2026-08-01' AND DATE '2026-08-07';
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A north-star metric is a team compass; if it points at "pages printed" in a digital company, everyone optimizes paper. Funnels are airport security lines - you measure where people leave, not only how many boarded. Cohorts are graduating classes - you judge a school by how each class does over time, not by mixing seniors and freshmen into one average. The insight memo is the brief to the mayor: recommendation first, charts in the appendix.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
-| Single north-star + guardrails | Focus | Risk if star is poorly chosen |
+| Single north-star + safety checks and limits | Focus | Risk if star is poorly chosen |
 | Many equally loud KPIs | Coverage | No prioritization |
 | Rigid funnel steps | Comparable conversion | Misses skip-ahead behavior |
 | Cohort views | Lifecycle truth | More complex storytelling |
 | Memo with clear ask | Decisions | Requires courage and ownership |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 from collections import defaultdict
@@ -2718,9 +2726,9 @@ print(
 )
 ```
 
-**INTERVIEW PERSPECTIVE:** Product/analytics interviews love metric design and funnel diagnosis. Define denominator carefully. Propose guardrails. For take-homes, a crisp memo scores higher than twelve unlabeled charts. Say what you would measure after the decision ships.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Product/analytics interviews love metric design and funnel diagnosis. Define denominator carefully. Propose safety checks and limits. For take-homes, a crisp memo scores higher than twelve unlabeled charts. Say what you would measure after the decision ships.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2730,11 +2738,11 @@ print(
 | Medium | Rewrite a vague analysis into the memo skeleton above |
 | Hard | End-to-end: EDA + metric + funnel + honest chart + memo on a Kaggle dataset |
 
-**THE BRIDGE BEYOND Phase 10:** With analyst foundations in place - thinking, spreadsheets, Python, SQL, stats, Pandas, visualization, metrics - the next limitations are organizational scale: many sources, conflicting definitions, slow manual refreshes, and warehouses that need engineered modeling, orchestration, and transformation frameworks. That is where data engineering phases begin: relational modeling, dimensional warehouses, ETL/ELT, Airflow, dbt, cloud platforms, Spark, and streaming.
+**WHY THE NEXT TOPIC IS NEEDED BEYOND Phase 10:** With analyst foundations in place - thinking, spreadsheets, Python, SQL, stats, Pandas, visualization, metrics - the next limitations are organizational scale: many sources, conflicting definitions, slow manual refreshes, and warehouses that need engineered modeling, orchestration, and transformation frameworks. That is where data engineering phases begin: relational modeling, dimensional warehouses, ETL/ELT, Airflow, dbt, cloud platforms, Spark, and streaming.
 
 ---
 
-> **Phase 10 complete?** [Build the aligned project](./Projects.md#L1212) · [Continue to Phase 11](#phase-11---relational-modeling-oltp)
+> **Phase 10 complete?** [Build the aligned project](./Projects.md#data-phase-10-project) · [Continue to Phase 11](#phase-11---relational-modeling-oltp)
 
 <a id="phase-11"></a>
 
@@ -2742,17 +2750,17 @@ print(
 
 **Track:** Engineering Depth
 
-**GOAL:** Design transactional schemas that stay correct under inserts and updates - keys, relationships, normalization to 3NF, then indexes and query plans that make those schemas fast enough to use.
+**WHAT YOU WILL BE ABLE TO DO:** Design transactional schemas that stay correct under inserts and updates - keys, relationships, normalization to 3NF, then indexes and query plans that make those schemas fast enough to use.
 
-**PREREQUISITES:** Phase 4-5 SQL (you can query tables); Phase 1 grain thinking.
+**WHAT YOU SHOULD KNOW FIRST:** Phase 4-5 SQL (you can query tables); Phase 1 grain thinking.
 
 ## 11.1 Keys, Relationships, and Normalization to 3NF
 
-**WHY THIS EXISTS:** Analytical questions assume trustworthy source tables. If the operational database stores the same customer address in twenty places, one update creates contradictions that every downstream dashboard inherits. Relational modeling exists so OLTP systems can take money, inventory, and identity seriously: one fact, one place, relationships enforced by keys.
+**WHY YOU ARE LEARNING THIS:** Analytical questions assume trustworthy source tables. If the operational database stores the same customer address in twenty places, one update creates contradictions that every downstream dashboard inherits. Relational modeling exists so OLTP systems can take money, inventory, and identity seriously: one fact, one place, relationships enforced by keys.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Early systems stuffed everything into wide flat files or one giant table: order id, customer name, customer city, product name, product price, quantity - repeated on every line. Change a customer's city and you update dozens of historical rows (or forget some). Insert a new product with no orders yet and you had nowhere clean to put it. Delete the last order for a product and you accidentally deleted the product's price. Those are insert, update, and delete anomalies - the pain normalization was invented to stop.
+**THE PROBLEM THIS SOLVES:** Early systems stuffed everything into wide flat files or one giant table: order id, customer name, customer city, product name, product price, quantity - repeated on every line. Change a customer's city and you update dozens of historical rows (or forget some). Insert a new product with no orders yet and you had nowhere clean to put it. Delete the last order for a product and you accidentally deleted the product's price. Those are insert, update, and delete anomalies - the pain normalization was invented to stop.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [Database Normalization Explained (Decomplexify)](https://www.youtube.com/watch?v=GFQaEYEc8_8) - stepwise normal forms with clear examples
 - Alternative: [Postgres in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=n2Fluyr3lbc) - modern relational engine context
@@ -2763,7 +2771,7 @@ print(
 - GitHub implementation: [DataExpert-io/data-engineer-handbook](https://github.com/DataExpert-io/data-engineer-handbook) - modeling notes in a broader DE map
 - Practice platform: [LeetCode Database](https://leetcode.com/problemset/database) plus designing a small schema on dbdiagram.io
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 A **primary key** uniquely identifies a row. A **foreign key** is a column (or set) that must match a primary key elsewhere, encoding a relationship. Relationships are one-to-one, one-to-many, or many-to-many (the last needs a bridge/junction table). **Normalization** is a sequence of design rules that remove redundancy:
 
@@ -2773,9 +2781,9 @@ A **primary key** uniquely identifies a row. A **foreign key** is a column (or s
 
 In practice you model entities (Customer, Order, Product, OrderItem), declare keys, and push attributes to the entity that owns them. Over-normalization can force painful multi-join reads for every screen; under-normalization reintroduces anomalies. OLTP systems usually aim for ~3NF for write-correctness, then serve analytics from a warehouse (Phase 12) rather than denormalizing the checkout database into a reporting swamp.
 
-**THE IDEA THAT FIXED IT:** Store each fact once, identify it with keys, and let relationships (not copy-paste columns) connect entities. Anomalies disappear because there is only one place to update.
+**THE MAIN IDEA IN SIMPLE WORDS:** Store each fact once, identify it with keys, and let relationships (not copy-paste columns) connect entities. Anomalies disappear because there is only one place to update.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Unnormalized order lines (anomaly magnet)
@@ -2813,11 +2821,11 @@ In practice you model entities (Customer, Order, Product, OrderItem), declare ke
  qty depends on (order_id, product_id)
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A school that writes a student's home address on every homework sheet will mis-deliver mail after one move. A school that stores address once on the student record and only writes student_id on homework can update one card. Foreign keys are the "see student record #142" stamps. Junction tables are club membership lists: students and clubs are many-to-many, so membership rows connect them.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -2827,7 +2835,7 @@ A school that writes a student's home address on every homework sheet will mis-d
 | Surrogate keys (serial/UUID) | Stable identity | Extra joins; UUID index width |
 | Enforced FKs | Integrity | Slight write overhead; migration care |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```sql
 CREATE TABLE customers (
@@ -2880,9 +2888,9 @@ keys = [(i["order_id"], i["product_id"]) for i in order_items]
 assert len(keys) == len(set(keys))
 ```
 
-**INTERVIEW PERSPECTIVE:** "Normalize this order form to 3NF" is a classic. Name entities, pick primary keys, draw FK arrows, and explain which anomaly each split removes. Mention when you would *not* chase BCNF purity in an OLTP hot path, and that analytics gets a different model (star schema) later.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "Normalize this order form to 3NF" is a classic. Name entities, pick primary keys, draw FK arrows, and explain which anomaly each split removes. Mention when you would *not* chase BCNF purity in an OLTP hot path, and that analytics gets a different model (star schema) later.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2892,17 +2900,17 @@ assert len(keys) == len(set(keys))
 | Medium | Model a many-to-many (students-courses) with a bridge table |
 | Hard | Take a real checkout form and produce DDL plus a short anomaly writeup |
 
-**THE BRIDGE to Indexes, EXPLAIN, and Query Plans:** A correct 3NF schema still fails in production if every lookup scans millions of rows. Indexes and query plans are how relational databases make normalized designs fast enough for real traffic.
+**WHY THE NEXT TOPIC IS NEEDED - Indexes, EXPLAIN, and Query Plans:** A correct 3NF schema still fails in production if every lookup scans millions of rows. Indexes and query plans are how relational databases make normalized designs fast enough for real traffic.
 
 ---
 
 ## 11.2 Indexes, EXPLAIN, and Query Plans
 
-**WHY THIS EXISTS:** Normalization creates more tables and more joins. Without indexes, the database answers "find customer 42" by reading every row. Indexes are ordered side structures (often B-trees) that turn point lookups and range filters into logarithmic work. `EXPLAIN` shows whether the planner used them - the difference between theory and the query that pages your on-call phone.
+**WHY YOU ARE LEARNING THIS:** Normalization creates more tables and more joins. Without indexes, the database answers "find customer 42" by reading every row. Indexes are ordered side structures (often B-trees) that turn point lookups and range filters into logarithmic work. `EXPLAIN` shows whether the planner used them - the difference between theory and the query that pages your on-call phone.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Applications were correct but slow. Teams added CPUs, then blamed "Postgres is slow," while every request did sequential scans on unindexed foreign keys. Or they indexed every column, slowed writes to a crawl, and still missed the composite index the `WHERE` clause needed. Without reading plans, optimization was superstition.
+**THE PROBLEM THIS SOLVES:** Applications were correct but slow. Teams added CPUs, then blamed "Postgres is slow," while every request did sequential scans on unindexed foreign keys. Or they indexed every column, slowed writes to a crawl, and still missed the composite index the `WHERE` clause needed. Without reading plans, optimization was superstition.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [Database Indexing Explained](https://www.youtube.com/watch?v=lYh6LrSIDvY) - why indexes change lookup cost
 - Alternative: [How indexing works (Arpit Bhayani)](https://www.youtube.com/watch?v=3G293is403I) - practitioner-depth intuition
@@ -2913,15 +2921,15 @@ assert len(keys) == len(set(keys))
 - GitHub implementation: [DataTalksClub/data-engineering-zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) - later modules touch performance-aware loading
 - Practice platform: use `EXPLAIN` on local Postgres/SQLite for join-heavy practice queries
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 A **B-tree index** stores sorted keys with pointers to heap rows (or index-only tuples). Equality and range predicates on the leading columns can seek instead of scan. **Composite indexes** matter: `(customer_id, ordered_at)` helps `WHERE customer_id = ? ORDER BY ordered_at` more than the reverse if filters always start with customer. **Covering indexes** include enough columns to answer without touching the table. Writes pay for indexes: each insert/update/delete maintains them.
 
 `EXPLAIN` (and `EXPLAIN ANALYZE` when safe) reveals node types: Seq Scan, Index Scan, Bitmap Heap Scan, Nested Loop, Hash Join, Merge Join, estimated rows vs actual. The skill is matching a slow node to a missing index, a bad join order, or a skewed estimate - not memorizing every node name.
 
-**THE IDEA THAT FIXED IT:** Keep a sorted shortcut for selective predicates, and verify with the planner instead of guessing.
+**THE MAIN IDEA IN SIMPLE WORDS:** Keep a sorted shortcut for selective predicates, and verify with the planner instead of guessing.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Table orders (heap)                 Index on customer_id (B-tree sketch)
@@ -2952,11 +2960,11 @@ A **B-tree index** stores sorted keys with pointers to heap rows (or index-only 
    WHERE ordered_at >= '2026-01-01'  -- leading column skipped
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A book without an index forces you to flip every page for "Mentions of Doha." The index at the back lists page numbers. A composite index is like a two-level library catalog: author first, then title. Looking up by title alone still means scanning many cards. `EXPLAIN` is asking the librarian which plan they intend before they walk the stacks.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -2966,7 +2974,7 @@ A book without an index forces you to flip every page for "Mentions of Doha." Th
 | `EXPLAIN` habit | Evidence-based tuning | Needs prod-like stats to trust |
 | Premature micro-indexes | Activity | Complexity without measured pain |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```sql
 CREATE INDEX orders_customer_id_idx ON orders (customer_id);
@@ -2992,9 +3000,9 @@ matching = 25
 print({"selectivity": matching / n_rows, "index_likely_helps": matching / n_rows < 0.05})
 ```
 
-**INTERVIEW PERSPECTIVE:** Expect "how would you speed this query up?" Answer with: measure (`EXPLAIN ANALYZE`), check selectivity, propose a concrete index matching `WHERE`/`JOIN`/`ORDER BY`, and mention write cost. Drawing a tiny B-tree sketch beats saying "add indexes" vaguely.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Expect "how would you speed this query up?" Answer with: measure (`EXPLAIN ANALYZE`), check selectivity, propose a concrete index matching `WHERE`/`JOIN`/`ORDER BY`, and mention write cost. Drawing a tiny B-tree sketch beats saying "add indexes" vaguely.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3004,9 +3012,9 @@ print({"selectivity": matching / n_rows, "index_likely_helps": matching / n_rows
 | Medium | Interpret a plan that shows Seq Scan + Filter and fix it |
 | Hard | Find a write-heavy table where an extra index hurts more than it helps |
 
-**THE BRIDGE to Warehouses & Dimensional Modeling:** OLTP 3NF plus indexes is optimized for correct, fast transactions - not for scanning years of history across dozens of joins for every dashboard. Analytics needs a different shape: warehouses and dimensional models built for OLAP-style questions.
+**WHY THE NEXT TOPIC IS NEEDED - Warehouses & Dimensional Modeling:** OLTP 3NF plus indexes is optimized for correct, fast transactions - not for scanning years of history across dozens of joins for every dashboard. Analytics needs a different shape: warehouses and dimensional models built for OLAP-style questions.
 
-> **Phase 11 complete?** [Build the aligned project](./Projects.md#L1233) · [Continue to Phase 12](#phase-12---warehouses--dimensional-modeling)
+> **Phase 11 complete?** [Build the aligned project](./Projects.md#data-phase-11-project) · [Continue to Phase 12](#phase-12---warehouses--dimensional-modeling)
 
 <a id="phase-12"></a>
 
@@ -3014,17 +3022,17 @@ print({"selectivity": matching / n_rows, "index_likely_helps": matching / n_rows
 
 **Track:** Engineering Depth
 
-**GOAL:** Separate analytical workloads from transactional systems, then model analytics as facts and dimensions with declared grain - including slowly changing dimensions when history matters.
+**WHAT YOU WILL BE ABLE TO DO:** Separate analytical workloads from transactional systems, then model analytics as facts and dimensions with declared grain - including slowly changing dimensions when history matters.
 
-**PREREQUISITES:** Phase 11 (relational OLTP literacy); Phase 5 (joins/grain).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 11 (relational OLTP literacy); Phase 5 (joins/grain).
 
 ## 12.1 OLTP vs OLAP and the Data Warehouse
 
-**WHY THIS EXISTS:** The database that takes payments should not also answer "revenue by region by week for five years" for fifty analysts at once. OLTP and OLAP have opposite access patterns. A **data warehouse** (and its lakehouse cousins) exists as a system of record for analysis: historical, integrated, subject-oriented, and safe to scan.
+**WHY YOU ARE LEARNING THIS:** The database that takes payments should not also answer "revenue by region by week for five years" for fifty analysts at once. OLTP and OLAP have opposite access patterns. A **data warehouse** (and its lakehouse cousins) exists as a system of record for analysis: historical, integrated, subject-oriented, and safe to scan.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Analysts queried production replicas with huge joins, locked rows, and accidental `UPDATE` nightmares (on systems that allowed it). Or they dumped CSVs nightly into folders named by person. Definitions of "revenue" multiplied. There was no single place that integrated CRM + billing + product events for historical questions.
+**THE PROBLEM THIS SOLVES:** Analysts queried production replicas with huge joins, locked rows, and accidental `UPDATE` nightmares (on systems that allowed it). Or they dumped CSVs nightly into folders named by person. Definitions of "revenue" multiplied. There was no single place that integrated CRM + billing + product events for historical questions.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [Data Warehouse vs Data Lake (Alex The Analyst)](https://www.youtube.com/watch?v=-bSkREem8dM) - clarifies roles of systems
 - Alternative: [What is Data Pipeline? (ByteByteGo)](https://www.youtube.com/watch?v=kGT4PcTEPP8) - how data moves into analytical stores
@@ -3035,13 +3043,13 @@ print({"selectivity": matching / n_rows, "index_likely_helps": matching / n_rows
 - GitHub implementation: [DataTalksClub/data-engineering-zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - Practice platform: load a public dataset into DuckDB/BigQuery sandbox and separate "app-like" vs "analytics-like" queries
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 **OLTP** systems optimize for many small reads/writes, strict integrity, current state. Schemas lean normalized. **OLAP** / analytics optimize for fewer, larger scans, aggregations, historical comparisons. Warehouses load integrated data from multiple sources on a schedule (or stream), store history, and present subject areas (sales, product, finance). Modern cloud warehouses separate storage and compute; lakehouses add open table formats on object storage. The conceptual win is the same: do not force one physical design to be both checkout-correct and BI-friendly.
 
-**THE IDEA THAT FIXED IT:** Copy and reshape data into a system built for questions, leaving the transactional system free to take orders.
+**THE MAIN IDEA IN SIMPLE WORDS:** Copy and reshape data into a system built for questions, leaving the transactional system free to take orders.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  OLTP (current truth, write-optimized)
@@ -3069,11 +3077,11 @@ print({"selectivity": matching / n_rows, "index_likely_helps": matching / n_rows
  OLAP:  SELECT week, SUM(amount) FROM fct_payments GROUP BY week
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 The restaurant kitchen line (OLTP) must plate orders in minutes with exact tickets. The accountant’s ledger room (warehouse) keeps years of receipts organized for questions like "which dish made money in summer?" Letting fifty accountants walk through the hot line during dinner service is how both dinner and books fail.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -3082,7 +3090,7 @@ The restaurant kitchen line (OLTP) must plate orders in minutes with exact ticke
 | Data lake only (files) | Cheap flexible storage | Needs table formats/governance to avoid swamp |
 | Warehouse + curated marts | Trusted metrics | Modeling discipline |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Conceptual separation: OLTP current state vs warehouse history rows
@@ -3110,9 +3118,9 @@ print(olt_customers[1])
 print(warehouse_dim_customer_history)
 ```
 
-**INTERVIEW PERSPECTIVE:** "Warehouse vs database vs lake" questions test whether you separate workloads and name trade-offs (freshness, cost, governance). Strong answers mention integration and history, not only vendor logos.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "Warehouse vs database vs lake" questions test whether you separate workloads and name trade-offs (freshness, cost, governance). Strong answers mention integration and history, not only vendor logos.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3122,17 +3130,17 @@ print(warehouse_dim_customer_history)
 | Medium | Document freshness requirements for two different stakeholders |
 | Hard | Design a minimal warehouse landing plan for 3 source systems |
 
-**THE BRIDGE to Star Schema, Snowflake, Grain, Facts & Dimensions:** A warehouse without an analytics-friendly model still forces 20-table joins that look like OLTP. Dimensional modeling - facts, dimensions, grain - is the redesign that makes BI SQL short and consistent.
+**WHY THE NEXT TOPIC IS NEEDED - Star Schema, Snowflake, Grain, Facts & Dimensions:** A warehouse without an analytics-friendly model still forces 20-table joins that look like OLTP. Dimensional modeling - facts, dimensions, grain - is the redesign that makes BI SQL short and consistent.
 
 ---
 
 ## 12.2 Star Schema, Snowflake, Grain, Facts & Dimensions
 
-**WHY THIS EXISTS:** Dimensional modeling rearranges data around business processes. **Fact tables** store additive measurements at a declared **grain**. **Dimensions** store descriptive context (who, what, where, when). A **star schema** connects facts to denormalized dimensions; a **snowflake** normalizes dimensions further. Getting grain right is the whole game: wrong grain makes every `SUM` a potential lie.
+**WHY YOU ARE LEARNING THIS:** Dimensional modeling rearranges data around business processes. **Fact tables** store additive measurements at a declared **grain**. **Dimensions** store descriptive context (who, what, where, when). A **star schema** connects facts to denormalized dimensions; a **snowflake** normalizes dimensions further. Getting grain right is the whole game: wrong grain makes every `SUM` a potential lie.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Warehouse copies of 3NF OLTP schemas made analysts recreate ten joins for "sales by region." Or teams built one monster wide table with ambiguous repeated columns. Nobody could answer "what does one row mean?" Metric arguments were secretly grain arguments.
+**THE PROBLEM THIS SOLVES:** Warehouse copies of 3NF OLTP schemas made analysts recreate ten joins for "sales by region." Or teams built one monster wide table with ambiguous repeated columns. Nobody could answer "what does one row mean?" Metric arguments were secretly grain arguments.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [Star Schema Explained (Kahan Data Solutions)](https://www.youtube.com/watch?v=gRE3E7VUzRU)
 - Alternative: [Star vs Snowflake (codebasics)](https://www.youtube.com/watch?v=hQvCOBv_-LE)
@@ -3143,13 +3151,13 @@ print(warehouse_dim_customer_history)
 - GitHub implementation: [dbt-labs/jaffle-shop](https://github.com/dbt-labs/jaffle-shop) - marts that smell like facts/dims
 - Practice platform: [DataTalksClub/data-engineering-zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Declare grain in one sentence: "one row per order line per day" or "one row per completed order." Fact columns are typically numeric and additive (`quantity`, `sale_amount`) or carefully semi-additive. Dimension tables hold attributes used to slice (`dim_customer`, `dim_product`, `dim_date`). Stars denormalize attributes into dimensions for simple joins; snowflakes split dimension hierarchies into subtables (product -> category -> department) at the cost of more joins. **Conformed dimensions** are shared across facts so "Customer" means the same thing in sales and support marts.
 
-**THE IDEA THAT FIXED IT:** Build analytics tables around processes and grain, not around application object graphs.
+**THE MAIN IDEA IN SIMPLE WORDS:** Build analytics tables around processes and grain, not around application object graphs.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Star schema
@@ -3173,11 +3181,11 @@ Declare grain in one sentence: "one row per order line per day" or "one row per 
  SUM(shipping_fee) multiplies shipping by number of lines.
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A fact is the receipt line ("2x Widget, $20"). Dimensions are the stamped labels around it: which store, which day, which customer segment, which product category. A star puts those labels on wide rubber stamps ready to mark. A snowflake keeps nested stamp drawers (category inside department) you must open in sequence.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -3186,7 +3194,7 @@ A fact is the receipt line ("2x Widget, $20"). Dimensions are the stamped labels
 | Wide facts with clear grain | Fast process analytics | Must police semi-additive measures |
 | One huge universal fact | Feels centralized | Ambiguous grain; sparse nulls |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```sql
 CREATE TABLE dim_date (
@@ -3231,9 +3239,9 @@ assert order_shipping["shipping_fee"] == 5.0
 print("line-level sum of shipping would wrongly be", sum(l["shipping_fee"] for l in lines))
 ```
 
-**INTERVIEW PERSPECTIVE:** Whiteboard a star for an e-commerce process. State grain first. Name facts vs dimensions. Explain star vs snowflake without dogma - "I'd snowflake only if hierarchy maintenance demands it."
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Whiteboard a star for an e-commerce process. State grain first. Name facts vs dimensions. Explain star vs snowflake without dogma - "I'd snowflake only if hierarchy maintenance demands it."
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3243,17 +3251,17 @@ print("line-level sum of shipping would wrongly be", sum(l["shipping_fee"] for l
 | Medium | Map jaffle-shop models to facts/dimensions |
 | Hard | Design conformed `dim_customer` usable by sales and support facts |
 
-**THE BRIDGE to Slowly Changing Dimensions:** Dimensions describe entities that change - customers move, plans rename, categories reorg. Overwriting loses history; never-changing dims lie about the past. SCD patterns encode how history should work.
+**WHY THE NEXT TOPIC IS NEEDED - Slowly Changing Dimensions:** Dimensions describe entities that change - customers move, plans rename, categories reorg. Overwriting loses history; never-changing dims lie about the past. SCD patterns encode how history should work.
 
 ---
 
 ## 12.3 Slowly Changing Dimensions (SCD Type 1 & 2)
 
-**WHY THIS EXISTS:** When a customer's city changes, finance may want today's city on all reports (correct the attribute), while product analytics may need the city *as it was at order time* (preserve history). **SCD Type 1** overwrites; **SCD Type 2** versions rows with validity windows (or equivalent). Choosing deliberately is how warehouses tell the truth over time.
+**WHY YOU ARE LEARNING THIS:** When a customer's city changes, finance may want today's city on all reports (correct the attribute), while product analytics may need the city *as it was at order time* (preserve history). **SCD Type 1** overwrites; **SCD Type 2** versions rows with validity windows (or equivalent). Choosing deliberately is how warehouses tell the truth over time.
 
-**THE PROBLEM BEFORE THIS EXISTED:** ETL jobs overwrote dimension attributes nightly. Historical revenue by region silently rewrote the past when territories changed. Or teams duplicated full snapshots daily without a key strategy, exploding storage and confusing which row to join. Analysts joined facts to "current dim only" and mislabeled last year's customers.
+**THE PROBLEM THIS SOLVES:** ETL jobs overwrote dimension attributes nightly. Historical revenue by region silently rewrote the past when territories changed. Or teams duplicated full snapshots daily without a key strategy, exploding storage and confusing which row to join. Analysts joined facts to "current dim only" and mislabeled last year's customers.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [SCD explained (Seattle Data Guy)](https://www.youtube.com/watch?v=1FZ7et0pN4c)
 - Alternative: [SCD Type 1/2/3 (practical walkthrough)](https://www.youtube.com/watch?v=sZFCYpojP4I)
@@ -3264,15 +3272,15 @@ print("line-level sum of shipping would wrongly be", sum(l["shipping_fee"] for l
 - GitHub implementation: [DataTalksClub/data-engineering-zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - Practice platform: implement Type 1 vs Type 2 updates on a toy dim in SQL
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 **Type 1:** overwrite the attribute; history of that attribute is discarded. Use for typo fixes ("Jon" -> "John") or when history is irrelevant. **Type 2:** add a new dimension row for the changed attributes; prior row closes (`valid_to`, `is_current=false`). Facts store the `customer_key` (surrogate) that applied at event time, so old facts keep old attributes. **Type 3** (awareness only) keeps a small amount of prior value in extra columns ("previous_city") - limited and less common for rich history.
 
 Joining Type 2 dims requires either fact surrogate keys set correctly at load time, or point-in-time joins on natural keys between `valid_from` and `valid_to`. Bugs here rewrite history in subtle ways.
 
-**THE IDEA THAT FIXED IT:** Make time part of the dimension contract. Overwrite when the past should change; version when the past must remain queryable.
+**THE MAIN IDEA IN SIMPLE WORDS:** Make time part of the dimension contract. Overwrite when the past should change; version when the past must remain queryable.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Type 1 (overwrite)
@@ -3298,11 +3306,11 @@ Joining Type 2 dims requires either fact surrogate keys set correctly at load ti
  AND (fact.ts < dim.valid_to OR dim.valid_to IS NULL)
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Type 1 is editing a contact card in ink with whiteout - the old address is gone. Type 2 is keeping a stack of dated contact cards; each receipt staples a copy of the card that was valid that day. Accounting audits want the stack. Marketing mail may want only the top card.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -3311,7 +3319,7 @@ Type 1 is editing a contact card in ink with whiteout - the old address is gone.
 | Always Type 2 for everything | Maximum history | Storage + complexity for noise changes |
 | Snapshot every day without keys | Crude history | Bloat; awkward joins |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 from dataclasses import dataclass
@@ -3357,9 +3365,9 @@ JOIN dim_customer d
  AND (d.valid_to IS NULL OR f.ordered_at < d.valid_to);
 ```
 
-**INTERVIEW PERSPECTIVE:** SCD questions separate people who have loaded dimensions from people who only memorized star diagrams. Explain Type 1 vs 2 with a customer address example, and how facts retain the correct surrogate key.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** SCD questions separate people who have loaded dimensions from people who only memorized star diagrams. Explain Type 1 vs 2 with a customer address example, and how facts retain the correct surrogate key.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3369,9 +3377,9 @@ JOIN dim_customer d
 | Medium | Write a point-in-time join for facts with natural keys only |
 | Hard | Design keys + ETL outline for Type 2 product category reparenting |
 
-**THE BRIDGE to ETL / ELT Pipelines:** Dimensional models do not fill themselves. You need reliable extract/transform/load (or load-then-transform) pipelines that can rerun safely and scale - Phase 13.
+**WHY THE NEXT TOPIC IS NEEDED - ETL / ELT Pipelines:** Dimensional models do not fill themselves. You need reliable extract/transform/load (or load-then-transform) pipelines that can rerun safely and scale - Phase 13.
 
-> **Phase 12 complete?** [Build the aligned project](./Projects.md#L1254) · [Continue to Phase 13](#phase-13---etl--elt-pipelines)
+> **Phase 12 complete?** [Build the aligned project](./Projects.md#data-phase-12-project) · [Continue to Phase 13](#phase-13---etl--elt-pipelines)
 
 <a id="phase-13"></a>
 
@@ -3379,17 +3387,17 @@ JOIN dim_customer d
 
 **Track:** Engineering Depth
 
-**GOAL:** Move data from sources into analytical systems reliably - choosing ETL vs ELT, then building loads that are idempotent, incremental, and stored in efficient columnar formats.
+**WHAT YOU WILL BE ABLE TO DO:** Move data from sources into analytical systems reliably - choosing ETL vs ELT, then building loads that are idempotent, incremental, and stored in efficient columnar formats.
 
-**PREREQUISITES:** Phase 12 (you know what you are loading into); Phase 3 (Python/files).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 12 (you know what you are loading into); Phase 3 (Python/files).
 
 ## 13.1 Extract, Transform, Load vs ELT
 
-**WHY THIS EXISTS:** Pipelines are the circulatory system of analytics. **ETL** transforms before loading a curated warehouse. **ELT** loads raw-ish data first, then transforms inside the warehouse with SQL (often dbt). The choice changes where compute happens, how raw history is preserved, and who owns transformation logic.
+**WHY YOU ARE LEARNING THIS:** Pipelines are the circulatory system of analytics. **ETL** transforms before loading a curated warehouse. **ELT** loads raw-ish data first, then transforms inside the warehouse with SQL (often dbt). The choice changes where compute happens, how raw history is preserved, and who owns transformation logic.
 
-**THE PROBLEM BEFORE THIS EXISTED:** People emailed CSVs, ran desktop Power Query (useful, but local), or wrote one-off scripts that only worked on their laptop. When source schemas changed, jobs failed silently or wrote partial tables. There was no shared pattern for "raw vs curated," so every pipeline reinvented trust.
+**THE PROBLEM THIS SOLVES:** People emailed CSVs, ran desktop Power Query (useful, but local), or wrote one-off scripts that only worked on their laptop. When source schemas changed, jobs failed silently or wrote partial tables. There was no shared pattern for "raw vs curated," so every pipeline reinvented trust.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [What is Data Pipeline? (ByteByteGo)](https://www.youtube.com/watch?v=kGT4PcTEPP8)
 - Alternative: [ETL with a clear example (Chandoo)](https://www.youtube.com/watch?v=wDTzxdShbd8)
@@ -3400,15 +3408,15 @@ JOIN dim_customer d
 - GitHub implementation: [DataTalksClub/data-engineering-zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - Practice platform: rebuild a tiny extract -> transform -> load on local files, then an ELT variant with SQL after load
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 **Extract** pulls from APIs, databases, files, event streams. **Transform** cleans, joins, conforms keys, applies business rules. **Load** writes to the target system. In classic ETL, a dedicated engine transforms outside the warehouse, loading mostly final tables. In ELT, the warehouse/lakehouse ingests raw or lightly typed data, then SQL models produce staging/intermediate/marts. Cloud warehouses made ELT popular because SQL compute scales elastically and keeps logic reviewable as code.
 
 Neither is universally "better." ETL can reduce sensitive raw sprawl and push heavy transforms closer to sources. ELT preserves raw landings for reprocessing and centralizes transforms with analysts/analytics engineers. Hybrid is common: light normalize on ingest, heavy business logic in-warehouse.
 
-**THE IDEA THAT FIXED IT:** Make movement and transformation an explicit, repeatable system with clear layers (raw vs curated), not a pile of personal scripts.
+**THE MAIN IDEA IN SIMPLE WORDS:** Make movement and transformation an explicit, repeatable system with clear layers (raw vs curated), not a pile of personal scripts.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  ETL
@@ -3429,11 +3437,11 @@ Neither is universally "better." ETL can reduce sensitive raw sprawl and push he
  late data -> watermarking / reprocess windows
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 ETL is washing and chopping vegetables in a prep kitchen, then delivering ready mise en place to the dining restaurant. ELT is delivering crates to the restaurant's walk-in first, then prep cooks (SQL models) chop inside - keeping crates for audit if a recipe changes tomorrow.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -3442,7 +3450,7 @@ ETL is washing and chopping vegetables in a prep kitchen, then delivering ready 
 | Hybrid | Practical balance | Two places to understand logic |
 | Desktop-only loads | Fast personal wins | Not operational; bus factor 1 |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import csv
@@ -3487,9 +3495,9 @@ Path("staging_orders.csv").write_text(raw.read_text(encoding="utf-8"), encoding=
 print("staging ready for SQL transforms")
 ```
 
-**INTERVIEW PERSPECTIVE:** Ask whether the team values raw reprocessing and SQL-centralized logic (ELT) or curated ingress (ETL). Mention schema contracts and layering. Vendor tools are secondary to the pattern.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Ask whether the team values raw reprocessing and SQL-centralized logic (ELT) or curated ingress (ETL). Mention schema contracts and layering. Vendor tools are secondary to the pattern.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3499,17 +3507,17 @@ print("staging ready for SQL transforms")
 | Medium | Zoomcamp: map week projects to ETL/ELT stages |
 | Hard | Design a hybrid pipeline with PII redaction before lake landing |
 
-**THE BRIDGE to Idempotency, Incremental Loads, and Columnar Formats:** Knowing ETL vs ELT is architecture. Production needs re-runnable loads, incremental water marks, and file formats that make analytical scans cheap - next.
+**WHY THE NEXT TOPIC IS NEEDED - Idempotency, Incremental Loads, and Columnar Formats:** Knowing ETL vs ELT is architecture. Production needs re-runnable loads, incremental water marks, and file formats that make analytical scans cheap - next.
 
 ---
 
 ## 13.2 Idempotency, Incremental Loads, and Columnar Formats (Parquet)
 
-**WHY THIS EXISTS:** Pipelines fail halfway. If rerunning doubles revenue rows, you cannot sleep. **Idempotency** means the same successful load applied twice leaves the same correct result. **Incremental loads** move only new/changed data so you are not reprocessing the world daily. **Columnar formats** like Parquet make warehouse/lake scans fast and cheap compared to CSV.
+**WHY YOU ARE LEARNING THIS:** Pipelines fail halfway. If rerunning doubles revenue rows, you cannot sleep. **Idempotency** means the same successful load applied twice leaves the same correct result. **Incremental loads** move only new/changed data so you are not reprocessing the world daily. **Columnar formats** like Parquet make warehouse/lake scans fast and cheap compared to CSV.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Nightly jobs appended blindly, creating duplicates after retries. Full-table reloads worked until tables weighed terabytes. CSV landings wasted IO reading five columns out of eighty. Late-arriving facts corrupted "complete day" partitions with no merge strategy.
+**THE PROBLEM THIS SOLVES:** Nightly jobs appended blindly, creating duplicates after retries. Full-table reloads worked until tables weighed terabytes. CSV landings wasted IO reading five columns out of eighty. Late-arriving facts corrupted "complete day" partitions with no merge strategy.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [Apache Parquet Explained](https://www.youtube.com/watch?v=5NA57Pfpdr4)
 - Alternative: [Column-oriented storage / Parquet](https://www.youtube.com/watch?v=Zt7rqtJ3uWA)
@@ -3520,15 +3528,15 @@ print("staging ready for SQL transforms")
 - GitHub implementation: [DataTalksClub/data-engineering-zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - Practice platform: write a load that can safely rerun without duplicating keys
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Idempotent patterns include: load to a staging table then atomic swap; `DELETE` partition then insert; `MERGE`/`UPSERT` on natural keys; write immutable partitions keyed by date with deterministic filenames. Incremental extraction uses watermarks (`updated_at > last_success`) or change data capture. Remember late data: watermarks need lookback or reconciliation.
 
 Parquet stores data by column with compression and statistics (min/max) enabling predicate pushdown. Analytical queries reading few columns scan far less than row-oriented CSV/JSON. Combine with partitioning (e.g., `date=2026-08-01/`) carefully - too many tiny files create their own pain ("small files problem").
 
-**THE IDEA THAT FIXED IT:** Design loads so retries are safe, increments are correct under lateness, and storage matches columnar scan patterns.
+**THE MAIN IDEA IN SIMPLE WORDS:** Design loads so retries are safe, increments are correct under lateness, and storage matches columnar scan patterns.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Non-idempotent append (bug)
@@ -3549,21 +3557,21 @@ Parquet stores data by column with compression and statistics (min/max) enabling
  Parquet: read only column chunks for selected columns + skip row groups via stats
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Idempotency is a "paid" stamp on an invoice: paying twice does not double the bill if the clerk checks the stamp. Incremental load is only processing today's mail, with a rule for mail postmarked yesterday that arrived late. Parquet is shelving a library by topic columns so you can pull only the "price" shelf instead of opening every book.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
-| Full reload | Simple correctness | Expensive at scale |
+| Full reload | Simple correctness | Expensive when the amount of work grows |
 | Incremental + MERGE | Efficient daily ops | Late data edge cases |
 | Partition replace | Easy idempotency per day | Not ideal for CDC row fixes inside day |
 | Parquet/columnar | Faster cheaper scans | Less friendly for whole-row transactional updates |
 | Tiny files per event | Naive streaming landings | Metadata/planning overhead |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Idempotent-in-memory merge (UPSERT) sketch
@@ -3602,9 +3610,9 @@ INSERT INTO fct_orders
 SELECT * FROM staging_orders WHERE order_date = DATE '2026-08-01';
 ```
 
-**INTERVIEW PERSPECTIVE:** "What happens if the job runs twice?" is the golden pipeline question. Answer with idempotency strategy, watermark/late data, and why Parquet/columnar landing helps scan cost. Mention small-files and MERGE costs if you want seniority points.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "What happens if the job runs twice?" is the golden pipeline question. Answer with idempotency strategy, watermark/late data, and why Parquet/columnar landing helps scan cost. Mention small-files and MERGE costs if you want seniority points.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3614,9 +3622,9 @@ SELECT * FROM staging_orders WHERE order_date = DATE '2026-08-01';
 | Medium | Convert a CSV dataset to Parquet and compare scan columns |
 | Hard | Specify MERGE keys and partition layout for a slowly changing fact |
 
-**THE BRIDGE to Orchestration (Airflow) & Containers:** A correct pipeline function still needs scheduling, dependency graphs, retries, and reproducible runtimes. Orchestrators and containers turn scripts into operable systems.
+**WHY THE NEXT TOPIC IS NEEDED - Orchestration (Airflow) & Containers:** A correct pipeline function still needs scheduling, dependency graphs, retries, and reproducible runtimes. Orchestrators and containers turn scripts into operable systems.
 
-> **Phase 13 complete?** [Build the aligned project](./Projects.md#L1275) · [Continue to Phase 14](#phase-14---orchestration-airflow--containers)
+> **Phase 13 complete?** [Build the aligned project](./Projects.md#data-phase-13-project) · [Continue to Phase 14](#phase-14---orchestration-airflow--containers)
 
 <a id="phase-14"></a>
 
@@ -3624,17 +3632,17 @@ SELECT * FROM staging_orders WHERE order_date = DATE '2026-08-01';
 
 **Track:** Engineering Depth
 
-**GOAL:** Schedule and monitor data work as DAGs with retries and sensors, and package runtimes with Docker so the same pipeline runs on your laptop and in prod.
+**WHAT YOU WILL BE ABLE TO DO:** Schedule and monitor data work as DAGs with retries and sensors, and package runtimes with Docker so the same pipeline runs on your laptop and in prod.
 
-**PREREQUISITES:** Phase 13 (pipeline stages exist as runnable units).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 13 (pipeline stages exist as runnable units).
 
 ## 14.1 DAGs, Operators, Sensors, Retries
 
-**WHY THIS EXISTS:** Pipelines have dependencies: warehouse load waits on extract; dbt marts wait on raw; reports wait on marts. Cron for twenty unrelated scripts does not express that graph, nor centralized logs, SLAs, or retry policy. **Airflow** (and cousins) models work as a **DAG** - directed acyclic graph - of tasks with operators, sensors, and retries.
+**WHY YOU ARE LEARNING THIS:** Pipelines have dependencies: warehouse load waits on extract; dbt marts wait on raw; reports wait on marts. Cron for twenty unrelated scripts does not express that graph, nor centralized logs, SLAs, or retry policy. **Airflow** (and cousins) models work as a **DAG** - directed acyclic graph - of tasks with operators, sensors, and retries.
 
-**THE PROBLEM BEFORE THIS EXISTED:** A shell cron fired at 2:00am. If extract failed, transform still ran on yesterday's files and "succeeded." Nobody knew without opening five servers. Retries double-loaded non-idempotent jobs. Cross-team dependencies were Slack messages: "is your table ready?"
+**THE PROBLEM THIS SOLVES:** A shell cron fired at 2:00am. If extract failed, transform still ran on yesterday's files and "succeeded." Nobody knew without opening five servers. Retries double-loaded non-idempotent jobs. Cross-team dependencies were Slack messages: "is your table ready?"
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [Airflow for beginners (codebasics)](https://www.youtube.com/watch?v=P6gsMOoXFLU)
 - Alternative: [Airflow tutorial (Darshil Parmar)](https://www.youtube.com/watch?v=5peQThvQmQk)
@@ -3645,15 +3653,15 @@ SELECT * FROM staging_orders WHERE order_date = DATE '2026-08-01';
 - GitHub implementation: [apache/airflow](https://github.com/apache/airflow) and Zoomcamp orchestration weeks
 - Practice platform: [DataTalksClub/data-engineering-zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 A **DAG** declares tasks and edges without cycles. **Operators** are task templates (`BashOperator`, `PythonOperator`, provider operators for warehouses). **Sensors** wait for a condition (file arrival, upstream partition). **Retries** with backoff handle transient failures - but only if tasks are idempotent (Phase 13). Scheduling uses timetable/`schedule` plus `catchup` decisions for historical backfills. The Airflow UI shows task state: success, failed, up for retry, skipped.
 
 Keep tasks coarse enough to operate (extract zone A, load staging, run dbt) and thin on business logic inside the orchestrator - Airflow schedules; dbt/Spark/SQL transforms.
 
-**THE IDEA THAT FIXED IT:** Encode dependencies and operational policy as data, visible in a UI, not as tribal cron lore.
+**THE MAIN IDEA IN SIMPLE WORDS:** Encode dependencies and operational policy as data, visible in a UI, not as tribal cron lore.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  DAG: daily_sales
@@ -3674,11 +3682,11 @@ Keep tasks coarse enough to operate (extract zone A, load staging, run dbt) and 
       (poke every 60s until true or timeout)
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A film production call sheet: makeup cannot start before actors arrive; cameras wait on lighting; if rain sensors trip, outdoor scenes delay. Cron alone is yelling "everyone start at 6am" into a megaphone. The DAG is the call sheet with dependencies and what to do when a truck is late (retry).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -3688,7 +3696,7 @@ A film production call sheet: makeup cannot start before actors arrive; cameras 
 | Fat tasks with all logic | Fewer tasks | Hard retries; orchestrator becomes a junk drawer |
 | Aggressive catchup | Auto backfill | Surprise compute bills / write storms |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Airflow 2.x style sketch (illustrative; run inside an Airflow env)
@@ -3734,9 +3742,9 @@ else:
     extract(); load(); transform()
 ```
 
-**INTERVIEW PERSPECTIVE:** Sketch a DAG for a concrete pipeline, name failure handling, and insist tasks are idempotent. Mention sensors vs hard sleeps, and why business logic belongs in dbt/Spark rather than giant PythonOperators.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Sketch a DAG for a concrete pipeline, name failure handling, and insist tasks are idempotent. Mention sensors vs hard sleeps, and why business logic belongs in dbt/Spark rather than giant PythonOperators.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3746,17 +3754,17 @@ else:
 | Medium | Add a sensor/wait pattern for upstream readiness |
 | Hard | Design backfill strategy with catchup off and manual date runs |
 
-**THE BRIDGE to Docker for Reproducible Data Work:** DAGs schedule code, but that code needs libraries, drivers, and system deps. Containers freeze the runtime so "works on my machine" stops being the deployment plan.
+**WHY THE NEXT TOPIC IS NEEDED - Docker for Reproducible Data Work:** DAGs schedule code, but that code needs libraries, drivers, and system deps. Containers freeze the runtime so "works on my machine" stops being the deployment plan.
 
 ---
 
 ## 14.2 Docker for Reproducible Data Work
 
-**WHY THIS EXISTS:** Data tools depend on Python packages, JDBC drivers, system libraries, and exact versions of Spark/dbt/Airflow. **Docker** packages application code plus runtime into an image you can run identically on a laptop, CI, and a server. For data engineers, Docker is how local stacks (Postgres + Airflow + warehouse emulator) become shareable.
+**WHY YOU ARE LEARNING THIS:** Data tools depend on Python packages, JDBC drivers, system libraries, and exact versions of Spark/dbt/Airflow. **Docker** packages application code plus runtime into an image you can run identically on a laptop, CI, and a server. For data engineers, Docker is how local stacks (Postgres + Airflow + warehouse emulator) become shareable.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Onboarding took a week of "install Java 11, no 17, no 11 again." A pipeline failed in prod because a colleague upgraded Pandas globally. CI could not reproduce the analyst's notebook environment. Servers drifted like pets instead of cattle.
+**THE PROBLEM THIS SOLVES:** Onboarding took a week of "install Java 11, no 17, no 11 again." A pipeline failed in prod because a colleague upgraded Pandas globally. CI could not reproduce the analyst's notebook environment. Servers drifted like pets instead of cattle.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [Docker for Data Engineers](https://www.youtube.com/watch?v=COMEVcZtx1s)
 - Alternative: [Airflow + Docker workflows in beginner series](https://www.youtube.com/watch?v=P6gsMOoXFLU) - notice containerized setups
@@ -3767,15 +3775,15 @@ else:
 - GitHub implementation: [apache/airflow](https://github.com/apache/airflow) deployment options; Zoomcamp docker setups
 - Practice platform: containerize a tiny Python ingest script end-to-end
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 A **Dockerfile** declares base image, dependencies, and start command. `docker build` produces an **image**; `docker run` creates a **container** (a running instance). Volumes mount data; networks connect containers (API app to Postgres). **Docker Compose** describes multi-service stacks in one YAML. For data work, pin versions, prefer non-root users in real deployments, and keep secrets out of images.
 
 Containers do not replace orchestrators; they complement them. Airflow workers may run tasks in containers; Spark jobs may ship as images; dbt runs in CI containers with credentials injected at runtime.
 
-**THE IDEA THAT FIXED IT:** Ship the environment with the code. If the image runs, the dependency story is closed enough to debug the *logic*.
+**THE MAIN IDEA IN SIMPLE WORDS:** Ship the environment with the code. If the image runs, the dependency story is closed enough to debug the *logic*.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Dockerfile
@@ -3799,11 +3807,11 @@ Containers do not replace orchestrators; they complement them. Airflow workers m
  same image digest -> same runtime behavior (given same mounts/env)
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Docker is a shipping container standard: the truck, ship, and crane all agree on the box size. You pack your pipeline kitchen inside the box. Without containers, every restaurant rebuilds a custom kitchen on every pier (server) and wonders why the soup tastes different.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -3813,7 +3821,7 @@ Docker is a shipping container standard: the truck, ship, and crane all agree on
 | Compose for local stacks | Realistic multi-service dev | Not always identical to prod K8s |
 | Secrets in Dockerfile | Tempting | Security incident waiting to happen |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```dockerfile
 # Dockerfile
@@ -3852,9 +3860,9 @@ services:
       POSTGRES_PASSWORD: pass
 ```
 
-**INTERVIEW PERSPECTIVE:** Explain why containers help data platforms, how you'd run Airflow/dbt locally with Compose, and how secrets and version pins work. You do not need to be a Kubernetes expert for most DE interviews, but you should sound fluent in images vs containers vs compose.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Explain why containers help data platforms, how you'd run Airflow/dbt locally with Compose, and how secrets and version pins work. You do not need to be a Kubernetes expert for most DE interviews, but you should sound fluent in images vs containers vs compose.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3864,9 +3872,9 @@ services:
 | Medium | Run Airflow via official Docker Compose quickstart |
 | Hard | Slim an image and document base digest pinning for CI |
 
-**THE BRIDGE to Analytics Engineering with dbt:** Orchestration runs steps; containers make them reproducible. The dominant pattern for in-warehouse SQL transforms - models, tests, docs, ref graphs - is dbt, which turns ELT SQL into software engineering.
+**WHY THE NEXT TOPIC IS NEEDED - Analytics Engineering with dbt:** Orchestration runs steps; containers make them reproducible. The dominant pattern for in-warehouse SQL transforms - models, tests, docs, ref graphs - is dbt, which turns ELT SQL into software engineering.
 
-> **Phase 14 complete?** [Build the aligned project](./Projects.md#L1296) · [Continue to Phase 15](#phase-15---analytics-engineering-with-dbt)
+> **Phase 14 complete?** [Build the aligned project](./Projects.md#data-phase-14-project) · [Continue to Phase 15](#phase-15---analytics-engineering-with-dbt)
 
 <a id="phase-15"></a>
 
@@ -3874,17 +3882,17 @@ services:
 
 **Track:** Engineering Depth
 
-**GOAL:** Treat warehouse SQL transforms as a software project: layered models, `ref()`/`source()` lineage, tests, docs, and CI.
+**WHAT YOU WILL BE ABLE TO DO:** Treat warehouse SQL transforms as a software project: layered models, `ref()`/`source()` lineage, tests, docs, and CI.
 
-**PREREQUISITES:** Phase 12-14 (warehouse targets, ELT mindset, orchestration literacy).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 12-14 (warehouse targets, ELT mindset, orchestration literacy).
 
 ## 15.1 Models, Layers (staging/intermediate/marts), ref() and source()
 
-**WHY THIS EXISTS:** ELT without structure becomes a folder of contradictory SQL files. **dbt** (data build tool) standardizes models as `SELECT` statements materialized as tables/views, wired by `ref()` lineage and `source()` declarations for raw inputs. Layering - staging, intermediate, marts - keeps raw quirks quarantined and business marts coherent.
+**WHY YOU ARE LEARNING THIS:** ELT without structure becomes a folder of contradictory SQL files. **dbt** (data build tool) standardizes models as `SELECT` statements materialized as tables/views, wired by `ref()` lineage and `source()` declarations for raw inputs. Layering - staging, intermediate, marts - keeps raw quirks quarantined and business marts coherent.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Analysts edited production SQL in BI tools with no git history. One person's `revenue.sql` disagreed with another's. Renaming a staging column broke twelve downstream queries discovered at 9am standup. There was no graph of dependencies - only tribal knowledge.
+**THE PROBLEM THIS SOLVES:** Analysts edited production SQL in BI tools with no git history. One person's `revenue.sql` disagreed with another's. Renaming a staging column broke twelve downstream queries discovered at 9am standup. There was no graph of dependencies - only tribal knowledge.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [What is dbt? (dbt Labs)](https://www.youtube.com/watch?v=rItxGK0cYj8)
 - Alternative: [dbt for analytics engineering (Seattle Data Guy)](https://www.youtube.com/watch?v=8FZZivIfJVo)
@@ -3895,7 +3903,7 @@ services:
 - GitHub implementation: [dbt-labs/jaffle-shop](https://github.com/dbt-labs/jaffle-shop) and [dbt-labs/jaffle_shop_duckdb](https://github.com/dbt-labs/jaffle_shop_duckdb)
 - Practice platform: run jaffle_shop_duckdb locally end-to-end
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 A **model** is a SQL (or Python) definition dbt builds into a relation. `source('raw', 'orders')` names an external landing table. `ref('stg_orders')` points at another model - dbt builds the DAG and runs in order. Typical layers:
 
@@ -3905,9 +3913,9 @@ A **model** is a SQL (or Python) definition dbt builds into a relation. `source(
 
 Materializations (`view`, `table`, `incremental`, `ephemeral`) trade freshness, cost, and reuse. Project style guides matter more than clever macros early on.
 
-**THE IDEA THAT FIXED IT:** Make SQL modular, dependency-aware, and rebuildable - like software modules with imports (`ref`) instead of copy-paste.
+**THE MAIN IDEA IN SIMPLE WORDS:** Make SQL modular, dependency-aware, and rebuildable - like software modules with imports (`ref`) instead of copy-paste.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  sources.yml                     models
@@ -3944,11 +3952,11 @@ from {{ ref('stg_orders') }} o
 join {{ ref('stg_payments') }} p using (order_id)
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Staging is rinsing produce and putting it in labeled bins. Intermediate is making sauces. Marts are plated dishes on the pass for servers (BI tools). `ref()` is the ticket system that prevents plating before sauce is ready. Without it, cooks shout across a chaotic kitchen and serve raw chicken.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -3958,7 +3966,7 @@ Staging is rinsing produce and putting it in labeled bins. Intermediate is makin
 | Everything as views | Always fresh logic | Repeated compute cost |
 | Incremental models | Scale | Complexity around keys/watermarks |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```yaml
 # models/staging/_sources.yml
@@ -3989,9 +3997,9 @@ dbt run --select stg_orders+
 dbt docs generate
 ```
 
-**INTERVIEW PERSPECTIVE:** Explain staging vs marts, why `ref` beats hard-coded table names, and how incremental models fit large facts. Mention jaffle shop if you have actually run it.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Explain staging vs marts, why `ref` beats hard-coded table names, and how incremental models fit large facts. Mention jaffle shop if you have actually run it.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -4001,17 +4009,17 @@ dbt docs generate
 | Medium | Convert a hardcoded table name chain into `ref`s |
 | Hard | Design incremental strategy for a large fact model |
 
-**THE BRIDGE to Tests, Documentation, and CI:** Models without tests still ship silent wrong numbers. dbt's tests/docs plus CI on pull requests are how analytics code earns production trust.
+**WHY THE NEXT TOPIC IS NEEDED - Tests, Documentation, and CI:** Models without tests still ship silent wrong numbers. dbt's tests/docs plus CI on pull requests are how analytics code earns production trust.
 
 ---
 
 ## 15.2 Tests, Documentation, and CI for Analytics Code
 
-**WHY THIS EXISTS:** A green `dbt run` only means SQL executed. It does not mean primary keys are unique, freign keys hold, or revenue is non-negative. **Tests**, **documentation**, and **CI** make failures loud before executives see them. This is analytics engineering's quality bar.
+**WHY YOU ARE LEARNING THIS:** A green `dbt run` only means SQL executed. It does not mean primary keys are unique, freign keys hold, or revenue is non-negative. **Tests**, **documentation**, and **CI** make failures loud before executives see them. This is analytics engineering's quality bar.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Broken joins produced fan-out for a week. Null keys crashed dashboards on Monday. Metric definitions lived in Slack. Pull requests for SQL were rare; people edited main directly. Trust eroded until every meeting started with "are these numbers right?"
+**THE PROBLEM THIS SOLVES:** Broken joins produced fan-out for a week. Null keys crashed dashboards on Monday. Metric definitions lived in Slack. Pull requests for SQL were rare; people edited main directly. Trust eroded until every meeting started with "are these numbers right?"
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [dbt overview (dbt Labs)](https://www.youtube.com/watch?v=rItxGK0cYj8) - revisit focusing on trust/testing culture
 - Alternative: [BugBytes dbt](https://www.youtube.com/watch?v=C9wEdUjTNk8) - practical project flow
@@ -4022,15 +4030,15 @@ dbt docs generate
 - GitHub implementation: [dbt-labs/jaffle-shop](https://github.com/dbt-labs/jaffle-shop), [great-expectations/great_expectations](https://github.com/great-expectations/great_expectations) for complementary DQ
 - Practice platform: add tests to a toy dbt project and fail CI on purpose
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 dbt generic tests include `unique`, `not_null`, `accepted_values`, `relationships`. Singular tests are custom SQL asserting zero failing rows. Schema.yml holds column descriptions and tests - documentation that travels with code. `dbt docs` generates a browsable site with lineage. CI typically runs on PRs: install deps, `dbt build` against a lightweight warehouse/DuckDB, fail on test errors. Pair with code review norms: grain stated, model layer correct, no undeclared sources.
 
 Great Expectations and warehouse observability tools complement dbt tests (Phase 19) for profiling and monitoring in production.
 
-**THE IDEA THAT FIXED IT:** Assert contracts on data the same way unit tests assert contracts on functions - automatically, on every change.
+**THE MAIN IDEA IN SIMPLE WORDS:** Assert contracts on data the same way unit tests assert contracts on functions - automatically, on every change.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  PR opened -> CI
@@ -4057,11 +4065,11 @@ Great Expectations and warehouse observability tools complement dbt tests (Phase
  source.raw.orders -> stg_orders -> fct_orders -> BI dashboard
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Restaurant health inspections (tests) plus published recipes (docs) plus a rule that new menu items must pass a tasting in the training kitchen (CI) before weekend service (prod). Without that, each cook invents "house special" nightly and customers get food poisoning - metaphorically, finance gets fake revenue.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -4071,7 +4079,7 @@ Restaurant health inspections (tests) plus published recipes (docs) plus a rule 
 | Docs as afterthought | Speed now | Onboarding debt forever |
 | Too many fragile tests | Loudness | Alert fatigue; ignored red builds |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```yaml
 # models/marts/schema.yml
@@ -4114,9 +4122,9 @@ jobs:
       - run: dbt deps && dbt build
 ```
 
-**INTERVIEW PERSPECTIVE:** "How do you prevent bad data in marts?" Answer with layered models + tests + CI + ownership. Give a concrete example: unique order_id test catching fan-out. Mention docs/lineage for stakeholder trust.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "How do you prevent bad data in marts?" Answer with layered models + tests + CI + ownership. Give a concrete example: unique order_id test catching fan-out. Mention docs/lineage for stakeholder trust.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -4126,9 +4134,9 @@ jobs:
 | Medium | Set up a minimal GitHub Action that runs `dbt build` |
 | Hard | Design a test suite + CI strategy for a multi-mart project |
 
-**THE BRIDGE to Cloud Data Platforms:** dbt needs somewhere to run SQL at scale. Cloud warehouses and lakehouses - BigQuery, Snowflake, Databricks-style platforms - plus cost/access/environment discipline - are the next layer.
+**WHY THE NEXT TOPIC IS NEEDED - Cloud Data Platforms:** dbt needs somewhere to run SQL when the amount of work grows. Cloud warehouses and lakehouses - BigQuery, Snowflake, Databricks-style platforms - plus cost/access/environment discipline - are the next layer.
 
-> **Phase 15 complete?** [Build the aligned project](./Projects.md#L1317) · [Continue to Phase 16](#phase-16---cloud-data-platforms)
+> **Phase 15 complete?** [Build the aligned project](./Projects.md#data-phase-15-project) · [Continue to Phase 16](#phase-16---cloud-data-platforms)
 
 <a id="phase-16"></a>
 
@@ -4136,17 +4144,17 @@ jobs:
 
 **Track:** Engineering Depth
 
-**GOAL:** Be literate across modern cloud analytical platforms (BigQuery, Snowflake, lakehouse patterns), and operate them with cost control, access discipline, and separate environments.
+**WHAT YOU WILL BE ABLE TO DO:** Be literate across modern cloud analytical platforms (BigQuery, Snowflake, lakehouse patterns), and operate them with cost control, access discipline, and separate environments.
 
-**PREREQUISITES:** Phase 12-15 (warehouse modeling + ELT/dbt habits).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 12-15 (warehouse modeling + ELT/dbt habits).
 
 ## 16.1 BigQuery / Snowflake / Lakehouse Literacy
 
-**WHY THIS EXISTS:** Most serious analytics compute now lives on managed platforms that separate storage from compute, bill for usage, and speak SQL dialects with quirks. **Lakehouse** patterns add open formats (Parquet/Iceberg/Delta) on object storage with warehouse-like table management. Literacy means knowing what is shared vs vendor-specific so you can design, estimate cost, and avoid lock-in myths and fanboy gaps alike.
+**WHY YOU ARE LEARNING THIS:** Most serious analytics compute now lives on managed platforms that separate storage from compute, bill for usage, and speak SQL dialects with quirks. **Lakehouse** patterns add open formats (Parquet/Iceberg/Delta) on object storage with warehouse-like table management. Literacy means knowing what is shared vs vendor-specific so you can design, estimate cost, and avoid lock-in myths and fanboy gaps alike.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Teams bought on-prem appliances sized for peak Friday, idle all week. Or they dumped files in S3 with no table metadata and called it a "lake" while every query listed CSV hell. Vendor tutorials taught clicks without explaining slots/warehouses/clusters - until the bill arrived.
+**THE PROBLEM THIS SOLVES:** Teams bought on-prem appliances sized for peak Friday, idle all week. Or they dumped files in S3 with no table metadata and called it a "lake" while every query listed CSV hell. Vendor tutorials taught clicks without explaining slots/warehouses/clusters - until the bill arrived.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [Warehouse vs lake framing (Alex The Analyst)](https://www.youtube.com/watch?v=-bSkREem8dM)
 - Alternative: [DuckDB (Fireship)](https://www.youtube.com/watch?v=uHm6FEb2Re4) - lightweight analytical SQL engine useful for local/lake patterns
@@ -4157,15 +4165,15 @@ jobs:
 - GitHub implementation: [DataTalksClub/data-engineering-zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp), [igorbarinov/awesome-data-engineering](https://github.com/igorbarinov/awesome-data-engineering)
 - Practice platform: run the same mart SQL on DuckDB locally and one cloud warehouse sandbox
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
-Shared ideas: columnar storage, partitioned/clustered tables, SQL as the interface, elastic compute, IAM-separated access, stages for landing files. **BigQuery** emphasizes serverless query pricing (bytes scanned / capacity modes) and Google ecosystem integration. **Snowflake** emphasizes virtual warehouses (compute clusters) you start/stop/size, with strong data sharing features. **Lakehouse** stacks (Databricks and open-table ecosystems) emphasize Spark/compute engines over object storage with ACID table formats.
+These products share several ideas: storing values by column, separating large tables into planned parts, using SQL to ask questions, changing computing power as demand changes, controlling access through IAM, and using staging areas for incoming files. **BigQuery** focuses on managed queries priced by scanned data or reserved capacity and connects closely with Google tools. **Snowflake** uses virtual warehouses—computing clusters you can start, stop, and resize—and provides strong data-sharing features. **Lakehouse** tools such as Databricks place Spark or another processing engine over object storage and use table formats that support reliable transactions.
 
 Your modeling and dbt habits transfer. Dialects differ (`DATE_TRUNC`, backticks vs quotes, `MERGE` details). Performance patterns (partition prune, avoid `SELECT *`, prune early) transfer too.
 
-**THE IDEA THAT FIXED IT:** Rent elastic analytical compute over durable storage, and treat SQL marts as the product - portable enough that the platform is a choice, not an identity.
+**THE MAIN IDEA IN SIMPLE WORDS:** Rent elastic analytical compute over durable storage, and treat SQL marts as the product - portable enough that the platform is a choice, not an identity.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Object storage / managed storage
@@ -4188,11 +4196,11 @@ Your modeling and dbt habits transfer. Dialects differ (`DATE_TRUNC`, backticks 
  Bill drivers: data scanned, compute time, storage, cloud egress
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Cloud warehouses are power-company grids for analytics: you do not build a private power plant sized for Black Friday lights year-round. Lakehouses are renting warehouse space (object storage) and bringing your own forklifts (compute engines) that agree on pallet standards (table formats).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -4201,7 +4209,7 @@ Cloud warehouses are power-company grids for analytics: you do not build a priva
 | Lakehouse open formats | Engine flexibility, storage control | More moving parts / governance work |
 | Single vendor deep integration | Speed of delivery | Switching cost; pricing concentration |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```sql
 -- Portable-ish mart query; dialect tweaks may be needed
@@ -4228,9 +4236,9 @@ ORDER BY 1;
 print("Use DuckDB locally to rehearse columnar SQL before cloud spend")
 ```
 
-**INTERVIEW PERSPECTIVE:** Compare platforms at the pattern level (compute model, pricing unit, lake vs warehouse). Admit dialect differences. Tie answers to workload: elastiс BI, data science features, streaming landings.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Compare platforms at the pattern level (compute model, pricing unit, lake vs warehouse). Admit dialect differences. Tie answers to workload: elastiс BI, data science features, streaming landings.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -4240,17 +4248,17 @@ print("Use DuckDB locally to rehearse columnar SQL before cloud spend")
 | Medium | Port a dbt project between two adapters in a sandbox |
 | Hard | Design table partitioning/clustering for a multi-tenant fact table |
 
-**THE BRIDGE to Cost Control, Access, Environments:** Platform literacy without cost/access/env discipline produces surprise bills, leaked PII, and "works in prod-only" chaos. Operations habits come next.
+**WHY THE NEXT TOPIC IS NEEDED - Cost Control, Access, Environments:** Platform literacy without cost/access/env discipline produces surprise bills, leaked PII, and "works in prod-only" chaos. Operations habits come next.
 
 ---
 
 ## 16.2 Cost Control, Access, and Environments (dev/prod)
 
-**WHY THIS EXISTS:** Elastic platforms fail open financially: a bad cross join can cost real money in minutes. Access fails open socially: too many people with raw PII. Environment discipline (`dev`/`staging`/`prod`) stops experiments from overwriting the executive dashboard's tables. This section is platform adulthood.
+**WHY YOU ARE LEARNING THIS:** Elastic platforms fail open financially: a bad cross join can cost real money in minutes. Access fails open socially: too many people with raw PII. Environment discipline (`dev`/`staging`/`prod`) stops experiments from overwriting the executive dashboard's tables. This section is platform adulthood.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Shared "admin" accounts. Unlimited personal sandboxes scanning full raw history. No query timeouts. Prod credentials on laptops. A junior test `SELECT `* joined two multi-TB tables during peak hours. Finance learned about analytics from an invoice, not a review.
+**THE PROBLEM THIS SOLVES:** Shared "admin" accounts. Unlimited personal sandboxes scanning full raw history. No query timeouts. Prod credentials on laptops. A junior test `SELECT `* joined two multi-TB tables during peak hours. Finance learned about analytics from an invoice, not a review.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [Warehouse vs lake (Alex)](https://www.youtube.com/watch?v=-bSkREem8dM) - revisit with "who pays for scans?" mindset
 - Alternative: [dbt CI mindset (BugBytes / dbt content)](https://www.youtube.com/watch?v=C9wEdUjTNk8) - separate environments via targets
@@ -4261,15 +4269,15 @@ print("Use DuckDB locally to rehearse columnar SQL before cloud spend")
 - GitHub implementation: [igorbarinov/awesome-data-engineering](https://github.com/igorbarinov/awesome-data-engineering)
 - Practice platform: create two dbt targets (`dev`, `prod`) writing to different schemas
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Cost controls: partition pruning, clustering, avoiding `SELECT *`, result caching awareness, materializing hot marts, warehouse auto-suspend, query/scan limits, budgets/alerts. Access: least privilege roles, column/row security for PII, service accounts for pipelines vs human users, secret managers. Environments: separate schemas/databases/projects; CI writes to ephemeral/dev; prod applies via controlled jobs after merge; never manual prod edits without audit.
 
 Treat raw zones as restricted; marts as wider read access. Document data classification. Align with legal retention.
 
-**THE IDEA THAT FIXED IT:** Make spend, permission, and change management first-class design constraints - not aftercare when something explodes.
+**THE MAIN IDEA IN SIMPLE WORDS:** Make spend, permission, and change management first-class design constraints - not aftercare when something explodes.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Environments
@@ -4290,11 +4298,11 @@ Treat raw zones as restricted; marts as wider read access. Document data classif
  airflow_sa    -> role loader_writer (staging + raw limited)
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A hotel master key for every intern is a security incident. Separate staff keys (roles), a training floor (dev), and a guest-facing floor (prod). Cost control is the breaker panel that trips when someone turns on every oven at once.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -4304,7 +4312,7 @@ A hotel master key for every intern is a security incident. Separate staff keys 
 | Broad admin access | Unblocks quickly | Audit nightmares; PII risk |
 | Materialized marts | Cheaper repeated reads | Staleness + build cost |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```yml
 # profiles.yml sketch (dbt)
@@ -4336,9 +4344,9 @@ except ValueError as e:
     print(e)
 ```
 
-**INTERVIEW PERSPECTIVE:** Platform design interviews often include cost and security. Speak least privilege, env separation, and two concrete cost controls. Mention how CI uses non-prod targets.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Platform design interviews often include cost and security. Speak least privilege, env separation, and two concrete cost controls. Mention how CI uses non-prod targets.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -4348,9 +4356,9 @@ except ValueError as e:
 | Medium | Rewrite three expensive queries to prune partitions/columns |
 | Hard | Draft an access + cost policy one-pager for a 20-person data team |
 
-**THE BRIDGE to Big Data with Spark:** Warehouses handle a huge share of analytics SQL. When transforms need general distributed compute, custom multi-language pipelines, or massive joins beyond comfortable warehouse patterns, Spark-style engines enter - Phase 17.
+**WHY THE NEXT TOPIC IS NEEDED - Big Data with Spark:** Warehouses handle a huge share of analytics SQL. When transforms need general distributed compute, custom multi-language pipelines, or massive joins beyond comfortable warehouse patterns, Spark-style engines enter - Phase 17.
 
-> **Phase 16 complete?** [Build the aligned project](./Projects.md#L1338) · [Continue to Phase 17](#phase-17---big-data-with-spark)
+> **Phase 16 complete?** [Build the aligned project](./Projects.md#data-phase-16-project) · [Continue to Phase 17](#phase-17---big-data-with-spark)
 
 <a id="phase-17"></a>
 
@@ -4358,17 +4366,17 @@ except ValueError as e:
 
 **Track:** Engineering Depth
 
-**GOAL:** Understand distributed compute with Spark: partitions, lazy evaluation, and the join/shuffle performance basics that decide whether a job finishes or melts the cluster.
+**WHAT YOU WILL BE ABLE TO DO:** Understand distributed compute with Spark: partitions, lazy evaluation, and the join/shuffle performance basics that decide whether a job finishes or melts the cluster.
 
-**PREREQUISITES:** Phase 8 (DataFrame mental model); Phase 13 (Parquet/pipelines); Phase 16 (when warehouses are not enough).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 8 (DataFrame mental model); Phase 13 (Parquet/pipelines); Phase 16 (when warehouses are not enough).
 
 ## 17.1 Distributed Compute, Partitions, and Lazy Evaluation
 
-**WHY THIS EXISTS:** Single-machine Pandas eventually hits RAM and CPU walls. **Spark** spreads DataFrame operations across executors on a cluster (or local mode for learning). Data is split into **partitions** processed in parallel. Transformations are **lazy** - they build a plan until an action forces computation. That model is why Spark can optimize whole pipelines and why "I called five maps" did not yet do anything.
+**WHY YOU ARE LEARNING THIS:** Single-machine Pandas eventually hits RAM and CPU walls. **Spark** spreads DataFrame operations across executors on a cluster (or local mode for learning). Data is split into **partitions** processed in parallel. Transformations are **lazy** - they build a plan until an action forces computation. That model is why Spark can optimize whole pipelines and why "I called five maps" did not yet do anything.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Teams vertical-scaled one giant box, or wrote hand-rolled multiprocessing. Failures lost hours of work with weak lineage. SQL warehouses covered many cases, but custom multi-stage feature engineering and huge multi-format ingests still needed a general distributed engine.
+**THE PROBLEM THIS SOLVES:** Teams vertical-scaled one giant box, or wrote hand-rolled multiprocessing. Failures lost hours of work with weak lineage. SQL warehouses covered many cases, but custom multi-stage feature engineering and huge multi-format ingests still needed a general distributed engine.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [Spark explained visually (Data with Baraa)](https://www.youtube.com/watch?v=nKRwjXRs4mY)
 - Alternative: [Apache Spark in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=IELMSD2kdmk)
@@ -4379,15 +4387,15 @@ except ValueError as e:
 - GitHub implementation: [apache/spark](https://github.com/apache/spark), Zoomcamp Spark materials
 - Practice platform: [DataTalksClub/data-engineering-zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Cluster roles (simplified): **driver** builds the plan; **executors** run tasks on partitions. Transformations (`select`, `filter`, `withColumn`) are lazy; actions (`count`, `write`, `collect`) trigger jobs. Catalyst optimizer rewrites plans; Tungsten execution optimizes CPU/memory paths. Partition count influences parallelism - too few underutilizes, too many schedules overhead. Reading Parquet with partition columns (`date=...`) enables pruning.
 
 Mental rule: prefer DataFrame/Spark SQL APIs over RDD spaghetti unless you must. Think in columns and plans, not row loops.
 
-**THE IDEA THAT FIXED IT:** Parallelize immutable transformations over partitions with a lazy plan that can be optimized and restarted.
+**THE MAIN IDEA IN SIMPLE WORDS:** Parallelize immutable transformations over partitions with a lazy plan that can be optimized and restarted.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Dataset file splits -> partitions p1 p2 p3 p4
@@ -4407,11 +4415,11 @@ Mental rule: prefer DataFrame/Spark SQL APIs over RDD spaghetti unless you must.
  groupBy/join: wide (shuffle) - details in 17.2
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A factory with many workstations (executors) assembling parts from totes (partitions). The manager (driver) does not assemble every piece; they schedule. Lazy evaluation is writing the full assembly instructions before turning the machines on, so you can cancel a useless step before wasting power.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -4421,7 +4429,7 @@ A factory with many workstations (executors) assembling parts from totes (partit
 | Few huge partitions | Less overhead | Idle cores; OOM risk |
 | Lazy plans | Whole-stage optimization | Harder debugging if you misunderstand actions |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # PySpark sketch (requires pyspark installed)
@@ -4446,9 +4454,9 @@ except ImportError:
     print("Install pyspark to run this locally; plan: filter then select then count")
 ```
 
-**INTERVIEW PERSPECTIVE:** Explain driver/executor, partition, lazy vs action, and when you'd choose Spark vs warehouse SQL. `explain` familiarity is a plus.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Explain driver/executor, partition, lazy vs action, and when you'd choose Spark vs warehouse SQL. `explain` familiarity is a plus.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -4458,17 +4466,17 @@ except ImportError:
 | Medium | Change partition count and measure runtime on a sample job |
 | Hard | Break down a Zoomcamp Spark notebook into plan stages |
 
-**THE BRIDGE to Joins, Shuffles, and Performance Basics:** Lazy plans still hide the expensive part: wide transformations that move data across the network. Joins and shuffles are where Spark jobs usually hurt.
+**WHY THE NEXT TOPIC IS NEEDED - Joins, Shuffles, and Performance Basics:** Lazy plans still hide the expensive part: wide transformations that move data across the network. Joins and shuffles are where Spark jobs usually hurt.
 
 ---
 
 ## 17.2 Joins, Shuffles, and Performance Basics
 
-**WHY THIS EXISTS:** Distributed joins require matching keys that may live on different machines. Spark **shuffles** data across the network to co-locate keys - powerful and expensive. Broadcast joins, skew handling, partition sizing, and avoiding unnecessary wide steps are the performance basics that separate "Spark is slow" from "our join was a cartesian accident."
+**WHY YOU ARE LEARNING THIS:** Distributed joins require matching keys that may live on different machines. Spark **shuffles** data across the network to co-locate keys - powerful and expensive. Broadcast joins, skew handling, partition sizing, and avoiding unnecessary wide steps are the performance basics that separate "Spark is slow" from "our join was a cartesian accident."
 
-**THE PROBLEM BEFORE THIS EXISTED:** Analysts ported naive SQL to Spark, joined two huge facts without pruning, triggered massive shuffles, flooded disks, and blamed the framework. Default configs hid skew until one partition held 80% of a hot key (popular country, null keys). `collect()` pulled millions of rows to the driver and crashed it.
+**THE PROBLEM THIS SOLVES:** Analysts ported naive SQL to Spark, joined two huge facts without pruning, triggered massive shuffles, flooded disks, and blamed the framework. Default configs hid skew until one partition held 80% of a hot key (popular country, null keys). `collect()` pulled millions of rows to the driver and crashed it.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [Spark visual (Baraa)](https://www.youtube.com/watch?v=nKRwjXRs4mY) - rewatch focusing on shuffle intuition
 - Alternative: [Fireship Spark](https://www.youtube.com/watch?v=IELMSD2kdmk)
@@ -4479,15 +4487,15 @@ except ImportError:
 - GitHub implementation: [apache/spark](https://github.com/apache/spark)
 - Practice platform: Zoomcamp + deliberate "bad join vs broadcast join" experiments
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 **Shuffle** redistributes records by key across partitions - disk and network heavy. **Sort-merge joins** shuffle both sides; **broadcast hash joins** send a small side to all executors, avoiding a large shuffle when one table fits broadcast thresholds. Filter early, project only needed columns, and partition facts by common join/filter keys when writing. Skew: salt hot keys or isolate them. Prefer writing Parquet with reasonable file sizes; watch the Spark UI for stragglers.
 
 Never `collect()` big data to Python lists "just to Pandas it" unless sampled. Let Spark write results out.
 
-**THE IDEA THAT FIXED IT:** Treat network movement as the scarce resource. Choose join strategy and data layout to minimize shuffles and balance partitions.
+**THE MAIN IDEA IN SIMPLE WORDS:** Treat network movement as the scarce resource. Choose join strategy and data layout to minimize shuffles and balance partitions.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Big join without broadcast
@@ -4506,11 +4514,11 @@ Never `collect()` big data to Python lists "just to Pandas it" unless sampled. L
  one task runs forever while others idle
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A shuffle is forcing every warehouse worker to mail their boxes to rooms labeled by customer ID before pairing receipts - necessary sometimes, expensive always. Broadcast is photocopying a small price list to every worker so giant receipt stacks never move. Skew is one "Customer US" room that receives a mountain while "Customer Iceland" gets a single envelope.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -4520,7 +4528,7 @@ A shuffle is forcing every warehouse worker to mail their boxes to rooms labeled
 | Early filter/project | Less data moved | Requires knowing predicates early |
 | `collect()` to driver | Convenient for tiny results | Driver OOM on real data |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 try:
@@ -4545,9 +4553,9 @@ except ImportError:
     print("Broadcast join: send small dim to all executors; avoid shuffling the fact by key")
 ```
 
-**INTERVIEW PERSPECTIVE:** Draw a join and mark where shuffle happens. Mention broadcast thresholds, skew, and Spark UI. Saying "we'd just add more executors" without fixing data movement is a junior tell.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Draw a join and mark where shuffle happens. Mention broadcast thresholds, skew, and Spark UI. Saying "we'd just add more executors" without fixing data movement is a junior tell.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -4557,11 +4565,11 @@ except ImportError:
 | Medium | Optimize a job by filtering before join and dropping columns |
 | Hard | Design partition keys for a lake table used in frequent joins |
 
-**THE BRIDGE to Streaming with Kafka:** Batch Spark/warehouse jobs assume data arrives in chunks. When product surfaces need continuous events - clicks, IoT, CDC - you need a log-based transport and consumer model. Kafka is the common backbone.
+**WHY THE NEXT TOPIC IS NEEDED - Streaming with Kafka:** Batch Spark/warehouse jobs assume data arrives in chunks. When product surfaces need continuous events - clicks, IoT, CDC - you need a log-based transport and consumer model. Kafka is the common backbone.
 
 ---
 
-> **Phase 17 complete?** [Build the aligned project](./Projects.md#L1359) · [Continue to Phase 18](#phase-18---streaming-with-apache-kafka)
+> **Phase 17 complete?** [Build the aligned project](./Projects.md#data-phase-17-project) · [Continue to Phase 18](#phase-18---streaming-with-apache-kafka)
 
 <a id="phase-18"></a>
 
@@ -4569,17 +4577,17 @@ except ImportError:
 
 **Track:** Engineering Depth
 
-**GOAL:** Understand log-based event streaming: topics, partitions, producers, consumers, delivery semantics, and when batch is still the right answer.
+**WHAT YOU WILL BE ABLE TO DO:** Understand log-based event streaming: topics, partitions, producers, consumers, delivery semantics, and when batch is still the right answer.
 
-**PREREQUISITES:** Phase 13-14 (pipelines and orchestration); Phase 17 helps for stream processors that land in Spark/Flink.
+**WHAT YOU SHOULD KNOW FIRST:** Phase 13-14 (pipelines and orchestration); Phase 17 helps for stream processors that land in Spark/Flink.
 
 ## 18.1 Topics, Partitions, Producers, and Consumers
 
-**WHY THIS EXISTS:** Batch jobs assume "the day is closed." Product analytics, fraud, inventory sync, and CDC do not wait for midnight. You need a durable, replayable transport where many independent consumers can read the same events without coupling to each other. Kafka popularized that model: a distributed commit log.
+**WHY YOU ARE LEARNING THIS:** Batch jobs assume "the day is closed." Product analytics, fraud, inventory sync, and CDC do not wait for midnight. You need a durable, replayable transport where many independent consumers can read the same events without coupling to each other. Kafka popularized that model: a distributed commit log.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Point-to-point queues and webhook fans meant each new consumer required a new integration. If the email service was down, events were gone. Replaying last Tuesday's traffic after a bug fix was a research project. Shared databases as "integration buses" created coupling and lock storms. Teams needed a buffer that kept history long enough to reprocess and scaled by splitting ordered streams.
+**THE PROBLEM THIS SOLVES:** Point-to-point queues and webhook fans meant each new consumer required a new integration. If the email service was down, events were gone. Replaying last Tuesday's traffic after a bug fix was a research project. Shared databases as "integration buses" created coupling and lock storms. Teams needed a buffer that kept history long enough to reprocess and scaled by splitting ordered streams.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [Apache Kafka Fundamentals (ByteByteGo)](https://www.youtube.com/watch?v=-RDyEFvnTXI)
 - Alternative: [Why is Kafka fast? (ByteByteGo)](https://www.youtube.com/watch?v=UNUz1-msbOM)
@@ -4591,13 +4599,13 @@ except ImportError:
 - GitHub / course: [DataTalksClub/data-engineering-zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) streaming week
 - Practice platform: local Docker Kafka quickstart from Confluent Developer
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 A **topic** is a named stream of records. Topics are split into **partitions** - each partition is an ordered, append-only log. Producers write records (optionally with a **key** that hashes to a partition, preserving per-key order). Consumers read with an **offset** bookmark. A **consumer group** divides partitions among members for parallelism: each partition is consumed by at most one member of a group, but multiple groups can independently read the full topic (analytics and fraud and search indexing all subscribe separately). Retention keeps data for a time or size window so late consumers or reprocessing can catch up. That replayability is the superpower versus ephemeral queues.
 
-**THE IDEA THAT FIXED IT:** Treat integration as a durable log, not a fragile RPC. Producers do not know consumers. Consumers advance offsets. New consumers can start from the beginning or from "now."
+**THE MAIN IDEA IN SIMPLE WORDS:** Treat integration as a durable log, not a fragile RPC. Producers do not know consumers. Consumers advance offsets. New consumers can start from the beginning or from "now."
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Producers
@@ -4615,11 +4623,11 @@ A **topic** is a named stream of records. Topics are split into **partitions** -
    members split partitions          independent offsets
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Kafka is a shared chalkboard ledger in a warehouse office. Drivers write new order lines at the bottom of their aisle (partition). Accounting, shipping, and analytics each keep a finger on the last line they copied (offset). A new intern can start at the top of yesterday's board and catch up without asking drivers to rewrite history.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -4629,7 +4637,7 @@ Kafka is a shared chalkboard ledger in a warehouse office. Drivers write new ord
 | Many consumer groups | Independent apps | Multiply read load |
 | Compaction topics | Latest value per key | Different semantics than pure log |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Conceptual API sketch (library names vary: confluent-kafka, kafka-python)
@@ -4645,9 +4653,9 @@ def partition_for_key(key: str, n_partitions: int) -> int:
 print(partition_for_key("user_42", 6))
 ```
 
-**INTERVIEW PERSPECTIVE:** Draw topic -> partitions -> consumer group. Explain why order is per partition, not global. Mention offsets and replay. "We use Kafka" without a consumer-group story is incomplete.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Draw topic -> partitions -> consumer group. Explain why order is per partition, not global. Mention offsets and replay. "We use Kafka" without a consumer-group story is incomplete.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -4657,15 +4665,15 @@ print(partition_for_key("user_42", 6))
 | Medium | Two consumer groups read the same topic independently |
 | Hard | Design topics for checkout events vs CDC of `orders` table |
 
-**THE BRIDGE to Delivery Semantics:** Publishing is easy. Guaranteeing that side effects happen once under retries, crashes, and rebalances is the hard part. That is delivery semantics and idempotent consumers.
+**WHY THE NEXT TOPIC IS NEEDED - Delivery Semantics:** Publishing is easy. Guaranteeing that side effects happen once under retries, crashes, and rebalances is the hard part. That is delivery semantics and idempotent consumers.
 
 ## 18.2 Delivery Semantics and When Streaming Is Worth It
 
-**WHY THIS EXISTS:** Networks fail. Consumers crash after writing to a database but before committing offsets (duplicate). Or they commit offsets before the write finishes (loss). "Exactly once" marketing slides hide end-to-end reality: you design for at-least-once plus idempotency, or use transactional patterns carefully.
+**WHY YOU ARE LEARNING THIS:** Networks fail. Consumers crash after writing to a database but before committing offsets (duplicate). Or they commit offsets before the write finishes (loss). "Exactly once" marketing slides hide end-to-end reality: you design for at-least-once plus idempotency, or use transactional patterns carefully.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Teams assumed "Kafka is exactly once" and double-charged customers on retries. Or they chose streaming for a dashboard that only needed hourly refresh and paid months of ops complexity for minutes of latency nobody used.
+**THE PROBLEM THIS SOLVES:** Teams assumed "Kafka is exactly once" and double-charged customers on retries. Or they chose streaming for a dashboard that only needed hourly refresh and paid months of ops complexity for minutes of latency nobody used.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [Why is Kafka fast? (ByteByteGo)](https://www.youtube.com/watch?v=UNUz1-msbOM) - internals that also inform reliability trade-offs
 - Alternative: [Kafka Fundamentals (ByteByteGo)](https://www.youtube.com/watch?v=-RDyEFvnTXI)
@@ -4675,13 +4683,13 @@ print(partition_for_key("user_42", 6))
 - GitHub / course: Zoomcamp streaming materials; handbook streaming links
 - Practice platform: build an at-least-once consumer with an idempotency key table
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 **At-most-once:** fire and forget or commit before processing - can lose data. **At-least-once:** process then commit (or auto-commit carefully) - can duplicate. **Exactly-once end-to-end** requires coordinated transactions or idempotent sinks across Kafka and external systems - possible in bounded designs, not free. Practical pattern: produce with idempotent producer settings; consume at-least-once; make sinks idempotent using natural keys (`event_id` unique constraint). Choose streaming when latency SLAs, multiple consumers, or continuous CDC justify ops cost. Prefer batch/ELT when stakeholders are fine with hourly/daily marts.
 
-**THE IDEA THAT FIXED IT:** Separate transport reliability from business idempotency. Retries are normal. Design consumers so duplicates do not corrupt metrics or money.
+**THE MAIN IDEA IN SIMPLE WORDS:** Separate transport reliability from business idempotency. Retries are normal. Design consumers so duplicates do not corrupt metrics or money.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  msg arrives offset=100
@@ -4696,20 +4704,20 @@ print(partition_for_key("user_42", 6))
  commit offset 101
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Mail carriers may deliver the same package twice if you do not sign. Your porch policy (idempotency) is "accept only one box with tracking number X," not "assume the post office never doubles."
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
 | At-least-once + idempotent sink | Correct under retries | Need stable event IDs |
-| Kafka transactions | Stronger EOS in Kafka ecosystem | Complexity; sink must participate |
+| Kafka transactions | Stronger exactly-once behavior within Kafka and compatible tools | More moving parts; the destination must also support the transaction |
 | Batch hourly | Simple ops | Higher latency |
 | Streaming everything | Low latency potential | Overkill and fragile for many teams |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Pseudocode idempotent sink
@@ -4727,9 +4735,9 @@ def apply_business_logic(payload: dict) -> None:
     print("upsert", payload.get("order_id"))
 ```
 
-**INTERVIEW PERSPECTIVE:** Ask "what happens twice?" If they cannot answer, the design is incomplete. Also ask when Kafka is overkill versus a scheduled ELT job.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Ask "what happens twice?" If they cannot answer, the design is incomplete. Also ask when Kafka is overkill versus a scheduled ELT job.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -4738,11 +4746,11 @@ def apply_business_logic(payload: dict) -> None:
 | Medium | Write a decision memo: batch vs streaming for a KPI dashboard |
 | Hard | Design EOS-ish path from Kafka to warehouse with failure cases listed |
 
-**THE BRIDGE to Projects & Quality:** Tools are not a career. You prove the chain with shipped projects and explicit quality gates - tests, freshness, reconciliation - that make stakeholders trust the numbers.
+**WHY THE NEXT TOPIC IS NEEDED - Projects & Quality:** Tools are not a career. You prove the chain with shipped projects and explicit quality gates - tests, freshness, reconciliation - that make stakeholders trust the numbers.
 
 ---
 
-> **Phase 18 complete?** [Build the aligned project](./Projects.md#L1380) · [Continue to Phase 19](#phase-19---projects-data-quality--portfolio)
+> **Phase 18 complete?** [Build the aligned project](./Projects.md#data-phase-18-project) · [Continue to Phase 19](#phase-19---projects-data-quality--portfolio)
 
 <a id="phase-19"></a>
 
@@ -4750,17 +4758,17 @@ def apply_business_logic(payload: dict) -> None:
 
 **Track:** Ship & Hire
 
-**GOAL:** Prove the full chain with portfolio projects and treat data quality as a first-class feature, not a hope.
+**WHAT YOU WILL BE ABLE TO DO:** Prove the full chain with portfolio projects and treat data quality as a first-class feature, not a hope.
 
-**PREREQUISITES:** Analyst track through Phase 10; Engineer track through Phase 15+ (Spark/Kafka optional when justified).
+**WHAT YOU SHOULD KNOW FIRST:** Analyst track through Phase 10; Engineer track through Phase 15+ (Spark/Kafka optional when justified).
 
 ## 19.1 Building Analyst and Engineer Portfolio Projects
 
-**WHY THIS EXISTS:** Hiring managers do not hire certificates. They hire evidence you can own a business question or a reliable pipeline. A portfolio forces integration: SQL + cleaning + metrics + communication for analysts; ingest + model + orchestrate + test for engineers.
+**WHY YOU ARE LEARNING THIS:** Hiring managers do not hire certificates. They hire evidence you can own a business question or a reliable pipeline. A portfolio forces integration: SQL + cleaning + metrics + communication for analysts; ingest + model + orchestrate + test for engineers.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Learners stayed in tutorial hell - twenty unfinished notebooks, zero public artifacts, no README that states grain or limitations. Interviews then had nothing concrete to probe, so candidates recited tool names.
+**THE PROBLEM THIS SOLVES:** Learners stayed in tutorial hell - twenty unfinished notebooks, zero public artifacts, no README that states grain or limitations. Interviews then had nothing concrete to probe, so candidates recited tool names.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best project-shape visual: [What is Data Pipeline? (ByteByteGo)](https://www.youtube.com/watch?v=kGT4PcTEPP8)
 - Portfolio patterns: [SQL Data Warehouse Portfolio Project playlist (Data with Baraa)](https://www.youtube.com/playlist?list=PLNcg_FV9n7qaUWeyUkPfiVtMbKlrfMqA8)
@@ -4771,13 +4779,13 @@ def apply_business_logic(payload: dict) -> None:
 - GitHub templates: [DataTalksClub/data-engineering-zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp), [DataExpert-io/data-engineer-handbook](https://github.com/DataExpert-io/data-engineer-handbook)
 - Practice platform: publish GitHub + short writeup + dashboard screenshots with green tests
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 **Analyst portfolio (aim 3-5 sharp pieces):** (1) multi-table SQL analysis answering a real question; (2) end-to-end extract -> Pandas clean -> viz -> memo; (3) dashboard with defined metrics; (4) optional experiment/cohort study. **Engineer portfolio (aim 2-4):** (1) batch ELT into a warehouse with dbt marts, tests, and Airflow; (2) Spark/Parquet job on sizable data; (3) optional Kafka path; (4) quality checks and a failure postmortem. Scope tightly. Overbuilt Kubernetes for a 5MB CSV smells fake. Under-documented gold mines also fail - nobody can run them.
 
-**THE IDEA THAT FIXED IT:** Ship a thin vertical slice end-to-end with honesty about limitations, rather than a horizontal sprawl of half tools.
+**THE MAIN IDEA IN SIMPLE WORDS:** Ship a thin vertical slice end-to-end with honesty about limitations, rather than a horizontal sprawl of half tools.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Idea
@@ -4789,11 +4797,11 @@ def apply_business_logic(payload: dict) -> None:
    -> tell the story in interviews
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A chef's portfolio is not "I watched cooking shows." It is dishes people can taste. Your GitHub should be edible: clone, run, see results.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -4802,7 +4810,7 @@ A chef's portfolio is not "I watched cooking shows." It is dishes people can tas
 | Fancy infra for tiny data | Looks advanced | Smells fake |
 | Private-only work | Comfort | Interviewers cannot review |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```text
 Suggested DE project layout
@@ -4828,9 +4836,9 @@ checklist = [
 print("\n".join(f"- [ ] {c}" for c in checklist))
 ```
 
-**INTERVIEW PERSPECTIVE:** Be ready to defend every technology choice in one sentence of problem it solved. Walk through a failure you hit and how tests catch it now.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Be ready to defend every technology choice in one sentence of problem it solved. Walk through a failure you hit and how tests catch it now.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -4839,15 +4847,15 @@ print("\n".join(f"- [ ] {c}" for c in checklist))
 | Medium | Analyst: dashboard + metric contract + insight memo |
 | Hard | Add cost/quality metrics and a short postmortem of a real bug |
 
-**THE BRIDGE to Data Quality:** A project that "runs" but silently drifts is a liability. Quality checks and observability turn pipelines into trustworthy products.
+**WHY THE NEXT TOPIC IS NEEDED - Data Quality:** A project that "runs" but silently drifts is a liability. Quality checks and observability turn pipelines into trustworthy products.
 
 ## 19.2 Data Quality, Tests, and Observability
 
-**WHY THIS EXISTS:** Downstream users assume marts are correct. Schemas evolve, sources go quiet, joins fan out, and currency columns flip units. Quality gates - dbt tests, Great Expectations-style assertions, freshness checks, reconciliations - catch lies before executives do.
+**WHY YOU ARE LEARNING THIS:** Downstream users assume marts are correct. Schemas evolve, sources go quiet, joins fan out, and currency columns flip units. Quality gates - dbt tests, Great Expectations-style assertions, freshness checks, reconciliations - catch lies before executives do.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Teams discovered breakage via Slack screenshots ("revenue is zero"). Debugging meant archaeology. Without contracts, every pipeline was "works on my machine yesterday."
+**THE PROBLEM THIS SOLVES:** Teams discovered breakage via Slack screenshots ("revenue is zero"). Debugging meant archaeology. Without contracts, every pipeline was "works on my machine yesterday."
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best practical intro: [Great Expectations Tutorial (Anuj Syal)](https://www.youtube.com/watch?v=oxOj30rl_xs)
 - Portfolio angle: [Data Quality with Great Expectations (Avery Smith)](https://www.youtube.com/watch?v=7Nk0HiiWi_Q)
@@ -4857,13 +4865,13 @@ print("\n".join(f"- [ ] {c}" for c in checklist))
 - GitHub: [dbt-labs/jaffle-shop](https://github.com/dbt-labs/jaffle-shop), Zoomcamp quality patterns
 - Practice platform: add a failing test on purpose, see CI/orchestrator block the promote
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Layer quality: **schema tests** (types, nullability, uniqueness), **relationship tests** (FK orphans), **business tests** (revenue >= 0, status in allowed set), **freshness** (max timestamp SLA), **reconciliation** (source sum ~= target sum within tolerance). Great Expectations and similar tools express "expect column values to be between" as code. dbt encodes many checks next to models. Observability adds: job duration anomalies, row-count drops, and alerting when gates fail. Quality without ownership fails - every critical table needs a named steward.
 
-**THE IDEA THAT FIXED IT:** Treat bad data as a deploy failure. Block promotion when contracts break.
+**THE MAIN IDEA IN SIMPLE WORDS:** Treat bad data as a deploy failure. Block promotion when contracts break.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  raw load
@@ -4875,11 +4883,11 @@ Layer quality: **schema tests** (types, nullability, uniqueness), **relationship
    -> publish OR page on-call
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Restaurants do not wait for customers to report raw chicken. Health checks happen before service. Your marts need a pass/fail ticket, not a guest complaint on Twitter.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -4888,7 +4896,7 @@ Restaurants do not wait for customers to report raw chicken. Health checks happe
 | Reconciliation daily | Catches silent drops | Needs stable definitions |
 | Soft alerts only | Less blockage | Bad data still ships |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```yaml
 # dbt-style test sketch (schema.yml)
@@ -4912,9 +4920,9 @@ def reconcile(source_sum: float, target_sum: float, tol: float = 0.01) -> bool:
 assert reconcile(1000.0, 998.0, tol=0.01)
 ```
 
-**INTERVIEW PERSPECTIVE:** "How do you know the pipeline is right?" Answer with tests, freshness, reconciliation, and who gets paged. Tool names without failure stories are weak.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "How do you know the pipeline is right?" Answer with tests, freshness, reconciliation, and who gets paged. Tool names without failure stories are weak.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -4923,11 +4931,11 @@ assert reconcile(1000.0, 998.0, tol=0.01)
 | Medium | Implement one Great Expectations suite on a CSV |
 | Hard | Design alert thresholds that avoid noise but catch outages |
 
-**THE BRIDGE to Interview Mastery:** Projects and quality create stories. Interviews test whether you can reproduce the thinking live - SQL, cases, pipeline design, and behavior - under time pressure.
+**WHY THE NEXT TOPIC IS NEEDED - Interview Mastery:** Projects and quality create stories. Interviews test whether you can reproduce the thinking live - SQL, cases, pipeline design, and behavior - under time pressure.
 
 ---
 
-> **Phase 19 complete?** [Build the aligned project](./Projects.md#L1401) · [Continue to Phase 20](#phase-20---interview-mastery)
+> **Phase 19 complete?** [Build the aligned project](./Projects.md#data-phase-19-project) · [Continue to Phase 20](#phase-20---interview-mastery)
 
 <a id="phase-20"></a>
 
@@ -4935,17 +4943,17 @@ assert reconcile(1000.0, 998.0, tol=0.01)
 
 **Track:** Ship & Hire
 
-**GOAL:** Communicate SQL skill, analytics judgment, and (for engineers) pipeline design clearly under pressure.
+**WHAT YOU WILL BE ABLE TO DO:** Communicate SQL skill, analytics judgment, and (for engineers) pipeline design clearly under pressure.
 
-**PREREQUISITES:** Phases above plus at least two finished projects you can defend.
+**WHAT YOU SHOULD KNOW FIRST:** Phases above plus at least two finished projects you can defend.
 
 ## 20.1 SQL Interviews
 
-**WHY THIS EXISTS:** SQL is the shared language of data roles. Screens filter for joins, null logic, aggregation grain, and window functions faster than any other skill.
+**WHY YOU ARE LEARNING THIS:** SQL is the shared language of data roles. Screens filter for joins, null logic, aggregation grain, and window functions faster than any other skill.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Candidates "knew SQL" from GUI builders but froze when asked for the latest order per user or a rolling 7-day sum. Interviews expose whether you can think in sets.
+**THE PROBLEM THIS SOLVES:** Candidates "knew SQL" from GUI builders but froze when asked for the latest order per user or a rolling 7-day sum. Interviews expose whether you can think in sets.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best visual review: [SQL Joins Visually Explained (Data with Baraa)](https://www.youtube.com/watch?v=aY7z4HcHm5M)
 - Windows review: [SQL Window Functions Basics (Data with Baraa)](https://www.youtube.com/watch?v=o666k19mZwE)
@@ -4954,13 +4962,13 @@ assert reconcile(1000.0, 998.0, tol=0.01)
 - Join visualizer: [SQL JOIN Visualizer](https://www.dev-toolbox.tech/tools/sql-join-visualizer)
 - Practice platform: timed sets (25-40 minutes) three times a week
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Common patterns: filter + aggregate; multi-join with explicit grain; `GROUP BY` correctness; `LEFT JOIN` anti-join (`IS NULL`); dedupe with `ROW_NUMBER`; running totals and lags; date spines; handling NULLs in predicates and averages. Narrate assumptions. Say the grain before you `SUM`. Prefer readable CTEs over nested sludge.
 
-**THE IDEA THAT FIXED IT:** Interview SQL is set thinking under a clock - state grain, handle NULLs, prove no fan-out, then code.
+**THE MAIN IDEA IN SIMPLE WORDS:** Interview SQL is set thinking under a clock - state grain, handle NULLs, prove no fan-out, then code.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Prompt: "latest order per user"
@@ -4970,11 +4978,11 @@ Common patterns: filter + aggregate; multi-join with explicit grain; `GROUP BY` 
    -> check ties policy with interviewer
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A cooking show timed challenge is not "have you ever cooked." It is "make this dish now, narrating why you salt before you sear."
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -4982,7 +4990,7 @@ A cooking show timed challenge is not "have you ever cooked." It is "make this d
 | `DISTINCT ON` (Postgres) | Concise | Less portable |
 | Correlated subquery | Sometimes simple | Easy to get slow/wrong |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```sql
 SELECT user_id, order_id, created_at, amount
@@ -4998,9 +5006,9 @@ FROM (
 WHERE rn = 1;
 ```
 
-**INTERVIEW PERSPECTIVE:** Talk while coding. Silent struggle reads worse than structured debugging. Test a NULL and a duplicate edge case aloud.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Talk while coding. Silent struggle reads worse than structured debugging. Test a NULL and a duplicate edge case aloud.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -5008,28 +5016,28 @@ WHERE rn = 1;
 | Medium | Latest row per entity + running sum in one session |
 | Hard | Gaps-and-islands or consecutive login days style prompt |
 
-**THE BRIDGE to Analytics Cases:** SQL proves you can fetch truth. Cases prove you can decide what truth matters when the metric moves.
+**WHY THE NEXT TOPIC IS NEEDED - Analytics Cases:** SQL proves you can fetch truth. Cases prove you can decide what truth matters when the metric moves.
 
 ## 20.2 Analytics Case Interviews
 
-**WHY THIS EXISTS:** Analyst interviews simulate the job: revenue dropped, conversion dipped, a stakeholder wants a dashboard. Structure beats bravado.
+**WHY YOU ARE LEARNING THIS:** Analyst interviews simulate the job: revenue dropped, conversion dipped, a stakeholder wants a dashboard. Structure beats bravado.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Candidates jumped to random cuts ("maybe it's mobile?") without clarifying the metric, checking data quality, or proposing a measurement plan after the decision.
+**THE PROBLEM THIS SOLVES:** Candidates jumped to random cuts ("maybe it's mobile?") without clarifying the metric, checking data quality, or proposing a measurement plan after the decision.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Storytelling frame: [Telling Stories with Data (HBR)](https://www.youtube.com/watch?v=r5_34YnCmMY)
 - A/B literacy: [Simple explanation of A/B Testing (codebasics)](https://www.youtube.com/watch?v=eiIhTbFP0ls)
 - Interactive: practice with a friend using a timer; use Kaggle datasets as props
 - Written: metric contract cards from Phase 10
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
-Case loop: (1) clarify metric definition and time window; (2) sanity-check data quality and pipeline freshness; (3) segment (platform, geo, new vs returning); (4) form ranked hypotheses; (5) propose analyses and decisions; (6) define success metrics and guardrails for any ship. Separate "data broken" from "world changed."
+Case loop: (1) clarify metric definition and time window; (2) sanity-check data quality and pipeline freshness; (3) segment (platform, geo, new vs returning); (4) form ranked hypotheses; (5) propose analyses and decisions; (6) define success metrics and safety checks and limits for any ship. Separate "data broken" from "world changed."
 
-**THE IDEA THAT FIXED IT:** Diagnose before you prescribe. Write the metric first.
+**THE MAIN IDEA IN SIMPLE WORDS:** Diagnose before you prescribe. Write the metric first.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  "Revenue down 10%"
@@ -5040,11 +5048,11 @@ Case loop: (1) clarify metric definition and time window; (2) sanity-check data 
    -> next measurement + decision ask
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A doctor does not amputate because you said your arm hurts. They take history, rule out measurement error, then treat.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -5052,7 +5060,7 @@ A doctor does not amputate because you said your arm hurts. They take history, r
 | Jumping to solutions | Looks decisive | Often wrong |
 | Too many cuts | Completeness theater | No narrative |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 def case_outline(metric: str) -> list[str]:
@@ -5067,9 +5075,9 @@ def case_outline(metric: str) -> list[str]:
 print("\n".join(case_outline("checkout_conversion")))
 ```
 
-**INTERVIEW PERSPECTIVE:** Interviewers reward crisp clarifying questions. Ask one or two high-leverage ones early.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Interviewers reward crisp clarifying questions. Ask one or two high-use ones early.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -5077,28 +5085,28 @@ print("\n".join(case_outline("checkout_conversion")))
 | Medium | 30-minute "metric dropped" mock with a friend |
 | Hard | Full case + SQL follow-up on the same prompt |
 
-**THE BRIDGE to DE System Design:** Analysts diagnose decisions. Engineers are asked how data would arrive reliably enough for those decisions to be possible.
+**WHY THE NEXT TOPIC IS NEEDED - DE System Design:** Analysts diagnose decisions. Engineers are asked how data would arrive reliably enough for those decisions to be possible.
 
 ## 20.3 Data Engineering System Design Interviews
 
-**WHY THIS EXISTS:** DE interviews probe whether you can design ingest, storage, transforms, SLAs, backfills, and failure modes - not whether you memorized a logo soup.
+**WHY YOU ARE LEARNING THIS:** DE interviews probe whether you can design ingest, storage, transforms, SLAs, backfills, and failure modes - not whether you memorized a logo soup.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Candidates listed Kafka, Spark, Airflow, Snowflake in one breath without grain, idempotency, or late data. Designs looked impressive and could not survive a retry.
+**THE PROBLEM THIS SOLVES:** Candidates listed Kafka, Spark, Airflow, Snowflake in one breath without grain, idempotency, or late data. Designs looked impressive and could not survive a retry.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
-- Pipeline spine: [What is Data Pipeline? (ByteByteGo)](https://www.youtube.com/watch?v=kGT4PcTEPP8)
+- Pipeline foundation: [What is Data Pipeline? (ByteByteGo)](https://www.youtube.com/watch?v=kGT4PcTEPP8)
 - Warehouse contrast: [Database vs Warehouse vs Lake (Alex The Analyst)](https://www.youtube.com/watch?v=-bSkREem8dM)
 - Kafka when needed: [ByteByteGo Kafka Fundamentals](https://www.youtube.com/watch?v=-RDyEFvnTXI)
 - Course architectures: Zoomcamp project READMEs
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Design loop: requirements (latency, volume, consumers) -> sources -> landing/raw (immutable if possible) -> modeled layers (dbt) -> serving (BI/features) -> orchestration -> quality/alerts -> backfill strategy. Call out idempotent keys, partition dates, SCD needs, PII, cost. Prefer boring batch when SLAs allow.
 
-**THE IDEA THAT FIXED IT:** Design for replay and failure first. Happy path last.
+**THE MAIN IDEA IN SIMPLE WORDS:** Design for replay and failure first. Happy path last.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Interviewer: "Stripe -> revenue dashboard"
@@ -5110,11 +5118,11 @@ Design loop: requirements (latency, volume, consumers) -> sources -> landing/raw
    -> backfill story for late refunds
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Building a kitchen for a restaurant means loading docks, cold storage, prep, tickets, and health checks - not only buying a shiny oven brand.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -5123,7 +5131,7 @@ Building a kitchen for a restaurant means loading docks, cold storage, prep, tic
 | SCD2 everywhere | History | Storage and complexity |
 | Raw immutable lake | Auditability | Governance needed |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```text
 Whiteboard checklist
@@ -5137,9 +5145,9 @@ Whiteboard checklist
 [ ] cost controls
 ```
 
-**INTERVIEW PERSPECTIVE:** Draw boxes, then attack your own design with "what if the job fails at step 3?" Promote yourself by showing recovery.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Draw boxes, then attack your own design with "what if the job fails at step 3?" Promote yourself by showing recovery.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -5147,27 +5155,27 @@ Whiteboard checklist
 | Medium | Add late-arriving facts and SCD2 customer dimensions |
 | Hard | Streaming clickstream + batch finance reconcile architecture |
 
-**THE BRIDGE to Behavioral:** Technical designs fail in real jobs when collaboration fails. Behavioral interviews probe ownership, conflict, and learning speed.
+**WHY THE NEXT TOPIC IS NEEDED - Behavioral:** Technical designs fail in real jobs when collaboration fails. Behavioral interviews probe ownership, conflict, and learning speed.
 
 ## 20.4 Behavioral Interviews and Mock Loops
 
-**WHY THIS EXISTS:** Teams hire humans who ship with others. STAR stories from your projects - conflict, failure, impact - are the evidence.
+**WHY YOU ARE LEARNING THIS:** Teams hire humans who ship with others. STAR stories from your projects - conflict, failure, impact - are the evidence.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Candidates claimed "team player" without a single concrete story, or blamed tools for failures they did not own.
+**THE PROBLEM THIS SOLVES:** Candidates claimed "team player" without a single concrete story, or blamed tools for failures they did not own.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Practice aloud with a timer; record yourself
 - Use your Phase 19 projects as story sources
 - Written: keep a brag document of incidents, decisions, and metrics moved
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 STAR: Situation, Task, Action, Result (prefer quantified). Prepare stories for: disagreement, production failure, ambiguous requirements, mentoring, prioritization, and a time you were wrong. Mock loops stitch SQL + case/design + behavioral into one session so stamina is trained.
 
-**THE IDEA THAT FIXED IT:** Store stories like you store metrics - written, rehearsed, honest.
+**THE MAIN IDEA IN SIMPLE WORDS:** Store stories like you store metrics - written, rehearsed, honest.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Prompt: "Tell me about a failure"
@@ -5177,11 +5185,11 @@ STAR: Situation, Task, Action, Result (prefer quantified). Prepare stories for: 
    -> Result: caught in CI twice since; stakeholder trust restored
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A flight review after turbulence is more useful than claiming you never hit weather. Interviewers want the review, not the myth of perfect flights.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
@@ -5189,7 +5197,7 @@ A flight review after turbulence is more useful than claiming you never hit weat
 | Blame-only stories | Temporary cover | Red flags |
 | No prep | "Authenticity" | Rambling |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 stories = [
@@ -5201,9 +5209,9 @@ for s in stories:
     print(f"{s['theme']}: {s['project']} -> {s['result']}")
 ```
 
-**INTERVIEW PERSPECTIVE:** End answers with the result and what you changed in your process. That is maturity.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** End answers with the result and what you changed in your process. That is maturity.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -5211,11 +5219,11 @@ for s in stories:
 | Medium | 45-minute mock: SQL + behavioral |
 | Hard | Full loop: SQL + case or DE design + behavioral |
 
-**THE BRIDGE BEYOND This Document:** The roadmap ends; the job does not. Production invents the next limitation - a broken SLA, a new source, a privacy rule - and that limitation becomes your next concept. Keep the habit: what broke, why, what we invent next.
+**WHY THE NEXT TOPIC IS NEEDED BEYOND This Document:** The roadmap ends; the job does not. Production invents the next limitation - a broken SLA, a new source, a privacy rule - and that limitation becomes your next concept. Keep the habit: what broke, why, what we invent next.
 
 ---
 
-> **Phase 20 complete?** [Build the aligned project](./Projects.md#L1422) · [Return to the phase index](#phase-index)
+> **Phase 20 complete?** [Build the aligned project](./Projects.md#data-phase-20-project) · [Return to the phase index](#phase-index)
 
 ---
 

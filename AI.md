@@ -1,10 +1,10 @@
 # The Zero-to-Hero Artificial Intelligence & Machine Learning Roadmap
 
-*Mohammad Bilal's complete, self-paced path from first principles to professional-level AI work - math intuition, classical ML, neural nets, PyTorch, CNNs, embeddings, transformers, LLMs, RAG, fine-tuning, agents, evaluation, MLOps, and hiring readiness - told as one continuous chain of discoveries.*
+*Mohammad Bilal's complete, self-paced path from first principles to professional-level AI work - math intuition, classical ML, neural nets, PyTorch, CNNs, embeddings, transformers, LLMs, RAG, fine-tuning, agents, evaluation, MLOps, and hiring readiness - told as a connected story in which each new idea solves a problem left by the previous one.*
 
 *Resources curated with Composio (web search, YouTube, GitHub) against [mlabonne/llm-course](https://github.com/mlabonne/llm-course), [Karpathy nn-zero-to-hero](https://github.com/karpathy/nn-zero-to-hero), [fast.ai](https://course.fast.ai/), [Hugging Face Course](https://github.com/huggingface/course), [CS231n](https://cs231n.stanford.edu/), and 2026 AI engineer roadmaps.*
 
-**Scope:** 40 concepts · 20 phases · bridge-driven, no week clocks.
+**Scope:** 40 concepts · 20 phases · connected step by step, with no artificial weekly deadline.
 
 ```
 Data → Learn → Deep → Transformers → Ship → Hire
@@ -14,7 +14,15 @@ Data → Learn → Deep → Transformers → Ship → Hire
 
 ## How to Read This Document
 
-This is not a stack of unrelated notes you can jump around in. It is one long argument, and every section exists because the section before it hit a wall. Each stop opens by explaining **why what you just learned wasn't enough**, and closes by showing you **the crack that the next concept was invented to fill**. Read it in order the first time through - transformers only make sense because of what broke with fixed windows and RNNs, and RAG only makes sense because of what broke when LLMs hallucinated without your documents.
+### Start here if AI is completely new to you
+
+You are not expected to know the vocabulary on the first read. In this roadmap, **artificial intelligence (AI)** means software that performs a task we normally connect with human judgment. **Machine learning (ML)** is one way to build that software: instead of writing every rule yourself, you show the program examples and let it adjust a mathematical model. A **model** is the adjustable pattern-finder, **training** is the adjustment process, a **dataset** is the collection of examples, and **evaluation** means checking the model on carefully chosen examples to see whether it actually works.
+
+Use a simple loop for every topic: read the everyday problem, study the analogy, run the smallest example, change one input, and explain what changed in your own words. If you cannot explain a term without using the same term in its definition, stay with the example a little longer. Repetition is expected here; it is how unfamiliar ideas become familiar.
+
+**Words you will meet often:** a **feature** is one piece of information given to a model; a **label** is the answer you want it to learn; a **parameter** is a number the model adjusts; **loss** is a score showing how wrong an answer was; a **gradient** points toward the change that most affects that score; **inference** means using a trained model; **overfitting** means memorizing practice examples instead of learning a pattern that works on new ones; an **embedding** represents meaning as a list of numbers; a **token** is a small piece of text; **RAG** means looking up useful source material before generating an answer; and **fine-tuning** means continuing a model's training for a narrower purpose.
+
+The sections are connected. Read them in order the first time because each one begins with a problem that the previous idea could not solve. Each section begins by explaining **why what you just learned wasn't enough**, and closes by showing you **the remaining problem that leads to the next idea**. Read it in order the first time through - transformers only make sense because of what broke with fixed windows and RNNs, and RAG only makes sense because of what broke when LLMs hallucinated without your documents.
 
 **There is no clock on this document.** No week numbers, no day-by-day plan, no "finish by." AI skill does not compress into a fixed number of days, and pretending otherwise is how people memorize buzzwords instead of building understanding. Move at the pace your own understanding requires. The only valid unit of progress here is: *can I now explain why the previous concept wasn't enough, and how this one fixes it?*
 
@@ -23,40 +31,40 @@ Every concept in this roadmap answers the same set of questions, because that se
 - What is it, in plain language?
 - Why does it exist - what problem forced someone to invent it?
 - What did people do before it existed, and what broke?
-- How does it solve that problem, mechanically, underneath the hood?
+- How does it solve that problem, step by step, inside the computer or system?
 - What does it cost? (Every solution trades something for something.)
 - Where does its own limitation show up - and what does *that* limitation force us to invent next?
 
 That last question is the engine of the whole roadmap. Nothing here is "just a topic to cover." Every topic is a *reaction* to the topic before it.
 
-### Two Crafts, One Stack
+### Two Kinds of Work, One Shared Foundation
 
-This document covers both **ML / Research-shaped depth** and **AI Engineer who ships LLM apps** depth, because they share a spine (data, loss, generalization, representations) and then diverge:
+This document covers both **ML / Research-shaped depth** and **AI Engineer who ships LLM apps** depth, because they share the same basic knowledge (data, loss, generalization, representations) and then diverge:
 
-| Role | Primary question | Primary craft |
+| Role | Primary question | Main work |
 | --- | --- | --- |
 | **ML Scientist / Practitioner** | How do we *learn* a good model from data? | Features, architectures, training, metrics, ablations |
-| **AI Engineer** | How do we *ship* reliable AI systems users trust? | Prompts, RAG, agents, evals, cost/latency, guardrails |
+| **AI Engineer** | How do we *ship* reliable AI systems users trust? | Prompts, RAG, agents, evaluation tests, cost/latency, safety checks and limits |
 
 Phases 1-13 build the shared foundation through transformers. Phases 14-18 deepen LLMs, RAG, fine-tuning, agents, and production. Phases 19-20 are portfolio and hiring. If you only want to ship LLM apps, do not skip Phases 4-8 - engineers who cannot think in loss and overfitting build demos that rot. If you want research depth, still finish eval and shipping phases - papers that never meet users are incomplete.
 
-### The Rhythm Every Concept Follows
+### The Beginner-Friendly Pattern Every Topic Follows
 
 Those questions are answered in the same order every single time. Once you have read one section you know the shape of all of them:
 
 | Element | What it gives you |
 | --- | --- |
-| **Why This Concept Exists** | The previous concept's limitation, stated plainly |
-| **Visual Learning** | Videos, interactive tools, docs, GitHub, practice - placed *here* |
-| **Detailed Explanation** | The mechanics, precisely, in prose |
-| **The Idea That Fixed It** | The compact insight that made the concept stick |
+| **Why You Are Learning This** | The previous concept's limitation, stated plainly |
+| **See It Before You Memorize It** | Videos, interactive tools, docs, GitHub, practice - placed *here* |
+| **Step-by-Step Explanation** | A precise, step-by-step explanation in words |
+| **The Idea That Fixed It** | The main idea in one clear sentence that made the concept stick |
 | **Internal Working, Step by Step** | A prose and diagram "animation" of what happens underneath |
-| **Real-World Analogy** | Something you can picture without a screen |
+| **Picture It Like This** | Something you can picture without a screen |
 | **Complexity / Trade-offs** | What improved, what it cost, and why |
-| **Code Implementation** | A minimal, working version you can run |
-| **Interview Perspective** | What the concept looks like when it is tested |
+| **Small Working Example** | A minimal, working version you can run |
+| **How to Explain This in an Interview** | What the concept looks like when it is tested |
 | **Practice** | Problems graded easy to hard |
-| **The Bridge** | The exact limitation that makes the next concept necessary |
+| **Why the Next Topic Is Needed** | The exact limitation that makes the next concept necessary |
 
 **Diagram conventions.** Diagrams are plain ASCII inside code fences. `|` and `v` mean "then this happens", `+--` joins related paths, `-->` and `->` mean data/gradient flow, `X` marks a failure point, and boxes drawn with `+---+` are layers, datasets, or services. Time / forward pass usually runs downward.
 
@@ -127,7 +135,7 @@ Those questions are answered in the same order every single time. Once you have 
 | 15 | [RAG](#phase-15---retrieval-augmented-generation) | Ground models in your data | Build chunk→embed→retrieve→generate |
 | 16 | [Fine-tuning](#phase-16---fine-tuning-and-alignment-basics) | Specialize models efficiently | Justify LoRA vs full FT vs RAG |
 | 17 | [Agents](#phase-17---agents-and-tool-use) | Tool-using loops | Implement a ReAct-style agent safely |
-| 18 | [Eval, Safety & MLOps](#phase-18---evaluation-safety-and-mlops) | Ship and operate | Design evals, tracing, and guardrails |
+| 18 | [Eval, Safety & MLOps](#phase-18---evaluation-safety-and-mlops) | Ship and operate | Design evaluation tests, tracing, and safety checks and limits |
 | 19 | [Portfolio](#phase-19---portfolio-and-projects) | Prove skill with artifacts | Publish projects with metrics |
 | 20 | [Interviews](#phase-20---interviews) | Get hired | Explain systems end-to-end under pressure |
 
@@ -155,17 +163,17 @@ Those questions are answered in the same order every single time. Once you have 
 
 **Track:** Foundations
 
-**GOAL:** Understand machine learning as learning a function from data, and why train/test discipline exists.
+**WHAT YOU WILL BE ABLE TO DO:** Understand machine learning as learning a function from data, and why train/test discipline exists.
 
-**PREREQUISITES:** Basic Python comfort helps; no ML required.
+**WHAT YOU SHOULD KNOW FIRST:** Basic Python comfort helps; no ML required.
 
 ## 1.1 Rules vs Learning - What Machine Learning Actually Is
 
-**WHY THIS EXISTS - WHERE EVERYTHING STARTS:** Hand-written rules break when the world is messy - spam patterns change, images vary, language is ambiguous. **Machine learning** replaces brittle rule lists with models whose parameters are fit from examples. Every later architecture is still this idea at larger scale.
+**WHY YOU ARE LEARNING THIS - WHERE THE ROADMAP STARTS:** Hand-written rules break when the world is messy - spam patterns change, images vary, language is ambiguous. **Machine learning** replaces brittle rule lists with models whose parameters are fit from examples. Every later architecture is still this idea at larger scale.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Expert systems and if-else forests could not keep up with high-dimensional, shifting data. Maintenance cost exploded. Nobody could list all rules for "is this photo a cat?"
+**THE PROBLEM THIS SOLVES:** Expert systems and if-else forests could not keep up with high-dimensional, shifting data. Maintenance cost exploded. Nobody could list all rules for "is this photo a cat?"
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [But what is a neural network? (3Blue1Brown)](https://www.youtube.com/watch?v=aircAruvnKk) - intuition before math
 - [Neural Networks Explained in 5 minutes (IBM Technology)](https://www.youtube.com/watch?v=jmmW0F0biz0)
@@ -175,13 +183,13 @@ Those questions are answered in the same order every single time. Once you have 
 - [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
 - Kaggle: pick any Intro course dataset and state the prediction task in one sentence
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
-A learning problem has: inputs \(x\), outputs \(y\) (maybe missing), a model family \(f_\theta\), a loss that scores mistakes, and an algorithm that updates \(\theta\). **Supervised** learning uses labeled pairs. **Unsupervised** finds structure without labels. **Reinforcement** learns from rewards. Generative AI is still learning a model of data - often \(p(x)\) or \(p(x_{t+1}|x_{\le t})\). AI engineering wraps these models in products with evals and guardrails.
+A learning problem has: inputs \(x\), outputs \(y\) (maybe missing), a model family \(f_\theta\), a loss that scores mistakes, and an algorithm that updates \(\theta\). **Supervised** learning uses labeled pairs. **Unsupervised** finds structure without labels. **Reinforcement** learns from rewards. Generative AI is still learning a model of data - often \(p(x)\) or \(p(x_{t+1}|x_{\le t})\). AI engineering wraps these models in products with evaluation tests and safety checks and limits.
 
-**THE IDEA THAT FIXED IT:** Stop encoding every rule. Encode a hypothesis class + objective, then let data set the parameters.
+**THE MAIN IDEA IN SIMPLE WORDS:** Stop encoding every rule. Encode a hypothesis class + objective, then let data set the parameters.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Rules program:                 Learning program:
@@ -196,11 +204,11 @@ A learning problem has: inputs \(x\), outputs \(y\) (maybe missing), a model fam
  The second approach adapts when "blacklist" is infinite.
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Teaching someone to spot ripe fruit by showing hundreds of examples beats writing a 400-page color checklist.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Buys | Costs |
 | --- | --- | --- |
@@ -208,7 +216,7 @@ Teaching someone to spot ripe fruit by showing hundreds of examples beats writin
 | Learned models | Adaptation | Need data, can fail silently |
 | Bigger models | Capacity | Compute, opacity, eval burden |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Tiny "learning": find threshold that separates two groups
@@ -224,9 +232,9 @@ for t in range(0, 12):
 print("best threshold", best_t, "acc", best_acc)
 ```
 
-**INTERVIEW PERSPECTIVE:** "What is machine learning?" - learning parameters from data to generalize. Follow-up: supervised vs unsupervised vs RL.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** "What is machine learning?" - learning parameters from data to generalize. Follow-up: supervised vs unsupervised vs RL.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -234,30 +242,30 @@ print("best threshold", best_t, "acc", best_acc)
 | Medium | Rewrite a rule-based spam filter as a learning problem statement |
 | Hard | Argue when rules still beat ML (compliance, tiny data, hard constraints) |
 
-**THE BRIDGE to Train/Test & Generalization:** Fitting data is easy if you memorize it. The whole field exists because we need models that work on *new* examples - that requires a different mindset than "maximize training accuracy."
+**WHY THE NEXT TOPIC IS NEEDED - Train/Test & Generalization:** Fitting data is easy if you memorize it. The whole field exists because we need models that work on *new* examples - that requires a different mindset than "maximize training accuracy."
 
 ---
 
 ## 1.2 Train, Validation, Test - and the Generalization Goal
 
-**WHY THIS EXISTS:** A model that memorizes training examples looks perfect and fails in production. We split data so we can estimate **generalization** - performance on unseen samples - and tune without cheating.
+**WHY YOU ARE LEARNING THIS:** A model that memorizes training examples looks perfect and fails in production. We split data so we can estimate **generalization** - performance on unseen samples - and tune without cheating.
 
-**THE PROBLEM BEFORE THIS EXISTED:** People reported training accuracy as success. Products collapsed on real users. Leaderboards were gamed by test-set peeking.
+**THE PROBLEM THIS SOLVES:** People reported training accuracy as success. Products collapsed on real users. Leaderboards were gamed by test-set peeking.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - StatQuest bias-variance / train-test videos
 - Google MLCC validation sets
 - Kaggle learn "Intro to ML"
 - Hold out a test set on any toy CSV and refuse to touch it until the end
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 **Train** fits parameters. **Validation** chooses hyperparameters / architecture decisions. **Test** is a final, rarely touched estimate. Random splits fail on time series and grouped data - use time-based or group splits. **Data leakage** is when information from the future or the label sneaks into features. Overfitting = low train error, high val error. Underfitting = high error everywhere.
 
-**THE IDEA THAT FIXED IT:** Evaluate on data the training procedure did not see - and protect a final test set like production.
+**THE MAIN IDEA IN SIMPLE WORDS:** Evaluate on data the training procedure did not see - and protect a final test set like production.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Dataset
@@ -268,11 +276,11 @@ print("best threshold", best_t, "acc", best_acc)
  Never: tune on test, then celebrate test score.
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Studying with practice exams (train), a mock exam (val), and the real exam (test). Peeking at the real exam while "studying" invalidates the grade.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
@@ -280,7 +288,7 @@ Studying with practice exams (train), a mock exam (val), and the real exam (test
 | No val set | Hyperparameters chosen on test (leak) |
 | Over-shuffling time data | Fake metrics, real failure |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -291,9 +299,9 @@ X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, r
 print(len(X_train), len(X_val), len(X_test))
 ```
 
-**INTERVIEW PERSPECTIVE:** Explain leakage with an example (using "days until churn" to predict churn). How choose split for fraud or time series?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Explain leakage with an example (using "days until churn" to predict churn). How choose split for fraud or time series?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -301,11 +309,11 @@ print(len(X_train), len(X_val), len(X_test))
 | Medium | Find a leakage example in a public notebook (common on Kaggle) |
 | Hard | Design a split for user-level recommendation data |
 
-**THE BRIDGE to Math for ML:** To improve models systematically we need language for vectors, distances, and gradients - the minimum math that makes learning mechanical rather than magical.
+**WHY THE NEXT TOPIC IS NEEDED - Math for ML:** To improve models systematically we need language for vectors, distances, and gradients - the minimum math that makes learning mechanical rather than magical.
 
 ---
 
-> **Phase 1 complete?** [Build the aligned project](./Projects.md#L1873) · [Continue to Phase 2](#phase-2---math-for-ml-the-useful-slice)
+> **Phase 1 complete?** [Build the aligned project](./Projects.md#ai-phase-1-project) · [Continue to Phase 2](#phase-2---math-for-ml-the-useful-slice)
 
 <a id="phase-2"></a>
 
@@ -313,30 +321,30 @@ print(len(X_train), len(X_val), len(X_test))
 
 **Track:** Foundations
 
-**GOAL:** Build working intuition for vectors/matrices, probability, and derivatives/gradients - not a full math degree.
+**WHAT YOU WILL BE ABLE TO DO:** Build working intuition for vectors/matrices, probability, and derivatives/gradients - not a full math degree.
 
-**PREREQUISITES:** Phase 1.
+**WHAT YOU SHOULD KNOW FIRST:** Phase 1.
 
 ## 2.1 Vectors, Matrices, and Geometry of Data
 
-**WHY THIS EXISTS:** Data points are vectors. Models are matrix multiplies plus nonlinearities. Similarity is often a dot product. Without this language, "embedding" and "weight matrix" stay vocabulary.
+**WHY YOU ARE LEARNING THIS:** Data points are vectors. Models are matrix multiplies plus nonlinearities. Similarity is often a dot product. Without this language, "embedding" and "weight matrix" stay vocabulary.
 
-**THE PROBLEM BEFORE THIS EXISTED:** People treated ML as GUI buttons. They could not debug shapes, norms, or why cosine similarity works.
+**THE PROBLEM THIS SOLVES:** People treated ML as GUI buttons. They could not debug shapes, norms, or why cosine similarity works.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - 3Blue1Brown Essence of Linear Algebra (playlist)
 - [How word vectors encode meaning (3Blue1Brown)](https://www.youtube.com/watch?v=FJtFZwbvkI4)
 - Khan Academy linear algebra essentials
 - NumPy docs - ndarray basics
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 A vector is an ordered list of numbers - a point/direction in space. Matrices transform vectors (rotate, scale, project). Dot product measures alignment. Norm measures length. Broadcasting in NumPy is applied linear algebra ergonomics. Shape errors are the most common deep learning bug - think in `(batch, features)`.
 
-**THE IDEA THAT FIXED IT:** Treat data and parameters as geometric objects you can add, multiply, and measure.
+**THE MAIN IDEA IN SIMPLE WORDS:** Treat data and parameters as geometric objects you can add, multiply, and measure.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  x = [x1, x2, ..., xd]
@@ -345,18 +353,18 @@ A vector is an ordered list of numbers - a point/direction in space. Matrices tr
  similarity = (a · b) / (|a||b|)   # cosine
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A spreadsheet row is a vector. Multiplying by a matrix is a systematic remix of columns into new columns (features/activations).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | High dimension | Expressive vs distance concentration / need more data |
 | Dense multiply | Simple vs compute cost (GPUs exist for this) |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import numpy as np
@@ -368,9 +376,9 @@ cos = (a @ b) / (np.linalg.norm(a) * np.linalg.norm(b))
 print(cos)
 ```
 
-**INTERVIEW PERSPECTIVE:** What is a dot product? Why normalize embeddings? What does a shape `(32, 768)` mean?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** What is a dot product? Why normalize embeddings? What does a shape `(32, 768)` mean?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -378,30 +386,30 @@ print(cos)
 | Medium | Implement matrix multiply without `@` |
 | Hard | Explain the curse of dimensionality qualitatively |
 
-**THE BRIDGE to Probability & Loss:** Geometry places points. Learning needs a way to score uncertainty and mistakes - probability and loss functions.
+**WHY THE NEXT TOPIC IS NEEDED - Probability & Loss:** Geometry places points. Learning needs a way to score uncertainty and mistakes - probability and loss functions.
 
 ---
 
 ## 2.2 Probability, Expectation, and Gradients
 
-**WHY THIS EXISTS:** Predictions are uncertain. Losses are averages of mistakes. Training follows **gradients** - directions that increase loss fastest - then steps the other way. This is the engine under every neural net.
+**WHY YOU ARE LEARNING THIS:** Predictions are uncertain. Losses are averages of mistakes. Training follows **gradients** - directions that increase loss fastest - then steps the other way. This is the engine under every neural net.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Without probability, classification scores are uncalibrated vibes. Without gradients, "learning" is random search.
+**THE PROBLEM THIS SOLVES:** Without probability, classification scores are uncalibrated vibes. Without gradients, "learning" is random search.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Gradient descent, how neural networks learn (3Blue1Brown)](https://www.youtube.com/watch?v=IHZwWFHWa-w)
 - [Gradient Descent, Step-by-Step (StatQuest)](https://www.youtube.com/watch?v=sDv4f4s2SB8)
 - [Stochastic Gradient Descent (StatQuest)](https://www.youtube.com/watch?v=vMh0zPT0tLI)
 - StatQuest probability / likelihood playlists
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Random variables, expectation, Bernoulli/Gaussian intuition, likelihood vs loss (negative log likelihood). Derivative = slope; gradient = vector of partials. Gradient descent: \(\theta \leftarrow \theta - \eta \nabla_\theta L\). Convex vs nonconvex - deep nets are nonconvex but still work empirically. Chain rule unlocks backprop (Phase 8).
 
-**THE IDEA THAT FIXED IT:** Define a differentiable loss, then repeatedly step opposite the gradient.
+**THE MAIN IDEA IN SIMPLE WORDS:** Define a differentiable loss, then repeatedly step opposite the gradient.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  L(θ) surface over parameters
@@ -412,11 +420,11 @@ Random variables, expectation, Bernoulli/Gaussian intuition, likelihood vs loss 
  until low loss / out of patience
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Hiking down a foggy mountain by feeling which way the ground slopes under your feet - small steps, hope you reach a valley (maybe not the global one).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
@@ -425,7 +433,7 @@ Hiking down a foggy mountain by feeling which way the ground slopes under your f
 | Full-batch GD | Exact gradient vs expensive |
 | SGD | Cheap noisy steps vs variance |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Minimize (θ-3)^2 with GD
@@ -436,9 +444,9 @@ for i in range(30):
 print(theta)
 ```
 
-**INTERVIEW PERSPECTIVE:** Explain gradient descent without equations, then with. What is a learning rate? Local minima worry - practical answer.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Explain gradient descent without equations, then with. What is a learning rate? Local minima worry - practical answer.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -446,11 +454,11 @@ print(theta)
 | Medium | Derive gradient of MSE for linear regression (1D) |
 | Hard | Explain why noise in SGD can help escape sharp minima (intuition) |
 
-**THE BRIDGE to Python for AI:** Math needs a vehicle. NumPy/pandas turn vectors and datasets into daily practice.
+**WHY THE NEXT TOPIC IS NEEDED - Python for AI:** Math needs a vehicle. NumPy/pandas turn vectors and datasets into daily practice.
 
 ---
 
-> **Phase 2 complete?** [Build the aligned project](./Projects.md#L1894) · [Continue to Phase 3](#phase-3---python-for-ai)
+> **Phase 2 complete?** [Build the aligned project](./Projects.md#ai-phase-2-project) · [Continue to Phase 3](#phase-3---python-for-ai)
 
 <a id="phase-3"></a>
 
@@ -458,29 +466,29 @@ print(theta)
 
 **Track:** Foundations
 
-**GOAL:** Be fluent with NumPy, pandas, and basic plotting so model code is not the bottleneck.
+**WHAT YOU WILL BE ABLE TO DO:** Be fluent with NumPy, pandas, and basic plotting so model code is not the bottleneck.
 
-**PREREQUISITES:** Phase 2 intuition.
+**WHAT YOU SHOULD KNOW FIRST:** Phase 2 intuition.
 
 ## 3.1 NumPy - The Array Language of ML
 
-**WHY THIS EXISTS:** Python loops over millions of numbers are too slow. **NumPy** provides contiguous arrays and vectorized ops that map to BLAS/SIMD - the substrate under PyTorch/TensorFlow.
+**WHY YOU ARE LEARNING THIS:** Python loops over millions of numbers are too slow. **NumPy** provides contiguous arrays and vectorized ops that map to BLAS/SIMD - the substrate under PyTorch/TensorFlow.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Pure Python numeric code could not train real models. People bounced off ML because tooling felt impossible.
+**THE PROBLEM THIS SOLVES:** Pure Python numeric code could not train real models. People bounced off ML because tooling felt impossible.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - NumPy absolute beginners guide
 - [yunjey/pytorch-tutorial](https://github.com/yunjey/pytorch-tutorial) - later, but shapes start here
 - Google Colab scratch notebook
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 `ndarray` dtype, shape, reshape, broadcast, axis reductions (`mean(axis=0)`), indexing/slicing, boolean masks, random seeds for reproducibility. Think batch-first. Avoid Python `for` over rows when vectorization exists.
 
-**THE IDEA THAT FIXED IT:** One n-dimensional array abstraction with fast bulk operations.
+**THE MAIN IDEA IN SIMPLE WORDS:** One n-dimensional array abstraction with fast bulk operations.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  list of lists -> np.array
@@ -488,18 +496,18 @@ print(theta)
  reduce along axis -> smaller array
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A calculator that operates on whole spreadsheets at once instead of cell-by-cell with a pencil.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Vectorize everything | Speed vs unreadable one-liners |
 | Copy vs view | Memory vs accidental mutation bugs |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import numpy as np
@@ -510,9 +518,9 @@ y = X @ w + 0.1 * rng.normal(size=1000)
 print(X.shape, y[:3])
 ```
 
-**INTERVIEW PERSPECTIVE:** Broadcasting rules. Difference between shape `(n,)` and `(n,1)`.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Broadcasting rules. Difference between shape `(n,)` and `(n,1)`.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -520,29 +528,29 @@ print(X.shape, y[:3])
 | Medium | Implement train/val split with NumPy only |
 | Hard | Implement softmax stably with max subtraction |
 
-**THE BRIDGE to Pandas & Data Reality:** Arrays assume clean matrices. Real data arrives messy - tables, nulls, categories - pandas territory.
+**WHY THE NEXT TOPIC IS NEEDED - Pandas & Data Reality:** Arrays assume clean matrices. Real data arrives messy - tables, nulls, categories - pandas territory.
 
 ---
 
 ## 3.2 Pandas, Plotting, and Honest EDA
 
-**WHY THIS EXISTS:** Before modeling, you must see the data: missingness, skew, leakage candidates, class imbalance. **Pandas** + plots turn CSVs into understanding.
+**WHY YOU ARE LEARNING THIS:** Before modeling, you must see the data: missingness, skew, leakage candidates, class imbalance. **Pandas** + plots turn CSVs into understanding.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Models trained on garbage. "Accuracy 99%" on imbalanced labels fooled teams.
+**THE PROBLEM THIS SOLVES:** Models trained on garbage. "Accuracy 99%" on imbalanced labels fooled teams.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - pandas getting started
 - Kaggle pandas courses
 - Any short EDA walkthrough you trust - then do your own
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 `DataFrame`, joins, groupby, dtypes, datetime, categorical encoding preview. Plots: histogram, scatter, correlation heatmap - for intuition, not decoration. Document assumptions. Separate raw vs cleaned datasets.
 
-**THE IDEA THAT FIXED IT:** Make tabular data a first-class programmable object with inspection affordances.
+**THE MAIN IDEA IN SIMPLE WORDS:** Make tabular data a first-class programmable object with inspection affordances.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  read_csv -> inspect head/dtypes/nulls
@@ -551,18 +559,18 @@ print(X.shape, y[:3])
  save processed parquet/csv for modeling
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A chef tasting ingredients and trimming spoiled parts before cooking - modeling is the cooking.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Heavy cleaning | Better signal vs time sink / overfitting to quirks |
 | Dropping nulls | Simple vs biased sample |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import pandas as pd
@@ -572,9 +580,9 @@ print(df.isna().mean())
 df["age"] = df["age"].fillna(df["age"].median())
 ```
 
-**INTERVIEW PERSPECTIVE:** Walk an EDA you actually did. What surprised you? What did you not impute and why?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Walk an EDA you actually did. What surprised you? What did you not impute and why?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -582,11 +590,11 @@ df["age"] = df["age"].fillna(df["age"].median())
 | Medium | Find class imbalance and propose a metric |
 | Hard | Write a reproducible cleaning script with assertions |
 
-**THE BRIDGE to Classical ML:** Clean tables demand simple strong baselines - linear/logistic models - before deep learning theater.
+**WHY THE NEXT TOPIC IS NEEDED - Classical ML:** Clean tables demand simple strong baselines - linear/logistic models - before deep learning theater.
 
 ---
 
-> **Phase 3 complete?** [Build the aligned project](./Projects.md#L1915) · [Continue to Phase 4](#phase-4---classical-machine-learning)
+> **Phase 3 complete?** [Build the aligned project](./Projects.md#ai-phase-3-project) · [Continue to Phase 4](#phase-4---classical-machine-learning)
 
 <a id="phase-4"></a>
 
@@ -594,30 +602,30 @@ df["age"] = df["age"].fillna(df["age"].median())
 
 **Track:** Supervised Basics
 
-**GOAL:** Fit and interpret linear/logistic models; understand loss and regularization.
+**WHAT YOU WILL BE ABLE TO DO:** Fit and interpret linear/logistic models; understand loss and regularization.
 
-**PREREQUISITES:** Phases 1-3.
+**WHAT YOU SHOULD KNOW FIRST:** Phases 1-3.
 
 ## 4.1 Linear Regression and Loss Landscapes
 
-**WHY THIS EXISTS:** Predicting continuous values is the simplest supervised setting. **Linear regression** makes the loss surface and closed-form/GD learning tangible - the template for everything deeper.
+**WHY YOU ARE LEARNING THIS:** Predicting continuous values is the simplest supervised setting. **Linear regression** makes the loss surface and closed-form/GD learning tangible - the template for everything deeper.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Ad hoc curve fitting without a shared objective. No principled way to compare models.
+**THE PROBLEM THIS SOLVES:** Ad hoc curve fitting without a shared objective. No principled way to compare models.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - StatQuest linear regression
 - 3Blue1Brown / StatQuest gradient descent on MSE
 - scikit-learn linear models docs
 - Hands-on ML book notebooks (community mirrors)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Model \(\hat{y} = w^\top x + b \). MSE loss. Normal equation vs GD. Features need scaling for GD. Outliers hurt MSE - discuss MAE/Huber later. Residuals plots diagnose misfit.
 
-**THE IDEA THAT FIXED IT:** Define prediction as a linear function; minimize average squared error.
+**THE MAIN IDEA IN SIMPLE WORDS:** Define prediction as a linear function; minimize average squared error.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  for each example:
@@ -627,18 +635,18 @@ Model \(\hat{y} = w^\top x + b \). MSE loss. Normal equation vs GD. Features nee
  update w, b
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Drawing the best straight trend line through rent-vs-square-footage points.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Linear model | Interpretable vs underfits complex patterns |
 | MSE | Smooth vs outlier-sensitive |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 from sklearn.linear_model import LinearRegression
@@ -652,9 +660,9 @@ model = LinearRegression().fit(Xtr, ytr)
 print(model.coef_, model.intercept_, model.score(Xte, yte))
 ```
 
-**INTERVIEW PERSPECTIVE:** Derive MSE gradient for w. When is linear regression wrong? Multicollinearity?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Derive MSE gradient for w. When is linear regression wrong? Multicollinearity?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -662,29 +670,29 @@ print(model.coef_, model.intercept_, model.score(Xte, yte))
 | Medium | Compare scaled vs unscaled GD |
 | Hard | Implement GD linear regression from scratch |
 
-**THE BRIDGE to Classification:** Many labels are categories, not continuous numbers. Squared error is the wrong story - logistic regression and classification losses enter.
+**WHY THE NEXT TOPIC IS NEEDED - Classification:** Many labels are categories, not continuous numbers. Squared error is the wrong story - logistic regression and classification losses enter.
 
 ---
 
 ## 4.2 Logistic Regression and Decision Boundaries
 
-**WHY THIS EXISTS:** Spam/not-spam needs probabilities and a decision threshold. **Logistic regression** squeezes a linear score through a sigmoid and trains with log loss - still linear decision boundaries, still foundational.
+**WHY YOU ARE LEARNING THIS:** Spam/not-spam needs probabilities and a decision threshold. **Logistic regression** squeezes a linear score through a sigmoid and trains with log loss - still linear decision boundaries, still foundational.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Thresholding linear regression for classes is statistically awkward. Accuracy alone hides probability quality.
+**THE PROBLEM THIS SOLVES:** Thresholding linear regression for classes is statistically awkward. Accuracy alone hides probability quality.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - StatQuest logistic regression
 - scikit-learn LogisticRegression docs
 - Desmos/sigmoid sketch
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Sigmoid maps scores to (0,1). Log loss / cross-entropy. Regularization L1/L2. Threshold tuning for precision/recall. One-vs-rest for multiclass. Features still linear - XOR needs nonlinear models (trees/nets).
 
-**THE IDEA THAT FIXED IT:** Model log-odds as linear; train by maximizing likelihood (minimizing cross-entropy).
+**THE MAIN IDEA IN SIMPLE WORDS:** Model log-odds as linear; train by maximizing likelihood (minimizing cross-entropy).
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  z = w·x + b
@@ -692,18 +700,18 @@ Sigmoid maps scores to (0,1). Log loss / cross-entropy. Regularization L1/L2. Th
  loss = -[y log p + (1-y) log(1-p)]
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A credit score turned into a probability of default, then a cutoff policy.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Logistic | Fast, interpretable coeffs vs linear boundary only |
 | Complex nets | Capacity vs data hunger / opacity |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 from sklearn.datasets import load_breast_cancer
@@ -718,9 +726,9 @@ clf.fit(Xtr, ytr)
 print(clf.score(Xte, yte))
 ```
 
-**INTERVIEW PERSPECTIVE:** Why not MSE for classification? What does a coefficient mean? Threshold vs probability.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Why not MSE for classification? What does a coefficient mean? Threshold vs probability.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -728,11 +736,11 @@ print(clf.score(Xte, yte))
 | Medium | Sweep thresholds; plot precision/recall |
 | Hard | Implement binary logistic GD from scratch |
 
-**THE BRIDGE to Evaluation:** Fitting is not success. Metrics, bias-variance, and leakage decide whether a model is honest.
+**WHY THE NEXT TOPIC IS NEEDED - Evaluation:** Fitting is not success. Metrics, bias-variance, and leakage decide whether a model is honest.
 
 ---
 
-> **Phase 4 complete?** [Build the aligned project](./Projects.md#L1936) · [Continue to Phase 5](#phase-5---evaluation-and-generalization)
+> **Phase 4 complete?** [Build the aligned project](./Projects.md#ai-phase-4-project) · [Continue to Phase 5](#phase-5---evaluation-and-generalization)
 
 <a id="phase-5"></a>
 
@@ -740,29 +748,29 @@ print(clf.score(Xte, yte))
 
 **Track:** Supervised Basics
 
-**GOAL:** Choose metrics that match the business cost of errors; diagnose under/overfitting.
+**WHAT YOU WILL BE ABLE TO DO:** Choose metrics that match the business cost of errors; diagnose under/overfitting.
 
-**PREREQUISITES:** Phase 4.
+**WHAT YOU SHOULD KNOW FIRST:** Phase 4.
 
 ## 5.1 Metrics Beyond Accuracy
 
-**WHY THIS EXISTS:** 99% accuracy on 99% negative class is a useless always-negative classifier. **Precision, recall, F1, ROC-AUC, PR-AUC, calibration** express different costs.
+**WHY YOU ARE LEARNING THIS:** 99% accuracy on 99% negative class is a useless always-negative classifier. **Precision, recall, F1, ROC-AUC, PR-AUC, calibration** express different costs.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Leaderboards optimized the wrong number. Hospitals and fraud teams shipped harmful policies.
+**THE PROBLEM THIS SOLVES:** Leaderboards optimized the wrong number. Hospitals and fraud teams shipped harmful policies.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - StatQuest ROC and confusion matrix
 - sklearn metrics docs
 - Confusion matrix interactive explainers
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Confusion matrix cells. Precision = of predicted positives, how many true? Recall = of actual positives, how many caught? F1 balances. ROC-AUC vs PR-AUC under imbalance. Regression: MAE/MSE/RMSE/MAPE caveats. Task defines metric - never default blindly to accuracy.
 
-**THE IDEA THAT FIXED IT:** Score models with the loss that matches the decision's real costs.
+**THE MAIN IDEA IN SIMPLE WORDS:** Score models with the loss that matches the decision's real costs.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Predict labels/probas on val
@@ -771,18 +779,18 @@ Confusion matrix cells. Precision = of predicted positives, how many true? Recal
  Pick threshold with stakeholders
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Airport security: missing a threat (false negative) vs delaying travelers (false positive) are not equal - metric/threshold encode that policy.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Optimize recall | Catch more vs more false alarms |
 | Optimize precision | Cleaner alerts vs misses |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 from sklearn.metrics import classification_report, roc_auc_score
@@ -794,9 +802,9 @@ print(classification_report(y_true, y_pred))
 print("auc", roc_auc_score(y_true, y_prob))
 ```
 
-**INTERVIEW PERSPECTIVE:** Imbalanced classes - which metric? When ROC lies. Business-threshold conversation.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Imbalanced classes - which metric? When ROC lies. Business-threshold conversation.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -804,47 +812,47 @@ print("auc", roc_auc_score(y_true, y_prob))
 | Medium | Compare F1 vs AUC on an imbalanced set |
 | Hard | Design a cost matrix and choose a threshold |
 
-**THE BRIDGE to Bias-Variance & CV:** A single split is noisy. We need mental models of error components and more stable estimation.
+**WHY THE NEXT TOPIC IS NEEDED - Bias-Variance & CV:** A single split is noisy. We need mental models of error components and more stable estimation.
 
 ---
 
 ## 5.2 Bias-Variance, Cross-Validation, Leakage
 
-**WHY THIS EXISTS:** Error decomposes into bias (underfit), variance (overfit), noise. **Cross-validation** stabilizes estimates. Leakage silently invents fake performance.
+**WHY YOU ARE LEARNING THIS:** Error decomposes into bias (underfit), variance (overfit), noise. **Cross-validation** stabilizes estimates. Leakage silently invents fake performance.
 
-**THE PROBLEM BEFORE THIS EXISTED:** One lucky split greenlit models. Pipelines that scaled using the full dataset leaked test information.
+**THE PROBLEM THIS SOLVES:** One lucky split greenlit models. Pipelines that scaled using the full dataset leaked test information.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - StatQuest bias-variance
 - sklearn cross-validation user guide
 - Search Kaggle "leakage" war stories
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 High bias: simplify features? richer model? High variance: more data, regularization, simpler model, early stopping. K-fold CV. Nested CV for honest hyperparam selection (advanced). Always put preprocessing inside folds. TimeSeriesSplit for temporal data.
 
-**THE IDEA THAT FIXED IT:** Estimate generalization multiple ways; isolate preprocessing to training folds only.
+**THE MAIN IDEA IN SIMPLE WORDS:** Estimate generalization multiple ways; isolate preprocessing to training folds only.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Wrong: scale on all data -> split -> "great" score
  Right: split -> fit scaler on train -> transform val/test
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Practicing with the answer key mixed into flashcards - your quiz score is fake (leakage).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | More folds | Stable estimate vs compute |
 | Heavy regularization | Less overfit vs underfit risk |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 from sklearn.model_selection import cross_val_score
@@ -857,9 +865,9 @@ pipe = make_pipeline(StandardScaler(), LogisticRegression(max_iter=1000))
 print(cross_val_score(pipe, X, y, cv=5).mean())
 ```
 
-**INTERVIEW PERSPECTIVE:** Give a leakage example. Why pipeline objects? Bias-variance diagnosis from learning curves.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Give a leakage example. Why pipeline objects? Bias-variance diagnosis from learning curves.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -867,11 +875,11 @@ print(cross_val_score(pipe, X, y, cv=5).mean())
 | Medium | Break a model with intentional leakage; watch AUC jump |
 | Hard | Nested CV sketch for hyperparams |
 
-**THE BRIDGE to Trees:** Linear models miss nonlinear interactions. Decision trees carve the space with axes-aligned splits - next classical power tool.
+**WHY THE NEXT TOPIC IS NEEDED - Trees:** Linear models miss nonlinear interactions. Decision trees carve the space with axes-aligned splits - next classical power tool.
 
 ---
 
-> **Phase 5 complete?** [Build the aligned project](./Projects.md#L1957) · [Continue to Phase 6](#phase-6---trees-and-ensembles)
+> **Phase 5 complete?** [Build the aligned project](./Projects.md#ai-phase-5-project) · [Continue to Phase 6](#phase-6---trees-and-ensembles)
 
 <a id="phase-6"></a>
 
@@ -879,29 +887,29 @@ print(cross_val_score(pipe, X, y, cv=5).mean())
 
 **Track:** Supervised Basics
 
-**GOAL:** Use decision trees, random forests, and gradient boosting as strong tabular baselines.
+**WHAT YOU WILL BE ABLE TO DO:** Use decision trees, random forests, and gradient boosting as strong tabular baselines.
 
-**PREREQUISITES:** Phase 5.
+**WHAT YOU SHOULD KNOW FIRST:** Phase 5.
 
 ## 6.1 Decision Trees and Random Forests
 
-**WHY THIS EXISTS:** Many business datasets are tabular with nonlinear effects and missingness. **Trees** split on features; **random forests** average many trees to cut variance.
+**WHY YOU ARE LEARNING THIS:** Many business datasets are tabular with nonlinear effects and missingness. **Trees** split on features; **random forests** average many trees to cut variance.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Linear models missed interactions. Single deep trees memorized noise.
+**THE PROBLEM THIS SOLVES:** Linear models missed interactions. Single deep trees memorized noise.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - StatQuest decision trees / random forests
 - sklearn ensemble docs
 - Visual tree toy datasets
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Impurity (Gini/entropy), recursion, depth/leaf constraints. Bagging + feature randomness → RF. Feature importances (with caveats). Still struggle with linear extrapolations and very high-cardinality IDs.
 
-**THE IDEA THAT FIXED IT:** Partition the input space into regions with simple local predictions; average many noisy trees.
+**THE MAIN IDEA IN SIMPLE WORDS:** Partition the input space into regions with simple local predictions; average many noisy trees.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  while not pure/too small:
@@ -910,18 +918,18 @@ Impurity (Gini/entropy), recursion, depth/leaf constraints. Bagging + feature ra
  RF: bootstrap samples + random feature subsets -> vote
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A flowchart of yes/no questions; a forest is a committee of slightly different flowcharts voting.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Deep tree | Fit vs overfit |
 | RF | Strong baseline vs larger models, weaker extrapolation |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 from sklearn.ensemble import RandomForestClassifier
@@ -933,9 +941,9 @@ rf = RandomForestClassifier(n_estimators=200, random_state=0).fit(Xtr, ytr)
 print(rf.score(Xte, yte))
 ```
 
-**INTERVIEW PERSPECTIVE:** Why bagging reduces variance. RF vs single tree. Feature importance pitfalls.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Why bagging reduces variance. RF vs single tree. Feature importance pitfalls.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -943,29 +951,29 @@ print(rf.score(Xte, yte))
 | Medium | Compare RF depth limits vs default |
 | Hard | Explain out-of-bag error |
 
-**THE BRIDGE to Boosting:** Bagging averages peers. Boosting builds a sequence of learners that fix residual mistakes - often the best classic tabular method.
+**WHY THE NEXT TOPIC IS NEEDED - Boosting:** Bagging averages peers. Boosting builds a sequence of learners that fix residual mistakes - often the best classic tabular method.
 
 ---
 
 ## 6.2 Gradient Boosting (XGBoost/LightGBM intuition)
 
-**WHY THIS EXISTS:** **Boosting** adds weak learners staged to correct residuals. With careful regularization it dominates many Kaggle tabular problems and real business baselines.
+**WHY YOU ARE LEARNING THIS:** **Boosting** adds weak learners staged to correct residuals. With careful regularization it dominates many Kaggle tabular problems and real business baselines.
 
-**THE PROBLEM BEFORE THIS EXISTED:** RF plateaued. Pure deep trees overfit. Need additive refinement with shrinkage.
+**THE PROBLEM THIS SOLVES:** RF plateaued. Pure deep trees overfit. Need additive refinement with shrinkage.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - StatQuest gradient boost
 - XGBoost/LightGBM docs intros
 - Awesome lists mentioning boosting practice
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Additive model: \(F_m = F_{m-1} + \eta h_m\). Fit \(h_m\) to pseudo-residuals. Learning rate, subsample, max depth, regularization. Early stopping on val set. Still not automatic for images/text - representation learning needed later.
 
-**THE IDEA THAT FIXED IT:** Sequentially focus capacity on current errors with small steps.
+**THE MAIN IDEA IN SIMPLE WORDS:** Sequentially focus capacity on current errors with small steps.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  start with F0 (mean / prior)
@@ -976,18 +984,18 @@ Additive model: \(F_m = F_{m-1} + \eta h_m\). Fit \(h_m\) to pseudo-residuals. L
  early stop on val loss
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 An editor revising a draft repeatedly - each pass fixes remaining mistakes, lightly, so you do not rewrite into chaos.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Boosting | State-of-art tabular vs tuning sensitive, less parallel than RF |
 | Very many trees | Fit vs overfit / latency |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 from sklearn.ensemble import GradientBoostingClassifier
@@ -999,9 +1007,9 @@ gb = GradientBoostingClassifier(random_state=0).fit(Xtr, ytr)
 print(gb.score(Xte, yte))
 ```
 
-**INTERVIEW PERSPECTIVE:** Bagging vs boosting. Why learning rate matters. When neural nets still lose to GBDT on tabular.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Bagging vs boosting. Why learning rate matters. When neural nets still lose to GBDT on tabular.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1009,11 +1017,11 @@ print(gb.score(Xte, yte))
 | Medium | Compare RF vs GBDT on same dataset |
 | Hard | Read XGBoost objective/regularization sketch |
 
-**THE BRIDGE to Neural Nets:** Trees excel on mixed tabular features but struggle to learn hierarchical representations for raw sensory data. Neural nets compose differentiable features end-to-end.
+**WHY THE NEXT TOPIC IS NEEDED - Neural Nets:** Trees excel on mixed tabular features but struggle to learn hierarchical representations for raw sensory data. Neural nets compose differentiable features end-to-end.
 
 ---
 
-> **Phase 6 complete?** [Build the aligned project](./Projects.md#L1978) · [Continue to Phase 7](#phase-7---neural-network-basics)
+> **Phase 6 complete?** [Build the aligned project](./Projects.md#ai-phase-6-project) · [Continue to Phase 7](#phase-7---neural-network-basics)
 
 <a id="phase-7"></a>
 
@@ -1021,17 +1029,17 @@ print(gb.score(Xte, yte))
 
 **Track:** Deep Learning
 
-**GOAL:** Understand MLPs as stacked linear transforms + nonlinearities.
+**WHAT YOU WILL BE ABLE TO DO:** Understand MLPs as stacked linear transforms + nonlinearities.
 
-**PREREQUISITES:** Phases 2 and 4-5.
+**WHAT YOU SHOULD KNOW FIRST:** Phases 2 and 4-5.
 
 ## 7.1 Perceptrons to MLPs
 
-**WHY THIS EXISTS:** Linear models cannot learn XOR-style interactions. Stacking linear layers without nonlinearities collapses to one linear map. **Activations** between layers create universal function approximators (in theory) and useful features (in practice).
+**WHY YOU ARE LEARNING THIS:** Linear models cannot learn XOR-style interactions. Stacking linear layers without nonlinearities collapses to one linear map. **Activations** between layers create universal function approximators (in theory) and useful features (in practice).
 
-**THE PROBLEM BEFORE THIS EXISTED:** Hand-designed features + linear classifiers hit ceilings on perception tasks.
+**THE PROBLEM THIS SOLVES:** Hand-designed features + linear classifiers hit ceilings on perception tasks.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [But what is a neural network? (3Blue1Brown)](https://www.youtube.com/watch?v=aircAruvnKk)
 - [Neural Networks Explained in 5 minutes (IBM)](https://www.youtube.com/watch?v=jmmW0F0biz0)
@@ -1039,13 +1047,13 @@ print(gb.score(Xte, yte))
 - [karpathy/micrograd](https://github.com/karpathy/micrograd)
 - CS231n neural nets notes
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Dense layer: `y = activation(xW + b)`. Width vs depth. Hidden representations. Softmax for multiclass. Initialization matters. Without nonlinearity, depth is fake. ReLU made deep nets practical vs saturating sigmoids in hidden layers.
 
-**THE IDEA THAT FIXED IT:** Compose simple differentiable blocks; learn features and classifier jointly.
+**THE MAIN IDEA IN SIMPLE WORDS:** Compose simple differentiable blocks; learn features and classifier jointly.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  x
@@ -1054,11 +1062,11 @@ Dense layer: `y = activation(xW + b)`. Width vs depth. Hidden representations. S
   -> Linear -> softmax probs
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 An assembly line: each station transforms the product; nonlinear stations allow qualitatively new shapes, not just rescaling.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
@@ -1066,7 +1074,7 @@ An assembly line: each station transforms the product; nonlinear stations allow 
 | ReLU | Fast vs dead neurons |
 | Sigmoid hidden | Historic vs vanishing gradients |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import numpy as np
@@ -1085,9 +1093,9 @@ W2, b2 = np.random.randn(16, 3)*0.1, np.zeros(3)
 print(mlp_forward(x, W1, b1, W2, b2).shape)
 ```
 
-**INTERVIEW PERSPECTIVE:** Why activation functions? What happens if all are linear? Softmax purpose?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Why activation functions? What happens if all are linear? Softmax purpose?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1095,29 +1103,29 @@ print(mlp_forward(x, W1, b1, W2, b2).shape)
 | Medium | Show algebraically two linear layers collapse |
 | Hard | Train a tiny MLP on XOR from scratch (NumPy) |
 
-**THE BRIDGE to Capacity & Regularization:** More neurons fit more functions - including noise. We need inductive biases and regularization before we celebrate capacity.
+**WHY THE NEXT TOPIC IS NEEDED - Capacity & Regularization:** More neurons fit more functions - including noise. We need inductive biases and regularization before we celebrate capacity.
 
 ---
 
 ## 7.2 Overfitting Nets - Regularization, Dropout, Early Stopping
 
-**WHY THIS EXISTS:** Deep nets memorize. **Weight decay, dropout, data augmentation, early stopping** buy generalization.
+**WHY YOU ARE LEARNING THIS:** Deep nets memorize. **Weight decay, dropout, data augmentation, early stopping** buy generalization.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Train accuracy 100%, test accuracy coin-flip. "Just add layers" culture.
+**THE PROBLEM THIS SOLVES:** Train accuracy 100%, test accuracy coin-flip. "Just add layers" culture.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - CS231n regularization notes
 - StatQuest dropout / regularization intuition
 - Watch val curves in any Keras/PyTorch tutorial
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 L2 weight decay. Dropout as training-time noise / ensemble approx. Early stopping as implicit regularizer. Label noise and dataset size dominate. Architecture choice is also regularization (CNN structure later).
 
-**THE IDEA THAT FIXED IT:** Constrain or noise the hypothesis search so the optimizer prefers simpler functions that fit data.
+**THE MAIN IDEA IN SIMPLE WORDS:** Constrain or noise the hypothesis search so the optimizer prefers simpler functions that fit data.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  train loop:
@@ -1126,18 +1134,18 @@ L2 weight decay. Dropout as training-time noise / ensemble approx. Early stoppin
    if val worsens patiently: stop / restore best
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A student who memorizes practice answers vs one who learns principles - exams (val/test) distinguish them.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Heavy dropout | Regularize vs underfit / slower convergence |
 | Early stop | Simple vs may stop before rare features learned |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Conceptual early stopping
@@ -1152,9 +1160,9 @@ for epoch, val_loss in enumerate([1.0, 0.8, 0.75, 0.76, 0.79, 0.81]):
             break
 ```
 
-**INTERVIEW PERSPECTIVE:** Signs of overfit. Dropout train vs eval behavior. Why data beats fancy regularizers often.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Signs of overfit. Dropout train vs eval behavior. Why data beats fancy regularizers often.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1162,11 +1170,11 @@ for epoch, val_loss in enumerate([1.0, 0.8, 0.75, 0.76, 0.79, 0.81]):
 | Medium | Ablate weight decay on a small net |
 | Hard | Explain dropout as ensemble (intuition-level) |
 
-**THE BRIDGE to Backprop:** We described layers and regularizers. Training still needs an efficient way to get gradients for millions of parameters - backpropagation.
+**WHY THE NEXT TOPIC IS NEEDED - Backprop:** We described layers and regularizers. Training still needs an efficient way to get gradients for millions of parameters - backpropagation.
 
 ---
 
-> **Phase 7 complete?** [Build the aligned project](./Projects.md#L1999) · [Continue to Phase 8](#phase-8---backpropagation-and-optimizers)
+> **Phase 7 complete?** [Build the aligned project](./Projects.md#ai-phase-7-project) · [Continue to Phase 8](#phase-8---backpropagation-and-optimizers)
 
 <a id="phase-8"></a>
 
@@ -1174,17 +1182,17 @@ for epoch, val_loss in enumerate([1.0, 0.8, 0.75, 0.76, 0.79, 0.81]):
 
 **Track:** Deep Learning
 
-**GOAL:** Understand backprop as chain rule on a computational graph; use SGD/Adam wisely.
+**WHAT YOU WILL BE ABLE TO DO:** Understand backprop as chain rule on a computational graph; use SGD/Adam wisely.
 
-**PREREQUISITES:** Phase 7 + Phase 2 gradients.
+**WHAT YOU SHOULD KNOW FIRST:** Phase 7 + Phase 2 gradients.
 
 ## 8.1 Backpropagation on a Computational Graph
 
-**WHY THIS EXISTS:** Finite differences for every parameter are impossible at scale. **Backprop** computes all gradients in one backward pass using the chain rule stored on a graph of ops.
+**WHY YOU ARE LEARNING THIS:** Finite differences for every parameter are impossible when the amount of work grows. **Backprop** computes all gradients in one backward pass using the chain rule stored on a graph of ops.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Training deep nets was computationally hopeless or hand-derived per architecture.
+**THE PROBLEM THIS SOLVES:** Training deep nets was computationally hopeless or hand-derived per architecture.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Backpropagation, intuitively (3Blue1Brown)](https://www.youtube.com/watch?v=Ilg3gGewQ5U)
 - [Backpropagation calculus (3Blue1Brown)](https://www.youtube.com/watch?v=tIeHLnjs5U8)
@@ -1192,13 +1200,13 @@ for epoch, val_loss in enumerate([1.0, 0.8, 0.75, 0.76, 0.79, 0.81]):
 - [Karpathy micrograd video](https://www.youtube.com/watch?v=VMj-3S1tku0)
 - [karpathy/micrograd](https://github.com/karpathy/micrograd) · [karpathy/nn-zero-to-hero](https://github.com/karpathy/nn-zero-to-hero)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Forward pass builds values; backward pass propagates `dL/d(node)`. Autograd engines record ops. You must understand *enough* to debug vanishing/exploding gradients and wrong loss wiring - not memorize every derivative.
 
-**THE IDEA THAT FIXED IT:** Reverse-mode automatic differentiation for scalar losses - cost comparable to one forward pass.
+**THE MAIN IDEA IN SIMPLE WORDS:** Reverse-mode automatic differentiation for scalar losses - cost comparable to one forward pass.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Forward:  x -> a -> b -> L
@@ -1206,18 +1214,18 @@ Forward pass builds values; backward pass propagates `dL/d(node)`. Autograd engi
  Each local op knows local gradient; multiply along path (chain rule)
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Blame assignment in a factory: final defect rate attributed backward through each station's sensitivity.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Autograd | Productivity vs memory for stored activations |
 | Checkpointing | Memory save vs extra compute |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Tiny scalar autograd vibe (see micrograd for real)
@@ -1231,9 +1239,9 @@ dL_dw = dL_dpred * x
 print(L, dL_dw)
 ```
 
-**INTERVIEW PERSPECTIVE:** Explain backprop simply. Why vanishing gradients with sigmoids? What does autograd store?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Explain backprop simply. Why vanishing gradients with sigmoids? What does autograd store?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1241,30 +1249,30 @@ print(L, dL_dw)
 | Medium | Complete micrograd exercises |
 | Hard | Implement backward for matmul + ReLU |
 
-**THE BRIDGE to Optimizers:** Gradients point downhill. *How* we step - learning rates, momentum, adaptive methods - decides whether training converges.
+**WHY THE NEXT TOPIC IS NEEDED - Optimizers:** Gradients point downhill. *How* we step - learning rates, momentum, adaptive methods - decides whether training converges.
 
 ---
 
 ## 8.2 SGD, Momentum, Adam, and Training Dynamics
 
-**WHY THIS EXISTS:** Raw GD on full data is slow; vanilla SGD is noisy. **Momentum** and **Adam** improve practical convergence. Learning rate schedules prevent late-stage chaos.
+**WHY YOU ARE LEARNING THIS:** Raw GD on full data is slow; vanilla SGD is noisy. **Momentum** and **Adam** improve practical convergence. Learning rate schedules prevent late-stage chaos.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Training diverged or crawled. People blamed models when optimizers/hyperparams were wrong.
+**THE PROBLEM THIS SOLVES:** Training diverged or crawled. People blamed models when optimizers/hyperparams were wrong.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [SGD Clearly Explained (StatQuest)](https://www.youtube.com/watch?v=vMh0zPT0tLI)
 - [Gradient Descent (3Blue1Brown)](https://www.youtube.com/watch?v=IHZwWFHWa-w)
 - PyTorch optim docs
 - Distill.pub / optimizer visualizations (search)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Minibatch SGD. Momentum accumulates velocity. Adam adapts per-parameter steps using moment estimates - great default, not magic. LR too high = diverge; too low = waste. Warmup + cosine decay common in large transformers. Gradient clipping for stability.
 
-**THE IDEA THAT FIXED IT:** Use noisy cheap gradients and adaptive step sizes to navigate nonconvex losses.
+**THE MAIN IDEA IN SIMPLE WORDS:** Use noisy cheap gradients and adaptive step sizes to work through nonconvex losses.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  sample batch
@@ -1274,18 +1282,18 @@ Minibatch SGD. Momentum accumulates velocity. Adam adapts per-parameter steps us
  zero grads
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Finding the valley in fog: take steps based on local slope (SGD), keep some hiking momentum, and adjust step length per terrain type (Adam).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Adam | Fast start vs sometimes worse generalization than SGD+momentum |
 | Huge batches | Hardware efficiency vs may need LR scaling tricks |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Pseudocode Adam moments
@@ -1298,9 +1306,9 @@ beta1, beta2, eps, lr = 0.9, 0.999, 1e-8, 1e-3
 print("Use torch.optim.Adam in practice; know the story above.")
 ```
 
-**INTERVIEW PERSPECTIVE:** SGD vs Adam. What is momentum? Why LR schedules? Gradient explosion fix?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** SGD vs Adam. What is momentum? Why LR schedules? Gradient explosion fix?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1308,11 +1316,11 @@ print("Use torch.optim.Adam in practice; know the story above.")
 | Medium | Compare Adam vs SGD on a small MLP |
 | Hard | Implement SGD+momentum from scratch |
 
-**THE BRIDGE to PyTorch:** Theory is ready. Professional practice uses a framework with tensors, autograd, and GPU - PyTorch.
+**WHY THE NEXT TOPIC IS NEEDED - PyTorch:** Theory is ready. Professional practice uses a framework with tensors, autograd, and GPU - PyTorch.
 
 ---
 
-> **Phase 8 complete?** [Build the aligned project](./Projects.md#L2020) · [Continue to Phase 9](#phase-9---pytorch-deep-practice)
+> **Phase 8 complete?** [Build the aligned project](./Projects.md#ai-phase-8-project) · [Continue to Phase 9](#phase-9---pytorch-deep-practice)
 
 <a id="phase-9"></a>
 
@@ -1320,17 +1328,17 @@ print("Use torch.optim.Adam in practice; know the story above.")
 
 **Track:** Deep Learning
 
-**GOAL:** Write clean training loops; debug shapes and device issues.
+**WHAT YOU WILL BE ABLE TO DO:** Write clean training loops; debug shapes and device issues.
 
-**PREREQUISITES:** Phase 8.
+**WHAT YOU SHOULD KNOW FIRST:** Phase 8.
 
 ## 9.1 Tensors, Autograd, and Modules
 
-**WHY THIS EXISTS:** NumPy does not autograd or run CUDA seamlessly. **PyTorch** gives tensor compute + autograd + `nn.Module` for parameters.
+**WHY YOU ARE LEARNING THIS:** NumPy does not calculate gradients for you or run calculations on an NVIDIA GPU through CUDA. **PyTorch** provides both, along with `nn.Module`, a standard way to organize a model's adjustable values.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Researchers reimplemented backprop per project. Portability and speed suffered.
+**THE PROBLEM THIS SOLVES:** Researchers reimplemented backprop per project. Portability and speed suffered.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [yunjey/pytorch-tutorial](https://github.com/yunjey/pytorch-tutorial)
 - [pytorch/tutorials](https://github.com/pytorch/tutorials)
@@ -1338,13 +1346,13 @@ print("Use torch.optim.Adam in practice; know the story above.")
 - Official PyTorch 60-min blitz
 - Google Colab + GPU runtime
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 `requires_grad`, `backward()`, `grad`. `nn.Linear`, `nn.Sequential`. `.parameters()` for optimizers. `model.train()`/`eval()` for dropout/batchnorm. Device `cpu`/`cuda`/`mps`. Common bugs: forgetting `zero_grad`, mixing numpy silently, shape mismatches.
 
-**THE IDEA THAT FIXED IT:** One imperative framework where the tape records ops as you run them.
+**THE MAIN IDEA IN SIMPLE WORDS:** One imperative framework where the tape records ops as you run them.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  batch -> model -> logits -> loss
@@ -1352,18 +1360,18 @@ print("Use torch.optim.Adam in practice; know the story above.")
  optimizer.step(); optimizer.zero_grad()
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A notebook that not only computes answers but remembers how each answer depended on dials - so it can tell you which dial to turn.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Eager PyTorch | Debuggable vs historically slower than static graphs (gap narrowed) |
 | Too much magic wrappers | Speed of writing vs not understanding loops |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import torch
@@ -1381,9 +1389,9 @@ opt.zero_grad()
 print(float(loss))
 ```
 
-**INTERVIEW PERSPECTIVE:** What does backward do? Why zero_grad? train vs eval mode?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** What does backward do? Why zero_grad? train vs eval mode?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1391,29 +1399,29 @@ print(float(loss))
 | Medium | Move training to GPU if available |
 | Hard | Reproduce a bug from wrong broadcasting; fix it |
 
-**THE BRIDGE to DataLoaders & Debugging:** Toy tensors hide I/O and bottlenecks. Real training needs Dataset/DataLoader and a debugging checklist.
+**WHY THE NEXT TOPIC IS NEEDED - DataLoaders & Debugging:** Toy tensors hide I/O and bottlenecks. Real training needs Dataset/DataLoader and a debugging checklist.
 
 ---
 
 ## 9.2 Datasets, Loops, and Debugging Training
 
-**WHY THIS EXISTS:** Training fails quietly - wrong labels, shuffled mismatch, LR typos, silent CPU fallback. Engineering discipline separates "model bad" from "pipeline buggy."
+**WHY YOU ARE LEARNING THIS:** Training fails quietly - wrong labels, shuffled mismatch, LR typos, silent CPU fallback. Engineering discipline separates "model bad" from "pipeline buggy."
 
-**THE PROBLEM BEFORE THIS EXISTED:** Weeks wasted "tuning" a broken loader.
+**THE PROBLEM THIS SOLVES:** Weeks wasted "tuning" a broken loader.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - PyTorch DataLoading tutorial
 - fast.ai training philosophy - plot losses early
 - TensorBoard / wandb free tiers
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 `Dataset`/`DataLoader` batching, workers, seeding. Log train loss per batch, val per epoch. Overfit one batch as sanity check. Check input ranges, label ids, class counts. Save checkpoints with optimizer state.
 
-**THE IDEA THAT FIXED IT:** Make training observable and testable - start by deliberately overfitting a tiny slice.
+**THE MAIN IDEA IN SIMPLE WORDS:** Make training observable and testable - start by deliberately overfitting a tiny slice.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Sanity ladder:
@@ -1423,18 +1431,18 @@ print(float(loss))
   4) hyperparam sweeps
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Before opening a restaurant, cook one plate perfectly - then scale - don't book 200 guests on untested recipes.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Heavy logging | Insight vs I/O slowdown |
 | Many workers | Speed vs RAM / flaky Windows setups |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 from torch.utils.data import DataLoader, TensorDataset
@@ -1448,9 +1456,9 @@ for xb, yb in loader:
 print("batch ok", xb.shape)
 ```
 
-**INTERVIEW PERSPECTIVE:** How do you debug a net that won't learn? (Overfit one batch, LR range, check labels.)
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** How do you debug a net that won't learn? (Overfit one batch, LR range, check labels.)
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1458,11 +1466,11 @@ print("batch ok", xb.shape)
 | Medium | Build Dataset for CSV features |
 | Hard | Add checkpointing + resume |
 
-**THE BRIDGE to CNNs:** Dense MLPs ignore spatial structure in images. Convolutions bake translation-friendly inductive bias - vision's breakthrough.
+**WHY THE NEXT TOPIC IS NEEDED - CNNs:** Dense MLPs ignore spatial structure in images. Convolutions bake translation-friendly inductive bias - vision's breakthrough.
 
 ---
 
-> **Phase 9 complete?** [Build the aligned project](./Projects.md#L2041) · [Continue to Phase 10](#phase-10---cnns-and-computer-vision)
+> **Phase 9 complete?** [Build the aligned project](./Projects.md#ai-phase-9-project) · [Continue to Phase 10](#phase-10---cnns-and-computer-vision)
 
 <a id="phase-10"></a>
 
@@ -1470,30 +1478,30 @@ print("batch ok", xb.shape)
 
 **Track:** Deep Learning
 
-**GOAL:** Explain convolution, pooling, and transfer learning for images.
+**WHAT YOU WILL BE ABLE TO DO:** Explain convolution, pooling, and transfer learning for images.
 
-**PREREQUISITES:** Phase 9.
+**WHAT YOU SHOULD KNOW FIRST:** Phase 9.
 
 ## 10.1 Convolutions, Filters, and Hierarchies
 
-**WHY THIS EXISTS:** Flattening images into MLP inputs explodes parameters and ignores locality. **CNNs** slide small filters to detect local patterns and compose them into objects.
+**WHY YOU ARE LEARNING THIS:** Flattening images into MLP inputs explodes parameters and ignores locality. **CNNs** slide small filters to detect local patterns and compose them into objects.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Hand-crafted SIFT-like features + shallow classifiers. Fragile and expensive.
+**THE PROBLEM THIS SOLVES:** Hand-crafted SIFT-like features + shallow classifiers. Fragile and expensive.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [CS231n](https://cs231n.stanford.edu/)
 - CNN explainers (search 3Blue1Brown / StatQuest CNN)
 - [pytorch vision tutorials](https://github.com/pytorch/tutorials)
 - [Netron](https://github.com/lutzroeder/netron) model visualizer
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Kernel, stride, padding, channels. Early layers: edges; deeper: textures/parts. Pooling/strides downsample. Parameter sharing = fewer weights than dense. receptive field grows with depth.
 
-**THE IDEA THAT FIXED IT:** Share local detectors across positions - images' natural symmetry.
+**THE MAIN IDEA IN SIMPLE WORDS:** Share local detectors across positions - images' natural symmetry.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  image (C,H,W)
@@ -1504,18 +1512,18 @@ Kernel, stride, padding, channels. Early layers: edges; deeper: textures/parts. 
   -> flatten/GAP -> classifier
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A flashlight scanning a mural with a small stencil (filter) looking for motifs everywhere, not a unique stencil per pixel.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | CNNs | Great for grid data vs less natural for sets/graphs without changes |
 | Very deep | Representation power vs need residuals/normalization |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import torch.nn as nn
@@ -1530,9 +1538,9 @@ model = nn.Sequential(
 print(model)
 ```
 
-**INTERVIEW PERSPECTIVE:** Why conv over dense for images? What is a channel? Translation equivariance intuition?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Why conv over dense for images? What is a channel? Translation equivariance intuition?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1540,29 +1548,29 @@ print(model)
 | Medium | Train CNN on CIFAR10 subset |
 | Hard | Visualize first-layer filters |
 
-**THE BRIDGE to Transfer Learning:** Training CNNs from scratch needs huge data. Pretrained nets transfer - the practical default.
+**WHY THE NEXT TOPIC IS NEEDED - Transfer Learning:** Training CNNs from scratch needs huge data. Pretrained nets transfer - the practical default.
 
 ---
 
 ## 10.2 Transfer Learning and Modern Vision Practice
 
-**WHY THIS EXISTS:** Labeled images are expensive. Models pretrained on ImageNet (and beyond) provide reusable visual features. Fine-tune heads or deeper layers for your task.
+**WHY YOU ARE LEARNING THIS:** Labeled images are expensive. Models pretrained on ImageNet (and beyond) provide reusable visual features. Fine-tune heads or deeper layers for your task.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Every startup trained from random init - slow, data-hungry, worse accuracy.
+**THE PROBLEM THIS SOLVES:** Every startup trained from random init - slow, data-hungry, worse accuracy.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [fast.ai](https://course.fast.ai/) first lessons - transfer learning first
 - torchvision models docs
 - HF transformers vision models (later bridge)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Freeze backbone vs full fine-tune. Augmentations as regularization. Domain shift: medical ≠ ImageNet - still often helps. Today: CNN and ViT backbones; principle remains representation reuse.
 
-**THE IDEA THAT FIXED IT:** Reuse features from related large-scale training instead of starting from zero.
+**THE MAIN IDEA IN SIMPLE WORDS:** Reuse features from related large-scale training instead of starting from zero.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  load pretrained backbone
@@ -1570,18 +1578,18 @@ Freeze backbone vs full fine-tune. Augmentations as regularization. Domain shift
  train head (optional unfreeze later with small LR)
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Hiring a photographer who already learned light and composition, then teaching them your product catalog - faster than teaching vision from scratch.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Freeze most layers | Safe/fast vs under-adapt |
 | Full fine-tune | Adapt vs overfit tiny datasets |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import torchvision.models as models
@@ -1591,9 +1599,9 @@ m.fc = nn.Linear(m.fc.in_features, 2)  # binary task
 print(m.fc)
 ```
 
-**INTERVIEW PERSPECTIVE:** When does transfer learning fail? What to freeze? Augmentation examples.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** When does transfer learning fail? What to freeze? Augmentation examples.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1601,11 +1609,11 @@ print(m.fc)
 | Medium | Compare frozen vs unfrozen backbone |
 | Hard | Diagnose domain shift with error analysis |
 
-**THE BRIDGE to Sequences:** Images are grids. Language and time series are sequences - RNNs were the historical answer, and their limits force attention.
+**WHY THE NEXT TOPIC IS NEEDED - Sequences:** Images are grids. Language and time series are sequences - RNNs were the historical answer, and their limits force attention.
 
 ---
 
-> **Phase 10 complete?** [Build the aligned project](./Projects.md#L2062) · [Continue to Phase 11](#phase-11---sequence-models-rnnlstm-era)
+> **Phase 10 complete?** [Build the aligned project](./Projects.md#ai-phase-10-project) · [Continue to Phase 11](#phase-11---sequence-models-rnnlstm-era)
 
 <a id="phase-11"></a>
 
@@ -1613,29 +1621,29 @@ print(m.fc)
 
 **Track:** Representations
 
-**GOAL:** Understand sequence modeling needs and the bottlenecks that motivated transformers.
+**WHAT YOU WILL BE ABLE TO DO:** Understand sequence modeling needs and the bottlenecks that motivated transformers.
 
-**PREREQUISITES:** Phases 7-9.
+**WHAT YOU SHOULD KNOW FIRST:** Phases 7-9.
 
 ## 11.1 RNNs - State Across Time
 
-**WHY THIS EXISTS:** Text and time series have variable length and order. **RNNs** share weights across steps and carry a hidden state - the first widely used neural sequence model.
+**WHY YOU ARE LEARNING THIS:** Text and time series have variable length and order. **RNNs** share weights across steps and carry a hidden state - the first widely used neural sequence model.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Fixed-size bags of words ignored order. N-grams exploded combinatorially.
+**THE PROBLEM THIS SOLVES:** Fixed-size bags of words ignored order. N-grams exploded combinatorially.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - CS231n / CS224n RNN notes (Stanford)
 - Search "RNN LSTM explained animated"
 - Karpathy char-RNN heritage posts / makemore series bridge
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 At each step: `h_t = f(h_{t-1}, x_t)`. BPTT trains through time. Vanishing/exploding gradients plague long dependencies. Sequential computation limits parallel training.
 
-**THE IDEA THAT FIXED IT:** Reuse the same transition function across time with a memory state.
+**THE MAIN IDEA IN SIMPLE WORDS:** Reuse the same transition function across time with a memory state.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  x1 -> h1 -> x2 -> h2 -> ... -> ht -> output
@@ -1643,18 +1651,18 @@ At each step: `h_t = f(h_{t-1}, x_t)`. BPTT trains through time. Vanishing/explo
  long chain => gradients shrink/explode
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Reading a book while only jotting one sticky note of "what I know so far" after each sentence - easy to forget chapter 1 by chapter 20.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | RNNs | Variable length, streaming vs hard to train long-range, slow |
 | Deep stacks | More capacity vs optimization pain |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import torch, torch.nn as nn
@@ -1664,9 +1672,9 @@ out, h = rnn(x)
 print(out.shape, h.shape)
 ```
 
-**INTERVIEW PERSPECTIVE:** Why RNNs for text historically? What is vanishing gradient? Why slow on GPU vs transformers?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Why RNNs for text historically? What is vanishing gradient? Why slow on GPU vs transformers?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1674,29 +1682,29 @@ print(out.shape, h.shape)
 | Medium | Train tiny char-RNN (Karpathy makemore style) |
 | Hard | Measure gradient norms vs sequence length |
 
-**THE BRIDGE to LSTM/GRU:** Vanilla RNNs forget. Gated architectures add highways for memory - better, still sequential.
+**WHY THE NEXT TOPIC IS NEEDED - LSTM/GRU:** Vanilla RNNs forget. Gated architectures add highways for memory - better, still sequential.
 
 ---
 
 ## 11.2 LSTMs/GRUs and the Wall That Remained
 
-**WHY THIS EXISTS:** **LSTMs/GRUs** introduce gates to keep or forget information, improving long-range learning. They powered machine translation for years - then hit parallelism and path-length walls.
+**WHY YOU ARE LEARNING THIS:** **LSTMs/GRUs** introduce gates to keep or forget information, improving long-range learning. They powered machine translation for years - then hit parallelism and path-length walls.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Vanilla RNNs failed on long sentences. Translation quality stalled.
+**THE PROBLEM THIS SOLVES:** Vanilla RNNs failed on long sentences. Translation quality stalled.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Colah's LSTM blog (classic written visual)
 - CS224n LSTM lectures
 - [Karpathy makemore](https://www.youtube.com/watch?v=PaCmpygFfXo)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Cell state highways, forget/input/output gates (LSTM). GRU simplifies. Still step-by-step - cannot fully parallelize sequence length during training. Distance between positions is linear in steps - weak inductive path for very long dependencies compared to attention's direct links.
 
-**THE IDEA THAT FIXED IT:** Learnable gates protect memory - but the sequential bottleneck remains.
+**THE MAIN IDEA IN SIMPLE WORDS:** Learnable gates protect memory - but the sequential bottleneck remains.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  LSTM gates decide:
@@ -1706,18 +1714,18 @@ Cell state highways, forget/input/output gates (LSTM). GRU simplifies. Still ste
  Still: t depends on t-1 compute
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A better notebook with sections you can lock (gates) - still, you update page by page, not all pages at once.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | LSTM | Better memory vs heavier compute than GRU |
 | Any RNN | Streaming friendly vs poor training parallelism |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import torch.nn as nn
@@ -1725,9 +1733,9 @@ print(nn.LSTM(32, 64, batch_first=True))
 print(nn.GRU(32, 64, batch_first=True))
 ```
 
-**INTERVIEW PERSPECTIVE:** LSTM vs GRU. Why transformers replaced them for most NLP pretraining.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** LSTM vs GRU. Why transformers replaced them for most NLP pretraining.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1735,11 +1743,11 @@ print(nn.GRU(32, 64, batch_first=True))
 | Medium | Compare RNN vs LSTM on long synthetic copy task |
 | Hard | Explain path length arguments from "Attention Is All You Need" |
 
-**THE BRIDGE to Embeddings:** Before attention transformers, we need the idea that discrete tokens become continuous vectors that capture similarity - embeddings.
+**WHY THE NEXT TOPIC IS NEEDED - Embeddings:** Before attention transformers, we need the idea that discrete tokens become continuous vectors that capture similarity - embeddings.
 
 ---
 
-> **Phase 11 complete?** [Build the aligned project](./Projects.md#L2083) · [Continue to Phase 12](#phase-12---embeddings-and-representation-learning)
+> **Phase 11 complete?** [Build the aligned project](./Projects.md#ai-phase-11-project) · [Continue to Phase 12](#phase-12---embeddings-and-representation-learning)
 
 <a id="phase-12"></a>
 
@@ -1747,30 +1755,30 @@ print(nn.GRU(32, 64, batch_first=True))
 
 **Track:** Representations
 
-**GOAL:** Represent discrete tokens (and more) as vectors where geometry reflects meaning.
+**WHAT YOU WILL BE ABLE TO DO:** Represent discrete tokens (and more) as vectors where geometry reflects meaning.
 
-**PREREQUISITES:** Phase 2 geometry + Phase 4/7 learning.
+**WHAT YOU SHOULD KNOW FIRST:** Phase 2 geometry + Phase 4/7 learning.
 
 ## 12.1 Word Embeddings and Distributional Meaning
 
-**WHY THIS EXISTS:** One-hot tokens treat "cat" and "dog" as orthogonal. **Embeddings** place tokens in \(\mathbb{R}^d\) so similar contexts sit nearby - the foundation of NLP transfer.
+**WHY YOU ARE LEARNING THIS:** One-hot tokens treat "cat" and "dog" as orthogonal. **Embeddings** place tokens in \(\mathbb{R}^d\) so similar contexts sit nearby - the foundation of NLP transfer.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Sparse bag-of-words, gigantic dimensions, no notion of similarity.
+**THE PROBLEM THIS SOLVES:** Sparse bag-of-words, gigantic dimensions, no notion of similarity.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Word Embedding and Word2Vec (StatQuest)](https://www.youtube.com/watch?v=viZrOnJclY0)
 - [How word vectors encode meaning (3Blue1Brown)](https://www.youtube.com/watch?v=FJtFZwbvkI4)
 - [Word Embeddings: Word2Vec (Hex)](https://www.youtube.com/watch?v=iErmK_sJtag) · [IBM](https://www.youtube.com/watch?v=wgfSDrqYMJ4)
 - Mikolov Word2Vec paper (skim)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Distributional hypothesis: words in similar contexts have similar meanings. Word2Vec CBOW/Skip-gram. Cosine similarity. Analogies as vector arithmetic (fragile but illustrative). Subword/BPE comes later with LLMs. Embeddings also for users, products, graphs.
 
-**THE IDEA THAT FIXED IT:** Learn dense vectors so nearest neighbors in space match nearest neighbors in meaning.
+**THE MAIN IDEA IN SIMPLE WORDS:** Learn dense vectors so nearest neighbors in space match nearest neighbors in meaning.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  token id -> lookup table E[id] -> vector
@@ -1778,18 +1786,18 @@ Distributional hypothesis: words in similar contexts have similar meanings. Word
  similar words => high cosine(E[a], E[b])
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A city map where related cafes cluster in neighborhoods - distance means relatedness, not alphabetical order.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Static embeddings | Fast vs one vector per word (no context) |
 | Contextual (transformers) | Disambiguate bank/river bank vs heavier |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import numpy as np
@@ -1806,9 +1814,9 @@ def cos(a, b):
 print(cos(E["king"], E["queen"]), cos(E["king"], E["man"]))
 ```
 
-**INTERVIEW PERSPECTIVE:** Why not one-hot? Cosine vs Euclidean. Static vs contextual embeddings.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Why not one-hot? Cosine vs Euclidean. Static vs contextual embeddings.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1816,40 +1824,40 @@ print(cos(E["king"], E["queen"]), cos(E["king"], E["man"]))
 | Medium | Train Word2Vec with Gensim on a small corpus |
 | Hard | Show a polysemy failure of static embeddings |
 
-**THE BRIDGE to Contextualization:** "Bank" needs different vectors by sentence. Sequence models + attention produce **contextual embeddings** - transformers' gift.
+**WHY THE NEXT TOPIC IS NEEDED - Contextualization:** "Bank" needs different vectors by sentence. Sequence models + attention produce **contextual embeddings** - transformers' gift.
 
 ---
 
 ## 12.2 Similarity, Retrieval, and Vector Spaces in Products
 
-**WHY THIS EXISTS:** Embeddings power search, recommendations, and RAG. Understanding **ANN indexes**, cosine vs dot product, and dimensionality practicalities prevents magical thinking about "vector DBs."
+**WHY YOU ARE LEARNING THIS:** Embeddings power search, recommendations, and RAG. Understanding **ANN indexes**, cosine vs dot product, and dimensionality practicalities prevents magical thinking about "vector DBs."
 
-**THE PROBLEM BEFORE THIS EXISTED:** Keyword search missed synonyms. Brute-force cosine over millions of vectors was too slow.
+**THE PROBLEM THIS SOLVES:** Keyword search missed synonyms. Brute-force cosine over millions of vectors was too slow.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - FAISS / vector DB intros (Pinecone/Chroma blogs - conceptual)
 - LlamaIndex / LangChain embedding docs (Phase 15)
 - IBM / ByteByteGo embedding explainers
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Normalize vectors for cosine-as-dot. Chunking documents into embeddable passages. Index types: flat, HNSW, IVF - approximate neighbors trade recall for speed. Garbage embeddings => garbage retrieval. Multilingual and instruction-tuned embedding models matter.
 
-**THE IDEA THAT FIXED IT:** Precompute vectors; retrieve by geometry; generate or rank afterward.
+**THE MAIN IDEA IN SIMPLE WORDS:** Precompute vectors; retrieve by geometry; generate or rank afterward.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  docs -> chunks -> embed -> index
  query -> embed -> top-k neighbors -> downstream (rank/LLM)
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A library that shelves books by topic neighborhood instead of only by title spelling - you can find related books even with different words.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
@@ -1857,7 +1865,7 @@ A library that shelves books by topic neighborhood instead of only by title spel
 | ANN | Fast vs approximate misses |
 | Large chunks | Context vs diluted embeddings |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import numpy as np
@@ -1868,9 +1876,9 @@ q = q / np.linalg.norm(q)
 print(docs @ q)  # cosine similarities
 ```
 
-**INTERVIEW PERSPECTIVE:** How does semantic search work? Failure modes? Why chunk size matters?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** How does semantic search work? Failure modes? Why chunk size matters?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1878,11 +1886,11 @@ print(docs @ q)  # cosine similarities
 | Medium | Build a tiny FAQ searcher |
 | Hard | Compare chunk sizes' effect on retrieval quality |
 
-**THE BRIDGE to Transformers:** We need a model that produces contextual embeddings with long-range links and training parallelism - attention.
+**WHY THE NEXT TOPIC IS NEEDED - Transformers:** We need a model that produces contextual embeddings with long-range links and training parallelism - attention.
 
 ---
 
-> **Phase 12 complete?** [Build the aligned project](./Projects.md#L2104) · [Continue to Phase 13](#phase-13---transformers)
+> **Phase 12 complete?** [Build the aligned project](./Projects.md#ai-phase-12-project) · [Continue to Phase 13](#phase-13---transformers)
 
 <a id="phase-13"></a>
 
@@ -1890,17 +1898,17 @@ print(docs @ q)  # cosine similarities
 
 **Track:** Foundation Models
 
-**GOAL:** Master self-attention, multi-head attention, and the encoder/decoder patterns.
+**WHAT YOU WILL BE ABLE TO DO:** Master self-attention, multi-head attention, and the encoder/decoder patterns.
 
-**PREREQUISITES:** Phases 11-12.
+**WHAT YOU SHOULD KNOW FIRST:** Phases 11-12.
 
 ## 13.1 Self-Attention and Q/K/V
 
-**WHY THIS EXISTS:** RNNs force long paths and sequential compute. **Self-attention** lets every token directly attend to every other token in the sequence (within context), in parallel - the core of "Attention Is All You Need."
+**WHY YOU ARE LEARNING THIS:** RNNs force long paths and sequential compute. **Self-attention** lets every token directly attend to every other token in the sequence (within context), in parallel - the core of "Attention Is All You Need."
 
-**THE PROBLEM BEFORE THIS EXISTED:** Slow training, weak long-range dependency learning, complex seq2seq+attention hybrids still bottlenecked by recurrence.
+**THE PROBLEM THIS SOLVES:** Slow training, weak long-range dependency learning, complex seq2seq+attention hybrids still bottlenecked by recurrence.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Attention in transformers, step-by-step (3Blue1Brown)](https://www.youtube.com/watch?v=eMlx5fFNoYc)
 - [Transformers, the tech behind LLMs (3Blue1Brown)](https://www.youtube.com/watch?v=wjZofJX0v4M)
@@ -1908,13 +1916,13 @@ print(docs @ q)  # cosine similarities
 - Original paper + Illustrated Transformer (Jay Alammar)
 - [karpathy/nanoGPT](https://github.com/karpathy/nanoGPT) · [Let's build GPT](https://www.youtube.com/watch?v=kCc8FmEb1nY)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Project tokens to Queries, Keys, Values. Attention weights = softmax(QK^T / sqrt(d)). Output = weights · V. Multi-head = several subspaces. Positional encodings inject order. Residual connections + layer norm stabilize depth. Complexity O(T^2) in sequence length T - the context window cost story.
 
-**THE IDEA THAT FIXED IT:** Replace recurrence with weighted averages of values, with weights from query-key matches.
+**THE MAIN IDEA IN SIMPLE WORDS:** Replace recurrence with weighted averages of values, with weights from query-key matches.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  tokens -> embed (+ position)
@@ -1924,11 +1932,11 @@ Project tokens to Queries, Keys, Values. Attention weights = softmax(QK^T / sqrt
  logits over vocabulary
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 In a meeting, each person writes questions (Q), expertise tags (K), and content (V). Everyone listens hardest to people whose tags match their questions - all at once, not in a speaking queue.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
@@ -1936,7 +1944,7 @@ In a meeting, each person writes questions (Q), expertise tags (K), and content 
 | Long context | Capability vs $ and latency |
 | Many heads/layers | Power vs cost |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 import torch
@@ -1953,9 +1961,9 @@ Q = K = V = torch.randn(B, T, H)
 print(attention(Q, K, V).shape)
 ```
 
-**INTERVIEW PERSPECTIVE:** Explain Q/K/V. Why scale by sqrt(d)? Why positions needed? Quadratic cost implications.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Explain Q/K/V. Why scale by sqrt(d)? Why positions needed? Quadratic cost implications.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -1963,30 +1971,30 @@ print(attention(Q, K, V).shape)
 | Medium | Follow nanoGPT attention module |
 | Hard | Implement multi-head attention |
 
-**THE BRIDGE to Encoder/Decoder & LLMs:** Attention is a block. Stacking patterns (encoder-only, decoder-only, encoder-decoder) create BERT-like vs GPT-like systems.
+**WHY THE NEXT TOPIC IS NEEDED - Encoder/Decoder & LLMs:** Attention is a block. Stacking patterns (encoder-only, decoder-only, encoder-decoder) create BERT-like vs GPT-like systems.
 
 ---
 
 ## 13.2 Encoder, Decoder, and Scaling Laws Intuition
 
-**WHY THIS EXISTS:** Different jobs need different stacks. **Encoders** bidirectional understand. **Decoders** autoregressive generate. Seq2seq uses both. Empirically, scaling data/params/compute predicts loss - the modern foundation-model economy.
+**WHY YOU ARE LEARNING THIS:** Different jobs need different stacks. **Encoders** bidirectional understand. **Decoders** autoregressive generate. Seq2seq uses both. Empirically, scaling data/params/compute predicts loss - the modern foundation-model economy.
 
-**THE PROBLEM BEFORE THIS EXISTED:** One architecture forced into every task. Training was art without scaling intuition.
+**THE PROBLEM THIS SOLVES:** One architecture forced into every task. Training was art without scaling intuition.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Grant Sanderson talk on visualizing transformers](https://www.youtube.com/watch?v=KJtZARuO3JY)
 - HF course transformer chapters
 - [huggingface/transformers](https://github.com/huggingface/transformers)
 - [huggingface/course](https://github.com/huggingface/course)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Masked self-attention for causal LM. Cross-attention in encoder-decoder. Pretrain objectives: MLM vs next-token. Scaling: bigger models + more tokens + more compute => better loss (with caveats). Inference = KV cache, sampling temperature/top-p.
 
-**THE IDEA THAT FIXED IT:** Standardize a stackable block; scale it; specialize with heads/objectives.
+**THE MAIN IDEA IN SIMPLE WORDS:** Standardize a stackable block; scale it; specialize with heads/objectives.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  GPT-style: predict next token repeatedly
@@ -1994,18 +2002,18 @@ Masked self-attention for causal LM. Cross-attention in encoder-decoder. Pretrai
  T5-style: text-in text-out encoder-decoder
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 LEGO bricks (attention blocks) built into warehouses (encoders), storytellers (decoders), or translators (both).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Decoder-only | Simple serving vs weaker bidirectional encode unless clever prompting |
 | Huge models | Quality vs cost/latency/energy |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Conceptual causal mask
@@ -2015,9 +2023,9 @@ mask = torch.tril(torch.ones(T, T))
 print(mask)
 ```
 
-**INTERVIEW PERSPECTIVE:** BERT vs GPT. What is causal masking? What are scaling laws at a high level?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** BERT vs GPT. What is causal masking? What are scaling laws at a high level?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2025,11 +2033,11 @@ print(mask)
 | Medium | Read HF GPT-2 generate docs; sample text |
 | Hard | Skim nanoGPT training loop end-to-end |
 
-**THE BRIDGE to LLMs & Prompting:** The architecture is clear. Using pretrained LLMs effectively - tokens, context, prompts - is the next craft.
+**WHY THE NEXT TOPIC IS NEEDED - LLMs & Prompting:** The architecture is clear. Using pretrained LLMs effectively - tokens, context, prompts - is the next craft.
 
 ---
 
-> **Phase 13 complete?** [Build the aligned project](./Projects.md#L2125) · [Continue to Phase 14](#phase-14---llms-and-prompting)
+> **Phase 13 complete?** [Build the aligned project](./Projects.md#ai-phase-13-project) · [Continue to Phase 14](#phase-14---llms-and-prompting)
 
 <a id="phase-14"></a>
 
@@ -2037,17 +2045,17 @@ print(mask)
 
 **Track:** Llm Apps
 
-**GOAL:** Use LLMs deliberately: tokenization, context limits, prompting patterns, failure modes.
+**WHAT YOU WILL BE ABLE TO DO:** Use LLMs deliberately: tokenization, context limits, prompting patterns, failure modes.
 
-**PREREQUISITES:** Phase 13.
+**WHAT YOU SHOULD KNOW FIRST:** Phase 13.
 
 ## 14.1 Tokens, Context Windows, and Sampling
 
-**WHY THIS EXISTS:** LLMs consume/produce **tokens**, not English words. Context length is finite and expensive. Sampling parameters change creativity vs determinism. Ignoring this causes silent truncation and flaky products.
+**WHY YOU ARE LEARNING THIS:** LLMs consume/produce **tokens**, not English words. Context length is finite and expensive. Sampling parameters change creativity vs determinism. Ignoring this causes silent truncation and flaky products.
 
-**THE PROBLEM BEFORE THIS EXISTED:** People pasted novels into prompts, got truncated mid-thought, blamed "the model is dumb."
+**THE PROBLEM THIS SOLVES:** People pasted novels into prompts, got truncated mid-thought, blamed "the model is dumb."
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Deep Dive into LLMs like ChatGPT (Karpathy)](https://www.youtube.com/watch?v=7xTGNNLPyMI)
 - [9 AI Concepts Explained (ByteByteAI)](https://www.youtube.com/watch?v=nVnxG10D5W0)
@@ -2055,31 +2063,31 @@ print(mask)
 - [mlabonne/llm-course](https://github.com/mlabonne/llm-course)
 - [Vibe Engines AI Engineer](https://vibeengines.com/roadmap/ai-engineer)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 BPE/WordPiece tokenization. Context = prompt + generation budget. Temperature, top-p, top-k, stop sequences. Determinism needs temperature 0 + still watch ties. Cost ≈ tokens in + out. System vs user vs tool roles in chat APIs.
 
-**THE IDEA THAT FIXED IT:** Treat the model as a next-token engine with a finite working memory you must manage.
+**THE MAIN IDEA IN SIMPLE WORDS:** Treat the model as a next-token engine with a finite working memory you must manage.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  text -> tokens -> model forward -> next-token distribution
  sample/argmax -> append token -> repeat until stop
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A brilliant intern with a small desk: if you bury them in papers, they drop the oldest ones off the edge (context).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Long context | Convenience vs $ / latency / distraction |
 | High temperature | Creative vs unstable |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # pip install tiktoken  (example with OpenAI encoding names)
@@ -2092,9 +2100,9 @@ except Exception as e:
     print("install tiktoken to run:", e)
 ```
 
-**INTERVIEW PERSPECTIVE:** What is a token? Why count tokens for billing? Temperature effect?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** What is a token? Why count tokens for billing? Temperature effect?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2102,30 +2110,30 @@ except Exception as e:
 | Medium | Show truncation bug with a short max_tokens |
 | Hard | Design a context budget policy for a chatbot |
 
-**THE BRIDGE to Prompting Craft:** Raw generation is uncontrolled. Structured prompting and eval turn LLMs into reliable components.
+**WHY THE NEXT TOPIC IS NEEDED - Prompting Craft:** Raw generation is uncontrolled. Structured prompting and eval turn LLMs into reliable components.
 
 ---
 
 ## 14.2 Prompting Patterns and Failure Modes
 
-**WHY THIS EXISTS:** LLMs are sensitive to instructions, examples, and format. **Prompt engineering** is interface design under uncertainty - not mystical spells. Hallucinations, prompt injection, and brittle formatting are product bugs.
+**WHY YOU ARE LEARNING THIS:** LLMs are sensitive to instructions, examples, and format. **Prompt engineering** is interface design under uncertainty - not mystical spells. Hallucinations, prompt injection, and brittle formatting are product bugs.
 
-**THE PROBLEM BEFORE THIS EXISTED:** One-off prompts in notebooks; production variance; unsafe tool calls.
+**THE PROBLEM THIS SOLVES:** One-off prompts in notebooks; production variance; unsafe tool calls.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Vibe Engines CRISP prompt lab
 - Anthropic/OpenAI prompting guides
 - CoT / few-shot explainers
 - awesome prompting lists via ML awesome repos
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Patterns: instructions, few-shot, chain-of-thought (when appropriate), structured outputs/JSON schemas, role prompts. Failures: hallucination, inconsistency, sycophancy, injection ("ignore previous instructions"). Mitigations: retrieval grounding (Phase 15), tools with validation, constrained decoding, eval suites (Phase 18).
 
-**THE IDEA THAT FIXED IT:** Specify the task like a product contract - context, role, instructions, constraints, examples - and test it.
+**THE MAIN IDEA IN SIMPLE WORDS:** Specify the task like a product contract - context, role, instructions, constraints, examples - and test it.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  CRISP-ish:
@@ -2135,18 +2143,18 @@ Patterns: instructions, few-shot, chain-of-thought (when appropriate), structure
  -> retry or escalate on failure
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Briefing a contractor: vague "build a website" fails; a scoped brief with examples succeeds.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Long elaborate prompts | Clarity vs token cost / overfitting to one model |
 | CoT always | Sometimes helps reasoning vs leaks / cost / not for all tasks |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 def build_prompt(question: str, context: str) -> str:
@@ -2160,9 +2168,9 @@ Question: {question}
 print(build_prompt("What is refund window?", "Refunds accepted within 30 days."))
 ```
 
-**INTERVIEW PERSPECTIVE:** How reduce hallucinations? What is prompt injection? Few-shot vs fine-tune vs RAG decision.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** How reduce hallucinations? What is prompt injection? Few-shot vs fine-tune vs RAG decision.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2170,11 +2178,11 @@ print(build_prompt("What is refund window?", "Refunds accepted within 30 days.")
 | Medium | Force JSON output; validate with pydantic/jsonschema |
 | Hard | Red-team your prompt with injection attempts |
 
-**THE BRIDGE to RAG:** Prompting alone cannot know your private docs or yesterday's facts reliably. Retrieval-augmented generation grounds answers in evidence.
+**WHY THE NEXT TOPIC IS NEEDED - RAG:** Prompting alone cannot know your private docs or yesterday's facts reliably. Retrieval-augmented generation grounds answers in evidence.
 
 ---
 
-> **Phase 14 complete?** [Build the aligned project](./Projects.md#L2146) · [Continue to Phase 15](#phase-15---retrieval-augmented-generation)
+> **Phase 14 complete?** [Build the aligned project](./Projects.md#ai-phase-14-project) · [Continue to Phase 15](#phase-15---retrieval-augmented-generation)
 
 <a id="phase-15"></a>
 
@@ -2182,17 +2190,17 @@ print(build_prompt("What is refund window?", "Refunds accepted within 30 days.")
 
 **Track:** Llm Apps
 
-**GOAL:** Build and critique RAG pipelines; know when RAG beats fine-tuning.
+**WHAT YOU WILL BE ABLE TO DO:** Build and critique RAG pipelines; know when RAG beats fine-tuning.
 
-**PREREQUISITES:** Phases 12 and 14.
+**WHAT YOU SHOULD KNOW FIRST:** Phases 12 and 14.
 
 ## 15.1 The RAG Pipeline
 
-**WHY THIS EXISTS:** Parametric memory in weights is stale, expensive to update, and opaque. **RAG** retrieves relevant passages at query time and conditions generation on them - better factuality for private/enterprise data.
+**WHY YOU ARE LEARNING THIS:** Parametric memory in weights is stale, expensive to update, and opaque. **RAG** retrieves relevant passages at query time and conditions generation on them - better factuality for private/enterprise data.
 
-**THE PROBLEM BEFORE THIS EXISTED:** LLMs invented policies and citations. Fine-tuning every doc change was slow and still hallucinated.
+**THE PROBLEM THIS SOLVES:** LLMs invented policies and citations. Fine-tuning every doc change was slow and still hallucinated.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [What is RAG? (IBM Technology)](https://www.youtube.com/watch?v=T-D1OfcDW1M)
 - [RAG Explained For Beginners (KodeKloud)](https://www.youtube.com/watch?v=_HQ2H_0Ayy0)
@@ -2200,13 +2208,13 @@ print(build_prompt("What is refund window?", "Refunds accepted within 30 days.")
 - [run-llama/llama_index](https://github.com/run-llama/llama_index) · [langchain-ai/langchain](https://github.com/langchain-ai/langchain)
 - LlamaIndex / HF RAG tutorials
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Ingest → chunk → embed → index. Query → embed → top-k → (rerank) → prompt with passages → answer + citations. Chunking strategy dominates quality. Metadata filters matter. Hybrid search (keyword + vector) often wins. Failures: wrong chunks, insufficient k, context stuffing dilution, citation hallucination.
 
-**THE IDEA THAT FIXED IT:** Don't store all facts in weights; fetch evidence, then generate.
+**THE MAIN IDEA IN SIMPLE WORDS:** Don't store all facts in weights; fetch evidence, then generate.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  User question
@@ -2221,11 +2229,11 @@ Ingest → chunk → embed → index. Query → embed → top-k → (rerank) →
  LLM answer (+ require quotes/citations)
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 An open-book exam: the model may be smart, but it must look up the chapter before answering policy questions.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
@@ -2233,7 +2241,7 @@ An open-book exam: the model may be smart, but it must look up the chapter befor
 | Tiny chunks | Precise hits vs broken meaning |
 | Huge chunks | Coherence vs weak retrieval |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 # Toy RAG without external services
@@ -2253,9 +2261,9 @@ prompt = f"Use context to answer.\n{ctx}\nQ: {q}\nA:"
 print(prompt)
 ```
 
-**INTERVIEW PERSPECTIVE:** RAG vs fine-tune. Failure modes. Why hybrid search? How evaluate retrieval separately from generation?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** RAG vs fine-tune. Failure modes. Why hybrid search? How evaluate retrieval separately from generation?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2263,29 +2271,29 @@ print(prompt)
 | Medium | Build FAQ RAG with Chroma/FAISS local |
 | Hard | Add reranker + citation checks |
 
-**THE BRIDGE to Better RAG:** Naive top-k is often not enough - routing, agentic retrieval, and evaluation make systems production-grade.
+**WHY THE NEXT TOPIC IS NEEDED - Better RAG:** Naive top-k is often not enough - routing, agentic retrieval, and evaluation make systems production-grade.
 
 ---
 
 ## 15.2 Improving RAG - Hybrid, Rerank, Agentic Retrieval
 
-**WHY THIS EXISTS:** Semantic search misses exact identifiers (order IDs, error codes). Multi-hop questions need iterative retrieval. **Hybrid search, rerankers, and agentic RAG** address these cracks.
+**WHY YOU ARE LEARNING THIS:** Semantic search misses exact identifiers (order IDs, error codes). Multi-hop questions need iterative retrieval. **Hybrid search, rerankers, and agentic RAG** address these cracks.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Demos worked on blog posts; enterprise queries failed on SKUs and multi-doc reasoning.
+**THE PROBLEM THIS SOLVES:** Demos worked on blog posts; enterprise queries failed on SKUs and multi-doc reasoning.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [What is Agentic RAG? (IBM)](https://www.youtube.com/watch?v=0z_MhcYvcY)
 - Cohere/HF reranker blogs
 - LlamaIndex query engine patterns
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 BM25 + vectors. Cross-encoder rerank top-100 → top-5. Query rewriting. Parent-document retrieval. Graph/knowledge routes for structured data. Measure recall@k with a labeled eval set before blaming the LLM.
 
-**THE IDEA THAT FIXED IT:** Treat retrieval as a ranked ML system with its own metrics - generation cannot fix missing evidence.
+**THE MAIN IDEA IN SIMPLE WORDS:** Treat retrieval as a ranked ML system with its own metrics - generation cannot fix missing evidence.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  query -> rewrite
@@ -2297,18 +2305,18 @@ BM25 + vectors. Cross-encoder rerank top-100 → top-5. Query rewriting. Parent-
  if low confidence: retrieve again / ask clarifying Q
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A librarian who searches both the catalog numbers (keywords) and the topic neighborhood (semantic), then double-checks the top books before answering.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Agentic loops | Higher quality vs latency/cost |
 | Heavy rerankers | Accuracy vs GPU spend |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 def merge_candidates(a: list[str], b: list[str]) -> list[str]:
@@ -2321,9 +2329,9 @@ def merge_candidates(a: list[str], b: list[str]) -> list[str]:
 print(merge_candidates(["a", "b"], ["b", "c"]))
 ```
 
-**INTERVIEW PERSPECTIVE:** When does vector search fail? How debug a wrong RAG answer (retrieval vs generation)?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** When does vector search fail? How debug a wrong RAG answer (retrieval vs generation)?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2331,11 +2339,11 @@ print(merge_candidates(["a", "b"], ["b", "c"]))
 | Medium | Compare vector-only vs hybrid recall@5 |
 | Hard | Multi-hop retrieval on a small wiki dump |
 
-**THE BRIDGE to Fine-tuning:** RAG grounds facts. Style, format, tool schemas, and domain dialect sometimes need weight updates - fine-tuning territory.
+**WHY THE NEXT TOPIC IS NEEDED - Fine-tuning:** RAG grounds facts. Style, format, tool schemas, and domain dialect sometimes need weight updates - fine-tuning territory.
 
 ---
 
-> **Phase 15 complete?** [Build the aligned project](./Projects.md#L2167) · [Continue to Phase 16](#phase-16---fine-tuning-and-alignment-basics)
+> **Phase 15 complete?** [Build the aligned project](./Projects.md#ai-phase-15-project) · [Continue to Phase 16](#phase-16---fine-tuning-and-alignment-basics)
 
 <a id="phase-16"></a>
 
@@ -2343,32 +2351,32 @@ print(merge_candidates(["a", "b"], ["b", "c"]))
 
 **Track:** Llm Apps
 
-**GOAL:** Know when and how to fine-tune efficiently; contrast with RAG and prompting.
+**WHAT YOU WILL BE ABLE TO DO:** Know when and how to fine-tune efficiently; contrast with RAG and prompting.
 
-**PREREQUISITES:** Phases 13-15.
+**WHAT YOU SHOULD KNOW FIRST:** Phases 13-15.
 
 ## 16.1 SFT and Parameter-Efficient Fine-Tuning (LoRA/QLoRA)
 
-**WHY THIS EXISTS:** Full fine-tuning huge models is costly. **LoRA** injects small trainable low-rank adapters; **QLoRA** quantizes base weights to fine-tune on consumer GPUs. **SFT** teaches formats and behaviors from demonstration data.
+**WHY YOU ARE LEARNING THIS:** Full fine-tuning huge models is costly. **LoRA** injects small trainable low-rank adapters; **QLoRA** quantizes base weights to fine-tune on consumer GPUs. **SFT** teaches formats and behaviors from demonstration data.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Only labs with giant clusters could specialize models. Everyone else was stuck with brittle prompts.
+**THE PROBLEM THIS SOLVES:** Only labs with giant clusters could specialize models. Everyone else was stuck with brittle prompts.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [LoRA & QLoRA Fine-tuning Explained (Mark Hennings)](https://www.youtube.com/watch?v=t1caDsMzWBk)
 - [LoRA/QLoRA Explained Simply (Wes Roth)](https://www.youtube.com/watch?v=lixMONUAjfs)
 - [Keerti Purswani LoRA internals](https://www.youtube.com/watch?v=3LGw54I9FDs)
 - [mlabonne/llm-course](https://github.com/mlabonne/llm-course) notebooks
 - PEFT / HF Trainer docs
-- [huggingface/peft](https://github.com/huggingface/peft) (via HF ecosystem)
+- [huggingface/peft](https://github.com/huggingface/peft) (part of the Hugging Face collection of tools and libraries)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 SFT dataset quality >> quantity. Catastrophic forgetting risk. LoRA ranks, target modules (q/v projections). QLoRA: 4-bit base + adapters. Eval before/after on capability + safety. Prefer RAG for fast-changing facts; FT for stable style/tools/languages.
 
-**THE IDEA THAT FIXED IT:** Update a thin adapter instead of all weights - specialize without full retrain cost.
+**THE MAIN IDEA IN SIMPLE WORDS:** Update a thin adapter instead of all weights - specialize without full retrain cost.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  freeze base W
@@ -2377,11 +2385,11 @@ SFT dataset quality >> quantity. Catastrophic forgetting risk. LoRA ranks, targe
  merge adapters for serving (optional)
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Instead of rewriting an encyclopedia, add sticky notes and tabs that steer how you use it - small, swappable, cheap.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
@@ -2389,16 +2397,16 @@ Instead of rewriting an encyclopedia, add sticky notes and tabs that steer how y
 | LoRA | Efficient vs limited capacity if rank too small |
 | FT for facts | Tempting vs RAG usually better for knowledge |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 print("Typical stack: transformers + peft + bitsandbytes + datasets")
 print("Start from mlabonne llm-course Colabs rather than inventing configs.")
 ```
 
-**INTERVIEW PERSPECTIVE:** RAG vs FT decision matrix. What does LoRA change mathematically at a high level? Data quality issues?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** RAG vs FT decision matrix. What does LoRA change mathematically at a high level? Data quality issues?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2406,29 +2414,29 @@ print("Start from mlabonne llm-course Colabs rather than inventing configs.")
 | Medium | Run a QLoRA Colab from llm-course |
 | Hard | Ablate rank vs quality on a fixed eval |
 
-**THE BRIDGE to Preference Optimization:** Demonstrations teach imitation. Human preferences for helpful/harmless need another objective - RLHF/DPO family.
+**WHY THE NEXT TOPIC IS NEEDED - Preference Optimization:** Demonstrations teach imitation. Human preferences for helpful/harmless need another objective - RLHF/DPO family.
 
 ---
 
 ## 16.2 Preferences, RLHF/DPO Literacy, and Safety Trade-offs
 
-**WHY THIS EXISTS:** Next-token SFT does not fully capture "which answer is better." **RLHF** and simpler **DPO**-style methods align models to preference data. Over-alignment can reduce capability (verbosity, refusals).
+**WHY YOU ARE LEARNING THIS:** Next-token SFT does not fully capture "which answer is better." **RLHF** and simpler **DPO**-style methods align models to preference data. Over-alignment can reduce capability (verbosity, refusals).
 
-**THE PROBLEM BEFORE THIS EXISTED:** Base models were witty but unsafe/unhelpful. Pure SFT still produced toxic or unusable outputs.
+**THE PROBLEM THIS SOLVES:** Base models were witty but unsafe/unhelpful. Pure SFT still produced toxic or unusable outputs.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - HF alignment handbook / llm-course scientist track
 - High-level RLHF explainers (IBM/ByteByteGo style)
 - Karpathy LLM deep dive sections on post-training
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Preference pairs (chosen/rejected). Reward models + PPO historically; DPO optimizes preferences more directly. Constitutional/AI feedback variants. Measure regressions: MMLU-ish capability, toxicity, instruction following. Product policy is part of the model.
 
-**THE IDEA THAT FIXED IT:** Train on pairwise human (or AI) preferences, not only expert demonstrations.
+**THE MAIN IDEA IN SIMPLE WORDS:** Train on pairwise human (or AI) preferences, not only expert demonstrations.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  SFT base behaviors
@@ -2437,18 +2445,18 @@ Preference pairs (chosen/rejected). Reward models + PPO historically; DPO optimi
  evaluate safety + helpfulness + core skills
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Not only showing a trainee good emails (SFT), but repeatedly saying "this draft is better than that one" (preferences).
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Strong safety tuning | Fewer harms vs more refusals / hedging |
 | Heavy RLHF | Alignment gains vs complexity/instability |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 prefs = [
@@ -2457,9 +2465,9 @@ prefs = [
 print("Preference data is policy. Treat it like production code reviews.")
 ```
 
-**INTERVIEW PERSPECTIVE:** What problem does RLHF solve beyond SFT? DPO vs RLHF at a conceptual level. Alignment tax?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** What problem does RLHF solve beyond SFT? DPO vs RLHF at a conceptual level. Alignment tax?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2467,11 +2475,11 @@ print("Preference data is policy. Treat it like production code reviews.")
 | Medium | List metrics you'd watch post-alignment |
 | Hard | Read a DPO paper abstract; summarize objective in plain English |
 
-**THE BRIDGE to Agents:** Aligned LLMs still only text-predict. Products need side effects - search, code, APIs - via tool-calling agents.
+**WHY THE NEXT TOPIC IS NEEDED - Agents:** Aligned LLMs still only text-predict. Products need side effects - search, code, APIs - via tool-calling agents.
 
 ---
 
-> **Phase 16 complete?** [Build the aligned project](./Projects.md#L2188) · [Continue to Phase 17](#phase-17---agents-and-tool-use)
+> **Phase 16 complete?** [Build the aligned project](./Projects.md#ai-phase-16-project) · [Continue to Phase 17](#phase-17---agents-and-tool-use)
 
 <a id="phase-17"></a>
 
@@ -2479,17 +2487,17 @@ print("Preference data is policy. Treat it like production code reviews.")
 
 **Track:** Llm Apps
 
-**GOAL:** Build reliable tool-using loops; avoid autonomous chaos.
+**WHAT YOU WILL BE ABLE TO DO:** Build reliable tool-using loops; avoid autonomous chaos.
 
-**PREREQUISITES:** Phases 14-16.
+**WHAT YOU SHOULD KNOW FIRST:** Phases 14-16.
 
 ## 17.1 Tool Calling and ReAct Loops
 
-**WHY THIS EXISTS:** Pure LLMs cannot fetch live data or take actions. **Tools** (functions/APIs) extend them. **ReAct**-style loops interleave reasoning traces with actions and observations.
+**WHY YOU ARE LEARNING THIS:** Pure LLMs cannot fetch live data or take actions. **Tools** (functions/APIs) extend them. **ReAct**-style loops interleave reasoning traces with actions and observations.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Copy-paste between ChatGPT and dashboards. No closed-loop automation. Hallucinated API results.
+**THE PROBLEM THIS SOLVES:** Copy-paste between ChatGPT and dashboards. No closed-loop automation. Hallucinated API results.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [Build a ReAct Agent with LangGraph](https://www.youtube.com/watch?v=eRo1DvdL6pI)
 - [Building a LangGraph ReAct Mini Agent (Sam Witteveen)](https://www.youtube.com/watch?v=pEMhPBQMNjg)
@@ -2497,13 +2505,13 @@ print("Preference data is policy. Treat it like production code reviews.")
 - [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) · [langchain-ai/langchain](https://github.com/langchain-ai/langchain)
 - Anthropic/OpenAI tool use docs
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Schema-defined tools; model emits structured call; runtime executes; result returns as observation. Guard: allowlists, auth, sandboxes, max steps. ReAct: Thought/Action/Observation. Function calling may replace verbose thoughts. Infinite loops and prompt injection via tool outputs are real.
 
-**THE IDEA THAT FIXED IT:** Let the model choose tools; let deterministic code execute them - with hard limits.
+**THE MAIN IDEA IN SIMPLE WORDS:** Let the model choose tools; let deterministic code execute them - with hard limits.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  User goal
@@ -2513,11 +2521,11 @@ Schema-defined tools; model emits structured call; runtime executes; result retu
     else: return answer
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A project manager who can either answer or assign a specialist (tool), then update the plan from the specialist's report - with a meeting timebox.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
@@ -2525,7 +2533,7 @@ A project manager who can either answer or assign a specialist (tool), then upda
 | Higher max_steps | Solves harder tasks vs cost runaway |
 | Autonomous agents | Hype vs reliability issues |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 TOOLS = {
@@ -2540,9 +2548,9 @@ def run_tool(name: str, **kwargs):
 print(run_tool("add", a=2, b=3))
 ```
 
-**INTERVIEW PERSPECTIVE:** How do agents differ from chatbots? How prevent infinite tool loops? Security model for tools?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** How do agents differ from chatbots? How prevent infinite tool loops? Security model for tools?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2550,29 +2558,29 @@ print(run_tool("add", a=2, b=3))
 | Medium | ReAct loop with 2 tools + max_steps=5 |
 | Hard | Inject malicious tool output; harden parsing |
 
-**THE BRIDGE to Memory & Orchestration:** Single loops are not enough for multi-actor workflows - state graphs, memory, and human-in-the-loop enter.
+**WHY THE NEXT TOPIC IS NEEDED - Memory & Orchestration:** Single loops are not enough for multi-actor workflows - state graphs, memory, and human-in-the-loop enter.
 
 ---
 
 ## 17.2 Memory, Graphs, and Human-in-the-Loop
 
-**WHY THIS EXISTS:** Multi-step work needs durable **state**. LangGraph-style **graphs** make control flow explicit vs hidden prompt spaghetti. Humans approve irreversible actions.
+**WHY YOU ARE LEARNING THIS:** Multi-step work needs durable **state**. LangGraph-style **graphs** make control flow explicit vs hidden prompt spaghetti. Humans approve irreversible actions.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Stateless chats forgot; agents repeated work; refunds shipped without approval.
+**THE PROBLEM THIS SOLVES:** Stateless chats forgot; agents repeated work; refunds shipped without approval.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - LangGraph official videos above
 - LangGraph examples repo patterns
 - "Building effective agents" essays (Anthropic et al.)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Short-term vs long-term memory (vector stores, summaries). Checkpoints. Branching graphs: retrieve → draft → review → act. HITL interrupts. Prefer deterministic workflow engines when the path is known; use agents when decisions are dynamic.
 
-**THE IDEA THAT FIXED IT:** Make agent control flow a first-class state machine, not only free-form text.
+**THE MAIN IDEA IN SIMPLE WORDS:** Make agent control flow a first-class state machine, not only free-form text.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  State {messages, artifacts, approvals}
@@ -2581,18 +2589,18 @@ Short-term vs long-term memory (vector stores, summaries). Checkpoints. Branchin
  Persist checkpoint after each node
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A ticket system with statuses and required approvals beats a group chat yelling "just do it."
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Graph frameworks | Clarity vs framework lock-in |
 | More memory | Continuity vs privacy/stale memory bugs |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 from dataclasses import dataclass, field
@@ -2608,9 +2616,9 @@ s.approved = False  # require human
 print(s)
 ```
 
-**INTERVIEW PERSPECTIVE:** When not to use an agent. How design approval gates. Memory poisoning risks.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** When not to use an agent. How design approval gates. Memory poisoning risks.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2618,11 +2626,11 @@ print(s)
 | Medium | Implement checkpoint save/load JSON |
 | Hard | Add human approval before "send_email" tool |
 
-**THE BRIDGE to Eval & MLOps:** Agents and RAG demos impress. Production needs measurement, tracing, safety, and deployment discipline.
+**WHY THE NEXT TOPIC IS NEEDED - Eval & MLOps:** Agents and RAG demos impress. Production needs measurement, tracing, safety, and deployment discipline.
 
 ---
 
-> **Phase 17 complete?** [Build the aligned project](./Projects.md#L2209) · [Continue to Phase 18](#phase-18---evaluation-safety-and-mlops)
+> **Phase 17 complete?** [Build the aligned project](./Projects.md#ai-phase-17-project) · [Continue to Phase 18](#phase-18---evaluation-safety-and-mlops)
 
 <a id="phase-18"></a>
 
@@ -2630,30 +2638,30 @@ print(s)
 
 **Track:** Production
 
-**GOAL:** Put AI systems under test; observe them; deploy with cost/safety controls.
+**WHAT YOU WILL BE ABLE TO DO:** Put AI systems under test; observe them; deploy with cost/safety controls.
 
-**PREREQUISITES:** Phases 14-17.
+**WHAT YOU SHOULD KNOW FIRST:** Phases 14-17.
 
 ## 18.1 Evaluation That Matches Product Risk
 
-**WHY THIS EXISTS:** "Seems good in chat" is not a release bar. Offline **eval sets**, LLM-as-judge (carefully), and online metrics catch regressions when prompts/models/retrievers change.
+**WHY YOU ARE LEARNING THIS:** "Seems good in chat" is not a release bar. Offline **eval sets**, LLM-as-judge (carefully), and online metrics catch regressions when prompts/models/retrievers change.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Prompt edits silently broke edge cases. Model swaps changed tone overnight. No golden sets.
+**THE PROBLEM THIS SOLVES:** Prompt edits silently broke edge cases. Model swaps changed tone overnight. No golden sets.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - RAGAS / HF evaluate docs
 - [EthicalML/awesome-production-machine-learning](https://github.com/EthicalML/awesome-production-machine-learning)
 - Vibe Engines production track
 - [mlabonne/llm-course](https://github.com/mlabonne/llm-course) engineer track
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Unit tests for tools. Golden prompts with expected properties. Retrieval metrics + answer metrics. Human eval sampling. Canary deployments. Version everything: prompt, model id, index build, chunker. Statistical significance for A/Bs when possible.
 
-**THE IDEA THAT FIXED IT:** Treat prompts/indexes/models as code - regression test them.
+**THE MAIN IDEA IN SIMPLE WORDS:** Treat prompts/indexes/models as code - regression test them.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  change prompt/model/index
@@ -2663,18 +2671,18 @@ Unit tests for tools. Golden prompts with expected properties. Retrieval metrics
  promote or rollback
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 CI for backend services - you would not ship unchecked SQL; do not ship unchecked prompts.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | LLM-as-judge | Scalable vs biased/expensive |
 | Huge golden sets | Coverage vs maintenance |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 cases = [
@@ -2687,9 +2695,9 @@ def check(answer: str, case: dict) -> bool:
 print(check("We allow refunds within 30 days.", cases[0]))
 ```
 
-**INTERVIEW PERSPECTIVE:** How eval a RAG system? What do you version? How catch regressions?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** How eval a RAG system? What do you version? How catch regressions?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2697,30 +2705,30 @@ print(check("We allow refunds within 30 days.", cases[0]))
 | Medium | Wire CI that fails if score < threshold |
 | Hard | Design online feedback loop + offline suite |
 
-**THE BRIDGE to Safety & Operations:** Correctness is not enough - abuse, PII, cost explosions, and outages need guardrails and observability.
+**WHY THE NEXT TOPIC IS NEEDED - Safety & Operations:** Correctness is not enough - abuse, PII, cost explosions, and outages need safety checks and limits and observability.
 
 ---
 
-## 18.2 Guardrails, Observability, Cost, and Deployment
+## 18.2 Safety checks and limits, Observability, Cost, and Deployment
 
-**WHY THIS EXISTS:** LLM apps fail via prompt injection, PII leakage, runaway tool calls, and 10× bills. **Guardrails**, tracing, budgets, and gateway layers (e.g. LiteLLM) are the ops craft.
+**WHY YOU ARE LEARNING THIS:** LLM apps fail via prompt injection, PII leakage, runaway tool calls, and 10× bills. **Safety checks and limits**, tracing, budgets, and gateway layers (e.g. LiteLLM) are the ops craft.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Demo apps on weekend; Monday production incident; no traces to debug which tool fired.
+**THE PROBLEM THIS SOLVES:** Demo apps on weekend; Monday production incident; no traces to debug which tool fired.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [BerriAI/litellm](https://github.com/BerriAI/litellm)
 - [HuaizhengZhang/AI-Infra-from-Zero-to-Hero](https://github.com/HuaizhengZhang/AI-Infra-from-Zero-to-Hero)
 - OWASP LLM Top 10 overview
 - Observability vendor tutorials (LangSmith etc.) - concepts matter more than brand
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Input/output filters, allowlisted tools, sandboxing, rate limits, authz. Structured logs: prompt version, latency, token cost, retrieval IDs. Caching embeddings/responses. Fallback models. Red team regularly. Privacy: what leaves the VPC?
 
-**THE IDEA THAT FIXED IT:** Assume the model is untrusted; put policy and telemetry around it.
+**THE MAIN IDEA IN SIMPLE WORDS:** Assume the model is untrusted; put policy and telemetry around it.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  request -> authz -> input guard -> router/gateway
@@ -2729,18 +2737,18 @@ Input/output filters, allowlisted tools, sandboxing, rate limits, authz. Structu
          traces           cost meter
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A powerful intern with corporate card: need spending limits, audit logs, and forbidden actions - not vibes.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Strict guards | Safety vs false refusals |
 | Multi-model routing | Cost/perf vs complexity |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 BUDGET_TOKENS = 100_000
@@ -2756,9 +2764,9 @@ charge(1_000)
 print("used", used)
 ```
 
-**INTERVIEW PERSPECTIVE:** How stop prompt injection? How debug a bad agent action with traces? Cost controls?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** How stop prompt injection? How debug a bad agent action with traces? Cost controls?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2766,11 +2774,11 @@ print("used", used)
 | Medium | Log a full RAG trace object |
 | Hard | Threat-model your app against OWASP LLM risks |
 
-**THE BRIDGE to Portfolio:** You know the chain. Hiring needs public proof - projects with evals and write-ups.
+**WHY THE NEXT TOPIC IS NEEDED - Portfolio:** You know the chain. Hiring needs public proof - projects with evaluation tests and write-ups.
 
 ---
 
-> **Phase 18 complete?** [Build the aligned project](./Projects.md#L2230) · [Continue to Phase 19](#phase-19---portfolio-and-projects)
+> **Phase 18 complete?** [Build the aligned project](./Projects.md#ai-phase-18-project) · [Continue to Phase 19](#phase-19---portfolio-and-projects)
 
 <a id="phase-19"></a>
 
@@ -2778,30 +2786,30 @@ print("used", used)
 
 **Track:** Proof
 
-**GOAL:** Publish 2-4 projects that prove classical ML + deep learning + LLM engineering range.
+**WHAT YOU WILL BE ABLE TO DO:** Publish 2-4 projects that prove classical ML + deep learning + LLM engineering range.
 
-**PREREQUISITES:** Phases 1-18 spine.
+**WHAT YOU SHOULD KNOW FIRST:** the knowledge from Phases 1-18.
 
 ## 19.1 Project Ladder That Signals Competence
 
-**WHY THIS EXISTS:** "I know LangChain" is weak. A repo with data cards, metrics, failure analysis, and a demo is strong.
+**WHY YOU ARE LEARNING THIS:** "I know LangChain" is weak. A repo with data cards, metrics, failure analysis, and a demo is strong.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Tutorial clones with no eval and no original thought.
+**THE PROBLEM THIS SOLVES:** Tutorial clones with no eval and no original thought.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - [ashishpatel26/500-AI-...Projects](https://github.com/ashishpatel26/500-AI-Machine-learning-Deep-learning-Computer-vision-NLP-Projects-with-code) - ideas, not copy-paste
 - [NirantK/awesome-project-ideas](https://github.com/NirantK/awesome-project-ideas)
 - fast.ai / HF course end projects
 - llm-course project suggestions
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
-Suggested ladder: (1) tabular baseline + honest metrics; (2) PyTorch CNN or NLP classifier from scratch-ish; (3) RAG app with hybrid search + eval set; (4) tool agent with guardrails + traces. Each needs README: problem, data, method, results, limitations, next steps.
+Suggested ladder: (1) tabular baseline + honest metrics; (2) PyTorch CNN or NLP classifier from scratch-ish; (3) RAG app with hybrid search + eval set; (4) tool agent with safety checks and limits + traces. Each needs README: problem, data, method, results, limitations, next steps.
 
-**THE IDEA THAT FIXED IT:** Show judgment with numbers and known limits - not only architecture diagrams.
+**THE MAIN IDEA IN SIMPLE WORDS:** Show judgment with numbers and known limits - not only architecture diagrams.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Pick user problem
@@ -2813,27 +2821,27 @@ Suggested ladder: (1) tabular baseline + honest metrics; (2) PyTorch CNN or NLP 
  publish demo
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A design portfolio with case studies beats a folder of untitled Photoshop files.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Many shallow demos | Breadth vs no trust |
 | One deep system | Strong signal vs narrower story |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 sections = ["Problem", "Data", "Baseline", "Method", "Evals", "Failures", "Setup"]
 print("\n".join(f"## {s}" for s in sections))
 ```
 
-**INTERVIEW PERSPECTIVE:** Expect deep dive into *your* project - metrics, mistakes, ablations.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Expect deep dive into *your* project - metrics, mistakes, ablations.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2841,29 +2849,29 @@ print("\n".join(f"## {s}" for s in sections))
 | Medium | RAG app with 30 golden questions scored in CI |
 | Hard | End-to-end agent with tracing screenshots |
 
-**THE BRIDGE to Collaboration Quality:** Solo demos help; production-shaped habits (repro, docs, issues) help more.
+**WHY THE NEXT TOPIC IS NEEDED - Collaboration Quality:** Solo demos help; production-shaped habits (repro, docs, issues) help more.
 
 ---
 
 ## 19.2 Reproducibility, Ethics Notes, and Public Writing
 
-**WHY THIS EXISTS:** AI results without seeds, versions, and data licenses cannot be trusted. Short technical blog posts prove communication - a hiring filter.
+**WHY YOU ARE LEARNING THIS:** AI results without seeds, versions, and data licenses cannot be trusted. Short technical blog posts prove communication - a hiring filter.
 
-**THE PROBLEM BEFORE THIS EXISTED:** "Works on my GPU" folklore. Hidden scraped data. No discussion of harm.
+**THE PROBLEM THIS SOLVES:** "Works on my GPU" folklore. Hidden scraped data. No discussion of harm.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Model cards / data cards examples (HF)
 - EthicalML awesome list
 - Write one blog from a lab failure
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Pin dependency versions. Record seeds, hardware, model IDs. Respect data licenses and PII. Disclose limitations. Write publicly: "what I tried, what failed, what I measured."
 
-**THE IDEA THAT FIXED IT:** Make your work auditable by a skeptical stranger.
+**THE MAIN IDEA IN SIMPLE WORDS:** Make your work auditable by a skeptical stranger.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  requirements.lock / env file
@@ -2872,18 +2880,18 @@ Pin dependency versions. Record seeds, hardware, model IDs. Respect data license
  blog: 800 words with one figure/table
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 Lab notebooks in science - if it is not recorded, it did not happen.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Perfect docs | Clarity vs delay shipping |
 | Overclaiming | Marketing vs credibility loss |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 meta = {
@@ -2895,9 +2903,9 @@ meta = {
 print(meta)
 ```
 
-**INTERVIEW PERSPECTIVE:** How reproduce your results? Any ethical concerns in your dataset?
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** How reproduce your results? Any ethical concerns in your dataset?
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2905,11 +2913,11 @@ print(meta)
 | Medium | Publish a failure postmortem blog |
 | Hard | Third-party reproduction checklist for your RAG app |
 
-**THE BRIDGE to Interviews:** Artifacts ready - train the oral exam: ML fundamentals + LLM system design under pressure.
+**WHY THE NEXT TOPIC IS NEEDED - Interviews:** Artifacts ready - train the oral exam: ML fundamentals + LLM system design under pressure.
 
 ---
 
-> **Phase 19 complete?** [Build the aligned project](./Projects.md#L2251) · [Continue to Phase 20](#phase-20---interviews)
+> **Phase 19 complete?** [Build the aligned project](./Projects.md#ai-phase-19-project) · [Continue to Phase 20](#phase-20---interviews)
 
 <a id="phase-20"></a>
 
@@ -2917,29 +2925,29 @@ print(meta)
 
 **Track:** Hire
 
-**GOAL:** Explain the full chain clearly; design LLM systems with trade-offs; debug with structure.
+**WHAT YOU WILL BE ABLE TO DO:** Explain the full chain clearly; design LLM systems with trade-offs; debug with structure.
 
-**PREREQUISITES:** Portfolio from Phase 19.
+**WHAT YOU SHOULD KNOW FIRST:** Portfolio from Phase 19.
 
 ## 20.1 Core ML Drills and "Explain Like Production"
 
-**WHY THIS EXISTS:** Interviews test whether concepts connect. Bias-variance, metrics, backprop intuition, and overfitting diagnosis still appear beside LLM questions.
+**WHY YOU ARE LEARNING THIS:** Interviews test whether concepts connect. Bias-variance, metrics, backprop intuition, and overfitting diagnosis still appear beside LLM questions.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Candidates recited transformer slogans but failed train/test leakage questions.
+**THE PROBLEM THIS SOLVES:** Candidates recited transformer slogans but failed train/test leakage questions.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - Review your Phase 5/8/13 notes aloud
 - 3Blue1Brown + StatQuest refreshers
 - Interview experiences curated cautiously (signal vs noise)
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Practice 5-minute answers: gradient descent; precision/recall; dropout; attention QKV; RAG pipeline; LoRA; agent risks. Always end with a limitation. Use your projects as anchors.
 
-**THE IDEA THAT FIXED IT:** Answer as a bridge chain - problem → idea → cost → next crack.
+**THE MAIN IDEA IN SIMPLE WORDS:** Answer as a bridge chain - problem → idea → cost → next crack.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Question
@@ -2950,18 +2958,18 @@ Practice 5-minute answers: gradient descent; precision/recall; dropout; attentio
   -> example from your project
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 A guide who knows trails and hazards, not only peak names.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Too shallow | Fail screen |
 | Too research-deep | Miss applied signal for AI engineer roles |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 drills = ["leakage", "AUC vs accuracy", "backprop", "QKV", "RAG fail modes", "LoRA vs RAG"]
@@ -2969,9 +2977,9 @@ for d in drills:
     print("explain:", d)
 ```
 
-**INTERVIEW PERSPECTIVE:** This section *is* the perspective - timed verbal drills.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** This section *is* the perspective - timed verbal drills.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -2979,54 +2987,54 @@ for d in drills:
 | Medium | 45-min mock: ML basics + project deep dive |
 | Hard | Whiteboard attention + RAG eval design |
 
-**THE BRIDGE to System Design:** Many AI roles now ask you to design an end-to-end assistant - bring Phase 18 into the room.
+**WHY THE NEXT TOPIC IS NEEDED - System Design:** Many AI roles now ask you to design an end-to-end assistant - bring Phase 18 into the room.
 
 ---
 
 ## 20.2 LLM System Design and Behavioral Stories
 
-**WHY THIS EXISTS:** "Design a customer-support copilot" tests architecture judgment: data, RAG, tools, evals, safety, cost, UX fallbacks.
+**WHY YOU ARE LEARNING THIS:** "Design a customer-support copilot" tests architecture judgment: data, RAG, tools, evaluation tests, safety, cost, UX fallbacks.
 
-**THE PROBLEM BEFORE THIS EXISTED:** Diagrams with only "LLM in the middle" and no failure modes.
+**THE PROBLEM THIS SOLVES:** Diagrams with only "LLM in the middle" and no failure modes.
 
-**VISUAL LEARNING**
+**SEE IT BEFORE YOU MEMORIZE IT**
 
 - ByteByteGo-style system design for AI components
 - Your Phase 19 architecture READMEs
 
-**DETAILED EXPLANATION**
+**STEP-BY-STEP EXPLANATION**
 
 Clarify users/SLAs. Propose: ingest, index, retrieve, generate, tools, HITL, telemetry, budgets. Compare build vs buy. Discuss abuse. Behavioral STAR: a time you debugged bad retrieval, fixed leakage, or stopped a risky tool call.
 
-**THE IDEA THAT FIXED IT:** Design for measurement and failure first - model choice second.
+**THE MAIN IDEA IN SIMPLE WORDS:** Design for measurement and failure first - model choice second.
 
-**INTERNAL WORKING, STEP BY STEP**
+**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
 ```
  Requirements -> architecture -> threats -> eval plan -> rollout -> cost model
 ```
 
-**REAL-WORLD ANALOGY**
+**PICTURE IT LIKE THIS**
 
 City planning with fire codes and traffic metrics - not only a pretty skyline render.
 
-**COMPLEXITY / TRADE-OFFS**
+**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 | Choice | Trade-off |
 | --- | --- |
 | Over-agentic design | Impressive vs unreliable |
 | Over-rigid workflows | Reliable vs inflexible |
 
-**CODE IMPLEMENTATION**
+**SMALL WORKING EXAMPLE**
 
 ```python
 checklist = ["users","data","RAG","tools","eval","safety","obs","cost","rollback"]
 print(", ".join(checklist))
 ```
 
-**INTERVIEW PERSPECTIVE:** Ask clarifying questions. State assumptions. Offer a simple MVP then extensions.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Ask clarifying questions. State assumptions. Offer a simple MVP then extensions.
 
-**PRACTICE PROBLEMS**
+**PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | --- | --- |
@@ -3034,11 +3042,11 @@ print(", ".join(checklist))
 | Medium | 30-min design: internal docs assistant |
 | Hard | Full loop: design + threat model + eval metrics |
 
-**THE BRIDGE BEYOND This Document:** Production invents the next limitation - a new jailbreak, a cost cliff, a multimodal requirement - and that limitation becomes your next concept. Keep the habit: what broke, why, what we invent next.
+**WHY THE NEXT TOPIC IS NEEDED BEYOND This Document:** Production invents the next limitation - a new jailbreak, a cost cliff, a multimodal requirement - and that limitation becomes your next concept. Keep the habit: what broke, why, what we invent next.
 
 ---
 
-> **Phase 20 complete?** [Build the aligned project](./Projects.md#L2272) · [Return to the phase index](#phase-index)
+> **Phase 20 complete?** [Build the aligned project](./Projects.md#ai-phase-20-project) · [Return to the phase index](#phase-index)
 
 ---
 

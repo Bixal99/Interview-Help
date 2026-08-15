@@ -4,10 +4,10 @@
 
 *Project inspiration curated with Composio (YouTube and GitHub search) against hands-on tutorials, maintained repositories, Odoo examples, structured project collections, and official platform/API/security documentation. See [Curated inspiration](#curated-inspiration) at the bottom.*
 
-**Scope:** One project cements one bridge · no mega-apps · public proof.
+**Scope:** Each project strengthens one connection between ideas · no oversized applications · public proof of your work.
 
 ```
-Build → Explain → Ship README → Drill Interview.md
+Build → Explain → Write and publish the README → Practice with Interview.md
 ```
 
 ---
@@ -19,9 +19,9 @@ Build → Explain → Ship README → Drill Interview.md
 | **Roadmap** | Which file and phase cluster owns the theory |
 | **Goal** | What you are proving in one sentence |
 | **Concepts practiced** | Skills the build forces you to use |
-| **Difficulty** | Easy / Medium / Hard (scope, not IQ) |
+| **How challenging the project is** | Easy / Medium / Hard (scope, not IQ) |
 | **Steps** | 3-8 actionable bullets |
-| **Done when** | Acceptance criteria - ship or do not ship |
+| **Done when** | Acceptance criteria - clear checks that tell you whether the project is truly finished |
 | **Stretch** | Optional depth if you have time |
 
 **Difficulty guide**
@@ -36,21 +36,29 @@ Build → Explain → Ship README → Drill Interview.md
 
 ## 1. How to Use This File
 
-This playbook is the **build layer** on top of the roadmaps. Reading [`CS.md`](./CS.md) Phase 3 teaches linked lists; building one from scratch is how you know you can explain the bridge out loud in [`Interview.md`](./Interview.md).
+### Start here if you have never built a project before
 
-### Pick projects by phase cluster, not by hype
+A **project** is a small, working result that lets you use what you just learned. **Scope** means the exact boundary of what you will and will not build. **Acceptance criteria** are observable checks that tell you the work is finished. A **trade-off** is a choice where one benefit costs another, and a **README** is the instruction page that tells another person what the project does, how to run it, and what you learned.
+
+Start smaller than your ambition. Make one path work from beginning to end, prove it with a test or saved output, and only then add an optional feature. Each phase project below is deliberately limited so you can finish it with the knowledge introduced up to that point.
+
+**Words you will meet often:** a **repository** is the project folder and its version history; a **CLI** is a program you use by typing commands; a **test** checks that observed behavior matches an expected result; **evidence** is saved output, a test report, or another reproducible sign that a claim is true; a **stretch task** is an optional extra challenge; a **refactor** changes code structure without changing promised behavior; **deployment** puts a project into a running environment; and a **capstone** combines several earlier skills in one larger final project.
+
+This playbook is where you turn reading into working practice. [`CS.md`](./CS.md) Phase 3 teaches linked lists; building one from scratch shows whether you can explain why it is useful and how it leads to the next idea in [`Interview.md`](./Interview.md).
+
+### Pick projects by what you just learned, not by what is popular
 
 | Rule | Why |
 | --- | --- |
-| **1-2 projects per phase cluster** | Depth beats a portfolio of half-finished repos |
-| **Finish before you hop tracks** | A shipped calculator teaches more than three abandoned CRUD apps |
-| **Write the README first draft after building** | Forces you to name trade-offs, not just features |
-| **Tag the roadmap phase in the README** | Recruiters and future-you can trace concept to artifact |
+| **1-2 projects per phase cluster** | One finished, well-explained project teaches and proves more than several unfinished repositories |
+| **Finish before you hop tracks** | A finished calculator teaches more than three abandoned create-read-update-delete applications |
+| **Write the README first draft after building** | Makes you explain why you chose one approach and what that choice costs, instead of only listing features |
+| **Tag the roadmap phase in the README** | Recruiters and future-you can connect the concept to the finished project |
 
 ### Recommended rhythm
 
 ```
-Read phase → hit mastery checkpoint → pick 1 project from that cluster → ship README → drill Interview.md questions for that topic
+Read the phase → pass its understanding check → choose one matching project → write and publish the README → practice the related Interview.md questions aloud
 ```
 
 ### What every public README must include
@@ -60,7 +68,7 @@ Read phase → hit mastery checkpoint → pick 1 project from that cluster → s
 3. **How to run** - copy-paste commands that work on a clean machine
 4. **Concepts map** - link to roadmap phases (e.g., "OOP Phase 4 encapsulation")
 5. **Trade-offs** - one thing you simplified and why
-6. **Next bridge** - what project you would do next and why
+6. **Next step** - which project you would do next and why
 
 ### Phase cluster quick map
 
@@ -77,7 +85,7 @@ Read phase → hit mastery checkpoint → pick 1 project from that cluster → s
 | [`Data.md`](./Data.md) | Engineer (11-18) | DATA-E01 to DATA-E05 |
 | [`Networks.md`](./Networks.md) | Core stack (1-14) | NET-01 to NET-05 |
 | [`AI.md`](./AI.md) | Classical + Deep (1-11) | AI-01 to AI-05 |
-| [`AI.md`](./AI.md) | LLM + Ship (12-18) | AI-06 to AI-09 |
+| [`AI.md`](./AI.md) | LLM applications you can evaluate and release (12-18) | AI-06 to AI-09 |
 | [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) | Defensive and authorized security labs (1-20) | CYBER phase navigator below |
 | [`ODOO.md`](./ODOO.md) | Module to integration | ODOO-01 to ODOO-08 |
 | [`Web.md`](./Web.md) | Browser to production (1-19) | WEB-01 to WEB-06 |
@@ -88,9 +96,9 @@ Read phase → hit mastery checkpoint → pick 1 project from that cluster → s
 
 ## Phase-by-phase project navigator
 
-Use this navigator at the end of **every phase**. Each phase section is a focused build specification, not a command to copy the linked repository. The external repositories and videos are public inspiration; implement your own version from the phase knowledge, cite anything you reuse, and obey repository licenses.
+Use this navigator at the end of **every phase**. Each phase section is a focused build specification, not an instruction to copy someone else's repository. The external repositories and videos are public inspiration; implement your own version from the phase knowledge, cite anything you reuse, and obey repository licenses.
 
-**Definition of done for every project section:** the artifact runs from a clean checkout, its verification evidence is committed, and its README links back to the matching roadmap phase.
+**Every project is complete only when:** the project runs from a clean checkout, its verification evidence is committed, and its README links back to the matching roadmap phase.
 
 - [Programming Fundamentals & OOP](#oop-phase-projects)
 - [Computer Science](#cs-phase-projects)
@@ -105,4314 +113,5329 @@ Use this navigator at the end of **every phase**. Each phase section is a focuse
 
 ### OOP Phase Projects
 
-Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent portfolio artifact.
+Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent finished portfolio project.
 
 #### OOP Phase F1 Project
 
 **Recommended build — Execution Trace Notebook**
 
-**Why this project now:** it applies the material covered through [OOP Phase F1](./OOP.md#L167) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase F1](./OOP.md#phase-f1) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Execution Trace Notebook** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Execution Trace Notebook** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Execution Trace Notebook Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Execution Trace Notebook Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [How to Build a Python CLI Tool People Actually Want to Use — ArjanCodes](https://www.youtube.com/watch?v=FWacanslfFM)
 
-> **When this project is complete:** [Resume your study at OOP Phase F2](./OOP.md#L311) · [Review Phase F1](./OOP.md#L167)
+> **When this project is complete:** [Resume your study at OOP Phase F2](./OOP.md#phase-f2) · [Review Phase F1](./OOP.md#phase-f1)
 
 ---
 #### OOP Phase F2 Project
 
 **Recommended build — CLI Rule Engine**
 
-**Why this project now:** it applies the material covered through [OOP Phase F2](./OOP.md#L311) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase F2](./OOP.md#phase-f2) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **CLI Rule Engine** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **CLI Rule Engine** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — CLI Rule Engine Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — CLI Rule Engine Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [How to Build a Python CLI Tool People Actually Want to Use — ArjanCodes](https://www.youtube.com/watch?v=FWacanslfFM)
 
-> **When this project is complete:** [Resume your study at OOP Phase F3](./OOP.md#L459) · [Review Phase F2](./OOP.md#L311)
+> **When this project is complete:** [Resume your study at OOP Phase F3](./OOP.md#phase-f3) · [Review Phase F2](./OOP.md#phase-f2)
 
 ---
 #### OOP Phase F3 Project
 
 **Recommended build — Modular Text Statistics**
 
-**Why this project now:** it applies the material covered through [OOP Phase F3](./OOP.md#L459) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase F3](./OOP.md#phase-f3) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Modular Text Statistics** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Modular Text Statistics** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Modular Text Statistics Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Modular Text Statistics Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [How to Build a Python CLI Tool People Actually Want to Use — ArjanCodes](https://www.youtube.com/watch?v=FWacanslfFM)
 
-> **When this project is complete:** [Resume your study at OOP Phase 1](./OOP.md#L608) · [Review Phase F3](./OOP.md#L459)
+> **When this project is complete:** [Resume your study at OOP Phase 1](./OOP.md#phase-1) · [Review Phase F3](./OOP.md#phase-f3)
 
 ---
 #### OOP Phase 1 Project
 
 **Recommended build — Procedural-to-Objects Refactor**
 
-**Why this project now:** it applies the material covered through [OOP Phase 1](./OOP.md#L608) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase 1](./OOP.md#phase-1) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Procedural-to-Objects Refactor** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Procedural-to-Objects Refactor** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Procedural-to-Objects Refactor Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Procedural-to-Objects Refactor Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
 
-> **When this project is complete:** [Resume your study at OOP Phase 2](./OOP.md#L806) · [Review Phase 1](./OOP.md#L608)
+> **When this project is complete:** [Resume your study at OOP Phase 2](./OOP.md#phase-2) · [Review Phase 1](./OOP.md#phase-1)
 
 ---
 #### OOP Phase 2 Project
 
 **Recommended build — Class & Instance Registry**
 
-**Why this project now:** it applies the material covered through [OOP Phase 2](./OOP.md#L806) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase 2](./OOP.md#phase-2) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Class & Instance Registry** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Class & Instance Registry** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Class & Instance Registry Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Class & Instance Registry Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
 
-> **When this project is complete:** [Resume your study at OOP Phase 3](./OOP.md#L989) · [Review Phase 2](./OOP.md#L806)
+> **When this project is complete:** [Resume your study at OOP Phase 3](./OOP.md#phase-3) · [Review Phase 2](./OOP.md#phase-2)
 
 ---
 #### OOP Phase 3 Project
 
 **Recommended build — Bank Account State Machine**
 
-**Why this project now:** it applies the material covered through [OOP Phase 3](./OOP.md#L989) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase 3](./OOP.md#phase-3) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Bank Account State Machine** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Bank Account State Machine** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Bank Account State Machine Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Bank Account State Machine Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
 
-> **When this project is complete:** [Resume your study at OOP Phase 4](./OOP.md#L1172) · [Review Phase 3](./OOP.md#L989)
+> **When this project is complete:** [Resume your study at OOP Phase 4](./OOP.md#phase-4) · [Review Phase 3](./OOP.md#phase-3)
 
 ---
 #### OOP Phase 4 Project
 
 **Recommended build — Validated Wallet API**
 
-**Why this project now:** it applies the material covered through [OOP Phase 4](./OOP.md#L1172) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase 4](./OOP.md#phase-4) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Validated Wallet API** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Validated Wallet API** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Validated Wallet API Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Validated Wallet API Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
 
-> **When this project is complete:** [Resume your study at OOP Phase 5](./OOP.md#L1380) · [Review Phase 4](./OOP.md#L1172)
+> **When this project is complete:** [Resume your study at OOP Phase 5](./OOP.md#phase-5) · [Review Phase 4](./OOP.md#phase-4)
 
 ---
 #### OOP Phase 5 Project
 
 **Recommended build — Pluggable Shape Calculator**
 
-**Why this project now:** it applies the material covered through [OOP Phase 5](./OOP.md#L1380) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase 5](./OOP.md#phase-5) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Pluggable Shape Calculator** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Pluggable Shape Calculator** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Pluggable Shape Calculator Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Pluggable Shape Calculator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
 
-> **When this project is complete:** [Resume your study at OOP Phase 6](./OOP.md#L1582) · [Review Phase 5](./OOP.md#L1380)
+> **When this project is complete:** [Resume your study at OOP Phase 6](./OOP.md#phase-6) · [Review Phase 5](./OOP.md#phase-5)
 
 ---
 #### OOP Phase 6 Project
 
 **Recommended build — Employee Payroll Hierarchy**
 
-**Why this project now:** it applies the material covered through [OOP Phase 6](./OOP.md#L1582) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase 6](./OOP.md#phase-6) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Employee Payroll Hierarchy** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Employee Payroll Hierarchy** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Employee Payroll Hierarchy Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Employee Payroll Hierarchy Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
 
-> **When this project is complete:** [Resume your study at OOP Phase 7](./OOP.md#L1775) · [Review Phase 6](./OOP.md#L1582)
+> **When this project is complete:** [Resume your study at OOP Phase 7](./OOP.md#phase-7) · [Review Phase 6](./OOP.md#phase-6)
 
 ---
 #### OOP Phase 7 Project
 
 **Recommended build — Polymorphic Exporter**
 
-**Why this project now:** it applies the material covered through [OOP Phase 7](./OOP.md#L1775) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase 7](./OOP.md#phase-7) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Polymorphic Exporter** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Polymorphic Exporter** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Polymorphic Exporter Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Polymorphic Exporter Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
 
-> **When this project is complete:** [Resume your study at OOP Phase 8](./OOP.md#L1964) · [Review Phase 7](./OOP.md#L1775)
+> **When this project is complete:** [Resume your study at OOP Phase 8](./OOP.md#phase-8) · [Review Phase 7](./OOP.md#phase-7)
 
 ---
 #### OOP Phase 8 Project
 
 **Recommended build — Composed Order Service**
 
-**Why this project now:** it applies the material covered through [OOP Phase 8](./OOP.md#L1964) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase 8](./OOP.md#phase-8) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Composed Order Service** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Composed Order Service** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Composed Order Service Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Composed Order Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
 
-> **When this project is complete:** [Resume your study at OOP Phase 9](./OOP.md#L2159) · [Review Phase 8](./OOP.md#L1964)
+> **When this project is complete:** [Resume your study at OOP Phase 9](./OOP.md#phase-9) · [Review Phase 8](./OOP.md#phase-8)
 
 ---
 #### OOP Phase 9 Project
 
 **Recommended build — Pythonic Collection Wrapper**
 
-**Why this project now:** it applies the material covered through [OOP Phase 9](./OOP.md#L2159) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase 9](./OOP.md#phase-9) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Pythonic Collection Wrapper** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Pythonic Collection Wrapper** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Pythonic Collection Wrapper Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Pythonic Collection Wrapper Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
 
-> **When this project is complete:** [Resume your study at OOP Phase 10](./OOP.md#L2355) · [Review Phase 9](./OOP.md#L2159)
+> **When this project is complete:** [Resume your study at OOP Phase 10](./OOP.md#phase-10) · [Review Phase 9](./OOP.md#phase-9)
 
 ---
 #### OOP Phase 10 Project
 
 **Recommended build — Library Relationship Model**
 
-**Why this project now:** it applies the material covered through [OOP Phase 10](./OOP.md#L2355) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase 10](./OOP.md#phase-10) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Library Relationship Model** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Library Relationship Model** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Library Relationship Model Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Library Relationship Model Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
 
-> **When this project is complete:** [Resume your study at OOP Phase 11](./OOP.md#L2542) · [Review Phase 10](./OOP.md#L2355)
+> **When this project is complete:** [Resume your study at OOP Phase 11](./OOP.md#phase-11) · [Review Phase 10](./OOP.md#phase-10)
 
 ---
 #### OOP Phase 11 Project
 
 **Recommended build — God-Object Rescue**
 
-**Why this project now:** it applies the material covered through [OOP Phase 11](./OOP.md#L2542) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase 11](./OOP.md#phase-11) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **God-Object Rescue** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **God-Object Rescue** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — God-Object Rescue Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — God-Object Rescue Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
 
-> **When this project is complete:** [Resume your study at OOP Phase 12](./OOP.md#L2732) · [Review Phase 11](./OOP.md#L2542)
+> **When this project is complete:** [Resume your study at OOP Phase 12](./OOP.md#phase-12) · [Review Phase 11](./OOP.md#phase-11)
 
 ---
 #### OOP Phase 12 Project
 
 **Recommended build — SOLID Notification Service**
 
-**Why this project now:** it applies the material covered through [OOP Phase 12](./OOP.md#L2732) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase 12](./OOP.md#phase-12) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **SOLID Notification Service** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **SOLID Notification Service** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — SOLID Notification Service Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — SOLID Notification Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
 
-> **When this project is complete:** [Resume your study at OOP Phase 13](./OOP.md#L2932) · [Review Phase 12](./OOP.md#L2732)
+> **When this project is complete:** [Resume your study at OOP Phase 13](./OOP.md#phase-13) · [Review Phase 12](./OOP.md#phase-12)
 
 ---
 #### OOP Phase 13 Project
 
 **Recommended build — Configurable Object Factory**
 
-**Why this project now:** it applies the material covered through [OOP Phase 13](./OOP.md#L2932) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase 13](./OOP.md#phase-13) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Configurable Object Factory** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Configurable Object Factory** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Configurable Object Factory Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Configurable Object Factory Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [python-patterns](https://github.com/faif/python-patterns)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
 
-> **When this project is complete:** [Resume your study at OOP Phase 14](./OOP.md#L3131) · [Review Phase 13](./OOP.md#L2932)
+> **When this project is complete:** [Resume your study at OOP Phase 14](./OOP.md#phase-14) · [Review Phase 13](./OOP.md#phase-13)
 
 ---
 #### OOP Phase 14 Project
 
 **Recommended build — Legacy Payment Adapter**
 
-**Why this project now:** it applies the material covered through [OOP Phase 14](./OOP.md#L3131) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase 14](./OOP.md#phase-14) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Legacy Payment Adapter** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Legacy Payment Adapter** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Legacy Payment Adapter Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Legacy Payment Adapter Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [python-patterns](https://github.com/faif/python-patterns)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
 
-> **When this project is complete:** [Resume your study at OOP Phase 15](./OOP.md#L3323) · [Review Phase 14](./OOP.md#L3131)
+> **When this project is complete:** [Resume your study at OOP Phase 15](./OOP.md#phase-15) · [Review Phase 14](./OOP.md#phase-14)
 
 ---
 #### OOP Phase 15 Project
 
 **Recommended build — Event-Driven Task Board**
 
-**Why this project now:** it applies the material covered through [OOP Phase 15](./OOP.md#L3323) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase 15](./OOP.md#phase-15) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Event-Driven Task Board** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Event-Driven Task Board** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Event-Driven Task Board Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Event-Driven Task Board Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [python-patterns](https://github.com/faif/python-patterns)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
 
-> **When this project is complete:** [Resume your study at OOP Phase 16](./OOP.md#L3549) · [Review Phase 15](./OOP.md#L3323)
+> **When this project is complete:** [Resume your study at OOP Phase 16](./OOP.md#phase-16) · [Review Phase 15](./OOP.md#phase-15)
 
 ---
 #### OOP Phase 16 Project
 
 **Recommended build — Testable Domain Model**
 
-**Why this project now:** it applies the material covered through [OOP Phase 16](./OOP.md#L3549) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase 16](./OOP.md#phase-16) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Testable Domain Model** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Testable Domain Model** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Testable Domain Model Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Testable Domain Model Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
 
-> **When this project is complete:** [Resume your study at OOP Phase 17](./OOP.md#L3754) · [Review Phase 16](./OOP.md#L3549)
+> **When this project is complete:** [Resume your study at OOP Phase 17](./OOP.md#phase-17) · [Review Phase 16](./OOP.md#phase-16)
 
 ---
 #### OOP Phase 17 Project
 
 **Recommended build — Layered Inventory App**
 
-**Why this project now:** it applies the material covered through [OOP Phase 17](./OOP.md#L3754) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase 17](./OOP.md#phase-17) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Layered Inventory App** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Layered Inventory App** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Layered Inventory App Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Layered Inventory App Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
 
-> **When this project is complete:** [Resume your study at OOP Phase 18](./OOP.md#L3953) · [Review Phase 17](./OOP.md#L3754)
+> **When this project is complete:** [Resume your study at OOP Phase 18](./OOP.md#phase-18) · [Review Phase 17](./OOP.md#phase-17)
 
 ---
 #### OOP Phase 18 Project
 
 **Recommended build — Parking Lot LLD**
 
-**Why this project now:** it applies the material covered through [OOP Phase 18](./OOP.md#L3953) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase 18](./OOP.md#phase-18) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Parking Lot LLD** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Parking Lot LLD** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Parking Lot LLD Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Parking Lot LLD Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [Parking Lot Design — Think Software](https://www.youtube.com/watch?v=tVRyb4HaHgw)
 
-> **When this project is complete:** [Resume your study at OOP Phase 19](./OOP.md#L4153) · [Review Phase 18](./OOP.md#L3953)
+> **When this project is complete:** [Resume your study at OOP Phase 19](./OOP.md#phase-19) · [Review Phase 18](./OOP.md#phase-18)
 
 ---
 #### OOP Phase 19 Project
 
 **Recommended build — Design Portfolio Pack**
 
-**Why this project now:** it applies the material covered through [OOP Phase 19](./OOP.md#L4153) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase 19](./OOP.md#phase-19) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Design Portfolio Pack** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Design Portfolio Pack** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Design Portfolio Pack Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Design Portfolio Pack Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [Parking Lot Design — Think Software](https://www.youtube.com/watch?v=tVRyb4HaHgw)
 
-> **When this project is complete:** [Resume your study at OOP Phase 20](./OOP.md#L4314) · [Review Phase 19](./OOP.md#L4153)
+> **When this project is complete:** [Resume your study at OOP Phase 20](./OOP.md#phase-20) · [Review Phase 19](./OOP.md#phase-19)
 
 ---
 #### OOP Phase 20 Project
 
 **Recommended build — Timed OOP Design Kata**
 
-**Why this project now:** it applies the material covered through [OOP Phase 20](./OOP.md#L4314) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [OOP Phase 20](./OOP.md#phase-20) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Timed OOP Design Kata** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Timed OOP Design Kata** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Timed OOP Design Kata Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Timed OOP Design Kata Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [python-patterns](https://github.com/faif/python-patterns)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
 - **YouTube build/lab:** [Parking Lot Design — Think Software](https://www.youtube.com/watch?v=tVRyb4HaHgw)
 
-> **When this project is complete:** [Return to the OOP phase index](./OOP.md#L111) · [Review Phase 20](./OOP.md#L4314)
+> **When this project is complete:** [Return to the OOP phase index](./OOP.md#phase-index) · [Review Phase 20](./OOP.md#phase-20)
 
 ---
 
 ### CS Phase Projects
 
-Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent portfolio artifact.
+Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent finished portfolio project.
 
 #### CS Phase 1 Project
 
 **Recommended build — Mini Expression Runtime**
 
-**Why this project now:** it applies the material covered through [CS Phase 1](./CS.md#L169) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CS Phase 1](./CS.md#phase-1) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Mini Expression Runtime** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Mini Expression Runtime** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Mini Expression Runtime Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Mini Expression Runtime Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Data Structure and Algorithm Patterns — freeCodeCamp.org](https://www.youtube.com/watch?v=Z_c4byLrNBU)
 
-> **When this project is complete:** [Resume your study at CS Phase 2](./CS.md#L313) · [Review Phase 1](./CS.md#L169)
+> **When this project is complete:** [Resume your study at CS Phase 2](./CS.md#phase-2) · [Review Phase 1](./CS.md#phase-1)
 
 ---
 #### CS Phase 2 Project
 
 **Recommended build — Algorithm Growth Profiler**
 
-**Why this project now:** it applies the material covered through [CS Phase 2](./CS.md#L313) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CS Phase 2](./CS.md#phase-2) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Algorithm Growth Profiler** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Algorithm Growth Profiler** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Algorithm Growth Profiler Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Algorithm Growth Profiler Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Data Structure and Algorithm Patterns — freeCodeCamp.org](https://www.youtube.com/watch?v=Z_c4byLrNBU)
 
-> **When this project is complete:** [Resume your study at CS Phase 3](./CS.md#L417) · [Review Phase 2](./CS.md#L313)
+> **When this project is complete:** [Resume your study at CS Phase 3](./CS.md#phase-3) · [Review Phase 2](./CS.md#phase-2)
 
 ---
 #### CS Phase 3 Project
 
 **Recommended build — Data Structures Toolkit**
 
-**Why this project now:** it applies the material covered through [CS Phase 3](./CS.md#L417) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CS Phase 3](./CS.md#phase-3) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Data Structures Toolkit** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Data Structures Toolkit** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Data Structures Toolkit Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Data Structures Toolkit Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Data Structure and Algorithm Patterns — freeCodeCamp.org](https://www.youtube.com/watch?v=Z_c4byLrNBU)
 
-> **When this project is complete:** [Resume your study at CS Phase 4](./CS.md#L725) · [Review Phase 3](./CS.md#L417)
+> **When this project is complete:** [Resume your study at CS Phase 4](./CS.md#phase-4) · [Review Phase 3](./CS.md#phase-3)
 
 ---
 #### CS Phase 4 Project
 
 **Recommended build — Recursive Filesystem Walker**
 
-**Why this project now:** it applies the material covered through [CS Phase 4](./CS.md#L725) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CS Phase 4](./CS.md#phase-4) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Recursive Filesystem Walker** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Recursive Filesystem Walker** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Recursive Filesystem Walker Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Recursive Filesystem Walker Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Data Structure and Algorithm Patterns — freeCodeCamp.org](https://www.youtube.com/watch?v=Z_c4byLrNBU)
 
-> **When this project is complete:** [Resume your study at CS Phase 5](./CS.md#L812) · [Review Phase 4](./CS.md#L725)
+> **When this project is complete:** [Resume your study at CS Phase 5](./CS.md#phase-5) · [Review Phase 4](./CS.md#phase-4)
 
 ---
 #### CS Phase 5 Project
 
 **Recommended build — Priority Task Scheduler**
 
-**Why this project now:** it applies the material covered through [CS Phase 5](./CS.md#L812) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CS Phase 5](./CS.md#phase-5) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Priority Task Scheduler** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Priority Task Scheduler** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Priority Task Scheduler Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Priority Task Scheduler Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Data Structure and Algorithm Patterns — freeCodeCamp.org](https://www.youtube.com/watch?v=Z_c4byLrNBU)
 
-> **When this project is complete:** [Resume your study at CS Phase 6](./CS.md#L1040) · [Review Phase 5](./CS.md#L812)
+> **When this project is complete:** [Resume your study at CS Phase 6](./CS.md#phase-6) · [Review Phase 5](./CS.md#phase-5)
 
 ---
 #### CS Phase 6 Project
 
 **Recommended build — Hash Table and LRU Cache**
 
-**Why this project now:** it applies the material covered through [CS Phase 6](./CS.md#L1040) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CS Phase 6](./CS.md#phase-6) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Hash Table and LRU Cache** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Hash Table and LRU Cache** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Hash Table and LRU Cache Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Hash Table and LRU Cache Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Four Systems Projects Worth Building — Alexa Fazio](https://www.youtube.com/watch?v=6CJiM3E2mAA)
 
-> **When this project is complete:** [Resume your study at CS Phase 7](./CS.md#L1125) · [Review Phase 6](./CS.md#L1040)
+> **When this project is complete:** [Resume your study at CS Phase 7](./CS.md#phase-7) · [Review Phase 6](./CS.md#phase-6)
 
 ---
 #### CS Phase 7 Project
 
 **Recommended build — Sorting Benchmark Explorer**
 
-**Why this project now:** it applies the material covered through [CS Phase 7](./CS.md#L1125) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CS Phase 7](./CS.md#phase-7) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Sorting Benchmark Explorer** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Sorting Benchmark Explorer** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Sorting Benchmark Explorer Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Sorting Benchmark Explorer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Four Systems Projects Worth Building — Alexa Fazio](https://www.youtube.com/watch?v=6CJiM3E2mAA)
 
-> **When this project is complete:** [Resume your study at CS Phase 8](./CS.md#L1287) · [Review Phase 7](./CS.md#L1125)
+> **When this project is complete:** [Resume your study at CS Phase 8](./CS.md#phase-8) · [Review Phase 7](./CS.md#phase-7)
 
 ---
 #### CS Phase 8 Project
 
 **Recommended build — Graph Route Planner**
 
-**Why this project now:** it applies the material covered through [CS Phase 8](./CS.md#L1287) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CS Phase 8](./CS.md#phase-8) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Graph Route Planner** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Graph Route Planner** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Graph Route Planner Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Graph Route Planner Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Four Systems Projects Worth Building — Alexa Fazio](https://www.youtube.com/watch?v=6CJiM3E2mAA)
 
-> **When this project is complete:** [Resume your study at CS Phase 9](./CS.md#L1599) · [Review Phase 8](./CS.md#L1287)
+> **When this project is complete:** [Resume your study at CS Phase 9](./CS.md#phase-9) · [Review Phase 8](./CS.md#phase-8)
 
 ---
 #### CS Phase 9 Project
 
 **Recommended build — Algorithm Pattern Workbook**
 
-**Why this project now:** it applies the material covered through [CS Phase 9](./CS.md#L1599) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CS Phase 9](./CS.md#phase-9) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Algorithm Pattern Workbook** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Algorithm Pattern Workbook** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Algorithm Pattern Workbook Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Algorithm Pattern Workbook Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Four Systems Projects Worth Building — Alexa Fazio](https://www.youtube.com/watch?v=6CJiM3E2mAA)
 
-> **When this project is complete:** [Resume your study at CS Phase 10](./CS.md#L2056) · [Review Phase 9](./CS.md#L1599)
+> **When this project is complete:** [Resume your study at CS Phase 10](./CS.md#phase-10) · [Review Phase 9](./CS.md#phase-9)
 
 ---
 #### CS Phase 10 Project
 
 **Recommended build — Parking Lot LLD**
 
-**Why this project now:** it applies the material covered through [CS Phase 10](./CS.md#L2056) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CS Phase 10](./CS.md#phase-10) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Parking Lot LLD** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Parking Lot LLD** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Parking Lot LLD Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Parking Lot LLD Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [python-patterns](https://github.com/faif/python-patterns)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Four Systems Projects Worth Building — Alexa Fazio](https://www.youtube.com/watch?v=6CJiM3E2mAA)
 
-> **When this project is complete:** [Resume your study at CS Phase 11](./CS.md#L2385) · [Review Phase 10](./CS.md#L2056)
+> **When this project is complete:** [Resume your study at CS Phase 11](./CS.md#phase-11) · [Review Phase 10](./CS.md#phase-10)
 
 ---
 #### CS Phase 11 Project
 
 **Recommended build — Shell and Scheduler Simulator**
 
-**Why this project now:** it applies the material covered through [CS Phase 11](./CS.md#L2385) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CS Phase 11](./CS.md#phase-11) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Shell and Scheduler Simulator** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Shell and Scheduler Simulator** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Shell and Scheduler Simulator Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Shell and Scheduler Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Build a Production-Ready Backend API — JavaScript Mastery](https://www.youtube.com/watch?v=rOpEN1JDaD0)
 
-> **When this project is complete:** [Resume your study at CS Phase 12](./CS.md#L3055) · [Review Phase 11](./CS.md#L2385)
+> **When this project is complete:** [Resume your study at CS Phase 12](./CS.md#phase-12) · [Review Phase 11](./CS.md#phase-11)
 
 ---
 #### CS Phase 12 Project
 
 **Recommended build — TCP Chat Service**
 
-**Why this project now:** it applies the material covered through [CS Phase 12](./CS.md#L3055) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CS Phase 12](./CS.md#phase-12) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **TCP Chat Service** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **TCP Chat Service** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — TCP Chat Service Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — TCP Chat Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Build a Production-Ready Backend API — JavaScript Mastery](https://www.youtube.com/watch?v=rOpEN1JDaD0)
 
-> **When this project is complete:** [Resume your study at CS Phase 13](./CS.md#L3781) · [Review Phase 12](./CS.md#L3055)
+> **When this project is complete:** [Resume your study at CS Phase 13](./CS.md#phase-13) · [Review Phase 12](./CS.md#phase-12)
 
 ---
 #### CS Phase 13 Project
 
 **Recommended build — Raw HTTP API Server**
 
-**Why this project now:** it applies the material covered through [CS Phase 13](./CS.md#L3781) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CS Phase 13](./CS.md#phase-13) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Raw HTTP API Server** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Raw HTTP API Server** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Raw HTTP API Server Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Raw HTTP API Server Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Build a Production-Ready Backend API — JavaScript Mastery](https://www.youtube.com/watch?v=rOpEN1JDaD0)
 
-> **When this project is complete:** [Resume your study at CS Phase 14](./CS.md#L4389) · [Review Phase 13](./CS.md#L3781)
+> **When this project is complete:** [Resume your study at CS Phase 14](./CS.md#phase-14) · [Review Phase 13](./CS.md#phase-13)
 
 ---
 #### CS Phase 14 Project
 
 **Recommended build — Transactional Library Database**
 
-**Why this project now:** it applies the material covered through [CS Phase 14](./CS.md#L4389) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CS Phase 14](./CS.md#phase-14) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Transactional Library Database** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Transactional Library Database** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Transactional Library Database Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Transactional Library Database Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Build a Production-Ready Backend API — JavaScript Mastery](https://www.youtube.com/watch?v=rOpEN1JDaD0)
 
-> **When this project is complete:** [Resume your study at CS Phase 15](./CS.md#L6742) · [Review Phase 14](./CS.md#L4389)
+> **When this project is complete:** [Resume your study at CS Phase 15](./CS.md#phase-15) · [Review Phase 14](./CS.md#phase-14)
 
 ---
 #### CS Phase 15 Project
 
 **Recommended build — Secure Auth Service**
 
-**Why this project now:** it applies the material covered through [CS Phase 15](./CS.md#L6742) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CS Phase 15](./CS.md#phase-15) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Secure Auth Service** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Secure Auth Service** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Secure Auth Service Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Secure Auth Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OWASP NodeGoat](https://github.com/OWASP/NodeGoat)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Build a Production-Ready Backend API — JavaScript Mastery](https://www.youtube.com/watch?v=rOpEN1JDaD0)
 
-> **When this project is complete:** [Resume your study at CS Phase 16](./CS.md#L8418) · [Review Phase 15](./CS.md#L6742)
+> **When this project is complete:** [Resume your study at CS Phase 16](./CS.md#phase-16) · [Review Phase 15](./CS.md#phase-15)
 
 ---
 #### CS Phase 16 Project
 
 **Recommended build — Tested CI-Ready Service**
 
-**Why this project now:** it applies the material covered through [CS Phase 16](./CS.md#L8418) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CS Phase 16](./CS.md#phase-16) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Tested CI-Ready Service** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Tested CI-Ready Service** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Tested CI-Ready Service Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Tested CI-Ready Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [System Design Primer: Distributed Systems — Gaurav Sen](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
 
-> **When this project is complete:** [Resume your study at CS Phase 17](./CS.md#L9682) · [Review Phase 16](./CS.md#L8418)
+> **When this project is complete:** [Resume your study at CS Phase 17](./CS.md#phase-17) · [Review Phase 16](./CS.md#phase-16)
 
 ---
 #### CS Phase 17 Project
 
 **Recommended build — Scalable URL Shortener Design**
 
-**Why this project now:** it applies the material covered through [CS Phase 17](./CS.md#L9682) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CS Phase 17](./CS.md#phase-17) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Scalable URL Shortener Design** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Scalable URL Shortener Design** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Scalable URL Shortener Design Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Scalable URL Shortener Design Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [System Design Primer](https://github.com/donnemartin/system-design-primer)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [System Design Primer: Distributed Systems — Gaurav Sen](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
 
-> **When this project is complete:** [Resume your study at CS Phase 18](./CS.md#L11050) · [Review Phase 17](./CS.md#L9682)
+> **When this project is complete:** [Resume your study at CS Phase 18](./CS.md#phase-18) · [Review Phase 17](./CS.md#phase-17)
 
 ---
 #### CS Phase 18 Project
 
 **Recommended build — Replicated Ledger Simulator**
 
-**Why this project now:** it applies the material covered through [CS Phase 18](./CS.md#L11050) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CS Phase 18](./CS.md#phase-18) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Replicated Ledger Simulator** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Replicated Ledger Simulator** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Replicated Ledger Simulator Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Replicated Ledger Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [System Design Primer](https://github.com/donnemartin/system-design-primer)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [System Design Primer: Distributed Systems — Gaurav Sen](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
 
-> **When this project is complete:** [Resume your study at CS Phase 19](./CS.md#L11994) · [Review Phase 18](./CS.md#L11050)
+> **When this project is complete:** [Resume your study at CS Phase 19](./CS.md#phase-19) · [Review Phase 18](./CS.md#phase-18)
 
 ---
 #### CS Phase 19 Project
 
 **Recommended build — Integrated Systems Capstone**
 
-**Why this project now:** it applies the material covered through [CS Phase 19](./CS.md#L11994) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CS Phase 19](./CS.md#phase-19) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Integrated Systems Capstone** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Integrated Systems Capstone** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Integrated Systems Capstone Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Integrated Systems Capstone Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [System Design Primer: Distributed Systems — Gaurav Sen](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
 
-> **When this project is complete:** [Resume your study at CS Phase 20](./CS.md#L12453) · [Review Phase 19](./CS.md#L11994)
+> **When this project is complete:** [Resume your study at CS Phase 20](./CS.md#phase-20) · [Review Phase 19](./CS.md#phase-19)
 
 ---
 #### CS Phase 20 Project
 
 **Recommended build — Timed Interview Harness**
 
-**Why this project now:** it applies the material covered through [CS Phase 20](./CS.md#L12453) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CS Phase 20](./CS.md#phase-20) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Timed Interview Harness** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Timed Interview Harness** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Timed Interview Harness Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Timed Interview Harness Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Coding Interview University](https://github.com/jwasham/coding-interview-university)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [System Design Primer: Distributed Systems — Gaurav Sen](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
 
-> **When this project is complete:** [Return to the CS phase index](./CS.md#L140) · [Review Phase 20](./CS.md#L12453)
+> **When this project is complete:** [Return to the CS phase index](./CS.md#phase-index) · [Review Phase 20](./CS.md#phase-20)
 
 ---
 
 ### Data Phase Projects
 
-Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent portfolio artifact.
+Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent finished portfolio project.
 
 #### DATA Phase 1 Project
 
 **Recommended build — Decision Metric Brief**
 
-**Why this project now:** it applies the material covered through [DATA Phase 1](./Data.md#L156) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DATA Phase 1](./Data.md#phase-1) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Decision Metric Brief** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Decision Metric Brief** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Decision Metric Brief Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Decision Metric Brief Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
 - **YouTube build/lab:** [Building Your First Data Analytics Portfolio — CareerFoundry](https://www.youtube.com/watch?v=j9Q84_Gn_T0)
 
-> **When this project is complete:** [Resume your study at DATA Phase 2](./Data.md#L444) · [Review Phase 1](./Data.md#L156)
+> **When this project is complete:** [Resume your study at DATA Phase 2](./Data.md#phase-2) · [Review Phase 1](./Data.md#phase-1)
 
 ---
 #### DATA Phase 2 Project
 
 **Recommended build — Spreadsheet KPI Dashboard**
 
-**Why this project now:** it applies the material covered through [DATA Phase 2](./Data.md#L444) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DATA Phase 2](./Data.md#phase-2) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Spreadsheet KPI Dashboard** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Spreadsheet KPI Dashboard** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Spreadsheet KPI Dashboard Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Spreadsheet KPI Dashboard Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
 - **YouTube build/lab:** [Building Your First Data Analytics Portfolio — CareerFoundry](https://www.youtube.com/watch?v=j9Q84_Gn_T0)
 
-> **When this project is complete:** [Resume your study at DATA Phase 3](./Data.md#L673) · [Review Phase 2](./Data.md#L444)
+> **When this project is complete:** [Resume your study at DATA Phase 3](./Data.md#phase-3) · [Review Phase 2](./Data.md#phase-2)
 
 ---
 #### DATA Phase 3 Project
 
 **Recommended build — Reproducible Data CLI**
 
-**Why this project now:** it applies the material covered through [DATA Phase 3](./Data.md#L673) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DATA Phase 3](./Data.md#phase-3) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Reproducible Data CLI** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Reproducible Data CLI** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Reproducible Data CLI Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Reproducible Data CLI Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
 - **YouTube build/lab:** [Building Your First Data Analytics Portfolio — CareerFoundry](https://www.youtube.com/watch?v=j9Q84_Gn_T0)
 
-> **When this project is complete:** [Resume your study at DATA Phase 4](./Data.md#L934) · [Review Phase 3](./Data.md#L673)
+> **When this project is complete:** [Resume your study at DATA Phase 4](./Data.md#phase-4) · [Review Phase 3](./Data.md#phase-3)
 
 ---
 #### DATA Phase 4 Project
 
 **Recommended build — SQL Bookstore Database**
 
-**Why this project now:** it applies the material covered through [DATA Phase 4](./Data.md#L934) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DATA Phase 4](./Data.md#phase-4) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **SQL Bookstore Database** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **SQL Bookstore Database** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — SQL Bookstore Database Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — SQL Bookstore Database Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
 - **YouTube build/lab:** [Building Your First Data Analytics Portfolio — CareerFoundry](https://www.youtube.com/watch?v=j9Q84_Gn_T0)
 
-> **When this project is complete:** [Resume your study at DATA Phase 5](./Data.md#L1199) · [Review Phase 4](./Data.md#L934)
+> **When this project is complete:** [Resume your study at DATA Phase 5](./Data.md#phase-5) · [Review Phase 4](./Data.md#phase-4)
 
 ---
 #### DATA Phase 5 Project
 
 **Recommended build — Sales Cohort Analysis**
 
-**Why this project now:** it applies the material covered through [DATA Phase 5](./Data.md#L1199) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DATA Phase 5](./Data.md#phase-5) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Sales Cohort Analysis** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Sales Cohort Analysis** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Sales Cohort Analysis Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Sales Cohort Analysis Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
 - **YouTube build/lab:** [Building Your First Data Analytics Portfolio — CareerFoundry](https://www.youtube.com/watch?v=j9Q84_Gn_T0)
 
-> **When this project is complete:** [Resume your study at DATA Phase 6](./Data.md#L1468) · [Review Phase 5](./Data.md#L1199)
+> **When this project is complete:** [Resume your study at DATA Phase 6](./Data.md#phase-6) · [Review Phase 5](./Data.md#phase-5)
 
 ---
 #### DATA Phase 6 Project
 
 **Recommended build — Window Function Analytics Pack**
 
-**Why this project now:** it applies the material covered through [DATA Phase 6](./Data.md#L1468) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DATA Phase 6](./Data.md#phase-6) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Window Function Analytics Pack** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Window Function Analytics Pack** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Window Function Analytics Pack Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Window Function Analytics Pack Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
 - **YouTube build/lab:** [SQL Data Analyst Portfolio Project with Real Data — Amlan Mohanty](https://www.youtube.com/watch?v=x8dfQkKTyP0)
 
-> **When this project is complete:** [Resume your study at DATA Phase 7](./Data.md#L1759) · [Review Phase 6](./Data.md#L1468)
+> **When this project is complete:** [Resume your study at DATA Phase 7](./Data.md#phase-7) · [Review Phase 6](./Data.md#phase-6)
 
 ---
 #### DATA Phase 7 Project
 
 **Recommended build — A/B Test Analyzer**
 
-**Why this project now:** it applies the material covered through [DATA Phase 7](./Data.md#L1759) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DATA Phase 7](./Data.md#phase-7) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **A/B Test Analyzer** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **A/B Test Analyzer** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — A/B Test Analyzer Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — A/B Test Analyzer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
 - **YouTube build/lab:** [SQL Data Analyst Portfolio Project with Real Data — Amlan Mohanty](https://www.youtube.com/watch?v=x8dfQkKTyP0)
 
-> **When this project is complete:** [Resume your study at DATA Phase 8](./Data.md#L2004) · [Review Phase 7](./Data.md#L1759)
+> **When this project is complete:** [Resume your study at DATA Phase 8](./Data.md#phase-8) · [Review Phase 7](./Data.md#phase-7)
 
 ---
 #### DATA Phase 8 Project
 
 **Recommended build — Dirty Dataset Cleaner**
 
-**Why this project now:** it applies the material covered through [DATA Phase 8](./Data.md#L2004) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DATA Phase 8](./Data.md#phase-8) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Dirty Dataset Cleaner** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Dirty Dataset Cleaner** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Dirty Dataset Cleaner Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Dirty Dataset Cleaner Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
 - **YouTube build/lab:** [SQL Data Analyst Portfolio Project with Real Data — Amlan Mohanty](https://www.youtube.com/watch?v=x8dfQkKTyP0)
 
-> **When this project is complete:** [Resume your study at DATA Phase 9](./Data.md#L2241) · [Review Phase 8](./Data.md#L2004)
+> **When this project is complete:** [Resume your study at DATA Phase 9](./Data.md#phase-9) · [Review Phase 8](./Data.md#phase-8)
 
 ---
 #### DATA Phase 9 Project
 
 **Recommended build — Executive Data Story**
 
-**Why this project now:** it applies the material covered through [DATA Phase 9](./Data.md#L2241) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DATA Phase 9](./Data.md#phase-9) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Executive Data Story** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Executive Data Story** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Executive Data Story Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Executive Data Story Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
 - **YouTube build/lab:** [SQL Data Analyst Portfolio Project with Real Data — Amlan Mohanty](https://www.youtube.com/watch?v=x8dfQkKTyP0)
 
-> **When this project is complete:** [Resume your study at DATA Phase 10](./Data.md#L2455) · [Review Phase 9](./Data.md#L2241)
+> **When this project is complete:** [Resume your study at DATA Phase 10](./Data.md#phase-10) · [Review Phase 9](./Data.md#phase-9)
 
 ---
 #### DATA Phase 10 Project
 
 **Recommended build — Product Funnel EDA**
 
-**Why this project now:** it applies the material covered through [DATA Phase 10](./Data.md#L2455) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DATA Phase 10](./Data.md#phase-10) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Product Funnel EDA** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Product Funnel EDA** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Product Funnel EDA Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Product Funnel EDA Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
 - **YouTube build/lab:** [SQL Data Analyst Portfolio Project with Real Data — Amlan Mohanty](https://www.youtube.com/watch?v=x8dfQkKTyP0)
 
-> **When this project is complete:** [Resume your study at DATA Phase 11](./Data.md#L2741) · [Review Phase 10](./Data.md#L2455)
+> **When this project is complete:** [Resume your study at DATA Phase 11](./Data.md#phase-11) · [Review Phase 10](./Data.md#phase-10)
 
 ---
 #### DATA Phase 11 Project
 
 **Recommended build — Normalized Order Database**
 
-**Why this project now:** it applies the material covered through [DATA Phase 11](./Data.md#L2741) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DATA Phase 11](./Data.md#phase-11) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Normalized Order Database** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Normalized Order Database** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Normalized Order Database Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Normalized Order Database Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
 - **YouTube build/lab:** [Build an ELT Pipeline with dbt, Snowflake, and Airflow — jayzern](https://www.youtube.com/watch?v=OLXkGB7krGo)
 
-> **When this project is complete:** [Resume your study at DATA Phase 12](./Data.md#L3013) · [Review Phase 11](./Data.md#L2741)
+> **When this project is complete:** [Resume your study at DATA Phase 12](./Data.md#phase-12) · [Review Phase 11](./Data.md#phase-11)
 
 ---
 #### DATA Phase 12 Project
 
 **Recommended build — Star Schema Warehouse**
 
-**Why this project now:** it applies the material covered through [DATA Phase 12](./Data.md#L3013) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DATA Phase 12](./Data.md#phase-12) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Star Schema Warehouse** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Star Schema Warehouse** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Star Schema Warehouse Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Star Schema Warehouse Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
 - **YouTube build/lab:** [Build an ELT Pipeline with dbt, Snowflake, and Airflow — jayzern](https://www.youtube.com/watch?v=OLXkGB7krGo)
 
-> **When this project is complete:** [Resume your study at DATA Phase 13](./Data.md#L3378) · [Review Phase 12](./Data.md#L3013)
+> **When this project is complete:** [Resume your study at DATA Phase 13](./Data.md#phase-13) · [Review Phase 12](./Data.md#phase-12)
 
 ---
 #### DATA Phase 13 Project
 
 **Recommended build — Incremental ETL Pipeline**
 
-**Why this project now:** it applies the material covered through [DATA Phase 13](./Data.md#L3378) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DATA Phase 13](./Data.md#phase-13) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Incremental ETL Pipeline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Incremental ETL Pipeline** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Incremental ETL Pipeline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Incremental ETL Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
 - **YouTube build/lab:** [Build an ELT Pipeline with dbt, Snowflake, and Airflow — jayzern](https://www.youtube.com/watch?v=OLXkGB7krGo)
 
-> **When this project is complete:** [Resume your study at DATA Phase 14](./Data.md#L3623) · [Review Phase 13](./Data.md#L3378)
+> **When this project is complete:** [Resume your study at DATA Phase 14](./Data.md#phase-14) · [Review Phase 13](./Data.md#phase-13)
 
 ---
 #### DATA Phase 14 Project
 
 **Recommended build — Scheduled Airflow Pipeline**
 
-**Why this project now:** it applies the material covered through [DATA Phase 14](./Data.md#L3623) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DATA Phase 14](./Data.md#phase-14) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Scheduled Airflow Pipeline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Scheduled Airflow Pipeline** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Scheduled Airflow Pipeline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Scheduled Airflow Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Apache Airflow](https://github.com/apache/airflow)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
 - **YouTube build/lab:** [Build an ELT Pipeline with dbt, Snowflake, and Airflow — jayzern](https://www.youtube.com/watch?v=OLXkGB7krGo)
 
-> **When this project is complete:** [Resume your study at DATA Phase 15](./Data.md#L3873) · [Review Phase 14](./Data.md#L3623)
+> **When this project is complete:** [Resume your study at DATA Phase 15](./Data.md#phase-15) · [Review Phase 14](./Data.md#phase-14)
 
 ---
 #### DATA Phase 15 Project
 
 **Recommended build — dbt Analytics Project**
 
-**Why this project now:** it applies the material covered through [DATA Phase 15](./Data.md#L3873) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DATA Phase 15](./Data.md#phase-15) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **dbt Analytics Project** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **dbt Analytics Project** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — dbt Analytics Project Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — dbt Analytics Project Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [dbt Jaffle Shop](https://github.com/dbt-labs/jaffle_shop)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
 - **YouTube build/lab:** [Build an ELT Pipeline with dbt, Snowflake, and Airflow — jayzern](https://www.youtube.com/watch?v=OLXkGB7krGo)
 
-> **When this project is complete:** [Resume your study at DATA Phase 16](./Data.md#L4135) · [Review Phase 15](./Data.md#L3873)
+> **When this project is complete:** [Resume your study at DATA Phase 16](./Data.md#phase-16) · [Review Phase 15](./Data.md#phase-15)
 
 ---
 #### DATA Phase 16 Project
 
 **Recommended build — Cloud Warehouse Migration**
 
-**Why this project now:** it applies the material covered through [DATA Phase 16](./Data.md#L4135) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DATA Phase 16](./Data.md#phase-16) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Cloud Warehouse Migration** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Cloud Warehouse Migration** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Cloud Warehouse Migration Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Cloud Warehouse Migration Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
 - **YouTube build/lab:** [Spark, Kafka, and Cassandra End-to-End Streaming Project — Data Engineering](https://www.youtube.com/watch?v=wNnTNTVdglM)
 
-> **When this project is complete:** [Resume your study at DATA Phase 17](./Data.md#L4357) · [Review Phase 16](./Data.md#L4135)
+> **When this project is complete:** [Resume your study at DATA Phase 17](./Data.md#phase-17) · [Review Phase 16](./Data.md#phase-16)
 
 ---
 #### DATA Phase 17 Project
 
 **Recommended build — Distributed Spark Batch Job**
 
-**Why this project now:** it applies the material covered through [DATA Phase 17](./Data.md#L4357) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DATA Phase 17](./Data.md#phase-17) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Distributed Spark Batch Job** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Distributed Spark Batch Job** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Distributed Spark Batch Job Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Distributed Spark Batch Job Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Apache Spark](https://github.com/apache/spark)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
 - **YouTube build/lab:** [Spark, Kafka, and Cassandra End-to-End Streaming Project — Data Engineering](https://www.youtube.com/watch?v=wNnTNTVdglM)
 
-> **When this project is complete:** [Resume your study at DATA Phase 18](./Data.md#L4568) · [Review Phase 17](./Data.md#L4357)
+> **When this project is complete:** [Resume your study at DATA Phase 18](./Data.md#phase-18) · [Review Phase 17](./Data.md#phase-17)
 
 ---
 #### DATA Phase 18 Project
 
 **Recommended build — Kafka Streaming Metrics**
 
-**Why this project now:** it applies the material covered through [DATA Phase 18](./Data.md#L4568) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DATA Phase 18](./Data.md#phase-18) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Kafka Streaming Metrics** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Kafka Streaming Metrics** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Kafka Streaming Metrics Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Kafka Streaming Metrics Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
 - **YouTube build/lab:** [Spark, Kafka, and Cassandra End-to-End Streaming Project — Data Engineering](https://www.youtube.com/watch?v=wNnTNTVdglM)
 
-> **When this project is complete:** [Resume your study at DATA Phase 19](./Data.md#L4749) · [Review Phase 18](./Data.md#L4568)
+> **When this project is complete:** [Resume your study at DATA Phase 19](./Data.md#phase-19) · [Review Phase 18](./Data.md#phase-18)
 
 ---
 #### DATA Phase 19 Project
 
 **Recommended build — Data Quality Portfolio**
 
-**Why this project now:** it applies the material covered through [DATA Phase 19](./Data.md#L4749) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DATA Phase 19](./Data.md#phase-19) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Data Quality Portfolio** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Data Quality Portfolio** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Data Quality Portfolio Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Data Quality Portfolio Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
 - **YouTube build/lab:** [Spark, Kafka, and Cassandra End-to-End Streaming Project — Data Engineering](https://www.youtube.com/watch?v=wNnTNTVdglM)
 
-> **When this project is complete:** [Resume your study at DATA Phase 20](./Data.md#L4934) · [Review Phase 19](./Data.md#L4749)
+> **When this project is complete:** [Resume your study at DATA Phase 20](./Data.md#phase-20) · [Review Phase 19](./Data.md#phase-19)
 
 ---
 #### DATA Phase 20 Project
 
 **Recommended build — Timed Analytics Case Study**
 
-**Why this project now:** it applies the material covered through [DATA Phase 20](./Data.md#L4934) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DATA Phase 20](./Data.md#phase-20) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Timed Analytics Case Study** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Timed Analytics Case Study** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Timed Analytics Case Study Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Timed Analytics Case Study Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
 - **YouTube build/lab:** [Spark, Kafka, and Cassandra End-to-End Streaming Project — Data Engineering](https://www.youtube.com/watch?v=wNnTNTVdglM)
 
-> **When this project is complete:** [Return to the DATA phase index](./Data.md#L115) · [Review Phase 20](./Data.md#L4934)
+> **When this project is complete:** [Return to the DATA phase index](./Data.md#phase-index) · [Review Phase 20](./Data.md#phase-20)
 
 ---
 
 ### Networks Phase Projects
 
-Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent portfolio artifact.
+Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent finished portfolio project.
 
 #### NETWORKS Phase 1 Project
 
 **Recommended build — Latency vs Throughput Lab**
 
-**Why this project now:** it applies the material covered through [NETWORKS Phase 1](./Networks.md#L159) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [NETWORKS Phase 1](./Networks.md#phase-1) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Latency vs Throughput Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Latency vs Throughput Lab** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Latency vs Throughput Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Latency vs Throughput Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
 - **YouTube build/lab:** [Free CCNA: Subnetting Lab — Jeremy's IT Lab](https://www.youtube.com/watch?v=bQ8sdpGQu8c)
 
-> **When this project is complete:** [Resume your study at NETWORKS Phase 2](./Networks.md#L379) · [Review Phase 1](./Networks.md#L159)
+> **When this project is complete:** [Resume your study at NETWORKS Phase 2](./Networks.md#phase-2) · [Review Phase 1](./Networks.md#phase-1)
 
 ---
 #### NETWORKS Phase 2 Project
 
 **Recommended build — Noisy Link Simulator**
 
-**Why this project now:** it applies the material covered through [NETWORKS Phase 2](./Networks.md#L379) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [NETWORKS Phase 2](./Networks.md#phase-2) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Noisy Link Simulator** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Noisy Link Simulator** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Noisy Link Simulator Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Noisy Link Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
 - **YouTube build/lab:** [Free CCNA: Subnetting Lab — Jeremy's IT Lab](https://www.youtube.com/watch?v=bQ8sdpGQu8c)
 
-> **When this project is complete:** [Resume your study at NETWORKS Phase 3](./Networks.md#L549) · [Review Phase 2](./Networks.md#L379)
+> **When this project is complete:** [Resume your study at NETWORKS Phase 3](./Networks.md#phase-3) · [Review Phase 2](./Networks.md#phase-2)
 
 ---
 #### NETWORKS Phase 3 Project
 
 **Recommended build — Ethernet Frame Encoder**
 
-**Why this project now:** it applies the material covered through [NETWORKS Phase 3](./Networks.md#L549) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [NETWORKS Phase 3](./Networks.md#phase-3) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Ethernet Frame Encoder** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Ethernet Frame Encoder** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Ethernet Frame Encoder Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Ethernet Frame Encoder Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
 - **YouTube build/lab:** [Free CCNA: Subnetting Lab — Jeremy's IT Lab](https://www.youtube.com/watch?v=bQ8sdpGQu8c)
 
-> **When this project is complete:** [Resume your study at NETWORKS Phase 4](./Networks.md#L706) · [Review Phase 3](./Networks.md#L549)
+> **When this project is complete:** [Resume your study at NETWORKS Phase 4](./Networks.md#phase-4) · [Review Phase 3](./Networks.md#phase-3)
 
 ---
 #### NETWORKS Phase 4 Project
 
 **Recommended build — Learning Switch Simulator**
 
-**Why this project now:** it applies the material covered through [NETWORKS Phase 4](./Networks.md#L706) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [NETWORKS Phase 4](./Networks.md#phase-4) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Learning Switch Simulator** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Learning Switch Simulator** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Learning Switch Simulator Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Learning Switch Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
 - **YouTube build/lab:** [Free CCNA: Subnetting Lab — Jeremy's IT Lab](https://www.youtube.com/watch?v=bQ8sdpGQu8c)
 
-> **When this project is complete:** [Resume your study at NETWORKS Phase 5](./Networks.md#L863) · [Review Phase 4](./Networks.md#L706)
+> **When this project is complete:** [Resume your study at NETWORKS Phase 5](./Networks.md#phase-5) · [Review Phase 4](./Networks.md#phase-4)
 
 ---
 #### NETWORKS Phase 5 Project
 
 **Recommended build — Subnet Calculator**
 
-**Why this project now:** it applies the material covered through [NETWORKS Phase 5](./Networks.md#L863) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [NETWORKS Phase 5](./Networks.md#phase-5) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Subnet Calculator** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Subnet Calculator** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Subnet Calculator Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Subnet Calculator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
 - **YouTube build/lab:** [Free CCNA: Subnetting Lab — Jeremy's IT Lab](https://www.youtube.com/watch?v=bQ8sdpGQu8c)
 
-> **When this project is complete:** [Resume your study at NETWORKS Phase 6](./Networks.md#L1011) · [Review Phase 5](./Networks.md#L863)
+> **When this project is complete:** [Resume your study at NETWORKS Phase 6](./Networks.md#phase-6) · [Review Phase 5](./Networks.md#phase-5)
 
 ---
 #### NETWORKS Phase 6 Project
 
 **Recommended build — Longest-Prefix Router**
 
-**Why this project now:** it applies the material covered through [NETWORKS Phase 6](./Networks.md#L1011) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [NETWORKS Phase 6](./Networks.md#phase-6) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Longest-Prefix Router** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Longest-Prefix Router** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Longest-Prefix Router Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Longest-Prefix Router Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
 - **YouTube build/lab:** [Python Socket Programming Tutorial — Tech With Tim](https://www.youtube.com/watch?v=3QiPPX-KeSc)
 
-> **When this project is complete:** [Resume your study at NETWORKS Phase 7](./Networks.md#L1175) · [Review Phase 6](./Networks.md#L1011)
+> **When this project is complete:** [Resume your study at NETWORKS Phase 7](./Networks.md#phase-7) · [Review Phase 6](./Networks.md#phase-6)
 
 ---
 #### NETWORKS Phase 7 Project
 
 **Recommended build — DHCP/NAT Table Simulator**
 
-**Why this project now:** it applies the material covered through [NETWORKS Phase 7](./Networks.md#L1175) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [NETWORKS Phase 7](./Networks.md#phase-7) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **DHCP/NAT Table Simulator** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **DHCP/NAT Table Simulator** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — DHCP/NAT Table Simulator Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — DHCP/NAT Table Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
 - **YouTube build/lab:** [Python Socket Programming Tutorial — Tech With Tim](https://www.youtube.com/watch?v=3QiPPX-KeSc)
 
-> **When this project is complete:** [Resume your study at NETWORKS Phase 8](./Networks.md#L1341) · [Review Phase 7](./Networks.md#L1175)
+> **When this project is complete:** [Resume your study at NETWORKS Phase 8](./Networks.md#phase-8) · [Review Phase 7](./Networks.md#phase-7)
 
 ---
 #### NETWORKS Phase 8 Project
 
 **Recommended build — Packet Encapsulation Visualizer**
 
-**Why this project now:** it applies the material covered through [NETWORKS Phase 8](./Networks.md#L1341) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [NETWORKS Phase 8](./Networks.md#phase-8) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Packet Encapsulation Visualizer** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Packet Encapsulation Visualizer** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Packet Encapsulation Visualizer Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Packet Encapsulation Visualizer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
 - **YouTube build/lab:** [Python Socket Programming Tutorial — Tech With Tim](https://www.youtube.com/watch?v=3QiPPX-KeSc)
 
-> **When this project is complete:** [Resume your study at NETWORKS Phase 9](./Networks.md#L1487) · [Review Phase 8](./Networks.md#L1341)
+> **When this project is complete:** [Resume your study at NETWORKS Phase 9](./Networks.md#phase-9) · [Review Phase 8](./Networks.md#phase-8)
 
 ---
 #### NETWORKS Phase 9 Project
 
 **Recommended build — Reliable UDP Chat**
 
-**Why this project now:** it applies the material covered through [NETWORKS Phase 9](./Networks.md#L1487) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [NETWORKS Phase 9](./Networks.md#phase-9) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Reliable UDP Chat** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Reliable UDP Chat** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Reliable UDP Chat Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Reliable UDP Chat Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
 - **YouTube build/lab:** [Python Socket Programming Tutorial — Tech With Tim](https://www.youtube.com/watch?v=3QiPPX-KeSc)
 
-> **When this project is complete:** [Resume your study at NETWORKS Phase 10](./Networks.md#L1636) · [Review Phase 9](./Networks.md#L1487)
+> **When this project is complete:** [Resume your study at NETWORKS Phase 10](./Networks.md#phase-10) · [Review Phase 9](./Networks.md#phase-9)
 
 ---
 #### NETWORKS Phase 10 Project
 
 **Recommended build — TCP State Trace**
 
-**Why this project now:** it applies the material covered through [NETWORKS Phase 10](./Networks.md#L1636) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [NETWORKS Phase 10](./Networks.md#phase-10) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **TCP State Trace** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **TCP State Trace** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — TCP State Trace Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — TCP State Trace Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
 - **YouTube build/lab:** [Python Socket Programming Tutorial — Tech With Tim](https://www.youtube.com/watch?v=3QiPPX-KeSc)
 
-> **When this project is complete:** [Resume your study at NETWORKS Phase 11](./Networks.md#L1802) · [Review Phase 10](./Networks.md#L1636)
+> **When this project is complete:** [Resume your study at NETWORKS Phase 11](./Networks.md#phase-11) · [Review Phase 10](./Networks.md#phase-10)
 
 ---
 #### NETWORKS Phase 11 Project
 
 **Recommended build — Multi-client Socket Server**
 
-**Why this project now:** it applies the material covered through [NETWORKS Phase 11](./Networks.md#L1802) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [NETWORKS Phase 11](./Networks.md#phase-11) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Multi-client Socket Server** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Multi-client Socket Server** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Multi-client Socket Server Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Multi-client Socket Server Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
 - **YouTube build/lab:** [Network Protocols: ARP through TLS and DNS — Practical Networking](https://www.youtube.com/watch?v=E5bSumTAHZE)
 
-> **When this project is complete:** [Resume your study at NETWORKS Phase 12](./Networks.md#L1980) · [Review Phase 11](./Networks.md#L1802)
+> **When this project is complete:** [Resume your study at NETWORKS Phase 12](./Networks.md#phase-12) · [Review Phase 11](./Networks.md#phase-11)
 
 ---
 #### NETWORKS Phase 12 Project
 
 **Recommended build — Recursive DNS Resolver**
 
-**Why this project now:** it applies the material covered through [NETWORKS Phase 12](./Networks.md#L1980) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [NETWORKS Phase 12](./Networks.md#phase-12) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Recursive DNS Resolver** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Recursive DNS Resolver** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Recursive DNS Resolver Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Recursive DNS Resolver Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
 - **YouTube build/lab:** [Network Protocols: ARP through TLS and DNS — Practical Networking](https://www.youtube.com/watch?v=E5bSumTAHZE)
 
-> **When this project is complete:** [Resume your study at NETWORKS Phase 13](./Networks.md#L2115) · [Review Phase 12](./Networks.md#L1980)
+> **When this project is complete:** [Resume your study at NETWORKS Phase 13](./Networks.md#phase-13) · [Review Phase 12](./Networks.md#phase-12)
 
 ---
 #### NETWORKS Phase 13 Project
 
 **Recommended build — Raw HTTP Exchange**
 
-**Why this project now:** it applies the material covered through [NETWORKS Phase 13](./Networks.md#L2115) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [NETWORKS Phase 13](./Networks.md#phase-13) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Raw HTTP Exchange** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Raw HTTP Exchange** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Raw HTTP Exchange Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Raw HTTP Exchange Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
 - **YouTube build/lab:** [Network Protocols: ARP through TLS and DNS — Practical Networking](https://www.youtube.com/watch?v=E5bSumTAHZE)
 
-> **When this project is complete:** [Resume your study at NETWORKS Phase 14](./Networks.md#L2255) · [Review Phase 13](./Networks.md#L2115)
+> **When this project is complete:** [Resume your study at NETWORKS Phase 14](./Networks.md#phase-14) · [Review Phase 13](./Networks.md#phase-13)
 
 ---
 #### NETWORKS Phase 14 Project
 
 **Recommended build — TLS Certificate Inspector**
 
-**Why this project now:** it applies the material covered through [NETWORKS Phase 14](./Networks.md#L2255) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [NETWORKS Phase 14](./Networks.md#phase-14) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **TLS Certificate Inspector** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **TLS Certificate Inspector** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — TLS Certificate Inspector Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — TLS Certificate Inspector Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
 - **YouTube build/lab:** [Network Protocols: ARP through TLS and DNS — Practical Networking](https://www.youtube.com/watch?v=E5bSumTAHZE)
 
-> **When this project is complete:** [Resume your study at NETWORKS Phase 15](./Networks.md#L2391) · [Review Phase 14](./Networks.md#L2255)
+> **When this project is complete:** [Resume your study at NETWORKS Phase 15](./Networks.md#phase-15) · [Review Phase 14](./Networks.md#phase-14)
 
 ---
 #### NETWORKS Phase 15 Project
 
 **Recommended build — Packet Forensics Report**
 
-**Why this project now:** it applies the material covered through [NETWORKS Phase 15](./Networks.md#L2391) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [NETWORKS Phase 15](./Networks.md#phase-15) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Packet Forensics Report** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Packet Forensics Report** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Packet Forensics Report Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Packet Forensics Report Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Wireshark](https://github.com/wireshark/wireshark)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
 - **YouTube build/lab:** [Network Protocols: ARP through TLS and DNS — Practical Networking](https://www.youtube.com/watch?v=E5bSumTAHZE)
 
-> **When this project is complete:** [Resume your study at NETWORKS Phase 16](./Networks.md#L2544) · [Review Phase 15](./Networks.md#L2391)
+> **When this project is complete:** [Resume your study at NETWORKS Phase 16](./Networks.md#phase-16) · [Review Phase 15](./Networks.md#phase-15)
 
 ---
 #### NETWORKS Phase 16 Project
 
 **Recommended build — Wi-Fi Survey and Heatmap**
 
-**Why this project now:** it applies the material covered through [NETWORKS Phase 16](./Networks.md#L2544) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [NETWORKS Phase 16](./Networks.md#phase-16) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Wi-Fi Survey and Heatmap** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Wi-Fi Survey and Heatmap** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Wi-Fi Survey and Heatmap Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Wi-Fi Survey and Heatmap Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
 - **YouTube build/lab:** [Wireshark Packet Analysis Lab — Concepts & Tricks](https://www.youtube.com/watch?v=2SYknklVHqU)
 
-> **When this project is complete:** [Resume your study at NETWORKS Phase 17](./Networks.md#L2672) · [Review Phase 16](./Networks.md#L2544)
+> **When this project is complete:** [Resume your study at NETWORKS Phase 17](./Networks.md#phase-17) · [Review Phase 16](./Networks.md#phase-16)
 
 ---
 #### NETWORKS Phase 17 Project
 
 **Recommended build — Reverse Proxy Load Lab**
 
-**Why this project now:** it applies the material covered through [NETWORKS Phase 17](./Networks.md#L2672) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [NETWORKS Phase 17](./Networks.md#phase-17) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Reverse Proxy Load Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Reverse Proxy Load Lab** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Reverse Proxy Load Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Reverse Proxy Load Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
 - **YouTube build/lab:** [Wireshark Packet Analysis Lab — Concepts & Tricks](https://www.youtube.com/watch?v=2SYknklVHqU)
 
-> **When this project is complete:** [Resume your study at NETWORKS Phase 18](./Networks.md#L2812) · [Review Phase 17](./Networks.md#L2672)
+> **When this project is complete:** [Resume your study at NETWORKS Phase 18](./Networks.md#phase-18) · [Review Phase 17](./Networks.md#phase-17)
 
 ---
 #### NETWORKS Phase 18 Project
 
 **Recommended build — BGP Policy Simulator**
 
-**Why this project now:** it applies the material covered through [NETWORKS Phase 18](./Networks.md#L2812) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [NETWORKS Phase 18](./Networks.md#phase-18) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **BGP Policy Simulator** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **BGP Policy Simulator** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — BGP Policy Simulator Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — BGP Policy Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
 - **YouTube build/lab:** [Wireshark Packet Analysis Lab — Concepts & Tricks](https://www.youtube.com/watch?v=2SYknklVHqU)
 
-> **When this project is complete:** [Resume your study at NETWORKS Phase 19](./Networks.md#L2947) · [Review Phase 18](./Networks.md#L2812)
+> **When this project is complete:** [Resume your study at NETWORKS Phase 19](./Networks.md#phase-19) · [Review Phase 18](./Networks.md#phase-18)
 
 ---
 #### NETWORKS Phase 19 Project
 
 **Recommended build — Automated Network Lab Portfolio**
 
-**Why this project now:** it applies the material covered through [NETWORKS Phase 19](./Networks.md#L2947) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [NETWORKS Phase 19](./Networks.md#phase-19) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Automated Network Lab Portfolio** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Automated Network Lab Portfolio** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Automated Network Lab Portfolio Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Automated Network Lab Portfolio Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
 - **YouTube build/lab:** [Wireshark Packet Analysis Lab — Concepts & Tricks](https://www.youtube.com/watch?v=2SYknklVHqU)
 
-> **When this project is complete:** [Resume your study at NETWORKS Phase 20](./Networks.md#L3081) · [Review Phase 19](./Networks.md#L2947)
+> **When this project is complete:** [Resume your study at NETWORKS Phase 20](./Networks.md#phase-20) · [Review Phase 19](./Networks.md#phase-19)
 
 ---
 #### NETWORKS Phase 20 Project
 
 **Recommended build — Timed Troubleshooting Drill**
 
-**Why this project now:** it applies the material covered through [NETWORKS Phase 20](./Networks.md#L3081) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [NETWORKS Phase 20](./Networks.md#phase-20) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Timed Troubleshooting Drill** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Timed Troubleshooting Drill** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Timed Troubleshooting Drill Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Timed Troubleshooting Drill Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
 - **YouTube build/lab:** [Wireshark Packet Analysis Lab — Concepts & Tricks](https://www.youtube.com/watch?v=2SYknklVHqU)
 
-> **When this project is complete:** [Return to the NETWORKS phase index](./Networks.md#L111) · [Review Phase 20](./Networks.md#L3081)
+> **When this project is complete:** [Return to the NETWORKS phase index](./Networks.md#phase-index) · [Review Phase 20](./Networks.md#phase-20)
 
 ---
 
 ### AI Phase Projects
 
-Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent portfolio artifact.
+Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent finished portfolio project.
 
 #### AI Phase 1 Project
 
 **Recommended build — Rule vs Learner Benchmark**
 
-**Why this project now:** it applies the material covered through [AI Phase 1](./AI.md#L154) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [AI Phase 1](./AI.md#phase-1) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Rule vs Learner Benchmark** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Rule vs Learner Benchmark** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Rule vs Learner Benchmark Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Rule vs Learner Benchmark Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
 - **YouTube build/lab:** [Build a Machine Learning Web App with scikit-learn — Patrick Loeber](https://www.youtube.com/watch?v=Klqn--Mu2pE)
 
-> **When this project is complete:** [Resume your study at AI Phase 2](./AI.md#L312) · [Review Phase 1](./AI.md#L154)
+> **When this project is complete:** [Resume your study at AI Phase 2](./AI.md#phase-2) · [Review Phase 1](./AI.md#phase-1)
 
 ---
 #### AI Phase 2 Project
 
 **Recommended build — Gradient Descent Visualizer**
 
-**Why this project now:** it applies the material covered through [AI Phase 2](./AI.md#L312) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [AI Phase 2](./AI.md#phase-2) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Gradient Descent Visualizer** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Gradient Descent Visualizer** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Gradient Descent Visualizer Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Gradient Descent Visualizer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [micrograd](https://github.com/karpathy/micrograd)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
 - **YouTube build/lab:** [Build a Machine Learning Web App with scikit-learn — Patrick Loeber](https://www.youtube.com/watch?v=Klqn--Mu2pE)
 
-> **When this project is complete:** [Resume your study at AI Phase 3](./AI.md#L457) · [Review Phase 2](./AI.md#L312)
+> **When this project is complete:** [Resume your study at AI Phase 3](./AI.md#phase-3) · [Review Phase 2](./AI.md#phase-2)
 
 ---
 #### AI Phase 3 Project
 
 **Recommended build — NumPy/Pandas Dataset Lab**
 
-**Why this project now:** it applies the material covered through [AI Phase 3](./AI.md#L457) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [AI Phase 3](./AI.md#phase-3) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **NumPy/Pandas Dataset Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **NumPy/Pandas Dataset Lab** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — NumPy/Pandas Dataset Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — NumPy/Pandas Dataset Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
 - **YouTube build/lab:** [Build a Machine Learning Web App with scikit-learn — Patrick Loeber](https://www.youtube.com/watch?v=Klqn--Mu2pE)
 
-> **When this project is complete:** [Resume your study at AI Phase 4](./AI.md#L593) · [Review Phase 3](./AI.md#L457)
+> **When this project is complete:** [Resume your study at AI Phase 4](./AI.md#phase-4) · [Review Phase 3](./AI.md#phase-3)
 
 ---
 #### AI Phase 4 Project
 
 **Recommended build — Regression and Classification Baseline**
 
-**Why this project now:** it applies the material covered through [AI Phase 4](./AI.md#L593) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [AI Phase 4](./AI.md#phase-4) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Regression and Classification Baseline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Regression and Classification Baseline** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Regression and Classification Baseline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Regression and Classification Baseline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
 - **YouTube build/lab:** [Build a Machine Learning Web App with scikit-learn — Patrick Loeber](https://www.youtube.com/watch?v=Klqn--Mu2pE)
 
-> **When this project is complete:** [Resume your study at AI Phase 5](./AI.md#L739) · [Review Phase 4](./AI.md#L593)
+> **When this project is complete:** [Resume your study at AI Phase 5](./AI.md#phase-5) · [Review Phase 4](./AI.md#phase-4)
 
 ---
 #### AI Phase 5 Project
 
 **Recommended build — Leakage-Proof Evaluation Harness**
 
-**Why this project now:** it applies the material covered through [AI Phase 5](./AI.md#L739) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [AI Phase 5](./AI.md#phase-5) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Leakage-Proof Evaluation Harness** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Leakage-Proof Evaluation Harness** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Leakage-Proof Evaluation Harness Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Leakage-Proof Evaluation Harness Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
 - **YouTube build/lab:** [Build a Machine Learning Web App with scikit-learn — Patrick Loeber](https://www.youtube.com/watch?v=Klqn--Mu2pE)
 
-> **When this project is complete:** [Resume your study at AI Phase 6](./AI.md#L878) · [Review Phase 5](./AI.md#L739)
+> **When this project is complete:** [Resume your study at AI Phase 6](./AI.md#phase-6) · [Review Phase 5](./AI.md#phase-5)
 
 ---
 #### AI Phase 6 Project
 
 **Recommended build — Ensemble Model Showdown**
 
-**Why this project now:** it applies the material covered through [AI Phase 6](./AI.md#L878) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [AI Phase 6](./AI.md#phase-6) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Ensemble Model Showdown** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Ensemble Model Showdown** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Ensemble Model Showdown Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Ensemble Model Showdown Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
 - **YouTube build/lab:** [Build Your First PyTorch Model — Rob Mulla](https://www.youtube.com/watch?v=tHL5STNJKag)
 
-> **When this project is complete:** [Resume your study at AI Phase 7](./AI.md#L1020) · [Review Phase 6](./AI.md#L878)
+> **When this project is complete:** [Resume your study at AI Phase 7](./AI.md#phase-7) · [Review Phase 6](./AI.md#phase-6)
 
 ---
 #### AI Phase 7 Project
 
 **Recommended build — Neural Network from Scratch**
 
-**Why this project now:** it applies the material covered through [AI Phase 7](./AI.md#L1020) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [AI Phase 7](./AI.md#phase-7) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Neural Network from Scratch** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Neural Network from Scratch** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Neural Network from Scratch Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Neural Network from Scratch Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [PyTorch Examples](https://github.com/pytorch/examples)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
 - **YouTube build/lab:** [Build Your First PyTorch Model — Rob Mulla](https://www.youtube.com/watch?v=tHL5STNJKag)
 
-> **When this project is complete:** [Resume your study at AI Phase 8](./AI.md#L1173) · [Review Phase 7](./AI.md#L1020)
+> **When this project is complete:** [Resume your study at AI Phase 8](./AI.md#phase-8) · [Review Phase 7](./AI.md#phase-7)
 
 ---
 #### AI Phase 8 Project
 
 **Recommended build — Tiny Autograd Engine**
 
-**Why this project now:** it applies the material covered through [AI Phase 8](./AI.md#L1173) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [AI Phase 8](./AI.md#phase-8) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Tiny Autograd Engine** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Tiny Autograd Engine** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Tiny Autograd Engine Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Tiny Autograd Engine Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [PyTorch Examples](https://github.com/pytorch/examples)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
 - **YouTube build/lab:** [Build Your First PyTorch Model — Rob Mulla](https://www.youtube.com/watch?v=tHL5STNJKag)
 
-> **When this project is complete:** [Resume your study at AI Phase 9](./AI.md#L1319) · [Review Phase 8](./AI.md#L1173)
+> **When this project is complete:** [Resume your study at AI Phase 9](./AI.md#phase-9) · [Review Phase 8](./AI.md#phase-8)
 
 ---
 #### AI Phase 9 Project
 
 **Recommended build — Reusable PyTorch Trainer**
 
-**Why this project now:** it applies the material covered through [AI Phase 9](./AI.md#L1319) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [AI Phase 9](./AI.md#phase-9) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Reusable PyTorch Trainer** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Reusable PyTorch Trainer** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Reusable PyTorch Trainer Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Reusable PyTorch Trainer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [PyTorch Examples](https://github.com/pytorch/examples)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
 - **YouTube build/lab:** [Build Your First PyTorch Model — Rob Mulla](https://www.youtube.com/watch?v=tHL5STNJKag)
 
-> **When this project is complete:** [Resume your study at AI Phase 10](./AI.md#L1469) · [Review Phase 9](./AI.md#L1319)
+> **When this project is complete:** [Resume your study at AI Phase 10](./AI.md#phase-10) · [Review Phase 9](./AI.md#phase-9)
 
 ---
 #### AI Phase 10 Project
 
 **Recommended build — Transfer-Learning Image Classifier**
 
-**Why this project now:** it applies the material covered through [AI Phase 10](./AI.md#L1469) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [AI Phase 10](./AI.md#phase-10) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Transfer-Learning Image Classifier** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Transfer-Learning Image Classifier** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Transfer-Learning Image Classifier Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Transfer-Learning Image Classifier Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [PyTorch Examples](https://github.com/pytorch/examples)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
 - **YouTube build/lab:** [Build Your First PyTorch Model — Rob Mulla](https://www.youtube.com/watch?v=tHL5STNJKag)
 
-> **When this project is complete:** [Resume your study at AI Phase 11](./AI.md#L1612) · [Review Phase 10](./AI.md#L1469)
+> **When this project is complete:** [Resume your study at AI Phase 11](./AI.md#phase-11) · [Review Phase 10](./AI.md#phase-10)
 
 ---
 #### AI Phase 11 Project
 
 **Recommended build — Sequence Sentiment Classifier**
 
-**Why this project now:** it applies the material covered through [AI Phase 11](./AI.md#L1612) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [AI Phase 11](./AI.md#phase-11) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Sequence Sentiment Classifier** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Sequence Sentiment Classifier** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Sequence Sentiment Classifier Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Sequence Sentiment Classifier Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [PyTorch Examples](https://github.com/pytorch/examples)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
 - **YouTube build/lab:** [Learn RAG from Scratch — freeCodeCamp.org](https://www.youtube.com/watch?v=sVcwVQRHIc8)
 
-> **When this project is complete:** [Resume your study at AI Phase 12](./AI.md#L1746) · [Review Phase 11](./AI.md#L1612)
+> **When this project is complete:** [Resume your study at AI Phase 12](./AI.md#phase-12) · [Review Phase 11](./AI.md#phase-11)
 
 ---
 #### AI Phase 12 Project
 
 **Recommended build — Semantic Search Engine**
 
-**Why this project now:** it applies the material covered through [AI Phase 12](./AI.md#L1746) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [AI Phase 12](./AI.md#phase-12) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Semantic Search Engine** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Semantic Search Engine** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Semantic Search Engine Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Semantic Search Engine Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Transformers](https://github.com/huggingface/transformers)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
 - **YouTube build/lab:** [Learn RAG from Scratch — freeCodeCamp.org](https://www.youtube.com/watch?v=sVcwVQRHIc8)
 
-> **When this project is complete:** [Resume your study at AI Phase 13](./AI.md#L1889) · [Review Phase 12](./AI.md#L1746)
+> **When this project is complete:** [Resume your study at AI Phase 13](./AI.md#phase-13) · [Review Phase 12](./AI.md#phase-12)
 
 ---
 #### AI Phase 13 Project
 
 **Recommended build — Tiny Transformer Explainer**
 
-**Why this project now:** it applies the material covered through [AI Phase 13](./AI.md#L1889) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [AI Phase 13](./AI.md#phase-13) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Tiny Transformer Explainer** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Tiny Transformer Explainer** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Tiny Transformer Explainer Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Tiny Transformer Explainer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Transformers](https://github.com/huggingface/transformers)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
 - **YouTube build/lab:** [Learn RAG from Scratch — freeCodeCamp.org](https://www.youtube.com/watch?v=sVcwVQRHIc8)
 
-> **When this project is complete:** [Resume your study at AI Phase 14](./AI.md#L2036) · [Review Phase 13](./AI.md#L1889)
+> **When this project is complete:** [Resume your study at AI Phase 14](./AI.md#phase-14) · [Review Phase 13](./AI.md#phase-13)
 
 ---
 #### AI Phase 14 Project
 
 **Recommended build — Prompt Experiment Matrix**
 
-**Why this project now:** it applies the material covered through [AI Phase 14](./AI.md#L2036) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [AI Phase 14](./AI.md#phase-14) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Prompt Experiment Matrix** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Prompt Experiment Matrix** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Prompt Experiment Matrix Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Prompt Experiment Matrix Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Transformers](https://github.com/huggingface/transformers)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
 - **YouTube build/lab:** [Learn RAG from Scratch — freeCodeCamp.org](https://www.youtube.com/watch?v=sVcwVQRHIc8)
 
-> **When this project is complete:** [Resume your study at AI Phase 15](./AI.md#L2181) · [Review Phase 14](./AI.md#L2036)
+> **When this project is complete:** [Resume your study at AI Phase 15](./AI.md#phase-15) · [Review Phase 14](./AI.md#phase-14)
 
 ---
 #### AI Phase 15 Project
 
 **Recommended build — Citation-First RAG**
 
-**Why this project now:** it applies the material covered through [AI Phase 15](./AI.md#L2181) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [AI Phase 15](./AI.md#phase-15) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Citation-First RAG** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Citation-First RAG** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Citation-First RAG Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Citation-First RAG Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Transformers](https://github.com/huggingface/transformers)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
 - **YouTube build/lab:** [Learn RAG from Scratch — freeCodeCamp.org](https://www.youtube.com/watch?v=sVcwVQRHIc8)
 
-> **When this project is complete:** [Resume your study at AI Phase 16](./AI.md#L2342) · [Review Phase 15](./AI.md#L2181)
+> **When this project is complete:** [Resume your study at AI Phase 16](./AI.md#phase-16) · [Review Phase 15](./AI.md#phase-15)
 
 ---
 #### AI Phase 16 Project
 
 **Recommended build — LoRA Fine-Tuning Report**
 
-**Why this project now:** it applies the material covered through [AI Phase 16](./AI.md#L2342) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [AI Phase 16](./AI.md#phase-16) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **LoRA Fine-Tuning Report** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **LoRA Fine-Tuning Report** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — LoRA Fine-Tuning Report Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — LoRA Fine-Tuning Report Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Transformers](https://github.com/huggingface/transformers)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
 - **YouTube build/lab:** [AI Agent Evaluation Crash Course — DSwithBappy](https://www.youtube.com/watch?v=rwxcoEglXA4)
 
-> **When this project is complete:** [Resume your study at AI Phase 17](./AI.md#L2478) · [Review Phase 16](./AI.md#L2342)
+> **When this project is complete:** [Resume your study at AI Phase 17](./AI.md#phase-17) · [Review Phase 16](./AI.md#phase-16)
 
 ---
 #### AI Phase 17 Project
 
 **Recommended build — Safe Tool-Using Agent**
 
-**Why this project now:** it applies the material covered through [AI Phase 17](./AI.md#L2478) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [AI Phase 17](./AI.md#phase-17) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Safe Tool-Using Agent** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Safe Tool-Using Agent** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Safe Tool-Using Agent Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Safe Tool-Using Agent Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Transformers](https://github.com/huggingface/transformers)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
 - **YouTube build/lab:** [AI Agent Evaluation Crash Course — DSwithBappy](https://www.youtube.com/watch?v=rwxcoEglXA4)
 
-> **When this project is complete:** [Resume your study at AI Phase 18](./AI.md#L2629) · [Review Phase 17](./AI.md#L2478)
+> **When this project is complete:** [Resume your study at AI Phase 18](./AI.md#phase-18) · [Review Phase 17](./AI.md#phase-17)
 
 ---
 #### AI Phase 18 Project
 
 **Recommended build — Model Eval and Monitoring Pipeline**
 
-**Why this project now:** it applies the material covered through [AI Phase 18](./AI.md#L2629) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [AI Phase 18](./AI.md#phase-18) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Model Eval and Monitoring Pipeline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Model Eval and Monitoring Pipeline** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Model Eval and Monitoring Pipeline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Model Eval and Monitoring Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
 - **YouTube build/lab:** [AI Agent Evaluation Crash Course — DSwithBappy](https://www.youtube.com/watch?v=rwxcoEglXA4)
 
-> **When this project is complete:** [Resume your study at AI Phase 19](./AI.md#L2777) · [Review Phase 18](./AI.md#L2629)
+> **When this project is complete:** [Resume your study at AI Phase 19](./AI.md#phase-19) · [Review Phase 18](./AI.md#phase-18)
 
 ---
 #### AI Phase 19 Project
 
 **Recommended build — Reproducible AI Portfolio**
 
-**Why this project now:** it applies the material covered through [AI Phase 19](./AI.md#L2777) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [AI Phase 19](./AI.md#phase-19) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Reproducible AI Portfolio** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Reproducible AI Portfolio** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Reproducible AI Portfolio Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Reproducible AI Portfolio Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
 - **YouTube build/lab:** [AI Agent Evaluation Crash Course — DSwithBappy](https://www.youtube.com/watch?v=rwxcoEglXA4)
 
-> **When this project is complete:** [Resume your study at AI Phase 20](./AI.md#L2916) · [Review Phase 19](./AI.md#L2777)
+> **When this project is complete:** [Resume your study at AI Phase 20](./AI.md#phase-20) · [Review Phase 19](./AI.md#phase-19)
 
 ---
 #### AI Phase 20 Project
 
 **Recommended build — ML System Design Drill**
 
-**Why this project now:** it applies the material covered through [AI Phase 20](./AI.md#L2916) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [AI Phase 20](./AI.md#phase-20) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **ML System Design Drill** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **ML System Design Drill** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — ML System Design Drill Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — ML System Design Drill Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
 - **YouTube build/lab:** [AI Agent Evaluation Crash Course — DSwithBappy](https://www.youtube.com/watch?v=rwxcoEglXA4)
 
-> **When this project is complete:** [Return to the AI phase index](./AI.md#L109) · [Review Phase 20](./AI.md#L2916)
+> **When this project is complete:** [Return to the AI phase index](./AI.md#phase-index) · [Review Phase 20](./AI.md#phase-20)
 
 ---
 
 ### ODOO Phase Projects
 
-Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent portfolio artifact.
+Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent finished portfolio project.
 
 #### ODOO Phase 1 Project
 
 **Recommended build — ERP Process Map**
 
-**Why this project now:** it applies the material covered through [ODOO Phase 1](./ODOO.md#L152) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [ODOO Phase 1](./ODOO.md#phase-1) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **ERP Process Map** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **ERP Process Map** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — ERP Process Map Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — ERP Process Map Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
 - **YouTube build/lab:** [Create a Custom Module in Odoo 17/18 — OdooVerse](https://www.youtube.com/watch?v=A61AyJRzLB8)
 
-> **When this project is complete:** [Resume your study at ODOO Phase 2](./ODOO.md#L336) · [Review Phase 1](./ODOO.md#L152)
+> **When this project is complete:** [Resume your study at ODOO Phase 2](./ODOO.md#phase-2) · [Review Phase 1](./ODOO.md#phase-1)
 
 ---
 #### ODOO Phase 2 Project
 
 **Recommended build — Request-to-Database Trace**
 
-**Why this project now:** it applies the material covered through [ODOO Phase 2](./ODOO.md#L336) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [ODOO Phase 2](./ODOO.md#phase-2) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Request-to-Database Trace** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Request-to-Database Trace** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Request-to-Database Trace Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Request-to-Database Trace Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
 - **YouTube build/lab:** [Create a Custom Module in Odoo 17/18 — OdooVerse](https://www.youtube.com/watch?v=A61AyJRzLB8)
 
-> **When this project is complete:** [Resume your study at ODOO Phase 3](./ODOO.md#L515) · [Review Phase 2](./ODOO.md#L336)
+> **When this project is complete:** [Resume your study at ODOO Phase 3](./ODOO.md#phase-3) · [Review Phase 2](./ODOO.md#phase-2)
 
 ---
 #### ODOO Phase 3 Project
 
 **Recommended build — Reproducible Odoo Dev Stack**
 
-**Why this project now:** it applies the material covered through [ODOO Phase 3](./ODOO.md#L515) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [ODOO Phase 3](./ODOO.md#phase-3) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Reproducible Odoo Dev Stack** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Reproducible Odoo Dev Stack** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Reproducible Odoo Dev Stack Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Reproducible Odoo Dev Stack Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
 - **YouTube build/lab:** [Create a Custom Module in Odoo 17/18 — OdooVerse](https://www.youtube.com/watch?v=A61AyJRzLB8)
 
-> **When this project is complete:** [Resume your study at ODOO Phase 4](./ODOO.md#L676) · [Review Phase 3](./ODOO.md#L515)
+> **When this project is complete:** [Resume your study at ODOO Phase 4](./ODOO.md#phase-4) · [Review Phase 3](./ODOO.md#phase-3)
 
 ---
 #### ODOO Phase 4 Project
 
 **Recommended build — Minimal Todo Addon**
 
-**Why this project now:** it applies the material covered through [ODOO Phase 4](./ODOO.md#L676) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [ODOO Phase 4](./ODOO.md#phase-4) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Minimal Todo Addon** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Minimal Todo Addon** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Minimal Todo Addon Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Minimal Todo Addon Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
 - **YouTube build/lab:** [Create a Custom Module in Odoo 17/18 — OdooVerse](https://www.youtube.com/watch?v=A61AyJRzLB8)
 
-> **When this project is complete:** [Resume your study at ODOO Phase 5](./ODOO.md#L859) · [Review Phase 4](./ODOO.md#L676)
+> **When this project is complete:** [Resume your study at ODOO Phase 5](./ODOO.md#phase-5) · [Review Phase 4](./ODOO.md#phase-4)
 
 ---
 #### ODOO Phase 5 Project
 
 **Recommended build — Library Domain Models**
 
-**Why this project now:** it applies the material covered through [ODOO Phase 5](./ODOO.md#L859) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [ODOO Phase 5](./ODOO.md#phase-5) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Library Domain Models** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Library Domain Models** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Library Domain Models Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Library Domain Models Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
 - **YouTube build/lab:** [Create a Custom Module in Odoo 17/18 — OdooVerse](https://www.youtube.com/watch?v=A61AyJRzLB8)
 
-> **When this project is complete:** [Resume your study at ODOO Phase 6](./ODOO.md#L1030) · [Review Phase 5](./ODOO.md#L859)
+> **When this project is complete:** [Resume your study at ODOO Phase 6](./ODOO.md#phase-6) · [Review Phase 5](./ODOO.md#phase-5)
 
 ---
 #### ODOO Phase 6 Project
 
 **Recommended build — Recordset Query Explorer**
 
-**Why this project now:** it applies the material covered through [ODOO Phase 6](./ODOO.md#L1030) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [ODOO Phase 6](./ODOO.md#phase-6) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Recordset Query Explorer** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Recordset Query Explorer** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Recordset Query Explorer Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Recordset Query Explorer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
 - **YouTube build/lab:** [Odoo Module Structure: Models, Views, and Security — EasyDev](https://www.youtube.com/watch?v=ov-ReGkIxIg)
 
-> **When this project is complete:** [Resume your study at ODOO Phase 7](./ODOO.md#L1199) · [Review Phase 6](./ODOO.md#L1030)
+> **When this project is complete:** [Resume your study at ODOO Phase 7](./ODOO.md#phase-7) · [Review Phase 6](./ODOO.md#phase-6)
 
 ---
 #### ODOO Phase 7 Project
 
 **Recommended build — Multi-company Access Lab**
 
-**Why this project now:** it applies the material covered through [ODOO Phase 7](./ODOO.md#L1199) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [ODOO Phase 7](./ODOO.md#phase-7) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Multi-company Access Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Multi-company Access Lab** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Multi-company Access Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Multi-company Access Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
 - **YouTube build/lab:** [Odoo Module Structure: Models, Views, and Security — EasyDev](https://www.youtube.com/watch?v=ov-ReGkIxIg)
 
-> **When this project is complete:** [Resume your study at ODOO Phase 8](./ODOO.md#L1361) · [Review Phase 7](./ODOO.md#L1199)
+> **When this project is complete:** [Resume your study at ODOO Phase 8](./ODOO.md#phase-8) · [Review Phase 7](./ODOO.md#phase-7)
 
 ---
 #### ODOO Phase 8 Project
 
 **Recommended build — Inherited Library Views**
 
-**Why this project now:** it applies the material covered through [ODOO Phase 8](./ODOO.md#L1361) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [ODOO Phase 8](./ODOO.md#phase-8) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Inherited Library Views** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Inherited Library Views** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Inherited Library Views Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Inherited Library Views Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
 - **YouTube build/lab:** [Odoo Module Structure: Models, Views, and Security — EasyDev](https://www.youtube.com/watch?v=ov-ReGkIxIg)
 
-> **When this project is complete:** [Resume your study at ODOO Phase 9](./ODOO.md#L1544) · [Review Phase 8](./ODOO.md#L1361)
+> **When this project is complete:** [Resume your study at ODOO Phase 9](./ODOO.md#phase-9) · [Review Phase 8](./ODOO.md#phase-8)
 
 ---
 #### ODOO Phase 9 Project
 
 **Recommended build — Role-Aware Navigation Module**
 
-**Why this project now:** it applies the material covered through [ODOO Phase 9](./ODOO.md#L1544) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [ODOO Phase 9](./ODOO.md#phase-9) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Role-Aware Navigation Module** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Role-Aware Navigation Module** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Role-Aware Navigation Module Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Role-Aware Navigation Module Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
 - **YouTube build/lab:** [Odoo Module Structure: Models, Views, and Security — EasyDev](https://www.youtube.com/watch?v=ov-ReGkIxIg)
 
-> **When this project is complete:** [Resume your study at ODOO Phase 10](./ODOO.md#L1710) · [Review Phase 9](./ODOO.md#L1544)
+> **When this project is complete:** [Resume your study at ODOO Phase 10](./ODOO.md#phase-10) · [Review Phase 9](./ODOO.md#phase-9)
 
 ---
 #### ODOO Phase 10 Project
 
 **Recommended build — Validated Order Workflow**
 
-**Why this project now:** it applies the material covered through [ODOO Phase 10](./ODOO.md#L1710) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [ODOO Phase 10](./ODOO.md#phase-10) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Validated Order Workflow** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Validated Order Workflow** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Validated Order Workflow Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Validated Order Workflow Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
 - **YouTube build/lab:** [Odoo Module Structure: Models, Views, and Security — EasyDev](https://www.youtube.com/watch?v=ov-ReGkIxIg)
 
-> **When this project is complete:** [Resume your study at ODOO Phase 11](./ODOO.md#L1893) · [Review Phase 10](./ODOO.md#L1710)
+> **When this project is complete:** [Resume your study at ODOO Phase 11](./ODOO.md#phase-11) · [Review Phase 10](./ODOO.md#phase-10)
 
 ---
 #### ODOO Phase 11 Project
 
 **Recommended build — Sale Order Extension**
 
-**Why this project now:** it applies the material covered through [ODOO Phase 11](./ODOO.md#L1893) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [ODOO Phase 11](./ODOO.md#phase-11) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Sale Order Extension** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Sale Order Extension** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Sale Order Extension Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Sale Order Extension Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
 - **YouTube build/lab:** [Odoo 19 Webhook Automation — VeeVee Infotech](https://www.youtube.com/watch?v=ndt8OCP_uG8)
 
-> **When this project is complete:** [Resume your study at ODOO Phase 12](./ODOO.md#L2060) · [Review Phase 11](./ODOO.md#L1893)
+> **When this project is complete:** [Resume your study at ODOO Phase 12](./ODOO.md#phase-12) · [Review Phase 11](./ODOO.md#phase-11)
 
 ---
 #### ODOO Phase 12 Project
 
 **Recommended build — Bulk Update Wizard**
 
-**Why this project now:** it applies the material covered through [ODOO Phase 12](./ODOO.md#L2060) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [ODOO Phase 12](./ODOO.md#phase-12) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Bulk Update Wizard** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Bulk Update Wizard** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Bulk Update Wizard Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Bulk Update Wizard Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
 - **YouTube build/lab:** [Odoo 19 Webhook Automation — VeeVee Infotech](https://www.youtube.com/watch?v=ndt8OCP_uG8)
 
-> **When this project is complete:** [Resume your study at ODOO Phase 13](./ODOO.md#L2230) · [Review Phase 12](./ODOO.md#L2060)
+> **When this project is complete:** [Resume your study at ODOO Phase 13](./ODOO.md#phase-13) · [Review Phase 12](./ODOO.md#phase-12)
 
 ---
 #### ODOO Phase 13 Project
 
 **Recommended build — Idempotent Webhook Module**
 
-**Why this project now:** it applies the material covered through [ODOO Phase 13](./ODOO.md#L2230) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [ODOO Phase 13](./ODOO.md#phase-13) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Idempotent Webhook Module** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Idempotent Webhook Module** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Idempotent Webhook Module Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Idempotent Webhook Module Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Connector](https://github.com/OCA/connector)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
 - **YouTube build/lab:** [Odoo 19 Webhook Automation — VeeVee Infotech](https://www.youtube.com/watch?v=ndt8OCP_uG8)
 
-> **When this project is complete:** [Resume your study at ODOO Phase 14](./ODOO.md#L2402) · [Review Phase 13](./ODOO.md#L2230)
+> **When this project is complete:** [Resume your study at ODOO Phase 14](./ODOO.md#phase-14) · [Review Phase 13](./ODOO.md#phase-13)
 
 ---
 #### ODOO Phase 14 Project
 
 **Recommended build — External Sync Client**
 
-**Why this project now:** it applies the material covered through [ODOO Phase 14](./ODOO.md#L2402) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [ODOO Phase 14](./ODOO.md#phase-14) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **External Sync Client** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **External Sync Client** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — External Sync Client Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — External Sync Client Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Connector](https://github.com/OCA/connector)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
 - **YouTube build/lab:** [Odoo 19 Webhook Automation — VeeVee Infotech](https://www.youtube.com/watch?v=ndt8OCP_uG8)
 
-> **When this project is complete:** [Resume your study at ODOO Phase 15](./ODOO.md#L2580) · [Review Phase 14](./ODOO.md#L2402)
+> **When this project is complete:** [Resume your study at ODOO Phase 15](./ODOO.md#phase-15) · [Review Phase 14](./ODOO.md#phase-14)
 
 ---
 #### ODOO Phase 15 Project
 
 **Recommended build — Payment Sandbox Integration**
 
-**Why this project now:** it applies the material covered through [ODOO Phase 15](./ODOO.md#L2580) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [ODOO Phase 15](./ODOO.md#phase-15) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Payment Sandbox Integration** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Payment Sandbox Integration** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Payment Sandbox Integration Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Payment Sandbox Integration Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Connector](https://github.com/OCA/connector)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
 - **YouTube build/lab:** [Odoo 19 Webhook Automation — VeeVee Infotech](https://www.youtube.com/watch?v=ndt8OCP_uG8)
 
-> **When this project is complete:** [Resume your study at ODOO Phase 16](./ODOO.md#L2758) · [Review Phase 15](./ODOO.md#L2580)
+> **When this project is complete:** [Resume your study at ODOO Phase 16](./ODOO.md#phase-16) · [Review Phase 15](./ODOO.md#phase-15)
 
 ---
 #### ODOO Phase 16 Project
 
 **Recommended build — OWL KPI Widget**
 
-**Why this project now:** it applies the material covered through [ODOO Phase 16](./ODOO.md#L2758) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [ODOO Phase 16](./ODOO.md#phase-16) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **OWL KPI Widget** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **OWL KPI Widget** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — OWL KPI Widget Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — OWL KPI Widget Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
 - **YouTube build/lab:** [Odoo Custom Dashboard with OWL — AJScript Media](https://www.youtube.com/watch?v=CJvaY-VGqwk)
 
-> **When this project is complete:** [Resume your study at ODOO Phase 17](./ODOO.md#L2930) · [Review Phase 16](./ODOO.md#L2758)
+> **When this project is complete:** [Resume your study at ODOO Phase 17](./ODOO.md#phase-17) · [Review Phase 16](./ODOO.md#phase-16)
 
 ---
 #### ODOO Phase 17 Project
 
 **Recommended build — ORM Query Tuning Report**
 
-**Why this project now:** it applies the material covered through [ODOO Phase 17](./ODOO.md#L2930) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [ODOO Phase 17](./ODOO.md#phase-17) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **ORM Query Tuning Report** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **ORM Query Tuning Report** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — ORM Query Tuning Report Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — ORM Query Tuning Report Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
 - **YouTube build/lab:** [Odoo Custom Dashboard with OWL — AJScript Media](https://www.youtube.com/watch?v=CJvaY-VGqwk)
 
-> **When this project is complete:** [Resume your study at ODOO Phase 18](./ODOO.md#L3088) · [Review Phase 17](./ODOO.md#L2930)
+> **When this project is complete:** [Resume your study at ODOO Phase 18](./ODOO.md#phase-18) · [Review Phase 17](./ODOO.md#phase-17)
 
 ---
 #### ODOO Phase 18 Project
 
 **Recommended build — Upgrade-Safe Test Suite**
 
-**Why this project now:** it applies the material covered through [ODOO Phase 18](./ODOO.md#L3088) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [ODOO Phase 18](./ODOO.md#phase-18) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Upgrade-Safe Test Suite** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Upgrade-Safe Test Suite** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Upgrade-Safe Test Suite Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Upgrade-Safe Test Suite Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
 - **YouTube build/lab:** [Odoo Custom Dashboard with OWL — AJScript Media](https://www.youtube.com/watch?v=CJvaY-VGqwk)
 
-> **When this project is complete:** [Resume your study at ODOO Phase 19](./ODOO.md#L3258) · [Review Phase 18](./ODOO.md#L3088)
+> **When this project is complete:** [Resume your study at ODOO Phase 19](./ODOO.md#phase-19) · [Review Phase 18](./ODOO.md#phase-18)
 
 ---
 #### ODOO Phase 19 Project
 
 **Recommended build — Portfolio-Ready Business Module**
 
-**Why this project now:** it applies the material covered through [ODOO Phase 19](./ODOO.md#L3258) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [ODOO Phase 19](./ODOO.md#phase-19) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Portfolio-Ready Business Module** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Portfolio-Ready Business Module** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Portfolio-Ready Business Module Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Portfolio-Ready Business Module Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
 - **YouTube build/lab:** [Odoo Custom Dashboard with OWL — AJScript Media](https://www.youtube.com/watch?v=CJvaY-VGqwk)
 
-> **When this project is complete:** [Resume your study at ODOO Phase 20](./ODOO.md#L3428) · [Review Phase 19](./ODOO.md#L3258)
+> **When this project is complete:** [Resume your study at ODOO Phase 20](./ODOO.md#phase-20) · [Review Phase 19](./ODOO.md#phase-19)
 
 ---
 #### ODOO Phase 20 Project
 
 **Recommended build — Timed Odoo Debug Drill**
 
-**Why this project now:** it applies the material covered through [ODOO Phase 20](./ODOO.md#L3428) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [ODOO Phase 20](./ODOO.md#phase-20) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Timed Odoo Debug Drill** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Timed Odoo Debug Drill** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Timed Odoo Debug Drill Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Timed Odoo Debug Drill Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
 - **YouTube build/lab:** [Odoo Custom Dashboard with OWL — AJScript Media](https://www.youtube.com/watch?v=CJvaY-VGqwk)
 
-> **When this project is complete:** [Return to the ODOO phase index](./ODOO.md#L107) · [Review Phase 20](./ODOO.md#L3428)
+> **When this project is complete:** [Return to the ODOO phase index](./ODOO.md#phase-index) · [Review Phase 20](./ODOO.md#phase-20)
 
 ---
 
 ### Web Phase Projects
 
-Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent portfolio artifact.
+Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent finished portfolio project.
 
 #### WEB Phase 1 Project
 
 **Recommended build — Client-Server Request Explorer**
 
-**Why this project now:** it applies the material covered through [WEB Phase 1](./Web.md#L129) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [WEB Phase 1](./Web.md#phase-1) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Client-Server Request Explorer** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Client-Server Request Explorer** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Client-Server Request Explorer Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Client-Server Request Explorer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Responsive HTML, CSS, and JavaScript Website Project — Brian Design](https://www.youtube.com/watch?v=FazgJVnrVuI)
 
-> **When this project is complete:** [Resume your study at WEB Phase 2](./Web.md#L297) · [Review Phase 1](./Web.md#L129)
+> **When this project is complete:** [Resume your study at WEB Phase 2](./Web.md#phase-2) · [Review Phase 1](./Web.md#phase-1)
 
 ---
 #### WEB Phase 2 Project
 
 **Recommended build — Accessible Profile Page**
 
-**Why this project now:** it applies the material covered through [WEB Phase 2](./Web.md#L297) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [WEB Phase 2](./Web.md#phase-2) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Accessible Profile Page** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Accessible Profile Page** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Accessible Profile Page Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Accessible Profile Page Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Responsive HTML, CSS, and JavaScript Website Project — Brian Design](https://www.youtube.com/watch?v=FazgJVnrVuI)
 
-> **When this project is complete:** [Resume your study at WEB Phase 3](./Web.md#L458) · [Review Phase 2](./Web.md#L297)
+> **When this project is complete:** [Resume your study at WEB Phase 3](./Web.md#phase-3) · [Review Phase 2](./Web.md#phase-2)
 
 ---
 #### WEB Phase 3 Project
 
 **Recommended build — Design Token Style Guide**
 
-**Why this project now:** it applies the material covered through [WEB Phase 3](./Web.md#L458) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [WEB Phase 3](./Web.md#phase-3) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Design Token Style Guide** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Design Token Style Guide** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Design Token Style Guide Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Design Token Style Guide Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Responsive HTML, CSS, and JavaScript Website Project — Brian Design](https://www.youtube.com/watch?v=FazgJVnrVuI)
 
-> **When this project is complete:** [Resume your study at WEB Phase 4](./Web.md#L610) · [Review Phase 3](./Web.md#L458)
+> **When this project is complete:** [Resume your study at WEB Phase 4](./Web.md#phase-4) · [Review Phase 3](./Web.md#phase-3)
 
 ---
 #### WEB Phase 4 Project
 
 **Recommended build — Responsive Product Landing**
 
-**Why this project now:** it applies the material covered through [WEB Phase 4](./Web.md#L610) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [WEB Phase 4](./Web.md#phase-4) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Responsive Product Landing** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Responsive Product Landing** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Responsive Product Landing Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Responsive Product Landing Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Responsive HTML, CSS, and JavaScript Website Project — Brian Design](https://www.youtube.com/watch?v=FazgJVnrVuI)
 
-> **When this project is complete:** [Resume your study at WEB Phase 5](./Web.md#L764) · [Review Phase 4](./Web.md#L610)
+> **When this project is complete:** [Resume your study at WEB Phase 5](./Web.md#phase-5) · [Review Phase 4](./Web.md#phase-4)
 
 ---
 #### WEB Phase 5 Project
 
 **Recommended build — Interactive Expense Tracker**
 
-**Why this project now:** it applies the material covered through [WEB Phase 5](./Web.md#L764) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [WEB Phase 5](./Web.md#phase-5) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Interactive Expense Tracker** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Interactive Expense Tracker** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Interactive Expense Tracker Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Interactive Expense Tracker Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Responsive HTML, CSS, and JavaScript Website Project — Brian Design](https://www.youtube.com/watch?v=FazgJVnrVuI)
 
-> **When this project is complete:** [Resume your study at WEB Phase 6](./Web.md#L932) · [Review Phase 5](./Web.md#L764)
+> **When this project is complete:** [Resume your study at WEB Phase 6](./Web.md#phase-6) · [Review Phase 5](./Web.md#phase-5)
 
 ---
 #### WEB Phase 6 Project
 
 **Recommended build — Offline-Capable Notes App**
 
-**Why this project now:** it applies the material covered through [WEB Phase 6](./Web.md#L932) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [WEB Phase 6](./Web.md#phase-6) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Offline-Capable Notes App** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Offline-Capable Notes App** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Offline-Capable Notes App Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Offline-Capable Notes App Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Beginner React and TypeScript Project — Web Dev Simplified](https://www.youtube.com/watch?v=-ONUyenGnWw)
 
-> **When this project is complete:** [Resume your study at WEB Phase 7](./Web.md#L1091) · [Review Phase 6](./Web.md#L932)
+> **When this project is complete:** [Resume your study at WEB Phase 7](./Web.md#phase-7) · [Review Phase 6](./Web.md#phase-6)
 
 ---
 #### WEB Phase 7 Project
 
 **Recommended build — Typed API Client**
 
-**Why this project now:** it applies the material covered through [WEB Phase 7](./Web.md#L1091) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [WEB Phase 7](./Web.md#phase-7) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Typed API Client** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Typed API Client** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Typed API Client Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Typed API Client Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Beginner React and TypeScript Project — Web Dev Simplified](https://www.youtube.com/watch?v=-ONUyenGnWw)
 
-> **When this project is complete:** [Resume your study at WEB Phase 8](./Web.md#L1243) · [Review Phase 7](./Web.md#L1091)
+> **When this project is complete:** [Resume your study at WEB Phase 8](./Web.md#phase-8) · [Review Phase 7](./Web.md#phase-7)
 
 ---
 #### WEB Phase 8 Project
 
 **Recommended build — React Habit Tracker**
 
-**Why this project now:** it applies the material covered through [WEB Phase 8](./Web.md#L1243) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [WEB Phase 8](./Web.md#phase-8) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **React Habit Tracker** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **React Habit Tracker** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — React Habit Tracker Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — React Habit Tracker Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Beginner React and TypeScript Project — Web Dev Simplified](https://www.youtube.com/watch?v=-ONUyenGnWw)
 
-> **When this project is complete:** [Resume your study at WEB Phase 9](./Web.md#L1414) · [Review Phase 8](./Web.md#L1243)
+> **When this project is complete:** [Resume your study at WEB Phase 9](./Web.md#phase-9) · [Review Phase 8](./Web.md#phase-8)
 
 ---
 #### WEB Phase 9 Project
 
 **Recommended build — Cached Admin Dashboard**
 
-**Why this project now:** it applies the material covered through [WEB Phase 9](./Web.md#L1414) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [WEB Phase 9](./Web.md#phase-9) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Cached Admin Dashboard** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Cached Admin Dashboard** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Cached Admin Dashboard Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Cached Admin Dashboard Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Bulletproof React](https://github.com/alan2207/bulletproof-react)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Beginner React and TypeScript Project — Web Dev Simplified](https://www.youtube.com/watch?v=-ONUyenGnWw)
 
-> **When this project is complete:** [Resume your study at WEB Phase 10](./Web.md#L1579) · [Review Phase 9](./Web.md#L1414)
+> **When this project is complete:** [Resume your study at WEB Phase 10](./Web.md#phase-10) · [Review Phase 9](./Web.md#phase-9)
 
 ---
 #### WEB Phase 10 Project
 
 **Recommended build — Full-Stack Issue Tracker**
 
-**Why this project now:** it applies the material covered through [WEB Phase 10](./Web.md#L1579) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [WEB Phase 10](./Web.md#phase-10) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Full-Stack Issue Tracker** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Full-Stack Issue Tracker** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Full-Stack Issue Tracker Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Full-Stack Issue Tracker Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Bulletproof React](https://github.com/alan2207/bulletproof-react)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Beginner React and TypeScript Project — Web Dev Simplified](https://www.youtube.com/watch?v=-ONUyenGnWw)
 
-> **When this project is complete:** [Resume your study at WEB Phase 11](./Web.md#L1744) · [Review Phase 10](./Web.md#L1579)
+> **When this project is complete:** [Resume your study at WEB Phase 11](./Web.md#phase-11) · [Review Phase 10](./Web.md#phase-10)
 
 ---
 #### WEB Phase 11 Project
 
 **Recommended build — Express Service Starter**
 
-**Why this project now:** it applies the material covered through [WEB Phase 11](./Web.md#L1744) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [WEB Phase 11](./Web.md#phase-11) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Express Service Starter** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Express Service Starter** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Express Service Starter Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Express Service Starter Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Node, Express, MongoDB API with Auth, JWT, and CRUD — Programming with Adil](https://www.youtube.com/watch?v=EMv8pc5Xo88)
 
-> **When this project is complete:** [Resume your study at WEB Phase 12](./Web.md#L1921) · [Review Phase 11](./Web.md#L1744)
+> **When this project is complete:** [Resume your study at WEB Phase 12](./Web.md#phase-12) · [Review Phase 11](./Web.md#phase-11)
 
 ---
 #### WEB Phase 12 Project
 
 **Recommended build — Contract-First REST API**
 
-**Why this project now:** it applies the material covered through [WEB Phase 12](./Web.md#L1921) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [WEB Phase 12](./Web.md#phase-12) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Contract-First REST API** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Contract-First REST API** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Contract-First REST API Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Contract-First REST API Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Node, Express, MongoDB API with Auth, JWT, and CRUD — Programming with Adil](https://www.youtube.com/watch?v=EMv8pc5Xo88)
 
-> **When this project is complete:** [Resume your study at WEB Phase 13](./Web.md#L2080) · [Review Phase 12](./Web.md#L1921)
+> **When this project is complete:** [Resume your study at WEB Phase 13](./Web.md#phase-13) · [Review Phase 12](./Web.md#phase-12)
 
 ---
 #### WEB Phase 13 Project
 
 **Recommended build — Transactional Project Database**
 
-**Why this project now:** it applies the material covered through [WEB Phase 13](./Web.md#L2080) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [WEB Phase 13](./Web.md#phase-13) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Transactional Project Database** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Transactional Project Database** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Transactional Project Database Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Transactional Project Database Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Node, Express, MongoDB API with Auth, JWT, and CRUD — Programming with Adil](https://www.youtube.com/watch?v=EMv8pc5Xo88)
 
-> **When this project is complete:** [Resume your study at WEB Phase 14](./Web.md#L2233) · [Review Phase 13](./Web.md#L2080)
+> **When this project is complete:** [Resume your study at WEB Phase 14](./Web.md#phase-14) · [Review Phase 13](./Web.md#phase-13)
 
 ---
 #### WEB Phase 14 Project
 
 **Recommended build — Secure Session Auth App**
 
-**Why this project now:** it applies the material covered through [WEB Phase 14](./Web.md#L2233) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [WEB Phase 14](./Web.md#phase-14) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Secure Session Auth App** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Secure Session Auth App** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Secure Session Auth App Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Secure Session Auth App Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OWASP NodeGoat](https://github.com/OWASP/NodeGoat)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Node, Express, MongoDB API with Auth, JWT, and CRUD — Programming with Adil](https://www.youtube.com/watch?v=EMv8pc5Xo88)
 
-> **When this project is complete:** [Resume your study at WEB Phase 15](./Web.md#L2401) · [Review Phase 14](./Web.md#L2233)
+> **When this project is complete:** [Resume your study at WEB Phase 15](./Web.md#phase-15) · [Review Phase 14](./Web.md#phase-14)
 
 ---
 #### WEB Phase 15 Project
 
 **Recommended build — Full-Stack Test Pyramid**
 
-**Why this project now:** it applies the material covered through [WEB Phase 15](./Web.md#L2401) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [WEB Phase 15](./Web.md#phase-15) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Full-Stack Test Pyramid** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Full-Stack Test Pyramid** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Full-Stack Test Pyramid Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Full-Stack Test Pyramid Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Node, Express, MongoDB API with Auth, JWT, and CRUD — Programming with Adil](https://www.youtube.com/watch?v=EMv8pc5Xo88)
 
-> **When this project is complete:** [Resume your study at WEB Phase 16](./Web.md#L2569) · [Review Phase 15](./Web.md#L2401)
+> **When this project is complete:** [Resume your study at WEB Phase 16](./Web.md#phase-16) · [Review Phase 15](./Web.md#phase-15)
 
 ---
 #### WEB Phase 16 Project
 
 **Recommended build — Web Vitals Optimization Case**
 
-**Why this project now:** it applies the material covered through [WEB Phase 16](./Web.md#L2569) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [WEB Phase 16](./Web.md#phase-16) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Web Vitals Optimization Case** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Web Vitals Optimization Case** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Web Vitals Optimization Case Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Web Vitals Optimization Case Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Real-Time WebSockets Project — JavaScript Mastery](https://www.youtube.com/watch?v=pbOXOY78dNA)
 
-> **When this project is complete:** [Resume your study at WEB Phase 17](./Web.md#L2734) · [Review Phase 16](./Web.md#L2569)
+> **When this project is complete:** [Resume your study at WEB Phase 17](./Web.md#phase-17) · [Review Phase 16](./Web.md#phase-16)
 
 ---
 #### WEB Phase 17 Project
 
 **Recommended build — Preview-to-Production Pipeline**
 
-**Why this project now:** it applies the material covered through [WEB Phase 17](./Web.md#L2734) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [WEB Phase 17](./Web.md#phase-17) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Preview-to-Production Pipeline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Preview-to-Production Pipeline** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Preview-to-Production Pipeline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Preview-to-Production Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Real-Time WebSockets Project — JavaScript Mastery](https://www.youtube.com/watch?v=pbOXOY78dNA)
 
-> **When this project is complete:** [Resume your study at WEB Phase 18](./Web.md#L2908) · [Review Phase 17](./Web.md#L2734)
+> **When this project is complete:** [Resume your study at WEB Phase 18](./Web.md#phase-18) · [Review Phase 17](./Web.md#phase-17)
 
 ---
 #### WEB Phase 18 Project
 
 **Recommended build — Real-Time Collaboration Board**
 
-**Why this project now:** it applies the material covered through [WEB Phase 18](./Web.md#L2908) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [WEB Phase 18](./Web.md#phase-18) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Real-Time Collaboration Board** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Real-Time Collaboration Board** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Real-Time Collaboration Board Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Real-Time Collaboration Board Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Real-Time WebSockets Project — JavaScript Mastery](https://www.youtube.com/watch?v=pbOXOY78dNA)
 
-> **When this project is complete:** [Resume your study at WEB Phase 19](./Web.md#L3067) · [Review Phase 18](./Web.md#L2908)
+> **When this project is complete:** [Resume your study at WEB Phase 19](./Web.md#phase-19) · [Review Phase 18](./Web.md#phase-18)
 
 ---
 #### WEB Phase 19 Project
 
 **Recommended build — Production SaaS Slice**
 
-**Why this project now:** it applies the material covered through [WEB Phase 19](./Web.md#L3067) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [WEB Phase 19](./Web.md#phase-19) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Production SaaS Slice** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Production SaaS Slice** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Production SaaS Slice Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Production SaaS Slice Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Real-Time WebSockets Project — JavaScript Mastery](https://www.youtube.com/watch?v=pbOXOY78dNA)
 
-> **When this project is complete:** [Resume your study at WEB Phase 20](./Web.md#L3229) · [Review Phase 19](./Web.md#L3067)
+> **When this project is complete:** [Resume your study at WEB Phase 20](./Web.md#phase-20) · [Review Phase 19](./Web.md#phase-19)
 
 ---
 #### WEB Phase 20 Project
 
 **Recommended build — Timed Web Interview Lab**
 
-**Why this project now:** it applies the material covered through [WEB Phase 20](./Web.md#L3229) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [WEB Phase 20](./Web.md#phase-20) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Timed Web Interview Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Timed Web Interview Lab** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Timed Web Interview Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Timed Web Interview Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **YouTube build/lab:** [Real-Time WebSockets Project — JavaScript Mastery](https://www.youtube.com/watch?v=pbOXOY78dNA)
 
-> **When this project is complete:** [Return to the WEB phase index](./Web.md#L88) · [Review Phase 20](./Web.md#L3229)
+> **When this project is complete:** [Return to the WEB phase index](./Web.md#phase-index) · [Review Phase 20](./Web.md#phase-20)
 
 ---
 
 ### Cloud Phase Projects
 
-Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent portfolio artifact.
+Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent finished portfolio project.
 
 #### CLOUD Phase 1 Project
 
 **Recommended build — Linux Service Baseline**
 
-**Why this project now:** it applies the material covered through [CLOUD Phase 1](./cloud.md#L96) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CLOUD Phase 1](./cloud.md#phase-1) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Linux Service Baseline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Linux Service Baseline** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Linux Service Baseline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Linux Service Baseline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
 - **YouTube build/lab:** [Create an AWS VPC with Terraform — Cloud Champ](https://www.youtube.com/watch?v=4IFW5dXMW1Y)
 
-> **When this project is complete:** [Resume your study at CLOUD Phase 2](./cloud.md#L189) · [Review Phase 1](./cloud.md#L96)
+> **When this project is complete:** [Resume your study at CLOUD Phase 2](./cloud.md#phase-2) · [Review Phase 1](./cloud.md#phase-1)
 
 ---
 #### CLOUD Phase 2 Project
 
 **Recommended build — VM vs Container Benchmark**
 
-**Why this project now:** it applies the material covered through [CLOUD Phase 2](./cloud.md#L189) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CLOUD Phase 2](./cloud.md#phase-2) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **VM vs Container Benchmark** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **VM vs Container Benchmark** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — VM vs Container Benchmark Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — VM vs Container Benchmark Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
 - **YouTube build/lab:** [Create an AWS VPC with Terraform — Cloud Champ](https://www.youtube.com/watch?v=4IFW5dXMW1Y)
 
-> **When this project is complete:** [Resume your study at CLOUD Phase 3](./cloud.md#L280) · [Review Phase 2](./cloud.md#L189)
+> **When this project is complete:** [Resume your study at CLOUD Phase 3](./cloud.md#phase-3) · [Review Phase 2](./cloud.md#phase-2)
 
 ---
 #### CLOUD Phase 3 Project
 
 **Recommended build — Multi-Provider Architecture Matrix**
 
-**Why this project now:** it applies the material covered through [CLOUD Phase 3](./cloud.md#L280) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CLOUD Phase 3](./cloud.md#phase-3) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Multi-Provider Architecture Matrix** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Multi-Provider Architecture Matrix** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Multi-Provider Architecture Matrix Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Multi-Provider Architecture Matrix Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
 - **YouTube build/lab:** [Create an AWS VPC with Terraform — Cloud Champ](https://www.youtube.com/watch?v=4IFW5dXMW1Y)
 
-> **When this project is complete:** [Resume your study at CLOUD Phase 4](./cloud.md#L374) · [Review Phase 3](./cloud.md#L280)
+> **When this project is complete:** [Resume your study at CLOUD Phase 4](./cloud.md#phase-4) · [Review Phase 3](./cloud.md#phase-3)
 
 ---
 #### CLOUD Phase 4 Project
 
 **Recommended build — Least-Privilege IAM Lab**
 
-**Why this project now:** it applies the material covered through [CLOUD Phase 4](./cloud.md#L374) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CLOUD Phase 4](./cloud.md#phase-4) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Least-Privilege IAM Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Least-Privilege IAM Lab** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Least-Privilege IAM Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Least-Privilege IAM Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
 - **YouTube build/lab:** [Create an AWS VPC with Terraform — Cloud Champ](https://www.youtube.com/watch?v=4IFW5dXMW1Y)
 
-> **When this project is complete:** [Resume your study at CLOUD Phase 5](./cloud.md#L467) · [Review Phase 4](./cloud.md#L374)
+> **When this project is complete:** [Resume your study at CLOUD Phase 5](./cloud.md#phase-5) · [Review Phase 4](./cloud.md#phase-4)
 
 ---
 #### CLOUD Phase 5 Project
 
 **Recommended build — Multi-Tier VPC**
 
-**Why this project now:** it applies the material covered through [CLOUD Phase 5](./cloud.md#L467) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CLOUD Phase 5](./cloud.md#phase-5) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Multi-Tier VPC** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Multi-Tier VPC** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Multi-Tier VPC Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Multi-Tier VPC Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
 - **YouTube build/lab:** [Create an AWS VPC with Terraform — Cloud Champ](https://www.youtube.com/watch?v=4IFW5dXMW1Y)
 
-> **When this project is complete:** [Resume your study at CLOUD Phase 6](./cloud.md#L564) · [Review Phase 5](./cloud.md#L467)
+> **When this project is complete:** [Resume your study at CLOUD Phase 6](./cloud.md#phase-6) · [Review Phase 5](./cloud.md#phase-5)
 
 ---
 #### CLOUD Phase 6 Project
 
 **Recommended build — Autoscaled Web Tier**
 
-**Why this project now:** it applies the material covered through [CLOUD Phase 6](./cloud.md#L564) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CLOUD Phase 6](./cloud.md#phase-6) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Autoscaled Web Tier** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Autoscaled Web Tier** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Autoscaled Web Tier Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Autoscaled Web Tier Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cloud Resume Challenge Projects](https://github.com/cloudresumechallenge/projects)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
 - **YouTube build/lab:** [Build an Event-Driven Serverless App — Google Cloud Tech](https://www.youtube.com/watch?v=pSdD28cY6r8)
 
-> **When this project is complete:** [Resume your study at CLOUD Phase 7](./cloud.md#L657) · [Review Phase 6](./cloud.md#L564)
+> **When this project is complete:** [Resume your study at CLOUD Phase 7](./cloud.md#phase-7) · [Review Phase 6](./cloud.md#phase-6)
 
 ---
 #### CLOUD Phase 7 Project
 
 **Recommended build — Versioned Object Backup**
 
-**Why this project now:** it applies the material covered through [CLOUD Phase 7](./cloud.md#L657) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CLOUD Phase 7](./cloud.md#phase-7) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Versioned Object Backup** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Versioned Object Backup** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Versioned Object Backup Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Versioned Object Backup Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cloud Resume Challenge Projects](https://github.com/cloudresumechallenge/projects)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
 - **YouTube build/lab:** [Build an Event-Driven Serverless App — Google Cloud Tech](https://www.youtube.com/watch?v=pSdD28cY6r8)
 
-> **When this project is complete:** [Resume your study at CLOUD Phase 8](./cloud.md#L746) · [Review Phase 7](./cloud.md#L657)
+> **When this project is complete:** [Resume your study at CLOUD Phase 8](./cloud.md#phase-8) · [Review Phase 7](./cloud.md#phase-7)
 
 ---
 #### CLOUD Phase 8 Project
 
 **Recommended build — Resilient Managed Data Tier**
 
-**Why this project now:** it applies the material covered through [CLOUD Phase 8](./cloud.md#L746) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CLOUD Phase 8](./cloud.md#phase-8) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Resilient Managed Data Tier** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Resilient Managed Data Tier** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Resilient Managed Data Tier Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Resilient Managed Data Tier Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cloud Resume Challenge Projects](https://github.com/cloudresumechallenge/projects)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
 - **YouTube build/lab:** [Build an Event-Driven Serverless App — Google Cloud Tech](https://www.youtube.com/watch?v=pSdD28cY6r8)
 
-> **When this project is complete:** [Resume your study at CLOUD Phase 9](./cloud.md#L836) · [Review Phase 8](./cloud.md#L746)
+> **When this project is complete:** [Resume your study at CLOUD Phase 9](./cloud.md#phase-9) · [Review Phase 8](./cloud.md#phase-8)
 
 ---
 #### CLOUD Phase 9 Project
 
 **Recommended build — CDN Delivery Benchmark**
 
-**Why this project now:** it applies the material covered through [CLOUD Phase 9](./cloud.md#L836) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CLOUD Phase 9](./cloud.md#phase-9) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **CDN Delivery Benchmark** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **CDN Delivery Benchmark** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — CDN Delivery Benchmark Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — CDN Delivery Benchmark Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cloud Resume Challenge Projects](https://github.com/cloudresumechallenge/projects)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
 - **YouTube build/lab:** [Build an Event-Driven Serverless App — Google Cloud Tech](https://www.youtube.com/watch?v=pSdD28cY6r8)
 
-> **When this project is complete:** [Resume your study at CLOUD Phase 10](./cloud.md#L928) · [Review Phase 9](./cloud.md#L836)
+> **When this project is complete:** [Resume your study at CLOUD Phase 10](./cloud.md#phase-10) · [Review Phase 9](./cloud.md#phase-9)
 
 ---
 #### CLOUD Phase 10 Project
 
 **Recommended build — Event-Driven Image Pipeline**
 
-**Why this project now:** it applies the material covered through [CLOUD Phase 10](./cloud.md#L928) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CLOUD Phase 10](./cloud.md#phase-10) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Event-Driven Image Pipeline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Event-Driven Image Pipeline** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Event-Driven Image Pipeline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Event-Driven Image Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [AWS Serverless Workshops](https://github.com/aws-samples/aws-serverless-workshops)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
 - **YouTube build/lab:** [Build an Event-Driven Serverless App — Google Cloud Tech](https://www.youtube.com/watch?v=pSdD28cY6r8)
 
-> **When this project is complete:** [Resume your study at CLOUD Phase 11](./cloud.md#L1021) · [Review Phase 10](./cloud.md#L928)
+> **When this project is complete:** [Resume your study at CLOUD Phase 11](./cloud.md#phase-11) · [Review Phase 10](./cloud.md#phase-10)
 
 ---
 #### CLOUD Phase 11 Project
 
 **Recommended build — Managed Kubernetes Service**
 
-**Why this project now:** it applies the material covered through [CLOUD Phase 11](./cloud.md#L1021) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CLOUD Phase 11](./cloud.md#phase-11) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Managed Kubernetes Service** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Managed Kubernetes Service** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Managed Kubernetes Service Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Managed Kubernetes Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cloud Resume Challenge Projects](https://github.com/cloudresumechallenge/projects)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
 - **YouTube build/lab:** [Kubernetes Microservice Application — KodeKloud](https://www.youtube.com/watch?v=XuSQU5Grv1g)
 
-> **When this project is complete:** [Resume your study at CLOUD Phase 12](./cloud.md#L1111) · [Review Phase 11](./cloud.md#L1021)
+> **When this project is complete:** [Resume your study at CLOUD Phase 12](./cloud.md#phase-12) · [Review Phase 11](./cloud.md#phase-11)
 
 ---
 #### CLOUD Phase 12 Project
 
 **Recommended build — Reusable Terraform Environment**
 
-**Why this project now:** it applies the material covered through [CLOUD Phase 12](./cloud.md#L1111) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CLOUD Phase 12](./cloud.md#phase-12) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Reusable Terraform Environment** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Reusable Terraform Environment** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Reusable Terraform Environment Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Reusable Terraform Environment Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
 - **YouTube build/lab:** [Kubernetes Microservice Application — KodeKloud](https://www.youtube.com/watch?v=XuSQU5Grv1g)
 
-> **When this project is complete:** [Resume your study at CLOUD Phase 13](./cloud.md#L1205) · [Review Phase 12](./cloud.md#L1111)
+> **When this project is complete:** [Resume your study at CLOUD Phase 13](./cloud.md#phase-13) · [Review Phase 12](./cloud.md#phase-12)
 
 ---
 #### CLOUD Phase 13 Project
 
 **Recommended build — Governed Landing Zone**
 
-**Why this project now:** it applies the material covered through [CLOUD Phase 13](./cloud.md#L1205) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CLOUD Phase 13](./cloud.md#phase-13) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Governed Landing Zone** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Governed Landing Zone** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Governed Landing Zone Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Governed Landing Zone Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
 - **YouTube build/lab:** [Kubernetes Microservice Application — KodeKloud](https://www.youtube.com/watch?v=XuSQU5Grv1g)
 
-> **When this project is complete:** [Resume your study at CLOUD Phase 14](./cloud.md#L1301) · [Review Phase 13](./cloud.md#L1205)
+> **When this project is complete:** [Resume your study at CLOUD Phase 14](./cloud.md#phase-14) · [Review Phase 13](./cloud.md#phase-13)
 
 ---
 #### CLOUD Phase 14 Project
 
 **Recommended build — Encrypted Secret Rotation**
 
-**Why this project now:** it applies the material covered through [CLOUD Phase 14](./cloud.md#L1301) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CLOUD Phase 14](./cloud.md#phase-14) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Encrypted Secret Rotation** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Encrypted Secret Rotation** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Encrypted Secret Rotation Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Encrypted Secret Rotation Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
 - **YouTube build/lab:** [Kubernetes Microservice Application — KodeKloud](https://www.youtube.com/watch?v=XuSQU5Grv1g)
 
-> **When this project is complete:** [Resume your study at CLOUD Phase 15](./cloud.md#L1389) · [Review Phase 14](./cloud.md#L1301)
+> **When this project is complete:** [Resume your study at CLOUD Phase 15](./cloud.md#phase-15) · [Review Phase 14](./cloud.md#phase-14)
 
 ---
 #### CLOUD Phase 15 Project
 
 **Recommended build — Observable Cloud Service**
 
-**Why this project now:** it applies the material covered through [CLOUD Phase 15](./cloud.md#L1389) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CLOUD Phase 15](./cloud.md#phase-15) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Observable Cloud Service** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Observable Cloud Service** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Observable Cloud Service Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Observable Cloud Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
 - **YouTube build/lab:** [Kubernetes Microservice Application — KodeKloud](https://www.youtube.com/watch?v=XuSQU5Grv1g)
 
-> **When this project is complete:** [Resume your study at CLOUD Phase 16](./cloud.md#L1477) · [Review Phase 15](./cloud.md#L1389)
+> **When this project is complete:** [Resume your study at CLOUD Phase 16](./cloud.md#phase-16) · [Review Phase 15](./cloud.md#phase-15)
 
 ---
 #### CLOUD Phase 16 Project
 
-**Recommended build — Policy-as-Code Guardrails**
+**Recommended build — Policy-as-Code Safety checks and limits**
 
-**Why this project now:** it applies the material covered through [CLOUD Phase 16](./cloud.md#L1477) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CLOUD Phase 16](./cloud.md#phase-16) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Policy-as-Code Guardrails** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Policy-as-Code Safety checks and limits** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Policy-as-Code Guardrails Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Policy-as-Code Safety checks and limits Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
 - **YouTube build/lab:** [Cloud Cost Optimization and FinOps — The Executive Briefing](https://www.youtube.com/watch?v=EiX2OQRB_Dk)
 
-> **When this project is complete:** [Resume your study at CLOUD Phase 17](./cloud.md#L1568) · [Review Phase 16](./cloud.md#L1477)
+> **When this project is complete:** [Resume your study at CLOUD Phase 17](./cloud.md#phase-17) · [Review Phase 16](./cloud.md#phase-16)
 
 ---
 #### CLOUD Phase 17 Project
 
 **Recommended build — Disaster Recovery Game Day**
 
-**Why this project now:** it applies the material covered through [CLOUD Phase 17](./cloud.md#L1568) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CLOUD Phase 17](./cloud.md#phase-17) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Disaster Recovery Game Day** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Disaster Recovery Game Day** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Disaster Recovery Game Day Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Disaster Recovery Game Day Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
 - **YouTube build/lab:** [Cloud Cost Optimization and FinOps — The Executive Briefing](https://www.youtube.com/watch?v=EiX2OQRB_Dk)
 
-> **When this project is complete:** [Resume your study at CLOUD Phase 18](./cloud.md#L1660) · [Review Phase 17](./cloud.md#L1568)
+> **When this project is complete:** [Resume your study at CLOUD Phase 18](./cloud.md#phase-18) · [Review Phase 17](./cloud.md#phase-17)
 
 ---
 #### CLOUD Phase 18 Project
 
 **Recommended build — Cloud Cost Optimizer**
 
-**Why this project now:** it applies the material covered through [CLOUD Phase 18](./cloud.md#L1660) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CLOUD Phase 18](./cloud.md#phase-18) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Cloud Cost Optimizer** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Cloud Cost Optimizer** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Cloud Cost Optimizer Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Cloud Cost Optimizer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
 - **YouTube build/lab:** [Cloud Cost Optimization and FinOps — The Executive Briefing](https://www.youtube.com/watch?v=EiX2OQRB_Dk)
 
-> **When this project is complete:** [Resume your study at CLOUD Phase 19](./cloud.md#L1750) · [Review Phase 18](./cloud.md#L1660)
+> **When this project is complete:** [Resume your study at CLOUD Phase 19](./cloud.md#phase-19) · [Review Phase 18](./cloud.md#phase-18)
 
 ---
 #### CLOUD Phase 19 Project
 
 **Recommended build — Migration Runbook and Pilot**
 
-**Why this project now:** it applies the material covered through [CLOUD Phase 19](./cloud.md#L1750) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CLOUD Phase 19](./cloud.md#phase-19) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Migration Runbook and Pilot** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Migration Runbook and Pilot** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Migration Runbook and Pilot Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Migration Runbook and Pilot Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
 - **YouTube build/lab:** [Cloud Cost Optimization and FinOps — The Executive Briefing](https://www.youtube.com/watch?v=EiX2OQRB_Dk)
 
-> **When this project is complete:** [Resume your study at CLOUD Phase 20](./cloud.md#L1841) · [Review Phase 19](./cloud.md#L1750)
+> **When this project is complete:** [Resume your study at CLOUD Phase 20](./cloud.md#phase-20) · [Review Phase 19](./cloud.md#phase-19)
 
 ---
 #### CLOUD Phase 20 Project
 
 **Recommended build — Cloud Architecture Portfolio**
 
-**Why this project now:** it applies the material covered through [CLOUD Phase 20](./cloud.md#L1841) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CLOUD Phase 20](./cloud.md#phase-20) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Cloud Architecture Portfolio** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Cloud Architecture Portfolio** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Cloud Architecture Portfolio Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Cloud Architecture Portfolio Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cloud Resume Challenge Projects](https://github.com/cloudresumechallenge/projects)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
 - **YouTube build/lab:** [Cloud Cost Optimization and FinOps — The Executive Briefing](https://www.youtube.com/watch?v=EiX2OQRB_Dk)
 
-> **When this project is complete:** [Return to the CLOUD phase index](./cloud.md#L67) · [Review Phase 20](./cloud.md#L1841)
+> **When this project is complete:** [Return to the CLOUD phase index](./cloud.md#phase-index) · [Review Phase 20](./cloud.md#phase-20)
 
 ---
 
 ### DevOps Phase Projects
 
-Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent portfolio artifact.
+Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent finished portfolio project.
 
 #### DEVOPS Phase 1 Project
 
 **Recommended build — Value Stream Delivery Map**
 
-**Why this project now:** it applies the material covered through [DEVOPS Phase 1](./devops.md#L96) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DEVOPS Phase 1](./devops.md#phase-1) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Value Stream Delivery Map** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Value Stream Delivery Map** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Value Stream Delivery Map Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Value Stream Delivery Map Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
 - **YouTube build/lab:** [Home Lab Automation with Terraform, Ansible, and CI/CD — VirtualizationHowto](https://www.youtube.com/watch?v=r5RckLwzkfc)
 
-> **When this project is complete:** [Resume your study at DEVOPS Phase 2](./devops.md#L182) · [Review Phase 1](./devops.md#L96)
+> **When this project is complete:** [Resume your study at DEVOPS Phase 2](./devops.md#phase-2) · [Review Phase 1](./devops.md#phase-1)
 
 ---
 #### DEVOPS Phase 2 Project
 
 **Recommended build — Hardened Linux Service**
 
-**Why this project now:** it applies the material covered through [DEVOPS Phase 2](./devops.md#L182) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DEVOPS Phase 2](./devops.md#phase-2) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Hardened Linux Service** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Hardened Linux Service** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Hardened Linux Service Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Hardened Linux Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
 - **YouTube build/lab:** [Home Lab Automation with Terraform, Ansible, and CI/CD — VirtualizationHowto](https://www.youtube.com/watch?v=r5RckLwzkfc)
 
-> **When this project is complete:** [Resume your study at DEVOPS Phase 3](./devops.md#L272) · [Review Phase 2](./devops.md#L182)
+> **When this project is complete:** [Resume your study at DEVOPS Phase 3](./devops.md#phase-3) · [Review Phase 2](./devops.md#phase-2)
 
 ---
 #### DEVOPS Phase 3 Project
 
 **Recommended build — Incident Troubleshooting Toolkit**
 
-**Why this project now:** it applies the material covered through [DEVOPS Phase 3](./devops.md#L272) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DEVOPS Phase 3](./devops.md#phase-3) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Incident Troubleshooting Toolkit** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Incident Troubleshooting Toolkit** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Incident Troubleshooting Toolkit Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Incident Troubleshooting Toolkit Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
 - **YouTube build/lab:** [Home Lab Automation with Terraform, Ansible, and CI/CD — VirtualizationHowto](https://www.youtube.com/watch?v=r5RckLwzkfc)
 
-> **When this project is complete:** [Resume your study at DEVOPS Phase 4](./devops.md#L362) · [Review Phase 3](./devops.md#L272)
+> **When this project is complete:** [Resume your study at DEVOPS Phase 4](./devops.md#phase-4) · [Review Phase 3](./devops.md#phase-3)
 
 ---
 #### DEVOPS Phase 4 Project
 
 **Recommended build — Pull-Request Git Workflow**
 
-**Why this project now:** it applies the material covered through [DEVOPS Phase 4](./devops.md#L362) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DEVOPS Phase 4](./devops.md#phase-4) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Pull-Request Git Workflow** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Pull-Request Git Workflow** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Pull-Request Git Workflow Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Pull-Request Git Workflow Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
 - **YouTube build/lab:** [Home Lab Automation with Terraform, Ansible, and CI/CD — VirtualizationHowto](https://www.youtube.com/watch?v=r5RckLwzkfc)
 
-> **When this project is complete:** [Resume your study at DEVOPS Phase 5](./devops.md#L452) · [Review Phase 4](./devops.md#L362)
+> **When this project is complete:** [Resume your study at DEVOPS Phase 5](./devops.md#phase-5) · [Review Phase 4](./devops.md#phase-4)
 
 ---
 #### DEVOPS Phase 5 Project
 
 **Recommended build — Operations Automation CLI**
 
-**Why this project now:** it applies the material covered through [DEVOPS Phase 5](./devops.md#L452) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DEVOPS Phase 5](./devops.md#phase-5) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Operations Automation CLI** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Operations Automation CLI** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Operations Automation CLI Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Operations Automation CLI Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
 - **YouTube build/lab:** [Home Lab Automation with Terraform, Ansible, and CI/CD — VirtualizationHowto](https://www.youtube.com/watch?v=r5RckLwzkfc)
 
-> **When this project is complete:** [Resume your study at DEVOPS Phase 6](./devops.md#L543) · [Review Phase 5](./devops.md#L452)
+> **When this project is complete:** [Resume your study at DEVOPS Phase 6](./devops.md#phase-6) · [Review Phase 5](./devops.md#phase-5)
 
 ---
 #### DEVOPS Phase 6 Project
 
 **Recommended build — Reproducible Artifact Pipeline**
 
-**Why this project now:** it applies the material covered through [DEVOPS Phase 6](./devops.md#L543) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DEVOPS Phase 6](./devops.md#phase-6) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Reproducible Artifact Pipeline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Reproducible Artifact Pipeline** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Reproducible Artifact Pipeline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Reproducible Artifact Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
 - **YouTube build/lab:** [Deploy a Monitoring Application on Kubernetes — Cloud Champ](https://www.youtube.com/watch?v=kBWCsHEcWnc)
 
-> **When this project is complete:** [Resume your study at DEVOPS Phase 7](./devops.md#L631) · [Review Phase 6](./devops.md#L543)
+> **When this project is complete:** [Resume your study at DEVOPS Phase 7](./devops.md#phase-7) · [Review Phase 6](./devops.md#phase-6)
 
 ---
 #### DEVOPS Phase 7 Project
 
 **Recommended build — Quality-Gated CI Pipeline**
 
-**Why this project now:** it applies the material covered through [DEVOPS Phase 7](./devops.md#L631) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DEVOPS Phase 7](./devops.md#phase-7) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Quality-Gated CI Pipeline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Quality-Gated CI Pipeline** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Quality-Gated CI Pipeline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Quality-Gated CI Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
 - **YouTube build/lab:** [Deploy a Monitoring Application on Kubernetes — Cloud Champ](https://www.youtube.com/watch?v=kBWCsHEcWnc)
 
-> **When this project is complete:** [Resume your study at DEVOPS Phase 8](./devops.md#L719) · [Review Phase 7](./devops.md#L631)
+> **When this project is complete:** [Resume your study at DEVOPS Phase 8](./devops.md#phase-8) · [Review Phase 7](./devops.md#phase-7)
 
 ---
 #### DEVOPS Phase 8 Project
 
 **Recommended build — Canary Deployment Simulator**
 
-**Why this project now:** it applies the material covered through [DEVOPS Phase 8](./devops.md#L719) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DEVOPS Phase 8](./devops.md#phase-8) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Canary Deployment Simulator** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Canary Deployment Simulator** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Canary Deployment Simulator Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Canary Deployment Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
 - **YouTube build/lab:** [Deploy a Monitoring Application on Kubernetes — Cloud Champ](https://www.youtube.com/watch?v=kBWCsHEcWnc)
 
-> **When this project is complete:** [Resume your study at DEVOPS Phase 9](./devops.md#L809) · [Review Phase 8](./devops.md#L719)
+> **When this project is complete:** [Resume your study at DEVOPS Phase 9](./devops.md#phase-9) · [Review Phase 8](./devops.md#phase-8)
 
 ---
 #### DEVOPS Phase 9 Project
 
 **Recommended build — Hardened Multi-Stage Container**
 
-**Why this project now:** it applies the material covered through [DEVOPS Phase 9](./devops.md#L809) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DEVOPS Phase 9](./devops.md#phase-9) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Hardened Multi-Stage Container** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Hardened Multi-Stage Container** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Hardened Multi-Stage Container Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Hardened Multi-Stage Container Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Docker Getting Started](https://github.com/docker/getting-started)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
 - **YouTube build/lab:** [Deploy a Monitoring Application on Kubernetes — Cloud Champ](https://www.youtube.com/watch?v=kBWCsHEcWnc)
 
-> **When this project is complete:** [Resume your study at DEVOPS Phase 10](./devops.md#L899) · [Review Phase 9](./devops.md#L809)
+> **When this project is complete:** [Resume your study at DEVOPS Phase 10](./devops.md#phase-10) · [Review Phase 9](./devops.md#phase-9)
 
 ---
 #### DEVOPS Phase 10 Project
 
 **Recommended build — Kubernetes Operations Lab**
 
-**Why this project now:** it applies the material covered through [DEVOPS Phase 10](./devops.md#L899) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DEVOPS Phase 10](./devops.md#phase-10) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Kubernetes Operations Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Kubernetes Operations Lab** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Kubernetes Operations Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Kubernetes Operations Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Kubernetes Examples](https://github.com/kubernetes/examples)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
 - **YouTube build/lab:** [Deploy a Monitoring Application on Kubernetes — Cloud Champ](https://www.youtube.com/watch?v=kBWCsHEcWnc)
 
-> **When this project is complete:** [Resume your study at DEVOPS Phase 11](./devops.md#L989) · [Review Phase 10](./devops.md#L899)
+> **When this project is complete:** [Resume your study at DEVOPS Phase 11](./devops.md#phase-11) · [Review Phase 10](./devops.md#phase-10)
 
 ---
 #### DEVOPS Phase 11 Project
 
 **Recommended build — Terraform State Lifecycle Lab**
 
-**Why this project now:** it applies the material covered through [DEVOPS Phase 11](./devops.md#L989) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DEVOPS Phase 11](./devops.md#phase-11) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Terraform State Lifecycle Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Terraform State Lifecycle Lab** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Terraform State Lifecycle Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Terraform State Lifecycle Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
 - **YouTube build/lab:** [Terraform and Ansible Full DevOps Project — Pravesh Sudha](https://www.youtube.com/watch?v=tKlGTGye_hk)
 
-> **When this project is complete:** [Resume your study at DEVOPS Phase 12](./devops.md#L1080) · [Review Phase 11](./devops.md#L989)
+> **When this project is complete:** [Resume your study at DEVOPS Phase 12](./devops.md#phase-12) · [Review Phase 11](./devops.md#phase-11)
 
 ---
 #### DEVOPS Phase 12 Project
 
 **Recommended build — Idempotent Ansible Baseline**
 
-**Why this project now:** it applies the material covered through [DEVOPS Phase 12](./devops.md#L1080) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DEVOPS Phase 12](./devops.md#phase-12) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Idempotent Ansible Baseline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Idempotent Ansible Baseline** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Idempotent Ansible Baseline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Idempotent Ansible Baseline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
 - **YouTube build/lab:** [Terraform and Ansible Full DevOps Project — Pravesh Sudha](https://www.youtube.com/watch?v=tKlGTGye_hk)
 
-> **When this project is complete:** [Resume your study at DEVOPS Phase 13](./devops.md#L1169) · [Review Phase 12](./devops.md#L1080)
+> **When this project is complete:** [Resume your study at DEVOPS Phase 13](./devops.md#phase-13) · [Review Phase 12](./devops.md#phase-12)
 
 ---
 #### DEVOPS Phase 13 Project
 
 **Recommended build — Cloud Delivery Foundation**
 
-**Why this project now:** it applies the material covered through [DEVOPS Phase 13](./devops.md#L1169) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DEVOPS Phase 13](./devops.md#phase-13) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Cloud Delivery Foundation** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Cloud Delivery Foundation** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Cloud Delivery Foundation Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Cloud Delivery Foundation Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
 - **YouTube build/lab:** [Terraform and Ansible Full DevOps Project — Pravesh Sudha](https://www.youtube.com/watch?v=tKlGTGye_hk)
 
-> **When this project is complete:** [Resume your study at DEVOPS Phase 14](./devops.md#L1257) · [Review Phase 13](./devops.md#L1169)
+> **When this project is complete:** [Resume your study at DEVOPS Phase 14](./devops.md#phase-14) · [Review Phase 13](./devops.md#phase-13)
 
 ---
 #### DEVOPS Phase 14 Project
 
 **Recommended build — Observable Demo Service**
 
-**Why this project now:** it applies the material covered through [DEVOPS Phase 14](./devops.md#L1257) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DEVOPS Phase 14](./devops.md#phase-14) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Observable Demo Service** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Observable Demo Service** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Observable Demo Service Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Observable Demo Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
 - **YouTube build/lab:** [Terraform and Ansible Full DevOps Project — Pravesh Sudha](https://www.youtube.com/watch?v=tKlGTGye_hk)
 
-> **When this project is complete:** [Resume your study at DEVOPS Phase 15](./devops.md#L1346) · [Review Phase 14](./devops.md#L1257)
+> **When this project is complete:** [Resume your study at DEVOPS Phase 15](./devops.md#phase-15) · [Review Phase 14](./devops.md#phase-14)
 
 ---
 #### DEVOPS Phase 15 Project
 
 **Recommended build — SLO and Error Budget Dashboard**
 
-**Why this project now:** it applies the material covered through [DEVOPS Phase 15](./devops.md#L1346) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DEVOPS Phase 15](./devops.md#phase-15) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **SLO and Error Budget Dashboard** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **SLO and Error Budget Dashboard** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — SLO and Error Budget Dashboard Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — SLO and Error Budget Dashboard Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
 - **YouTube build/lab:** [Terraform and Ansible Full DevOps Project — Pravesh Sudha](https://www.youtube.com/watch?v=tKlGTGye_hk)
 
-> **When this project is complete:** [Resume your study at DEVOPS Phase 16](./devops.md#L1436) · [Review Phase 15](./devops.md#L1346)
+> **When this project is complete:** [Resume your study at DEVOPS Phase 16](./devops.md#phase-16) · [Review Phase 15](./devops.md#phase-15)
 
 ---
 #### DEVOPS Phase 16 Project
 
 **Recommended build — Signed Software Supply Chain**
 
-**Why this project now:** it applies the material covered through [DEVOPS Phase 16](./devops.md#L1436) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DEVOPS Phase 16](./devops.md#phase-16) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Signed Software Supply Chain** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Signed Software Supply Chain** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Signed Software Supply Chain Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Signed Software Supply Chain Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
 - **YouTube build/lab:** [Chaos Engineering Workflow Resiliency Tutorial — LitmusChaos](https://www.youtube.com/watch?v=OuB3dS05DHU)
 
-> **When this project is complete:** [Resume your study at DEVOPS Phase 17](./devops.md#L1525) · [Review Phase 16](./devops.md#L1436)
+> **When this project is complete:** [Resume your study at DEVOPS Phase 17](./devops.md#phase-17) · [Review Phase 16](./devops.md#phase-16)
 
 ---
 #### DEVOPS Phase 17 Project
 
 **Recommended build — GitOps Application Platform**
 
-**Why this project now:** it applies the material covered through [DEVOPS Phase 17](./devops.md#L1525) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DEVOPS Phase 17](./devops.md#phase-17) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **GitOps Application Platform** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **GitOps Application Platform** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — GitOps Application Platform Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — GitOps Application Platform Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Argo CD](https://github.com/argoproj/argo-cd)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
 - **YouTube build/lab:** [Chaos Engineering Workflow Resiliency Tutorial — LitmusChaos](https://www.youtube.com/watch?v=OuB3dS05DHU)
 
-> **When this project is complete:** [Resume your study at DEVOPS Phase 18](./devops.md#L1614) · [Review Phase 17](./devops.md#L1525)
+> **When this project is complete:** [Resume your study at DEVOPS Phase 18](./devops.md#phase-18) · [Review Phase 17](./devops.md#phase-17)
 
 ---
 #### DEVOPS Phase 18 Project
 
 **Recommended build — Chaos Game Day and Postmortem**
 
-**Why this project now:** it applies the material covered through [DEVOPS Phase 18](./devops.md#L1614) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DEVOPS Phase 18](./devops.md#phase-18) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Chaos Game Day and Postmortem** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Chaos Game Day and Postmortem** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Chaos Game Day and Postmortem Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Chaos Game Day and Postmortem Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
 - **YouTube build/lab:** [Chaos Engineering Workflow Resiliency Tutorial — LitmusChaos](https://www.youtube.com/watch?v=OuB3dS05DHU)
 
-> **When this project is complete:** [Resume your study at DEVOPS Phase 19](./devops.md#L1702) · [Review Phase 18](./devops.md#L1614)
+> **When this project is complete:** [Resume your study at DEVOPS Phase 19](./devops.md#phase-19) · [Review Phase 18](./devops.md#phase-18)
 
 ---
 #### DEVOPS Phase 19 Project
 
 **Recommended build — Production Delivery Platform**
 
-**Why this project now:** it applies the material covered through [DEVOPS Phase 19](./devops.md#L1702) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DEVOPS Phase 19](./devops.md#phase-19) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Production Delivery Platform** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Production Delivery Platform** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Production Delivery Platform Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Production Delivery Platform Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
 - **YouTube build/lab:** [Chaos Engineering Workflow Resiliency Tutorial — LitmusChaos](https://www.youtube.com/watch?v=OuB3dS05DHU)
 
-> **When this project is complete:** [Resume your study at DEVOPS Phase 20](./devops.md#L1790) · [Review Phase 19](./devops.md#L1702)
+> **When this project is complete:** [Resume your study at DEVOPS Phase 20](./devops.md#phase-20) · [Review Phase 19](./devops.md#phase-19)
 
 ---
 #### DEVOPS Phase 20 Project
 
 **Recommended build — Timed DevOps Incident Drill**
 
-**Why this project now:** it applies the material covered through [DEVOPS Phase 20](./devops.md#L1790) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [DEVOPS Phase 20](./devops.md#phase-20) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Timed DevOps Incident Drill** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Timed DevOps Incident Drill** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Timed DevOps Incident Drill Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Timed DevOps Incident Drill Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
 - **YouTube build/lab:** [Chaos Engineering Workflow Resiliency Tutorial — LitmusChaos](https://www.youtube.com/watch?v=OuB3dS05DHU)
 
-> **When this project is complete:** [Return to the DEVOPS phase index](./devops.md#L67) · [Review Phase 20](./devops.md#L1790)
+> **When this project is complete:** [Return to the DEVOPS phase index](./devops.md#phase-index) · [Review Phase 20](./devops.md#phase-20)
 
 ---
 
 ### Cyber Phase Projects
 
-Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent portfolio artifact.
+Choose the recommended build first. Use the alternative only after the recommended version is complete, or when you already have an equivalent finished portfolio project.
 
 #### CYBER Phase 1 Project
 
 **Recommended build — Risk Register and Treatment Plan**
 
-**Why this project now:** it applies the material covered through [CYBER Phase 1](./ICT_Cybersecurity.md#L160) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CYBER Phase 1](./ICT_Cybersecurity.md#phase-1) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Risk Register and Treatment Plan** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Risk Register and Treatment Plan** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Risk Register and Treatment Plan Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Risk Register and Treatment Plan Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
 - **YouTube build/lab:** [Build a Basic Cybersecurity Home Lab — MyDFIR](https://www.youtube.com/watch?v=Zgiw-4z51NI)
 
-> **When this project is complete:** [Resume your study at CYBER Phase 2](./ICT_Cybersecurity.md#L308) · [Review Phase 1](./ICT_Cybersecurity.md#L160)
+> **When this project is complete:** [Resume your study at CYBER Phase 2](./ICT_Cybersecurity.md#phase-2) · [Review Phase 1](./ICT_Cybersecurity.md#phase-1)
 
 ---
 #### CYBER Phase 2 Project
 
 **Recommended build — Network Attack Surface Map**
 
-**Why this project now:** it applies the material covered through [CYBER Phase 2](./ICT_Cybersecurity.md#L308) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CYBER Phase 2](./ICT_Cybersecurity.md#phase-2) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Network Attack Surface Map** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Network Attack Surface Map** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Network Attack Surface Map Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Network Attack Surface Map Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
 - **YouTube build/lab:** [Build a Basic Cybersecurity Home Lab — MyDFIR](https://www.youtube.com/watch?v=Zgiw-4z51NI)
 
-> **When this project is complete:** [Resume your study at CYBER Phase 3](./ICT_Cybersecurity.md#L446) · [Review Phase 2](./ICT_Cybersecurity.md#L308)
+> **When this project is complete:** [Resume your study at CYBER Phase 3](./ICT_Cybersecurity.md#phase-3) · [Review Phase 2](./ICT_Cybersecurity.md#phase-2)
 
 ---
 #### CYBER Phase 3 Project
 
 **Recommended build — Host Hardening Baseline**
 
-**Why this project now:** it applies the material covered through [CYBER Phase 3](./ICT_Cybersecurity.md#L446) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CYBER Phase 3](./ICT_Cybersecurity.md#phase-3) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Host Hardening Baseline** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Host Hardening Baseline** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Host Hardening Baseline Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Host Hardening Baseline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
 - **YouTube build/lab:** [Build a Basic Cybersecurity Home Lab — MyDFIR](https://www.youtube.com/watch?v=Zgiw-4z51NI)
 
-> **When this project is complete:** [Resume your study at CYBER Phase 4](./ICT_Cybersecurity.md#L586) · [Review Phase 3](./ICT_Cybersecurity.md#L446)
+> **When this project is complete:** [Resume your study at CYBER Phase 4](./ICT_Cybersecurity.md#phase-4) · [Review Phase 3](./ICT_Cybersecurity.md#phase-3)
 
 ---
 #### CYBER Phase 4 Project
 
 **Recommended build — Secure File Vault**
 
-**Why this project now:** it applies the material covered through [CYBER Phase 4](./ICT_Cybersecurity.md#L586) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CYBER Phase 4](./ICT_Cybersecurity.md#phase-4) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Secure File Vault** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Secure File Vault** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Secure File Vault Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Secure File Vault Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
 - **YouTube build/lab:** [Build a Basic Cybersecurity Home Lab — MyDFIR](https://www.youtube.com/watch?v=Zgiw-4z51NI)
 
-> **When this project is complete:** [Resume your study at CYBER Phase 5](./ICT_Cybersecurity.md#L724) · [Review Phase 4](./ICT_Cybersecurity.md#L586)
+> **When this project is complete:** [Resume your study at CYBER Phase 5](./ICT_Cybersecurity.md#phase-5) · [Review Phase 4](./ICT_Cybersecurity.md#phase-4)
 
 ---
 #### CYBER Phase 5 Project
 
 **Recommended build — Least-Privilege IAM Review**
 
-**Why this project now:** it applies the material covered through [CYBER Phase 5](./ICT_Cybersecurity.md#L724) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CYBER Phase 5](./ICT_Cybersecurity.md#phase-5) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Least-Privilege IAM Review** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Least-Privilege IAM Review** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Least-Privilege IAM Review Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Least-Privilege IAM Review Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
 - **YouTube build/lab:** [Build a Basic Cybersecurity Home Lab — MyDFIR](https://www.youtube.com/watch?v=Zgiw-4z51NI)
 
-> **When this project is complete:** [Resume your study at CYBER Phase 6](./ICT_Cybersecurity.md#L862) · [Review Phase 5](./ICT_Cybersecurity.md#L724)
+> **When this project is complete:** [Resume your study at CYBER Phase 6](./ICT_Cybersecurity.md#phase-6) · [Review Phase 5](./ICT_Cybersecurity.md#phase-5)
 
 ---
 #### CYBER Phase 6 Project
 
 **Recommended build — Threat Model and ATT&CK Map**
 
-**Why this project now:** it applies the material covered through [CYBER Phase 6](./ICT_Cybersecurity.md#L862) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CYBER Phase 6](./ICT_Cybersecurity.md#phase-6) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Threat Model and ATT&CK Map** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Threat Model and ATT&CK Map** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Threat Model and ATT&CK Map Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Threat Model and ATT&CK Map Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
 - **YouTube build/lab:** [OWASP Juice Shop Web Penetration Testing Lab — Woman in WhiteHat](https://www.youtube.com/watch?v=0XIzwlhWO3g)
 
-> **When this project is complete:** [Resume your study at CYBER Phase 7](./ICT_Cybersecurity.md#L1007) · [Review Phase 6](./ICT_Cybersecurity.md#L862)
+> **When this project is complete:** [Resume your study at CYBER Phase 7](./ICT_Cybersecurity.md#phase-7) · [Review Phase 6](./ICT_Cybersecurity.md#phase-6)
 
 ---
 #### CYBER Phase 7 Project
 
 **Recommended build — OWASP Remediation Lab**
 
-**Why this project now:** it applies the material covered through [CYBER Phase 7](./ICT_Cybersecurity.md#L1007) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CYBER Phase 7](./ICT_Cybersecurity.md#phase-7) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **OWASP Remediation Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **OWASP Remediation Lab** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — OWASP Remediation Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — OWASP Remediation Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OWASP Juice Shop](https://github.com/juice-shop/juice-shop)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
 - **YouTube build/lab:** [OWASP Juice Shop Web Penetration Testing Lab — Woman in WhiteHat](https://www.youtube.com/watch?v=0XIzwlhWO3g)
 
-> **When this project is complete:** [Resume your study at CYBER Phase 8](./ICT_Cybersecurity.md#L1155) · [Review Phase 7](./ICT_Cybersecurity.md#L1007)
+> **When this project is complete:** [Resume your study at CYBER Phase 8](./ICT_Cybersecurity.md#phase-8) · [Review Phase 7](./ICT_Cybersecurity.md#phase-7)
 
 ---
 #### CYBER Phase 8 Project
 
 **Recommended build — Firewall and IDS Validation**
 
-**Why this project now:** it applies the material covered through [CYBER Phase 8](./ICT_Cybersecurity.md#L1155) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CYBER Phase 8](./ICT_Cybersecurity.md#phase-8) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Firewall and IDS Validation** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Firewall and IDS Validation** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Firewall and IDS Validation Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Firewall and IDS Validation Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
 - **YouTube build/lab:** [OWASP Juice Shop Web Penetration Testing Lab — Woman in WhiteHat](https://www.youtube.com/watch?v=0XIzwlhWO3g)
 
-> **When this project is complete:** [Resume your study at CYBER Phase 9](./ICT_Cybersecurity.md#L1283) · [Review Phase 8](./ICT_Cybersecurity.md#L1155)
+> **When this project is complete:** [Resume your study at CYBER Phase 9](./ICT_Cybersecurity.md#phase-9) · [Review Phase 8](./ICT_Cybersecurity.md#phase-8)
 
 ---
 #### CYBER Phase 9 Project
 
 **Recommended build — Endpoint Hardening Pack**
 
-**Why this project now:** it applies the material covered through [CYBER Phase 9](./ICT_Cybersecurity.md#L1283) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CYBER Phase 9](./ICT_Cybersecurity.md#phase-9) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Endpoint Hardening Pack** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Endpoint Hardening Pack** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Endpoint Hardening Pack Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Endpoint Hardening Pack Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
 - **YouTube build/lab:** [OWASP Juice Shop Web Penetration Testing Lab — Woman in WhiteHat](https://www.youtube.com/watch?v=0XIzwlhWO3g)
 
-> **When this project is complete:** [Resume your study at CYBER Phase 10](./ICT_Cybersecurity.md#L1410) · [Review Phase 9](./ICT_Cybersecurity.md#L1283)
+> **When this project is complete:** [Resume your study at CYBER Phase 10](./ICT_Cybersecurity.md#phase-10) · [Review Phase 9](./ICT_Cybersecurity.md#phase-9)
 
 ---
 #### CYBER Phase 10 Project
 
 **Recommended build — Vulnerability Triage Program**
 
-**Why this project now:** it applies the material covered through [CYBER Phase 10](./ICT_Cybersecurity.md#L1410) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CYBER Phase 10](./ICT_Cybersecurity.md#phase-10) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Vulnerability Triage Program** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Vulnerability Triage Program** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Vulnerability Triage Program Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Vulnerability Triage Program Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
 - **YouTube build/lab:** [OWASP Juice Shop Web Penetration Testing Lab — Woman in WhiteHat](https://www.youtube.com/watch?v=0XIzwlhWO3g)
 
-> **When this project is complete:** [Resume your study at CYBER Phase 11](./ICT_Cybersecurity.md#L1540) · [Review Phase 10](./ICT_Cybersecurity.md#L1410)
+> **When this project is complete:** [Resume your study at CYBER Phase 11](./ICT_Cybersecurity.md#phase-11) · [Review Phase 10](./ICT_Cybersecurity.md#phase-10)
 
 ---
 #### CYBER Phase 11 Project
 
 **Recommended build — Authorized Web Pentest Report**
 
-**Why this project now:** it applies the material covered through [CYBER Phase 11](./ICT_Cybersecurity.md#L1540) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CYBER Phase 11](./ICT_Cybersecurity.md#phase-11) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Authorized Web Pentest Report** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Authorized Web Pentest Report** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Authorized Web Pentest Report Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Authorized Web Pentest Report Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OWASP Juice Shop](https://github.com/juice-shop/juice-shop)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
 - **YouTube build/lab:** [Build a SOC Home Lab with Elastic SIEM — Prabh Nair](https://www.youtube.com/watch?v=HsLpZCbiasA)
 
-> **When this project is complete:** [Resume your study at CYBER Phase 12](./ICT_Cybersecurity.md#L1682) · [Review Phase 11](./ICT_Cybersecurity.md#L1540)
+> **When this project is complete:** [Resume your study at CYBER Phase 12](./ICT_Cybersecurity.md#phase-12) · [Review Phase 11](./ICT_Cybersecurity.md#phase-11)
 
 ---
 #### CYBER Phase 12 Project
 
 **Recommended build — Active Directory Detection Lab**
 
-**Why this project now:** it applies the material covered through [CYBER Phase 12](./ICT_Cybersecurity.md#L1682) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CYBER Phase 12](./ICT_Cybersecurity.md#phase-12) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Active Directory Detection Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Active Directory Detection Lab** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Active Directory Detection Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Active Directory Detection Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
 - **YouTube build/lab:** [Build a SOC Home Lab with Elastic SIEM — Prabh Nair](https://www.youtube.com/watch?v=HsLpZCbiasA)
 
-> **When this project is complete:** [Resume your study at CYBER Phase 13](./ICT_Cybersecurity.md#L1812) · [Review Phase 12](./ICT_Cybersecurity.md#L1682)
+> **When this project is complete:** [Resume your study at CYBER Phase 13](./ICT_Cybersecurity.md#phase-13) · [Review Phase 12](./ICT_Cybersecurity.md#phase-12)
 
 ---
 #### CYBER Phase 13 Project
 
 **Recommended build — SIEM Detection Engineering Pack**
 
-**Why this project now:** it applies the material covered through [CYBER Phase 13](./ICT_Cybersecurity.md#L1812) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CYBER Phase 13](./ICT_Cybersecurity.md#phase-13) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **SIEM Detection Engineering Pack** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **SIEM Detection Engineering Pack** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — SIEM Detection Engineering Pack Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — SIEM Detection Engineering Pack Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
 - **YouTube build/lab:** [Build a SOC Home Lab with Elastic SIEM — Prabh Nair](https://www.youtube.com/watch?v=HsLpZCbiasA)
 
-> **When this project is complete:** [Resume your study at CYBER Phase 14](./ICT_Cybersecurity.md#L1949) · [Review Phase 13](./ICT_Cybersecurity.md#L1812)
+> **When this project is complete:** [Resume your study at CYBER Phase 14](./ICT_Cybersecurity.md#phase-14) · [Review Phase 13](./ICT_Cybersecurity.md#phase-13)
 
 ---
 #### CYBER Phase 14 Project
 
 **Recommended build — Incident Forensics Case**
 
-**Why this project now:** it applies the material covered through [CYBER Phase 14](./ICT_Cybersecurity.md#L1949) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CYBER Phase 14](./ICT_Cybersecurity.md#phase-14) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Incident Forensics Case** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Incident Forensics Case** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Incident Forensics Case Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Incident Forensics Case Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
 - **YouTube build/lab:** [Build a SOC Home Lab with Elastic SIEM — Prabh Nair](https://www.youtube.com/watch?v=HsLpZCbiasA)
 
-> **When this project is complete:** [Resume your study at CYBER Phase 15](./ICT_Cybersecurity.md#L2083) · [Review Phase 14](./ICT_Cybersecurity.md#L1949)
+> **When this project is complete:** [Resume your study at CYBER Phase 15](./ICT_Cybersecurity.md#phase-15) · [Review Phase 14](./ICT_Cybersecurity.md#phase-14)
 
 ---
 #### CYBER Phase 15 Project
 
 **Recommended build — Cloud IAM Attack-Path Review**
 
-**Why this project now:** it applies the material covered through [CYBER Phase 15](./ICT_Cybersecurity.md#L2083) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CYBER Phase 15](./ICT_Cybersecurity.md#phase-15) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Cloud IAM Attack-Path Review** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Cloud IAM Attack-Path Review** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Cloud IAM Attack-Path Review Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Cloud IAM Attack-Path Review Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
 - **YouTube build/lab:** [Build a SOC Home Lab with Elastic SIEM — Prabh Nair](https://www.youtube.com/watch?v=HsLpZCbiasA)
 
-> **When this project is complete:** [Resume your study at CYBER Phase 16](./ICT_Cybersecurity.md#L2215) · [Review Phase 15](./ICT_Cybersecurity.md#L2083)
+> **When this project is complete:** [Resume your study at CYBER Phase 16](./ICT_Cybersecurity.md#phase-16) · [Review Phase 15](./ICT_Cybersecurity.md#phase-15)
 
 ---
 #### CYBER Phase 16 Project
 
 **Recommended build — Container Supply-Chain Lab**
 
-**Why this project now:** it applies the material covered through [CYBER Phase 16](./ICT_Cybersecurity.md#L2215) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CYBER Phase 16](./ICT_Cybersecurity.md#phase-16) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Container Supply-Chain Lab** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Container Supply-Chain Lab** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Container Supply-Chain Lab Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Container Supply-Chain Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
 - **YouTube build/lab:** [Cybersecurity Portfolio Project Ideas — Cyber Culture Interface](https://www.youtube.com/watch?v=0LxVcNJUSdY)
 
-> **When this project is complete:** [Resume your study at CYBER Phase 17](./ICT_Cybersecurity.md#L2344) · [Review Phase 16](./ICT_Cybersecurity.md#L2215)
+> **When this project is complete:** [Resume your study at CYBER Phase 17](./ICT_Cybersecurity.md#phase-17) · [Review Phase 16](./ICT_Cybersecurity.md#phase-16)
 
 ---
 #### CYBER Phase 17 Project
 
 **Recommended build — Static Malware Triage**
 
-**Why this project now:** it applies the material covered through [CYBER Phase 17](./ICT_Cybersecurity.md#L2344) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CYBER Phase 17](./ICT_Cybersecurity.md#phase-17) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Static Malware Triage** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Static Malware Triage** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Static Malware Triage Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Static Malware Triage Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
 - **YouTube build/lab:** [Cybersecurity Portfolio Project Ideas — Cyber Culture Interface](https://www.youtube.com/watch?v=0LxVcNJUSdY)
 
-> **When this project is complete:** [Resume your study at CYBER Phase 18](./ICT_Cybersecurity.md#L2469) · [Review Phase 17](./ICT_Cybersecurity.md#L2344)
+> **When this project is complete:** [Resume your study at CYBER Phase 18](./ICT_Cybersecurity.md#phase-18) · [Review Phase 17](./ICT_Cybersecurity.md#phase-17)
 
 ---
 #### CYBER Phase 18 Project
 
 **Recommended build — Control-to-Evidence Audit Pack**
 
-**Why this project now:** it applies the material covered through [CYBER Phase 18](./ICT_Cybersecurity.md#L2469) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CYBER Phase 18](./ICT_Cybersecurity.md#phase-18) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Control-to-Evidence Audit Pack** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Control-to-Evidence Audit Pack** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Control-to-Evidence Audit Pack Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Control-to-Evidence Audit Pack Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
 - **YouTube build/lab:** [Cybersecurity Portfolio Project Ideas — Cyber Culture Interface](https://www.youtube.com/watch?v=0LxVcNJUSdY)
 
-> **When this project is complete:** [Resume your study at CYBER Phase 19](./ICT_Cybersecurity.md#L2596) · [Review Phase 18](./ICT_Cybersecurity.md#L2469)
+> **When this project is complete:** [Resume your study at CYBER Phase 19](./ICT_Cybersecurity.md#phase-19) · [Review Phase 18](./ICT_Cybersecurity.md#phase-18)
 
 ---
 #### CYBER Phase 19 Project
 
 **Recommended build — Defensive Security Portfolio**
 
-**Why this project now:** it applies the material covered through [CYBER Phase 19](./ICT_Cybersecurity.md#L2596) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CYBER Phase 19](./ICT_Cybersecurity.md#phase-19) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Defensive Security Portfolio** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Defensive Security Portfolio** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Defensive Security Portfolio Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Defensive Security Portfolio Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
 - **YouTube build/lab:** [Cybersecurity Portfolio Project Ideas — Cyber Culture Interface](https://www.youtube.com/watch?v=0LxVcNJUSdY)
 
-> **When this project is complete:** [Resume your study at CYBER Phase 20](./ICT_Cybersecurity.md#L2730) · [Review Phase 19](./ICT_Cybersecurity.md#L2596)
+> **When this project is complete:** [Resume your study at CYBER Phase 20](./ICT_Cybersecurity.md#phase-20) · [Review Phase 19](./ICT_Cybersecurity.md#phase-19)
 
 ---
 #### CYBER Phase 20 Project
 
 **Recommended build — Timed SOC Investigation**
 
-**Why this project now:** it applies the material covered through [CYBER Phase 20](./ICT_Cybersecurity.md#L2730) without requiring later phases.
+**Why this is the right project now:** it applies the material covered through [CYBER Phase 20](./ICT_Cybersecurity.md#phase-20) without requiring later phases.
 
-**Build specification**
+**What to build, step by step**
 
-- Build **Timed SOC Investigation** as the smallest working artifact that proves this phase's core idea. Demonstrate at least three scenarios or examples and explain where each concept learned so far appears.
-- **Scope guard:** use only concepts introduced through this phase; treat later-phase tools as optional stretch work.
-- **Done when:** a new reader can follow the README, reproduce or inspect the artifact, and see evidence for every stated scenario.
+- Build **Timed SOC Investigation** as the smallest working project that lets you practice the main idea from this phase and show that it works. Show at least three examples. For each one, point to the part of the project that uses what you learned in this phase, and explain it in your own words.
+- Before writing code, state the input, the expected output, and the reason this phase's idea is needed.
+- Build one simple success case first. Use the smallest sample data, network, screen, or workflow that makes the idea visible.
+- Add a second normal example and one edge or failure case. Write what you expect before you run each one.
+- Add at least one automated check. If automation is not practical for this phase, give an exact manual command and the output a learner should expect.
+- In the README, define every technical term you use, explain the important files, include copy-and-paste run steps, save the result as evidence, and describe one mistake you found and fixed.
+- **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
+- **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Timed SOC Investigation Remix:** apply the same phase concept to a different small domain, dataset, topology, or workflow using no later-phase tools; document what changed.
+**Alternative project — Timed SOC Investigation Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
 - **YouTube build/lab:** [Cybersecurity Portfolio Project Ideas — Cyber Culture Interface](https://www.youtube.com/watch?v=0LxVcNJUSdY)
 
-> **When this project is complete:** [Return to the CYBER phase index](./ICT_Cybersecurity.md#L118) · [Review Phase 20](./ICT_Cybersecurity.md#L2730)
+> **When this project is complete:** [Return to the CYBER phase index](./ICT_Cybersecurity.md#phase-index) · [Review Phase 20](./ICT_Cybersecurity.md#phase-20)
 
 ---
 
@@ -4449,13 +5472,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`CS.md`](./CS.md) Phase 1, [`OOP.md`](./OOP.md) Phase 1 |
-| **Difficulty** | Easy |
+| **How challenging the project is** | Easy |
 
-**Goal:** Parse user input, apply operations, and handle bad input without crashing.
+**What you will build and prove:** Parse user input, apply operations, and handle bad input without crashing.
 
-**Concepts practiced:** variables, control flow, functions, error handling, REPL loop
+**What you will practice:** variables, control flow, functions, error handling, REPL loop
 
-**Steps:**
+**Steps to follow:**
 
 1. Accept two numbers and an operator (`+`, `-`, `*`, `/`) from stdin
 2. Wrap parsing in try/except for invalid input
@@ -4464,12 +5487,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Extract `parse_input()` and `calculate(a, op, b)` as pure functions
 6. Add `--help` and a minimal test for `calculate`
 
-**Done when:**
+**You are finished when:**
 
 - All four operators work; bad input never crashes the program
 - README shows sample session and lists one parsing edge case you handled
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Add parentheses or a small expression parser (shunting-yard)
 
@@ -4480,13 +5503,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`CS.md`](./CS.md) Phase 1 |
-| **Difficulty** | Easy |
+| **How challenging the project is** | Easy |
 
-**Goal:** Practice loops, randomness, and bounded attempts with user feedback.
+**What you will build and prove:** Practice loops, randomness, and bounded attempts with user feedback.
 
-**Concepts practiced:** `while` loops, `if/elif`, `random`, comparison operators
+**What you will practice:** `while` loops, `if/elif`, `random`, comparison operators
 
-**Steps:**
+**Steps to follow:**
 
 1. Pick a secret integer in a configurable range (default 1-100)
 2. Prompt until correct or attempts exhausted (default 7)
@@ -4495,12 +5518,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Add `play_round()` callable from `main`
 6. Log each guess to a list and print history at end
 
-**Done when:**
+**You are finished when:**
 
 - Win and loss paths both behave; range and max attempts are CLI flags
 - You can explain why a binary-search strategy wins in fewer guesses
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Two-player mode where one human sets the secret
 
@@ -4511,13 +5534,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`CS.md`](./CS.md) Phase 1, [`OOP.md`](./OOP.md) Phase 1 |
-| **Difficulty** | Easy |
+| **How challenging the project is** | Easy |
 
-**Goal:** Walk a directory tree and sort files into extension folders safely.
+**What you will build and prove:** Walk a directory tree and sort files into extension folders safely.
 
-**Concepts practiced:** `pathlib` or `os`, loops, string ops, idempotent file moves
+**What you will practice:** `pathlib` or `os`, loops, string ops, idempotent file moves
 
-**Steps:**
+**Steps to follow:**
 
 1. Accept a source directory path via CLI argument
 2. Create subfolders like `images/`, `docs/`, `other/` from a mapping dict
@@ -4526,12 +5549,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Print a summary: counts per category
 6. Add `--dry-run` that only prints planned moves
 
-**Done when:**
+**You are finished when:**
 
 - Dry-run and live modes both work on a test folder you create
 - README documents what happens on name collisions
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Organize by date modified instead of extension
 
@@ -4542,13 +5565,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`CS.md`](./CS.md) Phase 1, [`OOP.md`](./OOP.md) Phase 4 (preview encapsulation) |
-| **Difficulty** | Easy |
+| **How challenging the project is** | Easy |
 
-**Goal:** Generate cryptographically sensible passwords and score user-chosen ones.
+**What you will build and prove:** Generate cryptographically sensible passwords and score user-chosen ones.
 
-**Concepts practiced:** `secrets` module, string categories, scoring functions
+**What you will practice:** `secrets` module, string categories, scoring functions
 
-**Steps:**
+**Steps to follow:**
 
 1. Generate passwords with configurable length and character sets
 2. Implement `score_password(pwd) -> int` using length and charset rules
@@ -4556,12 +5579,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 4. Never print or log generated passwords in debug mode by default
 5. Add unit tests for scoring edge cases (empty, all lower, etc.)
 
-**Done when:**
+**You are finished when:**
 
 - Generator uses `secrets`, not `random`
 - README explains why `random` is wrong for passwords
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Read forbidden-password list from a file
 
@@ -4576,13 +5599,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`OOP.md`](./OOP.md) Phases 2-7 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Model accounts with shared behavior and specialized rules via inheritance and polymorphism.
+**What you will build and prove:** Model accounts with shared behavior and specialized rules via inheritance and polymorphism.
 
-**Concepts practiced:** classes, encapsulation, inheritance, polymorphism, `__repr__`
+**What you will practice:** classes, encapsulation, inheritance, polymorphism, `__repr__`
 
-**Steps:**
+**Steps to follow:**
 
 1. Base `Account` with private balance, deposit, withdraw, and invariant checks
 2. Subclasses: `SavingsAccount` (min balance), `CheckingAccount` (overdraft limit)
@@ -4591,12 +5614,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Add `@property` for read-only balance
 6. Write tests that prove invalid state cannot be reached
 
-**Done when:**
+**You are finished when:**
 
 - No public mutable balance field
 - README includes class diagram and MRO explanation for your hierarchy
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Replace inheritance with composition (`AccountPolicy` strategy objects)
 
@@ -4607,13 +5630,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`OOP.md`](./OOP.md) Phases 4-10 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Track books, members, and loans with clear object relationships.
+**What you will build and prove:** Track books, members, and loans with clear object relationships.
 
-**Concepts practiced:** composition, encapsulation, domain modeling, CRC-style thinking
+**What you will practice:** composition, encapsulation, domain modeling, CRC-style thinking
 
-**Steps:**
+**Steps to follow:**
 
 1. Classes: `Book`, `Member`, `Loan`, `Library`
 2. `Library` lends/returns copies; enforce one active loan per copy
@@ -4622,12 +5645,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Sketch relationships (Member has many Loans, Book has many Copies)
 6. Add overdue calculation without god-method on `Library`
 
-**Done when:**
+**You are finished when:**
 
 - Loan/return invariants hold after restart from JSON
 - You can walk through associations in an interview without opening code
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Fine calculation with a `FinePolicy` interface
 
@@ -4638,13 +5661,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`OOP.md`](./OOP.md) Phases 5, 7 |
-| **Difficulty** | Easy |
+| **How challenging the project is** | Easy |
 
-**Goal:** Use an abstract base class so callers depend on `Shape`, not concrete types.
+**What you will build and prove:** Use an abstract base class so callers depend on `Shape`, not concrete types.
 
-**Concepts practiced:** ABCs, polymorphism, abstraction
+**What you will practice:** ABCs, polymorphism, abstraction
 
-**Steps:**
+**Steps to follow:**
 
 1. Define `Shape` ABC with `area()` and `perimeter()`
 2. Implement `Circle`, `Rectangle`, `Triangle`
@@ -4653,12 +5676,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Add `__eq__` for value comparison on at least one shape
 6. Test with a fake `Shape` stub in unit tests
 
-**Done when:**
+**You are finished when:**
 
 - Zero `if type ==` chains in area summation
 - README explains what abstraction buys you vs a bag of functions
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Serialize/deserialize shapes to JSON by type tag
 
@@ -4669,13 +5692,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`OOP.md`](./OOP.md) Phases 3-4, 9 |
-| **Difficulty** | Easy |
+| **How challenging the project is** | Easy |
 
-**Goal:** Store contacts behind a clean API; hide internal storage choices.
+**What you will build and prove:** Store contacts behind a clean API; hide internal storage choices.
 
-**Concepts practiced:** encapsulation, properties, dunder methods, validation
+**What you will practice:** encapsulation, properties, dunder methods, validation
 
-**Steps:**
+**Steps to follow:**
 
 1. `Contact` with validated email/phone setters
 2. `ContactBook` with add, remove, search, list - no exposed raw dict
@@ -4684,12 +5707,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Persist to CSV or JSON via methods on `ContactBook`, not loose scripts
 6. Test that invalid email cannot be assigned
 
-**Done when:**
+**You are finished when:**
 
 - External code never touches `_contacts` dict directly
 - Search is case-insensitive and covered by a test
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Tag contacts and filter by tag
 
@@ -4702,13 +5725,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`OOP.md`](./OOP.md) Phases 12, 15 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Send notifications through multiple channels without modifying core domain logic for each new channel.
+**What you will build and prove:** Send notifications through multiple channels without modifying core domain logic for each new channel.
 
-**Concepts practiced:** Open/Closed, Strategy, Observer, dependency direction
+**What you will practice:** Open/Closed, Strategy, Observer, dependency direction
 
-**Steps:**
+**Steps to follow:**
 
 1. Domain event: `OrderPlaced` with order id and total
 2. `Notifier` interface with `send(event)` implementations: Email, SMS, Slack
@@ -4717,12 +5740,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Unit-test with fake `Notifier` that records messages
 6. Document which SOLID letters each class satisfies
 
-**Done when:**
+**You are finished when:**
 
 - Adding `PushNotifier` requires zero changes to `OrderService`
 - README maps classes to Observer vs Strategy roles
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Async dispatch with a simple queue
 
@@ -4733,13 +5756,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`OOP.md`](./OOP.md) Phases 13-14 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Integrate two fake payment APIs behind one `PaymentGateway` interface.
+**What you will build and prove:** Integrate two fake payment APIs behind one `PaymentGateway` interface.
 
-**Concepts practiced:** Adapter, Factory, Interface Segregation
+**What you will practice:** Adapter, Factory, Interface Segregation
 
-**Steps:**
+**Steps to follow:**
 
 1. Define `PaymentGateway.charge(amount, currency) -> Receipt`
 2. Write adapters for `StripeLikeAPI` and `PayPalLikeAPI` with different method names
@@ -4748,12 +5771,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Test adapters with stub APIs
 6. Explain in README why callers never import vendor classes
 
-**Done when:**
+**You are finished when:**
 
 - Switching gateway is one env var change
 - Adapters contain all translation logic
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Decorator for retry-on-timeout
 
@@ -4764,13 +5787,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`OOP.md`](./OOP.md) Phases 14-15 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Apply reversible formatting steps to text using composable commands.
+**What you will build and prove:** Apply reversible formatting steps to text using composable commands.
 
-**Concepts practiced:** Decorator pattern, Command pattern, composition
+**What you will practice:** Decorator pattern, Command pattern, composition
 
-**Steps:**
+**Steps to follow:**
 
 1. `Formatter` interface with `format(text) -> str`
 2. Concrete formatters: trim, uppercase, replace tabs, wrap width
@@ -4779,12 +5802,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. CLI: `--steps trim,upper,wrap`
 6. Test pipeline order matters (document order in README)
 
-**Done when:**
+**You are finished when:**
 
 - Pipeline is data-driven from CLI flags
 - Undo works for wrap and replace steps
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Persist command history to redo
 
@@ -4797,13 +5820,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`OOP.md`](./OOP.md) Phase 18, [`CS.md`](./CS.md) Phase 10 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Classic LLD interview prompt - vehicles, spots, tickets, fees - with clean class boundaries.
+**What you will build and prove:** Classic LLD interview prompt - vehicles, spots, tickets, fees - with clean class boundaries.
 
-**Concepts practiced:** LLD method, enums, composition, extensibility
+**What you will practice:** LLD method, enums, composition, extensibility
 
-**Steps:**
+**Steps to follow:**
 
 1. Write 1-page design: entities, APIs, concurrency assumptions
 2. Implement `ParkingLot`, `Spot`, `Vehicle` (Car, Bike, Truck), `Ticket`
@@ -4812,12 +5835,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Provide `park(vehicle)` and `unpark(ticket_id)` with full state transitions
 6. Add tests for full lot, wrong spot type, and duplicate park attempt
 
-**Done when:**
+**You are finished when:**
 
 - Design doc and code both public; README links them
 - You can whiteboard the diagram in under 5 minutes
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Multi-floor lot with nearest-spot finder (BFS preview)
 
@@ -4828,13 +5851,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`OOP.md`](./OOP.md) Phases 15, 18 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Model vending machine behavior with explicit states instead of boolean flags.
+**What you will build and prove:** Model vending machine behavior with explicit states instead of boolean flags.
 
-**Concepts practiced:** State pattern, encapsulation, LLD
+**What you will practice:** State pattern, encapsulation, LLD
 
-**Steps:**
+**Steps to follow:**
 
 1. States: Idle, HasMoney, Dispensing, OutOfStock
 2. Events: insert coin, select item, dispense, cancel
@@ -4843,12 +5866,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Reject invalid transitions with clear errors
 6. Table in README: state x event -> next state
 
-**Done when:**
+**You are finished when:**
 
 - No giant `if self.state ==` in business methods (delegated to state objects)
 - All transitions in table are covered by tests
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Admin mode for price changes
 
@@ -4859,13 +5882,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`OOP.md`](./OOP.md) Phase 18 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Schedule elevator cars for pickup requests using a defined algorithm.
+**What you will build and prove:** Schedule elevator cars for pickup requests using a defined algorithm.
 
-**Concepts practiced:** LLD, queues, strategy, simulation
+**What you will practice:** LLD, queues, strategy, simulation
 
-**Steps:**
+**Steps to follow:**
 
 1. Define `Elevator`, `Controller`, `Request` (source floor, direction)
 2. Implement SCAN or LOOK scan for one car first
@@ -4874,12 +5897,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Metrics: average wait time, max wait
 6. Compare algorithm choice in README with trade-offs
 
-**Done when:**
+**You are finished when:**
 
 - Simulation runs deterministically from a seed file
 - README states assumptions (number of floors, peak load, etc.)
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Two cars with a simple dispatcher
 
@@ -4902,13 +5925,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`CS.md`](./CS.md) Phase 3 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Implement your own resizable array and singly linked list with the same API surface.
+**What you will build and prove:** Implement your own resizable array and singly linked list with the same API surface.
 
-**Concepts practiced:** amortized analysis, pointers, Big O comparison
+**What you will practice:** amortized analysis, pointers, Big O comparison
 
-**Steps:**
+**Steps to follow:**
 
 1. `DynamicArray` with append, insert, delete, index get/set
 2. `SinglyLinkedList` with the same operations
@@ -4917,12 +5940,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Document Big O per method in docstrings
 6. Tests comparing behavior on edge cases (empty, single element)
 
-**Done when:**
+**You are finished when:**
 
 - No use of Python `list` inside `DynamicArray` storage
 - README includes table: operation x structure x complexity
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Doubly linked list with O(1) delete given node reference
 
@@ -4933,13 +5956,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`CS.md`](./CS.md) Phase 3 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Evaluate infix arithmetic using two stacks or shunting-yard conversion.
+**What you will build and prove:** Evaluate infix arithmetic using two stacks or shunting-yard conversion.
 
-**Concepts practiced:** stacks, parsing, operator precedence
+**What you will practice:** stacks, parsing, operator precedence
 
-**Steps:**
+**Steps to follow:**
 
 1. Support `+`, `-`, `*`, `/`, parentheses, integers
 2. Implement shunting-yard to RPN, then evaluate
@@ -4948,12 +5971,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. CLI accepts one expression string
 6. Explain algorithm in README with one worked example
 
-**Done when:**
+**You are finished when:**
 
 - `"3 + 5 * (2 - 8)"` evaluates correctly
 - Malformed input never throws uncaught exceptions
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Variables via `x=3; x+1`
 
@@ -4964,13 +5987,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`CS.md`](./CS.md) Phases 3, 6 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** `get` and `put` in O(1) average with a capacity cap.
+**What you will build and prove:** `get` and `put` in O(1) average with a capacity cap.
 
-**Concepts practiced:** hash map + doubly linked list, design under constraints
+**What you will practice:** hash map + doubly linked list, design under constraints
 
-**Steps:**
+**Steps to follow:**
 
 1. Define `LRUCache(capacity)` with `get(key)`, `put(key, value)`
 2. Track usage order; evict LRU on overflow
@@ -4979,12 +6002,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Optional: thread-unsafe version first, document if adding locks
 6. README diagram of map node <-> list node links
 
-**Done when:**
+**You are finished when:**
 
 - Pass a standard LeetCode-style test suite you write yourself
 - Complexity claims match implementation
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - TTL expiry per key
 
@@ -4995,13 +6018,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`CS.md`](./CS.md) Phase 8 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Find shortest path in an unweighted city graph and compare BFS vs DFS visits.
+**What you will build and prove:** Find shortest path in an unweighted city graph and compare BFS vs DFS visits.
 
-**Concepts practiced:** adjacency list, BFS, DFS, path reconstruction
+**What you will practice:** adjacency list, BFS, DFS, path reconstruction
 
-**Steps:**
+**Steps to follow:**
 
 1. Load graph from JSON (nodes, edges)
 2. Implement BFS shortest path and DFS reachability
@@ -5010,12 +6033,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Detect disconnected components count
 6. Visualize small graph as ASCII in README
 
-**Done when:**
+**You are finished when:**
 
 - BFS returns shortest path length and path list
 - You explain when DFS is wrong for shortest path
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Dijkstra with weighted edges
 
@@ -5028,13 +6051,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`CS.md`](./CS.md) Phases 12-13, [`Networks.md`](./Networks.md) Phase 13 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Serve static files over HTTP/1.1 using sockets only (no Flask).
+**What you will build and prove:** Serve static files over HTTP/1.1 using sockets only (no Flask).
 
-**Concepts practiced:** TCP, HTTP parsing, status codes, MIME types
+**What you will practice:** TCP, HTTP parsing, status codes, MIME types
 
-**Steps:**
+**Steps to follow:**
 
 1. TCP listen on port 8080; accept one client at a time first
 2. Parse request line and headers minimally
@@ -5043,12 +6066,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Log method, path, status to stdout
 6. Document request/response raw bytes in README
 
-**Done when:**
+**You are finished when:**
 
 - Browser loads HTML and CSS from your server
 - curl shows correct headers and status codes
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - `Connection: keep-alive` for multiple requests
 
@@ -5059,13 +6082,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`CS.md`](./CS.md) Phases 13-14, 17 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** REST API for short links with redirect and basic analytics.
+**What you will build and prove:** REST API for short links with redirect and basic analytics.
 
-**Concepts practiced:** REST design, SQL schema, hashing/base62, indexes
+**What you will practice:** REST design, SQL schema, hashing/base62, indexes
 
-**Steps:**
+**Steps to follow:**
 
 1. Design schema: `urls(id, slug, target, created_at, hits)`
 2. `POST /api/shorten` with URL validation
@@ -5074,12 +6097,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Write API tests for duplicate slug handling
 6. One-page design doc: capacity estimate, collision strategy
 
-**Done when:**
+**You are finished when:**
 
 - Redirect works in browser; hit count persists
 - README includes ER diagram and sample curl commands
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Expiring links with TTL column
 
@@ -5090,13 +6113,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`CS.md`](./CS.md) Phase 11 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Compare thread pool vs process pool for CPU vs IO fake workloads.
+**What you will build and prove:** Compare thread pool vs process pool for CPU vs IO fake workloads.
 
-**Concepts practiced:** threads, processes, GIL intuition, queues
+**What you will practice:** threads, processes, GIL intuition, queues
 
-**Steps:**
+**Steps to follow:**
 
 1. Producer enqueues jobs (sleep=IO, compute=CPU)
 2. Worker pool consumes and writes results
@@ -5105,12 +6128,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Explain results in README with GIL mention for Python
 6. Graceful shutdown on SIGINT
 
-**Done when:**
+**You are finished when:**
 
 - Table shows IO-bound favors threads, CPU-bound favors processes (on your machine)
 - Code is runnable with one command
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Persistent queue with Redis or SQLite
 
@@ -5121,13 +6144,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`CS.md`](./CS.md) Phases 13-15 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** CRUD posts with password hashing and session or JWT auth.
+**What you will build and prove:** CRUD posts with password hashing and session or JWT auth.
 
-**Concepts practiced:** REST, SQL, bcrypt/argon2, middleware, SQL injection prevention
+**What you will practice:** REST, SQL, bcrypt/argon2, middleware, SQL injection prevention
 
-**Steps:**
+**Steps to follow:**
 
 1. Users register/login; store hashed passwords only
 2. JWT or session cookie protects `POST/PATCH/DELETE` posts
@@ -5136,12 +6159,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Integration tests for auth failures and happy path
 6. README threat model: what you protect and what you defer
 
-**Done when:**
+**You are finished when:**
 
 - SQL injection attempt in a test fails safely
 - OpenAPI or route table documented
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Refresh tokens or rate limiting on login
 
@@ -5154,13 +6177,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`CS.md`](./CS.md) Phase 17 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Token bucket or sliding window limiter reusable in any API.
+**What you will build and prove:** Token bucket or sliding window limiter reusable in any API.
 
-**Concepts practiced:** algorithms, time windows, system design building block
+**What you will practice:** algorithms, time windows, system design building block
 
-**Steps:**
+**Steps to follow:**
 
 1. Interface: `allow(key) -> bool`
 2. Implement token bucket with configurable rate and burst
@@ -5169,12 +6192,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Tests advance clock or use injectable time source
 6. README compares token bucket vs fixed window
 
-**Done when:**
+**You are finished when:**
 
 - Burst then steady rate behaves as documented
 - Unit tests do not depend on real sleep for correctness
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Redis-backed distributed limiter (design note enough if no Redis)
 
@@ -5185,13 +6208,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`CS.md`](./CS.md) Phase 18 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Visualize key distribution when nodes join or leave the ring.
+**What you will build and prove:** Visualize key distribution when nodes join or leave the ring.
 
-**Concepts practiced:** consistent hashing, minimal remapping on churn
+**What you will practice:** consistent hashing, minimal remapping on churn
 
-**Steps:**
+**Steps to follow:**
 
 1. Hash keys and nodes to a ring (0..2^n-1 or library hash)
 2. Assign key to first node clockwise
@@ -5200,12 +6223,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Plot histogram of keys per node (matplotlib or ASCII)
 6. Document virtual nodes option
 
-**Done when:**
+**You are finished when:**
 
 - Adding one node moves ~1/N keys, not nearly all
 - README ties to cache sharding use case
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Replication factor 3 placement
 
@@ -5216,13 +6239,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`CS.md`](./CS.md) Phases 14, 18 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Store account state as append-only events; rebuild balance from log.
+**What you will build and prove:** Store account state as append-only events; rebuild balance from log.
 
-**Concepts practiced:** event sourcing, immutability, projections
+**What you will practice:** event sourcing, immutability, projections
 
-**Steps:**
+**Steps to follow:**
 
 1. Events: `AccountOpened`, `MoneyDeposited`, `MoneyWithdrawn`
 2. Append to JSON or SQL event table; no in-place balance updates
@@ -5231,12 +6254,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Snapshot every N events for faster rebuild
 6. Tests: replay twice yields same balance
 
-**Done when:**
+**You are finished when:**
 
 - You can delete projection table and rebuild from events
 - README contrasts with CRUD-only design
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Optimistic concurrency with expected version
 
@@ -5257,13 +6280,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Data.md`](./Data.md) Phases 2-3, 8 |
-| **Difficulty** | Easy |
+| **How challenging the project is** | Easy |
 
-**Goal:** Ingest a messy CSV and output an analysis-ready table with a data dictionary.
+**What you will build and prove:** Ingest a messy CSV and output an analysis-ready table with a data dictionary.
 
-**Concepts practiced:** types, nulls, parsing dates, Pandas or stdlib csv
+**What you will practice:** types, nulls, parsing dates, Pandas or stdlib csv
 
-**Steps:**
+**Steps to follow:**
 
 1. Start from a deliberately dirty file (mixed dates, `$` in numbers, dup rows)
 2. Profile columns: null rate, unique count, sample values
@@ -5272,12 +6295,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Export clean CSV + `data_dictionary.md`
 6. One pytest or assert block on row count and null rules
 
-**Done when:**
+**You are finished when:**
 
 - Clean file loads without manual Excel fixes
 - README states every transform and why
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Great Expectations or pandera schema validation
 
@@ -5288,13 +6311,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Data.md`](./Data.md) Phases 2, 9 |
-| **Difficulty** | Easy |
+| **How challenging the project is** | Easy |
 
-**Goal:** Answer three business questions from a sheet and publish static charts.
+**What you will build and prove:** Answer three business questions from a sheet and publish static charts.
 
-**Concepts practiced:** PivotTables or Pandas pivot, chart choice, metric definition
+**What you will practice:** PivotTables or Pandas pivot, chart choice, metric definition
 
-**Steps:**
+**Steps to follow:**
 
 1. Pick a public sample dataset (sales, HR, web traffic)
 2. Define 3 KPIs with formulas in README
@@ -5303,12 +6326,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Write 200-word insight memo: so what, now what
 6. Note one chart you rejected and why
 
-**Done when:**
+**You are finished when:**
 
 - Memo references specific numbers from your output
 - Charts avoid dual-axis lies (or explain if used)
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Parameterized notebook with papermill
 
@@ -5319,13 +6342,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Data.md`](./Data.md) Phases 4-6 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Design a mini star-ish schema and answer 10 analyst questions in SQL only.
+**What you will build and prove:** Design a mini star-ish schema and answer 10 analyst questions in SQL only.
 
-**Concepts practiced:** joins, aggregations, CTEs, window functions, grain
+**What you will practice:** joins, aggregations, CTEs, window functions, grain
 
-**Steps:**
+**Steps to follow:**
 
 1. Model: customers, orders, order_items, products (SQLite or Postgres)
 2. Seed with realistic skew and NULLs
@@ -5334,12 +6357,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Document grain per query in comments
 6. `queries/` folder with numbered `.sql` files
 
-**Done when:**
+**You are finished when:**
 
 - All queries run via single seed script
 - README includes ER sketch and hardest query explanation
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Explain plan for one slow query
 
@@ -5350,13 +6373,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Data.md`](./Data.md) Phase 7 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Analyze a simulated experiment and decide ship or no-ship with uncertainty stated.
+**What you will build and prove:** Analyze a simulated experiment and recommend either releasing the change or holding it back. State what remains uncertain.
 
-**Concepts practiced:** hypothesis testing, conversion rates, confidence, pitfalls
+**What you will practice:** hypothesis testing, conversion rates, confidence, pitfalls
 
-**Steps:**
+**Steps to follow:**
 
 1. Generate or use sample A/B click data with assignment column
 2. Compute conversion rate per variant
@@ -5365,12 +6388,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. One-page decision memo with recommendation
 6. Script reproduces memo numbers from raw CSV
 
-**Done when:**
+**You are finished when:**
 
 - Memo names both statistical and business thresholds
 - You explain what p-value is not
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Bayesian beta-binomial posterior
 
@@ -5381,13 +6404,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Data.md`](./Data.md) Phase 10 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Full EDA pipeline ending in metrics definitions stakeholders can adopt.
+**What you will build and prove:** Full EDA pipeline ending in metrics definitions stakeholders can adopt.
 
-**Concepts practiced:** EDA, metric design, documentation, reproducibility
+**What you will practice:** EDA, metric design, documentation, reproducibility
 
-**Steps:**
+**Steps to follow:**
 
 1. Pick dataset with at least one datetime and one categorical
 2. Univariate and bivariate sections with labeled plots
@@ -5396,12 +6419,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Export notebook to HTML; summary PDF or MD
 6. `requirements.txt` pins versions
 
-**Done when:**
+**You are finished when:**
 
 - Someone else can rerun notebook top to bottom
 - Metrics have plain-English definitions
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - dbt-style metric YAML for one metric
 
@@ -5414,13 +6437,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Data.md`](./Data.md) Phases 11, 13 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Extract from API or CSV, transform, load into Postgres idempotently.
+**What you will build and prove:** Extract from API or CSV, transform, load into Postgres idempotently.
 
-**Concepts practiced:** ETL, idempotency, schemas, logging
+**What you will practice:** ETL, idempotency, schemas, logging
 
-**Steps:**
+**Steps to follow:**
 
 1. Docker Compose: Postgres + optional Adminer
 2. Python script: extract (HTTP or file), transform, load
@@ -5429,12 +6452,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Makefile or README one-liner to run
 6. Test on empty re-run (no duplicate facts)
 
-**Done when:**
+**You are finished when:**
 
 - Second run does not duplicate rows
 - README documents source schema to target schema mapping
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Airflow DAG wrapper with retry
 
@@ -5445,13 +6468,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Data.md`](./Data.md) Phase 12 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Build fact + dimension tables from OLTP-like JSON exports.
+**What you will build and prove:** Build fact + dimension tables from OLTP-like JSON exports.
 
-**Concepts practiced:** dimensional modeling, SCD Type 1 vs 2, grain
+**What you will practice:** dimensional modeling, SCD Type 1 vs 2, grain
 
-**Steps:**
+**Steps to follow:**
 
 1. Stage raw JSON to landing tables
 2. Build `dim_customer`, `dim_product`, `fact_sales` with explicit grain
@@ -5460,12 +6483,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Sample analyst query joins star without fan-out
 6. dbt or plain SQL migrations in repo
 
-**Done when:**
+**You are finished when:**
 
 - One fact row = one order line (or chosen grain)
 - README star diagram matches DDL
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Incremental load watermark column
 
@@ -5476,13 +6499,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Data.md`](./Data.md) Phase 15 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Layer staging, intermediate, and mart models with tests.
+**What you will build and prove:** Layer staging, intermediate, and mart models with tests.
 
-**Concepts practiced:** dbt, ref(), tests, documentation
+**What you will practice:** dbt, ref(), tests, documentation
 
-**Steps:**
+**Steps to follow:**
 
 1. Init dbt project against Postgres or DuckDB
 2. `stg_`, `int_`, `mart_` models for one business domain
@@ -5491,12 +6514,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Seed data for CI run
 6. GitHub Action or local script runs `dbt test`
 
-**Done when:**
+**You are finished when:**
 
 - `dbt build` passes on clean clone
 - README explains model naming convention
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Snapshot for SCD2
 
@@ -5507,13 +6530,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Data.md`](./Data.md) Phase 18 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Stream synthetic click events to a topic and aggregate counts in a consumer.
+**What you will build and prove:** Stream synthetic click events to a topic and aggregate counts in a consumer.
 
-**Concepts practiced:** Kafka basics, partitions, at-least-once, streaming agg
+**What you will practice:** Kafka basics, partitions, at-least-once, streaming agg
 
-**Steps:**
+**Steps to follow:**
 
 1. Docker Compose with Kafka (or Redpanda)
 2. Producer emits JSON events with key=user_id
@@ -5522,12 +6545,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Kill consumer mid-run; restart and note duplicate handling
 6. README diagram: producer -> topic -> consumer
 
-**Done when:**
+**You are finished when:**
 
 - End-to-end demo in under 5 commands
 - You explain offset commit trade-off
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Exactly-once-ish idempotent sink
 
@@ -5538,13 +6561,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Data.md`](./Data.md) Phase 17 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Aggregate a medium CSV with PySpark locally (Docker or standalone).
+**What you will build and prove:** Aggregate a medium CSV with PySpark locally (Docker or standalone).
 
-**Concepts practiced:** Spark DataFrame, shuffle, partitions, lazy eval
+**What you will practice:** Spark DataFrame, shuffle, partitions, lazy eval
 
-**Steps:**
+**Steps to follow:**
 
 1. Input 1M+ row CSV (generate if needed)
 2. Job: group by category, sum revenue, top 10
@@ -5553,12 +6576,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Write output parquet partitioned by date
 6. Compare pandas vs Spark timing on same machine
 
-**Done when:**
+**You are finished when:**
 
 - Spark job runs non-interactively via `spark-submit`
 - README notes when Spark is overkill
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Broadcast join on small lookup table
 
@@ -5577,13 +6600,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Networks.md`](./Networks.md) Phases 10-11 |
-| **Difficulty** | Easy |
+| **How challenging the project is** | Easy |
 
-**Goal:** Echo bytes over TCP and print the four-tuple on connect.
+**What you will build and prove:** Echo bytes over TCP and print the four-tuple on connect.
 
-**Concepts practiced:** sockets, TCP stream, client/server, byte strings
+**What you will practice:** sockets, TCP stream, client/server, byte strings
 
-**Steps:**
+**Steps to follow:**
 
 1. Server binds localhost high port; accepts loop
 2. Client sends line; server echoes until `quit`
@@ -5592,12 +6615,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Optional: concurrent clients with threading
 6. Paste sample session in README
 
-**Done when:**
+**You are finished when:**
 
 - Works with `telnet` or netcat as client too
 - You explain connection vs listening socket
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - UDP echo counterpart and compare semantics
 
@@ -5608,13 +6631,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Networks.md`](./Networks.md) Phase 13 |
-| **Difficulty** | Easy |
+| **How challenging the project is** | Easy |
 
-**Goal:** Craft HTTP/1.1 request by hand with netcat or Python socket.
+**What you will build and prove:** Craft HTTP/1.1 request by hand with netcat or Python socket.
 
-**Concepts practiced:** request line, headers, status codes, Host header
+**What you will practice:** request line, headers, status codes, Host header
 
-**Steps:**
+**Steps to follow:**
 
 1. Connect to `example.com:80` or local server
 2. Send `GET / HTTP/1.1` with Host and Connection headers
@@ -5623,12 +6646,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Document byte-exact request in README
 6. List headers you must send vs optional
 
-**Done when:**
+**You are finished when:**
 
 - You receive valid HTML without curl
 - README explains persistent vs close behavior
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - POST with form body to httpbin
 
@@ -5639,13 +6662,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Networks.md`](./Networks.md) Phase 12 |
-| **Difficulty** | Easy |
+| **How challenging the project is** | Easy |
 
-**Goal:** Trace resolution steps for one domain and publish a annotated write-up.
+**What you will build and prove:** Trace resolution steps for one domain and publish a annotated write-up.
 
-**Concepts practiced:** DNS records, recursion, TTL, tools
+**What you will practice:** DNS records, recursion, TTL, tools
 
-**Steps:**
+**Steps to follow:**
 
 1. Pick a domain you control or a public site
 2. Run `dig` +trace or equivalent; save output
@@ -5654,12 +6677,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Diagram resolver -> root -> TLD -> authoritative
 6. Tie narrative to [`Interview.md`](./Interview.md) URL question
 
-**Done when:**
+**You are finished when:**
 
 - Public markdown post with redacted sensitive data if needed
 - Reader can follow without running commands themselves
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Compare DNS over HTTPS resolver
 
@@ -5670,13 +6693,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Networks.md`](./Networks.md) Phase 15 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Capture a failing or interesting exchange and explain layers.
+**What you will build and prove:** Capture a failing or interesting exchange and explain layers.
 
-**Concepts practiced:** Wireshark, filters, TCP handshake, TLS overview
+**What you will practice:** Wireshark, filters, TCP handshake, TLS overview
 
-**Steps:**
+**Steps to follow:**
 
 1. Reproduce HTTPS login or local HTTP failure
 2. Capture during reproduction; mark filter used
@@ -5685,12 +6708,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Map one packet to OSI layers in prose
 6. Publish sanitized PCAP or screenshots only
 
-**Done when:**
+**You are finished when:**
 
 - Write-up answers: what happened, which layer, evidence packet
 - Filter string documented
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Decrypt local TLS with session keys (dev only)
 
@@ -5701,13 +6724,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Networks.md`](./Networks.md) Phases 5-6, 7 |
-| **Difficulty** | Easy |
+| **How challenging the project is** | Easy |
 
-**Goal:** Run traceroute to three hosts and interpret hop behavior.
+**What you will build and prove:** Run traceroute to three hosts and interpret hop behavior.
 
-**Concepts practiced:** ICMP, TTL, routing, NAT hints
+**What you will practice:** ICMP, TTL, routing, NAT hints
 
-**Steps:**
+**Steps to follow:**
 
 1. Trace to local gateway, regional site, global CDN
 2. Record latency jumps and `*` hops
@@ -5716,12 +6739,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. ASCII map of paths in README
 6. Link to routing phase concepts
 
-**Done when:**
+**You are finished when:**
 
 - Three traces compared in one table
 - You explain one anonymized hop and one timeout
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - MTR over 50 cycles for packet loss
 
@@ -5732,13 +6755,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Networks.md`](./Networks.md) Phase 5 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Given CIDR, print network, broadcast, host range, and usable count.
+**What you will build and prove:** Given CIDR, print network, broadcast, host range, and usable count.
 
-**Concepts practiced:** CIDR, bitwise ops, address planning
+**What you will practice:** CIDR, bitwise ops, address planning
 
-**Steps:**
+**Steps to follow:**
 
 1. Parse `192.168.1.0/24` style input
 2. Validate prefix length per IPv4 rules
@@ -5747,12 +6770,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Tests for /32, /31 edge cases you document
 6. README with one office subnetting example
 
-**Done when:**
+**You are finished when:**
 
 - Matches known online calculator on test vectors
 - Invalid input returns helpful error
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - IPv6 /64 basics
 
@@ -5763,13 +6786,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Networks.md`](./Networks.md) Phase 14 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Fetch a site's certificate chain and summarize trust fields.
+**What you will build and prove:** Fetch a site's certificate chain and summarize trust fields.
 
-**Concepts practiced:** TLS, certificates, SAN, expiry, chain of trust
+**What you will practice:** TLS, certificates, SAN, expiry, chain of trust
 
-**Steps:**
+**Steps to follow:**
 
 1. Script connects to `host:443` with ssl module
 2. Print subject, issuer, notBefore, notAfter, SANs
@@ -5778,12 +6801,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. README explains what CA signing means
 6. Compare cert for two subdomains
 
-**Done when:**
+**You are finished when:**
 
 - Output readable without openssl CLI
 - You explain hostname verification vs cert validity
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Pin expected SPKI hash for a known host
 
@@ -5793,7 +6816,7 @@ Choose the recommended build first. Use the alternative only after the recommend
 
 **File:** [`AI.md`](./AI.md)
 
-**Scope:** Classical ML baselines first, then deep learning, then LLM apps with evals.
+**Scope:** Classical ML baselines first, then deep learning, then LLM apps with evaluation tests.
 
 ---
 
@@ -5802,13 +6825,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`AI.md`](./AI.md) Phases 4-5 |
-| **Difficulty** | Easy |
+| **How challenging the project is** | Easy |
 
-**Goal:** Train and evaluate a logistic regression on a public tabular dataset.
+**What you will build and prove:** Train and evaluate a logistic regression on a public tabular dataset.
 
-**Concepts practiced:** train/test split, metrics, baseline, overfitting check
+**What you will practice:** train/test split, metrics, baseline, overfitting check
 
-**Steps:**
+**Steps to follow:**
 
 1. Load Titanic or similar via sklearn/openml
 2. Simple preprocessing pipeline (impute, encode)
@@ -5817,12 +6840,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Save model with joblib; load and predict in second script
 6. README states metric choice for imbalanced data
 
-**Done when:**
+**You are finished when:**
 
 - Pipeline reproducible from one command
 - You explain one metric weakness on this dataset
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Cross-validation with std dev of scores
 
@@ -5833,13 +6856,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`AI.md`](./AI.md) Phase 6 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Compare variance and interpretability between single tree and ensemble.
+**What you will build and prove:** Compare variance and interpretability between single tree and ensemble.
 
-**Concepts practiced:** bagging, feature importance, hyperparameters
+**What you will practice:** bagging, feature importance, hyperparameters
 
-**Steps:**
+**Steps to follow:**
 
 1. Same dataset as AI-01 or credit default
 2. Train DecisionTree with max_depth sweep
@@ -5848,12 +6871,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Discuss overfitting on training score vs val
 6. Export comparison table to README
 
-**Done when:**
+**You are finished when:**
 
 - Forest beats single tree on held-out metric
 - You explain bagging in one paragraph
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Gradient boosting with XGBoost or sklearn GBM
 
@@ -5864,13 +6887,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`AI.md`](./AI.md) Phases 7-9 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Write training loop from scratch without high-level Trainer magic.
+**What you will build and prove:** Write training loop from scratch without high-level Trainer magic.
 
-**Concepts practiced:** tensors, autograd, loss, optimizer, epochs
+**What you will practice:** tensors, autograd, loss, optimizer, epochs
 
-**Steps:**
+**Steps to follow:**
 
 1. Load MNIST with torchvision
 2. Define small MLP or CNN
@@ -5879,12 +6902,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Save/load `state_dict`
 6. Plot loss curve in README
 
-**Done when:**
+**You are finished when:**
 
 - Test accuracy above 95% with your MLP or above 98% with CNN
 - Loop code is yours, not copy-pasted Trainer
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Learning rate schedule
 
@@ -5895,13 +6918,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`AI.md`](./AI.md) Phase 10 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Fine-tune a pretrained CNN on a small custom image folder.
+**What you will build and prove:** Fine-tune a pretrained CNN on a small custom image folder.
 
-**Concepts practiced:** transfer learning, frozen layers, data augmentation
+**What you will practice:** transfer learning, frozen layers, data augmentation
 
-**Steps:**
+**Steps to follow:**
 
 1. Collect 2-3 classes, ~50 images each (or use flowers102 subset)
 2. Freeze backbone; train new head
@@ -5910,12 +6933,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Export TorchScript or ONNX optional
 6. README compares train-from-scratch vs transfer on small data
 
-**Done when:**
+**You are finished when:**
 
 - Beats scratch model on same data budget
 - Augmentation described
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Grad-CAM visualization for one prediction
 
@@ -5926,13 +6949,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`AI.md`](./AI.md) Phase 12 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Embed sentences and retrieve nearest neighbors by cosine similarity.
+**What you will build and prove:** Embed sentences and retrieve nearest neighbors by cosine similarity.
 
-**Concepts practiced:** embeddings, cosine similarity, vector search
+**What you will practice:** embeddings, cosine similarity, vector search
 
-**Steps:**
+**Steps to follow:**
 
 1. Corpus of 100+ short texts (FAQ, docs, or wiki snippets)
 2. Embed with sentence-transformers or OpenAI API (document cost)
@@ -5941,12 +6964,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Show one failure case (false neighbor) and hypothesize why
 6. README diagram: query -> embed -> compare -> rank
 
-**Done when:**
+**You are finished when:**
 
 - Top result relevant for 8/10 hand-picked queries
 - Cosine formula and normalization explained
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - FAISS index for speed
 
@@ -5957,13 +6980,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`AI.md`](./AI.md) Phase 15 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Chunk markdown notes, retrieve, and answer with citations.
+**What you will build and prove:** Chunk markdown notes, retrieve, and answer with citations.
 
-**Concepts practiced:** chunking, retrieval, prompting, grounding
+**What you will practice:** chunking, retrieval, prompting, grounding
 
-**Steps:**
+**Steps to follow:**
 
 1. Ingest folder of `.md` roadmap excerpts
 2. Chunk ~500 tokens with overlap; embed to local vector store
@@ -5972,12 +6995,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Log retrieved chunks for debugging
 6. Eval set: 5 questions with expected source doc
 
-**Done when:**
+**You are finished when:**
 
 - Answers cite correct file for 4/5 eval questions
 - README documents chunk size trade-off
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Hybrid BM25 + vector retrieval
 
@@ -5988,13 +7011,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`AI.md`](./AI.md) Phases 14, 18 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Compare 3 prompt templates on a fixed task with a score rubric.
+**What you will build and prove:** Compare 3 prompt templates on a fixed task with a score rubric.
 
-**Concepts practiced:** prompting, eval design, failure modes
+**What you will practice:** prompting, eval design, failure modes
 
-**Steps:**
+**Steps to follow:**
 
 1. Task: extract JSON fields from messy customer emails (synthetic set)
 2. Write 3 prompts (zero-shot, few-shot, structured output)
@@ -6003,12 +7026,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Document one hallucination example
 6. Store prompts as versioned files
 
-**Done when:**
+**You are finished when:**
 
 - Repro script outputs same scores on rerun
 - README names when to change prompt vs change model
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - LLM-as-judge with human spot-check
 
@@ -6019,13 +7042,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`AI.md`](./AI.md) Phase 17 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Agent loop that calls whitelisted tools (calculator, datetime, search stub).
+**What you will build and prove:** Agent loop that calls whitelisted tools (calculator, datetime, search stub).
 
-**Concepts practiced:** agents, tool schemas, loop limits, guardrails
+**What you will practice:** agents, tool schemas, loop limits, safety checks and limits
 
-**Steps:**
+**Steps to follow:**
 
 1. Define 2-3 tools with JSON schema descriptions
 2. Loop: model proposes tool call -> execute -> feed result -> max 5 steps
@@ -6034,12 +7057,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Log full trace for one successful and one failed run
 6. README threat model: prompt injection via tool output
 
-**Done when:**
+**You are finished when:**
 
 - Solves 3/5 multi-step questions in eval set
 - Cannot execute shell or file delete (explicitly out of scope)
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Human approval gate before tool execution
 
@@ -6050,13 +7073,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`AI.md`](./AI.md) Phase 18 |
-| **Difficulty** | Easy |
+| **How challenging the project is** | Easy |
 
-**Goal:** Track hyperparameters and metrics across runs systematically.
+**What you will build and prove:** Track hyperparameters and metrics across runs systematically.
 
-**Concepts practiced:** MLOps basics, reproducibility, experiment comparison
+**What you will practice:** MLOps basics, reproducibility, experiment comparison
 
-**Steps:**
+**Steps to follow:**
 
 1. Wrap AI-01 or AI-03 training in experiment logger
 2. Log params, metrics, artifact path per run
@@ -6065,12 +7088,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Tag best model `staging`
 6. README screenshot or table of runs
 
-**Done when:**
+**You are finished when:**
 
 - You can answer "which run won and why" from logs alone
 - Seeds documented for reproducibility
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Promote model only if metric beats previous best
 
@@ -6090,13 +7113,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`ODOO.md`](./ODOO.md) Phase 1-2 |
-| **Difficulty** | Easy |
+| **How challenging the project is** | Easy |
 
-**Goal:** Create installable module with todo model, views, and menu.
+**What you will build and prove:** Create installable module with todo model, views, and menu.
 
-**Concepts practiced:** module manifest, models.Model, XML views, ACLs
+**What you will practice:** module manifest, models.Model, XML views, ACLs
 
-**Steps:**
+**Steps to follow:**
 
 1. Scaffold module `my_todo` with `__manifest__.py`
 2. Model fields: name, description, done, deadline
@@ -6105,12 +7128,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Demo data XML for 3 records
 6. README: install steps on Odoo 17+ dev instance
 
-**Done when:**
+**You are finished when:**
 
 - Module installs without error; CRUD works in UI
 - Uninstall leaves no orphan tables (or document expected residue)
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Kanban view by status
 
@@ -6121,13 +7144,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`ODOO.md`](./ODOO.md) Phase 2-3 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Books, authors, borrowers, loans with relational fields.
+**What you will build and prove:** Books, authors, borrowers, loans with relational fields.
 
-**Concepts practiced:** Many2one, One2many, constraints, onchange
+**What you will practice:** Many2one, One2many, constraints, onchange
 
-**Steps:**
+**Steps to follow:**
 
 1. Models: `library.book`, `library.author`, `library.loan`
 2. SQL constraint: no duplicate ISBN
@@ -6136,12 +7159,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Search filters and group by author
 6. Security: librarian vs reader groups
 
-**Done when:**
+**You are finished when:**
 
 - Cannot create invalid loan via UI or ORM
 - README ER diagram matches models
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Email reminder on overdue (cron)
 
@@ -6152,13 +7175,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`ODOO.md`](./ODOO.md) Phase 4 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Extend standard Sales with custom field and validation on order confirm.
+**What you will build and prove:** Extend standard Sales with custom field and validation on order confirm.
 
-**Concepts practiced:** `_inherit`, super(), xpath views, business rules
+**What you will practice:** `_inherit`, super(), xpath views, business rules
 
-**Steps:**
+**Steps to follow:**
 
 1. Add field `x_discount_reason` on `sale.order`
 2. Override confirm: block if discount > 20% without reason
@@ -6167,12 +7190,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Module depends on `sale`
 6. Document upgrade path when Odoo version bumps
 
-**Done when:**
+**You are finished when:**
 
 - Standard sale flow works; rule fires on edge case
 - View inheritance does not duplicate fields
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Approval workflow state for large discounts
 
@@ -6183,13 +7206,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`ODOO.md`](./ODOO.md) Phase 5-6 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Custom backend widget showing KPI count from RPC.
+**What you will build and prove:** Custom backend widget showing KPI count from RPC.
 
-**Concepts practiced:** OWL components, assets bundle, RPC, QWeb integration
+**What you will practice:** OWL components, assets bundle, RPC, QWeb integration
 
-**Steps:**
+**Steps to follow:**
 
 1. JS OWL component fetches count from custom JSON route or ORM
 2. Register widget in backend assets
@@ -6198,12 +7221,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. SCSS matches Odoo spacing roughly
 6. README screenshots of widget mounted
 
-**Done when:**
+**You are finished when:**
 
 - Widget loads without console errors on fresh install
 - Data refreshes on button click
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Small chart with Chart.js
 
@@ -6214,13 +7237,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`ODOO.md`](./ODOO.md) Phase 7 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** HTTP controller accepts signed webhook and creates CRM lead.
+**What you will build and prove:** HTTP controller accepts signed webhook and creates CRM lead.
 
-**Concepts practiced:** `@http.route`, auth, CSRF, idempotency, logging
+**What you will practice:** `@http.route`, auth, CSRF, idempotency, logging
 
-**Steps:**
+**Steps to follow:**
 
 1. Route `POST /api/webhook/lead` with JSON body
 2. Verify HMAC signature header with secret in config
@@ -6229,12 +7252,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Return 200/401/400 appropriately
 6. Test with curl examples in README
 
-**Done when:**
+**You are finished when:**
 
 - Invalid signature rejected; duplicate payload ignored
 - No CSRF on public route by design (document why)
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Queue job for heavy processing
 
@@ -6245,13 +7268,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`ODOO.md`](./ODOO.md) Phase 8 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Custom PDF report on sales orders with aggregated lines.
+**What you will build and prove:** Custom PDF report on sales orders with aggregated lines.
 
-**Concepts practiced:** QWeb, report action, paperformat, translations
+**What you will practice:** QWeb, report action, paperformat, translations
 
-**Steps:**
+**Steps to follow:**
 
 1. Report template listing order lines grouped by product category
 2. Subtotal per category and grand total
@@ -6260,12 +7283,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Add company logo from standard field
 6. PDF screenshot in README
 
-**Done when:**
+**You are finished when:**
 
 - PDF generates from UI for sample order
 - Template uses t-foreach correctly
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - XLSX export with same data
 
@@ -6276,13 +7299,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`ODOO.md`](./ODOO.md) Phase 9 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Tag-fast tests covering create, constraint, and workflow on your module.
+**What you will build and prove:** Tag-fast tests covering create, constraint, and workflow on your module.
 
-**Concepts practiced:** Odoo test tags, setUp, mock, CI
+**What you will practice:** Odoo test tags, setUp, mock, CI
 
-**Steps:**
+**Steps to follow:**
 
 1. Tests in `tests/` imported from `__init__.py`
 2. Cover at least one constraint violation assertion
@@ -6291,12 +7314,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Optional GitHub Action on push (docker odoo)
 6. README badge or log snippet showing green run
 
-**Done when:**
+**You are finished when:**
 
 - CI or local command exits 0 with tests enabled
 - One test proves business rule, not only `assertTrue(True)`
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Tour test with HttpCase browser simulation
 
@@ -6307,13 +7330,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`ODOO.md`](./ODOO.md) Phase 10 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Scheduled job fetches external API and stores results on model.
+**What you will build and prove:** Scheduled job fetches external API and stores results on model.
 
-**Concepts practiced:** cron, requests, error handling, config parameters
+**What you will practice:** cron, requests, error handling, config parameters
 
-**Steps:**
+**Steps to follow:**
 
 1. Model stores rate/date or geo lookup cache
 2. `ir.cron` daily job calls API with timeout and retry
@@ -6322,12 +7345,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Manual "refresh" button on form
 6. Graceful degrade if API down
 
-**Done when:**
+**You are finished when:**
 
 - Cron runs; manual refresh matches
 - Secrets not in git
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Circuit breaker after N failures
 
@@ -6346,13 +7369,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Web.md`](./Web.md) Phases 2-4 |
-| **Difficulty** | Easy |
+| **How challenging the project is** | Easy |
 
-**Goal:** Ship a standards-based page that remains usable without JavaScript and across keyboard, zoom, and narrow screens.
+**What you will build and prove:** Finish and publish a standards-based page that remains usable without JavaScript and with a keyboard, zoom, or a narrow screen.
 
-**Concepts practiced:** semantic HTML, forms, responsive images, cascade layers, Flexbox/Grid, accessibility, metadata
+**What you will practice:** semantic HTML, forms, responsive images, cascade layers, Flexbox/Grid, accessibility, metadata
 
-**Steps:**
+**Steps to follow:**
 
 1. Write the information architecture and HTML landmarks before styling
 2. Add product media, pricing, variant selection, reviews, and a native purchase form
@@ -6361,14 +7384,14 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Test keyboard order, accessible names, 200% zoom, 320px width, and long text
 6. Record Lighthouse/axe results and fix meaningful findings
 
-**Done when:**
+**You are finished when:**
 
 - Page works with CSS or JavaScript disabled where applicable
 - No horizontal scroll at 320px or 200% zoom
 - Form controls have labels and errors are understandable
 - README contains before/after accessibility evidence
 
-**Stretch (optional):** Add RTL and dark themes using logical properties and design tokens.
+**If you want an extra challenge:** Add RTL and dark themes using logical properties and design tokens.
 
 ---
 
@@ -6377,13 +7400,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Web.md`](./Web.md) Phases 5-7 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Prove browser and language fundamentals before a UI framework abstracts them.
+**What you will build and prove:** Prove browser and language fundamentals before a UI framework abstracts them.
 
-**Concepts practiced:** TypeScript, DOM, event delegation, modules, async/fetch, abort, storage, runtime validation, tooling
+**What you will practice:** TypeScript, DOM, event delegation, modules, async/fetch, abort, storage, runtime validation, tooling
 
-**Steps:**
+**Steps to follow:**
 
 1. Model task states with TypeScript discriminated unions
 2. Render lists with DOM APIs and delegated events
@@ -6392,14 +7415,14 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Cancel stale searches with `AbortController` and prevent race-condition overwrites
 6. Add format, lint, typecheck, unit-test, and build commands in CI
 
-**Done when:**
+**You are finished when:**
 
 - No framework and no `any` escape hatches in application code
 - Reload restores valid local state and rejects corrupt stored data safely
 - Keyboard interaction and status announcements work
 - A deterministic test proves the stale-response race is handled
 
-**Stretch (optional):** Add a service worker with a documented cache strategy.
+**If you want an extra challenge:** Add a service worker with a documented cache strategy.
 
 ---
 
@@ -6410,13 +7433,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Web.md`](./Web.md) Phases 8-10, 15-16 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Build a production-style frontend in React/Next, Vue/Nuxt, Angular, or SvelteKit and justify the choice.
+**What you will build and prove:** Build a production-style frontend in React/Next, Vue/Nuxt, Angular, or SvelteKit and justify the choice.
 
-**Concepts practiced:** routing, rendering strategy, server state, forms, URL state, component APIs, accessibility, tests, performance
+**What you will practice:** routing, rendering strategy, server state, forms, URL state, component APIs, accessibility, tests, performance
 
-**Steps:**
+**Steps to follow:**
 
 1. Write an ADR comparing at least two framework/rendering options
 2. Build protected-looking routes against a mock server without pretending UI checks are authorization
@@ -6427,14 +7450,14 @@ Choose the recommended build first. Use the alternative only after the recommend
 7. Add component/integration tests plus one Playwright critical journey
 8. Profile bundle and interaction performance; document one measured improvement
 
-**Done when:**
+**You are finished when:**
 
 - Refresh/deep links work and every route has loading/error/not-found behavior
 - Keyboard focus is correct through dialogs and validation failures
 - Tests assert behavior rather than private implementation
 - README explains state ownership and client/server boundaries
 
-**Stretch (optional):** Rebuild one route in a second framework and compare developer/runtime trade-offs.
+**If you want an extra challenge:** Rebuild one route in a second framework and compare developer/runtime trade-offs.
 
 ---
 
@@ -6445,13 +7468,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Web.md`](./Web.md) Phases 12-15, [`Data.md`](./Data.md) SQL phases |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Deliver a relational, documented REST API whose validation, authorization, and concurrency behavior are testable.
+**What you will build and prove:** Deliver a relational, documented REST API whose validation, authorization, and concurrency behavior are testable.
 
-**Concepts practiced:** backend framework, PostgreSQL, migrations, transactions, REST, OpenAPI, cursor pagination, sessions/tokens, object authorization
+**What you will practice:** backend framework, PostgreSQL, migrations, transactions, REST, OpenAPI, cursor pagination, sessions/tokens, object authorization
 
-**Steps:**
+**Steps to follow:**
 
 1. Model users, organizations, projects, memberships, and tasks with DB constraints
 2. Implement migrations, seed data, and indexed access patterns verified with query plans
@@ -6462,14 +7485,14 @@ Choose the recommended build first. Use the alternative only after the recommend
 7. Write unit, database integration, API contract, and negative authorization tests
 8. Add structured request logs, rate limiting, and graceful shutdown
 
-**Done when:**
+**You are finished when:**
 
 - Fresh setup runs migrations and contract tests from one documented command
 - Cross-tenant IDs never expose or modify another tenant's data
 - OpenAPI examples match actual responses
 - Duplicate idempotency keys return the original safe outcome
 
-**Stretch (optional):** Generate a typed client and verify compatibility in CI.
+**If you want an extra challenge:** Generate a typed client and verify compatibility in CI.
 
 ---
 
@@ -6478,13 +7501,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Web.md`](./Web.md) Phases 14-15, 17-18 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Integrate an unreliable third party without losing, duplicating, or blindly trusting events.
+**What you will build and prove:** Integrate an unreliable third party without losing, duplicating, or blindly trusting events.
 
-**Concepts practiced:** webhook signatures, raw bodies, replay protection, queues, retries, dead letters, idempotency, outbox, observability
+**What you will practice:** webhook signatures, raw bodies, replay protection, queues, retries, dead letters, idempotency, outbox, observability
 
-**Steps:**
+**Steps to follow:**
 
 1. Receive a provider-shaped webhook and verify signature/timestamp before parsing
 2. Persist event ID and raw audit metadata with unique deduplication constraint
@@ -6494,14 +7517,14 @@ Choose the recommended build first. Use the alternative only after the recommend
 6. Simulate duplicate, delayed, reordered, malformed, and dependency-down events
 7. Build metrics for accepted, processed, retried, dead-lettered, and age-of-oldest job
 
-**Done when:**
+**You are finished when:**
 
 - Duplicate delivery changes business state once
 - Invalid/stale signatures are rejected and secrets are redacted
 - A failed job can be inspected and safely replayed
 - Tests prove the database-commit/publish-failure boundary
 
-**Stretch (optional):** Add SSE progress updates to an operator dashboard.
+**If you want an extra challenge:** Add SSE progress updates to an operator dashboard.
 
 ---
 
@@ -6512,13 +7535,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Web.md`](./Web.md) Phases 16-19 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Ship one narrow product workflow with the security, test, performance, delivery, and operations evidence expected of production work.
+**What you will build and prove:** Finish and publish one focused product workflow with evidence for its security, tests, speed, delivery process, and operation in a real environment.
 
-**Concepts practiced:** full-stack architecture, auth, REST, SQL, cache, jobs/realtime, test strategy, CI/CD, Docker, cloud, observability, recovery
+**What you will practice:** full-stack architecture, auth, REST, SQL, cache, jobs/realtime, test strategy, CI/CD, Docker, cloud, observability, recovery
 
-**Steps:**
+**Steps to follow:**
 
 1. Define users, success metric, non-goals, threat model, and architecture ADR
 2. Build responsive accessible UI, authenticated API, relational schema, and one background/realtime feature
@@ -6529,14 +7552,14 @@ Choose the recommended build first. Use the alternative only after the recommend
 7. Measure Web Vitals/API percentiles and fix one evidenced bottleneck
 8. Rehearse rollback plus database backup restoration and write the result
 
-**Done when:**
+**You are finished when:**
 
 - Public demo and clean-machine local setup both work
 - CI blocks a deliberate test/type/security regression
 - Dashboard links one slow browser action to API and database evidence
-- README explains limits, cost, security decisions, incident exercise, and next bridge
+- README explains limits, cost, security decisions, the incident exercise, and the next useful project
 
-**Stretch (optional):** Add feature-flagged canary delivery and an SLO/error-budget report.
+**If you want an extra challenge:** Add feature-flagged canary delivery and an SLO/error-budget report.
 
 ---
 
@@ -6551,13 +7574,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`cloud.md`](./cloud.md) Phases 3-6, 12-14 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Create a secure, reproducible network and compute foundation for a small web service.
+**What you will build and prove:** Create a secure, reproducible network and compute foundation for a small web service.
 
-**Concepts practiced:** accounts/subscriptions, IAM, VPC/VNet, subnets, routes, load balancing, autoscaling, IaC, secrets, audit logs
+**What you will practice:** accounts/subscriptions, IAM, VPC/VNet, subnets, routes, load balancing, autoscaling, IaC, secrets, audit logs
 
-**Steps:**
+**Steps to follow:**
 
 1. Write the workload, data, threat, availability, and monthly-cost assumptions
 2. Build public load-balancer and private application subnets across two zones with IaC
@@ -6566,9 +7589,9 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Enable audit/config/network logs, encryption, tags, a budget, and a teardown command
 6. Draw request, management, and egress paths and review the IaC plan in CI
 
-**Done when:** A fresh environment is reproducible, the database/workload has no unnecessary public path, one zone can be removed without losing the service, and the README records cost plus security decisions.
+**You are finished when:** A fresh environment is reproducible, the database/workload has no unnecessary public path, one zone can be removed without losing the service, and the README records cost plus security decisions.
 
-**Stretch (optional):** Replace NAT traffic to provider services with private endpoints and compare cost.
+**If you want an extra challenge:** Replace NAT traffic to provider services with private endpoints and compare cost.
 
 ---
 
@@ -6577,13 +7600,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`cloud.md`](./cloud.md) Phases 7-10, 14-15 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Process uploaded work safely despite duplicates, retries, malformed inputs, and downstream failure.
+**What you will build and prove:** Process uploaded work safely despite duplicates, retries, malformed inputs, and downstream failure.
 
-**Concepts practiced:** object storage, events, functions/containers, queues, idempotency, dead letters, IAM, encryption, observability
+**What you will practice:** object storage, events, functions/containers, queues, idempotency, dead letters, IAM, encryption, observability
 
-**Steps:**
+**Steps to follow:**
 
 1. Accept a presigned upload or job submission and record a stable request ID
 2. Publish durable work to a queue and process it with a least-privilege worker
@@ -6592,9 +7615,9 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Add size/type limits, encryption, lifecycle rules, structured logs, and age/error metrics
 6. Test duplicate, reordered, corrupt, dependency-down, and lost-ack scenarios
 
-**Done when:** Duplicate delivery creates one business result, bad work is recoverable without editing production data, and a dashboard shows throughput, failures, retries, and age of oldest work.
+**You are finished when:** Duplicate delivery creates one business result, bad work is recoverable without editing production data, and a dashboard shows throughput, failures, retries, and age of oldest work.
 
-**Stretch (optional):** Compare function and container cost/latency for the same workload.
+**If you want an extra challenge:** Compare function and container cost/latency for the same workload.
 
 ---
 
@@ -6603,13 +7626,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`cloud.md`](./cloud.md) Phases 15-18 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Turn a deployed service into measured recovery evidence and an explainable unit-cost model.
+**What you will build and prove:** Turn a deployed service into measured recovery evidence and an explainable unit-cost model.
 
-**Concepts practiced:** SLI/SLO, alerts, RTO/RPO, backup/restore, zone failure, capacity, tags, budgets, right-sizing, runbooks
+**What you will practice:** SLI/SLO, alerts, RTO/RPO, backup/restore, zone failure, capacity, tags, budgets, right-sizing, runbooks
 
-**Steps:**
+**Steps to follow:**
 
 1. Define one user SLI/SLO, error budget, RTO, RPO, and unit-cost denominator
 2. Build logs/metrics/traces, a symptom alert, and a runbook with ownership
@@ -6618,9 +7641,9 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Capture detection, mitigation, recovery, data correctness, and missed telemetry
 6. Produce a tagged cost report and one right-sizing/lifecycle improvement without reducing the SLO
 
-**Done when:** Restore and failover are demonstrated rather than claimed, the alert leads to a usable runbook, and before/after reliability and cost evidence is public.
+**You are finished when:** Restore and failover are demonstrated rather than claimed, the alert leads to a usable runbook, and before/after reliability and cost evidence is public.
 
-**Stretch (optional):** Use a second region for backup recovery and document the real complexity premium.
+**If you want an extra challenge:** Use a second region for backup recovery and document the real complexity premium.
 
 ---
 
@@ -6629,13 +7652,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`cloud.md`](./cloud.md) Phases 11-20 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Migrate a small stateful application into a governed cloud landing zone with reversible cutover.
+**What you will build and prove:** Migrate a small stateful application into a governed cloud landing zone with reversible cutover.
 
-**Concepts practiced:** landing zone, service choice, IaC, security, migration waves, data validation, DNS cutover, rollback, operations, FinOps
+**What you will practice:** landing zone, service choice, IaC, security, migration waves, data validation, DNS cutover, rollback, operations, FinOps
 
-**Steps:**
+**Steps to follow:**
 
 1. Inventory dependencies/data and write RTO/RPO, regulatory, latency, cost, and non-goals
 2. Choose rehost/replatform/refactor per component in an architecture decision record
@@ -6644,9 +7667,9 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Run a low-risk migration wave, then a timed cutover with DNS/traffic and rollback thresholds
 6. Operate for a measurement window and publish performance, incident, security, and cost findings
 
-**Done when:** The old path can be restored within the declared window, data validation passes, ownership/runbooks exist, and the architecture/cost model explains every managed service.
+**You are finished when:** The old path can be restored within the declared window, data validation passes, ownership/runbooks exist, and the architecture/cost model explains every managed service.
 
-**Stretch (optional):** Re-express the architecture for a second provider and compare primitives instead of brand names.
+**If you want an extra challenge:** Re-express the architecture for a second provider and compare primitives instead of brand names.
 
 ---
 
@@ -6661,13 +7684,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`devops.md`](./devops.md) Phases 2-5 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Package, operate, break, and diagnose a real service without hiding behind an orchestrator.
+**What you will build and prove:** Package, operate, break, and diagnose a real service without hiding behind an orchestrator.
 
-**Concepts practiced:** Linux processes, systemd, permissions, filesystems, DNS/TCP/HTTP, shell automation, logs, runbooks
+**What you will practice:** Linux processes, systemd, permissions, filesystems, DNS/TCP/HTTP, shell automation, logs, runbooks
 
-**Steps:**
+**Steps to follow:**
 
 1. Install a small HTTP service under a dedicated non-login user and systemd unit
 2. Add environment/config separation, log rotation, health check, resource limits, and graceful stop
@@ -6676,9 +7699,9 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Diagnose with service/process/socket/filesystem/network evidence and record a timeline
 6. Turn each failure into a check, alert, test, or runbook improvement
 
-**Done when:** A clean host can be configured twice safely, another person can resolve two injected failures from the runbook, and no secret is committed.
+**You are finished when:** A clean host can be configured twice safely, another person can resolve two injected failures from the runbook, and no secret is committed.
 
-**Stretch (optional):** Add a read-only operator command that collects a safe diagnostic bundle.
+**If you want an extra challenge:** Add a read-only operator command that collects a safe diagnostic bundle.
 
 ---
 
@@ -6687,13 +7710,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`devops.md`](./devops.md) Phases 6-8, 16 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Convert a commit into one traceable, policy-checked artifact promoted through environments.
+**What you will build and prove:** Convert a commit into one traceable, policy-checked artifact promoted through environments.
 
-**Concepts practiced:** Git, build systems, CI, testing, caching, SBOM, signing, provenance, secrets, release strategies
+**What you will practice:** Git, build systems, CI, testing, caching, SBOM, signing, provenance, secrets, release strategies
 
-**Steps:**
+**Steps to follow:**
 
 1. Pin dependencies and create deterministic lint, test, integration, package, and scan commands
 2. Build once, generate SBOM/provenance, sign the digest, and publish to a protected registry
@@ -6702,9 +7725,9 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Add concurrency cancellation, safe caches, artifact retention, and flake ownership
 6. Rehearse rollback and deliberately block a vulnerable dependency, leaked secret, and tampered artifact
 
-**Done when:** Source-to-running digest is auditable, a failed gate cannot publish/promote, median pipeline time is measured, and rollback uses the prior immutable artifact.
+**You are finished when:** Source-to-running digest is auditable, a failed gate cannot publish/promote, median pipeline time is measured, and rollback uses the prior immutable artifact.
 
-**Stretch (optional):** Produce a verifiable SLSA-style provenance statement.
+**If you want an extra challenge:** Produce a verifiable SLSA-style provenance statement.
 
 ---
 
@@ -6713,13 +7736,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`devops.md`](./devops.md) Phases 9-11, 17 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Operate a containerized service on Kubernetes through reviewed desired state and progressive delivery.
+**What you will build and prove:** Operate a containerized service on Kubernetes through reviewed desired state and progressive delivery.
 
-**Concepts practiced:** Docker, image hardening, Kubernetes controllers/services, probes, resources, policies, Helm/Kustomize, GitOps, canary
+**What you will practice:** Docker, image hardening, Kubernetes controllers/services, probes, resources, policies, Helm/Kustomize, GitOps, canary
 
-**Steps:**
+**Steps to follow:**
 
 1. Build a pinned multi-stage non-root image that handles signals and contains no secret
 2. Declare Deployment, Service, config/secret references, probes, requests/limits, disruption and network policy
@@ -6728,9 +7751,9 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Add canary or blue-green promotion using application health, not pod count alone
 6. Inject CrashLoop, Pending, OOM, bad selector, failed readiness, and DNS/policy faults
 
-**Done when:** Git history identifies every release, manual drift is detected/reconciled, rollback is timed, and the troubleshooting guide maps symptoms to controller/network evidence.
+**You are finished when:** Git history identifies every release, manual drift is detected/reconciled, rollback is timed, and the troubleshooting guide maps symptoms to controller/network evidence.
 
-**Stretch (optional):** Add policy-as-code that blocks privileged, unpinned, or resource-less workloads.
+**If you want an extra challenge:** Add policy-as-code that blocks privileged, unpinned, or resource-less workloads.
 
 ---
 
@@ -6739,13 +7762,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`devops.md`](./devops.md) Phases 14-18 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Build the feedback and response loop around a service, then prove it during a game day.
+**What you will build and prove:** Build the feedback and response loop around a service, then prove it during a game day.
 
-**Concepts practiced:** metrics, logs, traces, OpenTelemetry, SLI/SLO, burn alerts, on-call, incidents, postmortems, capacity
+**What you will practice:** metrics, logs, traces, OpenTelemetry, SLI/SLO, burn alerts, on-call, incidents, postmortems, capacity
 
-**Steps:**
+**Steps to follow:**
 
 1. Instrument a critical user path with correlated metrics, structured logs, and traces
 2. Define availability/latency SLIs, an SLO, error budget, and cardinality/retention limits
@@ -6754,9 +7777,9 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Run an incident with commander, operations, communications, timeline, and recovery roles
 6. Write a blameless causal review whose actions have owners, dates, and verification
 
-**Done when:** A page corresponds to user impact, evidence finds the fault across a dependency boundary, and one corrective action prevents or shortens a repeated incident.
+**You are finished when:** A page corresponds to user impact, evidence finds the fault across a dependency boundary, and one corrective action prevents or shortens a repeated incident.
 
-**Stretch (optional):** Add automated rollback guarded by error-budget burn and a manual override.
+**If you want an extra challenge:** Add automated rollback guarded by error-budget burn and a manual override.
 
 ---
 
@@ -6765,13 +7788,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`devops.md`](./devops.md) Phases 1-20 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Offer one paved road from repository creation to a secure, observable production service without hiding escape hatches.
+**What you will build and prove:** Offer one paved road from repository creation to a secure, observable production service without hiding escape hatches.
 
-**Concepts practiced:** platform product, templates, CI/CD, IaC, cloud, Kubernetes, secrets, policy, GitOps, SRE, documentation, adoption metrics
+**What you will practice:** platform product, templates, CI/CD, IaC, cloud, Kubernetes, secrets, policy, GitOps, SRE, documentation, adoption metrics
 
-**Steps:**
+**Steps to follow:**
 
 1. Interview two developer personas and define the repeated delivery problem and success metrics
 2. Create a service template with build/test, signed artifact, IaC, deployment, telemetry, SLO, and runbook defaults
@@ -6780,15 +7803,15 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Onboard two example services, measure time-to-first-deploy and developer friction, then improve the road
 6. Publish ownership, support model, escape hatch, versioning, adoption, reliability, security, and cost evidence
 
-**Done when:** A new service reaches a test environment from documented steps, production change is auditable/reversible, platform failure does not trap teams, and outcomes—not tool count—show value.
+**You are finished when:** A new service reaches a test environment from documented steps, production change is auditable/reversible, platform failure does not trap teams, and outcomes—not tool count—show value.
 
-**Stretch (optional):** Add a scorecard that gives actionable feedback without becoming a vanity ranking.
+**If you want an extra challenge:** Add a scorecard that gives actionable feedback without becoming a vanity ranking.
 
 ---
 
 ## 11. Cross-cutting / Portfolio Capstones
 
-**Purpose:** Combine two or more tracks after you have shipped cluster projects. These are still bounded - not production ERP replacements.
+**Why this project exists:** Combine two or more learning paths after you have finished their smaller projects. Keep these projects limited; they are not replacements for a complete business system used by a real company.
 
 | ID | Combines | Difficulty |
 | --- | --- | --- |
@@ -6806,13 +7829,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`OOP.md`](./OOP.md) LLD, [`CS.md`](./CS.md) Phases 13-14 |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Small inventory service with products, stock movements, and REST API.
+**What you will build and prove:** Small inventory service with products, stock movements, and REST API.
 
-**Concepts practiced:** layered architecture, REST, SQL, domain invariants
+**What you will practice:** layered architecture, REST, SQL, domain invariants
 
-**Steps:**
+**Steps to follow:**
 
 1. Domain layer: Product, Warehouse, StockMove with quantity rules
 2. Service layer orchestrates transactions
@@ -6821,12 +7844,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Tests on domain without HTTP
 6. README architecture diagram with dependency direction
 
-**Done when:**
+**You are finished when:**
 
 - Cannot oversell stock in concurrent sequential tests
 - API documented with curl examples
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Optimistic locking on stock version column
 
@@ -6837,13 +7860,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`CS.md`](./CS.md) Phase 14, [`Data.md`](./Data.md) Phases 8-10 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Read replica or nightly export from CAP-01 (or any CRUD app) into analyst mart.
+**What you will build and prove:** Read replica or nightly export from CAP-01 (or any CRUD app) into analyst mart.
 
-**Concepts practiced:** ETL, star schema, visualization, metric alignment
+**What you will practice:** ETL, star schema, visualization, metric alignment
 
-**Steps:**
+**Steps to follow:**
 
 1. Export OLTP tables to staging nightly
 2. Build `fact_movements`, `dim_product` in warehouse DB
@@ -6852,12 +7875,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Schedule via cron or Airflow mini-DAG
 6. Public notebook or Streamlit read-only app
 
-**Done when:**
+**You are finished when:**
 
 - Numbers reconcile to source within documented tolerance
 - README defines grain and refresh SLA
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - dbt tests on mart
 
@@ -6868,13 +7891,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`CS.md`](./CS.md) Phase 13, [`Networks.md`](./Networks.md) Phases 13-15 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Deploy tiny app locally, capture login flow, narrate full stack in one write-up.
+**What you will build and prove:** Deploy tiny app locally, capture login flow, narrate full stack in one write-up.
 
-**Concepts practiced:** HTTP, TLS, DNS, debugging, full-stack integration
+**What you will practice:** HTTP, TLS, DNS, debugging, full-stack integration
 
-**Steps:**
+**Steps to follow:**
 
 1. Deploy hello-auth app (CAP-01 API or minimal login)
 2. Configure local DNS or hosts entry optional
@@ -6883,12 +7906,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Tie to [`Interview.md`](./Interview.md) Track E URL question
 6. Publish blog-style MD with diagrams
 
-**Done when:**
+**You are finished when:**
 
 - Reader sees code, packets, and prose in one repo
 - Failure case explained with evidence
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - HTTP/2 capture comparison
 
@@ -6899,13 +7922,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Data.md`](./Data.md) Phase 10, [`AI.md`](./AI.md) Phase 15 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Ask natural language questions about your CAP-02 metrics and schema docs.
+**What you will build and prove:** Ask natural language questions about your CAP-02 metrics and schema docs.
 
-**Concepts practiced:** RAG, data catalog, eval, grounding
+**What you will practice:** RAG, data catalog, eval, grounding
 
-**Steps:**
+**Steps to follow:**
 
 1. Corpus: schema YAML, metric definitions, EDA memos
 2. Chunk and index; metadata tags per table
@@ -6914,12 +7937,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Log retrieval misses; tune chunk boundaries
 6. README compares manual catalog search vs RAG
 
-**Done when:**
+**You are finished when:**
 
 - 5/7 catalog questions answered with correct citation
 - PII question refuses if not in corpus
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - SQL generation with human-in-loop approval
 
@@ -6930,13 +7953,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`ODOO.md`](./ODOO.md), [`Data.md`](./Data.md) Phase 13 |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Export Odoo sales data to warehouse on schedule; dashboard outside Odoo.
+**What you will build and prove:** Export Odoo sales data to warehouse on schedule; dashboard outside Odoo.
 
-**Concepts practiced:** Odoo ORM read, ETL, API keys, idempotency
+**What you will practice:** Odoo ORM read, ETL, API keys, idempotency
 
-**Steps:**
+**Steps to follow:**
 
 1. Odoo module or script: export orders since watermark
 2. Load to Postgres staging via JSON lines
@@ -6945,12 +7968,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Secure credentials; read-only DB user for BI
 6. Document field mapping Odoo -> warehouse
 
-**Done when:**
+**You are finished when:**
 
 - Dashboard updates after cron run
 - Totals match Odoo sales report for test month
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Webhook trigger on order confirm instead of poll
 
@@ -6961,13 +7984,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | All roadmaps Phase 19 portfolio clusters |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** One GitHub Pages site linking projects, roadmaps, and speak-aloud demos.
+**What you will build and prove:** One GitHub Pages site linking projects, roadmaps, and speak-aloud demos.
 
-**Concepts practiced:** technical writing, portfolio curation, CI
+**What you will practice:** technical writing, portfolio curation, CI
 
-**Steps:**
+**Steps to follow:**
 
 1. Static site generator or plain HTML/CSS
 2. Sections per track with 2-3 best projects each
@@ -6976,14 +7999,14 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Deploy via GitHub Actions on push
 6. Link from resume and LinkedIn
 
-**Done when:**
+**You are finished when:**
 
 - Live HTTPS URL loads on mobile
 - Every linked repo has README meeting Section 1 checklist
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
-- Blog post series mirroring bridge topics
+- Blog post series explaining how one topic leads to the next
 
 ---
 
@@ -6991,14 +8014,14 @@ Choose the recommended build first. Use the alternative only after the recommend
 
 **File:** [`Interview.md`](./Interview.md)
 
-**Purpose:** Timed **speak + build** reps. Each drill pairs a short build or diagram with spoken answers from the matching Interview track.
+**Why this project exists:** Timed **speak + build** reps. Each drill pairs a short build or diagram with spoken answers from the matching Interview track.
 
 ### Drill format (use every time)
 
 | Step | Time | Action |
 | --- | --- | --- |
 | 1 | 5 min | Read linked Interview.md questions cold |
-| 2 | 45-90 min | Build or diagram minimal artifact |
+| 2 | 45-90 min | Build or diagram the smallest working result |
 | 3 | 10 min | Speak answer 60-120 sec without notes |
 | 4 | 5 min | One follow-up cold |
 | 5 | 5 min | Update README "Interview notes" section |
@@ -7010,13 +8033,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`CS.md`](./CS.md) Phase 3, [`Interview.md`](./Interview.md) Track A |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Implement LRU Cache (CS-D03 lite, 90 min max) then explain Big O and trade-offs aloud.
+**What you will build and prove:** Implement LRU Cache (CS-D03 lite, 90 min max) then explain Big O and trade-offs aloud.
 
-**Concepts practiced:** timed coding, complexity narration, follow-ups
+**What you will practice:** timed coding, complexity narration, follow-ups
 
-**Steps:**
+**Steps to follow:**
 
 1. Set timer 90 minutes; build minimal LRU only
 2. Record or transcribe 90-second explanation of get/put cost
@@ -7025,12 +8048,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Add "Interview notes" to repo with traps you hit
 6. Link to Interview.md question ids if annotated in your fork
 
-**Done when:**
+**You are finished when:**
 
 - Code passes your handwritten tests
 - Spoken answer names O(1) and memory cost
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Whiteboard version without IDE
 
@@ -7041,13 +8064,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Networks.md`](./Networks.md), [`Interview.md`](./Interview.md) Track C/E |
-| **Difficulty** | Easy |
+| **How challenging the project is** | Easy |
 
-**Goal:** Draw sequence diagram for HTTPS request; speak full path in 120 seconds.
+**What you will build and prove:** Draw sequence diagram for HTTPS request; speak full path in 120 seconds.
 
-**Concepts practiced:** system narration, DNS, TCP, TLS, HTTP
+**What you will practice:** system narration, DNS, TCP, TLS, HTTP
 
-**Steps:**
+**Steps to follow:**
 
 1. Pick one URL (your portfolio site)
 2. Draw diagram: browser -> DNS -> TCP -> TLS -> HTTP -> server
@@ -7056,12 +8079,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Add one failure mode: DNS timeout
 6. Commit diagram as PNG or Mermaid in repo
 
-**Done when:**
+**You are finished when:**
 
 - Diagram and spoken story match
 - You mention caching at DNS and HTTP layers
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - HTTP/2 multiplexing paragraph
 
@@ -7072,13 +8095,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Data.md`](./Data.md) Phase 6, [`Interview.md`](./Interview.md) Track B |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Solve 3 window-function questions in 45 minutes; explain PARTITION BY aloud.
+**What you will build and prove:** Solve 3 window-function questions in 45 minutes; explain PARTITION BY aloud.
 
-**Concepts practiced:** timed SQL, grain, speaking query logic
+**What you will practice:** timed SQL, grain, speaking query logic
 
-**Steps:**
+**Steps to follow:**
 
 1. Use DATA-A03 database or public warehouse sample
 2. Queries: running total, rank within group, dedupe latest row per id
@@ -7087,12 +8110,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Document one wrong query and fix
 6. Save in `interview_drills/sql_window.sql`
 
-**Done when:**
+**You are finished when:**
 
 - All three queries return correct row counts
 - Spoken explanation distinguishes ROW_NUMBER vs RANK
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Optimize one with index suggestion
 
@@ -7103,13 +8126,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`OOP.md`](./OOP.md) Phase 18, [`Interview.md`](./Interview.md) Track A |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** 45-minute design + 45-minute code for parking lot lite.
+**What you will build and prove:** 45-minute design + 45-minute code for parking lot lite.
 
-**Concepts practiced:** LLD interview pacing, class identification, extensibility
+**What you will practice:** LLD interview pacing, class identification, extensibility
 
-**Steps:**
+**Steps to follow:**
 
 1. 0-10 min: clarify requirements out loud (vehicle types, payment?)
 2. 10-25 min: class diagram and APIs on paper
@@ -7118,12 +8141,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. List 3 extensions interviewer might ask (multi-floor, concurrent)
 6. Do not implement extensions unless time remains
 
-**Done when:**
+**You are finished when:**
 
 - Happy path works with tests
 - Design doc photographed or scanned in repo
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Second drill next day on elevator problem cold
 
@@ -7134,13 +8157,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`AI.md`](./AI.md) Phase 15, [`Interview.md`](./Interview.md) Track D |
-| **Difficulty** | Medium |
+| **How challenging the project is** | Medium |
 
-**Goal:** Whiteboard RAG pipeline; speak failure modes without building full system.
+**What you will build and prove:** Whiteboard RAG pipeline; speak failure modes without building full system.
 
-**Concepts practiced:** LLM system design, retrieval trade-offs, eval
+**What you will practice:** LLM system design, retrieval trade-offs, eval
 
-**Steps:**
+**Steps to follow:**
 
 1. Draw ingest, chunk, embed, store, retrieve, generate
 2. Label 3 failure modes: bad chunks, wrong retrieval, hallucination
@@ -7149,12 +8172,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Compare RAG vs fine-tune in 30-second closing
 6. Save photo + bullet outline in repo
 
-**Done when:**
+**You are finished when:**
 
 - 90-second spoken answer fits Interview.md Track D structure
 - You name latency and cost drivers
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Add eval metric definition on slide
 
@@ -7165,13 +8188,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`Interview.md`](./Interview.md) Track F |
-| **Difficulty** | Easy |
+| **How challenging the project is** | Easy |
 
-**Goal:** Pick one shipped project; rehearse 2 STAR stories with metrics.
+**What you will build and prove:** Pick one finished project and rehearse two STAR stories that include measured results.
 
-**Concepts practiced:** behavioral, storytelling, evidence
+**What you will practice:** behavioral, storytelling, evidence
 
-**Steps:**
+**Steps to follow:**
 
 1. Choose project with real friction (bug, scope cut, teamwork)
 2. Write Situation/Task/Action/Result bullets
@@ -7180,12 +8203,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Map story to resume bullet
 6. Store `interview_drills/star_project_x.md` (no private employer secrets)
 
-**Done when:**
+**You are finished when:**
 
 - Story under 2 minutes; Result has number or observable outcome
 - Action mentions your specific contribution
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Second story on failure and learning
 
@@ -7196,13 +8219,13 @@ Choose the recommended build first. Use the alternative only after the recommend
 | Field | Detail |
 | --- | --- |
 | **Roadmap** | [`CS.md`](./CS.md) Phases 11-13, [`Interview.md`](./Interview.md) Track E |
-| **Difficulty** | Hard |
+| **How challenging the project is** | Hard |
 
-**Goal:** Given intentionally buggy two-service demo, find root cause under time box.
+**What you will build and prove:** Given intentionally buggy two-service demo, find root cause under time box.
 
-**Concepts practiced:** debugging narrative, logs, HTTP tracing, systematic isolation
+**What you will practice:** debugging narrative, logs, HTTP tracing, systematic isolation
 
-**Steps:**
+**Steps to follow:**
 
 1. Clone or create two-container demo: api + db or api + worker
 2. Plant one bug (wrong env var, timeout, off-by-one pagination)
@@ -7211,12 +8234,12 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Speak postmortem: blast radius, fix, prevention
 6. Add regression test in fix PR
 
-**Done when:**
+**You are finished when:**
 
 - Root cause correct; fix has test
 - Spoken postmortem under 3 minutes
 
-**Stretch (optional):**
+**If you want an extra challenge:**
 
 - Add OpenTelemetry span around failing call
 
@@ -7239,7 +8262,7 @@ Project prompts curated with **Composio** (YouTube and GitHub). The phase naviga
 | [AWS Architecture Center](https://aws.amazon.com/architecture/) | CLOUD-* architecture patterns |
 | [Azure Architecture Center](https://learn.microsoft.com/azure/architecture/) | CLOUD-* provider comparison |
 | [Google Cloud Architecture Framework](https://cloud.google.com/architecture/framework) | CLOUD-03/04 reliability and operations |
-| [CNCF Landscape](https://landscape.cncf.io/) | DEVOPS-* ecosystem discovery after fundamentals |
+| [CNCF Landscape](https://landscape.cncf.io/) | Explore the wider set of DevOps tools after learning the fundamentals |
 | [DORA](https://dora.dev/) | DEVOPS-02/05 delivery measurements |
 | [Google SRE Books](https://sre.google/books/) | CLOUD-03 and DEVOPS-04 reliability practice |
 
@@ -7362,6 +8385,6 @@ Project prompts curated with **Composio** (YouTube and GitHub). The phase naviga
 
 ## Author
 
-**Mohammad Bilal** - Projects playbook for the Interview Help repo. Theory lives in the roadmaps; proof lives in your repos. Ship small, explain clearly, drill out loud.
+**Mohammad Bilal** - Projects playbook for the Interview Help repository. Theory lives in the roadmaps; proof lives in your project folders. Finish something small, explain it clearly, and practice aloud.
 
 *Pair with:* [`README.md`](./README.md) · [`OOP.md`](./OOP.md) · [`CS.md`](./CS.md) · [`Data.md`](./Data.md) · [`Networks.md`](./Networks.md) · [`AI.md`](./AI.md) · [`ODOO.md`](./ODOO.md) · [`Web.md`](./Web.md) · [`cloud.md`](./cloud.md) · [`devops.md`](./devops.md) · [`Interview.md`](./Interview.md)

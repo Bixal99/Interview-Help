@@ -8,9 +8,7 @@
 
 **Scope:** 40 concepts · 20 phases · connected step by step, with no artificial weekly deadline.
 
-```
 HTML/CSS → JavaScript → React/Next → Node/REST → Auth/DB/Test → Deploy → Hire
-```
 
 ---
 
@@ -59,7 +57,7 @@ Phases 1-10 front-load UI. Phases 11-18 backend and production. Phases 19-20 pro
 
 ## The Whole-Journey Map
 
-```
+```text
 PHASE 1                 PHASE 2               PHASE 3                PHASE 4
  WEB THINKING            HTML                  CSS FUNDAMENTALS       CSS LAYOUT
     |                       |                      |                      |
@@ -174,26 +172,18 @@ Keep client and server responsibilities separate. The client owns presentation a
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
-Browser
-  |
-  v
-DNS
-  |
-  v
-TCP
-  |
-  v
-HTTP GET
-  |
-  v
-HTML
-  |
-  v
-parse DOM/CSSOM
-  |
-  v
-render tree
+```mermaid
+sequenceDiagram
+    participant B as Browser
+    participant D as DNS
+    participant S as Server
+    B->>D: Resolve host name
+    D-->>B: Return IP address
+    B->>S: Establish TCP connection
+    B->>S: HTTP GET
+    S-->>B: HTML
+    B->>B: Parse DOM and CSSOM
+    B->>B: Build render tree
 ```
 
 Read the flow from top to bottom. The important change is **treat every page load as: resolve name, connect, request, response, parse, render.** Each arrow is a boundary where DevTools, a log, a test, or a measurement can later prove what actually happened.
@@ -260,9 +250,7 @@ The clean-machine test is the standard to aim for: clone the repository, copy th
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
 repo/ src/ public/ package.json .env.example README.md
-```
 
 Read the flow from top to bottom. The important change is **one command (`npm run dev`) should boot the app on a clean machine.** Each arrow is a boundary where DevTools, a log, a test, or a measurement can later prove what actually happened.
 
@@ -342,7 +330,7 @@ Native semantics are the strong default because they encode years of browser beh
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 header/nav/main/footer tree
 one h1 per page
 label for=id on inputs
@@ -412,7 +400,7 @@ Media and metadata extend the same principle of describing intent. Responsive im
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 form method action
   |
   v
@@ -503,7 +491,7 @@ Maintainable CSS keeps selector specificity deliberately low, gives components c
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 margin collapse
 border-box vs content-box width math
 ```
@@ -572,7 +560,7 @@ Web fonts introduce a network dependency into layout. A fallback font may render
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 :root { --color-bg
 --space-md } @media (prefers-color-scheme: dark)
 ```
@@ -655,7 +643,7 @@ Flexbox is strongest when the relationship is one-dimensional: a navigation row,
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 row nav: logo | grow | links
 column card stack on mobile
 ```
@@ -718,13 +706,13 @@ Grid treats rows and columns as a shared coordinate system. Tracks can be fixed,
 
 Responsive design is not a catalogue of device widths. It is the practice of allowing content to reflow and adding a breakpoint only where the current composition stops working. Mobile-first CSS begins with the narrow, linear version and uses `min-width` queries to add arrangement as space becomes available. Fluid functions such as `clamp()` and auto-fitting grids can remove breakpoints altogether.
 
-Responsiveness also includes input type, zoom, orientation, reduced motion, and user-selected font size. A layout that fits a 390-pixel screenshot but clips at 200% zoom is not responsive. Prefer normal flow, intrinsic sizing, logical properties, and content-driven tests; absolute coordinates should be the exception reserved for genuine overlays.
+Responsiveness also includes input type, zoom, orientation, reduced motion, and user-selected font size. A layout that fits a 390-pixel screenshot but clips at $200\%$ zoom is not responsive. Prefer normal flow, intrinsic sizing, logical properties, and content-driven tests; absolute coordinates should be the exception reserved for genuine overlays.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Start narrow; add min-width media queries; use fluid type/spacing.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 mobile single column
   |
   v
@@ -809,7 +797,7 @@ Modules replace global variables with explicit imports and exports. The browser 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 module exports import
   |
   v
@@ -883,20 +871,15 @@ JavaScript runs each task to completion on one main thread. Timers, network requ
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
-click
-  |
-  v
-handler
-  |
-  v
-fetch('/api')
-  |
-  v
-json
-  |
-  v
-patch DOM text
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant D as DOM event handler
+    participant A as API
+    U->>D: Click
+    D->>A: fetch('/api')
+    A-->>D: JSON
+    D->>D: Patch DOM text
 ```
 
 Read the flow from top to bottom. The important change is **listen on stable parents; update minimal DOM nodes; fetch returns Promises.** Each arrow is a boundary where DevTools, a log, a test, or a measurement can later prove what actually happened.
@@ -977,9 +960,7 @@ Performance tools record time rather than opinion. A waterfall reveals serialize
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
 Network tab: status, timing, initiator, response preview
-```
 
 Read the flow from top to bottom. The important change is **reproduce -> inspect request/response -> isolate minimal case.** Each arrow is a boundary where DevTools, a log, a test, or a measurement can later prove what actually happened.
 
@@ -1045,7 +1026,7 @@ Environment variables are configuration, not a magic secret store. Any value sub
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 npm install
   |
   v
@@ -1136,7 +1117,7 @@ The payoff is not autocomplete alone. Types make contracts searchable, allow ref
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```typescript
 interface User { id: string
 name: string } fetchUser(): Promise<User>
 ```
@@ -1205,7 +1186,7 @@ Utility types transform contracts: `Pick` selects fields, `Omit` removes them, a
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 ApiResponse<T> wrapper
 tsconfig strict true
 ```
@@ -1260,7 +1241,7 @@ Typed fetch helper ApiResponse<T> used in two endpoints.
 
 ## 8.1 Components, JSX, Props, and State
 
-**WHY YOU ARE LEARNING THIS:** React maps UI = f(state); you describe what, not how to mutate DOM. This is the pressure left behind by the previous step, and it is the reason this concept enters the roadmap here rather than as an isolated item to memorize.
+**WHY YOU ARE LEARNING THIS:** React maps $\mathrm{UI}=f(\mathrm{state})$; you describe what, not how to mutate DOM. This is the pressure left behind by the previous step, and it is the reason this concept enters the roadmap here rather than as an isolated item to memorize.
 
 **THE PROBLEM THIS SOLVES:** Manual DOM updates duplicated state and UI, causing bugs.
 
@@ -1288,7 +1269,7 @@ Keys preserve identity among siblings. They tell React whether a list item is th
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 props down
   |
   v
@@ -1365,7 +1346,7 @@ Controlled inputs make React state the current value; uncontrolled inputs let th
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 mount
   |
   v
@@ -1459,7 +1440,7 @@ Client-side navigation intercepts an ordinary link, updates history, loads data 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 /users/:id
   |
   v
@@ -1533,7 +1514,7 @@ A query key is part of the data contract. If a filter changes the result, it bel
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 useQuery key
   |
   v
@@ -1624,7 +1605,7 @@ Server components reduce client JavaScript and keep secrets near the data source
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 request
   |
   v
@@ -1695,7 +1676,7 @@ Cookies and headers are request-scoped inputs and can make a route dynamic. Serv
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 form action
   |
   v
@@ -1789,7 +1770,7 @@ Express places middleware around Node's HTTP primitives. Each middleware may ins
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 request
   |
   v
@@ -1872,7 +1853,7 @@ Logs should describe events with stable fields such as request ID, route, status
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 routes
   |
   v
@@ -1966,7 +1947,7 @@ Status codes are part of the contract: `200` for a successful representation, `2
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 POST /tasks
   |
   v
@@ -2040,7 +2021,7 @@ Compatibility is a design discipline before it is a version number. Adding optio
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 GET /tasks?limit=20&cursor=abc
   |
   v
@@ -2125,9 +2106,7 @@ A migration is a versioned state transition for the database. Safe changes consi
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
 User 1--* Task | migration SQL | prisma migrate dev
-```
 
 Read the flow from top to bottom. The important change is **schema is contract; migrations version it; never edit prod DB by hand.** Each arrow is a boundary where DevTools, a log, a test, or a measurement can later prove what actually happened.
 
@@ -2193,7 +2172,7 @@ A transaction gives a group of changes one commit boundary. Atomicity prevents p
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 for user in users: fetch tasks  # N+1
   |
   v
@@ -2278,17 +2257,20 @@ Cookies are automatically attached by the browser, which is convenient and creat
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
-login
-  |
-  v
-verify hash
-  |
-  v
-session id in cookie
-  |
-  v
-middleware loads user
+```mermaid
+sequenceDiagram
+    participant B as Browser
+    participant A as Application
+    participant S as Session store
+    B->>A: Submit login credentials
+    A->>A: Verify password
+    A->>S: Create session
+    S-->>A: Session ID
+    A-->>B: Set secure, HttpOnly cookie
+    B->>A: Later request with cookie
+    A->>S: Validate session
+    S-->>A: User identity
+    A-->>B: Authorized response
 ```
 
 Read the flow from top to bottom. The important change is **httpOnly secure cookies beat localStorage for session tokens.** Each arrow is a boundary where DevTools, a log, a test, or a measurement can later prove what actually happened.
@@ -2355,7 +2337,7 @@ Authorization happens after identity. Role-based access control groups permissio
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 OAuth code
   |
   v
@@ -2446,7 +2428,7 @@ Tests are examples of contracts. Include ordinary success, empty state, validati
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 render(<Login/>)
   |
   v
@@ -2523,7 +2505,7 @@ Contract tests sit between services and assert that provider and consumer agree 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 e2e: register
   |
   v
@@ -2614,7 +2596,7 @@ Loading strategy is prioritization. Eager-load what proves the page useful, lazy
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 HTML
   |
   v
@@ -2691,7 +2673,7 @@ Measure before and after with a repeatable profile. A smaller file can still exe
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 CDN edge HIT
   |
   v
@@ -2779,7 +2761,7 @@ A health endpoint should distinguish whether the process is alive from whether i
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 push main
   |
   v
@@ -2859,20 +2841,12 @@ Deployment strategies choose how old and new versions overlap. Rolling updates r
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
-PR
-  |
-  v
-actions
-  |
-  v
-green
-  |
-  v
-merge
-  |
-  v
-auto deploy
+```mermaid
+flowchart TD
+    P["Pull request"] --> A["Actions"]
+    A --> G{"Green?"}
+    G -->|Yes| M["Merge"]
+    M --> D["Automatic deploy"]
 ```
 
 Read the flow from top to bottom. The important change is **pipeline gate: lint -> test -> build -> deploy; tag releases.** Each arrow is a boundary where DevTools, a log, a test, or a measurement can later prove what actually happened.
@@ -2953,7 +2927,7 @@ GraphQL is not automatically superior to REST. HTTP caching is less direct, file
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Client query { user { tasks { title } } }
   |
   v
@@ -3024,7 +2998,7 @@ Webhooks solve a different direction: one server sends an HTTP request to anothe
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 client WS connect
   |
   v
@@ -3112,9 +3086,7 @@ Make evaluation easy. Provide a stable demo, seeded account or safe walkthrough,
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
 README: problem, stack, run, trade-offs, demo gif
-```
 
 Read the flow from top to bottom. The important change is **one strong full-stack app beats ten half-finished tutorials.** Each arrow is a boundary where DevTools, a log, a test, or a measurement can later prove what actually happened.
 
@@ -3180,7 +3152,7 @@ The final artifact should contain operational evidence: CI history, migrations, 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 User
   |
   v
@@ -3274,7 +3246,7 @@ Practice in the medium and time limit you will face. After each attempt, record 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 useState batching
   |
   v
@@ -3351,7 +3323,7 @@ Behavioral answers use the same engineering discipline. Describe a specific situ
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Client
   |
   v

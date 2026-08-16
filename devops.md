@@ -6,7 +6,7 @@
 
 **Scope:** 20 phases · delivery, automation, runtime, reliability, security, platform, projects, and interviews · no artificial weekly deadline.
 
-```
+```text
 FLOW/CULTURE -> LINUX/TROUBLESHOOTING -> GIT/AUTOMATION
       |                    |                    |
       +--------------------+--------------------+
@@ -56,7 +56,7 @@ There is no week clock. Move when you can trace the mechanism, produce the lab e
 
 ## The Whole-Journey Map
 
-```
+```text
 FLOW/CULTURE -> LINUX/TROUBLESHOOTING -> GIT/AUTOMATION
       |                    |                    |
       +--------------------+--------------------+
@@ -138,7 +138,7 @@ Operationally, cultural change, platform investment, and metric misuse require l
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 idea -> code -> review -> build -> test -> release -> deploy -> operate
  ^                                                        |
  +----------- customer and production feedback -----------+
@@ -224,7 +224,7 @@ Operationally, shell power makes quoting, privilege, and irreversible commands d
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 shell -> process -> files/sockets/memory
           |             |
        exit code   permission/ownership
@@ -314,7 +314,7 @@ Operationally, it requires broad layer knowledge and patience under pressure. Tr
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 symptom -> scope/time/change
 DNS -> route -> TCP/TLS -> listener -> process -> dependency
  |       |       |           |          |
@@ -404,7 +404,7 @@ Operationally, conflicts, long branches, rewritten history, and secret leakage r
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 main: A---B------M---R
           \     /    ^ revert
 feature:   C---D
@@ -494,7 +494,7 @@ Operationally, automation can amplify a bad assumption faster than a human. Trea
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 validated input -> inspect state -> compute diff
        |                   |
     dry run            safe apply
@@ -585,7 +585,7 @@ Operationally, storage, dependency risk, build isolation, and retention require 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 commit + lockfile + toolchain -> build/test -> artifact digest
                                       |
                                registry + evidence
@@ -673,10 +673,15 @@ Operationally, pipeline cost, secrets, flakes, and supply-chain trust become ope
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
-push/PR -> isolated runner -> fast checks -> tests -> build -> scan
-               |                                      |
-          safe cache                           immutable artifact
+```mermaid
+flowchart TD
+    P["Push or pull request"] --> R["Isolated runner"]
+    R --> F["Fast checks"]
+    F --> T["Tests"]
+    T --> B["Build"]
+    B --> S["Scan"]
+    S --> A["Immutable artifact"]
+    R --> C["Safe cache"]
 ```
 
 **WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
@@ -761,12 +766,18 @@ Operationally, parallel capacity, schema compatibility, flag debt, and rollback 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
-artifact -> new capacity -> readiness
-                |
-traffic 1% -> compare SLO/error/business signals
- healthy: expand | unhealthy: stop -> route back
-database: expand -> mixed versions -> contract later
+```mermaid
+flowchart TD
+    A["Artifact"] --> N["New capacity"]
+    N --> R["Readiness checks"]
+    R --> C["Route 1% traffic"]
+    C --> O["Compare SLO, error, and business signals"]
+    O --> D{"Healthy?"}
+    D -->|Yes| E["Expand rollout"]
+    D -->|No| B["Stop and route traffic back"]
+    A --> X["Expand database schema"]
+    X --> M["Run mixed application versions"]
+    M --> C2["Contract schema later"]
 ```
 
 **WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
@@ -851,7 +862,7 @@ Operationally, kernel sharing, image supply chain, state, and limits still need 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Dockerfile + context -> layered image -> registry
 host kernel -> namespaces/cgroups -> container PID 1
                             |-- network
@@ -941,11 +952,16 @@ Operationally, capacity, security, networking, upgrades, and noisy neighbors cre
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
-client -> API server -> desired state
-                |          |
-          controllers   scheduler -> node/kubelet -> pod
-service -> ready endpoints -> pod network
+```mermaid
+flowchart TD
+    C["Client"] --> A["API server"]
+    A --> D["Desired state"]
+    D --> K["Controllers"]
+    D --> S["Scheduler"]
+    S --> N["Node / kubelet"]
+    N --> P["Pod"]
+    V["Service"] --> E["Ready endpoints"]
+    E --> P
 ```
 
 **WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
@@ -1031,7 +1047,7 @@ Operationally, state, providers, replacements, drift, and module compatibility. 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 HCL/modules + prior state + remote refresh
                  |
                plan -> policy/review -> apply
@@ -1122,7 +1138,7 @@ Operationally, variable precedence, secret access, host drift, and unsafe shell 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 inventory + vars + role -> host facts
 controller -> module checks state -> change if needed
 change -> handler -> verified service
@@ -1211,7 +1227,7 @@ Operationally, iAM, networking, provider semantics, transfer, quotas, and cost a
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 source -> CI federation -> registry/IaC APIs
                          |
 VPC: load balancer -> workload -> managed data
@@ -1299,7 +1315,7 @@ Operationally, cardinality, volume, privacy, sampling, and alert fatigue. Treat 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 deploy marker/version
         |
 request -> trace -> services/queue/database
@@ -1359,13 +1375,13 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 14 (Observability: Metrics, Logs, Traces, and Alerts)
 
-**WHAT YOU HAVE LEARNED SO FAR:** Dashboards can show healthy infrastructure while a critical user journey fails, and teams can argue about whether reliability is good enough. Operations chased every alert equally, promised vague 100% uptime, and accumulated repetitive manual work.
+**WHAT YOU HAVE LEARNED SO FAR:** Dashboards can show healthy infrastructure while a critical user journey fails, and teams can argue about whether reliability is good enough. Operations chased every alert equally, promised vague $100\%$ uptime, and accumulated repetitive manual work.
 
 ## 15.1 SRE, SLIs, SLOs, Error Budgets, and Toil
 
 **WHY YOU ARE LEARNING THIS:** Dashboards can show healthy infrastructure while a critical user journey fails, and teams can argue about whether reliability is good enough.
 
-**THE PROBLEM THIS SOLVES:** Operations chased every alert equally, promised vague 100% uptime, and accumulated repetitive manual work.
+**THE PROBLEM THIS SOLVES:** Operations chased every alert equally, promised vague $100\%$ uptime, and accumulated repetitive manual work.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -1388,7 +1404,7 @@ Operationally, meaningful events, missing data, policy conflict, and gaming requ
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 good events / valid events = SLI
 SLO target -> allowed bad events = error budget
 actual failures -> burn rate -> alert/policy
@@ -1399,7 +1415,7 @@ toil inventory -> automate/eliminate/accept
 
 | Choice | What it buys | What it costs |
 | --- | --- | --- |
-| Keep the earlier approach | Avoid one more abstraction | Operations chased every alert equally, promised vague 100% uptime, and accumulated repetitive manual work. |
+| Keep the earlier approach | Avoid one more abstraction | Operations chased every alert equally, promised vague $100\%$ uptime, and accumulated repetitive manual work. |
 | Adopt this phase's model | A shared language for reliability and delivery risk | Meaningful events, missing data, policy conflict, and gaming require care |
 | Push it beyond its fit | Delays a redesign | Reliability controls delivery risk, but the software supply chain itself can be attacked. DevSecOps brings evidence and policy into each stage. |
 
@@ -1478,7 +1494,7 @@ Operationally, tool noise, trust roots, exceptions, and runner isolation become 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 developer -> reviewed commit -> isolated build
 dependencies -> SBOM/scan -> digest -> sign/provenance
 registry -> admission verifies -> runtime detection
@@ -1567,12 +1583,18 @@ Operationally, platform product work, abstraction leaks, controller risk, and ex
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
-developer -> template/portal -> repository + catalog
-PR desired state -> GitOps controller pulls
-                  -> diff/policy -> reconcile
-drift -------------------------> repaired/alerted
-feedback + telemetry -> platform roadmap
+```mermaid
+flowchart TD
+    D["Developer"] --> T["Template or portal"]
+    T --> R["Repository and catalog"]
+    R --> P["Desired-state pull request"]
+    P --> G["GitOps controller pulls"]
+    G --> V["Diff and policy"]
+    V --> C["Reconcile"]
+    X["Runtime drift"] --> C
+    C --> O["Repair or alert"]
+    O --> F["Feedback and telemetry"]
+    F --> M["Platform roadmap"]
 ```
 
 **WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
@@ -1656,7 +1678,7 @@ Operationally, on-call load, psychological safety, rehearsal time, and action fo
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 detect -> declare -> roles/channel/timeline
         -> mitigate -> diagnose -> recover -> verify
 evidence -> causal postmortem -> owned actions -> verify
@@ -1744,7 +1766,7 @@ Operationally, end-to-end work exposes gaps and requires disciplined scope. Trea
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 commit -> CI -> signed artifact -> IaC environment
                      |
 GitOps/progressive deploy -> telemetry/SLO -> failure drill
@@ -1832,7 +1854,7 @@ Operationally, timed practice is uncomfortable and reveals gaps reading can hide
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 prompt -> clarify impact/constraints
        -> simple model
        -> hypothesis or design choice

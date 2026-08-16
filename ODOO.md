@@ -8,9 +8,7 @@
 
 **Scope:** 40 concepts · 20 phases · connected step by step, with no artificial weekly deadline.
 
-```
 ERP → Modules → ORM → UI → HTTP → Ship → Hire
-```
 
 ---
 
@@ -70,7 +68,7 @@ Phases 1-10 build platform confident working knowledge (think ERP, ship modules)
 
 ## The Whole-Journey Map
 
-```
+```text
  PHASE 1                 PHASE 2                PHASE 3                PHASE 4
  ODOO / ERP THINKING     3-TIER ARCHITECTURE    DEV ENVIRONMENT        MODULE ANATOMY
     |                       |                      |                      |
@@ -196,7 +194,7 @@ Odoo's open-source core plus optional enterprise apps is why startups and manufa
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 SPREADSHEET CHAOS                    ODOO SINGLE TRUTH
 +------------------+                  +---------------------------+
 | sales.xlsx       |                  | res.partner (customer)    |
@@ -279,7 +277,7 @@ Finally, Odoo is **transactional**: public methods run in environments (`env`) t
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 SCRIPT PATH (fragile)                 MODULE PATH (Odoo-native)
   python patch.py                       __manifest__.py
        |                                      |
@@ -382,14 +380,11 @@ Deployment adds reverse proxies, worker counts, and filestore for attachments, b
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
-[ Browser / OWL client ]
-         |  JSON-RPC / HTTP
-         v
-[ Odoo Werkzeug + ORM registry ]
-         |  SQL (psycopg2)
-         v
-[ PostgreSQL + filestore attachments ]
+```mermaid
+flowchart TD
+    B["Browser / OWL client"] -->|JSON-RPC or HTTP| A["Odoo Werkzeug + ORM registry"]
+    A -->|SQL via psycopg2| D[(PostgreSQL)]
+    A -->|Attachment I/O| F["Filestore attachments"]
 ```
 
 **PICTURE IT LIKE THIS**
@@ -464,7 +459,7 @@ Multi-company and multi-language ride on context keys (`allowed_company_ids`, `l
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Module Python                Registry merge              PostgreSQL
 -----------                    --------------              ------------
 class SaleOrder(Model)    ->   model 'sale.order'     ->   table sale_order
@@ -559,7 +554,7 @@ Create a dedicated database per experiment (`dev_bilal`, not `postgres`). Never 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```bash
 git clone odoo/odoo
 pip install -r requirements.txt
 ./odoo-bin -d dev_bilal --addons-path=addons,custom_addons -i base --dev=all
@@ -633,7 +628,7 @@ Log files (`odoo.log`) and `--log-level=debug_sql` are your friends when domains
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 edit models.py --> --dev=reload (python)
 edit views.xml  --> -u my_module (registry merge)
 edit security   --> -u my_module + re-login user
@@ -710,7 +705,7 @@ House renovation: installing a room (install) vs remodeling existing wiring (upg
 
 Standard layout:
 
-```
+```text
 my_library/
   __init__.py          # imports models, controllers
   __manifest__.py      # metadata and data file list
@@ -729,7 +724,7 @@ Python loads through `__init__.py` importing subpackages. Missing import means m
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 depends: ['base','mail']
 data:
   1 security/groups.xml
@@ -814,7 +809,7 @@ For enterprise features, mark dependency explicitly and document license expecta
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 library_loans/__manifest__.py
   depends: ['library_core', 'mail']
 
@@ -903,7 +898,7 @@ Naming conventions: models grouped by prefix (`library.book`, `library.author`) 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 class LibraryBook(models.Model):
     _name = 'library.book'
          |
@@ -984,10 +979,10 @@ Use `tracking=True` on fields when inheriting `mail.thread` for audit UX. Use `g
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
-library.book                library.author
-  author_id (Many2one) -----> id
-  tag_ids (Many2many) <-----> library_book_tag_rel
+```mermaid
+erDiagram
+    LIBRARY_AUTHOR ||--o{ LIBRARY_BOOK : writes
+    LIBRARY_BOOK }o--o{ LIBRARY_TAG : tagged_with
 ```
 
 **PICTURE IT LIKE THIS**
@@ -1074,7 +1069,7 @@ Batch operations: create accepts list of dicts; write/unlink on multi-record set
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 env['library.book'].search([('active','=',True)])
         |
         v
@@ -1149,7 +1144,7 @@ Dynamic domains in views use strings evaluated safely in UI; in Python use real 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Domain: [('active','=',True), ('loan_count','>',0)]
         |
         v
@@ -1243,7 +1238,7 @@ Admin bypasses ACL checks but record rules still apply unless superuser flag in 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 User (library.group_user)
   perm_read=1 perm_write=1 perm_create=0 perm_unlink=0 on library.book
 
@@ -1316,7 +1311,7 @@ sudo() skips record rules - another reason to treat it as hazardous. For control
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 search sale.order
   + ACL: sales group may read model
   + rule: ('user_id','=',user.id)
@@ -1405,7 +1400,7 @@ Field widgets change UX: `widget="many2many_tags"`, `statusbar`, `monetary`. Dom
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 ir.ui.view (form)
   arch:
     <form>
@@ -1494,7 +1489,7 @@ Use **`optional="hide"`** on list columns for user toggles. Studio generates sim
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 sale.view_order_form (base)
         +
 my_sale.view_order_form_inherit (xpath after partner_id)
@@ -1588,7 +1583,7 @@ Actions can be **bound** to models (Print / Action menu). `binding_model_id` + `
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Menu -> action id 42 -> act_window
   res_model=library.book
   view_mode=list,form
@@ -1664,7 +1659,7 @@ Settings integration: inherit `res.config.settings` views for toggles, not rando
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 App: Library (sequence 10)
   +- Books (action_library_book)
   +- Loans   (action_library_loan)
@@ -1754,7 +1749,7 @@ Avoid side effects in compute methods (no create/write other records). Keep cons
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 write({'return_date': '2020-01-01'})  # checkout 2024
         |
         v
@@ -1839,7 +1834,7 @@ Return action dicts from buttons to open related records when UX needs navigatio
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 User clicks Confirm
   -> action_confirm()
        check state draft
@@ -1937,7 +1932,7 @@ Avoid naming collisions on methods; prefix custom public methods if exposing to 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 module A: sale.order fields
 module B: _inherit sale.order adds x_studio_fee
         |
@@ -2014,7 +2009,7 @@ Contrast **`_inherit` extension** (same model/table) vs **`_inherits` compositio
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 library.member                res.partner
   partner_id (required) ----> id
   membership_level            name, email (via delegation)
@@ -2104,7 +2099,7 @@ Use **`@api.model`** defaults pulling `self.env.context.get('active_model')` for
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 List view select 5 books
   -> Action 'Set Category' (binding)
   -> wizard form (transient)
@@ -2184,7 +2179,7 @@ Chained wizards: return another act_window from first wizard step for rare multi
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 list select rows -> Action menu -> act_window(target=new)
   -> modal form on transient model
   -> Apply -> server method -> close / reload parent
@@ -2274,12 +2269,16 @@ Use `request.env` for ORM. Validate input; never trust query params for ids with
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
-POST /library/webhook
-  -> Controller method
-  -> verify signature
-  -> env['library.loan'].sudo().create(...)  # only if justified
-  -> 200 JSON
+```mermaid
+sequenceDiagram
+    participant E as External service
+    participant C as Odoo controller
+    participant O as ORM
+    E->>C: POST /library/webhook
+    C->>C: Verify signature
+    C->>O: sudo().create(...) only if justified
+    O-->>C: Created record
+    C-->>E: 200 JSON
 ```
 
 **PICTURE IT LIKE THIS**
@@ -2352,7 +2351,7 @@ Align with [`Networks.md`](./Networks.md) HTTP/TLS basics: terminate TLS at prox
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Stripe POST webhook
   verify signature
   lookup event id in payment.transaction
@@ -2446,7 +2445,7 @@ For greenfield mobile, consider custom JSON controllers with OAuth2 proxy instea
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 External Python app
   authenticate -> uid
   execute_kw('library.book','search_read',[[domain]],{fields:[...]})
@@ -2529,7 +2528,7 @@ Monitor with logs and heartbeat transactions. Align retries with [`Networks.md`]
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Client sync loop:
   last_sync = watermark
   search_read domain write_date > last_sync
@@ -2624,11 +2623,18 @@ Document PCI boundaries: never log PAN/CVV; use provider tokens.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
-checkout -> payment.transaction pending
-  -> redirect Stripe
-  -> webhook -> transaction done
-  -> reconcile invoice payment state
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant O as Odoo
+    participant P as Stripe
+    U->>O: Checkout
+    O->>O: Create pending payment.transaction
+    O-->>U: Redirect to Stripe
+    U->>P: Complete payment
+    P->>O: Signed webhook
+    O->>O: Mark transaction done
+    O->>O: Reconcile invoice payment state
 ```
 
 **PICTURE IT LIKE THIS**
@@ -2704,7 +2710,7 @@ Map external ids on Odoo models (`shipengine_label_id`) for idempotent upsert.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Settings store API key
   cron every 15m
     -> ShippingConnector(env).sync_trackers()
@@ -2802,7 +2808,7 @@ Know when XML views suffice vs JS needed: custom kanban card layout, specialized
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 manifest assets -> backend bundle
   -> import { patch } from '@web/core/utils/patch'
   -> patch PartnerForm.setup ...
@@ -2883,7 +2889,7 @@ Legacy public widgets fade; read existing module JS before copying StackOverflow
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 __manifest__ assets:
   web.assets_backend
     - before web/static/src/scss/*
@@ -2974,7 +2980,7 @@ Use **`--log-level=debug_sql`** sparingly to learn ORM SQL without guessing.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 library_book table
   id | name | author_id | ...
 ir_model row: model=library.book, model=library.book
@@ -3045,7 +3051,7 @@ Pagination: default limits on actions; never `search([])` unbounded in cron. **`
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Bad: for line in order_lines: line.product_id.name  # N+1
 Better: names = order_lines.mapped('product_id.name')
 SQL: JOIN product_product IN one query
@@ -3132,7 +3138,7 @@ HttpCase hits routes with test client for controller auth tests.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 test_create_loan
   create book + partner
   loan.action_confirm()
@@ -3212,7 +3218,7 @@ Use **`pdb` / `breakpoint()`** in dev workers; `--dev=reload` for python changes
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 staging DB clone
   run -u module
   run tests
@@ -3302,7 +3308,7 @@ Tag repo with Odoo version series (`18.0`) prominently.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 README
   Problem -> Architecture -> Run commands
   -> Phase map (05 models, 07 security, 10 workflow)
@@ -3382,7 +3388,7 @@ Use the matching Odoo phase headings in [`Projects.md`](./Projects.md) to choose
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 git push origin feature/library
   -> Odoo.sh build
   -> run tests
@@ -3472,7 +3478,7 @@ Bring laptop with docker/source Odoo ready; verify demo DB installs your module 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Screen: Python + OOP
 Tech: ORM/module design
 Live: debug AccessError / xpath
@@ -3494,14 +3500,13 @@ Pilot exam: checklist plus simulator, not trivia flashcards only.
 
 **SMALL WORKING EXAMPLE**
 
-```text
-Mock answer outline (AccessError):
+Mock answer outline (`AccessError`):
+
 1. Read model + method in traceback
 2. Reproduce as affected user (not admin)
 3. Check ir.model.access for group
 4. Check ir.rule domains + company context
 5. Fix CSV/rule; add test with with_user
-```
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW:** Recruiters often assign take-home: scoped module in 4-8 hours - reuse portfolio patterns.
 
@@ -3548,7 +3553,7 @@ Give back: blog a bridge concept from this roadmap; teaching cements hire-level 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Hired -> client projects -> upgrade season
   -> read release notes
   -> refresh OWL/RPC changes

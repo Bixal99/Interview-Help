@@ -68,7 +68,7 @@ Each roadmap section follows the same shape so you always know where to look:
 
 **SWE path**
 
-```
+```text
 CS Phases 1-2  →  OOP.md (Part 0 fundamentals + Phases 1-20)  →  CS Phase 3+
                  →  Projects.md along the way
                  →  Networks.md essentials when systems start
@@ -85,9 +85,7 @@ CS Phases 1-2  →  OOP.md (Part 0 fundamentals + Phases 1-20)  →  CS Phase 3+
 
 **Cybersecurity path:** start [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) Phase 1. Pair it with [`Networks.md`](./Networks.md) when packet behavior becomes more detailed. Practice only in authorized labs (PortSwigger, TryHackMe, HTB, or your own home lab), then practice the Phase 20 interviews.
 
-```
 Mindset → Networks/OS → Crypto/IAM → Web/Defend → Detect/Respond → Cloud → Portfolio → Hire
-```
 
 - **SOC / blue:** Phases 1-6, 8-10, 13-14, 19-20 (skim 7 and 11 for attacker empathy).  
 - **Security engineer:** Phases 1-10, 15-16, 18-20 (heavy AppSec + cloud + DevSecOps).  
@@ -100,9 +98,7 @@ Mindset → Networks/OS → Crypto/IAM → Web/Defend → Detect/Respond → Clo
 **File:** [`CS.md`](./CS.md)  
 **Scope:** ~53 concepts across **20 phases** - programming foundations through distributed systems and mock interviews.
 
-```
 Foundations → Data structures & algorithms → Systems → Web & data → Design → Hire
-```
 
 | # | Phase | Goal |
 |--:|-------|------|
@@ -112,7 +108,7 @@ Foundations → Data structures & algorithms → Systems → Web & data → Desi
 | 03 | Linear Data Structures | Arrays, lists, stacks, queues |
 | 04 | Recursion | Call stack and base cases |
 | 05 | Hierarchical & Priority Structures | Trees, BSTs, heaps |
-| 06 | Hashing | O(1) "have I seen this?" |
+| 06 | Hashing | $O(1)$ "have I seen this?" |
 | 07 | Sorting & Binary Search | Impose and exploit order |
 | 08 | Graphs | BFS, DFS, relationships |
 | 09 | Algorithmic Patterns | DP, greedy, backtracking |
@@ -135,9 +131,7 @@ Foundations → Data structures & algorithms → Systems → Web & data → Desi
 **File:** [`OOP.md`](./OOP.md)  
 **Scope:** **Part 0 fundamentals** + **40 OOP concepts · 20 phases** - from first Python script through SOLID, patterns, LLD, and interviews.
 
-```
 Code basics → Think → Pillars → SOLID → Patterns → LLD → Hire
-```
 
 **When to use it:** start here if you are new to coding (Part 0). Otherwise after [`CS.md`](./CS.md) Phases 1-2, **before** CS Phase 3. CS Phase 10 then becomes revision, not first exposure.
 
@@ -174,9 +168,7 @@ Code basics → Think → Pillars → SOLID → Patterns → LLD → Hire
 **File:** [`Data.md`](./Data.md)  
 **Scope:** **20 phases** - from data thinking to portfolio and interviews.
 
-```
 Analyst core (1-10) → Engineering depth (11-18) → Portfolio & hire (19-20)
-```
 
 - **Analyst path:** finish through Phase 10, skim 11-12, then jump to 19-20.  
 - **Engineer path:** do not skip the analyst phases - pipelines without metric literacy produce data nobody trusts.
@@ -211,9 +203,7 @@ Analyst core (1-10) → Engineering depth (11-18) → Portfolio & hire (19-20)
 **File:** [`Networks.md`](./Networks.md)  
 **Scope:** **40 concepts · 20 phases** - packet switching through BGP, labs, and interviews.
 
-```
 Bits → Packets → Routes → Apps → Scale → Hire
-```
 
 - **Software engineer path:** finish through Phase 14 carefully, then skim 15-18 for production vocabulary.  
 - **Network / infra path:** do not skip sockets and HTTP - apps and networks fail together.
@@ -248,9 +238,7 @@ Bits → Packets → Routes → Apps → Scale → Hire
 **File:** [`AI.md`](./AI.md)  
 **Scope:** **40 concepts · 20 phases** - math intuition through transformers, RAG, agents, MLOps, and hire.
 
-```
 Data → Learn → Deep learning → Transformers → Release a usable system → Get hired
-```
 
 - **AI engineer (LLM apps) path:** do not skip Phases 4-8 - loss and overfitting still kill demos.  
 - **ML / research path:** still finish the evaluation and release phases. A model that never reaches real users has not faced real conditions.
@@ -285,9 +273,7 @@ Data → Learn → Deep learning → Transformers → Release a usable system �
 **File:** [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md)  
 **Scope:** **40 concepts · 20 phases** - security mindset through networking, crypto, identity, OWASP, pentest, AD, SOC/SIEM, DFIR, cloud/K8s, GRC, and hire.
 
-```
 Foundations → Defend → Attack → Detect → Respond → Hire
-```
 
 - **SOC / blue path:** heavy on Phases 13-14; still learn web and identity so alerts make sense.  
 - **Security engineer path:** heavy on 7, 15-16, 18; still practice authorized labs.  
@@ -325,9 +311,7 @@ Foundations → Defend → Attack → Detect → Respond → Hire
 **File:** [`ODOO.md`](./ODOO.md)  
 **Scope:** **40 concepts · 20 phases** - ERP thinking through modules, ORM, security, views, HTTP, OWL, PostgreSQL, and hire.
 
-```
 ERP → Modules → ORM → User interface → Web requests → Release a working module → Get hired
-```
 
 **Prerequisites:** Python + [`OOP.md`](./OOP.md). Odoo is Python OOP when the amount of work grows with XML, JS (OWL), and PostgreSQL.
 
@@ -361,9 +345,7 @@ ERP → Modules → ORM → User interface → Web requests → Release a workin
 **File:** [`Web.md`](./Web.md)
 **Scope:** **40 concepts · 20 phases** - browser fundamentals through React/Next.js, Node/Express, REST/OpenAPI, databases, authentication, testing, performance, deployment, GraphQL/realtime, and hire.
 
-```text
 Browser -> HTML/CSS -> JavaScript -> Frameworks -> Server -> Data -> APIs -> Security -> Production -> Hire
-```
 
 - **Frontend path:** read Phases 1-10, 15-16, and 19-20 deeply; skim 11-14 for API literacy.
 - **Backend/API path:** read Phases 1-7 quickly, then study 11-18 carefully; still finish one React interface.
@@ -399,9 +381,7 @@ Browser -> HTML/CSS -> JavaScript -> Frameworks -> Server -> Data -> APIs -> Sec
 **File:** [`cloud.md`](./cloud.md)
 **Scope:** **20 phases** - provider-aware foundations through identity, networking, compute, storage, data, serverless, Kubernetes, IaC, governance, security, reliability, FinOps, migration, projects, and interviews.
 
-```text
 Linux/Networks -> Cloud Core -> Data/Traffic -> Cloud Native -> Governance/Security -> Reliability/FinOps -> Hire
-```
 
 | # | Phase | Goal |
 |--:|-------|------|
@@ -433,9 +413,7 @@ Linux/Networks -> Cloud Core -> Data/Traffic -> Cloud Native -> Governance/Secur
 **File:** [`devops.md`](./devops.md)
 **Scope:** **20 phases** - delivery flow through Linux, troubleshooting, Git, automation, artifacts, CI/CD, Docker, Kubernetes, IaC, cloud, observability, SRE, DevSecOps, platform engineering, incidents, projects, and interviews.
 
-```text
 Flow -> Linux/Git/Automation -> Artifact/CI/CD -> Containers/Kubernetes -> IaC/Cloud -> SRE/Security/Platform -> Hire
-```
 
 | # | Phase | Goal |
 |--:|-------|------|
@@ -471,9 +449,7 @@ Every roadmap phase links to one matching mini-project card. After Phase 20, the
 
 Every mini-project ends with two navigation links: one returns to the phase you just studied, and the other continues to the next roadmap phase. Phase 20 continues to the larger main portfolio project.
 
-```
 Learn each phase → Build its mini-project → Finish Phase 20 → Build the complete portfolio project
-```
 
 - Finish the mini-project for the phase you just studied.
 - Use the listed tech stack so you do not have to guess which tools to choose.

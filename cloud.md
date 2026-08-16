@@ -6,7 +6,7 @@
 
 **Scope:** 20 phases · AWS/Azure/GCP mappings · architecture, operations, security, FinOps, migration, portfolio, and interviews · no artificial weekly deadline.
 
-```
+```text
 FOUNDATIONS -> CLOUD CORE -> DATA SERVICES -> TRAFFIC & EVENTS
      |              |                |                 |
  Linux/network   regions/IAM/VPC   storage/database   DNS/CDN/serverless
@@ -56,7 +56,7 @@ There is no week clock. Move when you can trace the mechanism, produce the lab e
 
 ## The Whole-Journey Map
 
-```
+```text
 FOUNDATIONS -> CLOUD CORE -> DATA SERVICES -> TRAFFIC & EVENTS
      |              |                |                 |
  Linux/network   regions/IAM/VPC   storage/database   DNS/CDN/serverless
@@ -138,7 +138,7 @@ The career distinction matters immediately. A software developer primarily owns 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 application
     |
     v
@@ -231,7 +231,7 @@ The correct model follows constraints. VMs maximize control and compatibility; c
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 physical hardware
       |
    hypervisor
@@ -322,7 +322,7 @@ Shared responsibility changes by service model. The provider secures physical fa
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 world
   |
 region A ---------------- region B
@@ -416,15 +416,15 @@ Least privilege is an iterative engineering process. Begin with a narrow job, ob
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
-principal -> authenticate -> temporary session
-    |
-    v
-request(action, resource, context)
-    |
-policy evaluation: explicit deny > allow > implicit deny
-    |
-allowed audit event OR denied audit event
+```mermaid
+flowchart TD
+    P["Principal"] --> A["Authenticate"]
+    A --> S["Temporary session"]
+    S --> R["Request: action, resource, and context"]
+    R --> E["Policy evaluation: explicit deny > allow > implicit deny"]
+    E --> D{"Allowed?"}
+    D -->|Yes| A1["Allowed audit event"]
+    D -->|No| A2["Denied audit event"]
 ```
 
 **WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
@@ -509,16 +509,17 @@ Plan address space before peering or hybrid connectivity because overlapping CID
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
-Internet -> DNS -> public load balancer [AZ1|AZ2]
-                         |
-                private application subnets
-                         |
-                  private data subnets
-                         |
-         service endpoint / controlled NAT egress
-
-route decides path -> security policy decides permission
+```mermaid
+flowchart TD
+    I["Internet"] --> D["DNS"]
+    D --> L["Public load balancer across AZs"]
+    L --> A1["Private application subnet: AZ1"]
+    L --> A2["Private application subnet: AZ2"]
+    A1 --> DB["Private data subnet"]
+    A2 --> DB
+    DB --> N["Controlled egress or private service endpoint"]
+    N --> R["Route decides path"]
+    R --> S["Security policy decides permission"]
 ```
 
 **WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
@@ -606,7 +607,7 @@ Immutable deployment replaces instances from a new image instead of editing runn
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 image + launch template
           |
 load balancer -> healthy instance AZ1
@@ -699,7 +700,7 @@ Cost includes operations, retrieval, replication, minimum storage duration, prov
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 application
   |-- object API -> bucket/key -> versions -> lifecycle archive
   |-- block device -> filesystem/database -> snapshots
@@ -788,7 +789,7 @@ A cache copies data closer to demand. Cache-aside is simple but allows stale rea
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 write -> primary database -> transaction log -> standby/replica
 read  -> cache hit? yes -> return
                   no  -> database -> fill cache -> return
@@ -878,7 +879,7 @@ Edge delivery moves static content and selected computation closer to users, pro
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 user -> recursive DNS -> authoritative traffic policy
   |
   v
@@ -970,14 +971,17 @@ Events reduce temporal coupling but increase reasoning about eventual consistenc
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
-producer -> event/command -> durable queue/topic
-                               |        |
-                         consumer A  consumer B
-                               |
-                    idempotency check -> side effect
-                               |
-                     retry -> dead-letter queue -> repair
+```mermaid
+flowchart TD
+    P["Producer"] --> E["Event or command"]
+    E --> Q["Durable queue or topic"]
+    Q --> A["Consumer A"]
+    Q --> B["Consumer B"]
+    A --> I["Idempotency check"]
+    I --> S["Side effect"]
+    S --> R["Retry on failure"]
+    R --> DLQ["Dead-letter queue"]
+    DLQ --> P2["Repair"]
 ```
 
 **WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
@@ -1063,7 +1067,7 @@ Managed Kubernetes operates the software that coordinates the cluster, but it do
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 image -> registry -> scheduler -> node/runtime -> pod
 desired replicas -> controller -> create/replace pods
 service -> ready endpoints -> traffic
@@ -1153,7 +1157,7 @@ Drift can be imported, accepted in code, or reverted deliberately. Never repair 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 configuration + provider schemas + prior state
                     |
                   plan
@@ -1247,7 +1251,7 @@ Safety checks and limits can prevent, detect, or repair. Preventive policy shoul
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 organization/root
  |-- security + immutable log archive
  |-- shared network/platform
@@ -1343,7 +1347,7 @@ Encryption at rest and in transit does not fix an authorized application leaking
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 workload identity -> token -> secret manager -> versioned secret
 data -> random data key -> ciphertext
              |
@@ -1431,7 +1435,7 @@ Telemetry has cost and privacy risk. High-cardinality labels can explode metrics
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 user request -> edge -> service A -> queue -> service B -> database
       |           |         |          |          |
     metric      span      logs       span       query
@@ -1519,7 +1523,7 @@ Zero trust means no location grants implicit trust: authenticate identities stro
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 assets/data -> classify -> threat model
       |
 prevent: identity/network/image/policy
@@ -1610,12 +1614,18 @@ Reliability uses timeouts, retries with jitter, idempotency, bulkheads, load she
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
-failure -> detect -> decide -> contain/fail over -> restore data -> validate -> communicate
-              |                     |
-          runbook/owner          measured RTO
-primary log ----async copy----> recovery region
-last durable point <------------ measured RPO
+```mermaid
+flowchart TD
+    F["Failure"] --> D["Detect"]
+    D --> C["Decide using runbook and owner"]
+    C --> H["Contain or fail over"]
+    H --> R["Restore data"]
+    R --> V["Validate application integrity"]
+    V --> M["Communicate"]
+    H --> T["Measure actual RTO"]
+    P["Primary log"] -->|Async copy| RR["Recovery region"]
+    RR --> L["Last durable point"]
+    L --> O["Measure actual RPO"]
 ```
 
 **WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
@@ -1702,7 +1712,7 @@ Budgets set expectations; anomaly detection catches unexpected change; forecasts
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 usage + price + allocation metadata -> cost and owner
                                   |
                          unit cost / forecast
@@ -1735,7 +1745,7 @@ Run the lab, save the output, change one assumption, and run it again. The evide
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW**
 
-Spend rose 40% while traffic rose 10%. Give the investigation tree before recommending reserved capacity or deleting resources.
+Spend rose $40\%$ while traffic rose $10\%$. Give the investigation tree before recommending reserved capacity or deleting resources.
 
 A strong answer begins with requirements and the previous limitation, traces the diagram, states one failure mode, and only then names a service or tool.
 
@@ -1792,7 +1802,7 @@ Cutover needs replication, validation, freeze or dual-write decisions, DNS or ro
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 inventory -> dependencies/data/classification -> strategy per workload
        |
 target foundation -> replicate/test -> cutover -> validate
@@ -1883,7 +1893,7 @@ Certifications can structure revision and improve vocabulary, especially for a t
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 requirements -> estimates -> provider-neutral design -> service mapping
       |              |                    |
    IaC/security -> deploy -> observe/cost -> fail/recover

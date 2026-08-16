@@ -4,9 +4,7 @@
 
 **Scope:** Data analyst × data engineer · 20 phases · no artificial weekly deadline.
 
-```
 First principles → SQL → Stats → Pipelines → Spark → Kafka → Hire
-```
 
 ---
 
@@ -70,7 +68,7 @@ Those questions are answered in the same order every single time. Once you have 
 
 ## The Whole-Journey Map
 
-```
+```text
  PHASE 1                 PHASE 2               PHASE 3                PHASE 4
  DATA THINKING           SPREADSHEETS &         PYTHON FOR DATA        SQL FOUNDATIONS
                          DATA LITERACY
@@ -196,37 +194,14 @@ Data work is a pipeline of trust, not a pile of tools. Something happens in the 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- User clicks "Buy"
-        |
-        v
- +------------------+     write      +------------------+
- | App / Checkout   | -------------> | OLTP Database    |
- +------------------+                | (orders, users)  |
-                                     +--------+---------+
-                                              |
-                              nightly / stream extract
-                                              |
-                                              v
-                                     +------------------+
-                                     | Staging / Raw    |
-                                     | (as ingested)    |
-                                     +--------+---------+
-                                              |
-                                      transform / model
-                                              |
-                                              v
-                                     +------------------+
-                                     | Warehouse Marts  |
-                                     | (facts, dims)    |
-                                     +--------+---------+
-                                              |
-                              SQL / BI / notebook
-                                              |
-                                              v
-                                     +------------------+
-                                     | Dashboard / Memo | ---> Decision
-                                     +------------------+
+```mermaid
+flowchart TD
+    E["User clicks Buy"] --> A["App / checkout"]
+    A -->|Write| O["OLTP database: orders and users"]
+    O -->|Nightly or streaming extract| R["Staging / raw: as ingested"]
+    R -->|Transform and model| M["Warehouse marts: facts and dimensions"]
+    M -->|SQL, BI, or notebook| D["Dashboard or memo"]
+    D --> X["Decision"]
 ```
 
 Follow one purchase through that diagram and you will see why "the dashboard is wrong" is almost never a chart problem. The bug might be capture (event never fired), movement (job failed silently), modeling (double-counted refunds), analysis (wrong filter), or decision (metric looked at without context). Engineers and analysts debug different boxes. Professionals can name which box failed.
@@ -345,7 +320,7 @@ print(revenue_by_user(facts))
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Sources
  +------------------+   +------------------+   +------------------+
  | Postgres orders  |   | API JSON events  |   | PDF invoices     |
@@ -484,7 +459,7 @@ Dirty data is not a moral failing; it is the default state of human-entered and 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Raw sheet (dirty)                     Tidy table
 +-------------------------+           +-----------------------------+
 | Region | Jan | Feb |    |           | region | month   | revenue  |
@@ -501,7 +476,7 @@ Dirty data is not a moral failing; it is the default state of human-entered and 
 
 Cleaning pipeline in practice:
 
-```
+```text
  Load -> normalize headers -> trim strings -> unify categories
      -> parse dates/numbers -> replace sentinels with NULL
      -> drop/repair duplicate keys -> validate grain -> freeze tidy output
@@ -588,7 +563,7 @@ Spreadsheet automation - recorded macros, Apps Script, Power Query - can repeat 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  orders tidy                  Pivot layout
 +---------------------+       Rows: region
 | region | amount     |       Values: SUM(amount)
@@ -713,7 +688,7 @@ Python is popular in data work for practical reasons. Its syntax is readable, an
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  CSV rows on disk
         |
         v
@@ -737,7 +712,7 @@ Python is popular in data work for practical reasons. Its syntax is readable, an
 
 Memory picture for a simple loop (what Python Tutor draws):
 
-```
+```text
  stack frame: summarize()          heap
  +------------------------+        +------------------+
  | totals = -------------+-------> | dict {"East":22} |
@@ -838,7 +813,7 @@ Notebooks vs scripts: notebooks excel at narrative exploration - plots, digressi
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  External world
  +-------------+     HTTP GET      +------------------+
  | REST API    | ----------------> | JSON bytes       |
@@ -974,7 +949,7 @@ NULLs propagate through expressions: `1 + NULL` is NULL; `NULL = NULL` is not tr
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Written SQL                         Conceptual order
  SELECT name, amount                 FROM orders
  FROM orders                         WHERE amount > 50
@@ -1102,7 +1077,7 @@ Dialect differences matter more here than in basic `SELECT`. Always check docs f
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  orders
  +----+----------+------------+------------+
  | id | amount   | country    | created_at |
@@ -1239,7 +1214,7 @@ An **INNER JOIN** keeps only key matches present in both tables. A **LEFT JOIN**
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  customers            orders
  +----+------+        +----+--------+--------+
  | id | name |        | id | cust_id| amount |
@@ -1267,7 +1242,7 @@ An **INNER JOIN** keeps only key matches present in both tables. A **LEFT JOIN**
 
 Row-count checklist:
 
-```
+```text
  before: count orders = 1000
  after left join to customers: still 1000? good (many-to-one)
  after join to order_items: 1000 -> 2500? maybe ok if items fan out
@@ -1369,7 +1344,7 @@ Correctness patterns: aggregate to the fact grain before joining exploding dimen
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  orders after join (detail rows)
  region | order_id | amount
  East   | 1        | 10
@@ -1391,9 +1366,7 @@ Correctness patterns: aggregate to the fact grain before joining exploding dimen
  Fix: SUM(items.line_amount) OR aggregate orders separately first
 ```
 
-```
  FROM -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY -> LIMIT
-```
 
 **PICTURE IT LIKE THIS**
 
@@ -1508,7 +1481,7 @@ A **CTE** introduces a named result: `WITH cohort AS (...), totals AS (...) SELE
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Question: customers whose 2026 spend > 500, with their email
 
  WITH paid_orders AS (
@@ -1533,7 +1506,7 @@ A **CTE** introduces a named result: `WITH cohort AS (...), totals AS (...) SELE
 
 Equivalent nested form (harder to read):
 
-```
+```text
  SELECT c.email, t.spend
  FROM (
    SELECT customer_id, SUM(amount) AS spend
@@ -1649,7 +1622,7 @@ Core families: ranking (`ROW_NUMBER`, `RANK`, `DENSE_RANK`); analytic aggregates
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  day | region | amount
  d1  | East   | 10
  d2  | East   | 5
@@ -1673,7 +1646,7 @@ Core families: ranking (`ROW_NUMBER`, `RANK`, `DENSE_RANK`); analytic aggregates
  DENSE_RANK: 1,1,2
 ```
 
-```
+```text
  For each input row:
    1) find its partition peers
    2) order peers if ORDER BY present
@@ -1799,7 +1772,7 @@ For analysis practice: start with `COUNT`, null rate, distinct count, mean/media
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Sample amounts: 4, 5, 6, 7, 100
 
  sorted: 4 5 6 7 100
@@ -1818,7 +1791,7 @@ For analysis practice: start with `COUNT`, null rate, distinct count, mean/media
  Two peaks: means may sit in a valley between modes - misleading
 ```
 
-```
+```text
  Exploratory pack for a numeric column
  +------------------+
  | null %           |
@@ -1925,7 +1898,7 @@ WHERE amount IS NOT NULL;
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  A/B sketch
  users randomly split
       |            |
@@ -2044,7 +2017,7 @@ Missing data in Pandas uses `NaN` / `NaT` / `NA` depending on version and dtype.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  CSV text
  amount,country,ts
  10, us ,2026-08-01
@@ -2068,7 +2041,7 @@ Missing data in Pandas uses `NaN` / `NaT` / `NA` depending on version and dtype.
  +--------+---------+--------+
 ```
 
-```
+```text
  Method chain habit
  df = (
    raw
@@ -2157,7 +2130,7 @@ Chaining these verbs cleanly beats one enormous expression nobody can debug. Val
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  merge how='left'
  orders  +  customers
  keep all orders; customer cols NULL if missing
@@ -2176,7 +2149,7 @@ Chaining these verbs cleanly beats one enormous expression nobody can debug. Val
  index=region, columns=month, values=value, aggfunc='sum'
 ```
 
-```
+```text
  Shape checks
  left_rows=1000, right_unique_keys=50
  after left merge on key: expect 1000 rows if right key unique
@@ -2281,7 +2254,7 @@ Honesty checklist: Does the visual ranking match the data ranking? Is the time w
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Question: which region sold more?
  Good: horizontal bars, zero baseline
  East ████████████ 120
@@ -2380,7 +2353,7 @@ Plotly (and similar) bridges code and interactivity: hover, zoom, filter callbac
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Data models / warehouse marts
             |
             v
@@ -2472,7 +2445,7 @@ fig.update_layout(yaxis_title="Revenue", xaxis_title="Region")
 
 **WHY YOU ARE LEARNING THIS:** EDA is structured skepticism. Before modeling, dashboarding, or claiming a trend, you learn what is in the data: grain, coverage, weird values, seasonality, join fan-out, definition traps. Skipping EDA is how teams industrialize first impressions.
 
-**THE PROBLEM THIS SOLVES:** Analysts jumped to a cool chart or a machine learning model on day one. They discovered mid-presentation that 30% of rows were test users, timestamps were UTC vs local mixed, and the "customer_id" was null for guest checkout. Cleanup then invalidated all prior charts. There was no shared checklist, so quality depended on individual heroics.
+**THE PROBLEM THIS SOLVES:** Analysts jumped to a cool chart or a machine learning model on day one. They discovered mid-presentation that $30\%$ of rows were test users, timestamps were UTC vs local mixed, and the "customer_id" was null for guest checkout. Cleanup then invalidated all prior charts. There was no shared checklist, so quality depended on individual heroics.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -2489,13 +2462,13 @@ fig.update_layout(yaxis_title="Revenue", xaxis_title="Region")
 
 A durable EDA workflow: (1) Write the question and decision at stake. (2) Identify tables and claimed grain. (3) Measure row counts, time range, null rates, duplicate keys. (4) Univariate describe + plots. (5) Bivariate relationships that matter to the question. (6) Segment checks (platform, country, new vs returning). (7) Data quality traps (bots, spikes on deploy days, timezone seams). (8) Only then finalize metrics/charts for communication.
 
-EDA is not endless wandering. Time-box it. Capture findings in a short log: "Guest checkouts lack customer_id - 18% of orders." Those notes become the appendix that saves your future self.
+EDA is not endless wandering. Time-box it. Capture findings in a short log: "Guest checkouts lack customer_id - $18\%$ of orders." Those notes become the appendix that saves your future self.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Explore with a checklist tied to a decision, not with vibes. Stop when you can state caveats and a next analytical step clearly.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Decision question
  "Why did checkout conversion drop last week?"
         |
@@ -2520,7 +2493,7 @@ EDA is not endless wandering. Time-box it. Capture findings in a short log: "Gue
  Findings -> metric definitions -> visual story -> memo
 ```
 
-```
+```text
  Daily volume
  count
   ^
@@ -2622,7 +2595,7 @@ print("duplicate order_id rows:", orders["order_id"].duplicated().sum())
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Metric contract card
  +------------------------------------------+
  | Name: Activated buyer                    |
@@ -2785,7 +2758,7 @@ In practice you model entities (Customer, Order, Product, OrderItem), declare ke
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Unnormalized order lines (anomaly magnet)
  +---------+----------+--------+----------+-------+
  | order_id| cust_name| city   | prod     | price |
@@ -2931,7 +2904,7 @@ A **B-tree index** stores sorted keys with pointers to heap rows (or index-only 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Table orders (heap)                 Index on customer_id (B-tree sketch)
  row# | cust | amount                key -> row pointers
  1    | 10   | 50                    10 -> (1, 4)
@@ -3051,7 +3024,7 @@ print({"selectivity": matching / n_rows, "index_likely_helps": matching / n_rows
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  OLTP (current truth, write-optimized)
  +------------------+
  | App DB (3NF)     |  <-- checkout, inventory, auth
@@ -3159,7 +3132,7 @@ Declare grain in one sentence: "one row per order line per day" or "one row per 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Star schema
                      dim_date
                          |
@@ -3282,7 +3255,7 @@ Joining Type 2 dims requires either fact surrogate keys set correctly at load ti
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Type 1 (overwrite)
  before: customer_key=1 city=Doha
  after:  customer_key=1 city=London
@@ -3418,24 +3391,22 @@ Neither is universally "better." ETL can reduce sensitive raw sprawl and push he
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
+```mermaid
+flowchart TD
+    subgraph ETL
+        ES["Source"] --> EE["Extract"] --> ET["Transform outside warehouse"] --> EL["Load curated tables"] --> EM["Warehouse marts"]
+    end
+    subgraph ELT
+        LS["Source"] --> LE["Extract"] --> LL["Load raw / staging"] --> LT["Transform with SQL / dbt"] --> LM["Marts"]
+        LL --> LH["Retained raw history"]
+    end
 ```
- ETL
- Source -> Extract -> Transform (Spark/Python/Informatica) -> Load curated tables
-                                         |
-                                         v
-                                   Warehouse marts
 
- ELT
- Source -> Extract -> Load raw/staging -> Transform in SQL/dbt -> Marts
-                           |
-                           v
-                    raw history retained
+Both approaches share these failure modes:
 
- Failure modes both share
- schema drift -> contract tests
- partial write -> idempotent reloads (13.2)
- late data -> watermarking / reprocess windows
-```
+- Schema drift → contract tests
+- Partial writes → idempotent reloads (13.2)
+- Late data → watermarking / reprocessing windows
 
 **PICTURE IT LIKE THIS**
 
@@ -3538,7 +3509,7 @@ Parquet stores data by column with compression and statistics (min/max) enabling
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Non-idempotent append (bug)
  run1 inserts ids 1,2
  fail after retry logic inserts 1,2 again -> duplicates
@@ -3663,7 +3634,7 @@ Keep tasks coarse enough to operate (extract zone A, load staging, run dbt) and 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  DAG: daily_sales
  extract_orders ----+
                     +--> load_staging --> dbt_run --> quality_checks
@@ -3785,7 +3756,7 @@ Containers do not replace orchestrators; they complement them. Airflow workers m
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Dockerfile
  FROM python:3.11-slim
  WORKDIR /app
@@ -3917,7 +3888,7 @@ Materializations (`view`, `table`, `incremental`, `ephemeral`) trade freshness, 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  sources.yml                     models
  raw.orders ---------> stg_orders ---------> int_order_items
  raw.customers ------> stg_customers --\         |
@@ -4040,7 +4011,7 @@ Great Expectations and warehouse observability tools complement dbt tests (Phase
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  PR opened -> CI
    dbt deps
    dbt build --select state:modified+   (or full project on small DW)
@@ -4175,7 +4146,7 @@ Your modeling and dbt habits transfer. Dialects differ (`DATE_TRUNC`, backticks 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Object storage / managed storage
  +----------------------------------+
  | Parquet / native table files     |
@@ -4279,7 +4250,7 @@ Treat raw zones as restricted; marts as wider read access. Document data classif
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Environments
  +---------+     PR CI      +---------+     merge+job    +---------+
  |  dev    | -------------> | staging | ---------------> |  prod   |
@@ -4314,7 +4285,7 @@ A hotel master key for every intern is a security incident. Separate staff keys 
 
 **SMALL WORKING EXAMPLE**
 
-```yml
+```yaml
 # profiles.yml sketch (dbt)
 analytics:
   target: dev
@@ -4397,7 +4368,7 @@ Mental rule: prefer DataFrame/Spark SQL APIs over RDD spaghetti unless you must.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Dataset file splits -> partitions p1 p2 p3 p4
         |      |      |      |
         v      v      v      v
@@ -4474,7 +4445,7 @@ except ImportError:
 
 **WHY YOU ARE LEARNING THIS:** Distributed joins require matching keys that may live on different machines. Spark **shuffles** data across the network to co-locate keys - powerful and expensive. Broadcast joins, skew handling, partition sizing, and avoiding unnecessary wide steps are the performance basics that separate "Spark is slow" from "our join was a cartesian accident."
 
-**THE PROBLEM THIS SOLVES:** Analysts ported naive SQL to Spark, joined two huge facts without pruning, triggered massive shuffles, flooded disks, and blamed the framework. Default configs hid skew until one partition held 80% of a hot key (popular country, null keys). `collect()` pulled millions of rows to the driver and crashed it.
+**THE PROBLEM THIS SOLVES:** Analysts ported naive SQL to Spark, joined two huge facts without pruning, triggered massive shuffles, flooded disks, and blamed the framework. Default configs hid skew until one partition held $80\%$ of a hot key (popular country, null keys). `collect()` pulled millions of rows to the driver and crashed it.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -4497,7 +4468,7 @@ Never `collect()` big data to Python lists "just to Pandas it" unless sampled. L
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Big join without broadcast
  big_fact (partitioned by date)  x  dim (medium)
  both shuffle by key ----> join ----> result
@@ -4607,20 +4578,20 @@ A **topic** is a named stream of records. Topics are split into **partitions** -
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- Producers
-    |  key=user_id  (optional)
-    v
- +---------------- Topic: orders ----------------+
- | partition 0: [..][..][..]  <-- ordered       |
- | partition 1: [..][..]                        |
- | partition 2: [..][..][..][..]                 |
- +----------------------------------------------+
-         |                 |                 |
-         v                 v                 v
-   consumer group G1                 consumer group G2
-   (fraud)                           (warehouse loader)
-   members split partitions          independent offsets
+```mermaid
+flowchart TD
+    P["Producers"] -->|Optional key: user_id| T["Topic"]
+    T --> P0["Partition 0"]
+    T --> P1["Partition 1"]
+    T --> P2["Partition 2"]
+    P0 --> G1["Consumer group G1: fraud"]
+    P1 --> G1
+    P2 --> G1
+    P0 --> G2["Consumer group G2: warehouse loader"]
+    P1 --> G2
+    P2 --> G2
+    G1 --> M["Members split partitions"]
+    G2 --> O["Independent offsets"]
 ```
 
 **PICTURE IT LIKE THIS**
@@ -4691,7 +4662,7 @@ print(partition_for_key("user_42", 6))
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  msg arrives offset=100
         |
         v
@@ -4787,7 +4758,7 @@ def apply_business_logic(payload: dict) -> None:
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Idea
    -> scoped question + success metric / SLA
    -> architecture diagram (ASCII is fine)
@@ -4873,7 +4844,7 @@ Layer quality: **schema tests** (types, nullability, uniqueness), **relationship
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  raw load
    -> staging tests (not_null keys)
    -> mart build
@@ -4970,7 +4941,7 @@ Common patterns: filter + aggregate; multi-join with explicit grain; `GROUP BY` 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Prompt: "latest order per user"
    -> restate grain: 1 row per user_id
    -> window ROW_NUMBER partition user order time desc
@@ -5039,7 +5010,7 @@ Case loop: (1) clarify metric definition and time window; (2) sanity-check data 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  "Revenue down 10%"
    -> which revenue? timezone? currency?
    -> is the pipeline fresh? row counts?
@@ -5108,7 +5079,7 @@ Design loop: requirements (latency, volume, consumers) -> sources -> landing/raw
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Interviewer: "Stripe -> revenue dashboard"
    -> freshness SLA? grain of revenue?
    -> extract (API/CDC) to raw
@@ -5177,7 +5148,7 @@ STAR: Situation, Task, Action, Result (prefer quantified). Prepare stories for: 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Prompt: "Tell me about a failure"
    -> Situation: pipeline double-counted refunds
    -> Task: restore trust before QBR

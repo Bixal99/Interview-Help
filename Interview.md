@@ -6,9 +6,7 @@
 
 **Scope:** CS × Data × Networks × AI × Web × Cloud × DevOps · speak trade-offs out loud.
 
-```
 Question → Strong answer → Follow-ups → Traps
-```
 
 ---
 
@@ -43,14 +41,12 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **Universal answer skeleton (use every time)**
 
-```
 1. Clarify the question / constraints (10s)
 2. Define the concept in one sentence
 3. Why it exists (the wall before it)
 4. How it works (2-5 steps or a tiny example)
 5. Trade-off + when you would NOT use it
 6. Optional: tie to a project you shipped
-```
 
 **Role routing**
 
@@ -97,13 +93,13 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **THE INTERVIEWER'S QUESTION:** Explain Big O. What is the complexity of your solution?
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Big O describes how runtime or memory grows as input size \(n\) grows - worst-case asymptotic upper bound, ignoring constants. In interviews I state time and space after coding, name the dominant loop/recursion, and say whether I can improve it (e.g., hash map \(O(n)\) vs nested loops \(O(n^2)\)).
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Big O describes how runtime or memory grows as input size $n$ grows - worst-case asymptotic upper bound, ignoring constants. In interviews I state time and space after coding, name the dominant loop/recursion, and say whether I can improve it (e.g., hash map $O(n)$ vs nested loops $O(n^2)$).
 
 **A SIMPLE ANSWER STRUCTURE:** Define → apply to *this* code → compare alternative → space too.
 
-**QUESTIONS THEY MAY ASK NEXT:** Average vs worst case? Why ignore constants? \(O(n \log n)\) sorts?
+**QUESTIONS THEY MAY ASK NEXT:** Average vs worst case? Why ignore constants? $O(n\log n)$ sorts?
 
-**COMMON MISTAKE:** Reciting the definition without analyzing your own code. Saying "hashmap is always O(1)" without average-case caveat / collisions.
+**COMMON MISTAKE:** Reciting the definition without analyzing your own code. Saying "hashmap is always $O(1)$" without average-case caveat / collisions.
 
 ---
 
@@ -113,7 +109,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **THE INTERVIEWER'S QUESTION:** When do you use two pointers or a sliding window?
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Two pointers when the array is sorted or you grow/shrink from ends (pair sum, palindrome). Sliding window when you need the best contiguous subarray/substring under a constraint (longest substring without repeat). Both aim for one pass \(O(n)\) instead of \(O(n^2)\).
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Two pointers when the array is sorted or you grow/shrink from ends (pair sum, palindrome). Sliding window when you need the best contiguous subarray/substring under a constraint (longest substring without repeat). Both aim for one pass $O(n)$ instead of $O(n^2)$.
 
 **A SIMPLE ANSWER STRUCTURE:** Name pattern → invariant → complexity → edge cases (empty, all unique).
 
@@ -131,7 +127,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Reverse iteratively: save `next`, point `curr.next` to `prev`, advance. Cycle: Floyd tortoise/hare - if pointers meet, cycle exists; optional math to find entrance. Interviewers watch that I never lose the head or overwrite `next` before saving it.
 
-**A SIMPLE ANSWER STRUCTURE:** Draw 3 nodes → code → null/single-node cases → complexity \(O(n)/O(1)\).
+**A SIMPLE ANSWER STRUCTURE:** Draw 3 nodes → code → null/single-node cases → complexity $O(n)/O(1)$.
 
 **QUESTIONS THEY MAY ASK NEXT:** Recursive reverse? Find middle? Merge two sorted lists?
 
@@ -187,11 +183,11 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **THE INTERVIEWER'S QUESTION:** Why use a hash map? Collision handling?
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Average \(O(1)\) insert/lookup/delete for counting, indexing, caching, two-sum patterns. Collisions via chaining or open addressing; worst case degrades toward \(O(n)\) if pathological. I mention load factor and that keys must be hashable.
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Average $O(1)$ insert/lookup/delete for counting, indexing, caching, two-sum patterns. Collisions via chaining or open addressing; worst case degrades toward $O(n)$ if pathological. I mention load factor and that keys must be hashable.
 
 **QUESTIONS THEY MAY ASK NEXT:** Hash set vs map? When sorted map/TreeMap instead?
 
-**COMMON MISTAKE:** Claiming O(1) worst-case always.
+**COMMON MISTAKE:** Claiming $O(1)$ worst-case always.
 
 ---
 
@@ -201,7 +197,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **THE INTERVIEWER'S QUESTION:** When binary search? Compare common sorts.
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Binary search needs sorted order (or monotonic predicate) for \(O(\log n)\). Mergesort stable \(O(n\log n)\) guaranteed; quicksort fast average, worse \(O(n^2)\) without care; heapsort in-place \(O(n\log n)\). In interviews I often sort then two-pointer, or binary search on answer space.
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Binary search needs sorted order (or monotonic predicate) for $O(\log n)$. Mergesort stable $O(n\log n)$ guaranteed; quicksort fast average, worse $O(n^2)$ without care; heapsort in-place $O(n\log n)$. In interviews I often sort then two-pointer, or binary search on answer space.
 
 **QUESTIONS THEY MAY ASK NEXT:** Search on rotated array? Lower bound vs exact match?
 
@@ -341,11 +337,11 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **THE INTERVIEWER'S QUESTION:** Implement LRU.
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Hash map for \(O(1)\) key→node plus doubly linked list for recency order. Get/put move node to head; evict tail when over capacity. Complexity \(O(1)\) per op. This is the classic "combine two structures" interview.
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Hash map for $O(1)$ key→node plus doubly linked list for recency order. Get/put move node to head; evict tail when over capacity. Complexity $O(1)$ per op. This is the classic "combine two structures" interview.
 
 **QUESTIONS THEY MAY ASK NEXT:** LFU? Thread-safety?
 
-**COMMON MISTAKE:** Only a list (O(n) find) or only a map (no order).
+**COMMON MISTAKE:** Only a list ($O(n)$ find) or only a map (no order).
 
 ---
 
@@ -607,7 +603,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **THE INTERVIEWER'S QUESTION:** Bandwidth vs latency? What is bandwidth-delay product?
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Bandwidth = capacity (bits/sec). Latency/RTT = time for a signal/request to go (and often return). Throughput = achieved rate after losses/overhead. BDP = bandwidth × RTT ≈ bytes in flight needed to fill the pipe - why TCP windows must be large on long fat networks. Bufferbloat: oversized buffers inflate latency under load.
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** $\text{bandwidth}=\text{capacity}\;(\mathrm{bit/s})$. $\text{latency/RTT}=\text{signal or request delay}$. $\text{throughput}=\text{achieved rate after loss and overhead}$. $\mathrm{BDP}=\text{bandwidth}\times\mathrm{RTT}\approx\text{bytes in flight needed to fill the pipe}$ - why TCP windows must be large on long fat networks. Bufferbloat: oversized buffers inflate latency under load.
 
 **QUESTIONS THEY MAY ASK NEXT:** Which matters for 1KB RPC vs 1GB download?
 
@@ -691,7 +687,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **THE INTERVIEWER'S QUESTION:** What is NAT? Why can't two phones host servers easily?
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** NAT/PAT multiplexes many private hosts onto scarce public IPv4 by rewriting ports and keeping a mapping table. Unsolicited inbound packets have no mapping - dropped unless port-forwarded. CGNAT makes it worse. Video calls use STUN/TURN/relays. NAT ≠ firewall, but behaves like a default inbound filter.
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** NAT/PAT multiplexes many private hosts onto scarce public IPv4 by rewriting ports and keeping a mapping table. Unsolicited inbound packets have no mapping - dropped unless port-forwarded. CGNAT makes it worse. Video calls use STUN/TURN/relays. $\mathrm{NAT}\neq\text{firewall}$, but behaves like a default inbound filter.
 
 **QUESTIONS THEY MAY ASK NEXT:** Hairpin NAT? IPv6 relation?
 
@@ -705,7 +701,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **THE INTERVIEWER'S QUESTION:** TCP vs UDP?
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** TCP: connection, reliable ordered byte stream, flow+congestion control - web, APIs, file transfer. UDP: datagram, no built-in reliability - DNS queries, gaming, live media, and QUIC/HTTP3 base. TCP: one `send` ≠ one `recv` (need framing). Choose UDP when you want control/latency and will handle loss yourself.
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** TCP: connection, reliable ordered byte stream, flow+congestion control - web, APIs, file transfer. UDP: datagram, no built-in reliability - DNS queries, gaming, live media, and QUIC/HTTP3 base. In TCP, one `send` does not correspond to one `recv` (you need framing). Choose UDP when you want control/latency and will handle loss yourself.
 
 **QUESTIONS THEY MAY ASK NEXT:** Why HTTP/3 over UDP? Hol blocking?
 
@@ -823,7 +819,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **THE INTERVIEWER'S QUESTION:** What is ML? Supervised vs unsupervised vs RL?
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Learning parameters of a model from data to generalize to unseen examples - not hard-coding every rule. Supervised: labeled \((x,y)\). Unsupervised: structure without labels. RL: learn from rewards via actions. Generative models learn a distribution over data (often next-token).
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Learning parameters of a model from data to generalize to unseen examples - not hard-coding every rule. Supervised: labeled $(x,y)$. Unsupervised: structure without labels. RL: learn from rewards via actions. Generative models learn a distribution over data (often next-token).
 
 **QUESTIONS THEY MAY ASK NEXT:** When rules beat ML?
 
@@ -849,9 +845,9 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **Level:** Core · **Source:** AI.md Phase 5 / Data metrics habits
 
-**THE INTERVIEWER'S QUESTION:** Accuracy is 99% - are we done? Precision vs recall?
+**THE INTERVIEWER'S QUESTION:** Accuracy is $99\%$ - are we done? Precision vs recall?
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Not if class imbalance exists - always-negative gets 99%. Precision: of predicted positives, how many true. Recall: of actual positives, how many caught. F1 balances; choose threshold from business costs. Prefer PR-AUC under heavy imbalance; ROC can look optimistic.
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Not if class imbalance exists - always-negative gets $99\%$. Precision: of predicted positives, how many true. Recall: of actual positives, how many caught. F1 balances; choose threshold from business costs. Prefer PR-AUC under heavy imbalance; ROC can look optimistic.
 
 **QUESTIONS THEY MAY ASK NEXT:** Calibration? Cost matrix?
 
@@ -879,7 +875,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **THE INTERVIEWER'S QUESTION:** Explain gradient descent. What does learning rate do?
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Loss is a function of parameters; gradient points to steepest increase - we step opposite: \(\theta \leftarrow \theta - \eta \nabla L\). Too high \(\eta\): diverge. Too low: crawl. SGD uses minibatches (noisy cheap gradients). Adam adapts per-parameter steps - strong default, not magic. Schedules/warmup common when the amount of work grows.
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Loss is a function of parameters; gradient points to steepest increase - we step opposite: $\theta \leftarrow \theta-\eta \nabla L$. Too high $\eta$: diverge. Too low: crawl. SGD uses minibatches (noisy cheap gradients). Adam adapts per-parameter steps - strong default, not magic. Schedules/warmup common when the amount of work grows.
 
 **QUESTIONS THEY MAY ASK NEXT:** Local minima worry in deep nets? Momentum?
 
@@ -963,7 +959,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **THE INTERVIEWER'S QUESTION:** Why embeddings? Cosine vs Euclidean?
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** One-hots make "cat"⊥"dog". Embeddings place tokens in \(\mathbb{R}^d\) so geometry reflects meaning (distributional hypothesis). Cosine focuses on direction (common after normalization); Euclidean cares about magnitude too. Static embeddings fail on polysemy - contextual models fix that. Power search/RAG.
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** One-hots make $\text{cat}\perp\text{dog}$. Embeddings place tokens in $\mathbb{R}^d$ so geometry reflects meaning (distributional hypothesis). Cosine focuses on direction (common after normalization); Euclidean cares about magnitude too. Static embeddings fail on polysemy - contextual models fix that. Power search/RAG.
 
 **QUESTIONS THEY MAY ASK NEXT:** Chunk size effects? ANN indexes?
 
@@ -975,9 +971,9 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **Level:** Core · **Source:** AI.md Phase 13
 
-**THE INTERVIEWER'S QUESTION:** Explain self-attention. Why scale by \(\sqrt{d}\)?
+**THE INTERVIEWER'S QUESTION:** Explain self-attention. Why scale by $\sqrt{d}$?
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Each token builds Query, Key, Value projections. Weights = softmax\((QK^\top)/\sqrt{d})\) then mix Values. Every token can directly attend to every other (in window) - parallelizable vs RNNs. Scale keeps dot products from exploding softmax into tiny gradients. Multi-head = multiple subspaces. Positional encodings add order. Cost \(O(T^2)\).
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Each token builds Query, Key, Value projections. Weights are $\operatorname{softmax}\left(\frac{QK^\top}{\sqrt{d}}\right)$, then mix Values. Every token can directly attend to every other (in window) - parallelizable vs RNNs. Scale keeps dot products from exploding softmax into tiny gradients. Multi-head = multiple subspaces. Positional encodings add order. Cost is $O(T^2)$.
 
 **QUESTIONS THEY MAY ASK NEXT:** Causal mask? BERT vs GPT?
 
@@ -991,7 +987,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **THE INTERVIEWER'S QUESTION:** What is a token? Temperature?
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Models read/write subword tokens (BPE etc.), not words. Context window is finite working memory - truncate silently if ignored. Cost ≈ tokens in+out. Temperature/top-p control randomness; temp 0 ≈ greedy (still not perfectly deterministic everywhere). Manage budgets deliberately.
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Models read/write subword tokens (BPE etc.), not words. Context window is finite working memory - truncate silently if ignored. $\text{cost}\approx\text{input tokens}+\text{output tokens}$. Temperature/top-p control randomness; $\text{temperature}=0\approx\text{greedy decoding}$ (still not perfectly deterministic everywhere). Manage budgets deliberately.
 
 **QUESTIONS THEY MAY ASK NEXT:** Why count tokens for billing?
 

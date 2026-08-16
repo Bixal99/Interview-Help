@@ -6,9 +6,7 @@
 
 **Scope:** 40 concepts · 20 phases · connected step by step, with no artificial weekly deadline.
 
-```
 Foundations → Defend → Attack → Detect → Respond → Hire
-```
 
 ---
 
@@ -51,7 +49,8 @@ Phases 1-10 build the shared foundation through vuln management. Phases 11-12 de
 
 ### Ethics and Scope (non-negotiable)
 
-Practice only on systems you own or have **written authorization** to test (labs, CTFs, bug bounty programs in scope). Unauthorized access is illegal. Every offensive technique in this document exists so you can defend better and report better - not so you can harm.
+> [!CAUTION]
+> Practice only on systems you own or have **written authorization** to test (labs, CTFs, bug bounty programs in scope). Unauthorized access is illegal. Every offensive technique in this document exists so you can defend better and report better - not so you can harm.
 
 ### The Beginner-Friendly Pattern Every Topic Follows
 
@@ -77,7 +76,7 @@ Those questions are answered in the same order every single time. Once you have 
 
 ## The Whole-Journey Map
 
-```
+```text
  PHASE 1                 PHASE 2               PHASE 3                PHASE 4
  SECURITY MINDSET        NETWORKING FOR        LINUX & WINDOWS        CRYPTOGRAPHY
  & CIA TRIAD             SECURITY              FOR SECURITY
@@ -190,13 +189,13 @@ Those questions are answered in the same order every single time. Once you have 
 
 **STEP-BY-STEP EXPLANATION**
 
-Confidentiality: only the right people see the data. Integrity: data and systems are not silently altered. Availability: systems work when needed. Authentication proves identity. Authorization decides permission. Accounting (audit) records who did what. Risk = likelihood × impact on assets. Controls reduce risk; they never erase it. Defense in depth stacks independent controls so one failure is not catastrophic.
+Confidentiality: only the right people see the data. Integrity: data and systems are not silently altered. Availability: systems work when needed. Authentication proves identity. Authorization decides permission. Accounting (audit) records who did what. $\text{risk}=\text{likelihood}\times\text{impact on assets}$. Controls reduce risk; they never erase it. Defense in depth stacks independent controls so one failure is not catastrophic.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Define the asset and the failure mode first. Then pick controls that reduce that specific risk.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Asset (payroll DB)
    |
    v
@@ -268,10 +267,12 @@ Rules of engagement (ROE) define what is allowed, when, and how findings are rep
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- Curiosity --> Technique --> Authorization check
-                              |-- YES --> lab / contract / bounty
-                              |-- NO  --> STOP (illegal)
+```mermaid
+flowchart TD
+    C["Curiosity"] --> T["Technique"]
+    T --> A{"Explicit authorization?"}
+    A -->|Yes| L["Authorized lab, contract, or in-scope bounty"]
+    A -->|No| S["Stop: testing would be illegal"]
 ```
 
 **PICTURE IT LIKE THIS**
@@ -344,7 +345,7 @@ TCP/IP layers: link, internet (IP), transport (TCP/UDP), application. TCP is rel
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Client --> DNS (53) --> resolve api.example
  Client --> TCP handshake --> :443
  Client --> TLS --> HTTP request
@@ -405,7 +406,7 @@ pcap analysis uses filters (e.g. `dns`, `tcp.port == 443`). Segmentation separat
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  [Users] --fw--> [App tier] --fw--> [DB]
      |                 |
      X lateral?       allow only 5432 from app SG
@@ -481,7 +482,7 @@ Users and groups; file modes `rwx`; sticky/SUID/SGID pitfalls; `ps`, `ss`/`netst
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  login --> shell
  inspect: whoami, id, ps, ss -tulpn
  files: ls -la, find, grep
@@ -543,7 +544,7 @@ NTFS ACLs, local vs domain accounts, services (SCM), Event Viewer channels (Secu
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  User logon --> token + groups
  Process create --> Security log events
  Persistence --> Run keys / tasks / services
@@ -620,7 +621,7 @@ Hash: one-way fingerprint (integrity, password storage with slow KDF like bcrypt
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Goal: hide data in transit/rest  -> authenticated encryption (AES-GCM)
  Goal: verify file not changed     -> hash (+ signature if origin matters)
  Goal: store passwords             -> slow salted KDF (Argon2/bcrypt)
@@ -683,12 +684,17 @@ TLS 1.3: agree keys, authenticate server via certificate chain to a trusted CA, 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- ClientHello -> ServerHello + cert
- verify chain to trust store
- derive session keys
- Application Data (encrypted)
- Wireshark shows SNI/certs meta; payloads ciphertext
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant S as Server
+    C->>S: ClientHello
+    S-->>C: ServerHello and certificate
+    C->>C: Verify chain against trust store
+    C->>S: Key-agreement messages
+    Note over C,S: Derive session keys
+    C->>S: Encrypted application data
+    Note over C,S: Wireshark shows SNI and certificate metadata, while payloads remain ciphertext
 ```
 
 **PICTURE IT LIKE THIS**
@@ -751,13 +757,14 @@ print("Broken if: HTTP, expired cert, wrong hostname, untrusted CA")
 
 **STEP-BY-STEP EXPLANATION**
 
-Store passwords with slow salted KDFs. Prefer passkeys/WebAuthn where possible. Sessions: opaque server-side IDs or well-designed tokens with short TTL, rotation, secure cookie flags (`HttpOnly`, `Secure`, `SameSite`). MFA adds a second factor (something you have/are). OAuth 2.0 / OIDC separate authorization of apps from login. Never log tokens.
+> [!WARNING]
+> Store passwords with slow salted KDFs. Prefer passkeys/WebAuthn where possible. Sessions: opaque server-side IDs or well-designed tokens with short TTL, rotation, secure cookie flags (`HttpOnly`, `Secure`, `SameSite`). MFA adds a second factor (something you have/are). OAuth 2.0 / OIDC separate authorization of apps from login. Never log tokens.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Identity is a control plane. Protect it harder than the data plane.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Login --> verify password (+ MFA)
       --> create session / issue tokens
       --> authorize each request
@@ -818,7 +825,7 @@ RBAC assigns permissions to roles, users to roles. ABAC adds attributes/context.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Request (user=42, GET /invoices/99)
    |
    v
@@ -895,7 +902,7 @@ STRIDE: Spoofing, Tampering, Repudiation, Information disclosure, Denial of serv
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  External User -> [Web] -> [API] -> [(DB)]
  Trust boundary at Web/API
  STRIDE each arrow and store
@@ -963,7 +970,7 @@ Matrix: tactics across columns (Initial Access ... Exfiltration / Impact), techn
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Technique page
    |-- Procedure examples (what to simulate)
    |-- Detection (log sources / ideas)
@@ -1043,7 +1050,7 @@ SQLi: attacker alters query structure. Fix with parameterized queries / ORM bind
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  User input --> (X concat into SQL) --> DB executes attacker logic
  User input --> parameterized statement --> data only
  User input --> (X raw HTML) --> victim browser runs script
@@ -1110,7 +1117,7 @@ SSRF: server requests attacker-controlled URL; hit `169.254.169.254` metadata, i
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  SSRF: Attacker -> App -> Internal IP / metadata (X)
  Fix: allow-list + egress filter
  CSRF: Evil site -> Victim browser -> Victim bank (cookies auto)
@@ -1188,7 +1195,7 @@ Stateless vs stateful firewalls. Allow-lists over deny-lists when possible. Secu
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Internet --> Edge FW --> DMZ --> App FW --> Internal
  Remote user --> VPN/ZTNA --> only app portal (not whole LAN)
  IDS tap --> SIEM alerts
@@ -1247,7 +1254,7 @@ Isolate management interfaces. Bastion/jump with MFA and session recording. Rest
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Admins --> MFA bastion --> prod SSH (recorded)
  Prod egress --> proxy allow-list --> internet
  Deny logs --> SIEM
@@ -1316,7 +1323,7 @@ Remove unused services, enforce disk encryption, secure boot where applicable, d
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Fresh OS --> apply baseline --> golden image --> fleet
  Exceptions register --> review quarterly
  Drift detection --> alert
@@ -1373,7 +1380,7 @@ AV: known-bad matching. EDR: rich endpoint telemetry + analytics + response acti
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Process create --> EDR event --> detections --> SOC
  Response: kill / isolate / collect
  Blind spots: firmware, offline hosts, disabled agents
@@ -1443,7 +1450,7 @@ Authenticated vs unauthenticated scans. Agent-based vs network. Deduplicate. Enr
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Discover --> Enrich (asset + exploit intel) --> Prioritize
  --> Patch / mitigate --> Verify --> Report metrics
 ```
@@ -1506,9 +1513,7 @@ Inventory is prerequisite. Separate critical out-of-band patches from routine. T
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
  Vuln ticket --> owner --> change plan --> canary --> fleet --> verify scan clean
-```
 
 **PICTURE IT LIKE THIS**
 
@@ -1576,7 +1581,7 @@ Pre-engagement: ROE, targets, timeboxes, emergency contacts, data handling. Pass
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  ROE signed
  --> passive recon
  --> active enum (ports/services)
@@ -1633,13 +1638,14 @@ print(" -> ".join(phases))
 
 **STEP-BY-STEP EXPLANATION**
 
-Prove impact safely. Avoid destructive payloads on shared labs. Capture screenshots, requests, hashes of evidence. Post-ex: situational awareness, loot within scope, persistence only if allowed. Report structure: exec summary, scope, findings (severity, CVSS/ATT&CK, steps, impact, remediations), appendix. Write for engineers and for leadership.
+> [!CAUTION]
+> Prove impact safely. Avoid destructive payloads on shared labs. Capture screenshots, requests, hashes of evidence. Post-ex: situational awareness, loot within scope, persistence only if allowed. Report structure: exec summary, scope, findings (severity, CVSS/ATT&CK, steps, impact, remediations), appendix. Write for engineers and for leadership.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** If the customer cannot fix it from your report, you failed professionally.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Foothold --> enum privs --> escalate (if in scope)
  --> map access to crown jewels
  --> cleanup if required
@@ -1715,7 +1721,7 @@ Domain join, domain controllers, Kerberos tickets, NTLM legacy, SPNs, service ac
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  User --> AS-REQ --> TGT (KRBTGT)
  User --> TGS-REQ --> Service ticket
  User --> App (Kerberos auth)
@@ -1774,7 +1780,7 @@ Themes (conceptual): credential reuse, remote execution via admin shares/WinRM/P
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Workstation foothold
  --> credential theft risk
  --> lateral to server
@@ -1846,10 +1852,17 @@ Sources: endpoints, identity, network, cloud audit. Parse/normalize. Retention v
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- Sources --> shipper --> parse --> SIEM index
- --> rules/ML --> alert --> case --> IR actions
- Feedback: tune rule / add context
+```mermaid
+flowchart TD
+    S["Log sources"] --> H["Shipper"]
+    H --> P["Parse and normalize"]
+    P --> I["SIEM index"]
+    I --> D["Rules or ML detection"]
+    D --> A["Alert"]
+    A --> C["Case"]
+    C --> R["Incident-response actions"]
+    R --> F["Tune rule or add context"]
+    F --> D
 ```
 
 **PICTURE IT LIKE THIS**
@@ -1905,7 +1918,7 @@ Sigma anatomy: title, logsource, detection map, condition, falsepositives, tags 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  ATT&CK technique --> required fields
  --> Sigma rule --> convert --> SIEM
  --> Atomic test --> true positive?
@@ -1983,12 +1996,17 @@ Preparation: contacts, playbooks, tooling, backups tested. Analysis: scope users
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- Alert --> triage severity
- --> collect volatile evidence if needed
- --> contain
- --> eradicate / recover
- --> report + improve detections
+```mermaid
+stateDiagram-v2
+    [*] --> Alerted
+    Alerted --> Triaged
+    Triaged --> EvidenceCollected: volatile evidence needed
+    Triaged --> Contained: no volatile collection needed
+    EvidenceCollected --> Contained
+    Contained --> Eradicated
+    Eradicated --> Recovered
+    Recovered --> LessonsLearned
+    LessonsLearned --> [*]
 ```
 
 **PICTURE IT LIKE THIS**
@@ -2043,7 +2061,7 @@ Order of volatility. Snapshot VMs. Hash evidence. Memory reveals running implant
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Isolate VM lab
  collect memory/disk
  hash + ticket
@@ -2118,7 +2136,7 @@ Provider: hardware, hypervisor, managed control plane baselines. You: identity, 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Human --> IdP MFA --> short-lived role
  Workload --> OIDC/instance profile --> scoped permissions
  Audit logs --> SIEM
@@ -2178,7 +2196,7 @@ Private subnets for data stores, bastions or ZTNA for admin, flow logs, config r
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  CSPM / config rules --> noncompliant resource --> auto ticket
  CloudTrail/Activity --> IAM change alerts
  Public bucket find --> break glass fix
@@ -2249,7 +2267,7 @@ Minimal base images, non-root users, scan images (Trivy), sign/verify images, se
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Code --> CI scan --> signed image --> cluster
  Pod security restricted
  NetworkPolicy default-deny
@@ -2308,10 +2326,16 @@ Threat model at design. Pre-commit secret scans. CI breaks on high SCA with reac
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- commit --> secret scan --> SAST/SCA --> build --> image scan --> deploy
- fail gate on policy
- SBOM stored
+```mermaid
+flowchart TD
+    C["Commit"] --> S["Secret scan"]
+    S --> A["SAST and SCA"]
+    A --> B["Build"]
+    B --> I["Image scan"]
+    I --> G{"Policy gate passes?"}
+    G -->|Yes| D["Deploy"]
+    G -->|No| F["Fail pipeline"]
+    I --> M["Store SBOM"]
 ```
 
 **PICTURE IT LIKE THIS**
@@ -2371,13 +2395,14 @@ print("CI gates:", ["gitleaks", "sca", "sast", "image scan", "iac scan"])
 
 **STEP-BY-STEP EXPLANATION**
 
-Static: file type, hashes, strings, imports, packer signs, signatures. YARA rules match patterns. Be careful with legal/ethical sample handling. Document IOCs: hashes, C2 domains, mutexes, paths.
+> [!CAUTION]
+> Static: file type, hashes, strings, imports, packer signs, signatures. YARA rules match patterns. Be careful with legal/ethical sample handling. Document IOCs: hashes, C2 domains, mutexes, paths.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Classify and extract facts before deep reversing. Feed defenders first.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  sample --> hash --> strings/imports --> YARA
  --> IOC list --> SIEM/EDR
  optional: deeper RE
@@ -2434,7 +2459,7 @@ Host-only or simulated internet. Snapshot before/after. Capture procmon/sysmon-l
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  snapshot --> detonate --> observe --> revert
  export IOCs only
 ```
@@ -2502,7 +2527,7 @@ Policy = must/should rules. Standards = mandatory specifics. Procedures = how. F
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Business risk --> control objective --> technical control
  --> evidence --> audit/assurance
 ```
@@ -2558,7 +2583,7 @@ Qualitative scales done consistently beat fake precision. Tie risks to assets an
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Scenario --> score --> treatment
  mitigate / transfer / accept (expiry)
  review cadence
@@ -2630,7 +2655,7 @@ Suggested lab: hypervisor, pfSense/router VM, Windows + Linux targets, Juice Sho
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  [Attacker box] --> [Targets]
        |               |
        +-----> [SIEM] <+
@@ -2689,7 +2714,7 @@ Recommended early cert: CompTIA Security+ (SY0-701) for HR screens. Blue path: C
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Skills in lab --> writeup --> optional cert
  Security+ early for SOC screens
  OSCP only after methodology solid
@@ -2763,7 +2788,7 @@ Drill list: CIA examples, TCP handshake, DNS, hash vs encrypt, OAuth vs session,
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Question --> define --> why exists --> how works
  --> trade-off --> example from YOUR lab
 ```
@@ -2820,7 +2845,7 @@ Clarify users/assets/threats. Propose controls layered (identity, app, network, 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Requirements --> assets --> threats --> controls
  --> telemetry --> IR hooks --> residual risk --> iterate
 ```

@@ -6,9 +6,7 @@
 
 **Scope:** 40 concepts · 20 phases · connected step by step, with no artificial weekly deadline.
 
-```
 Data → Learn → Deep → Transformers → Ship → Hire
-```
 
 ---
 
@@ -72,7 +70,7 @@ Those questions are answered in the same order every single time. Once you have 
 
 ## The Whole-Journey Map
 
-```
+```text
  PHASE 1                 PHASE 2               PHASE 3                PHASE 4
  AI THINKING             MATH FOR ML           PYTHON FOR AI          CLASSICAL ML
     |                       |                      |                      |
@@ -185,24 +183,18 @@ Those questions are answered in the same order every single time. Once you have 
 
 **STEP-BY-STEP EXPLANATION**
 
-A learning problem has: inputs \(x\), outputs \(y\) (maybe missing), a model family \(f_\theta\), a loss that scores mistakes, and an algorithm that updates \(\theta\). **Supervised** learning uses labeled pairs. **Unsupervised** finds structure without labels. **Reinforcement** learns from rewards. Generative AI is still learning a model of data - often \(p(x)\) or \(p(x_{t+1}|x_{\le t})\). AI engineering wraps these models in products with evaluation tests and safety checks and limits.
+A learning problem has: inputs $x$, outputs $y$ (maybe missing), a model family $f_\theta$, a loss that scores mistakes, and an algorithm that updates $\theta$. **Supervised** learning uses labeled pairs. **Unsupervised** finds structure without labels. **Reinforcement** learns from rewards. Generative AI is still learning a model of data - often $p(x)$ or $p(x_{t+1}\mid x_{\leq t})$. AI engineering wraps these models in products with evaluation tests and safety checks and limits.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Stop encoding every rule. Encode a hypothesis class + objective, then let data set the parameters.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- Rules program:                 Learning program:
-   if word in blacklist:          data (x, y)
-        spam                           |
-   else:                               v
-        ham                      fit θ to minimize loss
-                                       |
-                                       v
-                                 predict with f_θ(x)
+| Approach | Input | Decision process | Result |
+| --- | --- | --- | --- |
+| Rules program | A fixed blacklist | Check whether a word is present | Predict spam or ham |
+| Learning program | Labeled data $(x, y)$ | Fit $\theta$ to minimize loss | Predict with $f_\theta(x)$ |
 
- The second approach adapts when "blacklist" is infinite.
-```
+The learning approach adapts when a fixed blacklist would be effectively infinite.
 
 **PICTURE IT LIKE THIS**
 
@@ -267,7 +259,7 @@ print("best threshold", best_t, "acc", best_acc)
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Dataset
    |-- Train (fit θ)
    |-- Val   (choose LR, depth, early stop)
@@ -346,7 +338,7 @@ A vector is an ordered list of numbers - a point/direction in space. Matrices tr
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  x = [x1, x2, ..., xd]
  W is (h x d), b is (h,)
  h = W x + b     # one linear layer
@@ -405,13 +397,13 @@ print(cos)
 
 **STEP-BY-STEP EXPLANATION**
 
-Random variables, expectation, Bernoulli/Gaussian intuition, likelihood vs loss (negative log likelihood). Derivative = slope; gradient = vector of partials. Gradient descent: \(\theta \leftarrow \theta - \eta \nabla_\theta L\). Convex vs nonconvex - deep nets are nonconvex but still work empirically. Chain rule unlocks backprop (Phase 8).
+Random variables, expectation, Bernoulli/Gaussian intuition, likelihood vs loss (negative log likelihood). Derivative = slope; gradient = vector of partials. Gradient descent: $\theta \leftarrow \theta-\eta \nabla_\theta L$. Convex vs nonconvex - deep nets are nonconvex but still work empirically. Chain rule unlocks backprop (Phase 8).
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Define a differentiable loss, then repeatedly step opposite the gradient.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  L(θ) surface over parameters
  pick θ0
  loop:
@@ -450,7 +442,7 @@ print(theta)
 
 | Difficulty | Task |
 | --- | --- |
-| Easy | Sketch y=x^2 and one GD step from x=4 |
+| Easy | Sketch $y=x^2$ and one GD step from $x=4$ |
 | Medium | Derive gradient of MSE for linear regression (1D) |
 | Hard | Explain why noise in SGD can help escape sharp minima (intuition) |
 
@@ -490,7 +482,7 @@ print(theta)
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  list of lists -> np.array
  ops apply elementwise or via matmul
  reduce along axis -> smaller array
@@ -536,7 +528,7 @@ print(X.shape, y[:3])
 
 **WHY YOU ARE LEARNING THIS:** Before modeling, you must see the data: missingness, skew, leakage candidates, class imbalance. **Pandas** + plots turn CSVs into understanding.
 
-**THE PROBLEM THIS SOLVES:** Models trained on garbage. "Accuracy 99%" on imbalanced labels fooled teams.
+**THE PROBLEM THIS SOLVES:** Models trained on garbage. "Accuracy $99\%$" on imbalanced labels fooled teams.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -552,7 +544,7 @@ print(X.shape, y[:3])
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  read_csv -> inspect head/dtypes/nulls
  clean -> features X, label y
  plot distributions -> decide transforms
@@ -621,13 +613,13 @@ df["age"] = df["age"].fillna(df["age"].median())
 
 **STEP-BY-STEP EXPLANATION**
 
-Model \(\hat{y} = w^\top x + b \). MSE loss. Normal equation vs GD. Features need scaling for GD. Outliers hurt MSE - discuss MAE/Huber later. Residuals plots diagnose misfit.
+Model $\hat{y}=w^\top x+b$. MSE loss. Normal equation vs GD. Features need scaling for GD. Outliers hurt MSE - discuss MAE/Huber later. Residuals plots diagnose misfit.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Define prediction as a linear function; minimize average squared error.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  for each example:
    pred = w·x + b
    err  = pred - y
@@ -694,7 +686,7 @@ Sigmoid maps scores to (0,1). Log loss / cross-entropy. Regularization L1/L2. Th
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  z = w·x + b
  p = 1/(1+e^{-z})
  loss = -[y log p + (1-y) log(1-p)]
@@ -754,7 +746,7 @@ print(clf.score(Xte, yte))
 
 ## 5.1 Metrics Beyond Accuracy
 
-**WHY YOU ARE LEARNING THIS:** 99% accuracy on 99% negative class is a useless always-negative classifier. **Precision, recall, F1, ROC-AUC, PR-AUC, calibration** express different costs.
+**WHY YOU ARE LEARNING THIS:** $99\%$ accuracy on $99\%$ negative class is a useless always-negative classifier. **Precision, recall, F1, ROC-AUC, PR-AUC, calibration** express different costs.
 
 **THE PROBLEM THIS SOLVES:** Leaderboards optimized the wrong number. Hospitals and fraud teams shipped harmful policies.
 
@@ -772,7 +764,7 @@ Confusion matrix cells. Precision = of predicted positives, how many true? Recal
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Predict labels/probas on val
  Build confusion matrix
  Compute metrics that match costs
@@ -836,10 +828,10 @@ High bias: simplify features? richer model? High variance: more data, regulariza
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- Wrong: scale on all data -> split -> "great" score
- Right: split -> fit scaler on train -> transform val/test
-```
+| Pipeline | Sequence | Consequence |
+| --- | --- | --- |
+| Wrong | Scale all data → split | Validation information leaks into training and produces an unrealistically strong score |
+| Right | Split → fit the scaler on training data → transform validation/test data | Validation and test sets remain unseen during fitting |
 
 **PICTURE IT LIKE THIS**
 
@@ -911,7 +903,7 @@ Impurity (Gini/entropy), recursion, depth/leaf constraints. Bagging + feature ra
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  while not pure/too small:
    pick split that most reduces impurity
  leaf predicts majority / mean
@@ -969,13 +961,13 @@ print(rf.score(Xte, yte))
 
 **STEP-BY-STEP EXPLANATION**
 
-Additive model: \(F_m = F_{m-1} + \eta h_m\). Fit \(h_m\) to pseudo-residuals. Learning rate, subsample, max depth, regularization. Early stopping on val set. Still not automatic for images/text - representation learning needed later.
+Additive model: $F_m=F_{m-1}+\eta h_m$. Fit $h_m$ to pseudo-residuals. Learning rate, subsample, max depth, regularization. Early stopping on val set. Still not automatic for images/text - representation learning needed later.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Sequentially focus capacity on current errors with small steps.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  start with F0 (mean / prior)
  for m in 1..M:
    compute residuals
@@ -1049,13 +1041,13 @@ print(gb.score(Xte, yte))
 
 **STEP-BY-STEP EXPLANATION**
 
-Dense layer: `y = activation(xW + b)`. Width vs depth. Hidden representations. Softmax for multiclass. Initialization matters. Without nonlinearity, depth is fake. ReLU made deep nets practical vs saturating sigmoids in hidden layers.
+Dense layer: $y=\operatorname{activation}(xW+b)$. Width vs depth. Hidden representations. Softmax for multiclass. Initialization matters. Without nonlinearity, depth is fake. ReLU made deep nets practical vs saturating sigmoids in hidden layers.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Compose simple differentiable blocks; learn features and classifier jointly.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  x
   -> Linear -> ReLU
   -> Linear -> ReLU
@@ -1111,7 +1103,7 @@ print(mlp_forward(x, W1, b1, W2, b2).shape)
 
 **WHY YOU ARE LEARNING THIS:** Deep nets memorize. **Weight decay, dropout, data augmentation, early stopping** buy generalization.
 
-**THE PROBLEM THIS SOLVES:** Train accuracy 100%, test accuracy coin-flip. "Just add layers" culture.
+**THE PROBLEM THIS SOLVES:** Train accuracy $100\%$, test accuracy coin-flip. "Just add layers" culture.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -1127,7 +1119,7 @@ L2 weight decay. Dropout as training-time noise / ensemble approx. Early stoppin
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  train loop:
    update weights on batch
    every epoch: measure val loss
@@ -1202,13 +1194,13 @@ for epoch, val_loss in enumerate([1.0, 0.8, 0.75, 0.76, 0.79, 0.81]):
 
 **STEP-BY-STEP EXPLANATION**
 
-Forward pass builds values; backward pass propagates `dL/d(node)`. Autograd engines record ops. You must understand *enough* to debug vanishing/exploding gradients and wrong loss wiring - not memorize every derivative.
+Forward pass builds values; backward pass propagates $\frac{\partial L}{\partial \text{node}}$. Autograd engines record ops. You must understand *enough* to debug vanishing/exploding gradients and wrong loss wiring - not memorize every derivative.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Reverse-mode automatic differentiation for scalar losses - cost comparable to one forward pass.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Forward:  x -> a -> b -> L
  Backward: dL/db -> dL/da -> dL/dx
  Each local op knows local gradient; multiply along path (chain rule)
@@ -1274,7 +1266,7 @@ Minibatch SGD. Momentum accumulates velocity. Adam adapts per-parameter steps us
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  sample batch
  forward -> loss
  backward -> grads
@@ -1354,7 +1346,7 @@ print("Use torch.optim.Adam in practice; know the story above.")
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  batch -> model -> logits -> loss
  loss.backward()
  optimizer.step(); optimizer.zero_grad()
@@ -1423,7 +1415,7 @@ print(float(loss))
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Sanity ladder:
   1) one batch overfit
   2) small subset overfit
@@ -1503,7 +1495,7 @@ Kernel, stride, padding, channels. Early layers: edges; deeper: textures/parts. 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  image (C,H,W)
   -> conv+relu  (more channels, spatial map)
   -> conv+relu
@@ -1566,13 +1558,13 @@ print(model)
 
 **STEP-BY-STEP EXPLANATION**
 
-Freeze backbone vs full fine-tune. Augmentations as regularization. Domain shift: medical ≠ ImageNet - still often helps. Today: CNN and ViT backbones; principle remains representation reuse.
+Freeze backbone vs full fine-tune. Augmentations as regularization. Medical data differs from ImageNet because of domain shift - transfer still often helps. Today: CNN and ViT backbones; principle remains representation reuse.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Reuse features from related large-scale training instead of starting from zero.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  load pretrained backbone
  replace classifier head for K classes
  train head (optional unfreeze later with small LR)
@@ -1639,13 +1631,13 @@ print(m.fc)
 
 **STEP-BY-STEP EXPLANATION**
 
-At each step: `h_t = f(h_{t-1}, x_t)`. BPTT trains through time. Vanishing/exploding gradients plague long dependencies. Sequential computation limits parallel training.
+At each step: $h_t=f(h_{t-1},x_t)$. BPTT trains through time. Vanishing/exploding gradients plague long dependencies. Sequential computation limits parallel training.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Reuse the same transition function across time with a memory state.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  x1 -> h1 -> x2 -> h2 -> ... -> ht -> output
  gradients flow backward through the chain of h's
  long chain => gradients shrink/explode
@@ -1706,7 +1698,7 @@ Cell state highways, forget/input/output gates (LSTM). GRU simplifies. Still ste
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  LSTM gates decide:
    forget some memory
    write new memory
@@ -1761,7 +1753,7 @@ print(nn.GRU(32, 64, batch_first=True))
 
 ## 12.1 Word Embeddings and Distributional Meaning
 
-**WHY YOU ARE LEARNING THIS:** One-hot tokens treat "cat" and "dog" as orthogonal. **Embeddings** place tokens in \(\mathbb{R}^d\) so similar contexts sit nearby - the foundation of NLP transfer.
+**WHY YOU ARE LEARNING THIS:** One-hot tokens treat "cat" and "dog" as orthogonal. **Embeddings** place tokens in $\mathbb{R}^d$ so similar contexts sit nearby - the foundation of NLP transfer.
 
 **THE PROBLEM THIS SOLVES:** Sparse bag-of-words, gigantic dimensions, no notion of similarity.
 
@@ -1780,7 +1772,7 @@ Distributional hypothesis: words in similar contexts have similar meanings. Word
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  token id -> lookup table E[id] -> vector
  train so context prediction / contrastive objective holds
  similar words => high cosine(E[a], E[b])
@@ -1848,7 +1840,7 @@ Normalize vectors for cosine-as-dot. Chunking documents into embeddable passages
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  docs -> chunks -> embed -> index
  query -> embed -> top-k neighbors -> downstream (rank/LLM)
 ```
@@ -1918,13 +1910,13 @@ print(docs @ q)  # cosine similarities
 
 **STEP-BY-STEP EXPLANATION**
 
-Project tokens to Queries, Keys, Values. Attention weights = softmax(QK^T / sqrt(d)). Output = weights · V. Multi-head = several subspaces. Positional encodings inject order. Residual connections + layer norm stabilize depth. Complexity O(T^2) in sequence length T - the context window cost story.
+Project tokens to Queries, Keys, Values. Attention weights are $\operatorname{softmax}\left(\frac{QK^\top}{\sqrt{d}}\right)$. Output is $\text{weights}\cdot V$. Multi-head = several subspaces. Positional encodings inject order. Residual connections + layer norm stabilize depth. Complexity is $O(T^2)$ in sequence length $T$ - the context window cost story.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Replace recurrence with weighted averages of values, with weights from query-key matches.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  tokens -> embed (+ position)
  for each layer:
    x = x + Attention(x)
@@ -1961,7 +1953,7 @@ Q = K = V = torch.randn(B, T, H)
 print(attention(Q, K, V).shape)
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Explain Q/K/V. Why scale by sqrt(d)? Why positions needed? Quadratic cost implications.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Explain Q/K/V. Why scale by $\sqrt{d}$? Why positions needed? Quadratic cost implications.
 
 **PRACTICE UNTIL IT FEELS FAMILIAR**
 
@@ -1996,11 +1988,11 @@ Masked self-attention for causal LM. Cross-attention in encoder-decoder. Pretrai
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- GPT-style: predict next token repeatedly
- BERT-style: fill masked tokens with bidirectional context
- T5-style: text-in text-out encoder-decoder
-```
+| Model style | Core objective / structure |
+| --- | --- |
+| GPT-style | Predict the next token repeatedly |
+| BERT-style | Fill masked tokens using bidirectional context |
+| T5-style | Use an encoder-decoder for text-in, text-out tasks |
 
 **PICTURE IT LIKE THIS**
 
@@ -2065,13 +2057,13 @@ print(mask)
 
 **STEP-BY-STEP EXPLANATION**
 
-BPE/WordPiece tokenization. Context = prompt + generation budget. Temperature, top-p, top-k, stop sequences. Determinism needs temperature 0 + still watch ties. Cost ≈ tokens in + out. System vs user vs tool roles in chat APIs.
+BPE/WordPiece tokenization. Context = prompt + generation budget. Temperature, top-p, top-k, stop sequences. Determinism needs temperature 0 + still watch ties. $\text{cost}\approx\text{input tokens}+\text{output tokens}$. System vs user vs tool roles in chat APIs.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Treat the model as a next-token engine with a finite working memory you must manage.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  text -> tokens -> model forward -> next-token distribution
  sample/argmax -> append token -> repeat until stop
 ```
@@ -2135,7 +2127,7 @@ Patterns: instructions, few-shot, chain-of-thought (when appropriate), structure
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  CRISP-ish:
    Context / Role / Instructions / Specifics / Proof(examples)
  -> model
@@ -2216,17 +2208,14 @@ Ingest → chunk → embed → index. Query → embed → top-k → (rerank) →
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- User question
-    |
-    v
- Embed query -> Vector search -> top-k chunks
-    |
-    v
- Prompt: system + chunks + question
-    |
-    v
- LLM answer (+ require quotes/citations)
+```mermaid
+flowchart TD
+    Q["User question"] --> EQ["Embed query"]
+    EQ --> VS["Vector search"]
+    VS --> K["Top-k chunks"]
+    K --> P["Prompt: system + chunks + question"]
+    P --> L["LLM"]
+    L --> A["Answer with required quotes or citations"]
 ```
 
 **PICTURE IT LIKE THIS**
@@ -2295,14 +2284,18 @@ BM25 + vectors. Cross-encoder rerank top-100 → top-5. Query rewriting. Parent-
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- query -> rewrite
-      -> bm25 candidates
-      -> vector candidates
-      -> merge
-      -> rerank
-      -> generate
- if low confidence: retrieve again / ask clarifying Q
+```mermaid
+flowchart TD
+    Q["Query"] --> R["Rewrite"]
+    R --> B["BM25 candidates"]
+    R --> V["Vector candidates"]
+    B --> M["Merge candidates"]
+    V --> M
+    M --> RR["Rerank"]
+    RR --> G["Generate"]
+    G --> C{"Confidence sufficient?"}
+    C -->|Yes| A["Return answer"]
+    C -->|No| X["Retrieve again or ask a clarifying question"]
 ```
 
 **PICTURE IT LIKE THIS**
@@ -2378,7 +2371,7 @@ SFT dataset quality >> quantity. Catastrophic forgetting risk. LoRA ranks, targe
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  freeze base W
  train ΔW ≈ B A (low rank)
  effective = W + BA
@@ -2438,7 +2431,7 @@ Preference pairs (chosen/rejected). Reward models + PPO historically; DPO optimi
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  SFT base behaviors
  collect A vs B preferences
  optimize so model prefers A
@@ -2513,12 +2506,16 @@ Schema-defined tools; model emits structured call; runtime executes; result retu
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- User goal
-  loop until done or max_steps:
-    model -> (final answer | tool_call)
-    if tool_call: execute -> append observation
-    else: return answer
+```mermaid
+flowchart TD
+    U["User goal"] --> M["Model evaluates next step"]
+    M --> D{"Final answer or tool call?"}
+    D -->|Final answer| A["Return answer"]
+    D -->|Tool call| T["Execute allowlisted tool"]
+    T --> O["Append observation"]
+    O --> L{"Done or max steps reached?"}
+    L -->|Continue| M
+    L -->|Stop| A
 ```
 
 **PICTURE IT LIKE THIS**
@@ -2582,7 +2579,7 @@ Short-term vs long-term memory (vector stores, summaries). Checkpoints. Branchin
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  State {messages, artifacts, approvals}
  Nodes: retrieve / draft / critique / execute
  Edges: conditional routes
@@ -2663,12 +2660,16 @@ Unit tests for tools. Golden prompts with expected properties. Retrieval metrics
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- change prompt/model/index
- run offline suite
- if pass: canary % traffic
- watch error/latency/cost/user thumbs
- promote or rollback
+```mermaid
+flowchart TD
+    C["Change prompt, model, or index"] --> O["Run offline suite"]
+    O --> P{"Suite passes?"}
+    P -->|No| R["Revise or reject change"]
+    P -->|Yes| K["Canary a percentage of traffic"]
+    K --> W["Watch errors, latency, cost, and user feedback"]
+    W --> D{"Signals healthy?"}
+    D -->|Yes| M["Promote"]
+    D -->|No| B["Rollback"]
 ```
 
 **PICTURE IT LIKE THIS**
@@ -2711,7 +2712,7 @@ print(check("We allow refunds within 30 days.", cases[0]))
 
 ## 18.2 Safety checks and limits, Observability, Cost, and Deployment
 
-**WHY YOU ARE LEARNING THIS:** LLM apps fail via prompt injection, PII leakage, runaway tool calls, and 10× bills. **Safety checks and limits**, tracing, budgets, and gateway layers (e.g. LiteLLM) are the ops craft.
+**WHY YOU ARE LEARNING THIS:** LLM apps fail via prompt injection, PII leakage, runaway tool calls, and $10\times$ bills. **Safety checks and limits**, tracing, budgets, and gateway layers (e.g. LiteLLM) are the ops craft.
 
 **THE PROBLEM THIS SOLVES:** Demo apps on weekend; Monday production incident; no traces to debug which tool fired.
 
@@ -2730,11 +2731,16 @@ Input/output filters, allowlisted tools, sandboxing, rate limits, authz. Structu
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- request -> authz -> input guard -> router/gateway
-      -> rag/agent -> output guard -> response
-           |                 |
-         traces           cost meter
+```mermaid
+flowchart TD
+    R["Request"] --> A["Authorization"]
+    A --> I["Input guard"]
+    I --> G["Router / gateway"]
+    G --> S["RAG or agent"]
+    S --> O["Output guard"]
+    O --> P["Response"]
+    S --> T["Traces"]
+    O --> C["Cost meter"]
 ```
 
 **PICTURE IT LIKE THIS**
@@ -2811,7 +2817,7 @@ Suggested ladder: (1) tabular baseline + honest metrics; (2) PyTorch CNN or NLP 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Pick user problem
  define metric
  build smallest working slice
@@ -2873,12 +2879,10 @@ Pin dependency versions. Record seeds, hardware, model IDs. Respect data license
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- requirements.lock / env file
- data license note
- model card section
- blog: 800 words with one figure/table
-```
+- `requirements.lock` / environment file
+- Data license note
+- Model card section
+- Blog: 800 words with one figure/table
 
 **PICTURE IT LIKE THIS**
 
@@ -2949,7 +2953,7 @@ Practice 5-minute answers: gradient descent; precision/recall; dropout; attentio
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Question
   -> define
   -> why exists
@@ -3010,9 +3014,7 @@ Clarify users/SLAs. Propose: ingest, index, retrieve, generate, tools, HITL, tel
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
  Requirements -> architecture -> threats -> eval plan -> rollout -> cost model
-```
 
 **PICTURE IT LIKE THIS**
 

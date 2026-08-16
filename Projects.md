@@ -1029,7 +1029,7 @@ Build **Priority Task Scheduler** as a focused exercise for **Hierarchical and P
 
 Build **Hash Table and LRU Cache** as a focused exercise for **Hashing**. Keep the data and interface small enough to finish, but implement the following behavior:
 
-- Implement a hash table with collision handling, then build a fixed-capacity LRU cache with O(1)-style get and put operations.
+- Implement a hash table with collision handling, then build a fixed-capacity LRU cache with $O(1)$-style get and put operations.
 - Accept a tiny text, number, file, packet, or task input and validate it before processing.
 - Represent the important states or data structures from Hashing explicitly.
 - Show each important result or state transition in a form a learner can inspect.
@@ -1044,7 +1044,7 @@ Build **Hash Table and LRU Cache** as a focused exercise for **Hashing**. Keep t
 #### BUILD IT STEP BY STEP
 
 1. Create `hash-table-and-lru-cache` with `src`, `tests`, and `examples` folders; use a Python virtual environment.
-2. Implement a hash table with collision handling, then build a fixed-capacity LRU cache with O(1)-style get and put operations.
+2. Implement a hash table with collision handling, then build a fixed-capacity LRU cache with $O(1)$-style get and put operations.
 3. Represent the important states or data structures from Hashing explicitly.
 4. Show each important result or state transition in a form a learner can inspect.
 5. Check a normal case, a boundary case, and an invalid case against known answers.

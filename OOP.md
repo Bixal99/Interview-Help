@@ -8,9 +8,7 @@
 
 **Scope:** Part 0 fundamentals + 40 OOP concepts · 20 phases · no artificial weekly deadline.
 
-```
 Code basics → Think → Pillars → SOLID → Patterns → Hire
-```
 
 ---
 
@@ -68,7 +66,7 @@ Phases 1-10 build language + modeling confident working knowledge. Phases 11-18 
 
 ## The Whole-Journey Map
 
-```
+```text
  PART 0 FUNDAMENTALS
  F1 How programs run + variables
  F2 Conditionals + loops
@@ -201,7 +199,7 @@ A `.py` file is text. When you run `python app.py`, the CPython interpreter read
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 you type:  print("hi")
      |
      v
@@ -268,7 +266,7 @@ In Python, names refer to objects. `x = 3` binds `x` to an integer object. Types
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 x = 3        # name x -> int 3
 y = x        # y -> same int (immutable, safe)
 nums = [1]   # name nums -> list
@@ -344,7 +342,7 @@ Be ready for `is` vs `==` later; for now, explain mutable vs immutable with a li
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```python
 score = 87
 if score >= 90: grade = "A"
 elif score >= 80: grade = "B"
@@ -412,7 +410,7 @@ Talk through edge cases first (zero, negative, equal boundary).
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```python
 nums = [2, 4, 6]
 total = 0
 for n in nums:
@@ -491,7 +489,7 @@ Know `range`, `enumerate`, and how to avoid mutating a list while iterating it c
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 call average([2,4])
   | push frame
   | compute 3.0
@@ -558,7 +556,7 @@ Explain parameters vs arguments, and why side effects matter for testing.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```python
 main.py
   import utils
   utils.helper()
@@ -647,7 +645,7 @@ When invariants are enforced only by *convention* ("please call `withdraw` inste
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 PROCEDURAL (rules hope callers cooperate):
 
   balance = 100
@@ -736,7 +734,7 @@ Bad OOP starts by inventing inheritance trees for sport. Prefer boring, accurate
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Domain sketch (parking lot):
 
   ParkingLot ---- assigns ----> Spot
@@ -845,7 +843,7 @@ Methods live once on the class. Attribute values live per object on the heap. Be
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Dog = class (blueprint)
   methods: bark, __init__   <--- stored ONCE on the class
 
@@ -926,7 +924,7 @@ Aliasing means two names, one object: mutate through either name and both see th
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 aliasing:
 
   u1 -------------------+
@@ -1028,7 +1026,7 @@ If they ask `is` vs `==`, give a one-liner and a micro-example.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Call: acct.withdraw(30)
 
   1. Python finds withdraw on Account class
@@ -1110,13 +1108,13 @@ Weak: "self means itself." Strong: "self is the instance Python passes as the fi
 
 `__init__` runs immediately after the object is created. It should establish invariants: required fields set, defaults applied, invalid combinations rejected.
 
-Python separates allocation (`__new__`) from initialization (`__init__`). For 99% of classes you only customize `__init__`. Think: "What must be true the moment this object exists?"
+Python separates allocation (`__new__`) from initialization (`__init__`). For $99\%$ of classes you only customize `__init__`. Think: "What must be true the moment this object exists?"
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Construction is the gatekeeper - reject illegal objects at birth, not after they enter the system.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 obj = MyClass(a, b)
 
   1. __new__(cls, a, b)  -> allocates empty shell
@@ -1212,7 +1210,7 @@ The public API is the contract: `deposit`, `withdraw`, `balance`. Internals (`_b
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 WITHOUT encapsulation:
 
   caller --> account._balance = -500   X invariant dead
@@ -1286,7 +1284,7 @@ Strong answer: encapsulation is about *invariants* and *change control*, not the
 
 ## 4.2 Invariants and Validation
 
-**WHY YOU ARE LEARNING THIS:** Every domain object has truths that must never break: "balance ≥ 0," "order has ≥ 1 item," "spot holds ≤ 1 vehicle." Encapsulation exists to enforce those invariants at the boundary.
+**WHY YOU ARE LEARNING THIS:** Every domain object has truths that must never break: $\text{balance}\geq0$, $\text{item count}\geq1$, and $\text{vehicles per spot}\leq1$. Encapsulation exists to enforce those invariants at the boundary.
 
 **THE PROBLEM THIS SOLVES:** Validation sprinkled at UI, API, and database layers while the object itself accepts garbage - fix one layer, miss another.
 
@@ -1310,7 +1308,7 @@ Do not rely on "callers will remember to validate." The object is the last line 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Order invariant: len(items) >= 1
 
   Order([])           -> ValueError at __init__
@@ -1419,17 +1417,22 @@ In Python, `abc.ABC` plus `@abstractmethod` makes missing implementations a cons
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
-Caller holds PaymentGateway reference
-
-       +------------------+
-       | PaymentGateway   |  (ABC)
-       |  charge(amount)  |
-       +--------+---------+
-                ^
-        +-------+--------+
-        |                |
-   StripeGateway    FakeGateway (tests)
+```mermaid
+classDiagram
+    class PaymentGateway {
+        <<interface>>
+        +charge(amount)
+    }
+    class StripeGateway {
+        +charge(amount)
+    }
+    class FakeGateway {
+        +charge(amount)
+    }
+    PaymentGateway <|.. StripeGateway
+    PaymentGateway <|.. FakeGateway
+    class Caller
+    Caller --> PaymentGateway : holds reference
 ```
 
 **PICTURE IT LIKE THIS**
@@ -1509,7 +1512,7 @@ This is abstraction applied to *surface area*: callers import the smallest type 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 BEFORE (fat):
 
   Machine: print(), scan(), fax()  -> OldPrinter implements fax() as NotImplemented
@@ -1622,20 +1625,24 @@ Use **`super()`** to delegate to parent implementation instead of hard-coding th
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
+```mermaid
+classDiagram
+    class Employee {
+        +name
+        +pay()
+    }
+    class Manager {
+        +team_size
+        +pay()
+    }
+    Employee <|-- Manager
 ```
-Employee
-   | pay()
-   | name
-   v
-Manager
-   | pay() -> super().pay() + bonus
-   | team_size
 
-Call: mgr.pay()
-  1. find pay on Manager
-  2. super() -> Employee.pay
-  3. add bonus
-```
+Call `mgr.pay()`:
+
+1. Find `pay` on `Manager`.
+2. `super()` calls `Employee.pay`.
+3. Add the manager's bonus.
 
 **PICTURE IT LIKE THIS**
 
@@ -1714,7 +1721,7 @@ Rules of thumb: override when behavior truly differs; call `super()` when you ad
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Parent.send():
     validate()
     deliver()
@@ -1815,7 +1822,7 @@ Use duck typing when integrations are diverse and stable method names exist. Add
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 def persist(doc, sink):
     sink.write(doc)
 
@@ -1902,7 +1909,7 @@ No type registry. Open for extension (new class), closed for modification (calle
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 BEFORE:
   if t=="email": ...
   elif t=="sms": ...
@@ -2003,7 +2010,7 @@ Composition keeps objects small and swappable. You pass a `Engine` interface int
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 INHERITANCE (tight):
   FlyingCar extends Car extends Vehicle
 
@@ -2089,7 +2096,7 @@ Delegation powers Adapter (Phase 14), Strategy (Phase 15), and many stdlib types
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Playlist.shuffle():
     self._items.shuffle()   # delegate storage
 
@@ -2199,7 +2206,7 @@ Rule: `__repr__` should ideally let you recreate the object; `__str__` can be fr
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 order = Order(...)
 print(order)     -> __str__
 repr(order)      -> __repr__
@@ -2286,7 +2293,7 @@ Expect `__repr__` vs `__str__` and when `__eq__` without `__hash__` makes object
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Lookup: D(B,C).greet()
 
 MRO: D -> B -> C -> object
@@ -2394,11 +2401,11 @@ Strong composition = exclusive lifetime. LLD prompts (parking lot, library) test
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
-Composition: Lot owns Spot; destroy lot -> spots gone
-Aggregation: Library catalogs Book; book exists after deaccession
-Association: Driver uses Car; independent lifetimes
-```
+| Relationship | Example | Lifetime / ownership |
+| --- | --- | --- |
+| Composition | `Lot` owns `Spot` | Destroying the lot destroys its spots |
+| Aggregation | `Library` catalogs `Book` | The book can exist after deaccession |
+| Association | `Driver` uses `Car` | The objects have independent lifetimes |
 
 **PICTURE IT LIKE THIS**
 
@@ -2481,7 +2488,7 @@ You do not need enterprise tooling - index cards or ASCII boxes beat premature c
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 CRC Example - ParkingLot:
   R: track free spots, assign vehicle
   C: Spot, Vehicle, RatePolicy
@@ -2580,7 +2587,7 @@ Fix direction: move behavior to the class whose data it uses (Tell, Don't Ask) o
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Feature Envy:
   InvoicePrinter.print(order):
     uses order.items, order.tax, order.customer.address
@@ -2668,7 +2675,7 @@ Extract Class often precedes introducing interfaces (Phase 12) and patterns (Pha
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 BEFORE User: name, email, password_hash, verify(), reset_token
 
 AFTER:
@@ -2771,7 +2778,7 @@ Caveat: SOLID is for code that *changes with teams*. A 50-line script does not n
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 SRP: ReportData, CsvFormatter, EmailSender
 OCP: ExportPipeline uses Exporter ABC; add JsonExporter
 LSP: every PaymentGateway.charge works for checkout()
@@ -2857,7 +2864,7 @@ All five together: SRP finds classes, OCP/LSP/ISP shape boundaries, DIP flips de
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 DIP wiring:
 
   main():
@@ -2970,7 +2977,7 @@ Use when: construction varies by config, you want one place to swap implementati
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 checkout.py -> PaymentFactory.create("stripe")
                          -> StripeGateway()
 
@@ -3054,7 +3061,7 @@ Factory vs Abstract Factory vs Builder - know the interview distinctions with on
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Singleton (caution):
   Settings._instance created once
 
@@ -3169,7 +3176,7 @@ Adapter = integration pattern. Facade = simplification for clients. Both reduce 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Adapter:
   YourPayment.charge($) -> LegacyPay.charge_cents(int)
 
@@ -3259,7 +3266,7 @@ Use for cross-cutting concerns (metrics, caching, auth) without editing core cla
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Notifier
   ^ wrapped by LoggingNotifier
   ^ wrapped by RetryNotifier
@@ -3361,7 +3368,7 @@ Both replace conditional logic with objects - Strategy for algorithms, Command f
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Strategy:
   Checkout.set_strategy(VIPDiscount())
   total = checkout.total(cart)
@@ -3472,11 +3479,19 @@ Modern twist: reactive streams and message queues are industrial Observer. Patte
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
-WeatherStation (subject)
-   notify(temp)
-      -> PhoneDisplay.update
-      -> WebDashboard.update
+```mermaid
+classDiagram
+    class WeatherStation {
+        +notify(temp)
+    }
+    class PhoneDisplay {
+        +update(temp)
+    }
+    class WebDashboard {
+        +update(temp)
+    }
+    WeatherStation --> PhoneDisplay : notifies
+    WeatherStation --> WebDashboard : notifies
 ```
 
 **PICTURE IT LIKE THIS**
@@ -3587,7 +3602,7 @@ OOP helps testing when classes depend on abstractions (DIP) and have narrow publ
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 OrderService -> OrderRepository (ABC)
 tests: FakeOrderRepository (dict)
 prod: PostgresOrderRepository
@@ -3689,7 +3704,7 @@ Test pyramid still applies: many fast unit tests with fakes, fewer integration t
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 domain/OrderService -> ports/Repository
 infra/PostgresRepository implements Repository
 tests/FakeRepository implements Repository
@@ -3791,13 +3806,12 @@ Explain how you would test a service that sends email and charges card - name fa
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
-HTTP Controller -> Application Service -> Domain
-                              |
-                              v
-                         Repository port
-                              ^
-                         Postgres adapter
+```mermaid
+flowchart TD
+    H["HTTP controller"] --> A["Application service"]
+    A --> D["Domain"]
+    A --> P["Repository port"]
+    I["Postgres adapter"] -. implements .-> P
 ```
 
 **PICTURE IT LIKE THIS**
@@ -3891,7 +3905,7 @@ Violations to spot: domain importing Flask, entities inheriting ORM base classes
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 ALLOWED:
   infra -> domain
   infra -> application
@@ -3990,7 +4004,7 @@ Classic prompts: **parking lot** (spot types, fees, entry/exit), **library** (co
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Parking Lot (sketch):
 
 Entities: ParkingLot, Spot, Ticket, Vehicle, RatePolicy
@@ -4081,7 +4095,7 @@ Parking lot: entry kiosk + fee at exit. Library: copy vs title, waitlists. Eleva
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 SOLID quick pass:
   SRP: FeeCalculator separate from Spot?
   OCP: new VehicleType via strategy?
@@ -4190,7 +4204,7 @@ Quality beats quantity: two polished designs > ten half-finished repos.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 README sections:
   1. Problem statement
   2. Entities + diagram
@@ -4264,7 +4278,7 @@ Add "what I'd do with another week" section - shows prioritization, not perfecti
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Sample project bar:
   - domain classes with invariants
   - one pattern named honestly
@@ -4352,7 +4366,7 @@ Examples: inheritance vs composition; ABC vs duck typing; Repository vs active r
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Trade-off template (speak aloud):
 
   Context: 3-person team, LLD interview
@@ -4427,7 +4441,7 @@ Behavioral + LLD hybrid: "Tell me about a time you refactored a god object" - us
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
 Learning path:
 
   CS.md Ph1-2 (done before OOP.md)

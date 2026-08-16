@@ -6,9 +6,7 @@
 
 **Scope:** 40 concepts · 20 phases · connected step by step, with no artificial weekly deadline.
 
-```
 Bits → Packets → Routes → Apps → Scale → Hire
-```
 
 ---
 
@@ -72,7 +70,7 @@ Those questions are answered in the same order every single time. Once you have 
 
 ## The Whole-Journey Map
 
-```
+```text
  PHASE 1                 PHASE 2               PHASE 3                PHASE 4
  NETWORK THINKING        PHYSICAL LAYER        DATA LINK &            SWITCHING &
                                                ETHERNET               VLANs
@@ -135,7 +133,7 @@ Those questions are answered in the same order every single time. Once you have 
 | 13 | [HTTP](#phase-13---http-and-the-web) | Speak the web's application protocol | Craft a raw HTTP/1.1 exchange and contrast HTTP/2 and /3 |
 | 14 | [TLS & HTTPS](#phase-14---tls-and-https) | Encrypt and authenticate channels | Explain handshake goals and what a certificate actually proves |
 | 15 | [Wireshark](#phase-15---wireshark-and-packet-analysis) | See the truth on the wire | Capture a handshake and filter to the failing exchange |
-| 16 | [Wireless](#phase-16---wireless-and-wi-fi) | Understand shared-medium networks | Explain association, interference, and why Wi-Fi loss ≠ congestion |
+| 16 | [Wireless](#phase-16---wireless-and-wi-fi) | Understand shared-medium networks | Explain association, interference, and why $\text{Wi-Fi loss}\neq\text{congestion}$ |
 | 17 | [CDN, LB & Edge](#phase-17---cdn-load-balancers-and-edge) | Scale services at the edge | Contrast CDN, reverse proxy, and load balancer jobs |
 | 18 | [BGP & Internet](#phase-18---bgp-and-internet-architecture) | See how the Internet is glued | Explain AS, peering, and why BGP is policy more than shortest path |
 | 19 | [Labs & Portfolio](#phase-19---labs-portfolio-and-automation) | Prove skill with artifacts | Ship captures, labs, and a public write-up |
@@ -205,7 +203,7 @@ Applications care about different mixes. A file download loves bandwidth. A game
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Without a network abstraction:
 
    App A  ============================  App B
@@ -297,7 +295,7 @@ print(f"approx RTT+transfer: {rtt*1000:.1f} ms, bytes: {n}")
 
 **STEP-BY-STEP EXPLANATION**
 
-**Latency** is delay. Propagation delay is distance / signal speed. Serialization delay is packet size / bandwidth. Queuing delay is waiting in buffers. Processing delay is device compute. **Bandwidth** is capacity. **Throughput** is what you actually achieve after loss and protocol overhead. **Goodput** is application-useful bytes per second.
+**Latency** is delay. Propagation delay is $t_{\mathrm{propagation}}=\frac{\text{distance}}{\text{signal speed}}$. Serialization delay is $t_{\mathrm{serialization}}=\frac{\text{packet size}}{\text{bandwidth}}$. Queuing delay is waiting in buffers. Processing delay is device compute. **Bandwidth** is capacity. **Throughput** is what you actually achieve after loss and protocol overhead. **Goodput** is application-useful bytes per second.
 
 **Packet switching** splits data into packets, each with addressing headers. Links are shared. Multiplexing is statistical: when you are quiet, someone else uses the wire. The costs are fundamental: packets can queue (variable delay), overflow buffers (loss), take different paths (reordering), and arrive duplicated. The entire Transport layer exists because of these costs.
 
@@ -307,7 +305,7 @@ Circuit switching still appears inside networks (optical wavelengths, telephone 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Delay budget for one packet:
 
    total ≈ processing + queueing + serialization + propagation
@@ -418,7 +416,7 @@ Noise and attenuation force **repeaters/amplifiers** and limit distance-bandwidt
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  App bytes
     |
     v
@@ -497,7 +495,7 @@ print("received", transmit(msg, 0.05))
 
 **STEP-BY-STEP EXPLANATION**
 
-Bandwidth-delay product (BDP) = bandwidth × RTT. A 1 Gbps path with 40 ms RTT has about 5 MB in flight if fully utilized. A sender that cannot keep that much unacknowledged data outstanding will never fill the pipe. This Physical/metric fact becomes a Transport requirement in Phase 10.
+$\mathrm{BDP}=\text{bandwidth}\times\mathrm{RTT}$. A 1 Gbps path with 40 ms RTT has about 5 MB in flight if fully utilized. A sender that cannot keep that much unacknowledged data outstanding will never fill the pipe. This Physical/metric fact becomes a Transport requirement in Phase 10.
 
 Links "fail soft" too: Ethernet may renegotiate speed; Wi-Fi may rate-adapt downward; cellular may change towers. From IP's perspective the next hop sometimes just drops more packets.
 
@@ -505,7 +503,7 @@ Links "fail soft" too: Ethernet may renegotiate speed; Wi-Fi may rate-adapt down
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  BDP example:
 
    bandwidth = 1 Gbit/s = 125 MB/s
@@ -585,7 +583,7 @@ A typical Ethernet frame: destination MAC, source MAC, EtherType (what payload i
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Ethernet frame (simplified):
 
  +-----------+-----------+----------+------------------+-----+
@@ -659,7 +657,7 @@ print(hex(fake_fcs(frame)))
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Old: Hub (one collision domain)
    Hosts A B C share wire; simultaneous talk => collision => retry
 
@@ -741,7 +739,7 @@ On each frame: learn `src MAC -> ingress port`. If `dst MAC` known, forward out 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Empty table. A sends to B (unknown):
 
    A --p1--+           +--p2-- B
@@ -817,7 +815,7 @@ Access ports belong to one VLAN. Trunk ports carry multiple VLANs with tags. Bro
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  PC-A (VLAN 10) --access-- SWITCH --trunk-- SWITCH --access-- PC-B (VLAN 10)
                               |
                            router (SVI VLAN10, VLAN20)
@@ -893,13 +891,13 @@ print(vlan_tag(10).hex())
 
 **STEP-BY-STEP EXPLANATION**
 
-IPv4: 32-bit address. `/24` means 24 network bits, 8 host bits → 256 addresses (254 usable typically, minus network/broadcast). Private ranges (RFC1918): `10/8`, `172.16/12`, `192.168/16`. Subnetting carves a prefix into smaller prefixes for departments or security zones. **Longest prefix match** (Phase 6) depends on this hierarchy.
+IPv4: 32-bit address. `/24` means 24 network bits and 8 host bits, so $2^8=256$ addresses (254 usable typically, minus network/broadcast). Private ranges (RFC1918): `10/8`, `172.16/12`, `192.168/16`. Subnetting carves a prefix into smaller prefixes for departments or security zones. **Longest prefix match** (Phase 6) depends on this hierarchy.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Addresses are hierarchical prefixes, not flat names - so routing scales by aggregation.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  192.168.1.10/24
 
  Address:  11000000.10101000.00000001.00001010
@@ -971,7 +969,7 @@ Know on sight: `127.0.0.0/8` loopback, `169.254.0.0/16` link-local (APIPA), mult
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  IPv4 private + public NAT (Phase 7) was the band-aid.
  IPv6 goal: enough addresses that every host can be unique again.
  Reality: enterprise adoption uneven; dual-stack common.
@@ -1046,7 +1044,7 @@ print(addr.is_link_local, addr.version)
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Packet dst = 10.1.5.9
 
  Table:
@@ -1124,7 +1122,7 @@ Distance vector: share tables with neighbors; risk count-to-infinity (mitigation
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Campus:  OSPF builds map -> shortest path trees -> forwarding tables
  Internet: eBGP announces prefixes between ASes
            iBGP distributes external routes inside an AS
@@ -1210,7 +1208,7 @@ ARP: broadcast request, unicast reply, cache entries. Gratuitous ARP updates. Sp
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Send to 8.8.8.8:
    1. Routing: next hop = 192.168.1.1 (local gateway)
    2. ARP: who-has 192.168.1.1? -> MAC aa:bb:...
@@ -1281,7 +1279,7 @@ Outbound: rewrite src IP/port; keep a mapping table; reverse on replies. Inbound
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Laptop 192.168.1.10:52344 -> 93.184.216.34:443
  Router public 203.0.113.5:
 
@@ -1377,7 +1375,7 @@ OSI: Physical, Data Link, Network, Transport, Session, Presentation, Application
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  SEND:
    HTTP message
      -> TCP segment (+ ports, seq)
@@ -1447,7 +1445,7 @@ Well-known ports (80, 443, 53, 22). Ephemeral client ports. UDP and TCP port spa
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Browser tab1: (you:52344) <-> (server:443)
  Browser tab2: (you:52345) <-> (server:443)
  Same server port; different client ports => different sockets.
@@ -1516,19 +1514,22 @@ s.close()
 
 **STEP-BY-STEP EXPLANATION**
 
-UDP header: src port, dst port, length, checksum (~8 bytes). No connection, no ACK, no ordering, no congestion control (app/QUIC may add). Preserves message boundaries: one `sendto` ≈ one `recvfrom` (or loss). Applications must handle loss, duplication, and congestion ethics (or use QUIC/HTTP3).
+UDP header: src port, dst port, length, checksum (~8 bytes). No connection, no ACK, no ordering, no congestion control (app/QUIC may add). Preserves message boundaries: one `sendto` usually corresponds to one `recvfrom` (or loss). Applications must handle loss, duplication, and congestion ethics (or use QUIC/HTTP3).
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Offer a thin demultiplexed datagram service; let apps choose reliability policy.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- CLIENT                         SERVER
-   |---- DNS query datagram ---->|
-   |---- (lost) ----------------X|
-   |---- retry ----------------->|
-   |<--- response ---------------|
- No handshake. First packet is data.
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant S as Server
+    Note over C,S: No handshake, first packet is data
+    C->>S: DNS query datagram
+    C-xS: Datagram lost
+    Note over C: Timeout
+    C->>S: Retry query
+    S-->>C: DNS response
 ```
 
 **PICTURE IT LIKE THIS**
@@ -1594,7 +1595,7 @@ QUIC = modern transport features in user space over UDP: crypto handshake fused 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  HTTP/3
    |
   QUIC (reliability, CC, TLS)
@@ -1667,23 +1668,25 @@ print("HTTP/3 stack: App -> QUIC -> UDP -> IP")
 
 **STEP-BY-STEP EXPLANATION**
 
-Three-way handshake: SYN, SYN-ACK, ACK. Sequence numbers number bytes. ACKs cumulatively confirm receipt; loss triggers retransmit (RTO or fast retransmit on dup ACKs). TCP is a **stream**: `send` boundaries ≠ `recv` boundaries - apps must frame (length prefix / delimiters). Teardown is FIN/ACK each direction; TIME_WAIT holds the tuple.
+Three-way handshake: SYN, SYN-ACK, ACK. Sequence numbers number bytes. ACKs cumulatively confirm receipt; loss triggers retransmit (RTO or fast retransmit on dup ACKs). TCP is a **stream**: `send` boundaries do not match `recv` boundaries - apps must frame (length prefix / delimiters). Teardown is FIN/ACK each direction; TIME_WAIT holds the tuple.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Number every byte, ACK progress, retransmit holes, present a clean stream API upward.
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- CLIENT                                   SERVER
-   |-- SYN seq=1000 ---------------------->|
-   |<-- SYN-ACK seq=5000 ack=1001 ---------|
-   |-- ACK ack=5001 ---------------------->|
-   |-- data "GET /" ---------------------->|
-   ...
-   |-- FIN ------------------------------->|
-   |<-- ACK -------------------------------|
-   |<-- FIN -------------------------------|
-   |-- ACK ------------------------------->|
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant S as Server
+    C->>S: SYN seq=1000
+    S-->>C: SYN-ACK seq=5000, ack=1001
+    C->>S: ACK ack=5001
+    C->>S: Data "GET /"
+    S-->>C: ACK
+    C->>S: FIN
+    S-->>C: ACK
+    S-->>C: FIN
+    C->>S: ACK
 ```
 
 **PICTURE IT LIKE THIS**
@@ -1752,7 +1755,7 @@ Flow control: receiver advertises window. Congestion control: sender cwnd - slow
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  cwnd
   ^     /|    /|
   |    / |   / |
@@ -1837,7 +1840,7 @@ TCP server: `socket -> bind -> listen -> accept` loop. TCP client: `socket -> co
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  SERVER                         CLIENT
  socket()                       socket()
  bind(port)                     |
@@ -1923,7 +1926,7 @@ Framing strategies: length prefix, delimiter (`\n`), or self-describing codecs. 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Want message "HELLO\n":
    recv -> "HE"
    recv -> "LLO\n"  concatenate until delimiter
@@ -2015,12 +2018,24 @@ Query types: A/AAAA (addresses), CNAME (alias), MX (mail), NS (nameserver), TXT 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- App -> Stub -> Recursive Resolver
-                  |-- root: "ask .com"
-                  |-- TLD:  "ask example.com NS"
-                  |-- Auth: "A 93.184.216.34"
-              <- answer (+ cache until TTL)
+```mermaid
+sequenceDiagram
+    participant A as App
+    participant S as Stub resolver
+    participant R as Recursive resolver
+    participant Root as Root server
+    participant TLD as .com TLD
+    participant Auth as example.com authoritative
+    A->>S: Resolve example.com
+    S->>R: Recursive query
+    R->>Root: Query example.com
+    Root-->>R: Ask .com
+    R->>TLD: Query example.com
+    TLD-->>R: Ask example.com name server
+    R->>Auth: Query record
+    Auth-->>R: Return answer
+    R-->>S: Cache and return answer
+    S-->>A: Return IP address
 ```
 
 **PICTURE IT LIKE THIS**
@@ -2076,7 +2091,7 @@ Glue records, apex CNAME restrictions, split-horizon DNS, and anycast resolvers 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Change A record TTL 3600 -> wait up to 1 hour for caches.
  For fast failover: lower TTL *before* maintenance, then switch.
 ```
@@ -2150,14 +2165,14 @@ Request line + headers + optional body. Response status (2xx success, 3xx redire
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- CLIENT                                  SERVER
-   |-- GET /index.html HTTP/1.1 -------->|
-   |   Host: example.com                 |
-   |   Connection: close                 |
-   |<-- HTTP/1.1 200 OK -----------------|
-   |   Content-Type: text/html           |
-   |   <html>...                         |
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant S as Server
+    C->>S: GET /index.html HTTP/1.1
+    Note right of C: Host: example.com, Connection: close
+    S-->>C: HTTP/1.1 200 OK
+    Note left of S: Content-Type: text/html, followed by the HTML body
 ```
 
 **PICTURE IT LIKE THIS**
@@ -2216,11 +2231,11 @@ H2: binary frames, streams, HPACK header compression, server push (rarely used n
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- HTTP/1.1: many TCP conns, text
- HTTP/2:   one TCP, many streams, binary - TCP loss blocks all streams
- HTTP/3:   QUIC/UDP, many streams - loss isolates better
-```
+| Version | Connection and framing | Loss behavior |
+| --- | --- | --- |
+| HTTP/1.1 | Multiple TCP connections; text protocol | Parallelism relies on multiple connections |
+| HTTP/2 | One TCP connection; many binary streams | TCP loss blocks all streams on the connection |
+| HTTP/3 | QUIC over UDP; many streams | Loss is isolated more effectively between streams |
 
 **PICTURE IT LIKE THIS**
 
@@ -2290,7 +2305,7 @@ TLS handshake negotiates keys; modern TLS 1.3 is leaner (fewer RTTs). Certificat
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  TCP handshake
    then TLS 1.3 handshake (certs, key agreement)
      then HTTP request bytes (encrypted records)
@@ -2354,7 +2369,7 @@ Chain building, intermediate certs, OCSP/CRL revocation (imperfect), CT logs, an
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  leaf cert --signed by--> intermediate --signed by--> root (in trust store)
  If intermediate missing on server: some clients fail.
 ```
@@ -2426,13 +2441,11 @@ Capture on the right interface; avoid capturing yourself into a loop. Use captur
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- 1. Reproduce issue
- 2. Capture near the failing endpoint
- 3. Filter to 4-tuple of interest
- 4. Ask: DNS fail? TCP SYN no SYN-ACK? TLS alert? HTTP 5xx?
- 5. Save pcap + notes for the incident ticket
-```
+1. Reproduce issue
+2. Capture near the failing endpoint
+3. Filter to 4-tuple of interest
+4. Ask: DNS fail? TCP SYN no SYN-ACK? TLS alert? HTTP 5xx?
+5. Save pcap + notes for the incident ticket
 
 **PICTURE IT LIKE THIS**
 
@@ -2491,7 +2504,7 @@ Quick ladder: link up? ARP/neigh for gateway? ping gateway? ping public IP? DNS 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Symptom: browser spin
    DNS NXDOMAIN? -> DNS
    SYN no reply? -> filter/routing/blackhole
@@ -2577,9 +2590,7 @@ STA associates with AP; authentication/association states; encryption (WPA2/WPA3
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
  Device scan -> pick SSID -> auth/assoc -> 4-way handshake (WPA) -> get IP (DHCP) -> IP traffic
-```
 
 **PICTURE IT LIKE THIS**
 
@@ -2632,7 +2643,7 @@ Airtime is the scarce resource, not only Mbps peak PHY rate. Low RSSI → lower 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Low RSSI -> rate down -> each TCP segment costs more airtime
  -> AP queues grow -> RTT spikes -> TCP may back off
  Looks like "Internet congestion" but fix is RF/channel/AP placement
@@ -2706,10 +2717,14 @@ L4 LB balances TCP/UDP tuples; L7 LB routes on HTTP host/path and can do sticky 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
- Client -> DNS -> LB VIP
-              -> healthy backend A/B/C
- Health check fail on B -> remove from pool
+```mermaid
+flowchart TD
+    C["Client"] --> D["DNS"]
+    D --> L["Load-balancer VIP"]
+    L --> H{"Backend healthy?"}
+    H -->|A healthy| A["Backend A"]
+    H -->|B failed| X["Remove B from pool"]
+    H -->|C healthy| C2["Backend C"]
 ```
 
 **PICTURE IT LIKE THIS**
@@ -2773,7 +2788,7 @@ Cache-Control headers decide what can be stored. Cache HIT/MISS/BYPASS. Purge/in
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  User -> edge PoP (HIT? return : fetch origin, maybe cache)
  Deploy new asset -> purge or versioned URL (better)
 ```
@@ -2846,7 +2861,7 @@ eBGP between ASes; iBGP inside. AS paths loop-prevent. Attributes (local pref, M
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  AS64500 (ISP) --transit--> AS64501 (enterprise)
  AS64502 (CDN) --peer------> AS64500
  Traffic prefers policy: local pref to peer may beat shorter AS path via transit
@@ -2907,7 +2922,7 @@ Operators should announce only their prefixes. Customers should not be used as t
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Without filters: AS evil announces 0.0.0.0/0 or victim prefix -> traffic redirects
  With filters + RPKI: invalid origins dropped/rejected per policy
 ```
@@ -2983,7 +2998,7 @@ Minimum viable portfolio: (1) TCP/UDP socket project with framing; (2) annotated
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  For each lab:
    Goal -> Steps -> Evidence (pcap/screenshot) -> What broke -> What I learned
  Publish to GitHub; link from resume.
@@ -3042,9 +3057,7 @@ Start with: inventory source of truth, intentional config generation, dry-run di
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
  NetBox inventory -> generate config -> review diff -> push N devices -> validate tests
-```
 
 **PICTURE IT LIKE THIS**
 
@@ -3114,7 +3127,7 @@ A strong answer: browser cache/HSTS → DNS (stub/recursive/records) → connect
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
+```text
  Type URL
   -> parse scheme/host/path
   -> DNS
@@ -3183,9 +3196,7 @@ Design prompt checklist: requirements (latency, RPS, consistency), assumptions, 
 
 **WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
 
-```
  Clarify -> Diagram -> Data plane path -> Control plane (DNS/BGP) -> Failure drills -> Metrics
-```
 
 **PICTURE IT LIKE THIS**
 

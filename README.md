@@ -60,7 +60,7 @@ Each roadmap section follows the same shape so you always know where to look:
 
 **Revision:** jump straight to *Why you are learning this* and *Why the next topic is needed*; those two rebuild the reasoning.
 
-**Proof:** pick 1-2 builds from [`Projects.md`](./Projects.md) per related group of phases, then write and publish a clear README.
+**Practice:** after each phase, open its matching card in [`Projects.md`](./Projects.md) and follow the build steps.
 
 ---
 
@@ -75,15 +75,15 @@ CS Phases 1-2  →  OOP.md (Part 0 fundamentals + Phases 1-20)  →  CS Phase 3+
                  →  Interview.md before applications
 ```
 
-**Odoo path:** finish [`OOP.md`](./OOP.md) (including Part 0), then [`ODOO.md`](./ODOO.md), and finish and publish the Odoo projects from [`Projects.md`](./Projects.md).
+**Odoo path:** finish [`OOP.md`](./OOP.md) (including Part 0), then [`ODOO.md`](./ODOO.md), and build the matching Odoo phase projects from [`Projects.md`](./Projects.md).
 
-**Web developer path:** learn programming fundamentals in [`OOP.md`](./OOP.md) Part 0, then follow [`Web.md`](./Web.md) from browser fundamentals through frontend/backend tools, REST APIs, security, testing, and deployment. Pair Phase 1/6 with [`Networks.md`](./Networks.md), Phase 13 with [`Data.md`](./Data.md), and finish and publish the `WEB-*` builds in [`Projects.md`](./Projects.md).
+**Web developer path:** learn programming fundamentals in [`OOP.md`](./OOP.md) Part 0, then follow [`Web.md`](./Web.md) from browser fundamentals through frontend/backend tools, REST APIs, security, testing, and deployment. Pair Phase 1/6 with [`Networks.md`](./Networks.md), Phase 13 with [`Data.md`](./Data.md), and follow the matching Web phase builds in [`Projects.md`](./Projects.md).
 
-**Cloud engineer path:** learn Linux and network fundamentals in [`cloud.md`](./cloud.md) Phases 1-2, deepen packet and systems reasoning with [`Networks.md`](./Networks.md) and [`CS.md`](./CS.md) Phases 11-12, then complete cloud identity, networking, data, security, reliability, FinOps, and migration. Finish and publish the `CLOUD-*` builds, then practice Interview Track G.
+**Cloud engineer path:** learn Linux and network fundamentals in [`cloud.md`](./cloud.md) Phases 1-2, deepen packet and systems reasoning with [`Networks.md`](./Networks.md) and [`CS.md`](./CS.md) Phases 11-12, then complete cloud identity, networking, data, security, reliability, FinOps, and migration. Follow the matching Cloud phase builds, then practice Interview Track G.
 
-**DevOps engineer path:** follow [`devops.md`](./devops.md) from delivery flow through Linux, Git, automation, CI/CD, containers, Kubernetes, IaC, observability, SRE, DevSecOps, GitOps, and incidents. Pair Phase 13 with [`cloud.md`](./cloud.md), finish and publish the `DEVOPS-*` projects, and practice Interview Track H.
+**DevOps engineer path:** follow [`devops.md`](./devops.md) from delivery flow through Linux, Git, automation, CI/CD, containers, Kubernetes, IaC, observability, SRE, DevSecOps, GitOps, and incidents. Pair Phase 13 with [`cloud.md`](./cloud.md), follow the matching DevOps phase builds, and practice Interview Track H.
 
-**Cybersecurity path:** start [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) Phase 1. Pair it with [`Networks.md`](./Networks.md) when packet behavior becomes more detailed. Practice only in authorized labs (PortSwigger, TryHackMe, HTB, or your own home lab). Publish the write-ups and detection rules from Phase 19, then practice the Phase 20 interviews.
+**Cybersecurity path:** start [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) Phase 1. Pair it with [`Networks.md`](./Networks.md) when packet behavior becomes more detailed. Practice only in authorized labs (PortSwigger, TryHackMe, HTB, or your own home lab), then practice the Phase 20 interviews.
 
 ```
 Mindset → Networks/OS → Crypto/IAM → Web/Defend → Detect/Respond → Cloud → Portfolio → Hire
@@ -164,7 +164,7 @@ Code basics → Think → Pillars → SOLID → Patterns → LLD → Hire
 | 16 | Testing OOP | Fakes via dependency inversion |
 | 17 | Layers & Clean-ish Architecture | Keep policy independent of I/O |
 | 18 | LLD Method | Design under interview pressure |
-| 19 | Portfolio | Finish and publish designs with clear write-ups |
+| 19 | Portfolio | Finish complete designs that you can explain clearly |
 | 20 | Interviews | Speak pillars, SOLID, and trade-offs |
 
 ---
@@ -366,8 +366,8 @@ Browser -> HTML/CSS -> JavaScript -> Frameworks -> Server -> Data -> APIs -> Sec
 ```
 
 - **Frontend path:** read Phases 1-10, 15-16, and 19-20 deeply; skim 11-14 for API literacy.
-- **Backend/API path:** read Phases 1-7 quickly, then study 11-18 carefully; still finish and publish one React interface.
-- **Full-stack path:** complete all phases in order, then finish and publish the Phase 19 capstone.
+- **Backend/API path:** read Phases 1-7 quickly, then study 11-18 carefully; still finish one React interface.
+- **Full-stack path:** complete all phases in order, then finish the Phase 19 capstone.
 
 | # | Phase | Goal |
 |--:|-------|------|
@@ -465,19 +465,21 @@ Flow -> Linux/Git/Automation -> Artifact/CI/CD -> Containers/Kubernetes -> IaC/C
 ## Projects Playbook
 
 **File:** [`Projects.md`](./Projects.md)  
-**Scope:** Small-to-medium builds mapped to the roadmaps (fundamentals/OOP, CS, Data, Networks, AI, Cybersecurity, Odoo, Web, Cloud, DevOps, capstones, interview drills).
+**Scope:** A detailed mini-project for every phase plus one complete portfolio capstone for every 20-phase roadmap.
 
-Every roadmap phase ends with an exact link into the [phase-by-phase project navigator](./Projects.md#phase-by-phase-project-navigator). Each heading-based project section contains a recommended build, an alternative project, specifications, GitHub examples, a YouTube build or lab, a review link, and a link that resumes the next roadmap phase.
+Every roadmap phase links to one matching mini-project card. After Phase 20, the roadmap links to a complete portfolio project with intended users, a free/open-source stack, exactly 20 phase-mapped build steps, and a no-cost deployment path.
+
+Every mini-project ends with two navigation links: one returns to the phase you just studied, and the other continues to the next roadmap phase. Phase 20 continues to the larger main portfolio project.
 
 ```
-Build → Explain → Write and publish the README → Practice with Interview.md
+Learn each phase → Build its mini-project → Finish Phase 20 → Build the complete portfolio project
 ```
 
-- Pick **1-2 projects per phase cluster**, not a pile of abandoned repos.  
-- Use the phase-end project link when you want one build aligned exactly to what you just learned.
-- Each card has: goal, concepts, difficulty, steps, done-when, stretch.  
-- Capstones combine tracks (for example ERP-lite inventory, Odoo + API, RAG on your own notes).  
-- **Cybersecurity proof:** lab writeups, home SIEM + detections (Sigma), Juice Shop remediations, cloud IAM harden notes - see [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) Phase 19.
+- Finish the mini-project for the phase you just studied.
+- Use the listed tech stack so you do not have to guess which tools to choose.
+- Follow the numbered steps in order and keep the first version small.
+- After Phase 20, build the track capstone in order from Phase 1 through Phase 20.
+- For cybersecurity projects, use only systems you own or are explicitly authorized to test.
 
 ---
 
@@ -509,7 +511,7 @@ Build → Explain → Write and publish the README → Practice with Interview.m
 1. Pick a primary track: [`CS.md`](./CS.md), [`Data.md`](./Data.md), [`Networks.md`](./Networks.md), [`AI.md`](./AI.md), [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md), [`ODOO.md`](./ODOO.md), [`Web.md`](./Web.md), [`cloud.md`](./cloud.md), or [`devops.md`](./devops.md).
 2. If new to coding, start [`OOP.md`](./OOP.md) **Part 0**. On the SWE path: after CS Phases 1-2, finish OOP before CS Phase 3.
 3. Start at Phase 1 (or Part 0). Do not skip bridges on the first pass.
-4. After each related group of phases, finish and publish 1-2 items from [`Projects.md`](./Projects.md) (or the cybersecurity write-ups and detection rules from Phase 19).
+4. After each phase, follow its matching beginner-friendly mini-project in [`Projects.md`](./Projects.md). After Phase 20, build that track's main portfolio project.
 5. Use mastery checkpoints before moving on.
 6. Drill spoken answers in [`Interview.md`](./Interview.md) (or Cyber Phase 20 for security roles).
 
@@ -519,14 +521,14 @@ Build → Explain → Write and publish the README → Practice with Interview.m
 |------|------------|------------|
 | Absolute beginner | `OOP.md` Part 0 → Phases 1+ | `Projects.md` fundamentals + `Interview.md` A |
 | Software Engineer | `CS.md` → `OOP.md` → CS Phase 3+ | `Networks.md` essentials + `Projects.md` + `Interview.md` A/C/F |
-| Frontend Developer | `OOP.md` Part 0 → `Web.md` Phases 1-10, 15-16 | `Projects.md` WEB-01 to WEB-03 + `Interview.md` W |
-| Backend/API Developer | `CS.md` foundations → `Web.md` Phases 11-18 | `Data.md` SQL + `Projects.md` WEB-04/05 + `Interview.md` W/A |
-| Full-stack Developer | `OOP.md` Part 0 → `Web.md` full | `Projects.md` WEB-01 to WEB-06 + `Interview.md` W/C/F |
+| Frontend Developer | `OOP.md` Part 0 → `Web.md` Phases 1-10, 15-16 | Matching Web phase projects + `Interview.md` W |
+| Backend/API Developer | `CS.md` foundations → `Web.md` Phases 11-18 | `Data.md` SQL + matching Web phase projects + `Interview.md` W/A |
+| Full-stack Developer | `OOP.md` Part 0 → `Web.md` full | All Web phase projects + `Interview.md` W/C/F |
 | Data Analyst | `Data.md` (through Phase 10) | `Projects.md` data + `Interview.md` B |
 | Data Engineer | `Data.md` full | `Projects.md` data + `Interview.md` B |
 | Network / Infra | `Networks.md` | `Projects.md` networks + `Interview.md` C/F |
-| Cloud Engineer | `cloud.md` | `Networks.md` essentials + `Projects.md` CLOUD-* + `Interview.md` G/F |
-| DevOps Engineer | `devops.md` | `cloud.md` foundations + `Projects.md` DEVOPS-* + `Interview.md` H/G/F |
+| Cloud Engineer | `cloud.md` | `Networks.md` essentials + matching Cloud phase projects + `Interview.md` G/F |
+| DevOps Engineer | `devops.md` | `cloud.md` foundations + matching DevOps phase projects + `Interview.md` H/G/F |
 | AI / ML Engineer | `AI.md` | `Projects.md` AI + `Interview.md` D |
 | SOC Analyst | `ICT_Cybersecurity.md` (blue path) | Phase 13-14 labs + Security+ / CySA+ |
 | Security Engineer | `ICT_Cybersecurity.md` (SecEng path) | AppSec + cloud projects + Phase 20 |

@@ -314,7 +314,7 @@ To watch the compiled version of this idea, paste any small C function into [Com
 
 ---
 
-> **Phase 1 complete?** [Build the aligned project](./Projects.md#cs-phase-1-project) · [Continue to Phase 2](#phase-2---complexity-analysis)
+> **Phase 1 complete?** [Build the Phase 1 mini-project](./Projects.md#cs-phase-1-project) · [Continue to Phase 2](#phase-2---complexity-analysis)
 
 <a id="phase-2"></a>
 
@@ -418,7 +418,7 @@ An interviewer almost never asks "what is Big O" directly - they expect you to s
 
 ---
 
-> **Phase 2 complete?** [Build the aligned project](./Projects.md#cs-phase-2-project) · [Continue to Phase 3](#phase-3---linear-data-structures)
+> **Phase 2 complete?** [Build the Phase 2 mini-project](./Projects.md#cs-phase-2-project) · [Continue to Phase 3](#phase-3---linear-data-structures)
 
 <a id="phase-3"></a>
 
@@ -726,7 +726,7 @@ Queues rarely star on their own - they're the *engine* underneath breadth-first 
 
 ---
 
-> **Phase 3 complete?** [Build the aligned project](./Projects.md#cs-phase-3-project) · [Continue to Phase 4](#phase-4---recursion)
+> **Phase 3 complete?** [Build the Phase 3 mini-project](./Projects.md#cs-phase-3-project) · [Continue to Phase 4](#phase-4---recursion)
 
 <a id="phase-4"></a>
 
@@ -813,7 +813,7 @@ Interviewers watch for two things: can you state a correct base case on the firs
 
 ---
 
-> **Phase 4 complete?** [Build the aligned project](./Projects.md#cs-phase-4-project) · [Continue to Phase 5](#phase-5---hierarchical--priority-structures)
+> **Phase 4 complete?** [Build the Phase 4 mini-project](./Projects.md#cs-phase-4-project) · [Continue to Phase 5](#phase-5---hierarchical--priority-structures)
 
 <a id="phase-5"></a>
 
@@ -1041,7 +1041,7 @@ def k_largest(nums, k):
 
 ---
 
-> **Phase 5 complete?** [Build the aligned project](./Projects.md#cs-phase-5-project) · [Continue to Phase 6](#phase-6---hashing)
+> **Phase 5 complete?** [Build the Phase 5 mini-project](./Projects.md#cs-phase-5-project) · [Continue to Phase 6](#phase-6---hashing)
 
 <a id="phase-6"></a>
 
@@ -1126,7 +1126,7 @@ The single most common upgrade path in an interview is "brute force with nested 
 
 ---
 
-> **Phase 6 complete?** [Build the aligned project](./Projects.md#cs-phase-6-project) · [Continue to Phase 7](#phase-7---order-sorting--binary-search)
+> **Phase 6 complete?** [Build the Phase 6 mini-project](./Projects.md#cs-phase-6-project) · [Continue to Phase 7](#phase-7---order-sorting--binary-search)
 
 <a id="phase-7"></a>
 
@@ -1288,7 +1288,7 @@ Binary search is deceptively easy to state and notoriously easy to get wrong at 
 
 ---
 
-> **Phase 7 complete?** [Build the aligned project](./Projects.md#cs-phase-7-project) · [Continue to Phase 8](#phase-8---graphs)
+> **Phase 7 complete?** [Build the Phase 7 mini-project](./Projects.md#cs-phase-7-project) · [Continue to Phase 8](#phase-8---graphs)
 
 <a id="phase-8"></a>
 
@@ -1600,7 +1600,7 @@ def dfs(graph, start, visited=None, order=None):
 
 ---
 
-> **Phase 8 complete?** [Build the aligned project](./Projects.md#cs-phase-8-project) · [Continue to Phase 9](#phase-9---algorithmic-patterns)
+> **Phase 8 complete?** [Build the Phase 8 mini-project](./Projects.md#cs-phase-8-project) · [Continue to Phase 9](#phase-9---algorithmic-patterns)
 
 <a id="phase-9"></a>
 
@@ -2057,7 +2057,7 @@ class Trie:
 
 ---
 
-> **Phase 9 complete?** [Build the aligned project](./Projects.md#cs-phase-9-project) · [Continue to Phase 10](#phase-10---object-oriented-programming--low-level-design)
+> **Phase 9 complete?** [Build the Phase 9 mini-project](./Projects.md#cs-phase-9-project) · [Continue to Phase 10](#phase-10---object-oriented-programming--low-level-design)
 
 <a id="phase-10"></a>
 
@@ -2386,7 +2386,7 @@ Design a small library-management or parking-lot system on paper or in code: cla
 
 ---
 
-> **Phase 10 complete?** [Build the aligned project](./Projects.md#cs-phase-10-project) · [Continue to Phase 11](#phase-11---operating-systems)
+> **Phase 10 complete?** [Build the Phase 10 mini-project](./Projects.md#cs-phase-10-project) · [Continue to Phase 11](#phase-11---operating-systems)
 
 <a id="phase-11"></a>
 
@@ -3056,7 +3056,7 @@ Write a small multi-threaded counter increment program without a lock, observe t
 
 ---
 
-> **Phase 11 complete?** [Build the aligned project](./Projects.md#cs-phase-11-project) · [Continue to Phase 12](#phase-12---computer-networks)
+> **Phase 11 complete?** [Build the Phase 11 mini-project](./Projects.md#cs-phase-11-project) · [Continue to Phase 12](#phase-12---computer-networks)
 
 <a id="phase-12"></a>
 
@@ -3782,7 +3782,7 @@ DNS shows up in three predictable places. First, inside "what happens when you t
 
 ---
 
-> **Phase 12 complete?** [Build the aligned project](./Projects.md#cs-phase-12-project) · [Continue to Phase 13](#phase-13---web-http--apis)
+> **Phase 12 complete?** [Build the Phase 12 mini-project](./Projects.md#cs-phase-12-project) · [Continue to Phase 13](#phase-13---web-http--apis)
 
 <a id="phase-13"></a>
 
@@ -4390,7 +4390,7 @@ Design the full REST API surface (all endpoints, methods, and status codes) for 
 
 ---
 
-> **Phase 13 complete?** [Build the aligned project](./Projects.md#cs-phase-13-project) · [Continue to Phase 14](#phase-14---databases--data-modeling)
+> **Phase 13 complete?** [Build the Phase 13 mini-project](./Projects.md#cs-phase-13-project) · [Continue to Phase 14](#phase-14---databases--data-modeling)
 
 <a id="phase-14"></a>
 
@@ -6743,7 +6743,7 @@ Design a normalized schema (Phase 14.3) for a small e-commerce system (users, pr
 
 ---
 
-> **Phase 14 complete?** [Build the aligned project](./Projects.md#cs-phase-14-project) · [Continue to Phase 15](#phase-15---authentication--security)
+> **Phase 14 complete?** [Build the Phase 14 mini-project](./Projects.md#cs-phase-14-project) · [Continue to Phase 15](#phase-15---authentication--security)
 
 <a id="phase-15"></a>
 
@@ -8419,7 +8419,7 @@ Take the REST API you designed in Phase 13.2's mini-project and, for each endpoi
 
 ---
 
-> **Phase 15 complete?** [Build the aligned project](./Projects.md#cs-phase-15-project) · [Continue to Phase 16](#phase-16---software-engineering--testing)
+> **Phase 15 complete?** [Build the Phase 15 mini-project](./Projects.md#cs-phase-15-project) · [Continue to Phase 16](#phase-16---software-engineering--testing)
 
 <a id="phase-16"></a>
 
@@ -9683,7 +9683,7 @@ git log --format='%H %aI' main | head -50        # deployment frequency
 
 ---
 
-> **Phase 16 complete?** [Build the aligned project](./Projects.md#cs-phase-16-project) · [Continue to Phase 17](#phase-17---system-design--scalability)
+> **Phase 16 complete?** [Build the Phase 16 mini-project](./Projects.md#cs-phase-16-project) · [Continue to Phase 17](#phase-17---system-design--scalability)
 
 <a id="phase-17"></a>
 
@@ -11051,7 +11051,7 @@ System design interviews are explicitly graded on process, not a single correct 
 
 ---
 
-> **Phase 17 complete?** [Build the aligned project](./Projects.md#cs-phase-17-project) · [Continue to Phase 18](#phase-18---distributed-systems)
+> **Phase 17 complete?** [Build the Phase 17 mini-project](./Projects.md#cs-phase-17-project) · [Continue to Phase 18](#phase-18---distributed-systems)
 
 <a id="phase-18"></a>
 
@@ -11995,7 +11995,7 @@ Deep distributed-systems questions ("how would you build a leader-election mecha
 
 ---
 
-> **Phase 18 complete?** [Build the aligned project](./Projects.md#cs-phase-18-project) · [Continue to Phase 19](#phase-19---projects)
+> **Phase 18 complete?** [Build the Phase 18 mini-project](./Projects.md#cs-phase-18-project) · [Continue to Phase 19](#phase-19---projects)
 
 <a id="phase-19"></a>
 
@@ -12454,7 +12454,7 @@ Each project should end with you writing a short explanation of every trade-off 
 
 ---
 
-> **Phase 19 complete?** [Build the aligned project](./Projects.md#cs-phase-19-project) · [Continue to Phase 20](#phase-20---interview-mastery)
+> **Phase 19 complete?** [Build the Phase 19 mini-project](./Projects.md#cs-phase-19-project) · [Continue to Phase 20](#phase-20---interview-mastery)
 
 <a id="phase-20"></a>
 
@@ -13887,7 +13887,7 @@ The thing worth carrying from this section into the real interview is a change i
 
 ---
 
-> **Phase 20 complete?** [Build the aligned project](./Projects.md#cs-phase-20-project) · [Return to the phase index](#phase-index)
+> **Phase 20 complete?** [Build the Phase 20 mini-project](./Projects.md#cs-phase-20-project) · [Build the complete CS portfolio project](./Projects.md#cs-main-portfolio-project) · [Return to the phase index](#phase-index)
 
 ---
 

@@ -298,7 +298,7 @@ Scaffold Vite + React or plain HTML repo with npm scripts documented.
 
 ---
 
-> **Phase 1 complete?** [Build the aligned project](./Projects.md#web-phase-1-project) · [Continue to Phase 2](#phase-2---html-foundations)
+> **Phase 1 complete?** [Build the Phase 1 mini-project](./Projects.md#web-phase-1-project) · [Continue to Phase 2](#phase-2---html-foundations)
 
 <a id="phase-2"></a>
 
@@ -459,7 +459,7 @@ Contact form with client hints + documented server rules (even if mocked).
 
 ---
 
-> **Phase 2 complete?** [Build the aligned project](./Projects.md#web-phase-2-project) · [Continue to Phase 3](#phase-3---css-fundamentals)
+> **Phase 2 complete?** [Build the Phase 2 mini-project](./Projects.md#web-phase-2-project) · [Continue to Phase 3](#phase-3---css-fundamentals)
 
 <a id="phase-3"></a>
 
@@ -611,7 +611,7 @@ Light/dark toggle using only CSS variables + one class on html.
 
 ---
 
-> **Phase 3 complete?** [Build the aligned project](./Projects.md#web-phase-3-project) · [Continue to Phase 4](#phase-4---css-layout--responsive-design)
+> **Phase 3 complete?** [Build the Phase 3 mini-project](./Projects.md#web-phase-3-project) · [Continue to Phase 4](#phase-4---css-layout--responsive-design)
 
 <a id="phase-4"></a>
 
@@ -765,7 +765,7 @@ Dashboard layout: sidebar collapses to drawer under 768px.
 
 ---
 
-> **Phase 4 complete?** [Build the aligned project](./Projects.md#web-phase-4-project) · [Continue to Phase 5](#phase-5---javascript-fundamentals)
+> **Phase 4 complete?** [Build the Phase 4 mini-project](./Projects.md#web-phase-4-project) · [Continue to Phase 5](#phase-5---javascript-fundamentals)
 
 <a id="phase-5"></a>
 
@@ -933,7 +933,7 @@ Weather widget: fetch public API, render loading/error/data states.
 
 ---
 
-> **Phase 5 complete?** [Build the aligned project](./Projects.md#web-phase-5-project) · [Continue to Phase 6](#phase-6---browser-apis--tooling)
+> **Phase 5 complete?** [Build the Phase 5 mini-project](./Projects.md#web-phase-5-project) · [Continue to Phase 6](#phase-6---browser-apis--tooling)
 
 <a id="phase-6"></a>
 
@@ -1092,7 +1092,7 @@ Vite project with dev/build/preview scripts and .env.example.
 
 ---
 
-> **Phase 6 complete?** [Build the aligned project](./Projects.md#web-phase-6-project) · [Continue to Phase 7](#phase-7---typescript-for-web)
+> **Phase 6 complete?** [Build the Phase 6 mini-project](./Projects.md#web-phase-6-project) · [Continue to Phase 7](#phase-7---typescript-for-web)
 
 <a id="phase-7"></a>
 
@@ -1244,7 +1244,7 @@ Typed fetch helper ApiResponse<T> used in two endpoints.
 
 ---
 
-> **Phase 7 complete?** [Build the aligned project](./Projects.md#web-phase-7-project) · [Continue to Phase 8](#phase-8---react-fundamentals)
+> **Phase 7 complete?** [Build the Phase 7 mini-project](./Projects.md#web-phase-7-project) · [Continue to Phase 8](#phase-8---react-fundamentals)
 
 <a id="phase-8"></a>
 
@@ -1415,7 +1415,7 @@ Login form controlled fields + fetch on submit + error state.
 
 ---
 
-> **Phase 8 complete?** [Build the aligned project](./Projects.md#web-phase-8-project) · [Continue to Phase 9](#phase-9---react-patterns--state)
+> **Phase 8 complete?** [Build the Phase 8 mini-project](./Projects.md#web-phase-8-project) · [Continue to Phase 9](#phase-9---react-patterns--state)
 
 <a id="phase-9"></a>
 
@@ -1580,7 +1580,7 @@ Theme context + useQuery list/detail with loading/error UI.
 
 ---
 
-> **Phase 9 complete?** [Build the aligned project](./Projects.md#web-phase-9-project) · [Continue to Phase 10](#phase-10---nextjs--full-stack-react)
+> **Phase 9 complete?** [Build the Phase 9 mini-project](./Projects.md#web-phase-9-project) · [Continue to Phase 10](#phase-10---nextjs--full-stack-react)
 
 <a id="phase-10"></a>
 
@@ -1745,7 +1745,7 @@ CRUD notes app with route handlers + SQLite/Prisma.
 
 ---
 
-> **Phase 10 complete?** [Build the aligned project](./Projects.md#web-phase-10-project) · [Continue to Phase 11](#phase-11---nodejs--express)
+> **Phase 10 complete?** [Build the Phase 10 mini-project](./Projects.md#web-phase-10-project) · [Continue to Phase 11](#phase-11---nodejs--express)
 
 <a id="phase-11"></a>
 
@@ -1922,7 +1922,7 @@ Users API: CRUD routes, Zod validation, structured logs.
 
 ---
 
-> **Phase 11 complete?** [Build the aligned project](./Projects.md#web-phase-11-project) · [Continue to Phase 12](#phase-12---rest-api-design)
+> **Phase 11 complete?** [Build the Phase 11 mini-project](./Projects.md#web-phase-11-project) · [Continue to Phase 12](#phase-12---rest-api-design)
 
 <a id="phase-12"></a>
 
@@ -2081,7 +2081,7 @@ Paginated search endpoint with stable sort key.
 
 ---
 
-> **Phase 12 complete?** [Build the aligned project](./Projects.md#web-phase-12-project) · [Continue to Phase 13](#phase-13---databases-for-web-apps)
+> **Phase 12 complete?** [Build the Phase 12 mini-project](./Projects.md#web-phase-12-project) · [Continue to Phase 13](#phase-13---databases-for-web-apps)
 
 <a id="phase-13"></a>
 
@@ -2234,7 +2234,7 @@ Fix N+1 in list endpoint; add transfer transaction test.
 
 ---
 
-> **Phase 13 complete?** [Build the aligned project](./Projects.md#web-phase-13-project) · [Continue to Phase 14](#phase-14---authentication--authorization)
+> **Phase 13 complete?** [Build the Phase 13 mini-project](./Projects.md#web-phase-13-project) · [Continue to Phase 14](#phase-14---authentication--authorization)
 
 <a id="phase-14"></a>
 
@@ -2402,7 +2402,7 @@ Protected routes: user vs admin role middleware tests.
 
 ---
 
-> **Phase 14 complete?** [Build the aligned project](./Projects.md#web-phase-14-project) · [Continue to Phase 15](#phase-15---testing-web-applications)
+> **Phase 14 complete?** [Build the Phase 14 mini-project](./Projects.md#web-phase-14-project) · [Continue to Phase 15](#phase-15---testing-web-applications)
 
 <a id="phase-15"></a>
 
@@ -2570,7 +2570,7 @@ One supertest CRUD suite + one Playwright happy path.
 
 ---
 
-> **Phase 15 complete?** [Build the aligned project](./Projects.md#web-phase-15-project) · [Continue to Phase 16](#phase-16---performance--web-vitals)
+> **Phase 15 complete?** [Build the Phase 15 mini-project](./Projects.md#web-phase-15-project) · [Continue to Phase 16](#phase-16---performance--web-vitals)
 
 <a id="phase-16"></a>
 
@@ -2735,7 +2735,7 @@ Add cache headers to static assets; lazy route split admin page.
 
 ---
 
-> **Phase 16 complete?** [Build the aligned project](./Projects.md#web-phase-16-project) · [Continue to Phase 17](#phase-17---deployment--cicd)
+> **Phase 16 complete?** [Build the Phase 16 mini-project](./Projects.md#web-phase-16-project) · [Continue to Phase 17](#phase-17---deployment--cicd)
 
 <a id="phase-17"></a>
 
@@ -2909,7 +2909,7 @@ Dockerize API; GitHub Action runs tests on push.
 
 ---
 
-> **Phase 17 complete?** [Build the aligned project](./Projects.md#web-phase-17-project) · [Continue to Phase 18](#phase-18---graphql-websockets--modern-apis)
+> **Phase 17 complete?** [Build the Phase 17 mini-project](./Projects.md#web-phase-17-project) · [Continue to Phase 18](#phase-18---graphql-websockets--modern-apis)
 
 <a id="phase-18"></a>
 
@@ -3068,7 +3068,7 @@ SSE notifications endpoint + signed webhook receiver stub.
 
 ---
 
-> **Phase 18 complete?** [Build the aligned project](./Projects.md#web-phase-18-project) · [Continue to Phase 19](#phase-19---portfolio--capstone-projects)
+> **Phase 18 complete?** [Build the Phase 18 mini-project](./Projects.md#web-phase-18-project) · [Continue to Phase 19](#phase-19---portfolio--capstone-projects)
 
 <a id="phase-19"></a>
 
@@ -3230,7 +3230,7 @@ Plan capstone scope doc before coding week 2.
 
 ---
 
-> **Phase 19 complete?** [Build the aligned project](./Projects.md#web-phase-19-project) · [Continue to Phase 20](#phase-20---web-developer-interviews)
+> **Phase 19 complete?** [Build the Phase 19 mini-project](./Projects.md#web-phase-19-project) · [Continue to Phase 20](#phase-20---web-developer-interviews)
 
 <a id="phase-20"></a>
 
@@ -3404,7 +3404,7 @@ Architect explaining building before picking marble.
 
 ---
 
-> **Phase 20 complete?** [Build the aligned project](./Projects.md#web-phase-20-project) · [Return to the phase index](#phase-index)
+> **Phase 20 complete?** [Build the Phase 20 mini-project](./Projects.md#web-phase-20-project) · [Build the complete Web portfolio project](./Projects.md#web-main-portfolio-project) · [Return to the phase index](#phase-index)
 
 ---
 
@@ -3441,4 +3441,4 @@ Use this appendix for lookup only. During learning, use the annotated resources 
 
 ## Author
 
-**Mohammad Bilal** - Web track for the Interview Help repo. Ship READMEs; narrate trade-offs; pair with [`Projects.md`](./Projects.md) and [`Interview.md`](./Interview.md).
+**Mohammad Bilal** - Web track for the Interview Help repo. Build the matching phase projects and pair them with [`Interview.md`](./Interview.md).

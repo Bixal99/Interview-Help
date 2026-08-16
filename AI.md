@@ -313,7 +313,7 @@ print(len(X_train), len(X_val), len(X_test))
 
 ---
 
-> **Phase 1 complete?** [Build the aligned project](./Projects.md#ai-phase-1-project) · [Continue to Phase 2](#phase-2---math-for-ml-the-useful-slice)
+> **Phase 1 complete?** [Build the Phase 1 mini-project](./Projects.md#ai-phase-1-project) · [Continue to Phase 2](#phase-2---math-for-ml-the-useful-slice)
 
 <a id="phase-2"></a>
 
@@ -458,7 +458,7 @@ print(theta)
 
 ---
 
-> **Phase 2 complete?** [Build the aligned project](./Projects.md#ai-phase-2-project) · [Continue to Phase 3](#phase-3---python-for-ai)
+> **Phase 2 complete?** [Build the Phase 2 mini-project](./Projects.md#ai-phase-2-project) · [Continue to Phase 3](#phase-3---python-for-ai)
 
 <a id="phase-3"></a>
 
@@ -594,7 +594,7 @@ df["age"] = df["age"].fillna(df["age"].median())
 
 ---
 
-> **Phase 3 complete?** [Build the aligned project](./Projects.md#ai-phase-3-project) · [Continue to Phase 4](#phase-4---classical-machine-learning)
+> **Phase 3 complete?** [Build the Phase 3 mini-project](./Projects.md#ai-phase-3-project) · [Continue to Phase 4](#phase-4---classical-machine-learning)
 
 <a id="phase-4"></a>
 
@@ -740,7 +740,7 @@ print(clf.score(Xte, yte))
 
 ---
 
-> **Phase 4 complete?** [Build the aligned project](./Projects.md#ai-phase-4-project) · [Continue to Phase 5](#phase-5---evaluation-and-generalization)
+> **Phase 4 complete?** [Build the Phase 4 mini-project](./Projects.md#ai-phase-4-project) · [Continue to Phase 5](#phase-5---evaluation-and-generalization)
 
 <a id="phase-5"></a>
 
@@ -879,7 +879,7 @@ print(cross_val_score(pipe, X, y, cv=5).mean())
 
 ---
 
-> **Phase 5 complete?** [Build the aligned project](./Projects.md#ai-phase-5-project) · [Continue to Phase 6](#phase-6---trees-and-ensembles)
+> **Phase 5 complete?** [Build the Phase 5 mini-project](./Projects.md#ai-phase-5-project) · [Continue to Phase 6](#phase-6---trees-and-ensembles)
 
 <a id="phase-6"></a>
 
@@ -1021,7 +1021,7 @@ print(gb.score(Xte, yte))
 
 ---
 
-> **Phase 6 complete?** [Build the aligned project](./Projects.md#ai-phase-6-project) · [Continue to Phase 7](#phase-7---neural-network-basics)
+> **Phase 6 complete?** [Build the Phase 6 mini-project](./Projects.md#ai-phase-6-project) · [Continue to Phase 7](#phase-7---neural-network-basics)
 
 <a id="phase-7"></a>
 
@@ -1174,7 +1174,7 @@ for epoch, val_loss in enumerate([1.0, 0.8, 0.75, 0.76, 0.79, 0.81]):
 
 ---
 
-> **Phase 7 complete?** [Build the aligned project](./Projects.md#ai-phase-7-project) · [Continue to Phase 8](#phase-8---backpropagation-and-optimizers)
+> **Phase 7 complete?** [Build the Phase 7 mini-project](./Projects.md#ai-phase-7-project) · [Continue to Phase 8](#phase-8---backpropagation-and-optimizers)
 
 <a id="phase-8"></a>
 
@@ -1320,7 +1320,7 @@ print("Use torch.optim.Adam in practice; know the story above.")
 
 ---
 
-> **Phase 8 complete?** [Build the aligned project](./Projects.md#ai-phase-8-project) · [Continue to Phase 9](#phase-9---pytorch-deep-practice)
+> **Phase 8 complete?** [Build the Phase 8 mini-project](./Projects.md#ai-phase-8-project) · [Continue to Phase 9](#phase-9---pytorch-deep-practice)
 
 <a id="phase-9"></a>
 
@@ -1470,7 +1470,7 @@ print("batch ok", xb.shape)
 
 ---
 
-> **Phase 9 complete?** [Build the aligned project](./Projects.md#ai-phase-9-project) · [Continue to Phase 10](#phase-10---cnns-and-computer-vision)
+> **Phase 9 complete?** [Build the Phase 9 mini-project](./Projects.md#ai-phase-9-project) · [Continue to Phase 10](#phase-10---cnns-and-computer-vision)
 
 <a id="phase-10"></a>
 
@@ -1613,7 +1613,7 @@ print(m.fc)
 
 ---
 
-> **Phase 10 complete?** [Build the aligned project](./Projects.md#ai-phase-10-project) · [Continue to Phase 11](#phase-11---sequence-models-rnnlstm-era)
+> **Phase 10 complete?** [Build the Phase 10 mini-project](./Projects.md#ai-phase-10-project) · [Continue to Phase 11](#phase-11---sequence-models-rnnlstm-era)
 
 <a id="phase-11"></a>
 
@@ -1747,7 +1747,7 @@ print(nn.GRU(32, 64, batch_first=True))
 
 ---
 
-> **Phase 11 complete?** [Build the aligned project](./Projects.md#ai-phase-11-project) · [Continue to Phase 12](#phase-12---embeddings-and-representation-learning)
+> **Phase 11 complete?** [Build the Phase 11 mini-project](./Projects.md#ai-phase-11-project) · [Continue to Phase 12](#phase-12---embeddings-and-representation-learning)
 
 <a id="phase-12"></a>
 
@@ -1890,7 +1890,7 @@ print(docs @ q)  # cosine similarities
 
 ---
 
-> **Phase 12 complete?** [Build the aligned project](./Projects.md#ai-phase-12-project) · [Continue to Phase 13](#phase-13---transformers)
+> **Phase 12 complete?** [Build the Phase 12 mini-project](./Projects.md#ai-phase-12-project) · [Continue to Phase 13](#phase-13---transformers)
 
 <a id="phase-13"></a>
 
@@ -2037,7 +2037,7 @@ print(mask)
 
 ---
 
-> **Phase 13 complete?** [Build the aligned project](./Projects.md#ai-phase-13-project) · [Continue to Phase 14](#phase-14---llms-and-prompting)
+> **Phase 13 complete?** [Build the Phase 13 mini-project](./Projects.md#ai-phase-13-project) · [Continue to Phase 14](#phase-14---llms-and-prompting)
 
 <a id="phase-14"></a>
 
@@ -2182,7 +2182,7 @@ print(build_prompt("What is refund window?", "Refunds accepted within 30 days.")
 
 ---
 
-> **Phase 14 complete?** [Build the aligned project](./Projects.md#ai-phase-14-project) · [Continue to Phase 15](#phase-15---retrieval-augmented-generation)
+> **Phase 14 complete?** [Build the Phase 14 mini-project](./Projects.md#ai-phase-14-project) · [Continue to Phase 15](#phase-15---retrieval-augmented-generation)
 
 <a id="phase-15"></a>
 
@@ -2343,7 +2343,7 @@ print(merge_candidates(["a", "b"], ["b", "c"]))
 
 ---
 
-> **Phase 15 complete?** [Build the aligned project](./Projects.md#ai-phase-15-project) · [Continue to Phase 16](#phase-16---fine-tuning-and-alignment-basics)
+> **Phase 15 complete?** [Build the Phase 15 mini-project](./Projects.md#ai-phase-15-project) · [Continue to Phase 16](#phase-16---fine-tuning-and-alignment-basics)
 
 <a id="phase-16"></a>
 
@@ -2479,7 +2479,7 @@ print("Preference data is policy. Treat it like production code reviews.")
 
 ---
 
-> **Phase 16 complete?** [Build the aligned project](./Projects.md#ai-phase-16-project) · [Continue to Phase 17](#phase-17---agents-and-tool-use)
+> **Phase 16 complete?** [Build the Phase 16 mini-project](./Projects.md#ai-phase-16-project) · [Continue to Phase 17](#phase-17---agents-and-tool-use)
 
 <a id="phase-17"></a>
 
@@ -2630,7 +2630,7 @@ print(s)
 
 ---
 
-> **Phase 17 complete?** [Build the aligned project](./Projects.md#ai-phase-17-project) · [Continue to Phase 18](#phase-18---evaluation-safety-and-mlops)
+> **Phase 17 complete?** [Build the Phase 17 mini-project](./Projects.md#ai-phase-17-project) · [Continue to Phase 18](#phase-18---evaluation-safety-and-mlops)
 
 <a id="phase-18"></a>
 
@@ -2778,7 +2778,7 @@ print("used", used)
 
 ---
 
-> **Phase 18 complete?** [Build the aligned project](./Projects.md#ai-phase-18-project) · [Continue to Phase 19](#phase-19---portfolio-and-projects)
+> **Phase 18 complete?** [Build the Phase 18 mini-project](./Projects.md#ai-phase-18-project) · [Continue to Phase 19](#phase-19---portfolio-and-projects)
 
 <a id="phase-19"></a>
 
@@ -2917,7 +2917,7 @@ print(meta)
 
 ---
 
-> **Phase 19 complete?** [Build the aligned project](./Projects.md#ai-phase-19-project) · [Continue to Phase 20](#phase-20---interviews)
+> **Phase 19 complete?** [Build the Phase 19 mini-project](./Projects.md#ai-phase-19-project) · [Continue to Phase 20](#phase-20---interviews)
 
 <a id="phase-20"></a>
 
@@ -3046,7 +3046,7 @@ print(", ".join(checklist))
 
 ---
 
-> **Phase 20 complete?** [Build the aligned project](./Projects.md#ai-phase-20-project) · [Return to the phase index](#phase-index)
+> **Phase 20 complete?** [Build the Phase 20 mini-project](./Projects.md#ai-phase-20-project) · [Build the complete AI portfolio project](./Projects.md#ai-main-portfolio-project) · [Return to the phase index](#phase-index)
 
 ---
 

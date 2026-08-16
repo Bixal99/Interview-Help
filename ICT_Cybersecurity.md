@@ -309,7 +309,7 @@ print("proceed:", target)
 
 ---
 
-> **Phase 1 complete?** [Build the aligned project](./Projects.md#cyber-phase-1-project) · [Continue to Phase 2](#phase-2---networking-for-security)
+> **Phase 1 complete?** [Build the Phase 1 mini-project](./Projects.md#cyber-phase-1-project) · [Continue to Phase 2](#phase-2---networking-for-security)
 
 <a id="phase-2"></a>
 
@@ -447,7 +447,7 @@ print("allow" if any(True for _ in acl if dst == "10.0.2.5" and port == 5432) el
 
 ---
 
-> **Phase 2 complete?** [Build the aligned project](./Projects.md#cyber-phase-2-project) · [Continue to Phase 3](#phase-3---linux-and-windows-for-security)
+> **Phase 2 complete?** [Build the Phase 2 mini-project](./Projects.md#cyber-phase-2-project) · [Continue to Phase 3](#phase-3---linux-and-windows-for-security)
 
 <a id="phase-3"></a>
 
@@ -587,7 +587,7 @@ print(windows_logs["Security"])
 
 ---
 
-> **Phase 3 complete?** [Build the aligned project](./Projects.md#cyber-phase-3-project) · [Continue to Phase 4](#phase-4---cryptography-for-defenders-and-builders)
+> **Phase 3 complete?** [Build the Phase 3 mini-project](./Projects.md#cyber-phase-3-project) · [Continue to Phase 4](#phase-4---cryptography-for-defenders-and-builders)
 
 <a id="phase-4"></a>
 
@@ -725,7 +725,7 @@ print("Broken if: HTTP, expired cert, wrong hostname, untrusted CA")
 
 ---
 
-> **Phase 4 complete?** [Build the aligned project](./Projects.md#cyber-phase-4-project) · [Continue to Phase 5](#phase-5---identity-and-access-management)
+> **Phase 4 complete?** [Build the Phase 4 mini-project](./Projects.md#cyber-phase-4-project) · [Continue to Phase 5](#phase-5---identity-and-access-management)
 
 <a id="phase-5"></a>
 
@@ -863,7 +863,7 @@ print(can_read_invoice(7, {"owner_id": 9, "roles": []}))
 
 ---
 
-> **Phase 5 complete?** [Build the aligned project](./Projects.md#cyber-phase-5-project) · [Continue to Phase 6](#phase-6---threat-modeling-and-mitre-attck)
+> **Phase 5 complete?** [Build the Phase 5 mini-project](./Projects.md#cyber-phase-5-project) · [Continue to Phase 6](#phase-6---threat-modeling-and-mitre-attck)
 
 <a id="phase-6"></a>
 
@@ -1008,7 +1008,7 @@ print(technique)
 
 ---
 
-> **Phase 6 complete?** [Build the aligned project](./Projects.md#cyber-phase-6-project) · [Continue to Phase 7](#phase-7---web-application-security-owasp)
+> **Phase 6 complete?** [Build the Phase 6 mini-project](./Projects.md#cyber-phase-6-project) · [Continue to Phase 7](#phase-7---web-application-security-owasp)
 
 <a id="phase-7"></a>
 
@@ -1156,7 +1156,7 @@ print(safe_fetch_url("http://169.254.169.254/latest/meta-data/"))
 
 ---
 
-> **Phase 7 complete?** [Build the aligned project](./Projects.md#cyber-phase-7-project) · [Continue to Phase 8](#phase-8---network-defenses)
+> **Phase 7 complete?** [Build the Phase 7 mini-project](./Projects.md#cyber-phase-7-project) · [Continue to Phase 8](#phase-8---network-defenses)
 
 <a id="phase-8"></a>
 
@@ -1284,7 +1284,7 @@ print("patterns:", ["bastion", "egress allow-list", "prod/nonprod split", "deny 
 
 ---
 
-> **Phase 8 complete?** [Build the aligned project](./Projects.md#cyber-phase-8-project) · [Continue to Phase 9](#phase-9---hardening-and-endpoint-security)
+> **Phase 8 complete?** [Build the Phase 8 mini-project](./Projects.md#cyber-phase-8-project) · [Continue to Phase 9](#phase-9---hardening-and-endpoint-security)
 
 <a id="phase-9"></a>
 
@@ -1411,7 +1411,7 @@ print("Still need: patching, least privilege, backups, IR plan")
 
 ---
 
-> **Phase 9 complete?** [Build the aligned project](./Projects.md#cyber-phase-9-project) · [Continue to Phase 10](#phase-10---vulnerability-management)
+> **Phase 9 complete?** [Build the Phase 9 mini-project](./Projects.md#cyber-phase-9-project) · [Continue to Phase 10](#phase-10---vulnerability-management)
 
 <a id="phase-10"></a>
 
@@ -1541,7 +1541,7 @@ print("exception fields:", ["reason", "owner", "compensating_control", "expiry",
 
 ---
 
-> **Phase 10 complete?** [Build the aligned project](./Projects.md#cyber-phase-10-project) · [Continue to Phase 11](#phase-11---penetration-testing-methodology)
+> **Phase 10 complete?** [Build the Phase 10 mini-project](./Projects.md#cyber-phase-10-project) · [Continue to Phase 11](#phase-11---penetration-testing-methodology)
 
 <a id="phase-11"></a>
 
@@ -1683,7 +1683,7 @@ print(finding)
 
 ---
 
-> **Phase 11 complete?** [Build the aligned project](./Projects.md#cyber-phase-11-project) · [Continue to Phase 12](#phase-12---active-directory-attacks-and-defenses)
+> **Phase 11 complete?** [Build the Phase 11 mini-project](./Projects.md#cyber-phase-11-project) · [Continue to Phase 12](#phase-12---active-directory-attacks-and-defenses)
 
 <a id="phase-12"></a>
 
@@ -1813,7 +1813,7 @@ print("defender checklist: tiering, LAPS, MFA, logon anomalies, admin workstatio
 
 ---
 
-> **Phase 12 complete?** [Build the aligned project](./Projects.md#cyber-phase-12-project) · [Continue to Phase 13](#phase-13---soc-siem-and-detection-engineering)
+> **Phase 12 complete?** [Build the Phase 12 mini-project](./Projects.md#cyber-phase-12-project) · [Continue to Phase 13](#phase-13---soc-siem-and-detection-engineering)
 
 <a id="phase-13"></a>
 
@@ -1950,7 +1950,7 @@ print(sigma_like)
 
 ---
 
-> **Phase 13 complete?** [Build the aligned project](./Projects.md#cyber-phase-13-project) · [Continue to Phase 14](#phase-14---digital-forensics-and-incident-response)
+> **Phase 13 complete?** [Build the Phase 13 mini-project](./Projects.md#cyber-phase-13-project) · [Continue to Phase 14](#phase-14---digital-forensics-and-incident-response)
 
 <a id="phase-14"></a>
 
@@ -2084,7 +2084,7 @@ print("sha256", hashlib.sha256(blob).hexdigest())
 
 ---
 
-> **Phase 14 complete?** [Build the aligned project](./Projects.md#cyber-phase-14-project) · [Continue to Phase 15](#phase-15---cloud-security-fundamentals)
+> **Phase 14 complete?** [Build the Phase 14 mini-project](./Projects.md#cyber-phase-14-project) · [Continue to Phase 15](#phase-15---cloud-security-fundamentals)
 
 <a id="phase-15"></a>
 
@@ -2216,7 +2216,7 @@ print("hunt:", misconfigs)
 
 ---
 
-> **Phase 15 complete?** [Build the aligned project](./Projects.md#cyber-phase-15-project) · [Continue to Phase 16](#phase-16---containers-kubernetes-and-devsecops)
+> **Phase 15 complete?** [Build the Phase 15 mini-project](./Projects.md#cyber-phase-15-project) · [Continue to Phase 16](#phase-16---containers-kubernetes-and-devsecops)
 
 <a id="phase-16"></a>
 
@@ -2345,7 +2345,7 @@ print("CI gates:", ["gitleaks", "sca", "sast", "image scan", "iac scan"])
 
 ---
 
-> **Phase 16 complete?** [Build the aligned project](./Projects.md#cyber-phase-16-project) · [Continue to Phase 17](#phase-17---malware-analysis-basics)
+> **Phase 16 complete?** [Build the Phase 16 mini-project](./Projects.md#cyber-phase-16-project) · [Continue to Phase 17](#phase-17---malware-analysis-basics)
 
 <a id="phase-17"></a>
 
@@ -2470,7 +2470,7 @@ print("dynamic checklist: isolated nic, snapshot, time sync, capture, revert")
 
 ---
 
-> **Phase 17 complete?** [Build the aligned project](./Projects.md#cyber-phase-17-project) · [Continue to Phase 18](#phase-18---governance-risk-and-compliance)
+> **Phase 17 complete?** [Build the Phase 17 mini-project](./Projects.md#cyber-phase-17-project) · [Continue to Phase 18](#phase-18---governance-risk-and-compliance)
 
 <a id="phase-18"></a>
 
@@ -2597,7 +2597,7 @@ print(risk)
 
 ---
 
-> **Phase 18 complete?** [Build the aligned project](./Projects.md#cyber-phase-18-project) · [Continue to Phase 19](#phase-19---portfolio-and-labs)
+> **Phase 18 complete?** [Build the Phase 18 mini-project](./Projects.md#cyber-phase-18-project) · [Continue to Phase 19](#phase-19---portfolio-and-labs)
 
 <a id="phase-19"></a>
 
@@ -2731,7 +2731,7 @@ print(paths["seceng"])
 
 ---
 
-> **Phase 19 complete?** [Build the aligned project](./Projects.md#cyber-phase-19-project) · [Continue to Phase 20](#phase-20---interview-mastery-for-cybersecurity-roles)
+> **Phase 19 complete?** [Build the Phase 19 mini-project](./Projects.md#cyber-phase-19-project) · [Continue to Phase 20](#phase-20---interview-mastery-for-cybersecurity-roles)
 
 <a id="phase-20"></a>
 
@@ -2856,7 +2856,7 @@ print(" -> ".join(checklist))
 
 ---
 
-> **Phase 20 complete?** [Build the aligned project](./Projects.md#cyber-phase-20-project) · [Return to the phase index](#phase-index)
+> **Phase 20 complete?** [Build the Phase 20 mini-project](./Projects.md#cyber-phase-20-project) · [Build the complete cybersecurity portfolio project](./Projects.md#cyber-main-portfolio-project) · [Return to the phase index](#phase-index)
 
 ---
 

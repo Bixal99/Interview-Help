@@ -4,7 +4,7 @@
 
 *Resources curated with Composio (web search, YouTube, GitHub) against [Odoo 18 Server Framework 101](https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101/01_architecture.html), [Odoo developer tutorials](https://www.odoo.com/documentation/18.0/developer/tutorials.html), [backend reference](https://www.odoo.com/documentation/18.0/developer/reference/backend.html), [view architectures](https://www.odoo.com/documentation/18.0/developer/reference/user_interface/view_architectures.html), [data model](https://www.odoo.com/documentation/18.0/developer/reference/backend/data.html), [OWL components](https://www.odoo.com/documentation/18.0/developer/reference/frontend/owl_components.html), [Odoo 17 developer docs](https://www.odoo.com/documentation/17.0/developer.html), Ecosire/DeployMonkey/Braincuber/GetKnit/Cybrosys guides, [odoo/tutorials](https://github.com/odoo/tutorials), [odoo/odoo](https://github.com/odoo/odoo), [ged-odoo/odoo-js-training-public](https://github.com/ged-odoo/odoo-js-training-public), [NodenHQ/awesome-odoo](https://github.com/NodenHQ/awesome-odoo), [Bladefidz/learn-odoo](https://github.com/Bladefidz/learn-odoo), and [yavy-odoo/odoo-module-boilerplate](https://github.com/yavy-odoo/odoo-module-boilerplate).*
 
-*Where this sits:* do this **after** solid Python and [`OOP.md`](./OOP.md) (classes, inheritance, composition). Odoo is Python OOP when the amount of work grows with XML, PostgreSQL, and JS. Pair shipping with [`Projects.md`](./Projects.md) **ODOO-01 to ODOO-08** and drill [`Interview.md`](./Interview.md) for practice explaining ideas clearly under interview pressure.*
+*Where this sits:* do this **after** solid Python and [`OOP.md`](./OOP.md) (classes, inheritance, composition). Odoo is Python OOP when the amount of work grows with XML, PostgreSQL, and JS. Build the matching Odoo phase projects in [`Projects.md`](./Projects.md) and drill [`Interview.md`](./Interview.md) for practice explaining ideas clearly under interview pressure.*
 
 **Scope:** 40 concepts · 20 phases · connected step by step, with no artificial weekly deadline.
 
@@ -106,7 +106,7 @@ Phases 1-10 build platform confident working knowledge (think ERP, ship modules)
  PHASE 17                PHASE 18               PHASE 19               PHASE 20
  POSTGRESQL FOR ODOO     TEST / DEBUG / UPGRADE PORTFOLIO MODULES      INTERVIEWS / HIRE
     |                       |                      |                      |
- schema, ir_*, indexes,  TransactionCase,       Projects.md ODOO-01..08  live debug,
+ schema, ir_*, indexes,  TransactionCase,       matching phase builds  live debug,
  EXPLAIN, N+1 fixes       migrations, -u          Odoo.sh CI story        Interview.md
 ```
 
@@ -150,7 +150,7 @@ Phases 1-10 build platform confident working knowledge (think ERP, ship modules)
 - [Custom module (zKIKCtq9PfM)](https://www.youtube.com/watch?v=zKIKCtq9PfM) · [Module walkthrough (uJPjmS5Arug)](https://www.youtube.com/watch?v=uJPjmS5Arug) · [ORM (ASPjB-WowBU)](https://www.youtube.com/watch?v=ASPjB-WowBU)
 - [Architecture (WnsYmsq4Qr8)](https://www.youtube.com/watch?v=WnsYmsq4Qr8) · [Domains (k-hKNUZQi2o)](https://www.youtube.com/watch?v=k-hKNUZQi2o) · [OWL (YJg7dvwXQF8)](https://www.youtube.com/watch?v=YJg7dvwXQF8)
 - [Inheritance (RzQPI_lFKL8)](https://www.youtube.com/watch?v=RzQPI_lFKL8) · [Deep ORM (zq4aw99kv48)](https://www.youtube.com/watch?v=zq4aw99kv48)
-- **Projects bridge:** [`Projects.md`](./Projects.md) cluster **ODOO-01 to ODOO-08** (module to integration capstones)
+- **Projects bridge:** the matching Odoo phase builds in [`Projects.md`](./Projects.md)
 - **Interview bridge:** [`Interview.md`](./Interview.md) timed speak + live debug drills after Phase 19 portfolio
 
 ---
@@ -337,7 +337,7 @@ class ResPartner(models.Model):
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 1:** Explain ERP as shared master data plus workflows, and contrast ORM-module work with ad hoc SQL scripts.
 
-> **Phase 1 complete?** [Build the aligned project](./Projects.md#odoo-phase-1-project) · [Continue to Phase 2](#phase-2---architecture-3-tier)
+> **Phase 1 complete?** [Build the Phase 1 mini-project](./Projects.md#odoo-phase-1-project) · [Continue to Phase 2](#phase-2---architecture-3-tier)
 
 <a id="phase-2"></a>
 
@@ -516,7 +516,7 @@ class LibraryBook(models.Model):
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 2:** Draw browser, server/registry, and PostgreSQL, and explain how a model becomes a table.
 
-> **Phase 2 complete?** [Build the aligned project](./Projects.md#odoo-phase-2-project) · [Continue to Phase 3](#phase-3---dev-environment-setup)
+> **Phase 2 complete?** [Build the Phase 2 mini-project](./Projects.md#odoo-phase-2-project) · [Continue to Phase 3](#phase-3---dev-environment-setup)
 
 <a id="phase-3"></a>
 
@@ -677,7 +677,7 @@ House renovation: installing a room (install) vs remodeling existing wiring (upg
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 3:** Launch Odoo with custom addons path and correctly choose `-i`, `-u`, and dev mode.
 
-> **Phase 3 complete?** [Build the aligned project](./Projects.md#odoo-phase-3-project) · [Continue to Phase 4](#phase-4---module-anatomy)
+> **Phase 3 complete?** [Build the Phase 3 mini-project](./Projects.md#odoo-phase-3-project) · [Continue to Phase 4](#phase-4---module-anatomy)
 
 <a id="phase-4"></a>
 
@@ -860,7 +860,7 @@ Lego set numbers on the box: build 10234 before wing addon 10234-1.
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 4:** Scaffold a module manifest with ordered security and views; explain depends and versioning.
 
-> **Phase 4 complete?** [Build the aligned project](./Projects.md#odoo-phase-4-project) · [Continue to Phase 5](#phase-5---models--fields)
+> **Phase 4 complete?** [Build the Phase 4 mini-project](./Projects.md#odoo-phase-4-project) · [Continue to Phase 5](#phase-5---models--fields)
 
 <a id="phase-5"></a>
 
@@ -1031,7 +1031,7 @@ def _compute_loan_count(self):
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 5:** Define models with scalar and relational fields, constraints, and computed fields correctly.
 
-> **Phase 5 complete?** [Build the aligned project](./Projects.md#odoo-phase-5-project) · [Continue to Phase 6](#phase-6---orm-queries)
+> **Phase 5 complete?** [Build the Phase 5 mini-project](./Projects.md#odoo-phase-5-project) · [Continue to Phase 6](#phase-6---orm-queries)
 
 <a id="phase-6"></a>
 
@@ -1200,7 +1200,7 @@ rows = self.env["library.loan"].search_read(domain, ["book_id", "partner_id", "r
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 6:** Write domains, batch CRUD on recordsets, and explain env, sudo, and search_read.
 
-> **Phase 6 complete?** [Build the aligned project](./Projects.md#odoo-phase-6-project) · [Continue to Phase 7](#phase-7---record-rules--access)
+> **Phase 6 complete?** [Build the Phase 6 mini-project](./Projects.md#odoo-phase-6-project) · [Continue to Phase 7](#phase-7---record-rules--access)
 
 <a id="phase-7"></a>
 
@@ -1362,7 +1362,7 @@ Open office vs locked drawer: ACL is building entry; record rule is desk drawer 
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 7:** Configure groups, access CSV, and record rules; test with non-admin users.
 
-> **Phase 7 complete?** [Build the aligned project](./Projects.md#odoo-phase-7-project) · [Continue to Phase 8](#phase-8---views-xml)
+> **Phase 7 complete?** [Build the Phase 7 mini-project](./Projects.md#odoo-phase-7-project) · [Continue to Phase 8](#phase-8---views-xml)
 
 <a id="phase-8"></a>
 
@@ -1545,7 +1545,7 @@ Adding a power outlet on existing wall (xpath) vs rebuilding the house (copy-pas
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 8:** Author form/list/search views and extend standard views with xpath inheritance.
 
-> **Phase 8 complete?** [Build the aligned project](./Projects.md#odoo-phase-8-project) · [Continue to Phase 9](#phase-9---actions--menus)
+> **Phase 8 complete?** [Build the Phase 8 mini-project](./Projects.md#odoo-phase-8-project) · [Continue to Phase 9](#phase-9---actions--menus)
 
 <a id="phase-9"></a>
 
@@ -1711,7 +1711,7 @@ Store directory map: departments (menus) point to service desks (actions), not v
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 9:** Define act_window records, contexts, and menu trees with group-aware visibility.
 
-> **Phase 9 complete?** [Build the aligned project](./Projects.md#odoo-phase-9-project) · [Continue to Phase 10](#phase-10---business-logic)
+> **Phase 9 complete?** [Build the Phase 9 mini-project](./Projects.md#odoo-phase-9-project) · [Continue to Phase 10](#phase-10---business-logic)
 
 <a id="phase-10"></a>
 
@@ -1894,7 +1894,7 @@ def action_confirm(self):
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 10:** Implement constrains, computed fields, onchange, and stateful action methods.
 
-> **Phase 10 complete?** [Build the aligned project](./Projects.md#odoo-phase-10-project) · [Continue to Phase 11](#phase-11---inheritance)
+> **Phase 10 complete?** [Build the Phase 10 mini-project](./Projects.md#odoo-phase-10-project) · [Continue to Phase 11](#phase-11---inheritance)
 
 <a id="phase-11"></a>
 
@@ -2061,7 +2061,7 @@ class LibraryMember(models.Model):
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 11:** Extend models with `_inherit` and compose with `_inherits`; override using super().
 
-> **Phase 11 complete?** [Build the aligned project](./Projects.md#odoo-phase-11-project) · [Continue to Phase 12](#phase-12---wizards--transient-models)
+> **Phase 11 complete?** [Build the Phase 11 mini-project](./Projects.md#odoo-phase-11-project) · [Continue to Phase 12](#phase-12---wizards--transient-models)
 
 <a id="phase-12"></a>
 
@@ -2231,7 +2231,7 @@ Pop-up confirmation at checkout vs walking to back office separate desk.
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 12:** Build TransientModel wizards with modal actions and list bindings.
 
-> **Phase 12 complete?** [Build the aligned project](./Projects.md#odoo-phase-12-project) · [Continue to Phase 13](#phase-13---controllers--http--webhooks)
+> **Phase 12 complete?** [Build the Phase 12 mini-project](./Projects.md#odoo-phase-12-project) · [Continue to Phase 13](#phase-13---controllers--http--webhooks)
 
 <a id="phase-13"></a>
 
@@ -2403,7 +2403,7 @@ def stripe_webhook(self):
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 13:** Implement secured controllers and idempotent webhook handlers.
 
-> **Phase 13 complete?** [Build the aligned project](./Projects.md#odoo-phase-13-project) · [Continue to Phase 14](#phase-14---external-api)
+> **Phase 13 complete?** [Build the Phase 13 mini-project](./Projects.md#odoo-phase-13-project) · [Continue to Phase 14](#phase-14---external-api)
 
 <a id="phase-14"></a>
 
@@ -2581,7 +2581,7 @@ def books_v1(self, limit=50, offset=0):
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 14:** Use RPC safely and design versioned, paginated integration contracts.
 
-> **Phase 14 complete?** [Build the aligned project](./Projects.md#odoo-phase-14-project) · [Continue to Phase 15](#phase-15---integrations--payment-gateways)
+> **Phase 14 complete?** [Build the Phase 14 mini-project](./Projects.md#odoo-phase-14-project) · [Continue to Phase 15](#phase-15---integrations--payment-gateways)
 
 <a id="phase-15"></a>
 
@@ -2759,7 +2759,7 @@ class LibraryShipment(models.Model):
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 15:** Explain payment provider flow and design SaaS integrations with cron and settings.
 
-> **Phase 15 complete?** [Build the aligned project](./Projects.md#odoo-phase-15-project) · [Continue to Phase 16](#phase-16---owl--javascript-frontend)
+> **Phase 15 complete?** [Build the Phase 15 mini-project](./Projects.md#odoo-phase-15-project) · [Continue to Phase 16](#phase-16---owl--javascript-frontend)
 
 <a id="phase-16"></a>
 
@@ -2931,7 +2931,7 @@ Loading truck compartments: backend CSS in wrong compartment never reaches store
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 16:** Register backend assets and patch OWL components without forking web client.
 
-> **Phase 16 complete?** [Build the aligned project](./Projects.md#odoo-phase-16-project) · [Continue to Phase 17](#phase-17---postgresql-for-odoo)
+> **Phase 16 complete?** [Build the Phase 16 mini-project](./Projects.md#odoo-phase-16-project) · [Continue to Phase 17](#phase-17---postgresql-for-odoo)
 
 <a id="phase-17"></a>
 
@@ -3089,7 +3089,7 @@ partners = self.env["res.partner"].search([("email", "=", email)], limit=1)
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 17:** Inspect PostgreSQL schema for models and apply index/prefetch performance habits.
 
-> **Phase 17 complete?** [Build the aligned project](./Projects.md#odoo-phase-17-project) · [Continue to Phase 18](#phase-18---testing-debugging-upgrades)
+> **Phase 17 complete?** [Build the Phase 17 mini-project](./Projects.md#odoo-phase-17-project) · [Continue to Phase 18](#phase-18---testing-debugging-upgrades)
 
 <a id="phase-18"></a>
 
@@ -3259,7 +3259,7 @@ def migrate(cr, version):
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 18:** Write TransactionCase tests and plan module migrations with staged upgrades.
 
-> **Phase 18 complete?** [Build the aligned project](./Projects.md#odoo-phase-18-project) · [Continue to Phase 19](#phase-19---portfolio-modules)
+> **Phase 18 complete?** [Build the Phase 18 mini-project](./Projects.md#odoo-phase-18-project) · [Continue to Phase 19](#phase-19---portfolio-modules)
 
 <a id="phase-19"></a>
 
@@ -3282,11 +3282,11 @@ def migrate(cr, version):
 - [Build portfolio Odoo module](https://www.youtube.com/watch?v=s-4zNx7wCFk)
 - [Module case study walkthrough](https://www.youtube.com/watch?v=zKIKCtq9PfM)
 - [Odoo tutorials estate project](https://www.youtube.com/watch?v=uJPjmS5Arug)
-- [Projects.md ODOO-01 to ODOO-08 mapping](./Projects.md)
+- [Beginner-friendly Odoo phase projects](./Projects.md#odoo-engineering)
 - [odoo/tutorials official estate module](https://github.com/odoo/tutorials)
 - [Bladefidz learn-odoo sample modules](https://github.com/Bladefidz/learn-odoo)
 - [yavy-odoo/odoo-module-boilerplate README structure](https://github.com/yavy-odoo/odoo-module-boilerplate)
-- Pick Projects.md ODOO-03 scope; write design doc before coding.
+- Pick the matching project scope in Projects.md and build the smallest version first.
 
 **STEP-BY-STEP EXPLANATION**
 
@@ -3343,7 +3343,7 @@ Driving test: examiner watches parallel park (workflow), not just engine start (
 
 | Difficulty | Task |
 | --- | --- |
-| Easy | Write README sections from Projects template. |
+| Easy | Complete the matching project using the listed tech stack and steps. |
 | Medium | Record 3-min demo GIF. |
 | Hard | OCA contribution PR with tests. |
 
@@ -3376,7 +3376,7 @@ CI locally: `odoo-bin --test-enable --stop-after-init -i module` in GitHub Actio
 
 Add **`LICENSE`**, **`README`**, **`static/description/index.html`** for Apps store style listing even if not publishing. **`i18n/`** `.pot` if targeting multilingual clients.
 
-Link portfolio pieces to [`Projects.md`](./Projects.md) IDs **ODOO-01..08** in README for curriculum coherence.
+Use the matching Odoo phase headings in [`Projects.md`](./Projects.md) to choose portfolio pieces.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Ship like OCA: license, tests, CI, staged deploy.
 
@@ -3429,7 +3429,7 @@ steps:
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 19:** Ship a versioned module with README, tests, and optional Odoo.sh CI story.
 
-> **Phase 19 complete?** [Build the aligned project](./Projects.md#odoo-phase-19-project) · [Continue to Phase 20](#phase-20---interviews--hire)
+> **Phase 19 complete?** [Build the Phase 19 mini-project](./Projects.md#odoo-phase-19-project) · [Continue to Phase 20](#phase-20---interviews--hire)
 
 <a id="phase-20"></a>
 
@@ -3595,7 +3595,7 @@ Medical license: continuing education credits each year, not one exam forever.
 
 ---
 
-> **Phase 20 complete?** [Build the aligned project](./Projects.md#odoo-phase-20-project) · [Return to the phase index](#phase-index)
+> **Phase 20 complete?** [Build the Phase 20 mini-project](./Projects.md#odoo-phase-20-project) · [Build the complete Odoo portfolio project](./Projects.md#odoo-main-portfolio-project) · [Return to the phase index](#phase-index)
 
 ---
 
@@ -3681,7 +3681,7 @@ Finish OOP Phases 4-8 (encapsulation, inheritance, composition) -> **ODOO Phase 
 | --- | --- |
 | [`OOP.md`](./OOP.md) | **Recommended prerequisite** - classes, inheritance, composition |
 | [`CS.md`](./CS.md) / [`Networks.md`](./Networks.md) | **HTTP/TLS** for phases 13-14 |
-| [`Projects.md`](./Projects.md) ODOO-01..08 | **Build layer** - ship modules after mastery checkpoints |
+| [Odoo projects in `Projects.md`](./Projects.md#odoo-engineering) | **Build layer** - complete the matching module after each mastery checkpoint |
 | [`Interview.md`](./Interview.md) | **Hiring layer** - mocks after Phase 19 portfolio |
 
 ---

@@ -1041,7 +1041,7 @@ print(gb.score(Xte, yte))
 
 **STEP-BY-STEP EXPLANATION**
 
-Dense layer: $y=\operatorname{activation}(xW+b)$. Width vs depth. Hidden representations. Softmax for multiclass. Initialization matters. Without nonlinearity, depth is fake. ReLU made deep nets practical vs saturating sigmoids in hidden layers.
+Dense layer: $y=\mathrm{activation}(xW+b)$. Width vs depth. Hidden representations. Softmax for multiclass. Initialization matters. Without nonlinearity, depth is fake. ReLU made deep nets practical vs saturating sigmoids in hidden layers.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Compose simple differentiable blocks; learn features and classifier jointly.
 
@@ -1910,7 +1910,15 @@ print(docs @ q)  # cosine similarities
 
 **STEP-BY-STEP EXPLANATION**
 
-Project tokens to Queries, Keys, Values. Attention weights are $\operatorname{softmax}\left(\frac{QK^\top}{\sqrt{d}}\right)$. Output is $\text{weights}\cdot V$. Multi-head = several subspaces. Positional encodings inject order. Residual connections + layer norm stabilize depth. Complexity is $O(T^2)$ in sequence length $T$ - the context window cost story.
+Project tokens to Queries, Keys, Values. Scaled dot-product attention is:
+
+$$
+\mathrm{Attention}(Q,K,V)
+=
+\mathrm{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
+$$
+
+Multi-head attention uses several subspaces. Positional encodings inject order. Residual connections + layer norm stabilize depth. Complexity is $O(T^2)$ in sequence length $T$ - the context window cost story.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Replace recurrence with weighted averages of values, with weights from query-key matches.
 
@@ -1953,7 +1961,7 @@ Q = K = V = torch.randn(B, T, H)
 print(attention(Q, K, V).shape)
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Explain Q/K/V. Why scale by $\sqrt{d}$? Why positions needed? Quadratic cost implications.
+**HOW TO EXPLAIN THIS IN AN INTERVIEW:** Explain Q/K/V. Why scale by $\sqrt{d_k}$? Why positions needed? Quadratic cost implications.
 
 **PRACTICE UNTIL IT FEELS FAMILIAR**
 

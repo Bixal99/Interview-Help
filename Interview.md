@@ -971,9 +971,9 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **Level:** Core · **Source:** AI.md Phase 13
 
-**THE INTERVIEWER'S QUESTION:** Explain self-attention. Why scale by $\sqrt{d}$?
+**THE INTERVIEWER'S QUESTION:** Explain self-attention. Why scale by $\sqrt{d_k}$?
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Each token builds Query, Key, Value projections. Weights are $\operatorname{softmax}\left(\frac{QK^\top}{\sqrt{d}}\right)$, then mix Values. Every token can directly attend to every other (in window) - parallelizable vs RNNs. Scale keeps dot products from exploding softmax into tiny gradients. Multi-head = multiple subspaces. Positional encodings add order. Cost is $O(T^2)$.
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Each token builds Query, Key, Value projections. Weights are $\mathrm{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right)$, then mix Values. Every token can directly attend to every other (in window) - parallelizable vs RNNs. Scale keeps dot products from exploding softmax into tiny gradients. Multi-head = multiple subspaces. Positional encodings add order. Cost is $O(T^2)$.
 
 **QUESTIONS THEY MAY ASK NEXT:** Causal mask? BERT vs GPT?
 

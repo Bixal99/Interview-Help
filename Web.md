@@ -26,7 +26,7 @@ Keep one page open while you learn. Make one change, refresh it, and connect wha
 
 This is not a framework tutorial dump or a stack of unrelated notes. It is one connected explanation about pressure and response. A document needs meaning, so HTML appears. Meaning needs presentation, so CSS appears. Static presentation needs behavior, so JavaScript appears. Manual DOM work becomes fragile, so components appear. Components need durable data, so APIs and databases appear. Shared data needs identity, tests, performance work, and a reliable path to production. Every section opens at the limitation that forced the next tool to exist and closes at the crack that the following section will fill.
 
-**There is no clock on this document.** No week numbers, no day-by-day plan, and no promise that understanding can be compressed into a fixed schedule. Move when you can explain why the previous idea was not enough, trace how the current idea works underneath, and name what it costs. That explanation—not time spent—is the unit of progress.
+**There is no clock on this document.** No week numbers, no day-by-day plan, and no promise that understanding can be compressed into a fixed schedule. Move when you can explain why the previous idea was not enough, trace how the current idea works underneath, and name what it costs. That explanation-not time spent-is the unit of progress.
 
 Read every concept in order on the first pass because the order is the argument. On revision, go directly to **Why You Are Learning This**, **What Happens Inside**, and **Why the Next Topic Is Needed**. Those three pieces reconstruct the causal chain; the resource list and implementation then reload the detail you have forgotten.
 
@@ -402,7 +402,7 @@ Build accessible login form with labels, fieldset, aria-live for errors.
 
 GET vs POST, enctype multipart, required/pattern, input types, meta viewport.
 
-A form is the browser's built-in protocol adapter. Each successful control contributes a name-value pair; the form method decides how those pairs travel; the action chooses the destination; and the encoding decides how bytes are represented. `GET` places data in the URL, which makes searches bookmarkable and cacheable. `POST` places data in the request body, which suits changes and larger or sensitive payloads, although HTTPS—not the body—is what protects it in transit.
+A form is the browser's built-in protocol adapter. Each successful control contributes a name-value pair; the form method decides how those pairs travel; the action chooses the destination; and the encoding decides how bytes are represented. `GET` places data in the URL, which makes searches bookmarkable and cacheable. `POST` places data in the request body, which suits changes and larger or sensitive payloads, although HTTPS-not the body-is what protects it in transit.
 
 The `name` attribute is the key sent to the server; `id` connects a control to its label and to local document references. Native input types give mobile keyboards and browsers useful hints. Constraint attributes such as `required`, `min`, and `pattern` provide immediate feedback, but the server must repeat every rule because a caller can bypass the page entirely.
 
@@ -493,7 +493,7 @@ Contact form with client hints + documented server rules (even if mocked).
 
 Selectors, inheritance, specificity weights, box-sizing border-box.
 
-CSS is a conflict-resolution system before it is a design language. Several declarations may target the same property, so the browser resolves origin and importance, cascade layers, specificity, scoping proximity, and source order. Inheritance then carries selected values—such as color and font—from parent to child. When developers jump straight to increasing selector strength, stylesheets become an arms race that only `!important` can win.
+CSS is a conflict-resolution system before it is a design language. Several declarations may target the same property, so the browser resolves origin and importance, cascade layers, specificity, scoping proximity, and source order. Inheritance then carries selected values-such as color and font-from parent to child. When developers jump straight to increasing selector strength, stylesheets become an arms race that only `!important` can win.
 
 The box model explains where the resolved styles go. Content has a width and height; padding surrounds the content; border surrounds the padding; margin separates the box from its neighbors. Under `content-box`, a declared width excludes padding and border. Under `border-box`, it includes them, which makes component dimensions far easier to reason about. Margin collapse, intrinsic sizes, overflow, and min-content constraints explain many layouts that appear to ignore the declared width.
 
@@ -803,7 +803,7 @@ JavaScript values have types at runtime even though variables do not declare the
 
 Functions are values and closures remember the lexical environment where they were created. That ability powers callbacks, event handlers, modules, and component hooks later in the roadmap. Arrays and objects provide the dominant data shapes; `map`, `filter`, and `reduce` express transformations, while mutation methods change existing state. Pure functions are easier to test because the same input produces the same output and no hidden state changes.
 
-Modules replace global variables with explicit imports and exports. The browser or build tool constructs a dependency graph, evaluates each module once, and connects bindings. Keep side effects at boundaries—DOM, storage, clock, random, network—and let most application logic remain ordinary functions. That separation makes the later jump to TypeScript, React, and testing much smaller.
+Modules replace global variables with explicit imports and exports. The browser or build tool constructs a dependency graph, evaluates each module once, and connects bindings. Keep side effects at boundaries-DOM, storage, clock, random, network-and let most application logic remain ordinary functions. That separation makes the later jump to TypeScript, React, and testing much smaller.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Prefer const + pure functions; isolate side effects at boundaries.
 
@@ -1130,7 +1130,7 @@ TypeScript describes sets of possible JavaScript values. A union narrows a value
 
 `any` turns checking off and lets unsound assumptions spread through every caller. `unknown` preserves the fact that a value has not yet been proven and forces a guard, parser, or schema before use. Strict null checking distinguishes a missing value from the value a function promises to return. Discriminated unions model state particularly well because each state carries only the fields valid for that state.
 
-The payoff is not autocomplete alone. Types make contracts searchable, allow refactors to reveal affected callers, and turn impossible states into compilation errors. Good types follow domain decisions; they should not add abstraction merely to display cleverness. Begin at boundaries—component props, API responses, configuration—and let inference handle obvious local details.
+The payoff is not autocomplete alone. Types make contracts searchable, allow refactors to reveal affected callers, and turn impossible states into compilation errors. Good types follow domain decisions; they should not add abstraction merely to display cleverness. Begin at boundaries-component props, API responses, configuration-and let inference handle obvious local details.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Model API responses explicitly; never trust any from fetch.
 
@@ -1355,7 +1355,7 @@ Counter + todo list components with TypeScript props.
 
 useEffect deps array, cleanup return, controlled inputs, lifting state up.
 
-An effect synchronizes React with a system React does not control: a network connection, timer, DOM API, or external subscription. It runs after a commit; its cleanup undoes the previous synchronization before the next relevant run or unmount. The dependency list is not a scheduling preference—it describes every reactive value the effect reads.
+An effect synchronizes React with a system React does not control: a network connection, timer, DOM API, or external subscription. It runs after a commit; its cleanup undoes the previous synchronization before the next relevant run or unmount. The dependency list is not a scheduling preference-it describes every reactive value the effect reads.
 
 Many apparent effects are calculations that belong during render or event handling. Deriving filtered data from props does not need an effect. Submitting a form belongs in the submit event. Keeping two state values synchronized often means one should be derived from the other. Removing unnecessary effects removes extra renders and entire classes of stale-value bugs.
 
@@ -1527,7 +1527,7 @@ Not all state has the same owner. Local UI state belongs to a component; URL sta
 
 Context broadcasts a value to descendants. Every consumer observes a provider value change, so a large frequently changing object can trigger broad work. Split contexts by responsibility and keep transient state close to where it changes. TanStack Query addresses a different problem: keyed asynchronous server data with freshness, deduplication, retry, background refetch, mutation, and invalidation rules.
 
-A query key is part of the data contract. If a filter changes the result, it belongs in the key. Mutations do not magically update every cached representation; they invalidate or update the affected keys. Forms have yet another lifecycle—field state, validation, submission, server errors—and deserve deliberate ownership rather than being pushed into either context or the server cache.
+A query key is part of the data contract. If a filter changes the result, it belongs in the key. Mutations do not magically update every cached representation; they invalidate or update the affected keys. Forms have yet another lifecycle-field state, validation, submission, server errors-and deserve deliberate ownership rather than being pushed into either context or the server cache.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Server state is async cache; UI state is local; do not merge blindly.
 
@@ -2436,7 +2436,7 @@ Protected routes: user vs admin role middleware tests.
 
 Arrange-act-assert, query by role, userEvent, mock fetch.
 
-A unit test isolates a small decision and gives the fastest feedback. A component test renders a meaningful UI unit and interacts through the interface a user can perceive. The test should assert behavior—what appears, what can be activated, what callback or navigation occurs—rather than the component's private state or implementation sequence.
+A unit test isolates a small decision and gives the fastest feedback. A component test renders a meaningful UI unit and interacts through the interface a user can perceive. The test should assert behavior-what appears, what can be activated, what callback or navigation occurs-rather than the component's private state or implementation sequence.
 
 Mocks replace boundaries, not everything. Mocking the network at the protocol level lets application code still perform a real request and exercise loading, error, and parsing behavior. Over-mocking produces tests that only confirm their own setup. Prefer accessible queries by role and name because they resemble user interaction and reveal missing semantics.
 
@@ -3341,7 +3341,7 @@ Driving test: knowledge of how it works + judgment.
 
 Entities, endpoints, caching, auth, scaling web tier, observability basics.
 
-A full-stack design interview is a conversation that turns uncertainty into explicit constraints. Begin with users and critical actions, then estimate traffic and data shape. Draw the simplest end-to-end path—client, API, data store—and add caching, queues, replicas, or realtime channels only when a named bottleneck or reliability goal requires them.
+A full-stack design interview is a conversation that turns uncertainty into explicit constraints. Begin with users and critical actions, then estimate traffic and data shape. Draw the simplest end-to-end path-client, API, data store-and add caching, queues, replicas, or realtime channels only when a named bottleneck or reliability goal requires them.
 
 Every technology choice should be justified by a property: a relational database for transactions and constraints, a CDN for geographically distributed immutable content, a queue to absorb bursts and decouple slow work. Discuss failure modes, security boundaries, observability, migrations, and trade-offs. Saying what is deliberately out of scope shows control of the problem.
 

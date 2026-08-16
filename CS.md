@@ -14,7 +14,7 @@ First principles → Systems → Design → Distributed → Hire
 
 ### Start here if computer science is completely new to you
 
-A **program** is a set of instructions a computer follows. An **algorithm** is the ordered method used to solve a problem, while a **data structure** is the way information is arranged so the program can use it. **Memory** is the computer's short-term working space. A **system** is a group of parts—programs, machines, storage, and networks—that work together. These ordinary ideas grow into the technical terms used later in the roadmap.
+A **program** is a set of instructions a computer follows. An **algorithm** is the ordered method used to solve a problem, while a **data structure** is the way information is arranged so the program can use it. **Memory** is the computer's short-term working space. A **system** is a group of parts-programs, machines, storage, and networks-that work together. These ordinary ideas grow into the technical terms used later in the roadmap.
 
 Do not try to memorize definitions before you have seen them work. For each topic, trace one tiny example by hand, run the code, change an input, and say what the computer does next. When a section compares two choices, focus on the reason for choosing one rather than trying to label one as always “best.”
 

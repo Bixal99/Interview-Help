@@ -4167,7 +4167,7 @@ jobs:
 
 **STEP-BY-STEP EXPLANATION**
 
-These products share several ideas: storing values by column, separating large tables into planned parts, using SQL to ask questions, changing computing power as demand changes, controlling access through IAM, and using staging areas for incoming files. **BigQuery** focuses on managed queries priced by scanned data or reserved capacity and connects closely with Google tools. **Snowflake** uses virtual warehouses—computing clusters you can start, stop, and resize—and provides strong data-sharing features. **Lakehouse** tools such as Databricks place Spark or another processing engine over object storage and use table formats that support reliable transactions.
+These products share several ideas: storing values by column, separating large tables into planned parts, using SQL to ask questions, changing computing power as demand changes, controlling access through IAM, and using staging areas for incoming files. **BigQuery** focuses on managed queries priced by scanned data or reserved capacity and connects closely with Google tools. **Snowflake** uses virtual warehouses-computing clusters you can start, stop, and resize-and provides strong data-sharing features. **Lakehouse** tools such as Databricks place Spark or another processing engine over object storage and use table formats that support reliable transactions.
 
 Your modeling and dbt habits transfer. Dialects differ (`DATE_TRUNC`, backticks vs quotes, `MERGE` details). Performance patterns (partition prune, avoid `SELECT *`, prune early) transfer too.
 

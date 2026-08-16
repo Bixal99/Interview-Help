@@ -465,7 +465,7 @@ def transmit(bits: str, bit_error_rate: float) -> str:
 msg = "101100101001"
 print("sent    ", msg)
 print("received", transmit(msg, 0.05))
-# Upper layers must detect/correct or retransmit — Phase 3.
+# Upper layers must detect/correct or retransmit - Phase 3.
 ```
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW:** Rarely deep physics in SE interviews; infra interviews may ask copper vs fiber vs wireless trade-offs, or why fiber for data center spines. Tie answers to latency, bandwidth, and failure domains.
@@ -908,7 +908,7 @@ IPv4: 32-bit address. `/24` means 24 network bits, 8 host bits → 256 addresses
  Broadcast:192.168.1.255
  Hosts:    .1 - .254
 
- Gateway is usually .1 on small LANs — convention, not magic.
+ Gateway is usually .1 on small LANs - convention, not magic.
 ```
 
 **PICTURE IT LIKE THIS**
@@ -1268,7 +1268,7 @@ print(ping_once("127.0.0.1"))
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
-- [How Routers Actually Work — NAT Explained](https://www.youtube.com/watch?v=FAY43J3FvZk)
+- [How Routers Actually Work - NAT Explained](https://www.youtube.com/watch?v=FAY43J3FvZk)
 - ByteByteGo NAT explainers
 - [Cloudflare - What is NAT?](https://www.cloudflare.com/learning/network-layer/what-is-nat/)
 - Observe your public IP via a "what is my IP" site vs `ipconfig` private IP
@@ -1556,7 +1556,7 @@ try:
     data, addr = sock.recvfrom(1024)
     print("got", data, "from", addr)
 except socket.timeout:
-    print("no reply — expected if no server; that IS the UDP lesson")
+    print("no reply - expected if no server; that IS the UDP lesson")
 sock.close()
 ```
 
@@ -1619,7 +1619,7 @@ If the post office (kernel TCP) refuses to update rules, you invent a private co
 **SMALL WORKING EXAMPLE**
 
 ```python
-# Conceptual only — real QUIC needs a library (aioquic, quic-go, etc.)
+# Conceptual only - real QUIC needs a library (aioquic, quic-go, etc.)
 print("HTTP/3 stack: App -> QUIC -> UDP -> IP")
 ```
 
@@ -1862,7 +1862,7 @@ A phone: bind is publishing your number, listen is waiting for calls, accept is 
 **SMALL WORKING EXAMPLE**
 
 ```python
-# tcp_echo_server.py — run in one terminal
+# tcp_echo_server.py - run in one terminal
 import socket
 
 HOST, PORT = "127.0.0.1", 7_001
@@ -1882,7 +1882,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 ```
 
 ```python
-# tcp_echo_client.py — run in another terminal
+# tcp_echo_client.py - run in another terminal
 import socket
 with socket.create_connection(("127.0.0.1", 7001)) as s:
     s.sendall(b"ping")
@@ -2218,8 +2218,8 @@ H2: binary frames, streams, HPACK header compression, server push (rarely used n
 
 ```
  HTTP/1.1: many TCP conns, text
- HTTP/2:   one TCP, many streams, binary — TCP loss blocks all streams
- HTTP/3:   QUIC/UDP, many streams — loss isolates better
+ HTTP/2:   one TCP, many streams, binary - TCP loss blocks all streams
+ HTTP/3:   QUIC/UDP, many streams - loss isolates better
 ```
 
 **PICTURE IT LIKE THIS**
@@ -2596,7 +2596,7 @@ A busy cafe conversation: everyone shares air; talking over each other forces re
 **SMALL WORKING EXAMPLE**
 
 ```python
-print("Measure, don't guess: RSSI, channel utilization, retries — AP controllers expose these.")
+print("Measure, don't guess: RSSI, channel utilization, retries - AP controllers expose these.")
 ```
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW:** Why wireless feels flaky vs Ethernet. WPA2 vs open. Enterprise vs PSK at high level.
@@ -2656,7 +2656,7 @@ import time, urllib.request
 t0 = time.perf_counter()
 urllib.request.urlopen("https://example.com", timeout=10).read(1000)
 print("seconds", time.perf_counter() - t0)
-# Compare on Ethernet vs Wi-Fi vs phone hotspot — interpret deltas carefully.
+# Compare on Ethernet vs Wi-Fi vs phone hotspot - interpret deltas carefully.
 ```
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW:** "Users on Wi-Fi slow, Ethernet fine - what check?" RF, channel, airtime, not only WAN.
@@ -3147,7 +3147,7 @@ steps = [
     "response + render",
 ]
 for i, s in enumerate(steps, 1):
-    print(f"{i}. {s} — failure mode: ?")
+    print(f"{i}. {s} - failure mode: ?")
 ```
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW:** This *is* the interview perspective. Practice aloud with a timer (5 and 12 minutes versions).

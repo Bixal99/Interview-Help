@@ -598,7 +598,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 An image captures the base operating system and application prerequisites. A launch template turns that image, instance shape, network identity, storage, and bootstrap into a repeatable instance definition. A load balancer distributes requests only to healthy targets. An autoscaling group reconciles desired capacity and changes it from policies or schedules.
 
-Horizontal scaling requires stateless request handling or externalized shared state. Health checks must represent readiness to serve, not merely a running process. During replacement, connection draining lets in-flight work finish. Scaling needs a signal correlated with demand—queue depth or requests per target can be better than average CPU—and a warm-up period that prevents new capacity from distorting the metric.
+Horizontal scaling requires stateless request handling or externalized shared state. Health checks must represent readiness to serve, not merely a running process. During replacement, connection draining lets in-flight work finish. Scaling needs a signal correlated with demand-queue depth or requests per target can be better than average CPU-and a warm-up period that prevents new capacity from distorting the metric.
 
 Immutable deployment replaces instances from a new image instead of editing running hosts. This makes rollback and drift easier to reason about, but images must be rebuilt for patches and boot time matters. Vertical scaling remains useful for stateful or licensed workloads; the point is to choose from workload evidence rather than repeat 'horizontal is always better'.
 
@@ -693,7 +693,7 @@ Object storage addresses immutable or replaceable blobs by key through an API. I
 
 Durability is the probability bytes survive; availability is whether the service answers now. Replication protects against hardware failure but also replicates accidental deletion, so versioning, retention, independent backup, and restore testing remain separate controls. Encryption protects media and transport, while authorization decides who can read the logical object.
 
-Cost includes operations, retrieval, replication, minimum storage duration, provisioned performance, and data transfer—not only gigabytes. Lifecycle rules should follow measured access and regulatory retention. A backup is credible only when recovery time and recovered content have been tested.
+Cost includes operations, retrieval, replication, minimum storage duration, provisioned performance, and data transfer-not only gigabytes. Lifecycle rules should follow measured access and regulatory retention. A backup is credible only when recovery time and recovered content have been tested.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Decouple durable data from compute and select object, block, or file semantics from the workload's access and recovery needs.
 
@@ -1423,7 +1423,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 Metrics aggregate behavior over time, logs preserve discrete events, traces follow a request across boundaries, and events record state changes in the cloud control plane. Consistent service, environment, version, request, and tenant attributes allow those signals to join into one story.
 
-Instrument from user symptom inward. Golden signals—latency, traffic, errors, and saturation—provide a service view; dependency and resource signals explain causes. Percentiles expose tail pain hidden by averages. Alerts should identify an actionable condition with owner, severity, runbook, and evidence link.
+Instrument from user symptom inward. Golden signals-latency, traffic, errors, and saturation-provide a service view; dependency and resource signals explain causes. Percentiles expose tail pain hidden by averages. Alerts should identify an actionable condition with owner, severity, runbook, and evidence link.
 
 Telemetry has cost and privacy risk. High-cardinality labels can explode metrics cost; indiscriminate logs create noise and leak data; sampling can hide rare traces. Define retention and redaction, control cardinality, and test alerts. Observability is the ability to ask new questions of system output, not the purchase of a dashboard.
 
@@ -1692,7 +1692,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 **STEP-BY-STEP EXPLANATION**
 
-FinOps joins engineering, finance, and product around timely cost data. Allocation requires accounts, tags, labels, and ownership. Unit economics divides spend by a meaningful output—active tenant, transaction, job, or gigabyte—so growth and efficiency can be separated.
+FinOps joins engineering, finance, and product around timely cost data. Allocation requires accounts, tags, labels, and ownership. Unit economics divides spend by a meaningful output-active tenant, transaction, job, or gigabyte-so growth and efficiency can be separated.
 
 Optimization begins with eliminating idle resources, rightsizing from utilization, scheduling non-production, storage lifecycle, reducing transfer paths, tuning observability volume, and selecting commitment discounts only after stable usage is known. Spot capacity is excellent for interruptible work and dangerous when the interruption model is ignored.
 

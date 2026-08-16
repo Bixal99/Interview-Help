@@ -30,7 +30,7 @@ An interviewer is usually checking how you think, not whether you can repeat a p
 
 Practice aloud. It will feel slower and less polished than reading silently, and that is normal. Give yourself permission to pause, ask a clarifying question, and correct yourself. The aim is a clear conversation that another person can follow.
 
-**Words you will meet often:** **Big O** describes how time or memory needs grow as the input grows; an **edge case** is an unusual but valid input near a boundary; an **invariant** is a condition that must remain true while an algorithm runs; a **follow-up** is the next question prompted by your answer; **system design** asks you to explain how multiple parts would work together; a **behavioral question** asks for evidence from something you did; and **STAR** means Situation, Task, Action, Result—a simple order for telling that story clearly.
+**Words you will meet often:** **Big O** describes how time or memory needs grow as the input grows; an **edge case** is an unusual but valid input near a boundary; an **invariant** is a condition that must remain true while an algorithm runs; a **follow-up** is the next question prompted by your answer; **system design** asks you to explain how multiple parts would work together; a **behavioral question** asks for evidence from something you did; and **STAR** means Situation, Task, Action, Result-a simple order for telling that story clearly.
 
 This is not a list of sentences to memorize. It is a **spoken-answer gym** built from the same chain-of-discovery logic as the connected roadmaps. Every strong answer names: (1) the problem the idea solves, (2) the internal steps, (3) a trade-off, (4) a failure mode.
 
@@ -1137,7 +1137,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **THE INTERVIEWER'S QUESTION:** Where should frontend state live, and when is an effect appropriate?
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Put shareable navigation state in the URL, remote truth in a server-state cache, truly cross-cutting client state in context/store, and transient state in the nearest component. Derive values during render rather than synchronizing duplicates. An effect is for synchronizing with an external system—subscription, timer, DOM API, or network side effect—with dependency correctness, cleanup, and race handling. Stable keys preserve identity; rendering should remain pure.
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Put shareable navigation state in the URL, remote truth in a server-state cache, truly cross-cutting client state in context/store, and transient state in the nearest component. Derive values during render rather than synchronizing duplicates. An effect is for synchronizing with an external system-subscription, timer, DOM API, or network side effect-with dependency correctness, cleanup, and race handling. Stable keys preserve identity; rendering should remain pure.
 
 **QUESTIONS THEY MAY ASK NEXT:** Controlled vs uncontrolled form? Optimistic update rollback? Why can an effect loop?
 
@@ -1151,7 +1151,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **THE INTERVIEWER'S QUESTION:** How do you choose a rendering strategy and frontend framework?
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Start with the product's requirements and limits: must search engines read it, must each user see different or fresh information, how interactive is it, how much delay is acceptable, where will it run, and what can the team operate? Client-side rendering makes the browser create more of the page. Server-side rendering sends useful HTML sooner but adds server and hydration work. Static generation is fast and reliable for content known during the build, but updates may require another build. Streaming and islands can send or activate smaller pieces separately. Choose React with Next.js, Vue with Nuxt, Angular, SvelteKit, Astro, or no framework by matching those needs and the tool's long-term support—not by benchmark scores alone.
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Start with the product's requirements and limits: must search engines read it, must each user see different or fresh information, how interactive is it, how much delay is acceptable, where will it run, and what can the team operate? Client-side rendering makes the browser create more of the page. Server-side rendering sends useful HTML sooner but adds server and hydration work. Static generation is fast and reliable for content known during the build, but updates may require another build. Streaming and islands can send or activate smaller pieces separately. Choose React with Next.js, Vue with Nuxt, Angular, SvelteKit, Astro, or no framework by matching those needs and the tool's long-term support-not by benchmark scores alone.
 
 **QUESTIONS THEY MAY ASK NEXT:** What causes hydration mismatch? When is a server component useful?
 
@@ -1263,7 +1263,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **THE INTERVIEWER'S QUESTION:** A payment webhook may arrive twice or out of order. Design processing.
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Verify signature over raw body plus timestamp; reject stale/invalid events; persist provider event ID under a unique constraint; acknowledge quickly; enqueue durable work; make business transition idempotent and monotonic; bound retries with jitter and dead-letter/operator replay; log/measure age, attempts, and outcomes. Use an outbox for local commit plus event publication. Do not promise end-to-end exactly once—combine at-least-once delivery with idempotent effects.
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Verify signature over raw body plus timestamp; reject stale/invalid events; persist provider event ID under a unique constraint; acknowledge quickly; enqueue durable work; make business transition idempotent and monotonic; bound retries with jitter and dead-letter/operator replay; log/measure age, attempts, and outcomes. Use an outbox for local commit plus event publication. Do not promise end-to-end exactly once-combine at-least-once delivery with idempotent effects.
 
 **QUESTIONS THEY MAY ASK NEXT:** What if response is lost? Poison message? Ordering per aggregate?
 
@@ -1291,7 +1291,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **THE INTERVIEWER'S QUESTION:** Design a multi-tenant project management application.
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Clarify roles, tenant isolation, core workflow, traffic, consistency, latency, compliance, and non-goals. Start modular monolith: CDN/reverse proxy, server-rendered or SPA UI, API, Postgres with tenant constraints/indexes, object storage, queue/worker, optional Redis. Define REST/OpenAPI, session/OAuth needs, object authorization, audit events, rate limits, async notifications, test layers, CI/migrations, HTTPS/secrets, logs/metrics/traces, SLO/alerts, backup/restore, and rollback. Scale measured walls with cache/read replica/partition/service extraction—not preemptive microservices.
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Clarify roles, tenant isolation, core workflow, traffic, consistency, latency, compliance, and non-goals. Start modular monolith: CDN/reverse proxy, server-rendered or SPA UI, API, Postgres with tenant constraints/indexes, object storage, queue/worker, optional Redis. Define REST/OpenAPI, session/OAuth needs, object authorization, audit events, rate limits, async notifications, test layers, CI/migrations, HTTPS/secrets, logs/metrics/traces, SLO/alerts, backup/restore, and rollback. Scale measured walls with cache/read replica/partition/service extraction-not preemptive microservices.
 
 **QUESTIONS THEY MAY ASK NEXT:** Tenant migration? Noisy neighbor? Zero-downtime schema change? Regional failure?
 
@@ -1427,7 +1427,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Define impact and recent change, then inspect service state and logs, process ownership, exit code, resource pressure, filesystem/inodes, permissions, environment/config, listening sockets, DNS and dependency reachability. Follow the request path with `systemctl`, `journalctl`, `ps`, `ss`, `curl`, `dig`, and targeted tracing. Mitigate first when impact is active, preserve evidence, change one variable, verify recovery, and record a prevention action.
 
-**QUESTIONS THEY MAY ASK NEXT:** Process exists but port is closed—next checks? · **COMMON MISTAKE:** Restarting repeatedly until evidence disappears.
+**QUESTIONS THEY MAY ASK NEXT:** Process exists but port is closed-next checks? · **COMMON MISTAKE:** Restarting repeatedly until evidence disappears.
 
 ---
 
@@ -1485,7 +1485,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **Level:** Core · **Source:** devops.md Phase 9
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** A container is an isolated process using kernel namespaces and cgroups, packaged with an immutable layered filesystem—not a small VM. Build from a pinned minimal base with multi-stage builds, run as non-root, exclude secrets, scan and sign, set resource expectations, send logs to stdout/stderr, keep state external, handle PID 1 signals, expose truthful readiness, and identify releases by digest.
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** A container is an isolated process using kernel namespaces and cgroups, packaged with an immutable layered filesystem-not a small VM. Build from a pinned minimal base with multi-stage builds, run as non-root, exclude secrets, scan and sign, set resource expectations, send logs to stdout/stderr, keep state external, handle PID 1 signals, expose truthful readiness, and identify releases by digest.
 
 **QUESTIONS THEY MAY ASK NEXT:** Image vs container? Why does PID 1 matter? · **COMMON MISTAKE:** Baking credentials or production data into an image.
 
@@ -1525,7 +1525,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 **Level:** Senior · **Source:** devops.md Phases 16-20
 
-**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Put fast security feedback near the change—secret, dependency, SAST, IaC, image and policy checks—then prioritize exploitable risk and preserve exception ownership. With GitOps, reviewed Git state is reconciled continuously and drift is visible; protect promotion and emergency procedures. During incidents establish command, communication, mitigation, evidence, and recovery; follow with a blameless causal review. A platform packages these paved roads as a product with adoption and outcome metrics, not a ticket wall.
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Put fast security feedback near the change-secret, dependency, SAST, IaC, image and policy checks-then prioritize exploitable risk and preserve exception ownership. With GitOps, reviewed Git state is reconciled continuously and drift is visible; protect promotion and emergency procedures. During incidents establish command, communication, mitigation, evidence, and recovery; follow with a blameless causal review. A platform packages these paved roads as a product with adoption and outcome metrics, not a ticket wall.
 
 **QUESTIONS THEY MAY ASK NEXT:** Git is unavailable during an incident? How avoid security gate fatigue? · **COMMON MISTAKE:** More tools and gates without ownership, developer usability, or recovery practice.
 

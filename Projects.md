@@ -117,7 +117,7 @@ Choose the recommended build first. Use the alternative only after the recommend
 
 #### OOP Phase F1 Project
 
-**Recommended build — Execution Trace Notebook**
+**Recommended build - Execution Trace Notebook**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase F1](./OOP.md#phase-f1) without requiring later phases.
 
@@ -132,18 +132,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Execution Trace Notebook Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Execution Trace Notebook Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [How to Build a Python CLI Tool People Actually Want to Use — ArjanCodes](https://www.youtube.com/watch?v=FWacanslfFM)
+- **YouTube build/lab:** [How to Build a Python CLI Tool People Actually Want to Use - ArjanCodes](https://www.youtube.com/watch?v=FWacanslfFM)
 
 > **When this project is complete:** [Resume your study at OOP Phase F2](./OOP.md#phase-f2) · [Review Phase F1](./OOP.md#phase-f1)
 
 ---
 #### OOP Phase F2 Project
 
-**Recommended build — CLI Rule Engine**
+**Recommended build - CLI Rule Engine**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase F2](./OOP.md#phase-f2) without requiring later phases.
 
@@ -158,18 +158,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — CLI Rule Engine Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - CLI Rule Engine Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [How to Build a Python CLI Tool People Actually Want to Use — ArjanCodes](https://www.youtube.com/watch?v=FWacanslfFM)
+- **YouTube build/lab:** [How to Build a Python CLI Tool People Actually Want to Use - ArjanCodes](https://www.youtube.com/watch?v=FWacanslfFM)
 
 > **When this project is complete:** [Resume your study at OOP Phase F3](./OOP.md#phase-f3) · [Review Phase F2](./OOP.md#phase-f2)
 
 ---
 #### OOP Phase F3 Project
 
-**Recommended build — Modular Text Statistics**
+**Recommended build - Modular Text Statistics**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase F3](./OOP.md#phase-f3) without requiring later phases.
 
@@ -184,18 +184,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Modular Text Statistics Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Modular Text Statistics Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [How to Build a Python CLI Tool People Actually Want to Use — ArjanCodes](https://www.youtube.com/watch?v=FWacanslfFM)
+- **YouTube build/lab:** [How to Build a Python CLI Tool People Actually Want to Use - ArjanCodes](https://www.youtube.com/watch?v=FWacanslfFM)
 
 > **When this project is complete:** [Resume your study at OOP Phase 1](./OOP.md#phase-1) · [Review Phase F3](./OOP.md#phase-f3)
 
 ---
 #### OOP Phase 1 Project
 
-**Recommended build — Procedural-to-Objects Refactor**
+**Recommended build - Procedural-to-Objects Refactor**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase 1](./OOP.md#phase-1) without requiring later phases.
 
@@ -210,18 +210,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Procedural-to-Objects Refactor Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Procedural-to-Objects Refactor Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
+- **YouTube build/lab:** [Python OOP Project for Beginners - Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
 
 > **When this project is complete:** [Resume your study at OOP Phase 2](./OOP.md#phase-2) · [Review Phase 1](./OOP.md#phase-1)
 
 ---
 #### OOP Phase 2 Project
 
-**Recommended build — Class & Instance Registry**
+**Recommended build - Class & Instance Registry**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase 2](./OOP.md#phase-2) without requiring later phases.
 
@@ -236,18 +236,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Class & Instance Registry Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Class & Instance Registry Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
+- **YouTube build/lab:** [Python OOP Project for Beginners - Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
 
 > **When this project is complete:** [Resume your study at OOP Phase 3](./OOP.md#phase-3) · [Review Phase 2](./OOP.md#phase-2)
 
 ---
 #### OOP Phase 3 Project
 
-**Recommended build — Bank Account State Machine**
+**Recommended build - Bank Account State Machine**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase 3](./OOP.md#phase-3) without requiring later phases.
 
@@ -262,18 +262,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Bank Account State Machine Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Bank Account State Machine Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
+- **YouTube build/lab:** [Python OOP Project for Beginners - Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
 
 > **When this project is complete:** [Resume your study at OOP Phase 4](./OOP.md#phase-4) · [Review Phase 3](./OOP.md#phase-3)
 
 ---
 #### OOP Phase 4 Project
 
-**Recommended build — Validated Wallet API**
+**Recommended build - Validated Wallet API**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase 4](./OOP.md#phase-4) without requiring later phases.
 
@@ -288,18 +288,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Validated Wallet API Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Validated Wallet API Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
+- **YouTube build/lab:** [Python OOP Project for Beginners - Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
 
 > **When this project is complete:** [Resume your study at OOP Phase 5](./OOP.md#phase-5) · [Review Phase 4](./OOP.md#phase-4)
 
 ---
 #### OOP Phase 5 Project
 
-**Recommended build — Pluggable Shape Calculator**
+**Recommended build - Pluggable Shape Calculator**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase 5](./OOP.md#phase-5) without requiring later phases.
 
@@ -314,18 +314,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Pluggable Shape Calculator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Pluggable Shape Calculator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
+- **YouTube build/lab:** [Python OOP Project for Beginners - Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
 
 > **When this project is complete:** [Resume your study at OOP Phase 6](./OOP.md#phase-6) · [Review Phase 5](./OOP.md#phase-5)
 
 ---
 #### OOP Phase 6 Project
 
-**Recommended build — Employee Payroll Hierarchy**
+**Recommended build - Employee Payroll Hierarchy**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase 6](./OOP.md#phase-6) without requiring later phases.
 
@@ -340,18 +340,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Employee Payroll Hierarchy Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Employee Payroll Hierarchy Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
+- **YouTube build/lab:** [Python OOP Project for Beginners - Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
 
 > **When this project is complete:** [Resume your study at OOP Phase 7](./OOP.md#phase-7) · [Review Phase 6](./OOP.md#phase-6)
 
 ---
 #### OOP Phase 7 Project
 
-**Recommended build — Polymorphic Exporter**
+**Recommended build - Polymorphic Exporter**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase 7](./OOP.md#phase-7) without requiring later phases.
 
@@ -366,18 +366,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Polymorphic Exporter Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Polymorphic Exporter Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
+- **YouTube build/lab:** [Python OOP Project for Beginners - Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
 
 > **When this project is complete:** [Resume your study at OOP Phase 8](./OOP.md#phase-8) · [Review Phase 7](./OOP.md#phase-7)
 
 ---
 #### OOP Phase 8 Project
 
-**Recommended build — Composed Order Service**
+**Recommended build - Composed Order Service**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase 8](./OOP.md#phase-8) without requiring later phases.
 
@@ -392,18 +392,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Composed Order Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Composed Order Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
+- **YouTube build/lab:** [Python OOP Project for Beginners - Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
 
 > **When this project is complete:** [Resume your study at OOP Phase 9](./OOP.md#phase-9) · [Review Phase 8](./OOP.md#phase-8)
 
 ---
 #### OOP Phase 9 Project
 
-**Recommended build — Pythonic Collection Wrapper**
+**Recommended build - Pythonic Collection Wrapper**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase 9](./OOP.md#phase-9) without requiring later phases.
 
@@ -418,18 +418,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Pythonic Collection Wrapper Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Pythonic Collection Wrapper Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [Python OOP Project for Beginners — Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
+- **YouTube build/lab:** [Python OOP Project for Beginners - Dave Gray](https://www.youtube.com/watch?v=PMFd95RgIwE)
 
 > **When this project is complete:** [Resume your study at OOP Phase 10](./OOP.md#phase-10) · [Review Phase 9](./OOP.md#phase-9)
 
 ---
 #### OOP Phase 10 Project
 
-**Recommended build — Library Relationship Model**
+**Recommended build - Library Relationship Model**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase 10](./OOP.md#phase-10) without requiring later phases.
 
@@ -444,18 +444,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Library Relationship Model Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Library Relationship Model Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
+- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) - CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
 
 > **When this project is complete:** [Resume your study at OOP Phase 11](./OOP.md#phase-11) · [Review Phase 10](./OOP.md#phase-10)
 
 ---
 #### OOP Phase 11 Project
 
-**Recommended build — God-Object Rescue**
+**Recommended build - God-Object Rescue**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase 11](./OOP.md#phase-11) without requiring later phases.
 
@@ -470,18 +470,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — God-Object Rescue Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - God-Object Rescue Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
+- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) - CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
 
 > **When this project is complete:** [Resume your study at OOP Phase 12](./OOP.md#phase-12) · [Review Phase 11](./OOP.md#phase-11)
 
 ---
 #### OOP Phase 12 Project
 
-**Recommended build — SOLID Notification Service**
+**Recommended build - SOLID Notification Service**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase 12](./OOP.md#phase-12) without requiring later phases.
 
@@ -496,18 +496,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — SOLID Notification Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - SOLID Notification Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
+- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) - CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
 
 > **When this project is complete:** [Resume your study at OOP Phase 13](./OOP.md#phase-13) · [Review Phase 12](./OOP.md#phase-12)
 
 ---
 #### OOP Phase 13 Project
 
-**Recommended build — Configurable Object Factory**
+**Recommended build - Configurable Object Factory**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase 13](./OOP.md#phase-13) without requiring later phases.
 
@@ -522,18 +522,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Configurable Object Factory Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Configurable Object Factory Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [python-patterns](https://github.com/faif/python-patterns)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
+- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) - CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
 
 > **When this project is complete:** [Resume your study at OOP Phase 14](./OOP.md#phase-14) · [Review Phase 13](./OOP.md#phase-13)
 
 ---
 #### OOP Phase 14 Project
 
-**Recommended build — Legacy Payment Adapter**
+**Recommended build - Legacy Payment Adapter**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase 14](./OOP.md#phase-14) without requiring later phases.
 
@@ -548,18 +548,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Legacy Payment Adapter Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Legacy Payment Adapter Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [python-patterns](https://github.com/faif/python-patterns)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
+- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) - CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
 
 > **When this project is complete:** [Resume your study at OOP Phase 15](./OOP.md#phase-15) · [Review Phase 14](./OOP.md#phase-14)
 
 ---
 #### OOP Phase 15 Project
 
-**Recommended build — Event-Driven Task Board**
+**Recommended build - Event-Driven Task Board**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase 15](./OOP.md#phase-15) without requiring later phases.
 
@@ -574,18 +574,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Event-Driven Task Board Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Event-Driven Task Board Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [python-patterns](https://github.com/faif/python-patterns)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
+- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) - CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
 
 > **When this project is complete:** [Resume your study at OOP Phase 16](./OOP.md#phase-16) · [Review Phase 15](./OOP.md#phase-15)
 
 ---
 #### OOP Phase 16 Project
 
-**Recommended build — Testable Domain Model**
+**Recommended build - Testable Domain Model**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase 16](./OOP.md#phase-16) without requiring later phases.
 
@@ -600,18 +600,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Testable Domain Model Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Testable Domain Model Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
+- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) - CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
 
 > **When this project is complete:** [Resume your study at OOP Phase 17](./OOP.md#phase-17) · [Review Phase 16](./OOP.md#phase-16)
 
 ---
 #### OOP Phase 17 Project
 
-**Recommended build — Layered Inventory App**
+**Recommended build - Layered Inventory App**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase 17](./OOP.md#phase-17) without requiring later phases.
 
@@ -626,18 +626,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Layered Inventory App Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Layered Inventory App Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) — CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
+- **YouTube build/lab:** [Game of Life in Python (SOLID + Design Patterns) - CODE CREATIVE](https://www.youtube.com/watch?v=PIDrbtykQPY)
 
 > **When this project is complete:** [Resume your study at OOP Phase 18](./OOP.md#phase-18) · [Review Phase 17](./OOP.md#phase-17)
 
 ---
 #### OOP Phase 18 Project
 
-**Recommended build — Parking Lot LLD**
+**Recommended build - Parking Lot LLD**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase 18](./OOP.md#phase-18) without requiring later phases.
 
@@ -652,18 +652,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Parking Lot LLD Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Parking Lot LLD Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cosmic Python](https://github.com/cosmicpython/book)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [Parking Lot Design — Think Software](https://www.youtube.com/watch?v=tVRyb4HaHgw)
+- **YouTube build/lab:** [Parking Lot Design - Think Software](https://www.youtube.com/watch?v=tVRyb4HaHgw)
 
 > **When this project is complete:** [Resume your study at OOP Phase 19](./OOP.md#phase-19) · [Review Phase 18](./OOP.md#phase-18)
 
 ---
 #### OOP Phase 19 Project
 
-**Recommended build — Design Portfolio Pack**
+**Recommended build - Design Portfolio Pack**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase 19](./OOP.md#phase-19) without requiring later phases.
 
@@ -678,18 +678,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Design Portfolio Pack Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Design Portfolio Pack Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [Parking Lot Design — Think Software](https://www.youtube.com/watch?v=tVRyb4HaHgw)
+- **YouTube build/lab:** [Parking Lot Design - Think Software](https://www.youtube.com/watch?v=tVRyb4HaHgw)
 
 > **When this project is complete:** [Resume your study at OOP Phase 20](./OOP.md#phase-20) · [Review Phase 19](./OOP.md#phase-19)
 
 ---
 #### OOP Phase 20 Project
 
-**Recommended build — Timed OOP Design Kata**
+**Recommended build - Timed OOP Design Kata**
 
 **Why this is the right project now:** it applies the material covered through [OOP Phase 20](./OOP.md#phase-20) without requiring later phases.
 
@@ -704,11 +704,11 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Timed OOP Design Kata Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Timed OOP Design Kata Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [python-patterns](https://github.com/faif/python-patterns)
 - **More project ideas on GitHub:** [More Python OOP Projects](https://github.com/MostafaAhmed98/Python_OOP_Projects)
-- **YouTube build/lab:** [Parking Lot Design — Think Software](https://www.youtube.com/watch?v=tVRyb4HaHgw)
+- **YouTube build/lab:** [Parking Lot Design - Think Software](https://www.youtube.com/watch?v=tVRyb4HaHgw)
 
 > **When this project is complete:** [Return to the OOP phase index](./OOP.md#phase-index) · [Review Phase 20](./OOP.md#phase-20)
 
@@ -720,7 +720,7 @@ Choose the recommended build first. Use the alternative only after the recommend
 
 #### CS Phase 1 Project
 
-**Recommended build — Mini Expression Runtime**
+**Recommended build - Mini Expression Runtime**
 
 **Why this is the right project now:** it applies the material covered through [CS Phase 1](./CS.md#phase-1) without requiring later phases.
 
@@ -735,18 +735,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Mini Expression Runtime Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Mini Expression Runtime Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Data Structure and Algorithm Patterns — freeCodeCamp.org](https://www.youtube.com/watch?v=Z_c4byLrNBU)
+- **YouTube build/lab:** [Data Structure and Algorithm Patterns - freeCodeCamp.org](https://www.youtube.com/watch?v=Z_c4byLrNBU)
 
 > **When this project is complete:** [Resume your study at CS Phase 2](./CS.md#phase-2) · [Review Phase 1](./CS.md#phase-1)
 
 ---
 #### CS Phase 2 Project
 
-**Recommended build — Algorithm Growth Profiler**
+**Recommended build - Algorithm Growth Profiler**
 
 **Why this is the right project now:** it applies the material covered through [CS Phase 2](./CS.md#phase-2) without requiring later phases.
 
@@ -761,18 +761,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Algorithm Growth Profiler Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Algorithm Growth Profiler Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Data Structure and Algorithm Patterns — freeCodeCamp.org](https://www.youtube.com/watch?v=Z_c4byLrNBU)
+- **YouTube build/lab:** [Data Structure and Algorithm Patterns - freeCodeCamp.org](https://www.youtube.com/watch?v=Z_c4byLrNBU)
 
 > **When this project is complete:** [Resume your study at CS Phase 3](./CS.md#phase-3) · [Review Phase 2](./CS.md#phase-2)
 
 ---
 #### CS Phase 3 Project
 
-**Recommended build — Data Structures Toolkit**
+**Recommended build - Data Structures Toolkit**
 
 **Why this is the right project now:** it applies the material covered through [CS Phase 3](./CS.md#phase-3) without requiring later phases.
 
@@ -787,18 +787,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Data Structures Toolkit Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Data Structures Toolkit Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Data Structure and Algorithm Patterns — freeCodeCamp.org](https://www.youtube.com/watch?v=Z_c4byLrNBU)
+- **YouTube build/lab:** [Data Structure and Algorithm Patterns - freeCodeCamp.org](https://www.youtube.com/watch?v=Z_c4byLrNBU)
 
 > **When this project is complete:** [Resume your study at CS Phase 4](./CS.md#phase-4) · [Review Phase 3](./CS.md#phase-3)
 
 ---
 #### CS Phase 4 Project
 
-**Recommended build — Recursive Filesystem Walker**
+**Recommended build - Recursive Filesystem Walker**
 
 **Why this is the right project now:** it applies the material covered through [CS Phase 4](./CS.md#phase-4) without requiring later phases.
 
@@ -813,18 +813,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Recursive Filesystem Walker Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Recursive Filesystem Walker Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Data Structure and Algorithm Patterns — freeCodeCamp.org](https://www.youtube.com/watch?v=Z_c4byLrNBU)
+- **YouTube build/lab:** [Data Structure and Algorithm Patterns - freeCodeCamp.org](https://www.youtube.com/watch?v=Z_c4byLrNBU)
 
 > **When this project is complete:** [Resume your study at CS Phase 5](./CS.md#phase-5) · [Review Phase 4](./CS.md#phase-4)
 
 ---
 #### CS Phase 5 Project
 
-**Recommended build — Priority Task Scheduler**
+**Recommended build - Priority Task Scheduler**
 
 **Why this is the right project now:** it applies the material covered through [CS Phase 5](./CS.md#phase-5) without requiring later phases.
 
@@ -839,18 +839,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Priority Task Scheduler Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Priority Task Scheduler Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Data Structure and Algorithm Patterns — freeCodeCamp.org](https://www.youtube.com/watch?v=Z_c4byLrNBU)
+- **YouTube build/lab:** [Data Structure and Algorithm Patterns - freeCodeCamp.org](https://www.youtube.com/watch?v=Z_c4byLrNBU)
 
 > **When this project is complete:** [Resume your study at CS Phase 6](./CS.md#phase-6) · [Review Phase 5](./CS.md#phase-5)
 
 ---
 #### CS Phase 6 Project
 
-**Recommended build — Hash Table and LRU Cache**
+**Recommended build - Hash Table and LRU Cache**
 
 **Why this is the right project now:** it applies the material covered through [CS Phase 6](./CS.md#phase-6) without requiring later phases.
 
@@ -865,18 +865,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Hash Table and LRU Cache Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Hash Table and LRU Cache Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Four Systems Projects Worth Building — Alexa Fazio](https://www.youtube.com/watch?v=6CJiM3E2mAA)
+- **YouTube build/lab:** [Four Systems Projects Worth Building - Alexa Fazio](https://www.youtube.com/watch?v=6CJiM3E2mAA)
 
 > **When this project is complete:** [Resume your study at CS Phase 7](./CS.md#phase-7) · [Review Phase 6](./CS.md#phase-6)
 
 ---
 #### CS Phase 7 Project
 
-**Recommended build — Sorting Benchmark Explorer**
+**Recommended build - Sorting Benchmark Explorer**
 
 **Why this is the right project now:** it applies the material covered through [CS Phase 7](./CS.md#phase-7) without requiring later phases.
 
@@ -891,18 +891,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Sorting Benchmark Explorer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Sorting Benchmark Explorer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Four Systems Projects Worth Building — Alexa Fazio](https://www.youtube.com/watch?v=6CJiM3E2mAA)
+- **YouTube build/lab:** [Four Systems Projects Worth Building - Alexa Fazio](https://www.youtube.com/watch?v=6CJiM3E2mAA)
 
 > **When this project is complete:** [Resume your study at CS Phase 8](./CS.md#phase-8) · [Review Phase 7](./CS.md#phase-7)
 
 ---
 #### CS Phase 8 Project
 
-**Recommended build — Graph Route Planner**
+**Recommended build - Graph Route Planner**
 
 **Why this is the right project now:** it applies the material covered through [CS Phase 8](./CS.md#phase-8) without requiring later phases.
 
@@ -917,18 +917,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Graph Route Planner Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Graph Route Planner Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Four Systems Projects Worth Building — Alexa Fazio](https://www.youtube.com/watch?v=6CJiM3E2mAA)
+- **YouTube build/lab:** [Four Systems Projects Worth Building - Alexa Fazio](https://www.youtube.com/watch?v=6CJiM3E2mAA)
 
 > **When this project is complete:** [Resume your study at CS Phase 9](./CS.md#phase-9) · [Review Phase 8](./CS.md#phase-8)
 
 ---
 #### CS Phase 9 Project
 
-**Recommended build — Algorithm Pattern Workbook**
+**Recommended build - Algorithm Pattern Workbook**
 
 **Why this is the right project now:** it applies the material covered through [CS Phase 9](./CS.md#phase-9) without requiring later phases.
 
@@ -943,18 +943,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Algorithm Pattern Workbook Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Algorithm Pattern Workbook Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [The Algorithms](https://github.com/TheAlgorithms/Python)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Four Systems Projects Worth Building — Alexa Fazio](https://www.youtube.com/watch?v=6CJiM3E2mAA)
+- **YouTube build/lab:** [Four Systems Projects Worth Building - Alexa Fazio](https://www.youtube.com/watch?v=6CJiM3E2mAA)
 
 > **When this project is complete:** [Resume your study at CS Phase 10](./CS.md#phase-10) · [Review Phase 9](./CS.md#phase-9)
 
 ---
 #### CS Phase 10 Project
 
-**Recommended build — Parking Lot LLD**
+**Recommended build - Parking Lot LLD**
 
 **Why this is the right project now:** it applies the material covered through [CS Phase 10](./CS.md#phase-10) without requiring later phases.
 
@@ -969,18 +969,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Parking Lot LLD Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Parking Lot LLD Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [python-patterns](https://github.com/faif/python-patterns)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Four Systems Projects Worth Building — Alexa Fazio](https://www.youtube.com/watch?v=6CJiM3E2mAA)
+- **YouTube build/lab:** [Four Systems Projects Worth Building - Alexa Fazio](https://www.youtube.com/watch?v=6CJiM3E2mAA)
 
 > **When this project is complete:** [Resume your study at CS Phase 11](./CS.md#phase-11) · [Review Phase 10](./CS.md#phase-10)
 
 ---
 #### CS Phase 11 Project
 
-**Recommended build — Shell and Scheduler Simulator**
+**Recommended build - Shell and Scheduler Simulator**
 
 **Why this is the right project now:** it applies the material covered through [CS Phase 11](./CS.md#phase-11) without requiring later phases.
 
@@ -995,18 +995,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Shell and Scheduler Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Shell and Scheduler Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Build a Production-Ready Backend API — JavaScript Mastery](https://www.youtube.com/watch?v=rOpEN1JDaD0)
+- **YouTube build/lab:** [Build a Production-Ready Backend API - JavaScript Mastery](https://www.youtube.com/watch?v=rOpEN1JDaD0)
 
 > **When this project is complete:** [Resume your study at CS Phase 12](./CS.md#phase-12) · [Review Phase 11](./CS.md#phase-11)
 
 ---
 #### CS Phase 12 Project
 
-**Recommended build — TCP Chat Service**
+**Recommended build - TCP Chat Service**
 
 **Why this is the right project now:** it applies the material covered through [CS Phase 12](./CS.md#phase-12) without requiring later phases.
 
@@ -1021,18 +1021,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — TCP Chat Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - TCP Chat Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Build a Production-Ready Backend API — JavaScript Mastery](https://www.youtube.com/watch?v=rOpEN1JDaD0)
+- **YouTube build/lab:** [Build a Production-Ready Backend API - JavaScript Mastery](https://www.youtube.com/watch?v=rOpEN1JDaD0)
 
 > **When this project is complete:** [Resume your study at CS Phase 13](./CS.md#phase-13) · [Review Phase 12](./CS.md#phase-12)
 
 ---
 #### CS Phase 13 Project
 
-**Recommended build — Raw HTTP API Server**
+**Recommended build - Raw HTTP API Server**
 
 **Why this is the right project now:** it applies the material covered through [CS Phase 13](./CS.md#phase-13) without requiring later phases.
 
@@ -1047,18 +1047,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Raw HTTP API Server Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Raw HTTP API Server Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Build a Production-Ready Backend API — JavaScript Mastery](https://www.youtube.com/watch?v=rOpEN1JDaD0)
+- **YouTube build/lab:** [Build a Production-Ready Backend API - JavaScript Mastery](https://www.youtube.com/watch?v=rOpEN1JDaD0)
 
 > **When this project is complete:** [Resume your study at CS Phase 14](./CS.md#phase-14) · [Review Phase 13](./CS.md#phase-13)
 
 ---
 #### CS Phase 14 Project
 
-**Recommended build — Transactional Library Database**
+**Recommended build - Transactional Library Database**
 
 **Why this is the right project now:** it applies the material covered through [CS Phase 14](./CS.md#phase-14) without requiring later phases.
 
@@ -1073,18 +1073,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Transactional Library Database Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Transactional Library Database Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Build a Production-Ready Backend API — JavaScript Mastery](https://www.youtube.com/watch?v=rOpEN1JDaD0)
+- **YouTube build/lab:** [Build a Production-Ready Backend API - JavaScript Mastery](https://www.youtube.com/watch?v=rOpEN1JDaD0)
 
 > **When this project is complete:** [Resume your study at CS Phase 15](./CS.md#phase-15) · [Review Phase 14](./CS.md#phase-14)
 
 ---
 #### CS Phase 15 Project
 
-**Recommended build — Secure Auth Service**
+**Recommended build - Secure Auth Service**
 
 **Why this is the right project now:** it applies the material covered through [CS Phase 15](./CS.md#phase-15) without requiring later phases.
 
@@ -1099,18 +1099,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Secure Auth Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Secure Auth Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OWASP NodeGoat](https://github.com/OWASP/NodeGoat)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Build a Production-Ready Backend API — JavaScript Mastery](https://www.youtube.com/watch?v=rOpEN1JDaD0)
+- **YouTube build/lab:** [Build a Production-Ready Backend API - JavaScript Mastery](https://www.youtube.com/watch?v=rOpEN1JDaD0)
 
 > **When this project is complete:** [Resume your study at CS Phase 16](./CS.md#phase-16) · [Review Phase 15](./CS.md#phase-15)
 
 ---
 #### CS Phase 16 Project
 
-**Recommended build — Tested CI-Ready Service**
+**Recommended build - Tested CI-Ready Service**
 
 **Why this is the right project now:** it applies the material covered through [CS Phase 16](./CS.md#phase-16) without requiring later phases.
 
@@ -1125,18 +1125,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Tested CI-Ready Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Tested CI-Ready Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [System Design Primer: Distributed Systems — Gaurav Sen](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
+- **YouTube build/lab:** [System Design Primer: Distributed Systems - Gaurav Sen](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
 
 > **When this project is complete:** [Resume your study at CS Phase 17](./CS.md#phase-17) · [Review Phase 16](./CS.md#phase-16)
 
 ---
 #### CS Phase 17 Project
 
-**Recommended build — Scalable URL Shortener Design**
+**Recommended build - Scalable URL Shortener Design**
 
 **Why this is the right project now:** it applies the material covered through [CS Phase 17](./CS.md#phase-17) without requiring later phases.
 
@@ -1151,18 +1151,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Scalable URL Shortener Design Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Scalable URL Shortener Design Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [System Design Primer](https://github.com/donnemartin/system-design-primer)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [System Design Primer: Distributed Systems — Gaurav Sen](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
+- **YouTube build/lab:** [System Design Primer: Distributed Systems - Gaurav Sen](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
 
 > **When this project is complete:** [Resume your study at CS Phase 18](./CS.md#phase-18) · [Review Phase 17](./CS.md#phase-17)
 
 ---
 #### CS Phase 18 Project
 
-**Recommended build — Replicated Ledger Simulator**
+**Recommended build - Replicated Ledger Simulator**
 
 **Why this is the right project now:** it applies the material covered through [CS Phase 18](./CS.md#phase-18) without requiring later phases.
 
@@ -1177,18 +1177,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Replicated Ledger Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Replicated Ledger Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [System Design Primer](https://github.com/donnemartin/system-design-primer)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [System Design Primer: Distributed Systems — Gaurav Sen](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
+- **YouTube build/lab:** [System Design Primer: Distributed Systems - Gaurav Sen](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
 
 > **When this project is complete:** [Resume your study at CS Phase 19](./CS.md#phase-19) · [Review Phase 18](./CS.md#phase-18)
 
 ---
 #### CS Phase 19 Project
 
-**Recommended build — Integrated Systems Capstone**
+**Recommended build - Integrated Systems Capstone**
 
 **Why this is the right project now:** it applies the material covered through [CS Phase 19](./CS.md#phase-19) without requiring later phases.
 
@@ -1203,18 +1203,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Integrated Systems Capstone Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Integrated Systems Capstone Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [System Design Primer: Distributed Systems — Gaurav Sen](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
+- **YouTube build/lab:** [System Design Primer: Distributed Systems - Gaurav Sen](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
 
 > **When this project is complete:** [Resume your study at CS Phase 20](./CS.md#phase-20) · [Review Phase 19](./CS.md#phase-19)
 
 ---
 #### CS Phase 20 Project
 
-**Recommended build — Timed Interview Harness**
+**Recommended build - Timed Interview Harness**
 
 **Why this is the right project now:** it applies the material covered through [CS Phase 20](./CS.md#phase-20) without requiring later phases.
 
@@ -1229,11 +1229,11 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Timed Interview Harness Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Timed Interview Harness Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Coding Interview University](https://github.com/jwasham/coding-interview-university)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [System Design Primer: Distributed Systems — Gaurav Sen](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
+- **YouTube build/lab:** [System Design Primer: Distributed Systems - Gaurav Sen](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
 
 > **When this project is complete:** [Return to the CS phase index](./CS.md#phase-index) · [Review Phase 20](./CS.md#phase-20)
 
@@ -1245,7 +1245,7 @@ Choose the recommended build first. Use the alternative only after the recommend
 
 #### DATA Phase 1 Project
 
-**Recommended build — Decision Metric Brief**
+**Recommended build - Decision Metric Brief**
 
 **Why this is the right project now:** it applies the material covered through [DATA Phase 1](./Data.md#phase-1) without requiring later phases.
 
@@ -1260,18 +1260,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Decision Metric Brief Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Decision Metric Brief Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
-- **YouTube build/lab:** [Building Your First Data Analytics Portfolio — CareerFoundry](https://www.youtube.com/watch?v=j9Q84_Gn_T0)
+- **YouTube build/lab:** [Building Your First Data Analytics Portfolio - CareerFoundry](https://www.youtube.com/watch?v=j9Q84_Gn_T0)
 
 > **When this project is complete:** [Resume your study at DATA Phase 2](./Data.md#phase-2) · [Review Phase 1](./Data.md#phase-1)
 
 ---
 #### DATA Phase 2 Project
 
-**Recommended build — Spreadsheet KPI Dashboard**
+**Recommended build - Spreadsheet KPI Dashboard**
 
 **Why this is the right project now:** it applies the material covered through [DATA Phase 2](./Data.md#phase-2) without requiring later phases.
 
@@ -1286,18 +1286,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Spreadsheet KPI Dashboard Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Spreadsheet KPI Dashboard Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
-- **YouTube build/lab:** [Building Your First Data Analytics Portfolio — CareerFoundry](https://www.youtube.com/watch?v=j9Q84_Gn_T0)
+- **YouTube build/lab:** [Building Your First Data Analytics Portfolio - CareerFoundry](https://www.youtube.com/watch?v=j9Q84_Gn_T0)
 
 > **When this project is complete:** [Resume your study at DATA Phase 3](./Data.md#phase-3) · [Review Phase 2](./Data.md#phase-2)
 
 ---
 #### DATA Phase 3 Project
 
-**Recommended build — Reproducible Data CLI**
+**Recommended build - Reproducible Data CLI**
 
 **Why this is the right project now:** it applies the material covered through [DATA Phase 3](./Data.md#phase-3) without requiring later phases.
 
@@ -1312,18 +1312,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Reproducible Data CLI Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Reproducible Data CLI Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
-- **YouTube build/lab:** [Building Your First Data Analytics Portfolio — CareerFoundry](https://www.youtube.com/watch?v=j9Q84_Gn_T0)
+- **YouTube build/lab:** [Building Your First Data Analytics Portfolio - CareerFoundry](https://www.youtube.com/watch?v=j9Q84_Gn_T0)
 
 > **When this project is complete:** [Resume your study at DATA Phase 4](./Data.md#phase-4) · [Review Phase 3](./Data.md#phase-3)
 
 ---
 #### DATA Phase 4 Project
 
-**Recommended build — SQL Bookstore Database**
+**Recommended build - SQL Bookstore Database**
 
 **Why this is the right project now:** it applies the material covered through [DATA Phase 4](./Data.md#phase-4) without requiring later phases.
 
@@ -1338,18 +1338,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — SQL Bookstore Database Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - SQL Bookstore Database Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
-- **YouTube build/lab:** [Building Your First Data Analytics Portfolio — CareerFoundry](https://www.youtube.com/watch?v=j9Q84_Gn_T0)
+- **YouTube build/lab:** [Building Your First Data Analytics Portfolio - CareerFoundry](https://www.youtube.com/watch?v=j9Q84_Gn_T0)
 
 > **When this project is complete:** [Resume your study at DATA Phase 5](./Data.md#phase-5) · [Review Phase 4](./Data.md#phase-4)
 
 ---
 #### DATA Phase 5 Project
 
-**Recommended build — Sales Cohort Analysis**
+**Recommended build - Sales Cohort Analysis**
 
 **Why this is the right project now:** it applies the material covered through [DATA Phase 5](./Data.md#phase-5) without requiring later phases.
 
@@ -1364,18 +1364,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Sales Cohort Analysis Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Sales Cohort Analysis Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
-- **YouTube build/lab:** [Building Your First Data Analytics Portfolio — CareerFoundry](https://www.youtube.com/watch?v=j9Q84_Gn_T0)
+- **YouTube build/lab:** [Building Your First Data Analytics Portfolio - CareerFoundry](https://www.youtube.com/watch?v=j9Q84_Gn_T0)
 
 > **When this project is complete:** [Resume your study at DATA Phase 6](./Data.md#phase-6) · [Review Phase 5](./Data.md#phase-5)
 
 ---
 #### DATA Phase 6 Project
 
-**Recommended build — Window Function Analytics Pack**
+**Recommended build - Window Function Analytics Pack**
 
 **Why this is the right project now:** it applies the material covered through [DATA Phase 6](./Data.md#phase-6) without requiring later phases.
 
@@ -1390,18 +1390,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Window Function Analytics Pack Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Window Function Analytics Pack Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
-- **YouTube build/lab:** [SQL Data Analyst Portfolio Project with Real Data — Amlan Mohanty](https://www.youtube.com/watch?v=x8dfQkKTyP0)
+- **YouTube build/lab:** [SQL Data Analyst Portfolio Project with Real Data - Amlan Mohanty](https://www.youtube.com/watch?v=x8dfQkKTyP0)
 
 > **When this project is complete:** [Resume your study at DATA Phase 7](./Data.md#phase-7) · [Review Phase 6](./Data.md#phase-6)
 
 ---
 #### DATA Phase 7 Project
 
-**Recommended build — A/B Test Analyzer**
+**Recommended build - A/B Test Analyzer**
 
 **Why this is the right project now:** it applies the material covered through [DATA Phase 7](./Data.md#phase-7) without requiring later phases.
 
@@ -1416,18 +1416,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — A/B Test Analyzer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - A/B Test Analyzer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
-- **YouTube build/lab:** [SQL Data Analyst Portfolio Project with Real Data — Amlan Mohanty](https://www.youtube.com/watch?v=x8dfQkKTyP0)
+- **YouTube build/lab:** [SQL Data Analyst Portfolio Project with Real Data - Amlan Mohanty](https://www.youtube.com/watch?v=x8dfQkKTyP0)
 
 > **When this project is complete:** [Resume your study at DATA Phase 8](./Data.md#phase-8) · [Review Phase 7](./Data.md#phase-7)
 
 ---
 #### DATA Phase 8 Project
 
-**Recommended build — Dirty Dataset Cleaner**
+**Recommended build - Dirty Dataset Cleaner**
 
 **Why this is the right project now:** it applies the material covered through [DATA Phase 8](./Data.md#phase-8) without requiring later phases.
 
@@ -1442,18 +1442,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Dirty Dataset Cleaner Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Dirty Dataset Cleaner Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
-- **YouTube build/lab:** [SQL Data Analyst Portfolio Project with Real Data — Amlan Mohanty](https://www.youtube.com/watch?v=x8dfQkKTyP0)
+- **YouTube build/lab:** [SQL Data Analyst Portfolio Project with Real Data - Amlan Mohanty](https://www.youtube.com/watch?v=x8dfQkKTyP0)
 
 > **When this project is complete:** [Resume your study at DATA Phase 9](./Data.md#phase-9) · [Review Phase 8](./Data.md#phase-8)
 
 ---
 #### DATA Phase 9 Project
 
-**Recommended build — Executive Data Story**
+**Recommended build - Executive Data Story**
 
 **Why this is the right project now:** it applies the material covered through [DATA Phase 9](./Data.md#phase-9) without requiring later phases.
 
@@ -1468,18 +1468,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Executive Data Story Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Executive Data Story Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
-- **YouTube build/lab:** [SQL Data Analyst Portfolio Project with Real Data — Amlan Mohanty](https://www.youtube.com/watch?v=x8dfQkKTyP0)
+- **YouTube build/lab:** [SQL Data Analyst Portfolio Project with Real Data - Amlan Mohanty](https://www.youtube.com/watch?v=x8dfQkKTyP0)
 
 > **When this project is complete:** [Resume your study at DATA Phase 10](./Data.md#phase-10) · [Review Phase 9](./Data.md#phase-9)
 
 ---
 #### DATA Phase 10 Project
 
-**Recommended build — Product Funnel EDA**
+**Recommended build - Product Funnel EDA**
 
 **Why this is the right project now:** it applies the material covered through [DATA Phase 10](./Data.md#phase-10) without requiring later phases.
 
@@ -1494,18 +1494,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Product Funnel EDA Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Product Funnel EDA Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
-- **YouTube build/lab:** [SQL Data Analyst Portfolio Project with Real Data — Amlan Mohanty](https://www.youtube.com/watch?v=x8dfQkKTyP0)
+- **YouTube build/lab:** [SQL Data Analyst Portfolio Project with Real Data - Amlan Mohanty](https://www.youtube.com/watch?v=x8dfQkKTyP0)
 
 > **When this project is complete:** [Resume your study at DATA Phase 11](./Data.md#phase-11) · [Review Phase 10](./Data.md#phase-10)
 
 ---
 #### DATA Phase 11 Project
 
-**Recommended build — Normalized Order Database**
+**Recommended build - Normalized Order Database**
 
 **Why this is the right project now:** it applies the material covered through [DATA Phase 11](./Data.md#phase-11) without requiring later phases.
 
@@ -1520,18 +1520,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Normalized Order Database Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Normalized Order Database Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
-- **YouTube build/lab:** [Build an ELT Pipeline with dbt, Snowflake, and Airflow — jayzern](https://www.youtube.com/watch?v=OLXkGB7krGo)
+- **YouTube build/lab:** [Build an ELT Pipeline with dbt, Snowflake, and Airflow - jayzern](https://www.youtube.com/watch?v=OLXkGB7krGo)
 
 > **When this project is complete:** [Resume your study at DATA Phase 12](./Data.md#phase-12) · [Review Phase 11](./Data.md#phase-11)
 
 ---
 #### DATA Phase 12 Project
 
-**Recommended build — Star Schema Warehouse**
+**Recommended build - Star Schema Warehouse**
 
 **Why this is the right project now:** it applies the material covered through [DATA Phase 12](./Data.md#phase-12) without requiring later phases.
 
@@ -1546,18 +1546,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Star Schema Warehouse Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Star Schema Warehouse Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
-- **YouTube build/lab:** [Build an ELT Pipeline with dbt, Snowflake, and Airflow — jayzern](https://www.youtube.com/watch?v=OLXkGB7krGo)
+- **YouTube build/lab:** [Build an ELT Pipeline with dbt, Snowflake, and Airflow - jayzern](https://www.youtube.com/watch?v=OLXkGB7krGo)
 
 > **When this project is complete:** [Resume your study at DATA Phase 13](./Data.md#phase-13) · [Review Phase 12](./Data.md#phase-12)
 
 ---
 #### DATA Phase 13 Project
 
-**Recommended build — Incremental ETL Pipeline**
+**Recommended build - Incremental ETL Pipeline**
 
 **Why this is the right project now:** it applies the material covered through [DATA Phase 13](./Data.md#phase-13) without requiring later phases.
 
@@ -1572,18 +1572,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Incremental ETL Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Incremental ETL Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
-- **YouTube build/lab:** [Build an ELT Pipeline with dbt, Snowflake, and Airflow — jayzern](https://www.youtube.com/watch?v=OLXkGB7krGo)
+- **YouTube build/lab:** [Build an ELT Pipeline with dbt, Snowflake, and Airflow - jayzern](https://www.youtube.com/watch?v=OLXkGB7krGo)
 
 > **When this project is complete:** [Resume your study at DATA Phase 14](./Data.md#phase-14) · [Review Phase 13](./Data.md#phase-13)
 
 ---
 #### DATA Phase 14 Project
 
-**Recommended build — Scheduled Airflow Pipeline**
+**Recommended build - Scheduled Airflow Pipeline**
 
 **Why this is the right project now:** it applies the material covered through [DATA Phase 14](./Data.md#phase-14) without requiring later phases.
 
@@ -1598,18 +1598,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Scheduled Airflow Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Scheduled Airflow Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Apache Airflow](https://github.com/apache/airflow)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
-- **YouTube build/lab:** [Build an ELT Pipeline with dbt, Snowflake, and Airflow — jayzern](https://www.youtube.com/watch?v=OLXkGB7krGo)
+- **YouTube build/lab:** [Build an ELT Pipeline with dbt, Snowflake, and Airflow - jayzern](https://www.youtube.com/watch?v=OLXkGB7krGo)
 
 > **When this project is complete:** [Resume your study at DATA Phase 15](./Data.md#phase-15) · [Review Phase 14](./Data.md#phase-14)
 
 ---
 #### DATA Phase 15 Project
 
-**Recommended build — dbt Analytics Project**
+**Recommended build - dbt Analytics Project**
 
 **Why this is the right project now:** it applies the material covered through [DATA Phase 15](./Data.md#phase-15) without requiring later phases.
 
@@ -1624,18 +1624,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — dbt Analytics Project Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - dbt Analytics Project Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [dbt Jaffle Shop](https://github.com/dbt-labs/jaffle_shop)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
-- **YouTube build/lab:** [Build an ELT Pipeline with dbt, Snowflake, and Airflow — jayzern](https://www.youtube.com/watch?v=OLXkGB7krGo)
+- **YouTube build/lab:** [Build an ELT Pipeline with dbt, Snowflake, and Airflow - jayzern](https://www.youtube.com/watch?v=OLXkGB7krGo)
 
 > **When this project is complete:** [Resume your study at DATA Phase 16](./Data.md#phase-16) · [Review Phase 15](./Data.md#phase-15)
 
 ---
 #### DATA Phase 16 Project
 
-**Recommended build — Cloud Warehouse Migration**
+**Recommended build - Cloud Warehouse Migration**
 
 **Why this is the right project now:** it applies the material covered through [DATA Phase 16](./Data.md#phase-16) without requiring later phases.
 
@@ -1650,18 +1650,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Cloud Warehouse Migration Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Cloud Warehouse Migration Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
-- **YouTube build/lab:** [Spark, Kafka, and Cassandra End-to-End Streaming Project — Data Engineering](https://www.youtube.com/watch?v=wNnTNTVdglM)
+- **YouTube build/lab:** [Spark, Kafka, and Cassandra End-to-End Streaming Project - Data Engineering](https://www.youtube.com/watch?v=wNnTNTVdglM)
 
 > **When this project is complete:** [Resume your study at DATA Phase 17](./Data.md#phase-17) · [Review Phase 16](./Data.md#phase-16)
 
 ---
 #### DATA Phase 17 Project
 
-**Recommended build — Distributed Spark Batch Job**
+**Recommended build - Distributed Spark Batch Job**
 
 **Why this is the right project now:** it applies the material covered through [DATA Phase 17](./Data.md#phase-17) without requiring later phases.
 
@@ -1676,18 +1676,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Distributed Spark Batch Job Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Distributed Spark Batch Job Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Apache Spark](https://github.com/apache/spark)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
-- **YouTube build/lab:** [Spark, Kafka, and Cassandra End-to-End Streaming Project — Data Engineering](https://www.youtube.com/watch?v=wNnTNTVdglM)
+- **YouTube build/lab:** [Spark, Kafka, and Cassandra End-to-End Streaming Project - Data Engineering](https://www.youtube.com/watch?v=wNnTNTVdglM)
 
 > **When this project is complete:** [Resume your study at DATA Phase 18](./Data.md#phase-18) · [Review Phase 17](./Data.md#phase-17)
 
 ---
 #### DATA Phase 18 Project
 
-**Recommended build — Kafka Streaming Metrics**
+**Recommended build - Kafka Streaming Metrics**
 
 **Why this is the right project now:** it applies the material covered through [DATA Phase 18](./Data.md#phase-18) without requiring later phases.
 
@@ -1702,18 +1702,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Kafka Streaming Metrics Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Kafka Streaming Metrics Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
-- **YouTube build/lab:** [Spark, Kafka, and Cassandra End-to-End Streaming Project — Data Engineering](https://www.youtube.com/watch?v=wNnTNTVdglM)
+- **YouTube build/lab:** [Spark, Kafka, and Cassandra End-to-End Streaming Project - Data Engineering](https://www.youtube.com/watch?v=wNnTNTVdglM)
 
 > **When this project is complete:** [Resume your study at DATA Phase 19](./Data.md#phase-19) · [Review Phase 18](./Data.md#phase-18)
 
 ---
 #### DATA Phase 19 Project
 
-**Recommended build — Data Quality Portfolio**
+**Recommended build - Data Quality Portfolio**
 
 **Why this is the right project now:** it applies the material covered through [DATA Phase 19](./Data.md#phase-19) without requiring later phases.
 
@@ -1728,18 +1728,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Data Quality Portfolio Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Data Quality Portfolio Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
-- **YouTube build/lab:** [Spark, Kafka, and Cassandra End-to-End Streaming Project — Data Engineering](https://www.youtube.com/watch?v=wNnTNTVdglM)
+- **YouTube build/lab:** [Spark, Kafka, and Cassandra End-to-End Streaming Project - Data Engineering](https://www.youtube.com/watch?v=wNnTNTVdglM)
 
 > **When this project is complete:** [Resume your study at DATA Phase 20](./Data.md#phase-20) · [Review Phase 19](./Data.md#phase-19)
 
 ---
 #### DATA Phase 20 Project
 
-**Recommended build — Timed Analytics Case Study**
+**Recommended build - Timed Analytics Case Study**
 
 **Why this is the right project now:** it applies the material covered through [DATA Phase 20](./Data.md#phase-20) without requiring later phases.
 
@@ -1754,11 +1754,11 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Timed Analytics Case Study Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Timed Analytics Case Study Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - **More project ideas on GitHub:** [Udacity Data Engineering Projects](https://github.com/san089/Udacity-Data-Engineering-Projects)
-- **YouTube build/lab:** [Spark, Kafka, and Cassandra End-to-End Streaming Project — Data Engineering](https://www.youtube.com/watch?v=wNnTNTVdglM)
+- **YouTube build/lab:** [Spark, Kafka, and Cassandra End-to-End Streaming Project - Data Engineering](https://www.youtube.com/watch?v=wNnTNTVdglM)
 
 > **When this project is complete:** [Return to the DATA phase index](./Data.md#phase-index) · [Review Phase 20](./Data.md#phase-20)
 
@@ -1770,7 +1770,7 @@ Choose the recommended build first. Use the alternative only after the recommend
 
 #### NETWORKS Phase 1 Project
 
-**Recommended build — Latency vs Throughput Lab**
+**Recommended build - Latency vs Throughput Lab**
 
 **Why this is the right project now:** it applies the material covered through [NETWORKS Phase 1](./Networks.md#phase-1) without requiring later phases.
 
@@ -1785,18 +1785,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Latency vs Throughput Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Latency vs Throughput Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
-- **YouTube build/lab:** [Free CCNA: Subnetting Lab — Jeremy's IT Lab](https://www.youtube.com/watch?v=bQ8sdpGQu8c)
+- **YouTube build/lab:** [Free CCNA: Subnetting Lab - Jeremy's IT Lab](https://www.youtube.com/watch?v=bQ8sdpGQu8c)
 
 > **When this project is complete:** [Resume your study at NETWORKS Phase 2](./Networks.md#phase-2) · [Review Phase 1](./Networks.md#phase-1)
 
 ---
 #### NETWORKS Phase 2 Project
 
-**Recommended build — Noisy Link Simulator**
+**Recommended build - Noisy Link Simulator**
 
 **Why this is the right project now:** it applies the material covered through [NETWORKS Phase 2](./Networks.md#phase-2) without requiring later phases.
 
@@ -1811,18 +1811,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Noisy Link Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Noisy Link Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
-- **YouTube build/lab:** [Free CCNA: Subnetting Lab — Jeremy's IT Lab](https://www.youtube.com/watch?v=bQ8sdpGQu8c)
+- **YouTube build/lab:** [Free CCNA: Subnetting Lab - Jeremy's IT Lab](https://www.youtube.com/watch?v=bQ8sdpGQu8c)
 
 > **When this project is complete:** [Resume your study at NETWORKS Phase 3](./Networks.md#phase-3) · [Review Phase 2](./Networks.md#phase-2)
 
 ---
 #### NETWORKS Phase 3 Project
 
-**Recommended build — Ethernet Frame Encoder**
+**Recommended build - Ethernet Frame Encoder**
 
 **Why this is the right project now:** it applies the material covered through [NETWORKS Phase 3](./Networks.md#phase-3) without requiring later phases.
 
@@ -1837,18 +1837,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Ethernet Frame Encoder Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Ethernet Frame Encoder Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
-- **YouTube build/lab:** [Free CCNA: Subnetting Lab — Jeremy's IT Lab](https://www.youtube.com/watch?v=bQ8sdpGQu8c)
+- **YouTube build/lab:** [Free CCNA: Subnetting Lab - Jeremy's IT Lab](https://www.youtube.com/watch?v=bQ8sdpGQu8c)
 
 > **When this project is complete:** [Resume your study at NETWORKS Phase 4](./Networks.md#phase-4) · [Review Phase 3](./Networks.md#phase-3)
 
 ---
 #### NETWORKS Phase 4 Project
 
-**Recommended build — Learning Switch Simulator**
+**Recommended build - Learning Switch Simulator**
 
 **Why this is the right project now:** it applies the material covered through [NETWORKS Phase 4](./Networks.md#phase-4) without requiring later phases.
 
@@ -1863,18 +1863,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Learning Switch Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Learning Switch Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
-- **YouTube build/lab:** [Free CCNA: Subnetting Lab — Jeremy's IT Lab](https://www.youtube.com/watch?v=bQ8sdpGQu8c)
+- **YouTube build/lab:** [Free CCNA: Subnetting Lab - Jeremy's IT Lab](https://www.youtube.com/watch?v=bQ8sdpGQu8c)
 
 > **When this project is complete:** [Resume your study at NETWORKS Phase 5](./Networks.md#phase-5) · [Review Phase 4](./Networks.md#phase-4)
 
 ---
 #### NETWORKS Phase 5 Project
 
-**Recommended build — Subnet Calculator**
+**Recommended build - Subnet Calculator**
 
 **Why this is the right project now:** it applies the material covered through [NETWORKS Phase 5](./Networks.md#phase-5) without requiring later phases.
 
@@ -1889,18 +1889,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Subnet Calculator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Subnet Calculator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
-- **YouTube build/lab:** [Free CCNA: Subnetting Lab — Jeremy's IT Lab](https://www.youtube.com/watch?v=bQ8sdpGQu8c)
+- **YouTube build/lab:** [Free CCNA: Subnetting Lab - Jeremy's IT Lab](https://www.youtube.com/watch?v=bQ8sdpGQu8c)
 
 > **When this project is complete:** [Resume your study at NETWORKS Phase 6](./Networks.md#phase-6) · [Review Phase 5](./Networks.md#phase-5)
 
 ---
 #### NETWORKS Phase 6 Project
 
-**Recommended build — Longest-Prefix Router**
+**Recommended build - Longest-Prefix Router**
 
 **Why this is the right project now:** it applies the material covered through [NETWORKS Phase 6](./Networks.md#phase-6) without requiring later phases.
 
@@ -1915,18 +1915,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Longest-Prefix Router Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Longest-Prefix Router Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
-- **YouTube build/lab:** [Python Socket Programming Tutorial — Tech With Tim](https://www.youtube.com/watch?v=3QiPPX-KeSc)
+- **YouTube build/lab:** [Python Socket Programming Tutorial - Tech With Tim](https://www.youtube.com/watch?v=3QiPPX-KeSc)
 
 > **When this project is complete:** [Resume your study at NETWORKS Phase 7](./Networks.md#phase-7) · [Review Phase 6](./Networks.md#phase-6)
 
 ---
 #### NETWORKS Phase 7 Project
 
-**Recommended build — DHCP/NAT Table Simulator**
+**Recommended build - DHCP/NAT Table Simulator**
 
 **Why this is the right project now:** it applies the material covered through [NETWORKS Phase 7](./Networks.md#phase-7) without requiring later phases.
 
@@ -1941,18 +1941,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — DHCP/NAT Table Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - DHCP/NAT Table Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
-- **YouTube build/lab:** [Python Socket Programming Tutorial — Tech With Tim](https://www.youtube.com/watch?v=3QiPPX-KeSc)
+- **YouTube build/lab:** [Python Socket Programming Tutorial - Tech With Tim](https://www.youtube.com/watch?v=3QiPPX-KeSc)
 
 > **When this project is complete:** [Resume your study at NETWORKS Phase 8](./Networks.md#phase-8) · [Review Phase 7](./Networks.md#phase-7)
 
 ---
 #### NETWORKS Phase 8 Project
 
-**Recommended build — Packet Encapsulation Visualizer**
+**Recommended build - Packet Encapsulation Visualizer**
 
 **Why this is the right project now:** it applies the material covered through [NETWORKS Phase 8](./Networks.md#phase-8) without requiring later phases.
 
@@ -1967,18 +1967,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Packet Encapsulation Visualizer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Packet Encapsulation Visualizer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
-- **YouTube build/lab:** [Python Socket Programming Tutorial — Tech With Tim](https://www.youtube.com/watch?v=3QiPPX-KeSc)
+- **YouTube build/lab:** [Python Socket Programming Tutorial - Tech With Tim](https://www.youtube.com/watch?v=3QiPPX-KeSc)
 
 > **When this project is complete:** [Resume your study at NETWORKS Phase 9](./Networks.md#phase-9) · [Review Phase 8](./Networks.md#phase-8)
 
 ---
 #### NETWORKS Phase 9 Project
 
-**Recommended build — Reliable UDP Chat**
+**Recommended build - Reliable UDP Chat**
 
 **Why this is the right project now:** it applies the material covered through [NETWORKS Phase 9](./Networks.md#phase-9) without requiring later phases.
 
@@ -1993,18 +1993,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Reliable UDP Chat Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Reliable UDP Chat Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
-- **YouTube build/lab:** [Python Socket Programming Tutorial — Tech With Tim](https://www.youtube.com/watch?v=3QiPPX-KeSc)
+- **YouTube build/lab:** [Python Socket Programming Tutorial - Tech With Tim](https://www.youtube.com/watch?v=3QiPPX-KeSc)
 
 > **When this project is complete:** [Resume your study at NETWORKS Phase 10](./Networks.md#phase-10) · [Review Phase 9](./Networks.md#phase-9)
 
 ---
 #### NETWORKS Phase 10 Project
 
-**Recommended build — TCP State Trace**
+**Recommended build - TCP State Trace**
 
 **Why this is the right project now:** it applies the material covered through [NETWORKS Phase 10](./Networks.md#phase-10) without requiring later phases.
 
@@ -2019,18 +2019,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — TCP State Trace Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - TCP State Trace Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
-- **YouTube build/lab:** [Python Socket Programming Tutorial — Tech With Tim](https://www.youtube.com/watch?v=3QiPPX-KeSc)
+- **YouTube build/lab:** [Python Socket Programming Tutorial - Tech With Tim](https://www.youtube.com/watch?v=3QiPPX-KeSc)
 
 > **When this project is complete:** [Resume your study at NETWORKS Phase 11](./Networks.md#phase-11) · [Review Phase 10](./Networks.md#phase-10)
 
 ---
 #### NETWORKS Phase 11 Project
 
-**Recommended build — Multi-client Socket Server**
+**Recommended build - Multi-client Socket Server**
 
 **Why this is the right project now:** it applies the material covered through [NETWORKS Phase 11](./Networks.md#phase-11) without requiring later phases.
 
@@ -2045,18 +2045,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Multi-client Socket Server Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Multi-client Socket Server Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
-- **YouTube build/lab:** [Network Protocols: ARP through TLS and DNS — Practical Networking](https://www.youtube.com/watch?v=E5bSumTAHZE)
+- **YouTube build/lab:** [Network Protocols: ARP through TLS and DNS - Practical Networking](https://www.youtube.com/watch?v=E5bSumTAHZE)
 
 > **When this project is complete:** [Resume your study at NETWORKS Phase 12](./Networks.md#phase-12) · [Review Phase 11](./Networks.md#phase-11)
 
 ---
 #### NETWORKS Phase 12 Project
 
-**Recommended build — Recursive DNS Resolver**
+**Recommended build - Recursive DNS Resolver**
 
 **Why this is the right project now:** it applies the material covered through [NETWORKS Phase 12](./Networks.md#phase-12) without requiring later phases.
 
@@ -2071,18 +2071,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Recursive DNS Resolver Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Recursive DNS Resolver Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
-- **YouTube build/lab:** [Network Protocols: ARP through TLS and DNS — Practical Networking](https://www.youtube.com/watch?v=E5bSumTAHZE)
+- **YouTube build/lab:** [Network Protocols: ARP through TLS and DNS - Practical Networking](https://www.youtube.com/watch?v=E5bSumTAHZE)
 
 > **When this project is complete:** [Resume your study at NETWORKS Phase 13](./Networks.md#phase-13) · [Review Phase 12](./Networks.md#phase-12)
 
 ---
 #### NETWORKS Phase 13 Project
 
-**Recommended build — Raw HTTP Exchange**
+**Recommended build - Raw HTTP Exchange**
 
 **Why this is the right project now:** it applies the material covered through [NETWORKS Phase 13](./Networks.md#phase-13) without requiring later phases.
 
@@ -2097,18 +2097,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Raw HTTP Exchange Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Raw HTTP Exchange Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
-- **YouTube build/lab:** [Network Protocols: ARP through TLS and DNS — Practical Networking](https://www.youtube.com/watch?v=E5bSumTAHZE)
+- **YouTube build/lab:** [Network Protocols: ARP through TLS and DNS - Practical Networking](https://www.youtube.com/watch?v=E5bSumTAHZE)
 
 > **When this project is complete:** [Resume your study at NETWORKS Phase 14](./Networks.md#phase-14) · [Review Phase 13](./Networks.md#phase-13)
 
 ---
 #### NETWORKS Phase 14 Project
 
-**Recommended build — TLS Certificate Inspector**
+**Recommended build - TLS Certificate Inspector**
 
 **Why this is the right project now:** it applies the material covered through [NETWORKS Phase 14](./Networks.md#phase-14) without requiring later phases.
 
@@ -2123,18 +2123,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — TLS Certificate Inspector Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - TLS Certificate Inspector Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
-- **YouTube build/lab:** [Network Protocols: ARP through TLS and DNS — Practical Networking](https://www.youtube.com/watch?v=E5bSumTAHZE)
+- **YouTube build/lab:** [Network Protocols: ARP through TLS and DNS - Practical Networking](https://www.youtube.com/watch?v=E5bSumTAHZE)
 
 > **When this project is complete:** [Resume your study at NETWORKS Phase 15](./Networks.md#phase-15) · [Review Phase 14](./Networks.md#phase-14)
 
 ---
 #### NETWORKS Phase 15 Project
 
-**Recommended build — Packet Forensics Report**
+**Recommended build - Packet Forensics Report**
 
 **Why this is the right project now:** it applies the material covered through [NETWORKS Phase 15](./Networks.md#phase-15) without requiring later phases.
 
@@ -2149,18 +2149,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Packet Forensics Report Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Packet Forensics Report Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Wireshark](https://github.com/wireshark/wireshark)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
-- **YouTube build/lab:** [Network Protocols: ARP through TLS and DNS — Practical Networking](https://www.youtube.com/watch?v=E5bSumTAHZE)
+- **YouTube build/lab:** [Network Protocols: ARP through TLS and DNS - Practical Networking](https://www.youtube.com/watch?v=E5bSumTAHZE)
 
 > **When this project is complete:** [Resume your study at NETWORKS Phase 16](./Networks.md#phase-16) · [Review Phase 15](./Networks.md#phase-15)
 
 ---
 #### NETWORKS Phase 16 Project
 
-**Recommended build — Wi-Fi Survey and Heatmap**
+**Recommended build - Wi-Fi Survey and Heatmap**
 
 **Why this is the right project now:** it applies the material covered through [NETWORKS Phase 16](./Networks.md#phase-16) without requiring later phases.
 
@@ -2175,18 +2175,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Wi-Fi Survey and Heatmap Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Wi-Fi Survey and Heatmap Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
-- **YouTube build/lab:** [Wireshark Packet Analysis Lab — Concepts & Tricks](https://www.youtube.com/watch?v=2SYknklVHqU)
+- **YouTube build/lab:** [Wireshark Packet Analysis Lab - Concepts & Tricks](https://www.youtube.com/watch?v=2SYknklVHqU)
 
 > **When this project is complete:** [Resume your study at NETWORKS Phase 17](./Networks.md#phase-17) · [Review Phase 16](./Networks.md#phase-16)
 
 ---
 #### NETWORKS Phase 17 Project
 
-**Recommended build — Reverse Proxy Load Lab**
+**Recommended build - Reverse Proxy Load Lab**
 
 **Why this is the right project now:** it applies the material covered through [NETWORKS Phase 17](./Networks.md#phase-17) without requiring later phases.
 
@@ -2201,18 +2201,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Reverse Proxy Load Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Reverse Proxy Load Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
-- **YouTube build/lab:** [Wireshark Packet Analysis Lab — Concepts & Tricks](https://www.youtube.com/watch?v=2SYknklVHqU)
+- **YouTube build/lab:** [Wireshark Packet Analysis Lab - Concepts & Tricks](https://www.youtube.com/watch?v=2SYknklVHqU)
 
 > **When this project is complete:** [Resume your study at NETWORKS Phase 18](./Networks.md#phase-18) · [Review Phase 17](./Networks.md#phase-17)
 
 ---
 #### NETWORKS Phase 18 Project
 
-**Recommended build — BGP Policy Simulator**
+**Recommended build - BGP Policy Simulator**
 
 **Why this is the right project now:** it applies the material covered through [NETWORKS Phase 18](./Networks.md#phase-18) without requiring later phases.
 
@@ -2227,18 +2227,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — BGP Policy Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - BGP Policy Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
-- **YouTube build/lab:** [Wireshark Packet Analysis Lab — Concepts & Tricks](https://www.youtube.com/watch?v=2SYknklVHqU)
+- **YouTube build/lab:** [Wireshark Packet Analysis Lab - Concepts & Tricks](https://www.youtube.com/watch?v=2SYknklVHqU)
 
 > **When this project is complete:** [Resume your study at NETWORKS Phase 19](./Networks.md#phase-19) · [Review Phase 18](./Networks.md#phase-18)
 
 ---
 #### NETWORKS Phase 19 Project
 
-**Recommended build — Automated Network Lab Portfolio**
+**Recommended build - Automated Network Lab Portfolio**
 
 **Why this is the right project now:** it applies the material covered through [NETWORKS Phase 19](./Networks.md#phase-19) without requiring later phases.
 
@@ -2253,18 +2253,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Automated Network Lab Portfolio Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Automated Network Lab Portfolio Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
-- **YouTube build/lab:** [Wireshark Packet Analysis Lab — Concepts & Tricks](https://www.youtube.com/watch?v=2SYknklVHqU)
+- **YouTube build/lab:** [Wireshark Packet Analysis Lab - Concepts & Tricks](https://www.youtube.com/watch?v=2SYknklVHqU)
 
 > **When this project is complete:** [Resume your study at NETWORKS Phase 20](./Networks.md#phase-20) · [Review Phase 19](./Networks.md#phase-19)
 
 ---
 #### NETWORKS Phase 20 Project
 
-**Recommended build — Timed Troubleshooting Drill**
+**Recommended build - Timed Troubleshooting Drill**
 
 **Why this is the right project now:** it applies the material covered through [NETWORKS Phase 20](./Networks.md#phase-20) without requiring later phases.
 
@@ -2279,11 +2279,11 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Timed Troubleshooting Drill Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Timed Troubleshooting Drill Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Mininet](https://github.com/mininet/mininet)
 - **More project ideas on GitHub:** [Docker-Based Computer Networks Labs](https://github.com/senisioi/computer-networks)
-- **YouTube build/lab:** [Wireshark Packet Analysis Lab — Concepts & Tricks](https://www.youtube.com/watch?v=2SYknklVHqU)
+- **YouTube build/lab:** [Wireshark Packet Analysis Lab - Concepts & Tricks](https://www.youtube.com/watch?v=2SYknklVHqU)
 
 > **When this project is complete:** [Return to the NETWORKS phase index](./Networks.md#phase-index) · [Review Phase 20](./Networks.md#phase-20)
 
@@ -2295,7 +2295,7 @@ Choose the recommended build first. Use the alternative only after the recommend
 
 #### AI Phase 1 Project
 
-**Recommended build — Rule vs Learner Benchmark**
+**Recommended build - Rule vs Learner Benchmark**
 
 **Why this is the right project now:** it applies the material covered through [AI Phase 1](./AI.md#phase-1) without requiring later phases.
 
@@ -2310,18 +2310,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Rule vs Learner Benchmark Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Rule vs Learner Benchmark Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
-- **YouTube build/lab:** [Build a Machine Learning Web App with scikit-learn — Patrick Loeber](https://www.youtube.com/watch?v=Klqn--Mu2pE)
+- **YouTube build/lab:** [Build a Machine Learning Web App with scikit-learn - Patrick Loeber](https://www.youtube.com/watch?v=Klqn--Mu2pE)
 
 > **When this project is complete:** [Resume your study at AI Phase 2](./AI.md#phase-2) · [Review Phase 1](./AI.md#phase-1)
 
 ---
 #### AI Phase 2 Project
 
-**Recommended build — Gradient Descent Visualizer**
+**Recommended build - Gradient Descent Visualizer**
 
 **Why this is the right project now:** it applies the material covered through [AI Phase 2](./AI.md#phase-2) without requiring later phases.
 
@@ -2336,18 +2336,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Gradient Descent Visualizer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Gradient Descent Visualizer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [micrograd](https://github.com/karpathy/micrograd)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
-- **YouTube build/lab:** [Build a Machine Learning Web App with scikit-learn — Patrick Loeber](https://www.youtube.com/watch?v=Klqn--Mu2pE)
+- **YouTube build/lab:** [Build a Machine Learning Web App with scikit-learn - Patrick Loeber](https://www.youtube.com/watch?v=Klqn--Mu2pE)
 
 > **When this project is complete:** [Resume your study at AI Phase 3](./AI.md#phase-3) · [Review Phase 2](./AI.md#phase-2)
 
 ---
 #### AI Phase 3 Project
 
-**Recommended build — NumPy/Pandas Dataset Lab**
+**Recommended build - NumPy/Pandas Dataset Lab**
 
 **Why this is the right project now:** it applies the material covered through [AI Phase 3](./AI.md#phase-3) without requiring later phases.
 
@@ -2362,18 +2362,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — NumPy/Pandas Dataset Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - NumPy/Pandas Dataset Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
-- **YouTube build/lab:** [Build a Machine Learning Web App with scikit-learn — Patrick Loeber](https://www.youtube.com/watch?v=Klqn--Mu2pE)
+- **YouTube build/lab:** [Build a Machine Learning Web App with scikit-learn - Patrick Loeber](https://www.youtube.com/watch?v=Klqn--Mu2pE)
 
 > **When this project is complete:** [Resume your study at AI Phase 4](./AI.md#phase-4) · [Review Phase 3](./AI.md#phase-3)
 
 ---
 #### AI Phase 4 Project
 
-**Recommended build — Regression and Classification Baseline**
+**Recommended build - Regression and Classification Baseline**
 
 **Why this is the right project now:** it applies the material covered through [AI Phase 4](./AI.md#phase-4) without requiring later phases.
 
@@ -2388,18 +2388,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Regression and Classification Baseline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Regression and Classification Baseline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
-- **YouTube build/lab:** [Build a Machine Learning Web App with scikit-learn — Patrick Loeber](https://www.youtube.com/watch?v=Klqn--Mu2pE)
+- **YouTube build/lab:** [Build a Machine Learning Web App with scikit-learn - Patrick Loeber](https://www.youtube.com/watch?v=Klqn--Mu2pE)
 
 > **When this project is complete:** [Resume your study at AI Phase 5](./AI.md#phase-5) · [Review Phase 4](./AI.md#phase-4)
 
 ---
 #### AI Phase 5 Project
 
-**Recommended build — Leakage-Proof Evaluation Harness**
+**Recommended build - Leakage-Proof Evaluation Harness**
 
 **Why this is the right project now:** it applies the material covered through [AI Phase 5](./AI.md#phase-5) without requiring later phases.
 
@@ -2414,18 +2414,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Leakage-Proof Evaluation Harness Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Leakage-Proof Evaluation Harness Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
-- **YouTube build/lab:** [Build a Machine Learning Web App with scikit-learn — Patrick Loeber](https://www.youtube.com/watch?v=Klqn--Mu2pE)
+- **YouTube build/lab:** [Build a Machine Learning Web App with scikit-learn - Patrick Loeber](https://www.youtube.com/watch?v=Klqn--Mu2pE)
 
 > **When this project is complete:** [Resume your study at AI Phase 6](./AI.md#phase-6) · [Review Phase 5](./AI.md#phase-5)
 
 ---
 #### AI Phase 6 Project
 
-**Recommended build — Ensemble Model Showdown**
+**Recommended build - Ensemble Model Showdown**
 
 **Why this is the right project now:** it applies the material covered through [AI Phase 6](./AI.md#phase-6) without requiring later phases.
 
@@ -2440,18 +2440,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Ensemble Model Showdown Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Ensemble Model Showdown Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
-- **YouTube build/lab:** [Build Your First PyTorch Model — Rob Mulla](https://www.youtube.com/watch?v=tHL5STNJKag)
+- **YouTube build/lab:** [Build Your First PyTorch Model - Rob Mulla](https://www.youtube.com/watch?v=tHL5STNJKag)
 
 > **When this project is complete:** [Resume your study at AI Phase 7](./AI.md#phase-7) · [Review Phase 6](./AI.md#phase-6)
 
 ---
 #### AI Phase 7 Project
 
-**Recommended build — Neural Network from Scratch**
+**Recommended build - Neural Network from Scratch**
 
 **Why this is the right project now:** it applies the material covered through [AI Phase 7](./AI.md#phase-7) without requiring later phases.
 
@@ -2466,18 +2466,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Neural Network from Scratch Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Neural Network from Scratch Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [PyTorch Examples](https://github.com/pytorch/examples)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
-- **YouTube build/lab:** [Build Your First PyTorch Model — Rob Mulla](https://www.youtube.com/watch?v=tHL5STNJKag)
+- **YouTube build/lab:** [Build Your First PyTorch Model - Rob Mulla](https://www.youtube.com/watch?v=tHL5STNJKag)
 
 > **When this project is complete:** [Resume your study at AI Phase 8](./AI.md#phase-8) · [Review Phase 7](./AI.md#phase-7)
 
 ---
 #### AI Phase 8 Project
 
-**Recommended build — Tiny Autograd Engine**
+**Recommended build - Tiny Autograd Engine**
 
 **Why this is the right project now:** it applies the material covered through [AI Phase 8](./AI.md#phase-8) without requiring later phases.
 
@@ -2492,18 +2492,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Tiny Autograd Engine Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Tiny Autograd Engine Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [PyTorch Examples](https://github.com/pytorch/examples)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
-- **YouTube build/lab:** [Build Your First PyTorch Model — Rob Mulla](https://www.youtube.com/watch?v=tHL5STNJKag)
+- **YouTube build/lab:** [Build Your First PyTorch Model - Rob Mulla](https://www.youtube.com/watch?v=tHL5STNJKag)
 
 > **When this project is complete:** [Resume your study at AI Phase 9](./AI.md#phase-9) · [Review Phase 8](./AI.md#phase-8)
 
 ---
 #### AI Phase 9 Project
 
-**Recommended build — Reusable PyTorch Trainer**
+**Recommended build - Reusable PyTorch Trainer**
 
 **Why this is the right project now:** it applies the material covered through [AI Phase 9](./AI.md#phase-9) without requiring later phases.
 
@@ -2518,18 +2518,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Reusable PyTorch Trainer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Reusable PyTorch Trainer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [PyTorch Examples](https://github.com/pytorch/examples)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
-- **YouTube build/lab:** [Build Your First PyTorch Model — Rob Mulla](https://www.youtube.com/watch?v=tHL5STNJKag)
+- **YouTube build/lab:** [Build Your First PyTorch Model - Rob Mulla](https://www.youtube.com/watch?v=tHL5STNJKag)
 
 > **When this project is complete:** [Resume your study at AI Phase 10](./AI.md#phase-10) · [Review Phase 9](./AI.md#phase-9)
 
 ---
 #### AI Phase 10 Project
 
-**Recommended build — Transfer-Learning Image Classifier**
+**Recommended build - Transfer-Learning Image Classifier**
 
 **Why this is the right project now:** it applies the material covered through [AI Phase 10](./AI.md#phase-10) without requiring later phases.
 
@@ -2544,18 +2544,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Transfer-Learning Image Classifier Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Transfer-Learning Image Classifier Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [PyTorch Examples](https://github.com/pytorch/examples)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
-- **YouTube build/lab:** [Build Your First PyTorch Model — Rob Mulla](https://www.youtube.com/watch?v=tHL5STNJKag)
+- **YouTube build/lab:** [Build Your First PyTorch Model - Rob Mulla](https://www.youtube.com/watch?v=tHL5STNJKag)
 
 > **When this project is complete:** [Resume your study at AI Phase 11](./AI.md#phase-11) · [Review Phase 10](./AI.md#phase-10)
 
 ---
 #### AI Phase 11 Project
 
-**Recommended build — Sequence Sentiment Classifier**
+**Recommended build - Sequence Sentiment Classifier**
 
 **Why this is the right project now:** it applies the material covered through [AI Phase 11](./AI.md#phase-11) without requiring later phases.
 
@@ -2570,18 +2570,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Sequence Sentiment Classifier Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Sequence Sentiment Classifier Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [PyTorch Examples](https://github.com/pytorch/examples)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
-- **YouTube build/lab:** [Learn RAG from Scratch — freeCodeCamp.org](https://www.youtube.com/watch?v=sVcwVQRHIc8)
+- **YouTube build/lab:** [Learn RAG from Scratch - freeCodeCamp.org](https://www.youtube.com/watch?v=sVcwVQRHIc8)
 
 > **When this project is complete:** [Resume your study at AI Phase 12](./AI.md#phase-12) · [Review Phase 11](./AI.md#phase-11)
 
 ---
 #### AI Phase 12 Project
 
-**Recommended build — Semantic Search Engine**
+**Recommended build - Semantic Search Engine**
 
 **Why this is the right project now:** it applies the material covered through [AI Phase 12](./AI.md#phase-12) without requiring later phases.
 
@@ -2596,18 +2596,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Semantic Search Engine Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Semantic Search Engine Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Transformers](https://github.com/huggingface/transformers)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
-- **YouTube build/lab:** [Learn RAG from Scratch — freeCodeCamp.org](https://www.youtube.com/watch?v=sVcwVQRHIc8)
+- **YouTube build/lab:** [Learn RAG from Scratch - freeCodeCamp.org](https://www.youtube.com/watch?v=sVcwVQRHIc8)
 
 > **When this project is complete:** [Resume your study at AI Phase 13](./AI.md#phase-13) · [Review Phase 12](./AI.md#phase-12)
 
 ---
 #### AI Phase 13 Project
 
-**Recommended build — Tiny Transformer Explainer**
+**Recommended build - Tiny Transformer Explainer**
 
 **Why this is the right project now:** it applies the material covered through [AI Phase 13](./AI.md#phase-13) without requiring later phases.
 
@@ -2622,18 +2622,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Tiny Transformer Explainer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Tiny Transformer Explainer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Transformers](https://github.com/huggingface/transformers)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
-- **YouTube build/lab:** [Learn RAG from Scratch — freeCodeCamp.org](https://www.youtube.com/watch?v=sVcwVQRHIc8)
+- **YouTube build/lab:** [Learn RAG from Scratch - freeCodeCamp.org](https://www.youtube.com/watch?v=sVcwVQRHIc8)
 
 > **When this project is complete:** [Resume your study at AI Phase 14](./AI.md#phase-14) · [Review Phase 13](./AI.md#phase-13)
 
 ---
 #### AI Phase 14 Project
 
-**Recommended build — Prompt Experiment Matrix**
+**Recommended build - Prompt Experiment Matrix**
 
 **Why this is the right project now:** it applies the material covered through [AI Phase 14](./AI.md#phase-14) without requiring later phases.
 
@@ -2648,18 +2648,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Prompt Experiment Matrix Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Prompt Experiment Matrix Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Transformers](https://github.com/huggingface/transformers)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
-- **YouTube build/lab:** [Learn RAG from Scratch — freeCodeCamp.org](https://www.youtube.com/watch?v=sVcwVQRHIc8)
+- **YouTube build/lab:** [Learn RAG from Scratch - freeCodeCamp.org](https://www.youtube.com/watch?v=sVcwVQRHIc8)
 
 > **When this project is complete:** [Resume your study at AI Phase 15](./AI.md#phase-15) · [Review Phase 14](./AI.md#phase-14)
 
 ---
 #### AI Phase 15 Project
 
-**Recommended build — Citation-First RAG**
+**Recommended build - Citation-First RAG**
 
 **Why this is the right project now:** it applies the material covered through [AI Phase 15](./AI.md#phase-15) without requiring later phases.
 
@@ -2674,18 +2674,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Citation-First RAG Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Citation-First RAG Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Transformers](https://github.com/huggingface/transformers)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
-- **YouTube build/lab:** [Learn RAG from Scratch — freeCodeCamp.org](https://www.youtube.com/watch?v=sVcwVQRHIc8)
+- **YouTube build/lab:** [Learn RAG from Scratch - freeCodeCamp.org](https://www.youtube.com/watch?v=sVcwVQRHIc8)
 
 > **When this project is complete:** [Resume your study at AI Phase 16](./AI.md#phase-16) · [Review Phase 15](./AI.md#phase-15)
 
 ---
 #### AI Phase 16 Project
 
-**Recommended build — LoRA Fine-Tuning Report**
+**Recommended build - LoRA Fine-Tuning Report**
 
 **Why this is the right project now:** it applies the material covered through [AI Phase 16](./AI.md#phase-16) without requiring later phases.
 
@@ -2700,18 +2700,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — LoRA Fine-Tuning Report Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - LoRA Fine-Tuning Report Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Transformers](https://github.com/huggingface/transformers)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
-- **YouTube build/lab:** [AI Agent Evaluation Crash Course — DSwithBappy](https://www.youtube.com/watch?v=rwxcoEglXA4)
+- **YouTube build/lab:** [AI Agent Evaluation Crash Course - DSwithBappy](https://www.youtube.com/watch?v=rwxcoEglXA4)
 
 > **When this project is complete:** [Resume your study at AI Phase 17](./AI.md#phase-17) · [Review Phase 16](./AI.md#phase-16)
 
 ---
 #### AI Phase 17 Project
 
-**Recommended build — Safe Tool-Using Agent**
+**Recommended build - Safe Tool-Using Agent**
 
 **Why this is the right project now:** it applies the material covered through [AI Phase 17](./AI.md#phase-17) without requiring later phases.
 
@@ -2726,18 +2726,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Safe Tool-Using Agent Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Safe Tool-Using Agent Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Transformers](https://github.com/huggingface/transformers)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
-- **YouTube build/lab:** [AI Agent Evaluation Crash Course — DSwithBappy](https://www.youtube.com/watch?v=rwxcoEglXA4)
+- **YouTube build/lab:** [AI Agent Evaluation Crash Course - DSwithBappy](https://www.youtube.com/watch?v=rwxcoEglXA4)
 
 > **When this project is complete:** [Resume your study at AI Phase 18](./AI.md#phase-18) · [Review Phase 17](./AI.md#phase-17)
 
 ---
 #### AI Phase 18 Project
 
-**Recommended build — Model Eval and Monitoring Pipeline**
+**Recommended build - Model Eval and Monitoring Pipeline**
 
 **Why this is the right project now:** it applies the material covered through [AI Phase 18](./AI.md#phase-18) without requiring later phases.
 
@@ -2752,18 +2752,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Model Eval and Monitoring Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Model Eval and Monitoring Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
-- **YouTube build/lab:** [AI Agent Evaluation Crash Course — DSwithBappy](https://www.youtube.com/watch?v=rwxcoEglXA4)
+- **YouTube build/lab:** [AI Agent Evaluation Crash Course - DSwithBappy](https://www.youtube.com/watch?v=rwxcoEglXA4)
 
 > **When this project is complete:** [Resume your study at AI Phase 19](./AI.md#phase-19) · [Review Phase 18](./AI.md#phase-18)
 
 ---
 #### AI Phase 19 Project
 
-**Recommended build — Reproducible AI Portfolio**
+**Recommended build - Reproducible AI Portfolio**
 
 **Why this is the right project now:** it applies the material covered through [AI Phase 19](./AI.md#phase-19) without requiring later phases.
 
@@ -2778,18 +2778,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Reproducible AI Portfolio Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Reproducible AI Portfolio Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
-- **YouTube build/lab:** [AI Agent Evaluation Crash Course — DSwithBappy](https://www.youtube.com/watch?v=rwxcoEglXA4)
+- **YouTube build/lab:** [AI Agent Evaluation Crash Course - DSwithBappy](https://www.youtube.com/watch?v=rwxcoEglXA4)
 
 > **When this project is complete:** [Resume your study at AI Phase 20](./AI.md#phase-20) · [Review Phase 19](./AI.md#phase-19)
 
 ---
 #### AI Phase 20 Project
 
-**Recommended build — ML System Design Drill**
+**Recommended build - ML System Design Drill**
 
 **Why this is the right project now:** it applies the material covered through [AI Phase 20](./AI.md#phase-20) without requiring later phases.
 
@@ -2804,11 +2804,11 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — ML System Design Drill Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - ML System Design Drill Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - **More project ideas on GitHub:** [Hands-On MLOps for DevOps Engineers](https://github.com/techiescamp/mlops-for-devops)
-- **YouTube build/lab:** [AI Agent Evaluation Crash Course — DSwithBappy](https://www.youtube.com/watch?v=rwxcoEglXA4)
+- **YouTube build/lab:** [AI Agent Evaluation Crash Course - DSwithBappy](https://www.youtube.com/watch?v=rwxcoEglXA4)
 
 > **When this project is complete:** [Return to the AI phase index](./AI.md#phase-index) · [Review Phase 20](./AI.md#phase-20)
 
@@ -2820,7 +2820,7 @@ Choose the recommended build first. Use the alternative only after the recommend
 
 #### ODOO Phase 1 Project
 
-**Recommended build — ERP Process Map**
+**Recommended build - ERP Process Map**
 
 **Why this is the right project now:** it applies the material covered through [ODOO Phase 1](./ODOO.md#phase-1) without requiring later phases.
 
@@ -2835,18 +2835,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — ERP Process Map Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - ERP Process Map Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
-- **YouTube build/lab:** [Create a Custom Module in Odoo 17/18 — OdooVerse](https://www.youtube.com/watch?v=A61AyJRzLB8)
+- **YouTube build/lab:** [Create a Custom Module in Odoo 17/18 - OdooVerse](https://www.youtube.com/watch?v=A61AyJRzLB8)
 
 > **When this project is complete:** [Resume your study at ODOO Phase 2](./ODOO.md#phase-2) · [Review Phase 1](./ODOO.md#phase-1)
 
 ---
 #### ODOO Phase 2 Project
 
-**Recommended build — Request-to-Database Trace**
+**Recommended build - Request-to-Database Trace**
 
 **Why this is the right project now:** it applies the material covered through [ODOO Phase 2](./ODOO.md#phase-2) without requiring later phases.
 
@@ -2861,18 +2861,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Request-to-Database Trace Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Request-to-Database Trace Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
-- **YouTube build/lab:** [Create a Custom Module in Odoo 17/18 — OdooVerse](https://www.youtube.com/watch?v=A61AyJRzLB8)
+- **YouTube build/lab:** [Create a Custom Module in Odoo 17/18 - OdooVerse](https://www.youtube.com/watch?v=A61AyJRzLB8)
 
 > **When this project is complete:** [Resume your study at ODOO Phase 3](./ODOO.md#phase-3) · [Review Phase 2](./ODOO.md#phase-2)
 
 ---
 #### ODOO Phase 3 Project
 
-**Recommended build — Reproducible Odoo Dev Stack**
+**Recommended build - Reproducible Odoo Dev Stack**
 
 **Why this is the right project now:** it applies the material covered through [ODOO Phase 3](./ODOO.md#phase-3) without requiring later phases.
 
@@ -2887,18 +2887,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Reproducible Odoo Dev Stack Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Reproducible Odoo Dev Stack Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
-- **YouTube build/lab:** [Create a Custom Module in Odoo 17/18 — OdooVerse](https://www.youtube.com/watch?v=A61AyJRzLB8)
+- **YouTube build/lab:** [Create a Custom Module in Odoo 17/18 - OdooVerse](https://www.youtube.com/watch?v=A61AyJRzLB8)
 
 > **When this project is complete:** [Resume your study at ODOO Phase 4](./ODOO.md#phase-4) · [Review Phase 3](./ODOO.md#phase-3)
 
 ---
 #### ODOO Phase 4 Project
 
-**Recommended build — Minimal Todo Addon**
+**Recommended build - Minimal Todo Addon**
 
 **Why this is the right project now:** it applies the material covered through [ODOO Phase 4](./ODOO.md#phase-4) without requiring later phases.
 
@@ -2913,18 +2913,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Minimal Todo Addon Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Minimal Todo Addon Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
-- **YouTube build/lab:** [Create a Custom Module in Odoo 17/18 — OdooVerse](https://www.youtube.com/watch?v=A61AyJRzLB8)
+- **YouTube build/lab:** [Create a Custom Module in Odoo 17/18 - OdooVerse](https://www.youtube.com/watch?v=A61AyJRzLB8)
 
 > **When this project is complete:** [Resume your study at ODOO Phase 5](./ODOO.md#phase-5) · [Review Phase 4](./ODOO.md#phase-4)
 
 ---
 #### ODOO Phase 5 Project
 
-**Recommended build — Library Domain Models**
+**Recommended build - Library Domain Models**
 
 **Why this is the right project now:** it applies the material covered through [ODOO Phase 5](./ODOO.md#phase-5) without requiring later phases.
 
@@ -2939,18 +2939,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Library Domain Models Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Library Domain Models Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
-- **YouTube build/lab:** [Create a Custom Module in Odoo 17/18 — OdooVerse](https://www.youtube.com/watch?v=A61AyJRzLB8)
+- **YouTube build/lab:** [Create a Custom Module in Odoo 17/18 - OdooVerse](https://www.youtube.com/watch?v=A61AyJRzLB8)
 
 > **When this project is complete:** [Resume your study at ODOO Phase 6](./ODOO.md#phase-6) · [Review Phase 5](./ODOO.md#phase-5)
 
 ---
 #### ODOO Phase 6 Project
 
-**Recommended build — Recordset Query Explorer**
+**Recommended build - Recordset Query Explorer**
 
 **Why this is the right project now:** it applies the material covered through [ODOO Phase 6](./ODOO.md#phase-6) without requiring later phases.
 
@@ -2965,18 +2965,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Recordset Query Explorer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Recordset Query Explorer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
-- **YouTube build/lab:** [Odoo Module Structure: Models, Views, and Security — EasyDev](https://www.youtube.com/watch?v=ov-ReGkIxIg)
+- **YouTube build/lab:** [Odoo Module Structure: Models, Views, and Security - EasyDev](https://www.youtube.com/watch?v=ov-ReGkIxIg)
 
 > **When this project is complete:** [Resume your study at ODOO Phase 7](./ODOO.md#phase-7) · [Review Phase 6](./ODOO.md#phase-6)
 
 ---
 #### ODOO Phase 7 Project
 
-**Recommended build — Multi-company Access Lab**
+**Recommended build - Multi-company Access Lab**
 
 **Why this is the right project now:** it applies the material covered through [ODOO Phase 7](./ODOO.md#phase-7) without requiring later phases.
 
@@ -2991,18 +2991,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Multi-company Access Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Multi-company Access Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
-- **YouTube build/lab:** [Odoo Module Structure: Models, Views, and Security — EasyDev](https://www.youtube.com/watch?v=ov-ReGkIxIg)
+- **YouTube build/lab:** [Odoo Module Structure: Models, Views, and Security - EasyDev](https://www.youtube.com/watch?v=ov-ReGkIxIg)
 
 > **When this project is complete:** [Resume your study at ODOO Phase 8](./ODOO.md#phase-8) · [Review Phase 7](./ODOO.md#phase-7)
 
 ---
 #### ODOO Phase 8 Project
 
-**Recommended build — Inherited Library Views**
+**Recommended build - Inherited Library Views**
 
 **Why this is the right project now:** it applies the material covered through [ODOO Phase 8](./ODOO.md#phase-8) without requiring later phases.
 
@@ -3017,18 +3017,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Inherited Library Views Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Inherited Library Views Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
-- **YouTube build/lab:** [Odoo Module Structure: Models, Views, and Security — EasyDev](https://www.youtube.com/watch?v=ov-ReGkIxIg)
+- **YouTube build/lab:** [Odoo Module Structure: Models, Views, and Security - EasyDev](https://www.youtube.com/watch?v=ov-ReGkIxIg)
 
 > **When this project is complete:** [Resume your study at ODOO Phase 9](./ODOO.md#phase-9) · [Review Phase 8](./ODOO.md#phase-8)
 
 ---
 #### ODOO Phase 9 Project
 
-**Recommended build — Role-Aware Navigation Module**
+**Recommended build - Role-Aware Navigation Module**
 
 **Why this is the right project now:** it applies the material covered through [ODOO Phase 9](./ODOO.md#phase-9) without requiring later phases.
 
@@ -3043,18 +3043,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Role-Aware Navigation Module Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Role-Aware Navigation Module Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
-- **YouTube build/lab:** [Odoo Module Structure: Models, Views, and Security — EasyDev](https://www.youtube.com/watch?v=ov-ReGkIxIg)
+- **YouTube build/lab:** [Odoo Module Structure: Models, Views, and Security - EasyDev](https://www.youtube.com/watch?v=ov-ReGkIxIg)
 
 > **When this project is complete:** [Resume your study at ODOO Phase 10](./ODOO.md#phase-10) · [Review Phase 9](./ODOO.md#phase-9)
 
 ---
 #### ODOO Phase 10 Project
 
-**Recommended build — Validated Order Workflow**
+**Recommended build - Validated Order Workflow**
 
 **Why this is the right project now:** it applies the material covered through [ODOO Phase 10](./ODOO.md#phase-10) without requiring later phases.
 
@@ -3069,18 +3069,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Validated Order Workflow Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Validated Order Workflow Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
-- **YouTube build/lab:** [Odoo Module Structure: Models, Views, and Security — EasyDev](https://www.youtube.com/watch?v=ov-ReGkIxIg)
+- **YouTube build/lab:** [Odoo Module Structure: Models, Views, and Security - EasyDev](https://www.youtube.com/watch?v=ov-ReGkIxIg)
 
 > **When this project is complete:** [Resume your study at ODOO Phase 11](./ODOO.md#phase-11) · [Review Phase 10](./ODOO.md#phase-10)
 
 ---
 #### ODOO Phase 11 Project
 
-**Recommended build — Sale Order Extension**
+**Recommended build - Sale Order Extension**
 
 **Why this is the right project now:** it applies the material covered through [ODOO Phase 11](./ODOO.md#phase-11) without requiring later phases.
 
@@ -3095,18 +3095,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Sale Order Extension Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Sale Order Extension Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
-- **YouTube build/lab:** [Odoo 19 Webhook Automation — VeeVee Infotech](https://www.youtube.com/watch?v=ndt8OCP_uG8)
+- **YouTube build/lab:** [Odoo 19 Webhook Automation - VeeVee Infotech](https://www.youtube.com/watch?v=ndt8OCP_uG8)
 
 > **When this project is complete:** [Resume your study at ODOO Phase 12](./ODOO.md#phase-12) · [Review Phase 11](./ODOO.md#phase-11)
 
 ---
 #### ODOO Phase 12 Project
 
-**Recommended build — Bulk Update Wizard**
+**Recommended build - Bulk Update Wizard**
 
 **Why this is the right project now:** it applies the material covered through [ODOO Phase 12](./ODOO.md#phase-12) without requiring later phases.
 
@@ -3121,18 +3121,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Bulk Update Wizard Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Bulk Update Wizard Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
-- **YouTube build/lab:** [Odoo 19 Webhook Automation — VeeVee Infotech](https://www.youtube.com/watch?v=ndt8OCP_uG8)
+- **YouTube build/lab:** [Odoo 19 Webhook Automation - VeeVee Infotech](https://www.youtube.com/watch?v=ndt8OCP_uG8)
 
 > **When this project is complete:** [Resume your study at ODOO Phase 13](./ODOO.md#phase-13) · [Review Phase 12](./ODOO.md#phase-12)
 
 ---
 #### ODOO Phase 13 Project
 
-**Recommended build — Idempotent Webhook Module**
+**Recommended build - Idempotent Webhook Module**
 
 **Why this is the right project now:** it applies the material covered through [ODOO Phase 13](./ODOO.md#phase-13) without requiring later phases.
 
@@ -3147,18 +3147,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Idempotent Webhook Module Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Idempotent Webhook Module Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Connector](https://github.com/OCA/connector)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
-- **YouTube build/lab:** [Odoo 19 Webhook Automation — VeeVee Infotech](https://www.youtube.com/watch?v=ndt8OCP_uG8)
+- **YouTube build/lab:** [Odoo 19 Webhook Automation - VeeVee Infotech](https://www.youtube.com/watch?v=ndt8OCP_uG8)
 
 > **When this project is complete:** [Resume your study at ODOO Phase 14](./ODOO.md#phase-14) · [Review Phase 13](./ODOO.md#phase-13)
 
 ---
 #### ODOO Phase 14 Project
 
-**Recommended build — External Sync Client**
+**Recommended build - External Sync Client**
 
 **Why this is the right project now:** it applies the material covered through [ODOO Phase 14](./ODOO.md#phase-14) without requiring later phases.
 
@@ -3173,18 +3173,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — External Sync Client Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - External Sync Client Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Connector](https://github.com/OCA/connector)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
-- **YouTube build/lab:** [Odoo 19 Webhook Automation — VeeVee Infotech](https://www.youtube.com/watch?v=ndt8OCP_uG8)
+- **YouTube build/lab:** [Odoo 19 Webhook Automation - VeeVee Infotech](https://www.youtube.com/watch?v=ndt8OCP_uG8)
 
 > **When this project is complete:** [Resume your study at ODOO Phase 15](./ODOO.md#phase-15) · [Review Phase 14](./ODOO.md#phase-14)
 
 ---
 #### ODOO Phase 15 Project
 
-**Recommended build — Payment Sandbox Integration**
+**Recommended build - Payment Sandbox Integration**
 
 **Why this is the right project now:** it applies the material covered through [ODOO Phase 15](./ODOO.md#phase-15) without requiring later phases.
 
@@ -3199,18 +3199,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Payment Sandbox Integration Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Payment Sandbox Integration Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Connector](https://github.com/OCA/connector)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
-- **YouTube build/lab:** [Odoo 19 Webhook Automation — VeeVee Infotech](https://www.youtube.com/watch?v=ndt8OCP_uG8)
+- **YouTube build/lab:** [Odoo 19 Webhook Automation - VeeVee Infotech](https://www.youtube.com/watch?v=ndt8OCP_uG8)
 
 > **When this project is complete:** [Resume your study at ODOO Phase 16](./ODOO.md#phase-16) · [Review Phase 15](./ODOO.md#phase-15)
 
 ---
 #### ODOO Phase 16 Project
 
-**Recommended build — OWL KPI Widget**
+**Recommended build - OWL KPI Widget**
 
 **Why this is the right project now:** it applies the material covered through [ODOO Phase 16](./ODOO.md#phase-16) without requiring later phases.
 
@@ -3225,18 +3225,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — OWL KPI Widget Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - OWL KPI Widget Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
-- **YouTube build/lab:** [Odoo Custom Dashboard with OWL — AJScript Media](https://www.youtube.com/watch?v=CJvaY-VGqwk)
+- **YouTube build/lab:** [Odoo Custom Dashboard with OWL - AJScript Media](https://www.youtube.com/watch?v=CJvaY-VGqwk)
 
 > **When this project is complete:** [Resume your study at ODOO Phase 17](./ODOO.md#phase-17) · [Review Phase 16](./ODOO.md#phase-16)
 
 ---
 #### ODOO Phase 17 Project
 
-**Recommended build — ORM Query Tuning Report**
+**Recommended build - ORM Query Tuning Report**
 
 **Why this is the right project now:** it applies the material covered through [ODOO Phase 17](./ODOO.md#phase-17) without requiring later phases.
 
@@ -3251,18 +3251,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — ORM Query Tuning Report Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - ORM Query Tuning Report Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
-- **YouTube build/lab:** [Odoo Custom Dashboard with OWL — AJScript Media](https://www.youtube.com/watch?v=CJvaY-VGqwk)
+- **YouTube build/lab:** [Odoo Custom Dashboard with OWL - AJScript Media](https://www.youtube.com/watch?v=CJvaY-VGqwk)
 
 > **When this project is complete:** [Resume your study at ODOO Phase 18](./ODOO.md#phase-18) · [Review Phase 17](./ODOO.md#phase-17)
 
 ---
 #### ODOO Phase 18 Project
 
-**Recommended build — Upgrade-Safe Test Suite**
+**Recommended build - Upgrade-Safe Test Suite**
 
 **Why this is the right project now:** it applies the material covered through [ODOO Phase 18](./ODOO.md#phase-18) without requiring later phases.
 
@@ -3277,18 +3277,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Upgrade-Safe Test Suite Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Upgrade-Safe Test Suite Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OCA Server Tools](https://github.com/OCA/server-tools)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
-- **YouTube build/lab:** [Odoo Custom Dashboard with OWL — AJScript Media](https://www.youtube.com/watch?v=CJvaY-VGqwk)
+- **YouTube build/lab:** [Odoo Custom Dashboard with OWL - AJScript Media](https://www.youtube.com/watch?v=CJvaY-VGqwk)
 
 > **When this project is complete:** [Resume your study at ODOO Phase 19](./ODOO.md#phase-19) · [Review Phase 18](./ODOO.md#phase-18)
 
 ---
 #### ODOO Phase 19 Project
 
-**Recommended build — Portfolio-Ready Business Module**
+**Recommended build - Portfolio-Ready Business Module**
 
 **Why this is the right project now:** it applies the material covered through [ODOO Phase 19](./ODOO.md#phase-19) without requiring later phases.
 
@@ -3303,18 +3303,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Portfolio-Ready Business Module Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Portfolio-Ready Business Module Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
-- **YouTube build/lab:** [Odoo Custom Dashboard with OWL — AJScript Media](https://www.youtube.com/watch?v=CJvaY-VGqwk)
+- **YouTube build/lab:** [Odoo Custom Dashboard with OWL - AJScript Media](https://www.youtube.com/watch?v=CJvaY-VGqwk)
 
 > **When this project is complete:** [Resume your study at ODOO Phase 20](./ODOO.md#phase-20) · [Review Phase 19](./ODOO.md#phase-19)
 
 ---
 #### ODOO Phase 20 Project
 
-**Recommended build — Timed Odoo Debug Drill**
+**Recommended build - Timed Odoo Debug Drill**
 
 **Why this is the right project now:** it applies the material covered through [ODOO Phase 20](./ODOO.md#phase-20) without requiring later phases.
 
@@ -3329,11 +3329,11 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Timed Odoo Debug Drill Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Timed Odoo Debug Drill Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Odoo Tutorials](https://github.com/odoo/tutorials)
 - **More project ideas on GitHub:** [Odoo Example Modules](https://github.com/SerhiiMiroshnychenko/Odoo_examples)
-- **YouTube build/lab:** [Odoo Custom Dashboard with OWL — AJScript Media](https://www.youtube.com/watch?v=CJvaY-VGqwk)
+- **YouTube build/lab:** [Odoo Custom Dashboard with OWL - AJScript Media](https://www.youtube.com/watch?v=CJvaY-VGqwk)
 
 > **When this project is complete:** [Return to the ODOO phase index](./ODOO.md#phase-index) · [Review Phase 20](./ODOO.md#phase-20)
 
@@ -3345,7 +3345,7 @@ Choose the recommended build first. Use the alternative only after the recommend
 
 #### WEB Phase 1 Project
 
-**Recommended build — Client-Server Request Explorer**
+**Recommended build - Client-Server Request Explorer**
 
 **Why this is the right project now:** it applies the material covered through [WEB Phase 1](./Web.md#phase-1) without requiring later phases.
 
@@ -3360,18 +3360,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Client-Server Request Explorer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Client-Server Request Explorer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Responsive HTML, CSS, and JavaScript Website Project — Brian Design](https://www.youtube.com/watch?v=FazgJVnrVuI)
+- **YouTube build/lab:** [Responsive HTML, CSS, and JavaScript Website Project - Brian Design](https://www.youtube.com/watch?v=FazgJVnrVuI)
 
 > **When this project is complete:** [Resume your study at WEB Phase 2](./Web.md#phase-2) · [Review Phase 1](./Web.md#phase-1)
 
 ---
 #### WEB Phase 2 Project
 
-**Recommended build — Accessible Profile Page**
+**Recommended build - Accessible Profile Page**
 
 **Why this is the right project now:** it applies the material covered through [WEB Phase 2](./Web.md#phase-2) without requiring later phases.
 
@@ -3386,18 +3386,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Accessible Profile Page Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Accessible Profile Page Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Responsive HTML, CSS, and JavaScript Website Project — Brian Design](https://www.youtube.com/watch?v=FazgJVnrVuI)
+- **YouTube build/lab:** [Responsive HTML, CSS, and JavaScript Website Project - Brian Design](https://www.youtube.com/watch?v=FazgJVnrVuI)
 
 > **When this project is complete:** [Resume your study at WEB Phase 3](./Web.md#phase-3) · [Review Phase 2](./Web.md#phase-2)
 
 ---
 #### WEB Phase 3 Project
 
-**Recommended build — Design Token Style Guide**
+**Recommended build - Design Token Style Guide**
 
 **Why this is the right project now:** it applies the material covered through [WEB Phase 3](./Web.md#phase-3) without requiring later phases.
 
@@ -3412,18 +3412,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Design Token Style Guide Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Design Token Style Guide Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Responsive HTML, CSS, and JavaScript Website Project — Brian Design](https://www.youtube.com/watch?v=FazgJVnrVuI)
+- **YouTube build/lab:** [Responsive HTML, CSS, and JavaScript Website Project - Brian Design](https://www.youtube.com/watch?v=FazgJVnrVuI)
 
 > **When this project is complete:** [Resume your study at WEB Phase 4](./Web.md#phase-4) · [Review Phase 3](./Web.md#phase-3)
 
 ---
 #### WEB Phase 4 Project
 
-**Recommended build — Responsive Product Landing**
+**Recommended build - Responsive Product Landing**
 
 **Why this is the right project now:** it applies the material covered through [WEB Phase 4](./Web.md#phase-4) without requiring later phases.
 
@@ -3438,18 +3438,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Responsive Product Landing Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Responsive Product Landing Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Responsive HTML, CSS, and JavaScript Website Project — Brian Design](https://www.youtube.com/watch?v=FazgJVnrVuI)
+- **YouTube build/lab:** [Responsive HTML, CSS, and JavaScript Website Project - Brian Design](https://www.youtube.com/watch?v=FazgJVnrVuI)
 
 > **When this project is complete:** [Resume your study at WEB Phase 5](./Web.md#phase-5) · [Review Phase 4](./Web.md#phase-4)
 
 ---
 #### WEB Phase 5 Project
 
-**Recommended build — Interactive Expense Tracker**
+**Recommended build - Interactive Expense Tracker**
 
 **Why this is the right project now:** it applies the material covered through [WEB Phase 5](./Web.md#phase-5) without requiring later phases.
 
@@ -3464,18 +3464,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Interactive Expense Tracker Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Interactive Expense Tracker Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Responsive HTML, CSS, and JavaScript Website Project — Brian Design](https://www.youtube.com/watch?v=FazgJVnrVuI)
+- **YouTube build/lab:** [Responsive HTML, CSS, and JavaScript Website Project - Brian Design](https://www.youtube.com/watch?v=FazgJVnrVuI)
 
 > **When this project is complete:** [Resume your study at WEB Phase 6](./Web.md#phase-6) · [Review Phase 5](./Web.md#phase-5)
 
 ---
 #### WEB Phase 6 Project
 
-**Recommended build — Offline-Capable Notes App**
+**Recommended build - Offline-Capable Notes App**
 
 **Why this is the right project now:** it applies the material covered through [WEB Phase 6](./Web.md#phase-6) without requiring later phases.
 
@@ -3490,18 +3490,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Offline-Capable Notes App Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Offline-Capable Notes App Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Beginner React and TypeScript Project — Web Dev Simplified](https://www.youtube.com/watch?v=-ONUyenGnWw)
+- **YouTube build/lab:** [Beginner React and TypeScript Project - Web Dev Simplified](https://www.youtube.com/watch?v=-ONUyenGnWw)
 
 > **When this project is complete:** [Resume your study at WEB Phase 7](./Web.md#phase-7) · [Review Phase 6](./Web.md#phase-6)
 
 ---
 #### WEB Phase 7 Project
 
-**Recommended build — Typed API Client**
+**Recommended build - Typed API Client**
 
 **Why this is the right project now:** it applies the material covered through [WEB Phase 7](./Web.md#phase-7) without requiring later phases.
 
@@ -3516,18 +3516,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Typed API Client Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Typed API Client Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Beginner React and TypeScript Project — Web Dev Simplified](https://www.youtube.com/watch?v=-ONUyenGnWw)
+- **YouTube build/lab:** [Beginner React and TypeScript Project - Web Dev Simplified](https://www.youtube.com/watch?v=-ONUyenGnWw)
 
 > **When this project is complete:** [Resume your study at WEB Phase 8](./Web.md#phase-8) · [Review Phase 7](./Web.md#phase-7)
 
 ---
 #### WEB Phase 8 Project
 
-**Recommended build — React Habit Tracker**
+**Recommended build - React Habit Tracker**
 
 **Why this is the right project now:** it applies the material covered through [WEB Phase 8](./Web.md#phase-8) without requiring later phases.
 
@@ -3542,18 +3542,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — React Habit Tracker Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - React Habit Tracker Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Beginner React and TypeScript Project — Web Dev Simplified](https://www.youtube.com/watch?v=-ONUyenGnWw)
+- **YouTube build/lab:** [Beginner React and TypeScript Project - Web Dev Simplified](https://www.youtube.com/watch?v=-ONUyenGnWw)
 
 > **When this project is complete:** [Resume your study at WEB Phase 9](./Web.md#phase-9) · [Review Phase 8](./Web.md#phase-8)
 
 ---
 #### WEB Phase 9 Project
 
-**Recommended build — Cached Admin Dashboard**
+**Recommended build - Cached Admin Dashboard**
 
 **Why this is the right project now:** it applies the material covered through [WEB Phase 9](./Web.md#phase-9) without requiring later phases.
 
@@ -3568,18 +3568,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Cached Admin Dashboard Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Cached Admin Dashboard Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Bulletproof React](https://github.com/alan2207/bulletproof-react)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Beginner React and TypeScript Project — Web Dev Simplified](https://www.youtube.com/watch?v=-ONUyenGnWw)
+- **YouTube build/lab:** [Beginner React and TypeScript Project - Web Dev Simplified](https://www.youtube.com/watch?v=-ONUyenGnWw)
 
 > **When this project is complete:** [Resume your study at WEB Phase 10](./Web.md#phase-10) · [Review Phase 9](./Web.md#phase-9)
 
 ---
 #### WEB Phase 10 Project
 
-**Recommended build — Full-Stack Issue Tracker**
+**Recommended build - Full-Stack Issue Tracker**
 
 **Why this is the right project now:** it applies the material covered through [WEB Phase 10](./Web.md#phase-10) without requiring later phases.
 
@@ -3594,18 +3594,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Full-Stack Issue Tracker Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Full-Stack Issue Tracker Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Bulletproof React](https://github.com/alan2207/bulletproof-react)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Beginner React and TypeScript Project — Web Dev Simplified](https://www.youtube.com/watch?v=-ONUyenGnWw)
+- **YouTube build/lab:** [Beginner React and TypeScript Project - Web Dev Simplified](https://www.youtube.com/watch?v=-ONUyenGnWw)
 
 > **When this project is complete:** [Resume your study at WEB Phase 11](./Web.md#phase-11) · [Review Phase 10](./Web.md#phase-10)
 
 ---
 #### WEB Phase 11 Project
 
-**Recommended build — Express Service Starter**
+**Recommended build - Express Service Starter**
 
 **Why this is the right project now:** it applies the material covered through [WEB Phase 11](./Web.md#phase-11) without requiring later phases.
 
@@ -3620,18 +3620,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Express Service Starter Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Express Service Starter Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Node, Express, MongoDB API with Auth, JWT, and CRUD — Programming with Adil](https://www.youtube.com/watch?v=EMv8pc5Xo88)
+- **YouTube build/lab:** [Node, Express, MongoDB API with Auth, JWT, and CRUD - Programming with Adil](https://www.youtube.com/watch?v=EMv8pc5Xo88)
 
 > **When this project is complete:** [Resume your study at WEB Phase 12](./Web.md#phase-12) · [Review Phase 11](./Web.md#phase-11)
 
 ---
 #### WEB Phase 12 Project
 
-**Recommended build — Contract-First REST API**
+**Recommended build - Contract-First REST API**
 
 **Why this is the right project now:** it applies the material covered through [WEB Phase 12](./Web.md#phase-12) without requiring later phases.
 
@@ -3646,18 +3646,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Contract-First REST API Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Contract-First REST API Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Node, Express, MongoDB API with Auth, JWT, and CRUD — Programming with Adil](https://www.youtube.com/watch?v=EMv8pc5Xo88)
+- **YouTube build/lab:** [Node, Express, MongoDB API with Auth, JWT, and CRUD - Programming with Adil](https://www.youtube.com/watch?v=EMv8pc5Xo88)
 
 > **When this project is complete:** [Resume your study at WEB Phase 13](./Web.md#phase-13) · [Review Phase 12](./Web.md#phase-12)
 
 ---
 #### WEB Phase 13 Project
 
-**Recommended build — Transactional Project Database**
+**Recommended build - Transactional Project Database**
 
 **Why this is the right project now:** it applies the material covered through [WEB Phase 13](./Web.md#phase-13) without requiring later phases.
 
@@ -3672,18 +3672,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Transactional Project Database Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Transactional Project Database Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Node, Express, MongoDB API with Auth, JWT, and CRUD — Programming with Adil](https://www.youtube.com/watch?v=EMv8pc5Xo88)
+- **YouTube build/lab:** [Node, Express, MongoDB API with Auth, JWT, and CRUD - Programming with Adil](https://www.youtube.com/watch?v=EMv8pc5Xo88)
 
 > **When this project is complete:** [Resume your study at WEB Phase 14](./Web.md#phase-14) · [Review Phase 13](./Web.md#phase-13)
 
 ---
 #### WEB Phase 14 Project
 
-**Recommended build — Secure Session Auth App**
+**Recommended build - Secure Session Auth App**
 
 **Why this is the right project now:** it applies the material covered through [WEB Phase 14](./Web.md#phase-14) without requiring later phases.
 
@@ -3698,18 +3698,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Secure Session Auth App Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Secure Session Auth App Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OWASP NodeGoat](https://github.com/OWASP/NodeGoat)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Node, Express, MongoDB API with Auth, JWT, and CRUD — Programming with Adil](https://www.youtube.com/watch?v=EMv8pc5Xo88)
+- **YouTube build/lab:** [Node, Express, MongoDB API with Auth, JWT, and CRUD - Programming with Adil](https://www.youtube.com/watch?v=EMv8pc5Xo88)
 
 > **When this project is complete:** [Resume your study at WEB Phase 15](./Web.md#phase-15) · [Review Phase 14](./Web.md#phase-14)
 
 ---
 #### WEB Phase 15 Project
 
-**Recommended build — Full-Stack Test Pyramid**
+**Recommended build - Full-Stack Test Pyramid**
 
 **Why this is the right project now:** it applies the material covered through [WEB Phase 15](./Web.md#phase-15) without requiring later phases.
 
@@ -3724,18 +3724,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Full-Stack Test Pyramid Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Full-Stack Test Pyramid Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Node, Express, MongoDB API with Auth, JWT, and CRUD — Programming with Adil](https://www.youtube.com/watch?v=EMv8pc5Xo88)
+- **YouTube build/lab:** [Node, Express, MongoDB API with Auth, JWT, and CRUD - Programming with Adil](https://www.youtube.com/watch?v=EMv8pc5Xo88)
 
 > **When this project is complete:** [Resume your study at WEB Phase 16](./Web.md#phase-16) · [Review Phase 15](./Web.md#phase-15)
 
 ---
 #### WEB Phase 16 Project
 
-**Recommended build — Web Vitals Optimization Case**
+**Recommended build - Web Vitals Optimization Case**
 
 **Why this is the right project now:** it applies the material covered through [WEB Phase 16](./Web.md#phase-16) without requiring later phases.
 
@@ -3750,18 +3750,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Web Vitals Optimization Case Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Web Vitals Optimization Case Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Real-Time WebSockets Project — JavaScript Mastery](https://www.youtube.com/watch?v=pbOXOY78dNA)
+- **YouTube build/lab:** [Real-Time WebSockets Project - JavaScript Mastery](https://www.youtube.com/watch?v=pbOXOY78dNA)
 
 > **When this project is complete:** [Resume your study at WEB Phase 17](./Web.md#phase-17) · [Review Phase 16](./Web.md#phase-16)
 
 ---
 #### WEB Phase 17 Project
 
-**Recommended build — Preview-to-Production Pipeline**
+**Recommended build - Preview-to-Production Pipeline**
 
 **Why this is the right project now:** it applies the material covered through [WEB Phase 17](./Web.md#phase-17) without requiring later phases.
 
@@ -3776,18 +3776,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Preview-to-Production Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Preview-to-Production Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Real-Time WebSockets Project — JavaScript Mastery](https://www.youtube.com/watch?v=pbOXOY78dNA)
+- **YouTube build/lab:** [Real-Time WebSockets Project - JavaScript Mastery](https://www.youtube.com/watch?v=pbOXOY78dNA)
 
 > **When this project is complete:** [Resume your study at WEB Phase 18](./Web.md#phase-18) · [Review Phase 17](./Web.md#phase-17)
 
 ---
 #### WEB Phase 18 Project
 
-**Recommended build — Real-Time Collaboration Board**
+**Recommended build - Real-Time Collaboration Board**
 
 **Why this is the right project now:** it applies the material covered through [WEB Phase 18](./Web.md#phase-18) without requiring later phases.
 
@@ -3802,18 +3802,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Real-Time Collaboration Board Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Real-Time Collaboration Board Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Real-Time WebSockets Project — JavaScript Mastery](https://www.youtube.com/watch?v=pbOXOY78dNA)
+- **YouTube build/lab:** [Real-Time WebSockets Project - JavaScript Mastery](https://www.youtube.com/watch?v=pbOXOY78dNA)
 
 > **When this project is complete:** [Resume your study at WEB Phase 19](./Web.md#phase-19) · [Review Phase 18](./Web.md#phase-18)
 
 ---
 #### WEB Phase 19 Project
 
-**Recommended build — Production SaaS Slice**
+**Recommended build - Production SaaS Slice**
 
 **Why this is the right project now:** it applies the material covered through [WEB Phase 19](./Web.md#phase-19) without requiring later phases.
 
@@ -3828,18 +3828,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Production SaaS Slice Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Production SaaS Slice Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Real-Time WebSockets Project — JavaScript Mastery](https://www.youtube.com/watch?v=pbOXOY78dNA)
+- **YouTube build/lab:** [Real-Time WebSockets Project - JavaScript Mastery](https://www.youtube.com/watch?v=pbOXOY78dNA)
 
 > **When this project is complete:** [Resume your study at WEB Phase 20](./Web.md#phase-20) · [Review Phase 19](./Web.md#phase-19)
 
 ---
 #### WEB Phase 20 Project
 
-**Recommended build — Timed Web Interview Lab**
+**Recommended build - Timed Web Interview Lab**
 
 **Why this is the right project now:** it applies the material covered through [WEB Phase 20](./Web.md#phase-20) without requiring later phases.
 
@@ -3854,11 +3854,11 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Timed Web Interview Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Timed Web Interview Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [RealWorld](https://github.com/realworld-apps/realworld)
 - **More project ideas on GitHub:** [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
-- **YouTube build/lab:** [Real-Time WebSockets Project — JavaScript Mastery](https://www.youtube.com/watch?v=pbOXOY78dNA)
+- **YouTube build/lab:** [Real-Time WebSockets Project - JavaScript Mastery](https://www.youtube.com/watch?v=pbOXOY78dNA)
 
 > **When this project is complete:** [Return to the WEB phase index](./Web.md#phase-index) · [Review Phase 20](./Web.md#phase-20)
 
@@ -3870,7 +3870,7 @@ Choose the recommended build first. Use the alternative only after the recommend
 
 #### CLOUD Phase 1 Project
 
-**Recommended build — Linux Service Baseline**
+**Recommended build - Linux Service Baseline**
 
 **Why this is the right project now:** it applies the material covered through [CLOUD Phase 1](./cloud.md#phase-1) without requiring later phases.
 
@@ -3885,18 +3885,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Linux Service Baseline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Linux Service Baseline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
-- **YouTube build/lab:** [Create an AWS VPC with Terraform — Cloud Champ](https://www.youtube.com/watch?v=4IFW5dXMW1Y)
+- **YouTube build/lab:** [Create an AWS VPC with Terraform - Cloud Champ](https://www.youtube.com/watch?v=4IFW5dXMW1Y)
 
 > **When this project is complete:** [Resume your study at CLOUD Phase 2](./cloud.md#phase-2) · [Review Phase 1](./cloud.md#phase-1)
 
 ---
 #### CLOUD Phase 2 Project
 
-**Recommended build — VM vs Container Benchmark**
+**Recommended build - VM vs Container Benchmark**
 
 **Why this is the right project now:** it applies the material covered through [CLOUD Phase 2](./cloud.md#phase-2) without requiring later phases.
 
@@ -3911,18 +3911,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — VM vs Container Benchmark Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - VM vs Container Benchmark Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
-- **YouTube build/lab:** [Create an AWS VPC with Terraform — Cloud Champ](https://www.youtube.com/watch?v=4IFW5dXMW1Y)
+- **YouTube build/lab:** [Create an AWS VPC with Terraform - Cloud Champ](https://www.youtube.com/watch?v=4IFW5dXMW1Y)
 
 > **When this project is complete:** [Resume your study at CLOUD Phase 3](./cloud.md#phase-3) · [Review Phase 2](./cloud.md#phase-2)
 
 ---
 #### CLOUD Phase 3 Project
 
-**Recommended build — Multi-Provider Architecture Matrix**
+**Recommended build - Multi-Provider Architecture Matrix**
 
 **Why this is the right project now:** it applies the material covered through [CLOUD Phase 3](./cloud.md#phase-3) without requiring later phases.
 
@@ -3937,18 +3937,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Multi-Provider Architecture Matrix Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Multi-Provider Architecture Matrix Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
-- **YouTube build/lab:** [Create an AWS VPC with Terraform — Cloud Champ](https://www.youtube.com/watch?v=4IFW5dXMW1Y)
+- **YouTube build/lab:** [Create an AWS VPC with Terraform - Cloud Champ](https://www.youtube.com/watch?v=4IFW5dXMW1Y)
 
 > **When this project is complete:** [Resume your study at CLOUD Phase 4](./cloud.md#phase-4) · [Review Phase 3](./cloud.md#phase-3)
 
 ---
 #### CLOUD Phase 4 Project
 
-**Recommended build — Least-Privilege IAM Lab**
+**Recommended build - Least-Privilege IAM Lab**
 
 **Why this is the right project now:** it applies the material covered through [CLOUD Phase 4](./cloud.md#phase-4) without requiring later phases.
 
@@ -3963,18 +3963,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Least-Privilege IAM Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Least-Privilege IAM Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
-- **YouTube build/lab:** [Create an AWS VPC with Terraform — Cloud Champ](https://www.youtube.com/watch?v=4IFW5dXMW1Y)
+- **YouTube build/lab:** [Create an AWS VPC with Terraform - Cloud Champ](https://www.youtube.com/watch?v=4IFW5dXMW1Y)
 
 > **When this project is complete:** [Resume your study at CLOUD Phase 5](./cloud.md#phase-5) · [Review Phase 4](./cloud.md#phase-4)
 
 ---
 #### CLOUD Phase 5 Project
 
-**Recommended build — Multi-Tier VPC**
+**Recommended build - Multi-Tier VPC**
 
 **Why this is the right project now:** it applies the material covered through [CLOUD Phase 5](./cloud.md#phase-5) without requiring later phases.
 
@@ -3989,18 +3989,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Multi-Tier VPC Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Multi-Tier VPC Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
-- **YouTube build/lab:** [Create an AWS VPC with Terraform — Cloud Champ](https://www.youtube.com/watch?v=4IFW5dXMW1Y)
+- **YouTube build/lab:** [Create an AWS VPC with Terraform - Cloud Champ](https://www.youtube.com/watch?v=4IFW5dXMW1Y)
 
 > **When this project is complete:** [Resume your study at CLOUD Phase 6](./cloud.md#phase-6) · [Review Phase 5](./cloud.md#phase-5)
 
 ---
 #### CLOUD Phase 6 Project
 
-**Recommended build — Autoscaled Web Tier**
+**Recommended build - Autoscaled Web Tier**
 
 **Why this is the right project now:** it applies the material covered through [CLOUD Phase 6](./cloud.md#phase-6) without requiring later phases.
 
@@ -4015,18 +4015,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Autoscaled Web Tier Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Autoscaled Web Tier Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cloud Resume Challenge Projects](https://github.com/cloudresumechallenge/projects)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
-- **YouTube build/lab:** [Build an Event-Driven Serverless App — Google Cloud Tech](https://www.youtube.com/watch?v=pSdD28cY6r8)
+- **YouTube build/lab:** [Build an Event-Driven Serverless App - Google Cloud Tech](https://www.youtube.com/watch?v=pSdD28cY6r8)
 
 > **When this project is complete:** [Resume your study at CLOUD Phase 7](./cloud.md#phase-7) · [Review Phase 6](./cloud.md#phase-6)
 
 ---
 #### CLOUD Phase 7 Project
 
-**Recommended build — Versioned Object Backup**
+**Recommended build - Versioned Object Backup**
 
 **Why this is the right project now:** it applies the material covered through [CLOUD Phase 7](./cloud.md#phase-7) without requiring later phases.
 
@@ -4041,18 +4041,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Versioned Object Backup Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Versioned Object Backup Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cloud Resume Challenge Projects](https://github.com/cloudresumechallenge/projects)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
-- **YouTube build/lab:** [Build an Event-Driven Serverless App — Google Cloud Tech](https://www.youtube.com/watch?v=pSdD28cY6r8)
+- **YouTube build/lab:** [Build an Event-Driven Serverless App - Google Cloud Tech](https://www.youtube.com/watch?v=pSdD28cY6r8)
 
 > **When this project is complete:** [Resume your study at CLOUD Phase 8](./cloud.md#phase-8) · [Review Phase 7](./cloud.md#phase-7)
 
 ---
 #### CLOUD Phase 8 Project
 
-**Recommended build — Resilient Managed Data Tier**
+**Recommended build - Resilient Managed Data Tier**
 
 **Why this is the right project now:** it applies the material covered through [CLOUD Phase 8](./cloud.md#phase-8) without requiring later phases.
 
@@ -4067,18 +4067,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Resilient Managed Data Tier Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Resilient Managed Data Tier Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cloud Resume Challenge Projects](https://github.com/cloudresumechallenge/projects)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
-- **YouTube build/lab:** [Build an Event-Driven Serverless App — Google Cloud Tech](https://www.youtube.com/watch?v=pSdD28cY6r8)
+- **YouTube build/lab:** [Build an Event-Driven Serverless App - Google Cloud Tech](https://www.youtube.com/watch?v=pSdD28cY6r8)
 
 > **When this project is complete:** [Resume your study at CLOUD Phase 9](./cloud.md#phase-9) · [Review Phase 8](./cloud.md#phase-8)
 
 ---
 #### CLOUD Phase 9 Project
 
-**Recommended build — CDN Delivery Benchmark**
+**Recommended build - CDN Delivery Benchmark**
 
 **Why this is the right project now:** it applies the material covered through [CLOUD Phase 9](./cloud.md#phase-9) without requiring later phases.
 
@@ -4093,18 +4093,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — CDN Delivery Benchmark Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - CDN Delivery Benchmark Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cloud Resume Challenge Projects](https://github.com/cloudresumechallenge/projects)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
-- **YouTube build/lab:** [Build an Event-Driven Serverless App — Google Cloud Tech](https://www.youtube.com/watch?v=pSdD28cY6r8)
+- **YouTube build/lab:** [Build an Event-Driven Serverless App - Google Cloud Tech](https://www.youtube.com/watch?v=pSdD28cY6r8)
 
 > **When this project is complete:** [Resume your study at CLOUD Phase 10](./cloud.md#phase-10) · [Review Phase 9](./cloud.md#phase-9)
 
 ---
 #### CLOUD Phase 10 Project
 
-**Recommended build — Event-Driven Image Pipeline**
+**Recommended build - Event-Driven Image Pipeline**
 
 **Why this is the right project now:** it applies the material covered through [CLOUD Phase 10](./cloud.md#phase-10) without requiring later phases.
 
@@ -4119,18 +4119,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Event-Driven Image Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Event-Driven Image Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [AWS Serverless Workshops](https://github.com/aws-samples/aws-serverless-workshops)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
-- **YouTube build/lab:** [Build an Event-Driven Serverless App — Google Cloud Tech](https://www.youtube.com/watch?v=pSdD28cY6r8)
+- **YouTube build/lab:** [Build an Event-Driven Serverless App - Google Cloud Tech](https://www.youtube.com/watch?v=pSdD28cY6r8)
 
 > **When this project is complete:** [Resume your study at CLOUD Phase 11](./cloud.md#phase-11) · [Review Phase 10](./cloud.md#phase-10)
 
 ---
 #### CLOUD Phase 11 Project
 
-**Recommended build — Managed Kubernetes Service**
+**Recommended build - Managed Kubernetes Service**
 
 **Why this is the right project now:** it applies the material covered through [CLOUD Phase 11](./cloud.md#phase-11) without requiring later phases.
 
@@ -4145,18 +4145,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Managed Kubernetes Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Managed Kubernetes Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cloud Resume Challenge Projects](https://github.com/cloudresumechallenge/projects)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
-- **YouTube build/lab:** [Kubernetes Microservice Application — KodeKloud](https://www.youtube.com/watch?v=XuSQU5Grv1g)
+- **YouTube build/lab:** [Kubernetes Microservice Application - KodeKloud](https://www.youtube.com/watch?v=XuSQU5Grv1g)
 
 > **When this project is complete:** [Resume your study at CLOUD Phase 12](./cloud.md#phase-12) · [Review Phase 11](./cloud.md#phase-11)
 
 ---
 #### CLOUD Phase 12 Project
 
-**Recommended build — Reusable Terraform Environment**
+**Recommended build - Reusable Terraform Environment**
 
 **Why this is the right project now:** it applies the material covered through [CLOUD Phase 12](./cloud.md#phase-12) without requiring later phases.
 
@@ -4171,18 +4171,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Reusable Terraform Environment Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Reusable Terraform Environment Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
-- **YouTube build/lab:** [Kubernetes Microservice Application — KodeKloud](https://www.youtube.com/watch?v=XuSQU5Grv1g)
+- **YouTube build/lab:** [Kubernetes Microservice Application - KodeKloud](https://www.youtube.com/watch?v=XuSQU5Grv1g)
 
 > **When this project is complete:** [Resume your study at CLOUD Phase 13](./cloud.md#phase-13) · [Review Phase 12](./cloud.md#phase-12)
 
 ---
 #### CLOUD Phase 13 Project
 
-**Recommended build — Governed Landing Zone**
+**Recommended build - Governed Landing Zone**
 
 **Why this is the right project now:** it applies the material covered through [CLOUD Phase 13](./cloud.md#phase-13) without requiring later phases.
 
@@ -4197,18 +4197,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Governed Landing Zone Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Governed Landing Zone Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
-- **YouTube build/lab:** [Kubernetes Microservice Application — KodeKloud](https://www.youtube.com/watch?v=XuSQU5Grv1g)
+- **YouTube build/lab:** [Kubernetes Microservice Application - KodeKloud](https://www.youtube.com/watch?v=XuSQU5Grv1g)
 
 > **When this project is complete:** [Resume your study at CLOUD Phase 14](./cloud.md#phase-14) · [Review Phase 13](./cloud.md#phase-13)
 
 ---
 #### CLOUD Phase 14 Project
 
-**Recommended build — Encrypted Secret Rotation**
+**Recommended build - Encrypted Secret Rotation**
 
 **Why this is the right project now:** it applies the material covered through [CLOUD Phase 14](./cloud.md#phase-14) without requiring later phases.
 
@@ -4223,18 +4223,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Encrypted Secret Rotation Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Encrypted Secret Rotation Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
-- **YouTube build/lab:** [Kubernetes Microservice Application — KodeKloud](https://www.youtube.com/watch?v=XuSQU5Grv1g)
+- **YouTube build/lab:** [Kubernetes Microservice Application - KodeKloud](https://www.youtube.com/watch?v=XuSQU5Grv1g)
 
 > **When this project is complete:** [Resume your study at CLOUD Phase 15](./cloud.md#phase-15) · [Review Phase 14](./cloud.md#phase-14)
 
 ---
 #### CLOUD Phase 15 Project
 
-**Recommended build — Observable Cloud Service**
+**Recommended build - Observable Cloud Service**
 
 **Why this is the right project now:** it applies the material covered through [CLOUD Phase 15](./cloud.md#phase-15) without requiring later phases.
 
@@ -4249,18 +4249,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Observable Cloud Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Observable Cloud Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
-- **YouTube build/lab:** [Kubernetes Microservice Application — KodeKloud](https://www.youtube.com/watch?v=XuSQU5Grv1g)
+- **YouTube build/lab:** [Kubernetes Microservice Application - KodeKloud](https://www.youtube.com/watch?v=XuSQU5Grv1g)
 
 > **When this project is complete:** [Resume your study at CLOUD Phase 16](./cloud.md#phase-16) · [Review Phase 15](./cloud.md#phase-15)
 
 ---
 #### CLOUD Phase 16 Project
 
-**Recommended build — Policy-as-Code Safety checks and limits**
+**Recommended build - Policy-as-Code Safety checks and limits**
 
 **Why this is the right project now:** it applies the material covered through [CLOUD Phase 16](./cloud.md#phase-16) without requiring later phases.
 
@@ -4275,18 +4275,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Policy-as-Code Safety checks and limits Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Policy-as-Code Safety checks and limits Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
-- **YouTube build/lab:** [Cloud Cost Optimization and FinOps — The Executive Briefing](https://www.youtube.com/watch?v=EiX2OQRB_Dk)
+- **YouTube build/lab:** [Cloud Cost Optimization and FinOps - The Executive Briefing](https://www.youtube.com/watch?v=EiX2OQRB_Dk)
 
 > **When this project is complete:** [Resume your study at CLOUD Phase 17](./cloud.md#phase-17) · [Review Phase 16](./cloud.md#phase-16)
 
 ---
 #### CLOUD Phase 17 Project
 
-**Recommended build — Disaster Recovery Game Day**
+**Recommended build - Disaster Recovery Game Day**
 
 **Why this is the right project now:** it applies the material covered through [CLOUD Phase 17](./cloud.md#phase-17) without requiring later phases.
 
@@ -4301,18 +4301,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Disaster Recovery Game Day Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Disaster Recovery Game Day Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
-- **YouTube build/lab:** [Cloud Cost Optimization and FinOps — The Executive Briefing](https://www.youtube.com/watch?v=EiX2OQRB_Dk)
+- **YouTube build/lab:** [Cloud Cost Optimization and FinOps - The Executive Briefing](https://www.youtube.com/watch?v=EiX2OQRB_Dk)
 
 > **When this project is complete:** [Resume your study at CLOUD Phase 18](./cloud.md#phase-18) · [Review Phase 17](./cloud.md#phase-17)
 
 ---
 #### CLOUD Phase 18 Project
 
-**Recommended build — Cloud Cost Optimizer**
+**Recommended build - Cloud Cost Optimizer**
 
 **Why this is the right project now:** it applies the material covered through [CLOUD Phase 18](./cloud.md#phase-18) without requiring later phases.
 
@@ -4327,18 +4327,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Cloud Cost Optimizer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Cloud Cost Optimizer Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
-- **YouTube build/lab:** [Cloud Cost Optimization and FinOps — The Executive Briefing](https://www.youtube.com/watch?v=EiX2OQRB_Dk)
+- **YouTube build/lab:** [Cloud Cost Optimization and FinOps - The Executive Briefing](https://www.youtube.com/watch?v=EiX2OQRB_Dk)
 
 > **When this project is complete:** [Resume your study at CLOUD Phase 19](./cloud.md#phase-19) · [Review Phase 18](./cloud.md#phase-18)
 
 ---
 #### CLOUD Phase 19 Project
 
-**Recommended build — Migration Runbook and Pilot**
+**Recommended build - Migration Runbook and Pilot**
 
 **Why this is the right project now:** it applies the material covered through [CLOUD Phase 19](./cloud.md#phase-19) without requiring later phases.
 
@@ -4353,18 +4353,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Migration Runbook and Pilot Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Migration Runbook and Pilot Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Terraform AWS VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
-- **YouTube build/lab:** [Cloud Cost Optimization and FinOps — The Executive Briefing](https://www.youtube.com/watch?v=EiX2OQRB_Dk)
+- **YouTube build/lab:** [Cloud Cost Optimization and FinOps - The Executive Briefing](https://www.youtube.com/watch?v=EiX2OQRB_Dk)
 
 > **When this project is complete:** [Resume your study at CLOUD Phase 20](./cloud.md#phase-20) · [Review Phase 19](./cloud.md#phase-19)
 
 ---
 #### CLOUD Phase 20 Project
 
-**Recommended build — Cloud Architecture Portfolio**
+**Recommended build - Cloud Architecture Portfolio**
 
 **Why this is the right project now:** it applies the material covered through [CLOUD Phase 20](./cloud.md#phase-20) without requiring later phases.
 
@@ -4379,11 +4379,11 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Cloud Architecture Portfolio Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Cloud Architecture Portfolio Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Cloud Resume Challenge Projects](https://github.com/cloudresumechallenge/projects)
 - **More project ideas on GitHub:** [Cloud Engineering Project Ideas](https://github.com/madebygps/cloud-engineering-projects)
-- **YouTube build/lab:** [Cloud Cost Optimization and FinOps — The Executive Briefing](https://www.youtube.com/watch?v=EiX2OQRB_Dk)
+- **YouTube build/lab:** [Cloud Cost Optimization and FinOps - The Executive Briefing](https://www.youtube.com/watch?v=EiX2OQRB_Dk)
 
 > **When this project is complete:** [Return to the CLOUD phase index](./cloud.md#phase-index) · [Review Phase 20](./cloud.md#phase-20)
 
@@ -4395,7 +4395,7 @@ Choose the recommended build first. Use the alternative only after the recommend
 
 #### DEVOPS Phase 1 Project
 
-**Recommended build — Value Stream Delivery Map**
+**Recommended build - Value Stream Delivery Map**
 
 **Why this is the right project now:** it applies the material covered through [DEVOPS Phase 1](./devops.md#phase-1) without requiring later phases.
 
@@ -4410,18 +4410,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Value Stream Delivery Map Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Value Stream Delivery Map Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
-- **YouTube build/lab:** [Home Lab Automation with Terraform, Ansible, and CI/CD — VirtualizationHowto](https://www.youtube.com/watch?v=r5RckLwzkfc)
+- **YouTube build/lab:** [Home Lab Automation with Terraform, Ansible, and CI/CD - VirtualizationHowto](https://www.youtube.com/watch?v=r5RckLwzkfc)
 
 > **When this project is complete:** [Resume your study at DEVOPS Phase 2](./devops.md#phase-2) · [Review Phase 1](./devops.md#phase-1)
 
 ---
 #### DEVOPS Phase 2 Project
 
-**Recommended build — Hardened Linux Service**
+**Recommended build - Hardened Linux Service**
 
 **Why this is the right project now:** it applies the material covered through [DEVOPS Phase 2](./devops.md#phase-2) without requiring later phases.
 
@@ -4436,18 +4436,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Hardened Linux Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Hardened Linux Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
-- **YouTube build/lab:** [Home Lab Automation with Terraform, Ansible, and CI/CD — VirtualizationHowto](https://www.youtube.com/watch?v=r5RckLwzkfc)
+- **YouTube build/lab:** [Home Lab Automation with Terraform, Ansible, and CI/CD - VirtualizationHowto](https://www.youtube.com/watch?v=r5RckLwzkfc)
 
 > **When this project is complete:** [Resume your study at DEVOPS Phase 3](./devops.md#phase-3) · [Review Phase 2](./devops.md#phase-2)
 
 ---
 #### DEVOPS Phase 3 Project
 
-**Recommended build — Incident Troubleshooting Toolkit**
+**Recommended build - Incident Troubleshooting Toolkit**
 
 **Why this is the right project now:** it applies the material covered through [DEVOPS Phase 3](./devops.md#phase-3) without requiring later phases.
 
@@ -4462,18 +4462,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Incident Troubleshooting Toolkit Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Incident Troubleshooting Toolkit Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
-- **YouTube build/lab:** [Home Lab Automation with Terraform, Ansible, and CI/CD — VirtualizationHowto](https://www.youtube.com/watch?v=r5RckLwzkfc)
+- **YouTube build/lab:** [Home Lab Automation with Terraform, Ansible, and CI/CD - VirtualizationHowto](https://www.youtube.com/watch?v=r5RckLwzkfc)
 
 > **When this project is complete:** [Resume your study at DEVOPS Phase 4](./devops.md#phase-4) · [Review Phase 3](./devops.md#phase-3)
 
 ---
 #### DEVOPS Phase 4 Project
 
-**Recommended build — Pull-Request Git Workflow**
+**Recommended build - Pull-Request Git Workflow**
 
 **Why this is the right project now:** it applies the material covered through [DEVOPS Phase 4](./devops.md#phase-4) without requiring later phases.
 
@@ -4488,18 +4488,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Pull-Request Git Workflow Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Pull-Request Git Workflow Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
-- **YouTube build/lab:** [Home Lab Automation with Terraform, Ansible, and CI/CD — VirtualizationHowto](https://www.youtube.com/watch?v=r5RckLwzkfc)
+- **YouTube build/lab:** [Home Lab Automation with Terraform, Ansible, and CI/CD - VirtualizationHowto](https://www.youtube.com/watch?v=r5RckLwzkfc)
 
 > **When this project is complete:** [Resume your study at DEVOPS Phase 5](./devops.md#phase-5) · [Review Phase 4](./devops.md#phase-4)
 
 ---
 #### DEVOPS Phase 5 Project
 
-**Recommended build — Operations Automation CLI**
+**Recommended build - Operations Automation CLI**
 
 **Why this is the right project now:** it applies the material covered through [DEVOPS Phase 5](./devops.md#phase-5) without requiring later phases.
 
@@ -4514,18 +4514,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Operations Automation CLI Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Operations Automation CLI Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
-- **YouTube build/lab:** [Home Lab Automation with Terraform, Ansible, and CI/CD — VirtualizationHowto](https://www.youtube.com/watch?v=r5RckLwzkfc)
+- **YouTube build/lab:** [Home Lab Automation with Terraform, Ansible, and CI/CD - VirtualizationHowto](https://www.youtube.com/watch?v=r5RckLwzkfc)
 
 > **When this project is complete:** [Resume your study at DEVOPS Phase 6](./devops.md#phase-6) · [Review Phase 5](./devops.md#phase-5)
 
 ---
 #### DEVOPS Phase 6 Project
 
-**Recommended build — Reproducible Artifact Pipeline**
+**Recommended build - Reproducible Artifact Pipeline**
 
 **Why this is the right project now:** it applies the material covered through [DEVOPS Phase 6](./devops.md#phase-6) without requiring later phases.
 
@@ -4540,18 +4540,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Reproducible Artifact Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Reproducible Artifact Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
-- **YouTube build/lab:** [Deploy a Monitoring Application on Kubernetes — Cloud Champ](https://www.youtube.com/watch?v=kBWCsHEcWnc)
+- **YouTube build/lab:** [Deploy a Monitoring Application on Kubernetes - Cloud Champ](https://www.youtube.com/watch?v=kBWCsHEcWnc)
 
 > **When this project is complete:** [Resume your study at DEVOPS Phase 7](./devops.md#phase-7) · [Review Phase 6](./devops.md#phase-6)
 
 ---
 #### DEVOPS Phase 7 Project
 
-**Recommended build — Quality-Gated CI Pipeline**
+**Recommended build - Quality-Gated CI Pipeline**
 
 **Why this is the right project now:** it applies the material covered through [DEVOPS Phase 7](./devops.md#phase-7) without requiring later phases.
 
@@ -4566,18 +4566,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Quality-Gated CI Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Quality-Gated CI Pipeline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
-- **YouTube build/lab:** [Deploy a Monitoring Application on Kubernetes — Cloud Champ](https://www.youtube.com/watch?v=kBWCsHEcWnc)
+- **YouTube build/lab:** [Deploy a Monitoring Application on Kubernetes - Cloud Champ](https://www.youtube.com/watch?v=kBWCsHEcWnc)
 
 > **When this project is complete:** [Resume your study at DEVOPS Phase 8](./devops.md#phase-8) · [Review Phase 7](./devops.md#phase-7)
 
 ---
 #### DEVOPS Phase 8 Project
 
-**Recommended build — Canary Deployment Simulator**
+**Recommended build - Canary Deployment Simulator**
 
 **Why this is the right project now:** it applies the material covered through [DEVOPS Phase 8](./devops.md#phase-8) without requiring later phases.
 
@@ -4592,18 +4592,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Canary Deployment Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Canary Deployment Simulator Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
-- **YouTube build/lab:** [Deploy a Monitoring Application on Kubernetes — Cloud Champ](https://www.youtube.com/watch?v=kBWCsHEcWnc)
+- **YouTube build/lab:** [Deploy a Monitoring Application on Kubernetes - Cloud Champ](https://www.youtube.com/watch?v=kBWCsHEcWnc)
 
 > **When this project is complete:** [Resume your study at DEVOPS Phase 9](./devops.md#phase-9) · [Review Phase 8](./devops.md#phase-8)
 
 ---
 #### DEVOPS Phase 9 Project
 
-**Recommended build — Hardened Multi-Stage Container**
+**Recommended build - Hardened Multi-Stage Container**
 
 **Why this is the right project now:** it applies the material covered through [DEVOPS Phase 9](./devops.md#phase-9) without requiring later phases.
 
@@ -4618,18 +4618,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Hardened Multi-Stage Container Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Hardened Multi-Stage Container Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Docker Getting Started](https://github.com/docker/getting-started)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
-- **YouTube build/lab:** [Deploy a Monitoring Application on Kubernetes — Cloud Champ](https://www.youtube.com/watch?v=kBWCsHEcWnc)
+- **YouTube build/lab:** [Deploy a Monitoring Application on Kubernetes - Cloud Champ](https://www.youtube.com/watch?v=kBWCsHEcWnc)
 
 > **When this project is complete:** [Resume your study at DEVOPS Phase 10](./devops.md#phase-10) · [Review Phase 9](./devops.md#phase-9)
 
 ---
 #### DEVOPS Phase 10 Project
 
-**Recommended build — Kubernetes Operations Lab**
+**Recommended build - Kubernetes Operations Lab**
 
 **Why this is the right project now:** it applies the material covered through [DEVOPS Phase 10](./devops.md#phase-10) without requiring later phases.
 
@@ -4644,18 +4644,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Kubernetes Operations Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Kubernetes Operations Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Kubernetes Examples](https://github.com/kubernetes/examples)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
-- **YouTube build/lab:** [Deploy a Monitoring Application on Kubernetes — Cloud Champ](https://www.youtube.com/watch?v=kBWCsHEcWnc)
+- **YouTube build/lab:** [Deploy a Monitoring Application on Kubernetes - Cloud Champ](https://www.youtube.com/watch?v=kBWCsHEcWnc)
 
 > **When this project is complete:** [Resume your study at DEVOPS Phase 11](./devops.md#phase-11) · [Review Phase 10](./devops.md#phase-10)
 
 ---
 #### DEVOPS Phase 11 Project
 
-**Recommended build — Terraform State Lifecycle Lab**
+**Recommended build - Terraform State Lifecycle Lab**
 
 **Why this is the right project now:** it applies the material covered through [DEVOPS Phase 11](./devops.md#phase-11) without requiring later phases.
 
@@ -4670,18 +4670,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Terraform State Lifecycle Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Terraform State Lifecycle Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
-- **YouTube build/lab:** [Terraform and Ansible Full DevOps Project — Pravesh Sudha](https://www.youtube.com/watch?v=tKlGTGye_hk)
+- **YouTube build/lab:** [Terraform and Ansible Full DevOps Project - Pravesh Sudha](https://www.youtube.com/watch?v=tKlGTGye_hk)
 
 > **When this project is complete:** [Resume your study at DEVOPS Phase 12](./devops.md#phase-12) · [Review Phase 11](./devops.md#phase-11)
 
 ---
 #### DEVOPS Phase 12 Project
 
-**Recommended build — Idempotent Ansible Baseline**
+**Recommended build - Idempotent Ansible Baseline**
 
 **Why this is the right project now:** it applies the material covered through [DEVOPS Phase 12](./devops.md#phase-12) without requiring later phases.
 
@@ -4696,18 +4696,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Idempotent Ansible Baseline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Idempotent Ansible Baseline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
-- **YouTube build/lab:** [Terraform and Ansible Full DevOps Project — Pravesh Sudha](https://www.youtube.com/watch?v=tKlGTGye_hk)
+- **YouTube build/lab:** [Terraform and Ansible Full DevOps Project - Pravesh Sudha](https://www.youtube.com/watch?v=tKlGTGye_hk)
 
 > **When this project is complete:** [Resume your study at DEVOPS Phase 13](./devops.md#phase-13) · [Review Phase 12](./devops.md#phase-12)
 
 ---
 #### DEVOPS Phase 13 Project
 
-**Recommended build — Cloud Delivery Foundation**
+**Recommended build - Cloud Delivery Foundation**
 
 **Why this is the right project now:** it applies the material covered through [DEVOPS Phase 13](./devops.md#phase-13) without requiring later phases.
 
@@ -4722,18 +4722,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Cloud Delivery Foundation Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Cloud Delivery Foundation Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
-- **YouTube build/lab:** [Terraform and Ansible Full DevOps Project — Pravesh Sudha](https://www.youtube.com/watch?v=tKlGTGye_hk)
+- **YouTube build/lab:** [Terraform and Ansible Full DevOps Project - Pravesh Sudha](https://www.youtube.com/watch?v=tKlGTGye_hk)
 
 > **When this project is complete:** [Resume your study at DEVOPS Phase 14](./devops.md#phase-14) · [Review Phase 13](./devops.md#phase-13)
 
 ---
 #### DEVOPS Phase 14 Project
 
-**Recommended build — Observable Demo Service**
+**Recommended build - Observable Demo Service**
 
 **Why this is the right project now:** it applies the material covered through [DEVOPS Phase 14](./devops.md#phase-14) without requiring later phases.
 
@@ -4748,18 +4748,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Observable Demo Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Observable Demo Service Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
-- **YouTube build/lab:** [Terraform and Ansible Full DevOps Project — Pravesh Sudha](https://www.youtube.com/watch?v=tKlGTGye_hk)
+- **YouTube build/lab:** [Terraform and Ansible Full DevOps Project - Pravesh Sudha](https://www.youtube.com/watch?v=tKlGTGye_hk)
 
 > **When this project is complete:** [Resume your study at DEVOPS Phase 15](./devops.md#phase-15) · [Review Phase 14](./devops.md#phase-14)
 
 ---
 #### DEVOPS Phase 15 Project
 
-**Recommended build — SLO and Error Budget Dashboard**
+**Recommended build - SLO and Error Budget Dashboard**
 
 **Why this is the right project now:** it applies the material covered through [DEVOPS Phase 15](./devops.md#phase-15) without requiring later phases.
 
@@ -4774,18 +4774,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — SLO and Error Budget Dashboard Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - SLO and Error Budget Dashboard Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
-- **YouTube build/lab:** [Terraform and Ansible Full DevOps Project — Pravesh Sudha](https://www.youtube.com/watch?v=tKlGTGye_hk)
+- **YouTube build/lab:** [Terraform and Ansible Full DevOps Project - Pravesh Sudha](https://www.youtube.com/watch?v=tKlGTGye_hk)
 
 > **When this project is complete:** [Resume your study at DEVOPS Phase 16](./devops.md#phase-16) · [Review Phase 15](./devops.md#phase-15)
 
 ---
 #### DEVOPS Phase 16 Project
 
-**Recommended build — Signed Software Supply Chain**
+**Recommended build - Signed Software Supply Chain**
 
 **Why this is the right project now:** it applies the material covered through [DEVOPS Phase 16](./devops.md#phase-16) without requiring later phases.
 
@@ -4800,18 +4800,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Signed Software Supply Chain Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Signed Software Supply Chain Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
-- **YouTube build/lab:** [Chaos Engineering Workflow Resiliency Tutorial — LitmusChaos](https://www.youtube.com/watch?v=OuB3dS05DHU)
+- **YouTube build/lab:** [Chaos Engineering Workflow Resiliency Tutorial - LitmusChaos](https://www.youtube.com/watch?v=OuB3dS05DHU)
 
 > **When this project is complete:** [Resume your study at DEVOPS Phase 17](./devops.md#phase-17) · [Review Phase 16](./devops.md#phase-16)
 
 ---
 #### DEVOPS Phase 17 Project
 
-**Recommended build — GitOps Application Platform**
+**Recommended build - GitOps Application Platform**
 
 **Why this is the right project now:** it applies the material covered through [DEVOPS Phase 17](./devops.md#phase-17) without requiring later phases.
 
@@ -4826,18 +4826,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — GitOps Application Platform Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - GitOps Application Platform Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Argo CD](https://github.com/argoproj/argo-cd)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
-- **YouTube build/lab:** [Chaos Engineering Workflow Resiliency Tutorial — LitmusChaos](https://www.youtube.com/watch?v=OuB3dS05DHU)
+- **YouTube build/lab:** [Chaos Engineering Workflow Resiliency Tutorial - LitmusChaos](https://www.youtube.com/watch?v=OuB3dS05DHU)
 
 > **When this project is complete:** [Resume your study at DEVOPS Phase 18](./devops.md#phase-18) · [Review Phase 17](./devops.md#phase-17)
 
 ---
 #### DEVOPS Phase 18 Project
 
-**Recommended build — Chaos Game Day and Postmortem**
+**Recommended build - Chaos Game Day and Postmortem**
 
 **Why this is the right project now:** it applies the material covered through [DEVOPS Phase 18](./devops.md#phase-18) without requiring later phases.
 
@@ -4852,18 +4852,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Chaos Game Day and Postmortem Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Chaos Game Day and Postmortem Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
-- **YouTube build/lab:** [Chaos Engineering Workflow Resiliency Tutorial — LitmusChaos](https://www.youtube.com/watch?v=OuB3dS05DHU)
+- **YouTube build/lab:** [Chaos Engineering Workflow Resiliency Tutorial - LitmusChaos](https://www.youtube.com/watch?v=OuB3dS05DHU)
 
 > **When this project is complete:** [Resume your study at DEVOPS Phase 19](./devops.md#phase-19) · [Review Phase 18](./devops.md#phase-18)
 
 ---
 #### DEVOPS Phase 19 Project
 
-**Recommended build — Production Delivery Platform**
+**Recommended build - Production Delivery Platform**
 
 **Why this is the right project now:** it applies the material covered through [DEVOPS Phase 19](./devops.md#phase-19) without requiring later phases.
 
@@ -4878,18 +4878,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Production Delivery Platform Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Production Delivery Platform Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
-- **YouTube build/lab:** [Chaos Engineering Workflow Resiliency Tutorial — LitmusChaos](https://www.youtube.com/watch?v=OuB3dS05DHU)
+- **YouTube build/lab:** [Chaos Engineering Workflow Resiliency Tutorial - LitmusChaos](https://www.youtube.com/watch?v=OuB3dS05DHU)
 
 > **When this project is complete:** [Resume your study at DEVOPS Phase 20](./devops.md#phase-20) · [Review Phase 19](./devops.md#phase-19)
 
 ---
 #### DEVOPS Phase 20 Project
 
-**Recommended build — Timed DevOps Incident Drill**
+**Recommended build - Timed DevOps Incident Drill**
 
 **Why this is the right project now:** it applies the material covered through [DEVOPS Phase 20](./devops.md#phase-20) without requiring later phases.
 
@@ -4904,11 +4904,11 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Timed DevOps Incident Drill Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Timed DevOps Incident Drill Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DevOps Exercises](https://github.com/bregman-arie/devops-exercises)
 - **More project ideas on GitHub:** [Kubernetes Practical Exercises](https://github.com/seifrajhi/Kubernetes-practical-exercises-Hands-on)
-- **YouTube build/lab:** [Chaos Engineering Workflow Resiliency Tutorial — LitmusChaos](https://www.youtube.com/watch?v=OuB3dS05DHU)
+- **YouTube build/lab:** [Chaos Engineering Workflow Resiliency Tutorial - LitmusChaos](https://www.youtube.com/watch?v=OuB3dS05DHU)
 
 > **When this project is complete:** [Return to the DEVOPS phase index](./devops.md#phase-index) · [Review Phase 20](./devops.md#phase-20)
 
@@ -4920,7 +4920,7 @@ Choose the recommended build first. Use the alternative only after the recommend
 
 #### CYBER Phase 1 Project
 
-**Recommended build — Risk Register and Treatment Plan**
+**Recommended build - Risk Register and Treatment Plan**
 
 **Why this is the right project now:** it applies the material covered through [CYBER Phase 1](./ICT_Cybersecurity.md#phase-1) without requiring later phases.
 
@@ -4935,18 +4935,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Risk Register and Treatment Plan Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Risk Register and Treatment Plan Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
-- **YouTube build/lab:** [Build a Basic Cybersecurity Home Lab — MyDFIR](https://www.youtube.com/watch?v=Zgiw-4z51NI)
+- **YouTube build/lab:** [Build a Basic Cybersecurity Home Lab - MyDFIR](https://www.youtube.com/watch?v=Zgiw-4z51NI)
 
 > **When this project is complete:** [Resume your study at CYBER Phase 2](./ICT_Cybersecurity.md#phase-2) · [Review Phase 1](./ICT_Cybersecurity.md#phase-1)
 
 ---
 #### CYBER Phase 2 Project
 
-**Recommended build — Network Attack Surface Map**
+**Recommended build - Network Attack Surface Map**
 
 **Why this is the right project now:** it applies the material covered through [CYBER Phase 2](./ICT_Cybersecurity.md#phase-2) without requiring later phases.
 
@@ -4961,18 +4961,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Network Attack Surface Map Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Network Attack Surface Map Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
-- **YouTube build/lab:** [Build a Basic Cybersecurity Home Lab — MyDFIR](https://www.youtube.com/watch?v=Zgiw-4z51NI)
+- **YouTube build/lab:** [Build a Basic Cybersecurity Home Lab - MyDFIR](https://www.youtube.com/watch?v=Zgiw-4z51NI)
 
 > **When this project is complete:** [Resume your study at CYBER Phase 3](./ICT_Cybersecurity.md#phase-3) · [Review Phase 2](./ICT_Cybersecurity.md#phase-2)
 
 ---
 #### CYBER Phase 3 Project
 
-**Recommended build — Host Hardening Baseline**
+**Recommended build - Host Hardening Baseline**
 
 **Why this is the right project now:** it applies the material covered through [CYBER Phase 3](./ICT_Cybersecurity.md#phase-3) without requiring later phases.
 
@@ -4987,18 +4987,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Host Hardening Baseline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Host Hardening Baseline Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
-- **YouTube build/lab:** [Build a Basic Cybersecurity Home Lab — MyDFIR](https://www.youtube.com/watch?v=Zgiw-4z51NI)
+- **YouTube build/lab:** [Build a Basic Cybersecurity Home Lab - MyDFIR](https://www.youtube.com/watch?v=Zgiw-4z51NI)
 
 > **When this project is complete:** [Resume your study at CYBER Phase 4](./ICT_Cybersecurity.md#phase-4) · [Review Phase 3](./ICT_Cybersecurity.md#phase-3)
 
 ---
 #### CYBER Phase 4 Project
 
-**Recommended build — Secure File Vault**
+**Recommended build - Secure File Vault**
 
 **Why this is the right project now:** it applies the material covered through [CYBER Phase 4](./ICT_Cybersecurity.md#phase-4) without requiring later phases.
 
@@ -5013,18 +5013,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Secure File Vault Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Secure File Vault Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
-- **YouTube build/lab:** [Build a Basic Cybersecurity Home Lab — MyDFIR](https://www.youtube.com/watch?v=Zgiw-4z51NI)
+- **YouTube build/lab:** [Build a Basic Cybersecurity Home Lab - MyDFIR](https://www.youtube.com/watch?v=Zgiw-4z51NI)
 
 > **When this project is complete:** [Resume your study at CYBER Phase 5](./ICT_Cybersecurity.md#phase-5) · [Review Phase 4](./ICT_Cybersecurity.md#phase-4)
 
 ---
 #### CYBER Phase 5 Project
 
-**Recommended build — Least-Privilege IAM Review**
+**Recommended build - Least-Privilege IAM Review**
 
 **Why this is the right project now:** it applies the material covered through [CYBER Phase 5](./ICT_Cybersecurity.md#phase-5) without requiring later phases.
 
@@ -5039,18 +5039,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Least-Privilege IAM Review Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Least-Privilege IAM Review Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
-- **YouTube build/lab:** [Build a Basic Cybersecurity Home Lab — MyDFIR](https://www.youtube.com/watch?v=Zgiw-4z51NI)
+- **YouTube build/lab:** [Build a Basic Cybersecurity Home Lab - MyDFIR](https://www.youtube.com/watch?v=Zgiw-4z51NI)
 
 > **When this project is complete:** [Resume your study at CYBER Phase 6](./ICT_Cybersecurity.md#phase-6) · [Review Phase 5](./ICT_Cybersecurity.md#phase-5)
 
 ---
 #### CYBER Phase 6 Project
 
-**Recommended build — Threat Model and ATT&CK Map**
+**Recommended build - Threat Model and ATT&CK Map**
 
 **Why this is the right project now:** it applies the material covered through [CYBER Phase 6](./ICT_Cybersecurity.md#phase-6) without requiring later phases.
 
@@ -5065,18 +5065,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Threat Model and ATT&CK Map Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Threat Model and ATT&CK Map Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
-- **YouTube build/lab:** [OWASP Juice Shop Web Penetration Testing Lab — Woman in WhiteHat](https://www.youtube.com/watch?v=0XIzwlhWO3g)
+- **YouTube build/lab:** [OWASP Juice Shop Web Penetration Testing Lab - Woman in WhiteHat](https://www.youtube.com/watch?v=0XIzwlhWO3g)
 
 > **When this project is complete:** [Resume your study at CYBER Phase 7](./ICT_Cybersecurity.md#phase-7) · [Review Phase 6](./ICT_Cybersecurity.md#phase-6)
 
 ---
 #### CYBER Phase 7 Project
 
-**Recommended build — OWASP Remediation Lab**
+**Recommended build - OWASP Remediation Lab**
 
 **Why this is the right project now:** it applies the material covered through [CYBER Phase 7](./ICT_Cybersecurity.md#phase-7) without requiring later phases.
 
@@ -5091,18 +5091,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — OWASP Remediation Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - OWASP Remediation Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OWASP Juice Shop](https://github.com/juice-shop/juice-shop)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
-- **YouTube build/lab:** [OWASP Juice Shop Web Penetration Testing Lab — Woman in WhiteHat](https://www.youtube.com/watch?v=0XIzwlhWO3g)
+- **YouTube build/lab:** [OWASP Juice Shop Web Penetration Testing Lab - Woman in WhiteHat](https://www.youtube.com/watch?v=0XIzwlhWO3g)
 
 > **When this project is complete:** [Resume your study at CYBER Phase 8](./ICT_Cybersecurity.md#phase-8) · [Review Phase 7](./ICT_Cybersecurity.md#phase-7)
 
 ---
 #### CYBER Phase 8 Project
 
-**Recommended build — Firewall and IDS Validation**
+**Recommended build - Firewall and IDS Validation**
 
 **Why this is the right project now:** it applies the material covered through [CYBER Phase 8](./ICT_Cybersecurity.md#phase-8) without requiring later phases.
 
@@ -5117,18 +5117,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Firewall and IDS Validation Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Firewall and IDS Validation Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
-- **YouTube build/lab:** [OWASP Juice Shop Web Penetration Testing Lab — Woman in WhiteHat](https://www.youtube.com/watch?v=0XIzwlhWO3g)
+- **YouTube build/lab:** [OWASP Juice Shop Web Penetration Testing Lab - Woman in WhiteHat](https://www.youtube.com/watch?v=0XIzwlhWO3g)
 
 > **When this project is complete:** [Resume your study at CYBER Phase 9](./ICT_Cybersecurity.md#phase-9) · [Review Phase 8](./ICT_Cybersecurity.md#phase-8)
 
 ---
 #### CYBER Phase 9 Project
 
-**Recommended build — Endpoint Hardening Pack**
+**Recommended build - Endpoint Hardening Pack**
 
 **Why this is the right project now:** it applies the material covered through [CYBER Phase 9](./ICT_Cybersecurity.md#phase-9) without requiring later phases.
 
@@ -5143,18 +5143,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Endpoint Hardening Pack Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Endpoint Hardening Pack Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
-- **YouTube build/lab:** [OWASP Juice Shop Web Penetration Testing Lab — Woman in WhiteHat](https://www.youtube.com/watch?v=0XIzwlhWO3g)
+- **YouTube build/lab:** [OWASP Juice Shop Web Penetration Testing Lab - Woman in WhiteHat](https://www.youtube.com/watch?v=0XIzwlhWO3g)
 
 > **When this project is complete:** [Resume your study at CYBER Phase 10](./ICT_Cybersecurity.md#phase-10) · [Review Phase 9](./ICT_Cybersecurity.md#phase-9)
 
 ---
 #### CYBER Phase 10 Project
 
-**Recommended build — Vulnerability Triage Program**
+**Recommended build - Vulnerability Triage Program**
 
 **Why this is the right project now:** it applies the material covered through [CYBER Phase 10](./ICT_Cybersecurity.md#phase-10) without requiring later phases.
 
@@ -5169,18 +5169,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Vulnerability Triage Program Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Vulnerability Triage Program Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
-- **YouTube build/lab:** [OWASP Juice Shop Web Penetration Testing Lab — Woman in WhiteHat](https://www.youtube.com/watch?v=0XIzwlhWO3g)
+- **YouTube build/lab:** [OWASP Juice Shop Web Penetration Testing Lab - Woman in WhiteHat](https://www.youtube.com/watch?v=0XIzwlhWO3g)
 
 > **When this project is complete:** [Resume your study at CYBER Phase 11](./ICT_Cybersecurity.md#phase-11) · [Review Phase 10](./ICT_Cybersecurity.md#phase-10)
 
 ---
 #### CYBER Phase 11 Project
 
-**Recommended build — Authorized Web Pentest Report**
+**Recommended build - Authorized Web Pentest Report**
 
 **Why this is the right project now:** it applies the material covered through [CYBER Phase 11](./ICT_Cybersecurity.md#phase-11) without requiring later phases.
 
@@ -5195,18 +5195,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Authorized Web Pentest Report Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Authorized Web Pentest Report Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [OWASP Juice Shop](https://github.com/juice-shop/juice-shop)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
-- **YouTube build/lab:** [Build a SOC Home Lab with Elastic SIEM — Prabh Nair](https://www.youtube.com/watch?v=HsLpZCbiasA)
+- **YouTube build/lab:** [Build a SOC Home Lab with Elastic SIEM - Prabh Nair](https://www.youtube.com/watch?v=HsLpZCbiasA)
 
 > **When this project is complete:** [Resume your study at CYBER Phase 12](./ICT_Cybersecurity.md#phase-12) · [Review Phase 11](./ICT_Cybersecurity.md#phase-11)
 
 ---
 #### CYBER Phase 12 Project
 
-**Recommended build — Active Directory Detection Lab**
+**Recommended build - Active Directory Detection Lab**
 
 **Why this is the right project now:** it applies the material covered through [CYBER Phase 12](./ICT_Cybersecurity.md#phase-12) without requiring later phases.
 
@@ -5221,18 +5221,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Active Directory Detection Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Active Directory Detection Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
-- **YouTube build/lab:** [Build a SOC Home Lab with Elastic SIEM — Prabh Nair](https://www.youtube.com/watch?v=HsLpZCbiasA)
+- **YouTube build/lab:** [Build a SOC Home Lab with Elastic SIEM - Prabh Nair](https://www.youtube.com/watch?v=HsLpZCbiasA)
 
 > **When this project is complete:** [Resume your study at CYBER Phase 13](./ICT_Cybersecurity.md#phase-13) · [Review Phase 12](./ICT_Cybersecurity.md#phase-12)
 
 ---
 #### CYBER Phase 13 Project
 
-**Recommended build — SIEM Detection Engineering Pack**
+**Recommended build - SIEM Detection Engineering Pack**
 
 **Why this is the right project now:** it applies the material covered through [CYBER Phase 13](./ICT_Cybersecurity.md#phase-13) without requiring later phases.
 
@@ -5247,18 +5247,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — SIEM Detection Engineering Pack Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - SIEM Detection Engineering Pack Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
-- **YouTube build/lab:** [Build a SOC Home Lab with Elastic SIEM — Prabh Nair](https://www.youtube.com/watch?v=HsLpZCbiasA)
+- **YouTube build/lab:** [Build a SOC Home Lab with Elastic SIEM - Prabh Nair](https://www.youtube.com/watch?v=HsLpZCbiasA)
 
 > **When this project is complete:** [Resume your study at CYBER Phase 14](./ICT_Cybersecurity.md#phase-14) · [Review Phase 13](./ICT_Cybersecurity.md#phase-13)
 
 ---
 #### CYBER Phase 14 Project
 
-**Recommended build — Incident Forensics Case**
+**Recommended build - Incident Forensics Case**
 
 **Why this is the right project now:** it applies the material covered through [CYBER Phase 14](./ICT_Cybersecurity.md#phase-14) without requiring later phases.
 
@@ -5273,18 +5273,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Incident Forensics Case Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Incident Forensics Case Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
-- **YouTube build/lab:** [Build a SOC Home Lab with Elastic SIEM — Prabh Nair](https://www.youtube.com/watch?v=HsLpZCbiasA)
+- **YouTube build/lab:** [Build a SOC Home Lab with Elastic SIEM - Prabh Nair](https://www.youtube.com/watch?v=HsLpZCbiasA)
 
 > **When this project is complete:** [Resume your study at CYBER Phase 15](./ICT_Cybersecurity.md#phase-15) · [Review Phase 14](./ICT_Cybersecurity.md#phase-14)
 
 ---
 #### CYBER Phase 15 Project
 
-**Recommended build — Cloud IAM Attack-Path Review**
+**Recommended build - Cloud IAM Attack-Path Review**
 
 **Why this is the right project now:** it applies the material covered through [CYBER Phase 15](./ICT_Cybersecurity.md#phase-15) without requiring later phases.
 
@@ -5299,18 +5299,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Cloud IAM Attack-Path Review Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Cloud IAM Attack-Path Review Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
-- **YouTube build/lab:** [Build a SOC Home Lab with Elastic SIEM — Prabh Nair](https://www.youtube.com/watch?v=HsLpZCbiasA)
+- **YouTube build/lab:** [Build a SOC Home Lab with Elastic SIEM - Prabh Nair](https://www.youtube.com/watch?v=HsLpZCbiasA)
 
 > **When this project is complete:** [Resume your study at CYBER Phase 16](./ICT_Cybersecurity.md#phase-16) · [Review Phase 15](./ICT_Cybersecurity.md#phase-15)
 
 ---
 #### CYBER Phase 16 Project
 
-**Recommended build — Container Supply-Chain Lab**
+**Recommended build - Container Supply-Chain Lab**
 
 **Why this is the right project now:** it applies the material covered through [CYBER Phase 16](./ICT_Cybersecurity.md#phase-16) without requiring later phases.
 
@@ -5325,18 +5325,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Container Supply-Chain Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Container Supply-Chain Lab Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
-- **YouTube build/lab:** [Cybersecurity Portfolio Project Ideas — Cyber Culture Interface](https://www.youtube.com/watch?v=0LxVcNJUSdY)
+- **YouTube build/lab:** [Cybersecurity Portfolio Project Ideas - Cyber Culture Interface](https://www.youtube.com/watch?v=0LxVcNJUSdY)
 
 > **When this project is complete:** [Resume your study at CYBER Phase 17](./ICT_Cybersecurity.md#phase-17) · [Review Phase 16](./ICT_Cybersecurity.md#phase-16)
 
 ---
 #### CYBER Phase 17 Project
 
-**Recommended build — Static Malware Triage**
+**Recommended build - Static Malware Triage**
 
 **Why this is the right project now:** it applies the material covered through [CYBER Phase 17](./ICT_Cybersecurity.md#phase-17) without requiring later phases.
 
@@ -5351,18 +5351,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Static Malware Triage Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Static Malware Triage Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
-- **YouTube build/lab:** [Cybersecurity Portfolio Project Ideas — Cyber Culture Interface](https://www.youtube.com/watch?v=0LxVcNJUSdY)
+- **YouTube build/lab:** [Cybersecurity Portfolio Project Ideas - Cyber Culture Interface](https://www.youtube.com/watch?v=0LxVcNJUSdY)
 
 > **When this project is complete:** [Resume your study at CYBER Phase 18](./ICT_Cybersecurity.md#phase-18) · [Review Phase 17](./ICT_Cybersecurity.md#phase-17)
 
 ---
 #### CYBER Phase 18 Project
 
-**Recommended build — Control-to-Evidence Audit Pack**
+**Recommended build - Control-to-Evidence Audit Pack**
 
 **Why this is the right project now:** it applies the material covered through [CYBER Phase 18](./ICT_Cybersecurity.md#phase-18) without requiring later phases.
 
@@ -5377,18 +5377,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Control-to-Evidence Audit Pack Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Control-to-Evidence Audit Pack Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Wazuh](https://github.com/wazuh/wazuh)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
-- **YouTube build/lab:** [Cybersecurity Portfolio Project Ideas — Cyber Culture Interface](https://www.youtube.com/watch?v=0LxVcNJUSdY)
+- **YouTube build/lab:** [Cybersecurity Portfolio Project Ideas - Cyber Culture Interface](https://www.youtube.com/watch?v=0LxVcNJUSdY)
 
 > **When this project is complete:** [Resume your study at CYBER Phase 19](./ICT_Cybersecurity.md#phase-19) · [Review Phase 18](./ICT_Cybersecurity.md#phase-18)
 
 ---
 #### CYBER Phase 19 Project
 
-**Recommended build — Defensive Security Portfolio**
+**Recommended build - Defensive Security Portfolio**
 
 **Why this is the right project now:** it applies the material covered through [CYBER Phase 19](./ICT_Cybersecurity.md#phase-19) without requiring later phases.
 
@@ -5403,18 +5403,18 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Defensive Security Portfolio Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Defensive Security Portfolio Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [DetectionLab](https://github.com/clong/DetectionLab)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
-- **YouTube build/lab:** [Cybersecurity Portfolio Project Ideas — Cyber Culture Interface](https://www.youtube.com/watch?v=0LxVcNJUSdY)
+- **YouTube build/lab:** [Cybersecurity Portfolio Project Ideas - Cyber Culture Interface](https://www.youtube.com/watch?v=0LxVcNJUSdY)
 
 > **When this project is complete:** [Resume your study at CYBER Phase 20](./ICT_Cybersecurity.md#phase-20) · [Review Phase 19](./ICT_Cybersecurity.md#phase-19)
 
 ---
 #### CYBER Phase 20 Project
 
-**Recommended build — Timed SOC Investigation**
+**Recommended build - Timed SOC Investigation**
 
 **Why this is the right project now:** it applies the material covered through [CYBER Phase 20](./ICT_Cybersecurity.md#phase-20) without requiring later phases.
 
@@ -5429,11 +5429,11 @@ Choose the recommended build first. Use the alternative only after the recommend
 - **Keep the project manageable:** use only ideas introduced up to this phase. Tools from later phases belong only in the optional extra challenge.
 - **You are finished when:** a first-time reader can follow the README, run or inspect the project, and find clear evidence that every promised example works.
 
-**Alternative project — Timed SOC Investigation Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
+**Alternative project - Timed SOC Investigation Remix:** build a second version around a different everyday example. Depending on the topic, this may be a different business story, sample dataset, network layout, or work process. Stay within the same phase, and explain exactly what you changed.
 
 - **Similar implementation on GitHub:** [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
 - **More project ideas on GitHub:** [Hands-On Cybersecurity Labs](https://github.com/codelassey/cybersecurity-labs)
-- **YouTube build/lab:** [Cybersecurity Portfolio Project Ideas — Cyber Culture Interface](https://www.youtube.com/watch?v=0LxVcNJUSdY)
+- **YouTube build/lab:** [Cybersecurity Portfolio Project Ideas - Cyber Culture Interface](https://www.youtube.com/watch?v=0LxVcNJUSdY)
 
 > **When this project is complete:** [Return to the CYBER phase index](./ICT_Cybersecurity.md#phase-index) · [Review Phase 20](./ICT_Cybersecurity.md#phase-20)
 
@@ -7567,7 +7567,7 @@ Choose the recommended build first. Use the alternative only after the recommend
 
 **File:** [`cloud.md`](./cloud.md)
 
-**Scope:** Architecture-first projects that prove identity, networking, managed services, reliability, security, cost control, and recovery—not provider-console tourism.
+**Scope:** Architecture-first projects that prove identity, networking, managed services, reliability, security, cost control, and recovery-not provider-console tourism.
 
 #### CLOUD-01: Multi-Zone Cloud Foundation
 
@@ -7803,7 +7803,7 @@ Choose the recommended build first. Use the alternative only after the recommend
 5. Onboard two example services, measure time-to-first-deploy and developer friction, then improve the road
 6. Publish ownership, support model, escape hatch, versioning, adoption, reliability, security, and cost evidence
 
-**You are finished when:** A new service reaches a test environment from documented steps, production change is auditable/reversible, platform failure does not trap teams, and outcomes—not tool count—show value.
+**You are finished when:** A new service reaches a test environment from documented steps, production change is auditable/reversible, platform failure does not trap teams, and outcomes-not tool count-show value.
 
 **If you want an extra challenge:** Add a scorecard that gives actionable feedback without becoming a vanity ranking.
 
@@ -8247,7 +8247,7 @@ Choose the recommended build first. Use the alternative only after the recommend
 
 ## Curated Inspiration
 
-Project prompts curated with **Composio** (YouTube and GitHub). The phase navigator uses 40 validated public videos plus track-specific repositories and project collections. Use them for inspiration—implement your own code and README.
+Project prompts curated with **Composio** (YouTube and GitHub). The phase navigator uses 40 validated public videos plus track-specific repositories and project collections. Use them for inspiration-implement your own code and README.
 
 | Resource | Best for |
 | --- | --- |

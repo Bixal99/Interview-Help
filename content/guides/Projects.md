@@ -13116,3 +13116,221 @@ The capstone is complete only when a fresh clone passes its checks, both release
 ---
 
 Build small after every phase. Build the main portfolio project only after you have completed every phase in that roadmap.
+<a id="it-administration-projects"></a>
+
+# IT Administration Projects
+
+These projects form one cumulative fictional environment for **Northstar Services**, a small organization with Management, HR, Finance, Sales, and IT. Use only generated data and isolated systems you own. Every card requires a README, a diagram or flow where useful, a dated evidence folder, a rollback/reset note, and a `decisions.md` explaining one trade-off. Never commit credentials, recovery keys, real tenant data, VM disks, database dumps, private logs, or employee information.
+
+<a id="it-admin-phase-1-project"></a>
+
+### IT ADMINISTRATION PHASE 1 PROJECT - TICKETING, CHANGE, AND INCIDENT-RESPONSE SIMULATION
+
+**Business scenario:** A manager reports “the ERP is down” while other users appear unaffected. **Learning objective:** turn ambiguity into safe, communicable triage. **Prerequisites:** IT Administration Phase 1. **Deliverables:** one incident ticket, scope/timeline, evidence/hypothesis table, user update, escalation packet, root-cause/prevention note. **Milestones:** (1) record reporter/symptom/time/impact; (2) separate facts from assumptions; (3) propose layer-based hypotheses; (4) choose the smallest safe test; (5) document mitigation, owner, next update, and closure. **Validation checks:** another learner can continue the case and identify what is still unknown. **Safe failure to introduce:** reveal after triage that only one browser profile is affected. **Evidence:** timestamps, sanitized screenshots, decision log. **Security notes:** no real user names, messages, or logs. **Interview explanation:** answer with scope, impact, change, evidence, test, mitigation, root cause, prevention, communication. **Completion criteria:** the record is reproducible, appropriately prioritized, and escalation-ready.
+
+**Git checkpoint:** Validate redaction, then `git add -- it-administration/01-triage` and `git commit -m "docs(it-admin): complete evidence-based triage"`; verify `git log -1 --oneline` and a clean status.
+
+> **PROJECT NAVIGATION:** [Review IT Administration Phase 1](../roadmaps/IT_Administration.md#phase-1) | [Continue to Phase 2](../roadmaps/IT_Administration.md#phase-2)
+
+<a id="it-admin-phase-2-project"></a>
+
+### IT ADMINISTRATION PHASE 2 PROJECT - WORKSTATION DIAGNOSIS AND SUPPORT REPORT
+
+**Business scenario:** A Finance laptop intermittently freezes and its warranty expires soon. **Learning objective:** connect hardware evidence to repair/replace/lifecycle decisions. **Prerequisites:** Phases 1-2. **Deliverables:** asset record, component/boot map, disk/RAM/thermal/driver checks, decision matrix, user summary, secure-disposal plan. **Milestones:** inventory without personal data; reproduce safely; gather health/capacity/temperature/event evidence; test a known-good peripheral; compare repair, downtime, warranty, security support, and replacement cost. **Validation checks:** every recommendation cites evidence and preserves data. **Safe failure to introduce:** nearly fill a disposable VM disk or disconnect a lab dock. **Evidence:** commands, vendor diagnostic result, photos with labels redacted, decision. **Security notes:** protect serials and recovery keys; do not run destructive media tests. **Interview explanation:** trace power/firmware/boot/driver/resource layers and justify repair versus replace. **Completion criteria:** a reviewer can approve the recommendation and update the asset lifecycle.
+
+**Git checkpoint:** `git add -- it-administration/02-workstation` then commit `docs(it-admin): complete workstation diagnosis`; verify no serial number or personal path is tracked.
+
+> **PROJECT NAVIGATION:** [Review Phase 2](../roadmaps/IT_Administration.md#phase-2) | [Continue to Phase 3](../roadmaps/IT_Administration.md#phase-3)
+
+<a id="it-admin-phase-3-project"></a>
+
+### IT ADMINISTRATION PHASE 3 PROJECT - STANDARD WINDOWS WORKSTATION BUILD
+
+**Business scenario:** Northstar needs consistent, recoverable Windows devices. **Learning objective:** build and support a secure client baseline. **Prerequisites:** Phases 1-3 and a disposable Windows VM. **Deliverables:** build checklist, local user/group and NTFS test, update/Defender/BitLocker-state report, scheduled-task example, Event Viewer evidence, recovery test. **Milestones:** install; update; create standard/admin lab identities; apply a folder ACL; inspect services/events/Registry safely; test remote-support policy concept; rehearse recovery. **Validation checks:** baseline commands match the checklist and allowed/denied access works. **Safe failure to introduce:** stop a harmless test service and recover from logs. **Evidence:** redacted outputs and before/after results. **Security notes:** never publish recovery keys or enable internet-facing RDP. **Interview explanation:** separate hardware, OS, service, profile, security, and network causes. **Completion criteria:** the VM can be rebuilt and the fault diagnosed without a reimage.
+
+**Git checkpoint:** stage `it-administration/03-windows-client`, commit `feat(it-admin): add windows workstation baseline`, then verify the VM still works.
+
+> **PROJECT NAVIGATION:** [Review Phase 3](../roadmaps/IT_Administration.md#phase-3) | [Continue to Phase 4](../roadmaps/IT_Administration.md#phase-4)
+
+<a id="it-admin-phase-4-project"></a>
+
+### IT ADMINISTRATION PHASE 4 PROJECT - WINDOWS AND LINUX SERVER OPERATIONS LAB
+
+**Business scenario:** A small office operates both Windows and Ubuntu services. **Learning objective:** administer Linux on its own terms and compare equivalent operating evidence. **Prerequisites:** Phases 1-4; Ubuntu VM; Windows VM optional. **Deliverables:** user/group/permission lab, service and log runbook, SSH key setup, mount/timer/firewall exercise, Windows/Linux comparison table. **Milestones:** create lab identity; secure shared path; inspect/start/enable a service; query journal; add/remove a key; mount a small disk; schedule a harmless job; open and close one host-firewall port. **Validation checks:** second learner can identify service, port, owner, log, and recovery path. **Safe failure to introduce:** invalid noncritical service configuration validated before restart. **Evidence:** commands, exit codes, logs, restored baseline. **Security notes:** keep private keys and passwords outside Git; preserve console recovery before SSH hardening. **Interview explanation:** trace unit, log, process, socket, permissions, storage, and dependency. **Completion criteria:** failure is detected, repaired, and reversed with evidence.
+
+**Git checkpoint:** commit only sanitized files under `it-administration/04-server-operations` with `feat(it-admin): complete windows linux operations lab`.
+
+> **PROJECT NAVIGATION:** [Review Phase 4](../roadmaps/IT_Administration.md#phase-4) | [Continue to Phase 5](../roadmaps/IT_Administration.md#phase-5)
+
+<a id="it-admin-phase-5-project"></a>
+
+### IT ADMINISTRATION PHASE 5 PROJECT - SMALL-OFFICE NETWORK AND IP PLAN
+
+**Business scenario:** Five departments need wired, Wi-Fi, printer, server, guest, VPN, and internet connectivity. **Learning objective:** design and troubleshoot an administrator-sized network. **Prerequisites:** Phase 5. **Deliverables:** topology, VLAN/subnet/IP/DHCP/DNS plan, firewall-flow matrix, printer/VPN paths, command evidence. **Milestones:** inventory endpoints/services; assign documentation ranges; calculate capacity; separate trust zones; define DNS/DHCP/gateway; trace one internal and one remote flow; write layer-by-layer tests. **Validation checks:** every arrow has address, route, port/protocol, policy, and owner. **Safe failure to introduce:** wrong DNS on one lab client, then diagnose without changing the server. **Evidence:** `ipconfig`/`ip route`, `nslookup`/`dig`, connection tests, timeline. **Security notes:** use `192.0.2.0/24` diagrams or isolated private ranges, never real credentials/topology. **Interview explanation:** link → IP → route → DNS → port → TLS/app. **Completion criteria:** IP works/name fails case is found and repaired from evidence.
+
+**Git checkpoint:** commit `it-administration/05-network-plan` as `docs(it-admin): add small-office network design` after checking all addresses are fictional.
+
+> **PROJECT NAVIGATION:** [Review Phase 5](../roadmaps/IT_Administration.md#phase-5) | [Continue to Phase 6](../roadmaps/IT_Administration.md#phase-6)
+
+<a id="it-admin-phase-6-project"></a>
+
+### IT ADMINISTRATION PHASE 6 PROJECT - VIRTUALIZATION AND SERVER INVENTORY
+
+**Business scenario:** Northstar needs an affordable isolated training and recovery lab. **Learning objective:** manage hosts, guests, virtual switches, capacity, templates, checkpoints, and reset paths. **Prerequisites:** Phases 5-6 and a local hypervisor. **Deliverables:** VM inventory, host capacity budget, virtual-network diagram, template standard, checkpoint policy, reset procedure. **Milestones:** create host-only switch; deploy Ubuntu plus one optional Windows VM; assign CPU/RAM/disk; record virtual devices; test temporary NAT; checkpoint/change/revert/delete; export independent evidence. **Validation checks:** no inbound public path, no sustained overcommit, and rebuild works from records. **Safe failure to introduce:** exhaust a small disposable virtual disk. **Evidence:** inventory before/after, isolation test, recovery timing. **Security notes:** do not bridge an insecure domain lab; VM images and licenses stay out of Git. **Interview explanation:** distinguish type 1/2, host/guest, checkpoint/backup, overcommit/HA. **Completion criteria:** one guest resets without losing documentation or independent backup.
+
+**Git checkpoint:** commit manifests/diagrams under `it-administration/06-virtualization` with `docs(it-admin): add recoverable homelab inventory`.
+
+> **PROJECT NAVIGATION:** [Review Phase 6](../roadmaps/IT_Administration.md#phase-6) | [Continue to Phase 7](../roadmaps/IT_Administration.md#phase-7)
+
+<a id="it-admin-phase-7-project"></a>
+
+### IT ADMINISTRATION PHASE 7 PROJECT - SECURE SHARED-FOLDER AND PERMISSIONS PROJECT
+
+**Business scenario:** HR and Finance require separate shares; Management needs read-only reports; IT administers without routine data access. **Learning objective:** operate Windows file services and effective access. **Prerequisites:** Phases 5-7 and a Windows Server lab. **Deliverables:** group/access matrix, share/NTFS configuration, quota/capacity alert, maintenance plan, service/log evidence. **Milestones:** create role/resource groups; build shares; set share and NTFS ACLs; test allowed/denied/read-only access; enable appropriate SMB security; record remote-management and patch window. **Validation checks:** effective access matches matrix and no individual user ACL is needed. **Safe failure to introduce:** remove a test group from a resource group, diagnose denial, restore membership. **Evidence:** ACL reports, test results, event IDs, validation checklist. **Security notes:** use generated files and least privilege; do not make broad deny rules or publish ACLs from a real server. **Interview explanation:** authentication → token → share ACL → NTFS ACL → audit. **Completion criteria:** access, capacity, logging, backup, and rollback are all proven.
+
+**Git checkpoint:** stage `it-administration/07-file-services`; commit `feat(it-admin): add secure department shares`; rerun access tests after the commit.
+
+> **PROJECT NAVIGATION:** [Review Phase 7](../roadmaps/IT_Administration.md#phase-7) | [Continue to Phase 8](../roadmaps/IT_Administration.md#phase-8)
+
+<a id="it-admin-phase-8-project"></a>
+
+### IT ADMINISTRATION PHASE 8 PROJECT - ACTIVE DIRECTORY COMPANY LAB
+
+**Business scenario:** Northstar needs central identities for Management, HR, Finance, Sales, and IT. **Learning objective:** build a safe local AD DS structure. **Prerequisites:** Phases 5-8; isolated Windows Server/client VMs. **Deliverables:** forest/domain/OU diagram, users/computers/groups, group-nesting plan, joined client, delegated-help-desk test, DNS health report. **Milestones:** install AD DS/DNS; create `example.local`; design OUs for policy/delegation; add fictional users/computers; use account→global→domain-local→permission; join client; delegate one OU reset task; test DNS and access. **Validation checks:** domain sign-in works, groups drive resource access, delegated user cannot administer the domain. **Safe failure to introduce:** point client DNS elsewhere and diagnose join/login failure. **Evidence:** sanitized PowerShell exports, `dcdiag`, client tests. **Security notes:** isolated network, separate admin identity, no production domain names/passwords. **Interview explanation:** forest/domain/DC/OU/DNS/groups/delegation. **Completion criteria:** reproducible domain and least-privilege access proof.
+
+**Git checkpoint:** commit only scripts/diagrams under `it-administration/08-active-directory` as `feat(it-admin): build fictional company domain`.
+
+> **PROJECT NAVIGATION:** [Review Phase 8](../roadmaps/IT_Administration.md#phase-8) | [Continue to Phase 9](../roadmaps/IT_Administration.md#phase-9)
+
+<a id="it-admin-phase-9-project"></a>
+
+### IT ADMINISTRATION PHASE 9 PROJECT - ONBOARDING, ROLE-CHANGE, AND OFFBOARDING AUTOMATION
+
+**Business scenario:** New hires and departures are creating inconsistent access. **Learning objective:** combine GPO, Kerberos evidence, lifecycle controls, and reversible automation. **Prerequisites:** Phases 8-9; AD lab. **Deliverables:** joiner/mover/leaver approvals, group rules, harmless test GPO, dry-run PowerShell plan, disable/revoke/data-transfer checklist, Kerberos/GPO troubleshooting evidence. **Milestones:** link GPO to test OU; verify scope; onboard fictional user; move department and remove conflicting access; disable offboarded user before deletion; record session/token and asset actions; test script dry run. **Validation checks:** policy applies only to target, old access is removed, disabled account cannot use resources, data ownership is recorded. **Safe failure to introduce:** security-filter the GPO incorrectly. **Evidence:** `gpresult`, `klist`, logs, approvals, before/after memberships. **Security notes:** never automate deletion by default or store credentials. **Interview explanation:** DNS/time/DC → Kerberos/token → GPO scope → resource authorization → lifecycle. **Completion criteria:** each lifecycle is approved, repeatable, reversible, and auditable.
+
+**Git checkpoint:** test `-WhatIf`, commit `it-administration/09-identity-lifecycle` as `feat(it-admin): automate safe identity lifecycle`, and secret-scan the staged diff.
+
+> **PROJECT NAVIGATION:** [Review Phase 9](../roadmaps/IT_Administration.md#phase-9) | [Continue to Phase 10](../roadmaps/IT_Administration.md#phase-10)
+
+<a id="it-admin-phase-10-project"></a>
+
+### IT ADMINISTRATION PHASE 10 PROJECT - MICROSOFT 365 AND ENTRA SIMULATED ADMINISTRATION
+
+**Business scenario:** Northstar is moving email/collaboration and device policy to Microsoft cloud services. **Learning objective:** separate Entra, Microsoft 365 service, licensing, Conditional Access, and Intune decisions. **Prerequisites:** Phases 8-10. **Deliverables:** fictional tenant map, users/groups/licenses/roles, MFA/SSPR plan, Conditional Access decision table, Exchange/Teams/SharePoint cases, Intune enrollment/compliance/profile/app/remote-action flow. **Milestones:** map five personas; assign group-based licenses; separate admin roles; simulate sign-ins and device states; investigate audit/sign-in log examples; define emergency access and rollout. **Validation checks:** each case distinguishes authentication, policy, license, service, and data access. **Safe failure to introduce:** a broad policy would block admins-catch it in report-only/tabletop. **Evidence:** matrices and redacted trial screenshots if used. **Security notes:** a paid/trial tenant is optional; use disposable identities and remove resources before expiry. **Interview explanation:** trace identity → Conditional Access → token → service authorization/license. **Completion criteria:** five failures reach the correct control surface without Global Admin overuse.
+
+**Git checkpoint:** commit fictional materials under `it-administration/10-m365-entra` as `docs(it-admin): complete cloud administration simulation`.
+
+> **PROJECT NAVIGATION:** [Review Phase 10](../roadmaps/IT_Administration.md#phase-10) | [Continue to Phase 11](../roadmaps/IT_Administration.md#phase-11)
+
+<a id="it-admin-phase-11-project"></a>
+
+### IT ADMINISTRATION PHASE 11 PROJECT - BACKUP-AND-RESTORE VERIFICATION
+
+**Business scenario:** A backup dashboard is green, but leadership wants proof Northstar can recover. **Learning objective:** turn copies, retention, immutability, RPO/RTO, and runbooks into tested recovery. **Prerequisites:** Phases 6-11. **Deliverables:** data inventory, recovery tiers, 3-2-1-1-style design, schedule/retention/credential model, file/VM/database/ERP restore procedures, timed evidence. **Milestones:** generate data; hash; back up to local and disconnected/immutable-simulated targets; delete/corrupt one lab item; restore to isolation; verify integrity/application/access; compare actual RPO/RTO; update runbook. **Validation checks:** another person restores without the author and backup job success alone is not accepted. **Safe failure to introduce:** remove one required restore dependency or use a wrong credential, then correct the runbook. **Evidence:** hashes, timestamps, screenshots, audit, recovered business check. **Security notes:** generated data only; separate backup/admin credentials; never test ransomware on shared systems. **Interview explanation:** backup vs snapshot vs replication; copies → restore → integrity → business validation. **Completion criteria:** recovery meets declared targets or documents an owned gap.
+
+**Git checkpoint:** commit only evidence/runbooks in `it-administration/11-recovery` as `test(it-admin): prove isolated restore`; exclude archives and dumps.
+
+> **PROJECT NAVIGATION:** [Review Phase 11](../roadmaps/IT_Administration.md#phase-11) | [Continue to Phase 12](../roadmaps/IT_Administration.md#phase-12)
+
+<a id="it-admin-phase-12-project"></a>
+
+### IT ADMINISTRATION PHASE 12 PROJECT - ODOO OPERATIONAL ADMINISTRATION LAB
+
+**Business scenario:** Odoo is slow and an attachment is missing after a change. **Learning objective:** triage application, database, filestore, access, email/job, integration, and customization boundaries. **Prerequisites:** Phases 4-12; local Odoo or diagram-only alternative. **Deliverables:** architecture, roles/access matrix, service/log/capacity checks, module/change plan, database+filestore backup/restore, vendor escalation packet. **Milestones:** deploy generated test data; create departments/roles; inspect jobs/email/logs; stage a supported configuration change; stop PostgreSQL or fill a tiny lab volume safely; diagnose; restore both data layers; validate a business transaction. **Validation checks:** app, DB, attachment, scheduled job, and access tests pass. **Safe failure to introduce:** database service stopped or wrong lab connection setting. **Evidence:** timeline, logs, restore hashes, change approval/rollback. **Security notes:** no real financial/employee data; no direct production SQL; secrets outside Git. **Interview explanation:** classify configuration/infrastructure/data/permission/integration/custom code. **Completion criteria:** fault ownership and recovery are proven without unsupported data edits.
+
+**Git checkpoint:** commit sanitized files under `it-administration/12-odoo-operations` as `feat(it-admin): complete odoo operations lab`.
+
+> **PROJECT NAVIGATION:** [Review Phase 12](../roadmaps/IT_Administration.md#phase-12) | [Continue to Phase 13](../roadmaps/IT_Administration.md#phase-13)
+
+<a id="it-admin-phase-13-project"></a>
+
+### IT ADMINISTRATION PHASE 13 PROJECT - DEFENSIVE ADMINISTRATION AND INCIDENT TABLETOP
+
+**Business scenario:** Several users receive phishing email and one administrator entered credentials. **Learning objective:** connect baseline controls to authorized containment, evidence, recovery, and communication. **Prerequisites:** Phases 1-13. **Deliverables:** least-privilege baseline, privileged-account map, phishing/ransomware/device-loss playbooks, evidence checklist, executive update, remediation register. **Milestones:** identify assets/identities; preserve fictional message/log evidence; scope recipients/sign-ins; choose containment with authority; revoke/reset based on evidence; verify backups; communicate; document root cause and controls. **Validation checks:** decisions name authority, blast radius, evidence impact, service impact, and recovery validation. **Safe failure to introduce:** reveal a former employee account still has group access. **Evidence:** fictional logs, timeline, role assignments, action/verification pairs. **Security notes:** defensive tabletop only; never send phishing or malware. **Interview explanation:** prevention → detection → containment → evidence → eradication/rebuild → recovery → lessons. **Completion criteria:** the plan is executable and preserves both business service and investigation value.
+
+**Git checkpoint:** commit fictional controls under `it-administration/13-security` as `docs(it-admin): add defensive incident playbooks`; verify no exploitable real details.
+
+> **PROJECT NAVIGATION:** [Review Phase 13](../roadmaps/IT_Administration.md#phase-13) | [Continue to Phase 14](../roadmaps/IT_Administration.md#phase-14)
+
+<a id="it-admin-phase-14-project"></a>
+
+### IT ADMINISTRATION PHASE 14 PROJECT - MONITORING AND ALERTING
+
+**Business scenario:** Users discover failures before IT and a certificate will expire unnoticed. **Learning objective:** produce actionable health, capacity, expiry, dependency, and backup alerts. **Prerequisites:** Phases 11-14. **Deliverables:** service/dependency map, baselines, Uptime Kuma/Zabbix/local checks, disk/cert/backup/ERP alerts, runbooks, patch-window record. **Milestones:** select user outcomes; configure checks; assign owner/severity/window; induce service stop; measure detection/recovery; tune noise; patch a disposable service; verify technical and business behavior. **Validation checks:** one incident creates one actionable alert that clears, while normal variation does not page. **Safe failure to introduce:** stop test web service and age a simulated backup status. **Evidence:** alert timeline, screenshots, metrics/log correlation, maintenance results. **Security notes:** least-privilege monitoring credentials and no public admin consoles. **Interview explanation:** symptom → dependency evidence → runbook → mitigation → verification → tuning. **Completion criteria:** alert contains context, owner, action, and verified recovery.
+
+**Git checkpoint:** commit definitions under `it-administration/14-monitoring` as `feat(it-admin): add actionable service monitoring`; exclude tokens/databases.
+
+> **PROJECT NAVIGATION:** [Review Phase 14](../roadmaps/IT_Administration.md#phase-14) | [Continue to Phase 15](../roadmaps/IT_Administration.md#phase-15)
+
+<a id="it-admin-phase-15-project"></a>
+
+### IT ADMINISTRATION PHASE 15 PROJECT - POWERSHELL/BASH ADMINISTRATION TOOLKIT
+
+**Business scenario:** Inventory, health checks, log collection, and backup verification are inconsistent. **Learning objective:** build safe cross-platform automation. **Prerequisites:** Phases 3-15 and Git basics. **Deliverables:** PowerShell Windows inventory/health script, Bash Linux equivalent, small Python CSV/report helper optional, tests, dry-run/log/error/secret policy, schedule plan, Ansible-awareness note. **Milestones:** define schema/invariants; validate inputs; query state; implement bounded output and exit codes; add idempotent state change only in lab; add dry run and rollback; test empty/invalid/partial failure; schedule after manual proof. **Validation checks:** second run makes no unintended change and failures are per-target. **Safe failure to introduce:** malformed CSV and unreachable host. **Evidence:** test output, before/after state, sanitized logs. **Security notes:** allowlisted lab targets, least privilege, no stored passwords, no unreviewed remote fan-out. **Interview explanation:** validation/current state/idempotence/dry run/logging/rollback/staging. **Completion criteria:** clean checkout reproduces tests and report.
+
+**Git checkpoint:** secret-scan and test, then commit `it-administration/15-admin-toolkit` as `feat(it-admin): add safe administration toolkit`.
+
+> **PROJECT NAVIGATION:** [Review Phase 15](../roadmaps/IT_Administration.md#phase-15) | [Continue to Phase 16](../roadmaps/IT_Administration.md#phase-16)
+
+<a id="it-admin-phase-16-project"></a>
+
+### IT ADMINISTRATION PHASE 16 PROJECT - SERVICE DESK, ASSET, VENDOR, AND HANDOVER PACK
+
+**Business scenario:** Northstar has repeated incidents, unknown device ownership, and vendor escalations without evidence. **Learning objective:** operate the service-management and documentation system around technology. **Prerequisites:** Phases 1-16. **Deliverables:** incident/request/problem/change workflows, priority matrix/SLA examples, onboarding/offboarding KB, hardware/software/license inventory, warranty/lifecycle/spares, vendor ticket, network/server/IP/role records, SOPs/runbooks/change log. **Milestones:** create fictional dataset; link tickets to assets/services; trend repeated issue; draft approval/maintenance notice; escalate ISP/ERP case; update records after closure; perform peer handover. **Validation checks:** peer finds owner, impact, dependency, support contract, recovery, and last-tested date. **Safe failure to introduce:** stale owner and expired warranty discovered during handover. **Evidence:** reports, audit/change trail, reviewer notes. **Security notes:** reference secret vault locations without secrets; fictional contracts/contacts/serials. **Interview explanation:** impact+urgency priority, ticket lifecycle, escalation, change/rollback, asset/vendor ownership. **Completion criteria:** records enable independent operation rather than documentation for its own sake.
+
+**Git checkpoint:** commit generated templates under `it-administration/16-service-operations` as `docs(it-admin): complete operational handover pack`.
+
+> **PROJECT NAVIGATION:** [Review Phase 16](../roadmaps/IT_Administration.md#phase-16) | [Continue to Phase 17](../roadmaps/IT_Administration.md#phase-17)
+
+<a id="it-admin-phase-17-project"></a>
+
+### IT ADMINISTRATION PHASE 17 PROJECT - HYBRID IT DESIGN AND MIGRATION EXERCISE
+
+**Business scenario:** Northstar wants cloud-hosted collaboration and one application while retaining local identity/data dependencies. **Learning objective:** map shared responsibility, hybrid identity/network, backups, monitoring, security, cost, and migration. **Prerequisites:** Phases 5-17. **Deliverables:** on-prem/IaaS/PaaS/SaaS responsibility matrix, provider-neutral topology, Entra/hybrid identity concept, VPN/DNS flow, backup/monitoring plan, budget/tagging rules, migration/cutover/rollback. **Milestones:** inventory dependency/data/license/RPO/RTO; choose service model; define identity and network path; price conceptual resources; design pilot; validate data/access/performance; document rollback/decommission. **Validation checks:** every arrow and data copy has owner, control, signal, cost, and recovery. **Safe failure to introduce:** simulated VPN outage or missed egress/storage cost. **Evidence:** decision record, cost worksheet, test/cutover checklist. **Security notes:** free diagrams/local simulations are sufficient; if using a free tier, set budgets and delete resources. **Interview explanation:** provider-neutral requirement then service mapping/shared responsibility. **Completion criteria:** design is supportable under loss of cloud, VPN, identity, or on-prem dependency.
+
+**Git checkpoint:** commit fictional design under `it-administration/17-hybrid` as `docs(it-admin): add hybrid operations plan`; verify no cloud identifiers or keys.
+
+> **PROJECT NAVIGATION:** [Review Phase 17](../roadmaps/IT_Administration.md#phase-17) | [Continue to Phase 18](../roadmaps/IT_Administration.md#phase-18)
+
+<a id="it-admin-phase-18-project"></a>
+
+### IT ADMINISTRATION PHASE 18 PROJECT - SMALL-COMPANY OPERATIONS DEMONSTRATION
+
+**Business scenario:** Leadership and a replacement administrator need proof the environment is controlled and recoverable. **Learning objective:** rehearse the capstone handover and interview narrative. **Prerequisites:** Phases 1-17 and their accumulated artifacts. **Deliverables:** five-minute executive brief, 15-minute technical tour, live health check, one induced incident, one restore, risk/roadmap, honest CV bullets, scenario-answer recordings. **Milestones:** sanitize repository; trace one user transaction; show role access; trigger/recover a fault; restore data; explain patch/security/vendor controls; hand runbook to reviewer; collect gaps. **Validation checks:** reviewer answers who owns it, how it is monitored, how access is removed, how it recovers, and what remains risky. **Safe failure to introduce:** stop a service or misconfigure test DNS-never production. **Evidence:** timestamps, reviewer rubric, corrected runbook. **Security notes:** generated organization only and no screen capture of secrets. **Interview explanation:** scope → evidence → safe test → mitigation → root cause → prevention → communication. **Completion criteria:** peer can operate and recover the lab from repository evidence.
+
+**Git checkpoint:** run all project checks, commit `it-administration/18-demonstration` as `feat(it-admin): complete operations demonstration`, then verify no untracked sensitive artifacts.
+
+> **PROJECT NAVIGATION:** [Review Phase 18](../roadmaps/IT_Administration.md#phase-18) | [Build the full capstone](#it-admin-main-portfolio-project)
+
+<a id="it-admin-main-portfolio-project"></a>
+
+## IT ADMINISTRATION MAIN PORTFOLIO PROJECT - COMPLETE SMALL-COMPANY IT INFRASTRUCTURE
+
+**Business scenario:** Design and operate Northstar Services for Management, HR, Finance, Sales, and IT on one reasonably capable host with low-resource alternatives. **Learning objective:** prove end-to-end administration, security, support, recovery, and handover.
+
+**Prerequisites:** all 18 phases. **Free/open stack:** VirtualBox or Hyper-V; Windows evaluation VMs where legally available or documented simulation; Ubuntu Server; Odoo Community with PostgreSQL or architecture-only mode; PowerShell/Bash/Python; Uptime Kuma or Zabbix; Git and Mermaid/draw.io. No paid cloud or Microsoft 365 tenant is required.
+
+**Required deliverables:** requirements and risk register; users/groups/role matrix; endpoint/server/asset inventory; DNS/DHCP/IP/VLAN/Wi-Fi/VPN/firewall plan; shared storage permissions; ERP access and service map; monitoring/alert evidence; backup design and tested restores; patch/maintenance plan; privileged/MFA/encryption/logging controls; onboarding/offboarding; incident/change/problem/ticket examples; vendor/support matrix; network/system diagrams; SOPs/runbooks/recovery procedures; configuration/change records; executive-friendly handover.
+
+**Step-by-step milestones:** (1) define departments, services, data sensitivity, RPO/RTO, budget, and exclusions; (2) build isolated virtual network and inventories; (3) configure Windows/Linux services; (4) build AD/DNS, groups, OUs, client join, GPO, and delegation; (5) implement group-based shares; (6) simulate Entra/M365/Intune; (7) deploy or model Odoo/database/filestore; (8) implement monitoring and capacity/expiry/backup alerts; (9) build protected backups and restore file plus ERP/database artifact; (10) apply admin security baseline; (11) automate inventory/health and lifecycle dry runs; (12) operate tickets/changes/assets/vendors; (13) add hybrid design; (14) induce one endpoint, network/DNS, service, access, ERP/database, backup, and certificate-expiry scenario; (15) correct gaps found by peer handover.
+
+**Validation checks:** role-based access tests; domain/DNS/GPO health; Windows/Linux service and log checks; ERP transaction/attachment/job tests; alert detection/clearance; backup integrity and timed restore; patch post-check; offboarding access removal; asset/license ownership; clean rebuild/reset instructions; a reviewer can use the runbooks.
+
+**Failures to introduce safely:** one-user login failure, all-user DNS/DC simulation, wrong resolver, denied share, filtered GPO, department printer rule, low disposable disk, stopped test service after update, slow ERP symptom, stopped lab database, green job with failed restore dependency, former fictional employee access, simulated phishing table, expiring test certificate, accidental lab config change, and remote-office/VPN outage tabletop.
+
+**Evidence to capture:** scope/impact; changes; commands/logs with timestamps; hypotheses; smallest safe tests; mitigation; root cause; prevention; restore hashes/timing; before/after access; approvals; communications; risk decisions. Screenshots support but do not replace repeatable text/configuration.
+
+**Security notes:** isolate the lab; never expose RDP/SSH/database/ERP/hypervisor consoles publicly; use generated data and documentation IP ranges; keep secrets/backups/VM disks outside Git; use separate admin identities; preserve evidence; follow evaluation/trial licenses; delete optional cloud trial resources before billing.
+
+**Interview explanation:** present requirements first, trace one employee workflow, explain three trade-offs, demonstrate one failure and recovery, state top risks and next improvements, and be explicit about what was simulated. Honest portfolio language beats inflated enterprise claims.
+
+**Completion criteria:** every required outcome has an owner, configuration or procedure, validation signal, failure/recovery test, documentation, and peer-reviewed handover; all local tests pass from a clean checkout.
+
+### Capstone Git Checkpoints
+
+1. Foundations: commit requirements, topology, inventory, and reset plan.
+2. Identity/services: commit sanitized AD, Windows/Linux, share, and ERP configuration evidence.
+3. Operations: commit monitoring, backup/restore, security, automation, ITSM, and asset artifacts.
+4. Handover: commit corrected diagrams/runbooks, reviewer rubric, CV bullets, and interview evidence.
+
+At each checkpoint run project validation, inspect `git diff --staged`, scan for secrets/private data, stage only the named paths, commit atomically, and verify a clean status. Do not push unless you deliberately choose to publish the sanitized portfolio.

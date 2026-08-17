@@ -18,12 +18,12 @@ function remarkSafeNamedAnchors() {
   return (tree: MarkdownNode) => {
     const walk = (node: MarkdownNode) => {
       if (node.type === "html" && node.value) {
-        const match = /^\s*<a\s+id=["']([^"']+)["']\s*><\/a>\s*$/i.exec(node.value);
+        const match = /^\s*<a\s+id=["']([^"']+)["']\s*>(?:\s*<\/a>\s*)?$/i.exec(node.value);
         if (match) {
-          node.type = "paragraph";
-          node.value = undefined;
+          node.type = "text";
+          node.value = "\u200B";
           node.data = { hName: "span", hProperties: { id: match[1], "aria-hidden": "true" } };
-          node.children = [];
+          node.children = undefined;
         }
       }
       node.children?.forEach(walk);
@@ -44,8 +44,9 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope }: { mark
     function MarkdownHeading({ children, id, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
       const text = textContent(children);
       const headingId = id ?? githubSlug(text);
+      const phaseNumber = tag === "h1" ? /^PHASE\s+(\d+)\b/i.exec(text)?.[1] : undefined;
       const isTrackable = Boolean(progressScope && (/^PHASE\s+\d+/i.test(text) || /^(Practice|Phase Project|Git Checkpoint)/i.test(text)));
-      return React.createElement(tag, { ...props, id: headingId }, <span className="flex items-start gap-3"><a href={`#${headingId}`} className="min-w-0 flex-1 !text-inherit !no-underline">{children}</a>{isTrackable && <ProgressToggle id={`${progressScope}:${headingId}`} />}</span>);
+      return React.createElement(tag, { ...props, id: headingId }, <>{phaseNumber && <span id={`phase-${phaseNumber}`} aria-hidden="true" />}<span className="flex items-start gap-3"><a href={`#${headingId}`} className="min-w-0 flex-1 !text-inherit !no-underline">{children}</a>{isTrackable && <ProgressToggle id={`${progressScope}:${headingId}`} />}</span></>);
     }
     return MarkdownHeading;
   };
@@ -63,7 +64,10 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope }: { mark
     pre({ children }) {
       const child = Array.isArray(children) ? children[0] : children;
       if (!isValidElement<{ className?: string; children?: React.ReactNode }>(child)) return <pre>{children}</pre>;
-      const language = child.props.className?.replace("language-", "") ?? "text";
+      const className = child.props.className ?? "";
+      const language = /(?:^|\s)language-([\w-]+)/.exec(className)?.[1]
+        ?? className.split(/\s+/).find((name) => name && name !== "hljs")
+        ?? "text";
       const source = textContent(child.props.children).replace(/\n$/, "");
       if (language === "mermaid") return <MermaidDiagram source={source} />;
       return <CodeBlock language={language} code={source} />;

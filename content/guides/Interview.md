@@ -1,10 +1,10 @@
 # The Combined Interview Playbook
 
-*Mohammad Bilal's interview Q&A companion to the roadmaps - [CS.md](../roadmaps/CS.md), [OOP.md](../roadmaps/OOP.md), [Git.md](../roadmaps/Git.md), [Data.md](../roadmaps/Data.md), [Networks.md](../roadmaps/Networks.md), [AI.md](../roadmaps/AI.md), [Web.md](../roadmaps/Web.md), [cloud.md](../roadmaps/Cloud.md), and [devops.md](../roadmaps/DevOps.md). High-frequency questions with strong answers, follow-ups, and traps - not a list of facts to memorize.*
+*Mohammad Bilal's interview Q&A companion to the roadmaps - [CS.md](../roadmaps/CS.md), [OOP.md](../roadmaps/OOP.md), [Git.md](../roadmaps/Git.md), [Data.md](../roadmaps/Data.md), [Networks.md](../roadmaps/Networks.md), [IT_Administration.md](../roadmaps/IT_Administration.md), [AI.md](../roadmaps/AI.md), [Web.md](../roadmaps/Web.md), [cloud.md](../roadmaps/Cloud.md), and [devops.md](../roadmaps/DevOps.md). High-frequency questions with strong answers, follow-ups, and traps - not a list of facts to memorize.*
 
 *Curated with Composio (web search + DeepWiki on `mlabonne/llm-course`) against 2026 interview guides for DSA, SQL/DE, networking, and AI engineering, plus official web-platform, OpenAPI, OAuth, and OWASP documentation.*
 
-**Scope:** CS × OOP × Git × Data × Networks × AI × Web × Cloud × DevOps · speak trade-offs out loud.
+**Scope:** CS × OOP × Git × Data × Networks × IT Administration × AI × Web × Cloud × DevOps · speak trade-offs out loud.
 
 Question → Strong answer → Follow-ups → Traps
 
@@ -2022,3 +2022,220 @@ Use **Situation → Task → Action → Result**, and end with **what you would 
 ---
 
 *End of playbook. Cover the answer. Speak. Check follow-ups. If the "why" is fuzzy, return to the roadmap bridges - do not memorize harder.*
+<a id="track-i"></a>
+
+# Track I - IT Administration
+
+**Source roadmap:** [`IT_Administration.md`](../roadmaps/IT_Administration.md) · **Answer model:** scope and impact → recent changes → evidence → layer-by-layer hypotheses → smallest safe test → mitigation → root cause → prevention → documentation and communication.
+
+Do not jump straight to a command. State what you are authorized to change, how you will protect data/evidence, what would make you escalate, and how you will verify the user-facing outcome. Product-specific behavior and licenses vary; say when you would confirm current vendor documentation.
+
+## I1. What does an IT administrator own, and how is the role different from help desk, systems, network, cloud, DevOps, security, and ERP development?
+
+**Level:** Foundation · **Source:** IT Administration Phase 1
+
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** An IT administrator owns the connected daily environment: employee identities and access, endpoints, shared services, Microsoft 365 or other SaaS, networks, business applications, monitoring, patching, backup/recovery, tickets, assets, vendors, and documentation. Help desk usually starts with individual user restoration; a systems or network administrator goes deeper into servers or connectivity; cloud/DevOps engineers focus on cloud platforms or software delivery; security analysts focus on risk/detection/response; ERP developers change application code. Boundaries vary, so I clarify ownership and escalate with evidence instead of assuming.
+
+**QUESTIONS THEY MAY ASK NEXT:** What should a junior own independently? When do you escalate? · **COMMON MISTAKE:** Defining the job as “fixing computers” or claiming one person owns every specialist domain.
+
+---
+
+## I2. Walk through an evidence-based troubleshooting method
+
+**Level:** Foundation · **Source:** Phase 1
+
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** I first establish safety, scope, impact, start time, affected users/sites/services, and recent changes. I separate observations from hypotheses, reproduce only if safe, then test from the nearest layer outward with the smallest reversible action. I mitigate user impact, preserve logs and timelines, verify the actual business function, communicate owner and next update, then document root cause and prevention. If authority, risk, or expertise is exceeded, I escalate with timestamps, commands, results, and what remains unknown.
+
+**QUESTIONS THEY MAY ASK NEXT:** What if the user is angry? What if you cannot reproduce it? · **COMMON MISTAKE:** Rebooting, resetting, or reinstalling before collecting evidence.
+
+---
+
+## I3. Diagnose a Windows workstation that freezes intermittently
+
+**Level:** Core · **Source:** Phases 2-3
+
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** I confirm whether the whole device or one application freezes, the workload, timing, temperatures, storage pressure, peripherals, and recent driver/update changes. I preserve data, inspect Reliability Monitor/Event Viewer, Task Manager/Performance Monitor, disk health and free space, memory diagnostics, thermal behavior, driver/firmware support, and a clean/known-good peripheral test. I avoid destructive disk tests and unsupported Registry edits. I compare recurrence, warranty, downtime, security support, repair cost, and replacement risk, then validate with the original workload and update the asset record.
+
+**QUESTIONS THEY MAY ASK NEXT:** SSD health says good-are you done? Repair or replace? · **COMMON MISTAKE:** Treating one diagnostic result as proof or ignoring data protection and warranty.
+
+---
+
+## I4. Troubleshoot a failing Linux service
+
+**Level:** Core · **Source:** Phase 4
+
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** I check service scope and recent package/config changes, then `systemctl status`, current-boot `journalctl`, configuration validation, process and listening socket, user/permissions, filesystem capacity/mounts, firewall, and upstream dependencies. I do not repeatedly restart because that can erase timing and worsen load. I make a reversible lab-tested correction, restart only when justified, verify the port and real request, watch logs, and document rollback. I use console recovery before changing SSH or firewall access remotely.
+
+**QUESTIONS THEY MAY ASK NEXT:** Enabled versus active? What if SELinux denies it? · **COMMON MISTAKE:** Disabling SELinux/firewall or running everything as root to make the symptom disappear.
+
+---
+
+## I5. Explain DNS, DHCP, VLANs, VPNs, and firewalls as an administrator
+
+**Level:** Core · **Source:** Phase 5
+
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** DHCP leases IP, mask, gateway, and DNS; DNS maps the service name to an address; the mask and route decide local versus gateway; switches/VLANs create local segmentation; routers move between networks; firewalls allow intended flows by addresses, ports, protocol, state, and sometimes application; a VPN authenticates and encrypts a path across an untrusted network. I test link, IP, gateway/route, DNS, port, TLS/protocol, and application in order. A VPN protects transit, not the endpoint, and a VLAN is not security unless routing policy enforces it.
+
+**QUESTIONS THEY MAY ASK NEXT:** Why can ping fail while HTTPS works? Internet versus intranet? · **COMMON MISTAKE:** Calling every reachability failure “DNS” or opening broad firewall rules without a flow requirement.
+
+---
+
+## I6. Explain virtualization, snapshots, high availability, and backups
+
+**Level:** Core · **Source:** Phases 6 and 11
+
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** A hypervisor schedules physical host resources for isolated guests and connects them through virtual switches. Type 1 runs at the hardware/platform layer; type 2 as a host application. A checkpoint records short-term VM state dependencies for controlled rollback but shares the host/storage failure domain, so it is not a backup. High availability can restart/move a workload after host failure but may preserve deletion or corruption. A backup is an independently protected recovery copy whose restore is tested against RPO, RTO, integrity, access, and application behavior.
+
+**QUESTIONS THEY MAY ASK NEXT:** What does overcommitment look like? Clone versus template? · **COMMON MISTAKE:** Keeping long checkpoint chains or claiming replication/RAID is backup.
+
+---
+
+## I7. Design secure Windows file-share permissions
+
+**Level:** Core · **Source:** Phase 7
+
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** I model business roles as global groups, resource permissions as domain-local groups, nest role groups into resource groups, and assign NTFS rights to those groups. SMB share permissions and NTFS permissions both apply to network access; the effective result is the most restrictive allowed combination. I avoid per-user ACLs and broad deny entries, test allowed, denied, and read-only personas, audit where justified, monitor capacity, protect SMB, back up and restore, and document owner and review cadence.
+
+**QUESTIONS THEY MAY ASK NEXT:** Why does local access work but network access fail? · **COMMON MISTAKE:** “Everyone Full Control” everywhere or using Domain Admin to test normal access.
+
+---
+
+## I8. Explain Active Directory and troubleshoot sign-in
+
+**Level:** Core · **Source:** Phases 8-9
+
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** A forest is the top AD security boundary; a domain is an identity/policy boundary; DCs store and replicate directory data and rely on DNS; OUs support policy/delegation; users/computers/groups are objects. For one-user failure I compare account state, password/lockout, group/token, workstation, cached versus online sign-in, DC/DNS/time, and logs. If all users fail I immediately treat shared DNS/DC/network/time/replication/change as higher-probability and assess business impact. I avoid deleting/recreating accounts because that changes identifiers and access history.
+
+**QUESTIONS THEY MAY ASK NEXT:** Authentication versus authorization? Why does time matter? · **COMMON MISTAKE:** Pointing domain clients at public DNS or using OUs as permission groups.
+
+---
+
+## I9. Explain Kerberos, NTLM, Group Policy, replication, and FSMO at a practical level
+
+**Level:** Core · **Source:** Phase 9
+
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Kerberos uses the DC/KDC to issue a ticket-granting ticket and service tickets; DNS, SPNs, time, trust, and DC reachability matter. NTLM is older challenge-response fallback that should be monitored/reduced carefully. Group Policy applies computer/user settings through local, site, domain, and OU processing plus inheritance, security/WMI filters, loopback, and client-side extensions. Replication distributes directory changes; FSMO roles coordinate operations that cannot safely be ordinary multi-master. For GPO failure I check object location/link/order, filtering, replication, DNS/DC, resultant set, and operational logs before changing policy.
+
+**QUESTIONS THEY MAY ASK NEXT:** Why does `gpupdate /force` not fix design? What is a gMSA? · **COMMON MISTAKE:** Treating every DC as independent or seizing FSMO roles casually.
+
+---
+
+## I10. Run onboarding, role change, and offboarding safely
+
+**Level:** Core · **Source:** Phases 9, 10, and 15
+
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** I require an approved source of truth, manager, start/end time, role, groups, license, device, MFA, data, and expiry. On role change I remove incompatible/old access and verify the new role. On offboarding I confirm authority, disable sign-in, revoke sessions/tokens, remove privileged access, preserve/transfer data under retention policy, recover devices/licenses, notify owners, and monitor. Disabled is reversible; deletion waits for retention and ownership decisions. Automation defaults to dry run, validates input, logs per-item outcomes without secrets, and never deletes by default.
+
+**QUESTIONS THEY MAY ASK NEXT:** What if the manager wants mailbox access? · **COMMON MISTAKE:** Only disabling the on-prem password while cloud sessions, VPN, SaaS, tokens, and shared secrets remain.
+
+---
+
+## I11. Contrast Entra ID, AD DS, Microsoft 365, and Intune
+
+**Level:** Core · **Source:** Phase 10
+
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** AD DS is an on-prem/domain directory using DCs, LDAP, Kerberos/NTLM, domain join, and GPO. Microsoft Entra ID is cloud identity/access using modern tokens, cloud roles, application/device objects, sign-in/audit logs, MFA, and Conditional Access. Microsoft 365 adds service administration and licenses for Exchange, Teams, SharePoint, and OneDrive. Intune enrolls devices and applies compliance/configuration/app/remote actions. Hybrid identity connects lifecycle but adds synchronization and dependency risk. If sign-in succeeds but email fails, I check Conditional Access/token, license, mailbox/service authorization and health-not reset the password automatically.
+
+**QUESTIONS THEY MAY ASK NEXT:** What needs a paid license? Emergency access? · **COMMON MISTAKE:** Calling Entra a hosted DC or deploying a broad Conditional Access rule without report-only/pilot and emergency access.
+
+---
+
+## I12. Design and prove backup and disaster recovery
+
+**Level:** Core · **Source:** Phase 11
+
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** I inventory data and dependencies, derive RPO/RTO from business impact, choose application-consistent methods, and keep at least three copies across two media/failure types with one off-site plus offline/immutable protection where feasible. I separate and protect backup credentials, encrypt, monitor jobs/capacity, define retention, and test restores to isolation. Verification includes hashes or database checks, permissions, application transactions, dependency order, recovered point and elapsed time. A green job does not prove recoverability; the restore runbook and evidence do.
+
+**QUESTIONS THEY MAY ASK NEXT:** Incremental versus differential? Bare metal? · **COMMON MISTAKE:** Restoring over production first or backing up an ERP database without its filestore/configuration.
+
+---
+
+## I13. Triage a slow or unavailable ERP
+
+**Level:** Core · **Source:** Phase 12
+
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** I establish scope by user, department, transaction, time, and recent change. I trace browser/DNS/TLS/proxy, ERP app workers and logs, database connection/locks/slow queries/capacity, filestore, permissions, scheduled jobs, email/integrations, and custom modules. I compare health and saturation rather than guessing. I mitigate safely, avoid direct production SQL or reinstalling, and escalate to DBA, developer, or vendor with versions, timestamps, reproduction, logs, actions, and backup status. Recovery validates database plus files and a business transaction.
+
+**QUESTIONS THEY MAY ASK NEXT:** Website works but DB connection fails? Missing attachments? · **COMMON MISTAKE:** Confusing ERP administration with code customization or restoring only the database.
+
+---
+
+## I14. Secure administrator access and respond to phishing/ransomware
+
+**Level:** Core · **Source:** Phase 13
+
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** I separate daily/admin accounts, enforce MFA and least privilege, protect remote access, patch and baseline endpoints/servers, use EDR/host firewalls/encryption, manage secrets, centralize time/logs, and protect immutable/offline recoverable backups. For phishing I preserve messages/headers and sign-in evidence, scope recipients and actions, contain approved indicators/accounts, revoke/rotate based on exposure, communicate, and monitor. For ransomware I isolate affected systems without destroying evidence, activate incident authority, determine scope, rebuild from known-clean sources, restore in priority order, validate, and learn. Legal/regulatory/insurance steps follow policy.
+
+**QUESTIONS THEY MAY ASK NEXT:** Pull the power? Pay ransom? · **COMMON MISTAKE:** Running offensive tools, deleting evidence, mass-resetting without scope, or reconnecting restored systems before cause/containment is understood.
+
+---
+
+## I15. Build monitoring, patching, automation, and ITSM as one operating loop
+
+**Level:** Senior · **Source:** Phases 14-16
+
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** I monitor user outcomes and dependencies-service response, capacity, certificate expiry, backup and ERP jobs-not every metric. Alerts need owner, severity, time window, runbook, and actionable threshold. Patching uses inventory, risk/compatibility, pilot rings, backup/rollback, maintenance communication, deploy/restart, and business verification. Automation validates inputs, queries current state, supports dry run, is idempotent, least-privileged, logged, bounded, and rollback-capable. Tickets classify incident/request/problem/change, prioritize by impact and urgency, preserve communication and evidence, and update assets, configuration, and knowledge after closure.
+
+**QUESTIONS THEY MAY ASK NEXT:** How do you reduce alert fatigue? Partial automation failure? · **COMMON MISTAKE:** Calling command success service success, or automating a broken undocumented procedure.
+
+---
+
+## I16. Design a small-company IT environment
+
+**Level:** Senior · **Source:** Phases 16-18
+
+**A CLEAR ANSWER YOU CAN SAY OUT LOUD:** I begin with departments, users, business services, data sensitivity, availability/RPO/RTO, budget, sites, remote work, regulations, and team/vendor maturity. Then I design identity and separate admin paths, endpoints/lifecycle, segmented wired/Wi-Fi/VPN/firewall/DNS/DHCP, virtualized Windows/Linux services, group-based storage, ERP/database/filestore, Microsoft cloud boundaries, monitoring, patching, protected backups and restore tests, ITSM/assets/licenses/vendors, diagrams/runbooks, and a hybrid/cloud migration path. For every component I name owner, dependency, security control, health signal, capacity/cost, backup, restore, and rollback. I deliver an executive risk view and technical handover.
+
+**QUESTIONS THEY MAY ASK NEXT:** What do you cut on a small budget? Single host? · **COMMON MISTAKE:** Starting with products, building a single flat network, or drawing redundancy without tested recovery and operational ownership.
+
+---
+
+## IT Administrator Live Troubleshooting Drills
+
+For every case, answer aloud using the nine-step model at the top of Track I. The “first discriminating evidence” is not the entire solution; it is the safest observation that separates major branches.
+
+| Scenario | First discriminating evidence | Important branches and traps |
+| --- | --- | --- |
+| One user cannot sign in | Exact error, device, online/cached scope, account state, recent change | Do not recreate account; compare another user/device, DNS/time/DC, lockout, token/groups. |
+| All users cannot sign in | Site/service scope and DC/DNS/network/time health | Treat as major shared dependency; check recent identity/network change and emergency access. |
+| Internet works by IP but not hostname | Resolver configuration and direct query to expected DNS | DNS server/record/suffix/cache/hosts; do not open firewall broadly. |
+| Shared folder suddenly inaccessible | Who/where, name resolution, SMB reachability, token and effective ACL | Share versus NTFS, group change, server/storage, Kerberos; do not test as Domain Admin only. |
+| Group Policy does not apply | Object OU, link/order, security filter, `gpresult`, operational log | Replication/DNS/DC/time/client extension; `gpupdate` is evidence, not a design fix. |
+| Printer works for one department only | Queue/server/driver/path plus department group/VLAN/firewall policy | Separate physical/queue/driver/permission/network layers. |
+| Disk space is nearly full | Filesystem, growth rate, largest categories, service impact | Do not delete unknown logs/data; protect backup/retention, mitigate then capacity-plan. |
+| Service stops after an update | Timeline, unit/service event logs, config/dependency/version | Use rollback criteria, not endless restarts; verify real transaction afterward. |
+| ERP is slow | Scope by transaction/user/time and app/DB/storage/integration saturation | Slow is not down; preserve queries/logs; avoid unsupported SQL/index changes. |
+| ERP web works but DB fails | App connection error, DB service/port/auth/TLS/capacity/log | Protect credentials; distinguish network refusal, auth denial, saturation, migration/version. |
+| Backup says success but restore fails | Exact restore step, dependency, chain/catalog/key, isolated target | Job success is not recovery; preserve backup, fix runbook, report RPO/RTO gap. |
+| Former employee still has access | Which identity/session/app/resource and offboarding evidence | Disable/revoke/remove privilege, preserve/transfer data, investigate process gap. |
+| Multiple users receive phishing | Preserve message/headers, recipient/action scope, sign-in evidence | Approved containment, token/session risk, communication; do not forward dangerous content casually. |
+| Server certificate is expiring | Certificate identity, service binding, chain, owner, expiry/renewal method | Renew, deploy, restart only if needed, validate clients/monitoring, record next renewal. |
+| Admin changed production accidentally | Scope, exact change/time, audit/diff, current impact, rollback readiness | Stop further drift, preserve evidence, mitigate/rollback with authority, review guardrails-not blame. |
+| Remote office loses connectivity | Power/link, local gateway, WAN/VPN, DNS, provider scope, last change | Compare internet versus private routes, one/all sites, failover, ISP escalation evidence. |
+
+## Behavioral and Operational Questions
+
+1. Tell me about a time you slowed down an urgent request to protect data or evidence.
+2. Describe an error you made with elevated access and the guardrail you added afterward.
+3. Explain a disagreement with a vendor or user using evidence and business impact.
+4. Tell me how you prioritize a VIP request against a wider lower-severity incident.
+5. Describe documentation that allowed someone else to recover a service without you.
+6. Explain when you escalated early and when you persisted independently.
+7. Describe a repetitive task you automated and how you prevented scaled mistakes.
+8. Explain a backup or maintenance test that exposed a hidden assumption.
+
+Use STAR, but include technical evidence, risk, communication, and a changed operating control. “I worked hard and fixed it” is not a complete operational story.
+
+## Live Exercises and Interview Traps
+
+- **Command exercise:** given Windows/Linux outputs, identify observations before fixes. Trap: treating warnings, stopped manual services, or blocked ping as automatic root cause.
+- **Access exercise:** design HR/Finance/Management shares. Trap: direct user ACLs, broad denies, or daily Domain Admin.
+- **Automation exercise:** review CSV onboarding pseudocode. Trap: no schema validation, no dry run, hard-coded secret, delete-on-error, or all-or-nothing logging.
+- **Recovery exercise:** choose RPO/RTO and demonstrate restore order for AD, file service, database, filestore, ERP, and integrations. Trap: confusing HA/RAID/replication with backup.
+- **Change exercise:** patch a server with users waiting. Trap: no approval, backup, maintenance notice, compatibility test, rollback trigger, or business validation.
+- **Incident exercise:** triage phishing/ransomware. Trap: destructive containment, unsupported attribution, hidden uncertainty, or missing legal/leadership escalation.
+- **System-design exercise:** build Northstar Services. Trap: naming products before requirements, uncontrolled cloud cost, single flat trust zone, no owners/runbooks, or fake enterprise claims.
+
+## Track I Completion Drill
+
+Choose three scenarios at random. Give a 90-second triage answer, draw the relevant flow, name the first five evidence sources, state one unsafe action, define mitigation and rollback, and finish with prevention and user/leadership communication. Then present the [IT Administration capstone](../guides/Projects.md#it-admin-main-portfolio-project) in five minutes with one access test, one alert, one restore, one change, and one honest limitation.

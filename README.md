@@ -16,6 +16,8 @@ Use this learning loop throughout the repository: read the problem in plain lang
 
 **Common abbreviations on this page:** **SWE** means software engineer; **OOP** means object-oriented programming; **DSA** means data structures and algorithms; **LLM** means large language model; **SOC** means security operations center; **ERP** means enterprise resource planning; **API** means an agreed way for programs to communicate; **CI/CD** means automated checking and delivery of software changes; **SRE** means site reliability engineering; **IaC** means infrastructure as code; and **LLD** means low-level design, or planning the classes and smaller parts inside a software system.
 
+**Administration abbreviations:** **AD DS** means Active Directory Domain Services; **GPO** means Group Policy Object; **MFA** means multifactor authentication; **RPO** is the acceptable data-loss window; **RTO** is the recovery-time target; and **ITSM** means IT service management.
+
 ## What's inside
 
 | File | Track | Who it's for |
@@ -25,6 +27,7 @@ Use this learning loop throughout the repository: read the problem in plain lang
 | [`Git.md`](./content/roadmaps/Git.md) | Git & Professional Git Workflows | Beginners through internals, recovery, team workflows, releases, CI, and repository trust |
 | [`Data.md`](./content/roadmaps/Data.md) | Data Analyst & Data Engineer | Analytics, SQL, pipelines, warehouses, Spark/Kafka |
 | [`Networks.md`](./content/roadmaps/Networks.md) | Computer Networks | Network/infra engineers and SWEs who must understand the stack |
+| [`IT_Administration.md`](./content/roadmaps/IT_Administration.md) | IT Administration | Complete beginners through Windows/Linux, Active Directory, Microsoft 365, ERP operations, security, support, and recovery |
 | [`AI.md`](./content/roadmaps/AI.md) | Artificial Intelligence & Machine Learning | ML practitioners and AI engineers releasing LLM applications that people can use |
 | [`ICT_Cybersecurity.md`](./content/roadmaps/ICT_Cybersecurity.md) | ICT / Cybersecurity Engineer | Security engineers, SOC/blue team, and junior pentesters |
 | [`ODOO.md`](./content/roadmaps/ODOO.md) | Odoo Engineer / ERP Developer | Custom modules, ORM, XML, OWL, PostgreSQL, integrations |
@@ -34,7 +37,7 @@ Use this learning loop throughout the repository: read the problem in plain lang
 | [`Projects.md`](./content/guides/Projects.md) | Projects Playbook | Small builds that cement every roadmap |
 | [`Interview.md`](./content/guides/Interview.md) | Combined Interview Playbook | Spoken Q&A drill across the roadmaps |
 
-**Repository count:** 11 learning roadmaps · 2 shared playbooks · 1 CV template · 15 root Markdown files in total.
+**Repository count:** 12 learning roadmaps · 2 shared playbooks · 1 CV template · 16 canonical Markdown documents in total.
 
 All roadmaps use the **same teaching rhythm**. [`Projects.md`](./content/guides/Projects.md) is how you prove it. [`Interview.md`](./content/guides/Interview.md) is the place to practice answers aloud.
 
@@ -84,6 +87,8 @@ CS Phases 1-2  →  OOP.md (Part 0 fundamentals + Phases 1-20)  →  Git.md Phas
 ```
 
 **Odoo path:** finish [`OOP.md`](./content/roadmaps/OOP.md) (including Part 0), complete [`Git.md`](./content/roadmaps/Git.md) Phases 1-7 before Odoo source/branch collaboration, then follow [`ODOO.md`](./content/roadmaps/ODOO.md) and its matching projects.
+
+**IT administrator path:** begin directly with [`IT_Administration.md`](./content/roadmaps/IT_Administration.md); it starts from basic computer literacy and builds a safe local homelab. Use [`Networks.md`](./content/roadmaps/Networks.md) for packet/routing depth, [`ICT_Cybersecurity.md`](./content/roadmaps/ICT_Cybersecurity.md) for security depth, then specialize through [`Cloud.md`](./content/roadmaps/Cloud.md) or [`DevOps.md`](./content/roadmaps/DevOps.md). Build the matching IT Administration projects and practice Interview Track I throughout.
 
 **Web developer path:** learn programming fundamentals in [`OOP.md`](./content/roadmaps/OOP.md) Part 0, complete [`Git.md`](./content/roadmaps/Git.md) Phases 1-7 for repository and review work, then follow [`Web.md`](./content/roadmaps/Web.md) from browser fundamentals through deployment. Pair Web Phase 1/6 with [`Networks.md`](./content/roadmaps/Networks.md), Phase 13 with [`Data.md`](./content/roadmaps/Data.md), and Git Phases 12/15 with releases and CI.
 
@@ -478,10 +483,40 @@ Flow -> Linux/Git/Automation -> Artifact/CI/CD -> Containers/Kubernetes -> IaC/C
 
 ---
 
+## Track 10 - IT Administrator
+
+**File:** [`IT_Administration.md`](./content/roadmaps/IT_Administration.md)
+**Scope:** **18 phases** - support and endpoints through Windows/Linux servers, networks, Active Directory, Microsoft 365, ERP, security, recovery, automation, service management, hybrid operations, and hire.
+
+Support → Endpoints → Windows/Linux → Networks/Virtualization → Server/AD → Microsoft cloud → Recovery/ERP → Security/Operations → Hybrid → Hire
+
+| # | Phase | Goal |
+|--:|-------|------|
+| 01 | Support Mindset | Scope, evidence, safe tests, escalation, communication |
+| 02 | Hardware & Endpoints | Diagnose, standardize, protect, and retire devices |
+| 03 | Windows Client | Install, permissions, services, logs, update, recovery, PowerShell |
+| 04 | Linux Administration | Files, users, services, journal, SSH, storage, firewall, Bash |
+| 05 | Administrator Networking | IP/subnets, DNS, DHCP, VLAN, Wi-Fi, VPN, firewall troubleshooting |
+| 06 | Virtualization & Homelab | Isolated multi-VM lab, switches, templates, checkpoints, capacity |
+| 07 | Windows Server & File Services | Roles, storage, SMB/NTFS, print, hardening, maintenance |
+| 08 | Active Directory | Forest/domain/DC/OU, users, computers, groups, DNS, delegation |
+| 09 | GPO & Identity Lifecycle | Kerberos/NTLM, policy, service accounts, joiner/mover/leaver, recovery |
+| 10 | Entra, Microsoft 365 & Intune | Cloud identity, licensing, services, MFA/CA, device management |
+| 11 | Storage, Backup & DR | RAID/storage choices, protected copies, RPO/RTO, tested restores |
+| 12 | Databases & ERP Operations | PostgreSQL/SQL awareness, Odoo layers, access, jobs, upgrades, recovery |
+| 13 | Administrator Security | Least privilege, hardening, remote access, logging, incident response |
+| 14 | Monitoring & Maintenance | Health, capacity, alerts, certificates, patches, verification |
+| 15 | Automation | PowerShell/Bash/Python, validation, idempotence, dry run, rollback |
+| 16 | ITSM, Assets, Vendors & Docs | Tickets, changes, inventory, licenses, contracts, runbooks, handover |
+| 17 | Cloud & Hybrid Administration | Shared responsibility, virtual services, VPN, migration, cost |
+| 18 | Capstone & Career | Small-company proof, scenarios, certifications, CV, interviews |
+
+---
+
 ## Projects Playbook
 
 **File:** [`Projects.md`](./content/guides/Projects.md)  
-**Scope:** **218 phase projects** (203 existing + 15 Git) plus **11 complete portfolio capstones** - one phase project per roadmap phase and one capstone per roadmap.
+**Scope:** **236 phase projects** (218 existing + 18 IT Administration) plus **12 complete portfolio capstones** - one phase project per roadmap phase and one capstone per roadmap.
 
 Every roadmap phase links to one matching mini-project card. After that roadmap's final phase, it links to a complete portfolio project with intended users, a free/open-source stack, one build step per selected phase, and a no-cost/local execution path.
 
@@ -511,6 +546,7 @@ Learn each phase → Build its mini-project → Finish the roadmap → Build the
 | W | Web Development | 16 |
 | G | Cloud Engineering | 10 |
 | H | DevOps Engineering | 12 |
+| I | IT Administration | 16 plus live scenarios |
 | V | Git and Version Control | 18 |
 | E | Cross-cutting classics (URL bar, debug, design) | 6 |
 | F | Behavioral / STAR | 5 |
@@ -523,7 +559,7 @@ Learn each phase → Build its mini-project → Finish the roadmap → Build the
 
 ## How to use this repo
 
-1. Pick a primary track: [`CS.md`](./content/roadmaps/CS.md), [`OOP.md`](./content/roadmaps/OOP.md), [`Git.md`](./content/roadmaps/Git.md), [`Data.md`](./content/roadmaps/Data.md), [`Networks.md`](./content/roadmaps/Networks.md), [`AI.md`](./content/roadmaps/AI.md), [`ICT_Cybersecurity.md`](./content/roadmaps/ICT_Cybersecurity.md), [`ODOO.md`](./content/roadmaps/ODOO.md), [`Web.md`](./content/roadmaps/Web.md), [`Cloud.md`](./content/roadmaps/Cloud.md), or [`DevOps.md`](./content/roadmaps/DevOps.md).
+1. Pick a primary track: [`CS.md`](./content/roadmaps/CS.md), [`OOP.md`](./content/roadmaps/OOP.md), [`Git.md`](./content/roadmaps/Git.md), [`Data.md`](./content/roadmaps/Data.md), [`Networks.md`](./content/roadmaps/Networks.md), [`IT_Administration.md`](./content/roadmaps/IT_Administration.md), [`AI.md`](./content/roadmaps/AI.md), [`ICT_Cybersecurity.md`](./content/roadmaps/ICT_Cybersecurity.md), [`ODOO.md`](./content/roadmaps/ODOO.md), [`Web.md`](./content/roadmaps/Web.md), [`Cloud.md`](./content/roadmaps/Cloud.md), or [`DevOps.md`](./content/roadmaps/DevOps.md).
 2. If new to coding, start [`OOP.md`](./content/roadmaps/OOP.md) **Part 0**. On the SWE path: after CS Phases 1-2, finish OOP before CS Phase 3.
 3. Start at Phase 1 (or Part 0). Do not skip bridges on the first pass.
 4. After each phase, follow its matching beginner-friendly mini-project in [`Projects.md`](./content/guides/Projects.md). After the roadmap's final phase, build that track's main portfolio project.
@@ -542,6 +578,7 @@ Learn each phase → Build its mini-project → Finish the roadmap → Build the
 | Data Analyst | `Data.md` (through Phase 10) | `Projects.md` data + `Interview.md` B |
 | Data Engineer | `Data.md` full | `Projects.md` data + `Interview.md` B |
 | Network / Infra | `Networks.md` | `Projects.md` networks + `Interview.md` C/F |
+| IT / Systems Administrator | `IT_Administration.md` | IT Administration projects + `Interview.md` I/C/F; then Cloud/DevOps/Security specialization |
 | Git / SCM-focused | `Git.md` all 15 phases | Git phase projects + capstone + `Interview.md` V |
 | Cloud Engineer | `cloud.md` + `Git.md` Phases 1-9, 14-15 | Networks + Cloud/Git projects + Interview G/V/F |
 | DevOps Engineer | `devops.md` Phases 1-3 → `Git.md` full → DevOps Phase 4+ | Cloud foundations + DevOps/Git projects + Interview H/V/G/F |
@@ -561,7 +598,7 @@ Learn each phase → Build its mini-project → Finish the roadmap → Build the
 
 ## Author
 
-**Mohammad Bilal** - Interview Help roadmaps for software engineering, OOP, Git, data, networks, AI, cybersecurity, Odoo, web development, cloud engineering, and DevOps careers.
+**Mohammad Bilal** - Interview Help roadmaps for software engineering, OOP, Git, data, networks, IT administration, AI, cybersecurity, Odoo, web development, cloud engineering, and DevOps careers.
 
 ---
 

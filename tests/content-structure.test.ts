@@ -13,6 +13,7 @@ const expectedRoutes: Record<string, string> = {
   "DevOps.md": "/courses/devops",
   "Git.md": "/courses/git",
   "ICT_Cybersecurity.md": "/courses/cybersecurity",
+  "IT_Administration.md": "/courses/it-administration",
   "Networks.md": "/courses/networks",
   "ODOO.md": "/courses/odoo",
   "OOP.md": "/courses/object-oriented-programming",

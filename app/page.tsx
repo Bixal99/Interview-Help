@@ -4,6 +4,7 @@ import { CourseCard } from "@/components/course-card";
 import { getCourses } from "@/lib/content";
 
 const paths = [
+  { role: "IT administrator", route: "IT Administration → Networks fundamentals → Cybersecurity fundamentals → Cloud or DevOps specialization", color: "#b45309" },
   { role: "Software engineer", route: "CS → OOP → Git → Web → Projects → Interview", color: "#2563eb" },
   { role: "AI engineer", route: "CS → OOP / Python → Git → Data → AI → Projects → Interview", color: "#db2777" },
   { role: "DevOps engineer", route: "CS foundations → Networks → Git → Cloud → DevOps → Interview", color: "#16a34a" },

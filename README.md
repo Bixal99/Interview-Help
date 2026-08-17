@@ -562,3 +562,32 @@ Learn each phase → Build its mini-project → Finish the roadmap → Build the
 ## Author
 
 **Mohammad Bilal** - Interview Help roadmaps for software engineering, OOP, Git, data, networks, AI, cybersecurity, Odoo, web development, cloud engineering, and DevOps careers.
+
+---
+
+## Learning website
+
+The repository also includes a statically generated Next.js learning interface. The root Markdown files remain the source of truth: update a roadmap, rebuild the site, and its course pages, navigation, progress targets, and search index update with it.
+
+### Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+### Verify a change
+
+```bash
+npm run validate:content
+npm run test
+npm run build
+```
+
+No environment variables, database, authentication service, or paid API are required. Progress is stored locally in the learner's browser.
+
+### Deploy
+
+Import this repository into Vercel and keep the default Next.js settings. Every push triggers a build, so updated Markdown is reflected in the generated pages automatically. The same production build can be run elsewhere with `npm run build`; this project uses Next.js standalone output for portable hosting.

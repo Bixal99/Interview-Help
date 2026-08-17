@@ -74,6 +74,10 @@ Those questions are answered in the same order every single time. Once you have 
 
 ---
 
+> **Integrated Git practice:** Each linked phase-project card in [`Projects.md`](./Projects.md) ends with one specific Git checkpoint. Test the finished project first, commit only its named project path, verify the commit and clean working tree, then continue. Use [`Git.md` Phases 2-3](./Git.md#phase-2) if staging or commit selection is unfamiliar.
+
+---
+
 ## The Whole-Journey Map
 
 ```text

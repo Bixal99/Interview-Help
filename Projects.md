@@ -7,6 +7,26 @@ Use this guide in two layers:
 
 Every required tool is free. Application libraries and local infrastructure are open source. Optional public hosts use free plans, can sleep or enforce quotas, and can be replaced by the permanent local deployment instructions.
 
+## Integrated Git Workflow for Project Cards
+
+Use one portfolio repository for the non-Git project folders in this guide. Initialize it once, not again inside every phase folder. If you are already working inside a repository, skip `git init` and keep its existing branch policy.
+
+Before the first project, create a root `README.md` and `.gitignore`. Ignore `.env`, credentials, `.venv`, `node_modules`, caches, generated build output, large model files, raw packet captures, and local databases unless a card explicitly requires a small sanitized fixture. Then make the one-time workspace commit:
+
+```bash
+git init
+git branch -M main
+git status
+git add -- README.md .gitignore
+git commit -m "chore(portfolio): initialize project workspace"
+```
+
+Every checkpoint below assumes you are at this portfolio root. Keep phase projects under their lowercase roadmap directory, such as `cs/mini-expression-runtime`, `web/profile-page`, or `odoo/erp_process_map`; the checkpoint path is the canonical location. Inspect `git status` before staging and never commit secrets. The Git roadmap projects use their own evolving `git-workbench` repository because repository state is the subject of those labs.
+
+> New to staging and commits? Review [`Git.md` Phase 2](./Git.md#phase-2) and [Phase 3](./Git.md#phase-3) before continuing.
+
+---
+
 ## Choose your roadmap
 
 - [Programming Fundamentals and OOP](#programming-fundamentals-and-oop)
@@ -56,6 +76,25 @@ Build **Execution Trace Notebook** as a focused exercise for **Execution Tracing
 6. Add one normal example and one edge or failure example specifically for **Execution Tracing**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
 
+### Git Checkpoint
+
+You have completed **EXECUTION TRACE NOTEBOOK**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/execution-trace-notebook
+git commit -m "feat(execution-trace-notebook): complete execution trace notebook"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE F1](./OOP.md#phase-f1) | [CONTINUE TO OOP PHASE F2](./OOP.md#phase-f2)
 
 <a id="oop-phase-f2-project"></a>
@@ -88,6 +127,25 @@ Build **CLI Rule Engine** as a focused exercise for **Control Flow and Rules**. 
 5. Check a normal case, a boundary case, and an invalid case against known answers.
 6. Add one normal example and one edge or failure example specifically for **Control Flow and Rules**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **CLI RULE ENGINE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/cli-rule-engine
+git commit -m "feat(cli-rule-engine): complete cli rule engine"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE F2](./OOP.md#phase-f2) | [CONTINUE TO OOP PHASE F3](./OOP.md#phase-f3)
 
@@ -122,6 +180,25 @@ Build **Modular Text Statistics** as a focused exercise for **Functions and Modu
 6. Add one normal example and one edge or failure example specifically for **Functions and Modules**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
 
+### Git Checkpoint
+
+You have completed **MODULAR TEXT STATISTICS**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/modular-text-statistics
+git commit -m "feat(modular-text-statistics): complete modular text statistics"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE F3](./OOP.md#phase-f3) | [CONTINUE TO OOP PHASE 1](./OOP.md#phase-1)
 
 <a id="oop-phase-1-project"></a>
@@ -154,6 +231,25 @@ Build **Procedural-to-Objects Refactor** as a focused exercise for **Object Thin
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Object Thinking**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **PROCEDURAL-TO-OBJECTS REFACTOR**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/procedural-to-objects-refactor
+git commit -m "refactor(procedural-to-objects-refactor): complete procedural-to-objects refactor"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE 1](./OOP.md#phase-1) | [CONTINUE TO OOP PHASE 2](./OOP.md#phase-2)
 
@@ -188,6 +284,25 @@ Build **Class & Instance Registry** as a focused exercise for **Classes and Obje
 6. Add one normal example and one edge or failure example specifically for **Classes and Objects**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
 
+### Git Checkpoint
+
+You have completed **CLASS & INSTANCE REGISTRY**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/class-instance-registry
+git commit -m "feat(class-instance-registry): complete class & instance registry"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE 2](./OOP.md#phase-2) | [CONTINUE TO OOP PHASE 3](./OOP.md#phase-3)
 
 <a id="oop-phase-3-project"></a>
@@ -220,6 +335,25 @@ Build **Bank Account State Machine** as a focused exercise for **State and Behav
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **State and Behavior**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **BANK ACCOUNT STATE MACHINE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/bank-account-state-machine
+git commit -m "feat(bank-account-state-machine): complete bank account state machine"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE 3](./OOP.md#phase-3) | [CONTINUE TO OOP PHASE 4](./OOP.md#phase-4)
 
@@ -254,6 +388,25 @@ Build **Validated Wallet API** as a focused exercise for **Encapsulation**. Keep
 6. Add one normal example and one edge or failure example specifically for **Encapsulation**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
 
+### Git Checkpoint
+
+You have completed **VALIDATED WALLET API**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/validated-wallet-api
+git commit -m "feat(validated-wallet-api): complete validated wallet api"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE 4](./OOP.md#phase-4) | [CONTINUE TO OOP PHASE 5](./OOP.md#phase-5)
 
 <a id="oop-phase-5-project"></a>
@@ -286,6 +439,25 @@ Build **Pluggable Shape Calculator** as a focused exercise for **Abstraction**. 
 5. Check a normal case, a boundary case, and an invalid case against known answers.
 6. Add one normal example and one edge or failure example specifically for **Abstraction**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **PLUGGABLE SHAPE CALCULATOR**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/pluggable-shape-calculator
+git commit -m "feat(pluggable-shape-calculator): complete pluggable shape calculator"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE 5](./OOP.md#phase-5) | [CONTINUE TO OOP PHASE 6](./OOP.md#phase-6)
 
@@ -320,6 +492,25 @@ Build **Employee Payroll Hierarchy** as a focused exercise for **Inheritance**. 
 6. Add one normal example and one edge or failure example specifically for **Inheritance**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
 
+### Git Checkpoint
+
+You have completed **EMPLOYEE PAYROLL HIERARCHY**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/employee-payroll-hierarchy
+git commit -m "feat(employee-payroll-hierarchy): complete employee payroll hierarchy"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE 6](./OOP.md#phase-6) | [CONTINUE TO OOP PHASE 7](./OOP.md#phase-7)
 
 <a id="oop-phase-7-project"></a>
@@ -352,6 +543,25 @@ Build **Polymorphic Exporter** as a focused exercise for **Polymorphism**. Keep 
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Polymorphism**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **POLYMORPHIC EXPORTER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/polymorphic-exporter
+git commit -m "feat(polymorphic-exporter): complete polymorphic exporter"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE 7](./OOP.md#phase-7) | [CONTINUE TO OOP PHASE 8](./OOP.md#phase-8)
 
@@ -386,6 +596,25 @@ Build **Composed Order Service** as a focused exercise for **Composition over In
 6. Add one normal example and one edge or failure example specifically for **Composition over Inheritance**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
 
+### Git Checkpoint
+
+You have completed **COMPOSED ORDER SERVICE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/composed-order-service
+git commit -m "feat(composed-order-service): complete composed order service"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE 8](./OOP.md#phase-8) | [CONTINUE TO OOP PHASE 9](./OOP.md#phase-9)
 
 <a id="oop-phase-9-project"></a>
@@ -418,6 +647,25 @@ Build **Pythonic Collection Wrapper** as a focused exercise for **Python Power T
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Python Power Tools**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **PYTHONIC COLLECTION WRAPPER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/pythonic-collection-wrapper
+git commit -m "feat(pythonic-collection-wrapper): complete pythonic collection wrapper"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE 9](./OOP.md#phase-9) | [CONTINUE TO OOP PHASE 10](./OOP.md#phase-10)
 
@@ -452,6 +700,25 @@ Build **Library Relationship Model** as a focused exercise for **Relationships a
 6. Add one normal example and one edge or failure example specifically for **Relationships and Modeling**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
 
+### Git Checkpoint
+
+You have completed **LIBRARY RELATIONSHIP MODEL**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/library-relationship-model
+git commit -m "feat(library-relationship-model): complete library relationship model"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE 10](./OOP.md#phase-10) | [CONTINUE TO OOP PHASE 11](./OOP.md#phase-11)
 
 <a id="oop-phase-11-project"></a>
@@ -484,6 +751,25 @@ Build **God-Object Rescue** as a focused exercise for **Smells and Refactoring**
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Smells and Refactoring**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **GOD-OBJECT RESCUE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/god-object-rescue
+git commit -m "fix(god-object-rescue): complete god-object rescue"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE 11](./OOP.md#phase-11) | [CONTINUE TO OOP PHASE 12](./OOP.md#phase-12)
 
@@ -518,6 +804,25 @@ Build **SOLID Notification Service** as a focused exercise for **SOLID**. Keep t
 6. Add one normal example and one edge or failure example specifically for **SOLID**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
 
+### Git Checkpoint
+
+You have completed **SOLID NOTIFICATION SERVICE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/solid-notification-service
+git commit -m "feat(solid-notification-service): complete solid notification service"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE 12](./OOP.md#phase-12) | [CONTINUE TO OOP PHASE 13](./OOP.md#phase-13)
 
 <a id="oop-phase-13-project"></a>
@@ -550,6 +855,25 @@ Build **Configurable Object Factory** as a focused exercise for **Creational Pat
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Creational Patterns**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **CONFIGURABLE OBJECT FACTORY**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/configurable-object-factory
+git commit -m "feat(configurable-object-factory): complete configurable object factory"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE 13](./OOP.md#phase-13) | [CONTINUE TO OOP PHASE 14](./OOP.md#phase-14)
 
@@ -584,6 +908,25 @@ Build **Legacy Payment Adapter** as a focused exercise for **Structural Patterns
 6. Add one normal example and one edge or failure example specifically for **Structural Patterns**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
 
+### Git Checkpoint
+
+You have completed **LEGACY PAYMENT ADAPTER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/legacy-payment-adapter
+git commit -m "feat(legacy-payment-adapter): complete legacy payment adapter"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE 14](./OOP.md#phase-14) | [CONTINUE TO OOP PHASE 15](./OOP.md#phase-15)
 
 <a id="oop-phase-15-project"></a>
@@ -616,6 +959,25 @@ Build **Event-Driven Task Board** as a focused exercise for **Behavioral Pattern
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Behavioral Patterns**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **EVENT-DRIVEN TASK BOARD**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/event-driven-task-board
+git commit -m "feat(event-driven-task-board): complete event-driven task board"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE 15](./OOP.md#phase-15) | [CONTINUE TO OOP PHASE 16](./OOP.md#phase-16)
 
@@ -650,6 +1012,25 @@ Build **Testable Domain Model** as a focused exercise for **Testing OOP**. Keep 
 6. Add one normal example and one edge or failure example specifically for **Testing OOP**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
 
+### Git Checkpoint
+
+You have completed **TESTABLE DOMAIN MODEL**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/testable-domain-model
+git commit -m "test(testable-domain-model): complete testable domain model"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE 16](./OOP.md#phase-16) | [CONTINUE TO OOP PHASE 17](./OOP.md#phase-17)
 
 <a id="oop-phase-17-project"></a>
@@ -682,6 +1063,25 @@ Build **Layered Inventory App** as a focused exercise for **Layers and Clean Arc
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Layers and Clean Architecture**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **LAYERED INVENTORY APP**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/layered-inventory-app
+git commit -m "feat(layered-inventory-app): complete layered inventory app"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE 17](./OOP.md#phase-17) | [CONTINUE TO OOP PHASE 18](./OOP.md#phase-18)
 
@@ -716,6 +1116,25 @@ Build **Parking Lot LLD** as a focused exercise for **Low-Level Design Method**.
 6. Add one normal example and one edge or failure example specifically for **Low-Level Design Method**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
 
+### Git Checkpoint
+
+You have completed **PARKING LOT LLD**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/parking-lot-lld
+git commit -m "feat(oop-parking-lot-lld): complete parking lot lld"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE 18](./OOP.md#phase-18) | [CONTINUE TO OOP PHASE 19](./OOP.md#phase-19)
 
 <a id="oop-phase-19-project"></a>
@@ -749,6 +1168,25 @@ Build **Design Portfolio Pack** as a focused exercise for **Portfolio**. Keep th
 6. Add one normal example and one edge or failure example specifically for **Portfolio**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
 
+### Git Checkpoint
+
+You have completed **DESIGN PORTFOLIO PACK**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/design-portfolio-pack
+git commit -m "feat(design-portfolio-pack): complete design portfolio pack"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE 19](./OOP.md#phase-19) | [CONTINUE TO OOP PHASE 20](./OOP.md#phase-20)
 
 <a id="oop-phase-20-project"></a>
@@ -781,6 +1219,25 @@ Build **Timed OOP Design Kata** as a focused exercise for **Interviews**. Keep t
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Interviews**.
 7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **TIMED OOP DESIGN KATA**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/timed-oop-design-kata
+git commit -m "feat(timed-oop-design-kata): complete timed oop design kata"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW OOP PHASE 20](./OOP.md#phase-20) | [BUILD THE OOP MAIN PORTFOLIO PROJECT](#oop-main-portfolio-project)
 
@@ -842,6 +1299,107 @@ No paid API, commercial license, or paid cloud resource is required. Use only ge
 19. **PHASE 19 - Portfolio (REQUIRED CAPSTONE-COMPLETION STEP):** Polish the terminal screens, seed realistic data, add screenshots, choose an open-source license, and remove secrets or machine-specific paths.
 20. **PHASE 20 - Interviews (POST-BUILD PRACTICE; NO NEW PRODUCT FEATURE):** Practice a timed change such as adding a new tool category, then explain the design, tests, trade-offs, and complexity aloud.
 
+#### GIT MILESTONE CHECKPOINTS
+
+Keep this capstone in `community-workshop-inventory-and-booking-system` inside the portfolio repository. The five checkpoints below preserve working phase groups without interrupting every implementation step. Test the completed group before committing; the repository-level ignore rules still apply.
+
+##### Git Checkpoint 1
+
+You have completed **Phases 1-4: workshop domain model and protected state transitions**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- community-workshop-inventory-and-booking-system
+git commit -m "feat(workshop): model tools members and booking state"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 2
+
+You have completed **Phases 5-10: booking policies, composition, and domain relationships**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- community-workshop-inventory-and-booking-system
+git commit -m "feat(workshop): implement booking policies and relationships"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 3
+
+You have completed **Phases 11-15: refactored services, patterns, SQLite adapter, and terminal facade**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- community-workshop-inventory-and-booking-system
+git commit -m "refactor(workshop): integrate services patterns and persistence"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 4
+
+You have completed **Phases 16-18: automated tests, clean architecture, and wait-list design**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- community-workshop-inventory-and-booking-system
+git commit -m "test(workshop): verify domain adapters and wait-list flow"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Final Git Checkpoint
+
+You have completed **Phase 19: polished screens, demo data, documentation, and release assets**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- community-workshop-inventory-and-booking-system
+git commit -m "docs(workshop): complete community workshop portfolio release"
+git tag -a workshop-v1.0.0 -m "First complete workshop release"
+```
+
+Verify:
+
+```bash
+git log --oneline --decorate -5
+git status
+git tag
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
 #### HOW TO DEPLOY IT FOR FREE
 
 1. Run `pytest`, Ruff, and mypy locally; fix every error.
@@ -887,6 +1445,25 @@ Build **Mini Expression Runtime** as a focused exercise for **Programming Founda
 6. Add one normal example and one edge or failure example specifically for **Programming Foundations and Program Execution**.
 7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
 
+### Git Checkpoint
+
+You have completed **MINI EXPRESSION RUNTIME**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/mini-expression-runtime
+git commit -m "feat(mini-expression-runtime): complete mini expression runtime"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 1](./CS.md#phase-1) | [CONTINUE TO CS PHASE 2](./CS.md#phase-2)
 
 <a id="cs-phase-2-project"></a>
@@ -919,6 +1496,25 @@ Build **Algorithm Growth Profiler** as a focused exercise for **Complexity Analy
 5. Include one case where the preferred approach fails or becomes a poor choice.
 6. Add one normal example and one edge or failure example specifically for **Complexity Analysis**.
 7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
+
+### Git Checkpoint
+
+You have completed **ALGORITHM GROWTH PROFILER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/algorithm-growth-profiler
+git commit -m "feat(algorithm-growth-profiler): complete algorithm growth profiler"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 2](./CS.md#phase-2) | [CONTINUE TO CS PHASE 3](./CS.md#phase-3)
 
@@ -953,6 +1549,25 @@ Build **Data Structures Toolkit** as a focused exercise for **Linear Data Struct
 6. Add one normal example and one edge or failure example specifically for **Linear Data Structures**.
 7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
 
+### Git Checkpoint
+
+You have completed **DATA STRUCTURES TOOLKIT**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/data-structures-toolkit
+git commit -m "feat(data-structures-toolkit): complete data structures toolkit"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 3](./CS.md#phase-3) | [CONTINUE TO CS PHASE 4](./CS.md#phase-4)
 
 <a id="cs-phase-4-project"></a>
@@ -985,6 +1600,25 @@ Build **Recursive Filesystem Walker** as a focused exercise for **Recursion**. K
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Recursion**.
 7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
+
+### Git Checkpoint
+
+You have completed **RECURSIVE FILESYSTEM WALKER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/recursive-filesystem-walker
+git commit -m "feat(recursive-filesystem-walker): complete recursive filesystem walker"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 4](./CS.md#phase-4) | [CONTINUE TO CS PHASE 5](./CS.md#phase-5)
 
@@ -1019,6 +1653,25 @@ Build **Priority Task Scheduler** as a focused exercise for **Hierarchical and P
 6. Add one normal example and one edge or failure example specifically for **Hierarchical and Priority Structures**.
 7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
 
+### Git Checkpoint
+
+You have completed **PRIORITY TASK SCHEDULER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/priority-task-scheduler
+git commit -m "feat(priority-task-scheduler): complete priority task scheduler"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 5](./CS.md#phase-5) | [CONTINUE TO CS PHASE 6](./CS.md#phase-6)
 
 <a id="cs-phase-6-project"></a>
@@ -1051,6 +1704,25 @@ Build **Hash Table and LRU Cache** as a focused exercise for **Hashing**. Keep t
 5. Check a normal case, a boundary case, and an invalid case against known answers.
 6. Add one normal example and one edge or failure example specifically for **Hashing**.
 7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
+
+### Git Checkpoint
+
+You have completed **HASH TABLE AND LRU CACHE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/hash-table-and-lru-cache
+git commit -m "feat(hash-table-and-lru-cache): complete hash table and lru cache"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 6](./CS.md#phase-6) | [CONTINUE TO CS PHASE 7](./CS.md#phase-7)
 
@@ -1085,6 +1757,25 @@ Build **Sorting Benchmark Explorer** as a focused exercise for **Sorting and Bin
 6. Add one normal example and one edge or failure example specifically for **Sorting and Binary Search**.
 7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
 
+### Git Checkpoint
+
+You have completed **SORTING BENCHMARK EXPLORER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/sorting-benchmark-explorer
+git commit -m "feat(sorting-benchmark-explorer): complete sorting benchmark explorer"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 7](./CS.md#phase-7) | [CONTINUE TO CS PHASE 8](./CS.md#phase-8)
 
 <a id="cs-phase-8-project"></a>
@@ -1117,6 +1808,25 @@ Build **Graph Route Planner** as a focused exercise for **Graphs**. Keep the dat
 5. Add one concrete recommendation or next action for every important finding.
 6. Add one normal example and one edge or failure example specifically for **Graphs**.
 7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
+
+### Git Checkpoint
+
+You have completed **GRAPH ROUTE PLANNER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/graph-route-planner
+git commit -m "docs(graph-route-planner): complete graph route planner"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 8](./CS.md#phase-8) | [CONTINUE TO CS PHASE 9](./CS.md#phase-9)
 
@@ -1151,6 +1861,25 @@ Build **Algorithm Pattern Workbook** as a focused exercise for **Algorithmic Pat
 6. Add one normal example and one edge or failure example specifically for **Algorithmic Patterns**.
 7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
 
+### Git Checkpoint
+
+You have completed **ALGORITHM PATTERN WORKBOOK**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/algorithm-pattern-workbook
+git commit -m "feat(algorithm-pattern-workbook): complete algorithm pattern workbook"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 9](./CS.md#phase-9) | [CONTINUE TO CS PHASE 10](./CS.md#phase-10)
 
 <a id="cs-phase-10-project"></a>
@@ -1183,6 +1912,25 @@ Build **Parking Lot LLD** as a focused exercise for **OOP and Low-Level Design**
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **OOP and Low-Level Design**.
 7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
+
+### Git Checkpoint
+
+You have completed **PARKING LOT LLD**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/parking-lot-lld
+git commit -m "feat(cs-parking-lot-lld): complete parking lot lld"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 10](./CS.md#phase-10) | [CONTINUE TO CS PHASE 11](./CS.md#phase-11)
 
@@ -1217,6 +1965,25 @@ Build **Shell and Scheduler Simulator** as a focused exercise for **Operating Sy
 6. Add one normal example and one edge or failure example specifically for **Operating Systems**.
 7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
 
+### Git Checkpoint
+
+You have completed **SHELL AND SCHEDULER SIMULATOR**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/shell-and-scheduler-simulator
+git commit -m "feat(shell-and-scheduler-simulator): complete shell and scheduler simulator"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 11](./CS.md#phase-11) | [CONTINUE TO CS PHASE 12](./CS.md#phase-12)
 
 <a id="cs-phase-12-project"></a>
@@ -1249,6 +2016,25 @@ Build **TCP Chat Service** as a focused exercise for **Computer Networks**. Keep
 5. Add an automated check for the main success path and the most important failure path.
 6. Add one normal example and one edge or failure example specifically for **Computer Networks**.
 7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
+
+### Git Checkpoint
+
+You have completed **TCP CHAT SERVICE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/tcp-chat-service
+git commit -m "feat(tcp-chat-service): complete tcp chat service"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 12](./CS.md#phase-12) | [CONTINUE TO CS PHASE 13](./CS.md#phase-13)
 
@@ -1283,6 +2069,25 @@ Build **Raw HTTP API Server** as a focused exercise for **Web, HTTP, and APIs**.
 6. Add one normal example and one edge or failure example specifically for **Web, HTTP, and APIs**.
 7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
 
+### Git Checkpoint
+
+You have completed **RAW HTTP API SERVER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/raw-http-api-server
+git commit -m "feat(raw-http-api-server): complete raw http api server"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 13](./CS.md#phase-13) | [CONTINUE TO CS PHASE 14](./CS.md#phase-14)
 
 <a id="cs-phase-14-project"></a>
@@ -1315,6 +2120,25 @@ Build **Transactional Library Database** as a focused exercise for **Databases a
 5. Prove that one rejected write and one multi-step successful operation behave correctly.
 6. Add one normal example and one edge or failure example specifically for **Databases and Data Modeling**.
 7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
+
+### Git Checkpoint
+
+You have completed **TRANSACTIONAL LIBRARY DATABASE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/transactional-library-database
+git commit -m "feat(transactional-library-database): complete transactional library database"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 14](./CS.md#phase-14) | [CONTINUE TO CS PHASE 15](./CS.md#phase-15)
 
@@ -1349,6 +2173,25 @@ Build **Secure Auth Service** as a focused exercise for **Authentication and Sec
 6. Add one normal example and one edge or failure example specifically for **Authentication and Security**.
 7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
 
+### Git Checkpoint
+
+You have completed **SECURE AUTH SERVICE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/secure-auth-service
+git commit -m "feat(secure-auth-service): complete secure auth service"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 15](./CS.md#phase-15) | [CONTINUE TO CS PHASE 16](./CS.md#phase-16)
 
 <a id="cs-phase-16-project"></a>
@@ -1381,6 +2224,25 @@ Build **Tested CI-Ready Service** as a focused exercise for **Software Engineeri
 5. Add an automated check for the main success path and the most important failure path.
 6. Add one normal example and one edge or failure example specifically for **Software Engineering and Testing**.
 7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
+
+### Git Checkpoint
+
+You have completed **TESTED CI-READY SERVICE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/tested-ci-ready-service
+git commit -m "test(tested-ci-ready-service): complete tested ci-ready service"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 16](./CS.md#phase-16) | [CONTINUE TO CS PHASE 17](./CS.md#phase-17)
 
@@ -1415,6 +2277,25 @@ Build **Scalable URL Shortener Design** as a focused exercise for **System Desig
 6. Add one normal example and one edge or failure example specifically for **System Design and Scalability**.
 7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
 
+### Git Checkpoint
+
+You have completed **SCALABLE URL SHORTENER DESIGN**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/scalable-url-shortener-design
+git commit -m "feat(scalable-url-shortener-design): complete scalable url shortener design"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 17](./CS.md#phase-17) | [CONTINUE TO CS PHASE 18](./CS.md#phase-18)
 
 <a id="cs-phase-18-project"></a>
@@ -1447,6 +2328,25 @@ Build **Replicated Ledger Simulator** as a focused exercise for **Distributed Sy
 5. Check a normal case, a boundary case, and an invalid case against known answers.
 6. Add one normal example and one edge or failure example specifically for **Distributed Systems**.
 7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
+
+### Git Checkpoint
+
+You have completed **REPLICATED LEDGER SIMULATOR**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/replicated-ledger-simulator
+git commit -m "feat(replicated-ledger-simulator): complete replicated ledger simulator"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 18](./CS.md#phase-18) | [CONTINUE TO CS PHASE 19](./CS.md#phase-19)
 
@@ -1481,6 +2381,25 @@ Build **Integrated Systems Capstone** as a focused exercise for **Projects**. Ke
 6. Add one normal example and one edge or failure example specifically for **Projects**.
 7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
 
+### Git Checkpoint
+
+You have completed **INTEGRATED SYSTEMS CAPSTONE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/integrated-systems-capstone
+git commit -m "feat(integrated-systems-capstone): complete integrated systems capstone"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 19](./CS.md#phase-19) | [CONTINUE TO CS PHASE 20](./CS.md#phase-20)
 
 <a id="cs-phase-20-project"></a>
@@ -1513,6 +2432,25 @@ Build **Timed Interview Harness** as a focused exercise for **Interview Mastery*
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Interview Mastery**.
 7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
+
+### Git Checkpoint
+
+You have completed **TIMED INTERVIEW HARNESS**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/timed-interview-harness
+git commit -m "feat(timed-interview-harness): complete timed interview harness"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 20](./CS.md#phase-20) | [BUILD THE CS MAIN PORTFOLIO PROJECT](#cs-main-portfolio-project)
 
@@ -1576,6 +2514,107 @@ No paid API, commercial license, or paid cloud resource is required. Use only ge
 19. **PHASE 19 - Projects (REQUIRED CAPSTONE-COMPLETION STEP):** Polish one end-to-end workflow, seed demo accounts, choose an open-source license, and make the public demo safe.
 20. **PHASE 20 - Interview Mastery (POST-BUILD PRACTICE; NO NEW PRODUCT FEATURE):** Rehearse a timed coding change and a system-design explanation using this project as the concrete example.
 
+#### GIT MILESTONE CHECKPOINTS
+
+Keep this capstone in `open-community-resource-exchange` inside the portfolio repository. The five checkpoints below preserve working phase groups without interrupting every implementation step. Test the completed group before committing; the repository-level ignore rules still apply.
+
+##### Git Checkpoint 1
+
+You have completed **Phases 1-4: executable prototype, complexity evidence, core structures, and category recursion**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-community-resource-exchange
+git commit -m "feat(resource-exchange): build executable domain prototype"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 2
+
+You have completed **Phases 5-10: indexed search, scheduling, graph recommendations, and cohesive domain design**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-community-resource-exchange
+git commit -m "feat(resource-exchange): implement search scheduling and recommendations"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 3
+
+You have completed **Phases 11-15: process model, HTTP API, database transactions, and authorization**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-community-resource-exchange
+git commit -m "feat(resource-exchange): integrate secure API and persistence"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 4
+
+You have completed **Phases 16-18: test suite, observability, scaling evidence, and idempotent delivery**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-community-resource-exchange
+git commit -m "test(resource-exchange): verify scalable distributed workflows"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Final Git Checkpoint
+
+You have completed **Phase 19: safe demo workflow, documentation, license, and public portfolio assets**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-community-resource-exchange
+git commit -m "docs(resource-exchange): complete community exchange release"
+git tag -a resource-exchange-v1.0.0 -m "First complete resource-exchange release"
+```
+
+Verify:
+
+```bash
+git log --oneline --decorate -5
+git status
+git tag
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
 #### HOW TO DEPLOY IT FOR FREE
 
 1. Start PostgreSQL, Valkey, the API, and the frontend locally with Docker Compose and run all tests.
@@ -1622,6 +2661,25 @@ Build **Decision Metric Brief** as a focused exercise for **Data Thinking**. Kee
 6. Add one normal example and one edge or failure example specifically for **Data Thinking**.
 7. Run the workflow from raw input to final output, then open every exported table or chart and check its labels and totals.
 
+### Git Checkpoint
+
+You have completed **DECISION METRIC BRIEF**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- data/decision-metric-brief
+git commit -m "docs(decision-metric-brief): complete decision metric brief"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW DATA PHASE 1](./Data.md#phase-1) | [CONTINUE TO DATA PHASE 2](./Data.md#phase-2)
 
 <a id="data-phase-2-project"></a>
@@ -1654,6 +2712,25 @@ Build **Spreadsheet KPI Dashboard** as a focused exercise for **Spreadsheets and
 5. Make the output readable without needing to inspect the source code.
 6. Add one normal example and one edge or failure example specifically for **Spreadsheets and Data Literacy**.
 7. Run the workflow from raw input to final output, then open every exported table or chart and check its labels and totals.
+
+### Git Checkpoint
+
+You have completed **SPREADSHEET KPI DASHBOARD**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- data/spreadsheet-kpi-dashboard
+git commit -m "feat(spreadsheet-kpi-dashboard): complete spreadsheet kpi dashboard"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW DATA PHASE 2](./Data.md#phase-2) | [CONTINUE TO DATA PHASE 3](./Data.md#phase-3)
 
@@ -1688,6 +2765,25 @@ Build **Reproducible Data CLI** as a focused exercise for **Python for Data**. K
 6. Add one normal example and one edge or failure example specifically for **Python for Data**.
 7. Run the workflow from raw input to final output, then open every exported table or chart and check its labels and totals.
 
+### Git Checkpoint
+
+You have completed **REPRODUCIBLE DATA CLI**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- data/reproducible-data-cli
+git commit -m "feat(reproducible-data-cli): complete reproducible data cli"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW DATA PHASE 3](./Data.md#phase-3) | [CONTINUE TO DATA PHASE 4](./Data.md#phase-4)
 
 <a id="data-phase-4-project"></a>
@@ -1720,6 +2816,25 @@ Build **SQL Bookstore Database** as a focused exercise for **SQL Foundations**. 
 5. Prove that one rejected write and one multi-step successful operation behave correctly.
 6. Add one normal example and one edge or failure example specifically for **SQL Foundations**.
 7. Run the workflow from raw input to final output, then open every exported table or chart and check its labels and totals.
+
+### Git Checkpoint
+
+You have completed **SQL BOOKSTORE DATABASE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- data/sql-bookstore-database
+git commit -m "feat(sql-bookstore-database): complete sql bookstore database"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW DATA PHASE 4](./Data.md#phase-4) | [CONTINUE TO DATA PHASE 5](./Data.md#phase-5)
 
@@ -1754,6 +2869,25 @@ Build **Sales Cohort Analysis** as a focused exercise for **SQL Joins and Aggreg
 6. Add one normal example and one edge or failure example specifically for **SQL Joins and Aggregations**.
 7. Run the workflow from raw input to final output, then open every exported table or chart and check its labels and totals.
 
+### Git Checkpoint
+
+You have completed **SALES COHORT ANALYSIS**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- data/sales-cohort-analysis
+git commit -m "feat(sales-cohort-analysis): complete sales cohort analysis"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW DATA PHASE 5](./Data.md#phase-5) | [CONTINUE TO DATA PHASE 6](./Data.md#phase-6)
 
 <a id="data-phase-6-project"></a>
@@ -1786,6 +2920,25 @@ Build **Window Function Analytics Pack** as a focused exercise for **Advanced SQ
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Advanced SQL**.
 7. Run the workflow from raw input to final output, then open every exported table or chart and check its labels and totals.
+
+### Git Checkpoint
+
+You have completed **WINDOW FUNCTION ANALYTICS PACK**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- data/window-function-analytics-pack
+git commit -m "feat(window-function-analytics-pack): complete window function analytics pack"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW DATA PHASE 6](./Data.md#phase-6) | [CONTINUE TO DATA PHASE 7](./Data.md#phase-7)
 
@@ -1820,6 +2973,25 @@ Build **A/B Test Analyzer** as a focused exercise for **Statistics for Analysts*
 6. Add one normal example and one edge or failure example specifically for **Statistics for Analysts**.
 7. Run the workflow from raw input to final output, then open every exported table or chart and check its labels and totals.
 
+### Git Checkpoint
+
+You have completed **A/B TEST ANALYZER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- data/a-b-test-analyzer
+git commit -m "test(a-b-test-analyzer): complete a/b test analyzer"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW DATA PHASE 7](./Data.md#phase-7) | [CONTINUE TO DATA PHASE 8](./Data.md#phase-8)
 
 <a id="data-phase-8-project"></a>
@@ -1852,6 +3024,25 @@ Build **Dirty Dataset Cleaner** as a focused exercise for **Pandas and Wrangling
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Pandas and Wrangling**.
 7. Run the workflow from raw input to final output, then open every exported table or chart and check its labels and totals.
+
+### Git Checkpoint
+
+You have completed **DIRTY DATASET CLEANER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- data/dirty-dataset-cleaner
+git commit -m "feat(dirty-dataset-cleaner): complete dirty dataset cleaner"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW DATA PHASE 8](./Data.md#phase-8) | [CONTINUE TO DATA PHASE 9](./Data.md#phase-9)
 
@@ -1886,6 +3077,25 @@ Build **Executive Data Story** as a focused exercise for **Visualization and Sto
 6. Add one normal example and one edge or failure example specifically for **Visualization and Storytelling**.
 7. Run the workflow from raw input to final output, then open every exported table or chart and check its labels and totals.
 
+### Git Checkpoint
+
+You have completed **EXECUTIVE DATA STORY**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- data/executive-data-story
+git commit -m "feat(executive-data-story): complete executive data story"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW DATA PHASE 9](./Data.md#phase-9) | [CONTINUE TO DATA PHASE 10](./Data.md#phase-10)
 
 <a id="data-phase-10-project"></a>
@@ -1918,6 +3128,25 @@ Build **Product Funnel EDA** as a focused exercise for **EDA, Metrics, and Analy
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **EDA, Metrics, and Analytics**.
 7. Run the workflow from raw input to final output, then open every exported table or chart and check its labels and totals.
+
+### Git Checkpoint
+
+You have completed **PRODUCT FUNNEL EDA**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- data/product-funnel-eda
+git commit -m "feat(product-funnel-eda): complete product funnel eda"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW DATA PHASE 10](./Data.md#phase-10) | [CONTINUE TO DATA PHASE 11](./Data.md#phase-11)
 
@@ -1952,6 +3181,25 @@ Build **Normalized Order Database** as a focused exercise for **Relational Model
 6. Add one normal example and one edge or failure example specifically for **Relational Modeling**.
 7. Run the workflow from raw input to final output, then open every exported table or chart and check its labels and totals.
 
+### Git Checkpoint
+
+You have completed **NORMALIZED ORDER DATABASE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- data/normalized-order-database
+git commit -m "feat(normalized-order-database): complete normalized order database"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW DATA PHASE 11](./Data.md#phase-11) | [CONTINUE TO DATA PHASE 12](./Data.md#phase-12)
 
 <a id="data-phase-12-project"></a>
@@ -1984,6 +3232,25 @@ Build **Star Schema Warehouse** as a focused exercise for **Warehouses and Dimen
 5. Prove that one rejected write and one multi-step successful operation behave correctly.
 6. Add one normal example and one edge or failure example specifically for **Warehouses and Dimensional Modeling**.
 7. Run the workflow from raw input to final output, then open every exported table or chart and check its labels and totals.
+
+### Git Checkpoint
+
+You have completed **STAR SCHEMA WAREHOUSE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- data/star-schema-warehouse
+git commit -m "feat(star-schema-warehouse): complete star schema warehouse"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW DATA PHASE 12](./Data.md#phase-12) | [CONTINUE TO DATA PHASE 13](./Data.md#phase-13)
 
@@ -2018,6 +3285,25 @@ Build **Incremental ETL Pipeline** as a focused exercise for **ETL and ELT Pipel
 6. Add one normal example and one edge or failure example specifically for **ETL and ELT Pipelines**.
 7. Run the workflow from raw input to final output, then open every exported table or chart and check its labels and totals.
 
+### Git Checkpoint
+
+You have completed **INCREMENTAL ETL PIPELINE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- data/incremental-etl-pipeline
+git commit -m "chore(incremental-etl-pipeline): complete incremental etl pipeline"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW DATA PHASE 13](./Data.md#phase-13) | [CONTINUE TO DATA PHASE 14](./Data.md#phase-14)
 
 <a id="data-phase-14-project"></a>
@@ -2050,6 +3336,25 @@ Build **Scheduled Airflow Pipeline** as a focused exercise for **Airflow and Con
 5. Rerun the same input and prove that the final output remains correct.
 6. Add one normal example and one edge or failure example specifically for **Airflow and Containers**.
 7. Run the workflow from raw input to final output, then open every exported table or chart and check its labels and totals.
+
+### Git Checkpoint
+
+You have completed **SCHEDULED AIRFLOW PIPELINE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- data/scheduled-airflow-pipeline
+git commit -m "chore(scheduled-airflow-pipeline): complete scheduled airflow pipeline"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW DATA PHASE 14](./Data.md#phase-14) | [CONTINUE TO DATA PHASE 15](./Data.md#phase-15)
 
@@ -2084,6 +3389,25 @@ Build **dbt Analytics Project** as a focused exercise for **Analytics Engineerin
 6. Add one normal example and one edge or failure example specifically for **Analytics Engineering with dbt**.
 7. Run the workflow from raw input to final output, then open every exported table or chart and check its labels and totals.
 
+### Git Checkpoint
+
+You have completed **DBT ANALYTICS PROJECT**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- data/dbt-analytics-project
+git commit -m "feat(dbt-analytics-project): complete dbt analytics project"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW DATA PHASE 15](./Data.md#phase-15) | [CONTINUE TO DATA PHASE 16](./Data.md#phase-16)
 
 <a id="data-phase-16-project"></a>
@@ -2116,6 +3440,25 @@ Build **Cloud Warehouse Migration** as a focused exercise for **Cloud Data Platf
 5. Prove that one rejected write and one multi-step successful operation behave correctly.
 6. Add one normal example and one edge or failure example specifically for **Cloud Data Platforms**.
 7. Run the workflow from raw input to final output, then open every exported table or chart and check its labels and totals.
+
+### Git Checkpoint
+
+You have completed **CLOUD WAREHOUSE MIGRATION**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- data/cloud-warehouse-migration
+git commit -m "feat(cloud-warehouse-migration): complete cloud warehouse migration"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW DATA PHASE 16](./Data.md#phase-16) | [CONTINUE TO DATA PHASE 17](./Data.md#phase-17)
 
@@ -2150,6 +3493,25 @@ Build **Distributed Spark Batch Job** as a focused exercise for **Big Data with 
 6. Add one normal example and one edge or failure example specifically for **Big Data with Spark**.
 7. Run the workflow from raw input to final output, then open every exported table or chart and check its labels and totals.
 
+### Git Checkpoint
+
+You have completed **DISTRIBUTED SPARK BATCH JOB**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- data/distributed-spark-batch-job
+git commit -m "feat(distributed-spark-batch-job): complete distributed spark batch job"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW DATA PHASE 17](./Data.md#phase-17) | [CONTINUE TO DATA PHASE 18](./Data.md#phase-18)
 
 <a id="data-phase-18-project"></a>
@@ -2182,6 +3544,25 @@ Build **Kafka Streaming Metrics** as a focused exercise for **Streaming with Kaf
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Streaming with Kafka**.
 7. Run the workflow from raw input to final output, then open every exported table or chart and check its labels and totals.
+
+### Git Checkpoint
+
+You have completed **KAFKA STREAMING METRICS**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- data/kafka-streaming-metrics
+git commit -m "feat(kafka-streaming-metrics): complete kafka streaming metrics"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW DATA PHASE 18](./Data.md#phase-18) | [CONTINUE TO DATA PHASE 19](./Data.md#phase-19)
 
@@ -2216,6 +3597,25 @@ Build **Data Quality Portfolio** as a focused exercise for **Data Quality and Po
 6. Add one normal example and one edge or failure example specifically for **Data Quality and Portfolio**.
 7. Run the workflow from raw input to final output, then open every exported table or chart and check its labels and totals.
 
+### Git Checkpoint
+
+You have completed **DATA QUALITY PORTFOLIO**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- data/data-quality-portfolio
+git commit -m "feat(data-quality-portfolio): complete data quality portfolio"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW DATA PHASE 19](./Data.md#phase-19) | [CONTINUE TO DATA PHASE 20](./Data.md#phase-20)
 
 <a id="data-phase-20-project"></a>
@@ -2248,6 +3648,25 @@ Build **Timed Analytics Case Study** as a focused exercise for **Interview Maste
 5. Add one concrete recommendation or next action for every important finding.
 6. Add one normal example and one edge or failure example specifically for **Interview Mastery**.
 7. Run the workflow from raw input to final output, then open every exported table or chart and check its labels and totals.
+
+### Git Checkpoint
+
+You have completed **TIMED ANALYTICS CASE STUDY**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- data/timed-analytics-case-study
+git commit -m "feat(timed-analytics-case-study): complete timed analytics case study"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW DATA PHASE 20](./Data.md#phase-20) | [BUILD THE DATA MAIN PORTFOLIO PROJECT](#data-main-portfolio-project)
 
@@ -2310,6 +3729,107 @@ No paid API, commercial license, or paid cloud resource is required. Use only ge
 19. **PHASE 19 - Data Quality and Portfolio (REQUIRED CAPSTONE-COMPLETION STEP):** Add automated quality gates, a small data catalog, open-source license, sample data, and a polished public dashboard.
 20. **PHASE 20 - Interview Mastery (POST-BUILD PRACTICE; NO NEW PRODUCT FEATURE):** Complete a timed SQL/analytics case using the platform and explain metric definitions, trade-offs, and failures aloud.
 
+#### GIT MILESTONE CHECKPOINTS
+
+Keep this capstone in `open-city-mobility-analytics-platform` inside the portfolio repository. The five checkpoints below preserve working phase groups without interrupting every implementation step. Test the completed group before committing; the repository-level ignore rules still apply.
+
+##### Git Checkpoint 1
+
+You have completed **Phases 1-4: metric contract, spreadsheet prototype, validated CSV flow, and SQL foundation**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-city-mobility-analytics-platform
+git commit -m "feat(mobility-data): establish metrics and ingestion foundation"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 2
+
+You have completed **Phases 5-10: joined analytics, statistics, wrangling, and dashboard story**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-city-mobility-analytics-platform
+git commit -m "feat(mobility-data): build trusted mobility analytics"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 3
+
+You have completed **Phases 11-15: warehouse model, incremental pipeline, Airflow, and dbt lineage**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-city-mobility-analytics-platform
+git commit -m "feat(mobility-data): integrate warehouse and orchestrated models"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 4
+
+You have completed **Phases 16-18: portable platform, Spark batch, and Kafka streaming verification**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-city-mobility-analytics-platform
+git commit -m "test(mobility-data): verify batch and streaming pipelines"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Final Git Checkpoint
+
+You have completed **Phase 19: quality gates, catalog, sample data, and polished dashboard**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-city-mobility-analytics-platform
+git commit -m "docs(mobility-data): complete city mobility analytics release"
+git tag -a mobility-data-v1.0.0 -m "First complete mobility-data release"
+```
+
+Verify:
+
+```bash
+git log --oneline --decorate -5
+git status
+git tag
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
 #### HOW TO DEPLOY IT FOR FREE
 
 1. Run the full platform locally with Docker Compose using PostgreSQL, Airflow, Kafka, dbt, and the chosen dashboard.
@@ -2356,6 +3876,25 @@ Build **Latency vs Throughput Lab** as a focused exercise for **Network Thinking
 6. Add one normal example and one edge or failure example specifically for **Network Thinking**.
 7. Run the local lab, save only a small non-sensitive capture or result, and confirm the normal and failure behaviors.
 
+### Git Checkpoint
+
+You have completed **LATENCY VS THROUGHPUT LAB**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- networks/latency-vs-throughput-lab
+git commit -m "feat(latency-vs-throughput-lab): complete latency vs throughput lab"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 1](./Networks.md#phase-1) | [CONTINUE TO NETWORKS PHASE 2](./Networks.md#phase-2)
 
 <a id="networks-phase-2-project"></a>
@@ -2388,6 +3927,25 @@ Build **Noisy Link Simulator** as a focused exercise for **Physical Layer**. Kee
 5. Check a normal case, a boundary case, and an invalid case against known answers.
 6. Add one normal example and one edge or failure example specifically for **Physical Layer**.
 7. Run the local lab, save only a small non-sensitive capture or result, and confirm the normal and failure behaviors.
+
+### Git Checkpoint
+
+You have completed **NOISY LINK SIMULATOR**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- networks/noisy-link-simulator
+git commit -m "feat(noisy-link-simulator): complete noisy link simulator"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 2](./Networks.md#phase-2) | [CONTINUE TO NETWORKS PHASE 3](./Networks.md#phase-3)
 
@@ -2422,6 +3980,25 @@ Build **Ethernet Frame Encoder** as a focused exercise for **Ethernet and Data L
 6. Add one normal example and one edge or failure example specifically for **Ethernet and Data Link**.
 7. Run the local lab, save only a small non-sensitive capture or result, and confirm the normal and failure behaviors.
 
+### Git Checkpoint
+
+You have completed **ETHERNET FRAME ENCODER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- networks/ethernet-frame-encoder
+git commit -m "feat(ethernet-frame-encoder): complete ethernet frame encoder"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 3](./Networks.md#phase-3) | [CONTINUE TO NETWORKS PHASE 4](./Networks.md#phase-4)
 
 <a id="networks-phase-4-project"></a>
@@ -2454,6 +4031,25 @@ Build **Learning Switch Simulator** as a focused exercise for **Switching and VL
 5. Check a normal case, a boundary case, and an invalid case against known answers.
 6. Add one normal example and one edge or failure example specifically for **Switching and VLANs**.
 7. Run the local lab, save only a small non-sensitive capture or result, and confirm the normal and failure behaviors.
+
+### Git Checkpoint
+
+You have completed **LEARNING SWITCH SIMULATOR**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- networks/learning-switch-simulator
+git commit -m "feat(learning-switch-simulator): complete learning switch simulator"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 4](./Networks.md#phase-4) | [CONTINUE TO NETWORKS PHASE 5](./Networks.md#phase-5)
 
@@ -2488,6 +4084,25 @@ Build **Subnet Calculator** as a focused exercise for **IP Addressing and Subnet
 6. Add one normal example and one edge or failure example specifically for **IP Addressing and Subnetting**.
 7. Run the local lab, save only a small non-sensitive capture or result, and confirm the normal and failure behaviors.
 
+### Git Checkpoint
+
+You have completed **SUBNET CALCULATOR**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- networks/subnet-calculator
+git commit -m "feat(subnet-calculator): complete subnet calculator"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 5](./Networks.md#phase-5) | [CONTINUE TO NETWORKS PHASE 6](./Networks.md#phase-6)
 
 <a id="networks-phase-6-project"></a>
@@ -2520,6 +4135,25 @@ Build **Longest-Prefix Router** as a focused exercise for **Routing and Forwardi
 5. Check a normal case, a boundary case, and an invalid case against known answers.
 6. Add one normal example and one edge or failure example specifically for **Routing and Forwarding**.
 7. Run the local lab, save only a small non-sensitive capture or result, and confirm the normal and failure behaviors.
+
+### Git Checkpoint
+
+You have completed **LONGEST-PREFIX ROUTER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- networks/longest-prefix-router
+git commit -m "fix(longest-prefix-router): complete longest-prefix router"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 6](./Networks.md#phase-6) | [CONTINUE TO NETWORKS PHASE 7](./Networks.md#phase-7)
 
@@ -2554,6 +4188,25 @@ Build **DHCP/NAT Table Simulator** as a focused exercise for **ARP, DHCP, ICMP, 
 6. Add one normal example and one edge or failure example specifically for **ARP, DHCP, ICMP, and NAT**.
 7. Run the local lab, save only a small non-sensitive capture or result, and confirm the normal and failure behaviors.
 
+### Git Checkpoint
+
+You have completed **DHCP/NAT TABLE SIMULATOR**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- networks/dhcp-nat-table-simulator
+git commit -m "feat(dhcp-nat-table-simulator): complete dhcp/nat table simulator"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 7](./Networks.md#phase-7) | [CONTINUE TO NETWORKS PHASE 8](./Networks.md#phase-8)
 
 <a id="networks-phase-8-project"></a>
@@ -2586,6 +4239,25 @@ Build **Packet Encapsulation Visualizer** as a focused exercise for **OSI and TC
 5. Make the output readable without needing to inspect the source code.
 6. Add one normal example and one edge or failure example specifically for **OSI and TCP/IP Models**.
 7. Run the local lab, save only a small non-sensitive capture or result, and confirm the normal and failure behaviors.
+
+### Git Checkpoint
+
+You have completed **PACKET ENCAPSULATION VISUALIZER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- networks/packet-encapsulation-visualizer
+git commit -m "feat(packet-encapsulation-visualizer): complete packet encapsulation visualizer"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 8](./Networks.md#phase-8) | [CONTINUE TO NETWORKS PHASE 9](./Networks.md#phase-9)
 
@@ -2620,6 +4292,25 @@ Build **Reliable UDP Chat** as a focused exercise for **UDP**. Keep the data and
 6. Add one normal example and one edge or failure example specifically for **UDP**.
 7. Run the local lab, save only a small non-sensitive capture or result, and confirm the normal and failure behaviors.
 
+### Git Checkpoint
+
+You have completed **RELIABLE UDP CHAT**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- networks/reliable-udp-chat
+git commit -m "feat(reliable-udp-chat): complete reliable udp chat"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 9](./Networks.md#phase-9) | [CONTINUE TO NETWORKS PHASE 10](./Networks.md#phase-10)
 
 <a id="networks-phase-10-project"></a>
@@ -2652,6 +4343,25 @@ Build **TCP State Trace** as a focused exercise for **TCP**. Keep the data and i
 5. Check a normal case, a boundary case, and an invalid case against known answers.
 6. Add one normal example and one edge or failure example specifically for **TCP**.
 7. Run the local lab, save only a small non-sensitive capture or result, and confirm the normal and failure behaviors.
+
+### Git Checkpoint
+
+You have completed **TCP STATE TRACE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- networks/tcp-state-trace
+git commit -m "feat(tcp-state-trace): complete tcp state trace"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 10](./Networks.md#phase-10) | [CONTINUE TO NETWORKS PHASE 11](./Networks.md#phase-11)
 
@@ -2686,6 +4396,25 @@ Build **Multi-client Socket Server** as a focused exercise for **Socket Programm
 6. Add one normal example and one edge or failure example specifically for **Socket Programming**.
 7. Run the local lab, save only a small non-sensitive capture or result, and confirm the normal and failure behaviors.
 
+### Git Checkpoint
+
+You have completed **MULTI-CLIENT SOCKET SERVER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- networks/multi-client-socket-server
+git commit -m "feat(multi-client-socket-server): complete multi-client socket server"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 11](./Networks.md#phase-11) | [CONTINUE TO NETWORKS PHASE 12](./Networks.md#phase-12)
 
 <a id="networks-phase-12-project"></a>
@@ -2718,6 +4447,25 @@ Build **Recursive DNS Resolver** as a focused exercise for **DNS**. Keep the dat
 5. Add an automated check for the main success path and the most important failure path.
 6. Add one normal example and one edge or failure example specifically for **DNS**.
 7. Run the local lab, save only a small non-sensitive capture or result, and confirm the normal and failure behaviors.
+
+### Git Checkpoint
+
+You have completed **RECURSIVE DNS RESOLVER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- networks/recursive-dns-resolver
+git commit -m "feat(recursive-dns-resolver): complete recursive dns resolver"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 12](./Networks.md#phase-12) | [CONTINUE TO NETWORKS PHASE 13](./Networks.md#phase-13)
 
@@ -2752,6 +4500,25 @@ Build **Raw HTTP Exchange** as a focused exercise for **HTTP and the Web**. Keep
 6. Add one normal example and one edge or failure example specifically for **HTTP and the Web**.
 7. Run the local lab, save only a small non-sensitive capture or result, and confirm the normal and failure behaviors.
 
+### Git Checkpoint
+
+You have completed **RAW HTTP EXCHANGE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- networks/raw-http-exchange
+git commit -m "feat(raw-http-exchange): complete raw http exchange"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 13](./Networks.md#phase-13) | [CONTINUE TO NETWORKS PHASE 14](./Networks.md#phase-14)
 
 <a id="networks-phase-14-project"></a>
@@ -2784,6 +4551,25 @@ Build **TLS Certificate Inspector** as a focused exercise for **TLS and HTTPS**.
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **TLS and HTTPS**.
 7. Run the local lab, save only a small non-sensitive capture or result, and confirm the normal and failure behaviors.
+
+### Git Checkpoint
+
+You have completed **TLS CERTIFICATE INSPECTOR**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- networks/tls-certificate-inspector
+git commit -m "feat(tls-certificate-inspector): complete tls certificate inspector"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 14](./Networks.md#phase-14) | [CONTINUE TO NETWORKS PHASE 15](./Networks.md#phase-15)
 
@@ -2818,6 +4604,25 @@ Build **Packet Forensics Report** as a focused exercise for **Packet Analysis**.
 6. Add one normal example and one edge or failure example specifically for **Packet Analysis**.
 7. Run the local lab, save only a small non-sensitive capture or result, and confirm the normal and failure behaviors.
 
+### Git Checkpoint
+
+You have completed **PACKET FORENSICS REPORT**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- networks/packet-forensics-report
+git commit -m "docs(packet-forensics-report): complete packet forensics report"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 15](./Networks.md#phase-15) | [CONTINUE TO NETWORKS PHASE 16](./Networks.md#phase-16)
 
 <a id="networks-phase-16-project"></a>
@@ -2850,6 +4655,25 @@ Build **Wi-Fi Survey and Heatmap** as a focused exercise for **Wireless and Wi-F
 5. Add one concrete recommendation or next action for every important finding.
 6. Add one normal example and one edge or failure example specifically for **Wireless and Wi-Fi**.
 7. Run the local lab, save only a small non-sensitive capture or result, and confirm the normal and failure behaviors.
+
+### Git Checkpoint
+
+You have completed **WI-FI SURVEY AND HEATMAP**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- networks/wi-fi-survey-and-heatmap
+git commit -m "docs(wi-fi-survey-and-heatmap): complete wi-fi survey and heatmap"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 16](./Networks.md#phase-16) | [CONTINUE TO NETWORKS PHASE 17](./Networks.md#phase-17)
 
@@ -2884,6 +4708,25 @@ Build **Reverse Proxy Load Lab** as a focused exercise for **CDN, Load Balancers
 6. Add one normal example and one edge or failure example specifically for **CDN, Load Balancers, and Edge**.
 7. Run the local lab, save only a small non-sensitive capture or result, and confirm the normal and failure behaviors.
 
+### Git Checkpoint
+
+You have completed **REVERSE PROXY LOAD LAB**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- networks/reverse-proxy-load-lab
+git commit -m "feat(reverse-proxy-load-lab): complete reverse proxy load lab"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 17](./Networks.md#phase-17) | [CONTINUE TO NETWORKS PHASE 18](./Networks.md#phase-18)
 
 <a id="networks-phase-18-project"></a>
@@ -2916,6 +4759,25 @@ Build **BGP Policy Simulator** as a focused exercise for **BGP and Internet Arch
 5. Check a normal case, a boundary case, and an invalid case against known answers.
 6. Add one normal example and one edge or failure example specifically for **BGP and Internet Architecture**.
 7. Run the local lab, save only a small non-sensitive capture or result, and confirm the normal and failure behaviors.
+
+### Git Checkpoint
+
+You have completed **BGP POLICY SIMULATOR**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- networks/bgp-policy-simulator
+git commit -m "docs(bgp-policy-simulator): complete bgp policy simulator"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 18](./Networks.md#phase-18) | [CONTINUE TO NETWORKS PHASE 19](./Networks.md#phase-19)
 
@@ -2950,6 +4812,25 @@ Build **Automated Network Lab Portfolio** as a focused exercise for **Labs and A
 6. Add one normal example and one edge or failure example specifically for **Labs and Automation**.
 7. Run the local lab, save only a small non-sensitive capture or result, and confirm the normal and failure behaviors.
 
+### Git Checkpoint
+
+You have completed **AUTOMATED NETWORK LAB PORTFOLIO**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- networks/automated-network-lab-portfolio
+git commit -m "feat(automated-network-lab-portfolio): complete automated network lab portfolio"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 19](./Networks.md#phase-19) | [CONTINUE TO NETWORKS PHASE 20](./Networks.md#phase-20)
 
 <a id="networks-phase-20-project"></a>
@@ -2982,6 +4863,25 @@ Build **Timed Troubleshooting Drill** as a focused exercise for **Interviews**. 
 5. Include one case where the preferred approach fails or becomes a poor choice.
 6. Add one normal example and one edge or failure example specifically for **Interviews**.
 7. Run the local lab, save only a small non-sensitive capture or result, and confirm the normal and failure behaviors.
+
+### Git Checkpoint
+
+You have completed **TIMED TROUBLESHOOTING DRILL**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- networks/timed-troubleshooting-drill
+git commit -m "feat(timed-troubleshooting-drill): complete timed troubleshooting drill"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 20](./Networks.md#phase-20) | [BUILD THE NETWORKS MAIN PORTFOLIO PROJECT](#networks-main-portfolio-project)
 
@@ -3044,6 +4944,107 @@ No paid API, commercial license, or paid cloud resource is required. Use only ge
 19. **PHASE 19 - Labs and Automation (REQUIRED CAPSTONE-COMPLETION STEP):** Automate lab start, tests, fault injection, sanitized captures, and teardown with one command.
 20. **PHASE 20 - Interviews (POST-BUILD PRACTICE; NO NEW PRODUCT FEATURE):** Run a timed unknown-failure drill and explain the symptom-to-layer-to-tool reasoning without guessing.
 
+#### GIT MILESTONE CHECKPOINTS
+
+Keep this capstone in `open-network-operations-lab` inside the portfolio repository. The five checkpoints below preserve working phase groups without interrupting every implementation step. Test the completed group before committing; the repository-level ignore rules still apply.
+
+##### Git Checkpoint 1
+
+You have completed **Phases 1-4: requirements, packet evidence, addressing, switching, and VLAN topology**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-network-operations-lab
+git commit -m "feat(network-lab): establish observable routed topology"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 2
+
+You have completed **Phases 5-10: routing, DNS, transport, TLS, HTTP, and load-balanced services**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-network-operations-lab
+git commit -m "feat(network-lab): integrate secure network services"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 3
+
+You have completed **Phases 11-15: wireless, security controls, automation, virtualization, and cloud networking**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-network-operations-lab
+git commit -m "feat(network-lab): automate protected hybrid topology"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 4
+
+You have completed **Phases 16-18: monitoring, performance baselines, and ordered troubleshooting failures**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-network-operations-lab
+git commit -m "test(network-lab): verify monitoring and fault diagnosis"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Final Git Checkpoint
+
+You have completed **Phase 19: one-command lab, sanitized captures, diagrams, and teardown evidence**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-network-operations-lab
+git commit -m "docs(network-lab): complete network operations lab release"
+git tag -a network-lab-v1.0.0 -m "First complete network-lab release"
+```
+
+Verify:
+
+```bash
+git log --oneline --decorate -5
+git status
+git tag
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
 #### HOW TO DEPLOY IT FOR FREE
 
 1. Run the entire network only on a local machine with containerlab/GNS3 and Docker or Podman; do not expose router management ports.
@@ -3090,6 +5091,25 @@ Build **Rule vs Learner Benchmark** as a focused exercise for **AI Thinking**. K
 6. Add one normal example and one edge or failure example specifically for **AI Thinking**.
 7. Run the full notebook or script from a clean session, save the chosen metric, and confirm the same seed gives a comparable result.
 
+### Git Checkpoint
+
+You have completed **RULE VS LEARNER BENCHMARK**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- ai/rule-vs-learner-benchmark
+git commit -m "feat(rule-vs-learner-benchmark): complete rule vs learner benchmark"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW AI PHASE 1](./AI.md#phase-1) | [CONTINUE TO AI PHASE 2](./AI.md#phase-2)
 
 <a id="ai-phase-2-project"></a>
@@ -3122,6 +5142,25 @@ Build **Gradient Descent Visualizer** as a focused exercise for **Math for ML**.
 5. Make the output readable without needing to inspect the source code.
 6. Add one normal example and one edge or failure example specifically for **Math for ML**.
 7. Run the full notebook or script from a clean session, save the chosen metric, and confirm the same seed gives a comparable result.
+
+### Git Checkpoint
+
+You have completed **GRADIENT DESCENT VISUALIZER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- ai/gradient-descent-visualizer
+git commit -m "feat(gradient-descent-visualizer): complete gradient descent visualizer"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW AI PHASE 2](./AI.md#phase-2) | [CONTINUE TO AI PHASE 3](./AI.md#phase-3)
 
@@ -3156,6 +5195,25 @@ Build **NumPy/Pandas Dataset Lab** as a focused exercise for **Python for AI**. 
 6. Add one normal example and one edge or failure example specifically for **Python for AI**.
 7. Run the full notebook or script from a clean session, save the chosen metric, and confirm the same seed gives a comparable result.
 
+### Git Checkpoint
+
+You have completed **NUMPY/PANDAS DATASET LAB**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- ai/numpy-pandas-dataset-lab
+git commit -m "feat(numpy-pandas-dataset-lab): complete numpy/pandas dataset lab"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW AI PHASE 3](./AI.md#phase-3) | [CONTINUE TO AI PHASE 4](./AI.md#phase-4)
 
 <a id="ai-phase-4-project"></a>
@@ -3188,6 +5246,25 @@ Build **Regression and Classification Baseline** as a focused exercise for **Cla
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Classical Machine Learning**.
 7. Run the full notebook or script from a clean session, save the chosen metric, and confirm the same seed gives a comparable result.
+
+### Git Checkpoint
+
+You have completed **REGRESSION AND CLASSIFICATION BASELINE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- ai/regression-and-classification-baseline
+git commit -m "chore(regression-and-classification-baseline): complete regression and classification baseline"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW AI PHASE 4](./AI.md#phase-4) | [CONTINUE TO AI PHASE 5](./AI.md#phase-5)
 
@@ -3222,6 +5299,25 @@ Build **Leakage-Proof Evaluation Harness** as a focused exercise for **Evaluatio
 6. Add one normal example and one edge or failure example specifically for **Evaluation and Generalization**.
 7. Run the full notebook or script from a clean session, save the chosen metric, and confirm the same seed gives a comparable result.
 
+### Git Checkpoint
+
+You have completed **LEAKAGE-PROOF EVALUATION HARNESS**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- ai/leakage-proof-evaluation-harness
+git commit -m "feat(leakage-proof-evaluation-harness): complete leakage-proof evaluation harness"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW AI PHASE 5](./AI.md#phase-5) | [CONTINUE TO AI PHASE 6](./AI.md#phase-6)
 
 <a id="ai-phase-6-project"></a>
@@ -3254,6 +5350,25 @@ Build **Ensemble Model Showdown** as a focused exercise for **Trees and Ensemble
 5. Include one case where the preferred approach fails or becomes a poor choice.
 6. Add one normal example and one edge or failure example specifically for **Trees and Ensembles**.
 7. Run the full notebook or script from a clean session, save the chosen metric, and confirm the same seed gives a comparable result.
+
+### Git Checkpoint
+
+You have completed **ENSEMBLE MODEL SHOWDOWN**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- ai/ensemble-model-showdown
+git commit -m "feat(ensemble-model-showdown): complete ensemble model showdown"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW AI PHASE 6](./AI.md#phase-6) | [CONTINUE TO AI PHASE 7](./AI.md#phase-7)
 
@@ -3288,6 +5403,25 @@ Build **Neural Network from Scratch** as a focused exercise for **Neural Network
 6. Add one normal example and one edge or failure example specifically for **Neural Network Basics**.
 7. Run the full notebook or script from a clean session, save the chosen metric, and confirm the same seed gives a comparable result.
 
+### Git Checkpoint
+
+You have completed **NEURAL NETWORK FROM SCRATCH**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- ai/neural-network-from-scratch
+git commit -m "feat(neural-network-from-scratch): complete neural network from scratch"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW AI PHASE 7](./AI.md#phase-7) | [CONTINUE TO AI PHASE 8](./AI.md#phase-8)
 
 <a id="ai-phase-8-project"></a>
@@ -3320,6 +5454,25 @@ Build **Tiny Autograd Engine** as a focused exercise for **Backpropagation and O
 5. Check a normal case, a boundary case, and an invalid case against known answers.
 6. Add one normal example and one edge or failure example specifically for **Backpropagation and Optimizers**.
 7. Run the full notebook or script from a clean session, save the chosen metric, and confirm the same seed gives a comparable result.
+
+### Git Checkpoint
+
+You have completed **TINY AUTOGRAD ENGINE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- ai/tiny-autograd-engine
+git commit -m "feat(tiny-autograd-engine): complete tiny autograd engine"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW AI PHASE 8](./AI.md#phase-8) | [CONTINUE TO AI PHASE 9](./AI.md#phase-9)
 
@@ -3354,6 +5507,25 @@ Build **Reusable PyTorch Trainer** as a focused exercise for **PyTorch Practice*
 6. Add one normal example and one edge or failure example specifically for **PyTorch Practice**.
 7. Run the full notebook or script from a clean session, save the chosen metric, and confirm the same seed gives a comparable result.
 
+### Git Checkpoint
+
+You have completed **REUSABLE PYTORCH TRAINER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- ai/reusable-pytorch-trainer
+git commit -m "feat(reusable-pytorch-trainer): complete reusable pytorch trainer"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW AI PHASE 9](./AI.md#phase-9) | [CONTINUE TO AI PHASE 10](./AI.md#phase-10)
 
 <a id="ai-phase-10-project"></a>
@@ -3386,6 +5558,25 @@ Build **Transfer-Learning Image Classifier** as a focused exercise for **CNNs an
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **CNNs and Computer Vision**.
 7. Run the full notebook or script from a clean session, save the chosen metric, and confirm the same seed gives a comparable result.
+
+### Git Checkpoint
+
+You have completed **TRANSFER-LEARNING IMAGE CLASSIFIER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- ai/transfer-learning-image-classifier
+git commit -m "feat(transfer-learning-image-classifier): complete transfer-learning image classifier"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW AI PHASE 10](./AI.md#phase-10) | [CONTINUE TO AI PHASE 11](./AI.md#phase-11)
 
@@ -3420,6 +5611,25 @@ Build **Sequence Sentiment Classifier** as a focused exercise for **Sequence Mod
 6. Add one normal example and one edge or failure example specifically for **Sequence Models**.
 7. Run the full notebook or script from a clean session, save the chosen metric, and confirm the same seed gives a comparable result.
 
+### Git Checkpoint
+
+You have completed **SEQUENCE SENTIMENT CLASSIFIER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- ai/sequence-sentiment-classifier
+git commit -m "feat(sequence-sentiment-classifier): complete sequence sentiment classifier"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW AI PHASE 11](./AI.md#phase-11) | [CONTINUE TO AI PHASE 12](./AI.md#phase-12)
 
 <a id="ai-phase-12-project"></a>
@@ -3452,6 +5662,25 @@ Build **Semantic Search Engine** as a focused exercise for **Embeddings and Repr
 5. Check a normal case, a boundary case, and an invalid case against known answers.
 6. Add one normal example and one edge or failure example specifically for **Embeddings and Representation Learning**.
 7. Run the full notebook or script from a clean session, save the chosen metric, and confirm the same seed gives a comparable result.
+
+### Git Checkpoint
+
+You have completed **SEMANTIC SEARCH ENGINE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- ai/semantic-search-engine
+git commit -m "feat(semantic-search-engine): complete semantic search engine"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW AI PHASE 12](./AI.md#phase-12) | [CONTINUE TO AI PHASE 13](./AI.md#phase-13)
 
@@ -3486,6 +5715,25 @@ Build **Tiny Transformer Explainer** as a focused exercise for **Transformers**.
 6. Add one normal example and one edge or failure example specifically for **Transformers**.
 7. Run the full notebook or script from a clean session, save the chosen metric, and confirm the same seed gives a comparable result.
 
+### Git Checkpoint
+
+You have completed **TINY TRANSFORMER EXPLAINER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- ai/tiny-transformer-explainer
+git commit -m "feat(tiny-transformer-explainer): complete tiny transformer explainer"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW AI PHASE 13](./AI.md#phase-13) | [CONTINUE TO AI PHASE 14](./AI.md#phase-14)
 
 <a id="ai-phase-14-project"></a>
@@ -3518,6 +5766,25 @@ Build **Prompt Experiment Matrix** as a focused exercise for **LLMs and Promptin
 5. Add one concrete recommendation or next action for every important finding.
 6. Add one normal example and one edge or failure example specifically for **LLMs and Prompting**.
 7. Run the full notebook or script from a clean session, save the chosen metric, and confirm the same seed gives a comparable result.
+
+### Git Checkpoint
+
+You have completed **PROMPT EXPERIMENT MATRIX**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- ai/prompt-experiment-matrix
+git commit -m "feat(prompt-experiment-matrix): complete prompt experiment matrix"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW AI PHASE 14](./AI.md#phase-14) | [CONTINUE TO AI PHASE 15](./AI.md#phase-15)
 
@@ -3552,6 +5819,25 @@ Build **Citation-First RAG** as a focused exercise for **Retrieval-Augmented Gen
 6. Add one normal example and one edge or failure example specifically for **Retrieval-Augmented Generation**.
 7. Run the full notebook or script from a clean session, save the chosen metric, and confirm the same seed gives a comparable result.
 
+### Git Checkpoint
+
+You have completed **CITATION-FIRST RAG**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- ai/citation-first-rag
+git commit -m "feat(citation-first-rag): complete citation-first rag"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW AI PHASE 15](./AI.md#phase-15) | [CONTINUE TO AI PHASE 16](./AI.md#phase-16)
 
 <a id="ai-phase-16-project"></a>
@@ -3584,6 +5870,25 @@ Build **LoRA Fine-Tuning Report** as a focused exercise for **Fine-Tuning and Al
 5. Add one concrete recommendation or next action for every important finding.
 6. Add one normal example and one edge or failure example specifically for **Fine-Tuning and Alignment**.
 7. Run the full notebook or script from a clean session, save the chosen metric, and confirm the same seed gives a comparable result.
+
+### Git Checkpoint
+
+You have completed **LORA FINE-TUNING REPORT**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- ai/lora-fine-tuning-report
+git commit -m "docs(lora-fine-tuning-report): complete lora fine-tuning report"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW AI PHASE 16](./AI.md#phase-16) | [CONTINUE TO AI PHASE 17](./AI.md#phase-17)
 
@@ -3618,6 +5923,25 @@ Build **Safe Tool-Using Agent** as a focused exercise for **Agents and Tool Use*
 6. Add one normal example and one edge or failure example specifically for **Agents and Tool Use**.
 7. Run the full notebook or script from a clean session, save the chosen metric, and confirm the same seed gives a comparable result.
 
+### Git Checkpoint
+
+You have completed **SAFE TOOL-USING AGENT**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- ai/safe-tool-using-agent
+git commit -m "feat(safe-tool-using-agent): complete safe tool-using agent"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW AI PHASE 17](./AI.md#phase-17) | [CONTINUE TO AI PHASE 18](./AI.md#phase-18)
 
 <a id="ai-phase-18-project"></a>
@@ -3650,6 +5974,25 @@ Build **Model Eval and Monitoring Pipeline** as a focused exercise for **Evaluat
 5. Rerun the same input and prove that the final output remains correct.
 6. Add one normal example and one edge or failure example specifically for **Evaluation, Safety, and MLOps**.
 7. Run the full notebook or script from a clean session, save the chosen metric, and confirm the same seed gives a comparable result.
+
+### Git Checkpoint
+
+You have completed **MODEL EVAL AND MONITORING PIPELINE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- ai/model-eval-and-monitoring-pipeline
+git commit -m "chore(model-eval-and-monitoring-pipeline): complete model eval and monitoring pipeline"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW AI PHASE 18](./AI.md#phase-18) | [CONTINUE TO AI PHASE 19](./AI.md#phase-19)
 
@@ -3684,6 +6027,25 @@ Build **Reproducible AI Portfolio** as a focused exercise for **Portfolio and Pr
 6. Add one normal example and one edge or failure example specifically for **Portfolio and Projects**.
 7. Run the full notebook or script from a clean session, save the chosen metric, and confirm the same seed gives a comparable result.
 
+### Git Checkpoint
+
+You have completed **REPRODUCIBLE AI PORTFOLIO**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- ai/reproducible-ai-portfolio
+git commit -m "feat(reproducible-ai-portfolio): complete reproducible ai portfolio"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW AI PHASE 19](./AI.md#phase-19) | [CONTINUE TO AI PHASE 20](./AI.md#phase-20)
 
 <a id="ai-phase-20-project"></a>
@@ -3716,6 +6078,25 @@ Build **ML System Design Drill** as a focused exercise for **Interviews**. Keep 
 5. Include one case where the preferred approach fails or becomes a poor choice.
 6. Add one normal example and one edge or failure example specifically for **Interviews**.
 7. Run the full notebook or script from a clean session, save the chosen metric, and confirm the same seed gives a comparable result.
+
+### Git Checkpoint
+
+You have completed **ML SYSTEM DESIGN DRILL**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- ai/ml-system-design-drill
+git commit -m "feat(ml-system-design-drill): complete ml system design drill"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW AI PHASE 20](./AI.md#phase-20) | [BUILD THE AI MAIN PORTFOLIO PROJECT](#ai-main-portfolio-project)
 
@@ -3778,6 +6159,107 @@ No paid API, commercial license, or paid cloud resource is required. Use only ge
 19. **PHASE 19 - Portfolio and Projects (REQUIRED CAPSTONE-COMPLETION STEP):** Polish the local Gradio app, add model/data cards, select an open-source license, and include honest limitations in the interface.
 20. **PHASE 20 - Interviews (POST-BUILD PRACTICE; NO NEW PRODUCT FEATURE):** Practice an ML system-design review covering data, serving, evaluation, monitoring, privacy, cost, and rollback.
 
+#### GIT MILESTONE CHECKPOINTS
+
+Keep this capstone in `local-career-knowledge-assistant` inside the portfolio repository. The five checkpoints below preserve working phase groups without interrupting every implementation step. Test the completed group before committing; the repository-level ignore rules still apply.
+
+##### Git Checkpoint 1
+
+You have completed **Phases 1-4: problem framing, dataset, baseline model, and reproducible evaluation split**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- local-career-knowledge-assistant
+git commit -m "feat(career-assistant): establish data and baseline evaluation"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 2
+
+You have completed **Phases 5-10: trained models, error analysis, embeddings, retrieval, and grounded generation**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- local-career-knowledge-assistant
+git commit -m "feat(career-assistant): build evaluated retrieval pipeline"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 3
+
+You have completed **Phases 11-15: agent workflow, serving layer, observability, and safety controls**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- local-career-knowledge-assistant
+git commit -m "feat(career-assistant): integrate assistant service and safeguards"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 4
+
+You have completed **Phases 16-18: adversarial evaluation, monitoring, optimization, and reproducibility checks**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- local-career-knowledge-assistant
+git commit -m "test(career-assistant): verify quality safety and reproducibility"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Final Git Checkpoint
+
+You have completed **Phase 19: model cards, limitations, demo data, and local portfolio application**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- local-career-knowledge-assistant
+git commit -m "docs(career-assistant): complete verifiable assistant release"
+git tag -a career-assistant-v1.0.0 -m "First complete career-assistant release"
+```
+
+Verify:
+
+```bash
+git log --oneline --decorate -5
+git status
+git tag
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
 #### HOW TO DEPLOY IT FOR FREE
 
 1. Download the chosen small open model through Ollama and run the API, vector index, and Gradio UI locally.
@@ -3824,6 +6306,25 @@ Build **ERP Process Map** as a focused exercise for **ERP Thinking**. Keep the d
 6. Add one normal example and one edge or failure example specifically for **ERP Thinking**.
 7. Upgrade the addon in a fresh local test database, complete the normal workflow, and run its Odoo tests.
 
+### Git Checkpoint
+
+You have completed **ERP PROCESS MAP**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- odoo/erp_process_map
+git commit -m "docs(erp-process-map): complete erp process map"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 1](./ODOO.md#phase-1) | [CONTINUE TO ODOO PHASE 2](./ODOO.md#phase-2)
 
 <a id="odoo-phase-2-project"></a>
@@ -3856,6 +6357,25 @@ Build **Request-to-Database Trace** as a focused exercise for **Three-Tier Archi
 5. Prove that one rejected write and one multi-step successful operation behave correctly.
 6. Add one normal example and one edge or failure example specifically for **Three-Tier Architecture**.
 7. Upgrade the addon in a fresh local test database, complete the normal workflow, and run its Odoo tests.
+
+### Git Checkpoint
+
+You have completed **REQUEST-TO-DATABASE TRACE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- odoo/request_to_database_trace
+git commit -m "feat(request-to-database-trace): complete request-to-database trace"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 2](./ODOO.md#phase-2) | [CONTINUE TO ODOO PHASE 3](./ODOO.md#phase-3)
 
@@ -3890,6 +6410,25 @@ Build **Reproducible Odoo Dev Stack** as a focused exercise for **Development En
 6. Add one normal example and one edge or failure example specifically for **Development Environment**.
 7. Upgrade the addon in a fresh local test database, complete the normal workflow, and run its Odoo tests.
 
+### Git Checkpoint
+
+You have completed **REPRODUCIBLE ODOO DEV STACK**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- odoo/reproducible_odoo_dev_stack
+git commit -m "chore(reproducible-odoo-dev-stack): complete reproducible odoo dev stack"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 3](./ODOO.md#phase-3) | [CONTINUE TO ODOO PHASE 4](./ODOO.md#phase-4)
 
 <a id="odoo-phase-4-project"></a>
@@ -3922,6 +6461,25 @@ Build **Minimal Todo Addon** as a focused exercise for **Module Anatomy**. Keep 
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Module Anatomy**.
 7. Upgrade the addon in a fresh local test database, complete the normal workflow, and run its Odoo tests.
+
+### Git Checkpoint
+
+You have completed **MINIMAL TODO ADDON**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- odoo/minimal_todo_addon
+git commit -m "feat(minimal-todo-addon): complete minimal todo addon"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 4](./ODOO.md#phase-4) | [CONTINUE TO ODOO PHASE 5](./ODOO.md#phase-5)
 
@@ -3956,6 +6514,25 @@ Build **Library Domain Models** as a focused exercise for **Models and Fields**.
 6. Add one normal example and one edge or failure example specifically for **Models and Fields**.
 7. Upgrade the addon in a fresh local test database, complete the normal workflow, and run its Odoo tests.
 
+### Git Checkpoint
+
+You have completed **LIBRARY DOMAIN MODELS**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- odoo/library_domain_models
+git commit -m "feat(library-domain-models): complete library domain models"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 5](./ODOO.md#phase-5) | [CONTINUE TO ODOO PHASE 6](./ODOO.md#phase-6)
 
 <a id="odoo-phase-6-project"></a>
@@ -3988,6 +6565,25 @@ Build **Recordset Query Explorer** as a focused exercise for **ORM Queries**. Ke
 5. Make the output readable without needing to inspect the source code.
 6. Add one normal example and one edge or failure example specifically for **ORM Queries**.
 7. Upgrade the addon in a fresh local test database, complete the normal workflow, and run its Odoo tests.
+
+### Git Checkpoint
+
+You have completed **RECORDSET QUERY EXPLORER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- odoo/recordset_query_explorer
+git commit -m "feat(recordset-query-explorer): complete recordset query explorer"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 6](./ODOO.md#phase-6) | [CONTINUE TO ODOO PHASE 7](./ODOO.md#phase-7)
 
@@ -4022,6 +6618,25 @@ Build **Multi-company Access Lab** as a focused exercise for **Access Control an
 6. Add one normal example and one edge or failure example specifically for **Access Control and Record Rules**.
 7. Upgrade the addon in a fresh local test database, complete the normal workflow, and run its Odoo tests.
 
+### Git Checkpoint
+
+You have completed **MULTI-COMPANY ACCESS LAB**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- odoo/multi_company_access_lab
+git commit -m "feat(multi-company-access-lab): complete multi-company access lab"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 7](./ODOO.md#phase-7) | [CONTINUE TO ODOO PHASE 8](./ODOO.md#phase-8)
 
 <a id="odoo-phase-8-project"></a>
@@ -4054,6 +6669,25 @@ Build **Inherited Library Views** as a focused exercise for **XML Views**. Keep 
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **XML Views**.
 7. Upgrade the addon in a fresh local test database, complete the normal workflow, and run its Odoo tests.
+
+### Git Checkpoint
+
+You have completed **INHERITED LIBRARY VIEWS**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- odoo/inherited_library_views
+git commit -m "feat(inherited-library-views): complete inherited library views"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 8](./ODOO.md#phase-8) | [CONTINUE TO ODOO PHASE 9](./ODOO.md#phase-9)
 
@@ -4088,6 +6722,25 @@ Build **Role-Aware Navigation Module** as a focused exercise for **Actions and M
 6. Add one normal example and one edge or failure example specifically for **Actions and Menus**.
 7. Upgrade the addon in a fresh local test database, complete the normal workflow, and run its Odoo tests.
 
+### Git Checkpoint
+
+You have completed **ROLE-AWARE NAVIGATION MODULE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- odoo/role_aware_navigation_module
+git commit -m "feat(role-aware-navigation-module): complete role-aware navigation module"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 9](./ODOO.md#phase-9) | [CONTINUE TO ODOO PHASE 10](./ODOO.md#phase-10)
 
 <a id="odoo-phase-10-project"></a>
@@ -4120,6 +6773,25 @@ Build **Validated Order Workflow** as a focused exercise for **Business Logic**.
 5. Rerun the same input and prove that the final output remains correct.
 6. Add one normal example and one edge or failure example specifically for **Business Logic**.
 7. Upgrade the addon in a fresh local test database, complete the normal workflow, and run its Odoo tests.
+
+### Git Checkpoint
+
+You have completed **VALIDATED ORDER WORKFLOW**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- odoo/validated_order_workflow
+git commit -m "feat(validated-order-workflow): complete validated order workflow"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 10](./ODOO.md#phase-10) | [CONTINUE TO ODOO PHASE 11](./ODOO.md#phase-11)
 
@@ -4154,6 +6826,25 @@ Build **Sale Order Extension** as a focused exercise for **Inheritance**. Keep t
 6. Add one normal example and one edge or failure example specifically for **Inheritance**.
 7. Upgrade the addon in a fresh local test database, complete the normal workflow, and run its Odoo tests.
 
+### Git Checkpoint
+
+You have completed **SALE ORDER EXTENSION**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- odoo/sale_order_extension
+git commit -m "feat(sale-order-extension): complete sale order extension"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 11](./ODOO.md#phase-11) | [CONTINUE TO ODOO PHASE 12](./ODOO.md#phase-12)
 
 <a id="odoo-phase-12-project"></a>
@@ -4186,6 +6877,25 @@ Build **Bulk Update Wizard** as a focused exercise for **Wizards and Transient M
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Wizards and Transient Models**.
 7. Upgrade the addon in a fresh local test database, complete the normal workflow, and run its Odoo tests.
+
+### Git Checkpoint
+
+You have completed **BULK UPDATE WIZARD**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- odoo/bulk_update_wizard
+git commit -m "feat(bulk-update-wizard): complete bulk update wizard"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 12](./ODOO.md#phase-12) | [CONTINUE TO ODOO PHASE 13](./ODOO.md#phase-13)
 
@@ -4220,6 +6930,25 @@ Build **Idempotent Webhook Module** as a focused exercise for **Controllers and 
 6. Add one normal example and one edge or failure example specifically for **Controllers and Webhooks**.
 7. Upgrade the addon in a fresh local test database, complete the normal workflow, and run its Odoo tests.
 
+### Git Checkpoint
+
+You have completed **IDEMPOTENT WEBHOOK MODULE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- odoo/idempotent_webhook_module
+git commit -m "feat(idempotent-webhook-module): complete idempotent webhook module"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 13](./ODOO.md#phase-13) | [CONTINUE TO ODOO PHASE 14](./ODOO.md#phase-14)
 
 <a id="odoo-phase-14-project"></a>
@@ -4252,6 +6981,25 @@ Build **External Sync Client** as a focused exercise for **External APIs**. Keep
 5. Rerun the same input and prove that the final output remains correct.
 6. Add one normal example and one edge or failure example specifically for **External APIs**.
 7. Upgrade the addon in a fresh local test database, complete the normal workflow, and run its Odoo tests.
+
+### Git Checkpoint
+
+You have completed **EXTERNAL SYNC CLIENT**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- odoo/external_sync_client
+git commit -m "feat(external-sync-client): complete external sync client"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 14](./ODOO.md#phase-14) | [CONTINUE TO ODOO PHASE 15](./ODOO.md#phase-15)
 
@@ -4286,6 +7034,25 @@ Build **Payment Sandbox Integration** as a focused exercise for **Integrations a
 6. Add one normal example and one edge or failure example specifically for **Integrations and Payments**.
 7. Upgrade the addon in a fresh local test database, complete the normal workflow, and run its Odoo tests.
 
+### Git Checkpoint
+
+You have completed **PAYMENT SANDBOX INTEGRATION**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- odoo/payment_sandbox_integration
+git commit -m "feat(payment-sandbox-integration): complete payment sandbox integration"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 15](./ODOO.md#phase-15) | [CONTINUE TO ODOO PHASE 16](./ODOO.md#phase-16)
 
 <a id="odoo-phase-16-project"></a>
@@ -4318,6 +7085,25 @@ Build **OWL KPI Widget** as a focused exercise for **OWL Frontend**. Keep the da
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **OWL Frontend**.
 7. Upgrade the addon in a fresh local test database, complete the normal workflow, and run its Odoo tests.
+
+### Git Checkpoint
+
+You have completed **OWL KPI WIDGET**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- odoo/owl_kpi_widget
+git commit -m "feat(owl-kpi-widget): complete owl kpi widget"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 16](./ODOO.md#phase-16) | [CONTINUE TO ODOO PHASE 17](./ODOO.md#phase-17)
 
@@ -4352,6 +7138,25 @@ Build **ORM Query Tuning Report** as a focused exercise for **PostgreSQL for Odo
 6. Add one normal example and one edge or failure example specifically for **PostgreSQL for Odoo**.
 7. Upgrade the addon in a fresh local test database, complete the normal workflow, and run its Odoo tests.
 
+### Git Checkpoint
+
+You have completed **ORM QUERY TUNING REPORT**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- odoo/orm_query_tuning_report
+git commit -m "docs(orm-query-tuning-report): complete orm query tuning report"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 17](./ODOO.md#phase-17) | [CONTINUE TO ODOO PHASE 18](./ODOO.md#phase-18)
 
 <a id="odoo-phase-18-project"></a>
@@ -4384,6 +7189,25 @@ Build **Upgrade-Safe Test Suite** as a focused exercise for **Testing, Debugging
 5. Include one case where the preferred approach fails or becomes a poor choice.
 6. Add one normal example and one edge or failure example specifically for **Testing, Debugging, and Upgrades**.
 7. Upgrade the addon in a fresh local test database, complete the normal workflow, and run its Odoo tests.
+
+### Git Checkpoint
+
+You have completed **UPGRADE-SAFE TEST SUITE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- odoo/upgrade_safe_test_suite
+git commit -m "test(upgrade-safe-test-suite): complete upgrade-safe test suite"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 18](./ODOO.md#phase-18) | [CONTINUE TO ODOO PHASE 19](./ODOO.md#phase-19)
 
@@ -4418,6 +7242,25 @@ Build **Portfolio-Ready Business Module** as a focused exercise for **Portfolio 
 6. Add one normal example and one edge or failure example specifically for **Portfolio Modules**.
 7. Upgrade the addon in a fresh local test database, complete the normal workflow, and run its Odoo tests.
 
+### Git Checkpoint
+
+You have completed **PORTFOLIO-READY BUSINESS MODULE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- odoo/portfolio_ready_business_module
+git commit -m "feat(portfolio-ready-business-module): complete portfolio-ready business module"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 19](./ODOO.md#phase-19) | [CONTINUE TO ODOO PHASE 20](./ODOO.md#phase-20)
 
 <a id="odoo-phase-20-project"></a>
@@ -4450,6 +7293,25 @@ Build **Timed Odoo Debug Drill** as a focused exercise for **Interviews**. Keep 
 5. Include one case where the preferred approach fails or becomes a poor choice.
 6. Add one normal example and one edge or failure example specifically for **Interviews**.
 7. Upgrade the addon in a fresh local test database, complete the normal workflow, and run its Odoo tests.
+
+### Git Checkpoint
+
+You have completed **TIMED ODOO DEBUG DRILL**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- odoo/timed_odoo_debug_drill
+git commit -m "fix(timed-odoo-debug-drill): complete timed odoo debug drill"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 20](./ODOO.md#phase-20) | [BUILD THE ODOO MAIN PORTFOLIO PROJECT](#odoo-main-portfolio-project)
 
@@ -4511,6 +7373,107 @@ No paid API, commercial license, or paid cloud resource is required. Use only ge
 19. **PHASE 19 - Portfolio Modules (REQUIRED CAPSTONE-COMPLETION STEP):** Polish demo data, reports, translations-ready strings, screenshots, module metadata, and an open-source license.
 20. **PHASE 20 - Interviews (POST-BUILD PRACTICE; NO NEW PRODUCT FEATURE):** Run a timed bug investigation and explain the request path, ORM behavior, security, tests, upgrade plan, and trade-offs.
 
+#### GIT MILESTONE CHECKPOINTS
+
+Keep this capstone in `community_center_operations` inside the portfolio repository. The five checkpoints below preserve working phase groups without interrupting every implementation step. Test the completed group before committing; the repository-level ignore rules still apply.
+
+##### Git Checkpoint 1
+
+You have completed **Phases 1-4: installable addon scaffold, process map, models, ACLs, and menus**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- community_center_operations
+git commit -m "feat(community-center): establish installable operations addon"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 2
+
+You have completed **Phases 5-10: business rules, relationships, workflows, views, and record security**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- community_center_operations
+git commit -m "feat(community-center): implement secure operational workflows"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 3
+
+You have completed **Phases 11-15: reporting, scheduled work, integrations, web endpoints, and OWL interface**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- community_center_operations
+git commit -m "feat(community-center): integrate reporting automation and portal"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 4
+
+You have completed **Phases 16-18: tests, profiling, upgrades, deployment, backup, and observability**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- community_center_operations
+git commit -m "test(community-center): verify addon upgrade and operations"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Final Git Checkpoint
+
+You have completed **Phase 19: demo records, reports, metadata, screenshots, and release documentation**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- community_center_operations
+git commit -m "docs(community-center): complete Odoo operations suite release"
+git tag -a community-center-v1.0.0 -m "First complete community-center release"
+```
+
+Verify:
+
+```bash
+git log --oneline --decorate -5
+git status
+git tag
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
 #### HOW TO DEPLOY IT FOR FREE
 
 1. Build local Odoo and PostgreSQL images with Docker Compose, named volumes, health checks, and environment-based secrets.
@@ -4549,6 +7512,25 @@ Inspect one ordinary web request and identify the URL, method, request headers, 
 4. Run `curl -I https://example.com` and find the same kind of response information.
 5. Change the URL to a missing page and compare the successful and failed status codes.
 
+### Git Checkpoint
+
+You have completed **CLIENT-SERVER REQUEST EXPLORER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- web/client-server-request-explorer
+git commit -m "feat(client-server-request-explorer): complete client-server request explorer"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW WEB PHASE 1](./Web.md#phase-1) | [CONTINUE TO WEB PHASE 2](./Web.md#phase-2)
 
 <a id="web-phase-2-project"></a>
@@ -4574,6 +7556,25 @@ Build a one-page personal profile with a header, navigation, main biography, ski
 4. Add a contact form; connect every input to a visible `label`.
 5. Open the file in a browser and press Tab through every link and form field to confirm the order makes sense.
 
+### Git Checkpoint
+
+You have completed **ACCESSIBLE PROFILE PAGE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- web/profile-page
+git commit -m "feat(accessible-profile-page): complete accessible profile page"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW WEB PHASE 2](./Web.md#phase-2) | [CONTINUE TO WEB PHASE 3](./Web.md#phase-3)
 
 <a id="web-phase-3-project"></a>
@@ -4598,6 +7599,25 @@ Build a small style-guide page showing colors, type sizes, spacing, buttons, inp
 3. Add HTML examples for headings, body text, buttons, form fields, and cards.
 4. Style every example by reusing the variables instead of repeating raw values.
 5. Change one color and one spacing variable and confirm all related components update together.
+
+### Git Checkpoint
+
+You have completed **DESIGN TOKEN STYLE GUIDE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- web/design-token-style-guide
+git commit -m "docs(design-token-style-guide): complete design token style guide"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW WEB PHASE 3](./Web.md#phase-3) | [CONTINUE TO WEB PHASE 4](./Web.md#phase-4)
 
@@ -4625,6 +7645,25 @@ Build one product landing page with a header, hero area, product benefits, three
 5. Add a breakpoint near `768px` so the hero and cards use more columns when space is available.
 6. Test at 320px, 768px, and a wide desktop size. Fix any overlap, tiny text, or horizontal scroll.
 
+### Git Checkpoint
+
+You have completed **RESPONSIVE PRODUCT LANDING**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- web/product-landing
+git commit -m "feat(responsive-product-landing): complete responsive product landing"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW WEB PHASE 4](./Web.md#phase-4) | [CONTINUE TO WEB PHASE 5](./Web.md#phase-5)
 
 <a id="web-phase-5-project"></a>
@@ -4650,6 +7689,25 @@ Build an expense tracker where a user can add an amount, category, and date; see
 4. On form submit, validate the fields, add the expense, update the total, and clear the form.
 5. Add a Delete button to each row and save the array in `localStorage`.
 6. Reload the page and confirm saved expenses return; also try an empty and a negative amount.
+
+### Git Checkpoint
+
+You have completed **INTERACTIVE EXPENSE TRACKER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- web/interactive-expense-tracker
+git commit -m "feat(interactive-expense-tracker): complete interactive expense tracker"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW WEB PHASE 5](./Web.md#phase-5) | [CONTINUE TO WEB PHASE 6](./Web.md#phase-6)
 
@@ -4677,6 +7735,25 @@ Build a notes app that can create, edit, delete, and search notes. Previously op
 5. Switch the browser Network panel to Offline and confirm the app still opens.
 6. Run `npm run build` and fix any build errors.
 
+### Git Checkpoint
+
+You have completed **OFFLINE-CAPABLE NOTES APP**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- web/notes-app
+git commit -m "feat(offline-capable-notes-app): complete offline-capable notes app"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW WEB PHASE 6](./Web.md#phase-6) | [CONTINUE TO WEB PHASE 7](./Web.md#phase-7)
 
 <a id="web-phase-7-project"></a>
@@ -4702,6 +7779,25 @@ Build a typed client that loads a list from a public or mock JSON API, validates
 4. Render loading, empty, success, and retry views.
 5. Add one test for valid data and one for malformed data.
 6. Run `npm run build` and the test command until both pass.
+
+### Git Checkpoint
+
+You have completed **TYPED API CLIENT**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- web/typed-api-client
+git commit -m "feat(typed-api-client): complete typed api client"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW WEB PHASE 7](./Web.md#phase-7) | [CONTINUE TO WEB PHASE 8](./Web.md#phase-8)
 
@@ -4729,6 +7825,25 @@ Build a habit tracker that lets a user add habits, mark today complete, filter t
 5. Show useful empty text when there are no habits.
 6. Test adding and completing a habit, then run the production build.
 
+### Git Checkpoint
+
+You have completed **REACT HABIT TRACKER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- web/react-habit-tracker
+git commit -m "feat(react-habit-tracker): complete react habit tracker"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW WEB PHASE 8](./Web.md#phase-8) | [CONTINUE TO WEB PHASE 9](./Web.md#phase-9)
 
 <a id="web-phase-9-project"></a>
@@ -4754,6 +7869,25 @@ Build an admin dashboard with a list, search, filters, pagination, and an edit f
 4. Store search, filter, and page values in URL query parameters.
 5. Add an edit mutation with loading, success, error, and rollback behavior.
 6. Test a filtered deep link and confirm refreshing keeps the same screen.
+
+### Git Checkpoint
+
+You have completed **CACHED ADMIN DASHBOARD**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- web/cached-admin-dashboard
+git commit -m "feat(cached-admin-dashboard): complete cached admin dashboard"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW WEB PHASE 9](./Web.md#phase-9) | [CONTINUE TO WEB PHASE 10](./Web.md#phase-10)
 
@@ -4781,6 +7915,25 @@ Build a small issue tracker with pages for issue list, issue details, and new is
 5. Add metadata for the list and detail pages.
 6. Run the development server, test direct URLs, and run the production build.
 
+### Git Checkpoint
+
+You have completed **FULL-STACK ISSUE TRACKER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- web/full-stack-issue-tracker
+git commit -m "chore(full-stack-issue-tracker): complete full-stack issue tracker"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW WEB PHASE 10](./Web.md#phase-10) | [CONTINUE TO WEB PHASE 11](./Web.md#phase-11)
 
 <a id="web-phase-11-project"></a>
@@ -4806,6 +7959,25 @@ Build a small Express service with a health route and CRUD routes for tasks. Eve
 4. Validate required task fields before changing the array.
 5. Add tests for one successful request, one missing task, and one invalid body.
 6. Run the test command, then start the server and call the health route in a browser or with curl.
+
+### Git Checkpoint
+
+You have completed **EXPRESS SERVICE STARTER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- web/express-service-starter
+git commit -m "feat(express-service-starter): complete express service starter"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW WEB PHASE 11](./Web.md#phase-11) | [CONTINUE TO WEB PHASE 12](./Web.md#phase-12)
 
@@ -4833,6 +8005,25 @@ Build a versioned REST API for projects and tasks. Define the request, response,
 5. Add filtering plus a simple page limit and cursor.
 6. Test success, invalid input, missing records, and pagination; compare every response with the OpenAPI examples.
 
+### Git Checkpoint
+
+You have completed **CONTRACT-FIRST REST API**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- web/contract-first-rest-api
+git commit -m "feat(contract-first-rest-api): complete contract-first rest api"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW WEB PHASE 12](./Web.md#phase-12) | [CONTINUE TO WEB PHASE 13](./Web.md#phase-13)
 
 <a id="web-phase-13-project"></a>
@@ -4858,6 +8049,25 @@ Build a PostgreSQL database for users, projects, and tasks. Protect relationship
 4. Implement one transaction that creates a project and its first task together.
 5. Add list, update, and delete operations and handle a missing record clearly.
 6. Run the project from an empty database to confirm migrations and seed data work in the correct order.
+
+### Git Checkpoint
+
+You have completed **TRANSACTIONAL PROJECT DATABASE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- web/transactional-project-database
+git commit -m "feat(transactional-project-database): complete transactional project database"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW WEB PHASE 13](./Web.md#phase-13) | [CONTINUE TO WEB PHASE 14](./Web.md#phase-14)
 
@@ -4885,6 +8095,25 @@ Build a small sign-up, sign-in, sign-out, and protected-profile application. Pas
 5. Protect the profile route and check ownership again when loading user data.
 6. Test wrong passwords, missing sessions, duplicate email, and access to another user's ID.
 
+### Git Checkpoint
+
+You have completed **SECURE SESSION AUTH APP**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- web/secure-session-auth-app
+git commit -m "feat(secure-session-auth-app): complete secure session auth app"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW WEB PHASE 14](./Web.md#phase-14) | [CONTINUE TO WEB PHASE 15](./Web.md#phase-15)
 
 <a id="web-phase-15-project"></a>
@@ -4910,6 +8139,25 @@ Add a practical test pyramid to a small full-stack application: fast unit tests,
 4. Add React Testing Library tests for loading, success, and error behavior.
 5. Add one Playwright test that completes the main journey in a browser.
 6. Run all test levels from one command, deliberately break one behavior, and confirm the correct test catches it.
+
+### Git Checkpoint
+
+You have completed **FULL-STACK TEST PYRAMID**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- web/full-stack-test-pyramid
+git commit -m "test(full-stack-test-pyramid): complete full-stack test pyramid"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW WEB PHASE 15](./Web.md#phase-15) | [CONTINUE TO WEB PHASE 16](./Web.md#phase-16)
 
@@ -4937,6 +8185,25 @@ Measure and improve one real page. Record its initial Core Web Vitals, fix the l
 5. Run the same measurements three more times under the same conditions.
 6. Keep the change only if the measured result improves and the page still works at phone and desktop widths.
 
+### Git Checkpoint
+
+You have completed **WEB VITALS OPTIMIZATION CASE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- web/web-vitals-optimization-case
+git commit -m "feat(web-vitals-optimization-case): complete web vitals optimization case"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW WEB PHASE 16](./Web.md#phase-16) | [CONTINUE TO WEB PHASE 17](./Web.md#phase-17)
 
 <a id="web-phase-17-project"></a>
@@ -4962,6 +8229,25 @@ Create a pipeline that checks, builds, previews, and deploys a small web app. A 
 4. Connect a practice Vercel or Render project and enable a preview for pull requests.
 5. Merge only after the checks pass and verify the production health route.
 6. Introduce a temporary failing test and confirm the pipeline blocks it, then undo that test change.
+
+### Git Checkpoint
+
+You have completed **PREVIEW-TO-PRODUCTION PIPELINE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- web/preview-to-production-pipeline
+git commit -m "chore(preview-to-production-pipeline): complete preview-to-production pipeline"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW WEB PHASE 17](./Web.md#phase-17) | [CONTINUE TO WEB PHASE 18](./Web.md#phase-18)
 
@@ -4989,6 +8275,25 @@ Build a two-user collaboration board where changes appear in real time. Reconnec
 5. Disconnect one window, make another change, reconnect, and reload the latest state.
 6. Add an operation ID so resending the same action does not create a duplicate card.
 
+### Git Checkpoint
+
+You have completed **REAL-TIME COLLABORATION BOARD**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- web/real-time-collaboration-board
+git commit -m "feat(real-time-collaboration-board): complete real-time collaboration board"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW WEB PHASE 18](./Web.md#phase-18) | [CONTINUE TO WEB PHASE 19](./Web.md#phase-19)
 
 <a id="web-phase-19-project"></a>
@@ -5015,6 +8320,25 @@ Build one complete SaaS workflow: a user signs in, creates a project, adds tasks
 5. Add unit, API, and one Playwright browser test for the main workflow.
 6. Add Docker and a GitHub Actions check, deploy the app, and verify the deployed health route and main workflow.
 
+### Git Checkpoint
+
+You have completed **PRODUCTION SAAS SLICE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- web/production-saas-slice
+git commit -m "feat(production-saas-slice): complete production saas slice"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW WEB PHASE 19](./Web.md#phase-19) | [CONTINUE TO WEB PHASE 20](./Web.md#phase-20)
 
 <a id="web-phase-20-project"></a>
@@ -5040,6 +8364,25 @@ Create a repeatable interview practice lab containing one JavaScript problem, on
 4. Set a timer, speak your assumptions aloud, and solve without copying an existing answer.
 5. Run the prepared checks and correct only the failing behavior.
 6. Repeat on another day with new inputs until you can finish and explain all three exercises clearly.
+
+### Git Checkpoint
+
+You have completed **TIMED WEB INTERVIEW LAB**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- web/timed-web-interview-lab
+git commit -m "feat(timed-web-interview-lab): complete timed web interview lab"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW WEB PHASE 20](./Web.md#phase-20) | [BUILD THE WEB MAIN PORTFOLIO PROJECT](#web-main-portfolio-project)
 
@@ -5103,6 +8446,107 @@ No paid API, commercial license, or paid cloud resource is required. Use only ge
 19. **PHASE 19 - Portfolio Capstones (REQUIRED CAPSTONE-COMPLETION STEP):** Polish seed accounts, moderation, empty/error states, screenshots, an open-source license, and one complete public demo workflow.
 20. **PHASE 20 - Interviews (POST-BUILD PRACTICE; NO NEW PRODUCT FEATURE):** Practice explaining one frontend change, one API bug, one database decision, and the whole system design under a timer.
 
+#### GIT MILESTONE CHECKPOINTS
+
+Keep this capstone in `open-community-skill-exchange` inside the portfolio repository. The five checkpoints below preserve working phase groups without interrupting every implementation step. Test the completed group before committing; the repository-level ignore rules still apply.
+
+##### Git Checkpoint 1
+
+You have completed **Phases 1-4: request model, semantic accessible interface, design system, and responsive layout**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-community-skill-exchange
+git commit -m "feat(skill-exchange): establish accessible responsive interface"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 2
+
+You have completed **Phases 5-10: typed client state, React flows, routing, caching, and full-stack application shell**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-community-skill-exchange
+git commit -m "feat(skill-exchange): implement typed full-stack user flows"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 3
+
+You have completed **Phases 11-15: API contracts, PostgreSQL transactions, authentication, and test pyramid**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-community-skill-exchange
+git commit -m "feat(skill-exchange): integrate secure API and persistence"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 4
+
+You have completed **Phases 16-18: performance, preview delivery, observability, and realtime collaboration checks**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-community-skill-exchange
+git commit -m "test(skill-exchange): verify performance delivery and realtime behavior"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Final Git Checkpoint
+
+You have completed **Phase 19: production SaaS slice, documentation, demo accounts, and public portfolio evidence**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-community-skill-exchange
+git commit -m "docs(skill-exchange): complete community skill exchange release"
+git tag -a skill-exchange-v1.0.0 -m "First complete skill-exchange release"
+```
+
+Verify:
+
+```bash
+git log --oneline --decorate -5
+git status
+git tag
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
 #### HOW TO DEPLOY IT FOR FREE
 
 1. Run frontend, Express API, PostgreSQL, and realtime service locally with Docker Compose; run the complete test suite.
@@ -5149,6 +8593,25 @@ Build **Linux Service Baseline** as a focused exercise for **Linux and Service F
 6. Add one normal example and one edge or failure example specifically for **Linux and Service Foundations**.
 7. Apply the local lab, run its checks, capture the non-sensitive result, and destroy the temporary resources.
 
+### Git Checkpoint
+
+You have completed **LINUX SERVICE BASELINE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cloud/linux-service-baseline
+git commit -m "chore(linux-service-baseline): complete linux service baseline"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 1](./cloud.md#phase-1) | [CONTINUE TO CLOUD PHASE 2](./cloud.md#phase-2)
 
 <a id="cloud-phase-2-project"></a>
@@ -5181,6 +8644,25 @@ Build **VM vs Container Benchmark** as a focused exercise for **Virtualization a
 5. Include one case where the preferred approach fails or becomes a poor choice.
 6. Add one normal example and one edge or failure example specifically for **Virtualization and Service Models**.
 7. Apply the local lab, run its checks, capture the non-sensitive result, and destroy the temporary resources.
+
+### Git Checkpoint
+
+You have completed **VM VS CONTAINER BENCHMARK**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cloud/vm-vs-container-benchmark
+git commit -m "feat(vm-vs-container-benchmark): complete vm vs container benchmark"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 2](./cloud.md#phase-2) | [CONTINUE TO CLOUD PHASE 3](./cloud.md#phase-3)
 
@@ -5215,6 +8697,25 @@ Build **Multi-Provider Architecture Matrix** as a focused exercise for **Provide
 6. Add one normal example and one edge or failure example specifically for **Providers, Regions, and Shared Responsibility**.
 7. Apply the local lab, run its checks, capture the non-sensitive result, and destroy the temporary resources.
 
+### Git Checkpoint
+
+You have completed **MULTI-PROVIDER ARCHITECTURE MATRIX**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cloud/multi-provider-architecture-matrix
+git commit -m "docs(multi-provider-architecture-matrix): complete multi-provider architecture matrix"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 3](./cloud.md#phase-3) | [CONTINUE TO CLOUD PHASE 4](./cloud.md#phase-4)
 
 <a id="cloud-phase-4-project"></a>
@@ -5247,6 +8748,25 @@ Build **Least-Privilege IAM Lab** as a focused exercise for **Identity and Acces
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Identity and Access Management**.
 7. Apply the local lab, run its checks, capture the non-sensitive result, and destroy the temporary resources.
+
+### Git Checkpoint
+
+You have completed **LEAST-PRIVILEGE IAM LAB**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cloud/least-privilege-iam-lab
+git commit -m "feat(least-privilege-iam-lab): complete least-privilege iam lab"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 4](./cloud.md#phase-4) | [CONTINUE TO CLOUD PHASE 5](./cloud.md#phase-5)
 
@@ -5281,6 +8801,25 @@ Build **Multi-Tier VPC** as a focused exercise for **Cloud Networking**. Keep th
 6. Add one normal example and one edge or failure example specifically for **Cloud Networking**.
 7. Apply the local lab, run its checks, capture the non-sensitive result, and destroy the temporary resources.
 
+### Git Checkpoint
+
+You have completed **MULTI-TIER VPC**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cloud/multi-tier-vpc
+git commit -m "feat(multi-tier-vpc): complete multi-tier vpc"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 5](./cloud.md#phase-5) | [CONTINUE TO CLOUD PHASE 6](./cloud.md#phase-6)
 
 <a id="cloud-phase-6-project"></a>
@@ -5313,6 +8852,25 @@ Build **Autoscaled Web Tier** as a focused exercise for **Compute and Autoscalin
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Compute and Autoscaling**.
 7. Apply the local lab, run its checks, capture the non-sensitive result, and destroy the temporary resources.
+
+### Git Checkpoint
+
+You have completed **AUTOSCALED WEB TIER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cloud/autoscaled-web-tier
+git commit -m "feat(autoscaled-web-tier): complete autoscaled web tier"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 6](./cloud.md#phase-6) | [CONTINUE TO CLOUD PHASE 7](./cloud.md#phase-7)
 
@@ -5347,6 +8905,25 @@ Build **Versioned Object Backup** as a focused exercise for **Cloud Storage**. K
 6. Add one normal example and one edge or failure example specifically for **Cloud Storage**.
 7. Apply the local lab, run its checks, capture the non-sensitive result, and destroy the temporary resources.
 
+### Git Checkpoint
+
+You have completed **VERSIONED OBJECT BACKUP**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cloud/versioned-object-backup
+git commit -m "feat(versioned-object-backup): complete versioned object backup"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 7](./cloud.md#phase-7) | [CONTINUE TO CLOUD PHASE 8](./cloud.md#phase-8)
 
 <a id="cloud-phase-8-project"></a>
@@ -5379,6 +8956,25 @@ Build **Resilient Managed Data Tier** as a focused exercise for **Managed Data S
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Managed Data Services**.
 7. Apply the local lab, run its checks, capture the non-sensitive result, and destroy the temporary resources.
+
+### Git Checkpoint
+
+You have completed **RESILIENT MANAGED DATA TIER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cloud/resilient-managed-data-tier
+git commit -m "feat(resilient-managed-data-tier): complete resilient managed data tier"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 8](./cloud.md#phase-8) | [CONTINUE TO CLOUD PHASE 9](./cloud.md#phase-9)
 
@@ -5413,6 +9009,25 @@ Build **CDN Delivery Benchmark** as a focused exercise for **DNS, CDN, and Edge*
 6. Add one normal example and one edge or failure example specifically for **DNS, CDN, and Edge**.
 7. Apply the local lab, run its checks, capture the non-sensitive result, and destroy the temporary resources.
 
+### Git Checkpoint
+
+You have completed **CDN DELIVERY BENCHMARK**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cloud/cdn-delivery-benchmark
+git commit -m "feat(cdn-delivery-benchmark): complete cdn delivery benchmark"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 9](./cloud.md#phase-9) | [CONTINUE TO CLOUD PHASE 10](./cloud.md#phase-10)
 
 <a id="cloud-phase-10-project"></a>
@@ -5445,6 +9060,25 @@ Build **Event-Driven Image Pipeline** as a focused exercise for **Serverless and
 5. Rerun the same input and prove that the final output remains correct.
 6. Add one normal example and one edge or failure example specifically for **Serverless and Events**.
 7. Apply the local lab, run its checks, capture the non-sensitive result, and destroy the temporary resources.
+
+### Git Checkpoint
+
+You have completed **EVENT-DRIVEN IMAGE PIPELINE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cloud/event-driven-image-pipeline
+git commit -m "chore(event-driven-image-pipeline): complete event-driven image pipeline"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 10](./cloud.md#phase-10) | [CONTINUE TO CLOUD PHASE 11](./cloud.md#phase-11)
 
@@ -5479,6 +9113,25 @@ Build **Managed Kubernetes Service** as a focused exercise for **Containers and 
 6. Add one normal example and one edge or failure example specifically for **Containers and Kubernetes**.
 7. Apply the local lab, run its checks, capture the non-sensitive result, and destroy the temporary resources.
 
+### Git Checkpoint
+
+You have completed **MANAGED KUBERNETES SERVICE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cloud/managed-kubernetes-service
+git commit -m "feat(managed-kubernetes-service): complete managed kubernetes service"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 11](./cloud.md#phase-11) | [CONTINUE TO CLOUD PHASE 12](./cloud.md#phase-12)
 
 <a id="cloud-phase-12-project"></a>
@@ -5511,6 +9164,25 @@ Build **Reusable OpenTofu Environment** as a focused exercise for **Infrastructu
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Infrastructure as Code**.
 7. Apply the local lab, run its checks, capture the non-sensitive result, and destroy the temporary resources.
+
+### Git Checkpoint
+
+You have completed **REUSABLE OPENTOFU ENVIRONMENT**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cloud/reusable-opentofu-environment
+git commit -m "chore(reusable-opentofu-environment): complete reusable opentofu environment"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 12](./cloud.md#phase-12) | [CONTINUE TO CLOUD PHASE 13](./cloud.md#phase-13)
 
@@ -5545,6 +9217,25 @@ Build **Governed Landing Zone** as a focused exercise for **Landing Zones and Go
 6. Add one normal example and one edge or failure example specifically for **Landing Zones and Governance**.
 7. Apply the local lab, run its checks, capture the non-sensitive result, and destroy the temporary resources.
 
+### Git Checkpoint
+
+You have completed **GOVERNED LANDING ZONE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cloud/governed-landing-zone
+git commit -m "feat(governed-landing-zone): complete governed landing zone"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 13](./cloud.md#phase-13) | [CONTINUE TO CLOUD PHASE 14](./cloud.md#phase-14)
 
 <a id="cloud-phase-14-project"></a>
@@ -5577,6 +9268,25 @@ Build **Encrypted Secret Rotation** as a focused exercise for **Secrets and Encr
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Secrets and Encryption**.
 7. Apply the local lab, run its checks, capture the non-sensitive result, and destroy the temporary resources.
+
+### Git Checkpoint
+
+You have completed **ENCRYPTED SECRET ROTATION**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cloud/encrypted-secret-rotation
+git commit -m "feat(encrypted-secret-rotation): complete encrypted secret rotation"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 14](./cloud.md#phase-14) | [CONTINUE TO CLOUD PHASE 15](./cloud.md#phase-15)
 
@@ -5611,6 +9321,25 @@ Build **Observable Cloud Service** as a focused exercise for **Observability and
 6. Add one normal example and one edge or failure example specifically for **Observability and Operations**.
 7. Apply the local lab, run its checks, capture the non-sensitive result, and destroy the temporary resources.
 
+### Git Checkpoint
+
+You have completed **OBSERVABLE CLOUD SERVICE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cloud/observable-cloud-service
+git commit -m "feat(observable-cloud-service): complete observable cloud service"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 15](./cloud.md#phase-15) | [CONTINUE TO CLOUD PHASE 16](./cloud.md#phase-16)
 
 <a id="cloud-phase-16-project"></a>
@@ -5643,6 +9372,25 @@ Build **Policy-as-Code Safety checks and limits** as a focused exercise for **Cl
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Cloud Security and Compliance**.
 7. Apply the local lab, run its checks, capture the non-sensitive result, and destroy the temporary resources.
+
+### Git Checkpoint
+
+You have completed **POLICY-AS-CODE SAFETY CHECKS AND LIMITS**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cloud/policy-as-code-safety-checks-and-limits
+git commit -m "docs(policy-as-code-safety-checks-and-limits): complete policy-as-code safety checks and limits"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 16](./cloud.md#phase-16) | [CONTINUE TO CLOUD PHASE 17](./cloud.md#phase-17)
 
@@ -5677,6 +9425,25 @@ Build **Disaster Recovery Game Day** as a focused exercise for **Reliability and
 6. Add one normal example and one edge or failure example specifically for **Reliability and Disaster Recovery**.
 7. Apply the local lab, run its checks, capture the non-sensitive result, and destroy the temporary resources.
 
+### Git Checkpoint
+
+You have completed **DISASTER RECOVERY GAME DAY**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cloud/disaster-recovery-game-day
+git commit -m "fix(disaster-recovery-game-day): complete disaster recovery game day"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 17](./cloud.md#phase-17) | [CONTINUE TO CLOUD PHASE 18](./cloud.md#phase-18)
 
 <a id="cloud-phase-18-project"></a>
@@ -5709,6 +9476,25 @@ Build **Cloud Cost Optimizer** as a focused exercise for **FinOps**. Keep the da
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **FinOps**.
 7. Apply the local lab, run its checks, capture the non-sensitive result, and destroy the temporary resources.
+
+### Git Checkpoint
+
+You have completed **CLOUD COST OPTIMIZER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cloud/cloud-cost-optimizer
+git commit -m "feat(cloud-cost-optimizer): complete cloud cost optimizer"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 18](./cloud.md#phase-18) | [CONTINUE TO CLOUD PHASE 19](./cloud.md#phase-19)
 
@@ -5743,6 +9529,25 @@ Build **Migration Runbook and Pilot** as a focused exercise for **Migration**. K
 6. Add one normal example and one edge or failure example specifically for **Migration**.
 7. Apply the local lab, run its checks, capture the non-sensitive result, and destroy the temporary resources.
 
+### Git Checkpoint
+
+You have completed **MIGRATION RUNBOOK AND PILOT**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cloud/migration-runbook-and-pilot
+git commit -m "docs(migration-runbook-and-pilot): complete migration runbook and pilot"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 19](./cloud.md#phase-19) | [CONTINUE TO CLOUD PHASE 20](./cloud.md#phase-20)
 
 <a id="cloud-phase-20-project"></a>
@@ -5775,6 +9580,25 @@ Build **Cloud Architecture Portfolio** as a focused exercise for **Architecture 
 5. Add one concrete recommendation or next action for every important finding.
 6. Add one normal example and one edge or failure example specifically for **Architecture Interviews and Portfolio**.
 7. Apply the local lab, run its checks, capture the non-sensitive result, and destroy the temporary resources.
+
+### Git Checkpoint
+
+You have completed **CLOUD ARCHITECTURE PORTFOLIO**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cloud/cloud-architecture-portfolio
+git commit -m "docs(cloud-architecture-portfolio): complete cloud architecture portfolio"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 20](./cloud.md#phase-20) | [BUILD THE CLOUD MAIN PORTFOLIO PROJECT](#cloud-main-portfolio-project)
 
@@ -5838,6 +9662,107 @@ No paid API, commercial license, or paid cloud resource is required. Use only ge
 19. **PHASE 19 - Migration (REQUIRED CAPSTONE-COMPLETION STEP):** Write a migration wave for one legacy service, perform the local pilot, validate it, and define rollback.
 20. **PHASE 20 - Architecture Interviews and Portfolio (POST-BUILD PRACTICE; NO NEW PRODUCT FEATURE):** Package architecture diagrams, reusable modules, dashboards, recovery results, and a timed design explanation for the portfolio.
 
+#### GIT MILESTONE CHECKPOINTS
+
+Keep this capstone in `local-nonprofit-cloud-platform` inside the portfolio repository. The five checkpoints below preserve working phase groups without interrupting every implementation step. Test the completed group before committing; the repository-level ignore rules still apply.
+
+##### Git Checkpoint 1
+
+You have completed **Phases 1-4: Linux service baseline, architecture requirements, identity model, and network design**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- local-nonprofit-cloud-platform
+git commit -m "feat(nonprofit-cloud): establish secure platform foundation"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 2
+
+You have completed **Phases 5-10: compute, storage, database, messaging, containers, and Kubernetes platform**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- local-nonprofit-cloud-platform
+git commit -m "feat(nonprofit-cloud): integrate resilient application platform"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 3
+
+You have completed **Phases 11-15: serverless event flow, OpenTofu, observability, secrets, and backup recovery**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- local-nonprofit-cloud-platform
+git commit -m "feat(nonprofit-cloud): automate operations and recovery controls"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 4
+
+You have completed **Phases 16-18: reliability, cost, governance, and multi-region failure exercises**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- local-nonprofit-cloud-platform
+git commit -m "test(nonprofit-cloud): verify reliability governance and disaster recovery"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Final Git Checkpoint
+
+You have completed **Phase 19: migration evidence, sanitized diagrams, local demo, and teardown documentation**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- local-nonprofit-cloud-platform
+git commit -m "docs(nonprofit-cloud): complete nonprofit cloud platform release"
+git tag -a nonprofit-cloud-v1.0.0 -m "First complete nonprofit-cloud release"
+```
+
+Verify:
+
+```bash
+git log --oneline --decorate -5
+git status
+git tag
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
 #### HOW TO DEPLOY IT FOR FREE
 
 1. Install Docker Engine/Podman, OpenTofu, and k3d/kind on a local Linux machine; no cloud account is required.
@@ -5884,6 +9809,25 @@ Build **Value Stream Delivery Map** as a focused exercise for **DevOps Delivery 
 6. Add one normal example and one edge or failure example specifically for **DevOps Delivery Systems**.
 7. Run the full automation from a clean checkout and prove that a deliberate bad input or failed check stops safely.
 
+### Git Checkpoint
+
+You have completed **VALUE STREAM DELIVERY MAP**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- devops/value-stream-delivery-map
+git commit -m "docs(value-stream-delivery-map): complete value stream delivery map"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 1](./devops.md#phase-1) | [CONTINUE TO DEVOPS PHASE 2](./devops.md#phase-2)
 
 <a id="devops-phase-2-project"></a>
@@ -5916,6 +9860,25 @@ Build **Hardened Linux Service** as a focused exercise for **Linux and Services*
 5. Add an automated check for the main success path and the most important failure path.
 6. Add one normal example and one edge or failure example specifically for **Linux and Services**.
 7. Run the full automation from a clean checkout and prove that a deliberate bad input or failed check stops safely.
+
+### Git Checkpoint
+
+You have completed **HARDENED LINUX SERVICE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- devops/hardened-linux-service
+git commit -m "feat(hardened-linux-service): complete hardened linux service"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 2](./devops.md#phase-2) | [CONTINUE TO DEVOPS PHASE 3](./devops.md#phase-3)
 
@@ -5950,6 +9913,25 @@ Build **Incident Troubleshooting Toolkit** as a focused exercise for **Systems a
 6. Add one normal example and one edge or failure example specifically for **Systems and Network Troubleshooting**.
 7. Run the full automation from a clean checkout and prove that a deliberate bad input or failed check stops safely.
 
+### Git Checkpoint
+
+You have completed **INCIDENT TROUBLESHOOTING TOOLKIT**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- devops/incident-troubleshooting-toolkit
+git commit -m "feat(incident-troubleshooting-toolkit): complete incident troubleshooting toolkit"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 3](./devops.md#phase-3) | [CONTINUE TO DEVOPS PHASE 4](./devops.md#phase-4)
 
 <a id="devops-phase-4-project"></a>
@@ -5982,6 +9964,25 @@ Build **Pull-Request Git Workflow** as a focused exercise for **Git Collaboratio
 5. Rerun the same input and prove that the final output remains correct.
 6. Add one normal example and one edge or failure example specifically for **Git Collaboration**.
 7. Run the full automation from a clean checkout and prove that a deliberate bad input or failed check stops safely.
+
+### Git Checkpoint
+
+You have completed **PULL-REQUEST GIT WORKFLOW**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- devops/pull-request-git-workflow
+git commit -m "feat(pull-request-git-workflow): complete pull-request git workflow"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 4](./devops.md#phase-4) | [CONTINUE TO DEVOPS PHASE 5](./devops.md#phase-5)
 
@@ -6016,6 +10017,25 @@ Build **Operations Automation CLI** as a focused exercise for **Shell and Python
 6. Add one normal example and one edge or failure example specifically for **Shell and Python Automation**.
 7. Run the full automation from a clean checkout and prove that a deliberate bad input or failed check stops safely.
 
+### Git Checkpoint
+
+You have completed **OPERATIONS AUTOMATION CLI**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- devops/operations-automation-cli
+git commit -m "feat(operations-automation-cli): complete operations automation cli"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 5](./devops.md#phase-5) | [CONTINUE TO DEVOPS PHASE 6](./devops.md#phase-6)
 
 <a id="devops-phase-6-project"></a>
@@ -6048,6 +10068,25 @@ Build **Reproducible Artifact Pipeline** as a focused exercise for **Builds and 
 5. Rerun the same input and prove that the final output remains correct.
 6. Add one normal example and one edge or failure example specifically for **Builds and Artifacts**.
 7. Run the full automation from a clean checkout and prove that a deliberate bad input or failed check stops safely.
+
+### Git Checkpoint
+
+You have completed **REPRODUCIBLE ARTIFACT PIPELINE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- devops/reproducible-artifact-pipeline
+git commit -m "chore(reproducible-artifact-pipeline): complete reproducible artifact pipeline"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 6](./devops.md#phase-6) | [CONTINUE TO DEVOPS PHASE 7](./devops.md#phase-7)
 
@@ -6082,6 +10121,25 @@ Build **Quality-Gated CI Pipeline** as a focused exercise for **Continuous Integ
 6. Add one normal example and one edge or failure example specifically for **Continuous Integration**.
 7. Run the full automation from a clean checkout and prove that a deliberate bad input or failed check stops safely.
 
+### Git Checkpoint
+
+You have completed **QUALITY-GATED CI PIPELINE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- devops/quality-gated-ci-pipeline
+git commit -m "chore(quality-gated-ci-pipeline): complete quality-gated ci pipeline"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 7](./devops.md#phase-7) | [CONTINUE TO DEVOPS PHASE 8](./devops.md#phase-8)
 
 <a id="devops-phase-8-project"></a>
@@ -6114,6 +10172,25 @@ Build **Canary Deployment Simulator** as a focused exercise for **Continuous Del
 5. Check a normal case, a boundary case, and an invalid case against known answers.
 6. Add one normal example and one edge or failure example specifically for **Continuous Delivery**.
 7. Run the full automation from a clean checkout and prove that a deliberate bad input or failed check stops safely.
+
+### Git Checkpoint
+
+You have completed **CANARY DEPLOYMENT SIMULATOR**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- devops/canary-deployment-simulator
+git commit -m "feat(canary-deployment-simulator): complete canary deployment simulator"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 8](./devops.md#phase-8) | [CONTINUE TO DEVOPS PHASE 9](./devops.md#phase-9)
 
@@ -6148,6 +10225,25 @@ Build **Hardened Multi-Stage Container** as a focused exercise for **Container E
 6. Add one normal example and one edge or failure example specifically for **Container Engineering**.
 7. Run the full automation from a clean checkout and prove that a deliberate bad input or failed check stops safely.
 
+### Git Checkpoint
+
+You have completed **HARDENED MULTI-STAGE CONTAINER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- devops/hardened-multi-stage-container
+git commit -m "feat(hardened-multi-stage-container): complete hardened multi-stage container"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 9](./devops.md#phase-9) | [CONTINUE TO DEVOPS PHASE 10](./devops.md#phase-10)
 
 <a id="devops-phase-10-project"></a>
@@ -6180,6 +10276,25 @@ Build **Kubernetes Operations Lab** as a focused exercise for **Kubernetes Opera
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Kubernetes Operations**.
 7. Run the full automation from a clean checkout and prove that a deliberate bad input or failed check stops safely.
+
+### Git Checkpoint
+
+You have completed **KUBERNETES OPERATIONS LAB**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- devops/kubernetes-operations-lab
+git commit -m "feat(kubernetes-operations-lab): complete kubernetes operations lab"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 10](./devops.md#phase-10) | [CONTINUE TO DEVOPS PHASE 11](./devops.md#phase-11)
 
@@ -6214,6 +10329,25 @@ Build **OpenTofu State Lifecycle Lab** as a focused exercise for **Infrastructur
 6. Add one normal example and one edge or failure example specifically for **Infrastructure as Code**.
 7. Run the full automation from a clean checkout and prove that a deliberate bad input or failed check stops safely.
 
+### Git Checkpoint
+
+You have completed **OPENTOFU STATE LIFECYCLE LAB**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- devops/opentofu-state-lifecycle-lab
+git commit -m "feat(opentofu-state-lifecycle-lab): complete opentofu state lifecycle lab"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 11](./devops.md#phase-11) | [CONTINUE TO DEVOPS PHASE 12](./devops.md#phase-12)
 
 <a id="devops-phase-12-project"></a>
@@ -6246,6 +10380,25 @@ Build **Idempotent Ansible Baseline** as a focused exercise for **Configuration 
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Configuration Management**.
 7. Run the full automation from a clean checkout and prove that a deliberate bad input or failed check stops safely.
+
+### Git Checkpoint
+
+You have completed **IDEMPOTENT ANSIBLE BASELINE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- devops/idempotent-ansible-baseline
+git commit -m "chore(idempotent-ansible-baseline): complete idempotent ansible baseline"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 12](./devops.md#phase-12) | [CONTINUE TO DEVOPS PHASE 13](./devops.md#phase-13)
 
@@ -6280,6 +10433,25 @@ Build **Cloud Delivery Foundation** as a focused exercise for **Cloud Infrastruc
 6. Add one normal example and one edge or failure example specifically for **Cloud Infrastructure**.
 7. Run the full automation from a clean checkout and prove that a deliberate bad input or failed check stops safely.
 
+### Git Checkpoint
+
+You have completed **CLOUD DELIVERY FOUNDATION**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- devops/cloud-delivery-foundation
+git commit -m "feat(cloud-delivery-foundation): complete cloud delivery foundation"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 13](./devops.md#phase-13) | [CONTINUE TO DEVOPS PHASE 14](./devops.md#phase-14)
 
 <a id="devops-phase-14-project"></a>
@@ -6312,6 +10484,25 @@ Build **Observable Demo Service** as a focused exercise for **Observability**. K
 5. Add an automated check for the main success path and the most important failure path.
 6. Add one normal example and one edge or failure example specifically for **Observability**.
 7. Run the full automation from a clean checkout and prove that a deliberate bad input or failed check stops safely.
+
+### Git Checkpoint
+
+You have completed **OBSERVABLE DEMO SERVICE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- devops/observable-demo-service
+git commit -m "feat(observable-demo-service): complete observable demo service"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 14](./devops.md#phase-14) | [CONTINUE TO DEVOPS PHASE 15](./devops.md#phase-15)
 
@@ -6346,6 +10537,25 @@ Build **SLO and Error Budget Dashboard** as a focused exercise for **SRE and Err
 6. Add one normal example and one edge or failure example specifically for **SRE and Error Budgets**.
 7. Run the full automation from a clean checkout and prove that a deliberate bad input or failed check stops safely.
 
+### Git Checkpoint
+
+You have completed **SLO AND ERROR BUDGET DASHBOARD**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- devops/slo-and-error-budget-dashboard
+git commit -m "feat(slo-and-error-budget-dashboard): complete slo and error budget dashboard"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 15](./devops.md#phase-15) | [CONTINUE TO DEVOPS PHASE 16](./devops.md#phase-16)
 
 <a id="devops-phase-16-project"></a>
@@ -6378,6 +10588,25 @@ Build **Signed Software Supply Chain** as a focused exercise for **Software Supp
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Software Supply-Chain Security**.
 7. Run the full automation from a clean checkout and prove that a deliberate bad input or failed check stops safely.
+
+### Git Checkpoint
+
+You have completed **SIGNED SOFTWARE SUPPLY CHAIN**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- devops/signed-software-supply-chain
+git commit -m "feat(signed-software-supply-chain): complete signed software supply chain"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 16](./devops.md#phase-16) | [CONTINUE TO DEVOPS PHASE 17](./devops.md#phase-17)
 
@@ -6412,6 +10641,25 @@ Build **GitOps Application Platform** as a focused exercise for **GitOps and Pla
 6. Add one normal example and one edge or failure example specifically for **GitOps and Platform Engineering**.
 7. Run the full automation from a clean checkout and prove that a deliberate bad input or failed check stops safely.
 
+### Git Checkpoint
+
+You have completed **GITOPS APPLICATION PLATFORM**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- devops/gitops-application-platform
+git commit -m "feat(gitops-application-platform): complete gitops application platform"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 17](./devops.md#phase-17) | [CONTINUE TO DEVOPS PHASE 18](./devops.md#phase-18)
 
 <a id="devops-phase-18-project"></a>
@@ -6444,6 +10692,25 @@ Build **Chaos Game Day and Postmortem** as a focused exercise for **Incident Res
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Incident Response and Chaos**.
 7. Run the full automation from a clean checkout and prove that a deliberate bad input or failed check stops safely.
+
+### Git Checkpoint
+
+You have completed **CHAOS GAME DAY AND POSTMORTEM**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- devops/chaos-game-day-and-postmortem
+git commit -m "feat(chaos-game-day-and-postmortem): complete chaos game day and postmortem"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 18](./devops.md#phase-18) | [CONTINUE TO DEVOPS PHASE 19](./devops.md#phase-19)
 
@@ -6478,6 +10745,25 @@ Build **Production Delivery Platform** as a focused exercise for **Portfolio Del
 6. Add one normal example and one edge or failure example specifically for **Portfolio Delivery Platform**.
 7. Run the full automation from a clean checkout and prove that a deliberate bad input or failed check stops safely.
 
+### Git Checkpoint
+
+You have completed **PRODUCTION DELIVERY PLATFORM**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- devops/production-delivery-platform
+git commit -m "feat(production-delivery-platform): complete production delivery platform"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 19](./devops.md#phase-19) | [CONTINUE TO DEVOPS PHASE 20](./devops.md#phase-20)
 
 <a id="devops-phase-20-project"></a>
@@ -6510,6 +10796,25 @@ Build **Timed DevOps Incident Drill** as a focused exercise for **Interviews**. 
 5. Include one case where the preferred approach fails or becomes a poor choice.
 6. Add one normal example and one edge or failure example specifically for **Interviews**.
 7. Run the full automation from a clean checkout and prove that a deliberate bad input or failed check stops safely.
+
+### Git Checkpoint
+
+You have completed **TIMED DEVOPS INCIDENT DRILL**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- devops/timed-devops-incident-drill
+git commit -m "feat(timed-devops-incident-drill): complete timed devops incident drill"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 20](./devops.md#phase-20) | [BUILD THE DEVOPS MAIN PORTFOLIO PROJECT](#devops-main-portfolio-project)
 
@@ -6573,6 +10878,107 @@ No paid API, commercial license, or paid cloud resource is required. Use only ge
 19. **PHASE 19 - Portfolio Delivery Platform (REQUIRED CAPSTONE-COMPLETION STEP):** Polish the golden path, diagrams, dashboards, sample service, open-source license, and one-command local demonstration.
 20. **PHASE 20 - Interviews (POST-BUILD PRACTICE; NO NEW PRODUCT FEATURE):** Practice a timed broken-deployment drill and explain architecture, delivery metrics, security, SLOs, and recovery decisions.
 
+#### GIT MILESTONE CHECKPOINTS
+
+Keep this capstone in `open-developer-self-service-delivery-platform` inside the portfolio repository. The five checkpoints below preserve working phase groups without interrupting every implementation step. Test the completed group before committing; the repository-level ignore rules still apply.
+
+##### Git Checkpoint 1
+
+You have completed **Phases 1-4: delivery map, hardened host, diagnostic workflow, and reviewed Git policy**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-developer-self-service-delivery-platform
+git commit -m "feat(delivery-platform): establish delivery and repository foundation"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 2
+
+You have completed **Phases 5-10: scaffold automation, reproducible artifacts, CI/CD, containers, and Kubernetes**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-developer-self-service-delivery-platform
+git commit -m "feat(delivery-platform): implement build and deployment golden path"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 3
+
+You have completed **Phases 11-15: OpenTofu, Ansible, cloud interfaces, observability, and SLO operations**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-developer-self-service-delivery-platform
+git commit -m "feat(delivery-platform): integrate platform operations and reliability"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 4
+
+You have completed **Phases 16-18: supply-chain controls, GitOps reconciliation, and chaos recovery evidence**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-developer-self-service-delivery-platform
+git commit -m "test(delivery-platform): verify trusted GitOps and incident recovery"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Final Git Checkpoint
+
+You have completed **Phase 19: polished self-service demo, diagrams, dashboards, and release documentation**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- open-developer-self-service-delivery-platform
+git commit -m "docs(delivery-platform): complete self-service platform release"
+git tag -a delivery-platform-v1.0.0 -m "First complete delivery-platform release"
+```
+
+Verify:
+
+```bash
+git log --oneline --decorate -5
+git status
+git tag
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
 #### HOW TO DEPLOY IT FOR FREE
 
 1. Bootstrap the complete platform on a local Linux machine with Docker Engine/Podman and k3d/kind.
@@ -6619,6 +11025,25 @@ Build **Risk Register and Treatment Plan** as a focused exercise for **Risk-Base
 6. Add one normal example and one edge or failure example specifically for **Risk-Based Security**.
 7. Verify the defensive result, export only sanitized artifacts, and restore the isolated lab snapshot if it was changed.
 
+### Git Checkpoint
+
+You have completed **RISK REGISTER AND TREATMENT PLAN**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cyber/risk-register-and-treatment-plan
+git commit -m "docs(risk-register-and-treatment-plan): complete risk register and treatment plan"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 1](./ICT_Cybersecurity.md#phase-1) | [CONTINUE TO CYBER PHASE 2](./ICT_Cybersecurity.md#phase-2)
 
 <a id="cyber-phase-2-project"></a>
@@ -6651,6 +11076,25 @@ Build **Network Attack Surface Map** as a focused exercise for **Networking for 
 5. Add one concrete recommendation or next action for every important finding.
 6. Add one normal example and one edge or failure example specifically for **Networking for Security**.
 7. Verify the defensive result, export only sanitized artifacts, and restore the isolated lab snapshot if it was changed.
+
+### Git Checkpoint
+
+You have completed **NETWORK ATTACK SURFACE MAP**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cyber/network-attack-surface-map
+git commit -m "docs(network-attack-surface-map): complete network attack surface map"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 2](./ICT_Cybersecurity.md#phase-2) | [CONTINUE TO CYBER PHASE 3](./ICT_Cybersecurity.md#phase-3)
 
@@ -6685,6 +11129,25 @@ Build **Host Hardening Baseline** as a focused exercise for **Host Security**. K
 6. Add one normal example and one edge or failure example specifically for **Host Security**.
 7. Verify the defensive result, export only sanitized artifacts, and restore the isolated lab snapshot if it was changed.
 
+### Git Checkpoint
+
+You have completed **HOST HARDENING BASELINE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cyber/host-hardening-baseline
+git commit -m "chore(host-hardening-baseline): complete host hardening baseline"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 3](./ICT_Cybersecurity.md#phase-3) | [CONTINUE TO CYBER PHASE 4](./ICT_Cybersecurity.md#phase-4)
 
 <a id="cyber-phase-4-project"></a>
@@ -6717,6 +11180,25 @@ Build **Secure File Vault** as a focused exercise for **Cryptography**. Keep the
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Cryptography**.
 7. Verify the defensive result, export only sanitized artifacts, and restore the isolated lab snapshot if it was changed.
+
+### Git Checkpoint
+
+You have completed **SECURE FILE VAULT**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cyber/secure-file-vault
+git commit -m "feat(secure-file-vault): complete secure file vault"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 4](./ICT_Cybersecurity.md#phase-4) | [CONTINUE TO CYBER PHASE 5](./ICT_Cybersecurity.md#phase-5)
 
@@ -6751,6 +11233,25 @@ Build **Least-Privilege IAM Review** as a focused exercise for **Identity and Ac
 6. Add one normal example and one edge or failure example specifically for **Identity and Access Management**.
 7. Verify the defensive result, export only sanitized artifacts, and restore the isolated lab snapshot if it was changed.
 
+### Git Checkpoint
+
+You have completed **LEAST-PRIVILEGE IAM REVIEW**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cyber/least-privilege-iam-review
+git commit -m "feat(least-privilege-iam-review): complete least-privilege iam review"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 5](./ICT_Cybersecurity.md#phase-5) | [CONTINUE TO CYBER PHASE 6](./ICT_Cybersecurity.md#phase-6)
 
 <a id="cyber-phase-6-project"></a>
@@ -6783,6 +11284,25 @@ Build **Threat Model and ATT&CK Map** as a focused exercise for **Threat Modelin
 5. Add one concrete recommendation or next action for every important finding.
 6. Add one normal example and one edge or failure example specifically for **Threat Modeling and ATT&CK**.
 7. Verify the defensive result, export only sanitized artifacts, and restore the isolated lab snapshot if it was changed.
+
+### Git Checkpoint
+
+You have completed **THREAT MODEL AND ATT&CK MAP**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cyber/threat-model-and-att-ck-map
+git commit -m "docs(threat-model-and-att-ck-map): complete threat model and att&ck map"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 6](./ICT_Cybersecurity.md#phase-6) | [CONTINUE TO CYBER PHASE 7](./ICT_Cybersecurity.md#phase-7)
 
@@ -6817,6 +11337,25 @@ Build **OWASP Remediation Lab** as a focused exercise for **Web Application Secu
 6. Add one normal example and one edge or failure example specifically for **Web Application Security**.
 7. Verify the defensive result, export only sanitized artifacts, and restore the isolated lab snapshot if it was changed.
 
+### Git Checkpoint
+
+You have completed **OWASP REMEDIATION LAB**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cyber/owasp-remediation-lab
+git commit -m "feat(owasp-remediation-lab): complete owasp remediation lab"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 7](./ICT_Cybersecurity.md#phase-7) | [CONTINUE TO CYBER PHASE 8](./ICT_Cybersecurity.md#phase-8)
 
 <a id="cyber-phase-8-project"></a>
@@ -6849,6 +11388,25 @@ Build **Firewall and IDS Validation** as a focused exercise for **Network Defens
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Network Defenses**.
 7. Verify the defensive result, export only sanitized artifacts, and restore the isolated lab snapshot if it was changed.
+
+### Git Checkpoint
+
+You have completed **FIREWALL AND IDS VALIDATION**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cyber/firewall-and-ids-validation
+git commit -m "feat(firewall-and-ids-validation): complete firewall and ids validation"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 8](./ICT_Cybersecurity.md#phase-8) | [CONTINUE TO CYBER PHASE 9](./ICT_Cybersecurity.md#phase-9)
 
@@ -6883,6 +11441,25 @@ Build **Endpoint Hardening Pack** as a focused exercise for **Endpoint Hardening
 6. Add one normal example and one edge or failure example specifically for **Endpoint Hardening**.
 7. Verify the defensive result, export only sanitized artifacts, and restore the isolated lab snapshot if it was changed.
 
+### Git Checkpoint
+
+You have completed **ENDPOINT HARDENING PACK**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cyber/endpoint-hardening-pack
+git commit -m "feat(endpoint-hardening-pack): complete endpoint hardening pack"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 9](./ICT_Cybersecurity.md#phase-9) | [CONTINUE TO CYBER PHASE 10](./ICT_Cybersecurity.md#phase-10)
 
 <a id="cyber-phase-10-project"></a>
@@ -6915,6 +11492,25 @@ Build **Vulnerability Triage Program** as a focused exercise for **Vulnerability
 5. Include one case where the preferred approach fails or becomes a poor choice.
 6. Add one normal example and one edge or failure example specifically for **Vulnerability Management**.
 7. Verify the defensive result, export only sanitized artifacts, and restore the isolated lab snapshot if it was changed.
+
+### Git Checkpoint
+
+You have completed **VULNERABILITY TRIAGE PROGRAM**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cyber/vulnerability-triage-program
+git commit -m "feat(vulnerability-triage-program): complete vulnerability triage program"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 10](./ICT_Cybersecurity.md#phase-10) | [CONTINUE TO CYBER PHASE 11](./ICT_Cybersecurity.md#phase-11)
 
@@ -6949,6 +11545,25 @@ Build **Authorized Web Pentest Report** as a focused exercise for **Penetration 
 6. Add one normal example and one edge or failure example specifically for **Penetration Testing Methodology**.
 7. Verify the defensive result, export only sanitized artifacts, and restore the isolated lab snapshot if it was changed.
 
+### Git Checkpoint
+
+You have completed **AUTHORIZED WEB PENTEST REPORT**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cyber/authorized-web-pentest-report
+git commit -m "test(authorized-web-pentest-report): complete authorized web pentest report"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 11](./ICT_Cybersecurity.md#phase-11) | [CONTINUE TO CYBER PHASE 12](./ICT_Cybersecurity.md#phase-12)
 
 <a id="cyber-phase-12-project"></a>
@@ -6981,6 +11596,25 @@ Build **Active Directory Detection Lab** as a focused exercise for **Active Dire
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Active Directory Defense**.
 7. Verify the defensive result, export only sanitized artifacts, and restore the isolated lab snapshot if it was changed.
+
+### Git Checkpoint
+
+You have completed **ACTIVE DIRECTORY DETECTION LAB**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cyber/active-directory-detection-lab
+git commit -m "feat(active-directory-detection-lab): complete active directory detection lab"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 12](./ICT_Cybersecurity.md#phase-12) | [CONTINUE TO CYBER PHASE 13](./ICT_Cybersecurity.md#phase-13)
 
@@ -7015,6 +11649,25 @@ Build **SIEM Detection Engineering Pack** as a focused exercise for **SIEM and D
 6. Add one normal example and one edge or failure example specifically for **SIEM and Detection Engineering**.
 7. Verify the defensive result, export only sanitized artifacts, and restore the isolated lab snapshot if it was changed.
 
+### Git Checkpoint
+
+You have completed **SIEM DETECTION ENGINEERING PACK**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cyber/siem-detection-engineering-pack
+git commit -m "feat(siem-detection-engineering-pack): complete siem detection engineering pack"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 13](./ICT_Cybersecurity.md#phase-13) | [CONTINUE TO CYBER PHASE 14](./ICT_Cybersecurity.md#phase-14)
 
 <a id="cyber-phase-14-project"></a>
@@ -7047,6 +11700,25 @@ Build **Incident Forensics Case** as a focused exercise for **Digital Forensics 
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Digital Forensics and Incident Response**.
 7. Verify the defensive result, export only sanitized artifacts, and restore the isolated lab snapshot if it was changed.
+
+### Git Checkpoint
+
+You have completed **INCIDENT FORENSICS CASE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cyber/incident-forensics-case
+git commit -m "feat(incident-forensics-case): complete incident forensics case"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 14](./ICT_Cybersecurity.md#phase-14) | [CONTINUE TO CYBER PHASE 15](./ICT_Cybersecurity.md#phase-15)
 
@@ -7081,6 +11753,25 @@ Build **Cloud IAM Attack-Path Review** as a focused exercise for **Cloud Securit
 6. Add one normal example and one edge or failure example specifically for **Cloud Security**.
 7. Verify the defensive result, export only sanitized artifacts, and restore the isolated lab snapshot if it was changed.
 
+### Git Checkpoint
+
+You have completed **CLOUD IAM ATTACK-PATH REVIEW**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cyber/cloud-iam-attack-path-review
+git commit -m "feat(cloud-iam-attack-path-review): complete cloud iam attack-path review"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 15](./ICT_Cybersecurity.md#phase-15) | [CONTINUE TO CYBER PHASE 16](./ICT_Cybersecurity.md#phase-16)
 
 <a id="cyber-phase-16-project"></a>
@@ -7113,6 +11804,25 @@ Build **Container Supply-Chain Lab** as a focused exercise for **Container and D
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Container and DevSecOps Security**.
 7. Verify the defensive result, export only sanitized artifacts, and restore the isolated lab snapshot if it was changed.
+
+### Git Checkpoint
+
+You have completed **CONTAINER SUPPLY-CHAIN LAB**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cyber/container-supply-chain-lab
+git commit -m "feat(container-supply-chain-lab): complete container supply-chain lab"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 16](./ICT_Cybersecurity.md#phase-16) | [CONTINUE TO CYBER PHASE 17](./ICT_Cybersecurity.md#phase-17)
 
@@ -7147,6 +11857,25 @@ Build **Static Malware Triage** as a focused exercise for **Malware Analysis**. 
 6. Add one normal example and one edge or failure example specifically for **Malware Analysis**.
 7. Verify the defensive result, export only sanitized artifacts, and restore the isolated lab snapshot if it was changed.
 
+### Git Checkpoint
+
+You have completed **STATIC MALWARE TRIAGE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cyber/static-malware-triage
+git commit -m "feat(static-malware-triage): complete static malware triage"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 17](./ICT_Cybersecurity.md#phase-17) | [CONTINUE TO CYBER PHASE 18](./ICT_Cybersecurity.md#phase-18)
 
 <a id="cyber-phase-18-project"></a>
@@ -7179,6 +11908,25 @@ Build **Control-to-Evidence Audit Pack** as a focused exercise for **Governance,
 5. Add one concrete recommendation or next action for every important finding.
 6. Add one normal example and one edge or failure example specifically for **Governance, Risk, and Compliance**.
 7. Verify the defensive result, export only sanitized artifacts, and restore the isolated lab snapshot if it was changed.
+
+### Git Checkpoint
+
+You have completed **CONTROL-TO-EVIDENCE AUDIT PACK**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cyber/control-to-evidence-audit-pack
+git commit -m "docs(control-to-evidence-audit-pack): complete control-to-evidence audit pack"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 18](./ICT_Cybersecurity.md#phase-18) | [CONTINUE TO CYBER PHASE 19](./ICT_Cybersecurity.md#phase-19)
 
@@ -7213,6 +11961,25 @@ Build **Defensive Security Portfolio** as a focused exercise for **Security Port
 6. Add one normal example and one edge or failure example specifically for **Security Portfolio**.
 7. Verify the defensive result, export only sanitized artifacts, and restore the isolated lab snapshot if it was changed.
 
+### Git Checkpoint
+
+You have completed **DEFENSIVE SECURITY PORTFOLIO**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cyber/defensive-security-portfolio
+git commit -m "feat(defensive-security-portfolio): complete defensive security portfolio"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 19](./ICT_Cybersecurity.md#phase-19) | [CONTINUE TO CYBER PHASE 20](./ICT_Cybersecurity.md#phase-20)
 
 <a id="cyber-phase-20-project"></a>
@@ -7245,6 +12012,25 @@ Build **Timed SOC Investigation** as a focused exercise for **Interviews**. Keep
 5. Handle empty input, invalid input, and the normal user journey without crashing.
 6. Add one normal example and one edge or failure example specifically for **Interviews**.
 7. Verify the defensive result, export only sanitized artifacts, and restore the isolated lab snapshot if it was changed.
+
+### Git Checkpoint
+
+You have completed **TIMED SOC INVESTIGATION**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cyber/timed-soc-investigation
+git commit -m "feat(timed-soc-investigation): complete timed soc investigation"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 20](./ICT_Cybersecurity.md#phase-20) | [BUILD THE CYBER MAIN PORTFOLIO PROJECT](#cyber-main-portfolio-project)
 
@@ -7308,6 +12094,107 @@ No paid API, commercial license, or paid cloud resource is required. Use only ge
 19. **PHASE 19 - Security Portfolio (REQUIRED CAPSTONE-COMPLETION STEP):** Polish sanitized detections, dashboards, timelines, risk tables, hardening code, lab diagrams, and an open-source license.
 20. **PHASE 20 - Interviews (POST-BUILD PRACTICE; NO NEW PRODUCT FEATURE):** Run a timed unknown-alert investigation and explain severity, evidence, containment, communication, and next steps aloud.
 
+#### GIT MILESTONE CHECKPOINTS
+
+Keep this capstone in `defensive-soc-lab` inside the portfolio repository. The five checkpoints below preserve working phase groups without interrupting every implementation step. Test the completed group before committing; the repository-level ignore rules still apply.
+
+##### Git Checkpoint 1
+
+You have completed **Phases 1-4: risk register, isolated topology, hardened hosts, and cryptographic evidence**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- defensive-soc-lab
+git commit -m "feat(soc-lab): establish authorized defensive lab baseline"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 2
+
+You have completed **Phases 5-10: identity, threat model, web and network defenses, endpoint telemetry, and vulnerability process**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- defensive-soc-lab
+git commit -m "feat(soc-lab): implement layered detection and hardening"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 3
+
+You have completed **Phases 11-15: authorized assessment, AD defense, SIEM detections, incident timeline, and cloud controls**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- defensive-soc-lab
+git commit -m "feat(soc-lab): integrate detection and incident workflows"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 4
+
+You have completed **Phases 16-18: container policy, safe malware triage, governance mapping, and recovery checks**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- defensive-soc-lab
+git commit -m "test(soc-lab): verify safe security exercises and controls"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Final Git Checkpoint
+
+You have completed **Phase 19: sanitized detections, dashboards, evidence, diagrams, and portfolio documentation**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- defensive-soc-lab
+git commit -m "docs(soc-lab): complete defensive SOC lab release"
+git tag -a soc-lab-v1.0.0 -m "First complete soc-lab release"
+```
+
+Verify:
+
+```bash
+git log --oneline --decorate -5
+git status
+git tag
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
 #### HOW TO DEPLOY IT FOR FREE
 
 1. Run all security systems on an isolated host-only VirtualBox/KVM network; never bridge vulnerable targets to the public internet.
@@ -7333,7 +12220,7 @@ Study this roadmap first: [Git.md](./Git.md). Build one project after each of it
 - **Scenario / purpose:** Reproduce a safe Git laboratory for a new teammate without hidden settings; prove Git is local and a forge is an optional collaboration layer.
 - **Skills / prerequisites:** Phase 1; installation verification, config scopes, `init`, bare remotes, `clone`, `.git`, and Git-versus-hosting boundaries.
 - **Starting state:** No workbench directory or online account. Use only Git and a text editor; Forgejo/Gitea is optional and open source.
-- **Expected state:** Two working clones point to one local bare remote; `README.md` is untracked and no commit exists.
+- **Expected state:** Before the checkpoint, two working clones point to one local bare remote and `README.md` is untracked. The checkpoint creates the first intentional commit for Phase 2 to inspect.
 
 #### BUILD IT STEP BY STEP
 
@@ -7349,6 +12236,25 @@ Study this roadmap first: [Git.md](./Git.md). Build one project after each of it
 - **Deliberate mistake / recovery:** set a wrong local email, then correct only local scope and verify its origin without altering global config.
 - **Common mistakes:** treating author identity as authentication, assuming `origin` means GitHub, or editing `.git` blindly.
 - **Definition of done / portfolio evidence:** reproducible README, sanitized config output, topology diagram, and a one-minute explanation of why clone is more than download.
+
+### Git Checkpoint
+
+You have completed **Reproducible Git Workbench**. Run its final verification, save the required sanitized evidence under `evidence/phase-1`, and then preserve this working milestone from the `git-workbench` repository:
+
+```bash
+git status
+git add -- README.md evidence/phase-1
+git commit -m "chore(workbench): establish reproducible Git lab"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW GIT PHASE 1](./Git.md#phase-1) | [CONTINUE TO GIT PHASE 2](./Git.md#phase-2)
 
@@ -7379,6 +12285,25 @@ Study this roadmap first: [Git.md](./Git.md). Build one project after each of it
 - **Common mistakes:** reading only status, confusing diff directions, or using destructive restore for an index-only problem.
 - **Definition of done / portfolio evidence:** lifecycle table, saved staged diffs, exact commit IDs, ignored-file proof, and an interview explanation of “staged and modified” simultaneously.
 
+### Git Checkpoint
+
+You have completed **Three-State Change Journal**. Run its final verification, save the required sanitized evidence under `evidence/phase-2`, and then preserve this working milestone from the `git-workbench` repository:
+
+```bash
+git status
+git add -- journal.md .gitignore evidence/phase-2
+git commit -m "feat(index): complete three-state change journal"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW GIT PHASE 2](./Git.md#phase-2) | [CONTINUE TO GIT PHASE 3](./Git.md#phase-3)
 
 <a id="git-phase-3-project"></a>
@@ -7407,6 +12332,25 @@ Study this roadmap first: [Git.md](./Git.md). Build one project after each of it
 - **Deliberate mistake / recovery:** create one `misc changes` commit, split it before publication, and prove the final tree is unchanged.
 - **Common mistakes:** treating atomic as “few lines,” confusing author/committer, or using `..` and `...` interchangeably.
 - **Definition of done / portfolio evidence:** graph, five IDs, message rationale, history-investigation report, tree comparison, and defense of commit boundaries.
+
+### Git Checkpoint
+
+You have completed **Atomic History Exhibit**. Run its final verification, save the required sanitized evidence under `evidence/phase-3`, and then preserve this working milestone from the `git-workbench` repository:
+
+```bash
+git status
+git add -- README.md evidence/phase-3
+git commit -m "docs(history): record atomic history investigation"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW GIT PHASE 3](./Git.md#phase-3) | [CONTINUE TO GIT PHASE 4](./Git.md#phase-4)
 
@@ -7437,6 +12381,25 @@ Study this roadmap first: [Git.md](./Git.md). Build one project after each of it
 - **Common mistakes:** editing `.git/objects`, calling reflog remote backup, or treating pack deltas as the commit model.
 - **Definition of done / portfolio evidence:** object map, command transcript, before/after counts, rescue graph, and detached-HEAD interview explanation.
 
+### Git Checkpoint
+
+You have completed **Object Database Archaeology**. Run its final verification, save the required sanitized evidence under `evidence/phase-4`, and then preserve this working milestone from the `git-workbench` repository:
+
+```bash
+git status
+git add -- README.md evidence/phase-4
+git commit -m "docs(internals): document object database archaeology"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW GIT PHASE 4](./Git.md#phase-4) | [CONTINUE TO GIT PHASE 5](./Git.md#phase-5)
 
 <a id="git-phase-5-project"></a>
@@ -7465,6 +12428,25 @@ Study this roadmap first: [Git.md](./Git.md). Build one project after each of it
 - **Deliberate mistake / recovery:** trigger `git branch -d` refusal on unmerged work, preserve a safety ref, and integrate or retain it instead of forcing blindly.
 - **Common mistakes:** confusing local/remote-tracking branches, deleting by age, or using permanent environment branches by habit.
 - **Definition of done / portfolio evidence:** graph, `branch -vv`, merge bases, naming policy, cleanup log, and ahead/behind explanation.
+
+### Git Checkpoint
+
+You have completed **Parallel Feature Branch Lab**. Run its final verification, save the required sanitized evidence under `evidence/phase-5`, and then preserve this working milestone from the `git-workbench` repository:
+
+```bash
+git status
+git add -- README.md evidence/phase-5
+git commit -m "docs(branching): capture parallel branch experiment"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW GIT PHASE 5](./Git.md#phase-5) | [CONTINUE TO GIT PHASE 6](./Git.md#phase-6)
 
@@ -7495,6 +12477,25 @@ Study this roadmap first: [Git.md](./Git.md). Build one project after each of it
 - **Common mistakes:** context-free ours/theirs, untested marker removal, or destructive reset instead of merge abort.
 - **Definition of done / portfolio evidence:** correct trees, index-stage capture, tests, resolution rationale, graphs, and a three-way merge explanation.
 
+### Git Checkpoint
+
+You have completed **Conflict Resolution Gauntlet**. Run its final verification, save the required sanitized evidence under `evidence/phase-6`, and then preserve this working milestone from the `git-workbench` repository:
+
+```bash
+git status
+git add -- README.md evidence/phase-6
+git commit -m "test(merge): document conflict resolution gauntlet"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW GIT PHASE 6](./Git.md#phase-6) | [CONTINUE TO GIT PHASE 7](./Git.md#phase-7)
 
 <a id="git-phase-7-project"></a>
@@ -7523,6 +12524,25 @@ Study this roadmap first: [Git.md](./Git.md). Build one project after each of it
 - **Deliberate mistake / recovery:** pull a diverged branch without explicit strategy, abort/inspect, then repeat with a documented strategy.
 - **Common mistakes:** treating `origin/main` as live, assuming `origin` is reserved, leaking credentials, or reviewing generated noise.
 - **Definition of done / portfolio evidence:** topology, PR/MR or transcript, check output, graph, merge rationale, and fetch/pull/PR distinction.
+
+### Git Checkpoint
+
+You have completed **Distributed Review Simulation**. Run its final verification, save the required sanitized evidence under `evidence/phase-7`, and then preserve this working milestone from the `git-workbench` repository:
+
+```bash
+git status
+git add -- README.md evidence/phase-7
+git commit -m "docs(collaboration): record distributed review simulation"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW GIT PHASE 7](./Git.md#phase-7) | [CONTINUE TO GIT PHASE 8](./Git.md#phase-8)
 
@@ -7553,6 +12573,25 @@ Study this roadmap first: [Git.md](./Git.md). Build one project after each of it
 - **Common mistakes:** skipping diffs, rewriting published IDs, or claiming hard reset instantly destroys all objects.
 - **Definition of done / portfolio evidence:** completed decision table, state matrices, graphs, tests, warnings, and a state-first interview answer.
 
+### Git Checkpoint
+
+You have completed **Safe Undo Decision Lab**. Run its final verification, save the required sanitized evidence under `evidence/phase-8`, and then preserve this working milestone from the `git-workbench` repository:
+
+```bash
+git status
+git add -- README.md evidence/phase-8
+git commit -m "docs(undo): document safe undo decisions"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW GIT PHASE 8](./Git.md#phase-8) | [CONTINUE TO GIT PHASE 9](./Git.md#phase-9)
 
 <a id="git-phase-9-project"></a>
@@ -7581,6 +12620,25 @@ Study this roadmap first: [Git.md](./Git.md). Build one project after each of it
 - **Deliberate mistake / recovery:** stale local view before rewrite; let the lease fail, re-plan, and update without overwriting collaborator work.
 - **Common mistakes:** force first, assuming ignore removes history, practicing with real secrets, or calling reflog permanent backup.
 - **Definition of done / portfolio evidence:** incident timeline, graphs/ref map, lease refusal, verification script, collaborator guide, and containment-first explanation.
+
+### Git Checkpoint
+
+You have completed **Reflog Rescue Mission**. Run its final verification, save the required sanitized evidence under `evidence/phase-9`, and then preserve this working milestone from the `git-workbench` repository:
+
+```bash
+git status
+git add -- README.md evidence/phase-9
+git commit -m "fix(recovery): record reflog rescue and secret-response drill"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW GIT PHASE 9](./Git.md#phase-9) | [CONTINUE TO GIT PHASE 10](./Git.md#phase-10)
 
@@ -7611,6 +12669,25 @@ Study this roadmap first: [Git.md](./Git.md). Build one project after each of it
 - **Common mistakes:** rebasing shared main, misunderstanding todo order, testing only final tip, or blind force push.
 - **Definition of done / portfolio evidence:** before/after graphs, todo, range-diff, test matrix, recovery proof, and merge-versus-rebase defense.
 
+### Git Checkpoint
+
+You have completed **Curated History Workshop**. Run its final verification, save the required sanitized evidence under `evidence/phase-10`, and then preserve this working milestone from the `git-workbench` repository:
+
+```bash
+git status
+git add -- README.md evidence/phase-10
+git commit -m "refactor(history): curate private commit sequence"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW GIT PHASE 10](./Git.md#phase-10) | [CONTINUE TO GIT PHASE 11](./Git.md#phase-11)
 
 <a id="git-phase-11-project"></a>
@@ -7639,6 +12716,25 @@ Study this roadmap first: [Git.md](./Git.md). Build one project after each of it
 - **Deliberate mistake / recovery:** try checking out one branch in two worktrees, interpret refusal, and create a separate branch without force.
 - **Common mistakes:** stale stashes, popping before inspection, unexplained cherry-picks, or aliases hiding destructive actions.
 - **Definition of done / portfolio evidence:** interruption timeline, worktree diagram, patch comparison, tests, config rationale, and tool-choice explanation.
+
+### Git Checkpoint
+
+You have completed **Context-Switching Workbench**. Run its final verification, save the required sanitized evidence under `evidence/phase-11`, and then preserve this working milestone from the `git-workbench` repository:
+
+```bash
+git status
+git add -- README.md evidence/phase-11
+git commit -m "docs(workflow): record context-switching evidence"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW GIT PHASE 11](./Git.md#phase-11) | [CONTINUE TO GIT PHASE 12](./Git.md#phase-12)
 
@@ -7669,6 +12765,25 @@ Study this roadmap first: [Git.md](./Git.md). Build one project after each of it
 - **Common mistakes:** person-blame, forgetting bisect reset, moving published release tags, or SemVer without public API.
 - **Definition of done / portfolio evidence:** bisect transcript/count, changelog/version rationale, signature/checksum, fresh-checkout tests, and atomic-history connection.
 
+### Git Checkpoint
+
+You have completed **Regression Hunt and Signed Release**. Run its final verification, save the required sanitized evidence under `evidence/phase-12`, and then preserve this working milestone from the `git-workbench` repository:
+
+```bash
+git status
+git add -- README.md evidence/phase-12
+git commit -m "test(history): record bisect and signed release evidence"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW GIT PHASE 12](./Git.md#phase-12) | [CONTINUE TO GIT PHASE 13](./Git.md#phase-13)
 
 <a id="git-phase-13-project"></a>
@@ -7697,6 +12812,25 @@ Study this roadmap first: [Git.md](./Git.md). Build one project after each of it
 - **Deliberate mistake / recovery:** clone without LFS/dependency content, diagnose pointer/gitlink, fetch correctly, and add onboarding validation.
 - **Common mistakes:** assuming hosted LFS is unlimited/free, mixing normalization with logic, or equating sparse checkout with complete transfer reduction.
 - **Definition of done / portfolio evidence:** attributes diff, pointer trace, dependency comparison, timings, ADR, fresh-clone build, and boundary interview answer.
+
+### Git Checkpoint
+
+You have completed **Scalable Repository Architecture Lab**. Run its final verification, save the required sanitized evidence under `evidence/phase-13`, and then preserve this working milestone from the `git-workbench` repository:
+
+```bash
+git status
+git add -- README.md evidence/phase-13
+git commit -m "docs(repository): document scalable repository decision"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW GIT PHASE 13](./Git.md#phase-13) | [CONTINUE TO GIT PHASE 14](./Git.md#phase-14)
 
@@ -7727,6 +12861,25 @@ Study this roadmap first: [Git.md](./Git.md). Build one project after each of it
 - **Common mistakes:** branches as environments, Git Flow by slogan, linear history at any cost, or missing emergency/backport rules.
 - **Definition of done / portfolio evidence:** three ADRs, graphs, failure transcripts, policy matrices, metrics, and cross-scenario interview defense.
 
+### Git Checkpoint
+
+You have completed **Team Workflow Design Studio**. Run its final verification, save the required sanitized evidence under `evidence/phase-14`, and then preserve this working milestone from the `git-workbench` repository:
+
+```bash
+git status
+git add -- README.md evidence/phase-14
+git commit -m "docs(workflow): define team Git workflow policy"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
 > **PROJECT NAVIGATION:** [REVIEW GIT PHASE 14](./Git.md#phase-14) | [CONTINUE TO GIT PHASE 15](./Git.md#phase-15)
 
 <a id="git-phase-15-project"></a>
@@ -7755,6 +12908,25 @@ Study this roadmap first: [Git.md](./Git.md). Build one project after each of it
 - **Deliberate mistake / recovery:** request a secret from an untrusted job and race two green branches; fail closed, reduce permissions, retest combined candidate.
 - **Common mistakes:** fork secrets, mutable dependencies, “signed means approved,” permanent admin bypass, or premature maintenance during incident evidence collection.
 - **Definition of done / portfolio evidence:** policy/CI config, negative tests, permission table, queue graph, signature evidence, threat drill, health report, and trust-chain narration.
+
+### Git Checkpoint
+
+You have completed **Trusted Delivery Gate**. Run its final verification, save the required sanitized evidence under `evidence/phase-15`, and then preserve this working milestone from the `git-workbench` repository:
+
+```bash
+git status
+git add -- README.md evidence/phase-15
+git commit -m "ci(trust): implement trusted delivery gate"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
 
 > **PROJECT NAVIGATION:** [REVIEW GIT PHASE 15](./Git.md#phase-15) | [BUILD THE GIT MAIN PORTFOLIO PROJECT](#git-main-portfolio-project)
 
@@ -7829,6 +13001,107 @@ Another learner can clone fresh, verify both releases, run checks, reproduce a c
 #### PORTFOLIO AND INTERVIEW PRESENTATION
 
 Lead the README with the team problem, policy, lifecycle diagram, one-command verification, release evidence, and one recovered failure. In five minutes explain Git versus forge, index/objects/refs, workflow fit, contributor-to-artifact trust, reflog/lease/rotation recovery, hotfix propagation, and the next trade-off at larger scale.
+
+#### GIT MILESTONE CHECKPOINTS
+
+Keep this capstone in its own `open-source-team-delivery-lifecycle` repository because repository history is the product. Test each phase group and review both staged diffs before committing. Store only sanitized evidence under `evidence/`; never commit signing private keys, tokens, credentials, or raw incident data.
+
+##### Git Checkpoint 1
+
+You have completed **Phases 1-4: repository policy, intentional index, atomic history, and object/ref evidence**. Save the auditable foundation:
+
+```bash
+git status
+git add -- README.md LICENSE CONTRIBUTING.md CODE_OF_CONDUCT.md SECURITY.md .gitignore .gitattributes evidence
+git commit -m "chore(delivery-lifecycle): establish auditable Git foundation"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the checks pass and the working tree is clean.
+
+##### Git Checkpoint 2
+
+You have completed **Phases 5-7: contributor branches, conflict resolution, review, and protected integration**. Save the reviewed collaboration evidence:
+
+```bash
+git status
+git add -- README.md src tests evidence
+git commit -m "feat(delivery-lifecycle): complete reviewed collaboration flow"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the checks pass and the working tree is clean.
+
+##### Git Checkpoint 3
+
+You have completed **Phases 8-11: undo decisions, reflog rescue, coordinated rewrite, and context-switching evidence**. Save the recovery record:
+
+```bash
+git status
+git add -- README.md scripts evidence
+git commit -m "fix(delivery-lifecycle): verify recovery and private history cleanup"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the checks pass and the working tree is clean.
+
+##### Git Checkpoint 4
+
+You have completed **Phases 12-14: bisect result, signed release, repository-scale ADR, and workflow policy**. Save the release and workflow evidence:
+
+```bash
+git status
+git add -- README.md CHANGELOG.md evidence
+git commit -m "docs(delivery-lifecycle): record release and workflow evidence"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+git tag --list 'v1.*'
+```
+
+Continue only when the checks pass and the working tree is clean.
+
+##### Final Git Checkpoint
+
+You have completed **Phase 15: least-privilege CI, secret scanning, merge-race checks, hotfix handling, and the final history audit**. Save the trusted-delivery evidence after verifying `v1.0.0` and `v1.0.1` already exist:
+
+```bash
+git status
+git add -- README.md CHANGELOG.md SECURITY.md evidence
+git commit -m "ci(delivery-lifecycle): complete trusted delivery lifecycle"
+```
+
+Verify:
+
+```bash
+git log --oneline --decorate -5
+git status
+git tag --list 'v1.*'
+```
+
+The capstone is complete only when a fresh clone passes its checks, both release tags verify, and the working tree is clean.
 
 #### HOW TO RUN IT FOR FREE
 

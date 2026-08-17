@@ -67,6 +67,10 @@ Each roadmap section follows the same shape so you always know where to look:
 
 ---
 
+> **Build with Git as you learn:** Every phase-project card includes a short checkpoint for testing and committing that working milestone. Use [`Git.md`](./Git.md) for the full explanation of staging, commits, branches, recovery, and professional workflows.
+
+---
+
 ## Suggested learning order
 
 **SWE path**

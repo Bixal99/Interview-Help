@@ -64,6 +64,10 @@ You need a computer where you may create disposable files and install the open-s
 
 ---
 
+> **Integrated Git practice:** Each linked phase-project card in [`Projects.md`](./Projects.md) ends with one specific Git checkpoint. Test the finished project first, commit only its named project path, verify the commit and clean working tree, then continue. Use [`Git.md` Phases 2-3](./Git.md#phase-2) if staging or commit selection is unfamiliar.
+
+---
+
 ## The Whole-Journey Map
 
 ```text
@@ -227,7 +231,7 @@ This reads configuration, creates `.git`, and reports state; it creates no commi
 
 **Commands to investigate or use:** `git --version`, `git config --show-origin --list`, `git init`, `git init --bare`, `git clone`, `git status`, `git rev-parse --git-dir`, `git remote -v`.
 
-**Expected Git state or graph:** two working repositories point at one bare remote; no commit exists until Phase 2, and `git status` says `README.md` is untracked.
+**Expected Git state or graph:** before the checkpoint, two working repositories point at one bare remote and `README.md` is untracked. The checkpoint creates the first intentional commit, which Phase 2 will use as its baseline.
 
 **How to verify:** run every inspection command from a clean terminal, confirm both clones locate their own `.git`, and confirm no global credential or token appears in saved evidence.
 
@@ -241,7 +245,11 @@ This reads configuration, creates `.git`, and reports state; it creates no commi
 
 **Common mistakes:** treating author email as login authentication, saving secrets in evidence, editing `.git` blindly, or assuming `origin` means GitHub.
 
-**Definition of done:** a fresh user can reproduce the two-repository lab, identify every config scope used, and explain why no commit exists. **Evidence to save / portfolio evidence:** setup README, sanitized commands, directory diagram, and one-minute screen recording. **Interview explanation:** explain why a clone is more than a downloaded folder. **Next-phase preparation:** leave `README.md` untracked for the three-state experiment.
+**Definition of done:** a fresh user can reproduce the two-repository lab, identify every config scope used, and explain the state before and after the initial checkpoint commit. **Evidence to save / portfolio evidence:** setup README, sanitized commands, directory diagram, and one-minute screen recording. **Interview explanation:** explain why a clone is more than a downloaded folder. **Next-phase preparation:** after the checkpoint, make one new README edit without staging it so Phase 2 begins with a committed baseline and an unstaged change.
+
+### Git Checkpoint
+
+This project is mirrored in the [full **Reproducible Git Workbench** card](./Projects.md#git-phase-1-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
 > **Phase 1 complete?** [Build the full Phase 1 project card](./Projects.md#git-phase-1-project) · [Continue to Phase 2](#phase-2---the-three-state-model)
 
@@ -373,6 +381,10 @@ Before committing, predict which version enters history. Verify with `git show H
 
 **Definition of done:** every committed line was visible in a saved staged diff and the final status is clean. **Evidence to save / portfolio evidence:** lifecycle table, diff captures, two atomic commit IDs, and ignored-file proof. **Interview explanation:** walk through a path that is simultaneously staged and modified. **Next-phase preparation:** retain the three-commit graph for history queries.
 
+### Git Checkpoint
+
+This project is mirrored in the [full **Three-State Change Journal** card](./Projects.md#git-phase-2-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+
 > **Phase 2 complete?** [Build the full Phase 2 project card](./Projects.md#git-phase-2-project) · [Continue to Phase 3](#phase-3---commits-and-history)
 
 ---
@@ -498,6 +510,10 @@ These are read-only. Before each query, write what set or difference you expect;
 **Common mistakes:** equating atomic with tiny, trusting abbreviated hashes without context, confusing author with committer, or using `A..B` and `A...B` interchangeably.
 
 **Definition of done:** a reviewer can narrate the feature from `git log -p` alone. **Evidence to save / portfolio evidence:** graph, five commit IDs, message rationale, tree-hash comparison, and history investigation. **Interview explanation:** defend one boundary between two commits. **Next-phase preparation:** preserve all objects for plumbing inspection.
+
+### Git Checkpoint
+
+This project is mirrored in the [full **Atomic History Exhibit** card](./Projects.md#git-phase-3-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
 > **Phase 3 complete?** [Build the full Phase 3 project card](./Projects.md#git-phase-3-project) · [Continue to Phase 4](#phase-4---git-internals-and-the-commit-graph)
 
@@ -635,6 +651,10 @@ All commands are inspection-only. Record the commit, tree, and blob IDs, then pr
 
 **Definition of done:** every graph node in the report resolves to an inspected object and the detached commit is reachable. **Evidence to save / portfolio evidence:** object map, commands/output, before/after counts, and rescue narrative. **Interview explanation:** explain detached `HEAD` without calling it an error. **Next-phase preparation:** retain the rescue branch for rename/delete practice.
 
+### Git Checkpoint
+
+This project is mirrored in the [full **Object Database Archaeology** card](./Projects.md#git-phase-4-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+
 > **Phase 4 complete?** [Build the full Phase 4 project card](./Projects.md#git-phase-4-project) · [Continue to Phase 5](#phase-5---branching-and-parallel-work)
 
 ---
@@ -764,6 +784,10 @@ Verify the two tips and common ancestor before integrating anything.
 **Common mistakes:** confusing local and remote-tracking refs, using `checkout` as one mental action for several behaviors, deleting based on age alone, or treating branches as environments forever.
 
 **Definition of done:** every branch has a purpose, owner/upstream status, and evidence-backed keep/delete decision. **Evidence to save / portfolio evidence:** branch audit, graph, naming policy, and cleanup log. **Interview explanation:** explain ahead/behind without saying “newer files.” **Next-phase preparation:** keep two divergent branches for conflict work.
+
+### Git Checkpoint
+
+This project is mirrored in the [full **Parallel Feature Branch Lab** card](./Projects.md#git-phase-5-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
 > **Phase 5 complete?** [Build the full Phase 5 project card](./Projects.md#git-phase-5-project) · [Continue to Phase 6](#phase-6---merging-and-conflict-resolution)
 
@@ -898,6 +922,10 @@ Use `git merge --abort` instead of random resets if the experiment must stop bef
 
 **Definition of done:** all four conflicts produce correct tested trees and every decision is documented. **Evidence to save / portfolio evidence:** before/after graphs, index-stage capture, test output, and resolution rationale. **Interview explanation:** narrate the three-way inputs and verification. **Next-phase preparation:** publish the integrated repository to the local bare remote.
 
+### Git Checkpoint
+
+This project is mirrored in the [full **Conflict Resolution Gauntlet** card](./Projects.md#git-phase-6-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+
 > **Phase 6 complete?** [Build the full Phase 6 project card](./Projects.md#git-phase-6-project) · [Continue to Phase 7](#phase-7---remotes-collaboration-and-open-source)
 
 ---
@@ -1028,6 +1056,10 @@ git push origin feature/search
 **Common mistakes:** assuming `origin` is special, treating `origin/main` as live, pushing from the wrong branch, reviewing generated noise, or leaking credentials to public evidence.
 
 **Definition of done:** a fresh clone contains the tested reviewed result and the report distinguishes every local, remote-tracking, and remote branch. **Evidence to save / portfolio evidence:** topology diagram, review transcript/link, check output, graph, and merge-policy rationale. **Interview explanation:** explain fetch versus pull and PR versus commit. **Next-phase preparation:** create disposable mistakes only after tagging the current clean baseline.
+
+### Git Checkpoint
+
+This project is mirrored in the [full **Distributed Review Simulation** card](./Projects.md#git-phase-7-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
 > **Phase 7 complete?** [Build the full Phase 7 project card](./Projects.md#git-phase-7-project) · [Continue to Phase 8](#phase-8---safe-undoing-without-data-loss)
 
@@ -1173,6 +1205,10 @@ git revert <published-commit>        # shared-history-safe inverse
 
 **Definition of done:** all six decisions match the requested final state and publication rule. **Evidence to save / portfolio evidence:** completed decision table, state matrices, graphs, tests, and safety checklist. **Interview explanation:** answer a surprise undo scenario by asking state/sharing questions first. **Next-phase preparation:** retain safety refs and deliberately create recoverable lost tips.
 
+### Git Checkpoint
+
+This project is mirrored in the [full **Safe Undo Decision Lab** card](./Projects.md#git-phase-8-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+
 > **Phase 8 complete?** [Build the full Phase 8 project card](./Projects.md#git-phase-8-project) · [Continue to Phase 9](#phase-9---recovery-and-shared-history-safety)
 
 ---
@@ -1307,6 +1343,10 @@ git commit -m "chore: stop tracking generated file"
 
 **Definition of done:** all recoverable work is named, the fake secret is rotated and absent from intended rewritten refs, and no unseen remote commit is overwritten. **Evidence to save / portfolio evidence:** incident timeline, graphs, ref mapping, lease refusal, verification script, and collaborator instructions. **Interview explanation:** lead with containment, not `filter-repo`. **Next-phase preparation:** keep a messy unpublished feature branch and a safety tag.
 
+### Git Checkpoint
+
+This project is mirrored in the [full **Reflog Rescue Mission** card](./Projects.md#git-phase-9-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+
 > **Phase 9 complete?** [Build the full Phase 9 project card](./Projects.md#git-phase-9-project) · [Continue to Phase 10](#phase-10---rebase-and-intentional-history-rewriting)
 
 ---
@@ -1436,6 +1476,10 @@ Do not push rewritten shared commits without explicit coordination. If the branc
 **Common mistakes:** rebasing shared main, misunderstanding todo order, resolving tests only at final tip, force-pushing blindly, or calling rewritten commits “the same commits.”
 
 **Definition of done:** four coherent commits reproduce the intended feature and every old-to-new decision is auditable. **Evidence to save / portfolio evidence:** before/after graphs, todo plan, range-diff, test matrix, and recovery proof. **Interview explanation:** defend rebase versus merge for this exact branch. **Next-phase preparation:** keep a second urgent task ready for context switching.
+
+### Git Checkpoint
+
+This project is mirrored in the [full **Curated History Workshop** card](./Projects.md#git-phase-10-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
 > **Phase 10 complete?** [Build the full Phase 10 project card](./Projects.md#git-phase-10-project) · [Continue to Phase 11](#phase-11---productive-everyday-git)
 
@@ -1568,6 +1612,10 @@ Verify clean/dirty state in every worktree and inspect the cherry-picked patch p
 
 **Definition of done:** both tasks are clean, tested, separately reviewable, and reproducible from graph evidence. **Evidence to save / portfolio evidence:** interruption timeline, worktree diagram, patch/provenance comparison, tests, and config rationale. **Interview explanation:** choose stash versus WIP branch versus worktree. **Next-phase preparation:** introduce a regression across a scripted sequence of commits.
 
+### Git Checkpoint
+
+This project is mirrored in the [full **Context-Switching Workbench** card](./Projects.md#git-phase-11-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+
 > **Phase 11 complete?** [Build the full Phase 11 project card](./Projects.md#git-phase-11-project) · [Continue to Phase 12](#phase-12---investigation-tags-and-releases)
 
 ---
@@ -1699,6 +1747,10 @@ If signing is not configured, create an annotated tag with `-a` for the lab and 
 
 **Definition of done:** a fresh verifier finds the same culprit and validates the release target/evidence. **Evidence to save / portfolio evidence:** bisect transcript, complexity calculation, changelog, version rationale, signature/checksum, and rollback note. **Interview explanation:** connect atomic commits to bisect usefulness. **Next-phase preparation:** add a binary asset and external component requirement.
 
+### Git Checkpoint
+
+This project is mirrored in the [full **Regression Hunt and Signed Release** card](./Projects.md#git-phase-12-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+
 > **Phase 12 complete?** [Build the full Phase 12 project card](./Projects.md#git-phase-12-project) · [Continue to Phase 13](#phase-13---large-and-multi-repository-strategies)
 
 ---
@@ -1828,6 +1880,10 @@ Keep any renormalization commit separate, review it from a clean clone, and neve
 **Common mistakes:** treating LFS as free hosted storage, confusing ignore with attributes, committing renormalization with logic, or assuming sparse checkout reduces all history transfer.
 
 **Definition of done:** a fresh clone builds with documented prerequisites and the ADR quantifies trade-offs. **Evidence to save / portfolio evidence:** attributes diff, LFS pointer trace, dependency comparison, measurements, ADR, and onboarding validation. **Interview explanation:** defend the chosen boundary and name when it fails. **Next-phase preparation:** define a team/release scenario that uses this repository.
+
+### Git Checkpoint
+
+This project is mirrored in the [full **Scalable Repository Architecture Lab** card](./Projects.md#git-phase-13-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
 > **Phase 13 complete?** [Build the full Phase 13 project card](./Projects.md#git-phase-13-project) · [Continue to Phase 14](#phase-14---professional-team-workflows)
 
@@ -1970,6 +2026,10 @@ Verify policy by simulating normal change, stale branch, failed check, release, 
 
 **Definition of done:** each team's rules address normal delivery, releases, hotfixes, failures, and “when not to use” evidence. **Evidence to save / portfolio evidence:** three ADRs, graphs, failure transcripts, policy matrices, and metrics. **Interview explanation:** defend why one workflow is wrong for another team. **Next-phase preparation:** implement the chosen open-source-team policy as automated gates.
 
+### Git Checkpoint
+
+This project is mirrored in the [full **Team Workflow Design Studio** card](./Projects.md#git-phase-14-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+
 > **Phase 14 complete?** [Build the full Phase 14 project card](./Projects.md#git-phase-14-project) · [Continue to Phase 15](#phase-15---ci-trust-security-and-repository-health)
 
 ---
@@ -2105,6 +2165,10 @@ This is the “confusing repository state” read-only ladder. Look for merge/re
 
 **Definition of done:** the complete negative-test suite proves unauthorized/unsafe paths fail closed and one valid change produces a verified release. **Evidence to save / portfolio evidence:** policy/config, CI logs, permissions table, queue graph, signature verification, threat drill, and health report. **Interview explanation:** trace trust from contributor to artifact and name residual risk. **Next-phase preparation:** use all evidence in the capstone and interview track.
 
+### Git Checkpoint
+
+This project is mirrored in the [full **Trusted Delivery Gate** card](./Projects.md#git-phase-15-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+
 > **Phase 15 complete?** [Build the full Phase 15 project card](./Projects.md#git-phase-15-project) · [Build the complete Git portfolio project](./Projects.md#git-main-portfolio-project) · [Return to the phase index](#phase-index)
 
 ---
@@ -2177,6 +2241,10 @@ Create `README.md`, `LICENSE` using an OSI-approved license, `CONTRIBUTING.md`, 
 13. Cut `release/1.x`, add a mainline feature, receive a production hotfix request, patch `1.x`, tag `v1.0.1`, and forward-fix main without duplicate semantic change.
 14. Synchronize a fork, review an external-style contribution, and document etiquette, provenance, and contributor credit.
 15. Run a final repository audit: refs, upstreams, unreachable/large objects, signatures, stale branches, CI permissions, release reachability, and clean fresh clone.
+
+### Git Milestone Checkpoints
+
+Use the five canonical milestone checkpoints in the [matching full capstone card](./Projects.md#git-main-portfolio-project). They cover the foundation, collaboration, recovery/rewrite, release/workflow, and trusted-delivery audit without duplicating commit commands here.
 
 ### Failure and Recovery Scenarios
 

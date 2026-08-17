@@ -2723,6 +2723,8 @@ Add cache headers to static assets; lazy route split admin page.
 
 # PHASE 17 - Deployment & CI/CD
 
+> **Git prerequisite:** Complete [`Git.md`](./Git.md) Phases [1-7](./Git.md#phase-1) before the pull-request/deployment flow, then pair this phase with Git [Phase 12](./Git.md#phase-12) for tags/releases and [Phase 15](./Git.md#phase-15) for protected CI and repository trust.
+
 **Track:** Production
 
 **WHAT YOU WILL BE ABLE TO DO:** Ship reliably: build pipelines, hosting, containers, env separation.
@@ -3047,6 +3049,8 @@ SSE notifications endpoint + signed webhook receiver stub.
 <a id="phase-19"></a>
 
 # PHASE 19 - Portfolio & Capstone Projects
+
+> **Repository evidence:** Use the atomic-history and review standards in [`Git.md`](./Git.md#phase-3) Phases 3, 7, and 12 rather than publishing only a final source-code dump.
 
 **Track:** Proof
 
@@ -3392,6 +3396,7 @@ Architect explaining building before picking marble.
 
 | Topic | Read here | Deepen in |
 | --- | --- | --- |
+| Git collaboration and delivery | Web Phases 17, 19 | [`Git.md`](./Git.md) Phases 1-15 |
 | HTTP/TCP/TLS | Web Phases 1, 12 | [`Networks.md`](./Networks.md) 10-14, [`CS.md`](./CS.md) 13 |
 | SQL & indexes | Web Phase 13 | [`CS.md`](./CS.md) 14, [`Data.md`](./Data.md) 4-6 |
 | Auth & injection | Web Phase 14 | [`CS.md`](./CS.md) 15, [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) 7 |

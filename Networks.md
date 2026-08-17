@@ -2969,6 +2969,8 @@ print(accept("203.0.113.0/24", 64501), accept("203.0.113.0/24", 666))
 
 # PHASE 19 - Labs, Portfolio, and Automation
 
+> **Portfolio prerequisite:** Record labs as small reviewable commits and releases using [`Git.md`](./Git.md) Phases [1-7](./Git.md#phase-1) and [12](./Git.md#phase-12); never commit packet captures or configs containing real credentials or private identifiers.
+
 **Track:** Proof
 
 **WHAT YOU WILL BE ABLE TO DO:** Produce public proof of skill: labs, pcaps, write-ups, and basic automation.

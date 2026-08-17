@@ -22,6 +22,7 @@ Use this learning loop throughout the repository: read the problem in plain lang
 |------|--------|--------------|
 | [`CS.md`](./CS.md) | Computer Science & Software Engineering | Backend / full-stack / general SWE interviews |
 | [`OOP.md`](./OOP.md) | Programming Fundamentals + OOP | Absolute beginners through SOLID, patterns, LLD (before CS Phase 3) |
+| [`Git.md`](./Git.md) | Git & Professional Git Workflows | Beginners through internals, recovery, team workflows, releases, CI, and repository trust |
 | [`Data.md`](./Data.md) | Data Analyst & Data Engineer | Analytics, SQL, pipelines, warehouses, Spark/Kafka |
 | [`Networks.md`](./Networks.md) | Computer Networks | Network/infra engineers and SWEs who must understand the stack |
 | [`AI.md`](./AI.md) | Artificial Intelligence & Machine Learning | ML practitioners and AI engineers releasing LLM applications that people can use |
@@ -32,6 +33,8 @@ Use this learning loop throughout the repository: read the problem in plain lang
 | [`devops.md`](./devops.md) | DevOps Engineer | Linux, delivery automation, CI/CD, containers, Kubernetes, IaC, SRE, and platform engineering |
 | [`Projects.md`](./Projects.md) | Projects Playbook | Small builds that cement every roadmap |
 | [`Interview.md`](./Interview.md) | Combined Interview Playbook | Spoken Q&A drill across the roadmaps |
+
+**Repository count:** 11 learning roadmaps · 2 shared playbooks · 1 CV template · 15 root Markdown files in total.
 
 All roadmaps use the **same teaching rhythm**. [`Projects.md`](./Projects.md) is how you prove it. [`Interview.md`](./Interview.md) is the place to practice answers aloud.
 
@@ -69,19 +72,20 @@ Each roadmap section follows the same shape so you always know where to look:
 **SWE path**
 
 ```text
-CS Phases 1-2  →  OOP.md (Part 0 fundamentals + Phases 1-20)  →  CS Phase 3+
+CS Phases 1-2  →  OOP.md (Part 0 fundamentals + Phases 1-20)  →  Git.md Phases 1-10
+                 →  CS Phase 3+
                  →  Projects.md along the way
                  →  Networks.md essentials when systems start
                  →  Interview.md before applications
 ```
 
-**Odoo path:** finish [`OOP.md`](./OOP.md) (including Part 0), then [`ODOO.md`](./ODOO.md), and build the matching Odoo phase projects from [`Projects.md`](./Projects.md).
+**Odoo path:** finish [`OOP.md`](./OOP.md) (including Part 0), complete [`Git.md`](./Git.md) Phases 1-7 before Odoo source/branch collaboration, then follow [`ODOO.md`](./ODOO.md) and its matching projects.
 
-**Web developer path:** learn programming fundamentals in [`OOP.md`](./OOP.md) Part 0, then follow [`Web.md`](./Web.md) from browser fundamentals through frontend/backend tools, REST APIs, security, testing, and deployment. Pair Phase 1/6 with [`Networks.md`](./Networks.md), Phase 13 with [`Data.md`](./Data.md), and follow the matching Web phase builds in [`Projects.md`](./Projects.md).
+**Web developer path:** learn programming fundamentals in [`OOP.md`](./OOP.md) Part 0, complete [`Git.md`](./Git.md) Phases 1-7 for repository and review work, then follow [`Web.md`](./Web.md) from browser fundamentals through deployment. Pair Web Phase 1/6 with [`Networks.md`](./Networks.md), Phase 13 with [`Data.md`](./Data.md), and Git Phases 12/15 with releases and CI.
 
-**Cloud engineer path:** learn Linux and network fundamentals in [`cloud.md`](./cloud.md) Phases 1-2, deepen packet and systems reasoning with [`Networks.md`](./Networks.md) and [`CS.md`](./CS.md) Phases 11-12, then complete cloud identity, networking, data, security, reliability, FinOps, and migration. Follow the matching Cloud phase builds, then practice Interview Track G.
+**Cloud engineer path:** learn Linux and network fundamentals in [`cloud.md`](./cloud.md) Phases 1-2, add [`Git.md`](./Git.md) Phases 1-9 before versioned IaC and secret-response work, deepen packet/system reasoning with [`Networks.md`](./Networks.md) and [`CS.md`](./CS.md), then complete the cloud roadmap. Pair Git Phases 14-15 with cloud governance/delivery and practice Interview Tracks G and V.
 
-**DevOps engineer path:** follow [`devops.md`](./devops.md) from delivery flow through Linux, Git, automation, CI/CD, containers, Kubernetes, IaC, observability, SRE, DevSecOps, GitOps, and incidents. Pair Phase 13 with [`cloud.md`](./cloud.md), follow the matching DevOps phase builds, and practice Interview Track H.
+**DevOps engineer path:** use [`devops.md`](./devops.md) Phases 1-3 for delivery/Linux/troubleshooting, complete [`Git.md`](./Git.md) for deep Git mechanics, then return to DevOps Phase 4 and continue through CI/CD, platforms, GitOps, and incidents. Pair DevOps Phase 13 with [`cloud.md`](./cloud.md), and practice Interview Tracks H and V.
 
 **Cybersecurity path:** start [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) Phase 1. Pair it with [`Networks.md`](./Networks.md) when packet behavior becomes more detailed. Practice only in authorized labs (PortSwigger, TryHackMe, HTB, or your own home lab), then practice the Phase 20 interviews.
 
@@ -160,6 +164,36 @@ Code basics → Think → Pillars → SOLID → Patterns → LLD → Hire
 | 18 | LLD Method | Design under interview pressure |
 | 19 | Portfolio | Finish complete designs that you can explain clearly |
 | 20 | Interviews | Speak pillars, SOLID, and trade-offs |
+
+---
+
+## Companion - Git & Professional Git Workflows
+
+**File:** [`Git.md`](./Git.md)
+
+**Scope:** **15 phases** - zero-knowledge setup through state, internals, collaboration, recovery, rewriting, releases, repository scale, team workflows, CI, security, and trust.
+
+Setup → State → History/Internals → Branch/Merge/Remote → Undo/Recover/Rebase → Tools/Release/Scale → Workflow/Trust
+
+**When to use it:** begin after you can create and edit plain-text files. Finish Phases 1-7 before serious team projects; finish Phases 8-10 before rewriting or emergency recovery; finish Phases 11-15 for release, DevOps, open-source, and senior workflow work. Build one exact matching project per phase in [`Projects.md`](./Projects.md#git-and-git-workflows) and drill [Interview Track V](./Interview.md#track-v---git-and-version-control).
+
+| # | Phase | Goal |
+|--:|-------|------|
+| 01 | Foundations & Safe Setup | Git versus hosting, config, init, clone, `.git` |
+| 02 | Three-State Model | Working tree, index, repository, diffs |
+| 03 | Commits & History | Atomic snapshots, ancestry, revision queries |
+| 04 | Internals & Commit Graph | Objects, refs, `HEAD`, reachability, reflogs, packs |
+| 05 | Branching | Parallel refs, upstreams, divergence, cleanup |
+| 06 | Merge & Conflicts | Fast-forward, three-way, conflict types, `rerere` |
+| 07 | Remotes & Open Source | Fetch/pull/push, forks, review, protected branches |
+| 08 | Safe Undo | Restore, amend, reset modes, revert decision table |
+| 09 | Recovery & Shared Safety | Reflog rescue, secret response, guarded force update |
+| 10 | Rebase & Rewriting | Interactive curation of unpublished history |
+| 11 | Everyday Git | Stash, patch, cherry-pick, worktrees, config |
+| 12 | Investigation & Releases | Blame, bisect, tags, signing, changelog, SemVer |
+| 13 | Repository Scale | Attributes, LFS, sparse, submodule/subtree, monorepo |
+| 14 | Team Workflows | GitHub/GitLab Flow, Git Flow, trunk, forking, hotfix |
+| 15 | CI, Trust & Health | Hooks, checks, queues, signing, scanning, maintenance |
 
 ---
 
@@ -443,18 +477,18 @@ Flow -> Linux/Git/Automation -> Artifact/CI/CD -> Containers/Kubernetes -> IaC/C
 ## Projects Playbook
 
 **File:** [`Projects.md`](./Projects.md)  
-**Scope:** A detailed mini-project for every phase plus one complete portfolio capstone for every 20-phase roadmap.
+**Scope:** **218 phase projects** (203 existing + 15 Git) plus **11 complete portfolio capstones** - one phase project per roadmap phase and one capstone per roadmap.
 
-Every roadmap phase links to one matching mini-project card. After Phase 20, the roadmap links to a complete portfolio project with intended users, a free/open-source stack, exactly 20 phase-mapped build steps, and a no-cost deployment path.
+Every roadmap phase links to one matching mini-project card. After that roadmap's final phase, it links to a complete portfolio project with intended users, a free/open-source stack, one build step per selected phase, and a no-cost/local execution path.
 
-Every mini-project ends with two navigation links: one returns to the phase you just studied, and the other continues to the next roadmap phase. Phase 20 continues to the larger main portfolio project.
+Every mini-project ends with two navigation links: one returns to the phase you just studied, and the other continues to the next roadmap phase. The final phase continues to the larger main portfolio project.
 
-Learn each phase → Build its mini-project → Finish Phase 20 → Build the complete portfolio project
+Learn each phase → Build its mini-project → Finish the roadmap → Build the complete portfolio project
 
 - Finish the mini-project for the phase you just studied.
 - Use the listed tech stack so you do not have to guess which tools to choose.
 - Follow the numbered steps in order and keep the first version small.
-- After Phase 20, build the track capstone in order from Phase 1 through Phase 20.
+- After the final phase, build the track capstone in roadmap order.
 - For cybersecurity projects, use only systems you own or are explicitly authorized to test.
 
 ---
@@ -473,6 +507,7 @@ Learn each phase → Build its mini-project → Finish Phase 20 → Build the co
 | W | Web Development | 16 |
 | G | Cloud Engineering | 10 |
 | H | DevOps Engineering | 12 |
+| V | Git and Version Control | 18 |
 | E | Cross-cutting classics (URL bar, debug, design) | 6 |
 | F | Behavioral / STAR | 5 |
 
@@ -484,10 +519,10 @@ Learn each phase → Build its mini-project → Finish Phase 20 → Build the co
 
 ## How to use this repo
 
-1. Pick a primary track: [`CS.md`](./CS.md), [`Data.md`](./Data.md), [`Networks.md`](./Networks.md), [`AI.md`](./AI.md), [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md), [`ODOO.md`](./ODOO.md), [`Web.md`](./Web.md), [`cloud.md`](./cloud.md), or [`devops.md`](./devops.md).
+1. Pick a primary track: [`CS.md`](./CS.md), [`OOP.md`](./OOP.md), [`Git.md`](./Git.md), [`Data.md`](./Data.md), [`Networks.md`](./Networks.md), [`AI.md`](./AI.md), [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md), [`ODOO.md`](./ODOO.md), [`Web.md`](./Web.md), [`cloud.md`](./cloud.md), or [`devops.md`](./devops.md).
 2. If new to coding, start [`OOP.md`](./OOP.md) **Part 0**. On the SWE path: after CS Phases 1-2, finish OOP before CS Phase 3.
 3. Start at Phase 1 (or Part 0). Do not skip bridges on the first pass.
-4. After each phase, follow its matching beginner-friendly mini-project in [`Projects.md`](./Projects.md). After Phase 20, build that track's main portfolio project.
+4. After each phase, follow its matching beginner-friendly mini-project in [`Projects.md`](./Projects.md). After the roadmap's final phase, build that track's main portfolio project.
 5. Use mastery checkpoints before moving on.
 6. Drill spoken answers in [`Interview.md`](./Interview.md) (or Cyber Phase 20 for security roles).
 
@@ -496,20 +531,21 @@ Learn each phase → Build its mini-project → Finish Phase 20 → Build the co
 | Role | Start with | Then drill |
 |------|------------|------------|
 | Absolute beginner | `OOP.md` Part 0 → Phases 1+ | `Projects.md` fundamentals + `Interview.md` A |
-| Software Engineer | `CS.md` → `OOP.md` → CS Phase 3+ | `Networks.md` essentials + `Projects.md` + `Interview.md` A/C/F |
-| Frontend Developer | `OOP.md` Part 0 → `Web.md` Phases 1-10, 15-16 | Matching Web phase projects + `Interview.md` W |
-| Backend/API Developer | `CS.md` foundations → `Web.md` Phases 11-18 | `Data.md` SQL + matching Web phase projects + `Interview.md` W/A |
+| Software Engineer | `CS.md` → `OOP.md` → `Git.md` Phases 1-10 → CS Phase 3+ | `Networks.md` essentials + projects + Interview A/C/V/F |
+| Frontend Developer | `OOP.md` Part 0 → `Git.md` Phases 1-7 → `Web.md` Phases 1-10, 15-16 | Web/Git projects + Interview W/V |
+| Backend/API Developer | `CS.md` foundations → `Git.md` Phases 1-10 → `Web.md` Phases 11-18 | Data SQL + Web/Git projects + Interview W/A/V |
 | Full-stack Developer | `OOP.md` Part 0 → `Web.md` full | All Web phase projects + `Interview.md` W/C/F |
 | Data Analyst | `Data.md` (through Phase 10) | `Projects.md` data + `Interview.md` B |
 | Data Engineer | `Data.md` full | `Projects.md` data + `Interview.md` B |
 | Network / Infra | `Networks.md` | `Projects.md` networks + `Interview.md` C/F |
-| Cloud Engineer | `cloud.md` | `Networks.md` essentials + matching Cloud phase projects + `Interview.md` G/F |
-| DevOps Engineer | `devops.md` | `cloud.md` foundations + matching DevOps phase projects + `Interview.md` H/G/F |
+| Git / SCM-focused | `Git.md` all 15 phases | Git phase projects + capstone + `Interview.md` V |
+| Cloud Engineer | `cloud.md` + `Git.md` Phases 1-9, 14-15 | Networks + Cloud/Git projects + Interview G/V/F |
+| DevOps Engineer | `devops.md` Phases 1-3 → `Git.md` full → DevOps Phase 4+ | Cloud foundations + DevOps/Git projects + Interview H/V/G/F |
 | AI / ML Engineer | `AI.md` | `Projects.md` AI + `Interview.md` D |
 | SOC Analyst | `ICT_Cybersecurity.md` (blue path) | Phase 13-14 labs + Security+ / CySA+ |
 | Security Engineer | `ICT_Cybersecurity.md` (SecEng path) | AppSec + cloud projects + Phase 20 |
 | Junior Pentester | `ICT_Cybersecurity.md` (red path) | PortSwigger/HTB writeups → eJPT/PNPT |
-| Odoo / ERP Engineer | `OOP.md` → `ODOO.md` | `Projects.md` Odoo section + integrations |
+| Odoo / ERP Engineer | `OOP.md` → `Git.md` Phases 1-7 → `ODOO.md` | Odoo/Git projects + integrations |
 
 ---
 
@@ -521,4 +557,4 @@ Learn each phase → Build its mini-project → Finish Phase 20 → Build the co
 
 ## Author
 
-**Mohammad Bilal** - Interview Help roadmaps for software engineering, OOP, data, networks, AI, cybersecurity, Odoo, web development, cloud engineering, and DevOps careers.
+**Mohammad Bilal** - Interview Help roadmaps for software engineering, OOP, Git, data, networks, AI, cybersecurity, Odoo, web development, cloud engineering, and DevOps careers.

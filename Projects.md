@@ -3,13 +3,14 @@
 Use this guide in two layers:
 
 1. After each roadmap phase, build its detailed mini-project while the lesson is fresh.
-2. After Phase 20, build the track's main portfolio project. Its 20 numbered steps reuse Phase 1 through Phase 20 in order.
+2. After the roadmap's final phase, build the track's main portfolio project. Its numbered steps reuse that roadmap's phases in order.
 
 Every required tool is free. Application libraries and local infrastructure are open source. Optional public hosts use free plans, can sleep or enforce quotas, and can be replaced by the permanent local deployment instructions.
 
 ## Choose your roadmap
 
 - [Programming Fundamentals and OOP](#programming-fundamentals-and-oop)
+- [Git and Git Workflows](#git-and-git-workflows)
 - [Computer Science](#computer-science)
 - [Data Analysis and Engineering](#data-analysis-and-engineering)
 - [Computer Networks](#computer-networks)
@@ -7318,6 +7319,527 @@ No paid API, commercial license, or paid cloud resource is required. Use only ge
 
 > **MAIN PROJECT NAVIGATION:** [REVIEW CYBER PHASE 19](./ICT_Cybersecurity.md#phase-19) | [REVIEW CYBER PHASE 20](./ICT_Cybersecurity.md#phase-20) | [RETURN TO THE CYBER ROADMAP](./ICT_Cybersecurity.md#phase-index)
 
+## Git and Git Workflows
+
+Study this roadmap first: [Git.md](./Git.md). Build one project after each of its 15 phases, then build the main portfolio project after Phase 15. The cards below intentionally preserve the richer safety, evidence, and recovery requirements of the Git roadmap.
+
+<a id="git-phase-1-project"></a>
+### GIT PHASE 1 MINI-PROJECT
+
+#### PROJECT: Reproducible Git Workbench
+
+#### SPECIFICATION
+
+- **Scenario / purpose:** Reproduce a safe Git laboratory for a new teammate without hidden settings; prove Git is local and a forge is an optional collaboration layer.
+- **Skills / prerequisites:** Phase 1; installation verification, config scopes, `init`, bare remotes, `clone`, `.git`, and Git-versus-hosting boundaries.
+- **Starting state:** No workbench directory or online account. Use only Git and a text editor; Forgejo/Gitea is optional and open source.
+- **Expected state:** Two working clones point to one local bare remote; `README.md` is untracked and no commit exists.
+
+#### BUILD IT STEP BY STEP
+
+1. Record `git --version` and a sanitized `git config --list --show-origin`; set honest identity, editor, and `main` deliberately.
+2. Create `git-workbench`, run `git init`, add an untracked README, and locate repository administration with `git rev-parse --git-dir`.
+3. Create `../workbench-remote.git` with `git init --bare`, add it as a remote, and make a second clone.
+4. Document working tree versus `.git`, and local Git versus GitHub/GitLab/Forgejo/Gitea responsibilities.
+5. Verify both clones and remote URLs from a clean terminal; save no token, credential, or unsanitized identity output.
+
+#### VALIDATION, FAILURE, AND EVIDENCE
+
+- **Easy / medium / hard:** initialize and label boundaries; prove global/local precedence; reproduce the full lab at a second path from README alone.
+- **Deliberate mistake / recovery:** set a wrong local email, then correct only local scope and verify its origin without altering global config.
+- **Common mistakes:** treating author identity as authentication, assuming `origin` means GitHub, or editing `.git` blindly.
+- **Definition of done / portfolio evidence:** reproducible README, sanitized config output, topology diagram, and a one-minute explanation of why clone is more than download.
+
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 1](./Git.md#phase-1) | [CONTINUE TO GIT PHASE 2](./Git.md#phase-2)
+
+<a id="git-phase-2-project"></a>
+### GIT PHASE 2 MINI-PROJECT
+
+#### PROJECT: Three-State Change Journal
+
+#### SPECIFICATION
+
+- **Scenario / purpose:** Prove to a reviewer exactly what the next commit contains through working-tree/index/repository evidence.
+- **Skills / prerequisites:** Phase 2 and Reproducible Git Workbench; lifecycle states, `status`, both diffs, patch staging, ignores, and untracking.
+- **Starting state:** One committed README plus an unstaged line; Git CLI and editor only.
+- **Expected graph/state:** `A---B---C main`; B/C each contain one concern and ignored `build.log` never enters the index.
+
+#### BUILD IT STEP BY STEP
+
+1. Create `journal.md`, `.gitignore`, and generated `build.log`; capture untracked, staged, committed, and modified states.
+2. Put two unrelated concerns in one file and select one with `git add -p`.
+3. Save `git diff` and `git diff --staged`, commit the first concern, then commit the second separately.
+4. Prove `.gitignore` affects untracked discovery but not a path already tracked; untrack the fixture without deleting its working copy.
+5. Verify with `git status --short`, `git check-ignore -v`, `git ls-files`, `git show --stat`, and a clean final status.
+
+#### VALIDATION, FAILURE, AND EVIDENCE
+
+- **Easy / medium / hard:** show all states; split two concerns; demonstrate already-tracked ignore behavior and correct untracking.
+- **Deliberate mistake / recovery:** stage the wrong hunk, unstage it without losing disk edits, verify both diffs, then stage correctly.
+- **Common mistakes:** reading only status, confusing diff directions, or using destructive restore for an index-only problem.
+- **Definition of done / portfolio evidence:** lifecycle table, saved staged diffs, exact commit IDs, ignored-file proof, and an interview explanation of “staged and modified” simultaneously.
+
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 2](./Git.md#phase-2) | [CONTINUE TO GIT PHASE 3](./Git.md#phase-3)
+
+<a id="git-phase-3-project"></a>
+### GIT PHASE 3 MINI-PROJECT
+
+#### PROJECT: Atomic History Exhibit
+
+#### SPECIFICATION
+
+- **Scenario / purpose:** Let a review panel understand five logical changes from history before opening final files.
+- **Skills / prerequisites:** Phase 3 and Three-State Change Journal; atomic commits, author/committer, messages, revision syntax, comparison, and search.
+- **Starting state:** Clean main with at least three commits; Git CLI and a tiny text project.
+- **Expected graph/state:** `A---B---C---D---E---F main`; every commit is coherent and independently explainable.
+
+#### BUILD IT STEP BY STEP
+
+1. Plan five logical changes, implement them in a deliberately mixed order, and stage them in logical order with patch mode.
+2. Write specific subjects; add one body explaining why and one appropriate trailer.
+3. Inspect with `git log --format=fuller`, `git show`, `git rev-parse`, and `git diff A..B`.
+4. Answer five questions using `git log -S`, `-G`, `--follow`, `--grep`, and path limitation.
+5. Revert each feature commit on a disposable branch and verify each is a coherent unit; compare final tree hashes after any private cleanup.
+
+#### VALIDATION, FAILURE, AND EVIDENCE
+
+- **Easy / medium / hard:** identify parents/messages; locate added/removed content; reorder/split history without changing the intended final tree.
+- **Deliberate mistake / recovery:** create one `misc changes` commit, split it before publication, and prove the final tree is unchanged.
+- **Common mistakes:** treating atomic as “few lines,” confusing author/committer, or using `..` and `...` interchangeably.
+- **Definition of done / portfolio evidence:** graph, five IDs, message rationale, history-investigation report, tree comparison, and defense of commit boundaries.
+
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 3](./Git.md#phase-3) | [CONTINUE TO GIT PHASE 4](./Git.md#phase-4)
+
+<a id="git-phase-4-project"></a>
+### GIT PHASE 4 MINI-PROJECT
+
+#### PROJECT: Object Database Archaeology
+
+#### SPECIFICATION
+
+- **Scenario / purpose:** Prove what Git stores and why a detached or “lost” commit can remain recoverable.
+- **Skills / prerequisites:** Phase 4 and Atomic History Exhibit; objects, trees, refs, `HEAD`, reachability, reflogs, loose/packed storage.
+- **Starting state:** Six commits and two identical-content paths; Git CLI and optional open-source hex viewer.
+- **Expected graph/state:** `A---B---C main` and `C---D rescue/object-archaeology`; D is temporarily unnamed, then rescued.
+
+#### BUILD IT STEP BY STEP
+
+1. Map refs with `git show-ref`; resolve `HEAD`, its commit/tree, and every blob using `rev-parse`, `cat-file`, and `ls-tree`.
+2. Prove two filenames with identical bytes reference one blob.
+3. Detach `HEAD`, create D, switch away, locate D in reflog, inspect it, and name it with a rescue branch.
+4. Record `git count-objects -vH`, run safe `git gc`, and compare object identity/count/storage afterward.
+5. Use `git fsck` to confirm connectivity and write an object/reachability diagram.
+
+#### VALIDATION, FAILURE, AND EVIDENCE
+
+- **Easy / medium / hard:** object inventory; detached rescue; optional plumbing-created commit readable by normal Git.
+- **Deliberate mistake / recovery:** abandon a detached commit, then recover only after evidence-based identification.
+- **Common mistakes:** editing `.git/objects`, calling reflog remote backup, or treating pack deltas as the commit model.
+- **Definition of done / portfolio evidence:** object map, command transcript, before/after counts, rescue graph, and detached-HEAD interview explanation.
+
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 4](./Git.md#phase-4) | [CONTINUE TO GIT PHASE 5](./Git.md#phase-5)
+
+<a id="git-phase-5-project"></a>
+### GIT PHASE 5 MINI-PROJECT
+
+#### PROJECT: Parallel Feature Branch Lab
+
+#### SPECIFICATION
+
+- **Scenario / purpose:** Model three developers working on a feature, docs, and hotfix from different bases without losing track of refs.
+- **Skills / prerequisites:** Phase 5 and Object Database Archaeology; create/switch/rename/delete, upstreams, divergence, naming, reachability.
+- **Starting state:** Clean main, local bare remote, two clones, and no feature branches.
+- **Expected graph/state:** At least three tips from two bases, one ahead/behind upstream relationship, and no unnamed intended work.
+
+#### BUILD IT STEP BY STEP
+
+1. Create three purpose-named branches and commit distinct work; publish two with explicit upstreams.
+2. Advance the remote from clone B, fetch in clone A, and document local versus remote-tracking refs.
+3. Use `git branch -vv`, `merge-base`, and left/right graph queries to explain ahead/behind.
+4. Rename one branch and attempt safe deletion of merged and unmerged practice branches.
+5. Make keep/delete decisions from reachability evidence and save the final ref audit.
+
+#### VALIDATION, FAILURE, AND EVIDENCE
+
+- **Easy / medium / hard:** create/name; explain divergence; prove cleanup safety for all refs.
+- **Deliberate mistake / recovery:** trigger `git branch -d` refusal on unmerged work, preserve a safety ref, and integrate or retain it instead of forcing blindly.
+- **Common mistakes:** confusing local/remote-tracking branches, deleting by age, or using permanent environment branches by habit.
+- **Definition of done / portfolio evidence:** graph, `branch -vv`, merge bases, naming policy, cleanup log, and ahead/behind explanation.
+
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 5](./Git.md#phase-5) | [CONTINUE TO GIT PHASE 6](./Git.md#phase-6)
+
+<a id="git-phase-6-project"></a>
+### GIT PHASE 6 MINI-PROJECT
+
+#### PROJECT: Conflict Resolution Gauntlet
+
+#### SPECIFICATION
+
+- **Scenario / purpose:** Resolve content, rename, modify/delete, and binary conflicts from written business intent rather than marker deletion.
+- **Skills / prerequisites:** Phase 6 and Parallel Feature Branch Lab; merge bases, FF/three-way, index stages, abort/continue, tools, `rerere`, tests.
+- **Starting state:** Four prepared divergent branch pairs in a disposable clone; Git and optional open-source Meld/KDiff3.
+- **Expected graph/state:** Four tested integration commits with two parents and documented merge bases/resolutions.
+
+#### BUILD IT STEP BY STEP
+
+1. Predict each graph and reproduce all four conflict types with `git merge --no-commit`.
+2. Inspect `status`, `git ls-files -u`, `git diff --cc`, and diff3 markers; abort and repeat one scenario.
+3. Resolve from stated requirements, stage the final state, run `git diff --staged --check` and fixture tests, then commit.
+4. Enable `rerere`, recreate a conflict, inspect the reused result, and challenge it with changed semantics.
+5. Save before/after graphs and one decision record per conflict.
+
+#### VALIDATION, FAILURE, AND EVIDENCE
+
+- **Easy / medium / hard:** text conflict; rename/delete conflicts; binary ownership plus `rerere` reuse audit.
+- **Deliberate mistake / recovery:** accept an entire side that discards a required line; abort or correct/retest and prove the failure test detects it.
+- **Common mistakes:** context-free ours/theirs, untested marker removal, or destructive reset instead of merge abort.
+- **Definition of done / portfolio evidence:** correct trees, index-stage capture, tests, resolution rationale, graphs, and a three-way merge explanation.
+
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 6](./Git.md#phase-6) | [CONTINUE TO GIT PHASE 7](./Git.md#phase-7)
+
+<a id="git-phase-7-project"></a>
+### GIT PHASE 7 MINI-PROJECT
+
+#### PROJECT: Distributed Review Simulation
+
+#### SPECIFICATION
+
+- **Scenario / purpose:** Simulate maintainer and contributors collaborating through forks/remotes, review, checks, and protected-main policy.
+- **Skills / prerequisites:** Phase 7 and Conflict Resolution Gauntlet; fetch/pull/push, remote-tracking refs, multiple remotes, fork sync, PR/MR, review etiquette.
+- **Starting state:** Upstream bare/Forgejo/Gitea repository, two contributor clones/forks, clean main.
+- **Expected graph/state:** One reviewed tested integration on upstream main and synchronized forks with documented branch cleanup.
+
+#### BUILD IT STEP BY STEP
+
+1. Build `origin`/`upstream` topology and publish a short contributor branch.
+2. Fetch a new upstream commit without integrating and prove the working tree remains unchanged.
+3. Open or locally simulate a review; request one justified change and update through a new commit.
+4. Resolve an induced conflict, run the required check, choose merge/squash/rebase policy, and integrate.
+5. Synchronize the second fork and verify from a fresh clone using refs, graph, tests, and review record.
+
+#### VALIDATION, FAILURE, AND EVIDENCE
+
+- **Easy / medium / hard:** fetch proof; reviewer-author iteration; compare three host integration methods for the same proposal.
+- **Deliberate mistake / recovery:** pull a diverged branch without explicit strategy, abort/inspect, then repeat with a documented strategy.
+- **Common mistakes:** treating `origin/main` as live, assuming `origin` is reserved, leaking credentials, or reviewing generated noise.
+- **Definition of done / portfolio evidence:** topology, PR/MR or transcript, check output, graph, merge rationale, and fetch/pull/PR distinction.
+
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 7](./Git.md#phase-7) | [CONTINUE TO GIT PHASE 8](./Git.md#phase-8)
+
+<a id="git-phase-8-project"></a>
+### GIT PHASE 8 MINI-PROJECT
+
+#### PROJECT: Safe Undo Decision Lab
+
+#### SPECIFICATION
+
+- **Scenario / purpose:** Solve six different “undo” requests by affected state, desired final state, and publication boundary.
+- **Skills / prerequisites:** Phase 8 and Distributed Review Simulation; restore/unstage, amend, reset modes, revert, merge revert, verification.
+- **Starting state:** Tagged baseline, staged/unstaged edits, unpublished commits, and a simulated published merge in disposable clones.
+- **Expected graph/state:** Private cases may replace/move refs; published cases retain ancestry and add inverse commits.
+
+#### BUILD IT STEP BY STEP
+
+1. Classify one working-tree discard and one unstage request; inspect both diffs before/after.
+2. Amend one unpublished commit and compare old/new objects through reflog.
+3. Demonstrate soft, mixed, and hard reset from identical cloned state; record WT/index/ref triples.
+4. Revert a published commit and a merge with an explicitly justified mainline.
+5. Compare tree hashes, tests, graphs, and collaborator-clone behavior for every result.
+
+#### VALIDATION, FAILURE, AND EVIDENCE
+
+- **Easy / medium / hard:** classify states; prove reset differences; safely reason through merge revert and later re-merge.
+- **Deliberate mistake / recovery:** use mixed when staged state was required; recover/reforge state from safety ref/reflog without losing disk edits.
+- **Common mistakes:** skipping diffs, rewriting published IDs, or claiming hard reset instantly destroys all objects.
+- **Definition of done / portfolio evidence:** completed decision table, state matrices, graphs, tests, warnings, and a state-first interview answer.
+
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 8](./Git.md#phase-8) | [CONTINUE TO GIT PHASE 9](./Git.md#phase-9)
+
+<a id="git-phase-9-project"></a>
+### GIT PHASE 9 MINI-PROJECT
+
+#### PROJECT: Reflog Rescue Mission
+
+#### SPECIFICATION
+
+- **Scenario / purpose:** Recover deleted/reset work, untrack generated content, and respond to a fake credential already pushed to a shared lab remote.
+- **Skills / prerequisites:** Phase 9 and Safe Undo Decision Lab; reflog, `fsck`, secret containment, `git-filter-repo`, coordination, leases.
+- **Starting state:** Two disposable clones, bare remote, safety bundle/tag, failure refs, and fake credentials only.
+- **Expected graph/state:** All intended commits have refs; fake-secret path is absent from intended rewritten refs; unseen remote work is preserved.
+
+#### BUILD IT STEP BY STEP
+
+1. Stop writes and capture status, refs, graph, and reflog; recover a deleted branch and bad-reset tip.
+2. Stop tracking a generated file while keeping its working copy and adding ignore policy.
+3. Execute fake-secret response: contain/rotate in the scenario, analyze refs, rewrite a fresh clone, and verify absence.
+4. Advance the remote from clone B, demonstrate `--force-with-lease` refusal in A, then fetch and preserve B's work.
+5. Complete the approved guarded update and provide collaborator re-clone/reset instructions plus old/new tip mapping.
+
+#### VALIDATION, FAILURE, AND EVIDENCE
+
+- **Easy / medium / hard:** branch rescue; reset recovery/untracking; complete fake-secret/lease incident drill.
+- **Deliberate mistake / recovery:** stale local view before rewrite; let the lease fail, re-plan, and update without overwriting collaborator work.
+- **Common mistakes:** force first, assuming ignore removes history, practicing with real secrets, or calling reflog permanent backup.
+- **Definition of done / portfolio evidence:** incident timeline, graphs/ref map, lease refusal, verification script, collaborator guide, and containment-first explanation.
+
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 9](./Git.md#phase-9) | [CONTINUE TO GIT PHASE 10](./Git.md#phase-10)
+
+<a id="git-phase-10-project"></a>
+### GIT PHASE 10 MINI-PROJECT
+
+#### PROJECT: Curated History Workshop
+
+#### SPECIFICATION
+
+- **Scenario / purpose:** Transform eight messy private commits into four reviewable, buildable commits on current main without harming collaborators.
+- **Skills / prerequisites:** Phase 10 and Reflog Rescue Mission; rebase internals/conflicts, interactive actions, split, autosquash, safety refs, range-diff.
+- **Starting state:** Eight private commits, two upstream commits, one planned conflict, and `safety/pre-rebase`.
+- **Expected graph/state:** Old `B---D1...D8`; new current-main series `C---N1---N2---N3---N4` with documented mapping.
+
+#### BUILD IT STEP BY STEP
+
+1. Classify commits and create appropriate `fixup!` commits; write an oldest-first interactive plan.
+2. Reword, reorder, drop, squash, and autosquash; mark one mixed commit `edit` and split it with patch staging.
+3. Resolve the planned conflict, test each meaningful intermediate commit, and continue.
+4. Compare series with `git range-diff`, compare intended final trees, and retain the old safety ref.
+5. Recover to the old tip once, then return to the curated line to prove the safety plan.
+
+#### VALIDATION, FAILURE, AND EVIDENCE
+
+- **Easy / medium / hard:** reword/squash; autosquash/conflict; buildable split/reorder with defended mapping.
+- **Deliberate mistake / recovery:** drop a required commit, abort or recover from safety ref/reflog, then repeat and audit.
+- **Common mistakes:** rebasing shared main, misunderstanding todo order, testing only final tip, or blind force push.
+- **Definition of done / portfolio evidence:** before/after graphs, todo, range-diff, test matrix, recovery proof, and merge-versus-rebase defense.
+
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 10](./Git.md#phase-10) | [CONTINUE TO GIT PHASE 11](./Git.md#phase-11)
+
+<a id="git-phase-11-project"></a>
+### GIT PHASE 11 MINI-PROJECT
+
+#### PROJECT: Context-Switching Workbench
+
+#### SPECIFICATION
+
+- **Scenario / purpose:** Preserve a half-finished feature while an urgent hotfix is built and backported without mixed changes.
+- **Skills / prerequisites:** Phase 11 and Curated History Workshop; partial stash, patch mode, cherry-pick provenance, worktrees, safe aliases/scopes.
+- **Starting state:** Dirty feature with staged/unstaged/untracked work plus a release branch.
+- **Expected graph/state:** Feature and release contain only intended changes; hotfix/backport IDs differ; no stale stash/worktree remains.
+
+#### BUILD IT STEP BY STEP
+
+1. Inventory all three dirty-state categories and stash only selected work with a descriptive name.
+2. Create a hotfix worktree/branch, fix and test, then backport with `cherry-pick -x`.
+3. Resume the feature while preserving its intended staged versus unstaged distinction.
+4. Define one read-only local graph alias and explain scope/origin.
+5. Remove/prune the linked worktree safely and verify status, stash list, worktree list, graph, and tests.
+
+#### VALIDATION, FAILURE, AND EVIDENCE
+
+- **Easy / medium / hard:** named stash; provenance backport/conflict; preserve exact state across parallel worktrees.
+- **Deliberate mistake / recovery:** try checking out one branch in two worktrees, interpret refusal, and create a separate branch without force.
+- **Common mistakes:** stale stashes, popping before inspection, unexplained cherry-picks, or aliases hiding destructive actions.
+- **Definition of done / portfolio evidence:** interruption timeline, worktree diagram, patch comparison, tests, config rationale, and tool-choice explanation.
+
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 11](./Git.md#phase-11) | [CONTINUE TO GIT PHASE 12](./Git.md#phase-12)
+
+<a id="git-phase-12-project"></a>
+### GIT PHASE 12 MINI-PROJECT
+
+#### PROJECT: Regression Hunt and Signed Release
+
+#### SPECIFICATION
+
+- **Scenario / purpose:** Locate a regression in a long history, repair it, and publish a verifiable maintenance release.
+- **Skills / prerequisites:** Phase 12 and Context-Switching Workbench; blame context, automated bisect, tags/signing, changelog, SemVer.
+- **Starting state:** At least 32 commits, known-good tag, bad tip, moved/formatted function, deterministic test target.
+- **Expected graph/state:** `v1.0.0 ... first-bad ... fix---v1.0.1`; tag targets the exact tested fix.
+
+#### BUILD IT STEP BY STEP
+
+1. Compare ordinary blame with `-w -C` and inspect the responsible commit/context rather than person-first conclusions.
+2. Write a good/bad test and run `git bisect run`; save classifications and reset afterward.
+3. Fix the culprit on a maintenance branch and rerun the complete suite.
+4. Choose SemVer change from a defined API, update changelog, create annotated/signed tag, and generate checksum/release notes.
+5. Verify from a fresh checkout; if signing is unavailable, use annotated tag and document the missing trust step honestly.
+
+#### VALIDATION, FAILURE, AND EVIDENCE
+
+- **Easy / medium / hard:** contextual blame; 32+ commit automated bisect; independently verified signed release and rollback note.
+- **Deliberate mistake / recovery:** use a flaky classifier, detect contradiction, stabilize/seed, reset, rerun, and compare transcripts.
+- **Common mistakes:** person-blame, forgetting bisect reset, moving published release tags, or SemVer without public API.
+- **Definition of done / portfolio evidence:** bisect transcript/count, changelog/version rationale, signature/checksum, fresh-checkout tests, and atomic-history connection.
+
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 12](./Git.md#phase-12) | [CONTINUE TO GIT PHASE 13](./Git.md#phase-13)
+
+<a id="git-phase-13-project"></a>
+### GIT PHASE 13 MINI-PROJECT
+
+#### PROJECT: Scalable Repository Architecture Lab
+
+#### SPECIFICATION
+
+- **Scenario / purpose:** Design for cross-platform scripts, fake large binary versions, a shared library, three services, and slow clones.
+- **Skills / prerequisites:** Phase 13 and Regression Hunt and Signed Release; attributes, LFS, sparse/partial, submodule/subtree, monorepo trade-offs.
+- **Starting state:** Multi-service fixture with text churn, fake binary, and external tiny library; all required tools open source/local.
+- **Expected graph/state:** Isolated comparison branches and one ADR-selected strategy on main with reproducible checkout.
+
+#### BUILD IT STEP BY STEP
+
+1. Add `.gitattributes`, verify with `check-attr`, and isolate `--renormalize` from functional work.
+2. Track fake binary through local Git LFS and inspect pointer/content storage.
+3. Integrate one library as submodule and subtree on separate branches; compare clone/update/recovery behavior.
+4. Configure sparse checkout and blob-filtered clone; measure transfer, checkout, and build inputs.
+5. Write an ADR covering ownership, permissions, atomic changes, CI, release, backup, and failure boundaries.
+
+#### VALIDATION, FAILURE, AND EVIDENCE
+
+- **Easy / medium / hard:** line-ending stability; LFS/dependency reproduction; measured monorepo/multi-repo architecture defense.
+- **Deliberate mistake / recovery:** clone without LFS/dependency content, diagnose pointer/gitlink, fetch correctly, and add onboarding validation.
+- **Common mistakes:** assuming hosted LFS is unlimited/free, mixing normalization with logic, or equating sparse checkout with complete transfer reduction.
+- **Definition of done / portfolio evidence:** attributes diff, pointer trace, dependency comparison, timings, ADR, fresh-clone build, and boundary interview answer.
+
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 13](./Git.md#phase-13) | [CONTINUE TO GIT PHASE 14](./Git.md#phase-14)
+
+<a id="git-phase-14-project"></a>
+### GIT PHASE 14 MINI-PROJECT
+
+#### PROJECT: Team Workflow Design Studio
+
+#### SPECIFICATION
+
+- **Scenario / purpose:** Design different workflows for daily-deploy SaaS, regulated two-version product, and public open-source teams.
+- **Skills / prerequisites:** Phase 14 and Scalable Repository Architecture Lab; workflow/merge policy, CI, releases/hotfixes, metrics, failure design.
+- **Starting state:** One reusable fixture and three constraint briefs; Git and optional Forgejo/Gitea.
+- **Expected graph/state:** Three distinct graphs whose refs, reviews, releases, and hotfix propagation match their ADRs.
+
+#### BUILD IT STEP BY STEP
+
+1. Elicit team/trust/deploy/release/compliance/CI constraints and select the smallest fitting workflow.
+2. Define branch/ref lifecycle, owners, maximum age, checks, reviews, merge method, release, hotfix, and emergency policy.
+3. Simulate a normal change and compare merge-commit, squash, and rebase-merge evidence.
+4. Inject stale branch, failed check, urgent security fix, and unavailable maintainer; update policy from results.
+5. Measure branch age/review/queue/recovery signals and finalize three ADRs with “when not to use.”
+
+#### VALIDATION, FAILURE, AND EVIDENCE
+
+- **Easy / medium / hard:** justified defaults; hotfix/release propagation; four failure table-tops across all teams.
+- **Deliberate mistake / recovery:** force one workflow onto all teams, identify mismatches, redesign, and compare graph/lead-time/risk.
+- **Common mistakes:** branches as environments, Git Flow by slogan, linear history at any cost, or missing emergency/backport rules.
+- **Definition of done / portfolio evidence:** three ADRs, graphs, failure transcripts, policy matrices, metrics, and cross-scenario interview defense.
+
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 14](./Git.md#phase-14) | [CONTINUE TO GIT PHASE 15](./Git.md#phase-15)
+
+<a id="git-phase-15-project"></a>
+### GIT PHASE 15 MINI-PROJECT
+
+#### PROJECT: Trusted Delivery Gate
+
+#### SPECIFICATION
+
+- **Scenario / purpose:** Accept untrusted public contributions and produce verified releases without secret exposure or silent bypass.
+- **Skills / prerequisites:** Phase 15 and Team Workflow Design Studio; hooks/CI, protection, reviews, queues, signing, scans, maintenance, diagnosis.
+- **Starting state:** Open-source fixture, two clones, fake secret, test signing key, stale candidate, and Forgejo/Gitea or optional GitHub free CI.
+- **Expected graph/state:** Only reviewed, green, current-base changes reach main; verified release tag targets that integration.
+
+#### BUILD IT STEP BY STEP
+
+1. Add a fast local hook and identical central gate; demonstrate local bypass but CI refusal.
+2. Minimize workflow permissions and isolate untrusted changes from secrets; run format/test/secret/dependency checks.
+3. Simulate a combined-tip merge queue and prove individually green but incompatible changes do not merge.
+4. Sign/verify release evidence, revoke the test key in policy, and exercise verification failure.
+5. Run the read-only diagnosis ladder and repository maintenance/health audit only after preserving evidence.
+
+#### VALIDATION, FAILURE, AND EVIDENCE
+
+- **Easy / medium / hard:** hook versus gate; protected signed release; untrusted/race/flake/mutable-action/key/bypass threat drills.
+- **Deliberate mistake / recovery:** request a secret from an untrusted job and race two green branches; fail closed, reduce permissions, retest combined candidate.
+- **Common mistakes:** fork secrets, mutable dependencies, “signed means approved,” permanent admin bypass, or premature maintenance during incident evidence collection.
+- **Definition of done / portfolio evidence:** policy/CI config, negative tests, permission table, queue graph, signature evidence, threat drill, health report, and trust-chain narration.
+
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 15](./Git.md#phase-15) | [BUILD THE GIT MAIN PORTFOLIO PROJECT](#git-main-portfolio-project)
+
+<a id="git-main-portfolio-project"></a>
+## GIT MAIN PORTFOLIO PROJECT
+
+#### PROJECT: Open-Source Team Delivery Lifecycle
+
+#### DESCRIPTION
+
+Manage a tiny public open-source CLI through a complete professional Git lifecycle: setup, atomic history, contributor forks, review, conflicts, private-history cleanup, recovery, regression diagnosis, trusted CI, signed releases, supported-version hotfix, and final history audit. The repository evidence is the product.
+
+#### WHO THIS IS FOR
+
+- Contributor proposing a small reviewable change
+- Maintainer/code owner integrating safely
+- CI/security reviewer protecting untrusted inputs
+- Release manager and incident commander preserving traceability
+
+#### REPOSITORY, REVIEW, RELEASE, AND SECURITY RULES
+
+- Protected `main`, short-lived contributor branches/forks, and `release/1.x` only while supported.
+- Atomic buildable commits; contribution, code-of-conduct, security, ownership, issue/PR templates, ignore/attributes, changelog, and OSI-approved license.
+- One owner approval; two for authentication/release policy; required format/unit/integration/secret/dependency/build checks.
+- Squash routine PRs, preserve meaningful merge topology, never blind force push, and use explicit emergency records.
+- Tested annotated signed SemVer tags, checksums, source artifact, release/hotfix/forward-fix policy, least-privilege CI, and fake-secret drills only.
+
+#### FREE AND OPEN-SOURCE TECH STACK
+
+- Git, shell, any open-source language/test runner, GnuPG or SSH signing, Gitleaks, and local bare remotes
+- Forgejo or Gitea plus an Actions-compatible runner as the open-source default
+- Optional public GitHub free-tier repository for professional-platform evidence; GitHub itself is not open source
+- Git LFS/local dependency fixtures only when used; no paid API, subscription, premium course, or real secret is required
+
+#### BUILD IT PHASE BY PHASE
+
+1. **Phase 1 - Foundations:** Reproducible setup, identity/config evidence, local/forge trust boundary.
+2. **Phase 2 - Three States:** Intentional index, ignores, staged-diff evidence, selective snapshot.
+3. **Phase 3 - History:** At least six atomic buildable commits with meaningful messages and queries.
+4. **Phase 4 - Internals:** Object/ref/HEAD map plus detached-commit rescue evidence.
+5. **Phase 5 - Branches:** Two contributor branches/forks, upstreams, divergence, and cleanup policy.
+6. **Phase 6 - Merges:** Content and rename/delete conflict resolved from requirements with tests.
+7. **Phase 7 - Remotes/Review:** PR/MR discussion, requested change, approval, required checks, and chosen integration.
+8. **Phase 8 - Undo:** State-based undo table applied to private and shared scenarios.
+9. **Phase 9 - Recovery:** Reflog reset rescue, fake-secret rotation/rewrite, and lease-refusal coordination.
+10. **Phase 10 - Rebase:** Autosquash, split, conflict, safety ref, and range-diff on private history.
+11. **Phase 11 - Daily Tools:** Hotfix worktree, partial stash, backport with provenance, clean resumption.
+12. **Phase 12 - Investigation/Release:** Automated 32+ commit bisect and verified `v1.0.0` release.
+13. **Phase 13 - Scale:** Versioned attributes plus one measured LFS/dependency/sparse decision and ADR.
+14. **Phase 14 - Workflow:** Branch/review/merge/release/hotfix/emergency policy justified by team constraints.
+15. **Phase 15 - Trust:** Least-privilege untrusted CI, secret scan, merge-race gate, signatures, maintenance, health audit, and `v1.0.1` hotfix evidence.
+
+#### REQUIRED FAILURE, RECOVERY, AND EVIDENCE
+
+- Reproduce wrong hunk, bad merge resolution, deleted branch, disposable hard reset, dropped rebase commit, stale lease, fake secret, flaky bisect, untrusted secret request, signature failure, merge-queue race, and wrong-direction hotfix propagation.
+- For each: starting/expected/observed state, preserved evidence, smallest safe action, recovery, verification, prevention, and shared-history effect.
+- Save graphs for branch/merge/rebase/reflog/rewrite/release/hotfix; status/diffs/refs/upstreams/remotes; review/check records; range-diff; bisect transcript; signature/checksum; CI permission/threat table; fresh-clone audit.
+
+#### RUBRIC AND DEFINITION OF DONE
+
+| Area | Weight |
+| --- | ---: |
+| State/internals and graph quality | 30% |
+| Collaboration/review | 15% |
+| Safety/recovery | 20% |
+| Workflow/release judgment | 15% |
+| CI/security/trust | 15% |
+| Reproducible portfolio communication | 5% |
+
+Another learner can clone fresh, verify both releases, run checks, reproduce a contribution and recovery drill, trace artifacts to reviewed commits, and understand every exception. No real credential, paid dependency, unexplained force update, missing phase, or unverified signed/secure claim remains.
+
+#### PORTFOLIO AND INTERVIEW PRESENTATION
+
+Lead the README with the team problem, policy, lifecycle diagram, one-command verification, release evidence, and one recovered failure. In five minutes explain Git versus forge, index/objects/refs, workflow fit, contributor-to-artifact trust, reflog/lease/rotation recovery, hotfix propagation, and the next trade-off at larger scale.
+
+#### HOW TO RUN IT FOR FREE
+
+1. Use local bare remotes or run Forgejo/Gitea and its runner on a local machine; bind administration to localhost unless deliberately secured.
+2. Simulate each role in a separate clone and use fake test credentials only.
+3. Run tests, Gitleaks, signing verification, checksums, bisect, and release scripts locally; a public GitHub free-tier mirror is optional.
+4. Publish only sanitized diagrams, logs, review screenshots/links, and release evidence; keep keys, raw incident data, and personal identifiers private.
+5. Verify from a clean clone, then remove disposable worktrees/containers/remotes while retaining the final public repository and sanitized evidence.
+
+> **MAIN PROJECT NAVIGATION:** [REVIEW GIT PHASE 15](./Git.md#phase-15) | [REVIEW THE GIT CAPSTONE](./Git.md#main-git-capstone) | [RETURN TO THE GIT ROADMAP](./Git.md#phase-index)
+
 ---
 
-Build small after every phase. Build the main portfolio project only after you have completed all 20 phases in that roadmap.
+Build small after every phase. Build the main portfolio project only after you have completed every phase in that roadmap.

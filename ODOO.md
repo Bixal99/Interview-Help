@@ -525,6 +525,8 @@ class LibraryBook(models.Model):
 
 ## 3.1 Source, Docker, and Odoo.sh Mindset
 
+> **Git prerequisite:** Use [`Git.md`](./Git.md) Phases [1-7](./Git.md#phase-1) for clone, branch, remote, and review mechanics before treating Odoo source or Odoo.sh branches as deployment magic.
+
 **WHY YOU ARE LEARNING THIS:** You need a **repeatable dev environment** before custom modules: same version, same PostgreSQL major, same addons path every teammate uses.
 
 **THE PROBLEM THIS SOLVES:** A tutorial used Odoo 16 snippets on a 17 database; views failed silently and ORM field types mismatched until the database was rebuilt.
@@ -3359,6 +3361,8 @@ Driving test: examiner watches parallel park (workflow), not just engine start (
 
 ## 19.2 Odoo.sh, CI, and Open Source Hygiene
 
+> **Professional Git bridge:** Pair this Odoo-specific flow with [`Git.md`](./Git.md#phase-14) Phases 14-15 for workflow selection, protected branches, untrusted CI, signed releases, and hotfix policy.
+
 **WHY YOU ARE LEARNING THIS:** **Odoo.sh** builds branches; **OCA conventions** teach lint, manifest, and translation hygiene for professional repos.
 
 **THE PROBLEM THIS SOLVES:** Module worked locally but failed Odoo.sh build because manifest missing license and tests never ran in CI.
@@ -3684,6 +3688,7 @@ Finish OOP Phases 4-8 (encapsulation, inheritance, composition) -> **ODOO Phase 
 
 | Document | Relationship |
 | --- | --- |
+| [`Git.md`](./Git.md) | **Version-control prerequisite** - clone/branch/review, recovery, releases, and CI trust |
 | [`OOP.md`](./OOP.md) | **Recommended prerequisite** - classes, inheritance, composition |
 | [`CS.md`](./CS.md) / [`Networks.md`](./Networks.md) | **HTTP/TLS** for phases 13-14 |
 | [Odoo projects in `Projects.md`](./Projects.md#odoo-engineering) | **Build layer** - complete the matching module after each mastery checkpoint |

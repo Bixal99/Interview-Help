@@ -8431,6 +8431,8 @@ Take the REST API you designed in Phase 13.2's mini-project and, for each endpoi
 
 ## 16.1 Version Control & Code Review
 
+> **Companion deep dive:** Keep this software-engineering context, then use [`Git.md`](./Git.md) Phases [2-4](./Git.md#phase-2) for state/internals, [6-10](./Git.md#phase-6) for merge/recovery/rebase, and [14-15](./Git.md#phase-14) for team workflow and repository trust. Build the matching [Git projects](./Projects.md#git-and-git-workflows) rather than treating this section as a command reference.
+
 **WHY YOU ARE LEARNING THIS:** The moment more than one person touches the same codebase, or a single person wants the ability to undo a mistake made days ago, "just editing the files" breaks down - changes overwrite each other, and there's no record of *what* changed, *when*, or *why*.
 
 **SEE IT BEFORE YOU MEMORIZE IT**

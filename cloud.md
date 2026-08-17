@@ -1132,6 +1132,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ## 12.1 Infrastructure as Code with Terraform and Native Tools
 
+> **Git prerequisite:** Versioned desired state depends on reviewable commits and safe shared history. Complete [`Git.md`](./Git.md) Phases [1-7](./Git.md#phase-1), then pair this phase with Git [Phases 14-15](./Git.md#phase-14) for workflow and trusted CI gates.
+
 **WHY YOU ARE LEARNING THIS:** Click-built environments cannot be reproduced, reviewed, tested, or compared reliably.
 
 **THE PROBLEM THIS SOLVES:** Configuration lived in screenshots and operator memory; recovery meant manually rebuilding something that was never exactly documented.
@@ -1321,6 +1323,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 **WHAT YOU HAVE LEARNED SO FAR:** IAM protects API actions, but applications still need database credentials, certificates, and encryption keys without placing them in repositories or images. Secrets were copied into `.env` files, CI variables, AMIs, chat, and long-lived deployment manifests, making inventory and rotation nearly impossible.
 
 ## 14.1 Secrets, Encryption, and Key Management
+
+> **Committed-secret response:** If a credential enters Git, rotation/revocation comes before coordinated history cleanup. Use [`Git.md`](./Git.md#phase-9) Phase 9 for the full reflog, `git-filter-repo`, and `--force-with-lease` incident drill.
 
 **WHY YOU ARE LEARNING THIS:** IAM protects API actions, but applications still need database credentials, certificates, and encryption keys without placing them in repositories or images.
 
@@ -1954,6 +1958,7 @@ The sequence follows dependency and pressure, not product marketing. Provider na
 
 | Need | Continue in |
 | --- | --- |
+| Git history, IaC review, secret recovery, releases, and trusted CI | [`Git.md`](./Git.md) |
 | Linux, networking, and systems depth | [`CS.md`](./CS.md) Phases 11-12 and [`Networks.md`](./Networks.md) |
 | Web workloads and APIs | [`Web.md`](./Web.md) Phases 11-18 |
 | Delivery automation and operations | [`devops.md`](./devops.md) |

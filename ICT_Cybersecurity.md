@@ -2248,6 +2248,8 @@ print("hunt:", misconfigs)
 
 ## 16.1 Container Image Risk and Kubernetes Hardening Themes
 
+> **Git and supply-chain prerequisite:** Use [`Git.md`](./Git.md) [Phase 9](./Git.md#phase-9) for secret-history incident response and [Phase 15](./Git.md#phase-15) for signing, protected branches, untrusted CI, merge queues, and repository-health evidence.
+
 **WHY YOU ARE LEARNING THIS:** Containers share kernels and often run as root by default. Kubernetes multiplies misconfig surface: RBAC wildcards, privileged pods, no NetworkPolicy, exposed dashboards. The 4C model (Cloud, Cluster, Container, Code) organizes defenses.
 
 **THE PROBLEM THIS SOLVES:** Latest tags forever. Secrets in env vars in plain Deployments. cluster-admin for developers. Privileged debug pods left running.

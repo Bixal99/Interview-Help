@@ -1,10 +1,10 @@
 # The Combined Interview Playbook
 
-*Mohammad Bilal's interview Q&A companion to the roadmaps - [CS.md](CS.md), [Data.md](Data.md), [Networks.md](Networks.md), [AI.md](AI.md), [Web.md](Web.md), [cloud.md](cloud.md), and [devops.md](devops.md). High-frequency questions with strong answers, follow-ups, and traps - not a list of facts to memorize.*
+*Mohammad Bilal's interview Q&A companion to the roadmaps - [CS.md](CS.md), [OOP.md](OOP.md), [Git.md](Git.md), [Data.md](Data.md), [Networks.md](Networks.md), [AI.md](AI.md), [Web.md](Web.md), [cloud.md](cloud.md), and [devops.md](devops.md). High-frequency questions with strong answers, follow-ups, and traps - not a list of facts to memorize.*
 
 *Curated with Composio (web search + DeepWiki on `mlabonne/llm-course`) against 2026 interview guides for DSA, SQL/DE, networking, and AI engineering, plus official web-platform, OpenAPI, OAuth, and OWASP documentation.*
 
-**Scope:** CS × Data × Networks × AI × Web × Cloud × DevOps · speak trade-offs out loud.
+**Scope:** CS × OOP × Git × Data × Networks × AI × Web × Cloud × DevOps · speak trade-offs out loud.
 
 Question → Strong answer → Follow-ups → Traps
 
@@ -53,6 +53,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 | If interviewing for... | Prioritize sections |
 | --- | --- |
 | Software Engineer | A (CS), C (Networks essentials), F (URL/system) |
+| Git / SCM-heavy role | V full + A16 + H3/H7/H12 |
 | Data Analyst | B1–B2 (SQL + metrics), skim B3 |
 | Data Engineer | B full, C HTTP/DNS basics, F reliability |
 | Backend / Infra | A + C deep, F |
@@ -76,6 +77,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 | [W. Web Development](#track-w---web-development) | Browser, frontend, backend, REST, security, production | 16 |
 | [G. Cloud Engineering](#track-g---cloud-engineering) | Architecture, IAM, networks, data, reliability, FinOps | 10 |
 | [H. DevOps Engineering](#track-h---devops-engineering) | Linux, delivery, containers, Kubernetes, IaC, SRE | 12 |
+| [V. Git and Version Control](#track-v---git-and-version-control) | State, internals, collaboration, recovery, workflows, trust | 18 |
 | [E. Cross-Cutting Classics](#track-e---cross-cutting-classics) | URL bar, debug ladders, design prompts | 6 |
 | [F. Behavioral / STAR](#track-f---behavioral-star-anchored-to-your-roadmaps) | Stories that prove judgment | 5 |
 
@@ -1429,9 +1431,11 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 ## H3. Git strategy and safe collaboration
 
-**Level:** Screen · **Source:** devops.md Phase 4
+**Level:** Screen · **Source:** devops.md Phase 4; Git.md Phases 5–10 and 14
 
 **A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Git stores a graph of immutable commits and movable references. Prefer small changes, protected main, fast review, automated checks, and short-lived branches or trunk-based development when the team can sustain it. Merge preserves branch topology; rebase rewrites local ancestry for a linear story and should not rewrite shared history casually. A revert creates an auditable inverse change and is safer than erasing published commits.
+
+For the full state, recovery, and workflow interview track, continue at [Track V - Git and Version Control](#track-v---git-and-version-control).
 
 **QUESTIONS THEY MAY ASK NEXT:** When squash? How recover a lost commit? · **COMMON MISTAKE:** Long-lived environment branches and force-pushing shared history.
 
@@ -1524,6 +1528,300 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 **A CLEAR ANSWER YOU CAN SAY OUT LOUD:** Put fast security feedback near the change-secret, dependency, SAST, IaC, image and policy checks-then prioritize exploitable risk and preserve exception ownership. With GitOps, reviewed Git state is reconciled continuously and drift is visible; protect promotion and emergency procedures. During incidents establish command, communication, mitigation, evidence, and recovery; follow with a blameless causal review. A platform packages these paved roads as a product with adoption and outcome metrics, not a ticket wall.
 
 **QUESTIONS THEY MAY ASK NEXT:** Git is unavailable during an incident? How avoid security gate fatigue? · **COMMON MISTAKE:** More tools and gates without ownership, developer usability, or recovery practice.
+
+---
+
+<a id="track-v"></a>
+
+# Track V - Git and Version Control
+
+**Source roadmap:** [Git.md](./Git.md) · **Project evidence:** [Git project cards](./Projects.md#git-and-git-workflows)
+
+## V1. Git, GitHub, and version-control models
+
+**Level:** Screen · **Source:** Git.md Phase 1
+
+**THE INTERVIEWER'S QUESTION:** What is Git, and how is it different from GitHub or centralized version control?
+
+**BEGINNER-FRIENDLY ANSWER:** Git records versions and branches locally on my computer. GitHub is one service that hosts Git repositories and adds accounts, pull requests, permissions, and automation.
+
+**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** Git is a distributed content-addressed object database with a commit DAG, refs, and an index. A clone normally contains the object history needed for local commit, branch, diff, and log operations offline. GitHub/Forgejo/Gitea/GitLab add server identity, authorization, review, issue, policy, release, and CI features; centralized VCS keeps the primary history on a server rather than giving each ordinary client a complete repository model.
+
+**A SIMPLE ANSWER STRUCTURE:** Problem before version control → local/centralized/distributed distinction → Git mechanism → forge additions.
+
+**QUESTIONS THEY MAY ASK NEXT:** Is `origin` GitHub? Can Git work offline? · **COMMON MISTAKE:** Using Git and GitHub as synonyms or calling GitHub open-source software.
+
+---
+
+## V2. Working tree, staging area, and repository
+
+**Level:** Screen · **Source:** Git.md Phase 2
+
+**THE INTERVIEWER'S QUESTION:** Explain Git's three states and `git diff` versus `git diff --staged`.
+
+**BEGINNER-FRIENDLY ANSWER:** I edit in the working tree, stage the exact content for the next commit, and commit that staged snapshot. Plain diff shows edits not staged; staged diff shows what the next commit will contain.
+
+**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** The working tree is the checkout, the index is the proposed tree, and `HEAD` normally resolves to the current commit tree. `git status` compares WT↔index and index↔`HEAD`; `git diff` renders the first delta and `git diff --staged` the second. A path can be simultaneously staged and modified because the index and disk hold different versions.
+
+**A SIMPLE ANSWER STRUCTURE:** Name three states → two comparisons → one simultaneous-state example → verification.
+
+**QUESTIONS THEY MAY ASK NEXT:** Does commit read disk or index? Why patch staging? · **COMMON MISTAKE:** Saying staging is just a list of filenames.
+
+---
+
+## V3. What a commit stores and what makes a good commit
+
+**Level:** Core · **Source:** Git.md Phase 3
+
+**THE INTERVIEWER'S QUESTION:** Is a Git commit a diff? What does atomic mean?
+
+**BEGINNER-FRIENDLY ANSWER:** A commit names a complete project snapshot, links to its parent, and records a message and author. Atomic means it represents one coherent reason that can be reviewed and undone as a unit.
+
+**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** A commit object identifies a root tree, parent IDs, author/committer metadata, timestamps, and message; those bytes determine its ID. Git can display diffs by comparing trees, but the commit model is snapshots. Atomicity is semantic and buildability-oriented, not “one file” or “few lines”; it improves review, revert, cherry-pick, and bisect precision.
+
+**A SIMPLE ANSWER STRUCTURE:** Stored fields → snapshots versus displayed diffs → atomicity → practical benefit.
+
+**QUESTIONS THEY MAY ASK NEXT:** Author versus committer? Why does rebase change IDs? · **COMMON MISTAKE:** Calling a commit mutable or equating atomic with tiny.
+
+---
+
+## V4. Blobs, trees, refs, `HEAD`, and detached `HEAD`
+
+**Level:** Advanced · **Source:** Git.md Phase 4
+
+**THE INTERVIEWER'S QUESTION:** Walk through Git internals and explain detached `HEAD`.
+
+**BEGINNER-FRIENDLY ANSWER:** Git stores file content as blobs, directories as trees, and commits that point to a tree and parents. Branches are movable names for commits; detached `HEAD` means I checked out a commit directly instead of through a branch.
+
+**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** Blobs contain bytes without filenames; trees map names/modes to object IDs; commits bind a root tree to parents and metadata; annotated tags add tag objects. Refs name object IDs, and symbolic `HEAD` normally names a local branch. Detached commits are valid objects, but I create a ref before reflog expiry/GC can remove the last recovery route.
+
+**A SIMPLE ANSWER STRUCTURE:** Four object types → refs → symbolic/detached `HEAD` → reachability/recovery.
+
+**QUESTIONS THEY MAY ASK NEXT:** Loose objects versus packfiles? Why is branch creation cheap? · **COMMON MISTAKE:** Saying a branch copies the working tree.
+
+---
+
+## V5. Local, remote-tracking, and upstream branches
+
+**Level:** Core · **Source:** Git.md Phases 5 and 7
+
+**THE INTERVIEWER'S QUESTION:** What is the difference between `main`, `origin/main`, and an upstream?
+
+**BEGINNER-FRIENDLY ANSWER:** `main` is my movable local branch. `origin/main` is my local record of the remote's main from the last fetch. An upstream is configuration connecting my branch to the branch it normally compares/pulls/pushes against.
+
+**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** Local branch refs live under `refs/heads`; remote-tracking refs under `refs/remotes` are updated by fetch refspecs and may be stale. Upstream config records a remote and merge ref for status/default operations. Ahead/behind counts are asymmetric reachability, not file age.
+
+**A SIMPLE ANSWER STRUCTURE:** Name each ref → say who moves it → explain staleness → ahead/behind graph.
+
+**QUESTIONS THEY MAY ASK NEXT:** Is `origin` reserved? What does `branch -vv` show? · **COMMON MISTAKE:** Treating `origin/main` as a live server branch.
+
+---
+
+## V6. Fast-forward, three-way merge, and conflict resolution
+
+**Level:** Core · **Source:** Git.md Phase 6
+
+**THE INTERVIEWER'S QUESTION:** How does Git merge, and how do you resolve a conflict safely?
+
+**BEGINNER-FRIENDLY ANSWER:** If my branch can just move forward, Git fast-forwards. Otherwise it compares both tips with their common ancestor. I resolve the intended final content, stage it, test it, and continue—or abort before committing.
+
+**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** A true merge computes one or more merge bases and performs a three-way comparison of base, ours, and theirs. Conflicted index entries occupy stages 1–3 until I add a resolved stage-0 entry. I inspect `ls-files -u`/combined diff, resolve semantics including rename/delete cases, run tests and `diff --check`, then commit/continue; `merge --abort` is the safe pre-completion exit.
+
+**A SIMPLE ANSWER STRUCTURE:** Determine merge base → FF or three-way → inspect stages → semantic resolution → tests/graph.
+
+**QUESTIONS THEY MAY ASK NEXT:** Binary conflicts? `rerere`? · **COMMON MISTAKE:** Deleting markers or choosing an entire side without understanding intent.
+
+---
+
+## V7. Fetch, pull, and push
+
+**Level:** Screen · **Source:** Git.md Phase 7
+
+**THE INTERVIEWER'S QUESTION:** What is the difference between fetch, pull, and push?
+
+**BEGINNER-FRIENDLY ANSWER:** Fetch downloads remote objects and updates my remote-tracking view without applying it. Pull fetches and then merges or rebases. Push sends objects and asks the remote branch to move.
+
+**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** Fetch negotiates objects and applies configured refspec updates locally. Pull is a porcelain composition of fetch plus the selected integration policy, so it can update working/index/history. Push transfers missing objects and requests remote ref transactions subject to fast-forward and server policy. I fetch/inspect separately while diagnosing.
+
+**A SIMPLE ANSWER STRUCTURE:** Object transfer → which refs move → whether branch/WT changes → verification.
+
+**QUESTIONS THEY MAY ASK NEXT:** Why can push be rejected? Why `pull --ff-only`? · **COMMON MISTAKE:** Calling all three “sync.”
+
+---
+
+## V8. Pull requests, code review, and protected branches
+
+**Level:** Core · **Source:** Git.md Phase 7
+
+**THE INTERVIEWER'S QUESTION:** Is a pull request a Git feature, and what makes a good review workflow?
+
+**BEGINNER-FRIENDLY ANSWER:** A pull request is hosting-platform metadata around a proposed branch change. A good one is small, explains why and tests/risk, receives useful review, passes checks, and follows protected-main policy.
+
+**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** Git supplies commits/refs/object exchange; a forge supplies PR/MR discussion, review states, CODEOWNERS, required checks, branch rules, and merge UI. I keep diffs reviewable, separate blocking from suggestions, update with commits, protect untrusted CI from secrets, and integrate using the repository's documented merge policy.
+
+**A SIMPLE ANSWER STRUCTURE:** Git layer → forge layer → author evidence → reviewer duties → server gate.
+
+**QUESTIONS THEY MAY ASK NEXT:** Squash versus merge commit? Review disagreement? · **COMMON MISTAKE:** Treating a green check or approval count as proof of correctness.
+
+---
+
+## V9. Restore, amend, reset, and revert
+
+**Level:** Core · **Source:** Git.md Phase 8
+
+**THE INTERVIEWER'S QUESTION:** How do you choose the right undo command?
+
+**BEGINNER-FRIENDLY ANSWER:** I ask whether the problem is in the working file, staging area, unpublished commit, or shared history. I use restore/unstage narrowly, amend/reset only for private history, and revert for published commits.
+
+**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** `restore` changes WT and optionally index from an explicit source; amend synthesizes a replacement commit; reset moves the current ref and soft/mixed/hard progressively reset index/WT; revert adds an inverse commit. Shared-ID dependency determines safety. I inspect both diffs, create a safety ref, and verify tree/graph/tests.
+
+**A SIMPLE ANSWER STRUCTURE:** State → publication boundary → narrowest command → verify → recovery.
+
+**QUESTIONS THEY MAY ASK NEXT:** Reset modes? Reverting a merge? · **COMMON MISTAKE:** Recommending `reset --hard` as generic undo.
+
+---
+
+## V10. Recovering a deleted branch or lost commit
+
+**Level:** Core · **Source:** Git.md Phase 9
+
+**THE INTERVIEWER'S QUESTION:** You deleted a branch or reset away commits. What do you do?
+
+**BEGINNER-FRIENDLY ANSWER:** I stop changing things, inspect the reflog for the old tip, verify the candidate with `git show`, and create a rescue branch at that commit.
+
+**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** Ref deletion usually removes a name, not objects immediately. I capture status/refs/graph, inspect relevant and `HEAD` reflogs, validate tree/ancestry, and restore reachability with a new ref. `fsck` dangling search is a weaker fallback. Reflogs are local and expire, so this is not backup.
+
+**A SIMPLE ANSWER STRUCTURE:** Preserve evidence → reflog → inspect candidate → name it → verify reachability.
+
+**QUESTIONS THEY MAY ASK NEXT:** What if reflog is gone? Does GC matter? · **COMMON MISTAKE:** Resetting repeatedly before recording the state.
+
+---
+
+## V11. A secret was committed and pushed
+
+**Level:** Senior · **Source:** Git.md Phase 9
+
+**THE INTERVIEWER'S QUESTION:** A real credential is in Git history. What is your response?
+
+**BEGINNER-FRIENDLY ANSWER:** I revoke or rotate it immediately, assume it was exposed, review access, then decide with the team whether history must be rewritten. Deleting the latest file is not containment.
+
+**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** I contain first—revoke/rotate, disable dependent access if needed, preserve evidence, inspect audit logs, and notify owners. Then I inventory every ref/mirror/cache and use a coordinated fresh-clone rewrite such as `git filter-repo`, verify absence, pause pushes, map old/new IDs, apply guarded ref updates, and require collaborator re-clone/reset. Rewriting does not unexpose the secret.
+
+**A SIMPLE ANSWER STRUCTURE:** Contain → investigate → coordinated rewrite decision → verify → collaborator recovery/prevention.
+
+**QUESTIONS THEY MAY ASK NEXT:** Why not BFG/filter-repo first? `--force-with-lease`? · **COMMON MISTAKE:** Saying “remove the file and force push” without rotation or coordination.
+
+---
+
+## V12. Merge versus rebase and interactive rebase
+
+**Level:** Core · **Source:** Git.md Phase 10
+
+**THE INTERVIEWER'S QUESTION:** When do you merge, rebase, squash, or fix up?
+
+**BEGINNER-FRIENDLY ANSWER:** Merge joins existing histories and preserves them. Rebase copies my private commits onto a new base, so IDs change. I use interactive rebase to clean my unpublished series before review, not to rewrite shared history casually.
+
+**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** Rebase selects commits not reachable from the new upstream and replays their patches, creating objects with new parents/IDs; merge creates a multi-parent commit or fast-forwards. Interactive actions reword/edit/reorder/squash/fixup/drop/split. I create a safety ref, resolve/test each boundary, use range-diff, and respect branch ownership/publication policy.
+
+**A SIMPLE ANSWER STRUCTURE:** Graph result → identity effect → suitable boundary → verification/recovery.
+
+**QUESTIONS THEY MAY ASK NEXT:** How split a commit? Why does ours/theirs feel reversed? · **COMMON MISTAKE:** Saying rebase “moves the same commits.”
+
+---
+
+## V13. Stash, cherry-pick, patch mode, and worktrees
+
+**Level:** Core · **Source:** Git.md Phase 11
+
+**THE INTERVIEWER'S QUESTION:** How do you handle an urgent interruption without mixing work?
+
+**BEGINNER-FRIENDLY ANSWER:** For a short interruption I can name and inspect a stash; for simultaneous work I prefer another worktree/branch. I use patch mode to select intent and cherry-pick one coherent fix when backporting.
+
+**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** Stash creates local commit structure under `refs/stash`; partial/index options control captured state. Worktrees share objects but have separate checkout/index/`HEAD` state. Cherry-pick applies a commit's change to current parent as a new commit, with `-x` useful for public backport provenance. Each can conflict and needs tests.
+
+**A SIMPLE ANSWER STRUCTURE:** Duration/shareability → select tool → state/identity effect → provenance/test.
+
+**QUESTIONS THEY MAY ASK NEXT:** `apply` versus `pop`? Why not cherry-pick everything? · **COMMON MISTAKE:** Treating stash as durable shared project management.
+
+---
+
+## V14. Blame and bisect a regression
+
+**Level:** Core · **Source:** Git.md Phase 12
+
+**THE INTERVIEWER'S QUESTION:** A bug appeared among hundreds of commits. How do you find it?
+
+**BEGINNER-FRIENDLY ANSWER:** I identify one known-good and one known-bad revision, then use bisect to test midpoint commits until Git finds the first bad one. Blame can point me to a line's commit, but I inspect its context.
+
+**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** Bisect performs roughly logarithmic classification over a reachable ancestry interval and can automate with exit-code semantics through `bisect run`; deterministic tests and buildable commits are prerequisites. I reset after the run. For line history I use `blame -w -C`, `log -L`, and the originating commit/review—never person-first blame.
+
+**A SIMPLE ANSWER STRUCTURE:** Known boundaries → deterministic classifier → logarithmic search → inspect culprit → reset/fix.
+
+**QUESTIONS THEY MAY ASK NEXT:** Unbuildable commits? Flaky tests? · **COMMON MISTAKE:** Linear log reading or treating blame output as causal proof.
+
+---
+
+## V15. Tags, releases, and signing
+
+**Level:** Advanced · **Source:** Git.md Phase 12
+
+**THE INTERVIEWER'S QUESTION:** What is the difference between a branch, tag, and release, and what does signing prove?
+
+**BEGINNER-FRIENDLY ANSWER:** A branch moves as work continues. A tag gives one commit a stable version name. A release adds notes/artifacts around that tag. A valid signature proves the signed bytes match a key, not automatically that the change was reviewed or safe.
+
+**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** A lightweight tag is a ref to an object; an annotated tag is a tag object with target/tagger/date/message and optional signature. A forge release is external metadata/artifacts. Trust requires key identity, accepted algorithms, expiry/revocation, bot policy, and artifact-to-commit provenance in addition to signature verification.
+
+**A SIMPLE ANSWER STRUCTURE:** Ref mutability → annotated object → platform release → cryptographic claim and limits.
+
+**QUESTIONS THEY MAY ASK NEXT:** Move a published tag? SemVer? · **COMMON MISTAKE:** Claiming “verified signature” means approved, vulnerability-free, or reproducible.
+
+---
+
+## V16. LFS, submodules, subtrees, sparse checkout, and monorepos
+
+**Level:** Advanced · **Source:** Git.md Phase 13
+
+**THE INTERVIEWER'S QUESTION:** How do you choose Git repository scale and dependency tools?
+
+**BEGINNER-FRIENDLY ANSWER:** LFS keeps pointers in Git for large content stored elsewhere; submodules pin another repository; subtrees copy its history/content into mine; sparse checkout limits visible paths. I choose from team ownership, clone/build, and release needs.
+
+**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** LFS adds a separate authenticated content service and backup/quota boundary. A submodule is a mode-160000 gitlink to an exact external commit. Subtree vendors content into ordinary history. Sparse checkout changes worktree population, while partial-clone filters affect object transfer. Monorepo versus multi-repo trades atomic cross-project change/unified tooling against permissions, CI scale, checkout, ownership, and independent release coordination.
+
+**A SIMPLE ANSWER STRUCTURE:** Constraint → mechanism → extra operational boundary → failure/recovery cost.
+
+**QUESTIONS THEY MAY ASK NEXT:** Does sparse checkout make clone small? LFS outage? · **COMMON MISTAKE:** Choosing by repository size alone or ignoring disaster recovery.
+
+---
+
+## V17. Design a team Git workflow
+
+**Level:** Senior · **Source:** Git.md Phase 14
+
+**THE INTERVIEWER'S QUESTION:** Choose a workflow for a team shipping daily, or supporting multiple release versions.
+
+**BEGINNER-FRIENDLY ANSWER:** I first ask team size, deployment frequency, review/test maturity, supported versions, and compliance. Daily SaaS usually fits protected main with short branches/trunk practices; multiple supported releases may need release and hotfix branches.
+
+**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** I derive ref lifecycle, maximum branch age, integration method, CODEOWNERS/reviews/checks, merge queue, release tags, backport/forward-fix order, emergency exception, and metrics from trust/deploy/release constraints. I compare feature branch, GitHub/GitLab Flow, Git Flow, trunk-based, and forking failure modes and explicitly say when the selected model stops fitting.
+
+**A SIMPLE ANSWER STRUCTURE:** Clarify constraints → draw refs → normal flow → release/hotfix → failure/emergency → metrics.
+
+**QUESTIONS THEY MAY ASK NEXT:** Squash or merge? Environment branches? · **COMMON MISTAKE:** Naming Git Flow or trunk-based without prerequisites and failure modes.
+
+---
+
+## V18. Live repository diagnosis, CI trust, and behavioral recovery
+
+**Level:** Senior live exercise · **Source:** Git.md Phase 15 and capstone
+
+**THE INTERVIEWER'S QUESTION:** The repository is in a confusing state and a PR is green but unsafe. Diagnose and design the gate.
+
+**BEGINNER-FRIENDLY ANSWER:** I preserve evidence, inspect status, both diffs, graph, branches/upstreams, remotes, refs, and reflog before changing anything. I require protected main, human review, current combined tests, secret scanning, and no secrets for untrusted jobs.
+
+**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** I identify any merge/rebase/cherry-pick operation and intended invariant through read-only state first. For trust, I map contributor ref/identity to least-privilege isolated CI, pinned dependencies, deterministic required checks, CODEOWNER approval, merge-queue candidate against latest main, protected ref transaction, signed tag, and immutable artifact provenance. I threat-model admin bypass, stale checks, runner compromise, key revocation, flakes, and incident evidence retention.
+
+**A SIMPLE ANSWER STRUCTURE:** Preserve → read-only ladder → hypothesis → one safe change → verify; then contributor-to-artifact chain → bypasses/recovery.
+
+**QUESTIONS THEY MAY ASK NEXT:** Tell me about a Git mistake you recovered from. How do you handle review disagreement? · **COMMON MISTAKE:** Running reset/maintenance/retry immediately, or trusting a green badge/signature in isolation.
 
 ---
 
@@ -1650,9 +1948,9 @@ Use **Situation → Task → Action → Result**, and end with **what you would 
 | 1 | A1–A9 or W1–W4 + one coding pattern |
 | 2 | B2–B7 live SQL + W10 data/API follow-ups |
 | 3 | C3–C14 + E1/W1 URL tour (5 & 12 min) |
-| 4 | D1–D12 ML, W5–W8 frontend, or G1–G5 cloud foundations |
-| 5 | D14–D18 AI, W9–W14 backend, or H1–H8 delivery/runtime loop |
-| 6 | E4–E6 + W15–W16, G6–G10, or H9–H12 system design/debug prompts |
+| 4 | D1–D12 ML, W5–W8 frontend, G1–G5 cloud, or V1–V6 Git foundations |
+| 5 | D14–D18 AI, W9–W14 backend, H1–H8 delivery/runtime, or V7–V13 Git collaboration/recovery |
+| 6 | E4–E6 + W15–W16, G6–G10, H9–H12, or V14–V18 Git investigation/workflow/trust |
 | 7 | Full mock: coding + role track + URL/design + behavioral |
 
 ---
@@ -1710,9 +2008,16 @@ Use **Situation → Task → Action → Result**, and end with **what you would 
 - [Terraform Documentation](https://developer.hashicorp.com/terraform/docs)
 - [Google SRE Books](https://sre.google/books/)
 
+### Git and Version Control
+
+- [Git reference documentation](https://git-scm.com/docs) and [Pro Git](https://git-scm.com/book/en/v2)
+- [Learn Git Branching](https://learngitbranching.js.org/?locale=en_US), [Oh My Git!](https://ohmygit.org/), and [Git Katas](https://github.com/eficode-academy/git-katas)
+- [Missing Semester: Version Control](https://www.youtube.com/watch?v=2sjqTHE0zok) and [Git Internals - Fear Not The SHA!](https://www.youtube.com/watch?v=P6jD966jzlk)
+- [Google Code Review Developer Guide](https://google.github.io/eng-practices/review/) and [Trunk Based Development](https://trunkbaseddevelopment.com/)
+
 ### Your roadmaps (primary depth)
 
-- [CS.md](CS.md) · [Data.md](Data.md) · [Networks.md](Networks.md) · [AI.md](AI.md) · [Web.md](Web.md) · [cloud.md](cloud.md) · [devops.md](devops.md)
+- [CS.md](CS.md) · [OOP.md](OOP.md) · [Git.md](Git.md) · [Data.md](Data.md) · [Networks.md](Networks.md) · [AI.md](AI.md) · [Web.md](Web.md) · [cloud.md](cloud.md) · [devops.md](devops.md)
 
 ---
 

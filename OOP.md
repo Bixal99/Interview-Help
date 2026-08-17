@@ -4174,6 +4174,8 @@ Closing LLD: recap extensibility + tests + one trade-off you deferred (e.g., per
 
 # PHASE 19 - Portfolio
 
+> **Git prerequisite:** Before publishing portfolio work, complete [`Git.md`](./Git.md) Phases [1-7](./Git.md#phase-1) and use its [Phase 3](./Git.md#phase-3) atomic-history standard plus [Phase 7](./Git.md#phase-7) review workflow.
+
 **Track:** Career
 
 **WHAT YOU WILL BE ABLE TO DO:** Publish 2-3 LLD write-ups that prove you can think in objects.
@@ -4583,6 +4585,7 @@ Finish Phases 4-9 (pillars + Python tools) -> **CS.md Phase 3** -> return for Ph
 
 | Document | Relationship |
 | --- | --- |
+| [`Git.md`](Git.md) | **Version-control prerequisite** - history, collaboration, recovery, and portfolio evidence |
 | [`CS.md`](CS.md) Phase 1-2 | **Prerequisites** - functions, Big O |
 | [`CS.md`](CS.md) Phase 3+ | **Next** - data structures after OOP pillars |
 | [`CS.md`](CS.md) Phase 10 | **Revision** - LLD + patterns under algorithm load |

@@ -379,6 +379,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ## 4.1 Git, Collaboration, and Change History
 
+> **Required Git companion:** This phase explains Git in a delivery-system context. Use [`Git.md`](./Git.md) Phases [1-7](./Git.md#phase-1) for the full state/branch/remote model, [8-10](./Git.md#phase-8) for safe undo/recovery/rewrite, and [14-15](./Git.md#phase-14) for workflow, CI, trust, and security.
+
 **WHY YOU ARE LEARNING THIS:** Automation needs an authoritative change history while teams need to work concurrently and review before shared systems change.
 
 **THE PROBLEM THIS SOLVES:** Files were copied, renamed final, merged by hand, and deployed without a trustworthy record of what changed or why.
@@ -1558,6 +1560,8 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ## 17.1 GitOps and Platform Engineering
 
+> **Boundary to keep clear:** GitOps uses reviewed Git state as desired-state input; it does not replace Git mechanics or safe history policy. Review [`Git.md`](./Git.md#phase-14) Phases 14-15 before designing reconciliation, protected promotion, or emergency bypass.
+
 **WHY YOU ARE LEARNING THIS:** Every team can build pipelines and clusters, but duplicated expertise and permissions make delivery inconsistent and slow.
 
 **THE PROBLEM THIS SOLVES:** Central operations became a ticket bottleneck or gave teams raw cloud APIs with overwhelming cognitive load.
@@ -1915,6 +1919,7 @@ The sequence follows dependency and pressure, not product marketing. Provider na
 
 | Need | Continue in |
 | --- | --- |
+| Git internals, recovery, workflows, and trusted repository gates | [`Git.md`](./Git.md) |
 | Operating systems, concurrency, and system design | [`CS.md`](./CS.md) Phases 11, 16-18 |
 | Networking and HTTP diagnosis | [`Networks.md`](./Networks.md) and [`Web.md`](./Web.md) |
 | Cloud architecture and FinOps | [`cloud.md`](./cloud.md) |

@@ -4,7 +4,7 @@
 
 *Resources curated with Composio (web search, YouTube, GitHub) against the [Python Tutorial](https://docs.python.org/3/tutorial/index.html), [Real Python OOP](https://realpython.com/python3-object-oriented-programming/), [Refactoring Guru](https://refactoring.guru/design-patterns/), [faif/python-patterns](https://github.com/faif/python-patterns), [ashishps1/awesome-low-level-design](https://github.com/ashishps1/awesome-low-level-design), Corey Schafer / Mosh / Fireship / Christopher Okhravi, and 2026 LLD guides.*
 
-*Where this sits:* start with **Part 0 (Programming Fundamentals)** if you are new to coding, then Phases 1-20. Ideal path relative to [`CS.md`](CS.md): after CS Phase 1-2 (or in parallel with basics), **before** CS Phase 3 (data structures). [`CS.md`](CS.md) Phase 10 then becomes revision + LLD polish, not first exposure.
+*Where this sits:* start with **Part 0 (Programming Fundamentals)** if you are new to coding, then Phases 1-20. Ideal path relative to [`CS.md`](./CS.md): after CS Phase 1-2 (or in parallel with basics), **before** CS Phase 3 (data structures). [`CS.md`](./CS.md) Phase 10 then becomes revision + LLD polish, not first exposure.
 
 **Scope:** Part 0 fundamentals + 40 OOP concepts · 20 phases · no artificial weekly deadline.
 
@@ -64,7 +64,7 @@ Phases 1-10 build language + modeling confident working knowledge. Phases 11-18 
 
 ---
 
-> **Integrated Git practice:** Each linked phase-project card in [`Projects.md`](./Projects.md) ends with one specific Git checkpoint. Test the finished project first, commit only its named project path, verify the commit and clean working tree, then continue. Use [`Git.md` Phases 2-3](./Git.md#phase-2) if staging or commit selection is unfamiliar.
+> **Integrated Git practice:** Each linked phase-project card in [`Projects.md`](../guides/Projects.md) ends with one specific Git checkpoint. Test the finished project first, commit only its named project path, verify the commit and clean working tree, then continue. Use [`Git.md` Phases 2-3](./Git.md#phase-2) if staging or commit selection is unfamiliar.
 
 ---
 
@@ -314,7 +314,7 @@ Be ready for `is` vs `==` later; for now, explain mutable vs immutable with a li
 
 **WHY THE NEXT TOPIC IS NEEDED:** Fixed sequences of statements are not enough. Programs must **choose and repeat** - control flow.
 
-> **Phase F1 complete?** [Build the Phase F1 mini-project](./Projects.md#oop-phase-f1-project) · [Continue to Phase F2](#f2---control-flow)
+> **Phase F1 complete?** [Build the Phase F1 mini-project](../guides/Projects.md#oop-phase-f1-project) · [Continue to Phase F2](#f2---control-flow)
 
 <a id="phase-f2"></a>
 
@@ -462,7 +462,7 @@ Know `range`, `enumerate`, and how to avoid mutating a list while iterating it c
 
 **WHY THE NEXT TOPIC IS NEEDED:** Copy-pasted loop bodies become unmaintainable. Package reusable logic as **functions**.
 
-> **Phase F2 complete?** [Build the Phase F2 mini-project](./Projects.md#oop-phase-f2-project) · [Continue to Phase F3](#f3---functions-and-modules)
+> **Phase F2 complete?** [Build the Phase F2 mini-project](../guides/Projects.md#oop-phase-f2-project) · [Continue to Phase F3](#f3---functions-and-modules)
 
 <a id="phase-f3"></a>
 
@@ -611,7 +611,7 @@ if __name__ == "__main__":
 
 ---
 
-> **Phase F3 complete?** [Build the Phase F3 mini-project](./Projects.md#oop-phase-f3-project) · [Continue to Phase 1](#phase-1---object-thinking)
+> **Phase F3 complete?** [Build the Phase F3 mini-project](../guides/Projects.md#oop-phase-f3-project) · [Continue to Phase 1](#phase-1---object-thinking)
 
 <a id="phase-1"></a>
 
@@ -621,7 +621,7 @@ if __name__ == "__main__":
 
 **WHAT YOU WILL BE ABLE TO DO:** Feel the *problem* OOP was invented to solve before any class syntax.
 
-**WHAT YOU SHOULD KNOW FIRST:** Part 0 (Programming Fundamentals) or equivalent: variables, control flow, functions. [`CS.md`](CS.md) Phase 1-2 helps but Part 0 is enough to start.
+**WHAT YOU SHOULD KNOW FIRST:** Part 0 (Programming Fundamentals) or equivalent: variables, control flow, functions. [`CS.md`](./CS.md) Phase 1-2 helps but Part 0 is enough to start.
 
 ## 1.1 Procedural Code Hits a Wall
 
@@ -809,7 +809,7 @@ In LLD prompts, start by listing entities and illegal states out loud. Interview
 
 ---
 
-> **Phase 1 complete?** [Build the Phase 1 mini-project](./Projects.md#oop-phase-1-project) · [Continue to Phase 2](#phase-2---classes--objects)
+> **Phase 1 complete?** [Build the Phase 1 mini-project](../guides/Projects.md#oop-phase-1-project) · [Continue to Phase 2](#phase-2---classes--objects)
 
 <a id="phase-2"></a>
 
@@ -992,7 +992,7 @@ If they ask `is` vs `==`, give a one-liner and a micro-example.
 
 ---
 
-> **Phase 2 complete?** [Build the Phase 2 mini-project](./Projects.md#oop-phase-2-project) · [Continue to Phase 3](#phase-3---state--behavior)
+> **Phase 2 complete?** [Build the Phase 2 mini-project](../guides/Projects.md#oop-phase-2-project) · [Continue to Phase 3](#phase-3---state--behavior)
 
 <a id="phase-3"></a>
 
@@ -1175,7 +1175,7 @@ Interviewers love: "What should happen if construction fails?" Answer: raise; ne
 
 ---
 
-> **Phase 3 complete?** [Build the Phase 3 mini-project](./Projects.md#oop-phase-3-project) · [Continue to Phase 4](#phase-4---encapsulation)
+> **Phase 3 complete?** [Build the Phase 3 mini-project](../guides/Projects.md#oop-phase-3-project) · [Continue to Phase 4](#phase-4---encapsulation)
 
 <a id="phase-4"></a>
 
@@ -1383,7 +1383,7 @@ LLD interview gold: state invariants out loud before drawing classes. "What ille
 
 ---
 
-> **Phase 4 complete?** [Build the Phase 4 mini-project](./Projects.md#oop-phase-4-project) · [Continue to Phase 5](#phase-5---abstraction)
+> **Phase 4 complete?** [Build the Phase 4 mini-project](../guides/Projects.md#oop-phase-4-project) · [Continue to Phase 5](#phase-5---abstraction)
 
 <a id="phase-5"></a>
 
@@ -1590,7 +1590,7 @@ ISP interview: give a fat interface example and show the split. Mention callers 
 
 ---
 
-> **Phase 5 complete?** [Build the Phase 5 mini-project](./Projects.md#oop-phase-5-project) · [Continue to Phase 6](#phase-6---inheritance)
+> **Phase 5 complete?** [Build the Phase 5 mini-project](../guides/Projects.md#oop-phase-5-project) · [Continue to Phase 6](#phase-6---inheritance)
 
 <a id="phase-6"></a>
 
@@ -1787,7 +1787,7 @@ They may show broken inheritance (Square/Rectangle). Explain *why* callers break
 
 ---
 
-> **Phase 6 complete?** [Build the Phase 6 mini-project](./Projects.md#oop-phase-6-project) · [Continue to Phase 7](#phase-7---polymorphism)
+> **Phase 6 complete?** [Build the Phase 6 mini-project](../guides/Projects.md#oop-phase-6-project) · [Continue to Phase 7](#phase-7---polymorphism)
 
 <a id="phase-7"></a>
 
@@ -1976,7 +1976,7 @@ Show before/after of if/elif vs polymorphism on a whiteboard. Count how many fil
 
 ---
 
-> **Phase 7 complete?** [Build the Phase 7 mini-project](./Projects.md#oop-phase-7-project) · [Continue to Phase 8](#phase-8---composition-over-inheritance)
+> **Phase 7 complete?** [Build the Phase 7 mini-project](../guides/Projects.md#oop-phase-7-project) · [Continue to Phase 8](#phase-8---composition-over-inheritance)
 
 <a id="phase-8"></a>
 
@@ -2171,7 +2171,7 @@ Explain delegation vs inheritance in one sentence: "Inheritance is being; delega
 
 ---
 
-> **Phase 8 complete?** [Build the Phase 8 mini-project](./Projects.md#oop-phase-8-project) · [Continue to Phase 9](#phase-9---python-power-tools)
+> **Phase 8 complete?** [Build the Phase 8 mini-project](../guides/Projects.md#oop-phase-8-project) · [Continue to Phase 9](#phase-9---python-power-tools)
 
 <a id="phase-9"></a>
 
@@ -2367,7 +2367,7 @@ MRO question appears in senior loops. Bonus: `@classmethod` factory vs `__init__
 
 ---
 
-> **Phase 9 complete?** [Build the Phase 9 mini-project](./Projects.md#oop-phase-9-project) · [Continue to Phase 10](#phase-10---relationships--modeling)
+> **Phase 9 complete?** [Build the Phase 9 mini-project](../guides/Projects.md#oop-phase-9-project) · [Continue to Phase 10](#phase-10---relationships--modeling)
 
 <a id="phase-10"></a>
 
@@ -2554,7 +2554,7 @@ LLD round: spend first 5 minutes on CRC/entities. Weak candidates start with `cl
 
 ---
 
-> **Phase 10 complete?** [Build the Phase 10 mini-project](./Projects.md#oop-phase-10-project) · [Continue to Phase 11](#phase-11---smells--refactoring)
+> **Phase 10 complete?** [Build the Phase 10 mini-project](../guides/Projects.md#oop-phase-10-project) · [Continue to Phase 11](#phase-11---smells--refactoring)
 
 <a id="phase-11"></a>
 
@@ -2744,7 +2744,7 @@ Live refactor question: show Extract Class on whiteboard without naming SOLID ye
 
 ---
 
-> **Phase 11 complete?** [Build the Phase 11 mini-project](./Projects.md#oop-phase-11-project) · [Continue to Phase 12](#phase-12---solid)
+> **Phase 11 complete?** [Build the Phase 11 mini-project](../guides/Projects.md#oop-phase-11-project) · [Continue to Phase 12](#phase-12---solid)
 
 <a id="phase-12"></a>
 
@@ -2944,7 +2944,7 @@ Connect SOLID to testing (Phase 16): DIP is *why* fakes work. Warn against SOLID
 
 ---
 
-> **Phase 12 complete?** [Build the Phase 12 mini-project](./Projects.md#oop-phase-12-project) · [Continue to Phase 13](#phase-13---creational-patterns)
+> **Phase 12 complete?** [Build the Phase 12 mini-project](../guides/Projects.md#oop-phase-12-project) · [Continue to Phase 13](#phase-13---creational-patterns)
 
 <a id="phase-13"></a>
 
@@ -3143,7 +3143,7 @@ Strong candidates criticize Singleton as global state and suggest DI instead. Bu
 
 ---
 
-> **Phase 13 complete?** [Build the Phase 13 mini-project](./Projects.md#oop-phase-13-project) · [Continue to Phase 14](#phase-14---structural-patterns)
+> **Phase 13 complete?** [Build the Phase 13 mini-project](../guides/Projects.md#oop-phase-13-project) · [Continue to Phase 14](#phase-14---structural-patterns)
 
 <a id="phase-14"></a>
 
@@ -3335,7 +3335,7 @@ Compare Decorator vs Proxy vs Middleware. Python `@functools.wraps` is related b
 
 ---
 
-> **Phase 14 complete?** [Build the Phase 14 mini-project](./Projects.md#oop-phase-14-project) · [Continue to Phase 15](#phase-15---behavioral-patterns)
+> **Phase 14 complete?** [Build the Phase 14 mini-project](../guides/Projects.md#oop-phase-14-project) · [Continue to Phase 15](#phase-15---behavioral-patterns)
 
 <a id="phase-15"></a>
 
@@ -3569,7 +3569,7 @@ Observer vs Pub/Sub vs Mediator - concise compare. Mention weak references for c
 
 ---
 
-> **Phase 15 complete?** [Build the Phase 15 mini-project](./Projects.md#oop-phase-15-project) · [Continue to Phase 16](#phase-16---testing-oop)
+> **Phase 15 complete?** [Build the Phase 15 mini-project](../guides/Projects.md#oop-phase-15-project) · [Continue to Phase 16](#phase-16---testing-oop)
 
 <a id="phase-16"></a>
 
@@ -3774,7 +3774,7 @@ Explain how you would test a service that sends email and charges card - name fa
 
 ---
 
-> **Phase 16 complete?** [Build the Phase 16 mini-project](./Projects.md#oop-phase-16-project) · [Continue to Phase 17](#phase-17---layers--clean-ish-architecture)
+> **Phase 16 complete?** [Build the Phase 16 mini-project](../guides/Projects.md#oop-phase-16-project) · [Continue to Phase 17](#phase-17---layers--clean-ish-architecture)
 
 <a id="phase-17"></a>
 
@@ -3972,7 +3972,7 @@ Architecture interview: label arrows on diagram. Fix one backward dependency alo
 
 ---
 
-> **Phase 17 complete?** [Build the Phase 17 mini-project](./Projects.md#oop-phase-17-project) · [Continue to Phase 18](#phase-18---lld-method)
+> **Phase 17 complete?** [Build the Phase 17 mini-project](../guides/Projects.md#oop-phase-17-project) · [Continue to Phase 18](#phase-18---lld-method)
 
 <a id="phase-18"></a>
 
@@ -4172,7 +4172,7 @@ Closing LLD: recap extensibility + tests + one trade-off you deferred (e.g., per
 
 ---
 
-> **Phase 18 complete?** [Build the Phase 18 mini-project](./Projects.md#oop-phase-18-project) · [Continue to Phase 19](#phase-19---portfolio)
+> **Phase 18 complete?** [Build the Phase 18 mini-project](../guides/Projects.md#oop-phase-18-project) · [Continue to Phase 19](#phase-19---portfolio)
 
 <a id="phase-19"></a>
 
@@ -4202,7 +4202,7 @@ Closing LLD: recap extensibility + tests + one trade-off you deferred (e.g., per
 
 **STEP-BY-STEP EXPLANATION**
 
-Portfolio doc template: **Problem**, **Requirements**, **Class diagram / CRC**, **Key patterns & SOLID**, **Trade-offs**, **Tests**, **Future work**. ASCII diagrams are fine. Link to [`CS.md`](CS.md) Phase 3 only after OOP doc - show you know curriculum order.
+Portfolio doc template: **Problem**, **Requirements**, **Class diagram / CRC**, **Key patterns & SOLID**, **Trade-offs**, **Tests**, **Future work**. ASCII diagrams are fine. Link to [`CS.md`](./CS.md) Phase 3 only after OOP doc - show you know curriculum order.
 
 Quality beats quantity: two polished designs > ten half-finished repos.
 
@@ -4335,7 +4335,7 @@ Bring one portfolio project to interviews on a branch you can extend live.
 
 ---
 
-> **Phase 19 complete?** [Build the Phase 19 mini-project](./Projects.md#oop-phase-19-project) · [Continue to Phase 20](#phase-20---interviews)
+> **Phase 19 complete?** [Build the Phase 19 mini-project](../guides/Projects.md#oop-phase-19-project) · [Continue to Phase 20](#phase-20---interviews)
 
 <a id="phase-20"></a>
 
@@ -4345,7 +4345,7 @@ Bring one portfolio project to interviews on a branch you can extend live.
 
 **WHAT YOU WILL BE ABLE TO DO:** Speak OOP fluently: pillars, SOLID, patterns, LLD - with humility about over-design.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phases 1-19; [`Interview.md`](Interview.md) Track A; [`CS.md`](CS.md) Phase 3 next.
+**WHAT YOU SHOULD KNOW FIRST:** Phases 1-19; [`Interview.md`](../guides/Interview.md) Track A; [`CS.md`](./CS.md) Phase 3 next.
 
 ## 20.1 Explaining Trade-offs
 
@@ -4420,7 +4420,7 @@ Behavioral + LLD hybrid: "Tell me about a time you refactored a god object" - us
 | Medium | Compare Adapter vs rewriting vendor API |
 | Hard | When would you accept Singleton? When reject? |
 
-**WHY THE NEXT TOPIC IS NEEDED:** OOP mastery unlocks [`CS.md`](CS.md) Phase 3 - data structures as object-based APIs.
+**WHY THE NEXT TOPIC IS NEEDED:** OOP mastery unlocks [`CS.md`](./CS.md) Phase 3 - data structures as object-based APIs.
 
 ## 20.2 Bridge to CS.md Phase 3 and Interview.md Track A
 
@@ -4430,8 +4430,8 @@ Behavioral + LLD hybrid: "Tell me about a time you refactored a god object" - us
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
-- [`CS.md`](CS.md) - Phase 3 data structures after this doc
-- [`Interview.md`](Interview.md) Track A - hiring loop
+- [`CS.md`](./CS.md) - Phase 3 data structures after this doc
+- [`Interview.md`](../guides/Interview.md) Track A - hiring loop
 - [Real Python OOP learning path](https://realpython.com/learning-paths/object-oriented-programming-oop-python/)
 - [Mosh OOP](https://www.youtube.com/watch?v=pTB0EiLXUC8) - revisit pillars before DS phase
 - [ashishps1/awesome-low-level-design](https://github.com/ashishps1/awesome-low-level-design)
@@ -4439,9 +4439,9 @@ Behavioral + LLD hybrid: "Tell me about a time you refactored a god object" - us
 
 **STEP-BY-STEP EXPLANATION**
 
-**Placement reminder:** complete this OOP roadmap **after** [`CS.md`](CS.md) Phase 1-2, **before** Phase 3. When you reach [`CS.md`](CS.md) Phase 10, return for revision - LLD + patterns + SOLID polish, not first exposure.
+**Placement reminder:** complete this OOP roadmap **after** [`CS.md`](./CS.md) Phase 1-2, **before** Phase 3. When you reach [`CS.md`](./CS.md) Phase 10, return for revision - LLD + patterns + SOLID polish, not first exposure.
 
-[`Interview.md`](Interview.md) Track A weaves behavioral, OOP/LLD, and DS/A. Your OOP stories (refactors, trade-offs, portfolio projects) feed behavioral rounds; LLD rounds reuse Phase 18 checklist.
+[`Interview.md`](../guides/Interview.md) Track A weaves behavioral, OOP/LLD, and DS/A. Your OOP stories (refactors, trade-offs, portfolio projects) feed behavioral rounds; LLD rounds reuse Phase 18 checklist.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** OOP is the foundation; CS Phase 3 adds algorithmic structures; Interview.md choreographs hiring.
 
@@ -4494,19 +4494,19 @@ Close interviews by linking pillars → SOLID → one pattern → one LLD → CS
 | Medium | Outline Interview Track A study week using this doc |
 | Hard | 90-second "what's next after OOP.md" speech |
 
-**WHY THE NEXT TOPIC IS NEEDED:** Production keeps changing - [`CS.md`](CS.md) Phase 10 and real repos become your continuing revision loop.
+**WHY THE NEXT TOPIC IS NEEDED:** Production keeps changing - [`CS.md`](./CS.md) Phase 10 and real repos become your continuing revision loop.
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 20:** Deliver a two-minute trade-off story and state your next step: CS.md Phase 3 vs Interview.md Track A.
 
 ---
 
-> **Phase 20 complete?** [Build the Phase 20 mini-project](./Projects.md#oop-phase-20-project) · [Build the complete OOP portfolio project](./Projects.md#oop-main-portfolio-project) · [Return to the phase index](#phase-index)
+> **Phase 20 complete?** [Build the Phase 20 mini-project](../guides/Projects.md#oop-phase-20-project) · [Build the complete OOP portfolio project](../guides/Projects.md#oop-main-portfolio-project) · [Return to the phase index](#phase-index)
 
 ---
 
 ## Appendix A - Suggested Path Splits
 
-**Placement:** do this document **after** [`CS.md`](CS.md) Phase 1-2, **before** Phase 3 (data structures). [`CS.md`](CS.md) Phase 10 becomes **revision** (LLD + patterns polish), not first exposure.
+**Placement:** do this document **after** [`CS.md`](./CS.md) Phase 1-2, **before** Phase 3 (data structures). [`CS.md`](./CS.md) Phase 10 becomes **revision** (LLD + patterns polish), not first exposure.
 
 **If you want hire-ready OOP + LLD in minimum time**
 
@@ -4524,7 +4524,7 @@ Close interviews by linking pillars → SOLID → one pattern → one LLD → CS
 
 1 (skim) -> 3 (skim) -> 8 -> 9 -> 12 -> 13-15 (catalog) -> 18 -> 19
 
-**If you are bridging to [`CS.md`](CS.md) Phase 3 next**
+**If you are bridging to [`CS.md`](./CS.md) Phase 3 next**
 
 Finish Phases 4-9 (pillars + Python tools) -> **CS.md Phase 3** -> return for Phases 11-18 before **CS.md Phase 10** revision
 
@@ -4589,11 +4589,11 @@ Finish Phases 4-9 (pillars + Python tools) -> **CS.md Phase 3** -> return for Ph
 
 | Document | Relationship |
 | --- | --- |
-| [`Git.md`](Git.md) | **Version-control prerequisite** - history, collaboration, recovery, and portfolio evidence |
-| [`CS.md`](CS.md) Phase 1-2 | **Prerequisites** - functions, Big O |
-| [`CS.md`](CS.md) Phase 3+ | **Next** - data structures after OOP pillars |
-| [`CS.md`](CS.md) Phase 10 | **Revision** - LLD + patterns under algorithm load |
-| [`Interview.md`](Interview.md) Track A | **Hiring** - behavioral + OOP/LLD loop |
+| [`Git.md`](./Git.md) | **Version-control prerequisite** - history, collaboration, recovery, and portfolio evidence |
+| [`CS.md`](./CS.md) Phase 1-2 | **Prerequisites** - functions, Big O |
+| [`CS.md`](./CS.md) Phase 3+ | **Next** - data structures after OOP pillars |
+| [`CS.md`](./CS.md) Phase 10 | **Revision** - LLD + patterns under algorithm load |
+| [`Interview.md`](../guides/Interview.md) Track A | **Hiring** - behavioral + OOP/LLD loop |
 
 ---
 

@@ -60,11 +60,11 @@ There is no week clock. Move when you can predict a command's state transition, 
 
 ### Prerequisites and Companion Roadmaps
 
-You need a computer where you may create disposable files and install the open-source Git CLI. A terminal helps; no programming or GitHub account is required for Phases 1-6. Use [`OOP.md`](./OOP.md) Part 0 if shell and file concepts are new, [`CS.md`](./CS.md#phase-16) for broader software-engineering context, [`Networks.md`](./Networks.md) for SSH/HTTPS transport, [`devops.md`](./devops.md#phase-4) for delivery context, and [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) for secret and supply-chain risk. Build the matching cards in [`Projects.md`](./Projects.md#git-and-git-workflows) and drill the dedicated track in [`Interview.md`](./Interview.md#track-v---git-and-version-control).
+You need a computer where you may create disposable files and install the open-source Git CLI. A terminal helps; no programming or GitHub account is required for Phases 1-6. Use [`OOP.md`](./OOP.md) Part 0 if shell and file concepts are new, [`CS.md`](./CS.md#phase-16) for broader software-engineering context, [`Networks.md`](./Networks.md) for SSH/HTTPS transport, [`DevOps.md`](./DevOps.md#phase-4) for delivery context, and [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) for secret and supply-chain risk. Build the matching cards in [`Projects.md`](../guides/Projects.md#git-and-git-workflows) and drill the dedicated track in [`Interview.md`](../guides/Interview.md#track-v---git-and-version-control).
 
 ---
 
-> **Integrated Git practice:** Each linked phase-project card in [`Projects.md`](./Projects.md) ends with one specific Git checkpoint. Test the finished project first, commit only its named project path, verify the commit and clean working tree, then continue. Use [`Git.md` Phases 2-3](./Git.md#phase-2) if staging or commit selection is unfamiliar.
+> **Integrated Git practice:** Each linked phase-project card in [`Projects.md`](../guides/Projects.md) ends with one specific Git checkpoint. Test the finished project first, commit only its named project path, verify the commit and clean working tree, then continue. Use [`Git.md` Phases 2-3](./Git.md#phase-2) if staging or commit selection is unfamiliar.
 
 ---
 
@@ -249,9 +249,9 @@ This reads configuration, creates `.git`, and reports state; it creates no commi
 
 ### Git Checkpoint
 
-This project is mirrored in the [full **Reproducible Git Workbench** card](./Projects.md#git-phase-1-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+This project is mirrored in the [full **Reproducible Git Workbench** card](../guides/Projects.md#git-phase-1-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
-> **Phase 1 complete?** [Build the full Phase 1 project card](./Projects.md#git-phase-1-project) · [Continue to Phase 2](#phase-2---the-three-state-model)
+> **Phase 1 complete?** [Build the full Phase 1 project card](../guides/Projects.md#git-phase-1-project) · [Continue to Phase 2](#phase-2---the-three-state-model)
 
 ---
 
@@ -383,9 +383,9 @@ Before committing, predict which version enters history. Verify with `git show H
 
 ### Git Checkpoint
 
-This project is mirrored in the [full **Three-State Change Journal** card](./Projects.md#git-phase-2-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+This project is mirrored in the [full **Three-State Change Journal** card](../guides/Projects.md#git-phase-2-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
-> **Phase 2 complete?** [Build the full Phase 2 project card](./Projects.md#git-phase-2-project) · [Continue to Phase 3](#phase-3---commits-and-history)
+> **Phase 2 complete?** [Build the full Phase 2 project card](../guides/Projects.md#git-phase-2-project) · [Continue to Phase 3](#phase-3---commits-and-history)
 
 ---
 
@@ -513,9 +513,9 @@ These are read-only. Before each query, write what set or difference you expect;
 
 ### Git Checkpoint
 
-This project is mirrored in the [full **Atomic History Exhibit** card](./Projects.md#git-phase-3-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+This project is mirrored in the [full **Atomic History Exhibit** card](../guides/Projects.md#git-phase-3-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
-> **Phase 3 complete?** [Build the full Phase 3 project card](./Projects.md#git-phase-3-project) · [Continue to Phase 4](#phase-4---git-internals-and-the-commit-graph)
+> **Phase 3 complete?** [Build the full Phase 3 project card](../guides/Projects.md#git-phase-3-project) · [Continue to Phase 4](#phase-4---git-internals-and-the-commit-graph)
 
 ---
 
@@ -653,9 +653,9 @@ All commands are inspection-only. Record the commit, tree, and blob IDs, then pr
 
 ### Git Checkpoint
 
-This project is mirrored in the [full **Object Database Archaeology** card](./Projects.md#git-phase-4-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+This project is mirrored in the [full **Object Database Archaeology** card](../guides/Projects.md#git-phase-4-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
-> **Phase 4 complete?** [Build the full Phase 4 project card](./Projects.md#git-phase-4-project) · [Continue to Phase 5](#phase-5---branching-and-parallel-work)
+> **Phase 4 complete?** [Build the full Phase 4 project card](../guides/Projects.md#git-phase-4-project) · [Continue to Phase 5](#phase-5---branching-and-parallel-work)
 
 ---
 
@@ -787,9 +787,9 @@ Verify the two tips and common ancestor before integrating anything.
 
 ### Git Checkpoint
 
-This project is mirrored in the [full **Parallel Feature Branch Lab** card](./Projects.md#git-phase-5-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+This project is mirrored in the [full **Parallel Feature Branch Lab** card](../guides/Projects.md#git-phase-5-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
-> **Phase 5 complete?** [Build the full Phase 5 project card](./Projects.md#git-phase-5-project) · [Continue to Phase 6](#phase-6---merging-and-conflict-resolution)
+> **Phase 5 complete?** [Build the full Phase 5 project card](../guides/Projects.md#git-phase-5-project) · [Continue to Phase 6](#phase-6---merging-and-conflict-resolution)
 
 ---
 
@@ -924,9 +924,9 @@ Use `git merge --abort` instead of random resets if the experiment must stop bef
 
 ### Git Checkpoint
 
-This project is mirrored in the [full **Conflict Resolution Gauntlet** card](./Projects.md#git-phase-6-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+This project is mirrored in the [full **Conflict Resolution Gauntlet** card](../guides/Projects.md#git-phase-6-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
-> **Phase 6 complete?** [Build the full Phase 6 project card](./Projects.md#git-phase-6-project) · [Continue to Phase 7](#phase-7---remotes-collaboration-and-open-source)
+> **Phase 6 complete?** [Build the full Phase 6 project card](../guides/Projects.md#git-phase-6-project) · [Continue to Phase 7](#phase-7---remotes-collaboration-and-open-source)
 
 ---
 
@@ -1059,9 +1059,9 @@ git push origin feature/search
 
 ### Git Checkpoint
 
-This project is mirrored in the [full **Distributed Review Simulation** card](./Projects.md#git-phase-7-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+This project is mirrored in the [full **Distributed Review Simulation** card](../guides/Projects.md#git-phase-7-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
-> **Phase 7 complete?** [Build the full Phase 7 project card](./Projects.md#git-phase-7-project) · [Continue to Phase 8](#phase-8---safe-undoing-without-data-loss)
+> **Phase 7 complete?** [Build the full Phase 7 project card](../guides/Projects.md#git-phase-7-project) · [Continue to Phase 8](#phase-8---safe-undoing-without-data-loss)
 
 ---
 
@@ -1207,9 +1207,9 @@ git revert <published-commit>        # shared-history-safe inverse
 
 ### Git Checkpoint
 
-This project is mirrored in the [full **Safe Undo Decision Lab** card](./Projects.md#git-phase-8-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+This project is mirrored in the [full **Safe Undo Decision Lab** card](../guides/Projects.md#git-phase-8-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
-> **Phase 8 complete?** [Build the full Phase 8 project card](./Projects.md#git-phase-8-project) · [Continue to Phase 9](#phase-9---recovery-and-shared-history-safety)
+> **Phase 8 complete?** [Build the full Phase 8 project card](../guides/Projects.md#git-phase-8-project) · [Continue to Phase 9](#phase-9---recovery-and-shared-history-safety)
 
 ---
 
@@ -1345,9 +1345,9 @@ git commit -m "chore: stop tracking generated file"
 
 ### Git Checkpoint
 
-This project is mirrored in the [full **Reflog Rescue Mission** card](./Projects.md#git-phase-9-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+This project is mirrored in the [full **Reflog Rescue Mission** card](../guides/Projects.md#git-phase-9-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
-> **Phase 9 complete?** [Build the full Phase 9 project card](./Projects.md#git-phase-9-project) · [Continue to Phase 10](#phase-10---rebase-and-intentional-history-rewriting)
+> **Phase 9 complete?** [Build the full Phase 9 project card](../guides/Projects.md#git-phase-9-project) · [Continue to Phase 10](#phase-10---rebase-and-intentional-history-rewriting)
 
 ---
 
@@ -1479,9 +1479,9 @@ Do not push rewritten shared commits without explicit coordination. If the branc
 
 ### Git Checkpoint
 
-This project is mirrored in the [full **Curated History Workshop** card](./Projects.md#git-phase-10-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+This project is mirrored in the [full **Curated History Workshop** card](../guides/Projects.md#git-phase-10-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
-> **Phase 10 complete?** [Build the full Phase 10 project card](./Projects.md#git-phase-10-project) · [Continue to Phase 11](#phase-11---productive-everyday-git)
+> **Phase 10 complete?** [Build the full Phase 10 project card](../guides/Projects.md#git-phase-10-project) · [Continue to Phase 11](#phase-11---productive-everyday-git)
 
 ---
 
@@ -1614,9 +1614,9 @@ Verify clean/dirty state in every worktree and inspect the cherry-picked patch p
 
 ### Git Checkpoint
 
-This project is mirrored in the [full **Context-Switching Workbench** card](./Projects.md#git-phase-11-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+This project is mirrored in the [full **Context-Switching Workbench** card](../guides/Projects.md#git-phase-11-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
-> **Phase 11 complete?** [Build the full Phase 11 project card](./Projects.md#git-phase-11-project) · [Continue to Phase 12](#phase-12---investigation-tags-and-releases)
+> **Phase 11 complete?** [Build the full Phase 11 project card](../guides/Projects.md#git-phase-11-project) · [Continue to Phase 12](#phase-12---investigation-tags-and-releases)
 
 ---
 
@@ -1749,9 +1749,9 @@ If signing is not configured, create an annotated tag with `-a` for the lab and 
 
 ### Git Checkpoint
 
-This project is mirrored in the [full **Regression Hunt and Signed Release** card](./Projects.md#git-phase-12-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+This project is mirrored in the [full **Regression Hunt and Signed Release** card](../guides/Projects.md#git-phase-12-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
-> **Phase 12 complete?** [Build the full Phase 12 project card](./Projects.md#git-phase-12-project) · [Continue to Phase 13](#phase-13---large-and-multi-repository-strategies)
+> **Phase 12 complete?** [Build the full Phase 12 project card](../guides/Projects.md#git-phase-12-project) · [Continue to Phase 13](#phase-13---large-and-multi-repository-strategies)
 
 ---
 
@@ -1883,9 +1883,9 @@ Keep any renormalization commit separate, review it from a clean clone, and neve
 
 ### Git Checkpoint
 
-This project is mirrored in the [full **Scalable Repository Architecture Lab** card](./Projects.md#git-phase-13-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+This project is mirrored in the [full **Scalable Repository Architecture Lab** card](../guides/Projects.md#git-phase-13-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
-> **Phase 13 complete?** [Build the full Phase 13 project card](./Projects.md#git-phase-13-project) · [Continue to Phase 14](#phase-14---professional-team-workflows)
+> **Phase 13 complete?** [Build the full Phase 13 project card](../guides/Projects.md#git-phase-13-project) · [Continue to Phase 14](#phase-14---professional-team-workflows)
 
 ---
 
@@ -2028,9 +2028,9 @@ Verify policy by simulating normal change, stale branch, failed check, release, 
 
 ### Git Checkpoint
 
-This project is mirrored in the [full **Team Workflow Design Studio** card](./Projects.md#git-phase-14-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+This project is mirrored in the [full **Team Workflow Design Studio** card](../guides/Projects.md#git-phase-14-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
-> **Phase 14 complete?** [Build the full Phase 14 project card](./Projects.md#git-phase-14-project) · [Continue to Phase 15](#phase-15---ci-trust-security-and-repository-health)
+> **Phase 14 complete?** [Build the full Phase 14 project card](../guides/Projects.md#git-phase-14-project) · [Continue to Phase 15](#phase-15---ci-trust-security-and-repository-health)
 
 ---
 
@@ -2042,7 +2042,7 @@ This project is mirrored in the [full **Team Workflow Design Studio** card](./Pr
 
 **WHAT YOU WILL BE ABLE TO DO:** Design repository gates, signed evidence, safe CI for untrusted changes, merge queues, secret scanning, hooks, and maintenance/diagnostic routines.
 
-**WHAT YOU SHOULD KNOW FIRST:** All previous phases; [`devops.md`](./devops.md#phase-7) and [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md#phase-16) deepen runtime and supply-chain context.
+**WHAT YOU SHOULD KNOW FIRST:** All previous phases; [`DevOps.md`](./DevOps.md#phase-7) and [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md#phase-16) deepen runtime and supply-chain context.
 
 **WHAT YOU HAVE LEARNED SO FAR:** Workflow rules define desired collaboration. Trust requires proving which identity proposed/approved a change, which code checks ran, which commit produced an artifact, and how exceptions are contained.
 
@@ -2167,9 +2167,9 @@ This is the “confusing repository state” read-only ladder. Look for merge/re
 
 ### Git Checkpoint
 
-This project is mirrored in the [full **Trusted Delivery Gate** card](./Projects.md#git-phase-15-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
+This project is mirrored in the [full **Trusted Delivery Gate** card](../guides/Projects.md#git-phase-15-project). Run that card's exact checkpoint after testing; its staging path and commit message are canonical so you do not commit the same milestone twice.
 
-> **Phase 15 complete?** [Build the full Phase 15 project card](./Projects.md#git-phase-15-project) · [Build the complete Git portfolio project](./Projects.md#git-main-portfolio-project) · [Return to the phase index](#phase-index)
+> **Phase 15 complete?** [Build the full Phase 15 project card](../guides/Projects.md#git-phase-15-project) · [Build the complete Git portfolio project](../guides/Projects.md#git-main-portfolio-project) · [Return to the phase index](#phase-index)
 
 ---
 
@@ -2177,21 +2177,21 @@ This project is mirrored in the [full **Trusted Delivery Gate** card](./Projects
 
 | Git phase | Project in `Git.md` | Matching entry in `Projects.md` |
 | ---: | --- | --- |
-| 01 | Reproducible Git Workbench | [GIT PHASE 1 MINI-PROJECT](./Projects.md#git-phase-1-project) |
-| 02 | Three-State Change Journal | [GIT PHASE 2 MINI-PROJECT](./Projects.md#git-phase-2-project) |
-| 03 | Atomic History Exhibit | [GIT PHASE 3 MINI-PROJECT](./Projects.md#git-phase-3-project) |
-| 04 | Object Database Archaeology | [GIT PHASE 4 MINI-PROJECT](./Projects.md#git-phase-4-project) |
-| 05 | Parallel Feature Branch Lab | [GIT PHASE 5 MINI-PROJECT](./Projects.md#git-phase-5-project) |
-| 06 | Conflict Resolution Gauntlet | [GIT PHASE 6 MINI-PROJECT](./Projects.md#git-phase-6-project) |
-| 07 | Distributed Review Simulation | [GIT PHASE 7 MINI-PROJECT](./Projects.md#git-phase-7-project) |
-| 08 | Safe Undo Decision Lab | [GIT PHASE 8 MINI-PROJECT](./Projects.md#git-phase-8-project) |
-| 09 | Reflog Rescue Mission | [GIT PHASE 9 MINI-PROJECT](./Projects.md#git-phase-9-project) |
-| 10 | Curated History Workshop | [GIT PHASE 10 MINI-PROJECT](./Projects.md#git-phase-10-project) |
-| 11 | Context-Switching Workbench | [GIT PHASE 11 MINI-PROJECT](./Projects.md#git-phase-11-project) |
-| 12 | Regression Hunt and Signed Release | [GIT PHASE 12 MINI-PROJECT](./Projects.md#git-phase-12-project) |
-| 13 | Scalable Repository Architecture Lab | [GIT PHASE 13 MINI-PROJECT](./Projects.md#git-phase-13-project) |
-| 14 | Team Workflow Design Studio | [GIT PHASE 14 MINI-PROJECT](./Projects.md#git-phase-14-project) |
-| 15 | Trusted Delivery Gate | [GIT PHASE 15 MINI-PROJECT](./Projects.md#git-phase-15-project) |
+| 01 | Reproducible Git Workbench | [GIT PHASE 1 MINI-PROJECT](../guides/Projects.md#git-phase-1-project) |
+| 02 | Three-State Change Journal | [GIT PHASE 2 MINI-PROJECT](../guides/Projects.md#git-phase-2-project) |
+| 03 | Atomic History Exhibit | [GIT PHASE 3 MINI-PROJECT](../guides/Projects.md#git-phase-3-project) |
+| 04 | Object Database Archaeology | [GIT PHASE 4 MINI-PROJECT](../guides/Projects.md#git-phase-4-project) |
+| 05 | Parallel Feature Branch Lab | [GIT PHASE 5 MINI-PROJECT](../guides/Projects.md#git-phase-5-project) |
+| 06 | Conflict Resolution Gauntlet | [GIT PHASE 6 MINI-PROJECT](../guides/Projects.md#git-phase-6-project) |
+| 07 | Distributed Review Simulation | [GIT PHASE 7 MINI-PROJECT](../guides/Projects.md#git-phase-7-project) |
+| 08 | Safe Undo Decision Lab | [GIT PHASE 8 MINI-PROJECT](../guides/Projects.md#git-phase-8-project) |
+| 09 | Reflog Rescue Mission | [GIT PHASE 9 MINI-PROJECT](../guides/Projects.md#git-phase-9-project) |
+| 10 | Curated History Workshop | [GIT PHASE 10 MINI-PROJECT](../guides/Projects.md#git-phase-10-project) |
+| 11 | Context-Switching Workbench | [GIT PHASE 11 MINI-PROJECT](../guides/Projects.md#git-phase-11-project) |
+| 12 | Regression Hunt and Signed Release | [GIT PHASE 12 MINI-PROJECT](../guides/Projects.md#git-phase-12-project) |
+| 13 | Scalable Repository Architecture Lab | [GIT PHASE 13 MINI-PROJECT](../guides/Projects.md#git-phase-13-project) |
+| 14 | Team Workflow Design Studio | [GIT PHASE 14 MINI-PROJECT](../guides/Projects.md#git-phase-14-project) |
+| 15 | Trusted Delivery Gate | [GIT PHASE 15 MINI-PROJECT](../guides/Projects.md#git-phase-15-project) |
 
 ---
 
@@ -2244,7 +2244,7 @@ Create `README.md`, `LICENSE` using an OSI-approved license, `CONTRIBUTING.md`, 
 
 ### Git Milestone Checkpoints
 
-Use the five canonical milestone checkpoints in the [matching full capstone card](./Projects.md#git-main-portfolio-project). They cover the foundation, collaboration, recovery/rewrite, release/workflow, and trusted-delivery audit without duplicating commit commands here.
+Use the five canonical milestone checkpoints in the [matching full capstone card](../guides/Projects.md#git-main-portfolio-project). They cover the foundation, collaboration, recovery/rewrite, release/workflow, and trusted-delivery audit without duplicating commit commands here.
 
 ### Failure and Recovery Scenarios
 
@@ -2289,13 +2289,13 @@ The README begins with the team problem, repository policy, lifecycle diagram, o
 - Add local Git LFS storage or a submodule and document its disaster-recovery dependency.
 - Replace a long-lived branch with branch-by-abstraction or a feature flag and compare integration evidence.
 
-> **CAPSTONE NAVIGATION:** [Build the full matching card in Projects.md](./Projects.md#git-main-portfolio-project) · [Drill the Git interview track](./Interview.md#track-v---git-and-version-control) · [Return to the phase index](#phase-index)
+> **CAPSTONE NAVIGATION:** [Build the full matching card in Projects.md](../guides/Projects.md#git-main-portfolio-project) · [Drill the Git interview track](../guides/Interview.md#track-v---git-and-version-control) · [Return to the phase index](#phase-index)
 
 ---
 
 ## Git Interview Preparation
 
-Use the dedicated [Git and Version Control interview track](./Interview.md#track-v---git-and-version-control) after every phase, not only at the end. For each question, give a simple answer first, then the precise state/graph answer, a trade-off, a verification command, and a recovery path.
+Use the dedicated [Git and Version Control interview track](../guides/Interview.md#track-v---git-and-version-control) after every phase, not only at the end. For each question, give a simple answer first, then the precise state/graph answer, a trade-off, a verification command, and a recovery path.
 
 | Level | Focus | Live evidence to practice |
 | --- | --- | --- |
@@ -2372,12 +2372,12 @@ The 15 phases follow Git's natural pressure sequence rather than copying the rep
 | Broader software engineering, tests, and code review | [`CS.md`](./CS.md#phase-16) |
 | Programming/project structure for a first repository | [`OOP.md`](./OOP.md) and [`Web.md`](./Web.md) |
 | SSH, HTTPS, DNS, proxies, and transport diagnosis | [`Networks.md`](./Networks.md) |
-| CI/CD, artifacts, GitOps, and platform delivery | [`devops.md`](./devops.md) Phases 4, 7, 16-17 |
-| Cloud IaC, secrets, and delivery governance | [`cloud.md`](./cloud.md) Phases 12-16 |
+| CI/CD, artifacts, GitOps, and platform delivery | [`DevOps.md`](./DevOps.md) Phases 4, 7, 16-17 |
+| Cloud IaC, secrets, and delivery governance | [`Cloud.md`](./Cloud.md) Phases 12-16 |
 | Secret response, signing, and supply-chain threat modeling | [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) Phase 16 |
 | Odoo source, OCA contribution, and Odoo.sh branch workflow | [`ODOO.md`](./ODOO.md) |
-| Phase projects and complete capstone | [`Projects.md`](./Projects.md#git-and-git-workflows) |
-| Spoken questions and live debugging | [`Interview.md`](./Interview.md#track-v---git-and-version-control) |
+| Phase projects and complete capstone | [`Projects.md`](../guides/Projects.md#git-and-git-workflows) |
+| Spoken questions and live debugging | [`Interview.md`](../guides/Interview.md#track-v---git-and-version-control) |
 
 ## Appendix E - Further Official References
 

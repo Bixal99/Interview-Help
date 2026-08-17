@@ -23,7 +23,7 @@ git commit -m "chore(portfolio): initialize project workspace"
 
 Every checkpoint below assumes you are at this portfolio root. Keep phase projects under their lowercase roadmap directory, such as `cs/mini-expression-runtime`, `web/profile-page`, or `odoo/erp_process_map`; the checkpoint path is the canonical location. Inspect `git status` before staging and never commit secrets. The Git roadmap projects use their own evolving `git-workbench` repository because repository state is the subject of those labs.
 
-> New to staging and commits? Review [`Git.md` Phase 2](./Git.md#phase-2) and [Phase 3](./Git.md#phase-3) before continuing.
+> New to staging and commits? Review [`Git.md` Phase 2](../roadmaps/Git.md#phase-2) and [Phase 3](../roadmaps/Git.md#phase-3) before continuing.
 
 ---
 
@@ -43,7 +43,7 @@ Every checkpoint below assumes you are at this portfolio root. Keep phase projec
 
 ## Programming Fundamentals and OOP
 
-Study this roadmap first: [OOP.md](./OOP.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
+Study this roadmap first: [OOP.md](../roadmaps/OOP.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
 
 <a id="oop-phase-f1-project"></a>
 ### OOP PHASE F1 MINI-PROJECT
@@ -95,7 +95,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE F1](./OOP.md#phase-f1) | [CONTINUE TO OOP PHASE F2](./OOP.md#phase-f2)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE F1](../roadmaps/OOP.md#phase-f1) | [CONTINUE TO OOP PHASE F2](../roadmaps/OOP.md#phase-f2)
 
 <a id="oop-phase-f2-project"></a>
 ### OOP PHASE F2 MINI-PROJECT
@@ -147,7 +147,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE F2](./OOP.md#phase-f2) | [CONTINUE TO OOP PHASE F3](./OOP.md#phase-f3)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE F2](../roadmaps/OOP.md#phase-f2) | [CONTINUE TO OOP PHASE F3](../roadmaps/OOP.md#phase-f3)
 
 <a id="oop-phase-f3-project"></a>
 ### OOP PHASE F3 MINI-PROJECT
@@ -199,7 +199,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE F3](./OOP.md#phase-f3) | [CONTINUE TO OOP PHASE 1](./OOP.md#phase-1)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE F3](../roadmaps/OOP.md#phase-f3) | [CONTINUE TO OOP PHASE 1](../roadmaps/OOP.md#phase-1)
 
 <a id="oop-phase-1-project"></a>
 ### OOP PHASE 1 MINI-PROJECT
@@ -251,7 +251,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 1](./OOP.md#phase-1) | [CONTINUE TO OOP PHASE 2](./OOP.md#phase-2)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 1](../roadmaps/OOP.md#phase-1) | [CONTINUE TO OOP PHASE 2](../roadmaps/OOP.md#phase-2)
 
 <a id="oop-phase-2-project"></a>
 ### OOP PHASE 2 MINI-PROJECT
@@ -303,7 +303,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 2](./OOP.md#phase-2) | [CONTINUE TO OOP PHASE 3](./OOP.md#phase-3)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 2](../roadmaps/OOP.md#phase-2) | [CONTINUE TO OOP PHASE 3](../roadmaps/OOP.md#phase-3)
 
 <a id="oop-phase-3-project"></a>
 ### OOP PHASE 3 MINI-PROJECT
@@ -355,7 +355,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 3](./OOP.md#phase-3) | [CONTINUE TO OOP PHASE 4](./OOP.md#phase-4)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 3](../roadmaps/OOP.md#phase-3) | [CONTINUE TO OOP PHASE 4](../roadmaps/OOP.md#phase-4)
 
 <a id="oop-phase-4-project"></a>
 ### OOP PHASE 4 MINI-PROJECT
@@ -407,7 +407,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 4](./OOP.md#phase-4) | [CONTINUE TO OOP PHASE 5](./OOP.md#phase-5)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 4](../roadmaps/OOP.md#phase-4) | [CONTINUE TO OOP PHASE 5](../roadmaps/OOP.md#phase-5)
 
 <a id="oop-phase-5-project"></a>
 ### OOP PHASE 5 MINI-PROJECT
@@ -459,7 +459,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 5](./OOP.md#phase-5) | [CONTINUE TO OOP PHASE 6](./OOP.md#phase-6)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 5](../roadmaps/OOP.md#phase-5) | [CONTINUE TO OOP PHASE 6](../roadmaps/OOP.md#phase-6)
 
 <a id="oop-phase-6-project"></a>
 ### OOP PHASE 6 MINI-PROJECT
@@ -511,7 +511,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 6](./OOP.md#phase-6) | [CONTINUE TO OOP PHASE 7](./OOP.md#phase-7)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 6](../roadmaps/OOP.md#phase-6) | [CONTINUE TO OOP PHASE 7](../roadmaps/OOP.md#phase-7)
 
 <a id="oop-phase-7-project"></a>
 ### OOP PHASE 7 MINI-PROJECT
@@ -563,7 +563,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 7](./OOP.md#phase-7) | [CONTINUE TO OOP PHASE 8](./OOP.md#phase-8)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 7](../roadmaps/OOP.md#phase-7) | [CONTINUE TO OOP PHASE 8](../roadmaps/OOP.md#phase-8)
 
 <a id="oop-phase-8-project"></a>
 ### OOP PHASE 8 MINI-PROJECT
@@ -615,7 +615,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 8](./OOP.md#phase-8) | [CONTINUE TO OOP PHASE 9](./OOP.md#phase-9)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 8](../roadmaps/OOP.md#phase-8) | [CONTINUE TO OOP PHASE 9](../roadmaps/OOP.md#phase-9)
 
 <a id="oop-phase-9-project"></a>
 ### OOP PHASE 9 MINI-PROJECT
@@ -667,7 +667,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 9](./OOP.md#phase-9) | [CONTINUE TO OOP PHASE 10](./OOP.md#phase-10)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 9](../roadmaps/OOP.md#phase-9) | [CONTINUE TO OOP PHASE 10](../roadmaps/OOP.md#phase-10)
 
 <a id="oop-phase-10-project"></a>
 ### OOP PHASE 10 MINI-PROJECT
@@ -719,7 +719,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 10](./OOP.md#phase-10) | [CONTINUE TO OOP PHASE 11](./OOP.md#phase-11)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 10](../roadmaps/OOP.md#phase-10) | [CONTINUE TO OOP PHASE 11](../roadmaps/OOP.md#phase-11)
 
 <a id="oop-phase-11-project"></a>
 ### OOP PHASE 11 MINI-PROJECT
@@ -771,7 +771,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 11](./OOP.md#phase-11) | [CONTINUE TO OOP PHASE 12](./OOP.md#phase-12)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 11](../roadmaps/OOP.md#phase-11) | [CONTINUE TO OOP PHASE 12](../roadmaps/OOP.md#phase-12)
 
 <a id="oop-phase-12-project"></a>
 ### OOP PHASE 12 MINI-PROJECT
@@ -823,7 +823,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 12](./OOP.md#phase-12) | [CONTINUE TO OOP PHASE 13](./OOP.md#phase-13)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 12](../roadmaps/OOP.md#phase-12) | [CONTINUE TO OOP PHASE 13](../roadmaps/OOP.md#phase-13)
 
 <a id="oop-phase-13-project"></a>
 ### OOP PHASE 13 MINI-PROJECT
@@ -875,7 +875,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 13](./OOP.md#phase-13) | [CONTINUE TO OOP PHASE 14](./OOP.md#phase-14)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 13](../roadmaps/OOP.md#phase-13) | [CONTINUE TO OOP PHASE 14](../roadmaps/OOP.md#phase-14)
 
 <a id="oop-phase-14-project"></a>
 ### OOP PHASE 14 MINI-PROJECT
@@ -927,7 +927,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 14](./OOP.md#phase-14) | [CONTINUE TO OOP PHASE 15](./OOP.md#phase-15)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 14](../roadmaps/OOP.md#phase-14) | [CONTINUE TO OOP PHASE 15](../roadmaps/OOP.md#phase-15)
 
 <a id="oop-phase-15-project"></a>
 ### OOP PHASE 15 MINI-PROJECT
@@ -979,7 +979,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 15](./OOP.md#phase-15) | [CONTINUE TO OOP PHASE 16](./OOP.md#phase-16)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 15](../roadmaps/OOP.md#phase-15) | [CONTINUE TO OOP PHASE 16](../roadmaps/OOP.md#phase-16)
 
 <a id="oop-phase-16-project"></a>
 ### OOP PHASE 16 MINI-PROJECT
@@ -1031,7 +1031,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 16](./OOP.md#phase-16) | [CONTINUE TO OOP PHASE 17](./OOP.md#phase-17)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 16](../roadmaps/OOP.md#phase-16) | [CONTINUE TO OOP PHASE 17](../roadmaps/OOP.md#phase-17)
 
 <a id="oop-phase-17-project"></a>
 ### OOP PHASE 17 MINI-PROJECT
@@ -1083,7 +1083,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 17](./OOP.md#phase-17) | [CONTINUE TO OOP PHASE 18](./OOP.md#phase-18)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 17](../roadmaps/OOP.md#phase-17) | [CONTINUE TO OOP PHASE 18](../roadmaps/OOP.md#phase-18)
 
 <a id="oop-phase-18-project"></a>
 ### OOP PHASE 18 MINI-PROJECT
@@ -1135,7 +1135,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 18](./OOP.md#phase-18) | [CONTINUE TO OOP PHASE 19](./OOP.md#phase-19)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 18](../roadmaps/OOP.md#phase-18) | [CONTINUE TO OOP PHASE 19](../roadmaps/OOP.md#phase-19)
 
 <a id="oop-phase-19-project"></a>
 ### OOP PHASE 19 MINI-PROJECT
@@ -1187,7 +1187,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 19](./OOP.md#phase-19) | [CONTINUE TO OOP PHASE 20](./OOP.md#phase-20)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 19](../roadmaps/OOP.md#phase-19) | [CONTINUE TO OOP PHASE 20](../roadmaps/OOP.md#phase-20)
 
 <a id="oop-phase-20-project"></a>
 ### OOP PHASE 20 MINI-PROJECT
@@ -1239,7 +1239,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 20](./OOP.md#phase-20) | [BUILD THE OOP MAIN PORTFOLIO PROJECT](#oop-main-portfolio-project)
+> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 20](../roadmaps/OOP.md#phase-20) | [BUILD THE OOP MAIN PORTFOLIO PROJECT](#oop-main-portfolio-project)
 
 <a id="oop-main-portfolio-project"></a>
 ## OOP MAIN PORTFOLIO PROJECT
@@ -1408,11 +1408,11 @@ Continue only when the completed milestone works and the working tree is clean.
 4. Use a public repository and GitHub Actions standard runners to repeat tests and package builds at no cost.
 5. Install the release on a second computer or clean user account and complete one booking from start to finish.
 
-> **MAIN PROJECT NAVIGATION:** [REVIEW OOP PHASE 19](./OOP.md#phase-19) | [REVIEW OOP PHASE 20](./OOP.md#phase-20) | [RETURN TO THE OOP ROADMAP](./OOP.md#phase-index)
+> **MAIN PROJECT NAVIGATION:** [REVIEW OOP PHASE 19](../roadmaps/OOP.md#phase-19) | [REVIEW OOP PHASE 20](../roadmaps/OOP.md#phase-20) | [RETURN TO THE OOP ROADMAP](../roadmaps/OOP.md#phase-index)
 
 ## Computer Science
 
-Study this roadmap first: [CS.md](./CS.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
+Study this roadmap first: [CS.md](../roadmaps/CS.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
 
 <a id="cs-phase-1-project"></a>
 ### CS PHASE 1 MINI-PROJECT
@@ -1464,7 +1464,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 1](./CS.md#phase-1) | [CONTINUE TO CS PHASE 2](./CS.md#phase-2)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 1](../roadmaps/CS.md#phase-1) | [CONTINUE TO CS PHASE 2](../roadmaps/CS.md#phase-2)
 
 <a id="cs-phase-2-project"></a>
 ### CS PHASE 2 MINI-PROJECT
@@ -1516,7 +1516,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 2](./CS.md#phase-2) | [CONTINUE TO CS PHASE 3](./CS.md#phase-3)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 2](../roadmaps/CS.md#phase-2) | [CONTINUE TO CS PHASE 3](../roadmaps/CS.md#phase-3)
 
 <a id="cs-phase-3-project"></a>
 ### CS PHASE 3 MINI-PROJECT
@@ -1568,7 +1568,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 3](./CS.md#phase-3) | [CONTINUE TO CS PHASE 4](./CS.md#phase-4)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 3](../roadmaps/CS.md#phase-3) | [CONTINUE TO CS PHASE 4](../roadmaps/CS.md#phase-4)
 
 <a id="cs-phase-4-project"></a>
 ### CS PHASE 4 MINI-PROJECT
@@ -1620,7 +1620,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 4](./CS.md#phase-4) | [CONTINUE TO CS PHASE 5](./CS.md#phase-5)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 4](../roadmaps/CS.md#phase-4) | [CONTINUE TO CS PHASE 5](../roadmaps/CS.md#phase-5)
 
 <a id="cs-phase-5-project"></a>
 ### CS PHASE 5 MINI-PROJECT
@@ -1672,7 +1672,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 5](./CS.md#phase-5) | [CONTINUE TO CS PHASE 6](./CS.md#phase-6)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 5](../roadmaps/CS.md#phase-5) | [CONTINUE TO CS PHASE 6](../roadmaps/CS.md#phase-6)
 
 <a id="cs-phase-6-project"></a>
 ### CS PHASE 6 MINI-PROJECT
@@ -1724,7 +1724,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 6](./CS.md#phase-6) | [CONTINUE TO CS PHASE 7](./CS.md#phase-7)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 6](../roadmaps/CS.md#phase-6) | [CONTINUE TO CS PHASE 7](../roadmaps/CS.md#phase-7)
 
 <a id="cs-phase-7-project"></a>
 ### CS PHASE 7 MINI-PROJECT
@@ -1776,7 +1776,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 7](./CS.md#phase-7) | [CONTINUE TO CS PHASE 8](./CS.md#phase-8)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 7](../roadmaps/CS.md#phase-7) | [CONTINUE TO CS PHASE 8](../roadmaps/CS.md#phase-8)
 
 <a id="cs-phase-8-project"></a>
 ### CS PHASE 8 MINI-PROJECT
@@ -1828,7 +1828,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 8](./CS.md#phase-8) | [CONTINUE TO CS PHASE 9](./CS.md#phase-9)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 8](../roadmaps/CS.md#phase-8) | [CONTINUE TO CS PHASE 9](../roadmaps/CS.md#phase-9)
 
 <a id="cs-phase-9-project"></a>
 ### CS PHASE 9 MINI-PROJECT
@@ -1880,7 +1880,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 9](./CS.md#phase-9) | [CONTINUE TO CS PHASE 10](./CS.md#phase-10)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 9](../roadmaps/CS.md#phase-9) | [CONTINUE TO CS PHASE 10](../roadmaps/CS.md#phase-10)
 
 <a id="cs-phase-10-project"></a>
 ### CS PHASE 10 MINI-PROJECT
@@ -1932,7 +1932,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 10](./CS.md#phase-10) | [CONTINUE TO CS PHASE 11](./CS.md#phase-11)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 10](../roadmaps/CS.md#phase-10) | [CONTINUE TO CS PHASE 11](../roadmaps/CS.md#phase-11)
 
 <a id="cs-phase-11-project"></a>
 ### CS PHASE 11 MINI-PROJECT
@@ -1984,7 +1984,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 11](./CS.md#phase-11) | [CONTINUE TO CS PHASE 12](./CS.md#phase-12)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 11](../roadmaps/CS.md#phase-11) | [CONTINUE TO CS PHASE 12](../roadmaps/CS.md#phase-12)
 
 <a id="cs-phase-12-project"></a>
 ### CS PHASE 12 MINI-PROJECT
@@ -2036,7 +2036,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 12](./CS.md#phase-12) | [CONTINUE TO CS PHASE 13](./CS.md#phase-13)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 12](../roadmaps/CS.md#phase-12) | [CONTINUE TO CS PHASE 13](../roadmaps/CS.md#phase-13)
 
 <a id="cs-phase-13-project"></a>
 ### CS PHASE 13 MINI-PROJECT
@@ -2088,7 +2088,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 13](./CS.md#phase-13) | [CONTINUE TO CS PHASE 14](./CS.md#phase-14)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 13](../roadmaps/CS.md#phase-13) | [CONTINUE TO CS PHASE 14](../roadmaps/CS.md#phase-14)
 
 <a id="cs-phase-14-project"></a>
 ### CS PHASE 14 MINI-PROJECT
@@ -2140,7 +2140,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 14](./CS.md#phase-14) | [CONTINUE TO CS PHASE 15](./CS.md#phase-15)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 14](../roadmaps/CS.md#phase-14) | [CONTINUE TO CS PHASE 15](../roadmaps/CS.md#phase-15)
 
 <a id="cs-phase-15-project"></a>
 ### CS PHASE 15 MINI-PROJECT
@@ -2192,7 +2192,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 15](./CS.md#phase-15) | [CONTINUE TO CS PHASE 16](./CS.md#phase-16)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 15](../roadmaps/CS.md#phase-15) | [CONTINUE TO CS PHASE 16](../roadmaps/CS.md#phase-16)
 
 <a id="cs-phase-16-project"></a>
 ### CS PHASE 16 MINI-PROJECT
@@ -2244,7 +2244,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 16](./CS.md#phase-16) | [CONTINUE TO CS PHASE 17](./CS.md#phase-17)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 16](../roadmaps/CS.md#phase-16) | [CONTINUE TO CS PHASE 17](../roadmaps/CS.md#phase-17)
 
 <a id="cs-phase-17-project"></a>
 ### CS PHASE 17 MINI-PROJECT
@@ -2296,7 +2296,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 17](./CS.md#phase-17) | [CONTINUE TO CS PHASE 18](./CS.md#phase-18)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 17](../roadmaps/CS.md#phase-17) | [CONTINUE TO CS PHASE 18](../roadmaps/CS.md#phase-18)
 
 <a id="cs-phase-18-project"></a>
 ### CS PHASE 18 MINI-PROJECT
@@ -2348,7 +2348,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 18](./CS.md#phase-18) | [CONTINUE TO CS PHASE 19](./CS.md#phase-19)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 18](../roadmaps/CS.md#phase-18) | [CONTINUE TO CS PHASE 19](../roadmaps/CS.md#phase-19)
 
 <a id="cs-phase-19-project"></a>
 ### CS PHASE 19 MINI-PROJECT
@@ -2400,7 +2400,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 19](./CS.md#phase-19) | [CONTINUE TO CS PHASE 20](./CS.md#phase-20)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 19](../roadmaps/CS.md#phase-19) | [CONTINUE TO CS PHASE 20](../roadmaps/CS.md#phase-20)
 
 <a id="cs-phase-20-project"></a>
 ### CS PHASE 20 MINI-PROJECT
@@ -2452,7 +2452,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 20](./CS.md#phase-20) | [BUILD THE CS MAIN PORTFOLIO PROJECT](#cs-main-portfolio-project)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 20](../roadmaps/CS.md#phase-20) | [BUILD THE CS MAIN PORTFOLIO PROJECT](#cs-main-portfolio-project)
 
 <a id="cs-main-portfolio-project"></a>
 ## CS MAIN PORTFOLIO PROJECT
@@ -2624,11 +2624,11 @@ Continue only when the completed milestone works and the working tree is clean.
 5. Set the frontend API URL, allow only the deployed frontend origin, and test sign-in, request, approval, and return.
 6. State clearly that free services can sleep or enforce quotas; keep Docker Compose as the permanent no-cost local deployment.
 
-> **MAIN PROJECT NAVIGATION:** [REVIEW CS PHASE 19](./CS.md#phase-19) | [REVIEW CS PHASE 20](./CS.md#phase-20) | [RETURN TO THE CS ROADMAP](./CS.md#phase-index)
+> **MAIN PROJECT NAVIGATION:** [REVIEW CS PHASE 19](../roadmaps/CS.md#phase-19) | [REVIEW CS PHASE 20](../roadmaps/CS.md#phase-20) | [RETURN TO THE CS ROADMAP](../roadmaps/CS.md#phase-index)
 
 ## Data Analysis and Engineering
 
-Study this roadmap first: [Data.md](./Data.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
+Study this roadmap first: [Data.md](../roadmaps/Data.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
 
 <a id="data-phase-1-project"></a>
 ### DATA PHASE 1 MINI-PROJECT
@@ -2680,7 +2680,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 1](./Data.md#phase-1) | [CONTINUE TO DATA PHASE 2](./Data.md#phase-2)
+> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 1](../roadmaps/Data.md#phase-1) | [CONTINUE TO DATA PHASE 2](../roadmaps/Data.md#phase-2)
 
 <a id="data-phase-2-project"></a>
 ### DATA PHASE 2 MINI-PROJECT
@@ -2732,7 +2732,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 2](./Data.md#phase-2) | [CONTINUE TO DATA PHASE 3](./Data.md#phase-3)
+> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 2](../roadmaps/Data.md#phase-2) | [CONTINUE TO DATA PHASE 3](../roadmaps/Data.md#phase-3)
 
 <a id="data-phase-3-project"></a>
 ### DATA PHASE 3 MINI-PROJECT
@@ -2784,7 +2784,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 3](./Data.md#phase-3) | [CONTINUE TO DATA PHASE 4](./Data.md#phase-4)
+> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 3](../roadmaps/Data.md#phase-3) | [CONTINUE TO DATA PHASE 4](../roadmaps/Data.md#phase-4)
 
 <a id="data-phase-4-project"></a>
 ### DATA PHASE 4 MINI-PROJECT
@@ -2836,7 +2836,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 4](./Data.md#phase-4) | [CONTINUE TO DATA PHASE 5](./Data.md#phase-5)
+> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 4](../roadmaps/Data.md#phase-4) | [CONTINUE TO DATA PHASE 5](../roadmaps/Data.md#phase-5)
 
 <a id="data-phase-5-project"></a>
 ### DATA PHASE 5 MINI-PROJECT
@@ -2888,7 +2888,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 5](./Data.md#phase-5) | [CONTINUE TO DATA PHASE 6](./Data.md#phase-6)
+> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 5](../roadmaps/Data.md#phase-5) | [CONTINUE TO DATA PHASE 6](../roadmaps/Data.md#phase-6)
 
 <a id="data-phase-6-project"></a>
 ### DATA PHASE 6 MINI-PROJECT
@@ -2940,7 +2940,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 6](./Data.md#phase-6) | [CONTINUE TO DATA PHASE 7](./Data.md#phase-7)
+> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 6](../roadmaps/Data.md#phase-6) | [CONTINUE TO DATA PHASE 7](../roadmaps/Data.md#phase-7)
 
 <a id="data-phase-7-project"></a>
 ### DATA PHASE 7 MINI-PROJECT
@@ -2992,7 +2992,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 7](./Data.md#phase-7) | [CONTINUE TO DATA PHASE 8](./Data.md#phase-8)
+> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 7](../roadmaps/Data.md#phase-7) | [CONTINUE TO DATA PHASE 8](../roadmaps/Data.md#phase-8)
 
 <a id="data-phase-8-project"></a>
 ### DATA PHASE 8 MINI-PROJECT
@@ -3044,7 +3044,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 8](./Data.md#phase-8) | [CONTINUE TO DATA PHASE 9](./Data.md#phase-9)
+> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 8](../roadmaps/Data.md#phase-8) | [CONTINUE TO DATA PHASE 9](../roadmaps/Data.md#phase-9)
 
 <a id="data-phase-9-project"></a>
 ### DATA PHASE 9 MINI-PROJECT
@@ -3096,7 +3096,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 9](./Data.md#phase-9) | [CONTINUE TO DATA PHASE 10](./Data.md#phase-10)
+> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 9](../roadmaps/Data.md#phase-9) | [CONTINUE TO DATA PHASE 10](../roadmaps/Data.md#phase-10)
 
 <a id="data-phase-10-project"></a>
 ### DATA PHASE 10 MINI-PROJECT
@@ -3148,7 +3148,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 10](./Data.md#phase-10) | [CONTINUE TO DATA PHASE 11](./Data.md#phase-11)
+> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 10](../roadmaps/Data.md#phase-10) | [CONTINUE TO DATA PHASE 11](../roadmaps/Data.md#phase-11)
 
 <a id="data-phase-11-project"></a>
 ### DATA PHASE 11 MINI-PROJECT
@@ -3200,7 +3200,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 11](./Data.md#phase-11) | [CONTINUE TO DATA PHASE 12](./Data.md#phase-12)
+> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 11](../roadmaps/Data.md#phase-11) | [CONTINUE TO DATA PHASE 12](../roadmaps/Data.md#phase-12)
 
 <a id="data-phase-12-project"></a>
 ### DATA PHASE 12 MINI-PROJECT
@@ -3252,7 +3252,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 12](./Data.md#phase-12) | [CONTINUE TO DATA PHASE 13](./Data.md#phase-13)
+> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 12](../roadmaps/Data.md#phase-12) | [CONTINUE TO DATA PHASE 13](../roadmaps/Data.md#phase-13)
 
 <a id="data-phase-13-project"></a>
 ### DATA PHASE 13 MINI-PROJECT
@@ -3304,7 +3304,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 13](./Data.md#phase-13) | [CONTINUE TO DATA PHASE 14](./Data.md#phase-14)
+> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 13](../roadmaps/Data.md#phase-13) | [CONTINUE TO DATA PHASE 14](../roadmaps/Data.md#phase-14)
 
 <a id="data-phase-14-project"></a>
 ### DATA PHASE 14 MINI-PROJECT
@@ -3356,7 +3356,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 14](./Data.md#phase-14) | [CONTINUE TO DATA PHASE 15](./Data.md#phase-15)
+> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 14](../roadmaps/Data.md#phase-14) | [CONTINUE TO DATA PHASE 15](../roadmaps/Data.md#phase-15)
 
 <a id="data-phase-15-project"></a>
 ### DATA PHASE 15 MINI-PROJECT
@@ -3408,7 +3408,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 15](./Data.md#phase-15) | [CONTINUE TO DATA PHASE 16](./Data.md#phase-16)
+> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 15](../roadmaps/Data.md#phase-15) | [CONTINUE TO DATA PHASE 16](../roadmaps/Data.md#phase-16)
 
 <a id="data-phase-16-project"></a>
 ### DATA PHASE 16 MINI-PROJECT
@@ -3460,7 +3460,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 16](./Data.md#phase-16) | [CONTINUE TO DATA PHASE 17](./Data.md#phase-17)
+> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 16](../roadmaps/Data.md#phase-16) | [CONTINUE TO DATA PHASE 17](../roadmaps/Data.md#phase-17)
 
 <a id="data-phase-17-project"></a>
 ### DATA PHASE 17 MINI-PROJECT
@@ -3512,7 +3512,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 17](./Data.md#phase-17) | [CONTINUE TO DATA PHASE 18](./Data.md#phase-18)
+> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 17](../roadmaps/Data.md#phase-17) | [CONTINUE TO DATA PHASE 18](../roadmaps/Data.md#phase-18)
 
 <a id="data-phase-18-project"></a>
 ### DATA PHASE 18 MINI-PROJECT
@@ -3564,7 +3564,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 18](./Data.md#phase-18) | [CONTINUE TO DATA PHASE 19](./Data.md#phase-19)
+> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 18](../roadmaps/Data.md#phase-18) | [CONTINUE TO DATA PHASE 19](../roadmaps/Data.md#phase-19)
 
 <a id="data-phase-19-project"></a>
 ### DATA PHASE 19 MINI-PROJECT
@@ -3616,7 +3616,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 19](./Data.md#phase-19) | [CONTINUE TO DATA PHASE 20](./Data.md#phase-20)
+> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 19](../roadmaps/Data.md#phase-19) | [CONTINUE TO DATA PHASE 20](../roadmaps/Data.md#phase-20)
 
 <a id="data-phase-20-project"></a>
 ### DATA PHASE 20 MINI-PROJECT
@@ -3668,7 +3668,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 20](./Data.md#phase-20) | [BUILD THE DATA MAIN PORTFOLIO PROJECT](#data-main-portfolio-project)
+> **PROJECT NAVIGATION:** [REVIEW DATA PHASE 20](../roadmaps/Data.md#phase-20) | [BUILD THE DATA MAIN PORTFOLIO PROJECT](#data-main-portfolio-project)
 
 <a id="data-main-portfolio-project"></a>
 ## DATA MAIN PORTFOLIO PROJECT
@@ -3839,11 +3839,11 @@ Continue only when the completed milestone works and the working tree is clean.
 5. Use a public-repository GitHub Actions workflow to run SQL linting, Python tests, dbt tests, and a small pipeline smoke test for free.
 6. Test the published dashboard on phone and desktop and include the last successful data timestamp inside the interface.
 
-> **MAIN PROJECT NAVIGATION:** [REVIEW DATA PHASE 19](./Data.md#phase-19) | [REVIEW DATA PHASE 20](./Data.md#phase-20) | [RETURN TO THE DATA ROADMAP](./Data.md#phase-index)
+> **MAIN PROJECT NAVIGATION:** [REVIEW DATA PHASE 19](../roadmaps/Data.md#phase-19) | [REVIEW DATA PHASE 20](../roadmaps/Data.md#phase-20) | [RETURN TO THE DATA ROADMAP](../roadmaps/Data.md#phase-index)
 
 ## Computer Networks
 
-Study this roadmap first: [Networks.md](./Networks.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
+Study this roadmap first: [Networks.md](../roadmaps/Networks.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
 
 <a id="networks-phase-1-project"></a>
 ### NETWORKS PHASE 1 MINI-PROJECT
@@ -3895,7 +3895,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 1](./Networks.md#phase-1) | [CONTINUE TO NETWORKS PHASE 2](./Networks.md#phase-2)
+> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 1](../roadmaps/Networks.md#phase-1) | [CONTINUE TO NETWORKS PHASE 2](../roadmaps/Networks.md#phase-2)
 
 <a id="networks-phase-2-project"></a>
 ### NETWORKS PHASE 2 MINI-PROJECT
@@ -3947,7 +3947,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 2](./Networks.md#phase-2) | [CONTINUE TO NETWORKS PHASE 3](./Networks.md#phase-3)
+> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 2](../roadmaps/Networks.md#phase-2) | [CONTINUE TO NETWORKS PHASE 3](../roadmaps/Networks.md#phase-3)
 
 <a id="networks-phase-3-project"></a>
 ### NETWORKS PHASE 3 MINI-PROJECT
@@ -3999,7 +3999,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 3](./Networks.md#phase-3) | [CONTINUE TO NETWORKS PHASE 4](./Networks.md#phase-4)
+> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 3](../roadmaps/Networks.md#phase-3) | [CONTINUE TO NETWORKS PHASE 4](../roadmaps/Networks.md#phase-4)
 
 <a id="networks-phase-4-project"></a>
 ### NETWORKS PHASE 4 MINI-PROJECT
@@ -4051,7 +4051,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 4](./Networks.md#phase-4) | [CONTINUE TO NETWORKS PHASE 5](./Networks.md#phase-5)
+> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 4](../roadmaps/Networks.md#phase-4) | [CONTINUE TO NETWORKS PHASE 5](../roadmaps/Networks.md#phase-5)
 
 <a id="networks-phase-5-project"></a>
 ### NETWORKS PHASE 5 MINI-PROJECT
@@ -4103,7 +4103,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 5](./Networks.md#phase-5) | [CONTINUE TO NETWORKS PHASE 6](./Networks.md#phase-6)
+> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 5](../roadmaps/Networks.md#phase-5) | [CONTINUE TO NETWORKS PHASE 6](../roadmaps/Networks.md#phase-6)
 
 <a id="networks-phase-6-project"></a>
 ### NETWORKS PHASE 6 MINI-PROJECT
@@ -4155,7 +4155,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 6](./Networks.md#phase-6) | [CONTINUE TO NETWORKS PHASE 7](./Networks.md#phase-7)
+> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 6](../roadmaps/Networks.md#phase-6) | [CONTINUE TO NETWORKS PHASE 7](../roadmaps/Networks.md#phase-7)
 
 <a id="networks-phase-7-project"></a>
 ### NETWORKS PHASE 7 MINI-PROJECT
@@ -4207,7 +4207,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 7](./Networks.md#phase-7) | [CONTINUE TO NETWORKS PHASE 8](./Networks.md#phase-8)
+> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 7](../roadmaps/Networks.md#phase-7) | [CONTINUE TO NETWORKS PHASE 8](../roadmaps/Networks.md#phase-8)
 
 <a id="networks-phase-8-project"></a>
 ### NETWORKS PHASE 8 MINI-PROJECT
@@ -4259,7 +4259,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 8](./Networks.md#phase-8) | [CONTINUE TO NETWORKS PHASE 9](./Networks.md#phase-9)
+> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 8](../roadmaps/Networks.md#phase-8) | [CONTINUE TO NETWORKS PHASE 9](../roadmaps/Networks.md#phase-9)
 
 <a id="networks-phase-9-project"></a>
 ### NETWORKS PHASE 9 MINI-PROJECT
@@ -4311,7 +4311,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 9](./Networks.md#phase-9) | [CONTINUE TO NETWORKS PHASE 10](./Networks.md#phase-10)
+> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 9](../roadmaps/Networks.md#phase-9) | [CONTINUE TO NETWORKS PHASE 10](../roadmaps/Networks.md#phase-10)
 
 <a id="networks-phase-10-project"></a>
 ### NETWORKS PHASE 10 MINI-PROJECT
@@ -4363,7 +4363,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 10](./Networks.md#phase-10) | [CONTINUE TO NETWORKS PHASE 11](./Networks.md#phase-11)
+> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 10](../roadmaps/Networks.md#phase-10) | [CONTINUE TO NETWORKS PHASE 11](../roadmaps/Networks.md#phase-11)
 
 <a id="networks-phase-11-project"></a>
 ### NETWORKS PHASE 11 MINI-PROJECT
@@ -4415,7 +4415,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 11](./Networks.md#phase-11) | [CONTINUE TO NETWORKS PHASE 12](./Networks.md#phase-12)
+> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 11](../roadmaps/Networks.md#phase-11) | [CONTINUE TO NETWORKS PHASE 12](../roadmaps/Networks.md#phase-12)
 
 <a id="networks-phase-12-project"></a>
 ### NETWORKS PHASE 12 MINI-PROJECT
@@ -4467,7 +4467,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 12](./Networks.md#phase-12) | [CONTINUE TO NETWORKS PHASE 13](./Networks.md#phase-13)
+> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 12](../roadmaps/Networks.md#phase-12) | [CONTINUE TO NETWORKS PHASE 13](../roadmaps/Networks.md#phase-13)
 
 <a id="networks-phase-13-project"></a>
 ### NETWORKS PHASE 13 MINI-PROJECT
@@ -4519,7 +4519,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 13](./Networks.md#phase-13) | [CONTINUE TO NETWORKS PHASE 14](./Networks.md#phase-14)
+> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 13](../roadmaps/Networks.md#phase-13) | [CONTINUE TO NETWORKS PHASE 14](../roadmaps/Networks.md#phase-14)
 
 <a id="networks-phase-14-project"></a>
 ### NETWORKS PHASE 14 MINI-PROJECT
@@ -4571,7 +4571,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 14](./Networks.md#phase-14) | [CONTINUE TO NETWORKS PHASE 15](./Networks.md#phase-15)
+> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 14](../roadmaps/Networks.md#phase-14) | [CONTINUE TO NETWORKS PHASE 15](../roadmaps/Networks.md#phase-15)
 
 <a id="networks-phase-15-project"></a>
 ### NETWORKS PHASE 15 MINI-PROJECT
@@ -4623,7 +4623,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 15](./Networks.md#phase-15) | [CONTINUE TO NETWORKS PHASE 16](./Networks.md#phase-16)
+> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 15](../roadmaps/Networks.md#phase-15) | [CONTINUE TO NETWORKS PHASE 16](../roadmaps/Networks.md#phase-16)
 
 <a id="networks-phase-16-project"></a>
 ### NETWORKS PHASE 16 MINI-PROJECT
@@ -4675,7 +4675,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 16](./Networks.md#phase-16) | [CONTINUE TO NETWORKS PHASE 17](./Networks.md#phase-17)
+> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 16](../roadmaps/Networks.md#phase-16) | [CONTINUE TO NETWORKS PHASE 17](../roadmaps/Networks.md#phase-17)
 
 <a id="networks-phase-17-project"></a>
 ### NETWORKS PHASE 17 MINI-PROJECT
@@ -4727,7 +4727,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 17](./Networks.md#phase-17) | [CONTINUE TO NETWORKS PHASE 18](./Networks.md#phase-18)
+> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 17](../roadmaps/Networks.md#phase-17) | [CONTINUE TO NETWORKS PHASE 18](../roadmaps/Networks.md#phase-18)
 
 <a id="networks-phase-18-project"></a>
 ### NETWORKS PHASE 18 MINI-PROJECT
@@ -4779,7 +4779,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 18](./Networks.md#phase-18) | [CONTINUE TO NETWORKS PHASE 19](./Networks.md#phase-19)
+> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 18](../roadmaps/Networks.md#phase-18) | [CONTINUE TO NETWORKS PHASE 19](../roadmaps/Networks.md#phase-19)
 
 <a id="networks-phase-19-project"></a>
 ### NETWORKS PHASE 19 MINI-PROJECT
@@ -4831,7 +4831,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 19](./Networks.md#phase-19) | [CONTINUE TO NETWORKS PHASE 20](./Networks.md#phase-20)
+> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 19](../roadmaps/Networks.md#phase-19) | [CONTINUE TO NETWORKS PHASE 20](../roadmaps/Networks.md#phase-20)
 
 <a id="networks-phase-20-project"></a>
 ### NETWORKS PHASE 20 MINI-PROJECT
@@ -4883,7 +4883,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 20](./Networks.md#phase-20) | [BUILD THE NETWORKS MAIN PORTFOLIO PROJECT](#networks-main-portfolio-project)
+> **PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 20](../roadmaps/Networks.md#phase-20) | [BUILD THE NETWORKS MAIN PORTFOLIO PROJECT](#networks-main-portfolio-project)
 
 <a id="networks-main-portfolio-project"></a>
 ## NETWORKS MAIN PORTFOLIO PROJECT
@@ -5054,11 +5054,11 @@ Continue only when the completed milestone works and the working tree is clean.
 5. Publish only that static summary to GitHub Pages for free; keep captures and vulnerable lab services private.
 6. Provide one teardown command and verify that it removes lab containers, namespaces, bridges, and temporary certificates.
 
-> **MAIN PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 19](./Networks.md#phase-19) | [REVIEW NETWORKS PHASE 20](./Networks.md#phase-20) | [RETURN TO THE NETWORKS ROADMAP](./Networks.md#phase-index)
+> **MAIN PROJECT NAVIGATION:** [REVIEW NETWORKS PHASE 19](../roadmaps/Networks.md#phase-19) | [REVIEW NETWORKS PHASE 20](../roadmaps/Networks.md#phase-20) | [RETURN TO THE NETWORKS ROADMAP](../roadmaps/Networks.md#phase-index)
 
 ## Artificial Intelligence and Machine Learning
 
-Study this roadmap first: [AI.md](./AI.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
+Study this roadmap first: [AI.md](../roadmaps/AI.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
 
 <a id="ai-phase-1-project"></a>
 ### AI PHASE 1 MINI-PROJECT
@@ -5110,7 +5110,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW AI PHASE 1](./AI.md#phase-1) | [CONTINUE TO AI PHASE 2](./AI.md#phase-2)
+> **PROJECT NAVIGATION:** [REVIEW AI PHASE 1](../roadmaps/AI.md#phase-1) | [CONTINUE TO AI PHASE 2](../roadmaps/AI.md#phase-2)
 
 <a id="ai-phase-2-project"></a>
 ### AI PHASE 2 MINI-PROJECT
@@ -5162,7 +5162,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW AI PHASE 2](./AI.md#phase-2) | [CONTINUE TO AI PHASE 3](./AI.md#phase-3)
+> **PROJECT NAVIGATION:** [REVIEW AI PHASE 2](../roadmaps/AI.md#phase-2) | [CONTINUE TO AI PHASE 3](../roadmaps/AI.md#phase-3)
 
 <a id="ai-phase-3-project"></a>
 ### AI PHASE 3 MINI-PROJECT
@@ -5214,7 +5214,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW AI PHASE 3](./AI.md#phase-3) | [CONTINUE TO AI PHASE 4](./AI.md#phase-4)
+> **PROJECT NAVIGATION:** [REVIEW AI PHASE 3](../roadmaps/AI.md#phase-3) | [CONTINUE TO AI PHASE 4](../roadmaps/AI.md#phase-4)
 
 <a id="ai-phase-4-project"></a>
 ### AI PHASE 4 MINI-PROJECT
@@ -5266,7 +5266,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW AI PHASE 4](./AI.md#phase-4) | [CONTINUE TO AI PHASE 5](./AI.md#phase-5)
+> **PROJECT NAVIGATION:** [REVIEW AI PHASE 4](../roadmaps/AI.md#phase-4) | [CONTINUE TO AI PHASE 5](../roadmaps/AI.md#phase-5)
 
 <a id="ai-phase-5-project"></a>
 ### AI PHASE 5 MINI-PROJECT
@@ -5318,7 +5318,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW AI PHASE 5](./AI.md#phase-5) | [CONTINUE TO AI PHASE 6](./AI.md#phase-6)
+> **PROJECT NAVIGATION:** [REVIEW AI PHASE 5](../roadmaps/AI.md#phase-5) | [CONTINUE TO AI PHASE 6](../roadmaps/AI.md#phase-6)
 
 <a id="ai-phase-6-project"></a>
 ### AI PHASE 6 MINI-PROJECT
@@ -5370,7 +5370,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW AI PHASE 6](./AI.md#phase-6) | [CONTINUE TO AI PHASE 7](./AI.md#phase-7)
+> **PROJECT NAVIGATION:** [REVIEW AI PHASE 6](../roadmaps/AI.md#phase-6) | [CONTINUE TO AI PHASE 7](../roadmaps/AI.md#phase-7)
 
 <a id="ai-phase-7-project"></a>
 ### AI PHASE 7 MINI-PROJECT
@@ -5422,7 +5422,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW AI PHASE 7](./AI.md#phase-7) | [CONTINUE TO AI PHASE 8](./AI.md#phase-8)
+> **PROJECT NAVIGATION:** [REVIEW AI PHASE 7](../roadmaps/AI.md#phase-7) | [CONTINUE TO AI PHASE 8](../roadmaps/AI.md#phase-8)
 
 <a id="ai-phase-8-project"></a>
 ### AI PHASE 8 MINI-PROJECT
@@ -5474,7 +5474,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW AI PHASE 8](./AI.md#phase-8) | [CONTINUE TO AI PHASE 9](./AI.md#phase-9)
+> **PROJECT NAVIGATION:** [REVIEW AI PHASE 8](../roadmaps/AI.md#phase-8) | [CONTINUE TO AI PHASE 9](../roadmaps/AI.md#phase-9)
 
 <a id="ai-phase-9-project"></a>
 ### AI PHASE 9 MINI-PROJECT
@@ -5526,7 +5526,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW AI PHASE 9](./AI.md#phase-9) | [CONTINUE TO AI PHASE 10](./AI.md#phase-10)
+> **PROJECT NAVIGATION:** [REVIEW AI PHASE 9](../roadmaps/AI.md#phase-9) | [CONTINUE TO AI PHASE 10](../roadmaps/AI.md#phase-10)
 
 <a id="ai-phase-10-project"></a>
 ### AI PHASE 10 MINI-PROJECT
@@ -5578,7 +5578,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW AI PHASE 10](./AI.md#phase-10) | [CONTINUE TO AI PHASE 11](./AI.md#phase-11)
+> **PROJECT NAVIGATION:** [REVIEW AI PHASE 10](../roadmaps/AI.md#phase-10) | [CONTINUE TO AI PHASE 11](../roadmaps/AI.md#phase-11)
 
 <a id="ai-phase-11-project"></a>
 ### AI PHASE 11 MINI-PROJECT
@@ -5630,7 +5630,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW AI PHASE 11](./AI.md#phase-11) | [CONTINUE TO AI PHASE 12](./AI.md#phase-12)
+> **PROJECT NAVIGATION:** [REVIEW AI PHASE 11](../roadmaps/AI.md#phase-11) | [CONTINUE TO AI PHASE 12](../roadmaps/AI.md#phase-12)
 
 <a id="ai-phase-12-project"></a>
 ### AI PHASE 12 MINI-PROJECT
@@ -5682,7 +5682,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW AI PHASE 12](./AI.md#phase-12) | [CONTINUE TO AI PHASE 13](./AI.md#phase-13)
+> **PROJECT NAVIGATION:** [REVIEW AI PHASE 12](../roadmaps/AI.md#phase-12) | [CONTINUE TO AI PHASE 13](../roadmaps/AI.md#phase-13)
 
 <a id="ai-phase-13-project"></a>
 ### AI PHASE 13 MINI-PROJECT
@@ -5734,7 +5734,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW AI PHASE 13](./AI.md#phase-13) | [CONTINUE TO AI PHASE 14](./AI.md#phase-14)
+> **PROJECT NAVIGATION:** [REVIEW AI PHASE 13](../roadmaps/AI.md#phase-13) | [CONTINUE TO AI PHASE 14](../roadmaps/AI.md#phase-14)
 
 <a id="ai-phase-14-project"></a>
 ### AI PHASE 14 MINI-PROJECT
@@ -5786,7 +5786,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW AI PHASE 14](./AI.md#phase-14) | [CONTINUE TO AI PHASE 15](./AI.md#phase-15)
+> **PROJECT NAVIGATION:** [REVIEW AI PHASE 14](../roadmaps/AI.md#phase-14) | [CONTINUE TO AI PHASE 15](../roadmaps/AI.md#phase-15)
 
 <a id="ai-phase-15-project"></a>
 ### AI PHASE 15 MINI-PROJECT
@@ -5838,7 +5838,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW AI PHASE 15](./AI.md#phase-15) | [CONTINUE TO AI PHASE 16](./AI.md#phase-16)
+> **PROJECT NAVIGATION:** [REVIEW AI PHASE 15](../roadmaps/AI.md#phase-15) | [CONTINUE TO AI PHASE 16](../roadmaps/AI.md#phase-16)
 
 <a id="ai-phase-16-project"></a>
 ### AI PHASE 16 MINI-PROJECT
@@ -5890,7 +5890,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW AI PHASE 16](./AI.md#phase-16) | [CONTINUE TO AI PHASE 17](./AI.md#phase-17)
+> **PROJECT NAVIGATION:** [REVIEW AI PHASE 16](../roadmaps/AI.md#phase-16) | [CONTINUE TO AI PHASE 17](../roadmaps/AI.md#phase-17)
 
 <a id="ai-phase-17-project"></a>
 ### AI PHASE 17 MINI-PROJECT
@@ -5942,7 +5942,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW AI PHASE 17](./AI.md#phase-17) | [CONTINUE TO AI PHASE 18](./AI.md#phase-18)
+> **PROJECT NAVIGATION:** [REVIEW AI PHASE 17](../roadmaps/AI.md#phase-17) | [CONTINUE TO AI PHASE 18](../roadmaps/AI.md#phase-18)
 
 <a id="ai-phase-18-project"></a>
 ### AI PHASE 18 MINI-PROJECT
@@ -5994,7 +5994,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW AI PHASE 18](./AI.md#phase-18) | [CONTINUE TO AI PHASE 19](./AI.md#phase-19)
+> **PROJECT NAVIGATION:** [REVIEW AI PHASE 18](../roadmaps/AI.md#phase-18) | [CONTINUE TO AI PHASE 19](../roadmaps/AI.md#phase-19)
 
 <a id="ai-phase-19-project"></a>
 ### AI PHASE 19 MINI-PROJECT
@@ -6046,7 +6046,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW AI PHASE 19](./AI.md#phase-19) | [CONTINUE TO AI PHASE 20](./AI.md#phase-20)
+> **PROJECT NAVIGATION:** [REVIEW AI PHASE 19](../roadmaps/AI.md#phase-19) | [CONTINUE TO AI PHASE 20](../roadmaps/AI.md#phase-20)
 
 <a id="ai-phase-20-project"></a>
 ### AI PHASE 20 MINI-PROJECT
@@ -6098,7 +6098,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW AI PHASE 20](./AI.md#phase-20) | [BUILD THE AI MAIN PORTFOLIO PROJECT](#ai-main-portfolio-project)
+> **PROJECT NAVIGATION:** [REVIEW AI PHASE 20](../roadmaps/AI.md#phase-20) | [BUILD THE AI MAIN PORTFOLIO PROJECT](#ai-main-portfolio-project)
 
 <a id="ai-main-portfolio-project"></a>
 ## AI MAIN PORTFOLIO PROJECT
@@ -6269,11 +6269,11 @@ Continue only when the completed milestone works and the working tree is clean.
 5. Use free GitHub Actions on the public repository for tests, linting, and a small evaluation set; do not download a large model in CI.
 6. Test every public sample for private data, prompt injection, unsupported claims, and working citations before sharing it.
 
-> **MAIN PROJECT NAVIGATION:** [REVIEW AI PHASE 19](./AI.md#phase-19) | [REVIEW AI PHASE 20](./AI.md#phase-20) | [RETURN TO THE AI ROADMAP](./AI.md#phase-index)
+> **MAIN PROJECT NAVIGATION:** [REVIEW AI PHASE 19](../roadmaps/AI.md#phase-19) | [REVIEW AI PHASE 20](../roadmaps/AI.md#phase-20) | [RETURN TO THE AI ROADMAP](../roadmaps/AI.md#phase-index)
 
 ## Odoo Engineering
 
-Study this roadmap first: [ODOO.md](./ODOO.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
+Study this roadmap first: [ODOO.md](../roadmaps/ODOO.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
 
 <a id="odoo-phase-1-project"></a>
 ### ODOO PHASE 1 MINI-PROJECT
@@ -6325,7 +6325,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 1](./ODOO.md#phase-1) | [CONTINUE TO ODOO PHASE 2](./ODOO.md#phase-2)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 1](../roadmaps/ODOO.md#phase-1) | [CONTINUE TO ODOO PHASE 2](../roadmaps/ODOO.md#phase-2)
 
 <a id="odoo-phase-2-project"></a>
 ### ODOO PHASE 2 MINI-PROJECT
@@ -6377,7 +6377,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 2](./ODOO.md#phase-2) | [CONTINUE TO ODOO PHASE 3](./ODOO.md#phase-3)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 2](../roadmaps/ODOO.md#phase-2) | [CONTINUE TO ODOO PHASE 3](../roadmaps/ODOO.md#phase-3)
 
 <a id="odoo-phase-3-project"></a>
 ### ODOO PHASE 3 MINI-PROJECT
@@ -6429,7 +6429,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 3](./ODOO.md#phase-3) | [CONTINUE TO ODOO PHASE 4](./ODOO.md#phase-4)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 3](../roadmaps/ODOO.md#phase-3) | [CONTINUE TO ODOO PHASE 4](../roadmaps/ODOO.md#phase-4)
 
 <a id="odoo-phase-4-project"></a>
 ### ODOO PHASE 4 MINI-PROJECT
@@ -6481,7 +6481,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 4](./ODOO.md#phase-4) | [CONTINUE TO ODOO PHASE 5](./ODOO.md#phase-5)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 4](../roadmaps/ODOO.md#phase-4) | [CONTINUE TO ODOO PHASE 5](../roadmaps/ODOO.md#phase-5)
 
 <a id="odoo-phase-5-project"></a>
 ### ODOO PHASE 5 MINI-PROJECT
@@ -6533,7 +6533,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 5](./ODOO.md#phase-5) | [CONTINUE TO ODOO PHASE 6](./ODOO.md#phase-6)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 5](../roadmaps/ODOO.md#phase-5) | [CONTINUE TO ODOO PHASE 6](../roadmaps/ODOO.md#phase-6)
 
 <a id="odoo-phase-6-project"></a>
 ### ODOO PHASE 6 MINI-PROJECT
@@ -6585,7 +6585,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 6](./ODOO.md#phase-6) | [CONTINUE TO ODOO PHASE 7](./ODOO.md#phase-7)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 6](../roadmaps/ODOO.md#phase-6) | [CONTINUE TO ODOO PHASE 7](../roadmaps/ODOO.md#phase-7)
 
 <a id="odoo-phase-7-project"></a>
 ### ODOO PHASE 7 MINI-PROJECT
@@ -6637,7 +6637,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 7](./ODOO.md#phase-7) | [CONTINUE TO ODOO PHASE 8](./ODOO.md#phase-8)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 7](../roadmaps/ODOO.md#phase-7) | [CONTINUE TO ODOO PHASE 8](../roadmaps/ODOO.md#phase-8)
 
 <a id="odoo-phase-8-project"></a>
 ### ODOO PHASE 8 MINI-PROJECT
@@ -6689,7 +6689,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 8](./ODOO.md#phase-8) | [CONTINUE TO ODOO PHASE 9](./ODOO.md#phase-9)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 8](../roadmaps/ODOO.md#phase-8) | [CONTINUE TO ODOO PHASE 9](../roadmaps/ODOO.md#phase-9)
 
 <a id="odoo-phase-9-project"></a>
 ### ODOO PHASE 9 MINI-PROJECT
@@ -6741,7 +6741,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 9](./ODOO.md#phase-9) | [CONTINUE TO ODOO PHASE 10](./ODOO.md#phase-10)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 9](../roadmaps/ODOO.md#phase-9) | [CONTINUE TO ODOO PHASE 10](../roadmaps/ODOO.md#phase-10)
 
 <a id="odoo-phase-10-project"></a>
 ### ODOO PHASE 10 MINI-PROJECT
@@ -6793,7 +6793,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 10](./ODOO.md#phase-10) | [CONTINUE TO ODOO PHASE 11](./ODOO.md#phase-11)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 10](../roadmaps/ODOO.md#phase-10) | [CONTINUE TO ODOO PHASE 11](../roadmaps/ODOO.md#phase-11)
 
 <a id="odoo-phase-11-project"></a>
 ### ODOO PHASE 11 MINI-PROJECT
@@ -6845,7 +6845,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 11](./ODOO.md#phase-11) | [CONTINUE TO ODOO PHASE 12](./ODOO.md#phase-12)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 11](../roadmaps/ODOO.md#phase-11) | [CONTINUE TO ODOO PHASE 12](../roadmaps/ODOO.md#phase-12)
 
 <a id="odoo-phase-12-project"></a>
 ### ODOO PHASE 12 MINI-PROJECT
@@ -6897,7 +6897,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 12](./ODOO.md#phase-12) | [CONTINUE TO ODOO PHASE 13](./ODOO.md#phase-13)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 12](../roadmaps/ODOO.md#phase-12) | [CONTINUE TO ODOO PHASE 13](../roadmaps/ODOO.md#phase-13)
 
 <a id="odoo-phase-13-project"></a>
 ### ODOO PHASE 13 MINI-PROJECT
@@ -6949,7 +6949,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 13](./ODOO.md#phase-13) | [CONTINUE TO ODOO PHASE 14](./ODOO.md#phase-14)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 13](../roadmaps/ODOO.md#phase-13) | [CONTINUE TO ODOO PHASE 14](../roadmaps/ODOO.md#phase-14)
 
 <a id="odoo-phase-14-project"></a>
 ### ODOO PHASE 14 MINI-PROJECT
@@ -7001,7 +7001,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 14](./ODOO.md#phase-14) | [CONTINUE TO ODOO PHASE 15](./ODOO.md#phase-15)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 14](../roadmaps/ODOO.md#phase-14) | [CONTINUE TO ODOO PHASE 15](../roadmaps/ODOO.md#phase-15)
 
 <a id="odoo-phase-15-project"></a>
 ### ODOO PHASE 15 MINI-PROJECT
@@ -7053,7 +7053,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 15](./ODOO.md#phase-15) | [CONTINUE TO ODOO PHASE 16](./ODOO.md#phase-16)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 15](../roadmaps/ODOO.md#phase-15) | [CONTINUE TO ODOO PHASE 16](../roadmaps/ODOO.md#phase-16)
 
 <a id="odoo-phase-16-project"></a>
 ### ODOO PHASE 16 MINI-PROJECT
@@ -7105,7 +7105,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 16](./ODOO.md#phase-16) | [CONTINUE TO ODOO PHASE 17](./ODOO.md#phase-17)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 16](../roadmaps/ODOO.md#phase-16) | [CONTINUE TO ODOO PHASE 17](../roadmaps/ODOO.md#phase-17)
 
 <a id="odoo-phase-17-project"></a>
 ### ODOO PHASE 17 MINI-PROJECT
@@ -7157,7 +7157,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 17](./ODOO.md#phase-17) | [CONTINUE TO ODOO PHASE 18](./ODOO.md#phase-18)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 17](../roadmaps/ODOO.md#phase-17) | [CONTINUE TO ODOO PHASE 18](../roadmaps/ODOO.md#phase-18)
 
 <a id="odoo-phase-18-project"></a>
 ### ODOO PHASE 18 MINI-PROJECT
@@ -7209,7 +7209,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 18](./ODOO.md#phase-18) | [CONTINUE TO ODOO PHASE 19](./ODOO.md#phase-19)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 18](../roadmaps/ODOO.md#phase-18) | [CONTINUE TO ODOO PHASE 19](../roadmaps/ODOO.md#phase-19)
 
 <a id="odoo-phase-19-project"></a>
 ### ODOO PHASE 19 MINI-PROJECT
@@ -7261,7 +7261,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 19](./ODOO.md#phase-19) | [CONTINUE TO ODOO PHASE 20](./ODOO.md#phase-20)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 19](../roadmaps/ODOO.md#phase-19) | [CONTINUE TO ODOO PHASE 20](../roadmaps/ODOO.md#phase-20)
 
 <a id="odoo-phase-20-project"></a>
 ### ODOO PHASE 20 MINI-PROJECT
@@ -7313,7 +7313,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 20](./ODOO.md#phase-20) | [BUILD THE ODOO MAIN PORTFOLIO PROJECT](#odoo-main-portfolio-project)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 20](../roadmaps/ODOO.md#phase-20) | [BUILD THE ODOO MAIN PORTFOLIO PROJECT](#odoo-main-portfolio-project)
 
 <a id="odoo-main-portfolio-project"></a>
 ## ODOO MAIN PORTFOLIO PROJECT
@@ -7483,11 +7483,11 @@ Continue only when the completed milestone works and the working tree is clean.
 5. A live public Odoo server needs persistent compute and storage; use only a free VM you already control, never enter billing details for this project, and keep the Docker deployment portable.
 6. Back up the PostgreSQL volume, restore it into a new local environment, and verify one complete registration workflow after restoration.
 
-> **MAIN PROJECT NAVIGATION:** [REVIEW ODOO PHASE 19](./ODOO.md#phase-19) | [REVIEW ODOO PHASE 20](./ODOO.md#phase-20) | [RETURN TO THE ODOO ROADMAP](./ODOO.md#phase-index)
+> **MAIN PROJECT NAVIGATION:** [REVIEW ODOO PHASE 19](../roadmaps/ODOO.md#phase-19) | [REVIEW ODOO PHASE 20](../roadmaps/ODOO.md#phase-20) | [RETURN TO THE ODOO ROADMAP](../roadmaps/ODOO.md#phase-index)
 
 ## Web Development
 
-Study this roadmap first: [Web.md](./Web.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
+Study this roadmap first: [Web.md](../roadmaps/Web.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
 
 <a id="web-phase-1-project"></a>
 ### WEB PHASE 1 MINI-PROJECT
@@ -7531,7 +7531,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 1](./Web.md#phase-1) | [CONTINUE TO WEB PHASE 2](./Web.md#phase-2)
+> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 1](../roadmaps/Web.md#phase-1) | [CONTINUE TO WEB PHASE 2](../roadmaps/Web.md#phase-2)
 
 <a id="web-phase-2-project"></a>
 ### WEB PHASE 2 MINI-PROJECT
@@ -7575,7 +7575,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 2](./Web.md#phase-2) | [CONTINUE TO WEB PHASE 3](./Web.md#phase-3)
+> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 2](../roadmaps/Web.md#phase-2) | [CONTINUE TO WEB PHASE 3](../roadmaps/Web.md#phase-3)
 
 <a id="web-phase-3-project"></a>
 ### WEB PHASE 3 MINI-PROJECT
@@ -7619,7 +7619,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 3](./Web.md#phase-3) | [CONTINUE TO WEB PHASE 4](./Web.md#phase-4)
+> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 3](../roadmaps/Web.md#phase-3) | [CONTINUE TO WEB PHASE 4](../roadmaps/Web.md#phase-4)
 
 <a id="web-phase-4-project"></a>
 ### WEB PHASE 4 MINI-PROJECT
@@ -7664,7 +7664,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 4](./Web.md#phase-4) | [CONTINUE TO WEB PHASE 5](./Web.md#phase-5)
+> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 4](../roadmaps/Web.md#phase-4) | [CONTINUE TO WEB PHASE 5](../roadmaps/Web.md#phase-5)
 
 <a id="web-phase-5-project"></a>
 ### WEB PHASE 5 MINI-PROJECT
@@ -7709,7 +7709,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 5](./Web.md#phase-5) | [CONTINUE TO WEB PHASE 6](./Web.md#phase-6)
+> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 5](../roadmaps/Web.md#phase-5) | [CONTINUE TO WEB PHASE 6](../roadmaps/Web.md#phase-6)
 
 <a id="web-phase-6-project"></a>
 ### WEB PHASE 6 MINI-PROJECT
@@ -7754,7 +7754,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 6](./Web.md#phase-6) | [CONTINUE TO WEB PHASE 7](./Web.md#phase-7)
+> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 6](../roadmaps/Web.md#phase-6) | [CONTINUE TO WEB PHASE 7](../roadmaps/Web.md#phase-7)
 
 <a id="web-phase-7-project"></a>
 ### WEB PHASE 7 MINI-PROJECT
@@ -7799,7 +7799,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 7](./Web.md#phase-7) | [CONTINUE TO WEB PHASE 8](./Web.md#phase-8)
+> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 7](../roadmaps/Web.md#phase-7) | [CONTINUE TO WEB PHASE 8](../roadmaps/Web.md#phase-8)
 
 <a id="web-phase-8-project"></a>
 ### WEB PHASE 8 MINI-PROJECT
@@ -7844,7 +7844,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 8](./Web.md#phase-8) | [CONTINUE TO WEB PHASE 9](./Web.md#phase-9)
+> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 8](../roadmaps/Web.md#phase-8) | [CONTINUE TO WEB PHASE 9](../roadmaps/Web.md#phase-9)
 
 <a id="web-phase-9-project"></a>
 ### WEB PHASE 9 MINI-PROJECT
@@ -7889,7 +7889,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 9](./Web.md#phase-9) | [CONTINUE TO WEB PHASE 10](./Web.md#phase-10)
+> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 9](../roadmaps/Web.md#phase-9) | [CONTINUE TO WEB PHASE 10](../roadmaps/Web.md#phase-10)
 
 <a id="web-phase-10-project"></a>
 ### WEB PHASE 10 MINI-PROJECT
@@ -7934,7 +7934,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 10](./Web.md#phase-10) | [CONTINUE TO WEB PHASE 11](./Web.md#phase-11)
+> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 10](../roadmaps/Web.md#phase-10) | [CONTINUE TO WEB PHASE 11](../roadmaps/Web.md#phase-11)
 
 <a id="web-phase-11-project"></a>
 ### WEB PHASE 11 MINI-PROJECT
@@ -7979,7 +7979,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 11](./Web.md#phase-11) | [CONTINUE TO WEB PHASE 12](./Web.md#phase-12)
+> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 11](../roadmaps/Web.md#phase-11) | [CONTINUE TO WEB PHASE 12](../roadmaps/Web.md#phase-12)
 
 <a id="web-phase-12-project"></a>
 ### WEB PHASE 12 MINI-PROJECT
@@ -8024,7 +8024,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 12](./Web.md#phase-12) | [CONTINUE TO WEB PHASE 13](./Web.md#phase-13)
+> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 12](../roadmaps/Web.md#phase-12) | [CONTINUE TO WEB PHASE 13](../roadmaps/Web.md#phase-13)
 
 <a id="web-phase-13-project"></a>
 ### WEB PHASE 13 MINI-PROJECT
@@ -8069,7 +8069,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 13](./Web.md#phase-13) | [CONTINUE TO WEB PHASE 14](./Web.md#phase-14)
+> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 13](../roadmaps/Web.md#phase-13) | [CONTINUE TO WEB PHASE 14](../roadmaps/Web.md#phase-14)
 
 <a id="web-phase-14-project"></a>
 ### WEB PHASE 14 MINI-PROJECT
@@ -8114,7 +8114,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 14](./Web.md#phase-14) | [CONTINUE TO WEB PHASE 15](./Web.md#phase-15)
+> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 14](../roadmaps/Web.md#phase-14) | [CONTINUE TO WEB PHASE 15](../roadmaps/Web.md#phase-15)
 
 <a id="web-phase-15-project"></a>
 ### WEB PHASE 15 MINI-PROJECT
@@ -8159,7 +8159,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 15](./Web.md#phase-15) | [CONTINUE TO WEB PHASE 16](./Web.md#phase-16)
+> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 15](../roadmaps/Web.md#phase-15) | [CONTINUE TO WEB PHASE 16](../roadmaps/Web.md#phase-16)
 
 <a id="web-phase-16-project"></a>
 ### WEB PHASE 16 MINI-PROJECT
@@ -8204,7 +8204,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 16](./Web.md#phase-16) | [CONTINUE TO WEB PHASE 17](./Web.md#phase-17)
+> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 16](../roadmaps/Web.md#phase-16) | [CONTINUE TO WEB PHASE 17](../roadmaps/Web.md#phase-17)
 
 <a id="web-phase-17-project"></a>
 ### WEB PHASE 17 MINI-PROJECT
@@ -8249,7 +8249,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 17](./Web.md#phase-17) | [CONTINUE TO WEB PHASE 18](./Web.md#phase-18)
+> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 17](../roadmaps/Web.md#phase-17) | [CONTINUE TO WEB PHASE 18](../roadmaps/Web.md#phase-18)
 
 <a id="web-phase-18-project"></a>
 ### WEB PHASE 18 MINI-PROJECT
@@ -8294,7 +8294,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 18](./Web.md#phase-18) | [CONTINUE TO WEB PHASE 19](./Web.md#phase-19)
+> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 18](../roadmaps/Web.md#phase-18) | [CONTINUE TO WEB PHASE 19](../roadmaps/Web.md#phase-19)
 
 <a id="web-phase-19-project"></a>
 ### WEB PHASE 19 MINI-PROJECT
@@ -8339,7 +8339,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 19](./Web.md#phase-19) | [CONTINUE TO WEB PHASE 20](./Web.md#phase-20)
+> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 19](../roadmaps/Web.md#phase-19) | [CONTINUE TO WEB PHASE 20](../roadmaps/Web.md#phase-20)
 
 <a id="web-phase-20-project"></a>
 ### WEB PHASE 20 MINI-PROJECT
@@ -8384,7 +8384,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 20](./Web.md#phase-20) | [BUILD THE WEB MAIN PORTFOLIO PROJECT](#web-main-portfolio-project)
+> **PROJECT NAVIGATION:** [REVIEW WEB PHASE 20](../roadmaps/Web.md#phase-20) | [BUILD THE WEB MAIN PORTFOLIO PROJECT](#web-main-portfolio-project)
 
 <a id="web-main-portfolio-project"></a>
 ## WEB MAIN PORTFOLIO PROJECT
@@ -8556,11 +8556,11 @@ Continue only when the completed milestone works and the working tree is clean.
 5. Allow only the public frontend origin, use secure production cookies, seed non-sensitive demo accounts, and test the full journey in two browsers.
 6. Free hosting can sleep and has quotas; place a friendly cold-start message in the UI and keep Docker Compose as the permanent zero-cost deployment.
 
-> **MAIN PROJECT NAVIGATION:** [REVIEW WEB PHASE 19](./Web.md#phase-19) | [REVIEW WEB PHASE 20](./Web.md#phase-20) | [RETURN TO THE WEB ROADMAP](./Web.md#phase-index)
+> **MAIN PROJECT NAVIGATION:** [REVIEW WEB PHASE 19](../roadmaps/Web.md#phase-19) | [REVIEW WEB PHASE 20](../roadmaps/Web.md#phase-20) | [RETURN TO THE WEB ROADMAP](../roadmaps/Web.md#phase-index)
 
 ## Cloud Engineering
 
-Study this roadmap first: [cloud.md](./cloud.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
+Study this roadmap first: [cloud.md](../roadmaps/Cloud.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
 
 <a id="cloud-phase-1-project"></a>
 ### CLOUD PHASE 1 MINI-PROJECT
@@ -8612,7 +8612,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 1](./cloud.md#phase-1) | [CONTINUE TO CLOUD PHASE 2](./cloud.md#phase-2)
+> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 1](../roadmaps/Cloud.md#phase-1) | [CONTINUE TO CLOUD PHASE 2](../roadmaps/Cloud.md#phase-2)
 
 <a id="cloud-phase-2-project"></a>
 ### CLOUD PHASE 2 MINI-PROJECT
@@ -8664,7 +8664,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 2](./cloud.md#phase-2) | [CONTINUE TO CLOUD PHASE 3](./cloud.md#phase-3)
+> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 2](../roadmaps/Cloud.md#phase-2) | [CONTINUE TO CLOUD PHASE 3](../roadmaps/Cloud.md#phase-3)
 
 <a id="cloud-phase-3-project"></a>
 ### CLOUD PHASE 3 MINI-PROJECT
@@ -8716,7 +8716,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 3](./cloud.md#phase-3) | [CONTINUE TO CLOUD PHASE 4](./cloud.md#phase-4)
+> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 3](../roadmaps/Cloud.md#phase-3) | [CONTINUE TO CLOUD PHASE 4](../roadmaps/Cloud.md#phase-4)
 
 <a id="cloud-phase-4-project"></a>
 ### CLOUD PHASE 4 MINI-PROJECT
@@ -8768,7 +8768,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 4](./cloud.md#phase-4) | [CONTINUE TO CLOUD PHASE 5](./cloud.md#phase-5)
+> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 4](../roadmaps/Cloud.md#phase-4) | [CONTINUE TO CLOUD PHASE 5](../roadmaps/Cloud.md#phase-5)
 
 <a id="cloud-phase-5-project"></a>
 ### CLOUD PHASE 5 MINI-PROJECT
@@ -8820,7 +8820,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 5](./cloud.md#phase-5) | [CONTINUE TO CLOUD PHASE 6](./cloud.md#phase-6)
+> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 5](../roadmaps/Cloud.md#phase-5) | [CONTINUE TO CLOUD PHASE 6](../roadmaps/Cloud.md#phase-6)
 
 <a id="cloud-phase-6-project"></a>
 ### CLOUD PHASE 6 MINI-PROJECT
@@ -8872,7 +8872,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 6](./cloud.md#phase-6) | [CONTINUE TO CLOUD PHASE 7](./cloud.md#phase-7)
+> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 6](../roadmaps/Cloud.md#phase-6) | [CONTINUE TO CLOUD PHASE 7](../roadmaps/Cloud.md#phase-7)
 
 <a id="cloud-phase-7-project"></a>
 ### CLOUD PHASE 7 MINI-PROJECT
@@ -8924,7 +8924,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 7](./cloud.md#phase-7) | [CONTINUE TO CLOUD PHASE 8](./cloud.md#phase-8)
+> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 7](../roadmaps/Cloud.md#phase-7) | [CONTINUE TO CLOUD PHASE 8](../roadmaps/Cloud.md#phase-8)
 
 <a id="cloud-phase-8-project"></a>
 ### CLOUD PHASE 8 MINI-PROJECT
@@ -8976,7 +8976,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 8](./cloud.md#phase-8) | [CONTINUE TO CLOUD PHASE 9](./cloud.md#phase-9)
+> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 8](../roadmaps/Cloud.md#phase-8) | [CONTINUE TO CLOUD PHASE 9](../roadmaps/Cloud.md#phase-9)
 
 <a id="cloud-phase-9-project"></a>
 ### CLOUD PHASE 9 MINI-PROJECT
@@ -9028,7 +9028,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 9](./cloud.md#phase-9) | [CONTINUE TO CLOUD PHASE 10](./cloud.md#phase-10)
+> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 9](../roadmaps/Cloud.md#phase-9) | [CONTINUE TO CLOUD PHASE 10](../roadmaps/Cloud.md#phase-10)
 
 <a id="cloud-phase-10-project"></a>
 ### CLOUD PHASE 10 MINI-PROJECT
@@ -9080,7 +9080,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 10](./cloud.md#phase-10) | [CONTINUE TO CLOUD PHASE 11](./cloud.md#phase-11)
+> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 10](../roadmaps/Cloud.md#phase-10) | [CONTINUE TO CLOUD PHASE 11](../roadmaps/Cloud.md#phase-11)
 
 <a id="cloud-phase-11-project"></a>
 ### CLOUD PHASE 11 MINI-PROJECT
@@ -9132,7 +9132,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 11](./cloud.md#phase-11) | [CONTINUE TO CLOUD PHASE 12](./cloud.md#phase-12)
+> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 11](../roadmaps/Cloud.md#phase-11) | [CONTINUE TO CLOUD PHASE 12](../roadmaps/Cloud.md#phase-12)
 
 <a id="cloud-phase-12-project"></a>
 ### CLOUD PHASE 12 MINI-PROJECT
@@ -9184,7 +9184,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 12](./cloud.md#phase-12) | [CONTINUE TO CLOUD PHASE 13](./cloud.md#phase-13)
+> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 12](../roadmaps/Cloud.md#phase-12) | [CONTINUE TO CLOUD PHASE 13](../roadmaps/Cloud.md#phase-13)
 
 <a id="cloud-phase-13-project"></a>
 ### CLOUD PHASE 13 MINI-PROJECT
@@ -9236,7 +9236,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 13](./cloud.md#phase-13) | [CONTINUE TO CLOUD PHASE 14](./cloud.md#phase-14)
+> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 13](../roadmaps/Cloud.md#phase-13) | [CONTINUE TO CLOUD PHASE 14](../roadmaps/Cloud.md#phase-14)
 
 <a id="cloud-phase-14-project"></a>
 ### CLOUD PHASE 14 MINI-PROJECT
@@ -9288,7 +9288,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 14](./cloud.md#phase-14) | [CONTINUE TO CLOUD PHASE 15](./cloud.md#phase-15)
+> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 14](../roadmaps/Cloud.md#phase-14) | [CONTINUE TO CLOUD PHASE 15](../roadmaps/Cloud.md#phase-15)
 
 <a id="cloud-phase-15-project"></a>
 ### CLOUD PHASE 15 MINI-PROJECT
@@ -9340,7 +9340,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 15](./cloud.md#phase-15) | [CONTINUE TO CLOUD PHASE 16](./cloud.md#phase-16)
+> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 15](../roadmaps/Cloud.md#phase-15) | [CONTINUE TO CLOUD PHASE 16](../roadmaps/Cloud.md#phase-16)
 
 <a id="cloud-phase-16-project"></a>
 ### CLOUD PHASE 16 MINI-PROJECT
@@ -9392,7 +9392,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 16](./cloud.md#phase-16) | [CONTINUE TO CLOUD PHASE 17](./cloud.md#phase-17)
+> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 16](../roadmaps/Cloud.md#phase-16) | [CONTINUE TO CLOUD PHASE 17](../roadmaps/Cloud.md#phase-17)
 
 <a id="cloud-phase-17-project"></a>
 ### CLOUD PHASE 17 MINI-PROJECT
@@ -9444,7 +9444,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 17](./cloud.md#phase-17) | [CONTINUE TO CLOUD PHASE 18](./cloud.md#phase-18)
+> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 17](../roadmaps/Cloud.md#phase-17) | [CONTINUE TO CLOUD PHASE 18](../roadmaps/Cloud.md#phase-18)
 
 <a id="cloud-phase-18-project"></a>
 ### CLOUD PHASE 18 MINI-PROJECT
@@ -9496,7 +9496,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 18](./cloud.md#phase-18) | [CONTINUE TO CLOUD PHASE 19](./cloud.md#phase-19)
+> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 18](../roadmaps/Cloud.md#phase-18) | [CONTINUE TO CLOUD PHASE 19](../roadmaps/Cloud.md#phase-19)
 
 <a id="cloud-phase-19-project"></a>
 ### CLOUD PHASE 19 MINI-PROJECT
@@ -9548,7 +9548,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 19](./cloud.md#phase-19) | [CONTINUE TO CLOUD PHASE 20](./cloud.md#phase-20)
+> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 19](../roadmaps/Cloud.md#phase-19) | [CONTINUE TO CLOUD PHASE 20](../roadmaps/Cloud.md#phase-20)
 
 <a id="cloud-phase-20-project"></a>
 ### CLOUD PHASE 20 MINI-PROJECT
@@ -9600,7 +9600,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 20](./cloud.md#phase-20) | [BUILD THE CLOUD MAIN PORTFOLIO PROJECT](#cloud-main-portfolio-project)
+> **PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 20](../roadmaps/Cloud.md#phase-20) | [BUILD THE CLOUD MAIN PORTFOLIO PROJECT](#cloud-main-portfolio-project)
 
 <a id="cloud-main-portfolio-project"></a>
 ## CLOUD MAIN PORTFOLIO PROJECT
@@ -9772,11 +9772,11 @@ Continue only when the completed milestone works and the working tree is clean.
 5. Export sanitized diagrams, Grafana snapshots, policy results, and recovery timings to a static portfolio site on GitHub Pages.
 6. Run the destroy command, confirm that containers, clusters, volumes marked temporary, and networks are removed, and retain only intentional backup fixtures.
 
-> **MAIN PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 19](./cloud.md#phase-19) | [REVIEW CLOUD PHASE 20](./cloud.md#phase-20) | [RETURN TO THE CLOUD ROADMAP](./cloud.md#phase-index)
+> **MAIN PROJECT NAVIGATION:** [REVIEW CLOUD PHASE 19](../roadmaps/Cloud.md#phase-19) | [REVIEW CLOUD PHASE 20](../roadmaps/Cloud.md#phase-20) | [RETURN TO THE CLOUD ROADMAP](../roadmaps/Cloud.md#phase-index)
 
 ## DevOps Engineering
 
-Study this roadmap first: [devops.md](./devops.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
+Study this roadmap first: [devops.md](../roadmaps/DevOps.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
 
 <a id="devops-phase-1-project"></a>
 ### DEVOPS PHASE 1 MINI-PROJECT
@@ -9828,7 +9828,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 1](./devops.md#phase-1) | [CONTINUE TO DEVOPS PHASE 2](./devops.md#phase-2)
+> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 1](../roadmaps/DevOps.md#phase-1) | [CONTINUE TO DEVOPS PHASE 2](../roadmaps/DevOps.md#phase-2)
 
 <a id="devops-phase-2-project"></a>
 ### DEVOPS PHASE 2 MINI-PROJECT
@@ -9880,7 +9880,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 2](./devops.md#phase-2) | [CONTINUE TO DEVOPS PHASE 3](./devops.md#phase-3)
+> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 2](../roadmaps/DevOps.md#phase-2) | [CONTINUE TO DEVOPS PHASE 3](../roadmaps/DevOps.md#phase-3)
 
 <a id="devops-phase-3-project"></a>
 ### DEVOPS PHASE 3 MINI-PROJECT
@@ -9932,7 +9932,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 3](./devops.md#phase-3) | [CONTINUE TO DEVOPS PHASE 4](./devops.md#phase-4)
+> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 3](../roadmaps/DevOps.md#phase-3) | [CONTINUE TO DEVOPS PHASE 4](../roadmaps/DevOps.md#phase-4)
 
 <a id="devops-phase-4-project"></a>
 ### DEVOPS PHASE 4 MINI-PROJECT
@@ -9984,7 +9984,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 4](./devops.md#phase-4) | [CONTINUE TO DEVOPS PHASE 5](./devops.md#phase-5)
+> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 4](../roadmaps/DevOps.md#phase-4) | [CONTINUE TO DEVOPS PHASE 5](../roadmaps/DevOps.md#phase-5)
 
 <a id="devops-phase-5-project"></a>
 ### DEVOPS PHASE 5 MINI-PROJECT
@@ -10036,7 +10036,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 5](./devops.md#phase-5) | [CONTINUE TO DEVOPS PHASE 6](./devops.md#phase-6)
+> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 5](../roadmaps/DevOps.md#phase-5) | [CONTINUE TO DEVOPS PHASE 6](../roadmaps/DevOps.md#phase-6)
 
 <a id="devops-phase-6-project"></a>
 ### DEVOPS PHASE 6 MINI-PROJECT
@@ -10088,7 +10088,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 6](./devops.md#phase-6) | [CONTINUE TO DEVOPS PHASE 7](./devops.md#phase-7)
+> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 6](../roadmaps/DevOps.md#phase-6) | [CONTINUE TO DEVOPS PHASE 7](../roadmaps/DevOps.md#phase-7)
 
 <a id="devops-phase-7-project"></a>
 ### DEVOPS PHASE 7 MINI-PROJECT
@@ -10140,7 +10140,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 7](./devops.md#phase-7) | [CONTINUE TO DEVOPS PHASE 8](./devops.md#phase-8)
+> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 7](../roadmaps/DevOps.md#phase-7) | [CONTINUE TO DEVOPS PHASE 8](../roadmaps/DevOps.md#phase-8)
 
 <a id="devops-phase-8-project"></a>
 ### DEVOPS PHASE 8 MINI-PROJECT
@@ -10192,7 +10192,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 8](./devops.md#phase-8) | [CONTINUE TO DEVOPS PHASE 9](./devops.md#phase-9)
+> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 8](../roadmaps/DevOps.md#phase-8) | [CONTINUE TO DEVOPS PHASE 9](../roadmaps/DevOps.md#phase-9)
 
 <a id="devops-phase-9-project"></a>
 ### DEVOPS PHASE 9 MINI-PROJECT
@@ -10244,7 +10244,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 9](./devops.md#phase-9) | [CONTINUE TO DEVOPS PHASE 10](./devops.md#phase-10)
+> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 9](../roadmaps/DevOps.md#phase-9) | [CONTINUE TO DEVOPS PHASE 10](../roadmaps/DevOps.md#phase-10)
 
 <a id="devops-phase-10-project"></a>
 ### DEVOPS PHASE 10 MINI-PROJECT
@@ -10296,7 +10296,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 10](./devops.md#phase-10) | [CONTINUE TO DEVOPS PHASE 11](./devops.md#phase-11)
+> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 10](../roadmaps/DevOps.md#phase-10) | [CONTINUE TO DEVOPS PHASE 11](../roadmaps/DevOps.md#phase-11)
 
 <a id="devops-phase-11-project"></a>
 ### DEVOPS PHASE 11 MINI-PROJECT
@@ -10348,7 +10348,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 11](./devops.md#phase-11) | [CONTINUE TO DEVOPS PHASE 12](./devops.md#phase-12)
+> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 11](../roadmaps/DevOps.md#phase-11) | [CONTINUE TO DEVOPS PHASE 12](../roadmaps/DevOps.md#phase-12)
 
 <a id="devops-phase-12-project"></a>
 ### DEVOPS PHASE 12 MINI-PROJECT
@@ -10400,7 +10400,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 12](./devops.md#phase-12) | [CONTINUE TO DEVOPS PHASE 13](./devops.md#phase-13)
+> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 12](../roadmaps/DevOps.md#phase-12) | [CONTINUE TO DEVOPS PHASE 13](../roadmaps/DevOps.md#phase-13)
 
 <a id="devops-phase-13-project"></a>
 ### DEVOPS PHASE 13 MINI-PROJECT
@@ -10452,7 +10452,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 13](./devops.md#phase-13) | [CONTINUE TO DEVOPS PHASE 14](./devops.md#phase-14)
+> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 13](../roadmaps/DevOps.md#phase-13) | [CONTINUE TO DEVOPS PHASE 14](../roadmaps/DevOps.md#phase-14)
 
 <a id="devops-phase-14-project"></a>
 ### DEVOPS PHASE 14 MINI-PROJECT
@@ -10504,7 +10504,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 14](./devops.md#phase-14) | [CONTINUE TO DEVOPS PHASE 15](./devops.md#phase-15)
+> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 14](../roadmaps/DevOps.md#phase-14) | [CONTINUE TO DEVOPS PHASE 15](../roadmaps/DevOps.md#phase-15)
 
 <a id="devops-phase-15-project"></a>
 ### DEVOPS PHASE 15 MINI-PROJECT
@@ -10556,7 +10556,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 15](./devops.md#phase-15) | [CONTINUE TO DEVOPS PHASE 16](./devops.md#phase-16)
+> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 15](../roadmaps/DevOps.md#phase-15) | [CONTINUE TO DEVOPS PHASE 16](../roadmaps/DevOps.md#phase-16)
 
 <a id="devops-phase-16-project"></a>
 ### DEVOPS PHASE 16 MINI-PROJECT
@@ -10608,7 +10608,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 16](./devops.md#phase-16) | [CONTINUE TO DEVOPS PHASE 17](./devops.md#phase-17)
+> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 16](../roadmaps/DevOps.md#phase-16) | [CONTINUE TO DEVOPS PHASE 17](../roadmaps/DevOps.md#phase-17)
 
 <a id="devops-phase-17-project"></a>
 ### DEVOPS PHASE 17 MINI-PROJECT
@@ -10660,7 +10660,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 17](./devops.md#phase-17) | [CONTINUE TO DEVOPS PHASE 18](./devops.md#phase-18)
+> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 17](../roadmaps/DevOps.md#phase-17) | [CONTINUE TO DEVOPS PHASE 18](../roadmaps/DevOps.md#phase-18)
 
 <a id="devops-phase-18-project"></a>
 ### DEVOPS PHASE 18 MINI-PROJECT
@@ -10712,7 +10712,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 18](./devops.md#phase-18) | [CONTINUE TO DEVOPS PHASE 19](./devops.md#phase-19)
+> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 18](../roadmaps/DevOps.md#phase-18) | [CONTINUE TO DEVOPS PHASE 19](../roadmaps/DevOps.md#phase-19)
 
 <a id="devops-phase-19-project"></a>
 ### DEVOPS PHASE 19 MINI-PROJECT
@@ -10764,7 +10764,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 19](./devops.md#phase-19) | [CONTINUE TO DEVOPS PHASE 20](./devops.md#phase-20)
+> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 19](../roadmaps/DevOps.md#phase-19) | [CONTINUE TO DEVOPS PHASE 20](../roadmaps/DevOps.md#phase-20)
 
 <a id="devops-phase-20-project"></a>
 ### DEVOPS PHASE 20 MINI-PROJECT
@@ -10816,7 +10816,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 20](./devops.md#phase-20) | [BUILD THE DEVOPS MAIN PORTFOLIO PROJECT](#devops-main-portfolio-project)
+> **PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 20](../roadmaps/DevOps.md#phase-20) | [BUILD THE DEVOPS MAIN PORTFOLIO PROJECT](#devops-main-portfolio-project)
 
 <a id="devops-main-portfolio-project"></a>
 ## DEVOPS MAIN PORTFOLIO PROJECT
@@ -10988,11 +10988,11 @@ Continue only when the completed milestone works and the working tree is clean.
 5. Publish only a sanitized static architecture/demo page to GitHub Pages; do not expose the lab control plane.
 6. Run the teardown and recovery commands from a clean checkout to prove another learner can reproduce the platform without paid services.
 
-> **MAIN PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 19](./devops.md#phase-19) | [REVIEW DEVOPS PHASE 20](./devops.md#phase-20) | [RETURN TO THE DEVOPS ROADMAP](./devops.md#phase-index)
+> **MAIN PROJECT NAVIGATION:** [REVIEW DEVOPS PHASE 19](../roadmaps/DevOps.md#phase-19) | [REVIEW DEVOPS PHASE 20](../roadmaps/DevOps.md#phase-20) | [RETURN TO THE DEVOPS ROADMAP](../roadmaps/DevOps.md#phase-index)
 
 ## Cybersecurity
 
-Study this roadmap first: [ICT_Cybersecurity.md](./ICT_Cybersecurity.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
+Study this roadmap first: [ICT_Cybersecurity.md](../roadmaps/ICT_Cybersecurity.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
 
 <a id="cyber-phase-1-project"></a>
 ### CYBER PHASE 1 MINI-PROJECT
@@ -11044,7 +11044,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 1](./ICT_Cybersecurity.md#phase-1) | [CONTINUE TO CYBER PHASE 2](./ICT_Cybersecurity.md#phase-2)
+> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 1](../roadmaps/ICT_Cybersecurity.md#phase-1) | [CONTINUE TO CYBER PHASE 2](../roadmaps/ICT_Cybersecurity.md#phase-2)
 
 <a id="cyber-phase-2-project"></a>
 ### CYBER PHASE 2 MINI-PROJECT
@@ -11096,7 +11096,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 2](./ICT_Cybersecurity.md#phase-2) | [CONTINUE TO CYBER PHASE 3](./ICT_Cybersecurity.md#phase-3)
+> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 2](../roadmaps/ICT_Cybersecurity.md#phase-2) | [CONTINUE TO CYBER PHASE 3](../roadmaps/ICT_Cybersecurity.md#phase-3)
 
 <a id="cyber-phase-3-project"></a>
 ### CYBER PHASE 3 MINI-PROJECT
@@ -11148,7 +11148,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 3](./ICT_Cybersecurity.md#phase-3) | [CONTINUE TO CYBER PHASE 4](./ICT_Cybersecurity.md#phase-4)
+> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 3](../roadmaps/ICT_Cybersecurity.md#phase-3) | [CONTINUE TO CYBER PHASE 4](../roadmaps/ICT_Cybersecurity.md#phase-4)
 
 <a id="cyber-phase-4-project"></a>
 ### CYBER PHASE 4 MINI-PROJECT
@@ -11200,7 +11200,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 4](./ICT_Cybersecurity.md#phase-4) | [CONTINUE TO CYBER PHASE 5](./ICT_Cybersecurity.md#phase-5)
+> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 4](../roadmaps/ICT_Cybersecurity.md#phase-4) | [CONTINUE TO CYBER PHASE 5](../roadmaps/ICT_Cybersecurity.md#phase-5)
 
 <a id="cyber-phase-5-project"></a>
 ### CYBER PHASE 5 MINI-PROJECT
@@ -11252,7 +11252,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 5](./ICT_Cybersecurity.md#phase-5) | [CONTINUE TO CYBER PHASE 6](./ICT_Cybersecurity.md#phase-6)
+> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 5](../roadmaps/ICT_Cybersecurity.md#phase-5) | [CONTINUE TO CYBER PHASE 6](../roadmaps/ICT_Cybersecurity.md#phase-6)
 
 <a id="cyber-phase-6-project"></a>
 ### CYBER PHASE 6 MINI-PROJECT
@@ -11304,7 +11304,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 6](./ICT_Cybersecurity.md#phase-6) | [CONTINUE TO CYBER PHASE 7](./ICT_Cybersecurity.md#phase-7)
+> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 6](../roadmaps/ICT_Cybersecurity.md#phase-6) | [CONTINUE TO CYBER PHASE 7](../roadmaps/ICT_Cybersecurity.md#phase-7)
 
 <a id="cyber-phase-7-project"></a>
 ### CYBER PHASE 7 MINI-PROJECT
@@ -11356,7 +11356,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 7](./ICT_Cybersecurity.md#phase-7) | [CONTINUE TO CYBER PHASE 8](./ICT_Cybersecurity.md#phase-8)
+> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 7](../roadmaps/ICT_Cybersecurity.md#phase-7) | [CONTINUE TO CYBER PHASE 8](../roadmaps/ICT_Cybersecurity.md#phase-8)
 
 <a id="cyber-phase-8-project"></a>
 ### CYBER PHASE 8 MINI-PROJECT
@@ -11408,7 +11408,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 8](./ICT_Cybersecurity.md#phase-8) | [CONTINUE TO CYBER PHASE 9](./ICT_Cybersecurity.md#phase-9)
+> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 8](../roadmaps/ICT_Cybersecurity.md#phase-8) | [CONTINUE TO CYBER PHASE 9](../roadmaps/ICT_Cybersecurity.md#phase-9)
 
 <a id="cyber-phase-9-project"></a>
 ### CYBER PHASE 9 MINI-PROJECT
@@ -11460,7 +11460,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 9](./ICT_Cybersecurity.md#phase-9) | [CONTINUE TO CYBER PHASE 10](./ICT_Cybersecurity.md#phase-10)
+> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 9](../roadmaps/ICT_Cybersecurity.md#phase-9) | [CONTINUE TO CYBER PHASE 10](../roadmaps/ICT_Cybersecurity.md#phase-10)
 
 <a id="cyber-phase-10-project"></a>
 ### CYBER PHASE 10 MINI-PROJECT
@@ -11512,7 +11512,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 10](./ICT_Cybersecurity.md#phase-10) | [CONTINUE TO CYBER PHASE 11](./ICT_Cybersecurity.md#phase-11)
+> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 10](../roadmaps/ICT_Cybersecurity.md#phase-10) | [CONTINUE TO CYBER PHASE 11](../roadmaps/ICT_Cybersecurity.md#phase-11)
 
 <a id="cyber-phase-11-project"></a>
 ### CYBER PHASE 11 MINI-PROJECT
@@ -11564,7 +11564,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 11](./ICT_Cybersecurity.md#phase-11) | [CONTINUE TO CYBER PHASE 12](./ICT_Cybersecurity.md#phase-12)
+> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 11](../roadmaps/ICT_Cybersecurity.md#phase-11) | [CONTINUE TO CYBER PHASE 12](../roadmaps/ICT_Cybersecurity.md#phase-12)
 
 <a id="cyber-phase-12-project"></a>
 ### CYBER PHASE 12 MINI-PROJECT
@@ -11616,7 +11616,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 12](./ICT_Cybersecurity.md#phase-12) | [CONTINUE TO CYBER PHASE 13](./ICT_Cybersecurity.md#phase-13)
+> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 12](../roadmaps/ICT_Cybersecurity.md#phase-12) | [CONTINUE TO CYBER PHASE 13](../roadmaps/ICT_Cybersecurity.md#phase-13)
 
 <a id="cyber-phase-13-project"></a>
 ### CYBER PHASE 13 MINI-PROJECT
@@ -11668,7 +11668,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 13](./ICT_Cybersecurity.md#phase-13) | [CONTINUE TO CYBER PHASE 14](./ICT_Cybersecurity.md#phase-14)
+> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 13](../roadmaps/ICT_Cybersecurity.md#phase-13) | [CONTINUE TO CYBER PHASE 14](../roadmaps/ICT_Cybersecurity.md#phase-14)
 
 <a id="cyber-phase-14-project"></a>
 ### CYBER PHASE 14 MINI-PROJECT
@@ -11720,7 +11720,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 14](./ICT_Cybersecurity.md#phase-14) | [CONTINUE TO CYBER PHASE 15](./ICT_Cybersecurity.md#phase-15)
+> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 14](../roadmaps/ICT_Cybersecurity.md#phase-14) | [CONTINUE TO CYBER PHASE 15](../roadmaps/ICT_Cybersecurity.md#phase-15)
 
 <a id="cyber-phase-15-project"></a>
 ### CYBER PHASE 15 MINI-PROJECT
@@ -11772,7 +11772,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 15](./ICT_Cybersecurity.md#phase-15) | [CONTINUE TO CYBER PHASE 16](./ICT_Cybersecurity.md#phase-16)
+> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 15](../roadmaps/ICT_Cybersecurity.md#phase-15) | [CONTINUE TO CYBER PHASE 16](../roadmaps/ICT_Cybersecurity.md#phase-16)
 
 <a id="cyber-phase-16-project"></a>
 ### CYBER PHASE 16 MINI-PROJECT
@@ -11824,7 +11824,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 16](./ICT_Cybersecurity.md#phase-16) | [CONTINUE TO CYBER PHASE 17](./ICT_Cybersecurity.md#phase-17)
+> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 16](../roadmaps/ICT_Cybersecurity.md#phase-16) | [CONTINUE TO CYBER PHASE 17](../roadmaps/ICT_Cybersecurity.md#phase-17)
 
 <a id="cyber-phase-17-project"></a>
 ### CYBER PHASE 17 MINI-PROJECT
@@ -11876,7 +11876,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 17](./ICT_Cybersecurity.md#phase-17) | [CONTINUE TO CYBER PHASE 18](./ICT_Cybersecurity.md#phase-18)
+> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 17](../roadmaps/ICT_Cybersecurity.md#phase-17) | [CONTINUE TO CYBER PHASE 18](../roadmaps/ICT_Cybersecurity.md#phase-18)
 
 <a id="cyber-phase-18-project"></a>
 ### CYBER PHASE 18 MINI-PROJECT
@@ -11928,7 +11928,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 18](./ICT_Cybersecurity.md#phase-18) | [CONTINUE TO CYBER PHASE 19](./ICT_Cybersecurity.md#phase-19)
+> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 18](../roadmaps/ICT_Cybersecurity.md#phase-18) | [CONTINUE TO CYBER PHASE 19](../roadmaps/ICT_Cybersecurity.md#phase-19)
 
 <a id="cyber-phase-19-project"></a>
 ### CYBER PHASE 19 MINI-PROJECT
@@ -11980,7 +11980,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 19](./ICT_Cybersecurity.md#phase-19) | [CONTINUE TO CYBER PHASE 20](./ICT_Cybersecurity.md#phase-20)
+> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 19](../roadmaps/ICT_Cybersecurity.md#phase-19) | [CONTINUE TO CYBER PHASE 20](../roadmaps/ICT_Cybersecurity.md#phase-20)
 
 <a id="cyber-phase-20-project"></a>
 ### CYBER PHASE 20 MINI-PROJECT
@@ -12032,7 +12032,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 20](./ICT_Cybersecurity.md#phase-20) | [BUILD THE CYBER MAIN PORTFOLIO PROJECT](#cyber-main-portfolio-project)
+> **PROJECT NAVIGATION:** [REVIEW CYBER PHASE 20](../roadmaps/ICT_Cybersecurity.md#phase-20) | [BUILD THE CYBER MAIN PORTFOLIO PROJECT](#cyber-main-portfolio-project)
 
 <a id="cyber-main-portfolio-project"></a>
 ## CYBER MAIN PORTFOLIO PROJECT
@@ -12204,11 +12204,11 @@ Continue only when the completed milestone works and the working tree is clean.
 5. Export only sanitized ATT&CK maps, Sigma/YARA rules, dashboards, incident timelines, and risk summaries to GitHub Pages for free.
 6. Shut down the lab after use, confirm no vulnerable listener is public, and keep raw evidence containing identifiers outside the public repository.
 
-> **MAIN PROJECT NAVIGATION:** [REVIEW CYBER PHASE 19](./ICT_Cybersecurity.md#phase-19) | [REVIEW CYBER PHASE 20](./ICT_Cybersecurity.md#phase-20) | [RETURN TO THE CYBER ROADMAP](./ICT_Cybersecurity.md#phase-index)
+> **MAIN PROJECT NAVIGATION:** [REVIEW CYBER PHASE 19](../roadmaps/ICT_Cybersecurity.md#phase-19) | [REVIEW CYBER PHASE 20](../roadmaps/ICT_Cybersecurity.md#phase-20) | [RETURN TO THE CYBER ROADMAP](../roadmaps/ICT_Cybersecurity.md#phase-index)
 
 ## Git and Git Workflows
 
-Study this roadmap first: [Git.md](./Git.md). Build one project after each of its 15 phases, then build the main portfolio project after Phase 15. The cards below intentionally preserve the richer safety, evidence, and recovery requirements of the Git roadmap.
+Study this roadmap first: [Git.md](../roadmaps/Git.md). Build one project after each of its 15 phases, then build the main portfolio project after Phase 15. The cards below intentionally preserve the richer safety, evidence, and recovery requirements of the Git roadmap.
 
 <a id="git-phase-1-project"></a>
 ### GIT PHASE 1 MINI-PROJECT
@@ -12256,7 +12256,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 1](./Git.md#phase-1) | [CONTINUE TO GIT PHASE 2](./Git.md#phase-2)
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 1](../roadmaps/Git.md#phase-1) | [CONTINUE TO GIT PHASE 2](../roadmaps/Git.md#phase-2)
 
 <a id="git-phase-2-project"></a>
 ### GIT PHASE 2 MINI-PROJECT
@@ -12304,7 +12304,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 2](./Git.md#phase-2) | [CONTINUE TO GIT PHASE 3](./Git.md#phase-3)
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 2](../roadmaps/Git.md#phase-2) | [CONTINUE TO GIT PHASE 3](../roadmaps/Git.md#phase-3)
 
 <a id="git-phase-3-project"></a>
 ### GIT PHASE 3 MINI-PROJECT
@@ -12352,7 +12352,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 3](./Git.md#phase-3) | [CONTINUE TO GIT PHASE 4](./Git.md#phase-4)
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 3](../roadmaps/Git.md#phase-3) | [CONTINUE TO GIT PHASE 4](../roadmaps/Git.md#phase-4)
 
 <a id="git-phase-4-project"></a>
 ### GIT PHASE 4 MINI-PROJECT
@@ -12400,7 +12400,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 4](./Git.md#phase-4) | [CONTINUE TO GIT PHASE 5](./Git.md#phase-5)
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 4](../roadmaps/Git.md#phase-4) | [CONTINUE TO GIT PHASE 5](../roadmaps/Git.md#phase-5)
 
 <a id="git-phase-5-project"></a>
 ### GIT PHASE 5 MINI-PROJECT
@@ -12448,7 +12448,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 5](./Git.md#phase-5) | [CONTINUE TO GIT PHASE 6](./Git.md#phase-6)
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 5](../roadmaps/Git.md#phase-5) | [CONTINUE TO GIT PHASE 6](../roadmaps/Git.md#phase-6)
 
 <a id="git-phase-6-project"></a>
 ### GIT PHASE 6 MINI-PROJECT
@@ -12496,7 +12496,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 6](./Git.md#phase-6) | [CONTINUE TO GIT PHASE 7](./Git.md#phase-7)
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 6](../roadmaps/Git.md#phase-6) | [CONTINUE TO GIT PHASE 7](../roadmaps/Git.md#phase-7)
 
 <a id="git-phase-7-project"></a>
 ### GIT PHASE 7 MINI-PROJECT
@@ -12544,7 +12544,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 7](./Git.md#phase-7) | [CONTINUE TO GIT PHASE 8](./Git.md#phase-8)
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 7](../roadmaps/Git.md#phase-7) | [CONTINUE TO GIT PHASE 8](../roadmaps/Git.md#phase-8)
 
 <a id="git-phase-8-project"></a>
 ### GIT PHASE 8 MINI-PROJECT
@@ -12592,7 +12592,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 8](./Git.md#phase-8) | [CONTINUE TO GIT PHASE 9](./Git.md#phase-9)
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 8](../roadmaps/Git.md#phase-8) | [CONTINUE TO GIT PHASE 9](../roadmaps/Git.md#phase-9)
 
 <a id="git-phase-9-project"></a>
 ### GIT PHASE 9 MINI-PROJECT
@@ -12640,7 +12640,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 9](./Git.md#phase-9) | [CONTINUE TO GIT PHASE 10](./Git.md#phase-10)
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 9](../roadmaps/Git.md#phase-9) | [CONTINUE TO GIT PHASE 10](../roadmaps/Git.md#phase-10)
 
 <a id="git-phase-10-project"></a>
 ### GIT PHASE 10 MINI-PROJECT
@@ -12688,7 +12688,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 10](./Git.md#phase-10) | [CONTINUE TO GIT PHASE 11](./Git.md#phase-11)
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 10](../roadmaps/Git.md#phase-10) | [CONTINUE TO GIT PHASE 11](../roadmaps/Git.md#phase-11)
 
 <a id="git-phase-11-project"></a>
 ### GIT PHASE 11 MINI-PROJECT
@@ -12736,7 +12736,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 11](./Git.md#phase-11) | [CONTINUE TO GIT PHASE 12](./Git.md#phase-12)
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 11](../roadmaps/Git.md#phase-11) | [CONTINUE TO GIT PHASE 12](../roadmaps/Git.md#phase-12)
 
 <a id="git-phase-12-project"></a>
 ### GIT PHASE 12 MINI-PROJECT
@@ -12784,7 +12784,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 12](./Git.md#phase-12) | [CONTINUE TO GIT PHASE 13](./Git.md#phase-13)
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 12](../roadmaps/Git.md#phase-12) | [CONTINUE TO GIT PHASE 13](../roadmaps/Git.md#phase-13)
 
 <a id="git-phase-13-project"></a>
 ### GIT PHASE 13 MINI-PROJECT
@@ -12832,7 +12832,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 13](./Git.md#phase-13) | [CONTINUE TO GIT PHASE 14](./Git.md#phase-14)
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 13](../roadmaps/Git.md#phase-13) | [CONTINUE TO GIT PHASE 14](../roadmaps/Git.md#phase-14)
 
 <a id="git-phase-14-project"></a>
 ### GIT PHASE 14 MINI-PROJECT
@@ -12880,7 +12880,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 14](./Git.md#phase-14) | [CONTINUE TO GIT PHASE 15](./Git.md#phase-15)
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 14](../roadmaps/Git.md#phase-14) | [CONTINUE TO GIT PHASE 15](../roadmaps/Git.md#phase-15)
 
 <a id="git-phase-15-project"></a>
 ### GIT PHASE 15 MINI-PROJECT
@@ -12928,7 +12928,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 15](./Git.md#phase-15) | [BUILD THE GIT MAIN PORTFOLIO PROJECT](#git-main-portfolio-project)
+> **PROJECT NAVIGATION:** [REVIEW GIT PHASE 15](../roadmaps/Git.md#phase-15) | [BUILD THE GIT MAIN PORTFOLIO PROJECT](#git-main-portfolio-project)
 
 <a id="git-main-portfolio-project"></a>
 ## GIT MAIN PORTFOLIO PROJECT
@@ -13111,7 +13111,7 @@ The capstone is complete only when a fresh clone passes its checks, both release
 4. Publish only sanitized diagrams, logs, review screenshots/links, and release evidence; keep keys, raw incident data, and personal identifiers private.
 5. Verify from a clean clone, then remove disposable worktrees/containers/remotes while retaining the final public repository and sanitized evidence.
 
-> **MAIN PROJECT NAVIGATION:** [REVIEW GIT PHASE 15](./Git.md#phase-15) | [REVIEW THE GIT CAPSTONE](./Git.md#main-git-capstone) | [RETURN TO THE GIT ROADMAP](./Git.md#phase-index)
+> **MAIN PROJECT NAVIGATION:** [REVIEW GIT PHASE 15](../roadmaps/Git.md#phase-15) | [REVIEW THE GIT CAPSTONE](../roadmaps/Git.md#main-git-capstone) | [RETURN TO THE GIT ROADMAP](../roadmaps/Git.md#phase-index)
 
 ---
 

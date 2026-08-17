@@ -1,6 +1,6 @@
 # The Combined Interview Playbook
 
-*Mohammad Bilal's interview Q&A companion to the roadmaps - [CS.md](CS.md), [OOP.md](OOP.md), [Git.md](Git.md), [Data.md](Data.md), [Networks.md](Networks.md), [AI.md](AI.md), [Web.md](Web.md), [cloud.md](cloud.md), and [devops.md](devops.md). High-frequency questions with strong answers, follow-ups, and traps - not a list of facts to memorize.*
+*Mohammad Bilal's interview Q&A companion to the roadmaps - [CS.md](../roadmaps/CS.md), [OOP.md](../roadmaps/OOP.md), [Git.md](../roadmaps/Git.md), [Data.md](../roadmaps/Data.md), [Networks.md](../roadmaps/Networks.md), [AI.md](../roadmaps/AI.md), [Web.md](../roadmaps/Web.md), [cloud.md](../roadmaps/Cloud.md), and [devops.md](../roadmaps/DevOps.md). High-frequency questions with strong answers, follow-ups, and traps - not a list of facts to memorize.*
 
 *Curated with Composio (web search + DeepWiki on `mlabonne/llm-course`) against 2026 interview guides for DSA, SQL/DE, networking, and AI engineering, plus official web-platform, OpenAPI, OAuth, and OWASP documentation.*
 
@@ -1535,7 +1535,7 @@ For the full state, recovery, and workflow interview track, continue at [Track V
 
 # Track V - Git and Version Control
 
-**Source roadmap:** [Git.md](./Git.md) · **Project evidence:** [Git project cards](./Projects.md#git-and-git-workflows)
+**Source roadmap:** [Git.md](../roadmaps/Git.md) · **Project evidence:** [Git project cards](./Projects.md#git-and-git-workflows)
 
 ## V1. Git, GitHub, and version-control models
 
@@ -2017,7 +2017,7 @@ Use **Situation → Task → Action → Result**, and end with **what you would 
 
 ### Your roadmaps (primary depth)
 
-- [CS.md](CS.md) · [OOP.md](OOP.md) · [Git.md](Git.md) · [Data.md](Data.md) · [Networks.md](Networks.md) · [AI.md](AI.md) · [Web.md](Web.md) · [cloud.md](cloud.md) · [devops.md](devops.md)
+- [CS.md](../roadmaps/CS.md) · [OOP.md](../roadmaps/OOP.md) · [Git.md](../roadmaps/Git.md) · [Data.md](../roadmaps/Data.md) · [Networks.md](../roadmaps/Networks.md) · [AI.md](../roadmaps/AI.md) · [Web.md](../roadmaps/Web.md) · [cloud.md](../roadmaps/Cloud.md) · [devops.md](../roadmaps/DevOps.md)
 
 ---
 

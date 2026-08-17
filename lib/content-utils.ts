@@ -14,23 +14,31 @@ export type YouTubeInfo = {
 
 export type FencedBlock = { language: string; source: string; line: number };
 
-export const markdownRouteMap: Record<string, string> = {
-  "cs.md": "/courses/computer-science",
-  "oop.md": "/courses/object-oriented-programming",
-  "git.md": "/courses/git",
-  "web.md": "/courses/web-development",
-  "ai.md": "/courses/artificial-intelligence",
-  "data.md": "/courses/data",
-  "networks.md": "/courses/networks",
-  "ict_cybersecurity.md": "/courses/cybersecurity",
-  "cloud.md": "/courses/cloud",
-  "devops.md": "/courses/devops",
-  "odoo.md": "/courses/odoo",
-  "projects.md": "/projects",
-  "interview.md": "/interview",
-  "master_cv_template.md": "/cv-template",
-  "readme.md": "/about",
-};
+import { contentRegistry } from "./course-catalog";
+
+function normalizeSourcePath(value: string, lowercase = true): string {
+  const segments: string[] = [];
+  for (const segment of value.replace(/\\/g, "/").split("/")) {
+    if (!segment || segment === ".") continue;
+    if (segment === "..") segments.pop();
+    else segments.push(segment);
+  }
+  const normalized = segments.join("/");
+  return lowercase ? normalized.toLowerCase() : normalized;
+}
+
+const routeBySourcePath = new Map(contentRegistry.map((entry) => [normalizeSourcePath(entry.sourcePath), entry.route]));
+routeBySourcePath.set("data/job_tracker.xlsx", "/downloads/job-tracker");
+routeBySourcePath.set("content", "/about");
+routeBySourcePath.set("content/roadmaps", "/courses");
+routeBySourcePath.set("content/guides", "/projects");
+routeBySourcePath.set("content/templates", "/cv-template");
+routeBySourcePath.set("data", "/downloads/job-tracker");
+
+export const markdownRouteMap: Record<string, string> = Object.fromEntries([
+  ...contentRegistry.map((entry) => [entry.sourcePath.split("/").pop()!.toLowerCase(), entry.route] as const),
+  ["readme.md", "/about"] as const,
+]);
 
 export function githubSlug(value: string): string {
   return value
@@ -91,12 +99,29 @@ export function isExternalHref(href: string): boolean {
   return /^https?:\/\//i.test(href);
 }
 
-export function convertMarkdownHref(href: string): string {
+export function resolveMarkdownSourcePath(sourcePath: string, hrefPath: string): string {
+  const decodedPath = decodeURIComponent(hrefPath).replace(/\\/g, "/");
+  const sourceDirectory = sourcePath.replace(/\\/g, "/").split("/").slice(0, -1).join("/");
+  return normalizeSourcePath(`${sourceDirectory}/${decodedPath}`, false);
+}
+
+export function convertMarkdownHref(href: string, sourcePath?: string): string {
   if (!href || href.startsWith("#")) return href;
-  const match = /^(?:\.\/)?([^#?]+\.md)(#[^?]*)?(\?.*)?$/i.exec(href);
-  if (!match) return href;
-  const route = markdownRouteMap[match[1].replace(/\\/g, "/").split("/").pop()!.toLowerCase()];
-  return route ? `${route}${match[2] ?? ""}${match[3] ?? ""}` : href;
+  const boundary = href.search(/[?#]/);
+  const hrefPath = boundary < 0 ? href : href.slice(0, boundary);
+  const suffix = boundary < 0 ? "" : href.slice(boundary);
+  let decodedPath: string;
+  try { decodedPath = decodeURIComponent(hrefPath); } catch { return href; }
+  const resolved = sourcePath ? resolveMarkdownSourcePath(sourcePath, hrefPath) : "";
+  const repositoryRoute = sourcePath ? routeBySourcePath.get(normalizeSourcePath(resolved)) : undefined;
+  if (repositoryRoute) return `${repositoryRoute}${suffix}`;
+  if (!/\.(?:md|xlsx)$/i.test(decodedPath)) return href;
+  const route = sourcePath
+    ? undefined
+    : decodedPath.toLowerCase().endsWith(".xlsx")
+      ? decodedPath.replace(/\\/g, "/").split("/").pop()!.toLowerCase() === "job_tracker.xlsx" ? "/downloads/job-tracker" : undefined
+      : markdownRouteMap[decodedPath.replace(/\\/g, "/").split("/").pop()!.toLowerCase()];
+  return route ? `${route}${suffix}` : href;
 }
 
 export function extractYouTubeInfo(url: string): YouTubeInfo | null {

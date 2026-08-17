@@ -1,9 +1,9 @@
 import "server-only";
 import fs from "node:fs";
-import path from "node:path";
 import { cache } from "react";
-import { courseCatalog, type CourseDefinition } from "./course-catalog";
+import { contentBySlug, courseCatalog, guideRegistry, type CourseDefinition } from "./course-catalog";
 import { extractHeadings, stripMarkdown, type Heading } from "./content-utils";
+import { projectPath } from "./paths";
 
 export type Course = CourseDefinition & {
   title: string;
@@ -15,16 +15,16 @@ export type Course = CourseDefinition & {
   estimatedHours: number;
 };
 
-export const readMarkdown = cache((file: string) => {
-  const fullPath = path.join(/* turbopackIgnore: true */ process.cwd(), file);
-  if (!fs.existsSync(fullPath)) throw new Error(`Missing Markdown source: ${file}`);
+export const readMarkdown = cache((sourcePath: string) => {
+  const fullPath = projectPath(sourcePath);
+  if (!fs.existsSync(fullPath)) throw new Error(`Missing Markdown source: ${sourcePath}`);
   return fs.readFileSync(fullPath, "utf8");
 });
 
 export const getCourse = cache((slug: string): Course | null => {
   const definition = courseCatalog.find((item) => item.slug === slug);
   if (!definition) return null;
-  const markdown = readMarkdown(definition.file);
+  const markdown = readMarkdown(definition.sourcePath);
   const headings = extractHeadings(markdown);
   const title = headings[0]?.text.replace(/^The Zero-to-Hero\s+/i, "") ?? definition.shortName;
   const phases = headings.filter((heading) => heading.phase !== undefined);
@@ -35,10 +35,19 @@ export const getCourse = cache((slug: string): Course | null => {
 
 export const getCourses = cache(() => courseCatalog.map((course) => getCourse(course.slug)!).filter(Boolean));
 
-export function getDocument(file: string) {
-  const markdown = readMarkdown(file);
+export function getDocument(slug: string) {
+  const entry = contentBySlug[slug];
+  if (!entry) throw new Error(`Unknown content entry: ${slug}`);
+  const markdown = readMarkdown(entry.sourcePath);
   const headings = extractHeadings(markdown);
-  return { markdown, headings, title: headings[0]?.text ?? file.replace(/\.md$/i, "") };
+  return { ...entry, markdown, headings, title: headings[0]?.text ?? entry.title };
+}
+
+export function getRepositoryReadme() {
+  const sourcePath = "README.md";
+  const markdown = readMarkdown(sourcePath);
+  const headings = extractHeadings(markdown);
+  return { sourcePath, markdown, headings, title: headings[0]?.text ?? "Interview Help" };
 }
 
 export type SearchEntry = { id: string; title: string; course: string; type: string; href: string; excerpt: string; searchText: string };
@@ -65,14 +74,14 @@ export const getSearchIndex = cache((): SearchEntry[] => {
       entries.push({ id: `${course.slug}:${heading.id}:${heading.line}`, title: heading.text, course: course.shortName, type: heading.phase ? "Phase" : "Topic", href: `/courses/${course.slug}/learn#${heading.id}`, excerpt, searchText });
     }
   }
-  for (const [file, route, label] of [["Projects.md", "/projects", "Projects"], ["Interview.md", "/interview", "Interview"]] as const) {
-    const doc = getDocument(file);
+  for (const entry of guideRegistry) {
+    const doc = getDocument(entry.slug);
     const lines = doc.markdown.split(/\r?\n/);
     const searchableHeadings = doc.headings.filter((item) => item.depth <= 4 && item.text);
     for (const [index, heading] of searchableHeadings.entries()) {
       const nextLine = searchableHeadings[index + 1]?.line ?? lines.length + 1;
       const section = lines.slice(heading.line, nextLine - 1).join("\n");
-      entries.push({ id: `${file}:${heading.id}:${heading.line}`, title: heading.text, course: label, type: label, href: `${route}#${heading.id}`, excerpt: stripMarkdown(section).slice(0, 220), searchText: sectionSearchText(section) });
+      entries.push({ id: `${entry.slug}:${heading.id}:${heading.line}`, title: heading.text, course: entry.title, type: entry.title, href: `${entry.route}#${heading.id}`, excerpt: stripMarkdown(section).slice(0, 220), searchText: sectionSearchText(section) });
     }
   }
   return entries;

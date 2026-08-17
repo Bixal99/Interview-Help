@@ -54,7 +54,7 @@ There is no week clock. Move when you can trace the mechanism, produce the lab e
 
 ---
 
-> **Integrated Git practice:** Each linked phase-project card in [`Projects.md`](./Projects.md) ends with one specific Git checkpoint. Test the finished project first, commit only its named project path, verify the commit and clean working tree, then continue. Use [`Git.md` Phases 2-3](./Git.md#phase-2) if staging or commit selection is unfamiliar.
+> **Integrated Git practice:** Each linked phase-project card in [`Projects.md`](../guides/Projects.md) ends with one specific Git checkpoint. Test the finished project first, commit only its named project path, verify the commit and clean working tree, then continue. Use [`Git.md` Phases 2-3](./Git.md#phase-2) if staging or commit selection is unfamiliar.
 
 ---
 
@@ -187,7 +187,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 1 complete?** [Build the Phase 1 mini-project](./Projects.md#devops-phase-1-project) · [Continue to Phase 2](#phase-2---linux-the-shell-files-permissions-and-services)
+> **Phase 1 complete?** [Build the Phase 1 mini-project](../guides/Projects.md#devops-phase-1-project) · [Continue to Phase 2](#phase-2---linux-the-shell-files-permissions-and-services)
 
 <a id="phase-2"></a>
 
@@ -277,7 +277,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 2 complete?** [Build the Phase 2 mini-project](./Projects.md#devops-phase-2-project) · [Continue to Phase 3](#phase-3---systems-and-network-troubleshooting)
+> **Phase 2 complete?** [Build the Phase 2 mini-project](../guides/Projects.md#devops-phase-2-project) · [Continue to Phase 3](#phase-3---systems-and-network-troubleshooting)
 
 <a id="phase-3"></a>
 
@@ -367,7 +367,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 3 complete?** [Build the Phase 3 mini-project](./Projects.md#devops-phase-3-project) · [Continue to Phase 4](#phase-4---git-collaboration-and-change-history)
+> **Phase 3 complete?** [Build the Phase 3 mini-project](../guides/Projects.md#devops-phase-3-project) · [Continue to Phase 4](#phase-4---git-collaboration-and-change-history)
 
 <a id="phase-4"></a>
 
@@ -459,7 +459,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 4 complete?** [Build the Phase 4 mini-project](./Projects.md#devops-phase-4-project) · [Continue to Phase 5](#phase-5---shell-and-python-automation)
+> **Phase 4 complete?** [Build the Phase 4 mini-project](../guides/Projects.md#devops-phase-4-project) · [Continue to Phase 5](#phase-5---shell-and-python-automation)
 
 <a id="phase-5"></a>
 
@@ -550,7 +550,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 5 complete?** [Build the Phase 5 mini-project](./Projects.md#devops-phase-5-project) · [Continue to Phase 6](#phase-6---builds-dependencies-artifacts-and-registries)
+> **Phase 5 complete?** [Build the Phase 5 mini-project](../guides/Projects.md#devops-phase-5-project) · [Continue to Phase 6](#phase-6---builds-dependencies-artifacts-and-registries)
 
 <a id="phase-6"></a>
 
@@ -638,7 +638,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 6 complete?** [Build the Phase 6 mini-project](./Projects.md#devops-phase-6-project) · [Continue to Phase 7](#phase-7---continuous-integration)
+> **Phase 6 complete?** [Build the Phase 6 mini-project](../guides/Projects.md#devops-phase-6-project) · [Continue to Phase 7](#phase-7---continuous-integration)
 
 <a id="phase-7"></a>
 
@@ -731,7 +731,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 7 complete?** [Build the Phase 7 mini-project](./Projects.md#devops-phase-7-project) · [Continue to Phase 8](#phase-8---continuous-delivery-and-deployment-strategies)
+> **Phase 7 complete?** [Build the Phase 7 mini-project](../guides/Projects.md#devops-phase-7-project) · [Continue to Phase 8](#phase-8---continuous-delivery-and-deployment-strategies)
 
 <a id="phase-8"></a>
 
@@ -827,7 +827,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 8 complete?** [Build the Phase 8 mini-project](./Projects.md#devops-phase-8-project) · [Continue to Phase 9](#phase-9---docker-and-container-engineering)
+> **Phase 8 complete?** [Build the Phase 8 mini-project](../guides/Projects.md#devops-phase-8-project) · [Continue to Phase 9](#phase-9---docker-and-container-engineering)
 
 <a id="phase-9"></a>
 
@@ -917,7 +917,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 9 complete?** [Build the Phase 9 mini-project](./Projects.md#devops-phase-9-project) · [Continue to Phase 10](#phase-10---kubernetes-operations)
+> **Phase 9 complete?** [Build the Phase 9 mini-project](../guides/Projects.md#devops-phase-9-project) · [Continue to Phase 10](#phase-10---kubernetes-operations)
 
 <a id="phase-10"></a>
 
@@ -1012,7 +1012,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 10 complete?** [Build the Phase 10 mini-project](./Projects.md#devops-phase-10-project) · [Continue to Phase 11](#phase-11---terraform-and-infrastructure-lifecycle)
+> **Phase 10 complete?** [Build the Phase 10 mini-project](../guides/Projects.md#devops-phase-10-project) · [Continue to Phase 11](#phase-11---terraform-and-infrastructure-lifecycle)
 
 <a id="phase-11"></a>
 
@@ -1103,7 +1103,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 11 complete?** [Build the Phase 11 mini-project](./Projects.md#devops-phase-11-project) · [Continue to Phase 12](#phase-12---ansible-and-configuration-management)
+> **Phase 11 complete?** [Build the Phase 11 mini-project](../guides/Projects.md#devops-phase-11-project) · [Continue to Phase 12](#phase-12---ansible-and-configuration-management)
 
 <a id="phase-12"></a>
 
@@ -1192,7 +1192,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 12 complete?** [Build the Phase 12 mini-project](./Projects.md#devops-phase-12-project) · [Continue to Phase 13](#phase-13---cloud-infrastructure-for-devops)
+> **Phase 12 complete?** [Build the Phase 12 mini-project](../guides/Projects.md#devops-phase-12-project) · [Continue to Phase 13](#phase-13---cloud-infrastructure-for-devops)
 
 <a id="phase-13"></a>
 
@@ -1280,7 +1280,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 13 complete?** [Build the Phase 13 mini-project](./Projects.md#devops-phase-13-project) · [Continue to Phase 14](#phase-14---observability-metrics-logs-traces-and-alerts)
+> **Phase 13 complete?** [Build the Phase 13 mini-project](../guides/Projects.md#devops-phase-13-project) · [Continue to Phase 14](#phase-14---observability-metrics-logs-traces-and-alerts)
 
 <a id="phase-14"></a>
 
@@ -1369,7 +1369,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 14 complete?** [Build the Phase 14 mini-project](./Projects.md#devops-phase-14-project) · [Continue to Phase 15](#phase-15---sre-slis-slos-error-budgets-and-toil)
+> **Phase 14 complete?** [Build the Phase 14 mini-project](../guides/Projects.md#devops-phase-14-project) · [Continue to Phase 15](#phase-15---sre-slis-slos-error-budgets-and-toil)
 
 <a id="phase-15"></a>
 
@@ -1459,7 +1459,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 15 complete?** [Build the Phase 15 mini-project](./Projects.md#devops-phase-15-project) · [Continue to Phase 16](#phase-16---devsecops-and-software-supply-chain-security)
+> **Phase 15 complete?** [Build the Phase 15 mini-project](../guides/Projects.md#devops-phase-15-project) · [Continue to Phase 16](#phase-16---devsecops-and-software-supply-chain-security)
 
 <a id="phase-16"></a>
 
@@ -1548,7 +1548,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 16 complete?** [Build the Phase 16 mini-project](./Projects.md#devops-phase-16-project) · [Continue to Phase 17](#phase-17---gitops-and-platform-engineering)
+> **Phase 16 complete?** [Build the Phase 16 mini-project](../guides/Projects.md#devops-phase-16-project) · [Continue to Phase 17](#phase-17---gitops-and-platform-engineering)
 
 <a id="phase-17"></a>
 
@@ -1645,7 +1645,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 17 complete?** [Build the Phase 17 mini-project](./Projects.md#devops-phase-17-project) · [Continue to Phase 18](#phase-18---incident-response-postmortems-and-chaos-engineering)
+> **Phase 17 complete?** [Build the Phase 17 mini-project](../guides/Projects.md#devops-phase-17-project) · [Continue to Phase 18](#phase-18---incident-response-postmortems-and-chaos-engineering)
 
 <a id="phase-18"></a>
 
@@ -1733,7 +1733,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 18 complete?** [Build the Phase 18 mini-project](./Projects.md#devops-phase-18-project) · [Continue to Phase 19](#phase-19---devops-projects-and-portfolio-evidence)
+> **Phase 18 complete?** [Build the Phase 18 mini-project](../guides/Projects.md#devops-phase-18-project) · [Continue to Phase 19](#phase-19---devops-projects-and-portfolio-evidence)
 
 <a id="phase-19"></a>
 
@@ -1821,7 +1821,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 19 complete?** [Build the Phase 19 mini-project](./Projects.md#devops-phase-19-project) · [Continue to Phase 20](#phase-20---devops-interviews-and-career-mastery)
+> **Phase 19 complete?** [Build the Phase 19 mini-project](../guides/Projects.md#devops-phase-19-project) · [Continue to Phase 20](#phase-20---devops-interviews-and-career-mastery)
 
 <a id="phase-20"></a>
 
@@ -1911,7 +1911,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 20 complete?** [Build the Phase 20 mini-project](./Projects.md#devops-phase-20-project) · [Build the complete DevOps portfolio project](./Projects.md#devops-main-portfolio-project) · [Return to the phase index](#phase-index)
+> **Phase 20 complete?** [Build the Phase 20 mini-project](../guides/Projects.md#devops-phase-20-project) · [Build the complete DevOps portfolio project](../guides/Projects.md#devops-main-portfolio-project) · [Return to the phase index](#phase-index)
 
 ---
 
@@ -1926,9 +1926,9 @@ The sequence follows dependency and pressure, not product marketing. Provider na
 | Git internals, recovery, workflows, and trusted repository gates | [`Git.md`](./Git.md) |
 | Operating systems, concurrency, and system design | [`CS.md`](./CS.md) Phases 11, 16-18 |
 | Networking and HTTP diagnosis | [`Networks.md`](./Networks.md) and [`Web.md`](./Web.md) |
-| Cloud architecture and FinOps | [`cloud.md`](./cloud.md) |
+| Cloud architecture and FinOps | [`Cloud.md`](./Cloud.md) |
 | DevSecOps and incident security | [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) |
-| Hands-on proof and spoken drills | [`Projects.md`](./Projects.md) and [`Interview.md`](./Interview.md) |
+| Hands-on proof and spoken drills | [`Projects.md`](../guides/Projects.md) and [`Interview.md`](../guides/Interview.md) |
 
 ## Appendix B - Resource Policy
 

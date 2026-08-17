@@ -39,7 +39,7 @@ function textContent(value: React.ReactNode): string {
   return "";
 }
 
-export function MarkdownDocument({ markdown, progressScope }: { markdown: string; progressScope?: string }) {
+export function MarkdownDocument({ markdown, sourcePath, progressScope }: { markdown: string; sourcePath: string; progressScope?: string }) {
   const Heading = (tag: "h1" | "h2" | "h3" | "h4") => {
     function MarkdownHeading({ children, id, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
       const text = textContent(children);
@@ -56,7 +56,7 @@ export function MarkdownDocument({ markdown, progressScope }: { markdown: string
       const info = extractYouTubeInfo(href);
       const label = textContent(children) || "YouTube resource";
       if (info) return <YouTubeCard href={href} label={label} info={info} />;
-      const mapped = convertMarkdownHref(href);
+      const mapped = convertMarkdownHref(href, sourcePath);
       const external = /^https?:\/\//i.test(mapped);
       return <a {...props} href={mapped} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined}>{children}{external && <ExternalLink className="ml-1 inline" size={12} aria-hidden="true" />}</a>;
     },

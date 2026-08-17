@@ -66,7 +66,7 @@ Those questions are answered in the same order every single time. Once you have 
 
 ---
 
-> **Integrated Git practice:** Each linked phase-project card in [`Projects.md`](./Projects.md) ends with one specific Git checkpoint. Test the finished project first, commit only its named project path, verify the commit and clean working tree, then continue. Use [`Git.md` Phases 2-3](./Git.md#phase-2) if staging or commit selection is unfamiliar.
+> **Integrated Git practice:** Each linked phase-project card in [`Projects.md`](../guides/Projects.md) ends with one specific Git checkpoint. Test the finished project first, commit only its named project path, verify the commit and clean working tree, then continue. Use [`Git.md` Phases 2-3](./Git.md#phase-2) if staging or commit selection is unfamiliar.
 
 ---
 
@@ -424,7 +424,7 @@ print(dataset_product["grain"])
 
 **WHY THE NEXT TOPIC IS NEEDED - Spreadsheets & Data Literacy:** Product thinking and shape awareness still leave most humans' first contact with data as a grid of cells. That grid teaches types, filters, and aggregation - and also teaches every bad habit (merged cells, colors-as-data, `final_final_v3.xlsx`) that later tools exist to fix. Spreadsheets are the next stop.
 
-> **Phase 1 complete?** [Build the Phase 1 mini-project](./Projects.md#data-phase-1-project) · [Continue to Phase 2](#phase-2---spreadsheets--data-literacy)
+> **Phase 1 complete?** [Build the Phase 1 mini-project](../guides/Projects.md#data-phase-1-project) · [Continue to Phase 2](#phase-2---spreadsheets--data-literacy)
 
 <a id="phase-2"></a>
 
@@ -653,7 +653,7 @@ print([(o["order_id"], lookup_segment(o, customers)) for o in order_keys])
 
 **WHY THE NEXT TOPIC IS NEEDED - Python for Data:** Spreadsheets stop scaling when cleaning needs ten steps repeated daily, when files exceed memory comfort, or when you need tests and version control. That is the moment a programming language becomes the spreadsheet that can run itself.
 
-> **Phase 2 complete?** [Build the Phase 2 mini-project](./Projects.md#data-phase-2-project) · [Continue to Phase 3](#phase-3---python-for-data)
+> **Phase 2 complete?** [Build the Phase 2 mini-project](../guides/Projects.md#data-phase-2-project) · [Continue to Phase 3](#phase-3---python-for-data)
 
 <a id="phase-3"></a>
 
@@ -914,7 +914,7 @@ if __name__ == "__main__":
 
 **WHY THE NEXT TOPIC IS NEEDED - SQL Foundations:** Python can filter lists of dicts, but organizations store critical data in relational databases designed for declarative querying, concurrency, and huge tables. The language of those tables is SQL - and it is not optional for serious data work.
 
-> **Phase 3 complete?** [Build the Phase 3 mini-project](./Projects.md#data-phase-3-project) · [Continue to Phase 4](#phase-4---sql-foundations)
+> **Phase 3 complete?** [Build the Phase 3 mini-project](../guides/Projects.md#data-phase-3-project) · [Continue to Phase 4](#phase-4---sql-foundations)
 
 <a id="phase-4"></a>
 
@@ -1179,7 +1179,7 @@ print(enrich({"id": 1, "amount": "100", "country": " us ", "created_at": "2026-0
 
 **WHY THE NEXT TOPIC IS NEEDED - SQL Joins & Aggregations:** Single-table queries break as soon as the answer needs columns from more than one table, or needs "total by region" collapse. Joins and `GROUP BY` are the tools that unlock multi-table and summary questions.
 
-> **Phase 4 complete?** [Build the Phase 4 mini-project](./Projects.md#data-phase-4-project) · [Continue to Phase 5](#phase-5---sql-joins--aggregations)
+> **Phase 4 complete?** [Build the Phase 4 mini-project](../guides/Projects.md#data-phase-4-project) · [Continue to Phase 5](#phase-5---sql-joins--aggregations)
 
 <a id="phase-5"></a>
 
@@ -1446,7 +1446,7 @@ for region, g in grouped.items():
 
 **WHY THE NEXT TOPIC IS NEEDED - Advanced SQL (Subqueries and CTEs):** Complex grain fixes and multi-step logic become unreadable as nested subqueries. Named temporary result sets - CTEs - and nested questions need a cleaner structure. That is Phase 6.
 
-> **Phase 5 complete?** [Build the Phase 5 mini-project](./Projects.md#data-phase-5-project) · [Continue to Phase 6](#phase-6---advanced-sql)
+> **Phase 5 complete?** [Build the Phase 5 mini-project](../guides/Projects.md#data-phase-5-project) · [Continue to Phase 6](#phase-6---advanced-sql)
 
 <a id="phase-6"></a>
 
@@ -1737,7 +1737,7 @@ for r in rows:
 
 **WHY THE NEXT TOPIC IS NEEDED - Statistics for Analysts:** SQL can compute averages, ranks, and changes precisely - and still mislead you. A higher average may be noise; a conversion lift may be sampling luck. Statistics is the literacy that keeps pretty queries from becoming false confidence.
 
-> **Phase 6 complete?** [Build the Phase 6 mini-project](./Projects.md#data-phase-6-project) · [Continue to Phase 7](#phase-7---statistics-for-analysts)
+> **Phase 6 complete?** [Build the Phase 6 mini-project](../guides/Projects.md#data-phase-6-project) · [Continue to Phase 7](#phase-7---statistics-for-analysts)
 
 <a id="phase-7"></a>
 
@@ -1982,7 +1982,7 @@ print({"c_rate": conversion_rate(s1, n), "t_rate": conversion_rate(s2, n), "z": 
 
 **WHY THE NEXT TOPIC IS NEEDED - Pandas & Wrangling:** Statistics tells you what to look for. You still need a fast, programmable way to clean, join, group, and reshape tables outside the database - especially for files, notebooks, and iterative exploration. Pandas is that tool.
 
-> **Phase 7 complete?** [Build the Phase 7 mini-project](./Projects.md#data-phase-7-project) · [Continue to Phase 8](#phase-8---pandas--wrangling)
+> **Phase 7 complete?** [Build the Phase 7 mini-project](../guides/Projects.md#data-phase-7-project) · [Continue to Phase 8](#phase-8---pandas--wrangling)
 
 <a id="phase-8"></a>
 
@@ -2219,7 +2219,7 @@ print(back)
 
 **WHY THE NEXT TOPIC IS NEEDED - Visualization & Storytelling:** Clean aggregated tables still do not change minds by themselves. Humans need honest charts and a narrative. Visualization is how analysis becomes communication - and how lies can sneak in through axis tricks.
 
-> **Phase 8 complete?** [Build the Phase 8 mini-project](./Projects.md#data-phase-8-project) · [Continue to Phase 9](#phase-9---visualization--storytelling)
+> **Phase 8 complete?** [Build the Phase 8 mini-project](../guides/Projects.md#data-phase-8-project) · [Continue to Phase 9](#phase-9---visualization--storytelling)
 
 <a id="phase-9"></a>
 
@@ -2433,7 +2433,7 @@ fig.update_layout(yaxis_title="Revenue", xaxis_title="Region")
 
 **WHY THE NEXT TOPIC IS NEEDED - EDA, Metrics & Analytics:** Charts and dashboards assume you already know what to look for. Exploratory Data Analysis is the disciplined curiosity that discovers structure, and metric design is how you decide what "better" means before you draw it.
 
-> **Phase 9 complete?** [Build the Phase 9 mini-project](./Projects.md#data-phase-9-project) · [Continue to Phase 10](#phase-10---eda-metrics--analytics)
+> **Phase 9 complete?** [Build the Phase 9 mini-project](../guides/Projects.md#data-phase-9-project) · [Continue to Phase 10](#phase-10---eda-metrics--analytics)
 
 <a id="phase-10"></a>
 
@@ -2719,7 +2719,7 @@ print(
 
 ---
 
-> **Phase 10 complete?** [Build the Phase 10 mini-project](./Projects.md#data-phase-10-project) · [Continue to Phase 11](#phase-11---relational-modeling-oltp)
+> **Phase 10 complete?** [Build the Phase 10 mini-project](../guides/Projects.md#data-phase-10-project) · [Continue to Phase 11](#phase-11---relational-modeling-oltp)
 
 <a id="phase-11"></a>
 
@@ -2991,7 +2991,7 @@ print({"selectivity": matching / n_rows, "index_likely_helps": matching / n_rows
 
 **WHY THE NEXT TOPIC IS NEEDED - Warehouses & Dimensional Modeling:** OLTP 3NF plus indexes is optimized for correct, fast transactions - not for scanning years of history across dozens of joins for every dashboard. Analytics needs a different shape: warehouses and dimensional models built for OLAP-style questions.
 
-> **Phase 11 complete?** [Build the Phase 11 mini-project](./Projects.md#data-phase-11-project) · [Continue to Phase 12](#phase-12---warehouses--dimensional-modeling)
+> **Phase 11 complete?** [Build the Phase 11 mini-project](../guides/Projects.md#data-phase-11-project) · [Continue to Phase 12](#phase-12---warehouses--dimensional-modeling)
 
 <a id="phase-12"></a>
 
@@ -3356,7 +3356,7 @@ JOIN dim_customer d
 
 **WHY THE NEXT TOPIC IS NEEDED - ETL / ELT Pipelines:** Dimensional models do not fill themselves. You need reliable extract/transform/load (or load-then-transform) pipelines that can rerun safely and scale - Phase 13.
 
-> **Phase 12 complete?** [Build the Phase 12 mini-project](./Projects.md#data-phase-12-project) · [Continue to Phase 13](#phase-13---etl--elt-pipelines)
+> **Phase 12 complete?** [Build the Phase 12 mini-project](../guides/Projects.md#data-phase-12-project) · [Continue to Phase 13](#phase-13---etl--elt-pipelines)
 
 <a id="phase-13"></a>
 
@@ -3599,7 +3599,7 @@ SELECT * FROM staging_orders WHERE order_date = DATE '2026-08-01';
 
 **WHY THE NEXT TOPIC IS NEEDED - Orchestration (Airflow) & Containers:** A correct pipeline function still needs scheduling, dependency graphs, retries, and reproducible runtimes. Orchestrators and containers turn scripts into operable systems.
 
-> **Phase 13 complete?** [Build the Phase 13 mini-project](./Projects.md#data-phase-13-project) · [Continue to Phase 14](#phase-14---orchestration-airflow--containers)
+> **Phase 13 complete?** [Build the Phase 13 mini-project](../guides/Projects.md#data-phase-13-project) · [Continue to Phase 14](#phase-14---orchestration-airflow--containers)
 
 <a id="phase-14"></a>
 
@@ -3849,7 +3849,7 @@ services:
 
 **WHY THE NEXT TOPIC IS NEEDED - Analytics Engineering with dbt:** Orchestration runs steps; containers make them reproducible. The dominant pattern for in-warehouse SQL transforms - models, tests, docs, ref graphs - is dbt, which turns ELT SQL into software engineering.
 
-> **Phase 14 complete?** [Build the Phase 14 mini-project](./Projects.md#data-phase-14-project) · [Continue to Phase 15](#phase-15---analytics-engineering-with-dbt)
+> **Phase 14 complete?** [Build the Phase 14 mini-project](../guides/Projects.md#data-phase-14-project) · [Continue to Phase 15](#phase-15---analytics-engineering-with-dbt)
 
 <a id="phase-15"></a>
 
@@ -4111,7 +4111,7 @@ jobs:
 
 **WHY THE NEXT TOPIC IS NEEDED - Cloud Data Platforms:** dbt needs somewhere to run SQL when the amount of work grows. Cloud warehouses and lakehouses - BigQuery, Snowflake, Databricks-style platforms - plus cost/access/environment discipline - are the next layer.
 
-> **Phase 15 complete?** [Build the Phase 15 mini-project](./Projects.md#data-phase-15-project) · [Continue to Phase 16](#phase-16---cloud-data-platforms)
+> **Phase 15 complete?** [Build the Phase 15 mini-project](../guides/Projects.md#data-phase-15-project) · [Continue to Phase 16](#phase-16---cloud-data-platforms)
 
 <a id="phase-16"></a>
 
@@ -4333,7 +4333,7 @@ except ValueError as e:
 
 **WHY THE NEXT TOPIC IS NEEDED - Big Data with Spark:** Warehouses handle a huge share of analytics SQL. When transforms need general distributed compute, custom multi-language pipelines, or massive joins beyond comfortable warehouse patterns, Spark-style engines enter - Phase 17.
 
-> **Phase 16 complete?** [Build the Phase 16 mini-project](./Projects.md#data-phase-16-project) · [Continue to Phase 17](#phase-17---big-data-with-spark)
+> **Phase 16 complete?** [Build the Phase 16 mini-project](../guides/Projects.md#data-phase-16-project) · [Continue to Phase 17](#phase-17---big-data-with-spark)
 
 <a id="phase-17"></a>
 
@@ -4544,7 +4544,7 @@ except ImportError:
 
 ---
 
-> **Phase 17 complete?** [Build the Phase 17 mini-project](./Projects.md#data-phase-17-project) · [Continue to Phase 18](#phase-18---streaming-with-apache-kafka)
+> **Phase 17 complete?** [Build the Phase 17 mini-project](../guides/Projects.md#data-phase-17-project) · [Continue to Phase 18](#phase-18---streaming-with-apache-kafka)
 
 <a id="phase-18"></a>
 
@@ -4725,7 +4725,7 @@ def apply_business_logic(payload: dict) -> None:
 
 ---
 
-> **Phase 18 complete?** [Build the Phase 18 mini-project](./Projects.md#data-phase-18-project) · [Continue to Phase 19](#phase-19---projects-data-quality--portfolio)
+> **Phase 18 complete?** [Build the Phase 18 mini-project](../guides/Projects.md#data-phase-18-project) · [Continue to Phase 19](#phase-19---projects-data-quality--portfolio)
 
 <a id="phase-19"></a>
 
@@ -4910,7 +4910,7 @@ assert reconcile(1000.0, 998.0, tol=0.01)
 
 ---
 
-> **Phase 19 complete?** [Build the Phase 19 mini-project](./Projects.md#data-phase-19-project) · [Continue to Phase 20](#phase-20---interview-mastery)
+> **Phase 19 complete?** [Build the Phase 19 mini-project](../guides/Projects.md#data-phase-19-project) · [Continue to Phase 20](#phase-20---interview-mastery)
 
 <a id="phase-20"></a>
 
@@ -5198,7 +5198,7 @@ for s in stories:
 
 ---
 
-> **Phase 20 complete?** [Build the Phase 20 mini-project](./Projects.md#data-phase-20-project) · [Build the complete data portfolio project](./Projects.md#data-main-portfolio-project) · [Return to the phase index](#phase-index)
+> **Phase 20 complete?** [Build the Phase 20 mini-project](../guides/Projects.md#data-phase-20-project) · [Build the complete data portfolio project](../guides/Projects.md#data-main-portfolio-project) · [Return to the phase index](#phase-index)
 
 ---
 

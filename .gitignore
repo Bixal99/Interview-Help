@@ -1,6 +1,7 @@
 node_modules/
 .next/
 out/
+dist/
 .vercel/
 coverage/
 *.log
@@ -10,3 +11,4 @@ coverage/
 __pycache__/
 *.pyc
 .DS_Store
+Thumbs.db

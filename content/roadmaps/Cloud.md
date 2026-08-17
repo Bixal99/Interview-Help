@@ -54,7 +54,7 @@ There is no week clock. Move when you can trace the mechanism, produce the lab e
 
 ---
 
-> **Integrated Git practice:** Each linked phase-project card in [`Projects.md`](./Projects.md) ends with one specific Git checkpoint. Test the finished project first, commit only its named project path, verify the commit and clean working tree, then continue. Use [`Git.md` Phases 2-3](./Git.md#phase-2) if staging or commit selection is unfamiliar.
+> **Integrated Git practice:** Each linked phase-project card in [`Projects.md`](../guides/Projects.md) ends with one specific Git checkpoint. Test the finished project first, commit only its named project path, verify the commit and clean working tree, then continue. Use [`Git.md` Phases 2-3](./Git.md#phase-2) if staging or commit selection is unfamiliar.
 
 ---
 
@@ -194,7 +194,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 1 complete?** [Build the Phase 1 mini-project](./Projects.md#cloud-phase-1-project) · [Continue to Phase 2](#phase-2---virtualization-and-cloud-service-models)
+> **Phase 1 complete?** [Build the Phase 1 mini-project](../guides/Projects.md#cloud-phase-1-project) · [Continue to Phase 2](#phase-2---virtualization-and-cloud-service-models)
 
 <a id="phase-2"></a>
 
@@ -285,7 +285,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 2 complete?** [Build the Phase 2 mini-project](./Projects.md#cloud-phase-2-project) · [Continue to Phase 3](#phase-3---providers-regions-zones-and-shared-responsibility)
+> **Phase 2 complete?** [Build the Phase 2 mini-project](../guides/Projects.md#cloud-phase-2-project) · [Continue to Phase 3](#phase-3---providers-regions-zones-and-shared-responsibility)
 
 <a id="phase-3"></a>
 
@@ -379,7 +379,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 3 complete?** [Build the Phase 3 mini-project](./Projects.md#cloud-phase-3-project) · [Continue to Phase 4](#phase-4---identity-and-access-management)
+> **Phase 3 complete?** [Build the Phase 3 mini-project](../guides/Projects.md#cloud-phase-3-project) · [Continue to Phase 4](#phase-4---identity-and-access-management)
 
 <a id="phase-4"></a>
 
@@ -472,7 +472,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 4 complete?** [Build the Phase 4 mini-project](./Projects.md#cloud-phase-4-project) · [Continue to Phase 5](#phase-5---cloud-networking-vpcs-subnets-routes-and-private-access)
+> **Phase 4 complete?** [Build the Phase 4 mini-project](../guides/Projects.md#cloud-phase-4-project) · [Continue to Phase 5](#phase-5---cloud-networking-vpcs-subnets-routes-and-private-access)
 
 <a id="phase-5"></a>
 
@@ -570,7 +570,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 5 complete?** [Build the Phase 5 mini-project](./Projects.md#cloud-phase-5-project) · [Continue to Phase 6](#phase-6---compute-images-load-balancing-and-autoscaling)
+> **Phase 5 complete?** [Build the Phase 5 mini-project](../guides/Projects.md#cloud-phase-5-project) · [Continue to Phase 6](#phase-6---compute-images-load-balancing-and-autoscaling)
 
 <a id="phase-6"></a>
 
@@ -663,7 +663,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 6 complete?** [Build the Phase 6 mini-project](./Projects.md#cloud-phase-6-project) · [Continue to Phase 7](#phase-7---object-block-and-file-storage)
+> **Phase 6 complete?** [Build the Phase 6 mini-project](../guides/Projects.md#cloud-phase-6-project) · [Continue to Phase 7](#phase-7---object-block-and-file-storage)
 
 <a id="phase-7"></a>
 
@@ -752,7 +752,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 7 complete?** [Build the Phase 7 mini-project](./Projects.md#cloud-phase-7-project) · [Continue to Phase 8](#phase-8---managed-databases-nosql-replication-and-caching)
+> **Phase 7 complete?** [Build the Phase 7 mini-project](../guides/Projects.md#cloud-phase-7-project) · [Continue to Phase 8](#phase-8---managed-databases-nosql-replication-and-caching)
 
 <a id="phase-8"></a>
 
@@ -842,7 +842,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 8 complete?** [Build the Phase 8 mini-project](./Projects.md#cloud-phase-8-project) · [Continue to Phase 9](#phase-9---dns-load-balancing-cdn-and-edge-delivery)
+> **Phase 8 complete?** [Build the Phase 8 mini-project](../guides/Projects.md#cloud-phase-8-project) · [Continue to Phase 9](#phase-9---dns-load-balancing-cdn-and-edge-delivery)
 
 <a id="phase-9"></a>
 
@@ -934,7 +934,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 9 complete?** [Build the Phase 9 mini-project](./Projects.md#cloud-phase-9-project) · [Continue to Phase 10](#phase-10---serverless-and-event-driven-architecture)
+> **Phase 9 complete?** [Build the Phase 9 mini-project](../guides/Projects.md#cloud-phase-9-project) · [Continue to Phase 10](#phase-10---serverless-and-event-driven-architecture)
 
 <a id="phase-10"></a>
 
@@ -1030,7 +1030,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 10 complete?** [Build the Phase 10 mini-project](./Projects.md#cloud-phase-10-project) · [Continue to Phase 11](#phase-11---containers-and-managed-kubernetes)
+> **Phase 10 complete?** [Build the Phase 10 mini-project](../guides/Projects.md#cloud-phase-10-project) · [Continue to Phase 11](#phase-11---containers-and-managed-kubernetes)
 
 <a id="phase-11"></a>
 
@@ -1120,7 +1120,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 11 complete?** [Build the Phase 11 mini-project](./Projects.md#cloud-phase-11-project) · [Continue to Phase 12](#phase-12---infrastructure-as-code-with-terraform-and-native-tools)
+> **Phase 11 complete?** [Build the Phase 11 mini-project](../guides/Projects.md#cloud-phase-11-project) · [Continue to Phase 12](#phase-12---infrastructure-as-code-with-terraform-and-native-tools)
 
 <a id="phase-12"></a>
 
@@ -1216,7 +1216,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 12 complete?** [Build the Phase 12 mini-project](./Projects.md#cloud-phase-12-project) · [Continue to Phase 13](#phase-13---landing-zones-accounts-governance-and-policy)
+> **Phase 12 complete?** [Build the Phase 12 mini-project](../guides/Projects.md#cloud-phase-12-project) · [Continue to Phase 13](#phase-13---landing-zones-accounts-governance-and-policy)
 
 <a id="phase-13"></a>
 
@@ -1312,7 +1312,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 13 complete?** [Build the Phase 13 mini-project](./Projects.md#cloud-phase-13-project) · [Continue to Phase 14](#phase-14---secrets-encryption-and-key-management)
+> **Phase 13 complete?** [Build the Phase 13 mini-project](../guides/Projects.md#cloud-phase-13-project) · [Continue to Phase 14](#phase-14---secrets-encryption-and-key-management)
 
 <a id="phase-14"></a>
 
@@ -1402,7 +1402,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 14 complete?** [Build the Phase 14 mini-project](./Projects.md#cloud-phase-14-project) · [Continue to Phase 15](#phase-15---cloud-observability-and-operations)
+> **Phase 14 complete?** [Build the Phase 14 mini-project](../guides/Projects.md#cloud-phase-14-project) · [Continue to Phase 15](#phase-15---cloud-observability-and-operations)
 
 <a id="phase-15"></a>
 
@@ -1490,7 +1490,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 15 complete?** [Build the Phase 15 mini-project](./Projects.md#cloud-phase-15-project) · [Continue to Phase 16](#phase-16---cloud-security-governance-and-compliance)
+> **Phase 15 complete?** [Build the Phase 15 mini-project](../guides/Projects.md#cloud-phase-15-project) · [Continue to Phase 16](#phase-16---cloud-security-governance-and-compliance)
 
 <a id="phase-16"></a>
 
@@ -1581,7 +1581,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 16 complete?** [Build the Phase 16 mini-project](./Projects.md#cloud-phase-16-project) · [Continue to Phase 17](#phase-17---reliability-high-availability-and-disaster-recovery)
+> **Phase 16 complete?** [Build the Phase 16 mini-project](../guides/Projects.md#cloud-phase-16-project) · [Continue to Phase 17](#phase-17---reliability-high-availability-and-disaster-recovery)
 
 <a id="phase-17"></a>
 
@@ -1679,7 +1679,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 17 complete?** [Build the Phase 17 mini-project](./Projects.md#cloud-phase-17-project) · [Continue to Phase 18](#phase-18---finops-and-cloud-cost-engineering)
+> **Phase 17 complete?** [Build the Phase 17 mini-project](../guides/Projects.md#cloud-phase-17-project) · [Continue to Phase 18](#phase-18---finops-and-cloud-cost-engineering)
 
 <a id="phase-18"></a>
 
@@ -1769,7 +1769,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 18 complete?** [Build the Phase 18 mini-project](./Projects.md#cloud-phase-18-project) · [Continue to Phase 19](#phase-19---hybrid-cloud-multi-cloud-and-migration)
+> **Phase 18 complete?** [Build the Phase 18 mini-project](../guides/Projects.md#cloud-phase-18-project) · [Continue to Phase 19](#phase-19---hybrid-cloud-multi-cloud-and-migration)
 
 <a id="phase-19"></a>
 
@@ -1860,7 +1860,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 19 complete?** [Build the Phase 19 mini-project](./Projects.md#cloud-phase-19-project) · [Continue to Phase 20](#phase-20---cloud-projects-architecture-interviews-and-career-proof)
+> **Phase 19 complete?** [Build the Phase 19 mini-project](../guides/Projects.md#cloud-phase-19-project) · [Continue to Phase 20](#phase-20---cloud-projects-architecture-interviews-and-career-proof)
 
 <a id="phase-20"></a>
 
@@ -1950,7 +1950,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 ---
 
-> **Phase 20 complete?** [Build the Phase 20 mini-project](./Projects.md#cloud-phase-20-project) · [Build the complete cloud portfolio project](./Projects.md#cloud-main-portfolio-project) · [Return to the phase index](#phase-index)
+> **Phase 20 complete?** [Build the Phase 20 mini-project](../guides/Projects.md#cloud-phase-20-project) · [Build the complete cloud portfolio project](../guides/Projects.md#cloud-main-portfolio-project) · [Return to the phase index](#phase-index)
 
 ---
 
@@ -1965,9 +1965,9 @@ The sequence follows dependency and pressure, not product marketing. Provider na
 | Git history, IaC review, secret recovery, releases, and trusted CI | [`Git.md`](./Git.md) |
 | Linux, networking, and systems depth | [`CS.md`](./CS.md) Phases 11-12 and [`Networks.md`](./Networks.md) |
 | Web workloads and APIs | [`Web.md`](./Web.md) Phases 11-18 |
-| Delivery automation and operations | [`devops.md`](./devops.md) |
+| Delivery automation and operations | [`DevOps.md`](./DevOps.md) |
 | Cloud security depth | [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) |
-| Hands-on proof and spoken drills | [`Projects.md`](./Projects.md) and [`Interview.md`](./Interview.md) |
+| Hands-on proof and spoken drills | [`Projects.md`](../guides/Projects.md) and [`Interview.md`](../guides/Interview.md) |
 
 ## Appendix B - Resource Policy
 

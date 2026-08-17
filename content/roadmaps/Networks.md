@@ -68,7 +68,7 @@ Those questions are answered in the same order every single time. Once you have 
 
 ---
 
-> **Integrated Git practice:** Each linked phase-project card in [`Projects.md`](./Projects.md) ends with one specific Git checkpoint. Test the finished project first, commit only its named project path, verify the commit and clean working tree, then continue. Use [`Git.md` Phases 2-3](./Git.md#phase-2) if staging or commit selection is unfamiliar.
+> **Integrated Git practice:** Each linked phase-project card in [`Projects.md`](../guides/Projects.md) ends with one specific Git checkpoint. Test the finished project first, commit only its named project path, verify the commit and clean working tree, then continue. Use [`Git.md` Phases 2-3](./Git.md#phase-2) if staging or commit selection is unfamiliar.
 
 ---
 
@@ -382,7 +382,7 @@ for size in (64, 1500, 65535):
 
 ---
 
-> **Phase 1 complete?** [Build the Phase 1 mini-project](./Projects.md#networks-phase-1-project) · [Continue to Phase 2](#phase-2---physical-layer-putting-bits-on-a-medium)
+> **Phase 1 complete?** [Build the Phase 1 mini-project](../guides/Projects.md#networks-phase-1-project) · [Continue to Phase 2](#phase-2---physical-layer-putting-bits-on-a-medium)
 
 <a id="phase-2"></a>
 
@@ -552,7 +552,7 @@ print("BDP bytes:", int(bdp_bytes(1000, 40)))  # ~5_000_000
 
 ---
 
-> **Phase 2 complete?** [Build the Phase 2 mini-project](./Projects.md#networks-phase-2-project) · [Continue to Phase 3](#phase-3---data-link--ethernet-frames-on-a-segment)
+> **Phase 2 complete?** [Build the Phase 2 mini-project](../guides/Projects.md#networks-phase-2-project) · [Continue to Phase 3](#phase-3---data-link--ethernet-frames-on-a-segment)
 
 <a id="phase-3"></a>
 
@@ -709,7 +709,7 @@ print(len(segments(b"x" * 4000)))  # how many L3/L4 chunks needed
 
 ---
 
-> **Phase 3 complete?** [Build the Phase 3 mini-project](./Projects.md#networks-phase-3-project) · [Continue to Phase 4](#phase-4---switching--vlans)
+> **Phase 3 complete?** [Build the Phase 3 mini-project](../guides/Projects.md#networks-phase-3-project) · [Continue to Phase 4](#phase-4---switching--vlans)
 
 <a id="phase-4"></a>
 
@@ -866,7 +866,7 @@ print(vlan_tag(10).hex())
 
 ---
 
-> **Phase 4 complete?** [Build the Phase 4 mini-project](./Projects.md#networks-phase-4-project) · [Continue to Phase 5](#phase-5---ip-addressing--subnetting)
+> **Phase 4 complete?** [Build the Phase 4 mini-project](../guides/Projects.md#networks-phase-4-project) · [Continue to Phase 5](#phase-5---ip-addressing--subnetting)
 
 <a id="phase-5"></a>
 
@@ -1014,7 +1014,7 @@ print(addr.is_link_local, addr.version)
 
 ---
 
-> **Phase 5 complete?** [Build the Phase 5 mini-project](./Projects.md#networks-phase-5-project) · [Continue to Phase 6](#phase-6---routing--forwarding)
+> **Phase 5 complete?** [Build the Phase 5 mini-project](../guides/Projects.md#networks-phase-5-project) · [Continue to Phase 6](#phase-6---routing--forwarding)
 
 <a id="phase-6"></a>
 
@@ -1178,7 +1178,7 @@ print(dist)  # A0 B1 C2
 
 ---
 
-> **Phase 6 complete?** [Build the Phase 6 mini-project](./Projects.md#networks-phase-6-project) · [Continue to Phase 7](#phase-7---arp-dhcp-icmp-and-nat)
+> **Phase 6 complete?** [Build the Phase 6 mini-project](../guides/Projects.md#networks-phase-6-project) · [Continue to Phase 7](#phase-7---arp-dhcp-icmp-and-nat)
 
 <a id="phase-7"></a>
 
@@ -1344,7 +1344,7 @@ print(n.inbound(40000))
 
 ---
 
-> **Phase 7 complete?** [Build the Phase 7 mini-project](./Projects.md#networks-phase-7-project) · [Continue to Phase 8](#phase-8---layered-models-osi-and-tcpip)
+> **Phase 7 complete?** [Build the Phase 7 mini-project](../guides/Projects.md#networks-phase-7-project) · [Continue to Phase 8](#phase-8---layered-models-osi-and-tcpip)
 
 <a id="phase-8"></a>
 
@@ -1490,7 +1490,7 @@ s.close()
 
 ---
 
-> **Phase 8 complete?** [Build the Phase 8 mini-project](./Projects.md#networks-phase-8-project) · [Continue to Phase 9](#phase-9---udp-user-datagram-protocol)
+> **Phase 8 complete?** [Build the Phase 8 mini-project](../guides/Projects.md#networks-phase-8-project) · [Continue to Phase 9](#phase-9---udp-user-datagram-protocol)
 
 <a id="phase-9"></a>
 
@@ -1642,7 +1642,7 @@ print("HTTP/3 stack: App -> QUIC -> UDP -> IP")
 
 ---
 
-> **Phase 9 complete?** [Build the Phase 9 mini-project](./Projects.md#networks-phase-9-project) · [Continue to Phase 10](#phase-10---tcp-transmission-control-protocol)
+> **Phase 9 complete?** [Build the Phase 9 mini-project](../guides/Projects.md#networks-phase-9-project) · [Continue to Phase 10](#phase-10---tcp-transmission-control-protocol)
 
 <a id="phase-10"></a>
 
@@ -1810,7 +1810,7 @@ for round in range(20):
 
 ---
 
-> **Phase 10 complete?** [Build the Phase 10 mini-project](./Projects.md#networks-phase-10-project) · [Continue to Phase 11](#phase-11---sockets-programming-the-network)
+> **Phase 10 complete?** [Build the Phase 10 mini-project](../guides/Projects.md#networks-phase-10-project) · [Continue to Phase 11](#phase-11---sockets-programming-the-network)
 
 <a id="phase-11"></a>
 
@@ -1988,7 +1988,7 @@ def recv_msg(conn: socket.socket) -> bytes:
 
 ---
 
-> **Phase 11 complete?** [Build the Phase 11 mini-project](./Projects.md#networks-phase-11-project) · [Continue to Phase 12](#phase-12---dns-the-internets-phonebook)
+> **Phase 11 complete?** [Build the Phase 11 mini-project](../guides/Projects.md#networks-phase-11-project) · [Continue to Phase 12](#phase-12---dns-the-internets-phonebook)
 
 <a id="phase-12"></a>
 
@@ -2135,7 +2135,7 @@ print(ips)
 
 ---
 
-> **Phase 12 complete?** [Build the Phase 12 mini-project](./Projects.md#networks-phase-12-project) · [Continue to Phase 13](#phase-13---http-and-the-web)
+> **Phase 12 complete?** [Build the Phase 12 mini-project](../guides/Projects.md#networks-phase-12-project) · [Continue to Phase 13](#phase-13---http-and-the-web)
 
 <a id="phase-13"></a>
 
@@ -2275,7 +2275,7 @@ print(urllib.request.urlopen("https://example.com", timeout=5).status)
 
 ---
 
-> **Phase 13 complete?** [Build the Phase 13 mini-project](./Projects.md#networks-phase-13-project) · [Continue to Phase 14](#phase-14---tls-and-https)
+> **Phase 13 complete?** [Build the Phase 13 mini-project](../guides/Projects.md#networks-phase-13-project) · [Continue to Phase 14](#phase-14---tls-and-https)
 
 <a id="phase-14"></a>
 
@@ -2411,7 +2411,7 @@ print("Ops rule: alert 30 days before cert expiry; prefer ACME auto-renew.")
 
 ---
 
-> **Phase 14 complete?** [Build the Phase 14 mini-project](./Projects.md#networks-phase-14-project) · [Continue to Phase 15](#phase-15---wireshark-and-packet-analysis)
+> **Phase 14 complete?** [Build the Phase 14 mini-project](../guides/Projects.md#networks-phase-14-project) · [Continue to Phase 15](#phase-15---wireshark-and-packet-analysis)
 
 <a id="phase-15"></a>
 
@@ -2562,7 +2562,7 @@ check("example.com")
 
 ---
 
-> **Phase 15 complete?** [Build the Phase 15 mini-project](./Projects.md#networks-phase-15-project) · [Continue to Phase 16](#phase-16---wireless-and-wi-fi)
+> **Phase 15 complete?** [Build the Phase 15 mini-project](../guides/Projects.md#networks-phase-15-project) · [Continue to Phase 16](#phase-16---wireless-and-wi-fi)
 
 <a id="phase-16"></a>
 
@@ -2688,7 +2688,7 @@ print("seconds", time.perf_counter() - t0)
 
 ---
 
-> **Phase 16 complete?** [Build the Phase 16 mini-project](./Projects.md#networks-phase-16-project) · [Continue to Phase 17](#phase-17---cdn-load-balancers-and-edge)
+> **Phase 16 complete?** [Build the Phase 16 mini-project](../guides/Projects.md#networks-phase-16-project) · [Continue to Phase 17](#phase-17---cdn-load-balancers-and-edge)
 
 <a id="phase-17"></a>
 
@@ -2832,7 +2832,7 @@ print("cache forever:", versioned)
 
 ---
 
-> **Phase 17 complete?** [Build the Phase 17 mini-project](./Projects.md#networks-phase-17-project) · [Continue to Phase 18](#phase-18---bgp-and-internet-architecture)
+> **Phase 17 complete?** [Build the Phase 17 mini-project](../guides/Projects.md#networks-phase-17-project) · [Continue to Phase 18](#phase-18---bgp-and-internet-architecture)
 
 <a id="phase-18"></a>
 
@@ -2967,7 +2967,7 @@ print(accept("203.0.113.0/24", 64501), accept("203.0.113.0/24", 666))
 
 ---
 
-> **Phase 18 complete?** [Build the Phase 18 mini-project](./Projects.md#networks-phase-18-project) · [Continue to Phase 19](#phase-19---labs-portfolio-and-automation)
+> **Phase 18 complete?** [Build the Phase 18 mini-project](../guides/Projects.md#networks-phase-18-project) · [Continue to Phase 19](#phase-19---labs-portfolio-and-automation)
 
 <a id="phase-19"></a>
 
@@ -3101,7 +3101,7 @@ for device, conf in desired.items():
 
 ---
 
-> **Phase 19 complete?** [Build the Phase 19 mini-project](./Projects.md#networks-phase-19-project) · [Continue to Phase 20](#phase-20---interviews)
+> **Phase 19 complete?** [Build the Phase 19 mini-project](../guides/Projects.md#networks-phase-19-project) · [Continue to Phase 20](#phase-20---interviews)
 
 <a id="phase-20"></a>
 
@@ -3236,7 +3236,7 @@ print("Design prompt checklist:", ", ".join(checklist))
 
 ---
 
-> **Phase 20 complete?** [Build the Phase 20 mini-project](./Projects.md#networks-phase-20-project) · [Build the complete networks portfolio project](./Projects.md#networks-main-portfolio-project) · [Return to the phase index](#phase-index)
+> **Phase 20 complete?** [Build the Phase 20 mini-project](../guides/Projects.md#networks-phase-20-project) · [Build the complete networks portfolio project](../guides/Projects.md#networks-main-portfolio-project) · [Return to the phase index](#phase-index)
 
 ---
 

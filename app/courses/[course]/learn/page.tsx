@@ -12,5 +12,5 @@ export async function generateMetadata({ params }: { params: Promise<{ course: s
 
 export default async function CourseReaderPage({ params }: { params: Promise<{ course: string }> }) {
   const { course: slug } = await params; const course = getCourse(slug); if (!course) notFound();
-  return <ReaderLayout title={course.shortName} markdown={course.markdown} headings={course.headings} slug={course.slug} overviewHref={`/courses/${course.slug}`} />;
+  return <ReaderLayout title={course.shortName} markdown={course.markdown} sourcePath={course.sourcePath} headings={course.headings} slug={course.slug} overviewHref={`/courses/${course.slug}`} />;
 }

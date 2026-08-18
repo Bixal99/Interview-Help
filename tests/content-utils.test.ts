@@ -15,12 +15,12 @@ describe("content utilities", () => {
   });
 
   it("maps Markdown files and deep fragments to stable routes", () => {
-    expect(convertMarkdownHref("./Git.md#phase-4---branching")).toBe("/courses/git#phase-4---branching");
-    expect(convertMarkdownHref("cloud.md#phase-12")).toBe("/courses/cloud#phase-12");
-    expect(convertMarkdownHref("./Git.md#phase-4---branching", "content/roadmaps/CS.md")).toBe("/courses/git#phase-4---branching");
+    expect(convertMarkdownHref("./Git.md#phase-4---branching")).toBe("/courses/git/phase/4");
+    expect(convertMarkdownHref("cloud.md#phase-12")).toBe("/courses/cloud/phase/12");
+    expect(convertMarkdownHref("./Git.md#phase-4---branching", "content/roadmaps/CS.md")).toBe("/courses/git/phase/4");
     expect(convertMarkdownHref("../roadmaps/Git.md", "content/guides/Projects.md")).toBe("/courses/git");
     expect(convertMarkdownHref("..\\guides\\Projects.md", "content/roadmaps/Web.md")).toBe("/projects");
-    expect(convertMarkdownHref("../roadmaps/Git%2Emd#phase-4---branching", "content/guides/Interview.md")).toBe("/courses/git#phase-4---branching");
+    expect(convertMarkdownHref("../roadmaps/Git%2Emd#phase-4---branching", "content/guides/Interview.md")).toBe("/courses/git/phase/4");
     expect(convertMarkdownHref("./data/Job_Tracker.xlsx", "README.md")).toBe("/downloads/job-tracker");
     expect(convertMarkdownHref("./content/roadmaps", "README.md")).toBe("/courses");
     expect(convertMarkdownHref("./content/templates", "README.md")).toBe("/cv-template");

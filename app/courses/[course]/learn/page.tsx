@@ -1,16 +1,28 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ReaderLayout } from "@/components/reader-layout";
+import { HashRedirect } from "@/components/hash-redirect";
 import { courseCatalog } from "@/lib/course-catalog";
-import { getCourse } from "@/lib/content";
+import { getParsedCourse } from "@/lib/content";
+import { headingRouteMap, lessonPath } from "@/lib/parse-course";
 
 export function generateStaticParams() { return courseCatalog.map((course) => ({ course: course.slug })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ course: string }> }): Promise<Metadata> {
-  const { course: slug } = await params; const course = getCourse(slug); return course ? { title: `Learn ${course.shortName}`, description: course.description } : {};
+  const { course: slug } = await params;
+  const course = getParsedCourse(slug);
+  return course ? { title: `Learn ${course.shortName}` } : {};
 }
 
-export default async function CourseReaderPage({ params }: { params: Promise<{ course: string }> }) {
-  const { course: slug } = await params; const course = getCourse(slug); if (!course) notFound();
-  return <ReaderLayout title={course.shortName} markdown={course.markdown} sourcePath={course.sourcePath} headings={course.headings} slug={course.slug} overviewHref={`/courses/${course.slug}`} />;
+export default async function LearnCompatPage({ params }: { params: Promise<{ course: string }> }) {
+  const { course: slug } = await params;
+  const course = getParsedCourse(slug);
+  if (!course) notFound();
+  const first = course.phases[0]?.lessons[0];
+  const fallback = first ? lessonPath(slug, course.phases[0].id, first) : `/courses/${slug}`;
+  const map = Object.fromEntries(headingRouteMap(course));
+  return (
+    <main id="main-content">
+      <HashRedirect map={map} fallback={fallback} />
+    </main>
+  );
 }

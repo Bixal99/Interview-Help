@@ -1,43 +1,49 @@
 import Link from "next/link";
-import { ArrowRight, BookOpenCheck, CheckCircle2, Code2, FolderKanban, GitCommitHorizontal, GraduationCap, MessageSquareText, Route, Search, Sparkles } from "lucide-react";
-import { CourseCard } from "@/components/course-card";
-import { getCourses } from "@/lib/content";
-
-const paths = [
-  { role: "IT administrator", route: "IT Administration → Networks fundamentals → Cybersecurity fundamentals → Cloud or DevOps specialization", color: "#b45309" },
-  { role: "Software engineer", route: "CS → OOP → Git → Web → Projects → Interview", color: "#2563eb" },
-  { role: "AI engineer", route: "CS → OOP / Python → Git → Data → AI → Projects → Interview", color: "#db2777" },
-  { role: "DevOps engineer", route: "CS foundations → Networks → Git → Cloud → DevOps → Interview", color: "#16a34a" },
-  { role: "Odoo developer", route: "Programming fundamentals → OOP → Git → Odoo → Projects → Interview", color: "#9333ea" },
-];
+import { ContinueStrip } from "@/components/continue-strip";
+import { getCourseSummaries, getPathStarts } from "@/lib/content";
 
 export default function HomePage() {
-  const courses = getCourses();
-  const phaseCount = courses.reduce((sum, course) => sum + course.phases.length, 0);
+  const courses = getCourseSummaries();
+  const paths = getPathStarts();
   return (
-    <main id="main-content">
-      <section className="relative overflow-hidden border-b hairline">
-        <div className="site-grid pointer-events-none absolute inset-0" />
-        <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-6 sm:py-28 lg:grid-cols-[1.1fr_.9fr] lg:items-center lg:py-32">
-          <div><div className="mb-6 inline-flex items-center gap-2 rounded-full border hairline surface px-3 py-1.5 text-[11px] font-medium text-muted"><Sparkles size={13} className="text-cobalt" /> Free, open-source learning paths</div>
-            <h1 className="max-w-4xl text-[clamp(2.8rem,7vw,5.8rem)] font-semibold leading-[.98] tracking-[-.065em]">Learn the reason,<br /><span className="text-cobalt">not the recipe.</span></h1>
-            <p className="mt-7 max-w-xl text-base leading-7 text-muted sm:text-lg">Connected technical roadmaps that take you from first principles to projects you can explain—and interviews you can handle.</p>
-            <div className="mt-8 flex flex-wrap gap-3"><Link href="/courses/computer-science" className="inline-flex items-center gap-2 rounded-xl bg-ink px-5 py-3 text-sm font-medium text-paper transition hover:opacity-90">Start learning <ArrowRight size={16} /></Link><Link href="#courses" className="inline-flex items-center gap-2 rounded-xl border hairline surface px-5 py-3 text-sm font-medium transition hover:bg-ink/5">Explore courses</Link></div>
-            <dl className="mt-10 flex flex-wrap gap-8"><div><dt className="text-xs text-muted">Roadmaps</dt><dd className="mt-1 text-2xl font-semibold tracking-tight">{courses.length}</dd></div><div><dt className="text-xs text-muted">Connected phases</dt><dd className="mt-1 text-2xl font-semibold tracking-tight">{phaseCount}</dd></div><div><dt className="text-xs text-muted">Cost</dt><dd className="mt-1 text-2xl font-semibold tracking-tight">Free</dd></div></dl>
-          </div>
-          <div className="relative mx-auto w-full max-w-md"><div className="absolute -inset-10 rounded-full bg-cobalt/10 blur-3xl" /><div className="relative rounded-3xl border hairline surface p-6 shadow-soft"><div className="mb-7 flex items-center justify-between"><div><p className="text-xs text-muted">Your learning loop</p><p className="mt-1 font-semibold">One concept at a time</p></div><span className="grid size-10 place-items-center rounded-full bg-cobalt/10 text-cobalt"><Route size={19} /></span></div><div className="learning-thread space-y-5">{[[BookOpenCheck, "Learn", "Understand why it exists"], [Code2, "Practice", "Change the smallest example"], [FolderKanban, "Build", "Create evidence with Git"], [MessageSquareText, "Interview", "Explain trade-offs aloud"]].map(([Icon, title, text], index) => { const I = Icon as typeof BookOpenCheck; return <div className="relative flex gap-4" key={String(title)}><span className="relative z-10 grid size-10 shrink-0 place-items-center rounded-full border hairline surface text-cobalt"><I size={17} /></span><div><p className="text-sm font-medium">{index + 1}. {String(title)}</p><p className="mt-1 text-xs text-muted">{String(text)}</p></div></div>; })}</div></div></div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-6"><div className="mb-10 max-w-2xl"><p className="text-xs font-semibold uppercase tracking-[.16em] text-cobalt">Choose an outcome</p><h2 className="mt-3 text-3xl font-semibold tracking-[-.04em] sm:text-4xl">A path, not a pile of links.</h2><p className="mt-4 text-sm leading-6 text-muted">Start with the role you want to explore. Each handoff is explained in the source roadmaps.</p></div><div className="grid gap-3 md:grid-cols-2">{paths.map((path) => <div key={path.role} className="flex gap-4 rounded-2xl border hairline surface p-5"><span className="mt-1 size-3 shrink-0 rounded-full" style={{ backgroundColor: path.color }} /><div><h3 className="font-medium">{path.role}</h3><p className="mt-2 text-xs leading-5 text-muted">{path.route}</p></div></div>)}</div></section>
-
-      <section id="courses" className="border-y hairline bg-ink/[.018]"><div className="mx-auto max-w-7xl px-5 py-20 sm:px-6"><div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end"><div className="max-w-2xl sm:mr-auto"><p className="text-xs font-semibold uppercase tracking-[.16em] text-cobalt">Course library</p><h2 className="mt-3 text-3xl font-semibold tracking-[-.04em] sm:text-4xl">Pick one. Follow it in order.</h2></div><Link href="/courses" className="inline-flex items-center gap-2 text-sm font-medium">View all courses <ArrowRight size={15} /></Link></div><div className="grid items-start gap-4 md:grid-cols-2 xl:grid-cols-3">{courses.map((course) => <CourseCard key={course.slug} course={course} />)}</div></div></section>
-
-      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-6"><div className="grid gap-12 lg:grid-cols-2 lg:items-center"><div><p className="text-xs font-semibold uppercase tracking-[.16em] text-cobalt">A consistent teaching rhythm</p><h2 className="mt-3 text-3xl font-semibold tracking-[-.04em] sm:text-4xl">Every new idea solves a real limit.</h2><p className="mt-5 text-sm leading-7 text-muted">Each topic begins with the problem before it, shows the internal mechanism, names the trade-offs, gives you practice, and explains why the next topic is needed.</p><div className="mt-7 grid gap-3 sm:grid-cols-2">{["Why this exists", "See it before you memorize it", "Internal working", "Trade-offs and failure modes", "Practice at three levels", "Why the next topic is needed"].map((item) => <div key={item} className="flex items-center gap-2.5 text-sm"><CheckCircle2 size={16} className="text-cobalt" />{item}</div>)}</div></div><div className="rounded-3xl bg-ink p-6 text-paper sm:p-8"><div className="flex items-center gap-3 border-b border-white/10 pb-5"><span className="grid size-9 place-items-center rounded-lg bg-white/10"><GitCommitHorizontal size={17} /></span><div><p className="text-sm font-medium">Git checkpoint</p><p className="text-[11px] text-white/55">Learning becomes visible evidence</p></div></div><div className="space-y-5 pt-6 text-sm"><p className="text-white/65">Every phase ends with a working milestone you can test, commit, and explain.</p><code className="block rounded-xl bg-white/[.07] p-4 font-mono text-xs text-blue-200">git commit -m &quot;complete phase milestone&quot;</code><p className="text-xs text-white/45">The browser never runs commands. It gives you a safe, copyable checkpoint.</p></div></div></div></section>
-
-      <section className="border-y hairline"><div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 sm:px-6 lg:grid-cols-3"><div><GraduationCap className="text-cobalt" /><h2 className="mt-5 text-2xl font-semibold tracking-[-.03em]">Projects stay connected</h2><p className="mt-3 text-sm leading-6 text-muted">Build the matching mini-project after each phase, then finish a role-specific capstone.</p><Link href="/projects" className="mt-5 inline-flex items-center gap-2 text-sm font-medium">Explore projects <ArrowRight size={14} /></Link></div><div><MessageSquareText className="text-cobalt" /><h2 className="mt-5 text-2xl font-semibold tracking-[-.03em]">Interview out loud</h2><p className="mt-3 text-sm leading-6 text-muted">Practice strong answers, follow-ups, common traps, system design, and behavioral stories.</p><Link href="/interview" className="mt-5 inline-flex items-center gap-2 text-sm font-medium">Open interview practice <ArrowRight size={14} /></Link></div><div><Search className="text-cobalt" /><h2 className="mt-5 text-2xl font-semibold tracking-[-.03em]">Find anything fast</h2><p className="mt-3 text-sm leading-6 text-muted">Search phases, concepts, project titles, interview prompts, and commands without sending content elsewhere.</p><Link href="/search" className="mt-5 inline-flex items-center gap-2 text-sm font-medium">Search the library <ArrowRight size={14} /></Link></div></div></section>
-
-      <section className="mx-auto max-w-5xl px-5 py-24 text-center sm:px-6"><p className="text-xs font-semibold uppercase tracking-[.16em] text-cobalt">Your progress stays yours</p><h2 className="mx-auto mt-4 max-w-3xl text-3xl font-semibold tracking-[-.04em] sm:text-5xl">No account. No paywall. No artificial deadline.</h2><p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-muted">Completion is stored only in your browser. The original Markdown remains readable on GitHub, and every source is open for you to inspect or improve.</p><div className="mt-8 flex justify-center gap-3"><Link href="/courses" className="rounded-xl bg-ink px-5 py-3 text-sm font-medium text-paper">Choose a course</Link><a href="https://github.com/Bixal99/Interview-Help" target="_blank" rel="noopener noreferrer" className="rounded-xl border hairline surface px-5 py-3 text-sm font-medium">View source</a></div></section>
+    <main id="main-content" className="mx-auto max-w-[900px] px-4 py-10">
+      <h1 className="text-4xl font-bold tracking-[-.02em]">Interview Help</h1>
+      <p className="mt-3 max-w-[65ch] text-lg text-muted">The same roadmaps as the repository, shown one lesson at a time. Watch the videos on the lesson. Finish that phase&apos;s project before the next chapter.</p>
+      <form action="/search" method="get" className="mt-8">
+        <label htmlFor="home-search" className="sr-only">Search the library</label>
+        <input id="home-search" name="q" placeholder="Search lessons, projects, commands…" className="h-12 w-full border hairline bg-[rgb(var(--surface))] px-4 text-[16px]" />
+      </form>
+      <div className="mt-8">
+        <ContinueStrip />
+      </div>
+      <h2 className="mt-10 text-2xl font-bold">Courses</h2>
+      <ul className="mt-4 divide-y hairline border hairline bg-[rgb(var(--surface))]">
+        {courses.map((course) => (
+          <li key={course.slug} className="flex flex-wrap items-baseline justify-between gap-3 px-4 py-3">
+            <div className="min-w-0">
+              <Link href={`/courses/${course.slug}`} className="font-semibold hover:text-accent">{course.shortName}</Link>
+              <p className="text-sm text-muted">{course.description}</p>
+            </div>
+            <Link href={`/courses/${course.slug}`} className="text-accent underline">Start</Link>
+          </li>
+        ))}
+      </ul>
+      <h2 className="mt-12 text-2xl font-bold">Paths</h2>
+      <ul className="mt-4 space-y-2">
+        {paths.map((path) => (
+          <li key={path.id}>
+            <Link href={path.href} className="text-accent underline">{path.title}</Link>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-12 flex flex-wrap gap-x-5 gap-y-2 text-[15px]">
+        <Link href="/projects" className="underline">Projects</Link>
+        <Link href="/interview" className="underline">Interview</Link>
+        <Link href="/cv-template" className="underline">CV template</Link>
+        <Link href="/downloads/job-tracker" className="underline">Job Tracker</Link>
+        <Link href="/progress" className="underline">Progress</Link>
+        <Link href="/about" className="underline">About</Link>
+      </p>
     </main>
   );
 }

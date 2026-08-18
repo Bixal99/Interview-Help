@@ -44,6 +44,6 @@ describe("content structure", () => {
   it("resolves representative cross-folder and deep links", () => {
     expect(convertMarkdownHref("../guides/Projects.md", "content/roadmaps/Web.md")).toBe("/projects");
     expect(convertMarkdownHref("../guides/Interview.md", "content/roadmaps/CS.md")).toBe("/interview");
-    expect(convertMarkdownHref("../roadmaps/Git.md#phase-4---branching", "content/guides/Projects.md")).toBe("/courses/git#phase-4---branching");
+    expect(convertMarkdownHref("../roadmaps/Git.md#phase-4---branching", "content/guides/Projects.md")).toBe("/courses/git/phase/4");
   });
 });

@@ -10,10 +10,9 @@
     "validate:content": "tsx scripts/validate-content.ts"
   },
   "dependencies": {
-    "@fontsource/poppins": "^5.2.5",
     "@fontsource/jetbrains-mono": "^5.2.5",
+    "@fontsource/source-sans-3": "^5.3.0",
     "@tailwindcss/typography": "^0.5.16",
-    "framer-motion": "^12.6.3",
     "katex": "^0.16.22",
     "lucide-react": "^0.468.0",
     "mermaid": "^11.4.1",

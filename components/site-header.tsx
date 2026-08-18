@@ -1,11 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { BookOpen, Github, Menu, Search, X } from "lucide-react";
+import { Github, Menu, Search, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "./theme-toggle";
 
-const links = [["Courses", "/courses"], ["Projects", "/projects"], ["Interview", "/interview"], ["About", "/about"]];
+const links = [
+  ["Interview Help", "/"],
+  ["Tutorials", "/courses"],
+  ["Projects", "/projects"],
+  ["Interview", "/interview"],
+];
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -21,23 +26,34 @@ export function SiteHeader() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b hairline bg-paper/90 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-[1500px] items-center gap-4 px-4 sm:px-6">
-        <Link href="/" className="mr-auto flex items-center gap-2.5 font-semibold tracking-[-.02em]">
-          <span className="grid size-9 place-items-center rounded-xl bg-ink text-paper"><BookOpen size={18} /></span>
-          <span>Interview Help</span>
-        </Link>
-        <nav className="hidden items-center gap-6 text-sm text-muted lg:flex" aria-label="Primary navigation">
-          {links.map(([label, href]) => <Link key={href} className="transition hover:text-ink" href={href}>{label}</Link>)}
+    <header className="ih-topbar sticky top-0 z-50">
+      <div className="mx-auto flex h-12 max-w-[1600px] items-center gap-1 px-3 sm:px-4">
+        <nav className="hidden items-center gap-1 text-[15px] sm:flex" aria-label="Primary navigation">
+          {links.map(([label, href]) => (
+            <Link key={href} href={href} className="px-3 py-2 hover:bg-white/10">{label}</Link>
+          ))}
         </nav>
-        <Link href="/search" className="hidden h-10 items-center gap-2 rounded-full border hairline surface px-3.5 text-sm text-muted transition hover:text-ink sm:flex">
-          <Search size={16} /><span>Search</span><kbd className="ml-2 rounded border px-1.5 py-0.5 text-[10px]">⌘ K</kbd>
-        </Link>
-        <a href="https://github.com/Bixal99/Interview-Help" target="_blank" rel="noopener noreferrer" className="hidden size-10 place-items-center rounded-full border hairline surface text-muted transition hover:text-ink sm:grid" aria-label="Open GitHub repository"><Github size={17} /></a>
-        <ThemeToggle />
-        <button onClick={() => setOpen(!open)} className="grid size-10 place-items-center rounded-full border hairline surface lg:hidden" aria-expanded={open} aria-label="Toggle navigation">{open ? <X size={18} /> : <Menu size={18} />}</button>
+        <Link href="/" className="px-2 text-[15px] font-semibold sm:hidden">Interview Help</Link>
+        <div className="ml-auto flex items-center gap-1">
+          <Link href="/search" className="inline-flex items-center gap-2 px-3 py-2 text-[15px] hover:bg-white/10" aria-label="Search">
+            <Search size={16} /><span className="hidden sm:inline">Search</span>
+          </Link>
+          <a href="https://github.com/Bixal99/Interview-Help" target="_blank" rel="noopener noreferrer" className="grid size-10 place-items-center hover:bg-white/10" aria-label="Open GitHub repository">
+            <Github size={16} />
+          </a>
+          <ThemeToggle />
+          <button onClick={() => setOpen(!open)} className="grid size-10 place-items-center hover:bg-white/10 sm:hidden" aria-expanded={open} aria-label="Toggle navigation">
+            {open ? <X size={18} /> : <Menu size={18} />}
+          </button>
+        </div>
       </div>
-      {open && <nav className="border-t hairline surface p-4 lg:hidden" aria-label="Mobile navigation">{links.concat([["Search", "/search"]]).map(([label, href]) => <Link onClick={() => setOpen(false)} key={href} className="block rounded-lg px-3 py-2.5 text-sm hover:bg-ink/5" href={href}>{label}</Link>)}</nav>}
+      {open && (
+        <nav className="border-t border-white/15 px-3 py-2 sm:hidden" aria-label="Mobile navigation">
+          {links.concat([["Search", "/search"], ["Progress", "/progress"]]).map(([label, href]) => (
+            <Link onClick={() => setOpen(false)} key={href} className="block px-3 py-2.5" href={href}>{label}</Link>
+          ))}
+        </nav>
+      )}
     </header>
   );
 }

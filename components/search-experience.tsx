@@ -1,11 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Search, X } from "lucide-react";
+import type { SearchHit } from "@/lib/learning-model";
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { SearchEntry } from "@/lib/content";
 
-export function SearchExperience({ entries }: { entries: SearchEntry[] }) {
+function highlight(text: string, query: string) {
+  const terms = query.trim().split(/\s+/).filter((term) => term.length > 1);
+  if (!terms.length) return text;
+  const pattern = new RegExp(`(${terms.map((term) => term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`, "ig");
+  const parts = text.split(pattern);
+  return parts.map((part, index) => pattern.test(part) ? <mark key={`${part}-${index}`} className="mark">{part}</mark> : part);
+}
+
+export function SearchExperience({ entries }: { entries: SearchHit[] }) {
   const [query, setQuery] = useState("");
   const input = useRef<HTMLInputElement>(null);
   useEffect(() => {
@@ -22,13 +29,36 @@ export function SearchExperience({ entries }: { entries: SearchEntry[] }) {
       return { entry, score };
     }).filter((item) => item.score >= terms.length).sort((a, b) => b.score - a.score).slice(0, 60).map((item) => item.entry);
   }, [entries, query]);
+
   return (
     <div>
-      <div className="relative"><Search className="absolute left-4 top-1/2 -translate-y-1/2 text-muted" size={19} /><input ref={input} value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search phases, concepts, commands, projects…" className="h-14 w-full rounded-2xl border hairline surface pl-12 pr-12 text-sm shadow-soft placeholder:text-muted focus:border-cobalt" aria-label="Search all learning content" />{query && <button onClick={() => setQuery("")} className="absolute right-4 top-1/2 -translate-y-1/2 text-muted hover:text-ink" aria-label="Clear search"><X size={18} /></button>}</div>
-      <div className="mt-6" aria-live="polite">{query && <p className="mb-4 text-sm text-muted">{results.length} result{results.length === 1 ? "" : "s"} across the roadmaps</p>}
-        <div className="space-y-2">{results.map((result) => <Link key={result.id} href={result.href} className="group block rounded-xl border hairline surface p-4 transition hover:border-cobalt/30 hover:shadow-soft"><div className="flex items-start gap-3"><div className="min-w-0 flex-1"><div className="mb-1.5 flex flex-wrap items-center gap-2 text-[10px] font-medium uppercase tracking-wider text-muted"><span>{result.course}</span><span>·</span><span>{result.type}</span></div><h2 className="font-medium tracking-[-.015em] group-hover:text-cobalt">{result.title}</h2>{result.excerpt && <p className="mt-1.5 line-clamp-2 text-xs leading-5 text-muted">{result.excerpt}</p>}</div><ArrowRight className="mt-2 shrink-0 text-muted transition group-hover:translate-x-1 group-hover:text-cobalt" size={16} /></div></Link>)}</div>
-        {!query && <div className="rounded-2xl border border-dashed hairline p-10 text-center"><p className="font-medium">Search the entire learning library</p><p className="mt-2 text-sm text-muted">Try “binary search”, “Kubernetes”, “SQL joins”, or “behavioral”.</p></div>}
-        {query && !results.length && <div className="rounded-2xl border border-dashed hairline p-10 text-center"><p className="font-medium">No exact match</p><p className="mt-2 text-sm text-muted">Try fewer words or a broader concept.</p></div>}
+      <form action="/search" method="get" onSubmit={(event) => event.preventDefault()}>
+        <input
+          ref={input}
+          name="q"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          placeholder="Search lessons, projects, commands…"
+          className="h-12 w-full border hairline bg-[rgb(var(--surface))] px-4 text-[16px]"
+          aria-label="Search all learning content"
+          autoFocus
+        />
+      </form>
+      <div className="mt-6" aria-live="polite">
+        {query && <p className="mb-4 text-sm text-muted">{results.length} result{results.length === 1 ? "" : "s"}</p>}
+        <ul className="divide-y hairline border hairline bg-[rgb(var(--surface))]">
+          {results.map((result) => (
+            <li key={result.id}>
+              <Link href={result.href} className="block px-4 py-3 hover:bg-paper">
+                <p className="text-xs text-muted">{result.course} · {result.type}{result.phase ? ` · ${result.phase}` : ""}</p>
+                <h2 className="text-lg font-semibold">{highlight(result.title, query)}</h2>
+                {result.excerpt && <p className="mt-1 text-sm text-muted">{highlight(result.excerpt, query)}</p>}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        {!query && <p className="mt-8 text-muted">Try a concept, a command, or a project name.</p>}
+        {query && !results.length && <p className="mt-8 text-muted">No exact match. Try fewer words.</p>}
       </div>
     </div>
   );

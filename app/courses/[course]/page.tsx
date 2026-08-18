@@ -1,25 +1,62 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, BookOpen, CheckCircle2, Clock3, FolderKanban, GitCommitHorizontal, MessagesSquare } from "lucide-react";
-import { CourseProgress } from "@/components/progress";
+import { CourseHomeActions } from "@/components/course-home-actions";
+import { MarkdownDocument } from "@/components/markdown-document";
+import { TutorialShell } from "@/components/tutorial-shell";
 import { courseCatalog } from "@/lib/course-catalog";
-import { getCourse } from "@/lib/content";
+import { getCourseHome } from "@/lib/content";
+import { lessonPath, phasePath, projectPathFor } from "@/lib/parse-course";
 
 export function generateStaticParams() { return courseCatalog.map((course) => ({ course: course.slug })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ course: string }> }): Promise<Metadata> {
   const { course: slug } = await params;
-  const course = getCourse(slug);
+  const course = getCourseHome(slug);
   if (!course) return {};
-  return { title: course.shortName, description: course.description, alternates: { canonical: `/courses/${slug}` }, openGraph: { title: `${course.shortName} roadmap`, description: course.description } };
+  return { title: course.shortName, description: course.description, alternates: { canonical: `/courses/${slug}` } };
 }
 
-export default async function CourseOverviewPage({ params }: { params: Promise<{ course: string }> }) {
+export default async function CourseHomePage({ params }: { params: Promise<{ course: string }> }) {
   const { course: slug } = await params;
-  const course = getCourse(slug);
+  const course = getCourseHome(slug);
   if (!course) notFound();
-  const Icon = course.icon;
-  return <main id="main-content"><section className="border-b hairline"><div className="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-20"><Link href="/courses" className="text-xs font-medium text-muted hover:text-ink">← All courses</Link><div className="mt-8 grid gap-10 lg:grid-cols-[1fr_300px] lg:items-end"><div><span className="mb-6 grid size-12 place-items-center rounded-2xl text-white" style={{ backgroundColor: course.accent }}><Icon size={22} /></span><p className="text-xs font-semibold uppercase tracking-[.16em]" style={{ color: course.accent }}>{course.difficulty}</p><h1 className="mt-3 text-4xl font-semibold leading-tight tracking-[-.055em] sm:text-6xl">{course.title}</h1><p className="mt-6 max-w-2xl text-base leading-7 text-muted">{course.description}</p><div className="mt-7 flex flex-wrap gap-2">{course.skills.map((skill) => <span key={skill} className="rounded-full border hairline surface px-3 py-1.5 text-xs text-muted">{skill}</span>)}</div></div><div className="rounded-2xl border hairline surface p-5 shadow-soft"><div className="mb-5 flex items-center justify-between text-xs text-muted"><span className="flex items-center gap-1.5"><BookOpen size={14} /> {course.phases.length} phases</span><span className="flex items-center gap-1.5"><Clock3 size={14} /> ~{course.estimatedHours} hrs</span></div><CourseProgress slug={course.slug} phaseIds={course.phases.map((phase) => phase.id)} /><Link href={`/courses/${course.slug}/learn`} className="mt-5 flex items-center justify-center gap-2 rounded-xl bg-ink px-4 py-3 text-sm font-medium text-paper">Start course <ArrowRight size={15} /></Link></div></div></div></section>
-    <section className="mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-6 lg:grid-cols-[1fr_300px]"><div><div className="mb-9"><p className="text-xs font-semibold uppercase tracking-[.14em] text-cobalt">Curriculum</p><h2 className="mt-2 text-3xl font-semibold tracking-[-.035em]">A connected journey in {course.phases.length} phases</h2></div><div className="learning-thread space-y-2">{course.phases.map((phase) => <Link key={phase.id} href={`/courses/${course.slug}/learn#${phase.id}`} className="group relative flex gap-4 rounded-xl p-3 transition hover:bg-ink/[.035]"><span className="relative z-10 grid size-10 shrink-0 place-items-center rounded-full border hairline surface text-xs font-semibold group-hover:border-cobalt/40 group-hover:text-cobalt">{phase.phase}</span><div className="pt-1"><h3 className="text-sm font-medium">{phase.text.replace(/^PHASE\s+\d+\s*[-–—:]?\s*/i, "")}</h3><p className="mt-1 text-xs text-muted">Read, practice, and complete the matching project checkpoint.</p></div></Link>)}</div></div><aside><div className="sticky top-24 space-y-4"><div className="rounded-2xl border hairline surface p-5"><h2 className="text-sm font-semibold">Before you begin</h2><p className="mt-3 text-xs leading-5 text-muted">{course.prerequisites}</p></div><div className="rounded-2xl border hairline surface p-5"><h2 className="text-sm font-semibold">What you will produce</h2><ul className="mt-4 space-y-3 text-xs text-muted"><li className="flex gap-2"><CheckCircle2 size={15} className="shrink-0 text-cobalt" /> Phase projects with verifiable outcomes</li><li className="flex gap-2"><GitCommitHorizontal size={15} className="shrink-0 text-cobalt" /> Safe Git checkpoints and history</li><li className="flex gap-2"><MessagesSquare size={15} className="shrink-0 text-cobalt" /> Interview-ready explanations</li></ul></div><Link href="/projects" className="flex items-center gap-3 rounded-xl border hairline surface p-4 text-xs font-medium"><FolderKanban size={16} className="text-cobalt" /> Browse related projects <ArrowRight className="ml-auto" size={14} /></Link></div></aside></section></main>;
+  return (
+    <main id="main-content">
+      <TutorialShell nav={course.nav}>
+        <div className="ih-band px-4 py-8 sm:px-8 lg:px-12">
+          <h1 className="max-w-[75ch] text-3xl font-bold sm:text-4xl">{course.shortName} Tutorial</h1>
+        </div>
+        <div className="bg-[rgb(var(--surface))] px-4 py-8 sm:px-8 lg:px-12">
+          <div className="max-w-[75ch]">
+            <CourseHomeActions slug={course.slug} startHref={course.startHref} />
+            <div className="mt-8">
+              <MarkdownDocument markdown={course.teaserMarkdown} sourcePath={course.sourcePath} embedYouTube={false} />
+            </div>
+            <h2 className="mt-10 text-2xl font-bold">Chapters</h2>
+            <ol className="mt-4 space-y-6">
+              {course.nav.chapters.map((chapter) => (
+                <li key={chapter.id}>
+                  <h3 className="font-bold">{chapter.title}</h3>
+                  <ul className="mt-2 space-y-1">
+                    {chapter.phases.map((phase) => (
+                      <li key={phase.id}>
+                        <Link href={phasePath(course.slug, phase.id)} className="text-accent underline">PHASE {phase.number} — {phase.title}</Link>
+                        <ul className="ml-4 mt-1 space-y-1 text-[15px]">
+                          {phase.lessons.map((lesson) => (
+                            <li key={lesson.id}><Link href={lessonPath(course.slug, phase.id, lesson)} className="hover:text-accent">{lesson.id} {lesson.title}</Link></li>
+                          ))}
+                          {phase.hasProject && <li><Link href={projectPathFor(course.slug, phase.id)} className="hover:text-accent">Project</Link></li>}
+                        </ul>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </TutorialShell>
+    </main>
+  );
 }

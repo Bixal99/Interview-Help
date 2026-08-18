@@ -12,12 +12,14 @@ export function DocumentShell({
   headings?: Heading[];
 }) {
   return (
-    <main id="main-content" className="bg-[rgb(var(--surface))]">
+    <main id="main-content">
       <div className="ih-band px-4 py-8 sm:px-8">
         <h1 className="mx-auto max-w-[75ch] text-3xl font-bold sm:text-4xl">{title}</h1>
       </div>
-      <div className="mx-auto max-w-[75ch] px-4 py-8 sm:px-0">
-        <MarkdownDocument markdown={markdown} sourcePath={sourcePath} />
+      <div className="bg-[rgb(var(--surface))] px-4 py-8 sm:px-8">
+        <div className="mx-auto max-w-[75ch]">
+          <MarkdownDocument markdown={markdown} sourcePath={sourcePath} />
+        </div>
       </div>
     </main>
   );

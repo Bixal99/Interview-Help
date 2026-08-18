@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { InnerPage } from "@/components/inner-page";
 import { ProgressDashboard } from "@/components/progress-dashboard";
 import { getCourseSummaries, getParsedCourse } from "@/lib/content";
 
@@ -15,8 +16,8 @@ export default function ProgressPage() {
     };
   });
   return (
-    <main id="main-content">
+    <InnerPage title="Progress" description="Stored only in this browser. Export a backup before you clear site data.">
       <ProgressDashboard courses={courses} />
-    </main>
+    </InnerPage>
   );
 }

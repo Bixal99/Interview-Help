@@ -9,11 +9,11 @@ export function AppChrome({ children }: { children: React.ReactNode }) {
   const isLanding = usePathname() === "/";
   if (isLanding) return children;
   return (
-    <>
+    <div className="ih-w3">
       <SiteHeader />
       <SubjectBar />
       {children}
       <SiteFooter />
-    </>
+    </div>
   );
 }

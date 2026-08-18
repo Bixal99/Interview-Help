@@ -7,11 +7,18 @@ import { useEffect, useState } from "react";
 import { ThemeToggle } from "./theme-toggle";
 
 const links = [
-  ["Interview Help", "/"],
   ["Tutorials", "/courses"],
   ["Projects", "/projects"],
   ["Interview", "/interview"],
 ];
+
+function Wordmark() {
+  return (
+    <Link href="/" className="px-2 text-xl font-bold" title="Interview Help">
+      Interview <span className="ih-help">Help</span>
+    </Link>
+  );
+}
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -29,12 +36,12 @@ export function SiteHeader() {
   return (
     <header className="ih-topbar sticky top-0 z-50">
       <div className="mx-auto flex h-12 max-w-[1600px] items-center gap-1 px-3 sm:px-4">
+        <Wordmark />
         <nav className="hidden items-center gap-1 text-[15px] sm:flex" aria-label="Primary navigation">
           {links.map(([label, href]) => (
             <Link key={href} href={href} className="px-3 py-2 hover:bg-white/10">{label}</Link>
           ))}
         </nav>
-        <Link href="/" className="px-2 text-[15px] font-semibold sm:hidden">Interview Help</Link>
         <div className="ml-auto flex items-center gap-1">
           <Link href="/search" className="inline-flex items-center gap-2 px-3 py-2 text-[15px] hover:bg-white/10" aria-label="Search">
             <Search size={16} /><span className="hidden sm:inline">Search</span>

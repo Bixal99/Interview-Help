@@ -35,12 +35,12 @@ export function YouTubeBand({ videos }: { videos: VideoResource[] }) {
           </span>
         </button>
       )}
-      <p className="mt-3 text-sm text-[#f6f3ec]/80">
+      <p className="mt-3 text-sm text-white/80">
         {featured.title}{" "}
-        <a href={featured.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-[#f6f3ec] underline">YouTube <ExternalLink size={12} /></a>
+        <a href={featured.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-white underline">YouTube <ExternalLink size={12} /></a>
       </p>
       {rest.length > 0 && (
-        <ul className="mt-3 space-y-1.5 text-sm text-[#f6f3ec]/80">
+        <ul className="mt-3 space-y-1.5 text-sm text-white/80">
           {rest.map((video) => (
             <li key={video.href}>
               <a href={video.href} target="_blank" rel="noopener noreferrer" className="underline decoration-white/30 hover:decoration-white">{video.title}</a>

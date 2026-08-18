@@ -39,15 +39,13 @@ export function ProgressDashboard({
   }
 
   return (
-    <div className="mx-auto max-w-[75ch] px-4 py-10">
-      <h1 className="text-3xl font-bold">Progress</h1>
-      <p className="mt-3 text-muted">Stored only in this browser. Export a backup before you clear site data.</p>
+    <div>
       {current && (
-        <p className="mt-6">
+        <p className="mb-8">
           <Link href={current.href} className="btn-next">Continue</Link>
         </p>
       )}
-      <ul className="mt-8 divide-y hairline border hairline bg-[rgb(var(--surface))]">
+      <ul className="divide-y hairline border hairline bg-[rgb(var(--surface))]">
         {courses.map((item) => (
           <li key={item.slug} className="flex items-center justify-between gap-3 px-4 py-3">
             <Link href={`/courses/${item.slug}`} className="font-semibold hover:text-accent">{item.shortName}</Link>

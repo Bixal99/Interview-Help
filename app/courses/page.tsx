@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { CourseCard } from "@/components/course-card";
+import { InnerPage } from "@/components/inner-page";
 import { getCourseSummaries } from "@/lib/content";
 
 export const metadata: Metadata = { title: "Tutorials", description: "Every Interview Help course, as a tutorial index." };
@@ -7,20 +8,18 @@ export const metadata: Metadata = { title: "Tutorials", description: "Every Inte
 export default function CoursesPage() {
   const courses = getCourseSummaries();
   return (
-    <main id="main-content" className="mx-auto max-w-[900px] px-4 py-10">
-      <h1 className="text-4xl font-bold">Tutorials</h1>
-      <p className="mt-3 max-w-[65ch] text-muted">If you are new to programming, start with OOP. For general software engineering, start with Computer Science.</p>
-      <ul className="mt-8 divide-y hairline border hairline bg-[rgb(var(--surface))]">
-        {courses.map((course) => (
-          <li key={course.slug} className="flex flex-wrap items-baseline justify-between gap-3 px-4 py-3">
-            <div>
-              <Link href={`/courses/${course.slug}`} className="font-semibold hover:text-accent">{course.shortName}</Link>
-              <p className="text-sm text-muted">{course.description}</p>
-            </div>
-            <Link href={`/courses/${course.slug}`} className="text-accent underline">Open</Link>
+    <InnerPage
+      wide
+      title="Tutorials"
+      description="If you are new to programming, start with OOP. For general software engineering, start with Computer Science."
+    >
+      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {courses.map((course, index) => (
+          <li key={course.slug}>
+            <CourseCard course={course} index={index} />
           </li>
         ))}
       </ul>
-    </main>
+    </InnerPage>
   );
 }

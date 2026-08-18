@@ -1,14 +1,23 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
-export function CourseCard({ course }: { course: { slug: string; shortName: string; description: string } }) {
+const TILES = ["#D9EEE1", "#FFF4A3", "#FFC0C7", "#96D4FA", "#F3ECEA"];
+
+export function CourseCard({
+  course,
+  index = 0,
+}: {
+  course: { slug: string; shortName: string; description: string };
+  index?: number;
+}) {
   return (
-    <article className="flex h-fit flex-col border hairline bg-[rgb(var(--surface))] p-5">
-      <h3 className="text-xl font-semibold">{course.shortName}</h3>
-      <p className="mt-2 text-sm leading-6 text-muted">{course.description}</p>
-      <Link href={`/courses/${course.slug}`} className="mt-5 inline-flex items-center gap-1.5 text-accent underline">
-        Open tutorial <ArrowRight size={13} />
-      </Link>
-    </article>
+    <Link
+      href={`/courses/${course.slug}`}
+      className="flex h-full min-h-[180px] flex-col p-6 text-black no-underline transition-opacity hover:opacity-90"
+      style={{ background: TILES[index % TILES.length] }}
+    >
+      <h3 className="text-2xl font-bold">{course.shortName}</h3>
+      <p className="mt-3 text-[15px] leading-6">{course.description}</p>
+      <span className="mt-auto pt-6 font-semibold">Start {course.shortName} »</span>
+    </Link>
   );
 }

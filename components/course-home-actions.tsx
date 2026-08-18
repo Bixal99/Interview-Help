@@ -3,17 +3,25 @@
 import Link from "next/link";
 import { useLearningProgress } from "./progress-client";
 
-export function CourseHomeActions({ slug, startHref }: { slug: string; startHref: string }) {
+export function CourseHomeActions({
+  slug,
+  startHref,
+  shortName,
+}: {
+  slug: string;
+  startHref: string;
+  shortName: string;
+}) {
   const { ready, course } = useLearningProgress();
   const state = course(slug);
   const href = state.currentPhaseId
     ? `/courses/${slug}/phase/${state.currentPhaseId}${state.currentLessonId ? `/${state.currentLessonId}` : ""}`
     : startHref;
-  const label = ready && state.currentPhaseId ? "Continue" : "Start";
+  const started = ready && Boolean(state.currentPhaseId);
+  const label = started ? `Continue learning ${shortName}` : `Start learning ${shortName}`;
   return (
-    <div className="flex flex-wrap gap-3">
-      <Link href={href} className="btn-next">{label}</Link>
-      <Link href="/progress" className="btn-prev">Review progress</Link>
-    </div>
+    <Link href={href} className="btn-next mt-6 text-lg">
+      {label} »
+    </Link>
   );
 }

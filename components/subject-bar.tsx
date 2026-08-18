@@ -16,7 +16,7 @@ export function SubjectBar() {
             <Link
               key={course.slug}
               href={href}
-              className={`whitespace-nowrap px-3 py-2.5 text-[15px] font-semibold ${active ? "active" : "text-muted hover:text-ink"}`}
+              className={`whitespace-nowrap px-3 py-2.5 text-[15px] font-semibold ${active ? "active" : "hover:text-accent"}`}
             >
               {courseBarLabels[course.slug] ?? course.shortName}
             </Link>

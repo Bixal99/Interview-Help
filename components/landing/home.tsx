@@ -26,7 +26,7 @@ const TILES = ["#D9EEE1", "#FFF4A3", "#FFC0C7", "#96D4FA", "#F3ECEA"];
 const steps = [
   {
     title: "Pick a track",
-    body: "Choose a role path or open a tutorial. New to coding? Start with OOP Part 0.",
+    body: "Choose a role path or open a tutorial. New to coding? Start with Computer Science.",
   },
   {
     title: "Read one lesson",
@@ -62,7 +62,7 @@ export function LandingHome({
             Self-paced technical roadmaps. One lesson per page, then that phase&apos;s project. No account and no paywall.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
-            <Link href="/courses/object-oriented-programming" className="ih-landing-cta">
+            <Link href="/courses/computer-science" className="ih-landing-cta">
               Start learning
             </Link>
             <Link href="/progress" className="text-[17px] font-semibold text-[#04AA6D] underline decoration-[#04AA6D]/40 underline-offset-4 hover:decoration-[#04AA6D]">

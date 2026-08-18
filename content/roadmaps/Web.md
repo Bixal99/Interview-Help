@@ -4,7 +4,7 @@
 
 *Resources researched and link-verified with Composio on 2026-08-12 across YouTube, public web search, and GitHub, then checked against primary documentation from MDN, Chrome, TypeScript, React, Next.js, Node.js, Express, OpenAPI, PostgreSQL, Prisma, OWASP, the RFC Editor, Playwright, Docker, GraphQL, and Kubernetes. Every concept follows the CS.md visual-learning pattern: three curated videos, one interactive lab, written documentation, a GitHub implementation, and a practice platform.*
 
-*Where this sits:* pair with [`Networks.md`](./Networks.md) Phases 12-14 for HTTP/TLS depth and [`CS.md`](./CS.md) Phases 13-16 for backend/security/testing theory. [`OOP.md`](./OOP.md) Part 0 helps if you are new to programming. CS Phase 13 becomes *protocol revision* once you finish Web Phases 1-12.
+*Where this sits:* pair with [`Networks.md`](./Networks.md) Phases 12-14 for HTTP/TLS depth and [`CS.md`](./CS.md) Phases 36-39 for backend/security/testing theory. [`CS.md`](./CS.md) Phases 3-5 help if you are new to programming. CS Phase 36 becomes *protocol revision* once you finish Web Phases 1-12.
 
 **Scope:** 40 concepts · 20 phases · connected step by step, with no artificial weekly deadline.
 
@@ -142,7 +142,7 @@ PHASE 1                 PHASE 2               PHASE 3                PHASE 4
 
 **WHAT YOU WILL BE ABLE TO DO:** See the browser-server contract and the request path before touching frameworks.
 
-**WHAT YOU SHOULD KNOW FIRST:** None - this is the browser/server ground floor. [`OOP.md`](./OOP.md) Part 0 can wait until the backend half.
+**WHAT YOU SHOULD KNOW FIRST:** None - this is the browser/server ground floor. [`CS.md`](./CS.md) Phases 3-5 can wait until the backend half.
 
 **WHAT YOU HAVE LEARNED SO FAR:** A web developer's first mistake is often to begin with a framework. This phase begins one layer lower. Before React, routing, or databases, there is a browser asking another machine for a resource. Once that journey is visible, every later tool has a precise place in the story instead of looking like magic.
 
@@ -3401,10 +3401,10 @@ Architect explaining building before picking marble.
 | Topic | Read here | Deepen in |
 | --- | --- | --- |
 | Git collaboration and delivery | Web Phases 17, 19 | [`Git.md`](./Git.md) Phases 1-15 |
-| HTTP/TCP/TLS | Web Phases 1, 12 | [`Networks.md`](./Networks.md) 10-14, [`CS.md`](./CS.md) 13 |
-| SQL & indexes | Web Phase 13 | [`CS.md`](./CS.md) 14, [`Data.md`](./Data.md) 4-6 |
-| Auth & injection | Web Phase 14 | [`CS.md`](./CS.md) 15, [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) 7 |
-| System design | Web Phase 20 | [`CS.md`](./CS.md) 17-18 |
+| HTTP/TCP/TLS | Web Phases 1, 12 | [`Networks.md`](./Networks.md) 10-14, [`CS.md`](./CS.md) 36 |
+| SQL & indexes | Web Phase 13 | [`CS.md`](./CS.md) 37, [`Data.md`](./Data.md) 4-6 |
+| Auth & injection | Web Phase 14 | [`CS.md`](./CS.md) 38, [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) 7 |
+| System design | Web Phase 20 | [`CS.md`](./CS.md) 40-41 |
 
 ## Appendix C - Resource Index
 

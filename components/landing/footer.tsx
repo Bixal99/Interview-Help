@@ -46,7 +46,7 @@ export function LandingFooter() {
           <div className="col-span-2 lg:col-span-2">
             <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#9aa0a6]">Start learning</p>
             <p className="mt-5 max-w-[36ch] text-base leading-relaxed text-[#c8c8c8]">
-              New to coding? Open OOP Part 0. Otherwise pick the tutorial that matches the work you want.
+              New to coding? Open Computer Science. Programming fundamentals start at Phase 3.
             </p>
             <Link href="/courses" className="ih-landing-cta mt-6">
               Browse tutorials

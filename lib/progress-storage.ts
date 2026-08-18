@@ -1,8 +1,12 @@
+import { remapProgressId } from "./legacy-routes";
 import type { CourseProgressState, LearningProgress, PathStep } from "./learning-model";
 import { pathForCourse, sequentialPath } from "./learning-paths";
 
 export const PROGRESS_KEY = "interview-help-progress-v1";
 export const PROGRESS_KEY_V2 = "interview-help-progress-v2";
+
+const CS_SLUG = "computer-science";
+const OOP_SLUG = "object-oriented-programming";
 
 export function emptyCourseProgress(): CourseProgressState {
   return {
@@ -17,7 +21,7 @@ export function emptyCourseProgress(): CourseProgressState {
 }
 
 export function emptyProgress(): LearningProgress {
-  return { version: 2, courses: {} };
+  return { version: 3, courses: {} };
 }
 
 export function parseProgress(raw: string | null): string[] {
@@ -38,16 +42,64 @@ function unique(items: string[]) {
   return [...new Set(items)];
 }
 
+function remapList(items: string[] | undefined, fromOop: boolean) {
+  return unique((items ?? []).map((id) => remapProgressId(id, fromOop)));
+}
+
+function remapCourseState(state: CourseProgressState, fromOop: boolean): CourseProgressState {
+  return {
+    ...state,
+    currentPhaseId: state.currentPhaseId ? remapProgressId(state.currentPhaseId, fromOop) : undefined,
+    currentLessonId: state.currentLessonId ? remapProgressId(state.currentLessonId, fromOop) : undefined,
+    visitedLessons: remapList(state.visitedLessons, fromOop),
+    completedLessons: remapList(state.completedLessons, fromOop),
+    completedExercises: remapList(state.completedExercises, fromOop),
+    completedProjects: remapList(state.completedProjects, fromOop),
+    completedGitCheckpoints: remapList(state.completedGitCheckpoints, fromOop),
+    completedPhases: remapList(state.completedPhases, fromOop),
+  };
+}
+
+function mergeCourseState(cs: CourseProgressState, incoming: CourseProgressState): CourseProgressState {
+  const incomingNewer = incoming.lastVisitedAt > cs.lastVisitedAt;
+  return {
+    ...cs,
+    lastVisitedAt: incomingNewer ? incoming.lastVisitedAt : cs.lastVisitedAt,
+    currentPhaseId: incomingNewer && incoming.currentPhaseId ? incoming.currentPhaseId : cs.currentPhaseId,
+    currentLessonId: incomingNewer && incoming.currentLessonId ? incoming.currentLessonId : cs.currentLessonId,
+    visitedLessons: unique([...cs.visitedLessons, ...incoming.visitedLessons]),
+    completedLessons: unique([...cs.completedLessons, ...incoming.completedLessons]),
+    completedExercises: unique([...cs.completedExercises, ...incoming.completedExercises]),
+    completedProjects: unique([...cs.completedProjects, ...incoming.completedProjects]),
+    completedGitCheckpoints: unique([...cs.completedGitCheckpoints, ...incoming.completedGitCheckpoints]),
+    completedPhases: unique([...cs.completedPhases, ...incoming.completedPhases]),
+  };
+}
+
+function foldOopCourse(progress: LearningProgress, remapCsNumeric: boolean): LearningProgress {
+  const oop = progress.courses[OOP_SLUG];
+  const cs = progress.courses[CS_SLUG];
+  const remappedCs = cs ? (remapCsNumeric ? remapCourseState(cs, false) : cs) : undefined;
+  const remappedOop = oop ? remapCourseState(oop, true) : undefined;
+  const { [OOP_SLUG]: _removed, ...rest } = progress.courses;
+  const courses = { ...rest };
+  if (remappedCs && remappedOop) courses[CS_SLUG] = mergeCourseState(remappedCs, remappedOop);
+  else if (remappedCs) courses[CS_SLUG] = remappedCs;
+  else if (remappedOop) courses[CS_SLUG] = remappedOop;
+  return { ...progress, version: 3, courses };
+}
+
 function asProgress(value: unknown): LearningProgress | null {
   if (!value || typeof value !== "object") return null;
   const record = value as Partial<LearningProgress>;
-  if (record.version !== 2 || !record.courses || typeof record.courses !== "object") return null;
-  return {
-    version: 2,
+  if ((record.version !== 2 && record.version !== 3) || !record.courses || typeof record.courses !== "object") return null;
+  const progress: LearningProgress = {
+    version: record.version,
     activePath: typeof record.activePath === "string" ? record.activePath : undefined,
     courses: record.courses as LearningProgress["courses"],
     legacyIds: Array.isArray(record.legacyIds) ? record.legacyIds.filter((item): item is string => typeof item === "string") : undefined,
   };
+  return foldOopCourse(progress, record.version === 2);
 }
 
 export function parseProgressV2(raw: string | null): LearningProgress {
@@ -88,7 +140,7 @@ export function migrateV1Progress(
     next.courses[slug] = state;
   }
   if (leftover.length) next.legacyIds = leftover;
-  return next;
+  return foldOopCourse(next, true);
 }
 
 export function courseState(progress: LearningProgress, slug: string): CourseProgressState {

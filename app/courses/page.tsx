@@ -11,7 +11,7 @@ export default function CoursesPage() {
     <InnerPage
       wide
       title="Tutorials"
-      description="If you are new to programming, start with OOP. For general software engineering, start with Computer Science."
+      description="If you are new to programming or aiming for software engineering, start with Computer Science. Programming fundamentals start at Phase 3."
     >
       <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {courses.map((course, index) => (

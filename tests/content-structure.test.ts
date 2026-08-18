@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { contentRegistry, guideRegistry, roadmapRegistry } from "../lib/course-catalog";
+import { contentRegistry, courseCatalog, guideRegistry, roadmapRegistry } from "../lib/course-catalog";
 import { convertMarkdownHref } from "../lib/content-utils";
 import { PROJECT_ROOT, projectPath } from "../lib/paths";
 
@@ -16,7 +16,6 @@ const expectedRoutes: Record<string, string> = {
   "IT_Administration.md": "/courses/it-administration",
   "Networks.md": "/courses/networks",
   "ODOO.md": "/courses/odoo",
-  "OOP.md": "/courses/object-oriented-programming",
   "Web.md": "/courses/web-development",
 };
 
@@ -35,6 +34,13 @@ describe("content structure", () => {
   it("loads guides from content/guides", () => {
     expect(guideRegistry.find((entry) => entry.slug === "projects")?.sourcePath).toBe("content/guides/Projects.md");
     expect(guideRegistry.find((entry) => entry.slug === "interview")?.sourcePath).toBe("content/guides/Interview.md");
+  });
+
+  it("keeps Computer Science as one catalog course without a separate OOP source", () => {
+    expect(courseCatalog.some((course) => course.slug === "computer-science")).toBe(true);
+    expect(courseCatalog.some((course) => course.slug === "object-oriented-programming")).toBe(false);
+    expect(roadmapRegistry.some((entry) => entry.sourcePath.endsWith("OOP.md"))).toBe(false);
+    expect(fs.existsSync(projectPath("content/roadmaps/OOP.md"))).toBe(false);
   });
 
   it("preserves every public roadmap route", () => {

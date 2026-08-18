@@ -4,7 +4,7 @@
 
 *Resources curated with Composio (web search, YouTube, GitHub) against [Odoo 18 Server Framework 101](https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101/01_architecture.html), [Odoo developer tutorials](https://www.odoo.com/documentation/18.0/developer/tutorials.html), [backend reference](https://www.odoo.com/documentation/18.0/developer/reference/backend.html), [view architectures](https://www.odoo.com/documentation/18.0/developer/reference/user_interface/view_architectures.html), [data model](https://www.odoo.com/documentation/18.0/developer/reference/backend/data.html), [OWL components](https://www.odoo.com/documentation/18.0/developer/reference/frontend/owl_components.html), [Odoo 17 developer docs](https://www.odoo.com/documentation/17.0/developer.html), Ecosire/DeployMonkey/Braincuber/GetKnit/Cybrosys guides, [odoo/tutorials](https://github.com/odoo/tutorials), [odoo/odoo](https://github.com/odoo/odoo), [ged-odoo/odoo-js-training-public](https://github.com/ged-odoo/odoo-js-training-public), [NodenHQ/awesome-odoo](https://github.com/NodenHQ/awesome-odoo), [Bladefidz/learn-odoo](https://github.com/Bladefidz/learn-odoo), and [yavy-odoo/odoo-module-boilerplate](https://github.com/yavy-odoo/odoo-module-boilerplate).*
 
-*Where this sits:* do this **after** solid Python and [`OOP.md`](./OOP.md) (classes, inheritance, composition). Odoo is Python OOP when the amount of work grows with XML, PostgreSQL, and JS. Build the matching Odoo phase projects in [`Projects.md`](../guides/Projects.md) and drill [`Interview.md`](../guides/Interview.md) for practice explaining ideas clearly under interview pressure.*
+*Where this sits:* do this **after** solid Python and [`CS.md`](./CS.md) (classes, inheritance, composition). Odoo is Python OOP when the amount of work grows with XML, PostgreSQL, and JS. Build the matching Odoo phase projects in [`Projects.md`](../guides/Projects.md) and drill [`Interview.md`](../guides/Interview.md) for practice explaining ideas clearly under interview pressure.*
 
 **Scope:** 40 concepts · 20 phases · connected step by step, with no artificial weekly deadline.
 
@@ -62,7 +62,7 @@ Phases 1-10 build platform confident working knowledge (think ERP, ship modules)
 
 **Diagram conventions.** `|` and `v` mean sequence, `+--` joins paths, `-->` means a call or dependency, `X` marks a failure, boxes are models or tiers. Time usually runs downward.
 
-**Prerequisites:** Comfortable Python, [`OOP.md`](./OOP.md) phases 1-8 recommended (classes, inheritance, composition). [`CS.md`](./CS.md) networking basics help for phases 13-14 ([`Networks.md`](./Networks.md) phases 11-14 for HTTP/TLS depth).
+**Prerequisites:** Comfortable Python, [`CS.md`](./CS.md) Phases 6-13 recommended (classes, inheritance, composition). [`CS.md`](./CS.md) networking basics help for phases 13-14 ([`Networks.md`](./Networks.md) phases 11-14 for HTTP/TLS depth).
 
 ---
 
@@ -190,7 +190,7 @@ Enterprise Resource Planning (ERP) is not a buzzword for big software. It is the
 
 Odoo ships as a **modular monolith**: one PostgreSQL database, one Python application server, one web client, and dozens of official apps (Sales, Inventory, Accounting, HR, Website, and more) that extend the same ORM registry. You are not learning forty unrelated products. You are learning how **shared models** (partners, products, users, companies) let vertical apps cooperate.
 
-For a developer, ERP thinking means asking: *Which model owns this fact?* *Which state transition is legal?* *Who may read or write it?* Before you write XML or Python, you sketch entities and workflows the way [`OOP.md`](./OOP.md) taught you to sketch classes and invariants.
+For a developer, ERP thinking means asking: *Which model owns this fact?* *Which state transition is legal?* *Who may read or write it?* Before you write XML or Python, you sketch entities and workflows the way [`CS.md`](./CS.md) taught you to sketch classes and invariants.
 
 Odoo's open-source core plus optional enterprise apps is why startups and manufacturers both adopt it: you customize with modules instead of forking entire products. Your job is to extend the registry safely, not to reinvent accounting in a standalone script.
 
@@ -3633,9 +3633,9 @@ Medical license: continuing education credits each year, not one exam forever.
 1 (skim) -> 3 -> 4 -> 5 -> 6 -> 7 -> 10 -> 11 -> 13 -> 19 -> 20
 (Fill 8-9 when UI interviews loom; fill 14-15 before integration roles.)
 
-**If you are bridging from [`OOP.md`](./OOP.md)**
+**If you are bridging from [`CS.md`](./CS.md)**
 
-Finish OOP Phases 4-8 (encapsulation, inheritance, composition) -> **ODOO Phase 5-11** -> return to OOP SOLID if building large module boundaries.
+Finish CS Phases 9-13 (encapsulation, inheritance, composition) -> **ODOO Phase 5-11** -> return to CS Phase 17 (SOLID) if building large module boundaries.
 
 ---
 
@@ -3693,7 +3693,7 @@ Finish OOP Phases 4-8 (encapsulation, inheritance, composition) -> **ODOO Phase 
 | Document | Relationship |
 | --- | --- |
 | [`Git.md`](./Git.md) | **Version-control prerequisite** - clone/branch/review, recovery, releases, and CI trust |
-| [`OOP.md`](./OOP.md) | **Recommended prerequisite** - classes, inheritance, composition |
+| [`CS.md`](./CS.md) | **Recommended prerequisite** - classes, inheritance, composition |
 | [`CS.md`](./CS.md) / [`Networks.md`](./Networks.md) | **HTTP/TLS** for phases 13-14 |
 | [Odoo projects in `Projects.md`](../guides/Projects.md#odoo-engineering) | **Build layer** - complete the matching module after each mastery checkpoint |
 | [`Interview.md`](../guides/Interview.md) | **Hiring layer** - mocks after Phase 19 portfolio |

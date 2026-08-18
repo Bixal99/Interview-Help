@@ -15,6 +15,7 @@ export type YouTubeInfo = {
 export type FencedBlock = { language: string; source: string; line: number };
 
 import { contentRegistry, roadmapRegistry } from "./course-catalog";
+import { mapLegacyOopPhase } from "./legacy-routes";
 
 function normalizeSourcePath(value: string, lowercase = true): string {
   const segments: string[] = [];
@@ -105,28 +106,41 @@ export function resolveMarkdownSourcePath(sourcePath: string, hrefPath: string):
   return normalizeSourcePath(`${sourceDirectory}/${decodedPath}`, false);
 }
 
-export function rewriteContentFragment(route: string, fragment: string): string {
+function isOopSource(sourcePath?: string) {
+  return Boolean(sourcePath && /(?:^|\/)oop\.md$/i.test(sourcePath.replace(/\\/g, "/")));
+}
+
+export function rewriteContentFragment(route: string, fragment: string, sourcePath?: string): string {
   const hash = fragment.replace(/^#/, "");
   if (!hash) return route;
+  const fromOop = isOopSource(sourcePath);
   const project = /^(cs|oop|git|web|ai|data|networks|odoo|cloud|devops|cyber|it-admin)-phase-(f?\d+)-project$/i.exec(hash);
   if (project) {
     const prefix = project[1].toLowerCase();
+    const phaseId = project[2].toLowerCase();
+    if (prefix === "oop") return `/projects/computer-science/phase/${mapLegacyOopPhase(phaseId)}`;
     const course = roadmapRegistry.find((item) => item.projectPrefix === prefix);
-    return course ? `/projects/${course.slug}/phase/${project[2].toLowerCase()}` : `${route}#${hash}`;
+    return course ? `/projects/${course.slug}/phase/${phaseId}` : `${route}#${hash}`;
   }
   const fphase = /^phase-f(\d+)/i.exec(hash);
-  if (fphase && route.startsWith("/courses/")) return `${route}/phase/f${fphase[1]}`;
+  if (fphase && route.startsWith("/courses/")) return `${route}/phase/${mapLegacyOopPhase(`f${fphase[1]}`)}`;
   const phase = /^phase-(\d+)/i.exec(hash);
-  if (phase && route.startsWith("/courses/")) return `${route}/phase/${Number(phase[1])}`;
+  if (phase && route.startsWith("/courses/")) {
+    const id = fromOop ? mapLegacyOopPhase(phase[1]) : String(Number(phase[1]));
+    return `${route}/phase/${id}`;
+  }
   return `${route}#${hash}`;
 }
+
+const CS_ROUTE = "/courses/computer-science";
 
 export function convertMarkdownHref(href: string, sourcePath?: string): string {
   if (!href) return href;
   if (href.startsWith("#")) {
     if (!sourcePath) return href;
+    if (isOopSource(sourcePath)) return rewriteContentFragment(CS_ROUTE, href, sourcePath);
     const selfRoute = routeBySourcePath.get(normalizeSourcePath(sourcePath));
-    return selfRoute ? rewriteContentFragment(selfRoute, href) : href;
+    return selfRoute ? rewriteContentFragment(selfRoute, href, sourcePath) : href;
   }
   const boundary = href.search(/[?#]/);
   const hrefPath = boundary < 0 ? href : href.slice(0, boundary);
@@ -134,14 +148,17 @@ export function convertMarkdownHref(href: string, sourcePath?: string): string {
   let decodedPath: string;
   try { decodedPath = decodeURIComponent(hrefPath); } catch { return href; }
   const resolved = sourcePath ? resolveMarkdownSourcePath(sourcePath, hrefPath) : "";
+  if (isOopSource(resolved)) return suffix.startsWith("#") ? rewriteContentFragment(CS_ROUTE, suffix, resolved) : CS_ROUTE;
   const repositoryRoute = sourcePath ? routeBySourcePath.get(normalizeSourcePath(resolved)) : undefined;
-  if (repositoryRoute) return suffix.startsWith("#") ? rewriteContentFragment(repositoryRoute, suffix) : `${repositoryRoute}${suffix}`;
+  if (repositoryRoute) return suffix.startsWith("#") ? rewriteContentFragment(repositoryRoute, suffix, resolved) : `${repositoryRoute}${suffix}`;
   if (!/\.(?:md|xlsx)$/i.test(decodedPath)) return href;
+  const basename = decodedPath.replace(/\\/g, "/").split("/").pop()!.toLowerCase();
+  if (basename === "oop.md") return suffix.startsWith("#") ? rewriteContentFragment(CS_ROUTE, suffix, "content/roadmaps/OOP.md") : CS_ROUTE;
   const route = sourcePath
     ? undefined
     : decodedPath.toLowerCase().endsWith(".xlsx")
-      ? decodedPath.replace(/\\/g, "/").split("/").pop()!.toLowerCase() === "job_tracker.xlsx" ? "/downloads/job-tracker" : undefined
-      : markdownRouteMap[decodedPath.replace(/\\/g, "/").split("/").pop()!.toLowerCase()];
+      ? basename === "job_tracker.xlsx" ? "/downloads/job-tracker" : undefined
+      : markdownRouteMap[basename];
   return route ? (suffix.startsWith("#") ? rewriteContentFragment(route, suffix) : `${route}${suffix}`) : href;
 }
 

@@ -41,1378 +41,9 @@ Every checkpoint below assumes you are at this portfolio root. Keep phase projec
 - [DevOps Engineering](#devops-engineering)
 - [Cybersecurity](#cybersecurity)
 
-## Programming Fundamentals and OOP
-
-Study this roadmap first: [OOP.md](../roadmaps/OOP.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
-
-<a id="oop-phase-f1-project"></a>
-### OOP PHASE F1 MINI-PROJECT
-
-#### PROJECT: EXECUTION TRACE NOTEBOOK
-
-#### SPECIFICATION
-
-Build **Execution Trace Notebook** as a focused exercise for **Execution Tracing**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Run three short Python programs one statement at a time and output a table showing line number, variable values, branch taken, and printed result.
-- Define one realistic scenario, its boundaries, and the intended reader for the Execution Trace Notebook.
-- Collect or create the exact inputs needed to apply Execution Tracing; label assumptions instead of hiding them.
-- Produce a final diagram, table, report, or decision document with findings ordered by importance.
-- Add one concrete recommendation or next action for every important finding.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `execution-trace-notebook` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Run three short Python programs one statement at a time and output a table showing line number, variable values, branch taken, and printed result.
-3. Collect or create the exact inputs needed to apply Execution Tracing; label assumptions instead of hiding them.
-4. Produce a final diagram, table, report, or decision document with findings ordered by importance.
-5. Add one concrete recommendation or next action for every important finding.
-6. Add one normal example and one edge or failure example specifically for **Execution Tracing**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **EXECUTION TRACE NOTEBOOK**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/execution-trace-notebook
-git commit -m "feat(execution-trace-notebook): complete execution trace notebook"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE F1](../roadmaps/OOP.md#phase-f1) | [CONTINUE TO OOP PHASE F2](../roadmaps/OOP.md#phase-f2)
-
-<a id="oop-phase-f2-project"></a>
-### OOP PHASE F2 MINI-PROJECT
-
-#### PROJECT: CLI RULE ENGINE
-
-#### SPECIFICATION
-
-Build **CLI Rule Engine** as a focused exercise for **Control Flow and Rules**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Read simple facts from the command line, evaluate ordered if/elif rules, and print both the chosen result and the rule that matched.
-- Accept a tiny text, number, file, packet, or task input and validate it before processing.
-- Represent the important states or data structures from Control Flow and Rules explicitly.
-- Show each important result or state transition in a form a learner can inspect.
-- Check a normal case, a boundary case, and an invalid case against known answers.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `cli-rule-engine` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Read simple facts from the command line, evaluate ordered if/elif rules, and print both the chosen result and the rule that matched.
-3. Represent the important states or data structures from Control Flow and Rules explicitly.
-4. Show each important result or state transition in a form a learner can inspect.
-5. Check a normal case, a boundary case, and an invalid case against known answers.
-6. Add one normal example and one edge or failure example specifically for **Control Flow and Rules**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **CLI RULE ENGINE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/cli-rule-engine
-git commit -m "feat(cli-rule-engine): complete cli rule engine"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE F2](../roadmaps/OOP.md#phase-f2) | [CONTINUE TO OOP PHASE F3](../roadmaps/OOP.md#phase-f3)
-
-<a id="oop-phase-f3-project"></a>
-### OOP PHASE F3 MINI-PROJECT
-
-#### PROJECT: MODULAR TEXT STATISTICS
-
-#### SPECIFICATION
-
-Build **Modular Text Statistics** as a focused exercise for **Functions and Modules**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Read text from a file, call separate counting functions, and report lines, words, characters, unique words, and the five most frequent words.
-- Give the user one clear main action and keep all other features secondary.
-- Use Functions and Modules in the design and make that use visible in the code or interface.
-- Keep the working data after restart when persistence is relevant.
-- Handle empty input, invalid input, and the normal user journey without crashing.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `modular-text-statistics` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Read text from a file, call separate counting functions, and report lines, words, characters, unique words, and the five most frequent words.
-3. Use Functions and Modules in the design and make that use visible in the code or interface.
-4. Keep the working data after restart when persistence is relevant.
-5. Handle empty input, invalid input, and the normal user journey without crashing.
-6. Add one normal example and one edge or failure example specifically for **Functions and Modules**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **MODULAR TEXT STATISTICS**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/modular-text-statistics
-git commit -m "feat(modular-text-statistics): complete modular text statistics"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE F3](../roadmaps/OOP.md#phase-f3) | [CONTINUE TO OOP PHASE 1](../roadmaps/OOP.md#phase-1)
-
-<a id="oop-phase-1-project"></a>
-### OOP PHASE 1 MINI-PROJECT
-
-#### PROJECT: PROCEDURAL-TO-OBJECTS REFACTOR
-
-#### SPECIFICATION
-
-Build **Procedural-to-Objects Refactor** as a focused exercise for **Object Thinking**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Start with a procedural order-pricing script, identify its data and responsibilities, then refactor it into collaborating objects without changing the result.
-- Give the user one clear main action and keep all other features secondary.
-- Use Object Thinking in the design and make that use visible in the code or interface.
-- Keep the working data after restart when persistence is relevant.
-- Handle empty input, invalid input, and the normal user journey without crashing.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `procedural-to-objects-refactor` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Start with a procedural order-pricing script, identify its data and responsibilities, then refactor it into collaborating objects without changing the result.
-3. Use Object Thinking in the design and make that use visible in the code or interface.
-4. Keep the working data after restart when persistence is relevant.
-5. Handle empty input, invalid input, and the normal user journey without crashing.
-6. Add one normal example and one edge or failure example specifically for **Object Thinking**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **PROCEDURAL-TO-OBJECTS REFACTOR**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/procedural-to-objects-refactor
-git commit -m "refactor(procedural-to-objects-refactor): complete procedural-to-objects refactor"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 1](../roadmaps/OOP.md#phase-1) | [CONTINUE TO OOP PHASE 2](../roadmaps/OOP.md#phase-2)
-
-<a id="oop-phase-2-project"></a>
-### OOP PHASE 2 MINI-PROJECT
-
-#### PROJECT: CLASS & INSTANCE REGISTRY
-
-#### SPECIFICATION
-
-Build **Class & Instance Registry** as a focused exercise for **Classes and Objects**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Create a registry that constructs multiple class instances, assigns unique IDs, separates class data from instance data, and searches by ID.
-- Give the user one clear main action and keep all other features secondary.
-- Use Classes and Objects in the design and make that use visible in the code or interface.
-- Keep the working data after restart when persistence is relevant.
-- Handle empty input, invalid input, and the normal user journey without crashing.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `class-instance-registry` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Create a registry that constructs multiple class instances, assigns unique IDs, separates class data from instance data, and searches by ID.
-3. Use Classes and Objects in the design and make that use visible in the code or interface.
-4. Keep the working data after restart when persistence is relevant.
-5. Handle empty input, invalid input, and the normal user journey without crashing.
-6. Add one normal example and one edge or failure example specifically for **Classes and Objects**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **CLASS & INSTANCE REGISTRY**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/class-instance-registry
-git commit -m "feat(class-instance-registry): complete class & instance registry"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 2](../roadmaps/OOP.md#phase-2) | [CONTINUE TO OOP PHASE 3](../roadmaps/OOP.md#phase-3)
-
-<a id="oop-phase-3-project"></a>
-### OOP PHASE 3 MINI-PROJECT
-
-#### PROJECT: BANK ACCOUNT STATE MACHINE
-
-#### SPECIFICATION
-
-Build **Bank Account State Machine** as a focused exercise for **State and Behavior**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Model a bank account with deposit, withdraw, freeze, and close operations and reject every invalid state transition.
-- Give the user one clear main action and keep all other features secondary.
-- Use State and Behavior in the design and make that use visible in the code or interface.
-- Keep the working data after restart when persistence is relevant.
-- Handle empty input, invalid input, and the normal user journey without crashing.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `bank-account-state-machine` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Model a bank account with deposit, withdraw, freeze, and close operations and reject every invalid state transition.
-3. Use State and Behavior in the design and make that use visible in the code or interface.
-4. Keep the working data after restart when persistence is relevant.
-5. Handle empty input, invalid input, and the normal user journey without crashing.
-6. Add one normal example and one edge or failure example specifically for **State and Behavior**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **BANK ACCOUNT STATE MACHINE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/bank-account-state-machine
-git commit -m "feat(bank-account-state-machine): complete bank account state machine"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 3](../roadmaps/OOP.md#phase-3) | [CONTINUE TO OOP PHASE 4](../roadmaps/OOP.md#phase-4)
-
-<a id="oop-phase-4-project"></a>
-### OOP PHASE 4 MINI-PROJECT
-
-#### PROJECT: VALIDATED WALLET API
-
-#### SPECIFICATION
-
-Build **Validated Wallet API** as a focused exercise for **Encapsulation**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Create a wallet whose balance cannot be changed directly and whose methods enforce positive amounts, sufficient funds, and a transaction history.
-- Define the accepted request or message shape and the returned success and error shapes.
-- Use Encapsulation in the request path instead of hiding all work in one function.
-- Handle invalid input, a missing resource, and one dependency failure safely.
-- Add an automated check for the main success path and the most important failure path.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `validated-wallet-api` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Create a wallet whose balance cannot be changed directly and whose methods enforce positive amounts, sufficient funds, and a transaction history.
-3. Use Encapsulation in the request path instead of hiding all work in one function.
-4. Handle invalid input, a missing resource, and one dependency failure safely.
-5. Add an automated check for the main success path and the most important failure path.
-6. Add one normal example and one edge or failure example specifically for **Encapsulation**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **VALIDATED WALLET API**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/validated-wallet-api
-git commit -m "feat(validated-wallet-api): complete validated wallet api"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 4](../roadmaps/OOP.md#phase-4) | [CONTINUE TO OOP PHASE 5](../roadmaps/OOP.md#phase-5)
-
-<a id="oop-phase-5-project"></a>
-### OOP PHASE 5 MINI-PROJECT
-
-#### PROJECT: PLUGGABLE SHAPE CALCULATOR
-
-#### SPECIFICATION
-
-Build **Pluggable Shape Calculator** as a focused exercise for **Abstraction**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Calculate area and perimeter through a Shape abstraction with circle, rectangle, and triangle implementations.
-- Accept a tiny text, number, file, packet, or task input and validate it before processing.
-- Represent the important states or data structures from Abstraction explicitly.
-- Show each important result or state transition in a form a learner can inspect.
-- Check a normal case, a boundary case, and an invalid case against known answers.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `pluggable-shape-calculator` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Calculate area and perimeter through a Shape abstraction with circle, rectangle, and triangle implementations.
-3. Represent the important states or data structures from Abstraction explicitly.
-4. Show each important result or state transition in a form a learner can inspect.
-5. Check a normal case, a boundary case, and an invalid case against known answers.
-6. Add one normal example and one edge or failure example specifically for **Abstraction**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **PLUGGABLE SHAPE CALCULATOR**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/pluggable-shape-calculator
-git commit -m "feat(pluggable-shape-calculator): complete pluggable shape calculator"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 5](../roadmaps/OOP.md#phase-5) | [CONTINUE TO OOP PHASE 6](../roadmaps/OOP.md#phase-6)
-
-<a id="oop-phase-6-project"></a>
-### OOP PHASE 6 MINI-PROJECT
-
-#### PROJECT: EMPLOYEE PAYROLL HIERARCHY
-
-#### SPECIFICATION
-
-Build **Employee Payroll Hierarchy** as a focused exercise for **Inheritance**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Calculate payroll for salaried, hourly, and commission employees while keeping shared identity behavior in a small base class.
-- Give the user one clear main action and keep all other features secondary.
-- Use Inheritance in the design and make that use visible in the code or interface.
-- Keep the working data after restart when persistence is relevant.
-- Handle empty input, invalid input, and the normal user journey without crashing.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `employee-payroll-hierarchy` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Calculate payroll for salaried, hourly, and commission employees while keeping shared identity behavior in a small base class.
-3. Use Inheritance in the design and make that use visible in the code or interface.
-4. Keep the working data after restart when persistence is relevant.
-5. Handle empty input, invalid input, and the normal user journey without crashing.
-6. Add one normal example and one edge or failure example specifically for **Inheritance**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **EMPLOYEE PAYROLL HIERARCHY**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/employee-payroll-hierarchy
-git commit -m "feat(employee-payroll-hierarchy): complete employee payroll hierarchy"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 6](../roadmaps/OOP.md#phase-6) | [CONTINUE TO OOP PHASE 7](../roadmaps/OOP.md#phase-7)
-
-<a id="oop-phase-7-project"></a>
-### OOP PHASE 7 MINI-PROJECT
-
-#### PROJECT: POLYMORPHIC EXPORTER
-
-#### SPECIFICATION
-
-Build **Polymorphic Exporter** as a focused exercise for **Polymorphism**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Export the same records to CSV, JSON, and plain text by calling one export interface with different implementations.
-- Give the user one clear main action and keep all other features secondary.
-- Use Polymorphism in the design and make that use visible in the code or interface.
-- Keep the working data after restart when persistence is relevant.
-- Handle empty input, invalid input, and the normal user journey without crashing.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `polymorphic-exporter` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Export the same records to CSV, JSON, and plain text by calling one export interface with different implementations.
-3. Use Polymorphism in the design and make that use visible in the code or interface.
-4. Keep the working data after restart when persistence is relevant.
-5. Handle empty input, invalid input, and the normal user journey without crashing.
-6. Add one normal example and one edge or failure example specifically for **Polymorphism**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **POLYMORPHIC EXPORTER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/polymorphic-exporter
-git commit -m "feat(polymorphic-exporter): complete polymorphic exporter"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 7](../roadmaps/OOP.md#phase-7) | [CONTINUE TO OOP PHASE 8](../roadmaps/OOP.md#phase-8)
-
-<a id="oop-phase-8-project"></a>
-### OOP PHASE 8 MINI-PROJECT
-
-#### PROJECT: COMPOSED ORDER SERVICE
-
-#### SPECIFICATION
-
-Build **Composed Order Service** as a focused exercise for **Composition over Inheritance**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Build an order service from cart, pricing, inventory, payment, and notification components that can be replaced independently.
-- Define the accepted request or message shape and the returned success and error shapes.
-- Use Composition over Inheritance in the request path instead of hiding all work in one function.
-- Handle invalid input, a missing resource, and one dependency failure safely.
-- Add an automated check for the main success path and the most important failure path.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `composed-order-service` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Build an order service from cart, pricing, inventory, payment, and notification components that can be replaced independently.
-3. Use Composition over Inheritance in the request path instead of hiding all work in one function.
-4. Handle invalid input, a missing resource, and one dependency failure safely.
-5. Add an automated check for the main success path and the most important failure path.
-6. Add one normal example and one edge or failure example specifically for **Composition over Inheritance**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **COMPOSED ORDER SERVICE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/composed-order-service
-git commit -m "feat(composed-order-service): complete composed order service"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 8](../roadmaps/OOP.md#phase-8) | [CONTINUE TO OOP PHASE 9](../roadmaps/OOP.md#phase-9)
-
-<a id="oop-phase-9-project"></a>
-### OOP PHASE 9 MINI-PROJECT
-
-#### PROJECT: PYTHONIC COLLECTION WRAPPER
-
-#### SPECIFICATION
-
-Build **Pythonic Collection Wrapper** as a focused exercise for **Python Power Tools**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Wrap a collection with length, iteration, indexing, membership, string display, validated properties, and a useful classmethod constructor.
-- Give the user one clear main action and keep all other features secondary.
-- Use Python Power Tools in the design and make that use visible in the code or interface.
-- Keep the working data after restart when persistence is relevant.
-- Handle empty input, invalid input, and the normal user journey without crashing.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `pythonic-collection-wrapper` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Wrap a collection with length, iteration, indexing, membership, string display, validated properties, and a useful classmethod constructor.
-3. Use Python Power Tools in the design and make that use visible in the code or interface.
-4. Keep the working data after restart when persistence is relevant.
-5. Handle empty input, invalid input, and the normal user journey without crashing.
-6. Add one normal example and one edge or failure example specifically for **Python Power Tools**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **PYTHONIC COLLECTION WRAPPER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/pythonic-collection-wrapper
-git commit -m "feat(pythonic-collection-wrapper): complete pythonic collection wrapper"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 9](../roadmaps/OOP.md#phase-9) | [CONTINUE TO OOP PHASE 10](../roadmaps/OOP.md#phase-10)
-
-<a id="oop-phase-10-project"></a>
-### OOP PHASE 10 MINI-PROJECT
-
-#### PROJECT: LIBRARY RELATIONSHIP MODEL
-
-#### SPECIFICATION
-
-Build **Library Relationship Model** as a focused exercise for **Relationships and Modeling**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Model library books, physical copies, members, authors, loans, and reservations with correct one-to-one and one-to-many relationships.
-- Give the user one clear main action and keep all other features secondary.
-- Use Relationships and Modeling in the design and make that use visible in the code or interface.
-- Keep the working data after restart when persistence is relevant.
-- Handle empty input, invalid input, and the normal user journey without crashing.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `library-relationship-model` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Model library books, physical copies, members, authors, loans, and reservations with correct one-to-one and one-to-many relationships.
-3. Use Relationships and Modeling in the design and make that use visible in the code or interface.
-4. Keep the working data after restart when persistence is relevant.
-5. Handle empty input, invalid input, and the normal user journey without crashing.
-6. Add one normal example and one edge or failure example specifically for **Relationships and Modeling**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **LIBRARY RELATIONSHIP MODEL**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/library-relationship-model
-git commit -m "feat(library-relationship-model): complete library relationship model"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 10](../roadmaps/OOP.md#phase-10) | [CONTINUE TO OOP PHASE 11](../roadmaps/OOP.md#phase-11)
-
-<a id="oop-phase-11-project"></a>
-### OOP PHASE 11 MINI-PROJECT
-
-#### PROJECT: GOD-OBJECT RESCUE
-
-#### SPECIFICATION
-
-Build **God-Object Rescue** as a focused exercise for **Smells and Refactoring**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Split an oversized order manager into cohesive pricing, inventory, payment, persistence, and notification responsibilities.
-- Give the user one clear main action and keep all other features secondary.
-- Use Smells and Refactoring in the design and make that use visible in the code or interface.
-- Keep the working data after restart when persistence is relevant.
-- Handle empty input, invalid input, and the normal user journey without crashing.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `god-object-rescue` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Split an oversized order manager into cohesive pricing, inventory, payment, persistence, and notification responsibilities.
-3. Use Smells and Refactoring in the design and make that use visible in the code or interface.
-4. Keep the working data after restart when persistence is relevant.
-5. Handle empty input, invalid input, and the normal user journey without crashing.
-6. Add one normal example and one edge or failure example specifically for **Smells and Refactoring**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **GOD-OBJECT RESCUE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/god-object-rescue
-git commit -m "fix(god-object-rescue): complete god-object rescue"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 11](../roadmaps/OOP.md#phase-11) | [CONTINUE TO OOP PHASE 12](../roadmaps/OOP.md#phase-12)
-
-<a id="oop-phase-12-project"></a>
-### OOP PHASE 12 MINI-PROJECT
-
-#### PROJECT: SOLID NOTIFICATION SERVICE
-
-#### SPECIFICATION
-
-Build **SOLID Notification Service** as a focused exercise for **SOLID**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Send notifications through injected email, SMS, or console channels while keeping message policy independent of delivery details.
-- Define the accepted request or message shape and the returned success and error shapes.
-- Use SOLID in the request path instead of hiding all work in one function.
-- Handle invalid input, a missing resource, and one dependency failure safely.
-- Add an automated check for the main success path and the most important failure path.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `solid-notification-service` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Send notifications through injected email, SMS, or console channels while keeping message policy independent of delivery details.
-3. Use SOLID in the request path instead of hiding all work in one function.
-4. Handle invalid input, a missing resource, and one dependency failure safely.
-5. Add an automated check for the main success path and the most important failure path.
-6. Add one normal example and one edge or failure example specifically for **SOLID**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **SOLID NOTIFICATION SERVICE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/solid-notification-service
-git commit -m "feat(solid-notification-service): complete solid notification service"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 12](../roadmaps/OOP.md#phase-12) | [CONTINUE TO OOP PHASE 13](../roadmaps/OOP.md#phase-13)
-
-<a id="oop-phase-13-project"></a>
-### OOP PHASE 13 MINI-PROJECT
-
-#### PROJECT: CONFIGURABLE OBJECT FACTORY
-
-#### SPECIFICATION
-
-Build **Configurable Object Factory** as a focused exercise for **Creational Patterns**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Create objects from configuration through a factory that validates type names and constructs the correct repository or notification channel.
-- Give the user one clear main action and keep all other features secondary.
-- Use Creational Patterns in the design and make that use visible in the code or interface.
-- Keep the working data after restart when persistence is relevant.
-- Handle empty input, invalid input, and the normal user journey without crashing.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `configurable-object-factory` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Create objects from configuration through a factory that validates type names and constructs the correct repository or notification channel.
-3. Use Creational Patterns in the design and make that use visible in the code or interface.
-4. Keep the working data after restart when persistence is relevant.
-5. Handle empty input, invalid input, and the normal user journey without crashing.
-6. Add one normal example and one edge or failure example specifically for **Creational Patterns**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **CONFIGURABLE OBJECT FACTORY**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/configurable-object-factory
-git commit -m "feat(configurable-object-factory): complete configurable object factory"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 13](../roadmaps/OOP.md#phase-13) | [CONTINUE TO OOP PHASE 14](../roadmaps/OOP.md#phase-14)
-
-<a id="oop-phase-14-project"></a>
-### OOP PHASE 14 MINI-PROJECT
-
-#### PROJECT: LEGACY PAYMENT ADAPTER
-
-#### SPECIFICATION
-
-Build **Legacy Payment Adapter** as a focused exercise for **Structural Patterns**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Make a legacy payment function satisfy a modern PaymentGateway interface through an adapter without changing legacy code.
-- Give the user one clear main action and keep all other features secondary.
-- Use Structural Patterns in the design and make that use visible in the code or interface.
-- Keep the working data after restart when persistence is relevant.
-- Handle empty input, invalid input, and the normal user journey without crashing.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `legacy-payment-adapter` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Make a legacy payment function satisfy a modern PaymentGateway interface through an adapter without changing legacy code.
-3. Use Structural Patterns in the design and make that use visible in the code or interface.
-4. Keep the working data after restart when persistence is relevant.
-5. Handle empty input, invalid input, and the normal user journey without crashing.
-6. Add one normal example and one edge or failure example specifically for **Structural Patterns**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **LEGACY PAYMENT ADAPTER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/legacy-payment-adapter
-git commit -m "feat(legacy-payment-adapter): complete legacy payment adapter"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 14](../roadmaps/OOP.md#phase-14) | [CONTINUE TO OOP PHASE 15](../roadmaps/OOP.md#phase-15)
-
-<a id="oop-phase-15-project"></a>
-### OOP PHASE 15 MINI-PROJECT
-
-#### PROJECT: EVENT-DRIVEN TASK BOARD
-
-#### SPECIFICATION
-
-Build **Event-Driven Task Board** as a focused exercise for **Behavioral Patterns**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Create a task board whose add, move, and complete commands notify subscribed views and keep an undoable command history.
-- Give the user one clear main action and keep all other features secondary.
-- Use Behavioral Patterns in the design and make that use visible in the code or interface.
-- Keep the working data after restart when persistence is relevant.
-- Handle empty input, invalid input, and the normal user journey without crashing.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `event-driven-task-board` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Create a task board whose add, move, and complete commands notify subscribed views and keep an undoable command history.
-3. Use Behavioral Patterns in the design and make that use visible in the code or interface.
-4. Keep the working data after restart when persistence is relevant.
-5. Handle empty input, invalid input, and the normal user journey without crashing.
-6. Add one normal example and one edge or failure example specifically for **Behavioral Patterns**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **EVENT-DRIVEN TASK BOARD**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/event-driven-task-board
-git commit -m "feat(event-driven-task-board): complete event-driven task board"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 15](../roadmaps/OOP.md#phase-15) | [CONTINUE TO OOP PHASE 16](../roadmaps/OOP.md#phase-16)
-
-<a id="oop-phase-16-project"></a>
-### OOP PHASE 16 MINI-PROJECT
-
-#### PROJECT: TESTABLE DOMAIN MODEL
-
-#### SPECIFICATION
-
-Build **Testable Domain Model** as a focused exercise for **Testing OOP**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Build a small order domain whose rules are tested with fake clock, payment, inventory, and notification dependencies.
-- Choose a baseline and at least one alternative that can be compared fairly.
-- Use a metric connected to Testing OOP and explain in one sentence what a better value means.
-- Run both approaches on the same controlled inputs and store the result in a table.
-- Include one case where the preferred approach fails or becomes a poor choice.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `testable-domain-model` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Build a small order domain whose rules are tested with fake clock, payment, inventory, and notification dependencies.
-3. Use a metric connected to Testing OOP and explain in one sentence what a better value means.
-4. Run both approaches on the same controlled inputs and store the result in a table.
-5. Include one case where the preferred approach fails or becomes a poor choice.
-6. Add one normal example and one edge or failure example specifically for **Testing OOP**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **TESTABLE DOMAIN MODEL**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/testable-domain-model
-git commit -m "test(testable-domain-model): complete testable domain model"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 16](../roadmaps/OOP.md#phase-16) | [CONTINUE TO OOP PHASE 17](../roadmaps/OOP.md#phase-17)
-
-<a id="oop-phase-17-project"></a>
-### OOP PHASE 17 MINI-PROJECT
-
-#### PROJECT: LAYERED INVENTORY APP
-
-#### SPECIFICATION
-
-Build **Layered Inventory App** as a focused exercise for **Layers and Clean Architecture**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Create an inventory program with separate domain, application, persistence, and CLI layers and no database imports in domain code.
-- Give the user one clear main action and keep all other features secondary.
-- Use Layers and Clean Architecture in the design and make that use visible in the code or interface.
-- Keep the working data after restart when persistence is relevant.
-- Handle empty input, invalid input, and the normal user journey without crashing.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `layered-inventory-app` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Create an inventory program with separate domain, application, persistence, and CLI layers and no database imports in domain code.
-3. Use Layers and Clean Architecture in the design and make that use visible in the code or interface.
-4. Keep the working data after restart when persistence is relevant.
-5. Handle empty input, invalid input, and the normal user journey without crashing.
-6. Add one normal example and one edge or failure example specifically for **Layers and Clean Architecture**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **LAYERED INVENTORY APP**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/layered-inventory-app
-git commit -m "feat(layered-inventory-app): complete layered inventory app"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 17](../roadmaps/OOP.md#phase-17) | [CONTINUE TO OOP PHASE 18](../roadmaps/OOP.md#phase-18)
-
-<a id="oop-phase-18-project"></a>
-### OOP PHASE 18 MINI-PROJECT
-
-#### PROJECT: PARKING LOT LLD
-
-#### SPECIFICATION
-
-Build **Parking Lot LLD** as a focused exercise for **Low-Level Design Method**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Design a parking lot with vehicle types, spots, tickets, entry/exit, pricing, and capacity rules before implementing its core workflow.
-- Give the user one clear main action and keep all other features secondary.
-- Use Low-Level Design Method in the design and make that use visible in the code or interface.
-- Keep the working data after restart when persistence is relevant.
-- Handle empty input, invalid input, and the normal user journey without crashing.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `parking-lot-lld` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Design a parking lot with vehicle types, spots, tickets, entry/exit, pricing, and capacity rules before implementing its core workflow.
-3. Use Low-Level Design Method in the design and make that use visible in the code or interface.
-4. Keep the working data after restart when persistence is relevant.
-5. Handle empty input, invalid input, and the normal user journey without crashing.
-6. Add one normal example and one edge or failure example specifically for **Low-Level Design Method**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **PARKING LOT LLD**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/parking-lot-lld
-git commit -m "feat(oop-parking-lot-lld): complete parking lot lld"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 18](../roadmaps/OOP.md#phase-18) | [CONTINUE TO OOP PHASE 19](../roadmaps/OOP.md#phase-19)
-
-<a id="oop-phase-19-project"></a>
-### OOP PHASE 19 MINI-PROJECT
-
-#### PROJECT: DESIGN PORTFOLIO PACK
-
-#### SPECIFICATION
-
-Build **Design Portfolio Pack** as a focused exercise for **Portfolio**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Polish three earlier designs with diagrams, runnable examples, tests, consistent naming, and a short in-app explanation of trade-offs.
-- Define one realistic scenario, its boundaries, and the intended reader for the Design Portfolio Pack.
-- Collect or create the exact inputs needed to apply Portfolio; label assumptions instead of hiding them.
-- Produce a final diagram, table, report, or decision document with findings ordered by importance.
-- Add one concrete recommendation or next action for every important finding.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `design-portfolio-pack` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Polish three earlier designs with diagrams, runnable examples, tests, consistent naming, and a short in-app explanation of trade-offs.
-3. Collect or create the exact inputs needed to apply Portfolio; label assumptions instead of hiding them.
-4. Produce a final diagram, table, report, or decision document with findings ordered by importance.
-5. Add one concrete recommendation or next action for every important finding.
-6. Add one normal example and one edge or failure example specifically for **Portfolio**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **DESIGN PORTFOLIO PACK**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/design-portfolio-pack
-git commit -m "feat(design-portfolio-pack): complete design portfolio pack"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 19](../roadmaps/OOP.md#phase-19) | [CONTINUE TO OOP PHASE 20](../roadmaps/OOP.md#phase-20)
-
-<a id="oop-phase-20-project"></a>
-### OOP PHASE 20 MINI-PROJECT
-
-#### PROJECT: TIMED OOP DESIGN KATA
-
-#### SPECIFICATION
-
-Build **Timed OOP Design Kata** as a focused exercise for **Interviews**. Keep the data and interface small enough to finish, but implement the following behavior:
-
-- Solve a timed object-design change, write tests, and answer follow-up questions about responsibilities, patterns, and alternatives.
-- Give the user one clear main action and keep all other features secondary.
-- Use Interviews in the design and make that use visible in the code or interface.
-- Keep the working data after restart when persistence is relevant.
-- Handle empty input, invalid input, and the normal user journey without crashing.
-
-#### TECH STACK
-
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
-
-#### BUILD IT STEP BY STEP
-
-1. Create `timed-oop-design-kata` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Solve a timed object-design change, write tests, and answer follow-up questions about responsibilities, patterns, and alternatives.
-3. Use Interviews in the design and make that use visible in the code or interface.
-4. Keep the working data after restart when persistence is relevant.
-5. Handle empty input, invalid input, and the normal user journey without crashing.
-6. Add one normal example and one edge or failure example specifically for **Interviews**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
-
-### Git Checkpoint
-
-You have completed **TIMED OOP DESIGN KATA**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
-
-```bash
-git status
-git add -- oop/timed-oop-design-kata
-git commit -m "feat(timed-oop-design-kata): complete timed oop design kata"
-```
-
-Verify the checkpoint:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the project still works and the working tree is clean.
-
-> **PROJECT NAVIGATION:** [REVIEW OOP PHASE 20](../roadmaps/OOP.md#phase-20) | [BUILD THE OOP MAIN PORTFOLIO PROJECT](#oop-main-portfolio-project)
-
-<a id="oop-main-portfolio-project"></a>
-## OOP MAIN PORTFOLIO PROJECT
-
-#### PROJECT: COMMUNITY WORKSHOP INVENTORY AND BOOKING SYSTEM
-
-#### DESCRIPTION
-
-A local-first application that helps a community workshop lend tools, reserve work areas, track members, and record returns. It is large enough to demonstrate professional object-oriented design while remaining possible for one learner to finish.
-
-#### WHO THIS IS FOR
-
-- Workshop coordinator who registers tools and approves bookings
-- Member who searches availability and reserves equipment
-- Maintainer who records inspections and removes unsafe tools from circulation
-
-#### WHAT USERS CAN DO
-
-- Register members, tools, work areas, and maintenance records
-- Search availability and create, cancel, check-out, and return bookings
-- Block unsafe or already-booked equipment with clear domain errors
-- Persist data locally and export a simple usage summary
-
-#### FREE AND OPEN-SOURCE TECH STACK
-
-- Python 3.12
-- Textual for a terminal user interface
-- SQLite with the Python standard library
-- pytest, Ruff, and mypy
-- PyInstaller for a downloadable desktop executable
-- Git and a public GitHub repository; every application dependency is free and open source
-
-No paid API, commercial license, or paid cloud resource is required. Use only generated, public, or permissioned data.
-
-> **HOW PHASES 19 AND 20 WORK HERE:** Phase 19 is a required capstone-completion step: apply that roadmap's final engineering, integration, automation, migration, quality, or portfolio work. Phase 20 does not add another product feature. It is post-build interview and presentation practice using the completed project. The software is functionally complete after Phase 19; do Phase 20 to complete the career-preparation roadmap.
-
-#### BUILD IT PHASE BY PHASE
-
-1. **Phase 1 - Object Thinking:** Turn the workshop story into objects, responsibilities, and messages instead of one long procedural script.
-2. **Phase 2 - Classes and Objects:** Create Tool, Member, Booking, WorkArea, and MaintenanceRecord classes with clear constructors.
-3. **Phase 3 - State and Behavior:** Add state-changing methods such as reserve, check_out, return_tool, and mark_unsafe; reject impossible transitions.
-4. **Phase 4 - Encapsulation:** Keep fields private where changing them directly could break a rule, and expose safe methods or properties.
-5. **Phase 5 - Abstraction:** Define repository, clock, and notification abstractions so business rules do not depend on SQLite or the screen.
-6. **Phase 6 - Inheritance:** Use inheritance only for genuinely shared member or tool behavior; demonstrate and test the chosen hierarchy.
-7. **Phase 7 - Polymorphism:** Use polymorphism for different pricing, borrowing-limit, or notification policies behind one interface.
-8. **Phase 8 - Composition over Inheritance:** Compose BookingService from repositories, policies, and a clock instead of building a deep inheritance tree.
-9. **Phase 9 - Python Power Tools:** Add useful dunder methods, dataclasses, enums, and properties so domain values are safe and readable.
-10. **Phase 10 - Relationships and Modeling:** Draw the class relationships, then implement one-to-many member bookings and tool maintenance history.
-11. **Phase 11 - Smells and Refactoring:** Identify one oversized class or duplicated rule and refactor it without changing behavior.
-12. **Phase 12 - SOLID:** Review the design against all five SOLID principles and correct the two clearest violations.
-13. **Phase 13 - Creational Patterns:** Use a factory to construct tools or policies from saved configuration without conditionals spread everywhere.
-14. **Phase 14 - Structural Patterns:** Add an adapter between the domain repository interface and SQLite, plus a facade for the terminal UI.
-15. **Phase 15 - Behavioral Patterns:** Use Observer for notifications or Strategy for booking rules; show why the pattern removes a real conditional.
-16. **Phase 16 - Testing OOP:** Write unit tests for domain rules with fakes and integration tests for the SQLite adapter.
-17. **Phase 17 - Layers and Clean Architecture:** Separate domain, application, infrastructure, and interface folders so business rules point inward.
-18. **Phase 18 - Low-Level Design Method:** Create a short low-level design for a new wait-list feature, then implement it from the design.
-19. **PHASE 19 - Portfolio (REQUIRED CAPSTONE-COMPLETION STEP):** Polish the terminal screens, seed realistic data, add screenshots, choose an open-source license, and remove secrets or machine-specific paths.
-20. **PHASE 20 - Interviews (POST-BUILD PRACTICE; NO NEW PRODUCT FEATURE):** Practice a timed change such as adding a new tool category, then explain the design, tests, trade-offs, and complexity aloud.
-
-#### GIT MILESTONE CHECKPOINTS
-
-Keep this capstone in `community-workshop-inventory-and-booking-system` inside the portfolio repository. The five checkpoints below preserve working phase groups without interrupting every implementation step. Test the completed group before committing; the repository-level ignore rules still apply.
-
-##### Git Checkpoint 1
-
-You have completed **Phases 1-4: workshop domain model and protected state transitions**. Run the relevant application checks, then save this capstone milestone:
-
-```bash
-git status
-git add -- community-workshop-inventory-and-booking-system
-git commit -m "feat(workshop): model tools members and booking state"
-```
-
-Verify:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the completed milestone works and the working tree is clean.
-
-##### Git Checkpoint 2
-
-You have completed **Phases 5-10: booking policies, composition, and domain relationships**. Run the relevant application checks, then save this capstone milestone:
-
-```bash
-git status
-git add -- community-workshop-inventory-and-booking-system
-git commit -m "feat(workshop): implement booking policies and relationships"
-```
-
-Verify:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the completed milestone works and the working tree is clean.
-
-##### Git Checkpoint 3
-
-You have completed **Phases 11-15: refactored services, patterns, SQLite adapter, and terminal facade**. Run the relevant application checks, then save this capstone milestone:
-
-```bash
-git status
-git add -- community-workshop-inventory-and-booking-system
-git commit -m "refactor(workshop): integrate services patterns and persistence"
-```
-
-Verify:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the completed milestone works and the working tree is clean.
-
-##### Git Checkpoint 4
-
-You have completed **Phases 16-18: automated tests, clean architecture, and wait-list design**. Run the relevant application checks, then save this capstone milestone:
-
-```bash
-git status
-git add -- community-workshop-inventory-and-booking-system
-git commit -m "test(workshop): verify domain adapters and wait-list flow"
-```
-
-Verify:
-
-```bash
-git log -1 --oneline
-git status
-```
-
-Continue only when the completed milestone works and the working tree is clean.
-
-##### Final Git Checkpoint
-
-You have completed **Phase 19: polished screens, demo data, documentation, and release assets**. Run the relevant application checks, then save this capstone milestone:
-
-```bash
-git status
-git add -- community-workshop-inventory-and-booking-system
-git commit -m "docs(workshop): complete community workshop portfolio release"
-git tag -a workshop-v1.0.0 -m "First complete workshop release"
-```
-
-Verify:
-
-```bash
-git log --oneline --decorate -5
-git status
-git tag
-```
-
-Continue only when the completed milestone works and the working tree is clean.
-
-#### HOW TO DEPLOY IT FOR FREE
-
-1. Run `pytest`, Ruff, and mypy locally; fix every error.
-2. Build a standalone executable with PyInstaller for your operating system.
-3. Create a version tag and attach the executable plus a small sample database to a GitHub Release.
-4. Use a public repository and GitHub Actions standard runners to repeat tests and package builds at no cost.
-5. Install the release on a second computer or clean user account and complete one booking from start to finish.
-
-> **MAIN PROJECT NAVIGATION:** [REVIEW OOP PHASE 19](../roadmaps/OOP.md#phase-19) | [REVIEW OOP PHASE 20](../roadmaps/OOP.md#phase-20) | [RETURN TO THE OOP ROADMAP](../roadmaps/OOP.md#phase-index)
-
 ## Computer Science
 
-Study this roadmap first: [CS.md](../roadmaps/CS.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
+Study this roadmap first: [CS.md](../roadmaps/CS.md). Build each mini-project after its phase, then build the main portfolio project after Phase 43.
 
 <a id="cs-phase-1-project"></a>
 ### CS PHASE 1 MINI-PROJECT
@@ -1521,6 +152,1372 @@ Continue only when the project still works and the working tree is clean.
 <a id="cs-phase-3-project"></a>
 ### CS PHASE 3 MINI-PROJECT
 
+#### PROJECT: EXECUTION TRACE NOTEBOOK
+
+#### SPECIFICATION
+
+Build **Execution Trace Notebook** as a focused exercise for **Execution Tracing**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Run three short Python programs one statement at a time and output a table showing line number, variable values, branch taken, and printed result.
+- Define one realistic scenario, its boundaries, and the intended reader for the Execution Trace Notebook.
+- Collect or create the exact inputs needed to apply Execution Tracing; label assumptions instead of hiding them.
+- Produce a final diagram, table, report, or decision document with findings ordered by importance.
+- Add one concrete recommendation or next action for every important finding.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `execution-trace-notebook` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Run three short Python programs one statement at a time and output a table showing line number, variable values, branch taken, and printed result.
+3. Collect or create the exact inputs needed to apply Execution Tracing; label assumptions instead of hiding them.
+4. Produce a final diagram, table, report, or decision document with findings ordered by importance.
+5. Add one concrete recommendation or next action for every important finding.
+6. Add one normal example and one edge or failure example specifically for **Execution Tracing**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **EXECUTION TRACE NOTEBOOK**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/execution-trace-notebook
+git commit -m "feat(execution-trace-notebook): complete execution trace notebook"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 3](../roadmaps/CS.md#phase-3) | [CONTINUE TO CS PHASE 4](../roadmaps/CS.md#phase-4)
+
+<a id="cs-phase-4-project"></a>
+### CS PHASE 4 MINI-PROJECT
+
+#### PROJECT: CLI RULE ENGINE
+
+#### SPECIFICATION
+
+Build **CLI Rule Engine** as a focused exercise for **Control Flow and Rules**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Read simple facts from the command line, evaluate ordered if/elif rules, and print both the chosen result and the rule that matched.
+- Accept a tiny text, number, file, packet, or task input and validate it before processing.
+- Represent the important states or data structures from Control Flow and Rules explicitly.
+- Show each important result or state transition in a form a learner can inspect.
+- Check a normal case, a boundary case, and an invalid case against known answers.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `cli-rule-engine` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Read simple facts from the command line, evaluate ordered if/elif rules, and print both the chosen result and the rule that matched.
+3. Represent the important states or data structures from Control Flow and Rules explicitly.
+4. Show each important result or state transition in a form a learner can inspect.
+5. Check a normal case, a boundary case, and an invalid case against known answers.
+6. Add one normal example and one edge or failure example specifically for **Control Flow and Rules**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **CLI RULE ENGINE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/cli-rule-engine
+git commit -m "feat(cli-rule-engine): complete cli rule engine"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 4](../roadmaps/CS.md#phase-4) | [CONTINUE TO CS PHASE 5](../roadmaps/CS.md#phase-5)
+
+<a id="cs-phase-5-project"></a>
+### CS PHASE 5 MINI-PROJECT
+
+#### PROJECT: MODULAR TEXT STATISTICS
+
+#### SPECIFICATION
+
+Build **Modular Text Statistics** as a focused exercise for **Functions and Modules**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Read text from a file, call separate counting functions, and report lines, words, characters, unique words, and the five most frequent words.
+- Give the user one clear main action and keep all other features secondary.
+- Use Functions and Modules in the design and make that use visible in the code or interface.
+- Keep the working data after restart when persistence is relevant.
+- Handle empty input, invalid input, and the normal user journey without crashing.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `modular-text-statistics` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Read text from a file, call separate counting functions, and report lines, words, characters, unique words, and the five most frequent words.
+3. Use Functions and Modules in the design and make that use visible in the code or interface.
+4. Keep the working data after restart when persistence is relevant.
+5. Handle empty input, invalid input, and the normal user journey without crashing.
+6. Add one normal example and one edge or failure example specifically for **Functions and Modules**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **MODULAR TEXT STATISTICS**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/modular-text-statistics
+git commit -m "feat(modular-text-statistics): complete modular text statistics"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 5](../roadmaps/CS.md#phase-5) | [CONTINUE TO CS PHASE 6](../roadmaps/CS.md#phase-6)
+
+<a id="cs-phase-6-project"></a>
+### CS PHASE 6 MINI-PROJECT
+
+#### PROJECT: PROCEDURAL-TO-OBJECTS REFACTOR
+
+#### SPECIFICATION
+
+Build **Procedural-to-Objects Refactor** as a focused exercise for **Object Thinking**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Start with a procedural order-pricing script, identify its data and responsibilities, then refactor it into collaborating objects without changing the result.
+- Give the user one clear main action and keep all other features secondary.
+- Use Object Thinking in the design and make that use visible in the code or interface.
+- Keep the working data after restart when persistence is relevant.
+- Handle empty input, invalid input, and the normal user journey without crashing.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `procedural-to-objects-refactor` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Start with a procedural order-pricing script, identify its data and responsibilities, then refactor it into collaborating objects without changing the result.
+3. Use Object Thinking in the design and make that use visible in the code or interface.
+4. Keep the working data after restart when persistence is relevant.
+5. Handle empty input, invalid input, and the normal user journey without crashing.
+6. Add one normal example and one edge or failure example specifically for **Object Thinking**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **PROCEDURAL-TO-OBJECTS REFACTOR**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/procedural-to-objects-refactor
+git commit -m "refactor(procedural-to-objects-refactor): complete procedural-to-objects refactor"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 6](../roadmaps/CS.md#phase-6) | [CONTINUE TO CS PHASE 7](../roadmaps/CS.md#phase-7)
+
+<a id="cs-phase-7-project"></a>
+### CS PHASE 7 MINI-PROJECT
+
+#### PROJECT: CLASS & INSTANCE REGISTRY
+
+#### SPECIFICATION
+
+Build **Class & Instance Registry** as a focused exercise for **Classes and Objects**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Create a registry that constructs multiple class instances, assigns unique IDs, separates class data from instance data, and searches by ID.
+- Give the user one clear main action and keep all other features secondary.
+- Use Classes and Objects in the design and make that use visible in the code or interface.
+- Keep the working data after restart when persistence is relevant.
+- Handle empty input, invalid input, and the normal user journey without crashing.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `class-instance-registry` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Create a registry that constructs multiple class instances, assigns unique IDs, separates class data from instance data, and searches by ID.
+3. Use Classes and Objects in the design and make that use visible in the code or interface.
+4. Keep the working data after restart when persistence is relevant.
+5. Handle empty input, invalid input, and the normal user journey without crashing.
+6. Add one normal example and one edge or failure example specifically for **Classes and Objects**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **CLASS & INSTANCE REGISTRY**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/class-instance-registry
+git commit -m "feat(class-instance-registry): complete class & instance registry"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 7](../roadmaps/CS.md#phase-7) | [CONTINUE TO CS PHASE 8](../roadmaps/CS.md#phase-8)
+
+<a id="cs-phase-8-project"></a>
+### CS PHASE 8 MINI-PROJECT
+
+#### PROJECT: BANK ACCOUNT STATE MACHINE
+
+#### SPECIFICATION
+
+Build **Bank Account State Machine** as a focused exercise for **State and Behavior**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Model a bank account with deposit, withdraw, freeze, and close operations and reject every invalid state transition.
+- Give the user one clear main action and keep all other features secondary.
+- Use State and Behavior in the design and make that use visible in the code or interface.
+- Keep the working data after restart when persistence is relevant.
+- Handle empty input, invalid input, and the normal user journey without crashing.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `bank-account-state-machine` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Model a bank account with deposit, withdraw, freeze, and close operations and reject every invalid state transition.
+3. Use State and Behavior in the design and make that use visible in the code or interface.
+4. Keep the working data after restart when persistence is relevant.
+5. Handle empty input, invalid input, and the normal user journey without crashing.
+6. Add one normal example and one edge or failure example specifically for **State and Behavior**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **BANK ACCOUNT STATE MACHINE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/bank-account-state-machine
+git commit -m "feat(bank-account-state-machine): complete bank account state machine"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 8](../roadmaps/CS.md#phase-8) | [CONTINUE TO CS PHASE 9](../roadmaps/CS.md#phase-9)
+
+<a id="cs-phase-9-project"></a>
+### CS PHASE 9 MINI-PROJECT
+
+#### PROJECT: VALIDATED WALLET API
+
+#### SPECIFICATION
+
+Build **Validated Wallet API** as a focused exercise for **Encapsulation**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Create a wallet whose balance cannot be changed directly and whose methods enforce positive amounts, sufficient funds, and a transaction history.
+- Define the accepted request or message shape and the returned success and error shapes.
+- Use Encapsulation in the request path instead of hiding all work in one function.
+- Handle invalid input, a missing resource, and one dependency failure safely.
+- Add an automated check for the main success path and the most important failure path.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `validated-wallet-api` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Create a wallet whose balance cannot be changed directly and whose methods enforce positive amounts, sufficient funds, and a transaction history.
+3. Use Encapsulation in the request path instead of hiding all work in one function.
+4. Handle invalid input, a missing resource, and one dependency failure safely.
+5. Add an automated check for the main success path and the most important failure path.
+6. Add one normal example and one edge or failure example specifically for **Encapsulation**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **VALIDATED WALLET API**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/validated-wallet-api
+git commit -m "feat(validated-wallet-api): complete validated wallet api"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 9](../roadmaps/CS.md#phase-9) | [CONTINUE TO CS PHASE 10](../roadmaps/CS.md#phase-10)
+
+<a id="cs-phase-10-project"></a>
+### CS PHASE 10 MINI-PROJECT
+
+#### PROJECT: PLUGGABLE SHAPE CALCULATOR
+
+#### SPECIFICATION
+
+Build **Pluggable Shape Calculator** as a focused exercise for **Abstraction**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Calculate area and perimeter through a Shape abstraction with circle, rectangle, and triangle implementations.
+- Accept a tiny text, number, file, packet, or task input and validate it before processing.
+- Represent the important states or data structures from Abstraction explicitly.
+- Show each important result or state transition in a form a learner can inspect.
+- Check a normal case, a boundary case, and an invalid case against known answers.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `pluggable-shape-calculator` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Calculate area and perimeter through a Shape abstraction with circle, rectangle, and triangle implementations.
+3. Represent the important states or data structures from Abstraction explicitly.
+4. Show each important result or state transition in a form a learner can inspect.
+5. Check a normal case, a boundary case, and an invalid case against known answers.
+6. Add one normal example and one edge or failure example specifically for **Abstraction**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **PLUGGABLE SHAPE CALCULATOR**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/pluggable-shape-calculator
+git commit -m "feat(pluggable-shape-calculator): complete pluggable shape calculator"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 10](../roadmaps/CS.md#phase-10) | [CONTINUE TO CS PHASE 11](../roadmaps/CS.md#phase-11)
+
+<a id="cs-phase-11-project"></a>
+### CS PHASE 11 MINI-PROJECT
+
+#### PROJECT: EMPLOYEE PAYROLL HIERARCHY
+
+#### SPECIFICATION
+
+Build **Employee Payroll Hierarchy** as a focused exercise for **Inheritance**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Calculate payroll for salaried, hourly, and commission employees while keeping shared identity behavior in a small base class.
+- Give the user one clear main action and keep all other features secondary.
+- Use Inheritance in the design and make that use visible in the code or interface.
+- Keep the working data after restart when persistence is relevant.
+- Handle empty input, invalid input, and the normal user journey without crashing.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `employee-payroll-hierarchy` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Calculate payroll for salaried, hourly, and commission employees while keeping shared identity behavior in a small base class.
+3. Use Inheritance in the design and make that use visible in the code or interface.
+4. Keep the working data after restart when persistence is relevant.
+5. Handle empty input, invalid input, and the normal user journey without crashing.
+6. Add one normal example and one edge or failure example specifically for **Inheritance**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **EMPLOYEE PAYROLL HIERARCHY**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/employee-payroll-hierarchy
+git commit -m "feat(employee-payroll-hierarchy): complete employee payroll hierarchy"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 11](../roadmaps/CS.md#phase-11) | [CONTINUE TO CS PHASE 12](../roadmaps/CS.md#phase-12)
+
+<a id="cs-phase-12-project"></a>
+### CS PHASE 12 MINI-PROJECT
+
+#### PROJECT: POLYMORPHIC EXPORTER
+
+#### SPECIFICATION
+
+Build **Polymorphic Exporter** as a focused exercise for **Polymorphism**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Export the same records to CSV, JSON, and plain text by calling one export interface with different implementations.
+- Give the user one clear main action and keep all other features secondary.
+- Use Polymorphism in the design and make that use visible in the code or interface.
+- Keep the working data after restart when persistence is relevant.
+- Handle empty input, invalid input, and the normal user journey without crashing.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `polymorphic-exporter` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Export the same records to CSV, JSON, and plain text by calling one export interface with different implementations.
+3. Use Polymorphism in the design and make that use visible in the code or interface.
+4. Keep the working data after restart when persistence is relevant.
+5. Handle empty input, invalid input, and the normal user journey without crashing.
+6. Add one normal example and one edge or failure example specifically for **Polymorphism**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **POLYMORPHIC EXPORTER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/polymorphic-exporter
+git commit -m "feat(polymorphic-exporter): complete polymorphic exporter"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 12](../roadmaps/CS.md#phase-12) | [CONTINUE TO CS PHASE 13](../roadmaps/CS.md#phase-13)
+
+<a id="cs-phase-13-project"></a>
+### CS PHASE 13 MINI-PROJECT
+
+#### PROJECT: COMPOSED ORDER SERVICE
+
+#### SPECIFICATION
+
+Build **Composed Order Service** as a focused exercise for **Composition over Inheritance**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Build an order service from cart, pricing, inventory, payment, and notification components that can be replaced independently.
+- Define the accepted request or message shape and the returned success and error shapes.
+- Use Composition over Inheritance in the request path instead of hiding all work in one function.
+- Handle invalid input, a missing resource, and one dependency failure safely.
+- Add an automated check for the main success path and the most important failure path.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `composed-order-service` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Build an order service from cart, pricing, inventory, payment, and notification components that can be replaced independently.
+3. Use Composition over Inheritance in the request path instead of hiding all work in one function.
+4. Handle invalid input, a missing resource, and one dependency failure safely.
+5. Add an automated check for the main success path and the most important failure path.
+6. Add one normal example and one edge or failure example specifically for **Composition over Inheritance**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **COMPOSED ORDER SERVICE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/composed-order-service
+git commit -m "feat(composed-order-service): complete composed order service"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 13](../roadmaps/CS.md#phase-13) | [CONTINUE TO CS PHASE 14](../roadmaps/CS.md#phase-14)
+
+<a id="cs-phase-14-project"></a>
+### CS PHASE 14 MINI-PROJECT
+
+#### PROJECT: PYTHONIC COLLECTION WRAPPER
+
+#### SPECIFICATION
+
+Build **Pythonic Collection Wrapper** as a focused exercise for **Python Power Tools**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Wrap a collection with length, iteration, indexing, membership, string display, validated properties, and a useful classmethod constructor.
+- Give the user one clear main action and keep all other features secondary.
+- Use Python Power Tools in the design and make that use visible in the code or interface.
+- Keep the working data after restart when persistence is relevant.
+- Handle empty input, invalid input, and the normal user journey without crashing.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `pythonic-collection-wrapper` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Wrap a collection with length, iteration, indexing, membership, string display, validated properties, and a useful classmethod constructor.
+3. Use Python Power Tools in the design and make that use visible in the code or interface.
+4. Keep the working data after restart when persistence is relevant.
+5. Handle empty input, invalid input, and the normal user journey without crashing.
+6. Add one normal example and one edge or failure example specifically for **Python Power Tools**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **PYTHONIC COLLECTION WRAPPER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/pythonic-collection-wrapper
+git commit -m "feat(pythonic-collection-wrapper): complete pythonic collection wrapper"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 14](../roadmaps/CS.md#phase-14) | [CONTINUE TO CS PHASE 15](../roadmaps/CS.md#phase-15)
+
+<a id="cs-phase-15-project"></a>
+### CS PHASE 15 MINI-PROJECT
+
+#### PROJECT: LIBRARY RELATIONSHIP MODEL
+
+#### SPECIFICATION
+
+Build **Library Relationship Model** as a focused exercise for **Relationships and Modeling**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Model library books, physical copies, members, authors, loans, and reservations with correct one-to-one and one-to-many relationships.
+- Give the user one clear main action and keep all other features secondary.
+- Use Relationships and Modeling in the design and make that use visible in the code or interface.
+- Keep the working data after restart when persistence is relevant.
+- Handle empty input, invalid input, and the normal user journey without crashing.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `library-relationship-model` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Model library books, physical copies, members, authors, loans, and reservations with correct one-to-one and one-to-many relationships.
+3. Use Relationships and Modeling in the design and make that use visible in the code or interface.
+4. Keep the working data after restart when persistence is relevant.
+5. Handle empty input, invalid input, and the normal user journey without crashing.
+6. Add one normal example and one edge or failure example specifically for **Relationships and Modeling**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **LIBRARY RELATIONSHIP MODEL**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/library-relationship-model
+git commit -m "feat(library-relationship-model): complete library relationship model"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 15](../roadmaps/CS.md#phase-15) | [CONTINUE TO CS PHASE 16](../roadmaps/CS.md#phase-16)
+
+<a id="cs-phase-16-project"></a>
+### CS PHASE 16 MINI-PROJECT
+
+#### PROJECT: GOD-OBJECT RESCUE
+
+#### SPECIFICATION
+
+Build **God-Object Rescue** as a focused exercise for **Smells and Refactoring**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Split an oversized order manager into cohesive pricing, inventory, payment, persistence, and notification responsibilities.
+- Give the user one clear main action and keep all other features secondary.
+- Use Smells and Refactoring in the design and make that use visible in the code or interface.
+- Keep the working data after restart when persistence is relevant.
+- Handle empty input, invalid input, and the normal user journey without crashing.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `god-object-rescue` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Split an oversized order manager into cohesive pricing, inventory, payment, persistence, and notification responsibilities.
+3. Use Smells and Refactoring in the design and make that use visible in the code or interface.
+4. Keep the working data after restart when persistence is relevant.
+5. Handle empty input, invalid input, and the normal user journey without crashing.
+6. Add one normal example and one edge or failure example specifically for **Smells and Refactoring**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **GOD-OBJECT RESCUE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/god-object-rescue
+git commit -m "fix(god-object-rescue): complete god-object rescue"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 16](../roadmaps/CS.md#phase-16) | [CONTINUE TO CS PHASE 17](../roadmaps/CS.md#phase-17)
+
+<a id="cs-phase-17-project"></a>
+### CS PHASE 17 MINI-PROJECT
+
+#### PROJECT: SOLID NOTIFICATION SERVICE
+
+#### SPECIFICATION
+
+Build **SOLID Notification Service** as a focused exercise for **SOLID**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Send notifications through injected email, SMS, or console channels while keeping message policy independent of delivery details.
+- Define the accepted request or message shape and the returned success and error shapes.
+- Use SOLID in the request path instead of hiding all work in one function.
+- Handle invalid input, a missing resource, and one dependency failure safely.
+- Add an automated check for the main success path and the most important failure path.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `solid-notification-service` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Send notifications through injected email, SMS, or console channels while keeping message policy independent of delivery details.
+3. Use SOLID in the request path instead of hiding all work in one function.
+4. Handle invalid input, a missing resource, and one dependency failure safely.
+5. Add an automated check for the main success path and the most important failure path.
+6. Add one normal example and one edge or failure example specifically for **SOLID**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **SOLID NOTIFICATION SERVICE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/solid-notification-service
+git commit -m "feat(solid-notification-service): complete solid notification service"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 17](../roadmaps/CS.md#phase-17) | [CONTINUE TO CS PHASE 18](../roadmaps/CS.md#phase-18)
+
+<a id="cs-phase-18-project"></a>
+### CS PHASE 18 MINI-PROJECT
+
+#### PROJECT: CONFIGURABLE OBJECT FACTORY
+
+#### SPECIFICATION
+
+Build **Configurable Object Factory** as a focused exercise for **Creational Patterns**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Create objects from configuration through a factory that validates type names and constructs the correct repository or notification channel.
+- Give the user one clear main action and keep all other features secondary.
+- Use Creational Patterns in the design and make that use visible in the code or interface.
+- Keep the working data after restart when persistence is relevant.
+- Handle empty input, invalid input, and the normal user journey without crashing.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `configurable-object-factory` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Create objects from configuration through a factory that validates type names and constructs the correct repository or notification channel.
+3. Use Creational Patterns in the design and make that use visible in the code or interface.
+4. Keep the working data after restart when persistence is relevant.
+5. Handle empty input, invalid input, and the normal user journey without crashing.
+6. Add one normal example and one edge or failure example specifically for **Creational Patterns**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **CONFIGURABLE OBJECT FACTORY**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/configurable-object-factory
+git commit -m "feat(configurable-object-factory): complete configurable object factory"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 18](../roadmaps/CS.md#phase-18) | [CONTINUE TO CS PHASE 19](../roadmaps/CS.md#phase-19)
+
+<a id="cs-phase-19-project"></a>
+### CS PHASE 19 MINI-PROJECT
+
+#### PROJECT: LEGACY PAYMENT ADAPTER
+
+#### SPECIFICATION
+
+Build **Legacy Payment Adapter** as a focused exercise for **Structural Patterns**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Make a legacy payment function satisfy a modern PaymentGateway interface through an adapter without changing legacy code.
+- Give the user one clear main action and keep all other features secondary.
+- Use Structural Patterns in the design and make that use visible in the code or interface.
+- Keep the working data after restart when persistence is relevant.
+- Handle empty input, invalid input, and the normal user journey without crashing.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `legacy-payment-adapter` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Make a legacy payment function satisfy a modern PaymentGateway interface through an adapter without changing legacy code.
+3. Use Structural Patterns in the design and make that use visible in the code or interface.
+4. Keep the working data after restart when persistence is relevant.
+5. Handle empty input, invalid input, and the normal user journey without crashing.
+6. Add one normal example and one edge or failure example specifically for **Structural Patterns**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **LEGACY PAYMENT ADAPTER**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/legacy-payment-adapter
+git commit -m "feat(legacy-payment-adapter): complete legacy payment adapter"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 19](../roadmaps/CS.md#phase-19) | [CONTINUE TO CS PHASE 20](../roadmaps/CS.md#phase-20)
+
+<a id="cs-phase-20-project"></a>
+### CS PHASE 20 MINI-PROJECT
+
+#### PROJECT: EVENT-DRIVEN TASK BOARD
+
+#### SPECIFICATION
+
+Build **Event-Driven Task Board** as a focused exercise for **Behavioral Patterns**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Create a task board whose add, move, and complete commands notify subscribed views and keep an undoable command history.
+- Give the user one clear main action and keep all other features secondary.
+- Use Behavioral Patterns in the design and make that use visible in the code or interface.
+- Keep the working data after restart when persistence is relevant.
+- Handle empty input, invalid input, and the normal user journey without crashing.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `event-driven-task-board` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Create a task board whose add, move, and complete commands notify subscribed views and keep an undoable command history.
+3. Use Behavioral Patterns in the design and make that use visible in the code or interface.
+4. Keep the working data after restart when persistence is relevant.
+5. Handle empty input, invalid input, and the normal user journey without crashing.
+6. Add one normal example and one edge or failure example specifically for **Behavioral Patterns**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **EVENT-DRIVEN TASK BOARD**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/event-driven-task-board
+git commit -m "feat(event-driven-task-board): complete event-driven task board"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 20](../roadmaps/CS.md#phase-20) | [CONTINUE TO CS PHASE 21](../roadmaps/CS.md#phase-21)
+
+<a id="cs-phase-21-project"></a>
+### CS PHASE 21 MINI-PROJECT
+
+#### PROJECT: TESTABLE DOMAIN MODEL
+
+#### SPECIFICATION
+
+Build **Testable Domain Model** as a focused exercise for **Testing OOP**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Build a small order domain whose rules are tested with fake clock, payment, inventory, and notification dependencies.
+- Choose a baseline and at least one alternative that can be compared fairly.
+- Use a metric connected to Testing OOP and explain in one sentence what a better value means.
+- Run both approaches on the same controlled inputs and store the result in a table.
+- Include one case where the preferred approach fails or becomes a poor choice.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `testable-domain-model` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Build a small order domain whose rules are tested with fake clock, payment, inventory, and notification dependencies.
+3. Use a metric connected to Testing OOP and explain in one sentence what a better value means.
+4. Run both approaches on the same controlled inputs and store the result in a table.
+5. Include one case where the preferred approach fails or becomes a poor choice.
+6. Add one normal example and one edge or failure example specifically for **Testing OOP**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **TESTABLE DOMAIN MODEL**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/testable-domain-model
+git commit -m "test(testable-domain-model): complete testable domain model"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 21](../roadmaps/CS.md#phase-21) | [CONTINUE TO CS PHASE 22](../roadmaps/CS.md#phase-22)
+
+<a id="cs-phase-22-project"></a>
+### CS PHASE 22 MINI-PROJECT
+
+#### PROJECT: LAYERED INVENTORY APP
+
+#### SPECIFICATION
+
+Build **Layered Inventory App** as a focused exercise for **Layers and Clean Architecture**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Create an inventory program with separate domain, application, persistence, and CLI layers and no database imports in domain code.
+- Give the user one clear main action and keep all other features secondary.
+- Use Layers and Clean Architecture in the design and make that use visible in the code or interface.
+- Keep the working data after restart when persistence is relevant.
+- Handle empty input, invalid input, and the normal user journey without crashing.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `layered-inventory-app` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Create an inventory program with separate domain, application, persistence, and CLI layers and no database imports in domain code.
+3. Use Layers and Clean Architecture in the design and make that use visible in the code or interface.
+4. Keep the working data after restart when persistence is relevant.
+5. Handle empty input, invalid input, and the normal user journey without crashing.
+6. Add one normal example and one edge or failure example specifically for **Layers and Clean Architecture**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **LAYERED INVENTORY APP**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/layered-inventory-app
+git commit -m "feat(layered-inventory-app): complete layered inventory app"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 22](../roadmaps/CS.md#phase-22) | [CONTINUE TO CS PHASE 23](../roadmaps/CS.md#phase-23)
+
+<a id="cs-phase-23-project"></a>
+### CS PHASE 23 MINI-PROJECT
+
+#### PROJECT: PARKING LOT LLD
+
+#### SPECIFICATION
+
+Build **Parking Lot LLD** as a focused exercise for **Low-Level Design Method**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Design a parking lot with vehicle types, spots, tickets, entry/exit, pricing, and capacity rules before implementing its core workflow.
+- Give the user one clear main action and keep all other features secondary.
+- Use Low-Level Design Method in the design and make that use visible in the code or interface.
+- Keep the working data after restart when persistence is relevant.
+- Handle empty input, invalid input, and the normal user journey without crashing.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `parking-lot-lld` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Design a parking lot with vehicle types, spots, tickets, entry/exit, pricing, and capacity rules before implementing its core workflow.
+3. Use Low-Level Design Method in the design and make that use visible in the code or interface.
+4. Keep the working data after restart when persistence is relevant.
+5. Handle empty input, invalid input, and the normal user journey without crashing.
+6. Add one normal example and one edge or failure example specifically for **Low-Level Design Method**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **PARKING LOT LLD**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/parking-lot-lld
+git commit -m "feat(oop-parking-lot-lld): complete parking lot lld"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 23](../roadmaps/CS.md#phase-23) | [CONTINUE TO CS PHASE 24](../roadmaps/CS.md#phase-24)
+
+<a id="cs-phase-24-project"></a>
+### CS PHASE 24 MINI-PROJECT
+
+#### PROJECT: DESIGN PORTFOLIO PACK
+
+#### SPECIFICATION
+
+Build **Design Portfolio Pack** as a focused exercise for **Portfolio**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Polish three earlier designs with diagrams, runnable examples, tests, consistent naming, and a short in-app explanation of trade-offs.
+- Define one realistic scenario, its boundaries, and the intended reader for the Design Portfolio Pack.
+- Collect or create the exact inputs needed to apply Portfolio; label assumptions instead of hiding them.
+- Produce a final diagram, table, report, or decision document with findings ordered by importance.
+- Add one concrete recommendation or next action for every important finding.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `design-portfolio-pack` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Polish three earlier designs with diagrams, runnable examples, tests, consistent naming, and a short in-app explanation of trade-offs.
+3. Collect or create the exact inputs needed to apply Portfolio; label assumptions instead of hiding them.
+4. Produce a final diagram, table, report, or decision document with findings ordered by importance.
+5. Add one concrete recommendation or next action for every important finding.
+6. Add one normal example and one edge or failure example specifically for **Portfolio**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **DESIGN PORTFOLIO PACK**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/design-portfolio-pack
+git commit -m "feat(design-portfolio-pack): complete design portfolio pack"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 24](../roadmaps/CS.md#phase-24) | [CONTINUE TO CS PHASE 25](../roadmaps/CS.md#phase-25)
+
+<a id="cs-phase-25-project"></a>
+### CS PHASE 25 MINI-PROJECT
+
+#### PROJECT: TIMED OOP DESIGN KATA
+
+#### SPECIFICATION
+
+Build **Timed OOP Design Kata** as a focused exercise for **Interviews**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Solve a timed object-design change, write tests, and answer follow-up questions about responsibilities, patterns, and alternatives.
+- Give the user one clear main action and keep all other features secondary.
+- Use Interviews in the design and make that use visible in the code or interface.
+- Keep the working data after restart when persistence is relevant.
+- Handle empty input, invalid input, and the normal user journey without crashing.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; add pytest only when the phase introduces testing
+
+#### BUILD IT STEP BY STEP
+
+1. Create `timed-oop-design-kata` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
+2. Solve a timed object-design change, write tests, and answer follow-up questions about responsibilities, patterns, and alternatives.
+3. Use Interviews in the design and make that use visible in the code or interface.
+4. Keep the working data after restart when persistence is relevant.
+5. Handle empty input, invalid input, and the normal user journey without crashing.
+6. Add one normal example and one edge or failure example specifically for **Interviews**.
+7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+
+### Git Checkpoint
+
+You have completed **TIMED OOP DESIGN KATA**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- oop/timed-oop-design-kata
+git commit -m "feat(timed-oop-design-kata): complete timed oop design kata"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 25](../roadmaps/CS.md#phase-25) | [BUILD THE CS OOP-BLOCK PORTFOLIO PROJECT](#oop-main-portfolio-project) · [CONTINUE TO CS PHASE 26](../roadmaps/CS.md#phase-26)
+
+<a id="oop-main-portfolio-project"></a>
+<a id="cs-oop-block-portfolio-project"></a>
+## CS PHASES 6-25 PORTFOLIO PROJECT
+
+#### PROJECT: COMMUNITY WORKSHOP INVENTORY AND BOOKING SYSTEM
+
+#### DESCRIPTION
+
+A local-first application that helps a community workshop lend tools, reserve work areas, track members, and record returns. It is large enough to demonstrate professional object-oriented design while remaining possible for one learner to finish.
+
+#### WHO THIS IS FOR
+
+- Workshop coordinator who registers tools and approves bookings
+- Member who searches availability and reserves equipment
+- Maintainer who records inspections and removes unsafe tools from circulation
+
+#### WHAT USERS CAN DO
+
+- Register members, tools, work areas, and maintenance records
+- Search availability and create, cancel, check-out, and return bookings
+- Block unsafe or already-booked equipment with clear domain errors
+- Persist data locally and export a simple usage summary
+
+#### FREE AND OPEN-SOURCE TECH STACK
+
+- Python 3.12
+- Textual for a terminal user interface
+- SQLite with the Python standard library
+- pytest, Ruff, and mypy
+- PyInstaller for a downloadable desktop executable
+- Git and a public GitHub repository; every application dependency is free and open source
+
+No paid API, commercial license, or paid cloud resource is required. Use only generated, public, or permissioned data.
+
+> **HOW PHASES 24 AND 25 WORK HERE:** Phase 24 is a required capstone-completion step: apply that roadmap's final engineering, integration, automation, migration, quality, or portfolio work. Phase 25 does not add another product feature. It is post-build interview and presentation practice using the completed project. The software is functionally complete after Phase 24; do Phase 25 to complete the career-preparation roadmap.
+
+#### BUILD IT PHASE BY PHASE
+
+1. **Phase 6 - Object Thinking:** Turn the workshop story into objects, responsibilities, and messages instead of one long procedural script.
+2. **Phase 7 - Classes and Objects:** Create Tool, Member, Booking, WorkArea, and MaintenanceRecord classes with clear constructors.
+3. **Phase 8 - State and Behavior:** Add state-changing methods such as reserve, check_out, return_tool, and mark_unsafe; reject impossible transitions.
+4. **Phase 9 - Encapsulation:** Keep fields private where changing them directly could break a rule, and expose safe methods or properties.
+5. **Phase 10 - Abstraction:** Define repository, clock, and notification abstractions so business rules do not depend on SQLite or the screen.
+6. **Phase 11 - Inheritance:** Use inheritance only for genuinely shared member or tool behavior; demonstrate and test the chosen hierarchy.
+7. **Phase 12 - Polymorphism:** Use polymorphism for different pricing, borrowing-limit, or notification policies behind one interface.
+8. **Phase 13 - Composition over Inheritance:** Compose BookingService from repositories, policies, and a clock instead of building a deep inheritance tree.
+9. **Phase 14 - Python Power Tools:** Add useful dunder methods, dataclasses, enums, and properties so domain values are safe and readable.
+10. **Phase 15 - Relationships and Modeling:** Draw the class relationships, then implement one-to-many member bookings and tool maintenance history.
+11. **Phase 16 - Smells and Refactoring:** Identify one oversized class or duplicated rule and refactor it without changing behavior.
+12. **Phase 17 - SOLID:** Review the design against all five SOLID principles and correct the two clearest violations.
+13. **Phase 18 - Creational Patterns:** Use a factory to construct tools or policies from saved configuration without conditionals spread everywhere.
+14. **Phase 19 - Structural Patterns:** Add an adapter between the domain repository interface and SQLite, plus a facade for the terminal UI.
+15. **Phase 20 - Behavioral Patterns:** Use Observer for notifications or Strategy for booking rules; show why the pattern removes a real conditional.
+16. **Phase 21 - Testing OOP:** Write unit tests for domain rules with fakes and integration tests for the SQLite adapter.
+17. **Phase 22 - Layers and Clean Architecture:** Separate domain, application, infrastructure, and interface folders so business rules point inward.
+18. **Phase 23 - Low-Level Design Method:** Create a short low-level design for a new wait-list feature, then implement it from the design.
+19. **PHASE 24 - Portfolio (REQUIRED CAPSTONE-COMPLETION STEP):** Polish the terminal screens, seed realistic data, add screenshots, choose an open-source license, and remove secrets or machine-specific paths.
+20. **PHASE 25 - Interviews (POST-BUILD PRACTICE; NO NEW PRODUCT FEATURE):** Practice a timed change such as adding a new tool category, then explain the design, tests, trade-offs, and complexity aloud.
+
+#### GIT MILESTONE CHECKPOINTS
+
+Keep this capstone in `community-workshop-inventory-and-booking-system` inside the portfolio repository. The five checkpoints below preserve working phase groups without interrupting every implementation step. Test the completed group before committing; the repository-level ignore rules still apply.
+
+##### Git Checkpoint 1
+
+You have completed **Phases 6-9: workshop domain model and protected state transitions**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- community-workshop-inventory-and-booking-system
+git commit -m "feat(workshop): model tools members and booking state"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 2
+
+You have completed **Phases 10-15: booking policies, composition, and domain relationships**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- community-workshop-inventory-and-booking-system
+git commit -m "feat(workshop): implement booking policies and relationships"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 3
+
+You have completed **Phases 16-20: refactored services, patterns, SQLite adapter, and terminal facade**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- community-workshop-inventory-and-booking-system
+git commit -m "refactor(workshop): integrate services patterns and persistence"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Git Checkpoint 4
+
+You have completed **Phases 21-23: automated tests, clean architecture, and wait-list design**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- community-workshop-inventory-and-booking-system
+git commit -m "test(workshop): verify domain adapters and wait-list flow"
+```
+
+Verify:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+##### Final Git Checkpoint
+
+You have completed **Phase 24: polished screens, demo data, documentation, and release assets**. Run the relevant application checks, then save this capstone milestone:
+
+```bash
+git status
+git add -- community-workshop-inventory-and-booking-system
+git commit -m "docs(workshop): complete community workshop portfolio release"
+git tag -a workshop-v1.0.0 -m "First complete workshop release"
+```
+
+Verify:
+
+```bash
+git log --oneline --decorate -5
+git status
+git tag
+```
+
+Continue only when the completed milestone works and the working tree is clean.
+
+#### HOW TO DEPLOY IT FOR FREE
+
+1. Run `pytest`, Ruff, and mypy locally; fix every error.
+2. Build a standalone executable with PyInstaller for your operating system.
+3. Create a version tag and attach the executable plus a small sample database to a GitHub Release.
+4. Use a public repository and GitHub Actions standard runners to repeat tests and package builds at no cost.
+5. Install the release on a second computer or clean user account and complete one booking from start to finish.
+
+> **MAIN PROJECT NAVIGATION:** [REVIEW CS PHASE 24](../roadmaps/CS.md#phase-24) | [REVIEW CS PHASE 25](../roadmaps/CS.md#phase-25) | [RETURN TO THE CS ROADMAP](../roadmaps/CS.md#phase-index)
+
+<a id="cs-phase-26-project"></a>
+### CS PHASE 26 MINI-PROJECT
+
 #### PROJECT: DATA STRUCTURES TOOLKIT
 
 #### SPECIFICATION
@@ -1568,10 +1565,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 3](../roadmaps/CS.md#phase-3) | [CONTINUE TO CS PHASE 4](../roadmaps/CS.md#phase-4)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 26](../roadmaps/CS.md#phase-26) | [CONTINUE TO CS PHASE 27](../roadmaps/CS.md#phase-27)
 
-<a id="cs-phase-4-project"></a>
-### CS PHASE 4 MINI-PROJECT
+<a id="cs-phase-27-project"></a>
+### CS PHASE 27 MINI-PROJECT
 
 #### PROJECT: RECURSIVE FILESYSTEM WALKER
 
@@ -1620,10 +1617,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 4](../roadmaps/CS.md#phase-4) | [CONTINUE TO CS PHASE 5](../roadmaps/CS.md#phase-5)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 27](../roadmaps/CS.md#phase-27) | [CONTINUE TO CS PHASE 28](../roadmaps/CS.md#phase-28)
 
-<a id="cs-phase-5-project"></a>
-### CS PHASE 5 MINI-PROJECT
+<a id="cs-phase-28-project"></a>
+### CS PHASE 28 MINI-PROJECT
 
 #### PROJECT: PRIORITY TASK SCHEDULER
 
@@ -1672,10 +1669,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 5](../roadmaps/CS.md#phase-5) | [CONTINUE TO CS PHASE 6](../roadmaps/CS.md#phase-6)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 28](../roadmaps/CS.md#phase-28) | [CONTINUE TO CS PHASE 29](../roadmaps/CS.md#phase-29)
 
-<a id="cs-phase-6-project"></a>
-### CS PHASE 6 MINI-PROJECT
+<a id="cs-phase-29-project"></a>
+### CS PHASE 29 MINI-PROJECT
 
 #### PROJECT: HASH TABLE AND LRU CACHE
 
@@ -1724,10 +1721,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 6](../roadmaps/CS.md#phase-6) | [CONTINUE TO CS PHASE 7](../roadmaps/CS.md#phase-7)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 29](../roadmaps/CS.md#phase-29) | [CONTINUE TO CS PHASE 30](../roadmaps/CS.md#phase-30)
 
-<a id="cs-phase-7-project"></a>
-### CS PHASE 7 MINI-PROJECT
+<a id="cs-phase-30-project"></a>
+### CS PHASE 30 MINI-PROJECT
 
 #### PROJECT: SORTING BENCHMARK EXPLORER
 
@@ -1776,10 +1773,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 7](../roadmaps/CS.md#phase-7) | [CONTINUE TO CS PHASE 8](../roadmaps/CS.md#phase-8)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 30](../roadmaps/CS.md#phase-30) | [CONTINUE TO CS PHASE 31](../roadmaps/CS.md#phase-31)
 
-<a id="cs-phase-8-project"></a>
-### CS PHASE 8 MINI-PROJECT
+<a id="cs-phase-31-project"></a>
+### CS PHASE 31 MINI-PROJECT
 
 #### PROJECT: GRAPH ROUTE PLANNER
 
@@ -1828,10 +1825,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 8](../roadmaps/CS.md#phase-8) | [CONTINUE TO CS PHASE 9](../roadmaps/CS.md#phase-9)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 31](../roadmaps/CS.md#phase-31) | [CONTINUE TO CS PHASE 32](../roadmaps/CS.md#phase-32)
 
-<a id="cs-phase-9-project"></a>
-### CS PHASE 9 MINI-PROJECT
+<a id="cs-phase-32-project"></a>
+### CS PHASE 32 MINI-PROJECT
 
 #### PROJECT: ALGORITHM PATTERN WORKBOOK
 
@@ -1880,10 +1877,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 9](../roadmaps/CS.md#phase-9) | [CONTINUE TO CS PHASE 10](../roadmaps/CS.md#phase-10)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 32](../roadmaps/CS.md#phase-32) | [CONTINUE TO CS PHASE 33](../roadmaps/CS.md#phase-33)
 
-<a id="cs-phase-10-project"></a>
-### CS PHASE 10 MINI-PROJECT
+<a id="cs-phase-33-project"></a>
+### CS PHASE 33 MINI-PROJECT
 
 #### PROJECT: PARKING LOT LLD
 
@@ -1932,10 +1929,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 10](../roadmaps/CS.md#phase-10) | [CONTINUE TO CS PHASE 11](../roadmaps/CS.md#phase-11)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 33](../roadmaps/CS.md#phase-33) | [CONTINUE TO CS PHASE 34](../roadmaps/CS.md#phase-34)
 
-<a id="cs-phase-11-project"></a>
-### CS PHASE 11 MINI-PROJECT
+<a id="cs-phase-34-project"></a>
+### CS PHASE 34 MINI-PROJECT
 
 #### PROJECT: SHELL AND SCHEDULER SIMULATOR
 
@@ -1984,10 +1981,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 11](../roadmaps/CS.md#phase-11) | [CONTINUE TO CS PHASE 12](../roadmaps/CS.md#phase-12)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 34](../roadmaps/CS.md#phase-34) | [CONTINUE TO CS PHASE 35](../roadmaps/CS.md#phase-35)
 
-<a id="cs-phase-12-project"></a>
-### CS PHASE 12 MINI-PROJECT
+<a id="cs-phase-35-project"></a>
+### CS PHASE 35 MINI-PROJECT
 
 #### PROJECT: TCP CHAT SERVICE
 
@@ -2036,10 +2033,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 12](../roadmaps/CS.md#phase-12) | [CONTINUE TO CS PHASE 13](../roadmaps/CS.md#phase-13)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 35](../roadmaps/CS.md#phase-35) | [CONTINUE TO CS PHASE 36](../roadmaps/CS.md#phase-36)
 
-<a id="cs-phase-13-project"></a>
-### CS PHASE 13 MINI-PROJECT
+<a id="cs-phase-36-project"></a>
+### CS PHASE 36 MINI-PROJECT
 
 #### PROJECT: RAW HTTP API SERVER
 
@@ -2088,10 +2085,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 13](../roadmaps/CS.md#phase-13) | [CONTINUE TO CS PHASE 14](../roadmaps/CS.md#phase-14)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 36](../roadmaps/CS.md#phase-36) | [CONTINUE TO CS PHASE 37](../roadmaps/CS.md#phase-37)
 
-<a id="cs-phase-14-project"></a>
-### CS PHASE 14 MINI-PROJECT
+<a id="cs-phase-37-project"></a>
+### CS PHASE 37 MINI-PROJECT
 
 #### PROJECT: TRANSACTIONAL LIBRARY DATABASE
 
@@ -2140,10 +2137,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 14](../roadmaps/CS.md#phase-14) | [CONTINUE TO CS PHASE 15](../roadmaps/CS.md#phase-15)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 37](../roadmaps/CS.md#phase-37) | [CONTINUE TO CS PHASE 38](../roadmaps/CS.md#phase-38)
 
-<a id="cs-phase-15-project"></a>
-### CS PHASE 15 MINI-PROJECT
+<a id="cs-phase-38-project"></a>
+### CS PHASE 38 MINI-PROJECT
 
 #### PROJECT: SECURE AUTH SERVICE
 
@@ -2192,10 +2189,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 15](../roadmaps/CS.md#phase-15) | [CONTINUE TO CS PHASE 16](../roadmaps/CS.md#phase-16)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 38](../roadmaps/CS.md#phase-38) | [CONTINUE TO CS PHASE 39](../roadmaps/CS.md#phase-39)
 
-<a id="cs-phase-16-project"></a>
-### CS PHASE 16 MINI-PROJECT
+<a id="cs-phase-39-project"></a>
+### CS PHASE 39 MINI-PROJECT
 
 #### PROJECT: TESTED CI-READY SERVICE
 
@@ -2244,10 +2241,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 16](../roadmaps/CS.md#phase-16) | [CONTINUE TO CS PHASE 17](../roadmaps/CS.md#phase-17)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 39](../roadmaps/CS.md#phase-39) | [CONTINUE TO CS PHASE 40](../roadmaps/CS.md#phase-40)
 
-<a id="cs-phase-17-project"></a>
-### CS PHASE 17 MINI-PROJECT
+<a id="cs-phase-40-project"></a>
+### CS PHASE 40 MINI-PROJECT
 
 #### PROJECT: SCALABLE URL SHORTENER DESIGN
 
@@ -2296,10 +2293,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 17](../roadmaps/CS.md#phase-17) | [CONTINUE TO CS PHASE 18](../roadmaps/CS.md#phase-18)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 40](../roadmaps/CS.md#phase-40) | [CONTINUE TO CS PHASE 41](../roadmaps/CS.md#phase-41)
 
-<a id="cs-phase-18-project"></a>
-### CS PHASE 18 MINI-PROJECT
+<a id="cs-phase-41-project"></a>
+### CS PHASE 41 MINI-PROJECT
 
 #### PROJECT: REPLICATED LEDGER SIMULATOR
 
@@ -2348,10 +2345,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 18](../roadmaps/CS.md#phase-18) | [CONTINUE TO CS PHASE 19](../roadmaps/CS.md#phase-19)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 41](../roadmaps/CS.md#phase-41) | [CONTINUE TO CS PHASE 42](../roadmaps/CS.md#phase-42)
 
-<a id="cs-phase-19-project"></a>
-### CS PHASE 19 MINI-PROJECT
+<a id="cs-phase-42-project"></a>
+### CS PHASE 42 MINI-PROJECT
 
 #### PROJECT: INTEGRATED SYSTEMS CAPSTONE
 
@@ -2400,10 +2397,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 19](../roadmaps/CS.md#phase-19) | [CONTINUE TO CS PHASE 20](../roadmaps/CS.md#phase-20)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 42](../roadmaps/CS.md#phase-42) | [CONTINUE TO CS PHASE 43](../roadmaps/CS.md#phase-43)
 
-<a id="cs-phase-20-project"></a>
-### CS PHASE 20 MINI-PROJECT
+<a id="cs-phase-43-project"></a>
+### CS PHASE 43 MINI-PROJECT
 
 #### PROJECT: TIMED INTERVIEW HARNESS
 
@@ -2452,7 +2449,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 20](../roadmaps/CS.md#phase-20) | [BUILD THE CS MAIN PORTFOLIO PROJECT](#cs-main-portfolio-project)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 43](../roadmaps/CS.md#phase-43) | [BUILD THE CS MAIN PORTFOLIO PROJECT](#cs-main-portfolio-project)
 
 <a id="cs-main-portfolio-project"></a>
 ## CS MAIN PORTFOLIO PROJECT
@@ -2489,30 +2486,30 @@ A full-stack service where neighbors list useful items, request a loan, approve 
 
 No paid API, commercial license, or paid cloud resource is required. Use only generated, public, or permissioned data.
 
-> **HOW PHASES 19 AND 20 WORK HERE:** Phase 19 is a required capstone-completion step: apply that roadmap's final engineering, integration, automation, migration, quality, or portfolio work. Phase 20 does not add another product feature. It is post-build interview and presentation practice using the completed project. The software is functionally complete after Phase 19; do Phase 20 to complete the career-preparation roadmap.
+> **HOW PHASES 42 AND 43 WORK HERE:** Phase 42 is a required capstone-completion step: apply that roadmap's final engineering, integration, automation, migration, quality, or portfolio work. Phase 43 does not add another product feature. It is post-build interview and presentation practice using the completed project. The software is functionally complete after Phase 42; do Phase 43 to complete the career-preparation roadmap.
 
 #### BUILD IT PHASE BY PHASE
 
 1. **Phase 1 - Programming Foundations and Program Execution:** Build a small command-line version first and trace how source code becomes a running process.
 2. **Phase 2 - Complexity Analysis:** Measure time and memory for search and request-list operations at several dataset sizes; record Big O expectations.
-3. **Phase 3 - Linear Data Structures:** Use arrays/lists, queues, and stacks for result pages, pending requests, and undoable moderation actions.
-4. **Phase 4 - Recursion:** Add a recursive category tree operation and protect it from cycles and excessive depth.
-5. **Phase 5 - Hierarchical and Priority Structures:** Use a heap for expiry reminders and a tree structure for category navigation.
-6. **Phase 6 - Hashing:** Add hash-based indexes and an LRU cache for popular searches; define eviction and invalidation rules.
-7. **Phase 7 - Sorting and Binary Search:** Sort by distance, date, and popularity and use binary search where a sorted in-memory structure is justified.
-8. **Phase 8 - Graphs:** Model users and resources as a graph and add breadth-first recommendations within a chosen hop limit.
-9. **Phase 9 - Algorithmic Patterns:** Use two-pointer, sliding-window, or greedy patterns for one suitable feed or scheduling feature and explain the choice.
-10. **Phase 10 - OOP and Low-Level Design:** Refactor the domain into cohesive classes and produce a low-level design for the borrow workflow.
-11. **Phase 11 - Operating Systems:** Run API and worker processes separately, handle signals, limit concurrency, and shut down without losing accepted work.
-12. **Phase 12 - Computer Networks:** Define the browser-to-API network path, timeouts, connection reuse, and one simulated network failure.
-13. **Phase 13 - Web, HTTP, and APIs:** Publish versioned HTTP endpoints with validation, pagination, idempotency, and consistent error responses.
-14. **Phase 14 - Databases and Data Modeling:** Create a normalized PostgreSQL schema, migrations, indexes, and a transaction for approving a request.
-15. **Phase 15 - Authentication and Security:** Add password hashing or external OAuth, secure sessions, authorization on every object, rate limiting, and audit logging.
-16. **Phase 16 - Software Engineering and Testing:** Create unit, integration, contract, and browser tests plus a free GitHub Actions CI workflow.
-17. **Phase 17 - System Design and Scalability:** Add caching, background work, health endpoints, metrics, and a load test; document the next scaling bottleneck.
-18. **Phase 18 - Distributed Systems:** Make notifications idempotent, use an outbox table, simulate retry and duplication, and explain consistency choices.
-19. **PHASE 19 - Projects (REQUIRED CAPSTONE-COMPLETION STEP):** Polish one end-to-end workflow, seed demo accounts, choose an open-source license, and make the public demo safe.
-20. **PHASE 20 - Interview Mastery (POST-BUILD PRACTICE; NO NEW PRODUCT FEATURE):** Rehearse a timed coding change and a system-design explanation using this project as the concrete example.
+3. **Phase 26 - Linear Data Structures:** Use arrays/lists, queues, and stacks for result pages, pending requests, and undoable moderation actions.
+4. **Phase 27 - Recursion:** Add a recursive category tree operation and protect it from cycles and excessive depth.
+5. **Phase 28 - Hierarchical and Priority Structures:** Use a heap for expiry reminders and a tree structure for category navigation.
+6. **Phase 29 - Hashing:** Add hash-based indexes and an LRU cache for popular searches; define eviction and invalidation rules.
+7. **Phase 30 - Sorting and Binary Search:** Sort by distance, date, and popularity and use binary search where a sorted in-memory structure is justified.
+8. **Phase 31 - Graphs:** Model users and resources as a graph and add breadth-first recommendations within a chosen hop limit.
+9. **Phase 32 - Algorithmic Patterns:** Use two-pointer, sliding-window, or greedy patterns for one suitable feed or scheduling feature and explain the choice.
+10. **Phase 33 - OOP and Low-Level Design:** Refactor the domain into cohesive classes and produce a low-level design for the borrow workflow.
+11. **Phase 34 - Operating Systems:** Run API and worker processes separately, handle signals, limit concurrency, and shut down without losing accepted work.
+12. **Phase 35 - Computer Networks:** Define the browser-to-API network path, timeouts, connection reuse, and one simulated network failure.
+13. **Phase 36 - Web, HTTP, and APIs:** Publish versioned HTTP endpoints with validation, pagination, idempotency, and consistent error responses.
+14. **Phase 37 - Databases and Data Modeling:** Create a normalized PostgreSQL schema, migrations, indexes, and a transaction for approving a request.
+15. **Phase 38 - Authentication and Security:** Add password hashing or external OAuth, secure sessions, authorization on every object, rate limiting, and audit logging.
+16. **Phase 39 - Software Engineering and Testing:** Create unit, integration, contract, and browser tests plus a free GitHub Actions CI workflow.
+17. **Phase 40 - System Design and Scalability:** Add caching, background work, health endpoints, metrics, and a load test; document the next scaling bottleneck.
+18. **Phase 41 - Distributed Systems:** Make notifications idempotent, use an outbox table, simulate retry and duplication, and explain consistency choices.
+19. **PHASE 42 - Projects (REQUIRED CAPSTONE-COMPLETION STEP):** Polish one end-to-end workflow, seed demo accounts, choose an open-source license, and make the public demo safe.
+20. **PHASE 43 - Interview Mastery (POST-BUILD PRACTICE; NO NEW PRODUCT FEATURE):** Rehearse a timed coding change and a system-design explanation using this project as the concrete example.
 
 #### GIT MILESTONE CHECKPOINTS
 
@@ -2596,7 +2593,7 @@ Continue only when the completed milestone works and the working tree is clean.
 
 ##### Final Git Checkpoint
 
-You have completed **Phase 19: safe demo workflow, documentation, license, and public portfolio assets**. Run the relevant application checks, then save this capstone milestone:
+You have completed **Phase 42: safe demo workflow, documentation, license, and public portfolio assets**. Run the relevant application checks, then save this capstone milestone:
 
 ```bash
 git status
@@ -2624,7 +2621,7 @@ Continue only when the completed milestone works and the working tree is clean.
 5. Set the frontend API URL, allow only the deployed frontend origin, and test sign-in, request, approval, and return.
 6. State clearly that free services can sleep or enforce quotas; keep Docker Compose as the permanent no-cost local deployment.
 
-> **MAIN PROJECT NAVIGATION:** [REVIEW CS PHASE 19](../roadmaps/CS.md#phase-19) | [REVIEW CS PHASE 20](../roadmaps/CS.md#phase-20) | [RETURN TO THE CS ROADMAP](../roadmaps/CS.md#phase-index)
+> **MAIN PROJECT NAVIGATION:** [REVIEW CS PHASE 42](../roadmaps/CS.md#phase-42) | [REVIEW CS PHASE 43](../roadmaps/CS.md#phase-43) | [RETURN TO THE CS ROADMAP](../roadmaps/CS.md#phase-index)
 
 ## Data Analysis and Engineering
 

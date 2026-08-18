@@ -1924,7 +1924,7 @@ The sequence follows dependency and pressure, not product marketing. Provider na
 | Need | Continue in |
 | --- | --- |
 | Git internals, recovery, workflows, and trusted repository gates | [`Git.md`](./Git.md) |
-| Operating systems, concurrency, and system design | [`CS.md`](./CS.md) Phases 11, 16-18 |
+| Operating systems, concurrency, and system design | [`CS.md`](./CS.md) Phases 34, 39-41 |
 | Networking and HTTP diagnosis | [`Networks.md`](./Networks.md) and [`Web.md`](./Web.md) |
 | Cloud architecture and FinOps | [`Cloud.md`](./Cloud.md) |
 | DevSecOps and incident security | [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) |

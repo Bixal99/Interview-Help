@@ -16,13 +16,14 @@ Interview Help turns the existing README and roadmap Markdown into a W3Schools-s
 
 ## Positioning
 
-The curriculum already exists in the repo. The site does not invent lessons, videos, or quizzes. It displays the connected story the files already tell, with CS.md and OOP.md kept as separate sources and joined only in navigation the way README already does.
+The curriculum already exists in the repo. The site does not invent lessons, videos, or quizzes. It displays the connected story the files already tell. Computer Science is one `CS.md` tutorial (foundations, programming, OOP, then data structures onward).
 
 ## Operating Context
 
 - Canonical teaching text: `content/roadmaps/*.md`, `content/guides/Projects.md`, `content/guides/Interview.md`, and README.md.
 - Progress lives only in the browser (`localStorage`). No account, no paywall.
-- Recommended Software Engineer loop: CS 1–2 → OOP Part 0 and OOP phases → Git 1–10 → CS 3 onward.
+- Recommended Software Engineer loop: Computer Science Phases 1–25 → Git 1–10 → Computer Science Phases 26 onward.
+- OOP is not a separate course in the UI. Old `/courses/object-oriented-programming` URLs redirect into Computer Science.
 
 ## Capabilities and Constraints
 

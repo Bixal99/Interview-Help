@@ -12,5 +12,4 @@
 | IT Administration | [`IT_Administration.md`](./IT_Administration.md) | `/courses/it-administration` |
 | Computer Networks | [`Networks.md`](./Networks.md) | `/courses/networks` |
 | Odoo | [`ODOO.md`](./ODOO.md) | `/courses/odoo` |
-| Object-Oriented Programming | [`OOP.md`](./OOP.md) | `/courses/object-oriented-programming` |
 | Web Development | [`Web.md`](./Web.md) | `/courses/web-development` |

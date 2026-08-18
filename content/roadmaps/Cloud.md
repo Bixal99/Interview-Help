@@ -1963,7 +1963,7 @@ The sequence follows dependency and pressure, not product marketing. Provider na
 | Need | Continue in |
 | --- | --- |
 | Git history, IaC review, secret recovery, releases, and trusted CI | [`Git.md`](./Git.md) |
-| Linux, networking, and systems depth | [`CS.md`](./CS.md) Phases 11-12 and [`Networks.md`](./Networks.md) |
+| Linux, networking, and systems depth | [`CS.md`](./CS.md) Phases 34-35 and [`Networks.md`](./Networks.md) |
 | Web workloads and APIs | [`Web.md`](./Web.md) Phases 11-18 |
 | Delivery automation and operations | [`DevOps.md`](./DevOps.md) |
 | Cloud security depth | [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) |

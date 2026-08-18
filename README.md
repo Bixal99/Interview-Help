@@ -22,8 +22,7 @@ Use this learning loop throughout the repository: read the problem in plain lang
 
 | File | Track | Who it's for |
 |------|--------|--------------|
-| [`CS.md`](./content/roadmaps/CS.md) | Computer Science & Software Engineering | Backend / full-stack / general SWE interviews |
-| [`OOP.md`](./content/roadmaps/OOP.md) | Programming Fundamentals + OOP | Absolute beginners through SOLID, patterns, LLD (before CS Phase 3) |
+| [`CS.md`](./content/roadmaps/CS.md) | Computer Science | Backend / full-stack / general SWE interviews. Programming and OOP sit after Phases 1-2 |
 | [`Git.md`](./content/roadmaps/Git.md) | Git & Professional Git Workflows | Beginners through internals, recovery, team workflows, releases, CI, and repository trust |
 | [`Data.md`](./content/roadmaps/Data.md) | Data Analyst & Data Engineer | Analytics, SQL, pipelines, warehouses, Spark/Kafka |
 | [`Networks.md`](./content/roadmaps/Networks.md) | Computer Networks | Network/infra engineers and SWEs who must understand the stack |
@@ -37,7 +36,7 @@ Use this learning loop throughout the repository: read the problem in plain lang
 | [`Projects.md`](./content/guides/Projects.md) | Projects Playbook | Small builds that cement every roadmap |
 | [`Interview.md`](./content/guides/Interview.md) | Combined Interview Playbook | Spoken Q&A drill across the roadmaps |
 
-**Repository count:** 12 learning roadmaps · 2 shared playbooks · 1 CV template · 16 canonical Markdown documents in total.
+**Repository count:** 11 source roadmaps · 2 shared playbooks · 1 CV template. Computer Science is one tutorial in [`CS.md`](./content/roadmaps/CS.md): Phases 1-2 foundations, 3-25 programming and OOP, then 26 onward.
 
 All roadmaps use the **same teaching rhythm**. [`Projects.md`](./content/guides/Projects.md) is how you prove it. [`Interview.md`](./content/guides/Interview.md) is the place to practice answers aloud.
 
@@ -79,18 +78,17 @@ Each roadmap section follows the same shape so you always know where to look:
 **SWE path**
 
 ```text
-CS Phases 1-2  →  OOP.md (Part 0 fundamentals + Phases 1-20)  →  Git.md Phases 1-10
-                 →  CS Phase 3+
+CS Phases 1-25  →  Git.md Phases 1-10  →  CS Phases 26-43
                  →  Projects.md along the way
                  →  Networks.md essentials when systems start
                  →  Interview.md before applications
 ```
 
-**Odoo path:** finish [`OOP.md`](./content/roadmaps/OOP.md) (including Part 0), complete [`Git.md`](./content/roadmaps/Git.md) Phases 1-7 before Odoo source/branch collaboration, then follow [`ODOO.md`](./content/roadmaps/ODOO.md) and its matching projects.
+**Odoo path:** finish Computer Science Phases 3-25, complete [`Git.md`](./content/roadmaps/Git.md) Phases 1-7 before Odoo source/branch collaboration, then follow [`ODOO.md`](./content/roadmaps/ODOO.md) and its matching projects.
 
 **IT administrator path:** begin directly with [`IT_Administration.md`](./content/roadmaps/IT_Administration.md); it starts from basic computer literacy and builds a safe local homelab. Use [`Networks.md`](./content/roadmaps/Networks.md) for packet/routing depth, [`ICT_Cybersecurity.md`](./content/roadmaps/ICT_Cybersecurity.md) for security depth, then specialize through [`Cloud.md`](./content/roadmaps/Cloud.md) or [`DevOps.md`](./content/roadmaps/DevOps.md). Build the matching IT Administration projects and practice Interview Track I throughout.
 
-**Web developer path:** learn programming fundamentals in [`OOP.md`](./content/roadmaps/OOP.md) Part 0, complete [`Git.md`](./content/roadmaps/Git.md) Phases 1-7 for repository and review work, then follow [`Web.md`](./content/roadmaps/Web.md) from browser fundamentals through deployment. Pair Web Phase 1/6 with [`Networks.md`](./content/roadmaps/Networks.md), Phase 13 with [`Data.md`](./content/roadmaps/Data.md), and Git Phases 12/15 with releases and CI.
+**Web developer path:** learn programming fundamentals in Computer Science Phases 3-5, complete [`Git.md`](./content/roadmaps/Git.md) Phases 1-7 for repository and review work, then follow [`Web.md`](./content/roadmaps/Web.md) from browser fundamentals through deployment. Pair Web Phase 1/6 with [`Networks.md`](./content/roadmaps/Networks.md), Phase 13 with [`Data.md`](./content/roadmaps/Data.md), and Git Phases 12/15 with releases and CI.
 
 **Cloud engineer path:** learn Linux and network fundamentals in [`Cloud.md`](./content/roadmaps/Cloud.md) Phases 1-2, add [`Git.md`](./content/roadmaps/Git.md) Phases 1-9 before versioned IaC and secret-response work, deepen packet/system reasoning with [`Networks.md`](./content/roadmaps/Networks.md) and [`CS.md`](./content/roadmaps/CS.md), then complete the cloud roadmap. Pair Git Phases 14-15 with cloud governance/delivery and practice Interview Tracks G and V.
 
@@ -109,70 +107,58 @@ Mindset → Networks/OS → Crypto/IAM → Web/Defend → Detect/Respond → Clo
 ## Track 1 - Computer Science & Software Engineering
 
 **File:** [`CS.md`](./content/roadmaps/CS.md)  
-**Scope:** ~53 concepts across **20 phases** - programming foundations through distributed systems and mock interviews.
+**Website:** one Computer Science tutorial.  
+**Scope:** 43 phases - foundations, programming, OOP, data structures, systems, design, and mock interviews.
 
-Foundations → Data structures & algorithms → Systems → Web & data → Design → Hire
+Storyline: Foundations → Programming fundamentals → Object thinking → Pillars → SOLID / patterns / LLD → Data structures & algorithms → Systems → Web & data → Design → Hire
 
 | # | Phase | Goal |
 |--:|-------|------|
 | 01 | Programming Foundations | What happens when code runs |
 | 02 | Complexity Analysis | Big O as a measuring stick |
-| - | → park here and do [`OOP.md`](./content/roadmaps/OOP.md) | Fundamentals + classes before Node/List/Tree types |
-| 03 | Linear Data Structures | Arrays, lists, stacks, queues |
-| 04 | Recursion | Call stack and base cases |
-| 05 | Hierarchical & Priority Structures | Trees, BSTs, heaps |
-| 06 | Hashing | $O(1)$ "have I seen this?" |
-| 07 | Sorting & Binary Search | Impose and exploit order |
-| 08 | Graphs | BFS, DFS, relationships |
-| 09 | Algorithmic Patterns | DP, greedy, backtracking |
-| 10 | OOP & Low-Level Design | Revision if you already finished [`OOP.md`](./content/roadmaps/OOP.md) |
-| 11 | Operating Systems | Processes, threads, memory |
-| 12 | Computer Networks | Packets, TCP/UDP, DNS |
-| 13 | Web, HTTP & APIs | REST and the request path |
-| 14 | Databases & Data Modeling | SQL, schemas, indexes |
-| 15 | Authentication & Security | Passwords, sessions, JWT, injection |
-| 16 | Software Engineering & Testing | Tests that make change safe |
-| 17 | System Design & Scalability | Caching, sharding, load balancing |
-| 18 | Distributed Systems | CAP, consensus, failure |
-| 19 | Projects | Build proof across phases |
-| 20 | Interview Mastery | Coding + design + behavioral |
+| 03 | How Programs Run | Interpreter, variables, types |
+| 04 | Control Flow | if/else and loops |
+| 05 | Functions & Modules | Reuse and organize files |
+| 06 | Object Thinking | Why procedural hits a wall |
+| 07 | Classes & Objects | Blueprint vs instance on the heap |
+| 08 | State & Behavior | Attrs, methods, `__init__`, `self` |
+| 09 | Encapsulation | Hide state; protect invariants |
+| 10 | Abstraction | ABCs / contracts; what vs how |
+| 11 | Inheritance | is-a reuse and MRO - carefully |
+| 12 | Polymorphism | Same call, different behavior |
+| 13 | Composition over Inheritance | Prefer has-a when coupling hurts |
+| 14 | Python Power Tools | Dunders, properties, classmethods |
+| 15 | Relationships & Modeling | CRC cards and lightweight UML |
+| 16 | Smells & Refactoring | Spot God objects early |
+| 17 | SOLID | Five principles that localize change |
+| 18 | Creational Patterns | Factory, Singleton, Builder |
+| 19 | Structural Patterns | Adapter, Decorator, Facade |
+| 20 | Behavioral Patterns | Strategy, Observer, Command |
+| 21 | Testing OOP | Fakes via dependency inversion |
+| 22 | Layers & Clean-ish Architecture | Keep policy independent of I/O |
+| 23 | LLD Method | Design under interview pressure |
+| 24 | Portfolio | Finish complete designs that you can explain clearly |
+| 25 | Interviews | Speak pillars, SOLID, and trade-offs |
+| 26 | Linear Data Structures | Arrays, lists, stacks, queues |
+| 27 | Recursion | Call stack and base cases |
+| 28 | Hierarchical & Priority Structures | Trees, BSTs, heaps |
+| 29 | Hashing | $O(1)$ "have I seen this?" |
+| 30 | Sorting & Binary Search | Impose and exploit order |
+| 31 | Graphs | BFS, DFS, relationships |
+| 32 | Algorithmic Patterns | DP, greedy, backtracking |
+| 33 | OOP & Low-Level Design | Revision after the OOP block above |
+| 34 | Operating Systems | Processes, threads, memory |
+| 35 | Computer Networks | Packets, TCP/UDP, DNS |
+| 36 | Web, HTTP & APIs | REST and the request path |
+| 37 | Databases & Data Modeling | SQL, schemas, indexes |
+| 38 | Authentication & Security | Passwords, sessions, JWT, injection |
+| 39 | Software Engineering & Testing | Tests that make change safe |
+| 40 | System Design & Scalability | Caching, sharding, load balancing |
+| 41 | Distributed Systems | CAP, consensus, failure |
+| 42 | Projects | Build proof across phases |
+| 43 | Interview Mastery | Coding + design + behavioral |
 
----
-
-## Companion - Programming Fundamentals & OOP
-
-**File:** [`OOP.md`](./content/roadmaps/OOP.md)  
-**Scope:** **Part 0 fundamentals** + **40 OOP concepts · 20 phases** - from first Python script through SOLID, patterns, LLD, and interviews.
-
-Code basics → Think → Pillars → SOLID → Patterns → LLD → Hire
-
-**When to use it:** start here if you are new to coding (Part 0). Otherwise after [`CS.md`](./content/roadmaps/CS.md) Phases 1-2, **before** CS Phase 3. CS Phase 10 then becomes revision, not first exposure.
-
-| # | Phase | Goal |
-|--:|-------|------|
-| F1 | How Programs Run | Interpreter, variables, types |
-| F2 | Control Flow | if/else and loops |
-| F3 | Functions & Modules | Reuse and organize files |
-| 01 | Object Thinking | Why procedural hits a wall |
-| 02 | Classes & Objects | Blueprint vs instance on the heap |
-| 03 | State & Behavior | Attrs, methods, `__init__`, `self` |
-| 04 | Encapsulation | Hide state; protect invariants |
-| 05 | Abstraction | ABCs / contracts; what vs how |
-| 06 | Inheritance | is-a reuse and MRO - carefully |
-| 07 | Polymorphism | Same call, different behavior |
-| 08 | Composition over Inheritance | Prefer has-a when coupling hurts |
-| 09 | Python Power Tools | Dunders, properties, classmethods |
-| 10 | Relationships & Modeling | CRC cards and lightweight UML |
-| 11 | Smells & Refactoring | Spot God objects early |
-| 12 | SOLID | Five principles that localize change |
-| 13 | Creational Patterns | Factory, Singleton, Builder |
-| 14 | Structural Patterns | Adapter, Decorator, Facade |
-| 15 | Behavioral Patterns | Strategy, Observer, Command |
-| 16 | Testing OOP | Fakes via dependency inversion |
-| 17 | Layers & Clean-ish Architecture | Keep policy independent of I/O |
-| 18 | LLD Method | Design under interview pressure |
-| 19 | Portfolio | Finish complete designs that you can explain clearly |
-| 20 | Interviews | Speak pillars, SOLID, and trade-offs |
+On the Software Engineer path, finish [`Git.md`](./content/roadmaps/Git.md) Phases 1-10 after Phase 25 and before Phase 26.
 
 ---
 
@@ -356,7 +342,7 @@ Foundations → Defend → Attack → Detect → Respond → Hire
 
 ERP → Modules → ORM → User interface → Web requests → Release a working module → Get hired
 
-**Prerequisites:** Python + [`OOP.md`](./content/roadmaps/OOP.md). Odoo is Python OOP when the amount of work grows with XML, JS (OWL), and PostgreSQL.
+**Prerequisites:** Python and Computer Science through Phase 25. Odoo is Python OOP when the amount of work grows with XML, JS (OWL), and PostgreSQL.
 
 | # | Phase | Goal |
 |--:|-------|------|
@@ -559,9 +545,9 @@ Learn each phase → Build its mini-project → Finish the roadmap → Build the
 
 ## How to use this repo
 
-1. Pick a primary track: [`CS.md`](./content/roadmaps/CS.md), [`OOP.md`](./content/roadmaps/OOP.md), [`Git.md`](./content/roadmaps/Git.md), [`Data.md`](./content/roadmaps/Data.md), [`Networks.md`](./content/roadmaps/Networks.md), [`IT_Administration.md`](./content/roadmaps/IT_Administration.md), [`AI.md`](./content/roadmaps/AI.md), [`ICT_Cybersecurity.md`](./content/roadmaps/ICT_Cybersecurity.md), [`ODOO.md`](./content/roadmaps/ODOO.md), [`Web.md`](./content/roadmaps/Web.md), [`Cloud.md`](./content/roadmaps/Cloud.md), or [`DevOps.md`](./content/roadmaps/DevOps.md).
-2. If new to coding, start [`OOP.md`](./content/roadmaps/OOP.md) **Part 0**. On the SWE path: after CS Phases 1-2, finish OOP before CS Phase 3.
-3. Start at Phase 1 (or Part 0). Do not skip bridges on the first pass.
+1. Pick a primary track: [`CS.md`](./content/roadmaps/CS.md), [`Git.md`](./content/roadmaps/Git.md), [`Data.md`](./content/roadmaps/Data.md), [`Networks.md`](./content/roadmaps/Networks.md), [`IT_Administration.md`](./content/roadmaps/IT_Administration.md), [`AI.md`](./content/roadmaps/AI.md), [`ICT_Cybersecurity.md`](./content/roadmaps/ICT_Cybersecurity.md), [`ODOO.md`](./content/roadmaps/ODOO.md), [`Web.md`](./content/roadmaps/Web.md), [`Cloud.md`](./content/roadmaps/Cloud.md), or [`DevOps.md`](./content/roadmaps/DevOps.md). Programming fundamentals and OOP live inside Computer Science after Phases 1-2.
+2. If new to coding, start Computer Science at Phase 1. Programming starts at Phase 3. On the SWE path, finish Phase 25 and Git Phases 1-10 before Phase 26.
+3. Start at Phase 1 (or Phase 3 on the web/Odoo paths). Do not skip bridges on the first pass.
 4. After each phase, follow its matching beginner-friendly mini-project in [`Projects.md`](./content/guides/Projects.md). After the roadmap's final phase, build that track's main portfolio project.
 5. Use mastery checkpoints before moving on.
 6. Drill spoken answers in [`Interview.md`](./content/guides/Interview.md) (or Cyber Phase 20 for security roles).
@@ -570,11 +556,11 @@ Learn each phase → Build its mini-project → Finish the roadmap → Build the
 
 | Role | Start with | Then drill |
 |------|------------|------------|
-| Absolute beginner | `OOP.md` Part 0 → Phases 1+ | `Projects.md` fundamentals + `Interview.md` A |
-| Software Engineer | `CS.md` → `OOP.md` → `Git.md` Phases 1-10 → CS Phase 3+ | `Networks.md` essentials + projects + Interview A/C/V/F |
-| Frontend Developer | `OOP.md` Part 0 → `Git.md` Phases 1-7 → `Web.md` Phases 1-10, 15-16 | Web/Git projects + Interview W/V |
+| Absolute beginner | Computer Science (Phases 1-25) | `Projects.md` fundamentals + `Interview.md` A |
+| Software Engineer | Computer Science Phases 1-25, then `Git.md` Phases 1-10, then CS 26-43 | `Networks.md` essentials + projects + Interview A/C/V/F |
+| Frontend Developer | Computer Science Phases 3-5 → `Git.md` Phases 1-7 → `Web.md` Phases 1-10, 15-16 | Web/Git projects + Interview W/V |
 | Backend/API Developer | `CS.md` foundations → `Git.md` Phases 1-10 → `Web.md` Phases 11-18 | Data SQL + Web/Git projects + Interview W/A/V |
-| Full-stack Developer | `OOP.md` Part 0 → `Web.md` full | All Web phase projects + `Interview.md` W/C/F |
+| Full-stack Developer | Computer Science Phases 3-5 → `Web.md` full | All Web phase projects + `Interview.md` W/C/F |
 | Data Analyst | `Data.md` (through Phase 10) | `Projects.md` data + `Interview.md` B |
 | Data Engineer | `Data.md` full | `Projects.md` data + `Interview.md` B |
 | Network / Infra | `Networks.md` | `Projects.md` networks + `Interview.md` C/F |
@@ -586,7 +572,7 @@ Learn each phase → Build its mini-project → Finish the roadmap → Build the
 | SOC Analyst | `ICT_Cybersecurity.md` (blue path) | Phase 13-14 labs + Security+ / CySA+ |
 | Security Engineer | `ICT_Cybersecurity.md` (SecEng path) | AppSec + cloud projects + Phase 20 |
 | Junior Pentester | `ICT_Cybersecurity.md` (red path) | PortSwigger/HTB writeups → eJPT/PNPT |
-| Odoo / ERP Engineer | `OOP.md` → `Git.md` Phases 1-7 → `ODOO.md` | Odoo/Git projects + integrations |
+| Odoo / ERP Engineer | Computer Science Phases 3-25 → `Git.md` Phases 1-7 → `ODOO.md` | Odoo/Git projects + integrations |
 
 ---
 

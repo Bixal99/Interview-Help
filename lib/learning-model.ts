@@ -15,6 +15,7 @@ export type Lesson = {
   markdown: string;
   videos: VideoResource[];
   codeExamples: CodeExample[];
+  sourcePath?: string;
 };
 
 export type PhaseProject = {
@@ -35,6 +36,7 @@ export type Phase = {
   goal?: string;
   lessons: Lesson[];
   project?: PhaseProject;
+  sourcePath?: string;
 };
 
 export type ParsedCourse = {
@@ -75,7 +77,7 @@ export type CourseProgressState = {
 };
 
 export type LearningProgress = {
-  version: 2;
+  version: 2 | 3;
   activePath?: string;
   courses: Record<string, CourseProgressState>;
   legacyIds?: string[];

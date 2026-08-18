@@ -7,21 +7,19 @@ function range(from: number, to: number) {
 export const courseChapters: Record<string, CourseChapter[]> = {
   "computer-science": [
     { id: "foundations", title: "Foundations", phaseIds: ["1", "2"] },
-    { id: "algorithms", title: "Data structures and algorithms", phaseIds: range(3, 9) },
-    { id: "oop-revision", title: "OOP revision", phaseIds: ["10"] },
-    { id: "systems", title: "Systems", phaseIds: ["11", "12"] },
-    { id: "web-data", title: "Web, data, and security", phaseIds: range(13, 15) },
-    { id: "design", title: "Design", phaseIds: range(16, 18) },
-    { id: "hire", title: "Hire", phaseIds: ["19", "20"] },
-  ],
-  "object-oriented-programming": [
-    { id: "part-0", title: "Programming fundamentals", phaseIds: ["f1", "f2", "f3"] },
-    { id: "thinking", title: "Object thinking", phaseIds: range(1, 3) },
-    { id: "pillars", title: "Pillars", phaseIds: range(4, 8) },
-    { id: "tools", title: "Tools and modeling", phaseIds: range(9, 11) },
-    { id: "solid", title: "SOLID and patterns", phaseIds: range(12, 15) },
-    { id: "architecture", title: "Architecture and LLD", phaseIds: range(16, 18) },
-    { id: "hire", title: "Hire", phaseIds: ["19", "20"] },
+    { id: "programming", title: "Programming fundamentals", phaseIds: range(3, 5) },
+    { id: "thinking", title: "Object thinking", phaseIds: range(6, 8) },
+    { id: "pillars", title: "Pillars", phaseIds: range(9, 13) },
+    { id: "tools", title: "Tools and modeling", phaseIds: range(14, 16) },
+    { id: "solid", title: "SOLID and patterns", phaseIds: range(17, 20) },
+    { id: "architecture", title: "Architecture and LLD", phaseIds: range(21, 23) },
+    { id: "oop-hire", title: "OOP portfolio and interviews", phaseIds: ["24", "25"] },
+    { id: "algorithms", title: "Data structures and algorithms", phaseIds: range(26, 32) },
+    { id: "oop-revision", title: "OOP revision", phaseIds: ["33"] },
+    { id: "systems", title: "Systems", phaseIds: ["34", "35"] },
+    { id: "web-data", title: "Web, data, and security", phaseIds: range(36, 38) },
+    { id: "design", title: "Design", phaseIds: range(39, 41) },
+    { id: "hire", title: "Hire", phaseIds: ["42", "43"] },
   ],
   git: [
     { id: "setup", title: "Setup and state", phaseIds: range(1, 4) },
@@ -101,17 +99,16 @@ export const learningPaths: LearningPath[] = [
     id: "software-engineer",
     title: "Software Engineer",
     steps: [
-      ...steps("computer-science", ["1", "2"]),
-      ...steps("object-oriented-programming", ["f1", "f2", "f3", ...range(1, 20)]),
+      ...steps("computer-science", range(1, 25)),
       ...steps("git", range(1, 10)),
-      ...steps("computer-science", range(3, 20)),
+      ...steps("computer-science", range(26, 43)),
     ],
   },
   {
     id: "web-developer",
     title: "Web Developer",
     steps: [
-      ...steps("object-oriented-programming", ["f1", "f2", "f3"]),
+      ...steps("computer-science", range(3, 5)),
       ...steps("git", range(1, 7)),
       ...steps("web-development", range(1, 20)),
     ],
@@ -125,7 +122,7 @@ export const learningPaths: LearningPath[] = [
     id: "odoo-developer",
     title: "Odoo Developer",
     steps: [
-      ...steps("object-oriented-programming", ["f1", "f2", "f3", ...range(1, 20)]),
+      ...steps("computer-science", range(3, 25)),
       ...steps("git", range(1, 7)),
       ...steps("odoo", range(1, 20)),
     ],
@@ -183,7 +180,6 @@ export function sequentialPath(course: string, phaseIds: string[]): PathStep[] {
 
 export const defaultPathByCourse: Record<string, string> = {
   "computer-science": "software-engineer",
-  "object-oriented-programming": "software-engineer",
   git: "software-engineer",
   "web-development": "web-developer",
   "artificial-intelligence": "ai-engineer",

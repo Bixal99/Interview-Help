@@ -60,7 +60,7 @@ There is no week clock. Move when you can predict a command's state transition, 
 
 ### Prerequisites and Companion Roadmaps
 
-You need a computer where you may create disposable files and install the open-source Git CLI. A terminal helps; no programming or GitHub account is required for Phases 1-6. Use [`OOP.md`](./OOP.md) Part 0 if shell and file concepts are new, [`CS.md`](./CS.md#phase-16) for broader software-engineering context, [`Networks.md`](./Networks.md) for SSH/HTTPS transport, [`DevOps.md`](./DevOps.md#phase-4) for delivery context, and [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) for secret and supply-chain risk. Build the matching cards in [`Projects.md`](../guides/Projects.md#git-and-git-workflows) and drill the dedicated track in [`Interview.md`](../guides/Interview.md#track-v---git-and-version-control).
+You need a computer where you may create disposable files and install the open-source Git CLI. A terminal helps; no programming or GitHub account is required for Phases 1-6. Use [`CS.md`](./CS.md) Phases 3-5 if shell and file concepts are new, [`CS.md`](./CS.md#phase-39) for broader software-engineering context, [`Networks.md`](./Networks.md) for SSH/HTTPS transport, [`DevOps.md`](./DevOps.md#phase-4) for delivery context, and [`ICT_Cybersecurity.md`](./ICT_Cybersecurity.md) for secret and supply-chain risk. Build the matching cards in [`Projects.md`](../guides/Projects.md#git-and-git-workflows) and drill the dedicated track in [`Interview.md`](../guides/Interview.md#track-v---git-and-version-control).
 
 ---
 
@@ -2369,8 +2369,8 @@ The 15 phases follow Git's natural pressure sequence rather than copying the rep
 
 | Need | Continue in |
 | --- | --- |
-| Broader software engineering, tests, and code review | [`CS.md`](./CS.md#phase-16) |
-| Programming/project structure for a first repository | [`OOP.md`](./OOP.md) and [`Web.md`](./Web.md) |
+| Broader software engineering, tests, and code review | [`CS.md`](./CS.md#phase-39) |
+| Programming/project structure for a first repository | [`CS.md`](./CS.md) and [`Web.md`](./Web.md) |
 | SSH, HTTPS, DNS, proxies, and transport diagnosis | [`Networks.md`](./Networks.md) |
 | CI/CD, artifacts, GitOps, and platform delivery | [`DevOps.md`](./DevOps.md) Phases 4, 7, 16-17 |
 | Cloud IaC, secrets, and delivery governance | [`Cloud.md`](./Cloud.md) Phases 12-16 |

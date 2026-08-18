@@ -73,6 +73,14 @@ function parseLessons(lines: string[], start: number, end: number, kind: Marker[
   });
 }
 
+export function withSourcePath(phases: Phase[], sourcePath: string): Phase[] {
+  return phases.map((phase) => ({
+    ...phase,
+    sourcePath,
+    lessons: phase.lessons.map((lesson) => ({ ...lesson, sourcePath })),
+  }));
+}
+
 export function parseCourseMarkdown(markdown: string, slug = ""): ParsedCourse {
   const lines = markdown.split(/\r?\n/);
   const markers: Marker[] = [];

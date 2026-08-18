@@ -1,10 +1,10 @@
 # The Combined Interview Playbook
 
-*Mohammad Bilal's interview Q&A companion to the roadmaps - [CS.md](../roadmaps/CS.md), [OOP.md](../roadmaps/OOP.md), [Git.md](../roadmaps/Git.md), [Data.md](../roadmaps/Data.md), [Networks.md](../roadmaps/Networks.md), [IT_Administration.md](../roadmaps/IT_Administration.md), [AI.md](../roadmaps/AI.md), [Web.md](../roadmaps/Web.md), [cloud.md](../roadmaps/Cloud.md), and [devops.md](../roadmaps/DevOps.md). High-frequency questions with strong answers, follow-ups, and traps - not a list of facts to memorize.*
+*Mohammad Bilal's interview Q&A companion to the roadmaps - [CS.md](../roadmaps/CS.md), [Git.md](../roadmaps/Git.md), [Data.md](../roadmaps/Data.md), [Networks.md](../roadmaps/Networks.md), [IT_Administration.md](../roadmaps/IT_Administration.md), [AI.md](../roadmaps/AI.md), [Web.md](../roadmaps/Web.md), [cloud.md](../roadmaps/Cloud.md), and [devops.md](../roadmaps/DevOps.md). High-frequency questions with strong answers, follow-ups, and traps - not a list of facts to memorize.*
 
 *Curated with Composio (web search + DeepWiki on `mlabonne/llm-course`) against 2026 interview guides for DSA, SQL/DE, networking, and AI engineering, plus official web-platform, OpenAPI, OAuth, and OWASP documentation.*
 
-**Scope:** CS × OOP × Git × Data × Networks × IT Administration × AI × Web × Cloud × DevOps · speak trade-offs out loud.
+**Scope:** Computer Science × Git × Data × Networks × IT Administration × AI × Web × Cloud × DevOps · speak trade-offs out loud.
 
 Question → Strong answer → Follow-ups → Traps
 
@@ -107,7 +107,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 ## A2. Array / string patterns - two pointers & sliding window
 
-**Level:** Screen · **Source:** CS.md Phase 3
+**Level:** Screen · **Source:** CS.md Phase 26
 
 **THE INTERVIEWER'S QUESTION:** When do you use two pointers or a sliding window?
 
@@ -123,7 +123,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 ## A3. Linked lists - reverse, cycle, careful pointers
 
-**Level:** Core · **Source:** CS.md Phase 3
+**Level:** Core · **Source:** CS.md Phase 26
 
 **THE INTERVIEWER'S QUESTION:** Reverse a linked list. Detect a cycle.
 
@@ -139,7 +139,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 ## A4. Stacks and queues - when each is the right tool
 
-**Level:** Screen · **Source:** CS.md Phase 3
+**Level:** Screen · **Source:** CS.md Phase 26
 
 **THE INTERVIEWER'S QUESTION:** Stack vs queue - give use cases.
 
@@ -153,7 +153,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 ## A5. Recursion and the call stack
 
-**Level:** Core · **Source:** CS.md Phase 4
+**Level:** Core · **Source:** CS.md Phase 27
 
 **THE INTERVIEWER'S QUESTION:** How do you think about recursion? When is it dangerous?
 
@@ -167,7 +167,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 ## A6. Trees / BST validation
 
-**Level:** Core · **Source:** CS.md Phase 5
+**Level:** Core · **Source:** CS.md Phase 28
 
 **THE INTERVIEWER'S QUESTION:** Validate a Binary Search Tree.
 
@@ -181,7 +181,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 ## A7. Hash tables - why and when they fail
 
-**Level:** Screen · **Source:** CS.md Phase 6
+**Level:** Screen · **Source:** CS.md Phase 29
 
 **THE INTERVIEWER'S QUESTION:** Why use a hash map? Collision handling?
 
@@ -195,7 +195,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 ## A8. Sorting and binary search
 
-**Level:** Core · **Source:** CS.md Phase 7
+**Level:** Core · **Source:** CS.md Phase 30
 
 **THE INTERVIEWER'S QUESTION:** When binary search? Compare common sorts.
 
@@ -209,7 +209,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 ## A9. BFS vs DFS
 
-**Level:** Core · **Source:** CS.md Phase 8
+**Level:** Core · **Source:** CS.md Phase 31
 
 **THE INTERVIEWER'S QUESTION:** BFS vs DFS - when each?
 
@@ -223,7 +223,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 ## A10. Dynamic programming intuition
 
-**Level:** Senior-ish · **Source:** CS.md Phase 9
+**Level:** Senior-ish · **Source:** CS.md Phase 32
 
 **THE INTERVIEWER'S QUESTION:** How do you recognize a DP problem?
 
@@ -237,7 +237,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 ## A11. OOP pillars and SOLID (short)
 
-**Level:** Core · **Source:** CS.md Phase 10
+**Level:** Core · **Source:** CS.md Phases 9-12, 17, 33
 
 **THE INTERVIEWER'S QUESTION:** Explain encapsulation / polymorphism. One SOLID principle with example.
 
@@ -251,7 +251,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 ## A12. Processes vs threads; concurrency basics
 
-**Level:** Core · **Source:** CS.md Phase 11
+**Level:** Core · **Source:** CS.md Phase 34
 
 **THE INTERVIEWER'S QUESTION:** Process vs thread? Race condition? Mutex?
 
@@ -265,7 +265,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 ## A13. Virtual memory / page fault (high level)
 
-**Level:** Core · **Source:** CS.md Phase 11
+**Level:** Core · **Source:** CS.md Phase 34
 
 **THE INTERVIEWER'S QUESTION:** What is virtual memory?
 
@@ -279,7 +279,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 ## A14. Indexes and EXPLAIN (DB)
 
-**Level:** Core · **Source:** CS.md Phase 14 / Data.md Phase 11
+**Level:** Core · **Source:** CS.md Phase 37 / Data.md Phase 11
 
 **THE INTERVIEWER'S QUESTION:** How do you speed up a slow query?
 
@@ -293,7 +293,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 ## A15. Transactions ACID + isolation
 
-**Level:** Core · **Source:** CS.md Phase 14
+**Level:** Core · **Source:** CS.md Phase 37
 
 **THE INTERVIEWER'S QUESTION:** What is ACID? Dirty read?
 
@@ -307,7 +307,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 ## A16. CAP / consistency vs availability (short)
 
-**Level:** Senior · **Source:** CS.md distributed phases
+**Level:** Senior · **Source:** CS.md Phase 41
 
 **THE INTERVIEWER'S QUESTION:** Explain CAP in practical terms.
 
@@ -321,7 +321,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 ## A17. Caching strategies
 
-**Level:** Core · **Source:** CS.md system design
+**Level:** Core · **Source:** CS.md Phase 40
 
 **THE INTERVIEWER'S QUESTION:** Cache-aside vs write-through? Invalidation?
 
@@ -335,7 +335,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 ## A18. Design an LRU cache
 
-**Level:** Core · **Source:** CS.md patterns
+**Level:** Core · **Source:** CS.md Phases 20, 29, 33
 
 **THE INTERVIEWER'S QUESTION:** Implement LRU.
 
@@ -583,7 +583,7 @@ This is not a list of sentences to memorize. It is a **spoken-answer gym** built
 
 # Track C - Computer Networks
 
-**Source roadmap:** Networks.md (+ CS.md Phase 12)
+**Source roadmap:** Networks.md (+ CS.md Phase 35)
 
 ## C1. What is a computer network?
 
@@ -2017,7 +2017,7 @@ Use **Situation → Task → Action → Result**, and end with **what you would 
 
 ### Your roadmaps (primary depth)
 
-- [CS.md](../roadmaps/CS.md) · [OOP.md](../roadmaps/OOP.md) · [Git.md](../roadmaps/Git.md) · [Data.md](../roadmaps/Data.md) · [Networks.md](../roadmaps/Networks.md) · [AI.md](../roadmaps/AI.md) · [Web.md](../roadmaps/Web.md) · [cloud.md](../roadmaps/Cloud.md) · [devops.md](../roadmaps/DevOps.md)
+- [CS.md](../roadmaps/CS.md) · [Git.md](../roadmaps/Git.md) · [Data.md](../roadmaps/Data.md) · [Networks.md](../roadmaps/Networks.md) · [AI.md](../roadmaps/AI.md) · [Web.md](../roadmaps/Web.md) · [cloud.md](../roadmaps/Cloud.md) · [devops.md](../roadmaps/DevOps.md)
 
 ---
 

@@ -1,6 +1,6 @@
 import type { LucideIcon } from "lucide-react";
 import {
-  Bot, Boxes, Braces, Cloud, CodeXml, Database, GitBranch,
+  Bot, Braces, Cloud, CodeXml, Database, GitBranch,
   Network, ServerCog, ShieldCheck, TerminalSquare,
 } from "lucide-react";
 
@@ -30,8 +30,7 @@ export type ContentEntry = {
 };
 
 export const roadmapRegistry: CourseDefinition[] = [
-  { slug: "computer-science", title: "Computer Science", sourcePath: "content/roadmaps/CS.md", route: "/courses/computer-science", type: "roadmap", shortName: "Computer Science", icon: Braces, description: "First principles, algorithms, systems, databases, design, and interview mastery.", difficulty: "Foundation → advanced", skills: ["DSA", "Systems", "Design"], prerequisites: "No prior computer science required", projectPrefix: "cs", next: "object-oriented-programming", accent: "#2F5D8A" },
-  { slug: "object-oriented-programming", title: "Object-Oriented Programming", sourcePath: "content/roadmaps/OOP.md", route: "/courses/object-oriented-programming", type: "roadmap", shortName: "OOP", icon: Boxes, description: "Programming fundamentals through SOLID, patterns, clean architecture, and LLD.", difficulty: "Beginner friendly", skills: ["Python", "SOLID", "Patterns"], prerequisites: "None. Part 0 starts from zero", projectPrefix: "oop", next: "git", accent: "#2F5D8A" },
+  { slug: "computer-science", title: "Computer Science", sourcePath: "content/roadmaps/CS.md", route: "/courses/computer-science", type: "roadmap", shortName: "Computer Science", icon: Braces, description: "Foundations, programming, OOP, then data structures, systems, databases, design, and interview mastery.", difficulty: "Foundation → advanced", skills: ["Python", "OOP", "DSA", "Systems"], prerequisites: "No prior computer science required", projectPrefix: "cs", next: "git", accent: "#2F5D8A" },
   { slug: "git", title: "Git and Git Workflows", sourcePath: "content/roadmaps/Git.md", route: "/courses/git", type: "roadmap", shortName: "Git", icon: GitBranch, description: "Safe everyday Git, internals, recovery, collaboration, releases, and repository trust.", difficulty: "Beginner → professional", skills: ["Git", "Recovery", "CI"], prerequisites: "Ability to create and edit text files", projectPrefix: "git", next: "web-development", accent: "#2F5D8A" },
   { slug: "web-development", title: "Web Development", sourcePath: "content/roadmaps/Web.md", route: "/courses/web-development", type: "roadmap", shortName: "Web Development", icon: CodeXml, description: "Browser fundamentals, frontend, backend, APIs, security, testing, and deployment.", difficulty: "Beginner → production", skills: ["Frontend", "APIs", "Backend"], prerequisites: "Programming fundamentals and Git basics", projectPrefix: "web", next: "projects", accent: "#2F5D8A" },
   { slug: "artificial-intelligence", title: "Artificial Intelligence", sourcePath: "content/roadmaps/AI.md", route: "/courses/artificial-intelligence", type: "roadmap", shortName: "AI & ML", icon: Bot, description: "Classical ML through deep learning, transformers, RAG, agents, evaluation, and MLOps.", difficulty: "Intermediate", skills: ["Python", "ML", "LLMs"], prerequisites: "Programming, data, and useful math foundations", projectPrefix: "ai", next: "projects", accent: "#2F5D8A" },
@@ -56,7 +55,6 @@ export const templateRegistry: ContentEntry[] = [
 export const contentRegistry: ContentEntry[] = [...roadmapRegistry, ...guideRegistry, ...templateRegistry];
 export const courseBarLabels: Record<string, string> = {
   "computer-science": "CS",
-  "object-oriented-programming": "OOP",
   git: "Git",
   "web-development": "Web",
   "artificial-intelligence": "AI",

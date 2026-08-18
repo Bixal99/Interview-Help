@@ -6,7 +6,7 @@ import { extractHeadings, stripMarkdown, type Heading } from "./content-utils";
 import { chaptersFor, learningPaths, pathForCourse, sequentialPath } from "./learning-paths";
 import type { ParsedCourse, SearchHit } from "./learning-model";
 import { coursePages, firstLessonHref, firstLessonInPhase, neighborsFor, type CourseNav, type Neighbor } from "./navigation";
-import { findLesson, findPhase, headingRouteMap, lessonPath, parseCourseMarkdown, phasePath, projectPathFor } from "./parse-course";
+import { findLesson, findPhase, headingRouteMap, lessonPath, parseCourseMarkdown, phasePath, projectPathFor, withSourcePath } from "./parse-course";
 import { attachProjects, parseProjectsDocument } from "./parse-projects";
 import { extractPractice, withoutPractice } from "./practice";
 import { lookupFromCourses } from "./progress-lookup";
@@ -38,6 +38,7 @@ export const getParsedCourse = cache((slug: string) => {
   if (!definition) return null;
   const markdown = readMarkdown(definition.sourcePath);
   const parsed = parseCourseMarkdown(markdown, slug);
+  parsed.phases = withSourcePath(parsed.phases, definition.sourcePath);
   attachProjects(slug, definition.projectPrefix, parsed.phases, getAllProjects());
   return { ...definition, ...parsed };
 });
@@ -145,7 +146,7 @@ export function getLessonView(slug: string, phaseId: string, lessonSlug: string)
   const { prev, next } = neighborsFor(pages, href);
   const practice = extractPractice(lesson.markdown);
   return {
-    course: { slug: course.slug, shortName: course.shortName, sourcePath: course.sourcePath },
+    course: { slug: course.slug, shortName: course.shortName, sourcePath: lesson.sourcePath ?? phase.sourcePath ?? course.sourcePath },
     nav: toCourseNav(course),
     phase: { id: phase.id, number: phase.number, title: phase.title, hasProject: Boolean(phase.project) },
     lesson: {
@@ -169,7 +170,7 @@ export function getPhaseView(slug: string, phaseId: string) {
   const phase = findPhase(course, phaseId);
   if (!phase) return null;
   return {
-    course: { slug: course.slug, shortName: course.shortName, sourcePath: course.sourcePath, description: course.description },
+    course: { slug: course.slug, shortName: course.shortName, sourcePath: phase.sourcePath ?? course.sourcePath, description: course.description },
     nav: toCourseNav(course),
     phase,
     startHref: phase.lessons[0] ? lessonPath(slug, phaseId, phase.lessons[0]) : `/courses/${slug}`,

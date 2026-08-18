@@ -4,6 +4,7 @@ import { roadmapRegistry } from "./course-catalog";
 const prefixToSlug = Object.fromEntries(roadmapRegistry.map((course) => [course.projectPrefix, course.slug]));
 
 export function slugForProjectPrefix(prefix: string) {
+  if (prefix.toLowerCase() === "oop") return "computer-science";
   return prefixToSlug[prefix.toLowerCase()];
 }
 

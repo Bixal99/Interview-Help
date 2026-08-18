@@ -10,6 +10,116 @@ type Marker = {
   anchors: string[];
 };
 
+function isPacingParagraph(text: string) {
+  return /the sections are connected/i.test(text)
+    || /there is no clock on this document/i.test(text)
+    || /there is no week clock/i.test(text)
+    || /every concept in this roadmap answers the same/i.test(text)
+    || /every concept answers the same questions/i.test(text)
+    || /that last question is the engine/i.test(text);
+}
+
+function parseTermChunk(chunk: string) {
+  const match = /(?:^|(?:A |An |a |an |the |The )?)(?:`([^`]+)`|\*\*([^*]+)\*\*)\s+(.*)$/.exec(chunk.trim());
+  if (!match) return null;
+  const term = (match[1] || match[2]).trim();
+  let meaning = match[3].replace(/[.]*$/, "").trim();
+  meaning = meaning.replace(/^(is|are|means|describes|stores|holds|lets|checks|creates|spreads|changes|controls|identifies|translates|provides|sends|defines|protects|asks|applies|gathers|returns|uses|makes|runs|coordinates|receives|carries|keeps)\s+/i, "");
+  if (!term || !meaning) return null;
+  return { term, meaning: meaning.charAt(0).toUpperCase() + meaning.slice(1) };
+}
+
+function parseDenseTerms(text: string) {
+  let body = text.replace(/^\*\*Words you will meet often:\*\*\s*/i, "").trim();
+  body = body.replace(/,\s+while (?:a |an |the )?/gi, "; ");
+  body = body.replace(/\s+and (?:a |an |the )?(?=(?:\*\*|`))/g, "; ");
+  return body.split(/\s*;\s*/).flatMap((chunk) => {
+    const parts = chunk.split(/(?<=\.)\s+/);
+    return parts.map(parseTermChunk).filter((item): item is { term: string; meaning: string } => Boolean(item));
+  });
+}
+
+function parseMarkdownTableTerms(lines: string[], start: number) {
+  const terms: { term: string; meaning: string }[] = [];
+  let i = start;
+  if (!/^\|/.test(lines[i] ?? "")) return { terms, next: start };
+  i += 1;
+  if (/^\|\s*:?-+/.test(lines[i] ?? "")) i += 1;
+  for (; i < lines.length && /^\|/.test(lines[i]); i++) {
+    const cells = lines[i].split("|").slice(1, -1).map((cell) => cell.trim());
+    if (cells.length < 2) continue;
+    const term = cells[0].replace(/\*\*/g, "").trim();
+    const meaning = cells[1].trim();
+    if (term && meaning && !/^word$/i.test(term) && !/^meaning$/i.test(term) && !/^term$/i.test(term)) {
+      terms.push({ term, meaning });
+    }
+  }
+  return { terms, next: i };
+}
+
+function extractBeginnerIntro(lines: string[]) {
+  const startHere = lines.findIndex((line) => /^### Start here if\b/i.test(line));
+  const vocab = lines.findIndex((line) => /^## Beginner Vocabulary\b/i.test(line));
+  const whatMeans = lines.findIndex((line) => /^## What .+ Means\b/i.test(line));
+  const fallback = vocab >= 0 ? vocab : whatMeans;
+  const start = startHere >= 0 ? startHere : fallback;
+  if (start < 0) return null;
+  const heading = lines[start].replace(/^#{2,3}\s+/, "").trim();
+  const paragraphs: string[] = [];
+  const closingParagraphs: string[] = [];
+  const everydayTerms: { term: string; meaning: string }[] = [];
+  const terms: { term: string; meaning: string }[] = [];
+  let bucket: "everyday" | "terms" = "everyday";
+  let seenTable = false;
+  let buffer: string[] = [];
+  const addTerms = (items: { term: string; meaning: string }[], target?: "everyday" | "terms") => {
+    (target === "everyday" || (!target && bucket === "everyday") ? everydayTerms : terms).push(...items);
+  };
+  const flush = () => {
+    const text = buffer.join(" ").trim();
+    buffer = [];
+    if (!text || isPacingParagraph(text)) return;
+    if (/^\*\*Everyday words\*\*$/i.test(text)) {
+      bucket = "everyday";
+      return;
+    }
+    if (/^\*\*Words you will meet often\*\*$/i.test(text)) {
+      bucket = "terms";
+      return;
+    }
+    if (/words you will meet often/i.test(text)) {
+      addTerms(parseDenseTerms(text), "terms");
+      bucket = "terms";
+      return;
+    }
+    if (!seenTable && (text.match(/\*\*[^*]+\*\*/g) ?? []).length >= 3) {
+      addTerms(parseDenseTerms(text), everydayTerms.length ? "terms" : "everyday");
+      return;
+    }
+    (seenTable ? closingParagraphs : paragraphs).push(text);
+  };
+  for (let i = start + 1; i < lines.length; i++) {
+    const line = lines[i];
+    if (/^#{2,3}\s+/.test(line) || /^---\s*$/.test(line) || /^\s*```/.test(line) || /^>/.test(line)) break;
+    if (/^\|/.test(line)) {
+      flush();
+      const table = parseMarkdownTableTerms(lines, i);
+      addTerms(table.terms);
+      seenTable = true;
+      i = table.next - 1;
+      continue;
+    }
+    if (!line.trim()) {
+      flush();
+      continue;
+    }
+    if (/^\s*[-*]\s+/.test(line)) continue;
+    buffer.push(line.trim());
+  }
+  flush();
+  return { heading, paragraphs: paragraphs.slice(0, 4), closingParagraphs: closingParagraphs.slice(0, 4), everydayTerms, terms };
+}
+
 function sliceLines(lines: string[], start: number, end: number) {
   return lines.slice(start, end).join("\n").trim();
 }
@@ -34,9 +144,15 @@ function lessonSlug(title: string, id: string) {
   return githubSlug(title) || githubSlug(id);
 }
 
-function extractGoal(overview: string) {
-  const match = /\*\*WHAT YOU WILL BE ABLE TO DO:\*\*\s*([^\n*]+)/i.exec(overview);
+function firstLabeledLine(markdown: string, label: string) {
+  const match = new RegExp(`\\*\\*${label}:\\*\\*\\s*(.+)`, "i").exec(markdown);
   return match?.[1]?.trim();
+}
+
+function extractGoal(overview: string, body: string) {
+  return firstLabeledLine(overview, "WHAT YOU WILL BE ABLE TO DO")
+    ?? firstLabeledLine(body, "WHAT YOU WILL BE ABLE TO DO")
+    ?? firstLabeledLine(body, "WHY YOU ARE LEARNING THIS");
 }
 
 const nestedTopics: Record<string, string[]> = {
@@ -180,13 +296,14 @@ export function parseCourseMarkdown(markdown: string, slug = ""): ParsedCourse {
       })()
       : next;
     const overview = sliceLines(lines, marker.index, firstLessonLine);
+    const body = sliceLines(lines, marker.index, next);
     return {
       id: marker.id,
       number: marker.number,
       title: marker.title,
       anchorIds: [...new Set(["phase-" + marker.id, ...marker.anchors, githubSlug(`PHASE ${marker.number} - ${marker.title}`)])],
       overview,
-      goal: extractGoal(overview),
+      goal: extractGoal(overview, body),
       lessons,
     };
   });
@@ -196,6 +313,7 @@ export function parseCourseMarkdown(markdown: string, slug = ""): ParsedCourse {
     title,
     introMarkdown: sliceLines(lines, 0, introEnd),
     teaserMarkdown: sliceLines(lines, 0, teaserEnd),
+    beginnerIntro: extractBeginnerIntro(lines),
     phases,
   };
 }

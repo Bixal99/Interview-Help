@@ -4,7 +4,7 @@
 
 *Resources curated with Composio (web search, YouTube, GitHub) against [AlgoMaster CN roadmap](https://algomaster.io/roadmaps/cn), [Stanford CS144](https://cs144.github.io/), [Beej's Guide](https://beej.us/guide/bgnet/), and production learning centers.*
 
-**Scope:** 40 concepts · 20 phases · connected step by step, with no artificial weekly deadline.
+**Scope:** 40 concepts · 20 phases · connected step by step.
 
 Bits → Packets → Routes → Apps → Scale → Hire
 
@@ -14,15 +14,37 @@ Bits → Packets → Routes → Apps → Scale → Hire
 
 ### Start here if computer networks are completely new to you
 
-A **network** lets devices exchange information. A **packet** is a small labeled piece of that information. A **protocol** is an agreed set of rules for the exchange. An **address** identifies where information should go, a **port** identifies the program that should receive it, a **switch** connects devices on a local network, and a **router** moves packets between networks.
-
 When a section feels abstract, picture one message traveling from your laptop to another machine. At each step ask: What information was added? Which device read it? What choice did that device make? Use the diagrams, capture real traffic in the safe labs, and repeat the explanation until you can tell the story without reciting a list of layers.
 
-**Words you will meet often:** a **frame** carries data across one local link; a **MAC address** identifies a network interface on that local link; an **IP address** identifies a network destination; **DNS** translates names such as `example.com` into addresses; **TCP** provides an ordered, reliable byte stream; **UDP** sends separate messages without promising delivery; **HTTP** defines web requests and responses; **TLS** protects data while it travels and verifies the server; **NAT** translates addresses at a network boundary; **bandwidth** is the available carrying capacity; **latency** is delay; **throughput** is the amount successfully delivered over time; and a **CDN** keeps copies of suitable content closer to users.
+**Everyday words**
 
-The sections are connected. Read them in order the first time because each one begins with a problem that the previous idea could not solve. Each section begins by explaining **why what you just learned wasn't enough**, and closes by showing you **the remaining problem that leads to the next idea**. Read it in order the first time through - TCP only makes sense because of what broke with bare IP datagrams, and HTTPS only makes sense because of what broke with cleartext HTTP.
+| Word | Meaning |
+| --- | --- |
+| **Network** | Lets devices **exchange information** |
+| **Packet** | A small **labeled piece** of that information |
+| **Protocol** | An **agreed set of rules** for the exchange |
+| **Address** | Identifies **where** information should go |
+| **Port** | Identifies the **program** that should receive it |
+| **Switch** | Connects devices on a **local network** |
+| **Router** | Moves packets **between networks** |
 
-**There is no clock on this document.** No week numbers, no day-by-day plan, no "finish by." Networking knowledge does not compress into a fixed number of days, and pretending otherwise is how people memorize layer lists instead of building understanding. Move at the pace your own understanding requires. The only valid unit of progress here is: *can I now explain why the previous concept wasn't enough, and how this one fixes it?*
+**Words you will meet often**
+
+| Word | Meaning |
+| --- | --- |
+| **Frame** | Carries data across **one local link** |
+| **MAC address** | Identifies a **network interface** on that local link |
+| **IP address** | Identifies a **network destination** |
+| **DNS** | Translates **names** such as `example.com` into addresses |
+| **TCP** | Provides an **ordered, reliable** byte stream |
+| **UDP** | Sends **separate messages** without promising delivery |
+| **HTTP** | Defines web **requests and responses** |
+| **TLS** | **Protects** data while it travels and verifies the server |
+| **NAT** | Translates **addresses** at a network boundary |
+| **Bandwidth** | The available **carrying capacity** |
+| **Latency** | **Delay** |
+| **Throughput** | The amount **successfully delivered** over time |
+| **CDN** | Keeps copies of suitable content **closer to users** |
 
 Every concept in this roadmap answers the same set of questions, because that set of questions *is* how networking knowledge actually accumulates:
 

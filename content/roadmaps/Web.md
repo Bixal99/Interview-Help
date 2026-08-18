@@ -6,7 +6,7 @@
 
 *Where this sits:* pair with [`Networks.md`](./Networks.md) Phases 12-14 for HTTP/TLS depth and [`CS.md`](./CS.md) Phases 36-39 for backend/security/testing theory. [`CS.md`](./CS.md) Phases 3-5 help if you are new to programming. CS Phase 36 becomes *protocol revision* once you finish Web Phases 1-12.
 
-**Scope:** 40 concepts · 20 phases · connected step by step, with no artificial weekly deadline.
+**Scope:** 40 concepts · 20 phases · connected step by step.
 
 HTML/CSS → JavaScript → React/Next → Node/REST → Auth/DB/Test → Deploy → Hire
 
@@ -16,15 +16,41 @@ HTML/CSS → JavaScript → React/Next → Node/REST → Auth/DB/Test → Deploy
 
 ### Start here if web development is completely new to you
 
-The **browser** is the program that shows a website and sends requests. The **server** is another program that receives those requests and returns information. **HTML** gives a page its meaning and structure, **CSS** controls its appearance, and **JavaScript** adds behavior. An **API** is an agreed way for programs to ask each other for data or actions, while a **database** stores information that must remain after a request ends.
-
 Keep one page open while you learn. Make one change, refresh it, and connect what you see to the exact line that caused it. Later, trace a request from the browser to the server and database, then back again. The frameworks are easier to understand once the basic trip is familiar.
 
-**Words you will meet often:** the **DOM** is the browser's in-memory tree of page elements; **semantic HTML** uses elements whose names describe their meaning; **responsive design** makes a page work across screen sizes; a **component** is a reusable piece of interface; **state** is information that can change while the page runs; **asynchronous** work lets the program wait for slower tasks without freezing everything; **REST** is a common style for resource-based web APIs; **authentication** checks identity; **authorization** checks permission; a **session** stores an ongoing signed-in relationship; a **JWT** is a signed token carrying claims; an **ORM** lets code work with database records; a **migration** applies a planned database change; **server-side rendering (SSR)** creates page HTML on the server; and an **end-to-end test** checks a complete user path through the real application layers.
+**Everyday words**
 
-This is not a framework tutorial dump or a stack of unrelated notes. It is one connected explanation about pressure and response. A document needs meaning, so HTML appears. Meaning needs presentation, so CSS appears. Static presentation needs behavior, so JavaScript appears. Manual DOM work becomes fragile, so components appear. Components need durable data, so APIs and databases appear. Shared data needs identity, tests, performance work, and a reliable path to production. Every section opens at the limitation that forced the next tool to exist and closes at the crack that the following section will fill.
+| Word | Meaning |
+| --- | --- |
+| **Browser** | The program that **shows a website** and sends requests |
+| **Server** | Another program that **receives those requests** and returns information |
+| **HTML** | Gives a page its **meaning and structure** |
+| **CSS** | Controls its **appearance** |
+| **JavaScript** | Adds **behavior** |
+| **API** | An **agreed way** for programs to ask each other for data or actions |
+| **Database** | Stores information that must remain **after a request ends** |
 
-**There is no clock on this document.** No week numbers, no day-by-day plan, and no promise that understanding can be compressed into a fixed schedule. Move when you can explain why the previous idea was not enough, trace how the current idea works underneath, and name what it costs. That explanation-not time spent-is the unit of progress.
+**Words you will meet often**
+
+| Word | Meaning |
+| --- | --- |
+| **DOM** | The browser's **in-memory tree** of page elements |
+| **Semantic HTML** | Uses elements whose names describe their **meaning** |
+| **Responsive design** | Makes a page work across **screen sizes** |
+| **Component** | A **reusable piece** of interface |
+| **State** | Information that can **change** while the page runs |
+| **Asynchronous** | Work that lets the program **wait** for slower tasks without freezing everything |
+| **REST** | A common style for **resource-based** web APIs |
+| **Authentication** | Checks **identity** |
+| **Authorization** | Checks **permission** |
+| **Session** | Stores an ongoing **signed-in** relationship |
+| **JWT** | A **signed token** carrying claims |
+| **ORM** | Lets code work with **database records** |
+| **Migration** | Applies a planned **database change** |
+| **Server-side rendering (SSR)** | Creates page **HTML** on the server |
+| **End-to-end test** | Checks a **complete user path** through the real application layers |
+
+This is not a framework tutorial dump or a stack of unrelated notes. It is one connected explanation about pressure and response. A document needs meaning, so **HTML** appears. Meaning needs presentation, so **CSS** appears. Static presentation needs behavior, so **JavaScript** appears. Manual DOM work becomes fragile, so **components** appear. Components need durable data, so **APIs** and **databases** appear. Shared data needs **identity**, **tests**, **performance work**, and a **reliable path to production**. Every section opens at the limitation that forced the next tool to exist and closes at the crack that the following section will fill.
 
 Read every concept in order on the first pass because the order is the argument. On revision, go directly to **Why You Are Learning This**, **What Happens Inside**, and **Why the Next Topic Is Needed**. Those three pieces reconstruct the causal chain; the resource list and implementation then reload the detail you have forgotten.
 

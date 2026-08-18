@@ -2,7 +2,7 @@
 
 *Mohammad Bilal's complete, self-paced path from first principles to professional-level data work - spreadsheets, SQL, Python, statistics, visualization, warehousing, ETL/ELT, orchestration, dbt, Spark, Kafka, and cloud platforms - told as a connected story in which each new idea solves a problem left by the previous one.*
 
-**Scope:** Data analyst × data engineer · 20 phases · no artificial weekly deadline.
+**Scope:** Data analyst × data engineer · 20 phases.
 
 First principles → SQL → Stats → Pipelines → Spark → Kafka → Hire
 
@@ -12,15 +12,34 @@ First principles → SQL → Stats → Pipelines → Spark → Kafka → Hire
 
 ### Start here if data work is completely new to you
 
-**Data** is recorded information: a sale, a click, a temperature, a name, or any other fact you can store. A **data analyst** uses recorded facts to answer questions and support decisions. A **data engineer** builds the paths that collect, clean, store, and deliver those facts. A **query** is a precise request for information, a **pipeline** is a repeatable series of data-moving steps, and a **data model** describes how the stored facts relate to one another.
-
 Begin each topic with a small table you can inspect with your own eyes. Predict the result before you run a formula, query, or script. Then compare your prediction with the output and explain any difference. That habit matters more than remembering tool names because it teaches you to notice when data is incomplete, duplicated, or misleading.
 
-**Words you will meet often:** a **schema** describes the expected shape of stored data; **SQL** is a language for asking relational databases questions; a **metric** is a defined measurement used to track something; **grain** states what one row represents; a **warehouse** stores data prepared for analysis; **ETL** means extract, transform, then load, while **ELT** transforms after loading; **orchestration** schedules and coordinates data jobs; **batch** processing handles a collected group at once; **stream** processing handles continuing events; and a **partition** is one deliberately separated part of a larger dataset.
+**Everyday words**
 
-The sections are connected. Read them in order the first time because each one begins with a problem that the previous idea could not solve. Each section begins by explaining **why what you just learned wasn't enough**, and closes by showing you **the remaining problem that leads to the next idea**. Read it in order the first time through - window functions only make sense because of what broke in basic `GROUP BY`.
+| Word | Meaning |
+| --- | --- |
+| **Data** | **Recorded information**: a sale, a click, a temperature, a name, or any other fact you can store |
+| **Data analyst** | Uses recorded facts to **answer questions** and support decisions |
+| **Data engineer** | Builds the paths that **collect, clean, store, and deliver** those facts |
+| **Query** | A **precise request** for information |
+| **Pipeline** | A **repeatable series** of data-moving steps |
+| **Data model** | Describes how the stored facts **relate** to one another |
 
-**There is no clock on this document.** No week numbers, no day-by-day plan, no "finish by." Data skills do not compress into a fixed number of days, and pretending otherwise is how people memorize disconnected tool names instead of building understanding. Move at the pace your own understanding requires. The only valid unit of progress here is: *can I now explain why the previous concept wasn't enough, and how this one fixes it?*
+**Words you will meet often**
+
+| Word | Meaning |
+| --- | --- |
+| **Schema** | The expected **shape** of stored data |
+| **SQL** | A language for asking **relational databases** questions |
+| **Metric** | A defined **measurement** used to track something |
+| **Grain** | What **one row** represents |
+| **Warehouse** | Stores data prepared for **analysis** |
+| **ETL** | **Extract**, **transform**, then **load** |
+| **ELT** | **Transforms** after loading |
+| **Orchestration** | **Schedules and coordinates** data jobs |
+| **Batch** | Processing that handles a **collected group** at once |
+| **Stream** | Processing that handles **continuing events** |
+| **Partition** | One deliberately **separated part** of a larger dataset |
 
 Every concept in this roadmap answers the same set of questions, because that set of questions *is* how data knowledge actually accumulates:
 

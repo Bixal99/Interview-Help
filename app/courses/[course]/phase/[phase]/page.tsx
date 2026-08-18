@@ -14,7 +14,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ course: string; phase: string }> }): Promise<Metadata> {
   const { course, phase } = await params;
   const view = getPhaseView(course, phase);
-  return view ? { title: `PHASE ${view.phase.number} — ${view.phase.title}` } : {};
+  return view ? { title: `PHASE ${view.phase.number} - ${view.phase.title}` } : {};
 }
 
 export default async function PhasePage({ params }: { params: Promise<{ course: string; phase: string }> }) {
@@ -27,7 +27,7 @@ export default async function PhasePage({ params }: { params: Promise<{ course: 
       <TutorialShell nav={view.nav}>
         <GateBanner slug={view.course.slug} phaseId={view.phase.id} phaseIds={phaseIds} requiredHref={getRequiredProjectHref(view.course.slug, view.phase.id)} />
         <div className="ih-band px-4 py-8 sm:px-8 lg:px-12">
-          <h1 className="max-w-[75ch] text-3xl font-bold sm:text-4xl">PHASE {view.phase.number} — {view.phase.title}</h1>
+          <h1 className="max-w-[75ch] text-3xl font-bold sm:text-4xl">PHASE {view.phase.number} - {view.phase.title}</h1>
         </div>
         <div className="bg-[rgb(var(--surface))] px-4 py-8 sm:px-8 lg:px-12">
           <div className="max-w-[75ch]">

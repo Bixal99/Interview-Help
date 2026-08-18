@@ -4,8 +4,6 @@
 
 This repo is not a bag of random notes. Each concept exists because the previous one reached a practical limit. You learn *why* something was invented, how it works, what it costs, and what limitation forces the next idea.
 
-There are **no artificial weekly deadline**. Progress means: *can I explain why the last concept wasn't enough, and how this one fixes it?*
-
 ---
 
 ## Start here if this is your first technical roadmap
@@ -14,9 +12,32 @@ A **roadmap** is an ordered learning guide. A **phase** is one manageable group 
 
 Use this learning loop throughout the repository: read the problem in plain language, run the smallest example, change something, explain the result aloud, and complete the matching mini-project. Confusion on the first attempt is not failure. Repeat the example until you can describe what happened without copying the document's wording.
 
-**Common abbreviations on this page:** **SWE** means software engineer; **OOP** means object-oriented programming; **DSA** means data structures and algorithms; **LLM** means large language model; **SOC** means security operations center; **ERP** means enterprise resource planning; **API** means an agreed way for programs to communicate; **CI/CD** means automated checking and delivery of software changes; **SRE** means site reliability engineering; **IaC** means infrastructure as code; and **LLD** means low-level design, or planning the classes and smaller parts inside a software system.
+**Common abbreviations**
 
-**Administration abbreviations:** **AD DS** means Active Directory Domain Services; **GPO** means Group Policy Object; **MFA** means multifactor authentication; **RPO** is the acceptable data-loss window; **RTO** is the recovery-time target; and **ITSM** means IT service management.
+| Abbreviation | Meaning |
+| --- | --- |
+| **SWE** | Software engineer |
+| **OOP** | Object-oriented programming |
+| **DSA** | Data structures and algorithms |
+| **LLM** | Large language model |
+| **SOC** | Security operations center |
+| **ERP** | Enterprise resource planning |
+| **API** | An agreed way for programs to communicate |
+| **CI/CD** | Automated checking and delivery of software changes |
+| **SRE** | Site reliability engineering |
+| **IaC** | Infrastructure as code |
+| **LLD** | Low-level design, or planning the classes and smaller parts inside a software system |
+
+**Administration abbreviations**
+
+| Abbreviation | Meaning |
+| --- | --- |
+| **AD DS** | Active Directory Domain Services |
+| **GPO** | Group Policy Object |
+| **MFA** | Multifactor authentication |
+| **RPO** | The acceptable data-loss window |
+| **RTO** | The recovery-time target |
+| **ITSM** | IT service management |
 
 ## What's inside
 

@@ -4,7 +4,7 @@
 
 *Resources researched with Composio on 2026-08-12 using connected YouTube and GitHub discovery. Selected videos were batch-checked as public and available; primary documentation and hands-on repositories are placed inside the concept they support.*
 
-**Scope:** 20 phases · AWS/Azure/GCP mappings · architecture, operations, security, FinOps, migration, portfolio, and interviews · no artificial weekly deadline.
+**Scope:** 20 phases · AWS/Azure/GCP mappings · architecture, operations, security, FinOps, migration, portfolio, and interviews.
 
 ```text
 FOUNDATIONS -> CLOUD CORE -> DATA SERVICES -> TRAFFIC & EVENTS
@@ -26,15 +26,36 @@ FOUNDATIONS -> CLOUD CORE -> DATA SERVICES -> TRAFFIC & EVENTS
 
 ### Start here if cloud computing is completely new to you
 
-The **cloud** is someone else's collection of computers, storage devices, and network equipment that you rent and control through software. A **cloud provider** is the company operating that equipment. A **region** is a geographic area containing provider facilities, a **service** is a ready-made capability such as storage or a database, and a **workload** is simply the application or job you run there. **Deployment** means putting that workload into an environment where it can run for its intended users.
-
 For every phase, first ask: “What would I have to buy, connect, protect, and repair if the provider did not do this part for me?” Then draw the request path, perform the small lab, and explain which responsibilities belong to you and which belong to the provider. The names will become easier once you can picture the physical job behind them.
 
-**Words you will meet often:** a **virtual machine (VM)** is a software-made computer; a **container** is a packaged application that shares the host operating system; **IAM** controls who can sign in and what they may do; a **VPC** or **VNet** is your private network area inside a provider; a **load balancer** spreads requests across healthy servers; **autoscaling** changes the number of running servers as demand changes; **infrastructure as code (IaC)** stores infrastructure instructions in versioned files; **observability** means collecting enough signals to understand a running system; **RTO** is the target recovery time; **RPO** is the acceptable amount of recent data loss; and **FinOps** is the practice of connecting cloud cost to engineering and business decisions.
+**Everyday words**
+
+| Word | Meaning |
+| --- | --- |
+| **Cloud** | Someone else's collection of **computers**, **storage**, and **network equipment** that you rent and control through software |
+| **Cloud provider** | The **company** operating that equipment |
+| **Region** | A **geographic area** containing provider facilities |
+| **Service** | A ready-made capability such as **storage** or a **database** |
+| **Workload** | The **application or job** you run there |
+| **Deployment** | Putting that workload into an environment where it can **run for its intended users** |
+
+**Words you will meet often**
+
+| Word | Meaning |
+| --- | --- |
+| **Virtual machine (VM)** | A **software-made** computer |
+| **Container** | A **packaged application** that shares the host operating system |
+| **IAM** | Controls **who can sign in** and what they may do |
+| **VPC / VNet** | Your **private network area** inside a provider |
+| **Load balancer** | Spreads requests across **healthy servers** |
+| **Autoscaling** | Changes the **number of running servers** as demand changes |
+| **Infrastructure as code (IaC)** | Stores infrastructure instructions in **versioned files** |
+| **Observability** | Collecting enough **signals** to understand a running system |
+| **RTO** | The target **recovery time** |
+| **RPO** | The acceptable amount of recent **data loss** |
+| **FinOps** | Connecting **cloud cost** to engineering and business decisions |
 
 This roadmap teaches ideas, not a product list or a collection of exam objectives. The phases form one connected explanation: every phase begins where the previous design reached a practical limit, explains the mechanism invented to answer that limit, names what the mechanism costs, and closes on the pressure that forces the next phase. Read in order once; on revision, jump to **Why You Are Learning This**, **What Happens Inside**, and **Why the Next Topic Is Needed**.
-
-There is no week clock. Move when you can trace the mechanism, produce the lab evidence, explain one trade-off, and diagnose one failure without hiding behind a console screenshot.
 
 ### The Beginner-Friendly Pattern Every Topic Follows
 

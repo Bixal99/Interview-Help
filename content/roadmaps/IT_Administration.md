@@ -4,7 +4,7 @@
 
 *Resources researched with Composio on 2026-08-17 through official web documentation, connected GitHub discovery, and connected YouTube discovery. Selected videos were checked through the YouTube API as public and embeddable. Product behavior, licensing, and certification availability can change; verify current vendor documentation before a production change or exam purchase.*
 
-**Scope:** 18 phases · complete beginner to job-ready · Windows and Linux · on-premises and cloud identity · physical and virtual infrastructure · operations, support, security, recovery, and business systems · no artificial weekly deadline.
+**Scope:** 18 phases · complete beginner to job-ready · Windows and Linux · on-premises and cloud identity · physical and virtual infrastructure · operations, support, security, recovery, and business systems.
 
 ## What IT Administration Means
 
@@ -38,7 +38,28 @@ For packet-level routing depth continue with [`Networks.md`](./Networks.md). For
 
 ## Beginner Vocabulary
 
-An **endpoint** is a user device. A **server** provides a shared service. An **account** proves who or what is acting; a **group** collects accounts; a **permission** allows an action; a **role** packages permissions. A **directory** centrally stores identities and computers. **Authentication** proves identity; **authorization** decides what that identity may do. **DNS** maps names to addresses; **DHCP** leases network settings; a **gateway** moves traffic outside the local network. A **hypervisor** runs virtual machines. A **backup** is a recoverable copy; **RPO** is the acceptable data-loss window; **RTO** is the target recovery time. An **incident** interrupts service, a **request** asks for a standard service, a **problem** is an underlying recurring cause, and a **change** deliberately alters a service.
+| Word | Meaning |
+| --- | --- |
+| **Endpoint** | A **user device** |
+| **Server** | Provides a **shared service** |
+| **Account** | Proves **who or what** is acting |
+| **Group** | Collects **accounts** |
+| **Permission** | Allows an **action** |
+| **Role** | Packages **permissions** |
+| **Directory** | Centrally stores **identities and computers** |
+| **Authentication** | Proves **identity** |
+| **Authorization** | Decides **what that identity may do** |
+| **DNS** | Maps **names** to addresses |
+| **DHCP** | Leases **network settings** |
+| **Gateway** | Moves traffic **outside the local network** |
+| **Hypervisor** | Runs **virtual machines** |
+| **Backup** | A **recoverable copy** |
+| **RPO** | The acceptable **data-loss window** |
+| **RTO** | The target **recovery time** |
+| **Incident** | Interrupts **service** |
+| **Request** | Asks for a **standard service** |
+| **Problem** | An underlying **recurring cause** |
+| **Change** | Deliberately **alters a service** |
 
 ## How to Use This Roadmap
 

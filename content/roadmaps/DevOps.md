@@ -4,7 +4,7 @@
 
 *Resources researched with Composio on 2026-08-12 using connected YouTube and GitHub discovery. Selected videos were batch-checked as public and available; primary documentation and hands-on repositories are placed inside the concept they support.*
 
-**Scope:** 20 phases · delivery, automation, runtime, reliability, security, platform, projects, and interviews · no artificial weekly deadline.
+**Scope:** 20 phases · delivery, automation, runtime, reliability, security, platform, projects, and interviews.
 
 ```text
 FLOW/CULTURE -> LINUX/TROUBLESHOOTING -> GIT/AUTOMATION
@@ -26,15 +26,35 @@ FLOW/CULTURE -> LINUX/TROUBLESHOOTING -> GIT/AUTOMATION
 
 ### Start here if DevOps is completely new to you
 
-**DevOps** is the work of helping software move safely and repeatedly from a developer's computer to the people who use it. A **deployment** is a release into a running environment. A **pipeline** is an automated sequence of checks and delivery steps. An **environment** is a place where the software runs, such as testing or production. **Reliability** means the service keeps doing the promised job, including when parts fail.
-
 Treat every tool name as an answer to a practical question: What manual step is slow, inconsistent, or risky? Run the smallest lab, observe the files and processes it creates, break one safe thing on purpose, and restore it. If you can describe the failure and recovery without hiding behind a dashboard, you understand the idea.
 
-**Words you will meet often:** **CI** means automatically building and checking each change; **CD** means automatically preparing or delivering a checked change; an **artifact** is the saved build output, such as a package or container image; a **container image** is the reusable package from which containers start; **Kubernetes** coordinates many containers; **infrastructure as code (IaC)** describes infrastructure in versioned files; **observability** means collecting enough logs, measurements, and request traces to explain behavior; **SRE** applies engineering methods to reliability work; an **incident** is an interruption or serious risk that needs coordinated response; a **rollback** returns to a known working release; and **idempotent** means repeating an action produces the same intended final state.
+**Everyday words**
+
+| Word | Meaning |
+| --- | --- |
+| **DevOps** | The work of helping software move **safely and repeatedly** from a developer's computer to the people who use it |
+| **Deployment** | A **release** into a running environment |
+| **Pipeline** | An **automated sequence** of checks and delivery steps |
+| **Environment** | A place where the software runs, such as **testing** or **production** |
+| **Reliability** | The service keeps doing the **promised job**, including when parts fail |
+
+**Words you will meet often**
+
+| Word | Meaning |
+| --- | --- |
+| **CI** | Automatically **building and checking** each change |
+| **CD** | Automatically **preparing or delivering** a checked change |
+| **Artifact** | The saved **build output**, such as a package or container image |
+| **Container image** | The **reusable package** from which containers start |
+| **Kubernetes** | Coordinates **many containers** |
+| **Infrastructure as code (IaC)** | Describes infrastructure in **versioned files** |
+| **Observability** | Collecting enough **logs**, **measurements**, and **request traces** to explain behavior |
+| **SRE** | Applies **engineering methods** to reliability work |
+| **Incident** | An interruption or serious risk that needs **coordinated response** |
+| **Rollback** | Returns to a **known working release** |
+| **Idempotent** | Repeating an action produces the same **intended final state** |
 
 This roadmap teaches ideas, not a product list or a collection of exam objectives. The phases form one connected explanation: every phase begins where the previous design reached a practical limit, explains the mechanism invented to answer that limit, names what the mechanism costs, and closes on the pressure that forces the next phase. Read in order once; on revision, jump to **Why You Are Learning This**, **What Happens Inside**, and **Why the Next Topic Is Needed**.
-
-There is no week clock. Move when you can trace the mechanism, produce the lab evidence, explain one trade-off, and diagnose one failure without hiding behind a console screenshot.
 
 ### The Beginner-Friendly Pattern Every Topic Follows
 

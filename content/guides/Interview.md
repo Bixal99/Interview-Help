@@ -24,11 +24,29 @@ Question → Strong answer → Follow-ups → Traps
 
 ### Start here if technical interviews are new to you
 
-An interviewer is usually checking how you think, not whether you can repeat a perfect paragraph. A **constraint** is a limit or requirement in the question. A **trade-off** is a choice where gaining one benefit costs something else. A **failure mode** is a specific way the idea can stop working. A strong answer defines the idea in everyday language, walks through a small example, and then explains one choice and one possible failure.
+An interviewer is usually checking how you think, not whether you can repeat a perfect paragraph. A strong answer defines the idea in everyday language, walks through a small example, and then explains one choice and one possible failure.
 
 Practice aloud. It will feel slower and less polished than reading silently, and that is normal. Give yourself permission to pause, ask a clarifying question, and correct yourself. The aim is a clear conversation that another person can follow.
 
-**Words you will meet often:** **Big O** describes how time or memory needs grow as the input grows; an **edge case** is an unusual but valid input near a boundary; an **invariant** is a condition that must remain true while an algorithm runs; a **follow-up** is the next question prompted by your answer; **system design** asks you to explain how multiple parts would work together; a **behavioral question** asks for evidence from something you did; and **STAR** means Situation, Task, Action, Result-a simple order for telling that story clearly.
+**Everyday words**
+
+| Word | Meaning |
+| --- | --- |
+| **Constraint** | A **limit or requirement** in the question |
+| **Trade-off** | A choice where gaining one benefit **costs something else** |
+| **Failure mode** | A specific way the idea can **stop working** |
+
+**Words you will meet often**
+
+| Word | Meaning |
+| --- | --- |
+| **Big O** | How **time** or **memory** needs grow as the input grows |
+| **Edge case** | An unusual but valid input near a **boundary** |
+| **Invariant** | A condition that must remain **true** while an algorithm runs |
+| **Follow-up** | The **next question** prompted by your answer |
+| **System design** | Explaining how **multiple parts** would work together |
+| **Behavioral question** | Asks for **evidence** from something you did |
+| **STAR** | **Situation**, **Task**, **Action**, **Result**: a simple order for telling that story clearly |
 
 This is not a list of sentences to memorize. It is a **spoken-answer gym** built from the same chain-of-discovery logic as the connected roadmaps. Every strong answer names: (1) the problem the idea solves, (2) the internal steps, (3) a trade-off, (4) a failure mode.
 
@@ -1623,7 +1641,7 @@ For the full state, recovery, and workflow interview track, continue at [Track V
 
 **THE INTERVIEWER'S QUESTION:** How does Git merge, and how do you resolve a conflict safely?
 
-**BEGINNER-FRIENDLY ANSWER:** If my branch can just move forward, Git fast-forwards. Otherwise it compares both tips with their common ancestor. I resolve the intended final content, stage it, test it, and continue—or abort before committing.
+**BEGINNER-FRIENDLY ANSWER:** If my branch can just move forward, Git fast-forwards. Otherwise it compares both tips with their common ancestor. I resolve the intended final content, stage it, test it, and continue - or abort before committing.
 
 **TECHNICALLY PRECISE PROFESSIONAL ANSWER:** A true merge computes one or more merge bases and performs a three-way comparison of base, ours, and theirs. Conflicted index entries occupy stages 1–3 until I add a resolved stage-0 entry. I inspect `ls-files -u`/combined diff, resolve semantics including rename/delete cases, run tests and `diff --check`, then commit/continue; `merge --abort` is the safe pre-completion exit.
 
@@ -1705,7 +1723,7 @@ For the full state, recovery, and workflow interview track, continue at [Track V
 
 **BEGINNER-FRIENDLY ANSWER:** I revoke or rotate it immediately, assume it was exposed, review access, then decide with the team whether history must be rewritten. Deleting the latest file is not containment.
 
-**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** I contain first—revoke/rotate, disable dependent access if needed, preserve evidence, inspect audit logs, and notify owners. Then I inventory every ref/mirror/cache and use a coordinated fresh-clone rewrite such as `git filter-repo`, verify absence, pause pushes, map old/new IDs, apply guarded ref updates, and require collaborator re-clone/reset. Rewriting does not unexpose the secret.
+**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** I contain first - revoke/rotate, disable dependent access if needed, preserve evidence, inspect audit logs, and notify owners. Then I inventory every ref/mirror/cache and use a coordinated fresh-clone rewrite such as `git filter-repo`, verify absence, pause pushes, map old/new IDs, apply guarded ref updates, and require collaborator re-clone/reset. Rewriting does not unexpose the secret.
 
 **A SIMPLE ANSWER STRUCTURE:** Contain → investigate → coordinated rewrite decision → verify → collaborator recovery/prevention.
 
@@ -1753,7 +1771,7 @@ For the full state, recovery, and workflow interview track, continue at [Track V
 
 **BEGINNER-FRIENDLY ANSWER:** I identify one known-good and one known-bad revision, then use bisect to test midpoint commits until Git finds the first bad one. Blame can point me to a line's commit, but I inspect its context.
 
-**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** Bisect performs roughly logarithmic classification over a reachable ancestry interval and can automate with exit-code semantics through `bisect run`; deterministic tests and buildable commits are prerequisites. I reset after the run. For line history I use `blame -w -C`, `log -L`, and the originating commit/review—never person-first blame.
+**TECHNICALLY PRECISE PROFESSIONAL ANSWER:** Bisect performs roughly logarithmic classification over a reachable ancestry interval and can automate with exit-code semantics through `bisect run`; deterministic tests and buildable commits are prerequisites. I reset after the run. For line history I use `blame -w -C`, `log -L`, and the originating commit/review - never person-first blame.
 
 **A SIMPLE ANSWER STRUCTURE:** Known boundaries → deterministic classifier → logarithmic search → inspect culprit → reset/fix.
 

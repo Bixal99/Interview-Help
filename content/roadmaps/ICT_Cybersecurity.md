@@ -4,7 +4,7 @@
 
 *Resources curated with Composio (web search, YouTube, GitHub) against [OWASP Top 10](https://owasp.org/Top10/), [PortSwigger Web Security Academy](https://portswigger.net/web-security), [MITRE ATT&CK](https://attack.mitre.org/), [HackTricks](https://github.com/HackTricks-wiki/hacktricks), [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings), [juice-shop/juice-shop](https://github.com/juice-shop/juice-shop), [fabacab/awesome-cybersecurity-blueteam](https://github.com/fabacab/awesome-cybersecurity-blueteam), [meirwah/awesome-incident-response](https://github.com/meirwah/awesome-incident-response), [brootware/awesome-cyber-security-university](https://github.com/brootware/awesome-cyber-security-university), and 2026 Security Engineer / SOC / pentest roadmaps.*
 
-**Scope:** 40 concepts · 20 phases · connected step by step, with no artificial weekly deadline.
+**Scope:** 40 concepts · 20 phases · connected step by step.
 
 Foundations → Defend → Attack → Detect → Respond → Hire
 
@@ -14,15 +14,34 @@ Foundations → Defend → Attack → Detect → Respond → Hire
 
 ### Start here if cybersecurity is completely new to you
 
-An **asset** is something worth protecting, such as an account, file, computer, or service. A **threat** is a possible source of harm. A **vulnerability** is a weakness that harm could use. **Risk** combines what may happen with how damaging it would be, and a **security control** is a safeguard that lowers that risk. An **incident** is an event that may threaten security and must be checked and handled.
-
 For every technique, begin with the thing being protected and the allowed behavior. Then study how that behavior can fail, how you would notice the failure, and how you would recover. Practice only in systems you own or are explicitly allowed to test. The goal is not to collect attack names; it is to make safer decisions and explain the evidence behind them.
 
-**Words you will meet often:** **authentication** checks who someone is; **authorization** checks what that identity may do; **encryption** hides readable data using a key; a **hash** creates a fixed-size fingerprint used for checking or safe comparison; an **exploit** is a method that uses a vulnerability; **hardening** means reducing unnecessary ways a system can be attacked; **least privilege** means giving only the access needed for the current job; a **SIEM** gathers and searches security events; **detection** is a rule or method for noticing suspicious behavior; **incident response** is the organized work of confirming, containing, removing, and learning from an incident; and a **penetration test** is an authorized attempt to find and prove security weaknesses.
+**Everyday words**
 
-The sections are connected. Read them in order the first time because each one begins with a problem that the previous idea could not solve. Each section begins by explaining **why what you just learned wasn't enough**, and closes by showing you **the remaining problem that leads to the next idea**. Read it in order the first time through - SIEM detections only make sense after you understand logs and attacker TTPs, and cloud IAM only makes sense after you feel the pain of long-lived secrets.
+| Word | Meaning |
+| --- | --- |
+| **Asset** | Something **worth protecting**, such as an account, file, computer, or service |
+| **Threat** | A possible **source of harm** |
+| **Vulnerability** | A **weakness** that harm could use |
+| **Risk** | Combines what may happen with how **damaging** it would be |
+| **Security control** | A **safeguard** that lowers that risk |
+| **Incident** | An event that may threaten security and must be **checked and handled** |
 
-**There is no clock on this document.** No week numbers, no day-by-day plan, no "finish by." Cybersecurity skill does not compress into a fixed number of days, and pretending otherwise is how people memorize tool names instead of building judgment. Move at the pace your own understanding requires. The only valid unit of progress here is: *can I now explain why the previous concept wasn't enough, and how this one fixes it?*
+**Words you will meet often**
+
+| Word | Meaning |
+| --- | --- |
+| **Authentication** | Checks **who someone is** |
+| **Authorization** | Checks **what that identity may do** |
+| **Encryption** | Hides readable data using a **key** |
+| **Hash** | A fixed-size **fingerprint** used for checking or safe comparison |
+| **Exploit** | A method that uses a **vulnerability** |
+| **Hardening** | Reducing unnecessary ways a system can be **attacked** |
+| **Least privilege** | Giving only the access needed for the **current job** |
+| **SIEM** | **Gathers and searches** security events |
+| **Detection** | A rule or method for noticing **suspicious behavior** |
+| **Incident response** | The organized work of confirming, containing, removing, and **learning** from an incident |
+| **Penetration test** | An **authorized attempt** to find and prove security weaknesses |
 
 Every concept in this roadmap answers the same set of questions, because that set of questions *is* how security knowledge actually accumulates:
 

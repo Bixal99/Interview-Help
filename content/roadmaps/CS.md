@@ -2,7 +2,7 @@
 
 *Mohammad Bilal's complete, self-paced path from first principles to professional-level engineering - data structures, algorithms, operating systems, networks, the web, databases, security, software engineering, system design, and distributed systems, told as a connected story in which each new idea solves a problem left by the previous one.*
 
-**Scope:** programming, OOP, data structures, and systems · 43 phases · connected step by step, with no artificial weekly deadline.
+**Scope:** programming, OOP, data structures, and systems · 43 phases · connected step by step.
 
 Foundations → Programming → OOP → Data structures → Systems → Design → Hire
 
@@ -12,15 +12,32 @@ Foundations → Programming → OOP → Data structures → Systems → Design �
 
 ### Start here if computer science is completely new to you
 
-A **program** is a set of instructions a computer follows. An **algorithm** is the ordered method used to solve a problem, while a **data structure** is the way information is arranged so the program can use it. **Memory** is the computer's short-term working space. A **system** is a group of parts-programs, machines, storage, and networks-that work together. These ordinary ideas grow into the technical terms used later in the roadmap.
-
 Do not try to memorize definitions before you have seen them work. For each topic, trace one tiny example by hand, run the code, change an input, and say what the computer does next. When a section compares two choices, focus on the reason for choosing one rather than trying to label one as always “best.”
 
-**Words you will meet often:** **runtime** is the time when a program is executing; a **compiler** translates code before it runs, while an **interpreter** executes it through another program; **complexity** describes how time or memory needs grow as the input grows; the **stack** stores active function calls; the **heap** holds longer-lived data created while the program runs; a **process** is a running program with its own memory; a **thread** is one path of work inside a process; an **API** is an agreed way for software parts to communicate; and a **distributed system** is one job performed by multiple computers that can communicate and fail independently.
+**Everyday words**
 
-The sections are connected. Read them in order the first time because each one begins with a problem that the previous idea could not solve. Each section begins by explaining **why what you just learned wasn't enough**, and closes by showing you **the remaining problem that leads to the next idea**. Read it in order the first time through - concept 40 only makes sense because of what you built in concept 12.
+| Word | Meaning |
+| --- | --- |
+| **Program** | A set of **instructions** a computer follows |
+| **Algorithm** | The **ordered method** used to solve a problem |
+| **Data structure** | The way **information** is arranged so the program can use it |
+| **Memory** | The computer's **short-term working space** |
+| **System** | A group of parts: **programs**, **machines**, **storage**, and **networks** that work together |
 
-**There is no clock on this document.** No week numbers, no day-by-day plan, no "finish by." Software engineering knowledge does not compress into a fixed number of days, and pretending otherwise is how people memorize disconnected facts instead of building understanding. Move at the pace your own understanding requires. The only valid unit of progress here is: *can I now explain why the previous concept wasn't enough, and how this one fixes it?*
+**Words you will meet often**
+
+| Word | Meaning |
+| --- | --- |
+| **Runtime** | The time when a program is **executing** |
+| **Compiler** | **Translates** code before it runs |
+| **Interpreter** | **Executes** code through another program, as it goes |
+| **Complexity** | How **time** or **memory** needs grow as the input grows |
+| **Stack** | Stores active **function calls** |
+| **Heap** | Holds **longer-lived data** created while the program runs |
+| **Process** | A **running program** with its own memory |
+| **Thread** | One **path of work** inside a process |
+| **API** | An **agreed way** for software parts to communicate |
+| **Distributed system** | One job performed by **multiple computers** that can communicate and fail independently |
 
 Every concept in this roadmap answers the same set of questions, because that set of questions *is* how engineering knowledge actually accumulates:
 
@@ -389,6 +406,8 @@ An interviewer almost never asks "what is Big O" directly - they expect you to s
 
 **Track:** Programming Fundamentals
 
+**WHAT YOU WILL BE ABLE TO DO:** Run Python source through the interpreter and see how a program turns into output.
+
 ## 3.1 Source, Interpreter, and Output
 
 **WHY YOU ARE LEARNING THIS:** Computers only run machine instructions. Humans write source code. Something must translate and execute that source - in Python, the interpreter.
@@ -532,6 +551,8 @@ Be ready for `is` vs `==` later; for now, explain mutable vs immutable with a li
 # PHASE 4 - Control Flow
 
 **Track:** Programming Fundamentals
+
+**WHAT YOU WILL BE ABLE TO DO:** Direct a program with conditions and loops so it can make decisions and repeat work.
 
 ## 4.1 Conditionals
 
@@ -680,6 +701,8 @@ Know `range`, `enumerate`, and how to avoid mutating a list while iterating it c
 # PHASE 5 - Functions and Modules
 
 **Track:** Programming Fundamentals
+
+**WHAT YOU WILL BE ABLE TO DO:** Split a program into named functions and modules so one change does not break forgotten call sites.
 
 ## 5.1 Functions, Parameters, and Return Values
 

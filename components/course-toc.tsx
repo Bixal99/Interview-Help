@@ -4,7 +4,6 @@ import type { CourseNav, CourseNavPhase } from "@/lib/navigation";
 import { lessonPath, projectPathFor } from "@/lib/parse-course";
 
 function PhaseCard({ navSlug, phase }: { navSlug: string; phase: CourseNavPhase }) {
-  const lessonCount = phase.lessons.length + (phase.hasProject ? 1 : 0);
   return (
     <article className="overflow-hidden border hairline bg-[rgb(var(--surface))] shadow-[0_8px_24px_rgb(40_42_53_/_0.06)]">
       <div className="border-l-[5px] border-[#04AA6D] p-5 sm:p-7">
@@ -16,14 +15,9 @@ function PhaseCard({ navSlug, phase }: { navSlug: string; phase: CourseNavPhase 
             {phase.number}
           </div>
           <div className="min-w-0 flex-1">
-            <div className="flex flex-wrap items-baseline justify-between gap-2">
-              <h3 className="text-xl font-bold leading-snug sm:text-2xl">{phase.title}</h3>
-              <p className="text-sm font-semibold tabular-nums text-muted">
-                {lessonCount} {lessonCount === 1 ? "topic" : "topics"}
-              </p>
-            </div>
+            <h3 className="text-xl font-bold leading-snug sm:text-2xl">{phase.title}</h3>
             {phase.goal && (
-              <p className="mt-2 max-w-[70ch] text-[15px] leading-relaxed text-muted sm:text-base">
+              <p className="mt-2 text-[15px] leading-relaxed text-ink sm:text-base">
                 <Emphasis text={phase.goal} />
               </p>
             )}
@@ -57,7 +51,7 @@ function PhaseCard({ navSlug, phase }: { navSlug: string; phase: CourseNavPhase 
                           className="group flex items-baseline gap-3 py-1.5 text-[14px] no-underline hover:text-[#04AA6D]"
                         >
                           <span className="shrink-0 font-semibold tabular-nums text-[#04AA6D]">{child.id}</span>
-                          <span className="text-muted group-hover:text-[#04AA6D]">{child.title}</span>
+                          <span className="text-ink group-hover:text-[#04AA6D]">{child.title}</span>
                         </Link>
                       </li>
                     ))}
@@ -91,15 +85,11 @@ export function CourseToc({ nav }: { nav: CourseNav }) {
     <div className="mt-10 space-y-14">
       {nav.chapters.map((chapter) => (
         <section key={chapter.id}>
-          <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
-            <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-[#04AA6D]">{chapter.title}</h3>
-            <p className="hidden text-sm text-muted sm:block">
-              Phases {chapter.phases[0]?.number}
-              {chapter.phases.length > 1 ? `–${chapter.phases[chapter.phases.length - 1]?.number}` : ""}
-            </p>
-          </div>
+          <h3 className="mb-4 text-2xl font-bold uppercase tracking-wide text-[#04AA6D] sm:text-3xl">
+            {chapter.title}
+          </h3>
           {chapter.summary && (
-            <p className="mb-5 max-w-[80ch] text-[15px] leading-relaxed text-muted sm:text-base">
+            <p className="mb-5 text-[15px] leading-relaxed text-ink sm:text-base">
               <Emphasis text={chapter.summary} />
             </p>
           )}

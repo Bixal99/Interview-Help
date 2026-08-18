@@ -6,7 +6,7 @@
 
 *Where this sits:* do this **after** solid Python and [`CS.md`](./CS.md) (classes, inheritance, composition). Odoo is Python OOP when the amount of work grows with XML, PostgreSQL, and JS. Build the matching Odoo phase projects in [`Projects.md`](../guides/Projects.md) and drill [`Interview.md`](../guides/Interview.md) for practice explaining ideas clearly under interview pressure.*
 
-**Scope:** 40 concepts · 20 phases · connected step by step, with no artificial weekly deadline.
+**Scope:** 40 concepts · 20 phases · connected step by step.
 
 ERP → Modules → ORM → UI → HTTP → Ship → Hire
 
@@ -16,15 +16,38 @@ ERP → Modules → ORM → UI → HTTP → Ship → Hire
 
 ### Start here if Odoo and ERP are completely new to you
 
-**ERP** means enterprise resource planning: one connected business system for work such as sales, inventory, accounting, and staff records. **Odoo** is an ERP platform. A **module** adds or changes a business feature, a **model** describes a kind of business record, the **ORM** lets Python code work with database records, a **view** controls what the user sees, and a **record** is one stored item such as a customer or sales order.
-
 Keep one small business story in mind as you read-for example, a library lending books or a shop selling products. Ask how each Odoo feature changes that story. Build the smallest version, enter a few records by hand, and check what appears in the database and on the screen. The framework vocabulary becomes manageable when every term is tied to a visible business action.
 
-**Words you will meet often:** an **addon** is an Odoo module found on an addons path; a **manifest** is the file that describes a module and its dependencies; a **field** is one named value on a model; a **domain** is a list of conditions used to find records; an **ACL** grants model-level permissions; a **record rule** limits which individual rows a user may access; a **controller** receives web requests; a **webhook** is an HTTP message sent when an event occurs; **RPC** lets another program call Odoo operations remotely; **OWL** is Odoo's component system for interactive browser code; **QWeb** is its template system; and a **migration** changes existing data or code so it works with a newer version.
+**Everyday words**
+
+| Word | Meaning |
+| --- | --- |
+| **ERP** | Enterprise resource planning: one connected business system for work such as **sales**, **inventory**, **accounting**, and **staff records** |
+| **Odoo** | An **ERP platform** |
+| **Module** | Adds or changes a **business feature** |
+| **Model** | Describes a kind of **business record** |
+| **ORM** | Lets Python code work with **database records** |
+| **View** | Controls what the **user sees** |
+| **Record** | One stored item such as a **customer** or **sales order** |
+
+**Words you will meet often**
+
+| Word | Meaning |
+| --- | --- |
+| **Addon** | An Odoo module found on an **addons path** |
+| **Manifest** | The file that describes a module and its **dependencies** |
+| **Field** | One **named value** on a model |
+| **Domain** | A list of **conditions** used to find records |
+| **ACL** | Grants **model-level permissions** |
+| **Record rule** | Limits which **individual rows** a user may access |
+| **Controller** | Receives **web requests** |
+| **Webhook** | An **HTTP message** sent when an event occurs |
+| **RPC** | Lets another program call Odoo operations **remotely** |
+| **OWL** | Odoo's **component system** for interactive browser code |
+| **QWeb** | Its **template** system |
+| **Migration** | Changes existing data or code so it works with a **newer version** |
 
 This is not a glossary of Odoo buzzwords. It is one connected explanation: every section exists because the section before it reached a practical limit. ERP thinking only matters once spreadsheet chaos burned you. Record rules only matter once model ACLs let users see rows they should not. OWL patches only matter once pure XML could not express the UX.
-
-**There is no clock on this document.** Move when you can explain *why the previous idea was not enough*. That is the only unit of progress.
 
 Every concept answers the same questions:
 

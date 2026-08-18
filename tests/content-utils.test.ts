@@ -3,7 +3,7 @@ import { convertMarkdownHref, extractFencedBlocks, extractHeadings, extractYouTu
 
 describe("content utilities", () => {
   it("generates stable GitHub-style heading slugs", () => {
-    expect(githubSlug("Phase 4 — Branching & Rebase")).toBe("phase-4-branching-rebase");
+    expect(githubSlug("Phase 4 - Branching & Rebase")).toBe("phase-4-branching-rebase");
     expect(githubSlug("$O(n \\log n)$")).toBe("on-log-n");
   });
 

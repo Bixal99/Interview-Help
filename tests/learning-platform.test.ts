@@ -27,6 +27,8 @@ describe("course parsing", () => {
     expect(headingRouteMap(course).get("from-source-code-to-a-running-program")).toBe("/courses/computer-science/phase/1/from-source-code-to-a-running-program");
     expect(extractPractice(course.phases[0].lessons[0].markdown)?.kind).toBe("checklist");
     expect(new Set(course.phases.map((phase) => phase.id)).size).toBe(43);
+    expect(course.phases.find((phase) => phase.id === "5")?.goal).toMatch(/named functions and modules/i);
+    expect(course.phases.find((phase) => phase.id === "6")?.goal).toMatch(/Feel the \*problem\* OOP was invented to solve/i);
     expect(course.phases.find((phase) => phase.id === "38")?.lessons.find((lesson) => lesson.id === "38.5")?.children).toEqual([
       { id: "38.5.1", title: "SQL Injection" },
       { id: "38.5.2", title: "XSS" },
@@ -38,6 +40,39 @@ describe("course parsing", () => {
   it("extracts Git 15 phases", () => {
     const course = parseCourseMarkdown(read("content/roadmaps/Git.md"), "git");
     expect(course.phases).toHaveLength(15);
+  });
+
+  it("extracts the Cloud beginner intro for the course home", () => {
+    const course = parseCourseMarkdown(read("content/roadmaps/Cloud.md"), "cloud");
+    expect(course.beginnerIntro?.heading).toMatch(/cloud computing is completely new/i);
+    expect(course.beginnerIntro?.everydayTerms.map((item) => item.term)).toEqual(
+      expect.arrayContaining(["Cloud", "Cloud provider", "Region"]),
+    );
+    expect(course.beginnerIntro?.terms.map((item) => item.term)).toEqual(
+      expect.arrayContaining(["IAM", "FinOps"]),
+    );
+  });
+
+  it("extracts CS beginner glossary tables for the course home", () => {
+    const course = parseCourseMarkdown(read("content/roadmaps/CS.md"), "computer-science");
+    expect(course.beginnerIntro?.paragraphs.join(" ")).not.toMatch(/there is no clock|sections are connected/i);
+    expect(course.beginnerIntro?.everydayTerms).toEqual(
+      expect.arrayContaining([
+        { term: "Program", meaning: "A set of **instructions** a computer follows" },
+        { term: "Algorithm", meaning: "The **ordered method** used to solve a problem" },
+      ]),
+    );
+    expect(course.beginnerIntro?.everydayTerms.map((item) => item.term)).toEqual([
+      "Program",
+      "Algorithm",
+      "Data structure",
+      "Memory",
+      "System",
+    ]);
+    expect(course.beginnerIntro?.terms[0]).toMatchObject({
+      term: "Runtime",
+      meaning: "The time when a program is **executing**",
+    });
   });
 
   it("groups CS phases into sequential storyline chapters", () => {

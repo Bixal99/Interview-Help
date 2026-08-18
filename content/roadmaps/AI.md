@@ -4,7 +4,7 @@
 
 *Resources curated with Composio (web search, YouTube, GitHub) against [mlabonne/llm-course](https://github.com/mlabonne/llm-course), [Karpathy nn-zero-to-hero](https://github.com/karpathy/nn-zero-to-hero), [fast.ai](https://course.fast.ai/), [Hugging Face Course](https://github.com/huggingface/course), [CS231n](https://cs231n.stanford.edu/), and 2026 AI engineer roadmaps.*
 
-**Scope:** 40 concepts · 20 phases · connected step by step, with no artificial weekly deadline.
+**Scope:** 40 concepts · 20 phases · connected step by step.
 
 Data → Learn → Deep → Transformers → Ship → Hire
 
@@ -14,15 +14,34 @@ Data → Learn → Deep → Transformers → Ship → Hire
 
 ### Start here if AI is completely new to you
 
-You are not expected to know the vocabulary on the first read. In this roadmap, **artificial intelligence (AI)** means software that performs a task we normally connect with human judgment. **Machine learning (ML)** is one way to build that software: instead of writing every rule yourself, you show the program examples and let it adjust a mathematical model. A **model** is the adjustable pattern-finder, **training** is the adjustment process, a **dataset** is the collection of examples, and **evaluation** means checking the model on carefully chosen examples to see whether it actually works.
+You are not expected to know the vocabulary on the first read. Use a simple loop for every topic: read the everyday problem, study the analogy, run the smallest example, change one input, and explain what changed in your own words. If you cannot explain a term without using the same term in its definition, stay with the example a little longer. Repetition is expected here; it is how unfamiliar ideas become familiar.
 
-Use a simple loop for every topic: read the everyday problem, study the analogy, run the smallest example, change one input, and explain what changed in your own words. If you cannot explain a term without using the same term in its definition, stay with the example a little longer. Repetition is expected here; it is how unfamiliar ideas become familiar.
+**Everyday words**
 
-**Words you will meet often:** a **feature** is one piece of information given to a model; a **label** is the answer you want it to learn; a **parameter** is a number the model adjusts; **loss** is a score showing how wrong an answer was; a **gradient** points toward the change that most affects that score; **inference** means using a trained model; **overfitting** means memorizing practice examples instead of learning a pattern that works on new ones; an **embedding** represents meaning as a list of numbers; a **token** is a small piece of text; **RAG** means looking up useful source material before generating an answer; and **fine-tuning** means continuing a model's training for a narrower purpose.
+| Word | Meaning |
+| --- | --- |
+| **Artificial intelligence (AI)** | Software that performs a task we normally connect with **human judgment** |
+| **Machine learning (ML)** | Building that software by showing the program **examples** and letting it adjust a mathematical model, instead of writing every rule yourself |
+| **Model** | The adjustable **pattern-finder** |
+| **Training** | The **adjustment** process |
+| **Dataset** | The collection of **examples** |
+| **Evaluation** | Checking the model on carefully chosen examples to see whether it actually **works** |
 
-The sections are connected. Read them in order the first time because each one begins with a problem that the previous idea could not solve. Each section begins by explaining **why what you just learned wasn't enough**, and closes by showing you **the remaining problem that leads to the next idea**. Read it in order the first time through - transformers only make sense because of what broke with fixed windows and RNNs, and RAG only makes sense because of what broke when LLMs hallucinated without your documents.
+**Words you will meet often**
 
-**There is no clock on this document.** No week numbers, no day-by-day plan, no "finish by." AI skill does not compress into a fixed number of days, and pretending otherwise is how people memorize buzzwords instead of building understanding. Move at the pace your own understanding requires. The only valid unit of progress here is: *can I now explain why the previous concept wasn't enough, and how this one fixes it?*
+| Word | Meaning |
+| --- | --- |
+| **Feature** | One piece of **information** given to a model |
+| **Label** | The **answer** you want it to learn |
+| **Parameter** | A **number** the model adjusts |
+| **Loss** | A score showing how **wrong** an answer was |
+| **Gradient** | Points toward the **change** that most affects that score |
+| **Inference** | Using a **trained model** |
+| **Overfitting** | **Memorizing** practice examples instead of learning a pattern that works on new ones |
+| **Embedding** | Represents meaning as a **list of numbers** |
+| **Token** | A small **piece of text** |
+| **RAG** | Looking up useful **source material** before generating an answer |
+| **Fine-tuning** | Continuing a model's training for a **narrower purpose** |
 
 Every concept in this roadmap answers the same set of questions, because that set of questions *is* how AI knowledge actually accumulates:
 

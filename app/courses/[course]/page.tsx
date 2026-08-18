@@ -37,16 +37,9 @@ export default async function CourseHomePage({ params }: { params: Promise<{ cou
         </div>
       </div>
       <div className="bg-[rgb(var(--paper))] px-4 py-10 sm:px-8 lg:px-12">
-        <CourseWelcome slug={course.slug} shortName={course.shortName} />
-        <p className="mt-8 overflow-x-auto whitespace-nowrap pb-1 text-lg text-muted">{course.description}</p>
-        <div className="mt-12 flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <h2 className="text-3xl font-bold uppercase tracking-wide sm:text-5xl">What we will study</h2>
-            <p className="mt-4 max-w-[70ch] text-lg leading-relaxed">
-              This is the <strong>table of contents</strong>. {course.nav.chapters.reduce((sum, chapter) => sum + chapter.phases.length, 0)} phases, numbered in order. Open any topic to start that page.
-            </p>
-          </div>
-        </div>
+        <CourseWelcome shortName={course.shortName} intro={course.beginnerIntro} />
+        <p className="mt-8 text-lg leading-relaxed text-ink">{course.description}</p>
+        <h2 className="mt-12 text-3xl font-bold uppercase tracking-wide sm:text-5xl">What we will study</h2>
         <CourseToc nav={course.nav} />
         <div className="mt-12 flex justify-start border-t hairline pt-8">
           <CourseHomeActions slug={course.slug} startHref={course.startHref} shortName={course.shortName} />

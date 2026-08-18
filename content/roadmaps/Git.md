@@ -4,7 +4,7 @@
 
 *Resources researched with Composio on 2026-08-17 through connected GitHub, YouTube, and web-search services. Selected videos were batch-checked as public and available; every required learning resource is free to access, and every required lab tool is open source.*
 
-**Scope:** 15 phases · foundations, state, history, internals, branches, merges, remotes, undo, recovery, rewriting, daily tools, releases, repository scale, workflows, and trusted delivery · no artificial weekly deadline.
+**Scope:** 15 phases · foundations, state, history, internals, branches, merges, remotes, undo, recovery, rewriting, daily tools, releases, repository scale, workflows, and trusted delivery.
 
 ```text
 SAVE SAFELY -> UNDERSTAND STATE -> BUILD HISTORY -> SEE THE GRAPH
@@ -27,17 +27,34 @@ SAVE SAFELY -> UNDERSTAND STATE -> BUILD HISTORY -> SEE THE GRAPH
 
 ### Start here if Git is completely new to you
 
-**Version control** is a system for recording meaningful versions of files so you can compare them, restore them, and combine work. **Git** is the open-source program that records those versions locally. A **repository** is the project plus its Git history. A **commit** is a named snapshot with a reason. A **branch** is a movable name for one line of commits. A **remote** is another copy of the repository reachable over a network.
-
 Git is not GitHub. Git works without an account or internet connection. GitHub is a proprietary hosting and collaboration platform with a usable free tier. GitLab offers an open-source Community Edition; Forgejo and Gitea are open-source Git forges. This roadmap teaches Git first, then uses hosting platforms only where pull requests, protected branches, and CI make the collaboration mechanism visible.
 
 Use one disposable repository throughout the roadmap. Before a command, predict the working tree, index, branch pointer, and commit graph. Afterward, inspect them. When a command can discard work or rewrite shared history, reproduce it only in that disposable repository and prove the recovery path before using it on valuable work.
 
-**Words you will meet often:** the **working tree** is the checked-out files on disk; the **index** or **staging area** is the proposed next snapshot; `HEAD` identifies what is checked out; a **reference** or **ref** is a name that points to an object; a **remote-tracking branch** is your local record of a remote branch; **reachability** asks whether a ref can still lead to an object; and the **reflog** is a local journal of ref movement.
+**Everyday words**
+
+| Word | Meaning |
+| --- | --- |
+| **Version control** | A system for recording **meaningful versions** of files so you can compare them, restore them, and combine work |
+| **Git** | The **open-source program** that records those versions locally |
+| **Repository** | The project plus its **Git history** |
+| **Commit** | A named **snapshot** with a reason |
+| **Branch** | A **movable name** for one line of commits |
+| **Remote** | Another copy of the repository reachable over a **network** |
+
+**Words you will meet often**
+
+| Word | Meaning |
+| --- | --- |
+| **Working tree** | The **checked-out files** on disk |
+| **Index** | The proposed next snapshot, also called the **staging area** |
+| **HEAD** | Identifies what is **checked out** |
+| **Reference** | A name that points to an **object**, also called a ref |
+| **Remote-tracking branch** | Your **local record** of a remote branch |
+| **Reachability** | Whether a ref can still **lead to an object** |
+| **Reflog** | A local **journal** of ref movement |
 
 This is not a command catalogue. Every phase asks what state Git reads, what it changes, how to verify the result, whether shared history is safe, and how to recover. Read in order once. On revision, jump to **Why You Are Learning This**, **What Happens Inside**, the phase project, and **Why the Next Topic Is Needed**.
-
-There is no week clock. Move when you can predict a command's state transition, draw the resulting graph, explain one trade-off, reproduce one failure, and recover with evidence.
 
 ### The Beginner-Friendly Pattern Every Topic Follows
 
@@ -422,7 +439,7 @@ A commit records a root tree, parent commit or commits, author, committer, times
 
 Most ordinary commits have one parent. The first has none. A merge commit has two or more. Revision syntax names positions without copying hashes: `HEAD`, `HEAD^` (first parent), `HEAD~3` (three first-parent steps), `main..feature` (reachable from feature but not main), and `A...B` (symmetric difference, commonly with the merge base in diff contexts). Verify ambiguous expressions with `git rev-parse` and inspect the exact object with `git show`.
 
-Atomic means one coherent reason that can stand, build, and be reverted as a unit—not “one file” or “few lines.” A good subject is imperative and specific; the body explains why, constraints, and non-obvious trade-offs. `git log -S<string>` finds commits where occurrence count changed; `-G<regex>` finds matching diff lines; path-limited logs and `--follow` investigate file history.
+Atomic means one coherent reason that can stand, build, and be reverted as a unit - not “one file” or “few lines.” A good subject is imperative and specific; the body explains why, constraints, and non-obvious trade-offs. `git log -S<string>` finds commits where occurrence count changed; `-G<regex>` finds matching diff lines; path-limited logs and `--follow` investigate file history.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** A commit is a complete snapshot plus ancestry and intent; make each one a useful unit of reasoning.
 
@@ -959,9 +976,9 @@ This project is mirrored in the [full **Conflict Resolution Gauntlet** card](../
 
 **STEP-BY-STEP EXPLANATION**
 
-A remote is a named set of fetch/push URLs and refspecs. `git fetch origin` negotiates missing objects and updates remote-tracking refs such as `origin/main`; it does not merge them into the current branch or rewrite working files. `git pull` runs fetch followed by a configured integration method—merge or rebase—so inspect and fetch separately while learning. `git push` sends needed objects and requests a remote ref update; the server may reject non-fast-forward or policy-violating updates.
+A remote is a named set of fetch/push URLs and refspecs. `git fetch origin` negotiates missing objects and updates remote-tracking refs such as `origin/main`; it does not merge them into the current branch or rewrite working files. `git pull` runs fetch followed by a configured integration method - merge or rebase - so inspect and fetch separately while learning. `git push` sends needed objects and requests a remote ref update; the server may reject non-fast-forward or policy-violating updates.
 
-Remote-tracking refs are local observations updated by network operations. `origin` is only the default remote name created by clone. With a fork, commonly call your writable fork `origin` and the source repository `upstream`; fetch upstream, integrate upstream/main locally, then push the updated branch/fork. Never merge a remote-tracking ref into itself—it is not checked out.
+Remote-tracking refs are local observations updated by network operations. `origin` is only the default remote name created by clone. With a fork, commonly call your writable fork `origin` and the source repository `upstream`; fetch upstream, integrate upstream/main locally, then push the updated branch/fork. Never merge a remote-tracking ref into itself - it is not checked out.
 
 A pull request (GitHub/Forgejo/Gitea) or merge request (GitLab) is host metadata around a proposed ref integration: diff, discussion, review states, checks, ownership, and merge choice. Keep changes small, describe why/test/risk, respond to review with commits, distinguish blocking issues from suggestions, and never expose secrets to untrusted CI. Protected branches and required checks prevent certain ref updates; Git itself does not provide those server policies.
 
@@ -1310,7 +1327,7 @@ git commit -m "chore: stop tracking generated file"
 | Medium | Recover commits after a hard reset and prove the final tree matches the safety tag. |
 | Hard | Run a fake-secret incident drill: contain, analyze refs, rewrite a clone, verify absence, coordinate guarded updates, and document re-clone steps. |
 
-**WHY THE NEXT TOPIC IS NEEDED:** Recovery makes experimentation safer. Now you can intentionally replace unpublished commits to tell a cleaner review story—while preserving the rule against rewriting shared ancestry.
+**WHY THE NEXT TOPIC IS NEEDED:** Recovery makes experimentation safer. Now you can intentionally replace unpublished commits to tell a cleaner review story - while preserving the rule against rewriting shared ancestry.
 
 ### Phase 9 Project - Reflog Rescue Mission
 
@@ -1428,7 +1445,7 @@ git range-diff safety/pre-rebase...feature/search
 git log --oneline --graph --decorate --all
 ```
 
-Do not push rewritten shared commits without explicit coordination. If the branch is published but owned solely by you under agreed policy, use a lease-guarded update after fetching—not blind force.
+Do not push rewritten shared commits without explicit coordination. If the branch is published but owned solely by you under agreed policy, use a lease-guarded update after fetching - not blind force.
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW**
 
@@ -1518,7 +1535,7 @@ This project is mirrored in the [full **Curated History Workshop** card](../guid
 
 Patch mode (`git add -p`, `restore -p`, `stash -p`) selects hunks interactively; always review both diffs afterward. `git cherry-pick <commit>` applies one commit's change onto the current tip as a new commit with a new parent and ID. Use it for targeted backports, not to replace regular synchronization; record provenance with `-x` for public maintenance branches.
 
-`git worktree add ../repo-hotfix -b hotfix/x main` gives another working tree connected to the same object/ref database. Different branches can be built simultaneously; the same branch cannot normally be checked out in two worktrees. Config scopes—system/global/local/worktree—control behavior. Aliases should shorten visible safe queries, not hide destructive multi-step operations.
+`git worktree add ../repo-hotfix -b hotfix/x main` gives another working tree connected to the same object/ref database. Different branches can be built simultaneously; the same branch cannot normally be checked out in two worktrees. Config scopes - system/global/local/worktree - control behavior. Aliases should shorten visible safe queries, not hide destructive multi-step operations.
 
 **THE MAIN IDEA IN SIMPLE WORDS:** Make context switches named and inspectable; move the smallest coherent unit.
 
@@ -1645,7 +1662,7 @@ This project is mirrored in the [full **Context-Switching Workbench** card](../g
 | [Git Tutorial #36: How to Use Git Bisect to Track Down Bugs \| Learn Git - GitKraken](https://www.youtube.com/watch?v=z-AkSXDqodc) | Free verified video | Mark known good/bad and watch the candidate interval halve. | It makes binary-search investigation concrete. |
 | [git-bisect documentation](https://git-scm.com/docs/git-bisect) | Official documentation | Study manual/run modes, exit codes, skip, and reset. | Automation semantics and cleanup must be exact. |
 | [Semantic Versioning 2.0.0](https://semver.org/) | Free open specification | Map incompatible, compatible feature, and fix changes to MAJOR/MINOR/PATCH. | Versions should communicate API compatibility, not aesthetics. |
-| [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/) | Free open specification | Connect commit intent to changelog/release tooling, while reviewing manually. | Structured history can support—never replace—release judgment. |
+| [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/) | Free open specification | Connect commit intent to changelog/release tooling, while reviewing manually. | Structured history can support - never replace - release judgment. |
 
 **STEP-BY-STEP EXPLANATION**
 
@@ -1918,7 +1935,7 @@ This project is mirrored in the [full **Scalable Repository Architecture Lab** c
 
 **STEP-BY-STEP EXPLANATION**
 
-Start with constraints: team/contributor trust, deployment frequency, release trains, supported versions, regulated approvals, repository scale, feature-flag/test maturity, and incident response. Then decide the protected integration branch, maximum branch lifetime, update strategy, required checks/reviews, merge method, release tagging, hotfix path, and exception/rollback policy. Environment configuration should normally be promoted as artifacts/configuration—not represented by permanently merging code through `dev`, `qa`, and `prod` branches.
+Start with constraints: team/contributor trust, deployment frequency, release trains, supported versions, regulated approvals, repository scale, feature-flag/test maturity, and incident response. Then decide the protected integration branch, maximum branch lifetime, update strategy, required checks/reviews, merge method, release tagging, hotfix path, and exception/rollback policy. Environment configuration should normally be promoted as artifacts/configuration - not represented by permanently merging code through `dev`, `qa`, and `prod` branches.
 
 Merge commit preserves topology and granular commits. Squash merge makes one mainline commit per proposal but loses internal commit identity on main. Rebase-and-merge creates a linear series of new IDs and requires every commit to be coherent. Choose one default and document exceptions. Linear history is a means for navigation/bisect, not a moral goal; true merge topology may be valuable.
 
@@ -2358,7 +2375,7 @@ The 15 phases follow Git's natural pressure sequence rather than copying the rep
 
 ## Appendix C - Open-Source and Free Tool Policy
 
-- Required: Git, a text editor, shell, test runner, local bare remotes, and optional GnuPG/SSH signing—all free/open source.
+- Required: Git, a text editor, shell, test runner, local bare remotes, and optional GnuPG/SSH signing - all free/open source.
 - Optional open-source forge: Forgejo, Gitea, or self-managed GitLab Community Edition.
 - Optional proprietary/free-tier platforms: GitHub, GitLab.com, and Bitbucket may appear for professional relevance; none is required to learn Git.
 - Git LFS client is open source; hosted LFS quotas may not be free, so the required lab is local.

@@ -49,7 +49,7 @@ export function ProgressDashboard({
         {courses.map((item) => (
           <li key={item.slug} className="flex items-center justify-between gap-3 px-4 py-3">
             <Link href={`/courses/${item.slug}`} className="font-semibold hover:text-accent">{item.shortName}</Link>
-            <span className="text-sm text-muted">{ready ? `${percent(item.slug, item.lessonCount, item.projectCount)}%` : "—"}</span>
+            <span className="text-sm text-muted">{ready ? `${percent(item.slug, item.lessonCount, item.projectCount)}%` : "..."}</span>
           </li>
         ))}
       </ul>

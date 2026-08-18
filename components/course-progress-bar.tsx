@@ -20,7 +20,7 @@ export function CourseProgressBar({
   return (
     <div className={band ? "w-full max-w-md shrink-0 lg:w-[22rem]" : "mb-10"}>
       <div className={`mb-2 flex flex-wrap items-baseline justify-between gap-2 ${band ? "text-sm text-white" : ""}`}>
-        <p className="font-semibold">Tutorial progress: {ready ? `${value}%` : "—"}</p>
+        <p className="font-semibold">Tutorial progress: {ready ? `${value}%` : "..."}</p>
         <Link href="/progress" className={band ? "text-sm underline decoration-white/40 underline-offset-4 hover:decoration-white" : "text-sm text-accent underline"}>
           Review progress
         </Link>

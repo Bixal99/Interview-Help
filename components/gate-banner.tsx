@@ -18,7 +18,7 @@ export function GateBanner({
   if (!ready || canEnter(slug, phaseId, phaseIds)) return null;
   return (
     <div className="border-b hairline bg-paper px-4 py-3 text-sm sm:px-8 lg:px-12">
-      Complete the previous phase project first{requiredHref ? <> — <Link href={requiredHref} className="text-accent underline">open the required project</Link></> : null}.
+      Complete the previous phase project first{requiredHref ? <>: <Link href={requiredHref} className="text-accent underline">open the required project</Link></> : null}.
     </div>
   );
 }

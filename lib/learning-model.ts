@@ -42,11 +42,22 @@ export type Phase = {
   sourcePath?: string;
 };
 
+export type BeginnerTerm = { term: string; meaning: string };
+
+export type BeginnerIntro = {
+  heading: string;
+  paragraphs: string[];
+  closingParagraphs: string[];
+  everydayTerms: BeginnerTerm[];
+  terms: BeginnerTerm[];
+};
+
 export type ParsedCourse = {
   slug: string;
   title: string;
   introMarkdown: string;
   teaserMarkdown: string;
+  beginnerIntro: BeginnerIntro | null;
   phases: Phase[];
 };
 

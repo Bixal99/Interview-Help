@@ -112,19 +112,19 @@ function arrowAngle(fromX: number, fromY: number, toX: number, toY: number) {
 const OX = 48;
 const OY = 340;
 const ARROW_LEN = 12;
-const AXIS_END_X = 300;
+const AXIS_END_X = 348;
 const AXIS_TOP_Y = 56;
 
 const COMPLEXITY_CURVES = [
-  { n: 1, c1: [140, 332], c2: [220, 332], x: 292, y: 332, color: "#9aa0a6", label: "O(1)", width: 2.5 },
+  { n: 1, c1: [140, 332], c2: [220, 332], x: 292, y: 332, color: "#DC2626", label: "O(1)", width: 2.5, labelDx: -4 },
   { n: 2, c1: [130, 334], c2: [220, 308], x: 292, y: 292, color: "#70757A", label: "O(log n)", width: 2.5 },
-  { n: 3, c1: [140, 318], c2: [220, 270], x: 292, y: 238, color: "#a78bfa", label: "O(√n)", width: 2.5 },
+  { n: 3, c1: [140, 318], c2: [220, 270], x: 292, y: 238, color: "#EA580C", label: "O(√n)", width: 2.5 },
   { n: 4, c1: [130, 278], c2: [210, 210], x: 292, y: 168, color: "#0E7490", label: "O(n)", width: 3 },
   { n: 5, c1: [120, 320], c2: [210, 200], x: 292, y: 118, color: "#26538D", label: "O(n log n)", width: 3 },
-  { n: 6, c1: [110, 336], c2: [200, 190], x: 272, y: 78, color: "#04AA6D", label: "O(n²)", width: 3.5 },
-  { n: 7, c1: [95, 338], c2: [215, 100], x: 238, y: 52, color: "#C84C4C", label: "O(n³)", width: 3 },
-  { n: 8, c1: [80, 338], c2: [175, 110], x: 190, y: 46, color: "#111111", label: "O(2ⁿ)", width: 3.5 },
-  { n: 9, c1: [62, 338], c2: [125, 125], x: 132, y: 44, color: "#7c3aed", label: "O(n!)", width: 3.5 },
+  { n: 6, c1: [110, 336], c2: [200, 190], x: 272, y: 78, color: "#04AA6D", label: "O(n²)", width: 3.5, labelDx: -6 },
+  { n: 7, c1: [95, 338], c2: [215, 100], x: 238, y: 52, color: "#C84C4C", label: "O(n³)", width: 3, labelDx: -16 },
+  { n: 8, c1: [80, 338], c2: [175, 110], x: 190, y: 46, color: "#111111", label: "O(2ⁿ)", width: 3.5, labelDx: -16 },
+  { n: 9, c1: [62, 338], c2: [125, 125], x: 132, y: 44, color: "#7c3aed", label: "O(n!)", width: 3.5, labelDx: -16 },
 ] as const;
 
 function shortenEnd(fromX: number, fromY: number, toX: number, toY: number) {
@@ -140,6 +140,19 @@ function shortenEnd(fromX: number, fromY: number, toX: number, toY: number) {
 function curvePath(curve: (typeof COMPLEXITY_CURVES)[number]) {
   const end = shortenEnd(curve.c2[0], curve.c2[1], curve.x, curve.y);
   return `M${OX} ${OY} C${curve.c1[0]} ${curve.c1[1]} ${curve.c2[0]} ${curve.c2[1]} ${end.x} ${end.y}`;
+}
+
+function labelPlacement(curve: (typeof COMPLEXITY_CURVES)[number]) {
+  const dx = curve.x - curve.c2[0];
+  const dy = curve.y - curve.c2[1];
+  const len = Math.hypot(dx, dy) || 1;
+  const ux = dx / len;
+  const uy = dy / len;
+  return {
+    x: curve.x + ux * 16 + ("labelDx" in curve ? curve.labelDx : 0),
+    y: curve.y + uy * 16,
+    rotate: 0,
+  };
 }
 
 function ComplexityArt() {
@@ -162,12 +175,13 @@ function ComplexityArt() {
       />
       <polygon points={`${AXIS_END_X + 8},${OY} ${AXIS_END_X},${OY - 4} ${AXIS_END_X},${OY + 4}`} fill="#282A35" />
       <text
-        x={AXIS_END_X + 16}
-        y={OY - 1}
+        x={AXIS_END_X + 18}
+        y={OY}
         fill="#282A35"
         fontSize="13"
         fontWeight="700"
         fontFamily="Poppins, sans-serif"
+        dominantBaseline="middle"
       >
         n
       </text>
@@ -192,7 +206,31 @@ function ComplexityArt() {
       >
         t
       </text>
-      {COMPLEXITY_CURVES.map((curve) => (
+      <text
+        transform={`translate(16 ${(AXIS_TOP_Y + OY) / 2}) rotate(-90)`}
+        fill="#282A35"
+        fontSize="13"
+        fontWeight="700"
+        fontFamily="Poppins, sans-serif"
+        textAnchor="middle"
+        dominantBaseline="middle"
+      >
+        Time
+      </text>
+      <text
+        x={(OX + AXIS_END_X) / 2}
+        y={OY + 28}
+        fill="#282A35"
+        fontSize="13"
+        fontWeight="700"
+        fontFamily="Poppins, sans-serif"
+        textAnchor="middle"
+      >
+        Size
+      </text>
+      {COMPLEXITY_CURVES.map((curve) => {
+        const label = labelPlacement(curve);
+        return (
         <g key={curve.n}>
           <path
             className={`ih-draw ih-draw-${curve.n}`}
@@ -211,18 +249,29 @@ function ComplexityArt() {
           />
           <text
             className={`ih-label ih-draw-${curve.n}`}
-            x={curve.x}
-            y={curve.y - 22}
+            x={0}
+            y={0}
+            transform={`translate(${label.x} ${label.y}) rotate(${label.rotate})`}
             fill={curve.color}
             fontSize="13"
             fontWeight="700"
             fontFamily="Poppins, sans-serif"
-            textAnchor="middle"
+            textAnchor="start"
+            dominantBaseline="middle"
           >
-            {curve.label}
+            {curve.label === "O(2ⁿ)" ? (
+              <>
+                O(2
+                <tspan dy="-0.28em" fontSize="10">n</tspan>
+                <tspan dy="0.28em">)</tspan>
+              </>
+            ) : (
+              curve.label
+            )}
           </text>
         </g>
-      ))}
+        );
+      })}
     </Frame>
   );
 }

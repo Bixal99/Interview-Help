@@ -268,8 +268,8 @@ body {
   overflow: visible;
 }
 .ih-w3 .ih-checkpoint-page .ih-checkpoint-art svg.ih-big-o {
-  max-width: min(36rem, calc(100dvh - 11rem));
-  max-height: min(36rem, calc(100dvh - 11rem));
+  max-width: min(30rem, calc(100dvh - 11rem));
+  max-height: min(30rem, calc(100dvh - 11rem));
   width: 100%;
   height: auto;
   margin-inline: auto;

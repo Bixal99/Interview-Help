@@ -1,10 +1,14 @@
 import type { ReactNode } from "react";
+import { CheckpointControl } from "@/components/checkpoint-control";
+import { CheckpointFunctions } from "@/components/checkpoint-functions";
+import { CheckpointRun } from "@/components/checkpoint-run";
 import { CheckpointTerminal } from "@/components/checkpoint-terminal";
 
 type Topic = { id: string; title: string };
 
 type ArtKind =
   | "terminal"
+  | "run"
   | "complexity"
   | "graph"
   | "tree"
@@ -27,6 +31,8 @@ type ArtKind =
 function checkpointArtKind(title: string, topics: Topic[]): ArtKind {
   const text = `${title} ${topics.map((topic) => `${topic.id} ${topic.title}`).join(" ")}`.toLowerCase();
   if (/\bgraphs?\b|bfs|dfs|shortest path|dijkstra/.test(text)) return "graph";
+  if (/how programs run|source, interpreter/.test(text)) return "run";
+  if (/control flow|conditionals|loops and iteration/.test(text)) return "control";
   if (/complex|big o|notation|time & space/.test(text)) return "complexity";
   if (/\bhash/.test(text)) return "hash";
   if (/recur/.test(text)) return "recursion";
@@ -42,7 +48,6 @@ function checkpointArtKind(title: string, topics: Topic[]): ArtKind {
   if (/test|interview|mock/.test(text)) return "testing";
   if (/class|object|encapsul|inherit|polymorph|composit|solid|pattern|oop|low-level design/.test(text)) return "objects";
   if (/function|module/.test(text)) return "functions";
-  if (/control flow|loop|branch|if else/.test(text)) return "control";
   if (/execut|source code|compil|interpreter|running program|how programs run|git|shell|command/.test(text)) return "terminal";
   return "default";
 }
@@ -393,32 +398,6 @@ function ObjectsArt() {
   );
 }
 
-function FunctionsArt() {
-  return (
-    <Frame label="Input going into a function and output coming out">
-      <rect x="36" y="110" width="70" height="40" fill="#FFF4A3" />
-      <rect x="140" y="88" width="90" height="84" fill="#04AA6D" />
-      <rect x="264" y="110" width="70" height="40" fill="#96D4FA" />
-      <polygon points="114,130 136,130 136,124 152,132 136,140 136,134 114,134" fill="#282A35" />
-      <polygon points="238,130 260,130 260,124 276,132 260,140 260,134 238,134" fill="#282A35" />
-      <text x="185" y="136" textAnchor="middle" fill="#fff" fontSize="14" fontWeight="700">fn</text>
-    </Frame>
-  );
-}
-
-function ControlArt() {
-  return (
-    <Frame label="A decision that splits into two paths">
-      <polygon points="180,56 250,110 180,164 110,110" fill="#FFF4A3" stroke="#282A35" strokeWidth="3" />
-      <text x="180" y="116" textAnchor="middle" fill="#282A35" fontSize="14" fontWeight="700">if</text>
-      <rect x="56" y="188" width="88" height="36" fill="#04AA6D" />
-      <rect x="216" y="188" width="88" height="36" fill="#96D4FA" />
-      <line x1="150" y1="148" x2="100" y2="188" stroke="#282A35" strokeWidth="3" />
-      <line x1="210" y1="148" x2="260" y2="188" stroke="#282A35" strokeWidth="3" />
-    </Frame>
-  );
-}
-
 function OsArt() {
   return (
     <Frame label="A CPU with two running processes">
@@ -529,7 +508,7 @@ function DefaultArt({ number }: { number: string }) {
   );
 }
 
-const ART: Record<Exclude<ArtKind, "terminal">, (number: string) => ReactNode> = {
+const ART: Record<Exclude<ArtKind, "terminal" | "run" | "control" | "functions">, (number: string) => ReactNode> = {
   complexity: () => <ComplexityArt />,
   graph: () => <GraphArt />,
   tree: () => <TreeArt />,
@@ -538,8 +517,6 @@ const ART: Record<Exclude<ArtKind, "terminal">, (number: string) => ReactNode> =
   recursion: () => <RecursionArt />,
   search: () => <SearchArt />,
   objects: () => <ObjectsArt />,
-  functions: () => <FunctionsArt />,
-  control: () => <ControlArt />,
   os: () => <OsArt />,
   network: () => <NetworkArt />,
   web: () => <WebArt />,
@@ -561,5 +538,8 @@ export function PhaseCheckpointArt({
 }) {
   const kind = checkpointArtKind(title, topics);
   if (kind === "terminal") return <TerminalArt title={title} />;
+  if (kind === "run") return <CheckpointRun />;
+  if (kind === "control") return <CheckpointControl />;
+  if (kind === "functions") return <CheckpointFunctions />;
   return ART[kind](number);
 }

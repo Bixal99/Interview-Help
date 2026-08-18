@@ -37,6 +37,8 @@ export type Phase = {
   anchorIds: string[];
   overview: string;
   goal?: string;
+  track?: string;
+  knowFirst?: string;
   lessons: Lesson[];
   project?: PhaseProject;
   sourcePath?: string;

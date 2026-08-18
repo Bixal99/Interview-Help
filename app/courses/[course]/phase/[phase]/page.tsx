@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { GateBanner } from "@/components/gate-banner";
-import { MarkdownDocument } from "@/components/markdown-document";
-import { Pager } from "@/components/pager";
-import { TutorialShell } from "@/components/tutorial-shell";
-import { getAllPhaseParams, getPhaseView, getRequiredProjectHref } from "@/lib/content";
+import { PhaseCheckpoint } from "@/components/phase-checkpoint";
+import { getAllPhaseParams, getPhaseView } from "@/lib/content";
 import { lessonPath } from "@/lib/parse-course";
 
 export function generateStaticParams() {
@@ -15,41 +11,26 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ course: string; phase: string }> }): Promise<Metadata> {
   const { course, phase } = await params;
   const view = getPhaseView(course, phase);
-  return view ? { title: `PHASE ${view.phase.number} - ${view.phase.title}` } : {};
+  return view ? { title: view.phase.title } : {};
 }
 
 export default async function PhasePage({ params }: { params: Promise<{ course: string; phase: string }> }) {
   const { course, phase } = await params;
   const view = getPhaseView(course, phase);
   if (!view) notFound();
-  const phaseIds = view.nav.chapters.flatMap((chapter) => chapter.phases.map((item) => item.id));
+  const firstLesson = view.phase.lessons[0];
   return (
     <main id="main-content">
-      <TutorialShell nav={view.nav}>
-        <GateBanner slug={view.course.slug} phaseId={view.phase.id} phaseIds={phaseIds} requiredHref={getRequiredProjectHref(view.course.slug, view.phase.id)} />
-        <div className="ih-band px-4 py-8 sm:px-8 lg:px-12">
-          <h1 className="max-w-[75ch] text-3xl font-bold sm:text-4xl">PHASE {view.phase.number} - {view.phase.title}</h1>
-        </div>
-        <div className="bg-[rgb(var(--surface))] px-4 py-8 sm:px-8 lg:px-12">
-          <div className="max-w-[75ch]">
-            <MarkdownDocument markdown={view.phase.overview} sourcePath={view.course.sourcePath} embedYouTube={false} />
-            <h2 className="mt-8 text-2xl font-bold">Lessons</h2>
-            <ol className="mt-3 list-decimal space-y-2 pl-5">
-              {view.phase.lessons.map((lesson) => (
-                <li key={lesson.id}><Link href={lessonPath(view.course.slug, view.phase.id, lesson)} className="text-accent underline">{lesson.id} {lesson.title}</Link></li>
-              ))}
-            </ol>
-            <div className="mt-12 border-t hairline pt-8">
-              <Pager
-                backHref={`/courses/${view.course.slug}`}
-                backLabel="Back"
-                proceedHref={view.startHref}
-                proceedLabel="Proceed"
-              />
-            </div>
-          </div>
-        </div>
-      </TutorialShell>
+      <PhaseCheckpoint
+        phaseNumber={view.phase.number}
+        phaseTitle={view.phase.title}
+        track={view.phase.track}
+        goal={view.phase.goal}
+        knowFirst={view.phase.knowFirst}
+        topics={view.phase.lessons.map((lesson) => ({ id: lesson.id, title: lesson.title }))}
+        prev={view.prev}
+        proceedHref={firstLesson ? lessonPath(view.course.slug, view.phase.id, firstLesson) : view.next?.href ?? view.startHref}
+      />
     </main>
   );
 }

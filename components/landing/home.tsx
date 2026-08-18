@@ -62,7 +62,7 @@ export function LandingHome({
             Self-paced technical roadmaps. One lesson per page, then that phase&apos;s project. No account and no paywall.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
-            <Link href="/courses/computer-science" className="ih-landing-cta">
+            <Link href="/courses" className="ih-landing-cta">
               Start learning
             </Link>
             <Link href="/progress" className="text-[17px] font-semibold text-[#04AA6D] underline decoration-[#04AA6D]/40 underline-offset-4 hover:decoration-[#04AA6D]">

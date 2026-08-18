@@ -4,6 +4,7 @@ import { CourseHomeActions } from "@/components/course-home-actions";
 import { CourseProgressBar } from "@/components/course-progress-bar";
 import { CourseToc } from "@/components/course-toc";
 import { CourseWelcome } from "@/components/course-welcome";
+import { Pager } from "@/components/pager";
 import { courseCatalog } from "@/lib/course-catalog";
 import { getCourseHome } from "@/lib/content";
 
@@ -30,10 +31,15 @@ export default async function CourseHomePage({ params }: { params: Promise<{ cou
   );
   return (
     <main id="main-content">
-      <div className="ih-band px-4 py-8 sm:px-8 lg:px-12">
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
+      <div className="ih-band px-4 py-6 sm:px-8 lg:px-12">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
           <h1 className="text-4xl font-bold uppercase tracking-wide sm:text-6xl">{course.shortName} Tutorial</h1>
-          <CourseProgressBar slug={course.slug} lessonCount={lessonCount} projectCount={projectCount} variant="band" />
+          <div className="w-full max-w-md shrink-0 lg:w-[22rem]">
+            <CourseProgressBar slug={course.slug} lessonCount={lessonCount} projectCount={projectCount} variant="band" />
+            <div className="mt-4">
+              <Pager backHref="/courses" proceedHref={course.startHref} proceedLabel="Start" hideBack />
+            </div>
+          </div>
         </div>
       </div>
       <div className="bg-[rgb(var(--paper))] px-4 py-10 sm:px-8 lg:px-12">

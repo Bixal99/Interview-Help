@@ -5,7 +5,7 @@ import { catalogBySlug, contentBySlug, courseCatalog, courseBarLabels, guideRegi
 import { extractHeadings, stripMarkdown, type Heading } from "./content-utils";
 import { chaptersFor, learningPaths, pathForCourse, sequentialPath } from "./learning-paths";
 import type { ParsedCourse, SearchHit } from "./learning-model";
-import { coursePages, firstLessonHref, firstLessonInPhase, neighborsFor, type CourseNav, type Neighbor } from "./navigation";
+import { coursePages, firstLessonHref, firstPhaseHref, neighborsFor, type CourseNav, type Neighbor } from "./navigation";
 import { findLesson, findPhase, headingRouteMap, lessonPath, parseCourseMarkdown, phasePath, projectPathFor, withSourcePath } from "./parse-course";
 import { attachProjects, parseProjectsDocument } from "./parse-projects";
 import { extractPractice, withoutPractice } from "./practice";
@@ -133,8 +133,8 @@ function nextAfterProject(course: NonNullable<ReturnType<typeof getParsedCourse>
   const nextCourse = following.course === course.slug ? course : getParsedCourse(following.course);
   if (!nextCourse) return null;
   return {
-    href: firstLessonInPhase(nextCourse, following.phaseId),
-    label: "Next phase",
+    href: phasePath(nextCourse.slug, following.phaseId),
+    label: "Continue",
     kind: "phase",
     course: following.course,
     phaseId: following.phaseId,
@@ -176,10 +176,15 @@ export function getPhaseView(slug: string, phaseId: string) {
   if (!course) return null;
   const phase = findPhase(course, phaseId);
   if (!phase) return null;
+  const pages = coursePages(course);
+  const href = phasePath(slug, phaseId);
+  const { prev, next } = neighborsFor(pages, href);
   return {
     course: { slug: course.slug, shortName: course.shortName, sourcePath: phase.sourcePath ?? course.sourcePath, description: course.description },
     nav: toCourseNav(course),
     phase,
+    prev,
+    next,
     startHref: phase.lessons[0] ? lessonPath(slug, phaseId, phase.lessons[0]) : `/courses/${slug}`,
     projectHref: phase.project ? projectPathFor(slug, phaseId) : null,
   };
@@ -211,7 +216,7 @@ export function getCourseHome(slug: string) {
   return {
     ...course,
     nav: toCourseNav(course),
-    startHref: firstLessonHref(course),
+    startHref: firstPhaseHref(course),
   };
 }
 
@@ -219,7 +224,7 @@ export const getPathStarts = cache(() =>
   learningPaths.map((path) => {
     const step = path.steps[0];
     const course = getParsedCourse(step.course);
-    const href = course ? firstLessonInPhase(course, step.phaseId) : "/courses";
+    const href = course ? phasePath(course.slug, step.phaseId) : "/courses";
     return { id: path.id, title: path.title, href, course: step.course, phaseId: step.phaseId };
   }),
 );

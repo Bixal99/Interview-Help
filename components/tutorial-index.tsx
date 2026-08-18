@@ -20,16 +20,22 @@ export function TutorialIndex({
   const currentLesson = nav.chapters
     .flatMap((chapter) => chapter.phases.flatMap((phase) => phase.lessons.map((lesson) => ({ phase, lesson }))))
     .find(({ phase, lesson }) => pathname === lessonPath(nav.slug, phase.id, lesson));
+  const currentPhase = nav.chapters
+    .flatMap((chapter) => chapter.phases)
+    .find((phase) => pathname === phasePath(nav.slug, phase.id));
+  const nowReading = currentLesson
+    ? `${currentLesson.lesson.id} ${currentLesson.lesson.title}`
+    : currentPhase
+      ? `Phase ${currentPhase.number} ${currentPhase.title}`
+      : null;
 
   return (
     <nav className="text-[15px]" aria-label={`${nav.shortName} tutorial`}>
       <p className="px-3 pb-3 text-sm font-bold tracking-wide">{nav.shortName.toUpperCase()} TUTORIAL</p>
-      {currentLesson ? (
+      {nowReading ? (
         <p className="ih-now-reading mx-3 mb-4">
           <span>Now reading</span>
-          <strong>
-            {currentLesson.lesson.id} {currentLesson.lesson.title}
-          </strong>
+          <strong>{nowReading}</strong>
         </p>
       ) : null}
       <Link href={homeHref} className={`block px-3 py-1.5 ${pathname === homeHref ? "active font-semibold" : "hover:bg-black/5"}`}>HOME</Link>

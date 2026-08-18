@@ -7,6 +7,7 @@ export function Pager({
   proceedLabel = "Proceed",
   proceedDisabled,
   hint,
+  hideBack,
 }: {
   backHref: string;
   backLabel?: string;
@@ -14,12 +15,15 @@ export function Pager({
   proceedLabel?: string;
   proceedDisabled?: boolean;
   hint?: string;
+  hideBack?: boolean;
 }) {
   return (
-    <nav className="ih-pager" aria-label="Page">
-      <Link href={backHref} className="ih-pager-btn ih-pager-back">
-        <span className="ih-pager-label">« {backLabel}</span>
-      </Link>
+    <nav className={`ih-pager${hideBack ? " ih-pager-start-only" : ""}`} aria-label="Page">
+      {hideBack ? null : (
+        <Link href={backHref} className="ih-pager-btn ih-pager-back">
+          <span className="ih-pager-label">« {backLabel}</span>
+        </Link>
+      )}
       {proceedHref ? (
         proceedDisabled ? (
           <span className="text-right">

@@ -25,7 +25,7 @@ export function LandingHeader() {
               {item.label}
             </Link>
           ))}
-          <Link href="/courses/computer-science" className="ih-landing-cta">
+          <Link href="/courses" className="ih-landing-cta">
             Start learning
           </Link>
         </nav>
@@ -51,7 +51,7 @@ export function LandingHeader() {
             ))}
           </div>
           <Link
-            href="/courses/computer-science"
+            href="/courses"
             onClick={() => setOpen(false)}
             className="ih-landing-cta mt-5 w-full"
           >

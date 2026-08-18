@@ -304,6 +304,8 @@ export function parseCourseMarkdown(markdown: string, slug = ""): ParsedCourse {
       anchorIds: [...new Set(["phase-" + marker.id, ...marker.anchors, githubSlug(`PHASE ${marker.number} - ${marker.title}`)])],
       overview,
       goal: extractGoal(overview, body),
+      track: firstLabeledLine(overview, "Track") ?? firstLabeledLine(body, "Track"),
+      knowFirst: firstLabeledLine(overview, "WHAT YOU SHOULD KNOW FIRST") ?? firstLabeledLine(body, "WHAT YOU SHOULD KNOW FIRST"),
       lessons,
     };
   });

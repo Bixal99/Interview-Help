@@ -37,7 +37,7 @@ export type CourseNav = {
 };
 
 type Page = {
-  kind: "lesson" | "project";
+  kind: "lesson" | "project" | "phase";
   course: string;
   phaseId: string;
   phaseTitle: string;
@@ -50,6 +50,13 @@ type Page = {
 export function coursePages(course: ParsedCourse): Page[] {
   const pages: Page[] = [];
   for (const phase of course.phases) {
+    pages.push({
+      kind: "phase",
+      course: course.slug,
+      phaseId: phase.id,
+      phaseTitle: phase.title,
+      href: phasePath(course.slug, phase.id),
+    });
     for (const lesson of phase.lessons) {
       pages.push({
         kind: "lesson",
@@ -75,6 +82,11 @@ export function coursePages(course: ParsedCourse): Page[] {
   return pages;
 }
 
+export function firstPhaseHref(course: ParsedCourse) {
+  const phase = course.phases[0];
+  return phase ? phasePath(course.slug, phase.id) : `/courses/${course.slug}`;
+}
+
 export function firstLessonHref(course: ParsedCourse) {
   const lesson = course.phases[0]?.lessons[0];
   return lesson ? lessonPath(course.slug, course.phases[0].id, lesson) : `/courses/${course.slug}`;
@@ -89,6 +101,7 @@ export function firstLessonInPhase(course: ParsedCourse, phaseId: string) {
 
 function pageLabel(page: Page) {
   if (page.kind === "project") return `Start phase project`;
+  if (page.kind === "phase") return page.phaseTitle;
   return page.lessonTitle ?? "Lesson";
 }
 
@@ -106,14 +119,18 @@ export function neighborsFor(
   const prev: Neighbor | null = previous
     ? {
         href: previous.href,
-        label: previous.kind === "project" ? `${previous.phaseTitle} project` : previous.lessonTitle ?? "Previous",
+        label: previous.kind === "project"
+          ? `${previous.phaseTitle} project`
+          : previous.kind === "phase"
+            ? previous.phaseTitle
+            : previous.lessonTitle ?? "Previous",
         kind: previous.kind,
         course: previous.course,
         phaseId: previous.phaseId,
       }
     : {
-        href: `/courses/${current.course}`,
-        label: "HOME",
+        href: "/courses",
+        label: "Tutorials",
         kind: "home",
         course: current.course,
         phaseId: current.phaseId,

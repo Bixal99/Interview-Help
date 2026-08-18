@@ -51,11 +51,9 @@ export function CourseWelcome({
 }) {
   return (
     <section className="border border-[rgb(var(--line))] border-l-[5px] border-l-[#04AA6D] bg-[#F1F1F1] p-6 sm:p-8 lg:p-10 dark:bg-[rgb(var(--band))]">
-      <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#04AA6D]">Start here</p>
-      <h2 className="mt-3 text-4xl font-bold uppercase tracking-wide sm:text-6xl">Welcome to this course</h2>
+      <h2 className="text-4xl font-bold uppercase tracking-wide sm:text-6xl">Welcome to this course</h2>
       {intro ? (
         <>
-          <p className="mt-6 text-lg font-semibold leading-relaxed">{intro.heading}</p>
           {intro.paragraphs.map((paragraph) => (
             <p key={paragraph.slice(0, 64)} className="mt-4 text-lg leading-relaxed">
               <Emphasis text={paragraph} />

@@ -337,6 +337,94 @@ body {
   color: rgb(var(--ink));
 }
 .ih-w3 .ih-example .btn-next { margin-top: 1rem; }
+.ih-w3 .ih-pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
+.ih-w3 .ih-pager-btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.1rem;
+  min-width: 8.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.ih-w3 .ih-pager-label {
+  position: relative;
+  z-index: 1;
+}
+.ih-w3 .ih-pager-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: scaleX(0);
+  transition: transform 0.35s ease;
+  z-index: 0;
+}
+.ih-w3 .ih-pager-back {
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+}
+.ih-w3 .ih-pager-back::before {
+  background: #000;
+  transform-origin: left center;
+}
+.ih-w3 .ih-pager-back:hover {
+  color: #fff;
+  transform: translateX(-6px);
+  box-shadow: 6px 6px 0 #04AA6D;
+}
+.ih-w3 .ih-pager-start {
+  border: 0;
+  background: #04AA6D;
+  color: #fff;
+}
+.ih-w3 .ih-pager-start::before {
+  background: #00c37a;
+  transform-origin: right center;
+}
+.ih-w3 .ih-pager-start:hover {
+  color: #fff;
+  transform: translateX(6px);
+  box-shadow: -6px 6px 0 #000;
+}
+.ih-w3 .ih-pager-back:hover::before,
+.ih-w3 .ih-pager-start:hover::before {
+  transform: scaleX(1);
+}
+.ih-w3 .ih-pager-btn:focus-visible {
+  outline: 3px solid #04AA6D;
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ih-w3 .ih-pager-btn,
+  .ih-w3 .ih-pager-btn::before {
+    transition: none;
+  }
+  .ih-w3 .ih-pager-back:hover,
+  .ih-w3 .ih-pager-start:hover {
+    transform: none;
+  }
+}
+.dark .ih-w3 .ih-pager-back {
+  border-color: #fff;
+  background: transparent;
+  color: #fff;
+}
+.dark .ih-w3 .ih-pager-back::before { background: #fff; }
+.dark .ih-w3 .ih-pager-back:hover { color: #000; box-shadow: 6px 6px 0 #04AA6D; }
 .ih-w3 .ih-note {
   margin: 1.5rem 0;
   padding: 1rem 1.15rem;

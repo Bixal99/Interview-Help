@@ -41,8 +41,8 @@ export default async function CourseHomePage({ params }: { params: Promise<{ cou
         <p className="mt-8 text-lg leading-relaxed text-ink">{course.description}</p>
         <h2 className="mt-12 text-3xl font-bold uppercase tracking-wide sm:text-5xl">What we will study</h2>
         <CourseToc nav={course.nav} />
-        <div className="mt-12 flex justify-start border-t hairline pt-8">
-          <CourseHomeActions slug={course.slug} startHref={course.startHref} shortName={course.shortName} />
+        <div className="mt-12 border-t hairline pt-8">
+          <CourseHomeActions startHref={course.startHref} />
         </div>
       </div>
     </main>

@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Menu, Search, X } from "lucide-react";
+import { GithubLogoIcon } from "@phosphor-icons/react";
+import { Menu, Search, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "./theme-toggle";
 
@@ -39,7 +40,7 @@ export function SiteHeader() {
             <Search size={16} /><span className="hidden sm:inline">Search</span>
           </Link>
           <a href="https://github.com/Bixal99/Interview-Help" target="_blank" rel="noopener noreferrer" className="grid size-10 place-items-center hover:bg-white/10" aria-label="Open GitHub repository">
-            <Github size={16} />
+            <GithubLogoIcon size={16} />
           </a>
           <ThemeToggle />
           <button onClick={() => setOpen(!open)} className="grid size-10 place-items-center hover:bg-white/10 sm:hidden" aria-expanded={open} aria-label="Toggle navigation">

@@ -1,7 +1,8 @@
 "use client";
 
-import { Code2, Maximize2 } from "lucide-react";
 import { useEffect, useId, useRef, useState } from "react";
+import { AppIcon } from "@/components/icons/app-icon";
+import { ICON_SIZE } from "@/lib/icons";
 
 export function MermaidDiagram({ source }: { source: string }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -26,7 +27,7 @@ export function MermaidDiagram({ source }: { source: string }) {
   }, [id, source]);
   return (
     <div className="my-6 overflow-hidden rounded-xl border hairline surface not-prose">
-      <div className="flex items-center border-b hairline px-3 py-2 text-xs text-muted"><span>Diagram</span><button onClick={() => setShowSource(!showSource)} className="ml-auto inline-flex items-center gap-1.5 rounded-md px-2 py-1 hover:bg-ink/5"><Code2 size={13} /> Source</button><button onClick={() => ref.current?.requestFullscreen()} className="ml-1 rounded-md p-1.5 hover:bg-ink/5" aria-label="View diagram fullscreen"><Maximize2 size={13} /></button></div>
+      <div className="flex items-center border-b hairline px-3 py-2 text-xs text-muted"><span>Diagram</span><button onClick={() => setShowSource(!showSource)} className="ml-auto inline-flex min-h-10 items-center gap-1.5 rounded-md px-2 py-1 hover:bg-ink/5"><AppIcon name="code" size={13} /> Source</button><button onClick={() => ref.current?.requestFullscreen()} className="grid size-10 place-items-center rounded-md hover:bg-ink/5" aria-label="View diagram fullscreen"><AppIcon name="fullscreen" size={ICON_SIZE.compact} /></button></div>
       {showSource ? <pre className="overflow-auto p-4 font-mono text-xs whitespace-pre">{source}</pre> : <div ref={ref} className="grid min-h-44 place-items-center overflow-auto p-5 text-xs text-muted">{error ? <><span>Diagram could not render. Use “Source” to view the original Mermaid.</span></> : "Loading diagram…"}</div>}
     </div>
   );

@@ -5,7 +5,7 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import rehypeHighlight from "rehype-highlight";
 import rehypeSlug from "rehype-slug";
-import { ExternalLink } from "lucide-react";
+import { AppIcon } from "@/components/icons/app-icon";
 import { CodeBlock } from "./code-block";
 import { MermaidDiagram } from "./mermaid-diagram";
 import { ProgressToggle } from "./progress";
@@ -59,7 +59,8 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYou
       if (info && embedYouTube) return <YouTubeCard href={href} label={label} info={info} />;
       const mapped = convertMarkdownHref(href, sourcePath);
       const external = /^https?:\/\//i.test(mapped);
-      return <a {...props} href={mapped} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined}>{children}{external && <ExternalLink className="ml-1 inline" size={12} aria-hidden="true" />}</a>;
+      const download = mapped.startsWith("/downloads/");
+      return <a {...props} href={mapped} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined}>{children}{external && <AppIcon name="externalLink" size={12} className="ml-1" />}{download && <AppIcon name="download" size={12} className="ml-1" />}</a>;
     },
     pre({ children }) {
       const child = Array.isArray(children) ? children[0] : children;

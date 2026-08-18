@@ -3,10 +3,11 @@
 <!-- impeccable:design-system -->
 
 ## Product
-Interview Help is a tutorial website for existing roadmap Markdown: one lesson per page, YouTube on that lesson, and a separate phase project page. Next phase stays off until the project is marked complete.
+Interview Help is a tutorial website for existing roadmap Markdown: one lesson per page, YouTube on that lesson, and a separate phase project page. Next phase stays off until the project is marked complete. Home is a W3Schools-style directory of clickable colored course cards.
 
 ## Surfaces
-- `/` library home: search, continue strip, course directory, README path links
+- `/` landing: dark hero, search, four featured course cards, eight smaller tiles, four path cards, continue strip
+- `/courses` the same card grid for every tutorial
 - `/courses/[course]` tutorial HOME with chapter list
 - `/courses/[course]/phase/[phase]/[lesson]` one lesson
 - `/projects/[course]/phase/[phase]` phase project
@@ -14,20 +15,22 @@ Interview Help is a tutorial website for existing roadmap Markdown: one lesson p
 - `/search`, `/interview`, `/about`, `/cv-template`, `/paths`, `/practice`
 
 ## Palette
-Light (default CSS): paper `#F6F3EC`, ink `#1C1917`, accent `#2F5D8A`, success `#3F6F4E`, muted `#57534E`.
-Dark (`ih-theme` or `prefers-color-scheme`): warm charcoal paper, same accent.
-One accent only. No W3 green.
+Light (default CSS): paper `#F1F1F1`, ink `#1A1A1A`, accent `#04AA6D`, surface `#FFFFFF`, band `#282A35`.
+Dark (`ih-theme` or `prefers-color-scheme`): charcoal paper `#1D2A35`, same green.
+Home tiles only use per-course fills (`#D9EEE1`, `#FFF4A3`, `#FFC0C7`, `#96D4FA`, `#F3ECEA`). Tutorial chrome stays green and black.
 
 ## Type
-Source Sans 3 for UI and reading. JetBrains Mono for code. Body measure ~65–75ch.
+`"Segoe UI", Arial, sans-serif` for UI and reading. JetBrains Mono for code. Body measure ~65–75ch.
 
 ## Layout
-W3Schools tutorial grammar without ads or certificates: dark utility bar, horizontal course subject bar, left tutorial index, dark title band with Prev/Next, paper lesson column. No right-rail “On this page”.
+W3Schools tutorial grammar without ads or certificates: black utility bar, horizontal course subject bar, left tutorial index with green active row, white lesson column, green Prev/Next under the title and again at the bottom. Home is full-width cards, not a 900px list.
 
 ## Components
-- `btn-prev` white/paper with ink border; `btn-next` solid study-blue
-- Code blocks: near-black pane, 3px study-blue left rail (brief-pinned)
-- YouTube: click-to-play in the title band, remaining videos as a compact list
+- Wordmark: Interview in white, Help in `#04AA6D`
+- `btn-prev` and `btn-next` are both solid green
+- Course cards: the whole tile is a `Link` to `/courses/[slug]`
+- Code blocks: light Example pane and green Try it Yourself »
+- YouTube: click-to-play inside the article
 - Exercise block restates practice already in the Markdown
 - Project page: Git checkpoint + project-complete checkboxes; Next phase disabled until complete
 

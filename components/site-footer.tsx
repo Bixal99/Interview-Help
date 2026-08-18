@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github } from "lucide-react";
+import { GithubLogoIcon } from "@phosphor-icons/react/ssr";
 
 export function SiteFooter() {
   return (
@@ -8,7 +8,7 @@ export function SiteFooter() {
         <p className="sm:mr-auto">Interview Help. Source Markdown stays in the repository.</p>
         <Link href="/progress" className="hover:text-ink">Progress</Link>
         <Link href="/about" className="hover:text-ink">About</Link>
-        <a href="https://github.com/Bixal99/Interview-Help" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-ink"><Github size={15} /> GitHub</a>
+        <a href="https://github.com/Bixal99/Interview-Help" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-ink"><GithubLogoIcon size={15} /> GitHub</a>
       </div>
     </footer>
   );

@@ -34,7 +34,7 @@ The curriculum already exists in the repo. The site does not invent lessons, vid
 
 ## Brand Commitments
 
-Product name is Interview Help. Layout reference is W3Schools (two-column tutorial, Prev/Next), not W3 green branding. Study palette and Source Sans 3 / JetBrains Mono are pinned by the redesign brief.
+Product name is Interview Help. Visual reference is W3Schools tutorial chrome: black `#282A35` bar, green `#04AA6D`, page gray, white article, Segoe UI / Arial, clickable colored course cards on home. Do not copy the W3Schools logo, ads, Plus, Spaces, or certificates.
 
 ## Evidence on Hand
 
@@ -46,6 +46,7 @@ Real roadmaps, Projects.md cards, Interview.md, CV template, Job Tracker spreads
 - One lesson, then that phase's project, then the next chapter.
 - The left index is a map; completion checks follow project completion.
 - Light, low-arousal reading first.
+- Home is a W3-style directory of clickable course cards, not a list of Start links.
 
 ## Accessibility & Inclusion
 

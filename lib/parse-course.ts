@@ -39,6 +39,32 @@ function extractGoal(overview: string) {
   return match?.[1]?.trim();
 }
 
+const nestedTopics: Record<string, string[]> = {
+  "23.2": ["Parking Lot", "Library", "Elevator"],
+  "38.5": ["SQL Injection", "XSS", "CSRF", "CORS"],
+  "40.1": ["One Server to a Distributed System"],
+  "40.3": ["Worked System Design Walkthrough"],
+};
+
+function extractLessonChildren(lessonId: string, markdown: string) {
+  const headings: { id: string; title: string }[] = [];
+  let inFence = false;
+  for (const line of markdown.split(/\r?\n/)) {
+    if (/^\s*```/.test(line)) {
+      inFence = !inFence;
+      continue;
+    }
+    if (inFence) continue;
+    const numbered = /^###\s+(\d+\.\d+\.\d+)\s+(.+?)\s*$/.exec(line);
+    if (numbered) headings.push({ id: numbered[1], title: numbered[2].trim() });
+  }
+  if (headings.length) return headings;
+  return (nestedTopics[lessonId] ?? []).map((title, position) => ({
+    id: `${lessonId}.${position + 1}`,
+    title,
+  }));
+}
+
 function parseLessons(lines: string[], start: number, end: number, kind: Marker["kind"]): Lesson[] {
   const lessons: { index: number; id: string; title: string }[] = [];
   let inFence = false;
@@ -69,6 +95,7 @@ function parseLessons(lines: string[], start: number, end: number, kind: Marker[
       markdown,
       videos: extractVideos(markdown),
       codeExamples: extractFencedBlocks(markdown).filter((block) => block.language !== "mermaid"),
+      children: extractLessonChildren(lesson.id, markdown),
     };
   });
 }

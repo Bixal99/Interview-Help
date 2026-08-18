@@ -8,6 +8,8 @@ export type VideoResource = {
 
 export type CodeExample = FencedBlock;
 
+export type LessonChild = { id: string; title: string };
+
 export type Lesson = {
   id: string;
   slug: string;
@@ -15,6 +17,7 @@ export type Lesson = {
   markdown: string;
   videos: VideoResource[];
   codeExamples: CodeExample[];
+  children: LessonChild[];
   sourcePath?: string;
 };
 
@@ -50,6 +53,7 @@ export type ParsedCourse = {
 export type CourseChapter = {
   id: string;
   title: string;
+  summary: string;
   phaseIds: string[];
 };
 

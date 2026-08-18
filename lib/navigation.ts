@@ -12,15 +12,21 @@ export type Neighbor = {
   requiresProject?: boolean;
 };
 
-export type CourseNavLesson = { id: string; slug: string; title: string };
+export type CourseNavLesson = {
+  id: string;
+  slug: string;
+  title: string;
+  children: { id: string; title: string }[];
+};
 export type CourseNavPhase = {
   id: string;
   number: string;
   title: string;
+  goal?: string;
   hasProject: boolean;
   lessons: CourseNavLesson[];
 };
-export type CourseNavChapter = { id: string; title: string; phases: CourseNavPhase[] };
+export type CourseNavChapter = { id: string; title: string; summary: string; phases: CourseNavPhase[] };
 export type CourseNav = {
   slug: string;
   shortName: string;

@@ -27,6 +27,12 @@ describe("course parsing", () => {
     expect(headingRouteMap(course).get("from-source-code-to-a-running-program")).toBe("/courses/computer-science/phase/1/from-source-code-to-a-running-program");
     expect(extractPractice(course.phases[0].lessons[0].markdown)?.kind).toBe("checklist");
     expect(new Set(course.phases.map((phase) => phase.id)).size).toBe(43);
+    expect(course.phases.find((phase) => phase.id === "38")?.lessons.find((lesson) => lesson.id === "38.5")?.children).toEqual([
+      { id: "38.5.1", title: "SQL Injection" },
+      { id: "38.5.2", title: "XSS" },
+      { id: "38.5.3", title: "CSRF" },
+      { id: "38.5.4", title: "CORS" },
+    ]);
   });
 
   it("extracts Git 15 phases", () => {
@@ -37,6 +43,7 @@ describe("course parsing", () => {
   it("groups CS phases into sequential storyline chapters", () => {
     const chapters = chaptersFor("computer-science", Array.from({ length: 43 }, (_, index) => String(index + 1)));
     expect(chapters[0]).toMatchObject({ id: "foundations", phaseIds: ["1", "2"] });
+    expect(chapters[0].summary).toMatch(/computer actually does/i);
     expect(chapters.find((chapter) => chapter.id === "programming")?.phaseIds).toEqual(["3", "4", "5"]);
     expect(chapters.find((chapter) => chapter.id === "oop-revision")?.phaseIds).toEqual(["33"]);
   });

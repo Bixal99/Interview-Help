@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CourseHomeActions } from "@/components/course-home-actions";
 import { CourseProgressBar } from "@/components/course-progress-bar";
-import { TutorialShell } from "@/components/tutorial-shell";
+import { CourseToc } from "@/components/course-toc";
+import { CourseWelcome } from "@/components/course-welcome";
 import { courseCatalog } from "@/lib/course-catalog";
 import { getCourseHome } from "@/lib/content";
-import { lessonPath, phasePath, projectPathFor } from "@/lib/parse-course";
 
 export function generateStaticParams() { return courseCatalog.map((course) => ({ course: course.slug })); }
 
@@ -31,45 +30,28 @@ export default async function CourseHomePage({ params }: { params: Promise<{ cou
   );
   return (
     <main id="main-content">
-      <TutorialShell nav={course.nav}>
-        <div className="ih-band px-4 py-8 sm:px-8 lg:px-12">
-          <h1 className="max-w-[75ch] text-3xl font-bold sm:text-4xl">{course.shortName} Tutorial</h1>
-          <CourseHomeActions slug={course.slug} startHref={course.startHref} shortName={course.shortName} />
+      <div className="ih-band px-4 py-8 sm:px-8 lg:px-12">
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
+          <h1 className="text-4xl font-bold uppercase tracking-wide sm:text-6xl">{course.shortName} Tutorial</h1>
+          <CourseProgressBar slug={course.slug} lessonCount={lessonCount} projectCount={projectCount} variant="band" />
         </div>
-        <div className="bg-[rgb(var(--surface))] px-4 py-8 sm:px-8 lg:px-12">
-          <div className="max-w-[75ch]">
-            <CourseProgressBar slug={course.slug} lessonCount={lessonCount} projectCount={projectCount} />
-            <p className="mb-10 max-w-[65ch] text-lg leading-relaxed">{course.description}</p>
-            <h2 className="text-2xl font-bold">What you will learn</h2>
-            <ul className="mt-4 list-disc space-y-2 pl-6 text-[17px]">
-              {course.nav.chapters.map((chapter) => (
-                <li key={chapter.id}>{chapter.title}</li>
-              ))}
-            </ul>
-            <h2 className="mt-10 text-2xl font-bold">Chapters</h2>
-            <ol className="mt-4 space-y-6">
-              {course.nav.chapters.map((chapter) => (
-                <li key={chapter.id}>
-                  <h3 className="font-bold">{chapter.title}</h3>
-                  <ul className="mt-2 space-y-1">
-                    {chapter.phases.map((phase) => (
-                      <li key={phase.id}>
-                        <Link href={phasePath(course.slug, phase.id)} className="text-accent underline">PHASE {phase.number} — {phase.title}</Link>
-                        <ul className="ml-4 mt-1 space-y-1 text-[15px]">
-                          {phase.lessons.map((lesson) => (
-                            <li key={lesson.id}><Link href={lessonPath(course.slug, phase.id, lesson)} className="hover:text-accent">{lesson.id} {lesson.title}</Link></li>
-                          ))}
-                          {phase.hasProject && <li><Link href={projectPathFor(course.slug, phase.id)} className="hover:text-accent">Project</Link></li>}
-                        </ul>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              ))}
-            </ol>
+      </div>
+      <div className="bg-[rgb(var(--paper))] px-4 py-10 sm:px-8 lg:px-12">
+        <CourseWelcome slug={course.slug} shortName={course.shortName} />
+        <p className="mt-8 overflow-x-auto whitespace-nowrap pb-1 text-lg text-muted">{course.description}</p>
+        <div className="mt-12 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h2 className="text-3xl font-bold uppercase tracking-wide sm:text-5xl">What we will study</h2>
+            <p className="mt-4 max-w-[70ch] text-lg leading-relaxed">
+              This is the <strong>table of contents</strong>. {course.nav.chapters.reduce((sum, chapter) => sum + chapter.phases.length, 0)} phases, numbered in order. Open any topic to start that page.
+            </p>
           </div>
         </div>
-      </TutorialShell>
+        <CourseToc nav={course.nav} />
+        <div className="mt-12 flex justify-start border-t hairline pt-8">
+          <CourseHomeActions slug={course.slug} startHref={course.startHref} shortName={course.shortName} />
+        </div>
+      </div>
     </main>
   );
 }

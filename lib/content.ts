@@ -99,6 +99,7 @@ export function toCourseNav(course: NonNullable<ReturnType<typeof getParsedCours
     chapters: chapters.map((chapter) => ({
       id: chapter.id,
       title: chapter.title,
+      summary: chapter.summary,
       phases: chapter.phaseIds.flatMap((id) => {
         const phase = phaseMap[id];
         if (!phase) return [];
@@ -106,8 +107,14 @@ export function toCourseNav(course: NonNullable<ReturnType<typeof getParsedCours
           id: phase.id,
           number: phase.number,
           title: phase.title,
+          goal: phase.goal,
           hasProject: Boolean(phase.project),
-          lessons: phase.lessons.map((lesson) => ({ id: lesson.id, slug: lesson.slug, title: lesson.title })),
+          lessons: phase.lessons.map((lesson) => ({
+            id: lesson.id,
+            slug: lesson.slug,
+            title: lesson.title,
+            children: lesson.children,
+          })),
         }];
       }),
     })),

@@ -10,7 +10,7 @@ export function TutorialShell({
 }) {
   const homeHref = `/courses/${nav.slug}`;
   return (
-    <div className="mx-auto grid max-w-[1600px] lg:grid-cols-[230px_minmax(0,1fr)]">
+    <div className="mx-auto grid max-w-[1600px] lg:grid-cols-[260px_minmax(0,1fr)]">
       <aside className="ih-index hidden min-h-[calc(100vh-6.5rem)] border-r hairline lg:block">
         <div className="sticky top-[6.5rem] max-h-[calc(100vh-6.5rem)] overflow-y-auto py-4">
           <TutorialIndex nav={nav} homeHref={homeHref} />

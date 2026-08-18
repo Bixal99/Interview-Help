@@ -17,10 +17,21 @@ export function TutorialIndex({
   const pathname = usePathname();
   const progress = useOptionalProgress();
   const state = progress?.course(nav.slug);
+  const currentLesson = nav.chapters
+    .flatMap((chapter) => chapter.phases.flatMap((phase) => phase.lessons.map((lesson) => ({ phase, lesson }))))
+    .find(({ phase, lesson }) => pathname === lessonPath(nav.slug, phase.id, lesson));
 
   return (
     <nav className="text-[15px]" aria-label={`${nav.shortName} tutorial`}>
       <p className="px-3 pb-3 text-sm font-bold tracking-wide">{nav.shortName.toUpperCase()} TUTORIAL</p>
+      {currentLesson ? (
+        <p className="ih-now-reading mx-3 mb-4">
+          <span>Now reading</span>
+          <strong>
+            {currentLesson.lesson.id} {currentLesson.lesson.title}
+          </strong>
+        </p>
+      ) : null}
       <Link href={homeHref} className={`block px-3 py-1.5 ${pathname === homeHref ? "active font-semibold" : "hover:bg-black/5"}`}>HOME</Link>
       {nav.chapters.map((chapter) => (
         <div key={chapter.id} className="mt-3">
@@ -37,7 +48,7 @@ export function TutorialIndex({
                   const href = lessonPath(nav.slug, phase.id, lesson);
                   const active = pathname === href;
                   return (
-                    <Link key={lesson.id} href={href} className={`block truncate px-3 py-1.5 ${active ? "active font-semibold" : "hover:bg-black/5"}`}>
+                    <Link key={lesson.id} href={href} className={`block px-3 py-1.5 ${active ? "active font-semibold" : "truncate hover:bg-black/5"}`}>
                       {lesson.id} {lesson.title}
                     </Link>
                   );

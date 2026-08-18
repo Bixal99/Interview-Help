@@ -1,7 +1,7 @@
 "use client";
 
 import type { Neighbor } from "@/lib/navigation";
-import { PrevNext } from "./prev-next";
+import { Pager } from "./pager";
 import { useLearningProgress } from "./progress-client";
 
 export function ProjectChrome({
@@ -27,10 +27,7 @@ export function ProjectChrome({
   return (
     <article>
       <div className="ih-band px-4 py-8 sm:px-8 lg:px-12">
-        <h1 className="max-w-[75ch] text-3xl font-bold tracking-[-.02em] sm:text-4xl">{title}</h1>
-        <div className="mt-6 max-w-[75ch]">
-          <PrevNext prev={prev} next={next} nextDisabled={nextDisabled} nextHint={nextDisabled ? "Complete the project to continue." : undefined} />
-        </div>
+        <h1 className="max-w-[75ch] text-left text-3xl font-bold tracking-[-.02em] sm:text-4xl">{title}</h1>
       </div>
       <div className="bg-[rgb(var(--surface))] px-4 py-8 sm:px-8 lg:px-12">
         <div className="max-w-[75ch]">{children}</div>
@@ -45,8 +42,15 @@ export function ProjectChrome({
           </label>
           <p className="text-sm text-muted">Next phase stays off until the project is marked complete.</p>
         </div>
-        <div className="max-w-[75ch]">
-          <PrevNext prev={prev} next={next} nextDisabled={nextDisabled} nextHint={nextDisabled ? "Complete the project to continue." : undefined} />
+        <div className="mt-12 border-t hairline pt-8">
+          <Pager
+            backHref={prev?.href ?? `/courses/${slug}`}
+            backLabel="Back"
+            proceedHref={next?.href}
+            proceedLabel="Proceed"
+            proceedDisabled={nextDisabled}
+            hint={nextDisabled ? "Complete the project to continue." : undefined}
+          />
         </div>
       </div>
     </article>

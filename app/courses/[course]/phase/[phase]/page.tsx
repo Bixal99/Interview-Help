@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GateBanner } from "@/components/gate-banner";
 import { MarkdownDocument } from "@/components/markdown-document";
+import { Pager } from "@/components/pager";
 import { TutorialShell } from "@/components/tutorial-shell";
 import { getAllPhaseParams, getPhaseView, getRequiredProjectHref } from "@/lib/content";
 import { lessonPath } from "@/lib/parse-course";
@@ -38,10 +39,14 @@ export default async function PhasePage({ params }: { params: Promise<{ course: 
                 <li key={lesson.id}><Link href={lessonPath(view.course.slug, view.phase.id, lesson)} className="text-accent underline">{lesson.id} {lesson.title}</Link></li>
               ))}
             </ol>
-            <p className="mt-8 flex flex-wrap gap-3">
-              <Link href={view.startHref} className="btn-next">Start</Link>
-              {view.projectHref && <Link href={view.projectHref} className="btn-prev">Phase project</Link>}
-            </p>
+            <div className="mt-12 border-t hairline pt-8">
+              <Pager
+                backHref={`/courses/${view.course.slug}`}
+                backLabel="Back"
+                proceedHref={view.startHref}
+                proceedLabel="Proceed"
+              />
+            </div>
           </div>
         </div>
       </TutorialShell>

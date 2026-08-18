@@ -643,6 +643,127 @@ body {
 .ih-landing-foot .ih-landing-cta,
 .ih-landing-foot .ih-landing-cta:hover { color: #fff; }
 
+.ih-course-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 20rem;
+  overflow: hidden;
+  border-left: 5px solid #04AA6D;
+  padding: 1.35rem 1.4rem 1.25rem;
+  color: #1a1a1a;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgb(40 42 53 / 0.07);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.ih-course-tile::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.6rem;
+  height: 2.6rem;
+  background: linear-gradient(225deg, rgb(0 0 0 / 0.07) 49%, transparent 50%);
+  pointer-events: none;
+}
+.ih-course-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 36px rgb(40 42 53 / 0.14);
+  color: #1a1a1a;
+}
+.ih-course-tile:focus-visible {
+  outline: 3px solid #04AA6D;
+  outline-offset: 3px;
+}
+.ih-course-tile-index {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #04AA6D;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+.ih-course-tile-icon {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgb(255 255 255 / 0.72);
+  color: #04AA6D;
+}
+.ih-course-tile-kicker {
+  margin-top: 1.15rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #04AA6D;
+}
+.ih-course-tile-title {
+  margin-top: 0.35rem;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.ih-course-tile-copy {
+  margin-top: 0.7rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+.ih-course-tile-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  padding: 0;
+  list-style: none;
+}
+.ih-course-tile-skills li {
+  background: rgb(255 255 255 / 0.7);
+  padding: 0.2rem 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.ih-course-tile-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 1.35rem;
+}
+.ih-course-tile-foot p {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgb(26 26 26 / 0.7);
+}
+.ih-course-start {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.4rem;
+  padding: 0.45rem 0.95rem;
+  background: #04AA6D;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background 0.22s ease, transform 0.22s ease;
+}
+.ih-course-tile:hover .ih-course-start {
+  background: #00c37a;
+  transform: translateX(3px);
+}
+.dark .ih-course-tile { color: #1a1a1a; }
+
 @media (max-width: 767px) {
   html { scroll-padding-top: 6.5rem; }
   .markdown-body { font-size: 1rem; }

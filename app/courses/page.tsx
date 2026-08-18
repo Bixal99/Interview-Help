@@ -13,7 +13,7 @@ export default function CoursesPage() {
       title="Tutorials"
       description="If you are new to programming or aiming for software engineering, start with Computer Science. Programming fundamentals start at Phase 3."
     >
-      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {courses.map((course, index) => (
           <li key={course.slug}>
             <CourseCard course={course} index={index} />

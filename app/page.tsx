@@ -9,7 +9,7 @@ export default function HomePage() {
   const paths = getPathStarts();
 
   return (
-    <div className="bg-white">
+    <div className="ih-landing">
       <LandingHeader />
       <main id="main-content">
         <LandingHome

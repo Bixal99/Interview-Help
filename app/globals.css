@@ -279,6 +279,83 @@ body {
 .ih-w3 .hljs-function { color: #005cc5; }
 .ih-w3 :focus-visible { outline-color: #04AA6D; }
 
+.ih-landing {
+  --ink: 26 26 26;
+  --paper: 241 241 241;
+  --accent: 4 170 109;
+  --surface: 255 255 255;
+  --muted: 80 80 80;
+  --line: 213 216 220;
+  --band: 40 42 53;
+  min-height: 100vh;
+  background: #F1F1F1;
+  color: #1A1A1A;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+.ih-landing ::selection { background: rgb(4 170 109 / .28); }
+.ih-landing :focus-visible { outline: 3px solid #04AA6D; outline-offset: 3px; }
+.ih-landing .ih-help { color: #04AA6D; }
+.ih-landing-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: .75rem 1.35rem;
+  background: #04AA6D;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+}
+.ih-landing-cta:hover { background: #059862; color: #fff; }
+.ih-landing-nav {
+  background: #fff;
+  border-bottom: 3px solid #04AA6D;
+}
+.ih-landing-nav a { color: #1A1A1A; text-decoration: none; }
+.ih-landing-nav a:hover { color: #04AA6D; }
+.ih-landing-nav .ih-landing-cta,
+.ih-landing-nav .ih-landing-cta:hover { color: #fff; }
+.ih-landing-tile {
+  display: flex;
+  flex-direction: column;
+  min-height: 14rem;
+  padding: 1.5rem 1.4rem 1.35rem;
+  color: #1A1A1A;
+  text-decoration: none;
+}
+.ih-landing-tile:hover { filter: brightness(.97); }
+.ih-landing-tile:focus-visible { outline-offset: -3px; }
+.ih-landing-step {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #04AA6D;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  font-variant-numeric: tabular-nums;
+}
+.ih-landing-path {
+  display: inline-flex;
+  align-items: center;
+  padding: .55rem 1rem;
+  background: #fff;
+  color: #1A1A1A;
+  font-weight: 600;
+  text-decoration: none;
+}
+.ih-landing-path:hover { background: #04AA6D; color: #fff; }
+.ih-landing-foot {
+  background: #282A35;
+  color: #ddd;
+}
+.ih-landing-foot a { color: #fff; text-decoration: none; }
+.ih-landing-foot a:hover { color: #04AA6D; }
+.ih-landing-foot .ih-landing-cta,
+.ih-landing-foot .ih-landing-cta:hover { color: #fff; }
+
 @media (max-width: 767px) {
   html { scroll-padding-top: 6.5rem; }
   .markdown-body { font-size: 1rem; }

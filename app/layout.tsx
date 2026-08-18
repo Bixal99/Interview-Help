@@ -13,12 +13,12 @@ export const metadata: Metadata = {
 };
 
 const CONTRACT = `<!--
-THESIS: Interview Help is a tutorial school for existing Markdown. Home is a cream Celebration-style landing (hero, offer, features, how it works). Tutorial pages keep the black bar and lesson chrome.
-OWN-WORLD: Landing uses cream #FCF8F1, yellow-300 CTAs, black pills, blue-600 links. Tutorial chrome stays the existing ink bar and accent.
-STORY: A learner lands on the marketing home, picks a track, reads one lesson, then completes that phase's project before the next chapter unlocks.
-FIRST VIEWPORT: Cream header, split hero, Start learning CTA.
-FORM: W3Schools tutorial school / user-pinned competitor path / seed skipped.
-FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+THESIS: Interview Help is a tutorial school for existing Markdown. The landing is an original marketing page in the site's black/green/paper family, not a W3Schools clone and not a cream template.
+OWN-WORLD: Landing uses paper #F1F1F1, ink #1A1A1A, band #282A35, accent #04AA6D, white nav with a green rule, square pastel course tiles. Tutorial chrome stays .ih-w3.
+STORY: A learner lands, reads the offer, picks a course card, then follows one lesson and that phase's project.
+FIRST VIEWPORT: Tall white nav, large ink headline, green Start learning, compact real counts.
+FORM: W3 color family, original landing composition; seed skipped because the brief named the sections.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 -->`;
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

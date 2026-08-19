@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { OnMount } from "@monaco-editor/react";
+import type { editor as MonacoEditorApi } from "monaco-editor";
 import { monacoLanguageFor } from "@/lib/code-playground/editor-language";
 import type { PlaygroundLanguage } from "@/lib/code-playground/types";
 
@@ -32,22 +33,39 @@ export function CodeEditor({
 }) {
   const monacoEditorLanguage = editorLanguage ?? monacoLanguageFor(language);
   const runRef = useRef(onRun);
-  const [editorHeight, setEditorHeight] = useState(comfortable ? 420 : 256);
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const editorRef = useRef<MonacoEditorApi.IStandaloneCodeEditor | null>(null);
+  const minHeight = autoGrow && comfortable ? 640 : comfortable ? 420 : 256;
+  const [editorHeight, setEditorHeight] = useState(minHeight);
   runRef.current = onRun;
 
+  const syncHeight = useCallback((instance?: MonacoEditorApi.IStandaloneCodeEditor | null) => {
+    const editor = instance ?? editorRef.current;
+    if (!autoGrow || !editor) return;
+    setEditorHeight(Math.max(minHeight, editor.getContentHeight() + 2));
+  }, [autoGrow, minHeight]);
+
   const handleMount = useCallback<OnMount>((editor, monaco) => {
+    editorRef.current = editor;
     editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.Enter, () => {
       runRef.current();
     });
-    if (autoGrow) {
-      const syncHeight = () => {
-        const minHeight = comfortable ? 420 : 256;
-        setEditorHeight(Math.max(minHeight, editor.getContentHeight() + 2));
-      };
+    editor.updateOptions({ wordWrap: "on" });
+    syncHeight(editor);
+    editor.onDidContentSizeChange(() => syncHeight(editor));
+    editor.onDidLayoutChange(() => syncHeight(editor));
+  }, [syncHeight]);
+
+  useEffect(() => {
+    const node = wrapRef.current;
+    if (!node) return;
+    const observer = new ResizeObserver(() => {
+      editorRef.current?.layout();
       syncHeight();
-      editor.onDidContentSizeChange(syncHeight);
-    }
-  }, [autoGrow, comfortable]);
+    });
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [syncHeight]);
 
   useEffect(() => {
     const listener = (event: KeyboardEvent) => {
@@ -61,7 +79,7 @@ export function CodeEditor({
   }, []);
 
   return (
-    <div className={`ih-playground-editor${comfortable ? " is-comfortable" : ""}`}>
+    <div ref={wrapRef} className={`ih-playground-editor${comfortable ? " is-comfortable" : ""}`}>
       <MonacoEditor
         height={autoGrow ? editorHeight : "100%"}
         language={monacoEditorLanguage}
@@ -81,12 +99,18 @@ export function CodeEditor({
           insertSpaces: true,
           autoClosingBrackets: "always",
           autoClosingQuotes: "always",
-          wordWrap: "off",
+          wordWrap: "on",
+          wrappingIndent: "same",
           padding: { top: comfortable ? 16 : 12, bottom: comfortable ? 16 : 12 },
           renderLineHighlight: "line",
           cursorBlinking: "smooth",
           smoothScrolling: true,
-          scrollbar: autoGrow ? { vertical: "hidden", horizontal: "auto" } : undefined,
+          scrollbar: {
+            vertical: autoGrow ? "hidden" : "auto",
+            horizontal: "hidden",
+            handleMouseWheel: !autoGrow,
+            alwaysConsumeMouseWheel: false,
+          },
         }}
       />
     </div>

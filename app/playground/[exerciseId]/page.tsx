@@ -18,8 +18,8 @@ export default async function PlaygroundPage({ params }: { params: Promise<{ exe
   const exercise = getExercise(exerciseId);
   if (!exercise) notFound();
   return (
-    <main id="main-content" className="ih-playground-page px-4 py-6 sm:px-8">
-      <CodePlayground exercise={exercise} mode="tryit" />
+    <main id="main-content" className="ih-playground-page ih-playground-page-tryit px-4 py-3 sm:px-6">
+      <CodePlayground exercise={exercise} mode="tryit" fullPage />
     </main>
   );
 }

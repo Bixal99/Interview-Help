@@ -3,7 +3,7 @@ import { CourseCard } from "@/components/course-card";
 import { InnerPage } from "@/components/inner-page";
 import { getCourseSummaries } from "@/lib/content";
 
-export const metadata: Metadata = { title: "Tutorials", description: "Every Interview Help course, as a tutorial index." };
+export const metadata: Metadata = { title: "Tutorials", description: "Every Quarry course, as a tutorial index." };
 
 export default function CoursesPage() {
   const courses = getCourseSummaries();

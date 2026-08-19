@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { GateBanner } from "@/components/gate-banner";
-import { MarkdownDocument } from "@/components/markdown-document";
 import { ProjectChrome } from "@/components/project-chrome";
 import { TutorialShell } from "@/components/tutorial-shell";
 import { getAllProjectParams, getProjectView, getRequiredProjectHref } from "@/lib/content";
+import { parseProjectBrief } from "@/lib/parse-project-brief";
 
 export function generateStaticParams() {
   return getAllProjectParams();
@@ -28,15 +28,15 @@ export default async function PhaseProjectPage({ params }: { params: Promise<{ c
         <ProjectChrome
           slug={view.course.slug}
           phaseId={view.phase.id}
+          projectId={view.project.id}
           title={view.project.title}
+          brief={parseProjectBrief(view.project.markdown)}
           reviewHref={view.reviewHref}
           reviewLabel={view.reviewLabel}
           proceedHref={view.proceedHref}
           proceedLabel={view.proceedLabel}
           whatComesNext={view.whatComesNext}
-        >
-          <MarkdownDocument markdown={view.project.markdown} sourcePath={view.course.sourcePath} embedYouTube={false} />
-        </ProjectChrome>
+        />
       </TutorialShell>
     </main>
   );

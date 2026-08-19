@@ -32,7 +32,7 @@ export function ProgressToggle({ id, label = "Mark complete" }: { id: string; la
   const { completed, toggle } = useProgress();
   const done = completed.includes(id);
   return (
-    <button onClick={() => toggle(id)} className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-medium transition ${done ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400" : "hairline text-muted hover:text-ink"}`} aria-pressed={done} aria-label={`${done ? "Mark incomplete" : label}: ${id.split(":").pop()}`}>
+    <button onClick={() => toggle(id)} className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-medium transition ${done ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-600" : "hairline text-muted hover:text-ink"}`} aria-pressed={done} aria-label={`${done ? "Mark incomplete" : label}: ${id.split(":").pop()}`}>
       {done ? <AppIcon name="complete" size={12} weight="fill" className="text-success" /> : <AppIcon name="notStarted" size={12} />} {done ? "Complete" : "Mark complete"}
     </button>
   );

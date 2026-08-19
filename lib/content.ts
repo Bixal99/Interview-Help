@@ -78,7 +78,7 @@ export function getRepositoryReadme() {
   const sourcePath = "README.md";
   const markdown = readMarkdown(sourcePath);
   const headings = extractHeadings(markdown);
-  return { sourcePath, markdown, headings, title: headings[0]?.text ?? "Interview Help" };
+  return { sourcePath, markdown, headings, title: headings[0]?.text ?? "Quarry" };
 }
 
 export const getCourseChapters = cache((slug: string) => {

@@ -5,7 +5,6 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import rehypeHighlight from "rehype-highlight";
 import rehypeSlug from "rehype-slug";
-import { AppIcon } from "@/components/icons/app-icon";
 import { CodeBlock } from "./code-block";
 import { PlaygroundBlock } from "./code-playground/playground-block";
 import { LessonDiagram, isVisualDiagram } from "./lesson-diagram";
@@ -143,6 +142,16 @@ function emphasizeText(text: string): React.ReactNode {
   return nodes.length === 1 ? nodes[0] : nodes;
 }
 
+function classNamesOf(value: unknown) {
+  if (!isValidElement<{ className?: string | string[] }>(value)) return "";
+  const className = value.props.className;
+  return Array.isArray(className) ? className.join(" ") : String(className ?? "");
+}
+
+function isMathNode(value: unknown) {
+  return /\bkatex\b|\bmath-inline\b|\bmath-display\b/.test(classNamesOf(value));
+}
+
 function formatCopy(value: React.ReactNode): React.ReactNode {
   if (value == null || typeof value === "boolean") return value;
   if (typeof value === "string" || typeof value === "number") return emphasizeText(String(value));
@@ -150,8 +159,9 @@ function formatCopy(value: React.ReactNode): React.ReactNode {
     return value.map((child, index) => <React.Fragment key={index}>{formatCopy(child)}</React.Fragment>);
   }
   if (isValidElement<{ children?: React.ReactNode }>(value)) {
+    if (isMathNode(value)) return value;
     if (value.type === "strong" || value.type === "code" || value.type === "a") return value;
-    if (value.type === "em" || value.type === "i") return formatCopy(value.props.children);
+    if (value.type === "em" || value.type === "i") return <em>{formatCopy(value.props.children)}</em>;
     if (value.props.children == null) return value;
     return cloneElement(value, undefined, formatCopy(value.props.children));
   }
@@ -304,10 +314,9 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYou
           href={mapped}
           target={external ? "_blank" : undefined}
           rel={external ? "noopener noreferrer" : undefined}
+          download={download || undefined}
         >
           <span>{children}</span>
-          {external ? <AppIcon name="externalLink" size={12} /> : null}
-          {download ? <AppIcon name="download" size={12} /> : null}
         </a>
       );
     },

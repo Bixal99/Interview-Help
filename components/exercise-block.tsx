@@ -9,6 +9,8 @@ import { getPracticeRunner } from "@/lib/practice-runners";
 import type { PracticeRunnerSpec } from "@/lib/practice-runners";
 import type { PracticeBlock, PracticeItem } from "@/lib/practice";
 import { useLearningProgress } from "./progress-client";
+import { PlaygroundLanguageIcon } from "./code-playground/language-mark";
+import { PracticeRichText } from "./practice-rich-text";
 
 type RunnableEntry = { item: PracticeItem; runner: PracticeRunnerSpec };
 
@@ -86,7 +88,7 @@ export function ExerciseBlock({
     () =>
       practice.items
         .map((item) => {
-          const runner = getPracticeRunner(lessonId, item.id);
+          const runner = getPracticeRunner(lessonId, item.id, item.label);
           return runner ? { item, runner } : null;
         })
         .filter((entry): entry is RunnableEntry => entry !== null),
@@ -110,7 +112,7 @@ export function ExerciseBlock({
             >
               <span className="ih-exercise-num">{item.difficulty ?? String.fromCharCode(65 + index)}</span>
               <input type="radio" name={`ex-${lessonId}`} value={item.id} checked={choice === item.id} onChange={() => setChoice(item.id)} />
-              <code>{item.label}</code>
+              <code><PracticeRichText text={item.label} /></code>
             </label>
           ))}
         </fieldset>
@@ -145,7 +147,7 @@ export function ExerciseBlock({
       <ul className="ih-exercise-stack">
         {practice.items.map((item, index) => {
           const on = completed || checked.includes(item.id);
-          const runner = getPracticeRunner(lessonId, item.id);
+          const runner = getPracticeRunner(lessonId, item.id, item.label);
           const myPos = runnableItems.findIndex((entry) => entry.item.id === item.id);
           const selectedLang = editorLang[item.id] ?? runner?.options[0]?.language;
 
@@ -168,7 +170,7 @@ export function ExerciseBlock({
                       )
                     }
                   />
-                  <span className="ih-exercise-text">{item.label}</span>
+                  <span className="ih-exercise-text"><PracticeRichText text={item.label} /></span>
                   <span className="ih-exercise-check" aria-hidden="true">{on ? <Check size={16} strokeWidth={3} /> : null}</span>
                 </label>
                 {runner && selectedLang ? (
@@ -184,6 +186,7 @@ export function ExerciseBlock({
                             className={`ih-exercise-lang-tab${selectedLang === option.language ? " is-active" : ""}`}
                             onClick={() => setEditorLang((current) => ({ ...current, [item.id]: option.language }))}
                           >
+                            <PlaygroundLanguageIcon language={option.language} />
                             {option.label ?? option.language}
                           </button>
                         ))}
@@ -202,7 +205,7 @@ export function ExerciseBlock({
                         )
                       }
                     >
-                      Open in playground »
+                      Start Building »
                     </button>
                   </div>
                 ) : null}

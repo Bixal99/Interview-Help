@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
 import type { CodeExercise } from "@/lib/code-playground/exercises";
 import { getRunner } from "@/lib/code-playground/runners";
 import { displaySourceForLanguage, isSourceFiles, isWebLanguage, normalizeSourceForRunner, updateSourceFile } from "@/lib/code-playground/source";
@@ -10,10 +10,12 @@ import type { PlaygroundFileKey, PlaygroundSource, PlaygroundStatus, RunResult }
 import { formatRunOutput, validateExercise } from "@/lib/code-playground/validator";
 import { useLearningProgress } from "@/components/progress-client";
 import { CodeEditor } from "./code-editor";
+import { PlaygroundLanguageIcon } from "./language-mark";
 import { OutputPanel } from "./output-panel";
-import { PlaygroundToolbar } from "./toolbar";
+import { PlaygroundLead } from "./playground-lead";
 import { ProgramInput } from "./program-input";
 import { SolutionPanel } from "./solution-panel";
+import { SplitPanes } from "./split-panes";
 import { WebPreviewPanel } from "./web-preview-panel";
 
 export function CodePlayground({
@@ -21,13 +23,17 @@ export function CodePlayground({
   mode,
   tryItSource,
   onTryItSourceChange,
+  onRunComplete,
   fullPage = false,
+  lead,
 }: {
   exercise: CodeExercise;
   mode: "inline" | "tryit";
   tryItSource?: PlaygroundSource;
   onTryItSourceChange?: (code: PlaygroundSource) => void;
+  onRunComplete?: (ok: boolean) => void;
   fullPage?: boolean;
+  lead?: ReactNode;
 }) {
   const runner = useMemo(() => getRunner(exercise.language), [exercise.language]);
   const { course, toggleExercise } = useLearningProgress();
@@ -105,13 +111,15 @@ export function CodePlayground({
       setLastResult(result);
       setOutput(formatRunOutput(result) || " ");
       setStatus(result.ok ? "success" : "error");
+      onRunComplete?.(result.ok);
     } catch {
       setOutput(`${runner.label} failed to load.`);
       setStatus("error");
+      onRunComplete?.(false);
     } finally {
       setIsRunning(false);
     }
-  }, [runner, canRun, runSource, programInput]);
+  }, [runner, canRun, runSource, programInput, onRunComplete]);
 
   const handleCheck = useCallback(async () => {
     if (!runner || !canCheck) return;
@@ -181,134 +189,95 @@ export function CodePlayground({
     );
   }
 
-  if (mode === "tryit") {
-    return (
-      <div className={`ih-playground ih-playground-tryit${fullPage ? " is-fullpage" : ""}`}>
-        <div className="ih-playground-shell">
-          <div className="ih-playground-tryit-grid">
-            <div className="ih-playground-code-pane">
-              <div className="ih-playground-panel-head">
-                {usesFileTabs ? (
-                  <div className="ih-playground-file-tabs">
-                    {(["html", "css", "javascript"] as PlaygroundFileKey[]).map((fileKey) => (
-                      <button
-                        key={fileKey}
-                        type="button"
-                        className={`ih-playground-file-tab${activeFile === fileKey ? " is-active" : ""}`}
-                        onClick={() => setActiveFile(fileKey)}
-                      >
-                        {fileKey === "javascript" ? "script.js" : fileKey === "css" ? "style.css" : "index.html"}
-                      </button>
-                    ))}
-                  </div>
-                ) : <span>{runner.label} Editor</span>}
-                <div className="ih-playground-panel-head-actions">
-                  <button type="button" className="ih-playground-btn ih-playground-btn-run" onClick={handleRun} disabled={!canRun}>Run</button>
-                  <button type="button" className="ih-playground-btn ih-playground-btn-secondary" onClick={handleReset}>Reset</button>
-                  {canStop ? <button type="button" className="ih-playground-btn ih-playground-btn-secondary" onClick={handleStop}>Stop</button> : null}
-                </div>
-              </div>
-              <CodeEditor language={exercise.language} editorLanguage={currentEditorLanguage} value={currentCode} onChange={setCurrentEditorValue} onRun={handleRun} comfortable />
-            </div>
-            <div className="ih-playground-result-pane">
-              {showProgramInput ? (
-                <ProgramInput language={exercise.language} code={currentCode} value={programInput} onChange={setProgramInput} disabled={isRunning} variant="tryit" onRun={handleRun} />
-              ) : null}
-              {isWebLanguage(exercise.language) ? (
-                <div className="ih-playground-output is-tryit">
-                  <div className="ih-playground-panel-head">
-                    <span>Preview</span>
-                  </div>
-                  {checkMessage ? (
-                    <p className={`ih-playground-check${checkMessage === "Correct" ? " is-correct" : " is-wrong"}`} aria-live="polite">
-                      {checkMessage === "Correct" ? "✓ Correct" : "✕ Try Again"}
-                    </p>
-                  ) : null}
-                  <WebPreviewPanel result={lastResult} />
-                </div>
-              ) : (
-                <OutputPanel status={status} runnerLabel={runner.label} output={output} checkMessage={checkMessage} variant="tryit" />
-              )}
-            </div>
-          </div>
-        </div>
-        {exercise.lessonHref ? (
-          <div className="ih-playground-tryit-footer">
-            <Link href={exercise.lessonHref} className="btn-prev">
-              Back to lesson
-            </Link>
-          </div>
-        ) : null}
-      </div>
-    );
-  }
+  const banner = lead ?? (
+    <PlaygroundLead
+      title={exercise.title}
+      goal={exercise.instructions || "Write code and run it."}
+    />
+  );
 
   return (
-    <div className="ih-playground ih-playground-inline">
-      {exercise.instructions ? (
-        <div className="ih-playground-instructions">
-          <h3>{exercise.title}</h3>
-          <pre className="ih-playground-instructions-body">{exercise.instructions}</pre>
+    <div className={`ih-playground ih-playground-tryit${fullPage ? " is-fullpage" : ""}`}>
+      <div className="ih-playground-shell">
+        <SplitPanes
+          className="ih-playground-tryit-grid"
+          storageKey={mode === "tryit" ? "ih-split-tryit" : "ih-split-inline"}
+          defaultSplit={mode === "tryit" ? 0.7 : 0.55}
+          left={
+          <div className="ih-playground-code-pane">
+            {banner}
+            <div className="ih-playground-panel-head">
+              {usesFileTabs ? (
+                <div className="ih-playground-file-tabs">
+                  {(["html", "css", "javascript"] as PlaygroundFileKey[]).map((fileKey) => (
+                    <button
+                      key={fileKey}
+                      type="button"
+                      className={`ih-playground-file-tab${activeFile === fileKey ? " is-active" : ""}`}
+                      onClick={() => setActiveFile(fileKey)}
+                    >
+                      <PlaygroundLanguageIcon language={fileKey} />
+                      {fileKey === "javascript" ? "script.js" : fileKey === "css" ? "style.css" : "index.html"}
+                    </button>
+                  ))}
+                </div>
+              ) : (
+                <span className="ih-playground-editor-tab">
+                  <PlaygroundLanguageIcon language={exercise.language} />
+                  {runner.label} Editor
+                </span>
+              )}
+              <div className="ih-playground-panel-head-actions">
+                <button type="button" className="ih-playground-btn ih-playground-btn-run" onClick={handleRun} disabled={!canRun}>Run</button>
+                {mode === "inline" && hasGrading ? (
+                  <button type="button" className="ih-playground-btn ih-playground-btn-secondary" onClick={handleCheck} disabled={!canCheck}>Check</button>
+                ) : null}
+                <button type="button" className="ih-playground-btn ih-playground-btn-secondary" onClick={handleReset}>Reset</button>
+                {mode === "inline" && hasGrading ? (
+                  <button type="button" className="ih-playground-btn ih-playground-btn-secondary" onClick={handleSolution} aria-pressed={showSolution}>Solution</button>
+                ) : null}
+                {canStop ? <button type="button" className="ih-playground-btn ih-playground-btn-secondary" onClick={handleStop}>Stop</button> : null}
+              </div>
+            </div>
+            <CodeEditor language={exercise.language} editorLanguage={currentEditorLanguage} value={currentCode} onChange={setCurrentEditorValue} onRun={handleRun} comfortable autoGrow={fullPage} />
+          </div>
+          }
+          right={
+          <div className="ih-playground-result-pane">
+            {showProgramInput ? (
+              <ProgramInput language={exercise.language} code={currentCode} value={programInput} onChange={setProgramInput} disabled={isRunning} variant="tryit" onRun={handleRun} />
+            ) : null}
+            {isWebLanguage(exercise.language) ? (
+              <div className="ih-playground-output is-tryit">
+                <div className="ih-playground-panel-head">
+                  <span>Preview</span>
+                </div>
+                {checkMessage ? (
+                  <p className={`ih-playground-check${checkMessage === "Correct" ? " is-correct" : " is-wrong"}`} aria-live="polite">
+                    {checkMessage === "Correct" ? "✓ Correct" : "✕ Try Again"}
+                  </p>
+                ) : null}
+                <WebPreviewPanel result={lastResult} />
+              </div>
+            ) : (
+              <OutputPanel status={status} runnerLabel={runner.label} output={output} checkMessage={checkMessage} variant="tryit" />
+            )}
+          </div>
+          }
+        />
+      </div>
+      {mode === "inline" && exercise.allowTryItYourself ? (
+        <a href={`/playground/${exercise.id}`} className="btn-next ih-playground-try-link">
+          Start Building »
+        </a>
+      ) : null}
+      {mode === "tryit" && exercise.lessonHref ? (
+        <div className="ih-try-footer">
+          <Link href={exercise.lessonHref} className="ih-pager-btn ih-pager-back">
+            <span className="ih-pager-label">« Back</span>
+          </Link>
         </div>
       ) : null}
-      <div className="ih-playground-grid">
-        <div className="ih-playground-code-pane">
-          <div className="ih-playground-panel-head">
-            <span>Code</span>
-            {usesFileTabs ? (
-              <div className="ih-playground-file-tabs">
-                {(["html", "css", "javascript"] as PlaygroundFileKey[]).map((fileKey) => (
-                  <button
-                    key={fileKey}
-                    type="button"
-                    className={`ih-playground-file-tab${activeFile === fileKey ? " is-active" : ""}`}
-                    onClick={() => setActiveFile(fileKey)}
-                  >
-                    {fileKey === "javascript" ? "script.js" : fileKey === "css" ? "style.css" : "index.html"}
-                  </button>
-                ))}
-              </div>
-            ) : null}
-          </div>
-          <CodeEditor language={exercise.language} editorLanguage={currentEditorLanguage} value={currentCode} onChange={setCurrentEditorValue} onRun={handleRun} />
-        </div>
-        <div className="ih-playground-side-pane">
-          {showProgramInput ? (
-            <ProgramInput language={exercise.language} code={currentCode} value={programInput} onChange={setProgramInput} disabled={isRunning} onRun={handleRun} />
-          ) : null}
-          {isWebLanguage(exercise.language) ? (
-            <div className="ih-playground-output">
-              <div className="ih-playground-panel-head">
-                <span>Preview</span>
-              </div>
-              {checkMessage ? (
-                <p className={`ih-playground-check${checkMessage === "Correct" ? " is-correct" : " is-wrong"}`} aria-live="polite">
-                  {checkMessage === "Correct" ? "✓ Correct" : "✕ Try Again"}
-                </p>
-              ) : null}
-              <WebPreviewPanel result={lastResult} />
-            </div>
-          ) : (
-            <OutputPanel status={status} runnerLabel={runner.label} output={output} checkMessage={checkMessage} />
-          )}
-        </div>
-      </div>
-      <PlaygroundToolbar
-        mode="inline"
-        runnerLabel={runner.label}
-        canRun={canRun}
-        canStop={canStop}
-        canCheck={canCheck}
-        showCheckAnswer={hasGrading}
-        showSolution={showSolution}
-        allowTryItYourself={exercise.allowTryItYourself}
-        exerciseId={exercise.id}
-        onRun={handleRun}
-        onCheck={handleCheck}
-        onReset={handleReset}
-        onSolution={handleSolution}
-        onStop={handleStop}
-      />
       {showSolution && hasGrading ? <SolutionPanel solution={exercise.solution} /> : null}
     </div>
   );

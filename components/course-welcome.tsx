@@ -50,7 +50,7 @@ export function CourseWelcome({
   intro: BeginnerIntro | null;
 }) {
   return (
-    <section className="border border-[rgb(var(--line))] border-l-[5px] border-l-[#04AA6D] bg-[#F1F1F1] p-6 sm:p-8 lg:p-10 dark:bg-[rgb(var(--band))]">
+    <section className="border border-[rgb(var(--line))] border-l-[5px] border-l-[#04AA6D] bg-[#F1F1F1] p-6 sm:p-8 lg:p-10">
       <h2 className="text-4xl font-bold uppercase tracking-wide sm:text-6xl">Welcome to this course</h2>
       {intro ? (
         <>

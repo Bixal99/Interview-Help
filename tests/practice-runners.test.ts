@@ -24,5 +24,9 @@ describe("practice runners", () => {
     expect(tokenize?.options[0]?.code).toMatch(/LEFT_PAREN/);
     expect(tokenize?.options[0]?.code).toMatch(/operator/);
     expect(tokenize?.options[0]?.code).toContain('expression = "2 * (3 + 4)"');
+
+    const fib = getPracticeRunner("2.1", "task-3");
+    expect(fib?.options[0]?.code).toMatch(/O\(2\^n\)/);
+    expect(getPracticeRunner("3.1", "task-1", "State the time complexity")?.options[0]?.code).toContain("PROMPT");
   });
 });

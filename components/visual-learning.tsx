@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AppIcon } from "@/components/icons/app-icon";
+import { PracticeRichText } from "@/components/practice-rich-text";
 import { LessonVideo } from "@/components/lesson-video";
 import { convertMarkdownHref, extractYouTubeInfo } from "@/lib/content-utils";
 import type { VideoResource } from "@/lib/learning-model";
@@ -22,15 +22,6 @@ function kindLabel(kind: string) {
   return kind.toUpperCase();
 }
 
-function kindIcon(kind: string): "video" | "code" | "lesson" | "practice" | "resource" {
-  if (/video|animated|angle|alternative|overview|lecture/i.test(kind)) return "video";
-  if (/simulator|interactive|godbolt|tutor|visu/i.test(kind)) return "code";
-  if (/github|implementation/i.test(kind)) return "code";
-  if (/practice|exercism|leetcode/i.test(kind)) return "practice";
-  if (/written|documentation|docs|tutorial/i.test(kind)) return "lesson";
-  return "resource";
-}
-
 function ResourceLinkCard({
   item,
   index,
@@ -45,18 +36,12 @@ function ResourceLinkCard({
   const card = (
     <>
       <span className="ih-visual-step" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
-      <span className="ih-visual-icon" aria-hidden="true">
-        <AppIcon name={kindIcon(item.kind)} size={18} />
-      </span>
       <div className="ih-visual-copy">
         <span className="ih-visual-tag">{kindLabel(item.kind)}</span>
         <h3 className="ih-visual-title">{item.title}</h3>
-        {item.note ? <p className="ih-visual-lead">{item.note}</p> : null}
+        {item.note ? <p className="ih-visual-lead"><PracticeRichText text={item.note} /></p> : null}
       </div>
-      <span className="ih-visual-open">
-        Open
-        {external ? <AppIcon name="externalLink" size={14} /> : null}
-      </span>
+      <span className="ih-visual-open">Open</span>
     </>
   );
 
@@ -104,7 +89,7 @@ export function VisualLearning({
                     <h3 className="ih-visual-title">{item.title}</h3>
                   </div>
                 </div>
-                {item.note ? <p className="ih-visual-lead">{item.note}</p> : null}
+                {item.note ? <p className="ih-visual-lead"><PracticeRichText text={item.note} /></p> : null}
                 {embedYouTube ? <LessonVideo videos={[video]} compact /> : null}
               </article>
             );

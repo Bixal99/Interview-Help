@@ -1,3 +1,5 @@
+import { ComplexityArt, SearchComplexityFlow } from "@/components/complexity-art";
+
 function compact(value: string) {
   return value.replace(/\s+/g, " ").trim();
 }
@@ -22,6 +24,14 @@ function parseMemoryLayout(source: string) {
     sp: /<--\s*SP/i.test(item[0]),
   }));
   return { frames: frames.length ? frames : [{ label: "main()", sp: false }, { label: "factorial(4)", sp: false }, { label: "factorial(3)", sp: true }] };
+}
+
+function parseComplexityChart(source: string) {
+  return /Input size \(n\)/i.test(source) && /O\(n\^2\)/.test(source) && /O\(log n\)/.test(source);
+}
+
+function parseComplexityFlow(source: string) {
+  return /Unsorted array/i.test(source) && /Binary Search/i.test(source) && /O\(log n\)/.test(source);
 }
 
 function parseCompilerSteps(via: string) {
@@ -168,6 +178,22 @@ function MemoryLayoutDiagram({ frames }: { frames: { label: string; sp: boolean 
 }
 
 export function LessonDiagram({ source }: { source: string }) {
+  if (parseComplexityChart(source)) {
+    return (
+      <div className="ih-example ih-diagram ih-diagram-only">
+        <div className="ih-cpx">
+          <ComplexityArt caption="" />
+        </div>
+      </div>
+    );
+  }
+  if (parseComplexityFlow(source)) {
+    return (
+      <div className="ih-example ih-diagram ih-diagram-only">
+        <SearchComplexityFlow />
+      </div>
+    );
+  }
   const memory = parseMemoryLayout(source);
   if (memory) {
     return (
@@ -188,5 +214,5 @@ export function LessonDiagram({ source }: { source: string }) {
 }
 
 export function isVisualDiagram(source: string) {
-  return Boolean(parseMemoryLayout(source) || parseFlow(source));
+  return Boolean(parseMemoryLayout(source) || parseFlow(source) || parseComplexityChart(source) || parseComplexityFlow(source));
 }

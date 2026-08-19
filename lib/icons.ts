@@ -20,8 +20,6 @@ export type AppIconName =
   | "externalLink"
   | "menu"
   | "close"
-  | "sun"
-  | "moon"
   | "copy"
   | "wrap"
   | "reset"
@@ -129,6 +127,9 @@ export type TechnologyMeta = {
 
 export const TECHNOLOGY_BY_SLUG: Record<string, TechnologyMeta> = {
   python: { title: "Python", hasLogo: true },
+  sqlite: { title: "SQLite", hasLogo: true },
+  vscodium: { title: "VSCodium", hasLogo: true },
+  vscode: { title: "VS Code", hasLogo: true },
   javascript: { title: "JavaScript", hasLogo: true },
   typescript: { title: "TypeScript", hasLogo: true },
   react: { title: "React", hasLogo: true },
@@ -150,6 +151,14 @@ export const TECHNOLOGY_BY_SLUG: Record<string, TechnologyMeta> = {
   html5: { title: "HTML5", hasLogo: true },
   css: { title: "CSS", hasLogo: true },
   tailwindcss: { title: "Tailwind CSS", hasLogo: true },
+  flask: { title: "Flask", hasLogo: true },
+  fastapi: { title: "FastAPI", hasLogo: true },
+  streamlit: { title: "Streamlit", hasLogo: true },
+  selenium: { title: "Selenium", hasLogo: true },
+  supabase: { title: "Supabase", hasLogo: true },
+  vercel: { title: "Vercel", hasLogo: true },
+  c: { title: "C", hasLogo: true },
+  cplusplus: { title: "C++", hasLogo: true },
 };
 
 function humanizeSlug(slug: string) {

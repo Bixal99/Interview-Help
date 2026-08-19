@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { BrandWordmark } from "@/components/brand-mark";
+import { SITE_NAME } from "@/lib/brand";
 
 const nav = [
   { href: "/courses", label: "Tutorials" },
@@ -11,28 +13,36 @@ const nav = [
 
 export function LandingHeader() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="ih-landing-nav sticky top-0 z-50">
-      <div className="mx-auto flex max-w-6xl items-center gap-8 px-5 py-5 sm:px-8">
-        <Link href="/" title="Interview Help" className="text-[1.65rem] font-bold leading-none tracking-[-0.03em]">
-          Interview <span className="ih-help">Help</span>
+    <header className={`ih-landing-nav${scrolled ? " is-stuck" : ""}`}>
+      <div className="ih-landing-nav-bar">
+        <Link href="/" title={SITE_NAME} className="ih-landing-logo">
+          <BrandWordmark />
         </Link>
 
-        <nav className="ml-auto hidden items-center gap-8 text-[17px] font-semibold lg:flex" aria-label="Primary">
+        <nav className="ih-landing-nav-links" aria-label="Primary">
           {nav.map((item) => (
-            <Link key={item.href} href={item.href}>
+            <Link key={item.href} href={item.href} className="ih-landing-nav-link">
               {item.label}
             </Link>
           ))}
-          <Link href="/courses" className="ih-landing-cta">
+          <Link href="/courses" className="ih-landing-cta ih-landing-nav-cta">
             Start learning
           </Link>
         </nav>
 
         <button
           type="button"
-          className="ml-auto px-1 text-[17px] font-bold text-[#1A1A1A] lg:hidden"
+          className="ih-landing-menu"
           aria-expanded={open}
           aria-controls="landing-menu"
           onClick={() => setOpen((value) => !value)}
@@ -42,19 +52,15 @@ export function LandingHeader() {
       </div>
 
       {open ? (
-        <nav id="landing-menu" className="border-t border-[#D5D8DC] bg-white px-5 py-5 lg:hidden" aria-label="Mobile">
+        <nav id="landing-menu" className="ih-landing-nav-mobile" aria-label="Mobile">
           <div className="flex flex-col gap-1">
             {nav.map((item) => (
-              <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className="py-2 text-[17px] font-semibold">
+              <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className="ih-landing-nav-link">
                 {item.label}
               </Link>
             ))}
           </div>
-          <Link
-            href="/courses"
-            onClick={() => setOpen(false)}
-            className="ih-landing-cta mt-5 w-full"
-          >
+          <Link href="/courses" onClick={() => setOpen(false)} className="ih-landing-cta mt-5 w-full">
             Start learning
           </Link>
         </nav>

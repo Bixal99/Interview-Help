@@ -85,11 +85,11 @@ export function CodeBlock({ code, language = "text" }: { code: string; language?
       {canTry ? (
         canTryPlayground ? (
           <button type="button" onClick={openPlayground} className="btn-next">
-            Try it Yourself »
+            Start Building »
           </button>
         ) : (
           <button type="button" onClick={() => setTrying(true)} className="btn-next">
-            Try it Yourself »
+            Start Building »
           </button>
         )
       ) : null}

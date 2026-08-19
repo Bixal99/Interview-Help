@@ -122,6 +122,21 @@ describe("project mapping", () => {
     expect(cs3?.id).toBe("cs-phase-3-project");
     expect(cs1?.gitCheckpoint).toContain("git commit");
   });
+
+  it("parses a build brief and returns a commented starter", async () => {
+    const { parseProjectBrief } = await import("../lib/parse-project-brief");
+    const { getProjectStarter } = await import("../lib/project-starters");
+    const projects = parseProjectsDocument(read("content/guides/Projects.md"));
+    const cs2 = projects.find((project) => project.id === "cs-phase-2-project");
+    const brief = parseProjectBrief(cs2?.markdown ?? "");
+    expect(brief.title.toLowerCase()).toContain("algorithm growth");
+    expect(brief.topic).toMatch(/complexity/i);
+    expect(brief.spec.length).toBeGreaterThanOrEqual(3);
+    expect(brief.steps.length).toBeGreaterThanOrEqual(3);
+    const starter = getProjectStarter("cs-phase-2-project", brief);
+    expect(starter.code).toContain("def quadratic");
+    expect(starter.code).toContain("operation");
+  });
 });
 
 describe("internal link conversion", () => {

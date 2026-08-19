@@ -17,7 +17,7 @@ export function MermaidDiagram({ source }: { source: string }) {
       observer.disconnect();
       try {
         const mermaid = (await import("mermaid")).default;
-        mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: document.documentElement.classList.contains("dark") ? "dark" : "neutral", fontFamily: "Poppins" });
+        mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral", fontFamily: "Poppins" });
         const { svg } = await mermaid.render(`diagram-${id}`, source);
         node.innerHTML = svg;
       } catch { setError(true); }

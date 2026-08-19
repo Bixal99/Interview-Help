@@ -317,6 +317,8 @@ Run it and read the `id=` values: they are CPython's stand-in for a memory addre
 - Fast overview: [Big-O Notation in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=g2o22C3CRfU)
 - Another angle: [Learn Big O notation in 6 minutes (Bro Code)](https://www.youtube.com/watch?v=XMUe3zFhM5c)
 - Interactive simulator: [VisuAlgo - Sorting](https://visualgo.net/en/sorting) - watch the step-counter climb as array size grows, to *feel* $O(n)$ vs $O(n^2)$ instead of just reading it
+- Written tutorial: [W3Schools - Algorithm Time Complexity](https://www.w3schools.com/dsa/dsa_algo_timecomplexity.php)
+- Written reference: [W3Schools - Big-O Notation](https://www.w3schools.com/dsa/dsa_ref_bigO.php)
 - Written documentation: [MIT OCW 6.006 - Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) (Lectures 1-2 cover asymptotic analysis from first principles)
 - GitHub: [jwasham/coding-interview-university](https://github.com/jwasham/coding-interview-university) - "Algorithmic complexity / Big-O" section
 - Practice: [LeetCode](https://leetcode.com/) - every editorial states the intended Big O, so you can check your own analysis
@@ -366,8 +368,26 @@ This is the shape of nearly every improvement in this roadmap: a complexity gets
 **SMALL WORKING EXAMPLE**
 
 ```python
-def constant_time(arr):        # O(1) - cost never changes
+def constant_time(arr):        # O(1) - one index lookup, cost never grows
     return arr[0]
+
+
+def logarithmic_time(n):       # O(log n) - each step halves n
+    steps = 0
+    while n > 1:
+        n //= 2
+        steps += 1
+    return steps
+
+
+def sqrt_time(n):              # O(sqrt(n)) - i grows until i*i reaches n
+    count = 0
+    i = 1
+    while i * i <= n:
+        count += 1
+        i += 1
+    return count
+
 
 def linear_time(arr):          # O(n) - one loop over n elements
     total = 0
@@ -375,12 +395,55 @@ def linear_time(arr):          # O(n) - one loop over n elements
         total += x
     return total
 
+
+def linearithmic_time(arr):    # O(n log n) - sort does n * log n comparisons
+    return sorted(arr)
+
+
 def quadratic_time(arr):       # O(n^2) - a loop nested inside a loop
     pairs = []
     for i in arr:
         for j in arr:
             pairs.append((i, j))
     return pairs
+
+
+def cubic_time(arr):           # O(n^3) - three nested loops
+    count = 0
+    for a in arr:
+        for b in arr:
+            for c in arr:
+                count += 1
+    return count
+
+
+def exponential_time(n):       # O(2^n) - each call splits into two more calls
+    if n <= 1:
+        return n
+    return exponential_time(n - 1) + exponential_time(n - 2)
+
+
+def factorial_time(items):     # O(n!) - every permutation of the list
+    if len(items) <= 1:
+        return [list(items)]
+    out = []
+    for i, item in enumerate(items):
+        rest = items[:i] + items[i + 1:]
+        for perm in factorial_time(rest):
+            out.append([item] + perm)
+    return out
+
+
+sample = [3, 1, 4, 2]
+print("O(1):      ", constant_time(sample))
+print("O(log n):  ", logarithmic_time(16), "halves from 16")
+print("O(sqrt n): ", sqrt_time(16), "steps until i*i > 16")
+print("O(n):      ", linear_time(sample))
+print("O(n log n):", linearithmic_time(sample))
+print("O(n^2):    ", len(quadratic_time(sample)), "pairs")
+print("O(n^3):    ", cubic_time(sample), "triples")
+print("O(2^n):    ", exponential_time(6), "naive fib(6)")
+print("O(n!):     ", len(factorial_time([1, 2, 3])), "perms of 3 items")
 ```
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW**
@@ -403,7 +466,7 @@ An interviewer almost never asks "what is Big O" directly - they expect you to s
 
 ## Programming fundamentals
 
-*If you cannot yet write a small script with loops and functions, start here. OOP only pays off once procedural Python is comfortable. Resources curated with Composio against the [Python Tutorial](https://docs.python.org/3/tutorial/index.html), [Python Tutor](https://pythontutor.com/visualize.html), Mosh / Bro Code / Corey Schafer / freeCodeCamp.*
+*If you cannot yet write a small script with loops and functions, start here. OOP only pays off once procedural Python is comfortable. Start with the [Python Tutorial](https://www.w3schools.com/python/) and [Python Tutor](https://pythontutor.com/visualize.html), then Mosh / Bro Code / Corey Schafer / freeCodeCamp.*
 
 **WHAT YOU WILL BE ABLE TO DO:** Write clear procedural Python so classes in Phase 6 feel like a *choice*, not a mystery.
 
@@ -429,7 +492,7 @@ An interviewer almost never asks "what is Big O" directly - they expect you to s
 - [freeCodeCamp - Python for Beginners Full Course](https://www.youtube.com/watch?v=eWRfhZUzrAc)
 - [Mosh - Python Full Course for Beginners](https://www.youtube.com/watch?v=K5KVEU3aaeQ)
 - [Python Tutor visualizer](https://pythontutor.com/visualize.html)
-- [The Python Tutorial](https://docs.python.org/3/tutorial/index.html)
+- [W3Schools Python Tutorial](https://www.w3schools.com/python/)
 - [How to Learn Python (2026 beginner guide)](https://scrimba.com/articles/how-to-learn-python-a-beginners-guide-2026/)
 - [servinovich/python-basics](https://github.com/servinovich/python-basics)
 - Practice: run `print("hello")` in a `.py` file and in the REPL
@@ -736,7 +799,7 @@ Know `range`, `enumerate`, and how to avoid mutating a list while iterating it c
 - [Python docs - Control Flow (defining functions)](https://docs.python.org/3/tutorial/controlflow.html)
 - [Mosh - Python for Beginners](https://www.youtube.com/watch?v=kqtD5dpn9C8)
 - [Python Tutor](https://pythontutor.com/visualize.html) - watch the call stack grow and shrink
-- [Python Tutorial index](https://docs.python.org/3/tutorial/index.html)
+- [W3Schools Python Tutorial](https://www.w3schools.com/python/)
 - [muhammadwaheedairi/python-oop-practice](https://github.com/muhammadwaheedairi/python-oop-practice)
 - Write `def average(xs):` with an empty-list guard
 
@@ -800,7 +863,7 @@ Explain parameters vs arguments, and why side effects matter for testing.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
-- [Python Tutorial](https://docs.python.org/3/tutorial/index.html)
+- [W3Schools Python Tutorial](https://www.w3schools.com/python/)
 - [Python mini projects ideas](https://www.beginnersly.com/tutorials/python/python-projects)
 - [freeCodeCamp Python course](https://www.youtube.com/watch?v=eWRfhZUzrAc)
 - [droidevs/python-projects-beginner](https://github.com/droidevs/python-projects-beginner)

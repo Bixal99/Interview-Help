@@ -30,7 +30,7 @@ function PhaseCard({ navSlug, phase }: { navSlug: string; phase: CourseNavPhase 
               <li key={lesson.id}>
                 <Link
                   href={href}
-                  className="group flex items-start gap-3 px-2 py-3 no-underline transition-colors hover:bg-[#D9EEE1] sm:gap-4 sm:px-3 dark:hover:bg-[#04AA6D]/15"
+                  className="group flex items-start gap-3 px-2 py-3 no-underline transition-colors hover:bg-[#D9EEE1] sm:gap-4 sm:px-3"
                 >
                   <span className="w-14 shrink-0 pt-0.5 text-sm font-bold tabular-nums text-[#04AA6D] sm:w-16">
                     {lesson.id}
@@ -64,7 +64,7 @@ function PhaseCard({ navSlug, phase }: { navSlug: string; phase: CourseNavPhase 
             <li>
               <Link
                 href={projectPathFor(navSlug, phase.id)}
-                className="group flex items-center gap-3 px-2 py-3 no-underline hover:bg-[#D9EEE1] sm:gap-4 sm:px-3 dark:hover:bg-[#04AA6D]/15"
+                className="group flex items-center gap-3 px-2 py-3 no-underline hover:bg-[#D9EEE1] sm:gap-4 sm:px-3"
               >
                 <span className="w-14 shrink-0 text-sm font-bold tabular-nums text-[#04AA6D] sm:w-16">{phase.number}</span>
                 <span className="font-medium group-hover:text-[#04AA6D]">Phase project</span>

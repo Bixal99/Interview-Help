@@ -3,7 +3,7 @@ import { getExercise, getExerciseIds } from "../lib/code-playground/exercises";
 import { parseFenceInfo } from "../lib/code-playground/fence-meta";
 import { clearDraft, draftStorageKey, readDraft, readDraftSource, writeDraft, writeDraftSource } from "../lib/code-playground/storage";
 import { getRunner, isSupportedLanguage } from "../lib/code-playground/runners";
-import { toPlaygroundLanguage, writeTryItCode, readTryItCode, clearTryItCode, tryPlaygroundHref } from "../lib/code-playground/try-it-storage";
+import { applyTryItDraft, persistTryItSource, toPlaygroundLanguage, writeTryItCode, readTryItCode, clearTryItCode, tryPlaygroundHref } from "../lib/code-playground/try-it-storage";
 import { createStdinHandler, createStdoutWriteHandler } from "../lib/code-playground/python/streams";
 import { normalizeOutput, outputsMatch } from "../lib/code-playground/validator";
 
@@ -73,6 +73,11 @@ describe("try it storage", () => {
         setItem: (key: string, value: string) => { store.set(key, value); },
         removeItem: (key: string) => { store.delete(key); },
       },
+      localStorage: {
+        getItem: () => null,
+        setItem: () => {},
+        removeItem: () => {},
+      },
       dispatchEvent: () => true,
     });
 
@@ -87,6 +92,38 @@ describe("try it storage", () => {
     expect(href).toMatch(/^\/playground\/try\/python\?i=[\w-]+$/);
     clearTryItCode(slotId);
     expect(readTryItCode(slotId)?.title).toBe("Working example");
+  });
+
+  it("restores playground edits the next time the same build is opened", () => {
+    const session = new Map<string, string>();
+    const local = new Map<string, string>();
+    vi.stubGlobal("window", {
+      sessionStorage: {
+        getItem: (key: string) => session.get(key) ?? null,
+        setItem: (key: string, value: string) => { session.set(key, value); },
+        removeItem: (key: string) => { session.delete(key); },
+      },
+      localStorage: {
+        getItem: (key: string) => local.get(key) ?? null,
+        setItem: (key: string, value: string) => { local.set(key, value); },
+        removeItem: (key: string) => { local.delete(key); },
+      },
+      dispatchEvent: () => true,
+    });
+
+    const starter = {
+      source: "print('start')",
+      title: "ALGORITHM GROWTH PROFILER",
+      completeProject: { slug: "computer-science", phaseId: "2" },
+    };
+    persistTryItSource("python", starter, "print('edited')");
+    const restored = applyTryItDraft("python", {
+      source: "print('start')",
+      title: starter.title,
+      completeProject: starter.completeProject,
+    });
+    expect(restored.source).toBe("print('edited')");
+    expect(restored.originSource).toBe("print('start')");
   });
 });
 

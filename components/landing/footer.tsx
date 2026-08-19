@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { BrandWordmark } from "@/components/brand-mark";
+import { SITE_NAME } from "@/lib/brand";
 
 export function LandingFooter() {
   return (
@@ -6,11 +8,11 @@ export function LandingFooter() {
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:py-20">
         <div className="grid grid-cols-2 gap-x-10 gap-y-12 lg:grid-cols-6">
           <div className="col-span-2 lg:col-span-2">
-            <Link href="/" className="text-2xl font-bold tracking-[-0.03em] text-white">
-              Interview <span className="ih-help">Help</span>
+            <Link href="/" className="ih-landing-logo is-foot">
+              <BrandWordmark />
             </Link>
             <p className="mt-6 max-w-[38ch] text-base leading-relaxed text-[#c8c8c8]">
-              Interview Help turns the repo Markdown into one-lesson tutorial pages. No account and no paywall.
+              {SITE_NAME} turns the repo Markdown into one-lesson tutorial pages. No account and no paywall.
             </p>
             <a
               href="https://github.com/Bixal99/Interview-Help"
@@ -54,7 +56,7 @@ export function LandingFooter() {
           </div>
         </div>
 
-        <p className="mt-16 border-t border-white/10 pt-8 text-sm text-[#9aa0a6]">© 2026 Interview Help</p>
+        <p className="mt-16 border-t border-white/10 pt-8 text-sm text-[#9aa0a6]">© 2026 {SITE_NAME}</p>
       </div>
     </footer>
   );

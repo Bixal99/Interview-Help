@@ -9,7 +9,7 @@ export function createTryItExercise(
   return {
     id: `try-${language}`,
     language,
-    title: options?.title ?? "Try it Yourself",
+    title: options?.title ?? "Start Building",
     instructions: options?.instructions ?? "",
     starterCode: code,
     solution: code,

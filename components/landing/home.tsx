@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HeroStage } from "./hero-stage";
 
 export type LandingCourse = {
   slug: string;
@@ -54,28 +55,31 @@ export function LandingHome({
   return (
     <>
       <section className="px-5 py-16 sm:px-8 sm:py-24 lg:py-28">
-        <div className="mx-auto max-w-6xl">
-          <h1 className="max-w-[14ch] text-[2.75rem] font-bold leading-[1.05] tracking-[-0.035em] text-[#1A1A1A] sm:text-6xl lg:text-[5.5rem]">
-            From first principles to hire-ready
-          </h1>
-          <p className="mt-6 max-w-[58ch] text-lg leading-relaxed text-[#505050] sm:text-xl">
-            Self-paced technical roadmaps. One lesson per page, then that phase&apos;s project. No account and no paywall.
-          </p>
-          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
-            <Link href="/courses" className="ih-landing-cta">
-              Start learning
-            </Link>
-            <Link href="/progress" className="text-[17px] font-semibold text-[#04AA6D] underline decoration-[#04AA6D]/40 underline-offset-4 hover:decoration-[#04AA6D]">
-              Open progress
-            </Link>
+        <div className="ih-hero">
+          <div>
+            <h1 className="max-w-[14ch] text-[2.75rem] font-bold leading-[1.05] tracking-[-0.035em] text-[#1A1A1A] sm:text-6xl lg:text-[4.7rem] xl:text-[5.5rem]">
+              From first principles to hire-ready
+            </h1>
+            <p className="mt-6 max-w-[58ch] text-lg leading-relaxed text-[#505050] sm:text-xl">
+              Self-paced technical roadmaps. One lesson per page, then that phase&apos;s project. No account and no paywall.
+            </p>
+            <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+              <Link href="/courses" className="ih-landing-cta">
+                Start learning
+              </Link>
+              <Link href="/progress" className="text-[17px] font-semibold text-[#04AA6D] underline decoration-[#04AA6D]/40 underline-offset-4 hover:decoration-[#04AA6D]">
+                Open progress
+              </Link>
+            </div>
+            <p className="mt-12 max-w-[75ch] text-[15px] font-semibold tabular-nums text-[#1A1A1A]">
+              {stats.courseCount} roadmaps
+              <span className="mx-3 font-normal text-[#888]">·</span>
+              {stats.lessonCount.toLocaleString("en-US")} lessons
+              <span className="mx-3 font-normal text-[#888]">·</span>
+              {stats.projectCount.toLocaleString("en-US")} phase projects
+            </p>
           </div>
-          <p className="mt-12 max-w-[75ch] text-[15px] font-semibold tabular-nums text-[#1A1A1A]">
-            {stats.courseCount} roadmaps
-            <span className="mx-3 font-normal text-[#888]">·</span>
-            {stats.lessonCount.toLocaleString("en-US")} lessons
-            <span className="mx-3 font-normal text-[#888]">·</span>
-            {stats.projectCount.toLocaleString("en-US")} phase projects
-          </p>
+          <HeroStage />
         </div>
       </section>
 

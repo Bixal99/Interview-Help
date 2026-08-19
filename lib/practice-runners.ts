@@ -200,14 +200,132 @@ print(result)
     ],
     observe: "Tokens are the characters classified. The tree groups (3 + 4) first, then multiplies by 2. Result is 14.",
   },
+  "2.1:task-1": {
+    options: [
+      {
+        language: "python",
+        label: "Python",
+        code: `# Theory + a tiny demo: one loop that sums an array.
+
+nums = [4, 1, 7, 2]  # n = 4 items
+ops = 0
+total = 0
+
+for value in nums:  # visits each item once
+    total += value
+    ops += 1  # one addition per item
+
+print("Array:", nums)
+print("Sum:", total)
+print("Operations counted:", ops)
+print()
+print("Time: O(n) — the loop body runs once per element.")
+print("Space: O(1) extra — total and ops are a few variables, not a copy of the array.")
+`,
+      },
+    ],
+    observe: "One pass over n items is O(n) time and O(1) extra space. The demo just makes the counter visible.",
+  },
+  "2.1:task-2": {
+    options: [
+      {
+        language: "python",
+        label: "Python",
+        code: `# Nested loops vs two sequential loops over the same array.
+
+arr = [10, 20, 30, 40]
+n = len(arr)
+
+seq_ops = 0
+for _ in arr:  # first pass: n steps
+    seq_ops += 1
+for _ in arr:  # second pass: another n steps
+    seq_ops += 1
+
+nested_ops = 0
+for _ in arr:  # outer n
+    for _ in arr:  # inner n for every outer step
+        nested_ops += 1
+
+print(f"n = {n}")
+print(f"Two sequential loops: {seq_ops} ops  -> O(n) + O(n) = O(n)")
+print(f"Two nested loops:     {nested_ops} ops  -> O(n) * O(n) = O(n^2)")
+print()
+print("Same array, different shape: sequential stays linear; nested becomes quadratic.")
+`,
+      },
+    ],
+    observe: "O(n)+O(n) is still O(n). Nested loops multiply, so n times n is O(n²).",
+  },
+  "2.1:task-3": {
+    options: [
+      {
+        language: "python",
+        label: "Python",
+        code: `# Naive recursive Fibonacci: each call splits into two more calls.
+
+calls = 0
+
+
+def fib(n):
+    global calls
+    calls += 1  # count every invocation, including base cases
+    if n <= 1:
+        return n
+    return fib(n - 1) + fib(n - 2)
+
+
+n = 6
+value = fib(n)
+print(f"fib({n}) = {value}")
+print(f"Call count: {calls}")
+print()
+print("The call tree doubles at each level: fib(n) waits on fib(n-1) AND fib(n-2).")
+print("That branching is why the time is O(2^n), not O(n).")
+print("Worked example: fib(5) calls fib(4) and fib(3); those split again; overlapping work is repeated.")
+`,
+      },
+    ],
+    observe: "Naive fib(n) fans out into two subcalls. The tree has about 2^n nodes, so the time is O(2^n).",
+  },
 };
+
+function pythonEscape(value: string) {
+  return value.replace(/\\/g, "\\\\").replace(/"/g, '\\"').replace(/\$/g, "");
+}
+
+function fallbackRunner(label: string): PracticeRunnerSpec {
+  const prompt = pythonEscape(label);
+  return {
+    options: [
+      {
+        language: "python",
+        label: "Python",
+        code: `# Reasoning task. Not every practice item is a coding problem.
+
+prompt = "${prompt}"
+
+print("PROMPT")
+print(prompt)
+print()
+print("This can be theory: write the answer in comments or on paper.")
+print("Run keeps the prompt here. When it feels familiar, go Back and check the box.")
+`,
+      },
+    ],
+    observe: "Theory is allowed. Use this page to hold the prompt, then go back and check the task.",
+  };
+}
 
 export function practiceRunnerKey(lessonId: string, taskId: string) {
   return `${lessonId}:${taskId}`;
 }
 
-export function getPracticeRunner(lessonId: string, taskId: string): PracticeRunnerSpec | null {
-  return runners[practiceRunnerKey(lessonId, taskId)] ?? null;
+export function getPracticeRunner(lessonId: string, taskId: string, label?: string): PracticeRunnerSpec | null {
+  const found = runners[practiceRunnerKey(lessonId, taskId)];
+  if (found) return found;
+  if (label?.trim()) return fallbackRunner(label);
+  return null;
 }
 
 export function lessonHasPracticeRunners(lessonId: string): boolean {

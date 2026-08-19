@@ -19,7 +19,7 @@ export function YouTubeCard({ href, label, info }: { href: string; label: string
           <span className="absolute bottom-3 left-3 rounded-md bg-black/75 px-2 py-1 text-[10px] font-medium uppercase tracking-wider text-white">{info.kind === "playlist" ? "YouTube playlist" : "YouTube video"}</span>
         </button>
       )}
-      <span className="flex items-center gap-3 p-3.5"><span className="min-w-0 flex-1 text-sm font-medium text-ink">{label}</span><a href={href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-muted hover:text-ink">YouTube <AppIcon name="externalLink" size={12} /></a></span>
+      <span className="flex items-center gap-3 p-3.5"><span className="min-w-0 flex-1 text-sm font-medium text-ink">{label}</span><a href={href} target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-ink">YouTube</a></span>
     </span>
   );
 }

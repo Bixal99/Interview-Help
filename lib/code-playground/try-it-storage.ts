@@ -1,3 +1,4 @@
+import { readDraftSource, writeDraftSource } from "./storage";
 import type { PlaygroundLanguage, PlaygroundSource } from "./types";
 
 export const TRY_IT_PREFIX = "ih-code-try:";
@@ -19,8 +20,11 @@ export type TryItImportPayload = {
   problemIndex?: number;
   problemTotal?: number;
   observe?: string;
-  /** All language variants for this problem (present when > 1 language available) */
+  completeProject?: { slug: string; phaseId: string };
+  requireRunSuccess?: boolean;
   languageOptions?: TryItLanguageOption[];
+  originSource?: PlaygroundSource;
+  draftKey?: string;
 };
 
 // Survives React Strict Mode remounts and client navigations in the same tab.
@@ -50,6 +54,60 @@ function normalizePayload(payload: PlaygroundSource | TryItImportPayload): TryIt
   if (typeof payload === "string") return { source: payload };
   if (payload && typeof payload === "object" && "source" in payload) return payload;
   return { source: payload as PlaygroundSource };
+}
+
+function fingerprintSource(source: PlaygroundSource): string {
+  const raw = typeof source === "string" ? source : JSON.stringify(source);
+  let hash = 0;
+  for (let index = 0; index < raw.length; index += 1) {
+    hash = Math.imul(hash, 31) + raw.charCodeAt(index) | 0;
+  }
+  return (hash >>> 0).toString(36);
+}
+
+export function blankTryItDraftKey(language: PlaygroundLanguage): string {
+  return `tryit:blank:${language}`;
+}
+
+export function makeTryItDraftKey(language: PlaygroundLanguage, payload: TryItImportPayload): string {
+  if (payload.draftKey) return payload.draftKey;
+  const origin = payload.originSource ?? payload.source;
+  if (payload.completeProject) {
+    return `tryit:project:${payload.completeProject.slug}:${payload.completeProject.phaseId}:${language}`;
+  }
+  if (payload.problemIndex != null) {
+    return `tryit:practice:${payload.backHref ?? ""}:${payload.problemIndex}:${language}`;
+  }
+  return `tryit:example:${language}:${payload.backHref ?? ""}:${payload.title ?? ""}:${fingerprintSource(origin)}`;
+}
+
+export function applyTryItDraft(language: PlaygroundLanguage, payload: TryItImportPayload): TryItImportPayload {
+  const originSource = payload.originSource ?? payload.source;
+  const draftKey = makeTryItDraftKey(language, { ...payload, originSource, draftKey: payload.draftKey });
+  const saved = readDraftSource(draftKey);
+  return {
+    ...payload,
+    originSource,
+    draftKey,
+    source: saved ?? payload.source,
+  };
+}
+
+export function persistTryItSource(
+  language: PlaygroundLanguage,
+  payload: TryItImportPayload,
+  source: PlaygroundSource,
+  href?: string,
+): TryItImportPayload {
+  const next: TryItImportPayload = {
+    ...payload,
+    originSource: payload.originSource ?? payload.source,
+    draftKey: makeTryItDraftKey(language, payload),
+    source,
+  };
+  writeDraftSource(next.draftKey, source);
+  if (href) writeTryItCode(language, next, href);
+  return next;
 }
 
 export function writeTryItCode(

@@ -248,7 +248,7 @@ export function SearchExperience({ entries, initialQuery = "" }: { entries: Sear
                     <li key={item.id}>
                       <button type="button" className="ih-search-type" onClick={() => setFilter(item.id)} onMouseMove={onGlow}>
                         <span className="ih-search-type-icon">
-                          <AppIcon name={SEARCH_TYPE_ICONS[item.id]} size={ICON_SIZE.heading} decorative />
+                          <AppIcon name={filterIcon(item.id)} size={ICON_SIZE.heading} decorative />
                         </span>
                         <strong>{item.label}</strong>
                         <em>{counts[item.id].toLocaleString("en-US")} indexed</em>

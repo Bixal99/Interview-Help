@@ -137,13 +137,14 @@ export function persistTryItSource(
   source: PlaygroundSource,
   href?: string,
 ): TryItImportPayload {
+  const draftKey = makeTryItDraftKey(language, payload);
   const next: TryItImportPayload = {
     ...payload,
     originSource: payload.originSource ?? payload.source,
-    draftKey: makeTryItDraftKey(language, payload),
+    draftKey,
     source,
   };
-  writeDraftSource(next.draftKey, source);
+  writeDraftSource(draftKey, source);
   if (href) writeTryItCode(language, next, href);
   return next;
 }

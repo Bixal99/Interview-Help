@@ -39,7 +39,7 @@ const variables = {
 export const VideoPlayer = ({ style, ...props }: VideoPlayerProps) => (
   <MediaController
     autohide="0.4"
-    autohideovercontrols=""
+    autohideOverControls
     style={{
       ...variables,
       width: "100%",

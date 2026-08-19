@@ -6,7 +6,7 @@ import { AppIcon, CourseIdentityIcon } from "@/components/icons/app-icon";
 import { ICON_SIZE } from "@/lib/icons";
 import { useLearningProgress } from "./progress-client";
 import { WindingRoadmap } from "./winding-roadmap";
-import { phaseProgressPercent, trailStatuses } from "@/lib/progress-map";
+import { phaseProgressPercent, trailStatuses, type TrailStatus } from "@/lib/progress-map";
 
 export type ProgressCourseView = {
   slug: string;
@@ -70,7 +70,7 @@ export function ProgressDashboard({ courses }: { courses: ProgressCourseView[] }
   const phases = useMemo(() => active?.chapters.flatMap((chapter) => chapter.phases) ?? [], [active]);
   const statuses = useMemo(() => {
     if (!active) return [];
-    if (!activeState) return phases.map((_, index) => (index === 0 ? "here" : "locked") as const);
+    if (!activeState) return phases.map((_, index): TrailStatus => (index === 0 ? "here" : "locked"));
     return trailStatuses(phases, activeState.completedProjects, activeState.completedPhases, activeState.currentPhaseId);
   }, [active, activeState, phases]);
   const here = phases.find((_, index) => statuses[index] === "here") ?? phases[0];

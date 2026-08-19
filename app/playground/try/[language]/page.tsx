@@ -18,7 +18,7 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: "Start Building",
+  title: "Try it Yourself",
   description: "Run example code in your browser.",
 };
 

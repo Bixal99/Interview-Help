@@ -16,6 +16,7 @@ export type FencedBlock = { language: string; source: string; line: number; meta
 
 import { parseFenceInfo } from "./code-playground/fence-meta";
 import { contentRegistry, roadmapRegistry } from "./course-catalog";
+import { plainFormula } from "./format-math";
 import { mapLegacyOopPhase } from "./legacy-routes";
 
 function normalizeSourcePath(value: string, lowercase = true): string {
@@ -69,7 +70,7 @@ export function extractHeadings(markdown: string): Heading[] {
     const phaseMatch = /^PHASE\s+(\d+)\b/i.exec(text);
     headings.push({
       depth: match[1].length,
-      text,
+      text: plainFormula(text),
       id: githubSlug(text),
       line: index + 1,
       phase: phaseMatch ? Number(phaseMatch[1]) : undefined,
@@ -186,10 +187,12 @@ export function extractYouTubeInfo(url: string): YouTubeInfo | null {
 }
 
 export function stripMarkdown(value: string): string {
-  return value
-    .replace(/```[\s\S]*?```/g, " ")
-    .replace(/!?\[([^\]]*)\]\([^)]*\)/g, "$1")
-    .replace(/[*_~`>#|]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
+  return plainFormula(
+    value
+      .replace(/```[\s\S]*?```/g, " ")
+      .replace(/!?\[([^\]]*)\]\([^)]*\)/g, "$1")
+      .replace(/[*_~`>#|]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim(),
+  );
 }

@@ -1,7 +1,8 @@
 "use client";
 
+import { isProjectVfs } from "./project-fs";
 import { requireStringSource } from "./source-guards";
-import type { CodeRunner, PlaygroundLanguage, RunResult } from "./types";
+import type { CodeRunner, PlaygroundLanguage, PlaygroundSource, RunResult } from "./types";
 
 class NativeRunner implements CodeRunner {
   readonly language: PlaygroundLanguage;
@@ -18,19 +19,17 @@ class NativeRunner implements CodeRunner {
     // no-op
   }
 
-  async run(source: import("./types").PlaygroundSource, input = ""): Promise<RunResult> {
-    const code = requireStringSource(source);
+  async run(source: PlaygroundSource, input = ""): Promise<RunResult> {
+    const payload = isProjectVfs(source)
+      ? { language: this.language, input, files: source.files, entryFile: source.entryFile }
+      : { language: this.language, code: requireStringSource(source), input };
     this.controller = new AbortController();
 
     try {
       const response = await fetch("/api/code-playground/native", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          language: this.language,
-          code,
-          input,
-        }),
+        body: JSON.stringify(payload),
         signal: this.controller.signal,
       });
 

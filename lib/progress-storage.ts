@@ -200,11 +200,15 @@ export function resumeHref(
   if (!latest?.[1].currentPhaseId) return null;
   const [slug, state] = latest;
   if (!state.currentPhaseId) return null;
+  const lessonId = state.currentLessonId;
+  const projectStop = Boolean(lessonId?.startsWith("project:"));
   return {
     slug,
     phaseId: state.currentPhaseId,
-    lessonId: state.currentLessonId,
-    href: firstLessonHref(slug, state.currentPhaseId, state.currentLessonId),
+    lessonId: projectStop ? undefined : lessonId,
+    href: projectStop
+      ? `/projects/${slug}/phase/${state.currentPhaseId}`
+      : firstLessonHref(slug, state.currentPhaseId, lessonId),
     lastVisitedAt: state.lastVisitedAt,
   };
 }

@@ -1,6 +1,6 @@
-import { mkdtemp, rm, writeFile } from "node:fs/promises";
+import { mkdir, mkdtemp, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { dirname, join } from "node:path";
 import { spawn } from "node:child_process";
 import type { RunResult } from "./types";
 
@@ -23,11 +23,10 @@ function compilerCommand(language: NativeLanguage) {
   return language === "c" ? "gcc" : "g++";
 }
 
-function compilerArgs(language: NativeLanguage, programFile: string) {
-  const source = language === "c" ? "main.c" : "main.cpp";
+function compilerArgs(language: NativeLanguage, programFile: string, entryFile: string) {
   return language === "c"
-    ? ["-std=c11", "-O2", "-pipe", source, "-o", programFile]
-    : ["-std=c++17", "-O2", "-pipe", source, "-o", programFile];
+    ? ["-std=c11", "-O2", "-pipe", entryFile, "-o", programFile]
+    : ["-std=c++17", "-O2", "-pipe", entryFile, "-o", programFile];
 }
 
 function sourceFileName(language: NativeLanguage) {
@@ -129,18 +128,32 @@ function missingCompilerResult(language: NativeLanguage, detail: string): RunRes
   };
 }
 
-export async function executeNativeCode(language: NativeLanguage, code: string, input = ""): Promise<RunResult> {
+export async function executeNativeCode(
+  language: NativeLanguage,
+  code: string,
+  input = "",
+  project?: { files: Record<string, string>; entryFile: string },
+): Promise<RunResult> {
   const dir = await mkdtemp(join(tmpdir(), "ih-native-run-"));
-  const sourceFile = join(dir, sourceFileName(language));
+  const entryFile = project?.entryFile || sourceFileName(language);
   const programFile = programFileName();
   const startedAt = Date.now();
 
   try {
-    await writeFile(sourceFile, code, "utf8");
+    if (project) {
+      for (const folder of new Set(Object.keys(project.files).map((path) => dirname(path)).filter((path) => path && path !== "."))) {
+        await mkdir(join(dir, folder), { recursive: true });
+      }
+      for (const [path, content] of Object.entries(project.files)) {
+        await writeFile(join(dir, path), content, "utf8");
+      }
+    } else {
+      await writeFile(join(dir, entryFile), code, "utf8");
+    }
 
     const compile = await runCommand(
       compilerCommand(language),
-      compilerArgs(language, programFile),
+      compilerArgs(language, programFile, entryFile),
       dir,
       null,
       COMPILE_TIMEOUT_MS,

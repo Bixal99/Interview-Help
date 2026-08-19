@@ -1,3 +1,4 @@
+import { PracticeRichText } from "@/components/practice-rich-text";
 import type { BeginnerIntro, BeginnerTerm } from "@/lib/learning-model";
 
 export function Emphasis({ text }: { text: string }) {
@@ -6,9 +7,10 @@ export function Emphasis({ text }: { text: string }) {
     <>
       {parts.map((part, index) => {
         const bold = /^\*\*([^*]+)\*\*$/.exec(part);
-        if (bold) return <strong key={index}>{bold[1]}</strong>;
+        if (bold) return <strong key={index}><PracticeRichText text={bold[1]} /></strong>;
         const italic = /^\*([^*]+)\*$/.exec(part);
-        return italic ? <em key={index}>{italic[1]}</em> : <span key={index}>{part}</span>;
+        if (italic) return <em key={index}><PracticeRichText text={italic[1]} /></em>;
+        return <PracticeRichText key={index} text={part} />;
       })}
     </>
   );

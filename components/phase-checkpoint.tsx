@@ -1,5 +1,6 @@
 import { Pager } from "@/components/pager";
 import { PhaseCheckpointArt } from "@/components/phase-checkpoint-art";
+import { PracticeRichText } from "@/components/practice-rich-text";
 import type { Neighbor } from "@/lib/navigation";
 
 export function PhaseCheckpoint({
@@ -38,7 +39,7 @@ export function PhaseCheckpoint({
             <h1 className="mt-2 text-left text-3xl font-bold uppercase tracking-wide sm:text-4xl">
               {phaseTitle}
             </h1>
-            {goal ? <p className="mt-3 text-base leading-relaxed text-white/85">{goal}</p> : null}
+            {goal ? <p className="mt-3 text-base leading-relaxed text-white/85"><PracticeRichText text={goal} /></p> : null}
             {topics.length > 0 ? (
               <div className="mt-5">
                 <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#04AA6D]">What you will cover</p>

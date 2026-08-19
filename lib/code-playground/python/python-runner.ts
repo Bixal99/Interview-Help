@@ -1,11 +1,12 @@
 "use client";
 
+import { isProjectVfs } from "../project-fs";
 import { requireStringSource } from "../source-guards";
-import type { CodeRunner, PlaygroundLanguage, RunResult } from "../types";
+import type { CodeRunner, PlaygroundLanguage, PlaygroundSource, RunResult } from "../types";
 
 type WorkerRequest =
   | { type: "init" }
-  | { type: "run"; id: string; code: string; input?: string };
+  | { type: "run"; id: string; code: string; input?: string; files?: Record<string, string>; entryFile?: string };
 
 type WorkerResponse =
   | { type: "ready" }
@@ -137,14 +138,16 @@ class PythonRunner implements CodeRunner {
     return this.preparePromise;
   }
 
-  async run(source: import("../types").PlaygroundSource, input = ""): Promise<RunResult> {
+  async run(source: PlaygroundSource, input = ""): Promise<RunResult> {
     await this.prepare();
     if (!this.worker) {
       return { ok: false, stdout: "", stderr: "Python failed to load." };
     }
 
-    const code = requireStringSource(source);
     const id = nextRunId();
+    const payload: WorkerRequest = isProjectVfs(source)
+      ? { type: "run", id, code: source.files[source.entryFile] ?? "", input, files: source.files, entryFile: source.entryFile }
+      : { type: "run", id, code: requireStringSource(source), input };
     return new Promise<RunResult>((resolve, reject) => {
       const timeout = setTimeout(() => {
         this.failActiveRun({
@@ -158,7 +161,7 @@ class PythonRunner implements CodeRunner {
       }, EXECUTION_TIMEOUT_MS + 1000);
 
       this.activeRun = { id, resolve, reject, timeout };
-      this.worker?.postMessage({ type: "run", id, code, input } satisfies WorkerRequest);
+      this.worker?.postMessage(payload);
     });
   }
 

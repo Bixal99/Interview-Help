@@ -1,9 +1,9 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
-import { SubjectBar } from "@/components/subject-bar";
+import { LandingFooter } from "@/components/landing/footer";
+import { LandingHeader } from "@/components/landing/header";
+import type { SearchHit } from "@/lib/learning-model";
 
 function isPhaseCheckpoint(pathname: string) {
   return /^\/courses\/[^/]+\/phase\/[^/]+$/.test(pathname);
@@ -13,7 +13,7 @@ function isPlayground(pathname: string) {
   return /^\/playground(?:\/|$)/.test(pathname);
 }
 
-export function AppChrome({ children }: { children: React.ReactNode }) {
+export function AppChrome({ children, hits }: { children: React.ReactNode; hits: SearchHit[] }) {
   const pathname = usePathname();
   if (pathname === "/") return children;
   if (isPhaseCheckpoint(pathname)) {
@@ -22,17 +22,16 @@ export function AppChrome({ children }: { children: React.ReactNode }) {
   if (isPlayground(pathname)) {
     return (
       <div className="ih-w3 min-h-screen">
-        <SiteHeader />
+        <LandingHeader hits={hits} />
         {children}
       </div>
     );
   }
   return (
     <div className="ih-w3">
-      <SiteHeader />
-      <SubjectBar />
+      <LandingHeader hits={hits} />
       {children}
-      <SiteFooter />
+      <LandingFooter />
     </div>
   );
 }

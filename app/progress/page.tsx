@@ -1,22 +1,33 @@
 import type { Metadata } from "next";
-import { InnerPage } from "@/components/inner-page";
-import { ProgressDashboard } from "@/components/progress-dashboard";
-import { getCourseSummaries, getParsedCourse } from "@/lib/content";
+import { ProgressDashboard, type ProgressCourseView } from "@/components/progress-dashboard";
+import { getCourseNav, getCourseSummaries } from "@/lib/content";
+import { phaseCountWithProjects } from "@/lib/navigation";
+import { phasePath } from "@/lib/parse-course";
 
-export const metadata: Metadata = { title: "Progress", description: "Continue, export, import, or reset local progress." };
+export const metadata: Metadata = { title: "Progress", description: "Walk each roadmap as a trail of phases you clear in order." };
 
 export default function ProgressPage() {
-  const courses = getCourseSummaries().map((course) => {
-    const parsed = getParsedCourse(course.slug);
+  const courses: ProgressCourseView[] = getCourseSummaries().map((course) => {
+    const nav = getCourseNav(course.slug);
     return {
       slug: course.slug,
       shortName: course.shortName,
-      phaseCount: parsed?.phases.filter((phase) => phase.project).length ?? 0,
+      barLabel: course.barLabel,
+      description: course.description,
+      phaseCount: nav ? phaseCountWithProjects(nav) : 0,
+      chapters: (nav?.chapters ?? []).map((chapter) => ({
+        id: chapter.id,
+        title: chapter.title,
+        phases: chapter.phases.map((phase) => ({
+          id: phase.id,
+          number: phase.number,
+          title: phase.title,
+          goal: phase.goal,
+          hasProject: phase.hasProject,
+          href: phasePath(course.slug, phase.id),
+        })),
+      })),
     };
   });
-  return (
-    <InnerPage title="Progress" description="Stored only in this browser. Export a backup before you clear site data.">
-      <ProgressDashboard courses={courses} />
-    </InnerPage>
-  );
+  return <ProgressDashboard courses={courses} />;
 }

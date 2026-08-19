@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 import { headingRouteMap, parseCourseMarkdown } from "../lib/parse-course";
 import { parseProjectsDocument } from "../lib/parse-projects";
 import { convertMarkdownHref } from "../lib/content-utils";
-import { canEnterPhase, coursePercent, emptyProgress, migrateV1Progress, nextStep, parseProgressV2, validateImportedProgress, withCourse } from "../lib/progress-storage";
+import { canEnterPhase, coursePercent, emptyProgress, migrateV1Progress, nextStep, parseProgressV2, resumeHref, validateImportedProgress, withCourse } from "../lib/progress-storage";
 import { chaptersFor, learningPathById } from "../lib/learning-paths";
 import { rewriteLegacyPath } from "../lib/legacy-routes";
 import { extractPractice } from "../lib/practice";
@@ -134,8 +134,8 @@ describe("project mapping", () => {
     expect(brief.spec.length).toBeGreaterThanOrEqual(3);
     expect(brief.steps.length).toBeGreaterThanOrEqual(3);
     const starter = getProjectStarter("cs-phase-2-project", brief);
-    expect(starter.code).toContain("def quadratic");
-    expect(starter.code).toContain("operation");
+    expect(starter.project.files["src/main.py"]).toContain("def quadratic");
+    expect(starter.project.files["src/main.py"]).toContain("operation");
   });
 });
 
@@ -200,6 +200,20 @@ describe("progress v3", () => {
 
   it("calculates resume-related percent from lessons and projects", () => {
     expect(coursePercent({ lastVisitedAt: "", visitedLessons: [], completedLessons: ["1.1"], completedExercises: [], completedProjects: ["1"], completedGitCheckpoints: [], completedPhases: ["1"] }, 3)).toBe(33);
+  });
+
+  it("resumes a project stop to the project page, not a fake lesson path", () => {
+    const progress = withCourse(emptyProgress(), "computer-science", {
+      currentPhaseId: "2",
+      currentLessonId: "project:2",
+    });
+    const hrefFor = (slug: string, phaseId: string, lessonId?: string) =>
+      lessonId ? `/courses/${slug}/phase/${phaseId}/${lessonId}` : `/courses/${slug}/phase/${phaseId}`;
+    expect(resumeHref(progress, hrefFor)).toMatchObject({
+      slug: "computer-science",
+      phaseId: "2",
+      href: "/projects/computer-science/phase/2",
+    });
   });
 
   it("validates import JSON and rejects malformed files", () => {

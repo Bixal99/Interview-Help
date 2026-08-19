@@ -4,7 +4,14 @@ export type PlaygroundFileKey = "html" | "css" | "javascript";
 
 export type PlaygroundSourceFiles = Record<PlaygroundFileKey, string>;
 
-export type PlaygroundSource = string | PlaygroundSourceFiles;
+export type ProjectVfs = {
+  kind: "project";
+  entryFile: string;
+  files: Record<string, string>;
+  folders: string[];
+};
+
+export type PlaygroundSource = string | PlaygroundSourceFiles | ProjectVfs;
 
 export type RunErrorType =
   | "COMPILATION_ERROR"

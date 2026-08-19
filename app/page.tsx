@@ -1,22 +1,25 @@
 import { LandingFooter } from "@/components/landing/footer";
 import { LandingHeader } from "@/components/landing/header";
 import { LandingHome } from "@/components/landing/home";
-import { getAllProjects, getCourseSummaries, getPathStarts } from "@/lib/content";
+import { getAllProjects, getCourseSummaries, getPathStarts, getSearchIndex } from "@/lib/content";
 
 export default function HomePage() {
   const courses = getCourseSummaries();
   const projects = getAllProjects();
   const paths = getPathStarts();
+  const hits = getSearchIndex();
 
   return (
     <div className="ih-landing">
-      <LandingHeader />
+      <LandingHeader hits={hits} />
       <main id="main-content">
         <LandingHome
           courses={courses.map((course) => ({
             slug: course.slug,
             shortName: course.shortName,
             description: course.description,
+            barLabel: course.barLabel,
+            skills: course.skills,
             phaseCount: course.phaseCount,
             lessonCount: course.lessonCount,
           }))}

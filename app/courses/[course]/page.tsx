@@ -33,7 +33,7 @@ export default async function CourseHomePage({ params }: { params: Promise<{ cou
           <div className="w-full max-w-md shrink-0 lg:w-[22rem]">
             <CourseProgressBar slug={course.slug} phaseCount={phaseCount} variant="band" />
             <div className="mt-4">
-              <Pager backHref="/courses" proceedHref={course.startHref} proceedLabel="Start" hideBack />
+              <Pager backHref="/courses" backLabel="Back" proceedHref={course.startHref} proceedLabel="Start" />
             </div>
           </div>
         </div>

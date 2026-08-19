@@ -249,7 +249,7 @@ for _ in arr:  # outer n
 
 print(f"n = {n}")
 print(f"Two sequential loops: {seq_ops} ops  -> O(n) + O(n) = O(n)")
-print(f"Two nested loops:     {nested_ops} ops  -> O(n) * O(n) = O(n^2)")
+print(f"Two nested loops:     {nested_ops} ops  -> O(n) * O(n) = O(n²)")
 print()
 print("Same array, different shape: sequential stays linear; nested becomes quadratic.")
 `,
@@ -281,12 +281,12 @@ print(f"fib({n}) = {value}")
 print(f"Call count: {calls}")
 print()
 print("The call tree doubles at each level: fib(n) waits on fib(n-1) AND fib(n-2).")
-print("That branching is why the time is O(2^n), not O(n).")
+print("That branching is why the time is O(2ⁿ), not O(n).")
 print("Worked example: fib(5) calls fib(4) and fib(3); those split again; overlapping work is repeated.")
 `,
       },
     ],
-    observe: "Naive fib(n) fans out into two subcalls. The tree has about 2^n nodes, so the time is O(2^n).",
+    observe: "Naive fib(n) fans out into two subcalls. The tree has about 2ⁿ nodes, so the time is O(2ⁿ).",
   },
 };
 

@@ -2039,7 +2039,7 @@ Use **Situation → Task → Action → Result**, and end with **what you would 
 
 ---
 
-*End of playbook. Cover the answer. Speak. Check follow-ups. If the "why" is fuzzy, return to the roadmap bridges - do not memorize harder.*
+*End of Playbook. Cover the answer. Speak. Check follow-ups. If the "why" is fuzzy, return to the roadmap bridges - do not memorize harder.*
 <a id="track-i"></a>
 
 # Track I - IT Administration

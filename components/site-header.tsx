@@ -27,6 +27,12 @@ export function SiteHeader() {
     const handler = (event: KeyboardEvent) => {
       if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
         event.preventDefault();
+        const field = document.getElementById("site-search");
+        if (field instanceof HTMLInputElement) {
+          field.focus();
+          field.select();
+          return;
+        }
         window.location.assign("/search");
       }
     };

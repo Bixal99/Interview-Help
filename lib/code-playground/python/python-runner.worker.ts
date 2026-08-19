@@ -13,7 +13,7 @@ const EXECUTION_TIMEOUT_MS = 8000;
 
 type WorkerRequest =
   | { type: "init" }
-  | { type: "run"; id: string; code: string; input?: string };
+  | { type: "run"; id: string; code: string; input?: string; files?: Record<string, string>; entryFile?: string };
 
 type WorkerResponse =
   | { type: "ready" }
@@ -28,6 +28,10 @@ type PyodideApi = {
   setStdin: (options: { stdin?: () => string | undefined; error?: boolean }) => void;
   runPythonAsync: (code: string, options?: { globals?: unknown }) => Promise<unknown>;
   pyimport: (name: string) => { dict: (values?: Record<string, unknown>) => unknown };
+  FS: {
+    mkdirTree: (path: string) => void;
+    writeFile: (path: string, data: string) => void;
+  };
 };
 
 declare function loadPyodide(config: { indexURL: string }): Promise<PyodideApi>;
@@ -74,7 +78,7 @@ function configureStreams(pyodide: PyodideApi, input: string, stdoutRef: { value
   }
 }
 
-async function runPython(id: string, code: string, input = "") {
+async function runPython(id: string, code: string, input = "", files?: Record<string, string>, entryFile?: string) {
   activeRunId = id;
   const stdoutRef = { value: "" };
   const stderrRef = { value: "" };
@@ -101,7 +105,28 @@ async function runPython(id: string, code: string, input = "") {
     configureStreams(pyodide, input, stdoutRef, stderrRef);
 
     const globals = pyodide.pyimport("builtins").dict();
-    await pyodide.runPythonAsync(code, { globals });
+    let program = code;
+    if (files && entryFile) {
+      const root = `/home/pyodide/run-${id}`;
+      pyodide.FS.mkdirTree(root);
+      for (const [path, content] of Object.entries(files)) {
+        const full = `${root}/${path}`;
+        const folder = full.slice(0, full.lastIndexOf("/"));
+        if (folder) pyodide.FS.mkdirTree(folder);
+        pyodide.FS.writeFile(full, content);
+      }
+      program = `
+import os, sys, runpy
+os.chdir(${JSON.stringify(root)})
+sys.path.insert(0, ${JSON.stringify(root)})
+_entry = ${JSON.stringify(entryFile)}
+_dir = os.path.dirname(_entry)
+if _dir:
+    sys.path.insert(0, os.path.join(${JSON.stringify(root)}, _dir))
+runpy.run_path(_entry, run_name="__main__")
+`;
+    }
+    await pyodide.runPythonAsync(program, { globals });
 
     if (timedOut || activeRunId !== id) return;
 
@@ -139,7 +164,7 @@ self.addEventListener("message", (event: MessageEvent<WorkerRequest>) => {
   }
 
   if (message.type === "run") {
-    void runPython(message.id, message.code, message.input ?? "");
+    void runPython(message.id, message.code, message.input ?? "", message.files, message.entryFile);
   }
 });
 

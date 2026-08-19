@@ -186,6 +186,18 @@ describe("draft storage helpers", () => {
     expect(readDraft("python-numeric-types")).toBe("x = 10");
     writeDraftSource("web-sample", { html: "<h1>Hello</h1>", css: "h1{}", javascript: "console.log(1)" });
     expect(readDraftSource("web-sample")).toEqual({ html: "<h1>Hello</h1>", css: "h1{}", javascript: "console.log(1)" });
+    writeDraftSource("project-sample", {
+      kind: "project",
+      entryFile: "main.py",
+      folders: ["src"],
+      files: { "main.py": "print(1)", "src/util.py": "x=1" },
+    });
+    expect(readDraftSource("project-sample")).toEqual({
+      kind: "project",
+      entryFile: "main.py",
+      folders: ["src"],
+      files: { "main.py": "print(1)", "src/util.py": "x=1" },
+    });
     clearDraft("python-numeric-types");
     expect(readDraft("python-numeric-types")).toBeNull();
   });

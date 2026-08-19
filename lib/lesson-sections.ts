@@ -9,7 +9,7 @@ export function extractWhatComesNext(markdown: string): { markdown: string; what
   const body = match[2].trim();
   if (!body) return { markdown: source, whatComesNext: null };
   return {
-    markdown: source.replace(match[0], "\n\n").replace(/\n{3,}/g, "\n\n").trim(),
+    markdown: source.replace(match[0], "\n\n").replace(/\n---\s*$/g, "").replace(/\n{3,}/g, "\n\n").trim(),
     whatComesNext: { topic: match[1]?.trim(), body },
   };
 }

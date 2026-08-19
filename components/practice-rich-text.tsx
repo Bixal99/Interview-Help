@@ -1,11 +1,9 @@
-"use client";
-
-import { useMemo } from "react";
 import katex from "katex";
+import { splitFormulaParts } from "@/lib/format-math";
 
-function renderMath(tex: string) {
+function renderMath(tex: string, display = false) {
   try {
-    return katex.renderToString(tex, { throwOnError: false, output: "html" });
+    return katex.renderToString(tex, { throwOnError: false, output: "html", displayMode: display });
   } catch {
     return tex;
   }
@@ -21,33 +19,17 @@ function renderMarkup(text: string) {
   });
 }
 
-function texForComplexity(inner: string) {
-  return inner
-    .replace(/sqrt\(([^)]+)\)/gi, "\\sqrt{$1}")
-    .replace(/√\s*n/g, "\\sqrt{n}")
-    .replace(/√\s*\(([^)]+)\)/g, "\\sqrt{$1}")
-    .replace(/\blog\b/g, "\\log ")
-    .replace(/\^(\d+|[A-Za-z])/g, "^{$1}");
-}
-
-function prepareMath(text: string) {
-  if (/\$[^$]+\$/.test(text)) return text;
-  return text.replace(/\bO\(([^)]+)\)/g, (_match, inner: string) => `$O(${texForComplexity(inner)})$`);
-}
-
 export function PracticeRichText({ text }: { text: string }) {
-  const prepared = useMemo(() => prepareMath(text), [text]);
-  const parts = useMemo(() => prepared.split(/(\$[^$]+\$)/g).filter((part) => part.length > 0), [prepared]);
+  const parts = splitFormulaParts(text);
   return (
     <>
       {parts.map((part, index) => {
-        const math = /^\$([^$]+)\$$/.exec(part);
-        if (!math) return <span key={index}>{renderMarkup(part)}</span>;
+        if (part.type !== "math") return <span key={index}>{renderMarkup(part.value)}</span>;
         return (
           <span
             key={index}
             className="ih-practice-math"
-            dangerouslySetInnerHTML={{ __html: renderMath(math[1]) }}
+            dangerouslySetInnerHTML={{ __html: renderMath(part.value, part.display) }}
           />
         );
       })}

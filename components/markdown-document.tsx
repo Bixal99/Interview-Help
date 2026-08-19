@@ -11,7 +11,9 @@ import { LessonDiagram, isVisualDiagram } from "./lesson-diagram";
 import { MermaidDiagram } from "./mermaid-diagram";
 import { ProgressToggle } from "./progress";
 import { VisualLearning, type VisualResource } from "./visual-learning";
+import { PracticeRichText } from "@/components/practice-rich-text";
 import { convertMarkdownHref, githubSlug } from "@/lib/content-utils";
+import { withMarkdownMath } from "@/lib/format-math";
 import { getExercise } from "@/lib/code-playground/exercises";
 import { parseFenceInfo } from "@/lib/code-playground/fence-meta";
 
@@ -154,14 +156,22 @@ function isMathNode(value: unknown) {
 
 function formatCopy(value: React.ReactNode): React.ReactNode {
   if (value == null || typeof value === "boolean") return value;
-  if (typeof value === "string" || typeof value === "number") return emphasizeText(String(value));
+  if (typeof value === "string" || typeof value === "number") {
+    const text = String(value);
+    if (/\$|[OΘΩθω]\(|[A-Za-z0-9]\^[A-Za-z0-9]/.test(text)) {
+      return <PracticeRichText text={tidyDashes(text)} />;
+    }
+    return emphasizeText(text);
+  }
   if (Array.isArray(value)) {
     return value.map((child, index) => <React.Fragment key={index}>{formatCopy(child)}</React.Fragment>);
   }
   if (isValidElement<{ children?: React.ReactNode }>(value)) {
     if (isMathNode(value)) return value;
-    if (value.type === "strong" || value.type === "code" || value.type === "a") return value;
-    if (value.type === "em" || value.type === "i") return <em>{formatCopy(value.props.children)}</em>;
+    if (value.type === "code") return value;
+    if (value.type === "strong" || value.type === "a" || value.type === "em" || value.type === "i") {
+      return cloneElement(value, undefined, formatCopy(value.props.children));
+    }
     if (value.props.children == null) return value;
     return cloneElement(value, undefined, formatCopy(value.props.children));
   }
@@ -221,7 +231,7 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYou
 
   const extracted = extractVisual(markdown);
   const resources = extracted.resources;
-  const body = extracted.markdown;
+  const body = withMarkdownMath(extracted.markdown);
   let visualShown = false;
   let pendingVisual = false;
 
@@ -344,12 +354,16 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYou
       }
       return <CodeBlock language={language} code={source} />;
     },
+    hr() {
+      if (!visualShown) return takeVisual();
+      return null;
+    },
     table({ children, ...props }) { return <div className="table-wrap" role="region" aria-label="Scrollable table" tabIndex={0}><table {...props}>{children}</table></div>; },
   };
 
   return (
     <article className="markdown-body">
-      <ReactMarkdown remarkPlugins={[remarkGfm, remarkMath, remarkSafeNamedAnchors, remarkPlaygroundMeta]} rehypePlugins={[rehypeSlug, rehypeKatex, rehypeHighlight]} components={components} skipHtml>{body}</ReactMarkdown>
+      <ReactMarkdown remarkPlugins={[remarkMath, remarkGfm, remarkSafeNamedAnchors, remarkPlaygroundMeta]} rehypePlugins={[rehypeSlug, rehypeKatex, rehypeHighlight]} components={components} skipHtml>{body}</ReactMarkdown>
       {takeVisual()}
     </article>
   );

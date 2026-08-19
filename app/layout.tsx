@@ -3,7 +3,7 @@ import "katex/dist/katex.min.css";
 import "./globals.css";
 import { AppChrome } from "@/components/app-chrome";
 import { ProgressProvider } from "@/components/progress-client";
-import { getProgressLookup } from "@/lib/content";
+import { getProgressLookup, getSearchIndex } from "@/lib/content";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://interview-help.vercel.app"),
@@ -23,6 +23,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const lookup = getProgressLookup();
+  const hits = getSearchIndex();
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -32,7 +33,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <span hidden dangerouslySetInnerHTML={{ __html: CONTRACT }} />
         <a href="#main-content" className="fixed left-3 top-3 z-[100] -translate-y-20 bg-ink px-4 py-2 text-paper focus:translate-y-0">Skip to content</a>
         <ProgressProvider lookup={lookup}>
-          <AppChrome>{children}</AppChrome>
+          <AppChrome hits={hits}>{children}</AppChrome>
         </ProgressProvider>
       </body>
     </html>

@@ -6,10 +6,11 @@ import { useEffect } from "react";
 import { tryPlaygroundHref, writeTryItCode } from "@/lib/code-playground/try-it-storage";
 import type { WhatComesNext } from "@/lib/lesson-sections";
 import type { ProjectBrief } from "@/lib/parse-project-brief";
-import { getProjectStarter } from "@/lib/project-starters";
+import { getProjectStarter, starterSource } from "@/lib/project-starters";
 import { ICON_SIZE } from "@/lib/icons";
 import { TechnologyIcon } from "./icons/technology-icon";
 import { Pager } from "./pager";
+import { PracticeRichText } from "./practice-rich-text";
 import { WhatComesNextSection } from "./what-comes-next";
 import { useLearningProgress } from "./progress-client";
 
@@ -97,7 +98,7 @@ export function ProjectChrome({
     const starter = getProjectStarter(projectId, brief);
     const href = tryPlaygroundHref(starter.language);
     writeTryItCode(starter.language, {
-      source: starter.code,
+      source: starterSource(starter),
       title: brief.title || title,
       instructions: brief.title || title,
       observe: starter.observe,
@@ -113,7 +114,6 @@ export function ProjectChrome({
     <article className="ih-lesson ih-build">
       <div className="ih-build-top">
         <div>
-          <p className="ih-build-kicker">Start Building</p>
           <h1>{title}</h1>
         </div>
         <button type="button" className="ih-pager-btn ih-pager-start" onClick={startBuild}>
@@ -121,7 +121,7 @@ export function ProjectChrome({
         </button>
       </div>
 
-      <p className="ih-build-intro">{brief.intro}</p>
+      <p className="ih-build-intro"><PracticeRichText text={brief.intro} /></p>
 
       {brief.spec.length ? (
         <section className="ih-build-section" aria-labelledby="build-must">
@@ -130,7 +130,7 @@ export function ProjectChrome({
             {brief.spec.map((item, index) => (
               <li key={item} className="ih-build-card">
                 <span className="ih-build-num">{index + 1}</span>
-                <p>{item}</p>
+                <p><PracticeRichText text={item} /></p>
               </li>
             ))}
           </ol>
@@ -144,7 +144,7 @@ export function ProjectChrome({
             {brief.steps.map((item, index) => (
               <li key={item}>
                 <span>{index + 1}</span>
-                <p>{item}</p>
+                <p><PracticeRichText text={item} /></p>
               </li>
             ))}
           </ol>

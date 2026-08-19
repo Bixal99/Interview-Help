@@ -100,7 +100,7 @@ export function ExerciseBlock({
       <section id="practice-exercises" className="ih-exercise" aria-label="Exercise">
         <header className="ih-exercise-head">
           <p className="ih-exercise-kicker">Practice Exercises</p>
-          <h2>{prompt}</h2>
+          <h2><PracticeRichText text={prompt} /></h2>
         </header>
         <fieldset className="ih-exercise-stack">
           <legend className="sr-only">Choose an answer</legend>
@@ -138,7 +138,7 @@ export function ExerciseBlock({
     <section id="practice-exercises" className="ih-exercise" aria-label="Exercise">
       <header className="ih-exercise-head">
         <p className="ih-exercise-kicker">Practice Exercises</p>
-        <h2>{prompt}</h2>
+        <h2><PracticeRichText text={prompt} /></h2>
         <div className="ih-exercise-progress" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress} aria-label={`${doneCount} of ${total} tasks checked`}>
           <span className="ih-exercise-progress-label">{doneCount} / {total} checked</span>
           <span className="ih-exercise-progress-track"><i style={{ width: `${progress}%` }} /></span>
@@ -205,7 +205,7 @@ export function ExerciseBlock({
                         )
                       }
                     >
-                      Start Building »
+                      Practice Yourself »
                     </button>
                   </div>
                 ) : null}

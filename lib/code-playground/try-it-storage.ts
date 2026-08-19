@@ -1,5 +1,8 @@
 import { readDraftSource, writeDraftSource } from "./storage";
 import type { PlaygroundLanguage, PlaygroundSource } from "./types";
+import { isProjectVfs } from "./project-fs";
+import { isSourceFiles } from "./source";
+import { withCodeFormulas } from "../format-math";
 
 export const TRY_IT_PREFIX = "ih-code-try:";
 export const TRY_IT_EVENT = "ih-try-it-import";
@@ -50,10 +53,38 @@ export function tryPlaygroundHref(language: PlaygroundLanguage): string {
   return `/playground/try/${language}?i=${id}`;
 }
 
+function withSourceFormulas(source: PlaygroundSource): PlaygroundSource {
+  if (typeof source === "string") return withCodeFormulas(source);
+  if (isProjectVfs(source)) {
+    const files: Record<string, string> = {};
+    for (const [path, contents] of Object.entries(source.files)) files[path] = withCodeFormulas(contents);
+    return { ...source, files };
+  }
+  if (isSourceFiles(source)) {
+    return {
+      html: withCodeFormulas(source.html),
+      css: withCodeFormulas(source.css),
+      javascript: withCodeFormulas(source.javascript),
+    };
+  }
+  return source;
+}
+
+function formulaPayload(payload: TryItImportPayload): TryItImportPayload {
+  return {
+    ...payload,
+    source: withSourceFormulas(payload.source),
+    originSource: payload.originSource != null ? withSourceFormulas(payload.originSource) : payload.originSource,
+    title: payload.title != null ? withCodeFormulas(payload.title) : payload.title,
+    instructions: payload.instructions != null ? withCodeFormulas(payload.instructions) : payload.instructions,
+    observe: payload.observe != null ? withCodeFormulas(payload.observe) : payload.observe,
+  };
+}
+
 function normalizePayload(payload: PlaygroundSource | TryItImportPayload): TryItImportPayload {
-  if (typeof payload === "string") return { source: payload };
-  if (payload && typeof payload === "object" && "source" in payload) return payload;
-  return { source: payload as PlaygroundSource };
+  if (typeof payload === "string") return formulaPayload({ source: payload });
+  if (payload && typeof payload === "object" && "source" in payload) return formulaPayload(payload);
+  return formulaPayload({ source: payload as PlaygroundSource });
 }
 
 function fingerprintSource(source: PlaygroundSource): string {
@@ -81,16 +112,23 @@ export function makeTryItDraftKey(language: PlaygroundLanguage, payload: TryItIm
   return `tryit:example:${language}:${payload.backHref ?? ""}:${payload.title ?? ""}:${fingerprintSource(origin)}`;
 }
 
+function sameSourceShape(origin: PlaygroundSource, saved: PlaygroundSource): boolean {
+  if (isProjectVfs(origin)) return isProjectVfs(saved);
+  if (typeof origin === "string") return typeof saved === "string";
+  return isSourceFiles(saved) && !isProjectVfs(saved);
+}
+
 export function applyTryItDraft(language: PlaygroundLanguage, payload: TryItImportPayload): TryItImportPayload {
   const originSource = payload.originSource ?? payload.source;
   const draftKey = makeTryItDraftKey(language, { ...payload, originSource, draftKey: payload.draftKey });
   const saved = readDraftSource(draftKey);
-  return {
+  const source = saved && sameSourceShape(originSource, saved) ? saved : payload.source;
+  return formulaPayload({
     ...payload,
     originSource,
     draftKey,
-    source: saved ?? payload.source,
-  };
+    source,
+  });
 }
 
 export function persistTryItSource(
@@ -129,7 +167,7 @@ export function writeTryItCode(
 
 export function readTryItCode(slotId: string): TryItImportPayload | null {
   const cached = memorySlots.get(slotId);
-  if (cached) return cached;
+  if (cached) return formulaPayload(cached);
   if (typeof globalThis.window === "undefined") return null;
   try {
     const raw = globalThis.window.sessionStorage.getItem(slotKey(slotId));
@@ -141,8 +179,8 @@ export function readTryItCode(slotId: string): TryItImportPayload | null {
         : parsed && typeof parsed === "object" && "source" in parsed
           ? (parsed as TryItImportPayload)
           : { source: parsed as PlaygroundSource };
-    memorySlots.set(slotId, payload);
-    return payload;
+    memorySlots.set(slotId, formulaPayload(payload));
+    return formulaPayload(payload);
   } catch {
     return null;
   }

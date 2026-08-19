@@ -7,7 +7,10 @@ import { chaptersFor, learningPaths, pathForCourse, sequentialPath } from "./lea
 import type { ParsedCourse, SearchHit } from "./learning-model";
 import { coursePages, firstLessonHref, firstPhaseHref, neighborsFor, type CourseNav, type Neighbor } from "./navigation";
 import { findLesson, findPhase, headingRouteMap, lessonPath, parseCourseMarkdown, phasePath, projectPathFor, withSourcePath } from "./parse-course";
-import { attachProjects, parseProjectsDocument } from "./parse-projects";
+import { attachProjects, allProjectsByCourse, parseProjectsDocument } from "./parse-projects";
+import { parseProjectBrief } from "./parse-project-brief";
+import { parseInterviewPlaybook } from "./parse-interview";
+import type { ProjectStudioCourse } from "./studio-types";
 import { extractCompleteCta } from "./complete-cta";
 import { extractProjectNav, extractWhatComesNext, projectProceedLabel, projectReviewLabel } from "./lesson-sections";
 import { extractPractice, withoutPractice } from "./practice";
@@ -34,6 +37,34 @@ export const readMarkdown = cache((sourcePath: string) => {
 });
 
 export const getAllProjects = cache(() => parseProjectsDocument(readMarkdown("content/guides/Projects.md")));
+
+export const getInterviewPlaybook = cache(() => parseInterviewPlaybook(readMarkdown("content/guides/Interview.md")));
+
+export const getProjectStudio = cache((): ProjectStudioCourse[] => {
+  const grouped = allProjectsByCourse(getAllProjects());
+  return courseCatalog.flatMap((course) => {
+    const items = grouped.get(course.slug);
+    if (!items?.length) return [];
+    return [{
+      slug: course.slug,
+      shortName: course.shortName,
+      barLabel: courseBarLabels[course.slug] ?? course.shortName,
+      description: course.description,
+      items: items.map((project) => {
+        const brief = parseProjectBrief(project.markdown);
+        return {
+          id: project.id,
+          phaseId: project.phaseId,
+          title: brief.title || project.title,
+          intro: brief.intro,
+          topic: brief.topic,
+          tech: brief.tech.slice(0, 4),
+          href: `/projects/${course.slug}/phase/${project.phaseId}`,
+        };
+      }),
+    }];
+  });
+});
 
 export const getParsedCourse = cache((slug: string) => {
   const definition = courseCatalog.find((item) => item.slug === slug);

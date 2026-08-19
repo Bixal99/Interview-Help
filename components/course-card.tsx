@@ -1,8 +1,17 @@
+"use client";
+
 import Link from "next/link";
+import type { MouseEvent } from "react";
 import { CourseIdentityIcon } from "@/components/icons/app-icon";
 import { ICON_SIZE } from "@/lib/icons";
 
 const TILES = ["#D9EEE1", "#FFF4A3", "#FFC0C7", "#96D4FA", "#F3ECEA"];
+
+function onGlow(event: MouseEvent<HTMLElement>) {
+  const box = event.currentTarget.getBoundingClientRect();
+  event.currentTarget.style.setProperty("--x", `${event.clientX - box.left}px`);
+  event.currentTarget.style.setProperty("--y", `${event.clientY - box.top}px`);
+}
 
 export function CourseCard({
   course,
@@ -25,8 +34,9 @@ export function CourseCard({
       href={`/courses/${course.slug}`}
       className="ih-course-tile"
       style={{ background: TILES[index % TILES.length] }}
+      onMouseMove={onGlow}
     >
-      <div className="flex items-start justify-between gap-3">
+      <div className="ih-course-tile-top">
         <span className="ih-course-tile-index" aria-hidden="true">
           {number}
         </span>
@@ -50,7 +60,7 @@ export function CourseCard({
           {course.phaseCount && course.lessonCount ? " · " : null}
           {course.lessonCount ? `${course.lessonCount} lessons` : null}
         </p>
-        <span className="ih-course-start">Start »</span>
+        <span className="ih-course-start">Start</span>
       </div>
     </Link>
   );

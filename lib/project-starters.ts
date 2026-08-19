@@ -1,75 +1,23 @@
-import type { PlaygroundLanguage } from "./code-playground/types";
+import type { PlaygroundLanguage, PlaygroundSource, ProjectVfs } from "./code-playground/types";
 import type { ProjectBrief } from "./parse-project-brief";
+import { projectFromSingleScript } from "./project-starters/layout";
+import { MINI_EXPRESSION_OBSERVE, miniExpressionProject } from "./project-starters/mini-expression-runtime";
 
 export type ProjectStarter = {
   language: PlaygroundLanguage;
-  code: string;
   observe: string;
+  project: ProjectVfs;
 };
 
-const PHASE_1_EXPRESSION = `# Mini Expression Runtime
-# Each comment says what the next line does.
-
-expression = "2 * (3 + 4)"  # the input we will tokenize, tree, and evaluate
-
-# ---- 1. TOKENIZE: turn characters into labeled pieces ----
-tokens = []  # empty list that will hold (kind, value) pairs
-
-for char in expression:  # walk the input one character at a time
-    if char.isspace():  # skip spaces; they are not tokens
-        continue
-    elif char.isdigit():  # a digit is a NUMBER token
-        tokens.append(("NUMBER", int(char)))
-    elif char == "*":  # multiply operator
-        tokens.append(("STAR", char))
-    elif char == "+":  # add operator
-        tokens.append(("PLUS", char))
-    elif char == "(":  # start of a grouped sub-expression
-        tokens.append(("LEFT_PAREN", char))
-    elif char == ")":  # end of a grouped sub-expression
-        tokens.append(("RIGHT_PAREN", char))
-
-tokens.append(("EOF", None))  # end-of-file marker, like a real compiler
-
-print("Tokens:")  # show the token stream a learner can inspect
-print(tokens)
-
-# ---- 2. BUILD TREE: parentheses group 3 + 4 before multiplying by 2 ----
-tree = {  # nested dict = parse tree
-    "operator": "*",  # root operation
-    "left": 2,  # left child is the number 2
-    "right": {  # right child is another operation
-        "operator": "+",
-        "left": 3,
-        "right": 4,
-    },
+export function starterSource(starter: ProjectStarter): PlaygroundSource {
+  return starter.project;
 }
-
-print("Tree:")  # print a readable picture of that structure
-print("""
-        *
-       / \\\\
-      2   +
-         / \\\\
-        3   4
-""")
-
-# ---- 3. EVALUATE: compute the value, then check a boundary and an invalid case ----
-result = 2 * (3 + 4)  # normal case: 14
-print("Normal result:", result)
-
-boundary = 0 + (1 * 1)  # boundary: smallest non-empty arithmetic
-print("Boundary result:", boundary)
-
-invalid = "2 * (3 +"  # incomplete expression — we refuse it
-print("Invalid input rejected:", invalid, "-> missing closing tokens")
-`;
 
 const PHASE_2_GROWTH = `# Algorithm Growth Profiler
 # Each comment says what the next line does.
 # We count OPERATIONS, not wall-clock time, so growth stays comparable.
 
-SIZES = [1, 2, 4, 8, 16, 32]  # increasing n; small enough that n^2 still finishes
+SIZES = [1, 2, 4, 8, 16, 32]  # increasing n; small enough that n² still finishes
 
 
 def constant(n):
@@ -97,7 +45,7 @@ def logarithmic(n):
 
 
 def quadratic(n):
-    # O(n^2): nested loops visit every pair
+    # O(n²): nested loops visit every pair
     ops = 0
     for _ in range(n):  # outer n
         for _ in range(n):  # inner n
@@ -111,7 +59,7 @@ def bar(ops, scale=8):
     return "#" * width
 
 
-print("n | O(1) | O(log n) | O(n) | O(n^2)")  # table header
+print("n | O(1) | O(log n) | O(n) | O(n²)")  # table header
 print("--|------|----------|------|------")
 
 rows = []  # store the same controlled inputs for later comparison
@@ -125,7 +73,7 @@ for n in SIZES:
 
 # Baseline vs alternative: linear vs quadratic on the same n
 baseline = rows[-1][3]  # O(n) at n=32
-alternative = rows[-1][4]  # O(n^2) at n=32
+alternative = rows[-1][4]  # O(n²) at n=32
 print()
 print("Metric: operation count. A smaller count means less work as n grows.")
 print(f"Baseline linear at n=32: {baseline} ops")
@@ -166,20 +114,39 @@ print("Done when a normal case, a boundary case, and a failure case all print.")
 const STARTERS: Record<string, ProjectStarter> = {
   "cs-phase-1-project": {
     language: "python",
-    code: PHASE_1_EXPRESSION,
-    observe: "Run this. You should see tokens, a tree, 14, a tiny boundary case, and a rejected invalid string. That is a miniature compiler pipeline.",
+    project: miniExpressionProject(),
+    observe: MINI_EXPRESSION_OBSERVE,
   },
   "cs-phase-2-project": {
     language: "python",
-    code: PHASE_2_GROWTH,
-    observe: "Run this. The table is operation counts, not seconds. Watch $O(n^2)$ explode while $O(1)$ stays flat — that is growth rate.",
+    project: projectFromSingleScript(PHASE_2_GROWTH, {
+      "examples/sizes.txt": "1\n2\n4\n8\n16\n32\n",
+      "tests/test_starter.py": `def constant(n):
+    return 1
+
+
+def quadratic(n):
+    return n * n
+
+
+def test_growth():
+    assert constant(32) == 1
+    assert quadratic(8) == 64
+
+
+if __name__ == "__main__":
+    test_growth()
+    print("growth checks passed")
+`,
+    }),
+    observe: "Run this. The table is operation counts, not seconds. Watch $O(n^2)$ explode while $O(1)$ stays flat - that is growth rate.",
   },
 };
 
 export function getProjectStarter(projectId: string, brief: ProjectBrief): ProjectStarter {
   return STARTERS[projectId] ?? {
     language: "python",
-    code: fallbackStarter(brief),
+    project: projectFromSingleScript(fallbackStarter(brief)),
     observe: "Run the starter, then replace the print list with working functions until every requirement on the build page is true.",
   };
 }

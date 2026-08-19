@@ -4,12 +4,14 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
 import type { CodeExercise } from "@/lib/code-playground/exercises";
 import { getRunner } from "@/lib/code-playground/runners";
+import { isProjectVfs, monacoLanguageForPath, writeFile as writeProjectFile } from "@/lib/code-playground/project-fs";
 import { displaySourceForLanguage, isSourceFiles, isWebLanguage, normalizeSourceForRunner, updateSourceFile } from "@/lib/code-playground/source";
 import { clearDraft, readDraftSource, writeDraftSource } from "@/lib/code-playground/storage";
 import type { PlaygroundFileKey, PlaygroundSource, PlaygroundStatus, RunResult } from "@/lib/code-playground/types";
 import { formatRunOutput, validateExercise } from "@/lib/code-playground/validator";
 import { useLearningProgress } from "@/components/progress-client";
 import { CodeEditor } from "./code-editor";
+import { FileExplorer } from "./file-explorer";
 import { PlaygroundLanguageIcon } from "./language-mark";
 import { OutputPanel } from "./output-panel";
 import { PlaygroundLead } from "./playground-lead";
@@ -40,6 +42,7 @@ export function CodePlayground({
   const isControlledTryIt = mode === "tryit" && tryItSource != null && onTryItSourceChange != null;
   const [source, setSource] = useState<PlaygroundSource>(exercise.starterCode);
   const [activeFile, setActiveFile] = useState<PlaygroundFileKey>(exercise.language === "css" ? "css" : "html");
+  const [activePath, setActivePath] = useState("");
   const [programInput, setProgramInput] = useState("");
   const [output, setOutput] = useState("");
   const [lastResult, setLastResult] = useState<RunResult | undefined>(undefined);
@@ -53,19 +56,33 @@ export function CodePlayground({
   const sourceValue = isControlledTryIt ? tryItSource : source;
   const setSourceValue = isControlledTryIt ? onTryItSourceChange : setSource;
   const usesFileTabs = isSourceFiles(sourceValue);
-  const currentCode = displaySourceForLanguage(exercise.language, usesFileTabs ? sourceValue[activeFile] : sourceValue);
+  const projectVfs = isProjectVfs(sourceValue) ? sourceValue : null;
+  const projectPath = projectVfs
+    ? (activePath && projectVfs.files[activePath] != null ? activePath : projectVfs.entryFile)
+    : "";
+  const currentCode = projectVfs
+    ? (projectVfs.files[projectPath] ?? "")
+    : displaySourceForLanguage(exercise.language, usesFileTabs ? sourceValue[activeFile] : sourceValue);
   const runSource = normalizeSourceForRunner(exercise.language, sourceValue);
   const showProgramInput = !isWebLanguage(exercise.language);
 
-  const currentEditorLanguage =
-    activeFile === "css" ? "css" : activeFile === "javascript" ? "javascript" : exercise.language === "web" ? "html" : exercise.language;
+  const currentEditorLanguage = projectVfs
+    ? monacoLanguageForPath(projectPath)
+    : activeFile === "css" ? "css" : activeFile === "javascript" ? "javascript" : exercise.language === "web" ? "html" : exercise.language;
 
   useEffect(() => {
     const draft = exercise.id.startsWith("try-") ? null : readDraftSource(exercise.id);
-    setSource(draft ?? exercise.starterCode);
+    const next = draft ?? exercise.starterCode;
+    setSource(next);
     setActiveFile(exercise.language === "css" ? "css" : "html");
+    setActivePath(isProjectVfs(next) ? next.entryFile : "");
     setHydrated(true);
   }, [exercise.id, exercise.starterCode]);
+
+  useEffect(() => {
+    if (!projectVfs) return;
+    if (!activePath || projectVfs.files[activePath] == null) setActivePath(projectVfs.entryFile);
+  }, [projectVfs, activePath]);
 
   useEffect(() => {
     if (!hydrated || isControlledTryIt) return;
@@ -159,6 +176,7 @@ export function CodePlayground({
     setCheckMessage(null);
     setShowSolution(false);
     setActiveFile(exercise.language === "css" ? "css" : "html");
+    setActivePath(isProjectVfs(exercise.starterCode) ? exercise.starterCode.entryFile : "");
   }, [exercise.starterCode, exercise.id, exercise.language, runner, isControlledTryIt, setSourceValue]);
 
   const handleSolution = useCallback(() => {
@@ -174,12 +192,18 @@ export function CodePlayground({
   }, [runner]);
 
   const setCurrentEditorValue = useCallback((nextValue: string) => {
+    if (isProjectVfs(sourceValue)) {
+      const path = sourceValue.files[activePath] != null ? activePath : sourceValue.entryFile;
+      if (!path) return;
+      setSourceValue(writeProjectFile(sourceValue, path, nextValue));
+      return;
+    }
     if (isSourceFiles(sourceValue)) {
       setSourceValue(updateSourceFile(sourceValue, activeFile, nextValue));
       return;
     }
     setSourceValue(nextValue);
-  }, [activeFile, setSourceValue, sourceValue]);
+  }, [activeFile, activePath, setSourceValue, sourceValue]);
 
   if (!runner) {
     return (
@@ -191,7 +215,7 @@ export function CodePlayground({
 
   const banner = lead ?? (
     <PlaygroundLead
-      title={exercise.title}
+      title={exercise.title || "Your code"}
       goal={exercise.instructions || "Write code and run it."}
     />
   );
@@ -206,6 +230,16 @@ export function CodePlayground({
           left={
           <div className="ih-playground-code-pane">
             {banner}
+            <div className={`ih-playground-code-body${projectVfs ? " has-explorer" : ""}`}>
+              {projectVfs ? (
+                <FileExplorer
+                  vfs={projectVfs}
+                  activePath={projectPath}
+                  onChange={setSourceValue}
+                  onOpen={setActivePath}
+                />
+              ) : null}
+              <div className="ih-playground-editor-wrap">
             <div className="ih-playground-panel-head">
               {usesFileTabs ? (
                 <div className="ih-playground-file-tabs">
@@ -224,7 +258,7 @@ export function CodePlayground({
               ) : (
                 <span className="ih-playground-editor-tab">
                   <PlaygroundLanguageIcon language={exercise.language} />
-                  {runner.label} Editor
+                  {projectPath || `${runner.label} Editor`}
                 </span>
               )}
               <div className="ih-playground-panel-head-actions">
@@ -240,6 +274,8 @@ export function CodePlayground({
               </div>
             </div>
             <CodeEditor language={exercise.language} editorLanguage={currentEditorLanguage} value={currentCode} onChange={setCurrentEditorValue} onRun={handleRun} comfortable autoGrow={fullPage} />
+              </div>
+            </div>
           </div>
           }
           right={
@@ -268,7 +304,7 @@ export function CodePlayground({
       </div>
       {mode === "inline" && exercise.allowTryItYourself ? (
         <a href={`/playground/${exercise.id}`} className="btn-next ih-playground-try-link">
-          Start Building »
+          Try it Yourself »
         </a>
       ) : null}
       {mode === "tryit" && exercise.lessonHref ? (

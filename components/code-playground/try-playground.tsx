@@ -17,6 +17,7 @@ import type { TryItImportPayload } from "@/lib/code-playground/try-it-storage";
 import { readDraftSource, writeDraftSource } from "@/lib/code-playground/storage";
 import type { PlaygroundLanguage, PlaygroundSource } from "@/lib/code-playground/types";
 import { useLearningProgress } from "@/components/progress-client";
+import { plainFormula } from "@/lib/format-math";
 import { CodePlayground } from "./code-playground";
 import { PlaygroundLanguageIcon } from "./language-mark";
 import { PlaygroundLead } from "./playground-lead";
@@ -69,7 +70,7 @@ export function TryPlayground({ language }: { language: PlaygroundLanguage }) {
   const isLessonImport = Boolean(imported);
   const problemText = imported?.instructions ?? imported?.title ?? "";
   const exercise = createTryItExercise(language, origin, {
-    title: imported?.title ?? "Start Building",
+    title: imported?.title ?? "Try it Yourself",
     instructions: problemText,
   });
 
@@ -77,17 +78,36 @@ export function TryPlayground({ language }: { language: PlaygroundLanguage }) {
   const nextHref = imported?.nextHref ?? null;
   const langOptions = imported?.languageOptions ?? null;
   const showDone = Boolean(imported?.backHref) && !nextHref;
-  const isProjectBuild = Boolean(imported?.completeProject);
-  const heading = isProjectBuild ? imported?.title : null;
-  const primaryGoal = isProjectBuild
-    ? imported?.observe
-    : imported?.instructions || imported?.title || "";
-  const extraObserve = !isProjectBuild && imported?.observe && imported.observe !== primaryGoal
-    ? imported.observe
-    : null;
-  const kicker = imported?.problemIndex != null && imported?.problemTotal != null
-    ? `Start Building · ${imported.problemIndex} of ${imported.problemTotal}`
-    : "Start Building";
+  const isProject = Boolean(imported?.completeProject);
+  const isPractice = imported?.problemIndex != null;
+  const kicker = isProject
+    ? "Start Building"
+    : isPractice && imported?.problemIndex != null && imported?.problemTotal != null
+      ? `Practice Yourself · ${imported.problemIndex} of ${imported.problemTotal}`
+      : isPractice
+        ? "Practice Yourself"
+        : "Try it Yourself";
+  const importedTitle = imported?.title?.trim() || "";
+  const instructions = imported?.instructions?.trim() || "";
+  const genericTitles = /^(working example|start building|try it yourself|practice yourself|your code)$/i;
+  const heading = genericTitles.test(importedTitle)
+    ? (isLessonImport ? "Working example" : "Your code")
+    : (importedTitle || (isLessonImport ? "Working example" : "Your code"));
+  const primaryGoal = imported?.observe
+    || (instructions && instructions !== heading ? instructions : "")
+    || (isLessonImport ? "Run this example from the lesson." : "Write code and run it.");
+  const extra = imported?.observe && imported.observe !== primaryGoal ? imported.observe : null;
+
+  useEffect(() => {
+    const label = isProject
+      ? (importedTitle || heading || "Start Building")
+      : isPractice
+        ? "Practice Yourself"
+        : heading && !genericTitles.test(heading)
+          ? heading
+          : "Try it Yourself";
+    document.title = `${plainFormula(label)} · Quarry`;
+  }, [heading, importedTitle, isPractice, isProject]);
 
   function persistSource(next: PlaygroundSource) {
     setSource(next);
@@ -139,7 +159,7 @@ export function TryPlayground({ language }: { language: PlaygroundLanguage }) {
             onTryItSourceChange={persistSource}
             fullPage
             lead={(
-              <PlaygroundLead kicker={kicker} title={heading} goal={primaryGoal || (isLessonImport ? null : "Write code and run it.")} extra={extraObserve}>
+              <PlaygroundLead kicker={kicker} title={heading} goal={primaryGoal || null} extra={extra}>
                 {langOptions && langOptions.length > 1 ? (
                   <div className="ih-try-lang-tabs" role="tablist" aria-label="Language">
                     {langOptions.map((opt) => (

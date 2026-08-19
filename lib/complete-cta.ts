@@ -13,6 +13,6 @@ export function extractCompleteCta(markdown: string, sourcePath: string): { mark
     }));
     if (actions.length) cta = { title: String(title).trim(), actions };
     return "";
-  }).replace(/\n{3,}/g, "\n\n").trim();
+  }).replace(/\n---\s*$/g, "").replace(/\n{3,}/g, "\n\n").trim();
   return { markdown: next, cta };
 }

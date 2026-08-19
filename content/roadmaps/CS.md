@@ -317,8 +317,6 @@ Run it and read the `id=` values: they are CPython's stand-in for a memory addre
 - Fast overview: [Big-O Notation in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=g2o22C3CRfU)
 - Another angle: [Learn Big O notation in 6 minutes (Bro Code)](https://www.youtube.com/watch?v=XMUe3zFhM5c)
 - Interactive simulator: [VisuAlgo - Sorting](https://visualgo.net/en/sorting) - watch the step-counter climb as array size grows, to *feel* $O(n)$ vs $O(n^2)$ instead of just reading it
-- Written tutorial: [W3Schools - Algorithm Time Complexity](https://www.w3schools.com/dsa/dsa_algo_timecomplexity.php)
-- Written reference: [W3Schools - Big-O Notation](https://www.w3schools.com/dsa/dsa_ref_bigO.php)
 - Written documentation: [MIT OCW 6.006 - Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) (Lectures 1-2 cover asymptotic analysis from first principles)
 - GitHub: [jwasham/coding-interview-university](https://github.com/jwasham/coding-interview-university) - "Algorithmic complexity / Big-O" section
 - Practice: [LeetCode](https://leetcode.com/) - every editorial states the intended Big O, so you can check your own analysis
@@ -466,7 +464,7 @@ An interviewer almost never asks "what is Big O" directly - they expect you to s
 
 ## Programming fundamentals
 
-*If you cannot yet write a small script with loops and functions, start here. OOP only pays off once procedural Python is comfortable. Start with the [Python Tutorial](https://www.w3schools.com/python/) and [Python Tutor](https://pythontutor.com/visualize.html), then Mosh / Bro Code / Corey Schafer / freeCodeCamp.*
+*If you cannot yet write a small script with loops and functions, start here. OOP only pays off once procedural Python is comfortable. Start with the [Python Tutorial](https://www.w3schools.com/python/default.asp) and [Python Tutor](https://pythontutor.com/visualize.html), then Mosh / Bro Code / Corey Schafer / freeCodeCamp.*
 
 **WHAT YOU WILL BE ABLE TO DO:** Write clear procedural Python so classes in Phase 6 feel like a *choice*, not a mystery.
 

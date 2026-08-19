@@ -1,97 +1,75 @@
 "use client";
 
-import { useCallback, useState, type MouseEvent } from "react";
+import { useState } from "react";
 
-const BLOCKS = [
-  { id: "read", label: "One lesson", fill: "#D9EEE1", x: 48, y: 268, w: 168, h: 92 },
-  { id: "build", label: "Phase project", fill: "#FFF4A3", x: 168, y: 188, w: 176, h: 88 },
-  { id: "speak", label: "Interview", fill: "#FFC0C7", x: 292, y: 112, w: 164, h: 84 },
-  { id: "hire", label: "Hire-ready", fill: "#96D4FA", x: 408, y: 44, w: 148, h: 76 },
+const STAGES = [
+  { n: "01", title: "One lesson", hint: "Stay on the page until the idea is clear.", fill: "#D9EEE1" },
+  { n: "02", title: "Phase project", hint: "Build the matching project before you move on.", fill: "#FFF4A3" },
+  { n: "03", title: "Interview", hint: "Say the trade-off out loud, then keep going.", fill: "#FFC0C7" },
+  { n: "04", title: "Hire-ready", hint: "The loop repeats until the work holds.", fill: "#96D4FA" },
 ] as const;
 
 export function HeroStage() {
-  const [pointer, setPointer] = useState({ x: 0.42, y: 0.38 });
-  const [hot, setHot] = useState<string | null>(null);
-
-  const onMove = useCallback((event: MouseEvent<HTMLDivElement>) => {
-    const box = event.currentTarget.getBoundingClientRect();
-    setPointer({
-      x: Math.min(1, Math.max(0, (event.clientX - box.left) / box.width)),
-      y: Math.min(1, Math.max(0, (event.clientY - box.top) / box.height)),
-    });
-  }, []);
-
-  const shiftX = (pointer.x - 0.5) * 16;
-  const shiftY = (pointer.y - 0.5) * 10;
-  const growth = 0.22 + pointer.x * 0.78;
-  const bars = [0.18, 0.38, 0.62, 1].map((weight) => 18 + 70 * growth * weight);
-  const activeIndex = hot
-    ? BLOCKS.findIndex((block) => block.id === hot)
-    : Math.min(3, Math.floor(pointer.x * 4));
-  const active = BLOCKS[Math.max(0, activeIndex)];
+  const [hovered, setHovered] = useState<number | null>(null);
+  const [focused, setFocused] = useState<number | null>(null);
+  const active = hovered ?? focused;
+  const stage = active !== null ? STAGES[active] : null;
+  const progress = active === null ? 0 : ((active + 1) / STAGES.length) * 100;
 
   return (
-    <div
-      className="ih-hero-stage"
-      onMouseMove={onMove}
-      onMouseLeave={() => {
-        setPointer({ x: 0.42, y: 0.38 });
-        setHot(null);
-      }}
-    >
-      <svg viewBox="0 0 640 480" className="ih-hero-stage-svg" role="img" aria-label="Interactive path from a lesson block to hire-ready">
-        <rect width="640" height="480" fill="#282A35" />
-        <rect x="24" y="24" width="592" height="432" fill="#1A1A1A" />
-        <path d="M24 368 H616" stroke="#04AA6D" strokeWidth="4" />
+    <div className="ih-hero-stage">
+      <div className="ih-hero-stage-copy">
+        <p className="ih-hero-kicker">The loop</p>
+        <p className="ih-hero-stage-title">{stage?.title ?? "The loop"}</p>
+        <p className="ih-hero-stage-hint">{stage?.hint ?? "Hover a stage to see the path."}</p>
+      </div>
 
-        <g transform={`translate(${shiftX * 0.35} ${shiftY * 0.25})`}>
-          <text x="48" y="62" fill="#04AA6D" fontSize="12" fontWeight="800" letterSpacing="2.4">THE CUT</text>
-          <text x="48" y="92" fill="#F1F1F1" fontSize="22" fontWeight="700">Stack the phases</text>
-        </g>
+      <ol className="ih-hero-layers" onMouseLeave={() => setHovered(null)}>
+        {STAGES.map((item, index) => (
+          <li key={item.n}>
+            <button
+              type="button"
+              className={`ih-hero-layer${index === active ? " is-on" : ""}`}
+              style={{ background: item.fill }}
+              onMouseEnter={() => setHovered(index)}
+              onFocus={() => setFocused(index)}
+              onBlur={() => setFocused((current) => (current === index ? null : current))}
+              aria-pressed={index === active}
+            >
+              <b>{item.n}</b>
+              <span>{item.title}</span>
+            </button>
+          </li>
+        ))}
+      </ol>
 
-        <g transform={`translate(${shiftX} ${shiftY})`}>
-          {BLOCKS.map((block, index) => {
-            const on = active.id === block.id;
-            const lift = on ? -10 : 0;
-            return (
-              <g
-                key={block.id}
-                className="ih-hero-block"
-                transform={`translate(0 ${lift})`}
-                onMouseEnter={() => setHot(block.id)}
-                onMouseLeave={() => setHot(null)}
-              >
-                <rect x={block.x} y={block.y} width={block.w} height={block.h} fill={block.fill} />
-                <text x={block.x + 18} y={block.y + 32} fill="#1A1A1A" fontSize="13" fontWeight="700" letterSpacing="1.6">
-                  {String(index + 1).padStart(2, "0")}
-                </text>
-                <text x={block.x + 18} y={block.y + 58} fill="#1A1A1A" fontSize="16" fontWeight="700">
-                  {block.label}
-                </text>
-              </g>
-            );
-          })}
-        </g>
+      <div className="ih-hero-track" aria-hidden="true">
+        <i style={{ width: `${progress}%` }} />
+      </div>
 
-        <g transform="translate(428 278)">
-          <rect width="172" height="122" fill="#fff" />
-          <text x="16" y="26" fill="#04AA6D" fontSize="11" fontWeight="800" letterSpacing="2">GROWTH</text>
-          {bars.map((height, index) => (
-            <rect
+      <svg className="ih-hero-curve" viewBox="0 0 320 72" aria-hidden="true">
+        <path d="M8 58 C 70 58, 90 46, 120 40 S 190 18, 232 16 S 300 8, 312 8" fill="none" stroke="#3a3c45" strokeWidth="3" />
+        <path
+          d="M8 58 C 70 58, 90 46, 120 40 S 190 18, 232 16 S 300 8, 312 8"
+          fill="none"
+          stroke="#04AA6D"
+          strokeWidth="3"
+          strokeDasharray="340"
+          strokeDashoffset={active === null ? 340 : 340 - (340 * (active + 1)) / 4}
+        />
+        {STAGES.map((_, index) => {
+          const x = [8, 120, 232, 312][index];
+          const y = [58, 40, 16, 8][index];
+          return (
+            <circle
               key={index}
-              x={16 + index * 38}
-              y={104 - height}
-              width="26"
-              height={height}
-              fill={["#D9EEE1", "#FFF4A3", "#FFC0C7", "#96D4FA"][index]}
+              cx={x}
+              cy={y}
+              r={index === active ? 6 : 4}
+              fill={active !== null && index <= active ? "#04AA6D" : "#3a3c45"}
             />
-          ))}
-        </g>
-
-        <circle cx={56 + pointer.x * 500} cy={392} r="7" fill="#04AA6D" />
-        <text x="48" y="432" fill="#c8c8c8" fontSize="13">
-          Move across the cut · {active.label}
-        </text>
+          );
+        })}
       </svg>
     </div>
   );

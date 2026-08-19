@@ -7,8 +7,33 @@ import { isSupportedLanguage } from "@/lib/code-playground/runners";
 import { toPlaygroundLanguage, tryPlaygroundHref, writeTryItCode } from "@/lib/code-playground/try-it-storage";
 
 const TRY_LANGUAGES = new Set(["html", "css", "javascript", "js"]);
-const PYTHON_WORDS = /\b(def|return|if|else|elif|for|in|while|class|import|from|as|pass|None|True|False|and|or|not|with|try|except|raise)\b/;
-const JS_WORDS = /\b(function|return|if|else|const|let|var|class|new|this|import|from|export|while|for)\b/;
+
+const PYTHON_KEYWORDS = new Set([
+  "and", "as", "assert", "async", "await", "break", "class", "continue", "def", "del", "elif", "else",
+  "except", "False", "finally", "for", "from", "global", "if", "import", "in", "is", "lambda", "None",
+  "nonlocal", "not", "or", "pass", "raise", "return", "True", "try", "while", "with", "yield",
+]);
+
+const PYTHON_BUILTINS = new Set([
+  "abs", "all", "any", "ascii", "bin", "bool", "bytearray", "bytes", "callable", "chr", "classmethod",
+  "compile", "complex", "delattr", "dict", "dir", "divmod", "enumerate", "eval", "exec", "filter",
+  "float", "format", "frozenset", "getattr", "globals", "hasattr", "hash", "help", "hex", "id", "input",
+  "int", "isinstance", "issubclass", "iter", "len", "list", "locals", "map", "max", "memoryview", "min",
+  "next", "object", "oct", "open", "ord", "pow", "print", "property", "range", "repr", "reversed", "round",
+  "set", "setattr", "slice", "sorted", "staticmethod", "str", "sum", "super", "tuple", "type", "vars", "zip",
+]);
+
+const JS_KEYWORDS = new Set([
+  "async", "await", "break", "case", "catch", "class", "const", "continue", "debugger", "default", "delete",
+  "do", "else", "export", "extends", "false", "finally", "for", "from", "function", "if", "import", "in",
+  "instanceof", "let", "new", "null", "of", "return", "static", "super", "switch", "this", "throw", "true",
+  "try", "typeof", "var", "void", "while", "with", "yield",
+]);
+
+const JS_BUILTINS = new Set([
+  "Array", "Boolean", "console", "Date", "document", "Error", "JSON", "Map", "Math", "Number", "Object",
+  "Promise", "Set", "String", "undefined", "window",
+]);
 
 function trySrc(language: string, code: string) {
   if (language === "html") return code;
@@ -20,24 +45,118 @@ function escapeHtml(value: string) {
   return value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
-function highlight(code: string, language: string) {
-  const words = language === "python" || language === "py" ? PYTHON_WORDS : JS_WORDS;
-  const pattern = /(#.*|\/\/.*|"[^"\\]*(?:\\.[^"\\]*)*"|'[^'\\]*(?:\\.[^'\\]*)*'|\b\d+\b|\b[A-Za-z_][A-Za-z0-9_]*\b)/g;
-  let last = 0;
-  let html = "";
-  let match: RegExpExecArray | null;
-  while ((match = pattern.exec(code))) {
-    html += escapeHtml(code.slice(last, match.index));
-    const token = match[0];
-    let kind = "";
-    if (token.startsWith("#") || token.startsWith("//")) kind = "comment";
-    else if (token.startsWith("\"") || token.startsWith("'")) kind = "string";
-    else if (/^\d+$/.test(token)) kind = "number";
-    else if (words.test(token)) kind = "keyword";
-    html += kind ? `<span class="hljs-${kind}">${escapeHtml(token)}</span>` : escapeHtml(token);
-    last = match.index + token.length;
+function span(kind: string, value: string) {
+  return `<span class="hljs-${kind}">${escapeHtml(value)}</span>`;
+}
+
+function isPython(language: string) {
+  return language === "python" || language === "py";
+}
+
+function isJs(language: string) {
+  return language === "javascript" || language === "js" || language === "typescript" || language === "ts";
+}
+
+function isQuote(value: string | undefined) {
+  return value === '"' || value === "'";
+}
+
+function stringPrefixLength(code: string, index: number) {
+  const slice = code.slice(index, index + 3).toLowerCase();
+  if ((slice.startsWith("fr") || slice.startsWith("rf") || slice.startsWith("br") || slice.startsWith("rb")) && isQuote(code[index + 2])) {
+    return 2;
   }
-  html += escapeHtml(code.slice(last));
+  if ("rfbu".includes(slice[0] ?? "") && isQuote(code[index + 1])) return 1;
+  return 0;
+}
+
+function readQuoted(code: string, start: number) {
+  const triple = code.startsWith('"""', start) || code.startsWith("'''", start);
+  const quote = triple ? code.slice(start, start + 3) : code[start];
+  let index = start + quote.length;
+  while (index < code.length) {
+    if (code[index] === "\\" && !triple) {
+      index += 2;
+      continue;
+    }
+    if (code.startsWith(quote, index)) return code.slice(start, index + quote.length);
+    index += 1;
+  }
+  return code.slice(start);
+}
+
+function readNumber(code: string, start: number) {
+  const match = code.slice(start).match(/^(?:\d[\d_]*\.?\d[\d_]*|\.\d[\d_]*|\d[\d_]*)(?:[eE][+-]?\d+)?[jJ]?/);
+  return match?.[0] ?? "";
+}
+
+function highlight(code: string, language: string) {
+  const python = isPython(language);
+  const js = isJs(language);
+  const keywords = python ? PYTHON_KEYWORDS : JS_KEYWORDS;
+  const builtins = python ? PYTHON_BUILTINS : JS_BUILTINS;
+  let html = "";
+  let index = 0;
+
+  while (index < code.length) {
+    const current = code[index];
+
+    if (python && current === "#") {
+      const end = code.indexOf("\n", index);
+      const token = end === -1 ? code.slice(index) : code.slice(index, end);
+      html += span("comment", token);
+      index += token.length;
+      continue;
+    }
+
+    if (js && code.startsWith("//", index)) {
+      const end = code.indexOf("\n", index);
+      const token = end === -1 ? code.slice(index) : code.slice(index, end);
+      html += span("comment", token);
+      index += token.length;
+      continue;
+    }
+
+    if (js && code.startsWith("/*", index)) {
+      const end = code.indexOf("*/", index + 2);
+      const token = end === -1 ? code.slice(index) : code.slice(index, end + 2);
+      html += span("comment", token);
+      index += token.length;
+      continue;
+    }
+
+    const prefix = python ? stringPrefixLength(code, index) : 0;
+    const quoteAt = index + prefix;
+    if ((current === '"' || current === "'") || (prefix && (code[quoteAt] === '"' || code[quoteAt] === "'"))) {
+      const token = code.slice(index, quoteAt) + readQuoted(code, quoteAt);
+      html += span("string", token);
+      index += token.length;
+      continue;
+    }
+
+    if (/\d/.test(current) || (current === "." && /\d/.test(code[index + 1] ?? ""))) {
+      const token = readNumber(code, index);
+      if (token) {
+        html += span("number", token);
+        index += token.length;
+        continue;
+      }
+    }
+
+    if (/[A-Za-z_]/.test(current)) {
+      const match = code.slice(index).match(/^[A-Za-z_][A-Za-z0-9_]*/);
+      const token = match?.[0] ?? current;
+      if (keywords.has(token)) html += span("keyword", token);
+      else if (builtins.has(token)) html += span("built_in", token);
+      else html += escapeHtml(token);
+      index += token.length;
+      continue;
+    }
+
+    html += escapeHtml(current);
+    index += 1;
+  }
+
   return html;
 }
 
@@ -65,6 +184,7 @@ export function CodeBlock({ code, language = "text" }: { code: string; language?
       source: code,
       title: "Working example",
       instructions: "Run this example from the lesson.",
+      observe: "Run this example from the lesson.",
       backHref: pathname || "/",
     }, href);
     router.push(href);
@@ -72,24 +192,23 @@ export function CodeBlock({ code, language = "text" }: { code: string; language?
 
   return (
     <div className="ih-example ih-example-code">
-      <div className="ih-example-bar">
-        <div className="ih-example-actions">
-          <button type="button" onClick={copy}>
-            {copied ? <Check size={13} /> : <Copy size={13} />} {copied ? "Copied" : "Copy"}
-          </button>
-        </div>
+      <p className="ih-example-label">Example</p>
+      <div className="ih-example-window">
+        <button type="button" className="ih-example-copy" onClick={copy}>
+          {copied ? <Check size={13} /> : <Copy size={13} />} {copied ? "Copied" : "Copy"}
+        </button>
+        <pre className="ih-example-panel">
+          <code className={`language-${lang}`} dangerouslySetInnerHTML={{ __html: highlight(code, lang) }} />
+        </pre>
       </div>
-      <pre className="ih-example-panel">
-        <code className={`language-${lang}`} dangerouslySetInnerHTML={{ __html: highlight(code, lang) }} />
-      </pre>
       {canTry ? (
         canTryPlayground ? (
           <button type="button" onClick={openPlayground} className="btn-next">
-            Start Building »
+            Try it Yourself »
           </button>
         ) : (
           <button type="button" onClick={() => setTrying(true)} className="btn-next">
-            Start Building »
+            Try it Yourself »
           </button>
         )
       ) : null}

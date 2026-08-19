@@ -3,12 +3,12 @@ import Link from "next/link";
 import { InnerPage } from "@/components/inner-page";
 import { getCourseSummaries } from "@/lib/content";
 
-export const metadata: Metadata = { title: "Practice", description: "Practice lives inside lessons and the interview playbook." };
+export const metadata: Metadata = { title: "Practice", description: "Practice lives inside lessons and the Interview Playbook." };
 
 export default function PracticePage() {
   const courses = getCourseSummaries();
   return (
-    <InnerPage title="Practice" description="Exercises stay in the lesson that already contains them. Spoken drills are in the interview playbook. Nothing is invented here.">
+    <InnerPage title="Practice" description="Exercises stay in the lesson that already contains them. Spoken drills are in the Interview Playbook. Nothing is invented here.">
       <p><Link href="/interview" className="btn-next">Open interview practice</Link></p>
       <ul className="mt-8 space-y-2">
         {courses.map((course) => (

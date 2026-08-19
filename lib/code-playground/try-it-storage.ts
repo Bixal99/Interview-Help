@@ -18,9 +18,13 @@ export type TryItImportPayload = {
   nextHref?: string;
   problemIndex?: number;
   problemTotal?: number;
+  observe?: string;
   /** All language variants for this problem (present when > 1 language available) */
   languageOptions?: TryItLanguageOption[];
 };
+
+// Survives React Strict Mode remounts and client navigations in the same tab.
+const memorySlots = new Map<string, TryItImportPayload>();
 
 // Each write gets a unique slot key so concurrent problems don't overwrite each other.
 function slotKey(id: string): string {
@@ -55,6 +59,7 @@ export function writeTryItCode(
 ): string {
   const normalized = normalizePayload(payload);
   const id = href ? (slotIdFromHref(href) ?? `${Date.now()}`) : `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
+  memorySlots.set(id, normalized);
   if (typeof globalThis.window === "undefined") return id;
   try {
     globalThis.window.sessionStorage.setItem(slotKey(id), JSON.stringify(normalized));
@@ -65,14 +70,21 @@ export function writeTryItCode(
 }
 
 export function readTryItCode(slotId: string): TryItImportPayload | null {
+  const cached = memorySlots.get(slotId);
+  if (cached) return cached;
   if (typeof globalThis.window === "undefined") return null;
   try {
     const raw = globalThis.window.sessionStorage.getItem(slotKey(slotId));
     if (!raw) return null;
     const parsed = JSON.parse(raw) as TryItImportPayload | PlaygroundSource;
-    if (typeof parsed === "string") return { source: parsed };
-    if (parsed && typeof parsed === "object" && "source" in parsed) return parsed as TryItImportPayload;
-    return { source: parsed as PlaygroundSource };
+    const payload =
+      typeof parsed === "string"
+        ? { source: parsed }
+        : parsed && typeof parsed === "object" && "source" in parsed
+          ? (parsed as TryItImportPayload)
+          : { source: parsed as PlaygroundSource };
+    memorySlots.set(slotId, payload);
+    return payload;
   } catch {
     return null;
   }

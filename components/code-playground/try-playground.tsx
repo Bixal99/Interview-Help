@@ -4,19 +4,23 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { createTryItExercise } from "@/lib/code-playground/sandbox";
-import { defaultTryExample } from "@/lib/code-playground/try-examples";
-import { sourceForLanguage } from "@/lib/code-playground/source";
-import { readTryItCode, writeTryItCode, clearTryItCode, tryPlaygroundHref } from "@/lib/code-playground/try-it-storage";
+import { createEmptyWebSource, sourceForLanguage } from "@/lib/code-playground/source";
+import { readTryItCode, writeTryItCode, tryPlaygroundHref } from "@/lib/code-playground/try-it-storage";
 import type { TryItImportPayload } from "@/lib/code-playground/try-it-storage";
 import type { PlaygroundLanguage, PlaygroundSource } from "@/lib/code-playground/types";
 import { CodePlayground } from "./code-playground";
 
+function emptySource(language: PlaygroundLanguage): PlaygroundSource {
+  return language === "html" || language === "css" || language === "web"
+    ? createEmptyWebSource()
+    : "";
+}
+
 function sourceFromImport(
   language: PlaygroundLanguage,
   imported: TryItImportPayload | null,
-  fallback: PlaygroundSource,
 ): PlaygroundSource {
-  if (!imported) return fallback;
+  if (!imported) return emptySource(language);
   return typeof imported.source === "string" ? sourceForLanguage(language, imported.source) : imported.source;
 }
 
@@ -24,37 +28,31 @@ export function TryPlayground({ language }: { language: PlaygroundLanguage }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const importId = searchParams.get("i");
-  const fallback = defaultTryExample(language);
 
-  const [imported, setImported] = useState<TryItImportPayload | null>(() => {
-    if (!importId) return null;
-    const payload = readTryItCode(importId);
-    if (payload) clearTryItCode(importId);
-    return payload;
-  });
+  const [imported, setImported] = useState<TryItImportPayload | null>(() =>
+    importId ? readTryItCode(importId) : null,
+  );
   const [source, setSource] = useState<PlaygroundSource>(() =>
-    sourceFromImport(language, imported, fallback.source),
+    sourceFromImport(language, importId ? readTryItCode(importId) : null),
   );
 
   useEffect(() => {
-    const fallbackSource = defaultTryExample(language).source;
     if (!importId) {
       setImported(null);
-      setSource(fallbackSource);
+      setSource(emptySource(language));
       return;
     }
-    const fresh = readTryItCode(importId);
-    if (fresh) clearTryItCode(importId);
-    const payload = fresh ?? null;
+    const payload = readTryItCode(importId);
+    if (!payload) return;
     setImported(payload);
-    setSource(sourceFromImport(language, payload, fallbackSource));
+    setSource(sourceFromImport(language, payload));
   }, [language, importId]);
 
-  const starter = sourceFromImport(language, imported, fallback.source);
+  const starter = sourceFromImport(language, imported);
   const isLessonImport = Boolean(imported);
-  const problemText = imported?.instructions ?? imported?.title ?? `${fallback.title}. ${fallback.hint}`;
+  const problemText = imported?.instructions ?? imported?.title ?? "";
   const exercise = createTryItExercise(language, starter, {
-    title: imported?.title ?? fallback.title,
+    title: imported?.title ?? "Try it Yourself",
     instructions: problemText,
   });
 
@@ -71,28 +69,31 @@ export function TryPlayground({ language }: { language: PlaygroundLanguage }) {
 
   return (
     <div className="ih-try-playground-wrap">
-      <div className="ih-try-header">
-        <p className="ih-try-problem-label">
-          {imported?.problemIndex != null && imported?.problemTotal != null
-            ? `Exercise Problem ${imported.problemIndex} of ${imported.problemTotal}`
-            : "Exercise Problem"}
-        </p>
-        <p className="ih-try-problem-copy">{problemText}</p>
-        {langOptions && langOptions.length > 1 ? (
-          <div className="ih-try-lang-tabs">
-            {langOptions.map((opt) => (
-              <button
-                key={opt.language}
-                type="button"
-                className={`ih-try-lang-tab${opt.language === language ? " is-active" : ""}`}
-                onClick={() => opt.language !== language && switchLanguage(opt.language, opt.source)}
-              >
-                {opt.label ?? opt.language.toUpperCase()}
-              </button>
-            ))}
-          </div>
-        ) : null}
-      </div>
+      {isLessonImport ? (
+        <div className="ih-try-header">
+          <p className="ih-try-problem-label">
+            {imported?.problemIndex != null && imported?.problemTotal != null
+              ? `Exercise Problem ${imported.problemIndex} of ${imported.problemTotal}`
+              : "Exercise Problem"}
+          </p>
+          {problemText ? <p className="ih-try-problem-copy">{problemText}</p> : null}
+          {imported?.observe ? <p className="ih-try-observe">{imported.observe}</p> : null}
+          {langOptions && langOptions.length > 1 ? (
+            <div className="ih-try-lang-tabs">
+              {langOptions.map((opt) => (
+                <button
+                  key={opt.language}
+                  type="button"
+                  className={`ih-try-lang-tab${opt.language === language ? " is-active" : ""}`}
+                  onClick={() => opt.language !== language && switchLanguage(opt.language, opt.source)}
+                >
+                  {opt.label ?? opt.language.toUpperCase()}
+                </button>
+              ))}
+            </div>
+          ) : null}
+        </div>
+      ) : null}
       <CodePlayground
         exercise={exercise}
         mode="tryit"
@@ -103,15 +104,17 @@ export function TryPlayground({ language }: { language: PlaygroundLanguage }) {
       {isLessonImport ? (
         <div className="ih-try-footer">
           {backHref ? (
-            <Link href={backHref} className="btn-prev">← Back</Link>
+            <Link href={backHref} className="ih-pager-btn ih-pager-back">
+              <span className="ih-pager-label">« Back</span>
+            </Link>
           ) : <span />}
           {nextHref ? (
-            <button type="button" className="btn-next" onClick={() => router.push(nextHref)}>
-              Next »
-            </button>
+            <Link href={nextHref} className="ih-pager-btn ih-pager-start">
+              <span className="ih-pager-label">Next »</span>
+            </Link>
           ) : imported?.backHref ? (
-            <Link href={imported.backHref} className="btn-next">
-              Done »
+            <Link href={imported.backHref} className="ih-pager-btn ih-pager-start">
+              <span className="ih-pager-label">Done »</span>
             </Link>
           ) : null}
         </div>

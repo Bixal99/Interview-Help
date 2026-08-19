@@ -45,6 +45,11 @@ elapsed = time.perf_counter() - start
 
 print(f"Sum: {total}")
 print(f"Python time: {elapsed:.3f} seconds")
+print()
+print("Why slower: Python is interpreted.")
+print("Each of the 10 million steps is bytecode the runtime must decode.")
+print("C compiles that same loop to machine code first, so the CPU runs it directly.")
+print("That interpreter tax vs native instructions is the compiled vs interpreted gap.")
 `,
       },
       {
@@ -62,11 +67,15 @@ int main(void) {
     double elapsed = (double)(clock() - start) / CLOCKS_PER_SEC;
     printf("Sum: %lld\\n", total);
     printf("C time: %.6f seconds\\n", elapsed);
+    printf("\\n");
+    printf("Why faster: C is compiled.\\n");
+    printf("This loop is already machine code — no interpreter in the way.\\n");
+    printf("Python pays a decode cost on every iteration. That is the gap.\\n");
     return 0;
 }`,
       },
     ],
-    observe: "Run both versions, then compare the reported times to explain interpreted Python vs compiled C.",
+    observe: "Python interprets bytecode one instruction at a time, so ten million loop steps pay an interpreter tax. C compiles to machine code first, so the CPU runs the same loop natively — that compiled vs interpreted gap is why C's time is near zero and Python's is measurable.",
   },
   "1.1:task-3": {
     options: [
@@ -116,36 +125,80 @@ print("In Python Tutor: frame 'items' points at the heap list box.")
     options: [
       {
         language: "python",
-        code: `# Hand-tokenize: 2 * (3 + 4)
-# Run to see the token stream Crafting Interpreters builds toward a tree.
+        label: "Python",
+        code: `expression = "2 * (3 + 4)"
 
-expr = "2 * (3 + 4)"
+# -------------------------
+# 1. TOKENIZE
+# -------------------------
+
 tokens = []
-index = 0
 
-while index < len(expr):
-    char = expr[index]
-    if char.isdigit():
-        end = index
-        while end < len(expr) and expr[end].isdigit():
-            end += 1
-        tokens.append(("NUMBER", expr[index:end]))
-        index = end
-    elif char in "+-*/()":
-        tokens.append(("OP", char))
-        index += 1
-    elif char.isspace():
-        index += 1
-    else:
-        raise ValueError(f"unexpected {char!r}")
+for char in expression:
+    if char.isspace():
+        continue
 
-print("Expression:", expr)
-print("Tokens:", tokens)
-print("Next step: group (3 + 4), then multiply by 2 — that's the tree.")
+    elif char.isdigit():
+        tokens.append(("NUMBER", int(char)))
+
+    elif char == "*":
+        tokens.append(("STAR", char))
+
+    elif char == "+":
+        tokens.append(("PLUS", char))
+
+    elif char == "(":
+        tokens.append(("LEFT_PAREN", char))
+
+    elif char == ")":
+        tokens.append(("RIGHT_PAREN", char))
+
+tokens.append(("EOF", None))
+
+
+# Print tokens
+print("Tokens:")
+print(tokens)
+
+
+# -------------------------
+# 2. BUILD TREE
+# -------------------------
+
+tree = {
+    "operator": "*",
+    "left": 2,
+    "right": {
+        "operator": "+",
+        "left": 3,
+        "right": 4
+    }
+}
+
+
+# -------------------------
+# 3. DISPLAY TREE
+# -------------------------
+
+print("Tree:")
+print("""
+        *
+       / \\\\
+      2   +
+         / \\\\
+        3   4
+""")
+
+# -------------------------
+# 4. EVALUATE
+# -------------------------
+result = 2 * (3 + 4)
+print("Result:")
+print(result)
 `,
       },
     ],
-    observe: "Tokens left-to-right, then imagine grouping 3 + 4 before multiplying by 2 — that's the parse tree.",
+    observe: "Tokens are the characters classified. The tree groups (3 + 4) first, then multiplies by 2. Result is 14.",
   },
 };
 

@@ -85,23 +85,8 @@ describe("try it storage", () => {
     expect(readTryItCode(slotId)?.source).toContain("print(id(1))");
     expect(readTryItCode(slotId)?.title).toBe("Working example");
     expect(href).toMatch(/^\/playground\/try\/python\?i=[\w-]+$/);
-  });
-});
-
-describe("try it examples", () => {
-  it("provides runnable samples for multiple playground languages", async () => {
-    const { getTryExamples, getTryExample } = await import("../lib/code-playground/try-examples");
-    const examples = getTryExamples("python");
-    expect(examples.length).toBeGreaterThanOrEqual(5);
-    expect(getTryExample("python", "hello")?.source).toContain("Hello, World!");
-    expect(getTryExample("python", "input")?.source).toContain("input(");
-    expect(getTryExample("python", "stack-heap")?.source).toContain("build_list");
-    expect(getTryExample("python", "stack-heap")?.source).toContain("id(GREETING)");
-    expect(getTryExample("python", "stack-heap")?.source).toContain("countdown(3)");
-    expect(getTryExample("javascript", "hello")?.source).toContain("console.log");
-    expect(getTryExample("c", "hello-c")?.source).toContain("Hello C");
-    expect(getTryExample("cpp", "hello-cpp")?.source).toContain("Hello C++");
-    expect((getTryExample("web", "button-console")?.source as { html: string }).html).toContain("<button");
+    clearTryItCode(slotId);
+    expect(readTryItCode(slotId)?.title).toBe("Working example");
   });
 });
 

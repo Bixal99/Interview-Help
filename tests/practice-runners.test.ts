@@ -15,9 +15,14 @@ describe("practice runners", () => {
     expect(timing?.options.map((option) => option.language)).toEqual(["python", "c"]);
     expect(timing?.options[0]?.code).toMatch(/10_000_000/);
     expect(timing?.options[1]?.code).toMatch(/10000000/);
-    expect(timing?.observe).toMatch(/compiled/i);
+    expect(timing?.observe).toMatch(/compiled vs interpreted/i);
 
     const recursion = getPracticeRunner("1.1", "task-3");
     expect(recursion?.options[0]?.code).toMatch(/RecursionError/);
+
+    const tokenize = getPracticeRunner("1.1", "task-5");
+    expect(tokenize?.options[0]?.code).toMatch(/LEFT_PAREN/);
+    expect(tokenize?.options[0]?.code).toMatch(/operator/);
+    expect(tokenize?.options[0]?.code).toContain('expression = "2 * (3 + 4)"');
   });
 });

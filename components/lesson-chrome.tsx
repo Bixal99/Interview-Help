@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import type { Neighbor } from "@/lib/navigation";
+import { BeforeYouStart } from "./before-you-start";
 import { Pager } from "./pager";
 import { useLearningProgress } from "./progress-client";
 
@@ -11,6 +12,10 @@ export function LessonChrome({
   lessonId,
   lessonSlug,
   title,
+  knowFirst,
+  isFirstLesson,
+  isLastLesson,
+  projectHref,
   prev,
   next,
   children,
@@ -20,18 +25,25 @@ export function LessonChrome({
   lessonId: string;
   lessonSlug: string;
   title: string;
+  knowFirst?: string;
+  isFirstLesson?: boolean;
+  isLastLesson?: boolean;
+  projectHref?: string | null;
   prev: Neighbor | null;
   next: Neighbor | null;
   children: React.ReactNode;
 }) {
   const { visit, projectDone, completeLesson } = useLearningProgress();
-  const nextDisabled = Boolean(next?.requiresProject && !projectDone(slug, phaseId));
+  const buildProject = Boolean(isLastLesson && projectHref);
+  const nextDisabled = !buildProject && Boolean(next?.requiresProject && !projectDone(slug, phaseId));
+  const proceedHref = buildProject ? projectHref! : next?.href;
+  const proceedLabel = buildProject ? "Build Project" : "Next";
   const pager = (
     <Pager
       backHref={prev?.href ?? `/courses/${slug}`}
       backLabel="Previous"
-      proceedHref={next?.href}
-      proceedLabel="Next"
+      proceedHref={proceedHref}
+      proceedLabel={proceedLabel}
       proceedDisabled={nextDisabled}
       hint={nextDisabled ? "Complete the project to continue." : undefined}
     />
@@ -44,9 +56,12 @@ export function LessonChrome({
 
   return (
     <article className="ih-lesson">
-      <h1>{title}</h1>
+      <h1>{lessonId} {title}</h1>
       {pager}
-      <div className="ih-lesson-body">{children}</div>
+      <div className="ih-lesson-body">
+        {isFirstLesson && knowFirst ? <BeforeYouStart text={knowFirst} /> : null}
+        {children}
+      </div>
       <div className="ih-lesson-end">{pager}</div>
     </article>
   );

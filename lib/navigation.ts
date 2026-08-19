@@ -36,6 +36,13 @@ export type CourseNav = {
   chapters: CourseNavChapter[];
 };
 
+export function phaseCountWithProjects(nav: CourseNav) {
+  return nav.chapters.reduce(
+    (sum, chapter) => sum + chapter.phases.filter((phase) => phase.hasProject).length,
+    0,
+  );
+}
+
 type Page = {
   kind: "lesson" | "project" | "phase";
   course: string;

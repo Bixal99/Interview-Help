@@ -25,7 +25,16 @@ export default async function PhaseProjectPage({ params }: { params: Promise<{ c
     <main id="main-content">
       <TutorialShell nav={view.nav}>
         <GateBanner slug={view.course.slug} phaseId={view.phase.id} phaseIds={phaseIds} requiredHref={getRequiredProjectHref(view.course.slug, view.phase.id)} />
-        <ProjectChrome slug={view.course.slug} phaseId={view.phase.id} title={view.project.title} prev={view.prev} next={view.next}>
+        <ProjectChrome
+          slug={view.course.slug}
+          phaseId={view.phase.id}
+          title={view.project.title}
+          reviewHref={view.reviewHref}
+          reviewLabel={view.reviewLabel}
+          proceedHref={view.proceedHref}
+          proceedLabel={view.proceedLabel}
+          whatComesNext={view.whatComesNext}
+        >
           <MarkdownDocument markdown={view.project.markdown} sourcePath={view.course.sourcePath} embedYouTube={false} />
         </ProjectChrome>
       </TutorialShell>

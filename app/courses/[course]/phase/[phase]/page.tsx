@@ -26,7 +26,6 @@ export default async function PhasePage({ params }: { params: Promise<{ course: 
         phaseTitle={view.phase.title}
         track={view.phase.track}
         goal={view.phase.goal}
-        knowFirst={view.phase.knowFirst}
         topics={view.phase.lessons.map((lesson) => ({ id: lesson.id, title: lesson.title }))}
         prev={view.prev}
         proceedHref={firstLesson ? lessonPath(view.course.slug, view.phase.id, firstLesson) : view.next?.href ?? view.startHref}

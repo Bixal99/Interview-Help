@@ -21,11 +21,7 @@ export default async function CourseHomePage({ params }: { params: Promise<{ cou
   const { course: slug } = await params;
   const course = getCourseHome(slug);
   if (!course) notFound();
-  const lessonCount = course.nav.chapters.reduce(
-    (sum, chapter) => sum + chapter.phases.reduce((phaseSum, phase) => phaseSum + phase.lessons.length, 0),
-    0,
-  );
-  const projectCount = course.nav.chapters.reduce(
+  const phaseCount = course.nav.chapters.reduce(
     (sum, chapter) => sum + chapter.phases.filter((phase) => phase.hasProject).length,
     0,
   );
@@ -35,7 +31,7 @@ export default async function CourseHomePage({ params }: { params: Promise<{ cou
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
           <h1 className="text-4xl font-bold uppercase tracking-wide sm:text-6xl">{course.shortName} Tutorial</h1>
           <div className="w-full max-w-md shrink-0 lg:w-[22rem]">
-            <CourseProgressBar slug={course.slug} lessonCount={lessonCount} projectCount={projectCount} variant="band" />
+            <CourseProgressBar slug={course.slug} phaseCount={phaseCount} variant="band" />
             <div className="mt-4">
               <Pager backHref="/courses" proceedHref={course.startHref} proceedLabel="Start" hideBack />
             </div>

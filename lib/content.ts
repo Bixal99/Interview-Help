@@ -9,6 +9,7 @@ import { coursePages, firstLessonHref, firstPhaseHref, neighborsFor, type Course
 import { findLesson, findPhase, headingRouteMap, lessonPath, parseCourseMarkdown, phasePath, projectPathFor, withSourcePath } from "./parse-course";
 import { attachProjects, parseProjectsDocument } from "./parse-projects";
 import { extractCompleteCta } from "./complete-cta";
+import { extractProjectNav, extractWhatComesNext, projectProceedLabel, projectReviewLabel } from "./lesson-sections";
 import { extractPractice, withoutPractice } from "./practice";
 import { lookupFromCourses } from "./progress-lookup";
 import { nextStep, previousStep } from "./progress-storage";
@@ -154,11 +155,23 @@ export function getLessonView(slug: string, phaseId: string, lessonSlug: string)
   const { prev, next } = neighborsFor(pages, href);
   const practice = extractPractice(lesson.markdown);
   const sourcePath = lesson.sourcePath ?? phase.sourcePath ?? course.sourcePath;
-  const { markdown, cta } = extractCompleteCta(withoutPractice(lesson.markdown, practice), sourcePath);
+  const withoutComplete = extractCompleteCta(withoutPractice(lesson.markdown, practice), sourcePath).markdown;
+  const { markdown, whatComesNext } = extractWhatComesNext(withoutComplete);
+  const lessonIndex = phase.lessons.findIndex((item) => item.slug === lesson.slug);
+  const isFirstLesson = lessonIndex === 0;
+  const isLastLesson = lessonIndex === phase.lessons.length - 1;
+  const projectHref = phase.project ? projectPathFor(slug, phaseId) : null;
   return {
     course: { slug: course.slug, shortName: course.shortName, sourcePath },
     nav: toCourseNav(course),
-    phase: { id: phase.id, number: phase.number, title: phase.title, hasProject: Boolean(phase.project) },
+    phase: {
+      id: phase.id,
+      number: phase.number,
+      title: phase.title,
+      track: phase.track,
+      knowFirst: phase.knowFirst,
+      hasProject: Boolean(phase.project),
+    },
     lesson: {
       id: lesson.id,
       slug: lesson.slug,
@@ -168,7 +181,10 @@ export function getLessonView(slug: string, phaseId: string, lessonSlug: string)
       codeExamples: lesson.codeExamples,
     },
     practice,
-    completeCta: cta,
+    whatComesNext: isLastLesson && !phase.project ? whatComesNext : null,
+    isFirstLesson,
+    isLastLesson,
+    projectHref,
     prev,
     next,
     startHref: firstLessonHref(course),
@@ -203,13 +219,29 @@ export function getProjectView(slug: string, phaseId: string) {
   const href = projectPathFor(slug, phaseId);
   const { prev } = neighborsFor(pages, href);
   const next = nextAfterProject(course, phaseId) ?? neighborsFor(pages, href).next;
+  const phaseIndex = course.phases.findIndex((item) => item.id === phaseId);
+  const nextPhase = phaseIndex >= 0 ? course.phases[phaseIndex + 1] : undefined;
+  const lastLesson = phase.lessons[phase.lessons.length - 1];
+  let whatComesNext = null;
+  if (lastLesson) {
+    const practice = extractPractice(lastLesson.markdown);
+    const sourcePath = lastLesson.sourcePath ?? phase.sourcePath ?? course.sourcePath;
+    const stripped = extractCompleteCta(withoutPractice(lastLesson.markdown, practice), sourcePath).markdown;
+    whatComesNext = extractWhatComesNext(stripped).whatComesNext;
+  }
+  const projectMarkdown = extractProjectNav(phase.project.markdown);
   return {
     course: { slug: course.slug, shortName: course.shortName, sourcePath: "content/guides/Projects.md" },
     nav: toCourseNav(course),
-    phase: { id: phase.id, number: phase.number, title: phase.title },
-    project: phase.project,
+    phase: { id: phase.id, number: phase.number, title: phase.title, track: phase.track },
+    project: { ...phase.project, markdown: projectMarkdown },
+    whatComesNext,
+    reviewHref: phasePath(slug, phaseId),
+    reviewLabel: projectReviewLabel(phase),
+    proceedHref: nextPhase ? phasePath(slug, nextPhase.id) : next?.href,
+    proceedLabel: nextPhase ? projectProceedLabel(nextPhase.title) : next?.label ?? "Continue",
     prev,
-    next: next ? { ...next, requiresProject: true, label: "Next phase" } : null,
+    next: next ? { ...next, requiresProject: true } : null,
     startHref: firstLessonHref(course),
   };
 }

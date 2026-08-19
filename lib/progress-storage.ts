@@ -209,11 +209,14 @@ export function resumeHref(
   };
 }
 
-export function coursePercent(state: CourseProgressState, lessonCount: number, projectCount: number) {
-  const total = lessonCount + projectCount;
-  if (!total) return 0;
-  const done = state.completedLessons.length + state.completedProjects.length;
-  return Math.min(100, Math.round((done / total) * 100));
+export function phasesDone(state: CourseProgressState) {
+  return state.completedProjects.length;
+}
+
+/** Progress counts completed phase projects only — a phase advances when its project is done. */
+export function coursePercent(state: CourseProgressState, phaseCount: number) {
+  if (!phaseCount) return 0;
+  return Math.min(100, Math.round((phasesDone(state) / phaseCount) * 100));
 }
 
 export function validateImportedProgress(value: unknown): LearningProgress {

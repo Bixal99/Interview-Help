@@ -8,16 +8,20 @@ import type { CourseNav, CourseNavPhase } from "@/lib/navigation";
 import { lessonPath, phasePath, projectPathFor } from "@/lib/parse-course";
 import { useOptionalProgress } from "./progress-client";
 
-function navLabel(title: string) {
-  return title.split(/\s+[-–—:|]\s+/)[0].replace(/^phase\s+\d+\s*/i, "").trim() || title;
-}
-
-function courseTab(name: string) {
-  if (name === "Computer Science") return "CS";
-  if (name === "IT Administration") return "IT Admin";
-  if (name === "Web Development") return "Web";
-  if (name === "AI & ML") return "AI";
-  return name;
+function minimalLabel(title: string) {
+  let text = title.replace(/^phase\s+\d+\s*/i, "").trim();
+  text = text.split(/\s*[&|:–—]\s*/)[0] ?? text;
+  text = text.replace(/^(from|the|a)\s+/i, "");
+  text = text.replace(/^programming\s+/i, "");
+  text = text.split(/\s+to\s+/i)[0] ?? text;
+  if (text.length <= 18) return text;
+  const words = text.split(/\s+/).filter(Boolean);
+  let out = words[0] ?? text;
+  for (const word of words.slice(1)) {
+    if (`${out} ${word}`.length > 18) break;
+    out += ` ${word}`;
+  }
+  return out;
 }
 
 function PhaseBlock({
@@ -49,7 +53,7 @@ function PhaseBlock({
       <div className={`ih-index-row${onPhase || onChild ? " is-current" : ""}`}>
         <Link href={phaseHref} className={onPhase ? "active" : undefined}>
           <span className="ih-index-num">{phase.number}</span>
-          <span className="ih-index-label">{navLabel(phase.title)}</span>
+          <span className="ih-index-label">{minimalLabel(phase.title)}</span>
         </Link>
         {hasKids ? (
           <button
@@ -63,7 +67,7 @@ function PhaseBlock({
               setOpen((current) => !current);
             }}
           >
-            <ChevronRight size={16} />
+            <ChevronRight size={14} />
           </button>
         ) : null}
       </div>
@@ -74,7 +78,7 @@ function PhaseBlock({
             return (
               <Link key={lesson.id} href={href} className={pathname === href ? "active" : undefined}>
                 <span className="ih-index-num">{lesson.id}</span>
-                <span className="ih-index-label">{navLabel(lesson.title)}</span>
+                <span className="ih-index-label">{minimalLabel(lesson.title)}</span>
               </Link>
             );
           })}
@@ -111,14 +115,12 @@ export function TutorialIndex({
 
   return (
     <nav className="ih-index-nav" aria-label={`${nav.shortName} tutorial`}>
-      <p className="ih-index-title">{courseTab(nav.shortName)}</p>
       <Link href={homeHref} className={pathname === homeHref ? "active" : undefined}>
-        <span className="ih-index-num">0</span>
-        <span className="ih-index-label">Home</span>
+        Home
       </Link>
       {nav.chapters.map((chapter) => (
         <div key={chapter.id} className="ih-index-group">
-          <p className="ih-index-section">{navLabel(chapter.title)}</p>
+          <p className="ih-index-section">{minimalLabel(chapter.title)}</p>
           {chapter.phases.map((phase) => (
             <PhaseBlock
               key={phase.id}

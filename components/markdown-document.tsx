@@ -7,13 +7,43 @@ import rehypeHighlight from "rehype-highlight";
 import rehypeSlug from "rehype-slug";
 import { AppIcon } from "@/components/icons/app-icon";
 import { CodeBlock } from "./code-block";
-import { LessonVideo } from "./lesson-video";
+import { PlaygroundBlock } from "./code-playground/playground-block";
+import { LessonDiagram, isVisualDiagram } from "./lesson-diagram";
 import { MermaidDiagram } from "./mermaid-diagram";
 import { ProgressToggle } from "./progress";
-import { convertMarkdownHref, extractYouTubeInfo, githubSlug } from "@/lib/content-utils";
-import type { VideoResource } from "@/lib/learning-model";
+import { VisualLearning, type VisualResource } from "./visual-learning";
+import { convertMarkdownHref, githubSlug } from "@/lib/content-utils";
+import { getExercise } from "@/lib/code-playground/exercises";
+import { parseFenceInfo } from "@/lib/code-playground/fence-meta";
 
-type MarkdownNode = { type: string; value?: string; data?: { hName?: string; hProperties?: Record<string, string> }; children?: MarkdownNode[] };
+type MarkdownNode = {
+  type: string;
+  lang?: string;
+  value?: string;
+  data?: { hName?: string; hProperties?: Record<string, string> };
+  children?: MarkdownNode[];
+};
+
+function remarkPlaygroundMeta() {
+  return (tree: MarkdownNode) => {
+    const walk = (node: MarkdownNode) => {
+      if (node.type === "code" && node.lang) {
+        const info = parseFenceInfo(node.lang);
+        node.lang = info.language;
+        if (info.playgroundId) {
+          node.data = node.data ?? {};
+          node.data.hProperties = {
+            ...(node.data.hProperties ?? {}),
+            "data-playground": info.playgroundId,
+            dataPlayground: info.playgroundId,
+          };
+        }
+      }
+      node.children?.forEach(walk);
+    };
+    walk(tree);
+  };
+}
 
 function remarkSafeNamedAnchors() {
   return (tree: MarkdownNode) => {
@@ -43,8 +73,6 @@ function textContent(value: React.ReactNode): string {
 function tidyDashes(value: string) {
   return value
     .replace(/[\u2013\u2014]/g, ", ")
-    .replace(/\s+-\s+/g, ": ")
-    .replace(/^\s*-\s+/, "")
     .replace(/\s{2,}/g, " ");
 }
 
@@ -61,7 +89,7 @@ const KICKER_TITLES: Array<[RegExp, string]> = [
   [/compiler vs interpreter/i, "Compiler vs Interpreter"],
   [/internal working/i, "How Code Becomes Machine Code"],
   [/where a variable actually lives/i, "How a Program Uses Memory"],
-  [/see it before you memorize/i, "Visual Explanation"],
+  [/see it before you memorize/i, "Visual Learning"],
   [/^diagram\b/i, "Visual Explanation"],
   [/how it works internally/i, "How It Works Internally"],
   [/picture it like this/i, "Simple Real-World Analogy"],
@@ -97,7 +125,7 @@ function memoryHeading(label: string): string | null {
   return null;
 }
 
-const KEYWORDS = /\b(compilers?|interpreters?|variables?|function calls?|recursive calls?|network requests?|electrical signals?|the stack|the heap|pointers?|processes?|CPU|bytecode|machine code|source code|runtime|loops?|stack overflow|Big O)\b/gi;
+const KEYWORDS = /\b(compilers?|interpreters?|variables?|function calls?|recursive calls?|network requests?|electrical signals?|the stack|the heap|pointers?|process(?:es)?|CPU|bytecode|machine code|source code|runtime|loops?|stack overflow|Big O)\b/gi;
 
 function emphasizeText(text: string): React.ReactNode {
   const cleaned = tidyDashes(text);
@@ -130,13 +158,43 @@ function formatCopy(value: React.ReactNode): React.ReactNode {
   return value;
 }
 
-function firstLessonVideo(markdown: string): VideoResource | null {
-  const match = markdown.match(/\[([^\]]+)\]\((https?:\/\/(?:www\.)?(?:youtube\.com\/(?:watch\?[^)\s]+|playlist\?[^)\s]+)|youtu\.be\/[^)\s]+))\)/i);
-  if (!match) return null;
-  const info = extractYouTubeInfo(match[2]);
-  if (!info?.videoId && info?.kind !== "playlist") return null;
-  if (!info) return null;
-  return { href: match[2], title: match[1], info };
+function renderProse(value: React.ReactNode) {
+  const text = tidyDashes(textContent(value)).replace(/^[:\s]+/, "").trim();
+  if (!text) return null;
+  const topics = text.split(/(?=\b(?:The stack|The heap)\b)/).map((item) => item.trim()).filter(Boolean);
+  if (topics.length >= 2) {
+    return (
+      <ul className="ih-prose-list">
+        {topics.map((item, index) => <li key={index}>{formatCopy(item)}</li>)}
+      </ul>
+    );
+  }
+  return <p>{formatCopy(value)}</p>;
+}
+
+function tidyNote(note?: string) {
+  if (!note) return undefined;
+  const cleaned = note.replace(/^[:\s-]+/, "").replace(/\s{2,}/g, " ").trim();
+  if (!cleaned) return undefined;
+  return cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
+}
+
+function extractVisual(markdown: string): { markdown: string; resources: VisualResource[] } {
+  const source = markdown.replace(/\r\n/g, "\n");
+  const match = source.match(/\*\*SEE IT BEFORE YOU MEMORIZE IT\*\*[^\n]*\n+(?:[ \t]*[-*].+\n?)*/i);
+  if (!match) return { markdown: source, resources: [] };
+  const resources: VisualResource[] = [];
+  for (const line of match[0].split("\n")) {
+    const item = /^\s*[-*]\s+([^:]+):\s+\[([^\]]+)\]\(([^)]+)\)(?:\s*[-–—:]\s*(.+))?/.exec(line);
+    if (!item) continue;
+    resources.push({
+      kind: item[1].trim(),
+      title: item[2].trim(),
+      href: item[3].trim(),
+      note: tidyNote(item[4]),
+    });
+  }
+  return { markdown: source.replace(match[0], "\n\n"), resources };
 }
 
 export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYouTube = true }: { markdown: string; sourcePath: string; progressScope?: string; embedYouTube?: boolean }) {
@@ -151,15 +209,18 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYou
     return MarkdownHeading;
   };
 
-  const featured = embedYouTube ? firstLessonVideo(markdown) : null;
-  let usedPlayer = false;
-  let pendingInterviewVideo = false;
+  const extracted = extractVisual(markdown);
+  const resources = extracted.resources;
+  const body = extracted.markdown;
+  let visualShown = false;
+  let pendingVisual = false;
 
-  function takeVideo() {
-    if (!featured || usedPlayer) return null;
-    usedPlayer = true;
-    pendingInterviewVideo = false;
-    return <LessonVideo videos={[featured]} />;
+  function takeVisual() {
+    if (visualShown) return null;
+    if (resources.length === 0) return null;
+    visualShown = true;
+    pendingVisual = false;
+    return <VisualLearning resources={resources} sourcePath={sourcePath} embedYouTube={embedYouTube} />;
   }
 
   const components: Components = {
@@ -177,6 +238,7 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYou
         }
         const kicker = parseKicker(label);
         if (kicker) {
+          if (kicker.title === "Visual Learning" || kicker.title === "What Comes Next") return null;
           const rest = bits.slice(1);
           const restText = tidyDashes(textContent(rest)).replace(/^[:\s]+/, "").trim();
           if (kicker.kind === "interview") {
@@ -184,33 +246,33 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYou
               return (
                 <>
                   <h2 className="ih-lesson-kicker">{kicker.title}</h2>
-                  <p>{formatCopy(rest)}</p>
-                  {takeVideo()}
+                  {renderProse(rest)}
+                  {takeVisual()}
                 </>
               );
             }
-            pendingInterviewVideo = Boolean(featured && !usedPlayer);
+            pendingVisual = !visualShown;
             return <h2 className="ih-lesson-kicker">{kicker.title}</h2>;
           }
-          const before = pendingInterviewVideo ? takeVideo() : null;
+          const before = pendingVisual ? takeVisual() : null;
           return (
             <>
               {before}
               <h2 className="ih-lesson-kicker">{kicker.title}</h2>
-              {restText ? <p>{formatCopy(rest)}</p> : null}
+              {restText ? renderProse(rest) : null}
             </>
           );
         }
       }
-      if (pendingInterviewVideo) {
+      if (pendingVisual) {
         return (
           <>
-            <p>{formatCopy(children)}</p>
-            {takeVideo()}
+            {renderProse(children)}
+            {takeVisual()}
           </>
         );
       }
-      return <p>{formatCopy(children)}</p>;
+      return renderProse(children);
     },
     li({ children }) {
       const bits = Array.isArray(children) ? children : [children];
@@ -220,9 +282,8 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYou
         if (heading) {
           const rest = bits.slice(1);
           return (
-            <li className="ih-memory-item">
-              <h3 className="ih-lesson-sub">{heading}</h3>
-              {textContent(rest).trim() ? <p>{formatCopy(rest)}</p> : null}
+            <li>
+              <strong>{heading}:</strong> {textContent(rest).trim() ? formatCopy(rest) : null}
             </li>
           );
         }
@@ -230,23 +291,48 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYou
       return <li>{formatCopy(children)}</li>;
     },
     blockquote({ children }) {
-      return <div className="ih-note">{formatCopy(children)}</div>;
+      return <blockquote className="ih-quote">{formatCopy(children)}</blockquote>;
     },
     a({ href = "", children, ...props }) {
       const mapped = convertMarkdownHref(href, sourcePath);
       const external = /^https?:\/\//i.test(mapped);
       const download = mapped.startsWith("/downloads/");
-      return <a {...props} href={mapped} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined}>{children}{external && <AppIcon name="externalLink" size={12} className="ml-1" />}{download && <AppIcon name="download" size={12} className="ml-1" />}</a>;
+      return (
+        <a
+          {...props}
+          className="ih-md-link"
+          href={mapped}
+          target={external ? "_blank" : undefined}
+          rel={external ? "noopener noreferrer" : undefined}
+        >
+          <span>{children}</span>
+          {external ? <AppIcon name="externalLink" size={12} /> : null}
+          {download ? <AppIcon name="download" size={12} /> : null}
+        </a>
+      );
     },
     pre({ children }) {
       const child = Array.isArray(children) ? children[0] : children;
-      if (!isValidElement<{ className?: string; children?: React.ReactNode }>(child)) return <pre>{children}</pre>;
+      if (!isValidElement<{ className?: string; children?: React.ReactNode; "data-playground"?: string; dataPlayground?: string }>(child)) return <pre>{children}</pre>;
       const className = child.props.className ?? "";
+      const playgroundId =
+        child.props["data-playground"]
+        ?? child.props.dataPlayground
+        ?? /(?:^|\s)playground=([\w-]+)/.exec(className)?.[1]
+        ?? (/playground=([\w-]+)/.exec(className)?.[1]);
       const language = /(?:^|\s)language-([\w-]+)/.exec(className)?.[1]
-        ?? className.split(/\s+/).find((name) => name && name !== "hljs")
+        ?? className.split(/\s+/).find((name) => name && name !== "hljs" && !name.startsWith("playground="))
         ?? "text";
       const source = textContent(child.props.children).replace(/\n$/, "");
+      if (playgroundId) {
+        const exercise = getExercise(playgroundId);
+        if (exercise) return <PlaygroundBlock exercise={exercise} mode="inline" />;
+      }
       if (language === "mermaid") return <MermaidDiagram source={source} />;
+      if (language === "text" || language === "plaintext") {
+        const diagram = isVisualDiagram(source) ? <LessonDiagram source={source} /> : null;
+        if (diagram) return diagram;
+      }
       return <CodeBlock language={language} code={source} />;
     },
     table({ children, ...props }) { return <div className="table-wrap" role="region" aria-label="Scrollable table" tabIndex={0}><table {...props}>{children}</table></div>; },
@@ -254,7 +340,8 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYou
 
   return (
     <article className="markdown-body">
-      <ReactMarkdown remarkPlugins={[remarkGfm, remarkMath, remarkSafeNamedAnchors]} rehypePlugins={[rehypeSlug, rehypeKatex, rehypeHighlight]} components={components} skipHtml>{markdown}</ReactMarkdown>
+      <ReactMarkdown remarkPlugins={[remarkGfm, remarkMath, remarkSafeNamedAnchors, remarkPlaygroundMeta]} rehypePlugins={[rehypeSlug, rehypeKatex, rehypeHighlight]} components={components} skipHtml>{body}</ReactMarkdown>
+      {takeVisual()}
     </article>
   );
 }

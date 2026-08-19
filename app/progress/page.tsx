@@ -11,8 +11,7 @@ export default function ProgressPage() {
     return {
       slug: course.slug,
       shortName: course.shortName,
-      lessonCount: course.lessonCount,
-      projectCount: parsed?.phases.filter((phase) => phase.project).length ?? 0,
+      phaseCount: parsed?.phases.filter((phase) => phase.project).length ?? 0,
     };
   });
   return (

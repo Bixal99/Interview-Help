@@ -25,18 +25,20 @@ export function Pager({
         </Link>
       )}
       {proceedHref ? (
-        proceedDisabled ? (
-          <span className="text-right">
-            <span className="ih-pager-btn ih-pager-start" aria-disabled="true">
+        <div className="ih-pager-end">
+          {proceedDisabled ? (
+            <>
+              <span className="ih-pager-btn ih-pager-start" aria-disabled="true">
+                <span className="ih-pager-label">{proceedLabel} »</span>
+              </span>
+              {hint ? <span className="ih-pager-hint">{hint}</span> : null}
+            </>
+          ) : (
+            <Link href={proceedHref} className="ih-pager-btn ih-pager-start">
               <span className="ih-pager-label">{proceedLabel} »</span>
-            </span>
-            {hint ? <span className="mt-2 block text-sm text-muted">{hint}</span> : null}
-          </span>
-        ) : (
-          <Link href={proceedHref} className="ih-pager-btn ih-pager-start">
-            <span className="ih-pager-label">{proceedLabel} »</span>
-          </Link>
-        )
+            </Link>
+          )}
+        </div>
       ) : (
         <span />
       )}

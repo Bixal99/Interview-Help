@@ -7,7 +7,6 @@ export function PhaseCheckpoint({
   phaseTitle,
   track,
   goal,
-  knowFirst,
   topics,
   prev,
   proceedHref,
@@ -16,7 +15,6 @@ export function PhaseCheckpoint({
   phaseTitle: string;
   track?: string;
   goal?: string;
-  knowFirst?: string;
   topics: { id: string; title: string }[];
   prev: Neighbor | null;
   proceedHref: string;
@@ -41,11 +39,6 @@ export function PhaseCheckpoint({
               {phaseTitle}
             </h1>
             {goal ? <p className="mt-3 text-base leading-relaxed text-white/85">{goal}</p> : null}
-            {knowFirst ? (
-              <p className="mt-3 text-[15px] leading-relaxed text-white/70">
-                <span className="font-semibold text-white">Before you start:</span> {knowFirst}
-              </p>
-            ) : null}
             {topics.length > 0 ? (
               <div className="mt-5">
                 <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#04AA6D]">What you will cover</p>

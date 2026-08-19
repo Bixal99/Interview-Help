@@ -184,7 +184,7 @@ describe("progress v3", () => {
   });
 
   it("calculates resume-related percent from lessons and projects", () => {
-    expect(coursePercent({ lastVisitedAt: "", visitedLessons: [], completedLessons: ["1.1"], completedExercises: [], completedProjects: ["1"], completedGitCheckpoints: [], completedPhases: [] }, 2, 1)).toBe(67);
+    expect(coursePercent({ lastVisitedAt: "", visitedLessons: [], completedLessons: ["1.1"], completedExercises: [], completedProjects: ["1"], completedGitCheckpoints: [], completedPhases: ["1"] }, 3)).toBe(33);
   });
 
   it("validates import JSON and rejects malformed files", () => {

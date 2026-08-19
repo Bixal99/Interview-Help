@@ -9,11 +9,23 @@ function isPhaseCheckpoint(pathname: string) {
   return /^\/courses\/[^/]+\/phase\/[^/]+$/.test(pathname);
 }
 
+function isPlayground(pathname: string) {
+  return /^\/playground(?:\/|$)/.test(pathname);
+}
+
 export function AppChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   if (pathname === "/") return children;
   if (isPhaseCheckpoint(pathname)) {
     return <div className="ih-w3 min-h-screen">{children}</div>;
+  }
+  if (isPlayground(pathname)) {
+    return (
+      <div className="ih-w3 min-h-screen">
+        <SiteHeader />
+        {children}
+      </div>
+    );
   }
   return (
     <div className="ih-w3">

@@ -27,7 +27,7 @@ type ProgressApi = {
   ready: boolean;
   progress: LearningProgress;
   course: (slug: string) => CourseProgressState;
-  percent: (slug: string, lessonCount: number, projectCount: number) => number;
+  percent: (slug: string, phaseCount: number) => number;
   canEnter: (slug: string, phaseId: string, phaseIds: string[]) => boolean;
   projectDone: (slug: string, phaseId: string) => boolean;
   visit: (slug: string, phaseId: string, lessonId: string) => void;
@@ -82,7 +82,11 @@ export function ProgressProvider({ children, lookup }: { children: React.ReactNo
     sync();
     setReady(true);
     window.addEventListener("storage", sync);
-    return () => window.removeEventListener("storage", sync);
+    window.addEventListener(EVENT, sync);
+    return () => {
+      window.removeEventListener("storage", sync);
+      window.removeEventListener(EVENT, sync);
+    };
   }, []);
 
   const visit = useCallback((slug: string, phaseId: string, lessonId: string) => {
@@ -107,7 +111,7 @@ export function ProgressProvider({ children, lookup }: { children: React.ReactNo
     ready,
     progress,
     course: (slug) => courseState(progress, slug),
-    percent: (slug, lessonCount, projectCount) => coursePercent(courseState(progress, slug), lessonCount, projectCount),
+    percent: (slug, phaseCount) => coursePercent(courseState(progress, slug), phaseCount),
     canEnter: (slug, phaseId, phaseIds) => canEnterPhase(progress, stepsFor(progress, slug, phaseIds), slug, phaseId),
     projectDone: (slug, phaseId) => isProjectComplete(progress, slug, phaseId),
     visit,

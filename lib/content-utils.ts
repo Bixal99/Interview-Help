@@ -12,8 +12,9 @@ export type YouTubeInfo = {
   playlistId?: string;
 };
 
-export type FencedBlock = { language: string; source: string; line: number };
+export type FencedBlock = { language: string; source: string; line: number; meta?: string; playgroundId?: string };
 
+import { parseFenceInfo } from "./code-playground/fence-meta";
 import { contentRegistry, roadmapRegistry } from "./course-catalog";
 import { mapLegacyOopPhase } from "./legacy-routes";
 
@@ -87,10 +88,13 @@ export function extractFencedBlocks(markdown: string): FencedBlock[] {
   const blocks: FencedBlock[] = [];
   const pattern = /^```([^\r\n]*)\r?\n([\s\S]*?)^```\s*$/gm;
   for (const match of markdown.matchAll(pattern)) {
+    const info = parseFenceInfo(match[1].trim());
     blocks.push({
-      language: match[1].trim().toLowerCase() || "text",
+      language: info.language || "text",
       source: match[2].replace(/\r?\n$/, ""),
       line: markdown.slice(0, match.index).split(/\r?\n/).length,
+      meta: info.meta,
+      playgroundId: info.playgroundId,
     });
   }
   return blocks;

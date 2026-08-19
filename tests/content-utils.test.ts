@@ -41,6 +41,16 @@ describe("content utilities", () => {
     expect(blocks[1].source).toBe("+--+\n|A |\n+--+");
   });
 
+  it("parses playground metadata from fenced code info", () => {
+    const source = "```python playground=python-numeric-types\nprint(1)\n```";
+    expect(extractFencedBlocks(source)[0]).toMatchObject({
+      language: "python",
+      meta: "playground=python-numeric-types",
+      playgroundId: "python-numeric-types",
+      source: "print(1)",
+    });
+  });
+
   it("distinguishes external resources", () => {
     expect(isExternalHref("https://developer.mozilla.org")).toBe(true);
     expect(isExternalHref("/courses/git")).toBe(false);

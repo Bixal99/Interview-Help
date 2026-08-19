@@ -11,7 +11,7 @@ function resumeHrefFor(slug: string, phaseId: string, lessonId?: string) {
 export function ProgressDashboard({
   courses,
 }: {
-  courses: { slug: string; shortName: string; lessonCount: number; projectCount: number }[];
+  courses: { slug: string; shortName: string; phaseCount: number }[];
 }) {
   const { ready, percent, resume, exportJson, importJson, reset, course } = useLearningProgress();
   const file = useRef<HTMLInputElement>(null);
@@ -49,7 +49,7 @@ export function ProgressDashboard({
         {courses.map((item) => (
           <li key={item.slug} className="flex items-center justify-between gap-3 px-4 py-3">
             <Link href={`/courses/${item.slug}`} className="font-semibold hover:text-accent">{item.shortName}</Link>
-            <span className="text-sm text-muted">{ready ? `${percent(item.slug, item.lessonCount, item.projectCount)}%` : "..."}</span>
+            <span className="text-sm text-muted">{ready ? `${percent(item.slug, item.phaseCount)}%` : "..."}</span>
           </li>
         ))}
       </ul>
@@ -59,7 +59,7 @@ export function ProgressDashboard({
         <button type="button" className="btn-prev" onClick={() => { if (window.confirm("Reset all progress in this browser?")) reset(); }}>Reset</button>
         <input ref={file} type="file" accept="application/json" className="sr-only" onChange={onImport} />
       </div>
-      <p className="mt-6 text-sm text-muted">Visited lessons in this browser: {courses.reduce((sum, item) => sum + (ready ? course(item.slug).visitedLessons.length : 0), 0)}.</p>
+      <p className="mt-6 text-sm text-muted">Phases completed in this browser: {courses.reduce((sum, item) => sum + (ready ? course(item.slug).completedProjects.length : 0), 0)}.</p>
     </div>
   );
 }

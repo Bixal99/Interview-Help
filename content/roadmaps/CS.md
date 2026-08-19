@@ -247,8 +247,11 @@ The stack is a spiral notebook you only ever write on the current page of: start
 
 ```python
 # The same program, showing where each value physically lives.
+# In CPython, id(x) is the object's memory address.
 
 GREETING = "hello"          # static/global storage: exists for the whole program
+print("static GREETING:", GREETING, "id=", id(GREETING))
+
 
 def build_list(n):
     total = 0               # STACK: one slot in build_list's frame, gone on return
@@ -256,19 +259,25 @@ def build_list(n):
                             # `values` is just a stack slot holding its address
     for i in range(n):      # `i` is also a stack slot, reused each iteration
         values.append(i)    # each append may grow the heap allocation
+    print("  stack local total id=", id(total))
+    print("  heap list id=", id(values), "value=", values)
     return values           # the heap object survives; the stack frame does not
 
 
 def countdown(n):
+    print("  stack frame: countdown(" + str(n) + ")")
     if n == 0:              # base case: without this, the stack grows forever
         return
     countdown(n - 1)        # each call pushes a NEW frame onto the stack
 
-# countdown(3) pushes 4 frames, then pops all 4.
-# countdown(1_000_000) crashes: RecursionError, which is Python refusing to
-# let you find out what a real stack overflow feels like.
+
+print("build_list returned:", build_list(4))
+print("countdown(3) pushes 4 frames, then pops all 4:")
+countdown(3)
+# countdown(1_000_000) would raise RecursionError: Python stops you
+# before a real stack overflow.
 ```
-To watch the compiled version of this idea, paste any small C function into [Compiler Explorer](https://godbolt.org/) and look for the `sub rsp, N` instruction at the top of the assembly: that single instruction *is* the stack frame being allocated, and `N` is exactly how many bytes of stack your local variables needed. Then use [VisuAlgo - Recursion](https://visualgo.net/en/recursion) once you reach Phase 4 to see the same frames pushed and popped as an animation.
+Run it and read the `id=` values: they are CPython's stand-in for a memory address, so the global, the heap list, and each `countdown` frame show up as different places. To watch the compiled version of this idea, paste any small C function into [Compiler Explorer](https://godbolt.org/) and look for the `sub rsp, N` instruction at the top of the assembly: that single instruction *is* the stack frame being allocated, and `N` is exactly how many bytes of stack your local variables needed. Then use [VisuAlgo - Recursion](https://visualgo.net/en/recursion) once you reach Phase 4 to see the same frames pushed and popped as an animation.
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW:** Interviewers rarely ask "what is a compiler" directly, but they constantly probe whether you understand *why* your code has the memory behavior it does - "does this recursive solution risk a stack overflow," "is this large object on the stack or the heap," "why is this pass-by-reference and that pass-by-value." Those answers all come from the model built in this section.
 
@@ -528,6 +537,18 @@ price = 19.99
 active = True
 print(f"{name} age={age} price={price} active={active}")
 print(type(age), type(price))
+```
+
+**TRY IT YOURSELF**
+
+```python playground=python-numeric-types
+# Create an integer
+
+# Create a float
+
+# Create a complex number
+
+# Print the types
 ```
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW**

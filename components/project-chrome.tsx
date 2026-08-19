@@ -25,33 +25,37 @@ export function ProjectChrome({
   const nextDisabled = Boolean(next?.requiresProject && !done);
 
   return (
-    <article>
-      <div className="ih-band px-4 py-8 sm:px-8 lg:px-12">
-        <h1 className="max-w-[75ch] text-left text-3xl font-bold tracking-[-.02em] sm:text-4xl">{title}</h1>
+    <article className="ih-lesson">
+      <h1>{title}</h1>
+      <Pager
+        backHref={prev?.href ?? `/courses/${slug}`}
+        backLabel="Previous"
+        proceedHref={next?.href}
+        proceedLabel="Next"
+        proceedDisabled={nextDisabled}
+        hint={nextDisabled ? "Complete the project to continue." : undefined}
+      />
+      <div className="ih-lesson-body">{children}</div>
+      <div className="ih-lesson-body mt-8 space-y-3">
+        <label className="flex items-start gap-2 text-[15px]">
+          <input type="checkbox" checked={gitDone} onChange={() => toggleGit(slug, phaseId)} />
+          <span>I ran the Git checkpoint from this project card.</span>
+        </label>
+        <label className="flex items-start gap-2 text-[15px]">
+          <input type="checkbox" checked={done} onChange={() => toggleProject(slug, phaseId)} />
+          <span>I completed this phase project.</span>
+        </label>
+        <p className="text-sm text-muted">Next phase stays off until the project is marked complete.</p>
       </div>
-      <div className="bg-[rgb(var(--surface))] px-4 py-8 sm:px-8 lg:px-12">
-        <div className="max-w-[75ch]">{children}</div>
-        <div className="mt-10 max-w-[75ch] space-y-3 border-t hairline pt-6">
-          <label className="flex items-start gap-2 text-[15px]">
-            <input type="checkbox" checked={gitDone} onChange={() => toggleGit(slug, phaseId)} />
-            <span>I ran the Git checkpoint from this project card.</span>
-          </label>
-          <label className="flex items-start gap-2 text-[15px]">
-            <input type="checkbox" checked={done} onChange={() => toggleProject(slug, phaseId)} />
-            <span>I completed this phase project.</span>
-          </label>
-          <p className="text-sm text-muted">Next phase stays off until the project is marked complete.</p>
-        </div>
-        <div className="mt-12 border-t hairline pt-8">
-          <Pager
-            backHref={prev?.href ?? `/courses/${slug}`}
-            backLabel="Back"
-            proceedHref={next?.href}
-            proceedLabel="Proceed"
-            proceedDisabled={nextDisabled}
-            hint={nextDisabled ? "Complete the project to continue." : undefined}
-          />
-        </div>
+      <div className="ih-lesson-end">
+        <Pager
+          backHref={prev?.href ?? `/courses/${slug}`}
+          backLabel="Previous"
+          proceedHref={next?.href}
+          proceedLabel="Next"
+          proceedDisabled={nextDisabled}
+          hint={nextDisabled ? "Complete the project to continue." : undefined}
+        />
       </div>
     </article>
   );

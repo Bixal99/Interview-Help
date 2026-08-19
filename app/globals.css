@@ -245,12 +245,88 @@ body {
   box-shadow: inset 0 -3px 0 #04AA6D;
 }
 .ih-w3 .ih-subjects a:hover { color: #04AA6D; }
-.ih-w3 .ih-index { background: #E7E9EB; }
-.dark .ih-w3 .ih-index { background: rgb(36 48 58); }
+.ih-w3 .ih-index { background: #E7E9EB; color: #000; }
+.dark .ih-w3 .ih-index { background: rgb(36 48 58); color: rgb(var(--ink)); }
+.ih-w3 .ih-index-title {
+  margin: 0;
+  padding: 10px 16px 12px;
+  font-size: 21px;
+  font-weight: 700;
+  color: inherit;
+}
+.ih-w3 .ih-index-section {
+  margin: 8px 0 2px;
+  padding: 10px 16px 4px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.ih-w3 .ih-index a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem;
+  padding: 5px 16px;
+  color: inherit;
+  text-decoration: none;
+  background: transparent;
+}
+.ih-w3 .ih-index a:hover {
+  background: #ccc;
+  color: #000;
+}
+.dark .ih-w3 .ih-index a:hover {
+  background: rgb(55 70 82);
+  color: rgb(var(--ink));
+}
 .ih-w3 .ih-index a.active {
   background: #04AA6D;
   color: #fff;
 }
+.ih-w3 .ih-index a.ih-index-child { padding-left: 32px; }
+.ih-w3 .ih-tutorial > .min-w-0 { background: #fff; }
+.dark .ih-w3 .ih-tutorial > .min-w-0 { background: rgb(var(--surface)); }
+.ih-w3 .ih-lesson {
+  background: #fff;
+  color: #000;
+  padding: 1rem 1.15rem 2.75rem;
+}
+@media (min-width: 1024px) {
+  .ih-w3 .ih-lesson { padding: 1rem 2.4rem 3.25rem; }
+}
+.dark .ih-w3 .ih-lesson {
+  background: rgb(var(--surface));
+  color: rgb(var(--ink));
+}
+.ih-w3 .ih-lesson h1 {
+  margin: 0.35rem 0 1.15rem;
+  color: inherit;
+  font-size: clamp(1.85rem, 3vw, 2.55rem);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.ih-w3 .ih-lesson .ih-pager { margin: 0 0 1.35rem; }
+.ih-w3 .ih-lesson .ih-pager-btn {
+  min-height: 2.7rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.ih-w3 .ih-lesson-body,
+.ih-w3 .ih-lesson-end { max-width: 54rem; }
+.ih-w3 .ih-lesson-end { margin-top: 2.5rem; }
+.ih-w3 .ih-lesson-body .markdown-body { max-width: none; }
+.ih-w3 .ih-lesson-body .markdown-body h2 {
+  margin-top: 2rem;
+  font-size: 1.7rem;
+  letter-spacing: 0;
+}
+.ih-w3 .ih-lesson-player { overflow: hidden; background: #000; }
+.ih-w3 .ih-lesson-more {
+  margin: 0.85rem 0 0;
+  padding-left: 1.2rem;
+}
+.ih-w3 .ih-lesson-more a { color: inherit; }
 .ih-w3 .ih-band { color: #fff; }
 .ih-w3 .ih-checkpoint-art {
   overflow: hidden;
@@ -571,9 +647,19 @@ body {
   box-shadow: 8px 8px 0 #04AA6D;
   color: #d7ffef;
 }
+@media (min-width: 1024px) {
+  .ih-w3 .ih-checkpoint-row:has(.ih-checkpoint-flow),
+  .ih-w3 .ih-checkpoint-row:has(.ih-checkpoint-fn) {
+    max-width: 88rem;
+  }
+  .ih-w3 .ih-checkpoint-art-slot:has(.ih-checkpoint-flow),
+  .ih-w3 .ih-checkpoint-art-slot:has(.ih-checkpoint-fn) {
+    width: 50rem;
+  }
+}
 .ih-w3 .ih-flow-body {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 16.5rem minmax(0, 1fr);
   height: calc(28rem - 2.2rem);
   min-height: 0;
 }
@@ -582,10 +668,14 @@ body {
   flex-direction: column;
   min-width: 0;
   min-height: 0;
-  padding: 0.85rem 0.7rem 0.9rem;
+  padding: 0.75rem 0.55rem 0.8rem;
   border-right: 1px solid #2a2d3a;
   font-family: "JetBrains Mono", ui-monospace, monospace;
-  font-size: 0.78rem;
+  font-size: 0.74rem;
+}
+.ih-w3 .ih-flow-code .ih-flow-line {
+  flex: 0 0 1.38rem;
+  height: 1.38rem;
 }
 .ih-w3 .ih-flow-line {
   display: flex;
@@ -619,11 +709,49 @@ body {
   line-height: 2.1rem;
 }
 .ih-w3 .ih-flow-i span { color: #fde047; }
+.ih-w3 .ih-flow-pane {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  padding: 0.55rem 0.7rem 0.65rem;
+}
 .ih-w3 .ih-flow-map {
   display: block;
+  flex: 1 1 auto;
   width: 100%;
-  height: 100%;
+  min-height: 0;
+  height: auto;
   font-family: Poppins, sans-serif;
+}
+.ih-w3 .ih-flow-trace {
+  display: flex;
+  flex: 0 0 1.7rem;
+  align-items: center;
+  gap: 0.4rem;
+  height: 1.7rem;
+  overflow: hidden;
+  border: 1px solid #2a2d3a;
+  background: #171924;
+  padding: 0 0.55rem;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #8b908f;
+}
+.ih-w3 .ih-flow-trace em {
+  display: grid;
+  place-items: center;
+  min-width: 3.1rem;
+  height: 1.15rem;
+  border: 1px solid #2a2d3a;
+  font-style: normal;
+  color: transparent;
+}
+.ih-w3 .ih-flow-trace em.is-on {
+  border-color: #04AA6D;
+  background: #04AA6D;
+  color: #111218;
 }
 .ih-w3 .ih-flow-token {
   transform-box: view-box;
@@ -664,7 +792,17 @@ body {
   text-transform: uppercase;
   color: #8b908f;
 }
-.ih-w3 .ih-fn-file .ih-flow-line { padding: 0 0.55rem; }
+.ih-w3 .ih-fn-file .ih-flow-line,
+.ih-w3 .ih-fn-out .ih-flow-line {
+  flex: 0 0 1.35rem;
+  height: 1.35rem;
+  padding: 0 0.55rem;
+  font-size: 0.72rem;
+}
+.ih-w3 .ih-fn-out,
+.ih-w3 .ih-fn-stack {
+  min-height: 6.1rem;
+}
 .ih-w3 .ih-fn-machine {
   display: flex;
   align-items: center;

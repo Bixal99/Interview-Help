@@ -24,7 +24,7 @@ export function PhaseCheckpoint({
   return (
     <div className="ih-checkpoint-page flex h-dvh flex-col overflow-hidden">
       <div className="ih-band flex min-h-0 flex-1 items-center px-6 py-5 sm:px-10 lg:px-12">
-        <div className="mx-auto flex h-full w-full max-w-[1200px] flex-col items-center gap-6 lg:flex-row lg:justify-between lg:gap-10">
+        <div className="ih-checkpoint-row mx-auto flex h-full w-full max-w-[1200px] flex-col items-center gap-6 lg:flex-row lg:justify-between lg:gap-10">
           <div className="min-w-0 lg:max-w-[34rem]">
             <div className="flex items-end gap-5">
               <div

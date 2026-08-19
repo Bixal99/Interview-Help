@@ -10,15 +10,15 @@ export function TutorialShell({
 }) {
   const homeHref = `/courses/${nav.slug}`;
   return (
-    <div className="mx-auto grid max-w-[1600px] lg:grid-cols-[260px_minmax(0,1fr)]">
-      <aside className="ih-index hidden min-h-[calc(100vh-6.5rem)] border-r hairline lg:block">
-        <div className="sticky top-[6.5rem] max-h-[calc(100vh-6.5rem)] overflow-y-auto py-4">
+    <div className="ih-tutorial mx-auto grid max-w-[1600px] lg:grid-cols-[230px_minmax(0,1fr)]">
+      <aside className="ih-index hidden min-h-[calc(100vh-6.5rem)] lg:block">
+        <div className="sticky top-[6.5rem] max-h-[calc(100vh-6.5rem)] overflow-y-auto py-2">
           <TutorialIndex nav={nav} homeHref={homeHref} />
         </div>
       </aside>
-      <div className="min-w-0">
-        <details className="ih-index border-b hairline lg:hidden">
-          <summary className="cursor-pointer px-4 py-3 text-sm font-semibold">{nav.shortName} tutorial</summary>
+      <div className="min-w-0 bg-white">
+        <details className="ih-index lg:hidden">
+          <summary className="cursor-pointer px-4 py-3 text-sm font-semibold">{nav.shortName} Tutorial</summary>
           <div className="max-h-[70vh] overflow-y-auto pb-4">
             <TutorialIndex nav={nav} homeHref={homeHref} />
           </div>

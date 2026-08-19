@@ -3,9 +3,9 @@
 import { useEffect } from "react";
 import type { Neighbor } from "@/lib/navigation";
 import type { VideoResource } from "@/lib/learning-model";
+import { LessonVideo } from "./lesson-video";
 import { Pager } from "./pager";
 import { useLearningProgress } from "./progress-client";
-import { YouTubeBand } from "./youtube-band";
 
 export function LessonChrome({
   slug,
@@ -30,6 +30,16 @@ export function LessonChrome({
 }) {
   const { visit, projectDone, completeLesson } = useLearningProgress();
   const nextDisabled = Boolean(next?.requiresProject && !projectDone(slug, phaseId));
+  const pager = (
+    <Pager
+      backHref={prev?.href ?? `/courses/${slug}`}
+      backLabel="Previous"
+      proceedHref={next?.href}
+      proceedLabel="Next"
+      proceedDisabled={nextDisabled}
+      hint={nextDisabled ? "Complete the project to continue." : undefined}
+    />
+  );
 
   useEffect(() => {
     visit(slug, phaseId, lessonSlug);
@@ -37,24 +47,12 @@ export function LessonChrome({
   }, [slug, phaseId, lessonId, lessonSlug, visit, completeLesson]);
 
   return (
-    <article>
-      <div className="ih-band px-4 py-8 sm:px-8 lg:px-12">
-        <h1 className="max-w-[75ch] text-left text-3xl font-bold tracking-[-.02em] sm:text-4xl">{title}</h1>
-        <YouTubeBand videos={videos} />
-      </div>
-      <div className="bg-[rgb(var(--surface))] px-4 py-8 sm:px-8 lg:px-12">
-        <div className="max-w-[75ch]">{children}</div>
-        <div className="mt-12 border-t hairline pt-8">
-          <Pager
-            backHref={prev?.href ?? `/courses/${slug}`}
-            backLabel="Back"
-            proceedHref={next?.href}
-            proceedLabel="Proceed"
-            proceedDisabled={nextDisabled}
-            hint={nextDisabled ? "Complete the project to continue." : undefined}
-          />
-        </div>
-      </div>
+    <article className="ih-lesson">
+      <h1>{title}</h1>
+      {pager}
+      {videos.length > 0 ? <LessonVideo videos={videos} /> : null}
+      <div className="ih-lesson-body">{children}</div>
+      <div className="ih-lesson-end">{pager}</div>
     </article>
   );
 }

@@ -1,43 +1,15 @@
 "use client";
 
-import { useEffect, useState, type ComponentType } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  AlignLeft,
-  BookOpen,
-  Boxes,
-  Briefcase,
-  Check,
-  ChevronRight,
-  Cloud,
-  Code2,
-  Cpu,
-  Database,
-  FolderKanban,
-  GitBranch,
-  Globe,
-  House,
-  LayoutTemplate,
-  Layers,
-  Network,
-  Puzzle,
-  Shield,
-  Wrench,
-} from "lucide-react";
+import { Check, ChevronRight } from "lucide-react";
 import type { CourseNav, CourseNavPhase } from "@/lib/navigation";
 import { lessonPath, phasePath, projectPathFor } from "@/lib/parse-course";
 import { useOptionalProgress } from "./progress-client";
 
-type LucideIcon = ComponentType<{ size?: number; className?: string }>;
-
-function compactLabel(title: string, max = 22) {
-  const clipped = title
-    .split(/\s+[-–—:|]\s+/)[0]
-    .replace(/^phase\s+\d+\s*/i, "")
-    .trim();
-  if (clipped.length <= max) return clipped;
-  return `${clipped.slice(0, max - 1).trimEnd()}…`;
+function navLabel(title: string) {
+  return title.split(/\s+[-–—:|]\s+/)[0].replace(/^phase\s+\d+\s*/i, "").trim() || title;
 }
 
 function courseTab(name: string) {
@@ -45,37 +17,16 @@ function courseTab(name: string) {
   if (name === "IT Administration") return "IT Admin";
   if (name === "Web Development") return "Web";
   if (name === "AI & ML") return "AI";
-  return name.length > 16 ? `${name.slice(0, 15)}…` : name;
-}
-
-function chapterIcon(id: string, title: string): LucideIcon {
-  const key = `${id} ${title}`.toLowerCase();
-  if (/found|intro|start|basic|general/.test(key)) return BookOpen;
-  if (/program|python|code|script/.test(key)) return Code2;
-  if (/object|oop|class|thinking/.test(key)) return Boxes;
-  if (/pillar|solid/.test(key)) return key.includes("solid") ? Puzzle : Layers;
-  if (/algorithm|data struct|dsa/.test(key)) return GitBranch;
-  if (/network/.test(key)) return Network;
-  if (/security|cyber/.test(key)) return Shield;
-  if (/cloud|devops/.test(key)) return Cloud;
-  if (/data|sql|database/.test(key)) return Database;
-  if (/web|http/.test(key)) return Globe;
-  if (/system|os/.test(key)) return Cpu;
-  if (/interview|career|hire|portfolio/.test(key)) return Briefcase;
-  if (/tool|git|model/.test(key)) return Wrench;
-  if (/architect|design|lld/.test(key)) return LayoutTemplate;
-  return AlignLeft;
+  return name;
 }
 
 function PhaseBlock({
   navSlug,
   phase,
-  icon: Icon,
   phaseDone,
 }: {
   navSlug: string;
   phase: CourseNavPhase;
-  icon: LucideIcon;
   phaseDone?: boolean;
 }) {
   const pathname = usePathname();
@@ -86,6 +37,7 @@ function PhaseBlock({
   ];
   const onChild = childHrefs.includes(pathname);
   const onPhase = pathname === phaseHref;
+  const hasKids = childHrefs.length > 0;
   const [open, setOpen] = useState(onChild || onPhase);
 
   useEffect(() => {
@@ -96,26 +48,33 @@ function PhaseBlock({
     <div className="ih-index-phase">
       <div className={`ih-index-row${onPhase || onChild ? " is-current" : ""}`}>
         <Link href={phaseHref} className={onPhase ? "active" : undefined}>
-          <Icon size={18} className="ih-index-ico" />
-          <span>{compactLabel(phase.title)}</span>
+          <span className="ih-index-num">{phase.number}</span>
+          <span className="ih-index-label">{navLabel(phase.title)}</span>
         </Link>
-        <button
-          type="button"
-          className={`ih-index-caret${open ? " is-open" : ""}`}
-          aria-expanded={open}
-          aria-label={open ? "Hide lessons" : "Show lessons"}
-          onClick={() => setOpen((current) => !current)}
-        >
-          <ChevronRight size={16} />
-        </button>
+        {hasKids ? (
+          <button
+            type="button"
+            className={`ih-index-caret${open ? " is-open" : ""}`}
+            aria-expanded={open}
+            aria-label={open ? "Hide lessons" : "Show lessons"}
+            onClick={(event) => {
+              event.preventDefault();
+              event.stopPropagation();
+              setOpen((current) => !current);
+            }}
+          >
+            <ChevronRight size={16} />
+          </button>
+        ) : null}
       </div>
-      {open ? (
+      {open && hasKids ? (
         <div className="ih-index-sub">
           {phase.lessons.map((lesson) => {
             const href = lessonPath(navSlug, phase.id, lesson);
             return (
               <Link key={lesson.id} href={href} className={pathname === href ? "active" : undefined}>
-                {compactLabel(lesson.title, 26)}
+                <span className="ih-index-num">{lesson.id}</span>
+                <span className="ih-index-label">{navLabel(lesson.title)}</span>
               </Link>
             );
           })}
@@ -124,8 +83,8 @@ function PhaseBlock({
               href={projectPathFor(navSlug, phase.id)}
               className={pathname === projectPathFor(navSlug, phase.id) ? "active" : undefined}
             >
-              <FolderKanban size={15} className="ih-index-ico" />
-              Project
+              <span className="ih-index-num">P</span>
+              <span className="ih-index-label">Project</span>
             </Link>
           ) : null}
           {phaseDone ? (
@@ -149,35 +108,27 @@ export function TutorialIndex({
   const pathname = usePathname();
   const progress = useOptionalProgress();
   const state = progress?.course(nav.slug);
-  const tab = courseTab(nav.shortName);
 
   return (
     <nav className="ih-index-nav" aria-label={`${nav.shortName} tutorial`}>
-      <p className="ih-index-title">
-        <AlignLeft size={18} className="ih-index-ico" />
-        {tab}
-      </p>
+      <p className="ih-index-title">{courseTab(nav.shortName)}</p>
       <Link href={homeHref} className={pathname === homeHref ? "active" : undefined}>
-        <House size={18} className="ih-index-ico" />
-        Home
+        <span className="ih-index-num">0</span>
+        <span className="ih-index-label">Home</span>
       </Link>
-      {nav.chapters.map((chapter) => {
-        const Icon = chapterIcon(chapter.id, chapter.title);
-        return (
-          <div key={chapter.id} className="ih-index-group">
-            <p className="ih-index-section">{compactLabel(chapter.title, 18)}</p>
-            {chapter.phases.map((phase) => (
-              <PhaseBlock
-                key={phase.id}
-                navSlug={nav.slug}
-                phase={phase}
-                icon={Icon}
-                phaseDone={state?.completedProjects.includes(phase.id)}
-              />
-            ))}
-          </div>
-        );
-      })}
+      {nav.chapters.map((chapter) => (
+        <div key={chapter.id} className="ih-index-group">
+          <p className="ih-index-section">{navLabel(chapter.title)}</p>
+          {chapter.phases.map((phase) => (
+            <PhaseBlock
+              key={phase.id}
+              navSlug={nav.slug}
+              phase={phase}
+              phaseDone={state?.completedProjects.includes(phase.id)}
+            />
+          ))}
+        </div>
+      ))}
     </nav>
   );
 }

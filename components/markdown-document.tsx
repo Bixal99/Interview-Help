@@ -53,22 +53,48 @@ function sentenceCase(value: string) {
   return lower.replace(/^[a-z]/, (letter) => letter.toUpperCase());
 }
 
+const KICKER_TITLES: Array<[RegExp, string]> = [
+  [/why you are learning this/i, "Why You Need to Learn This"],
+  [/the problem this solves/i, "The Problem"],
+  [/the main idea/i, "The Solution"],
+  [/step-by-step explanation/i, "How the Solution Works"],
+  [/compiler vs interpreter/i, "Compiler vs Interpreter"],
+  [/internal working/i, "How Code Becomes Machine Code"],
+  [/where a variable actually lives/i, "How a Program Uses Memory"],
+  [/see it before you memorize/i, "Visual Explanation"],
+  [/^diagram\b/i, "Visual Explanation"],
+  [/how it works internally/i, "How It Works Internally"],
+  [/picture it like this/i, "Simple Real-World Analogy"],
+  [/what you gain/i, "Trade-offs & Limitations"],
+  [/small working example/i, "Working Example"],
+  [/try it yourself/i, "Try It Yourself"],
+  [/how to explain this in an interview/i, "Interview Preparation"],
+  [/practice until it feels familiar/i, "Practice Exercises"],
+  [/^practice\b/i, "Practice Exercises"],
+  [/why the next topic is needed/i, "What Comes Next"],
+];
+
 function parseKicker(label: string): { title: string; kind: "interview" | "section" } | null {
   const cleaned = label.replace(/:$/, "").trim();
   if (/^notes?$/i.test(cleaned)) return null;
-  if (/^diagram\b/i.test(cleaned)) return { title: "Diagram", kind: "section" };
-
-  const [lead, extra] = cleaned.split(/\s+[-–—]\s+/, 2);
+  const [lead] = cleaned.split(/\s+[-–—]\s+/, 2);
+  for (const [pattern, title] of KICKER_TITLES) {
+    if (pattern.test(cleaned) || pattern.test(lead)) {
+      return { title, kind: /interview/i.test(title) ? "interview" : "section" };
+    }
+  }
   const letters = lead.replace(/[^A-Za-z]/g, "");
   if (letters.length < 8) return null;
   const upperRatio = letters.replace(/[^A-Z]/g, "").length / letters.length;
-  const named = /^(how to explain this in an interview|why you are learning this|why the next topic is needed|picture it like this|see it before you memorize it)$/i.test(lead);
-  if (upperRatio < 0.8 && !named) return null;
+  if (upperRatio < 0.8) return null;
+  return { title: sentenceCase(lead), kind: "section" };
+}
 
-  const extraTitle = extra ? (extra === extra.toUpperCase() ? sentenceCase(extra) : extra) : "";
-  const title = extraTitle ? `${sentenceCase(lead)}: ${extraTitle}` : sentenceCase(lead);
-  if (/how to explain this in an interview/i.test(lead)) return { title, kind: "interview" };
-  return { title, kind: "section" };
+function memoryHeading(label: string): string | null {
+  if (/^the stack\b/i.test(label)) return "The Stack";
+  if (/^the heap\b/i.test(label)) return "The Heap";
+  if (/^static/i.test(label)) return "Static & Global Memory";
+  return null;
 }
 
 const KEYWORDS = /\b(compilers?|interpreters?|variables?|function calls?|recursive calls?|network requests?|electrical signals?|the stack|the heap|pointers?|processes?|CPU|bytecode|machine code|source code|runtime|loops?|stack overflow|Big O)\b/gi;
@@ -187,6 +213,20 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYou
       return <p>{formatCopy(children)}</p>;
     },
     li({ children }) {
+      const bits = Array.isArray(children) ? children : [children];
+      const first = bits[0];
+      if (isValidElement<{ children?: React.ReactNode }>(first) && first.type === "strong") {
+        const heading = memoryHeading(textContent(first.props.children).trim());
+        if (heading) {
+          const rest = bits.slice(1);
+          return (
+            <li className="ih-memory-item">
+              <h3 className="ih-lesson-sub">{heading}</h3>
+              {textContent(rest).trim() ? <p>{formatCopy(rest)}</p> : null}
+            </li>
+          );
+        }
+      }
       return <li>{formatCopy(children)}</li>;
     },
     blockquote({ children }) {

@@ -258,6 +258,7 @@ body {
   font-weight: 700;
   line-height: 1.25;
   color: #181d27;
+  white-space: normal;
 }
 .ih-w3 .ih-index-group { margin-top: 0.55rem; }
 .ih-w3 .ih-index-section {
@@ -268,10 +269,11 @@ body {
   letter-spacing: 0.02em;
   text-transform: none;
   color: #717680;
+  white-space: normal;
 }
 .ih-w3 .ih-index a {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.55rem;
   margin: 1px 8px;
   padding: 8px 10px;
@@ -281,30 +283,50 @@ body {
   background: transparent;
   font-size: 14px;
   font-weight: 600;
-  line-height: 1.3;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.35;
+  white-space: normal;
+  overflow: visible;
 }
-.ih-w3 .ih-index-ico {
+.ih-w3 .ih-index-num {
   flex: 0 0 auto;
-  color: #717680;
+  min-width: 1.5rem;
+  width: auto;
+  height: 1.5rem;
+  padding: 0 0.35rem;
+  display: grid;
+  place-items: center;
+  margin-top: 1px;
+  border-radius: 999px;
+  background: #f5f5f5;
+  color: #414651;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+}
+.ih-w3 .ih-index-label {
+  min-width: 0;
+  flex: 1;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 .ih-w3 .ih-index-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 1.75rem;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr) 2rem;
+  align-items: start;
   margin: 0 4px;
 }
 .ih-w3 .ih-index-row a { margin-right: 0; padding-right: 0.2rem; }
 .ih-w3 .ih-index-caret {
   display: grid;
   place-items: center;
-  width: 1.75rem;
-  height: 2rem;
+  width: 2rem;
+  min-height: 2.25rem;
+  margin-top: 2px;
   border: 0;
   background: transparent;
   color: #a4a7ae;
+  cursor: pointer;
+  z-index: 2;
 }
 .ih-w3 .ih-index-caret svg { transition: transform 0.15s ease; }
 .ih-w3 .ih-index-caret.is-open svg { transform: rotate(90deg); }
@@ -320,12 +342,13 @@ body {
   background: #ecfdf5;
   color: #067647;
 }
-.ih-w3 .ih-index a.active .ih-index-ico,
-.ih-w3 .ih-index a.active:hover {
+.ih-w3 .ih-index a.active .ih-index-num {
+  background: #d1fae5;
   color: #067647;
 }
 .ih-w3 .ih-index a.active:hover {
   background: #d1fae5;
+  color: #067647;
 }
 .ih-w3 .ih-index-sub {
   margin: 0 8px 6px 18px;
@@ -441,6 +464,19 @@ body {
   letter-spacing: 0;
   text-transform: none;
 }
+.ih-w3 .ih-lesson-sub {
+  margin: 1rem 0 0.35rem;
+  color: #000;
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.ih-w3 .ih-memory-item {
+  list-style: none;
+  margin: 0.85rem 0 1rem;
+  padding: 0;
+}
+.ih-w3 .ih-memory-item p { margin: 0.25rem 0 0; }
 .ih-w3 .ih-lesson-body .markdown-body h1,
 .ih-w3 .ih-lesson-body .markdown-body h2,
 .ih-w3 .ih-lesson-body .markdown-body h3 {

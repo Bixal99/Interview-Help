@@ -7,6 +7,16 @@ const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
     "/downloads/job-tracker": ["./data/Job_Tracker.xlsx"],
   },
+  outputFileTracingExcludes: {
+    "/*": [
+      "node_modules/monaco-editor/**",
+      "node_modules/@monaco-editor/**",
+      "node_modules/mermaid/**",
+      "node_modules/@mermaid-js/**",
+      "node_modules/@fontsource/**",
+    ],
+  },
+  serverExternalPackages: ["monaco-editor", "mermaid"],
   poweredByHeader: false,
   experimental: { optimizePackageImports: ["lucide-react"] },
   transpilePackages: ["media-chrome", "youtube-video-element", "ce-la-react"],

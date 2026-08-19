@@ -20,7 +20,7 @@ function linkIsOn(href: string, pathname: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-export function LandingHeader({ hits }: { hits: SearchHit[] }) {
+export function LandingHeader({ hits }: { hits?: SearchHit[] }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);

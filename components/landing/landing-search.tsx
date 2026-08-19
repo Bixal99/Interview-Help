@@ -5,17 +5,20 @@ import { useRouter } from "next/navigation";
 import { useMemo, useRef, useState } from "react";
 import type { SearchHit } from "@/lib/learning-model";
 
-export function LandingSearch({ hits }: { hits: SearchHit[] }) {
+export function LandingSearch({ hits }: { hits?: SearchHit[] }) {
   const router = useRouter();
   const box = useRef<HTMLFormElement>(null);
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
+  const [remoteHits, setRemoteHits] = useState<SearchHit[] | null>(null);
+  const [loadingIndex, setLoadingIndex] = useState(false);
   const href = query.trim() ? `/search?q=${encodeURIComponent(query.trim())}` : "/search";
+  const index = hits ?? remoteHits ?? [];
 
   const results = useMemo(() => {
     const terms = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
     if (!terms.length) return [];
-    return hits
+    return index
       .map((entry) => {
         const title = entry.title.toLowerCase();
         const haystack = `${entry.title} ${entry.course} ${entry.searchText}`.toLowerCase();
@@ -26,7 +29,22 @@ export function LandingSearch({ hits }: { hits: SearchHit[] }) {
       .sort((a, b) => b.score - a.score)
       .slice(0, 6)
       .map((item) => item.entry);
-  }, [hits, query]);
+  }, [index, query]);
+
+  async function ensureIndex() {
+    if (hits || remoteHits || loadingIndex) return;
+    setLoadingIndex(true);
+    try {
+      const response = await fetch("/api/search-index");
+      if (!response.ok) return;
+      const payload = (await response.json()) as SearchHit[];
+      if (Array.isArray(payload)) setRemoteHits(payload);
+    } catch {
+      // Header search can still submit to /search.
+    } finally {
+      setLoadingIndex(false);
+    }
+  }
 
   return (
     <div className="ih-landing-search-cluster">
@@ -44,7 +62,10 @@ export function LandingSearch({ hits }: { hits: SearchHit[] }) {
           name="q"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          onFocus={() => setOpen(true)}
+          onFocus={() => {
+            setOpen(true);
+            void ensureIndex();
+          }}
           onBlur={() => window.setTimeout(() => setOpen(false), 120)}
           placeholder="Search"
           aria-label="Search lessons and projects"
@@ -60,7 +81,7 @@ export function LandingSearch({ hits }: { hits: SearchHit[] }) {
                 </Link>
               </li>
             )) : (
-              <li className="is-empty">No exact match</li>
+              <li className="is-empty">{loadingIndex && !index.length ? "Searching…" : "No exact match"}</li>
             )}
             <li>
               <Link href={href} onMouseDown={(event) => event.preventDefault()}>

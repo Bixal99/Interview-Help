@@ -59,13 +59,13 @@ function persist(progress: LearningProgress) {
   window.dispatchEvent(new Event(EVENT));
 }
 
-export function ProgressProvider({ children, lookup }: { children: React.ReactNode; lookup: MigrationLookup[] }) {
+export function ProgressProvider({ children, lookup }: { children: React.ReactNode; lookup?: MigrationLookup[] }) {
   const [progress, setProgress] = useState<LearningProgress>(emptyProgress);
   const [ready, setReady] = useState(false);
   const progressRef = useRef(progress);
-  const lookupRef = useRef(lookup);
+  const lookupRef = useRef(lookup ?? []);
   progressRef.current = progress;
-  lookupRef.current = lookup;
+  if (lookup) lookupRef.current = lookup;
 
   const apply = useCallback((next: LearningProgress) => {
     progressRef.current = next;
@@ -74,20 +74,37 @@ export function ProgressProvider({ children, lookup }: { children: React.ReactNo
   }, []);
 
   useEffect(() => {
+    let cancelled = false;
     const sync = () => {
       const next = read(lookupRef.current);
       progressRef.current = next;
       setProgress(next);
     };
-    sync();
-    setReady(true);
+    const start = async () => {
+      if (!lookup) {
+        try {
+          const response = await fetch("/api/progress-lookup");
+          if (response.ok) {
+            const payload = (await response.json()) as MigrationLookup[];
+            if (Array.isArray(payload)) lookupRef.current = payload;
+          }
+        } catch {
+          // v2 progress still loads; v1 migration may be skipped.
+        }
+      }
+      if (cancelled) return;
+      sync();
+      setReady(true);
+    };
+    void start();
     window.addEventListener("storage", sync);
     window.addEventListener(EVENT, sync);
     return () => {
+      cancelled = true;
       window.removeEventListener("storage", sync);
       window.removeEventListener(EVENT, sync);
     };
-  }, []);
+  }, [lookup]);
 
   const visit = useCallback((slug: string, phaseId: string, lessonId: string) => {
     const current = progressRef.current;

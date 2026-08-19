@@ -1,10 +1,12 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import YoutubeVideo from "youtube-video-element/react";
 import type { VideoResource } from "@/lib/learning-model";
 import {
   VideoPlayer,
   VideoPlayerControlBar,
+  VideoPlayerFullscreenButton,
   VideoPlayerMuteButton,
   VideoPlayerPlayButton,
   VideoPlayerTimeDisplay,
@@ -22,42 +24,44 @@ function watchUrl(video: VideoResource) {
 }
 
 export function LessonVideo({ videos }: { videos: VideoResource[] }) {
+  const [ready, setReady] = useState(false);
   const featured = videos[0];
+  useEffect(() => {
+    setReady(true);
+  }, []);
   if (!featured) return null;
   if (!featured.info.videoId && featured.info.kind !== "playlist") return null;
-  const rest = videos.slice(1);
+  const poster = featured.info.videoId
+    ? `https://i.ytimg.com/vi/${featured.info.videoId}/hqdefault.jpg`
+    : undefined;
 
   return (
-    <div className="ih-example">
-      <h3 className="ih-example-label">{featured.title}</h3>
+    <div className="ih-video">
       <div className="ih-lesson-player">
-        <VideoPlayer>
-          <YoutubeVideo
-            slot="media"
-            src={watchUrl(featured)}
-            title={featured.title}
-            style={{ width: "100%", aspectRatio: "16 / 9", background: "#000" }}
-          />
-          <VideoPlayerControlBar>
-            <VideoPlayerPlayButton />
-            <VideoPlayerTimeRange />
-            <VideoPlayerTimeDisplay showDuration />
-            <VideoPlayerMuteButton />
-            <VideoPlayerVolumeRange />
-          </VideoPlayerControlBar>
-        </VideoPlayer>
+        {ready ? (
+          <VideoPlayer>
+            <YoutubeVideo
+              slot="media"
+              src={watchUrl(featured)}
+              title={featured.title}
+              poster={poster}
+              style={{ width: "100%", aspectRatio: "16 / 9", background: "#000" }}
+            />
+            <VideoPlayerControlBar>
+              <VideoPlayerPlayButton />
+              <VideoPlayerTimeRange />
+              <VideoPlayerTimeDisplay showDuration />
+              <VideoPlayerMuteButton />
+              <VideoPlayerVolumeRange />
+              <VideoPlayerFullscreenButton />
+            </VideoPlayerControlBar>
+          </VideoPlayer>
+        ) : (
+          <div className="ih-lesson-poster" aria-hidden="true">
+            {poster ? <img src={poster} alt="" /> : null}
+          </div>
+        )}
       </div>
-      {rest.length > 0 ? (
-        <ul className="ih-lesson-more">
-          {rest.map((video) => (
-            <li key={video.href}>
-              <a href={video.href} target="_blank" rel="noopener noreferrer">
-                {video.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      ) : null}
     </div>
   );
 }

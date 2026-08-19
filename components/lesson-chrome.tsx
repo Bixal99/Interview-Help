@@ -2,8 +2,6 @@
 
 import { useEffect } from "react";
 import type { Neighbor } from "@/lib/navigation";
-import type { VideoResource } from "@/lib/learning-model";
-import { LessonVideo } from "./lesson-video";
 import { Pager } from "./pager";
 import { useLearningProgress } from "./progress-client";
 
@@ -13,7 +11,6 @@ export function LessonChrome({
   lessonId,
   lessonSlug,
   title,
-  videos,
   prev,
   next,
   children,
@@ -23,7 +20,6 @@ export function LessonChrome({
   lessonId: string;
   lessonSlug: string;
   title: string;
-  videos: VideoResource[];
   prev: Neighbor | null;
   next: Neighbor | null;
   children: React.ReactNode;
@@ -50,7 +46,6 @@ export function LessonChrome({
     <article className="ih-lesson">
       <h1>{title}</h1>
       {pager}
-      {videos.length > 0 ? <LessonVideo videos={videos} /> : null}
       <div className="ih-lesson-body">{children}</div>
       <div className="ih-lesson-end">{pager}</div>
     </article>

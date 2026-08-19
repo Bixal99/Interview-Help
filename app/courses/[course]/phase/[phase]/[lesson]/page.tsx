@@ -4,6 +4,7 @@ import { ExerciseBlock } from "@/components/exercise-block";
 import { GateBanner } from "@/components/gate-banner";
 import { LessonChrome } from "@/components/lesson-chrome";
 import { MarkdownDocument } from "@/components/markdown-document";
+import { PhaseCompleteBar } from "@/components/phase-complete";
 import { TutorialShell } from "@/components/tutorial-shell";
 import { getAllLessonParams, getLessonView, getRequiredProjectHref } from "@/lib/content";
 
@@ -32,12 +33,12 @@ export default async function LessonPage({ params }: { params: Promise<{ course:
           lessonId={view.lesson.id}
           lessonSlug={view.lesson.slug}
           title={view.lesson.title}
-          videos={view.lesson.videos}
           prev={view.prev}
           next={view.next}
         >
-          <MarkdownDocument markdown={view.lesson.markdown} sourcePath={view.course.sourcePath} embedYouTube={false} />
+          <MarkdownDocument markdown={view.lesson.markdown} sourcePath={view.course.sourcePath} embedYouTube />
           {view.practice && <ExerciseBlock slug={view.course.slug} lessonId={view.lesson.id} practice={view.practice} />}
+          {view.completeCta ? <PhaseCompleteBar cta={view.completeCta} /> : null}
         </LessonChrome>
       </TutorialShell>
     </main>

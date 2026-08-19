@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import type { PracticeBlock } from "@/lib/practice";
 import { useLearningProgress } from "./progress-client";
 
@@ -22,34 +22,34 @@ export function ExerciseBlock({
 
   if (practice.kind === "choice") {
     return (
-      <section className="my-8 border hairline bg-paper p-5" aria-label="Exercise">
-        <h2 className="text-xl font-bold">Exercise</h2>
-        <p className="mt-2 text-muted">{practice.prompt}</p>
-        <fieldset className="mt-4 space-y-2">
-          <legend className="sr-only">Choose an answer from the source</legend>
+      <section className="ih-exercise" aria-label="Exercise">
+        <h2>Exercise <span className="ih-exercise-help" aria-hidden="true">?</span></h2>
+        <p>{practice.prompt}</p>
+        <fieldset>
+          <legend className="sr-only">Choose an answer</legend>
           {practice.items.map((item) => (
-            <label key={item.id} className="flex items-start gap-2 text-[15px]">
-              <input type="radio" name={`ex-${lessonId}`} value={item.id} checked={choice === item.id} onChange={() => setChoice(item.id)} className="mt-1" />
-              <span>{item.label}</span>
+            <label key={item.id} className={`ih-exercise-option${choice === item.id ? " is-on" : ""}`}>
+              <input type="radio" name={`ex-${lessonId}`} value={item.id} checked={choice === item.id} onChange={() => setChoice(item.id)} />
+              <code>{item.label}</code>
             </label>
           ))}
         </fieldset>
-        <button type="button" className="btn-next mt-4" onClick={() => { setSubmitted(true); if (choice) toggleExercise(slug, doneId); }} disabled={!choice}>
-          Submit
+        <button type="button" className="ih-exercise-submit" onClick={() => { setSubmitted(true); if (choice) toggleExercise(slug, doneId); }} disabled={!choice}>
+          Submit Answer »
         </button>
-        {submitted && <p className="mt-3 text-sm text-success">Saved. The wording above is from the lesson source.</p>}
+        {submitted ? <p className="ih-exercise-saved">Saved. The wording above is from the lesson source.</p> : null}
       </section>
     );
   }
 
   return (
-    <section className="my-8 border hairline bg-paper p-5" aria-label="Exercise">
-      <h2 className="text-xl font-bold">Exercise</h2>
-      <p className="mt-2 text-muted">{practice.prompt}</p>
-      <ul className="mt-4 space-y-2">
+    <section className="ih-exercise" aria-label="Exercise">
+      <h2>Exercise <span className="ih-exercise-help" aria-hidden="true">?</span></h2>
+      <p>{practice.prompt}</p>
+      <ul>
         {practice.items.map((item) => (
           <li key={item.id}>
-            <label className="flex items-start gap-2 text-[15px]">
+            <label className={`ih-exercise-option${(completed || checked.includes(item.id)) ? " is-on" : ""}`}>
               <input
                 type="checkbox"
                 checked={completed || checked.includes(item.id)}
@@ -60,8 +60,8 @@ export function ExerciseBlock({
           </li>
         ))}
       </ul>
-      <button type="button" className="btn-next mt-4" onClick={() => toggleExercise(slug, doneId)}>
-        {completed ? "Practice saved" : "Mark practice complete"}
+      <button type="button" className="ih-exercise-submit" onClick={() => toggleExercise(slug, doneId)}>
+        {completed ? "Practice saved" : "Submit Answer »"}
       </button>
     </section>
   );

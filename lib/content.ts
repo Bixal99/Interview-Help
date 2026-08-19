@@ -8,6 +8,7 @@ import type { ParsedCourse, SearchHit } from "./learning-model";
 import { coursePages, firstLessonHref, firstPhaseHref, neighborsFor, type CourseNav, type Neighbor } from "./navigation";
 import { findLesson, findPhase, headingRouteMap, lessonPath, parseCourseMarkdown, phasePath, projectPathFor, withSourcePath } from "./parse-course";
 import { attachProjects, parseProjectsDocument } from "./parse-projects";
+import { extractCompleteCta } from "./complete-cta";
 import { extractPractice, withoutPractice } from "./practice";
 import { lookupFromCourses } from "./progress-lookup";
 import { nextStep, previousStep } from "./progress-storage";
@@ -152,19 +153,22 @@ export function getLessonView(slug: string, phaseId: string, lessonSlug: string)
   const href = lessonPath(slug, phaseId, lesson);
   const { prev, next } = neighborsFor(pages, href);
   const practice = extractPractice(lesson.markdown);
+  const sourcePath = lesson.sourcePath ?? phase.sourcePath ?? course.sourcePath;
+  const { markdown, cta } = extractCompleteCta(withoutPractice(lesson.markdown, practice), sourcePath);
   return {
-    course: { slug: course.slug, shortName: course.shortName, sourcePath: lesson.sourcePath ?? phase.sourcePath ?? course.sourcePath },
+    course: { slug: course.slug, shortName: course.shortName, sourcePath },
     nav: toCourseNav(course),
     phase: { id: phase.id, number: phase.number, title: phase.title, hasProject: Boolean(phase.project) },
     lesson: {
       id: lesson.id,
       slug: lesson.slug,
       title: lesson.title,
-      markdown: withoutPractice(lesson.markdown, practice),
+      markdown,
       videos: lesson.videos,
       codeExamples: lesson.codeExamples,
     },
     practice,
+    completeCta: cta,
     prev,
     next,
     startHref: firstLessonHref(course),

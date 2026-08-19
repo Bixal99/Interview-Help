@@ -1,4 +1,4 @@
-import React, { isValidElement } from "react";
+import React, { cloneElement, isValidElement } from "react";
 import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
@@ -7,10 +7,11 @@ import rehypeHighlight from "rehype-highlight";
 import rehypeSlug from "rehype-slug";
 import { AppIcon } from "@/components/icons/app-icon";
 import { CodeBlock } from "./code-block";
+import { LessonVideo } from "./lesson-video";
 import { MermaidDiagram } from "./mermaid-diagram";
 import { ProgressToggle } from "./progress";
-import { YouTubeCard } from "./youtube-card";
 import { convertMarkdownHref, extractYouTubeInfo, githubSlug } from "@/lib/content-utils";
+import type { VideoResource } from "@/lib/learning-model";
 
 type MarkdownNode = { type: string; value?: string; data?: { hName?: string; hProperties?: Record<string, string> }; children?: MarkdownNode[] };
 
@@ -39,6 +40,79 @@ function textContent(value: React.ReactNode): string {
   return "";
 }
 
+function tidyDashes(value: string) {
+  return value
+    .replace(/[\u2013\u2014]/g, ", ")
+    .replace(/\s+-\s+/g, ": ")
+    .replace(/^\s*-\s+/, "")
+    .replace(/\s{2,}/g, " ");
+}
+
+function sentenceCase(value: string) {
+  const lower = value.toLowerCase();
+  return lower.replace(/^[a-z]/, (letter) => letter.toUpperCase());
+}
+
+function parseKicker(label: string): { title: string; kind: "interview" | "section" } | null {
+  const cleaned = label.replace(/:$/, "").trim();
+  if (/^notes?$/i.test(cleaned)) return null;
+  if (/^diagram\b/i.test(cleaned)) return { title: "Diagram", kind: "section" };
+
+  const [lead, extra] = cleaned.split(/\s+[-–—]\s+/, 2);
+  const letters = lead.replace(/[^A-Za-z]/g, "");
+  if (letters.length < 8) return null;
+  const upperRatio = letters.replace(/[^A-Z]/g, "").length / letters.length;
+  const named = /^(how to explain this in an interview|why you are learning this|why the next topic is needed|picture it like this|see it before you memorize it)$/i.test(lead);
+  if (upperRatio < 0.8 && !named) return null;
+
+  const extraTitle = extra ? (extra === extra.toUpperCase() ? sentenceCase(extra) : extra) : "";
+  const title = extraTitle ? `${sentenceCase(lead)}: ${extraTitle}` : sentenceCase(lead);
+  if (/how to explain this in an interview/i.test(lead)) return { title, kind: "interview" };
+  return { title, kind: "section" };
+}
+
+const KEYWORDS = /\b(compilers?|interpreters?|variables?|function calls?|recursive calls?|network requests?|electrical signals?|the stack|the heap|pointers?|processes?|CPU|bytecode|machine code|source code|runtime|loops?|stack overflow|Big O)\b/gi;
+
+function emphasizeText(text: string): React.ReactNode {
+  const cleaned = tidyDashes(text);
+  const nodes: React.ReactNode[] = [];
+  const pattern = new RegExp(KEYWORDS.source, "gi");
+  let last = 0;
+  let match: RegExpExecArray | null;
+  let index = 0;
+  while ((match = pattern.exec(cleaned))) {
+    if (match.index > last) nodes.push(cleaned.slice(last, match.index));
+    nodes.push(<strong key={`k-${index++}`}>{match[0]}</strong>);
+    last = match.index + match[0].length;
+  }
+  if (last < cleaned.length) nodes.push(cleaned.slice(last));
+  return nodes.length === 1 ? nodes[0] : nodes;
+}
+
+function formatCopy(value: React.ReactNode): React.ReactNode {
+  if (value == null || typeof value === "boolean") return value;
+  if (typeof value === "string" || typeof value === "number") return emphasizeText(String(value));
+  if (Array.isArray(value)) {
+    return value.map((child, index) => <React.Fragment key={index}>{formatCopy(child)}</React.Fragment>);
+  }
+  if (isValidElement<{ children?: React.ReactNode }>(value)) {
+    if (value.type === "strong" || value.type === "code" || value.type === "a") return value;
+    if (value.type === "em" || value.type === "i") return formatCopy(value.props.children);
+    if (value.props.children == null) return value;
+    return cloneElement(value, undefined, formatCopy(value.props.children));
+  }
+  return value;
+}
+
+function firstLessonVideo(markdown: string): VideoResource | null {
+  const match = markdown.match(/\[([^\]]+)\]\((https?:\/\/(?:www\.)?(?:youtube\.com\/(?:watch\?[^)\s]+|playlist\?[^)\s]+)|youtu\.be\/[^)\s]+))\)/i);
+  if (!match) return null;
+  const info = extractYouTubeInfo(match[2]);
+  if (!info?.videoId && info?.kind !== "playlist") return null;
+  if (!info) return null;
+  return { href: match[2], title: match[1], info };
+}
+
 export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYouTube = true }: { markdown: string; sourcePath: string; progressScope?: string; embedYouTube?: boolean }) {
   const Heading = (tag: "h1" | "h2" | "h3" | "h4") => {
     function MarkdownHeading({ children, id, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
@@ -51,12 +125,74 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYou
     return MarkdownHeading;
   };
 
+  const featured = embedYouTube ? firstLessonVideo(markdown) : null;
+  let usedPlayer = false;
+  let pendingInterviewVideo = false;
+
+  function takeVideo() {
+    if (!featured || usedPlayer) return null;
+    usedPlayer = true;
+    pendingInterviewVideo = false;
+    return <LessonVideo videos={[featured]} />;
+  }
+
   const components: Components = {
     h1: Heading("h1"), h2: Heading("h2"), h3: Heading("h3"), h4: Heading("h4"),
+    em({ children }) {
+      return <>{formatCopy(children)}</>;
+    },
+    p({ children }) {
+      const bits = Array.isArray(children) ? children : [children];
+      const first = bits[0];
+      if (isValidElement<{ children?: React.ReactNode }>(first) && first.type === "strong") {
+        const label = textContent(first.props.children).trim();
+        if (/^notes?:/i.test(label)) {
+          return <div className="ih-note">{formatCopy(children)}</div>;
+        }
+        const kicker = parseKicker(label);
+        if (kicker) {
+          const rest = bits.slice(1);
+          const restText = tidyDashes(textContent(rest)).replace(/^[:\s]+/, "").trim();
+          if (kicker.kind === "interview") {
+            if (restText) {
+              return (
+                <>
+                  <h2 className="ih-lesson-kicker">{kicker.title}</h2>
+                  <p>{formatCopy(rest)}</p>
+                  {takeVideo()}
+                </>
+              );
+            }
+            pendingInterviewVideo = Boolean(featured && !usedPlayer);
+            return <h2 className="ih-lesson-kicker">{kicker.title}</h2>;
+          }
+          const before = pendingInterviewVideo ? takeVideo() : null;
+          return (
+            <>
+              {before}
+              <h2 className="ih-lesson-kicker">{kicker.title}</h2>
+              {restText ? <p>{formatCopy(rest)}</p> : null}
+            </>
+          );
+        }
+      }
+      if (pendingInterviewVideo) {
+        return (
+          <>
+            <p>{formatCopy(children)}</p>
+            {takeVideo()}
+          </>
+        );
+      }
+      return <p>{formatCopy(children)}</p>;
+    },
+    li({ children }) {
+      return <li>{formatCopy(children)}</li>;
+    },
+    blockquote({ children }) {
+      return <div className="ih-note">{formatCopy(children)}</div>;
+    },
     a({ href = "", children, ...props }) {
-      const info = extractYouTubeInfo(href);
-      const label = textContent(children) || "YouTube resource";
-      if (info && embedYouTube) return <YouTubeCard href={href} label={label} info={info} />;
       const mapped = convertMarkdownHref(href, sourcePath);
       const external = /^https?:\/\//i.test(mapped);
       const download = mapped.startsWith("/downloads/");

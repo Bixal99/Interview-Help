@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "standalone",
+  // Next 16.3 skips next-server.js.nft.json when Vercel's adapter is active, which
+  // crashes standalone finalization. Vercel ignores standalone output anyway.
+  output: process.env.VERCEL ? undefined : "standalone",
   outputFileTracingIncludes: {
     "/downloads/job-tracker": ["./data/Job_Tracker.xlsx"],
   },

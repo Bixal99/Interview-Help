@@ -33,7 +33,7 @@ export function LessonChrome({
   next: Neighbor | null;
   children: React.ReactNode;
 }) {
-  const { visit, projectDone, completeLesson } = useLearningProgress();
+  const { ready, visit, projectDone, completeLesson } = useLearningProgress();
   const buildProject = Boolean(isLastLesson && projectHref);
   const nextDisabled = !buildProject && Boolean(next?.requiresProject && !projectDone(slug, phaseId));
   const proceedHref = buildProject ? projectHref! : next?.href;
@@ -50,9 +50,10 @@ export function LessonChrome({
   );
 
   useEffect(() => {
+    if (!ready) return;
     visit(slug, phaseId, lessonSlug);
     completeLesson(slug, lessonId);
-  }, [slug, phaseId, lessonId, lessonSlug, visit, completeLesson]);
+  }, [ready, slug, phaseId, lessonId, lessonSlug, visit, completeLesson]);
 
   return (
     <article className="ih-lesson">

@@ -10,6 +10,22 @@ import { useLearningProgress } from "./progress-client";
 
 const TILES = ["#D9EEE1", "#FFF4A3", "#FFC0C7", "#96D4FA", "#F3ECEA"];
 
+function compactTech(tech: string[]) {
+  const seen = new Set<string>();
+  const labels: string[] = [];
+  for (const item of tech) {
+    const head = item.split(/[;,(]|\bor\b/)[0]?.trim() ?? item.trim();
+    const label = head.length > 28 ? `${head.slice(0, 27)}…` : head;
+    if (!label) continue;
+    const key = label.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    labels.push(label);
+    if (labels.length === 2) break;
+  }
+  return labels;
+}
+
 function onGlow(event: MouseEvent<HTMLElement>) {
   const box = event.currentTarget.getBoundingClientRect();
   event.currentTarget.style.setProperty("--x", `${event.clientX - box.left}px`);
@@ -143,7 +159,9 @@ export function ProjectsStudio({ courses }: { courses: ProjectStudioCourse[] }) 
                   <span className="ih-studio-count">{rows.length}</span>
                 </div>
                 <ul className="ih-project-grid">
-                  {rows.map(({ item, done }) => (
+                  {rows.map(({ item, done }) => {
+                    const tools = compactTech(item.tech);
+                    return (
                     <li key={item.id}>
                       <Link href={item.href} className={`ih-project-card${done ? " is-done" : ""}`} onMouseMove={onGlow}>
                         <span className="ih-project-phase">Phase {item.phaseId}</span>
@@ -157,20 +175,23 @@ export function ProjectsStudio({ courses }: { courses: ProjectStudioCourse[] }) 
                         )}
                         <h3>{item.title}</h3>
                         <p><PracticeRichText text={item.intro} /></p>
-                        {item.tech.length ? (
-                          <ul className="ih-project-tech">
-                            {item.tech.map((tool) => (
-                              <li key={tool}>{tool}</li>
-                            ))}
-                          </ul>
-                        ) : null}
-                        <span className="ih-project-go">
-                          Open build
-                          <AppIcon name="next" size={16} />
-                        </span>
+                        <div className="ih-project-foot">
+                          {tools.length ? (
+                            <ul className="ih-project-tech">
+                              {tools.map((tool) => (
+                                <li key={tool} title={tool}>{tool}</li>
+                              ))}
+                            </ul>
+                          ) : null}
+                          <span className="ih-project-go">
+                            Open build
+                            <AppIcon name="next" size={16} />
+                          </span>
+                        </div>
                       </Link>
                     </li>
-                  ))}
+                    );
+                  })}
                 </ul>
                 </section>
               );

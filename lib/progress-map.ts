@@ -7,6 +7,15 @@ export type TrailPhase = {
   hasProject: boolean;
 };
 
+export function phaseIdKey(id: string) {
+  return id.trim().toLowerCase().replace(/^phase-/, "").replace(/^0+(?=\d)/, "") || "0";
+}
+
+function listHas(ids: string[], id: string) {
+  const key = phaseIdKey(id);
+  return ids.some((item) => phaseIdKey(item) === key);
+}
+
 export function plainText(markdown: string) {
   return plainFormula(
     markdown
@@ -22,8 +31,9 @@ export function isPhaseCleared(
   completedProjects: string[],
   completedPhases: string[],
 ) {
-  if (phase.hasProject) return completedProjects.includes(phase.id);
-  return completedPhases.includes(phase.id);
+  if (listHas(completedProjects, phase.id)) return true;
+  if (listHas(completedPhases, phase.id)) return true;
+  return false;
 }
 
 export function canEnterTrailPhase(index: number, phases: TrailPhase[], completedProjects: string[], completedPhases: string[]) {
@@ -45,7 +55,9 @@ export function trailStatuses(
   const cleared = phases.map((phase) => isPhaseCleared(phase, completedProjects, completedPhases));
   const enterable = phases.map((_, index) => canEnterTrailPhase(index, phases, completedProjects, completedPhases));
   const firstOpen = cleared.findIndex((done, index) => !done && enterable[index]);
-  const currentIndex = currentPhaseId ? phases.findIndex((phase) => phase.id === currentPhaseId) : -1;
+  const currentIndex = currentPhaseId
+    ? phases.findIndex((phase) => phaseIdKey(phase.id) === phaseIdKey(currentPhaseId))
+    : -1;
   const hereIndex =
     currentIndex >= 0 && !cleared[currentIndex] ? currentIndex : firstOpen;
 

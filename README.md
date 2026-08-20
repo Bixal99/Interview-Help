@@ -1,646 +1,207 @@
-# Interview Help
+<div align="center">
 
-**Mohammad Bilal's zero-to-hero interview preparation roadmaps** - self-paced paths from first principles to hire-ready skill, told as a connected story in which each new idea solves a problem left by the previous one.
+<img
+  src="https://capsule-render.vercel.app/api?type=waving&color=282A35&height=220&section=header&text=Quarry&fontSize=68&fontColor=04AA6D&animation=fadeIn&fontAlignY=35&desc=From%20first%20principles%20to%20hire-ready.&descAlignY=55&descSize=18"
+  alt="Quarry — From first principles to hire-ready."
+  width="100%"
+/>
 
-This repo is not a bag of random notes. Each concept exists because the previous one reached a practical limit. You learn *why* something was invented, how it works, what it costs, and what limitation forces the next idea.
+<br/>
 
----
+### Free tutorial school. One lesson, then that phase’s project. Zero backend.
 
-## Start here if this is your first technical roadmap
+**Live:** [interview-help.vercel.app](https://interview-help.vercel.app)
 
-A **roadmap** is an ordered learning guide. A **phase** is one manageable group of related ideas, and a **project** is a small working result that helps you practice those ideas. You do not need to understand the abbreviated job titles or tool names on this page yet. Choose the path closest to the work you want to try, open its first phase, and follow the examples in order.
+Computer Science · Git · Web · Data · AI · Networks · Cloud · DevOps · Cybersecurity · IT Administration · **Odoo**
 
-Use this learning loop throughout the repository: read the problem in plain language, run the smallest example, change something, explain the result aloud, and complete the matching mini-project. Confusion on the first attempt is not failure. Repeat the example until you can describe what happened without copying the document's wording.
+<br/>
 
-**Common abbreviations**
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Next.js](https://img.shields.io/badge/Next.js_16-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React_19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Tailwind](https://img.shields.io/badge/Tailwind_v3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)](https://vitest.dev/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://interview-help.vercel.app)
 
-| Abbreviation | Meaning |
-| --- | --- |
-| **SWE** | Software engineer |
-| **OOP** | Object-oriented programming |
-| **DSA** | Data structures and algorithms |
-| **LLM** | Large language model |
-| **SOC** | Security operations center |
-| **ERP** | Enterprise resource planning |
-| **API** | An agreed way for programs to communicate |
-| **CI/CD** | Automated checking and delivery of software changes |
-| **SRE** | Site reliability engineering |
-| **IaC** | Infrastructure as code |
-| **LLD** | Low-level design, or planning the classes and smaller parts inside a software system |
+<br/>
 
-**Administration abbreviations**
+[![Courses](https://img.shields.io/badge/Courses-11%20Roadmaps-04AA6D?style=flat-square)](#the-catalog)
+[![Auth](https://img.shields.io/badge/Auth-None%20(LocalStorage)-282A35?style=flat-square)](#tech-stack)
+[![Content](https://img.shields.io/badge/Source-Markdown-04AA6D?style=flat-square)](#content-source)
+[![Deploy](https://img.shields.io/badge/Deploy-Vercel-04AA6D?style=flat-square)](#deploy)
 
-| Abbreviation | Meaning |
-| --- | --- |
-| **AD DS** | Active Directory Domain Services |
-| **GPO** | Group Policy Object |
-| **MFA** | Multifactor authentication |
-| **RPO** | The acceptable data-loss window |
-| **RTO** | The recovery-time target |
-| **ITSM** | IT service management |
-
-## What's inside
-
-| File | Track | Who it's for |
-|------|--------|--------------|
-| [`CS.md`](./content/roadmaps/CS.md) | Computer Science | Backend / full-stack / general SWE interviews. Programming and OOP sit after Phases 1-2 |
-| [`Git.md`](./content/roadmaps/Git.md) | Git & Professional Git Workflows | Beginners through internals, recovery, team workflows, releases, CI, and repository trust |
-| [`Data.md`](./content/roadmaps/Data.md) | Data Analyst & Data Engineer | Analytics, SQL, pipelines, warehouses, Spark/Kafka |
-| [`Networks.md`](./content/roadmaps/Networks.md) | Computer Networks | Network/infra engineers and SWEs who must understand the stack |
-| [`IT_Administration.md`](./content/roadmaps/IT_Administration.md) | IT Administration | Complete beginners through Windows/Linux, Active Directory, Microsoft 365, ERP operations, security, support, and recovery |
-| [`AI.md`](./content/roadmaps/AI.md) | Artificial Intelligence & Machine Learning | ML practitioners and AI engineers releasing LLM applications that people can use |
-| [`ICT_Cybersecurity.md`](./content/roadmaps/ICT_Cybersecurity.md) | ICT / Cybersecurity Engineer | Security engineers, SOC/blue team, and junior pentesters |
-| [`ODOO.md`](./content/roadmaps/ODOO.md) | Odoo Engineer / ERP Developer | Custom modules, ORM, XML, OWL, PostgreSQL, integrations |
-| [`Web.md`](./content/roadmaps/Web.md) | Web Developer | Frontend, backend, full-stack, REST API, and production web roles |
-| [`Cloud.md`](./content/roadmaps/Cloud.md) | Cloud Engineer | Provider-aware cloud architecture, operations, security, reliability, FinOps, and migration |
-| [`DevOps.md`](./content/roadmaps/DevOps.md) | DevOps Engineer | Linux, delivery automation, CI/CD, containers, Kubernetes, IaC, SRE, and platform engineering |
-| [`Projects.md`](./content/guides/Projects.md) | Projects Playbook | Small builds that cement every roadmap |
-| [`Interview.md`](./content/guides/Interview.md) | Combined Interview Playbook | Spoken Q&A drill across the roadmaps |
-
-**Repository count:** 11 source roadmaps · 2 shared playbooks · 1 CV template. Computer Science is one tutorial in [`CS.md`](./content/roadmaps/CS.md): Phases 1-2 foundations, 3-25 programming and OOP, then 26 onward.
-
-All roadmaps use the **same teaching rhythm**. [`Projects.md`](./content/guides/Projects.md) is how you prove it. [`Interview.md`](./content/guides/Interview.md) is the place to practice answers aloud.
+</div>
 
 ---
 
-## How every concept is taught
+## At a glance
 
-Each roadmap section follows the same shape so you always know where to look:
-
-| Section | Purpose |
-|---------|---------|
-| **Why this exists** | The wall the previous idea hit |
-| **The problem before** | What broke without this concept |
-| **Visual learning** | Videos, interactive tools, docs, GitHub, practice |
-| **Detailed explanation** | The internal steps explained in plain language |
-| **The idea that fixed it** | The main idea in one clear sentence |
-| **Internal working** | Step-by-step + ASCII diagrams |
-| **Real-world analogy** | Hold the idea without a screen |
-| **Complexity / trade-offs** | What you gain and what it costs |
-| **Code implementation** | Minimal runnable example |
-| **Interview perspective** | How this gets tested |
-| **Practice problems** | Easy → Medium → Hard |
-| **Why the next topic is needed** | The problem that remains and leads to the next idea |
-
-**First pass:** read in order - the document is one connected explanation, not a page of unrelated definitions.
-
-**Revision:** jump straight to *Why you are learning this* and *Why the next topic is needed*; those two rebuild the reasoning.
-
-**Practice:** after each phase, open its matching card in [`Projects.md`](./content/guides/Projects.md) and follow the build steps.
-
----
-
-> **Build with Git as you learn:** Every phase-project card includes a short checkpoint for testing and committing that working milestone. Use [`Git.md`](./content/roadmaps/Git.md) for the full explanation of staging, commits, branches, recovery, and professional workflows.
-
----
-
-## Suggested learning order
-
-**SWE path**
+| Land | Learn | Prove |
+|:---:|:---:|:---:|
+| Paper home · course tiles · real counts | One lesson at a time · winding graph · playground | Phase builds · interview drills · browser progress |
 
 ```text
-CS Phases 1-25  →  Git.md Phases 1-10  →  CS Phases 26-43
-                 →  Projects.md along the way
-                 →  Networks.md essentials when systems start
-                 →  Interview.md before applications
+Home  →  Pick a course  →  Phase checkpoint  →  Lesson  →  Project
+                ↓                                      ↓
+           /progress graph                    Mark build complete → next phase
 ```
 
-**Odoo path:** finish Computer Science Phases 3-25, complete [`Git.md`](./content/roadmaps/Git.md) Phases 1-7 before Odoo source/branch collaboration, then follow [`ODOO.md`](./content/roadmaps/ODOO.md) and its matching projects.
+Architecture layers:
 
-**IT administrator path:** begin directly with [`IT_Administration.md`](./content/roadmaps/IT_Administration.md); it starts from basic computer literacy and builds a safe local homelab. Use [`Networks.md`](./content/roadmaps/Networks.md) for packet/routing depth, [`ICT_Cybersecurity.md`](./content/roadmaps/ICT_Cybersecurity.md) for security depth, then specialize through [`Cloud.md`](./content/roadmaps/Cloud.md) or [`DevOps.md`](./content/roadmaps/DevOps.md). Build the matching IT Administration projects and practice Interview Track I throughout.
+| Layer | Role | Where |
+|:---|:---|:---|
+| Presentation | Header, landing, lesson chrome, winding graph | `components/` |
+| Application | Routes, progress API, playground | `app/`, `ProgressProvider` |
+| Domain | Parse Markdown into courses, phases, briefs | `lib/` |
+| Persistence | Visited lessons, completed projects | `localStorage` (`interview-help-progress-v2`) |
 
-**Web developer path:** learn programming fundamentals in Computer Science Phases 3-5, complete [`Git.md`](./content/roadmaps/Git.md) Phases 1-7 for repository and review work, then follow [`Web.md`](./content/roadmaps/Web.md) from browser fundamentals through deployment. Pair Web Phase 1/6 with [`Networks.md`](./content/roadmaps/Networks.md), Phase 13 with [`Data.md`](./content/roadmaps/Data.md), and Git Phases 12/15 with releases and CI.
-
-**Cloud engineer path:** learn Linux and network fundamentals in [`Cloud.md`](./content/roadmaps/Cloud.md) Phases 1-2, add [`Git.md`](./content/roadmaps/Git.md) Phases 1-9 before versioned IaC and secret-response work, deepen packet/system reasoning with [`Networks.md`](./content/roadmaps/Networks.md) and [`CS.md`](./content/roadmaps/CS.md), then complete the cloud roadmap. Pair Git Phases 14-15 with cloud governance/delivery and practice Interview Tracks G and V.
-
-**DevOps engineer path:** use [`DevOps.md`](./content/roadmaps/DevOps.md) Phases 1-3 for delivery/Linux/troubleshooting, complete [`Git.md`](./content/roadmaps/Git.md) for deep Git mechanics, then return to DevOps Phase 4 and continue through CI/CD, platforms, GitOps, and incidents. Pair DevOps Phase 13 with [`Cloud.md`](./content/roadmaps/Cloud.md), and practice Interview Tracks H and V.
-
-**Cybersecurity path:** start [`ICT_Cybersecurity.md`](./content/roadmaps/ICT_Cybersecurity.md) Phase 1. Pair it with [`Networks.md`](./content/roadmaps/Networks.md) when packet behavior becomes more detailed. Practice only in authorized labs (PortSwigger, TryHackMe, HTB, or your own home lab), then practice the Phase 20 interviews.
-
-Mindset → Networks/OS → Crypto/IAM → Web/Defend → Detect/Respond → Cloud → Portfolio → Hire
-
-- **SOC / blue:** Phases 1-6, 8-10, 13-14, 19-20 (skim 7 and 11 for attacker empathy).  
-- **Security engineer:** Phases 1-10, 15-16, 18-20 (heavy AppSec + cloud + DevSecOps).  
-- **Pentest / red:** Phases 1-7, 10-12, 19-20 (never skip ethics; certs after lab hours).
+Hot-path rule: **Markdown in `content/` is canonical.** Rebuild the site and pages, search, and progress targets update with it.
 
 ---
 
-## Track 1 - Computer Science & Software Engineering
+## Tech stack
 
-**File:** [`CS.md`](./content/roadmaps/CS.md)  
-**Website:** one Computer Science tutorial.  
-**Scope:** 43 phases - foundations, programming, OOP, data structures, systems, design, and mock interviews.
+| Tool | Role |
+|:---|:---|
+| **Next.js 16** | App Router · static pages from Markdown |
+| **React 19** | UI · winding roadmap · playground |
+| **TypeScript** | End-to-end types |
+| **Tailwind CSS v3** | Layout utilities; brand lives in `app/globals.css` |
+| **react-markdown** | Lesson bodies (GFM, KaTeX, highlight) |
+| **Monaco** | In-browser try-it / exercises |
+| **Mermaid / KaTeX** | Diagrams and math |
+| **Vitest** | Automated tests |
+| **Lucide / react-icons** | Icons |
 
-Storyline: Foundations → Programming fundamentals → Object thinking → Pillars → SOLID / patterns / LLD → Data structures & algorithms → Systems → Web & data → Design → Hire
-
-| # | Phase | Goal |
-|--:|-------|------|
-| 01 | Programming Foundations | What happens when code runs |
-| 02 | Complexity Analysis | Big O as a measuring stick |
-| 03 | How Programs Run | Interpreter, variables, types |
-| 04 | Control Flow | if/else and loops |
-| 05 | Functions & Modules | Reuse and organize files |
-| 06 | Object Thinking | Why procedural hits a wall |
-| 07 | Classes & Objects | Blueprint vs instance on the heap |
-| 08 | State & Behavior | Attrs, methods, `__init__`, `self` |
-| 09 | Encapsulation | Hide state; protect invariants |
-| 10 | Abstraction | ABCs / contracts; what vs how |
-| 11 | Inheritance | is-a reuse and MRO - carefully |
-| 12 | Polymorphism | Same call, different behavior |
-| 13 | Composition over Inheritance | Prefer has-a when coupling hurts |
-| 14 | Python Power Tools | Dunders, properties, classmethods |
-| 15 | Relationships & Modeling | CRC cards and lightweight UML |
-| 16 | Smells & Refactoring | Spot God objects early |
-| 17 | SOLID | Five principles that localize change |
-| 18 | Creational Patterns | Factory, Singleton, Builder |
-| 19 | Structural Patterns | Adapter, Decorator, Facade |
-| 20 | Behavioral Patterns | Strategy, Observer, Command |
-| 21 | Testing OOP | Fakes via dependency inversion |
-| 22 | Layers & Clean-ish Architecture | Keep policy independent of I/O |
-| 23 | LLD Method | Design under interview pressure |
-| 24 | Portfolio | Finish complete designs that you can explain clearly |
-| 25 | Interviews | Speak pillars, SOLID, and trade-offs |
-| 26 | Linear Data Structures | Arrays, lists, stacks, queues |
-| 27 | Recursion | Call stack and base cases |
-| 28 | Hierarchical & Priority Structures | Trees, BSTs, heaps |
-| 29 | Hashing | $O(1)$ "have I seen this?" |
-| 30 | Sorting & Binary Search | Impose and exploit order |
-| 31 | Graphs | BFS, DFS, relationships |
-| 32 | Algorithmic Patterns | DP, greedy, backtracking |
-| 33 | OOP & Low-Level Design | Revision after the OOP block above |
-| 34 | Operating Systems | Processes, threads, memory |
-| 35 | Computer Networks | Packets, TCP/UDP, DNS |
-| 36 | Web, HTTP & APIs | REST and the request path |
-| 37 | Databases & Data Modeling | SQL, schemas, indexes |
-| 38 | Authentication & Security | Passwords, sessions, JWT, injection |
-| 39 | Software Engineering & Testing | Tests that make change safe |
-| 40 | System Design & Scalability | Caching, sharding, load balancing |
-| 41 | Distributed Systems | CAP, consensus, failure |
-| 42 | Projects | Build proof across phases |
-| 43 | Interview Mastery | Coding + design + behavioral |
-
-On the Software Engineer path, finish [`Git.md`](./content/roadmaps/Git.md) Phases 1-10 after Phase 25 and before Phase 26.
+Client-only — no paid APIs, no database, no auth.
 
 ---
 
-## Companion - Git & Professional Git Workflows
+## Features
 
-**File:** [`Git.md`](./content/roadmaps/Git.md)
+| Shared chrome | Visual language | Progress |
+|:---|:---|:---|
+| Sticky Quarry bar · hamburger on phone · search | Band `#282A35` · accent `#04AA6D` · paper `#F1F1F1` | Phase graph · themed reset dialog · export / import |
 
-**Scope:** **15 phases** - zero-knowledge setup through state, internals, collaboration, recovery, rewriting, releases, repository scale, team workflows, CI, security, and trust.
-
-Setup → State → History/Internals → Branch/Merge/Remote → Undo/Recover/Rebase → Tools/Release/Scale → Workflow/Trust
-
-**When to use it:** begin after you can create and edit plain-text files. Finish Phases 1-7 before serious team projects; finish Phases 8-10 before rewriting or emergency recovery; finish Phases 11-15 for release, DevOps, open-source, and senior workflow work. Build one exact matching project per phase in [`Projects.md`](./content/guides/Projects.md#git-and-git-workflows) and drill [Interview Track V](./content/guides/Interview.md#track-v---git-and-version-control).
-
-| # | Phase | Goal |
-|--:|-------|------|
-| 01 | Foundations & Safe Setup | Git versus hosting, config, init, clone, `.git` |
-| 02 | Three-State Model | Working tree, index, repository, diffs |
-| 03 | Commits & History | Atomic snapshots, ancestry, revision queries |
-| 04 | Internals & Commit Graph | Objects, refs, `HEAD`, reachability, reflogs, packs |
-| 05 | Branching | Parallel refs, upstreams, divergence, cleanup |
-| 06 | Merge & Conflicts | Fast-forward, three-way, conflict types, `rerere` |
-| 07 | Remotes & Open Source | Fetch/pull/push, forks, review, protected branches |
-| 08 | Safe Undo | Restore, amend, reset modes, revert decision table |
-| 09 | Recovery & Shared Safety | Reflog rescue, secret response, guarded force update |
-| 10 | Rebase & Rewriting | Interactive curation of unpublished history |
-| 11 | Everyday Git | Stash, patch, cherry-pick, worktrees, config |
-| 12 | Investigation & Releases | Blame, bisect, tags, signing, changelog, SemVer |
-| 13 | Repository Scale | Attributes, LFS, sparse, submodule/subtree, monorepo |
-| 14 | Team Workflows | GitHub/GitLab Flow, Git Flow, trunk, forking, hotfix |
-| 15 | CI, Trust & Health | Hooks, checks, queues, signing, scanning, maintenance |
+| Learning loop | Mobile | Deploy |
+|:---|:---|:---|
+| Lesson → phase project → interview drill | Full-width graph popup · checkpoint art scrolls · stacked pagers | Vercel · Next standalone · zero env secrets |
 
 ---
 
-## Track 2 - Data Analyst & Data Engineer
+## The catalog
 
-**File:** [`Data.md`](./content/roadmaps/Data.md)  
-**Scope:** **20 phases** - from data thinking to portfolio and interviews.
+| Course | Route |
+|:---|:---|
+| Computer Science | `/courses/computer-science` |
+| Git | `/courses/git` |
+| Web Development | `/courses/web-development` |
+| Data | `/courses/data` |
+| Artificial Intelligence | `/courses/artificial-intelligence` |
+| Computer Networks | `/courses/networks` |
+| Cloud | `/courses/cloud` |
+| DevOps | `/courses/devops` |
+| Cybersecurity | `/courses/cybersecurity` |
+| IT Administration | `/courses/it-administration` |
+| Odoo | `/courses/odoo` |
 
-Analyst core (1-10) → Engineering depth (11-18) → Portfolio & hire (19-20)
+Also: **`/`** home · **`/courses`** all tutorials · **`/projects`** phase builds · **`/interview`** spoken Q&A · **`/progress`** trail · **`/search`** · **`/playground`**.
 
-- **Analyst path:** finish through Phase 10, skim 11-12, then jump to 19-20.  
-- **Engineer path:** do not skip the analyst phases - pipelines without metric literacy produce data nobody trusts.
-
-| # | Phase | Goal |
-|--:|-------|------|
-| 01 | Data Thinking | Event → decision; analyst vs engineer |
-| 02 | Spreadsheets & Literacy | Dirty tables, PivotTables |
-| 03 | Python for Data | Automate beyond the sheet |
-| 04 | SQL Foundations | SELECT, WHERE, NULL literacy |
-| 05 | Joins & Aggregations | Combine and summarize correctly |
-| 06 | Advanced SQL | CTEs and window functions |
-| 07 | Statistics | Signal vs noise, A/B literacy |
-| 08 | Pandas | Clean, join, group, reshape |
-| 09 | Visualization | Honest charts that persuade |
-| 10 | EDA & Metrics | Insight memos that drive decisions |
-| 11 | Relational Modeling | OLTP schemas and indexes |
-| 12 | Warehouse & Dimensional | Star schemas, SCDs |
-| 13 | ETL/ELT & Formats | Move and store efficiently |
-| 14 | Orchestration & Containers | Airflow, Docker, retries |
-| 15 | dbt & Analytics Eng | Tested warehouse transforms |
-| 16 | Cloud Platforms | Batch / lake / warehouse on cloud |
-| 17 | Spark | Beyond one machine |
-| 18 | Kafka Streaming | Near-real-time events |
-| 19 | Portfolio & Quality | Public proof + data quality |
-| 20 | Interviews | SQL + case + design out loud |
+A phase counts as done when you finish that phase’s project. Lessons alone do not raise the percent. The green marching path fills **up to the phase you are on** and stops there.
 
 ---
 
-## Track 3 - Computer Networks
+## Prerequisites
 
-**File:** [`Networks.md`](./content/roadmaps/Networks.md)  
-**Scope:** **40 concepts · 20 phases** - packet switching through BGP, labs, and interviews.
+| Requirement | Notes |
+|:---|:---|
+| Node.js ≥ 20 · npm | Local development |
+| Modern browser | LocalStorage for progress |
 
-Bits → Packets → Routes → Apps → Scale → Hire
-
-- **Software engineer path:** finish through Phase 14 carefully, then skim 15-18 for production vocabulary.  
-- **Network / infra path:** do not skip sockets and HTTP - apps and networks fail together.
-
-| # | Phase | Goal |
-|--:|-------|------|
-| 01 | Network Thinking | Shared unreliable pipes; latency vs bandwidth |
-| 02 | Physical Layer | How bits move on a medium |
-| 03 | Data Link & Ethernet | Frames, MAC, CRC on one segment |
-| 04 | Switching & VLANs | MAC learning; split broadcast domains |
-| 05 | IP & Subnetting | Global addressing and CIDR plans |
-| 06 | Routing | Longest-prefix match; RIP / OSPF / BGP roles |
-| 07 | ARP / DHCP / ICMP / NAT | Make IP usable on real LANs |
-| 08 | Layered Models | OSI / TCP-IP; encapsulation end to end |
-| 09 | UDP | Minimal datagrams and their costs |
-| 10 | TCP | Handshake, ACKs, flow vs congestion control |
-| 11 | Sockets | Program the transport four-tuple |
-| 12 | DNS | Recursive lookup and common records |
-| 13 | HTTP | Raw HTTP/1.1 and what /2 /3 change |
-| 14 | TLS & HTTPS | Handshake goals and certificates |
-| 15 | Wireshark | Capture and filter the failing exchange |
-| 16 | Wireless (Wi-Fi) | Shared medium, interference, association |
-| 17 | CDN, LB & Edge | Scale services at the edge |
-| 18 | BGP & Internet | AS, peering, policy over shortest path |
-| 19 | Labs & Portfolio | Captures, labs, public write-ups |
-| 20 | Interviews | Narrate "what happens when you type a URL" |
+No database. No API keys.
 
 ---
 
-## Track 4 - Artificial Intelligence & Machine Learning
-
-**File:** [`AI.md`](./content/roadmaps/AI.md)  
-**Scope:** **40 concepts · 20 phases** - math intuition through transformers, RAG, agents, MLOps, and hire.
-
-Data → Learn → Deep learning → Transformers → Release a usable system → Get hired
-
-- **AI engineer (LLM apps) path:** do not skip Phases 4-8 - loss and overfitting still kill demos.  
-- **ML / research path:** still finish the evaluation and release phases. A model that never reaches real users has not faced real conditions.
-
-| # | Phase | Goal |
-|--:|-------|------|
-| 01 | AI Thinking | Learning as fitting from data |
-| 02 | Math for ML | Gradients, expectation, loss intuition |
-| 03 | Python for AI | Arrays and clean train matrices |
-| 04 | Classical ML | Linear/logistic baselines; overfitting |
-| 05 | Evaluation | Metrics that matter; leakage |
-| 06 | Trees & Ensembles | Bagging vs boosting |
-| 07 | Neural Nets Basics | Compose differentiable layers |
-| 08 | Backprop & Optimizers | Train by gradient descent |
-| 09 | PyTorch Practice | Real training loops with autograd |
-| 10 | CNNs & Vision | Convolution + transfer learning |
-| 11 | Sequences | RNNs and the limits that force transformers |
-| 12 | Embeddings | Meaning as vectors; cosine similarity |
-| 13 | Transformers | Attention, Q/K/V, multi-head |
-| 14 | LLMs & Prompting | Prompts with named failure modes |
-| 15 | RAG | Chunk → embed → retrieve → generate |
-| 16 | Fine-tuning | LoRA vs full FT vs RAG |
-| 17 | Agents | Tool-using loops, safely |
-| 18 | Eval, Safety & MLOps | Evaluation tests, tracing, safety checks and limits |
-| 19 | Portfolio | Projects with metrics |
-| 20 | Interviews | Explain systems end-to-end under pressure |
-
----
-
-## Track 5 - ICT / Cybersecurity Engineer
-
-**File:** [`ICT_Cybersecurity.md`](./content/roadmaps/ICT_Cybersecurity.md)  
-**Scope:** **40 concepts · 20 phases** - security mindset through networking, crypto, identity, OWASP, pentest, AD, SOC/SIEM, DFIR, cloud/K8s, GRC, and hire.
-
-Foundations → Defend → Attack → Detect → Respond → Hire
-
-- **SOC / blue path:** heavy on Phases 13-14; still learn web and identity so alerts make sense.  
-- **Security engineer path:** heavy on 7, 15-16, 18; still practice authorized labs.  
-- **Red / pentest path:** heavy on 7, 11-12; never skip ethics and scope. Practice only on authorized targets.
-
-| # | Phase | Goal |
-|--:|-------|------|
-| 01 | Security Mindset | CIA, AAA, risk, ethics |
-| 02 | Networking for Security | Packets, ports, segmentation |
-| 03 | Linux & Windows | CLI, permissions, logs |
-| 04 | Cryptography | Hash, encrypt, sign, TLS |
-| 05 | Identity & Access | AuthN/AuthZ, MFA, least privilege |
-| 06 | Threat Modeling & ATT&CK | STRIDE + shared TTP map |
-| 07 | Web App Security | OWASP, PortSwigger labs |
-| 08 | Network Defenses | Firewalls, VPN, IDS/IPS |
-| 09 | Hardening & Endpoints | Baselines, EDR intuition |
-| 10 | Vuln Management | Scan, prioritize, patch |
-| 11 | Pentest Methodology | Scoped recon → report |
-| 12 | Active Directory | Kerberos, lateral themes, defenses |
-| 13 | SOC / SIEM / Detection | Logs, Sigma, ATT&CK rules |
-| 14 | DFIR | Triage, forensics, IR lifecycle |
-| 15 | Cloud Security | Shared responsibility, IAM |
-| 16 | Containers & DevSecOps | K8s hardening, CI gates |
-| 17 | Malware Basics | Safe static/dynamic triage |
-| 18 | GRC & Risk | Policies, frameworks, registers |
-| 19 | Portfolio & Labs | Writeups, home lab, detections |
-| 20 | Interviews | Technical drills + security design |
-
-**Anchor labs / refs:** [PortSwigger Academy](https://portswigger.net/web-security) · [OWASP Top 10](https://owasp.org/Top10/) · [MITRE ATT&CK](https://attack.mitre.org/) · TryHackMe / HTB · HackTricks · Sigma · Juice Shop
-
----
-
-## Track 6 - Odoo Engineer (ERP)
-
-**File:** [`ODOO.md`](./content/roadmaps/ODOO.md)  
-**Scope:** **40 concepts · 20 phases** - ERP thinking through modules, ORM, security, views, HTTP, OWL, PostgreSQL, and hire.
-
-ERP → Modules → ORM → User interface → Web requests → Release a working module → Get hired
-
-**Prerequisites:** Python and Computer Science through Phase 25. Odoo is Python OOP when the amount of work grows with XML, JS (OWL), and PostgreSQL.
-
-| # | Phase | Goal |
-|--:|-------|------|
-| 01 | Odoo Thinking / What ERP Is | Why companies need modular business apps |
-| 02 | Architecture (3-tier) | PostgreSQL, Python server, web client |
-| 03 | Dev Environment Setup | Local Odoo you can restart and debug |
-| 04 | Module Anatomy | `__manifest__`, structure, installable addons |
-| 05 | Models & Fields | ORM models that map to tables |
-| 06 | ORM Queries | search, browse, create, write, unlink |
-| 07 | Record Rules & Access | Security CSV and ir.model.access |
-| 08 | Views XML | form, tree, search, kanban |
-| 09 | Actions & Menus | How users reach your screens |
-| 10 | Business Logic | computed, related, onchange, constraints |
-| 11 | Inheritance | Python `_inherit` and XML xpath |
-| 12 | Wizards & Transient Models | Short-lived UI workflows |
-| 13 | Controllers & HTTP / Webhooks | Inbound HTTP into Odoo |
-| 14 | External API | XML-RPC / JSON patterns to talk to Odoo |
-| 15 | Integrations & Payment Gateways | Third-party systems and payments |
-| 16 | OWL / JavaScript Frontend | Dynamic client UI |
-| 17 | PostgreSQL for Odoo | Indexes, performance, psql literacy |
-| 18 | Testing, Debugging, Upgrades | Keep modules alive across versions |
-| 19 | Portfolio Modules | Public proof of Odoo skill |
-| 20 | Interviews / Hire | Narrate design and trade-offs |
-
----
-
-## Track 7 - Web Developer
-
-**File:** [`Web.md`](./content/roadmaps/Web.md)
-**Scope:** **40 concepts · 20 phases** - browser fundamentals through React/Next.js, Node/Express, REST/OpenAPI, databases, authentication, testing, performance, deployment, GraphQL/realtime, and hire.
-
-Browser -> HTML/CSS -> JavaScript -> Frameworks -> Server -> Data -> APIs -> Security -> Production -> Hire
-
-- **Frontend path:** read Phases 1-10, 15-16, and 19-20 deeply; skim 11-14 for API literacy.
-- **Backend/API path:** read Phases 1-7 quickly, then study 11-18 carefully; still finish one React interface.
-- **Full-stack path:** complete all phases in order, then finish the Phase 19 capstone.
-
-| # | Phase | Goal |
-|--:|-------|------|
-| 01 | Web Thinking | Browser/server contract and request path |
-| 02 | HTML Foundations | Semantics, forms, media, accessibility |
-| 03 | CSS Fundamentals | Cascade, box model, type, color, variables |
-| 04 | CSS Layout & Responsive Design | Flexbox, Grid, mobile-first interfaces |
-| 05 | JavaScript Fundamentals | Language, DOM, events, fetch, async |
-| 06 | Browser APIs & Tooling | DevTools, npm, Vite, environment config |
-| 07 | TypeScript for Web | Strict contracts, generics, project config |
-| 08 | React Fundamentals | Components, props, state, effects, forms |
-| 09 | React Patterns & State | Routing, Context, TanStack Query |
-| 10 | Next.js & Full-Stack React | App Router, rendering, route handlers |
-| 11 | Node.js & Express | Runtime, middleware, validation, logging |
-| 12 | REST API Design | Resources, methods, status, OpenAPI, pagination |
-| 13 | Databases for Web Apps | PostgreSQL, Prisma, migrations, transactions |
-| 14 | Authentication & Authorization | Sessions, JWT, OAuth, RBAC, OWASP |
-| 15 | Testing Web Applications | Vitest, Testing Library, SuperTest, Playwright |
-| 16 | Performance & Web Vitals | LCP/INP/CLS, caching, compression, bundles |
-| 17 | Deployment & CI/CD | Hosting, Docker, GitHub Actions, rollback |
-| 18 | GraphQL, WebSockets & Modern APIs | GraphQL, SSE, WebSocket, webhooks |
-| 19 | Portfolio & Capstone Projects | Public, deployed, documented proof |
-| 20 | Web Developer Interviews | Frontend, backend, design, behavioral |
-
----
-
-## Track 8 - Cloud Engineer
-
-**File:** [`Cloud.md`](./content/roadmaps/Cloud.md)
-**Scope:** **20 phases** - provider-aware foundations through identity, networking, compute, storage, data, serverless, Kubernetes, IaC, governance, security, reliability, FinOps, migration, projects, and interviews.
-
-Linux/Networks -> Cloud Core -> Data/Traffic -> Cloud Native -> Governance/Security -> Reliability/FinOps -> Hire
-
-| # | Phase | Goal |
-|--:|-------|------|
-| 01 | Cloud Engineer Ground Floor | Linux, networking, scripting, and role boundaries |
-| 02 | Virtualization & Service Models | VM, container, IaaS/PaaS/SaaS/serverless responsibility |
-| 03 | Providers, Regions & Zones | AWS/Azure/GCP vocabulary and failure domains |
-| 04 | Identity & Access Management | Federation, roles, policies, short-lived least privilege |
-| 05 | Cloud Networking | VPC/VNet, subnets, routes, NAT, endpoints, security groups |
-| 06 | Compute & Autoscaling | Images, load balancing, health, elasticity, immutable groups |
-| 07 | Cloud Storage | Object, block, file, durability, lifecycle, restore |
-| 08 | Managed Databases & Caching | SQL/NoSQL, replication, backup, cache correctness |
-| 09 | DNS, CDN & Edge | Traffic steering, TLS, load balancing, cache policy |
-| 10 | Serverless & Events | Functions, queues, topics, idempotency, dead letters |
-| 11 | Containers & Managed Kubernetes | ECS/EKS/AKS/GKE and workload responsibility |
-| 12 | Infrastructure as Code | Terraform/native tools, plans, modules, state, drift |
-| 13 | Landing Zones & Governance | Organizations, account vending, safety checks and limits, audit |
-| 14 | Secrets & Encryption | Secret managers, KMS, envelope encryption, rotation |
-| 15 | Cloud Observability | Metrics, logs, traces, alerts, operational evidence |
-| 16 | Cloud Security & Compliance | Threat models, posture, zero trust, control evidence |
-| 17 | Reliability & Disaster Recovery | HA, RTO/RPO, backup, failover, game days |
-| 18 | FinOps | Allocation, unit cost, anomaly, rightsizing, commitments |
-| 19 | Hybrid/Multi-Cloud & Migration | Dependency discovery, 7Rs, cutover, rollback |
-| 20 | Projects & Cloud Interviews | Architecture proof, provider mapping, hire-ready narration |
-
----
-
-## Track 9 - DevOps Engineer
-
-**File:** [`DevOps.md`](./content/roadmaps/DevOps.md)
-**Scope:** **20 phases** - delivery flow through Linux, troubleshooting, Git, automation, artifacts, CI/CD, Docker, Kubernetes, IaC, cloud, observability, SRE, DevSecOps, platform engineering, incidents, projects, and interviews.
-
-Flow -> Linux/Git/Automation -> Artifact/CI/CD -> Containers/Kubernetes -> IaC/Cloud -> SRE/Security/Platform -> Hire
-
-| # | Phase | Goal |
-|--:|-------|------|
-| 01 | DevOps Delivery System | Value stream, feedback, small batches, DORA signals |
-| 02 | Linux & Services | Files, permissions, processes, systemd, journal |
-| 03 | Troubleshooting | DNS-to-dependency evidence ladder and safe mitigation |
-| 04 | Git & Collaboration | Commit graph, merge/rebase/revert, trunk and review |
-| 05 | Shell & Python Automation | Validation, idempotency, dry-run, failure handling |
-| 06 | Builds & Artifacts | Reproducibility, dependency locks, registries, digests |
-| 07 | Continuous Integration | Fast protected checks, caches, flakes, branch gates |
-| 08 | Continuous Delivery | Rolling/blue-green/canary, compatibility, rollback |
-| 09 | Docker | Images, layers, isolation, networking, volumes, security |
-| 10 | Kubernetes Operations | Controllers, workloads, services, health, debugging |
-| 11 | Terraform | Desired infrastructure, state, modules, plans, drift |
-| 12 | Ansible | Inventory, roles, templates, handlers, convergence |
-| 13 | Cloud for DevOps | Federated CI identity, VPC, managed runtime, cloud cost |
-| 14 | Observability | OpenTelemetry, Prometheus/Grafana, actionable alerts |
-| 15 | SRE | SLIs/SLOs, error budgets, burn rates, toil |
-| 16 | DevSecOps | SBOM, scanning, signing, provenance, admission |
-| 17 | GitOps & Platform Engineering | Argo CD, reconciliation, self-service golden paths |
-| 18 | Incidents & Chaos | Command, postmortems, game days, resilience experiments |
-| 19 | DevOps Portfolio | Complete delivery system with telemetry and recovery proof |
-| 20 | DevOps Interviews | Troubleshooting, system design, operational stories |
-
----
-
-## Track 10 - IT Administrator
-
-**File:** [`IT_Administration.md`](./content/roadmaps/IT_Administration.md)
-**Scope:** **18 phases** - support and endpoints through Windows/Linux servers, networks, Active Directory, Microsoft 365, ERP, security, recovery, automation, service management, hybrid operations, and hire.
-
-Support → Endpoints → Windows/Linux → Networks/Virtualization → Server/AD → Microsoft cloud → Recovery/ERP → Security/Operations → Hybrid → Hire
-
-| # | Phase | Goal |
-|--:|-------|------|
-| 01 | Support Mindset | Scope, evidence, safe tests, escalation, communication |
-| 02 | Hardware & Endpoints | Diagnose, standardize, protect, and retire devices |
-| 03 | Windows Client | Install, permissions, services, logs, update, recovery, PowerShell |
-| 04 | Linux Administration | Files, users, services, journal, SSH, storage, firewall, Bash |
-| 05 | Administrator Networking | IP/subnets, DNS, DHCP, VLAN, Wi-Fi, VPN, firewall troubleshooting |
-| 06 | Virtualization & Homelab | Isolated multi-VM lab, switches, templates, checkpoints, capacity |
-| 07 | Windows Server & File Services | Roles, storage, SMB/NTFS, print, hardening, maintenance |
-| 08 | Active Directory | Forest/domain/DC/OU, users, computers, groups, DNS, delegation |
-| 09 | GPO & Identity Lifecycle | Kerberos/NTLM, policy, service accounts, joiner/mover/leaver, recovery |
-| 10 | Entra, Microsoft 365 & Intune | Cloud identity, licensing, services, MFA/CA, device management |
-| 11 | Storage, Backup & DR | RAID/storage choices, protected copies, RPO/RTO, tested restores |
-| 12 | Databases & ERP Operations | PostgreSQL/SQL awareness, Odoo layers, access, jobs, upgrades, recovery |
-| 13 | Administrator Security | Least privilege, hardening, remote access, logging, incident response |
-| 14 | Monitoring & Maintenance | Health, capacity, alerts, certificates, patches, verification |
-| 15 | Automation | PowerShell/Bash/Python, validation, idempotence, dry run, rollback |
-| 16 | ITSM, Assets, Vendors & Docs | Tickets, changes, inventory, licenses, contracts, runbooks, handover |
-| 17 | Cloud & Hybrid Administration | Shared responsibility, virtual services, VPN, migration, cost |
-| 18 | Capstone & Career | Small-company proof, scenarios, certifications, CV, interviews |
-
----
-
-## Projects Playbook
-
-**File:** [`Projects.md`](./content/guides/Projects.md)  
-**Scope:** **236 phase projects** (218 existing + 18 IT Administration) plus **12 complete portfolio capstones** - one phase project per roadmap phase and one capstone per roadmap.
-
-Every roadmap phase links to one matching mini-project card. After that roadmap's final phase, it links to a complete portfolio project with intended users, a free/open-source stack, one build step per selected phase, and a no-cost/local execution path.
-
-Every mini-project ends with two navigation links: one returns to the phase you just studied, and the other continues to the next roadmap phase. The final phase continues to the larger main portfolio project.
-
-Learn each phase → Build its mini-project → Finish the roadmap → Build the complete portfolio project
-
-- Finish the mini-project for the phase you just studied.
-- Use the listed tech stack so you do not have to guess which tools to choose.
-- Follow the numbered steps in order and keep the first version small.
-- After the final phase, build the track capstone in roadmap order.
-- For cybersecurity projects, use only systems you own or are explicitly authorized to test.
-
----
-
-## Interview Playbook
-
-**File:** [`Interview.md`](./content/guides/Interview.md)  
-**Scope:** Combined spoken Q&A across the roadmaps - strong answers, speak-aloud structure, follow-ups, and traps.
-
-| Track | Focus | Approx. Q count |
-|-------|--------|----------------:|
-| A | Computer Science & Software Engineering | 18 |
-| B | Data Analyst & Data Engineer | 16 |
-| C | Computer Networks | 16 |
-| D | AI / ML / LLM Engineering | 18 |
-| W | Web Development | 16 |
-| G | Cloud Engineering | 10 |
-| H | DevOps Engineering | 12 |
-| I | IT Administration | 16 plus live scenarios |
-| V | Git and Version Control | 18 |
-| E | Cross-cutting classics (URL bar, debug, design) | 6 |
-| F | Behavioral / STAR | 5 |
-
-**Cybersecurity interviews:** drill [`ICT_Cybersecurity.md`](./content/roadmaps/ICT_Cybersecurity.md) Phase 20 (TLS, IAM, OWASP, ATT&CK, IR, cloud misconfig, security system design) plus Networks track C for packet confident working knowledge.
-
-**How to practice:** cover the answer → speak 60-120 seconds → check structure → answer one follow-up cold. If you cannot explain *why it exists*, return to the linked roadmap phase.
-
----
-
-## How to use this repo
-
-1. Pick a primary track: [`CS.md`](./content/roadmaps/CS.md), [`Git.md`](./content/roadmaps/Git.md), [`Data.md`](./content/roadmaps/Data.md), [`Networks.md`](./content/roadmaps/Networks.md), [`IT_Administration.md`](./content/roadmaps/IT_Administration.md), [`AI.md`](./content/roadmaps/AI.md), [`ICT_Cybersecurity.md`](./content/roadmaps/ICT_Cybersecurity.md), [`ODOO.md`](./content/roadmaps/ODOO.md), [`Web.md`](./content/roadmaps/Web.md), [`Cloud.md`](./content/roadmaps/Cloud.md), or [`DevOps.md`](./content/roadmaps/DevOps.md). Programming fundamentals and OOP live inside Computer Science after Phases 1-2.
-2. If new to coding, start Computer Science at Phase 1. Programming starts at Phase 3. On the SWE path, finish Phase 25 and Git Phases 1-10 before Phase 26.
-3. Start at Phase 1 (or Phase 3 on the web/Odoo paths). Do not skip bridges on the first pass.
-4. After each phase, follow its matching beginner-friendly mini-project in [`Projects.md`](./content/guides/Projects.md). After the roadmap's final phase, build that track's main portfolio project.
-5. Use mastery checkpoints before moving on.
-6. Drill spoken answers in [`Interview.md`](./content/guides/Interview.md) (or Cyber Phase 20 for security roles).
-
-**Role routing (quick)**
-
-| Role | Start with | Then drill |
-|------|------------|------------|
-| Absolute beginner | Computer Science (Phases 1-25) | `Projects.md` fundamentals + `Interview.md` A |
-| Software Engineer | Computer Science Phases 1-25, then `Git.md` Phases 1-10, then CS 26-43 | `Networks.md` essentials + projects + Interview A/C/V/F |
-| Frontend Developer | Computer Science Phases 3-5 → `Git.md` Phases 1-7 → `Web.md` Phases 1-10, 15-16 | Web/Git projects + Interview W/V |
-| Backend/API Developer | `CS.md` foundations → `Git.md` Phases 1-10 → `Web.md` Phases 11-18 | Data SQL + Web/Git projects + Interview W/A/V |
-| Full-stack Developer | Computer Science Phases 3-5 → `Web.md` full | All Web phase projects + `Interview.md` W/C/F |
-| Data Analyst | `Data.md` (through Phase 10) | `Projects.md` data + `Interview.md` B |
-| Data Engineer | `Data.md` full | `Projects.md` data + `Interview.md` B |
-| Network / Infra | `Networks.md` | `Projects.md` networks + `Interview.md` C/F |
-| IT / Systems Administrator | `IT_Administration.md` | IT Administration projects + `Interview.md` I/C/F; then Cloud/DevOps/Security specialization |
-| Git / SCM-focused | `Git.md` all 15 phases | Git phase projects + capstone + `Interview.md` V |
-| Cloud Engineer | `cloud.md` + `Git.md` Phases 1-9, 14-15 | Networks + Cloud/Git projects + Interview G/V/F |
-| DevOps Engineer | `devops.md` Phases 1-3 → `Git.md` full → DevOps Phase 4+ | Cloud foundations + DevOps/Git projects + Interview H/V/G/F |
-| AI / ML Engineer | `AI.md` | `Projects.md` AI + `Interview.md` D |
-| SOC Analyst | `ICT_Cybersecurity.md` (blue path) | Phase 13-14 labs + Security+ / CySA+ |
-| Security Engineer | `ICT_Cybersecurity.md` (SecEng path) | AppSec + cloud projects + Phase 20 |
-| Junior Pentester | `ICT_Cybersecurity.md` (red path) | PortSwigger/HTB writeups → eJPT/PNPT |
-| Odoo / ERP Engineer | Computer Science Phases 3-25 → `Git.md` Phases 1-7 → `ODOO.md` | Odoo/Git projects + integrations |
-
----
-
-## Philosophy in one line
-
-> Every topic is a *reaction* to the topic before it - not a checklist item to cover.
-
----
-
-## Author
-
-**Mohammad Bilal** - Interview Help roadmaps for software engineering, OOP, Git, data, networks, IT administration, AI, cybersecurity, Odoo, web development, cloud engineering, and DevOps careers.
-
----
-
-## Repository Structure
-
-| Location | Purpose |
-|---|---|
-| [`content/roadmaps`](./content/roadmaps) | Zero-to-hero technical roadmaps |
-| [`content/guides`](./content/guides) | Projects and interview preparation |
-| [`content/templates`](./content/templates) | Reusable career templates, including [`Master_CV_Template.md`](./content/templates/Master_CV_Template.md) |
-| [`data`](./data) | Downloadable trackers and supporting data, including [`Job_Tracker.xlsx`](./data/Job_Tracker.xlsx) |
-| `app` | Next.js pages and routes |
-| `components` | Reusable interface components |
-| `lib` | Content parsing, search, routing, and utilities |
-| `scripts` | Validation and build-support scripts |
-| `tests` | Automated tests |
-
-The canonical Job Tracker is [`data/Job_Tracker.xlsx`](./data/Job_Tracker.xlsx). The website serves it through the controlled [`/downloads/job-tracker`](./downloads/job-tracker) route.
-
----
-
-## Learning website
-
-The repository also includes a statically generated Next.js learning interface. Markdown under [`content`](./content) remains the source of truth: update a roadmap or guide, rebuild the site, and its pages, navigation, progress targets, and search index update with it.
-
-### Run locally
+## Setup
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+| Surface | URL |
+|:---|:---|
+| App | [http://localhost:3000](http://localhost:3000) |
+| Production | [https://interview-help.vercel.app](https://interview-help.vercel.app) |
 
-### Verify a change
+---
+
+## Scripts
+
+| Command | Purpose |
+|:---|:---|
+| `npm run dev` | Next.js development server |
+| `npm run build` | Production build |
+| `npm run start` | Serve production build |
+| `npm run test` | Vitest (`tests/`) |
+| `npm run validate:content` | Check Markdown against the catalog |
+
+---
+
+## Project layout
+
+```text
+quarry/
+├── app/                         # Routes (courses, projects, interview, progress, playground)
+├── components/                  # Landing, winding graph, lesson / project chrome
+├── lib/                         # Catalog, Markdown parse, progress, playground
+├── content/
+│   ├── roadmaps/                # Eleven course sources
+│   ├── guides/                  # Projects.md · Interview.md
+│   └── templates/               # CV template
+├── data/                        # Job tracker spreadsheet
+├── scripts/                     # validate-content
+├── tests/                       # Vitest
+└── public/
+```
+
+```mermaid
+flowchart LR
+  MD[content/ Markdown] --> PARSE[lib parse + catalog]
+  PARSE --> WEB[Next.js App]
+  WEB --> UI[components]
+  UI --> PROG[ProgressProvider]
+  PROG --> LS[(LocalStorage)]
+```
+
+---
+
+## Design tokens
+
+| Token | Role |
+|:---|:---|
+| Band `#282A35` | Header, checkpoint band, captions |
+| Accent `#04AA6D` | CTAs, progress fill, left rules |
+| Paper `#F1F1F1` | Page ground |
+| Ink `#1A1A1A` | Body text |
+
+Fonts: **Poppins** (display) · **Source Sans 3** (body) · **JetBrains Mono** (code).
+
+---
+
+## Content source
+
+Markdown under `content/` is canonical.
+
+| Path | Role |
+|:---|:---|
+| [`content/roadmaps`](./content/roadmaps) | Course source |
+| [`content/guides/Projects.md`](./content/guides/Projects.md) | Phase project briefs |
+| [`content/guides/Interview.md`](./content/guides/Interview.md) | Interview drills |
+| [`content/templates`](./content/templates) | CV template |
+| [`data/Job_Tracker.xlsx`](./data/Job_Tracker.xlsx) | Job tracker (`/downloads/job-tracker`) |
+
+After you edit Markdown:
 
 ```bash
 npm run validate:content
@@ -648,8 +209,61 @@ npm run test
 npm run build
 ```
 
-No environment variables, database, authentication service, or paid API are required. Progress is stored locally in the learner's browser.
+---
 
-### Deploy
+## Validation
 
-Import this repository into Vercel and keep the default Next.js settings. Every push triggers a build, so updated Markdown is reflected in the generated pages automatically. The same production build can be run elsewhere with `npm run build`; this project uses Next.js standalone output for portable hosting.
+```bash
+npm run validate:content
+npm run test
+npm run build
+```
+
+Smoke: open `/`, pick a course, walk one lesson, open the phase project, mark the build complete, confirm `/progress` colors that node, Reset via the themed dialog (not the browser prompt).
+
+---
+
+## Deploy
+
+### Vercel
+
+Production: **[https://interview-help.vercel.app](https://interview-help.vercel.app)**
+
+Import the repo with default Next.js settings. Each push rebuilds pages from current Markdown.
+
+No environment variables required.
+
+### Self-host
+
+```bash
+npm run build
+npm run start
+```
+
+The production build uses Next.js standalone output.
+
+---
+
+## Author
+
+**Mohammad Bilal** — Quarry is the website for these Interview Help roadmaps: software engineering, Git, data, networks, IT administration, AI, cybersecurity, Odoo, web, cloud, and DevOps.
+
+---
+
+<div align="center">
+
+<img
+  src="https://capsule-render.vercel.app/api?type=waving&color=282A35&height=120&section=footer&text=One%20lesson.%20Then%20the%20build.&fontSize=18&fontColor=04AA6D&fontAlignY=65"
+  alt="One lesson. Then the build."
+  width="100%"
+/>
+
+<br/>
+
+**[Back to top](#at-a-glance)** · **[Open live](https://interview-help.vercel.app)**
+
+<br/>
+
+<sub>Quarry · 11 roadmaps · Next.js 16 · React 19 · Tailwind v3 · Vitest · Vercel</sub>
+
+</div>

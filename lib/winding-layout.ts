@@ -3,18 +3,19 @@ export const WINDING_LEAD = 48;
 
 type Point = { x: number; y: number };
 
-export function windingColumns(count: number) {
-  if (count <= 1) return 1;
+export function windingColumns(count: number, forceSingle = false) {
+  if (forceSingle || count <= 1) return 1;
   if (count <= 3) return count;
   return 3;
 }
 
-export function windingLayout(count: number) {
-  const cols = windingColumns(count);
-  const padX = 120;
-  const padTop = 72;
-  const rowH = 220;
-  const wave = 52;
+export function windingLayout(count: number, options?: { singleColumn?: boolean }) {
+  const cols = windingColumns(count, options?.singleColumn);
+  const padX = cols === 1 ? 108 : 120;
+  const padTop = cols === 1 ? 96 : 72;
+  const padBottom = cols === 1 ? 96 : 36;
+  const rowH = cols === 1 ? 152 : 220;
+  const wave = cols === 1 ? 0 : 52;
   const span = WINDING_WIDTH - padX * 2;
   const denom = Math.max(cols - 1, 1);
   const points = Array.from({ length: count }, (_, index) => {
@@ -22,15 +23,26 @@ export function windingLayout(count: number) {
     const colInRow = index % cols;
     const col = row % 2 === 0 ? colInRow : cols - 1 - colInRow;
     return {
-      x: padX + (col / denom) * span,
-      y: padTop + row * rowH + (col % 2 === 0 ? wave : -wave),
+      x: cols === 1 ? WINDING_WIDTH / 2 + (index % 2 === 0 ? -22 : 22) : padX + (col / denom) * span,
+      y: padTop + row * rowH + (cols === 1 ? 0 : col % 2 === 0 ? wave : -wave),
     };
   });
   return {
     points,
     width: WINDING_WIDTH,
-    height: padTop + Math.ceil(Math.max(count, 1) / cols) * rowH + 28,
+    height: padTop + Math.ceil(Math.max(count, 1) / cols) * rowH + padBottom,
     cols,
+  };
+}
+
+export function windingTerminals(points: Point[], cols?: number) {
+  if (!points.length) return null;
+  const first = points[0];
+  const last = points[points.length - 1];
+  const vertical = cols === 1;
+  return {
+    start: vertical ? { x: first.x, y: first.y - WINDING_LEAD } : { x: first.x - WINDING_LEAD, y: first.y },
+    end: vertical ? { x: last.x, y: last.y + WINDING_LEAD } : { x: last.x + WINDING_LEAD, y: last.y },
   };
 }
 
@@ -65,10 +77,13 @@ function cubicLength(p0: Point, p1: Point, p2: Point, p3: Point, samples = 16) {
   return length;
 }
 
-export function windingPath(points: Point[]) {
+export function windingPath(points: Point[], cols?: number) {
   if (!points.length) return "";
   const start = points[0];
-  let d = `M ${start.x - WINDING_LEAD} ${start.y} H ${start.x}`;
+  const vertical = cols === 1;
+  let d = vertical
+    ? `M ${start.x} ${start.y - WINDING_LEAD} V ${start.y}`
+    : `M ${start.x - WINDING_LEAD} ${start.y} H ${start.x}`;
   for (let index = 1; index < points.length; index += 1) {
     const previous = points[index - 1];
     const next = points[index];
@@ -76,7 +91,7 @@ export function windingPath(points: Point[]) {
     d += ` C ${c1.x} ${c1.y}, ${c2.x} ${c2.y}, ${next.x} ${next.y}`;
   }
   const last = points[points.length - 1];
-  return `${d} H ${last.x + WINDING_LEAD}`;
+  return vertical ? `${d} V ${last.y + WINDING_LEAD}` : `${d} H ${last.x + WINDING_LEAD}`;
 }
 
 /** Path length to each node, plus the trailing lead. Avoids SVG getPointAtLength. */

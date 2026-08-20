@@ -6,7 +6,7 @@ import { AppIcon, CourseIdentityIcon } from "@/components/icons/app-icon";
 import { ICON_SIZE } from "@/lib/icons";
 import { useLearningProgress } from "./progress-client";
 import { WindingRoadmap } from "./winding-roadmap";
-import { phaseProgressPercent, trailStatuses, type TrailStatus } from "@/lib/progress-map";
+import { phaseProgressPercent, trailStatuses } from "@/lib/progress-map";
 
 export type ProgressCourseView = {
   slug: string;
@@ -41,6 +41,16 @@ export function ProgressDashboard({ courses }: { courses: ProgressCourseView[] }
   const file = useRef<HTMLInputElement>(null);
   const current = ready ? resume(resumeHrefFor) : null;
   const [selected, setSelected] = useState(courses[0]?.slug ?? "");
+  const [resetOpen, setResetOpen] = useState(false);
+
+  useEffect(() => {
+    if (!resetOpen) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setResetOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [resetOpen]);
 
   useEffect(() => {
     const stored = sessionStorage.getItem(SELECTED_KEY);
@@ -55,7 +65,6 @@ export function ProgressDashboard({ courses }: { courses: ProgressCourseView[] }
 
   const percents = useMemo(() => {
     const map: Record<string, number> = {};
-    if (!ready) return map;
     for (const item of courses) {
       const phases = item.chapters.flatMap((chapter) => chapter.phases);
       const state = course(item.slug);
@@ -63,14 +72,13 @@ export function ProgressDashboard({ courses }: { courses: ProgressCourseView[] }
       map[item.slug] = phaseProgressPercent(statuses);
     }
     return map;
-  }, [courses, ready, course]);
+  }, [courses, course]);
 
   const active = courses.find((item) => item.slug === selected) ?? courses[0];
-  const activeState = ready && active ? course(active.slug) : null;
+  const activeState = active ? course(active.slug) : null;
   const phases = useMemo(() => active?.chapters.flatMap((chapter) => chapter.phases) ?? [], [active]);
   const statuses = useMemo(() => {
-    if (!active) return [];
-    if (!activeState) return phases.map((_, index): TrailStatus => (index === 0 ? "here" : "locked"));
+    if (!active || !activeState) return [];
     return trailStatuses(phases, activeState.completedProjects, activeState.completedPhases, activeState.currentPhaseId);
   }, [active, activeState, phases]);
   const here = phases.find((_, index) => statuses[index] === "here") ?? phases[0];
@@ -84,9 +92,7 @@ export function ProgressDashboard({ courses }: { courses: ProgressCourseView[] }
   const continueLabel = current?.slug === active?.slug ? "Continue" : "Start here";
   const pathPercent = phaseProgressPercent(statuses);
   const totalPhases = courses.reduce((sum, item) => sum + item.phaseCount, 0);
-  const clearedPhases = ready
-    ? courses.reduce((sum, item) => sum + Math.round(((percents[item.slug] ?? 0) / 100) * item.phaseCount), 0)
-    : 0;
+  const clearedPhases = courses.reduce((sum, item) => sum + Math.round(((percents[item.slug] ?? 0) / 100) * item.phaseCount), 0);
   const overall = totalPhases ? Math.round((clearedPhases / totalPhases) * 100) : 0;
 
   async function onImport(event: React.ChangeEvent<HTMLInputElement>) {
@@ -108,6 +114,11 @@ export function ProgressDashboard({ courses }: { courses: ProgressCourseView[] }
     anchor.download = "interview-help-progress.json";
     anchor.click();
     URL.revokeObjectURL(url);
+  }
+
+  function confirmReset() {
+    reset();
+    setResetOpen(false);
   }
 
   function pick(slug: string) {
@@ -133,11 +144,11 @@ export function ProgressDashboard({ courses }: { courses: ProgressCourseView[] }
               <span>roadmaps</span>
             </li>
             <li>
-              <b>{ready ? clearedPhases : "—"}</b>
+              <b>{clearedPhases}</b>
               <span>phases cleared</span>
             </li>
             <li>
-              <b>{ready ? `${overall}%` : "—"}</b>
+              <b>{`${overall}%`}</b>
               <span>overall complete</span>
             </li>
           </ul>
@@ -158,7 +169,7 @@ export function ProgressDashboard({ courses }: { courses: ProgressCourseView[] }
                   onClick={() => pick(item.slug)}
                 >
                   {item.barLabel}
-                  <b>{ready ? `${value}%` : "—"}</b>
+                  <b>{`${value}%`}</b>
                 </button>
               );
             })}
@@ -172,9 +183,7 @@ export function ProgressDashboard({ courses }: { courses: ProgressCourseView[] }
               <h2>{active.shortName}</h2>
               <p>{active.description}</p>
               <p className="ih-progress-meta">
-                {ready
-                  ? `${pathPercent}% complete · now on phase ${liveIndex + 1} of ${phases.length}`
-                  : "Loading saved progress…"}
+                {`${pathPercent}% complete · now on phase ${liveIndex + 1} of ${phases.length}`}
               </p>
             </div>
             <Link href={continueHref} className="ih-progress-continue">
@@ -198,13 +207,7 @@ export function ProgressDashboard({ courses }: { courses: ProgressCourseView[] }
             <button type="button" className="btn-prev" onClick={() => file.current?.click()}>
               <AppIcon name="importProgress" size={16} /> Import
             </button>
-            <button
-              type="button"
-              className="btn-prev"
-              onClick={() => {
-                if (window.confirm("Reset all progress in this browser?")) reset();
-              }}
-            >
+            <button type="button" className="btn-prev" onClick={() => setResetOpen(true)}>
               <AppIcon name="resetProgress" size={16} /> Reset
             </button>
             <input ref={file} type="file" accept="application/json" className="sr-only" onChange={onImport} />
@@ -212,6 +215,38 @@ export function ProgressDashboard({ courses }: { courses: ProgressCourseView[] }
           <p className="ih-progress-note">Stored only in this browser. Export a backup before you clear site data.</p>
         </section>
       </div>
+
+      {resetOpen ? (
+        <div
+          className="ih-confirm"
+          role="presentation"
+          onClick={(event) => {
+            if (event.target === event.currentTarget) setResetOpen(false);
+          }}
+        >
+          <div
+            className="ih-confirm-panel"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="ih-reset-title"
+            aria-describedby="ih-reset-copy"
+          >
+            <p className="ih-confirm-kicker">Progress</p>
+            <h2 id="ih-reset-title">Reset all progress?</h2>
+            <p id="ih-reset-copy">
+              This clears every roadmap in this browser. Export a backup first if you want to keep it.
+            </p>
+            <div className="ih-confirm-actions">
+              <button type="button" className="ih-confirm-cancel" onClick={() => setResetOpen(false)}>
+                Cancel
+              </button>
+              <button type="button" className="ih-confirm-ok" onClick={confirmReset}>
+                Reset progress
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </main>
   );
 }

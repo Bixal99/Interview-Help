@@ -14,7 +14,7 @@ export default function CoursesPage() {
         <header className="ih-studio-hero">
           <h1>Tutorials</h1>
           <p className="ih-studio-lead">
-            New to coding? Start with Computer Science — programming begins at Phase 3.
+            Select a tutorial to get started.
           </p>
           <ul className="ih-studio-stats">
             <li>

@@ -6,8 +6,15 @@ import { AppIcon } from "@/components/icons/app-icon";
 import { PracticeRichText } from "@/components/practice-rich-text";
 import type { ProgressCourseView } from "@/components/progress-dashboard";
 import { phaseProgressPercent, trailStatuses, type TrailStatus } from "@/lib/progress-map";
-import { windingLayout, windingMetrics, windingPath } from "@/lib/winding-layout";
+import { windingLayout, windingMetrics, windingPath, windingTerminals } from "@/lib/winding-layout";
 import { useLearningProgress } from "@/components/progress-client";
+
+function nodePaint(status: TrailStatus, isSelected: boolean) {
+  if (status === "cleared") return { fill: "#04AA6D", stroke: "#04AA6D", number: "#fff" };
+  if (status === "here" || isSelected) return { fill: "#fff", stroke: "#282A35", number: "#282A35" };
+  if (status === "open") return { fill: "#fff", stroke: "#04AA6D", number: "#04AA6D" };
+  return { fill: "#F3F3F3", stroke: "#C8CDD2", number: "#9AA0A6" };
+}
 
 function toneLabel(status: TrailStatus) {
   if (status === "cleared") return "Complete";
@@ -27,22 +34,20 @@ export function WindingRoadmap({
   continueLabel: string;
   showIntro?: boolean;
 }) {
-  const { ready, course: courseState } = useLearningProgress();
+  const { course: courseState } = useLearningProgress();
   const maskId = useId().replace(/:/g, "");
   const [selected, setSelected] = useState(0);
 
-  const state = ready ? courseState(course.slug) : null;
+  const state = courseState(course.slug);
   const phases = useMemo(() => course.chapters.flatMap((chapter) => chapter.phases), [course]);
   const statuses = useMemo(
-    () =>
-      ready && state
-        ? trailStatuses(phases, state.completedProjects, state.completedPhases, state.currentPhaseId)
-        : phases.map((_, index) => (index === 0 ? "here" : "locked") as TrailStatus),
-    [phases, ready, state],
+    () => trailStatuses(phases, state.completedProjects, state.completedPhases, state.currentPhaseId),
+    [phases, state],
   );
   const layout = useMemo(() => windingLayout(phases.length), [phases.length]);
-  const pathD = useMemo(() => windingPath(layout.points), [layout.points]);
+  const pathD = useMemo(() => windingPath(layout.points, layout.cols), [layout.points, layout.cols]);
   const metrics = useMemo(() => windingMetrics(layout.points), [layout.points]);
+  const terminals = useMemo(() => windingTerminals(layout.points, layout.cols), [layout.points, layout.cols]);
   const liveIndex = useMemo(() => {
     if (statuses.length && statuses.every((status) => status === "cleared")) return statuses.length - 1;
     const here = statuses.findIndex((status) => status === "here");
@@ -57,7 +62,7 @@ export function WindingRoadmap({
 
   useEffect(() => {
     setSelected(liveIndex);
-  }, [course.slug, ready, liveIndex]);
+  }, [course.slug, liveIndex]);
 
   if (!current) return null;
 
@@ -124,9 +129,24 @@ export function WindingRoadmap({
           <path
             d={pathD}
             fill="none"
+            stroke="#EEF1F3"
+            strokeWidth="14"
+            strokeLinecap="round"
+          />
+          <path
+            d={pathD}
+            fill="none"
             stroke="#E7E9EB"
             strokeWidth="6"
             strokeDasharray="14 6"
+            strokeLinecap="round"
+          />
+          <path
+            d={pathD}
+            fill="none"
+            stroke="#C5CBD1"
+            strokeWidth="2"
+            strokeDasharray="0 16"
             strokeLinecap="round"
           />
           <path
@@ -139,23 +159,66 @@ export function WindingRoadmap({
             className="ih-winding-ants"
             mask={metrics.total ? `url(#${maskId})` : undefined}
           />
+          {terminals ? (
+            <g className="ih-winding-ends">
+              <circle cx={terminals.start.x} cy={terminals.start.y} r="7" fill="#04AA6D" />
+              <text
+                x={terminals.start.x}
+                y={terminals.start.y - 14}
+                textAnchor="middle"
+                fill="#04AA6D"
+                fontSize="11"
+                fontWeight="800"
+                letterSpacing="0.12em"
+                fontFamily="Source Sans 3, ui-sans-serif, sans-serif"
+              >
+                START
+              </text>
+              <circle cx={terminals.end.x} cy={terminals.end.y} r="7" fill={allDone ? "#04AA6D" : "#D5D8DC"} />
+              <rect
+                x={terminals.end.x + 11}
+                y={terminals.end.y - 9}
+                width="6"
+                height="12"
+                fill={allDone ? "#04AA6D" : "#D5D8DC"}
+              />
+              <text
+                x={terminals.end.x}
+                y={terminals.end.y - 14}
+                textAnchor="middle"
+                fill={allDone ? "#04AA6D" : "#888"}
+                fontSize="11"
+                fontWeight="800"
+                letterSpacing="0.12em"
+                fontFamily="Source Sans 3, ui-sans-serif, sans-serif"
+              >
+                FINISH
+              </text>
+            </g>
+          ) : null}
           {layout.points.map((point, index) => {
             const status = statuses[index] ?? "locked";
             const isSelected = index === selected;
-            const fill = status === "cleared" ? "#04AA6D" : "#fff";
-            const stroke = isSelected || status === "here" ? "#282A35" : status === "cleared" ? "#04AA6D" : "#D6D6D6";
-            const numberFill = status === "cleared" ? "#fff" : isSelected || status === "here" ? "#282A35" : "#9AA0A6";
+            const paint = nodePaint(status, isSelected);
             return (
               <g key={phases[index]?.id ?? index}>
-                {isSelected ? (
+                {isSelected || status === "here" ? (
                   <circle cx={point.x} cy={point.y} r="40" fill="none" stroke="#04AA6D" strokeWidth="1.5" className="ih-winding-pulse" />
                 ) : null}
-                <circle cx={point.x} cy={point.y} r="22" fill={fill} stroke={stroke} strokeWidth="3" />
+                <circle
+                  cx={point.x}
+                  cy={point.y}
+                  r="22"
+                  fill={paint.fill}
+                  stroke={paint.stroke}
+                  strokeWidth="3"
+                  strokeDasharray={status === "locked" ? "4 3" : undefined}
+                />
                 <text
                   x={point.x}
                   y={point.y + 5}
                   textAnchor="middle"
-                  fill={numberFill}
+                  fill={paint.number}
                   fontSize="13"
                   fontWeight="700"
                   fontFamily="Source Sans 3, ui-sans-serif, sans-serif"
@@ -171,6 +234,8 @@ export function WindingRoadmap({
           const status = statuses[index] ?? "locked";
           const phase = phases[index];
           const isSelected = index === selected;
+          const xRatio = point.x / layout.width;
+          const capSide = xRatio < 0.3 ? "is-cap-left" : xRatio > 0.7 ? "is-cap-right" : "is-cap-mid";
           return (
             <button
               key={`${phase.id}-pin`}
@@ -185,7 +250,7 @@ export function WindingRoadmap({
               onClick={() => setSelected(index)}
             >
               {isSelected ? (
-                <span className="ih-winding-caption">
+                <span className={`ih-winding-caption ih-winding-caption-float ${capSide}`}>
                   <em>Phase {index + 1}</em>
                   <strong>{phase.title}</strong>
                 </span>
@@ -194,6 +259,15 @@ export function WindingRoadmap({
           );
         })}
       </div>
+
+      {current ? (
+        <div className={`ih-winding-caption-dock is-${currentStatus}`} aria-live="polite">
+          <span className="ih-winding-caption">
+            <em>Phase {selected + 1}</em>
+            <strong>{current.title}</strong>
+          </span>
+        </div>
+      ) : null}
     </section>
   );
 }

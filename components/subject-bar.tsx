@@ -7,7 +7,7 @@ import { courseBarLabels, courseCatalog } from "@/lib/course-catalog";
 export function SubjectBar() {
   const pathname = usePathname();
   return (
-    <nav className="ih-subjects sticky top-12 z-40" aria-label="Courses">
+    <nav className="ih-subjects sticky top-[4.5rem] z-40 sm:top-[4.75rem]" aria-label="Courses">
       <div className="mx-auto flex max-w-[1600px] gap-1 overflow-x-auto px-2 sm:px-3">
         {courseCatalog.map((course) => {
           const href = `/courses/${course.slug}`;

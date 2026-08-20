@@ -23,9 +23,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: `try{localStorage.removeItem('ih-theme');document.documentElement.classList.remove('dark')}catch(e){}` }} />
-      </head>
       <body>
         <span hidden dangerouslySetInnerHTML={{ __html: CONTRACT }} />
         <a href="#main-content" className="fixed left-3 top-3 z-[100] -translate-y-20 bg-ink px-4 py-2 text-paper focus:translate-y-0">Skip to content</a>

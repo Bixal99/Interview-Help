@@ -167,7 +167,11 @@ export function toggleList(items: string[], id: string) {
 }
 
 export function isProjectComplete(progress: LearningProgress, slug: string, phaseId: string) {
-  return courseState(progress, slug).completedProjects.includes(phaseId);
+  const key = phaseId.trim().toLowerCase().replace(/^phase-/, "").replace(/^0+(?=\d)/, "") || "0";
+  return courseState(progress, slug).completedProjects.some((id) => {
+    const item = id.trim().toLowerCase().replace(/^phase-/, "").replace(/^0+(?=\d)/, "") || "0";
+    return item === key;
+  });
 }
 
 export function canEnterPhase(progress: LearningProgress, steps: PathStep[], course: string, phaseId: string) {
@@ -214,7 +218,9 @@ export function resumeHref(
 }
 
 export function phasesDone(state: CourseProgressState) {
-  return state.completedProjects.length;
+  const ids = [...state.completedProjects, ...state.completedPhases];
+  const unique = new Set(ids.map((id) => id.trim().toLowerCase().replace(/^phase-/, "").replace(/^0+(?=\d)/, "") || "0"));
+  return unique.size;
 }
 
 /** Progress counts completed phase projects only — a phase advances when its project is done. */

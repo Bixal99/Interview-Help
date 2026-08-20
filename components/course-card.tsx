@@ -44,7 +44,6 @@ export function CourseCard({
           <CourseIdentityIcon slug={course.slug} size={ICON_SIZE.course} />
         </span>
       </div>
-      {course.barLabel ? <p className="ih-course-tile-kicker">{course.barLabel}</p> : null}
       <h3 className="ih-course-tile-title">{course.shortName}</h3>
       <p className="ih-course-tile-copy">{course.description}</p>
       {course.skills && course.skills.length > 0 ? (

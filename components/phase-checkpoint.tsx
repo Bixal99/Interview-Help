@@ -21,10 +21,10 @@ export function PhaseCheckpoint({
   proceedHref: string;
 }) {
   return (
-    <div className="ih-checkpoint-page flex h-dvh flex-col overflow-hidden">
-      <div className="ih-band flex min-h-0 flex-1 items-center px-6 py-5 sm:px-10 lg:px-12">
-        <div className="ih-checkpoint-row mx-auto flex h-full w-full max-w-[1200px] flex-col items-center gap-6 lg:flex-row lg:justify-between lg:gap-10">
-          <div className="min-w-0 lg:max-w-[34rem]">
+    <div className="ih-checkpoint-page flex min-h-dvh flex-col lg:h-dvh lg:overflow-hidden">
+      <div className="ih-band flex min-h-0 flex-1 items-start overflow-y-auto px-6 py-5 sm:px-10 lg:items-center lg:overflow-hidden lg:px-12">
+        <div className="ih-checkpoint-row mx-auto flex w-full max-w-[1200px] flex-col items-center gap-6 pb-4 lg:h-full lg:flex-row lg:justify-between lg:gap-10 lg:pb-0">
+          <div className="min-w-0 w-full lg:max-w-[34rem]">
             <div className="flex items-end gap-5">
               <div
                 className="grid size-11 shrink-0 place-items-center bg-[#04AA6D] text-xl font-bold tabular-nums leading-none text-white sm:size-12 sm:text-2xl"
@@ -59,7 +59,7 @@ export function PhaseCheckpoint({
           </div>
         </div>
       </div>
-      <div className="shrink-0 bg-[rgb(var(--surface))] px-6 py-4 sm:px-10 lg:px-12">
+      <div className="ih-checkpoint-pager shrink-0 bg-[rgb(var(--surface))] px-6 py-4 sm:px-10 lg:px-12">
         <div className="mx-auto max-w-[1200px]">
           <Pager
             backHref={prev?.href ?? "/courses"}

@@ -29,7 +29,7 @@ export default async function CourseHomePage({ params }: { params: Promise<{ cou
     <main id="main-content">
       <div className="ih-band px-4 py-6 sm:px-8 lg:px-12">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
-          <h1 className="text-4xl font-bold uppercase tracking-wide sm:text-6xl">{course.shortName} Tutorial</h1>
+          <h1 className="text-3xl font-bold uppercase tracking-wide sm:text-4xl lg:text-6xl">{course.shortName} Tutorial</h1>
           <div className="w-full max-w-md shrink-0 lg:w-[22rem]">
             <CourseProgressBar slug={course.slug} phaseCount={phaseCount} variant="band" />
             <div className="mt-4">
@@ -41,7 +41,7 @@ export default async function CourseHomePage({ params }: { params: Promise<{ cou
       <div className="bg-[rgb(var(--paper))] px-4 py-10 sm:px-8 lg:px-12">
         <CourseWelcome shortName={course.shortName} intro={course.beginnerIntro} />
         <p className="mt-8 text-lg leading-relaxed text-ink">{course.description}</p>
-        <h2 className="mt-12 text-3xl font-bold uppercase tracking-wide sm:text-5xl">What we will study</h2>
+        <h2 className="mt-12 text-2xl font-bold uppercase tracking-wide sm:text-3xl lg:text-5xl">What we will study</h2>
         <CourseToc nav={course.nav} />
         <div className="mt-12 border-t hairline pt-8">
           <CourseHomeActions startHref={course.startHref} />

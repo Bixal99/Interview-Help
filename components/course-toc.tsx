@@ -43,7 +43,7 @@ function PhaseCard({ navSlug, phase }: { navSlug: string; phase: CourseNavPhase 
                   </span>
                 </Link>
                 {lesson.children.length > 0 && (
-                  <ul className="mb-2 ml-[3.75rem] space-y-0.5 border-l-2 border-[#04AA6D]/35 pl-4 sm:ml-[4.75rem]">
+                  <ul className="mb-2 ml-6 space-y-0.5 border-l-2 border-[#04AA6D]/35 pl-3 sm:ml-[4.75rem] sm:pl-4">
                     {lesson.children.map((child) => (
                       <li key={child.id}>
                         <Link

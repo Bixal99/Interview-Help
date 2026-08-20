@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BrandWordmark } from "@/components/brand-mark";
@@ -37,6 +38,18 @@ export function LandingHeader({ hits }: { hits?: SearchHit[] }) {
   }, [pathname]);
 
   useEffect(() => {
+    if (!open) return;
+    const previousHtml = document.documentElement.style.overflow;
+    const previousBody = document.body.style.overflow;
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.documentElement.style.overflow = previousHtml;
+      document.body.style.overflow = previousBody;
+    };
+  }, [open]);
+
+  useEffect(() => {
     const handler = (event: KeyboardEvent) => {
       if (!(event.ctrlKey || event.metaKey) || event.key.toLowerCase() !== "k") return;
       event.preventDefault();
@@ -53,8 +66,9 @@ export function LandingHeader({ hits }: { hits?: SearchHit[] }) {
   }, []);
 
   return (
-    <header className={`ih-landing-nav${scrolled ? " is-stuck" : ""}`}>
-      <div className="ih-landing-nav-bar">
+    <>
+      <header className={`ih-landing-nav${scrolled ? " is-stuck" : ""}${open ? " is-open" : ""}`}>
+        <div className="ih-landing-nav-bar">
         <Link href="/" title={SITE_NAME} className="ih-landing-logo">
           <BrandWordmark />
         </Link>
@@ -72,18 +86,21 @@ export function LandingHeader({ hits }: { hits?: SearchHit[] }) {
         </nav>
 
         <div className="ih-landing-nav-end">
-          <LandingSearch hits={hits} />
-          <Link href="/courses" className="ih-landing-cta ih-landing-nav-cta">
-            Start learning
-          </Link>
+          <div className="ih-landing-nav-desktop-tools hidden lg:flex">
+            <LandingSearch hits={hits} />
+            <Link href="/courses" className="ih-landing-cta ih-landing-nav-cta">
+              Start learning
+            </Link>
+          </div>
           <button
             type="button"
             className="ih-landing-menu"
             aria-expanded={open}
             aria-controls="landing-menu"
+            aria-label={open ? "Close navigation" : "Open navigation"}
             onClick={() => setOpen((value) => !value)}
           >
-            {open ? "Close" : "Menu"}
+            {open ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
           </button>
         </div>
       </div>
@@ -108,6 +125,8 @@ export function LandingHeader({ hits }: { hits?: SearchHit[] }) {
           </Link>
         </nav>
       ) : null}
-    </header>
+      </header>
+      <div className="ih-landing-nav-spacer" aria-hidden="true" />
+    </>
   );
 }

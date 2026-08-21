@@ -28,11 +28,11 @@ describe("project starters", () => {
   });
 
   it("turns every project starter into a file tree", () => {
-    const phase1 = getProjectStarter("cs-phase-1-project", emptyBrief);
-    const phase2 = getProjectStarter("cs-phase-2-project", emptyBrief);
+    const phase5 = getProjectStarter("cs-phase-5-project", emptyBrief);
+    const phase31 = getProjectStarter("cs-phase-31-project", emptyBrief);
     const other = getProjectStarter("unknown-project", emptyBrief);
-    expect(isProjectVfs(phase1.project)).toBe(true);
-    expect(isProjectVfs(phase2.project)).toBe(true);
+    expect(isProjectVfs(phase5.project)).toBe(true);
+    expect(isProjectVfs(phase31.project)).toBe(true);
     expect(isProjectVfs(other.project)).toBe(true);
     expect(other.project.entryFile).toBe("src/main.py");
     expect(other.project.folders).toEqual(expect.arrayContaining(["src", "tests", "examples"]));

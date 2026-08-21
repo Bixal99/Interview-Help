@@ -112,12 +112,12 @@ print("Done when a normal case, a boundary case, and a failure case all print.")
 }
 
 const STARTERS: Record<string, ProjectStarter> = {
-  "cs-phase-1-project": {
+  "cs-phase-5-project": {
     language: "python",
     project: miniExpressionProject(),
     observe: MINI_EXPRESSION_OBSERVE,
   },
-  "cs-phase-2-project": {
+  "cs-phase-31-project": {
     language: "python",
     project: projectFromSingleScript(PHASE_2_GROWTH, {
       "examples/sizes.txt": "1\n2\n4\n8\n16\n32\n",

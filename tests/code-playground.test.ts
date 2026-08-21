@@ -114,7 +114,7 @@ describe("try it storage", () => {
     const starter = {
       source: "print('start')",
       title: "ALGORITHM GROWTH PROFILER",
-      completeProject: { slug: "computer-science", phaseId: "2" },
+      completeProject: { slug: "computer-science", phaseId: "31" },
     };
     persistTryItSource("python", starter, "print('edited')");
     const restored = applyTryItDraft("python", {

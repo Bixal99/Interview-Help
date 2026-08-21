@@ -58,7 +58,7 @@ print(type(z))
 <class 'complex'>`,
   allowTryItYourself: true,
   courseSlug: "computer-science",
-  lessonHref: "/courses/computer-science/phase/3/variables-types-and-expressions",
+  lessonHref: "/courses/computer-science/phase/7/variables-types-and-expressions",
 };
 
 const JAVASCRIPT_VARIABLES: CodeExercise = {

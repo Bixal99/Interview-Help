@@ -156,10 +156,10 @@ function extractGoal(overview: string, body: string) {
 }
 
 const nestedTopics: Record<string, string[]> = {
-  "23.2": ["Parking Lot", "Library", "Elevator"],
-  "38.5": ["SQL Injection", "XSS", "CSRF", "CORS"],
-  "40.1": ["One Server to a Distributed System"],
-  "40.3": ["Worked System Design Walkthrough"],
+  "29.6": ["Parking Lot", "Library", "Elevator"],
+  "69.1": ["SQL Injection", "XSS", "CSRF", "CORS"],
+  "81.1": ["One Server to a Distributed System"],
+  "88.1": ["Worked System Design Walkthrough"],
 };
 
 function extractLessonChildren(lessonId: string, markdown: string) {

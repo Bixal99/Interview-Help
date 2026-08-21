@@ -21,7 +21,7 @@ export function emptyCourseProgress(): CourseProgressState {
 }
 
 export function emptyProgress(): LearningProgress {
-  return { version: 3, courses: {} };
+  return { version: 4, courses: {} };
 }
 
 export function parseProgress(raw: string | null): string[] {
@@ -86,20 +86,24 @@ function foldOopCourse(progress: LearningProgress, remapCsNumeric: boolean): Lea
   if (remappedCs && remappedOop) courses[CS_SLUG] = mergeCourseState(remappedCs, remappedOop);
   else if (remappedCs) courses[CS_SLUG] = remappedCs;
   else if (remappedOop) courses[CS_SLUG] = remappedOop;
-  return { ...progress, version: 3, courses };
+  return { ...progress, version: 4, courses };
 }
 
 function asProgress(value: unknown): LearningProgress | null {
   if (!value || typeof value !== "object") return null;
   const record = value as Partial<LearningProgress>;
-  if ((record.version !== 2 && record.version !== 3) || !record.courses || typeof record.courses !== "object") return null;
+  if (![2, 3, 4].includes(record.version as number) || !record.courses || typeof record.courses !== "object") return null;
   const progress: LearningProgress = {
     version: record.version,
     activePath: typeof record.activePath === "string" ? record.activePath : undefined,
     courses: record.courses as LearningProgress["courses"],
     legacyIds: Array.isArray(record.legacyIds) ? record.legacyIds.filter((item): item is string => typeof item === "string") : undefined,
   };
-  return foldOopCourse(progress, record.version === 2);
+  // Versions 2 and 3 both used the earlier 1-43 CS phase numbering; version 4
+  // introduced the 15-story/105-phase renumbering, so their CS-numeric ids
+  // (not the OOP-course ids, which always go through their own remap) need
+  // the phase-number remap applied once on the way in.
+  return foldOopCourse(progress, (record.version as number) < 4);
 }
 
 export function parseProgressV2(raw: string | null): LearningProgress {

@@ -94,7 +94,7 @@ export type CourseProgressState = {
 };
 
 export type LearningProgress = {
-  version: 2 | 3;
+  version: 2 | 3 | 4;
   activePath?: string;
   courses: Record<string, CourseProgressState>;
   legacyIds?: string[];

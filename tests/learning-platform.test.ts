@@ -18,22 +18,22 @@ function read(relative: string) {
 describe("course parsing", () => {
   it("extracts CS phases, stable lesson ids, and YouTube from real source", () => {
     const course = parseCourseMarkdown(read("content/roadmaps/CS.md"), "computer-science");
-    expect(course.phases).toHaveLength(43);
-    expect(course.phases[0]).toMatchObject({ id: "1", title: expect.stringContaining("Programming Foundations") });
-    expect(course.phases[0].lessons[0]).toMatchObject({ id: "1.1", slug: "from-source-code-to-a-running-program" });
-    expect(course.phases[0].lessons[0].videos[0].href).toContain("QXjU9qTsYCc");
-    expect(course.phases[2]).toMatchObject({ id: "3", title: expect.stringContaining("How Programs Run") });
-    expect(course.phases[25]).toMatchObject({ id: "26", title: expect.stringContaining("Linear Data Structures") });
-    expect(headingRouteMap(course).get("from-source-code-to-a-running-program")).toBe("/courses/computer-science/phase/1/from-source-code-to-a-running-program");
+    expect(course.phases).toHaveLength(78);
+    expect(course.phases[0]).toMatchObject({ id: "1", title: expect.stringContaining("What Is Computer Science?") });
+    expect(course.phases[0].lessons[0]).toMatchObject({ id: "1.1", slug: "computation-as-problem-solving" });
+    expect(course.phases[0].lessons[0].videos[0].href).toContain("PLhQjrBD2T380F_inVRXMIHCqLaNUd7bN4");
+    expect(course.phases[6]).toMatchObject({ id: "7", title: expect.stringContaining("Variables, Values & Types") });
+    expect(course.phases[39]).toMatchObject({ id: "40", title: expect.stringContaining("Searching") });
+    expect(headingRouteMap(course).get("from-source-code-to-a-running-program")).toBe("/courses/computer-science/phase/5/from-source-code-to-a-running-program");
     expect(extractPractice(course.phases[0].lessons[0].markdown)?.kind).toBe("checklist");
-    expect(new Set(course.phases.map((phase) => phase.id)).size).toBe(43);
-    expect(course.phases.find((phase) => phase.id === "5")?.goal).toMatch(/named functions and modules/i);
-    expect(course.phases.find((phase) => phase.id === "6")?.goal).toMatch(/Feel the \*problem\* OOP was invented to solve/i);
-    expect(course.phases.find((phase) => phase.id === "38")?.lessons.find((lesson) => lesson.id === "38.5")?.children).toEqual([
-      { id: "38.5.1", title: "SQL Injection" },
-      { id: "38.5.2", title: "XSS" },
-      { id: "38.5.3", title: "CSRF" },
-      { id: "38.5.4", title: "CORS" },
+    expect(new Set(course.phases.map((phase) => phase.id)).size).toBe(78);
+    expect(course.phases.find((phase) => phase.id === "9")?.goal).toMatch(/named functions and modules/i);
+    expect(course.phases.find((phase) => phase.id === "21")?.goal).toMatch(/Feel the \*problem\* OOP was invented to solve/i);
+    expect(course.phases.find((phase) => phase.id === "69")?.lessons.find((lesson) => lesson.id === "69.1")?.children).toEqual([
+      { id: "69.1.1", title: "SQL Injection" },
+      { id: "69.1.2", title: "XSS" },
+      { id: "69.1.3", title: "CSRF" },
+      { id: "69.1.4", title: "CORS" },
     ]);
   });
 
@@ -76,33 +76,38 @@ describe("course parsing", () => {
   });
 
   it("groups CS phases into sequential storyline chapters", () => {
-    const chapters = chaptersFor("computer-science", Array.from({ length: 43 }, (_, index) => String(index + 1)));
-    expect(chapters[0]).toMatchObject({ id: "foundations", phaseIds: ["1", "2"] });
+    const chapters = chaptersFor("computer-science", Array.from({ length: 105 }, (_, index) => String(index + 1)));
+    expect(chapters[0]).toMatchObject({ id: "story-1", phaseIds: ["1", "2", "3", "4", "5"] });
     expect(chapters[0].summary).toMatch(/computer actually does/i);
-    expect(chapters.find((chapter) => chapter.id === "programming")?.phaseIds).toEqual(["3", "4", "5"]);
-    expect(chapters.find((chapter) => chapter.id === "oop-revision")?.phaseIds).toEqual(["33"]);
+    expect(chapters.find((chapter) => chapter.id === "story-2")?.phaseIds).toEqual(
+      Array.from({ length: 10 }, (_, index) => String(index + 6)),
+    );
+    expect(chapters.find((chapter) => chapter.id === "story-4")?.phaseIds).toEqual(
+      Array.from({ length: 10 }, (_, index) => String(index + 21)),
+    );
   });
 
-  it("places programming after CS phase 2 in the CS storyline", () => {
-    const chapters = chaptersFor("computer-science", ["1", "2", "3", "4", "6", "26"]);
-    expect(chapters.map((chapter) => chapter.id)).toEqual(["foundations", "programming", "thinking", "algorithms"]);
-    expect(chapters.find((chapter) => chapter.id === "programming")?.phaseIds).toEqual(["3", "4"]);
+  it("places story II right after story I in the CS storyline, even with gaps", () => {
+    const chapters = chaptersFor("computer-science", ["1", "2", "3", "6", "21"]);
+    expect(chapters.map((chapter) => chapter.id)).toEqual(["story-1", "story-2", "story-4"]);
+    expect(chapters.find((chapter) => chapter.id === "story-1")?.phaseIds).toEqual(["1", "2", "3"]);
+    expect(chapters.find((chapter) => chapter.id === "story-2")?.phaseIds).toEqual(["6"]);
   });
 
   it("continues the software engineer path through OOP, Git, then data structures", () => {
     const steps = learningPathById["software-engineer"].steps;
     expect(nextStep(steps, "computer-science", "2")).toEqual({ course: "computer-science", phaseId: "3" });
-    expect(nextStep(steps, "computer-science", "25")).toEqual({ course: "git", phaseId: "1" });
-    expect(nextStep(steps, "git", "10")).toEqual({ course: "computer-science", phaseId: "26" });
+    expect(nextStep(steps, "computer-science", "30")).toEqual({ course: "git", phaseId: "1" });
+    expect(nextStep(steps, "git", "10")).toEqual({ course: "computer-science", phaseId: "31" });
   });
 
-  it("rewrites old OOP URLs into sequential Computer Science phases", () => {
+  it("rewrites old OOP URLs into their new Computer Science phase numbers", () => {
     expect(rewriteLegacyPath("/courses/object-oriented-programming")).toBe("/courses/computer-science");
     expect(rewriteLegacyPath("/courses/object-oriented-programming/learn")).toBeNull();
-    expect(rewriteLegacyPath("/courses/object-oriented-programming/phase/1")).toBe("/courses/computer-science/phase/6");
-    expect(rewriteLegacyPath("/courses/object-oriented-programming/phase/f1/how-programs-run")).toBe("/courses/computer-science/phase/3/how-programs-run");
-    expect(rewriteLegacyPath("/courses/object-oriented-programming/phase/oop-1")).toBe("/courses/computer-science/phase/6");
-    expect(rewriteLegacyPath("/projects/object-oriented-programming/phase/2")).toBe("/projects/computer-science/phase/7");
+    expect(rewriteLegacyPath("/courses/object-oriented-programming/phase/1")).toBe("/courses/computer-science/phase/21");
+    expect(rewriteLegacyPath("/courses/object-oriented-programming/phase/f1/how-programs-run")).toBe("/courses/computer-science/phase/6/how-programs-run");
+    expect(rewriteLegacyPath("/courses/object-oriented-programming/phase/oop-1")).toBe("/courses/computer-science/phase/21");
+    expect(rewriteLegacyPath("/projects/object-oriented-programming/phase/2")).toBe("/projects/computer-science/phase/22");
   });
 
   it("returns empty phases for malformed content without throwing", () => {
@@ -113,27 +118,27 @@ describe("course parsing", () => {
 });
 
 describe("project mapping", () => {
-  it("maps CS phase 1 and sequential phase 3 projects from Projects.md", () => {
+  it("maps CS phase 5 and sequential phase 7 projects from Projects.md", () => {
     const projects = parseProjectsDocument(read("content/guides/Projects.md"));
-    const cs1 = projects.find((project) => project.coursePrefix === "cs" && project.phaseId === "1");
-    const cs3 = projects.find((project) => project.coursePrefix === "cs" && project.phaseId === "3");
-    expect(cs1?.title.toLowerCase()).toContain("expression");
-    expect(cs3?.title.toLowerCase()).toContain("execution");
-    expect(cs3?.id).toBe("cs-phase-3-project");
-    expect(cs1?.gitCheckpoint).toContain("git commit");
+    const cs5 = projects.find((project) => project.coursePrefix === "cs" && project.phaseId === "5");
+    const cs7 = projects.find((project) => project.coursePrefix === "cs" && project.phaseId === "7");
+    expect(cs5?.title.toLowerCase()).toContain("expression");
+    expect(cs7?.title.toLowerCase()).toContain("execution");
+    expect(cs7?.id).toBe("cs-phase-7-project");
+    expect(cs5?.gitCheckpoint).toContain("git commit");
   });
 
   it("parses a build brief and returns a commented starter", async () => {
     const { parseProjectBrief } = await import("../lib/parse-project-brief");
     const { getProjectStarter } = await import("../lib/project-starters");
     const projects = parseProjectsDocument(read("content/guides/Projects.md"));
-    const cs2 = projects.find((project) => project.id === "cs-phase-2-project");
-    const brief = parseProjectBrief(cs2?.markdown ?? "");
+    const cs31 = projects.find((project) => project.id === "cs-phase-31-project");
+    const brief = parseProjectBrief(cs31?.markdown ?? "");
     expect(brief.title.toLowerCase()).toContain("algorithm growth");
     expect(brief.topic).toMatch(/complexity/i);
     expect(brief.spec.length).toBeGreaterThanOrEqual(3);
     expect(brief.steps.length).toBeGreaterThanOrEqual(3);
-    const starter = getProjectStarter("cs-phase-2-project", brief);
+    const starter = getProjectStarter("cs-phase-31-project", brief);
     expect(starter.project.files["src/main.py"]).toContain("def quadratic");
     expect(starter.project.files["src/main.py"]).toContain("operation");
   });
@@ -144,11 +149,11 @@ describe("internal link conversion", () => {
     expect(convertMarkdownHref("./Git.md#phase-4---branching")).toBe("/courses/git/phase/4");
     expect(convertMarkdownHref("cloud.md#phase-12")).toBe("/courses/cloud/phase/12");
     expect(convertMarkdownHref("../roadmaps/Git.md#phase-4---branching", "content/guides/Projects.md")).toBe("/courses/git/phase/4");
-    expect(convertMarkdownHref("../guides/Projects.md#cs-phase-1-project", "content/roadmaps/CS.md")).toBe("/projects/computer-science/phase/1");
-    expect(convertMarkdownHref("#phase-2---complexity-analysis", "content/roadmaps/CS.md")).toBe("/courses/computer-science/phase/2");
-    expect(convertMarkdownHref("./OOP.md#phase-1", "content/roadmaps/CS.md")).toBe("/courses/computer-science/phase/6");
-    expect(convertMarkdownHref("#phase-f1", "content/roadmaps/OOP.md")).toBe("/courses/computer-science/phase/3");
-    expect(convertMarkdownHref("../guides/Projects.md#oop-phase-1-project", "content/roadmaps/OOP.md")).toBe("/projects/computer-science/phase/6");
+    expect(convertMarkdownHref("../guides/Projects.md#cs-phase-5-project", "content/roadmaps/CS.md")).toBe("/projects/computer-science/phase/5");
+    expect(convertMarkdownHref("#phase-31---complexity-analysis", "content/roadmaps/CS.md")).toBe("/courses/computer-science/phase/31");
+    expect(convertMarkdownHref("./OOP.md#phase-1", "content/roadmaps/CS.md")).toBe("/courses/computer-science/phase/21");
+    expect(convertMarkdownHref("#phase-f1", "content/roadmaps/OOP.md")).toBe("/courses/computer-science/phase/6");
+    expect(convertMarkdownHref("../guides/Projects.md#oop-phase-1-project", "content/roadmaps/OOP.md")).toBe("/projects/computer-science/phase/21");
     expect(convertMarkdownHref("../guides/Projects.md", "content/roadmaps/Web.md")).toBe("/projects");
     expect(convertMarkdownHref("./data/Job_Tracker.xlsx", "README.md")).toBe("/downloads/job-tracker");
   });
@@ -160,7 +165,7 @@ describe("progress v3", () => {
       ["git:phase-1", "git:phase-1", "git:unknown-id"],
       [{ slug: "git", phaseHeadingIds: ["phase-1"], projectHeadingIds: [], gitHeadingIds: [], practiceHeadingIds: [] }],
     );
-    expect(migrated.version).toBe(3);
+    expect(migrated.version).toBe(4);
     expect(migrated.courses.git.completedPhases).toContain("1");
     expect(migrated.legacyIds).toContain("git:unknown-id");
   });
@@ -191,11 +196,11 @@ describe("progress v3", () => {
         },
       },
     }));
-    expect(migrated.version).toBe(3);
+    expect(migrated.version).toBe(4);
     expect(migrated.courses["object-oriented-programming"]).toBeUndefined();
-    expect(migrated.courses["computer-science"].completedProjects).toEqual(["6", "3"]);
-    expect(migrated.courses["computer-science"].completedLessons).toEqual(["6.1"]);
-    expect(migrated.courses["computer-science"].visitedLessons).toEqual(["6.1", "3.1"]);
+    expect(migrated.courses["computer-science"].completedProjects).toEqual(["21", "6"]);
+    expect(migrated.courses["computer-science"].completedLessons).toEqual(["21.1"]);
+    expect(migrated.courses["computer-science"].visitedLessons).toEqual(["21.1", "6.1"]);
   });
 
   it("calculates resume-related percent from lessons and projects", () => {
@@ -217,7 +222,7 @@ describe("progress v3", () => {
   });
 
   it("validates import JSON and rejects malformed files", () => {
-    expect(parseProgressV2(null).version).toBe(3);
+    expect(parseProgressV2(null).version).toBe(4);
     expect(() => validateImportedProgress({ version: 2, courses: {} })).not.toThrow();
     expect(() => validateImportedProgress({ version: 3, courses: {} })).not.toThrow();
     expect(() => validateImportedProgress({ hello: true })).toThrow(/valid Interview Help progress backup/);

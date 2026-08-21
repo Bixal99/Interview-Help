@@ -1297,7 +1297,59 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 46](../roadmaps/CS.md#phase-46) | [CONTINUE TO CS PHASE 53](../roadmaps/CS.md#phase-53)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 46](../roadmaps/CS.md#phase-46) | [CONTINUE TO CS PHASE 48](../roadmaps/CS.md#phase-48)
+
+<a id="cs-phase-48-project"></a>
+### CS PHASE 48 MINI-PROJECT
+
+#### PROJECT: RECENTLY-VIEWED ITEMS SERVICE
+
+#### SPECIFICATION
+
+Build **Recently-Viewed Items Service** as a focused exercise for **DSA Consolidation**. Keep the data and interface small enough to finish, but implement the following behavior:
+
+- Implement an LRU cache from scratch (no `functools.lru_cache`) backed by a hash map plus a doubly linked list, with `get` and `put` both $O(1)$.
+- Extend it into a small service with a `most_recent(n)` query that returns the n most recently touched items without scanning the whole cache.
+- Define one realistic scenario (e.g. "recently viewed products," "recently opened files") its boundaries, and the intended reader for the service.
+- Write tests that prove eviction order is correct after a mixed sequence of `get`/`put` calls, not just after a single insert.
+- Add one concrete recommendation or next action for every important finding.
+
+#### TECH STACK
+
+- Python 3.12
+- VSCodium or any text editor
+- Python standard library; use SQLite only for database projects
+
+#### BUILD IT STEP BY STEP
+
+1. Create `recently-viewed-items-service` with `src`, `tests`, and `examples` folders; use a Python virtual environment.
+2. Implement the `Node` and doubly linked list operations (`_remove`, `_insert_at_front`) first, and unit-test them in isolation before wiring in the hash map.
+3. Implement `LRUCache.get` and `LRUCache.put`, keeping the map and list synchronized on every call.
+4. Add `most_recent(n)`, which walks at most `n` nodes from the front of the list - never the whole structure.
+5. Write tests that insert past capacity and assert the correct item was evicted, then `get` an item to prove it becomes protected from the next eviction.
+6. Add one normal example and one edge case (capacity of 1, and repeated `put` on the same key) specifically for **DSA Consolidation**.
+7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
+
+### Git Checkpoint
+
+You have completed **RECENTLY-VIEWED ITEMS SERVICE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+
+```bash
+git status
+git add -- cs/recently-viewed-items-service
+git commit -m "feat(recently-viewed-items-service): complete recently-viewed items service"
+```
+
+Verify the checkpoint:
+
+```bash
+git log -1 --oneline
+git status
+```
+
+Continue only when the project still works and the working tree is clean.
+
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 48](../roadmaps/CS.md#phase-48) | [CONTINUE TO CS PHASE 53](../roadmaps/CS.md#phase-53)
 
 <a id="cs-phase-53-project"></a>
 ### CS PHASE 53 MINI-PROJECT

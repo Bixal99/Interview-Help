@@ -18,7 +18,7 @@ function read(relative: string) {
 describe("course parsing", () => {
   it("extracts CS phases, stable lesson ids, and YouTube from real source", () => {
     const course = parseCourseMarkdown(read("content/roadmaps/CS.md"), "computer-science");
-    expect(course.phases).toHaveLength(78);
+    expect(course.phases).toHaveLength(80);
     expect(course.phases[0]).toMatchObject({ id: "1", title: expect.stringContaining("What Is Computer Science?") });
     expect(course.phases[0].lessons[0]).toMatchObject({ id: "1.1", slug: "computation-as-problem-solving" });
     expect(course.phases[0].lessons[0].videos[0].href).toContain("PLhQjrBD2T380F_inVRXMIHCqLaNUd7bN4");
@@ -26,7 +26,7 @@ describe("course parsing", () => {
     expect(course.phases[39]).toMatchObject({ id: "40", title: expect.stringContaining("Searching") });
     expect(headingRouteMap(course).get("from-source-code-to-a-running-program")).toBe("/courses/computer-science/phase/5/from-source-code-to-a-running-program");
     expect(extractPractice(course.phases[0].lessons[0].markdown)?.kind).toBe("checklist");
-    expect(new Set(course.phases.map((phase) => phase.id)).size).toBe(78);
+    expect(new Set(course.phases.map((phase) => phase.id)).size).toBe(80);
     expect(course.phases.find((phase) => phase.id === "9")?.goal).toMatch(/named functions and modules/i);
     expect(course.phases.find((phase) => phase.id === "21")?.goal).toMatch(/Feel the \*problem\* OOP was invented to solve/i);
     expect(course.phases.find((phase) => phase.id === "69")?.lessons.find((lesson) => lesson.id === "69.1")?.children).toEqual([

@@ -86,7 +86,12 @@ for (const sourcePath of documents) {
       const targetPath = resolveMarkdownSourcePath(sourcePath, local.hrefPath);
       if (!fs.existsSync(projectPath(targetPath))) errors.push(`${sourcePath}: missing internal target ${href} (resolved to ${targetPath})`);
       else if (local.fragment && /\.md$/i.test(local.hrefPath)) {
-        const targetIds = new Set(extractHeadings(sourceAt(targetPath)).map((heading) => heading.id.toLowerCase()));
+        const targetHeadings = extractHeadings(sourceAt(targetPath));
+        const targetIds = new Set(targetHeadings.map((heading) => heading.id.toLowerCase()));
+        // `#phase-N` short anchors (Projects.md / Git.md / nav) match parse-course anchorIds
+        for (const heading of targetHeadings) {
+          if (heading.phase !== undefined) targetIds.add(`phase-${heading.phase}`);
+        }
         let fragment = decodeURIComponent(local.fragment).toLowerCase();
         if (!targetIds.has(fragment)) fragment = fragment.replace(/---+/g, "-");
         if (!targetIds.has(fragment)) warnings.push(`${sourcePath}: unresolved heading fragment ${href}`);

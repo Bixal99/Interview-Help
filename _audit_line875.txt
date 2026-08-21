@@ -1,0 +1,1187 @@
+<timestamp>Friday, Aug 21, 2026, 3:01 PM (UTC+3)</timestamp>
+<user_query>
+verify
+COMPUTER SCIENCE & SOFTWARE ENGINEERING
+Zero Knowledge → Programmer → Software Engineer → Computer Scientist → Job Ready
+│
+│
+├── STORY I — BEFORE YOU WRITE CODE
+│   │   "What is computing, and what is a computer actually doing?"
+│   │
+│   ├── Phase 1 — What Is Computer Science?
+│   │   ├── 1.1 Problems, Inputs & Outputs
+│   │   ├── 1.2 Algorithms
+│   │   ├── 1.3 CS vs Programming vs Software Engineering
+│   │   ├── 1.4 Abstraction
+│   │   └── PRACTICE — Written / By Hand
+│   │       ├── Write an algorithm for using an ATM
+│   │       └── Explain CS vs programming in your own words
+│   │
+│   ├── Phase 2 — How Computers Represent Information
+│   │   ├── 2.1 Bits & Bytes
+│   │   ├── 2.2 Binary
+│   │   ├── 2.3 Hexadecimal
+│   │   ├── 2.4 Signed / Unsigned Numbers
+│   │   ├── 2.5 Floating Point
+│   │   ├── 2.6 ASCII / Unicode / UTF-8
+│   │   └── PRACTICE — Mixed
+│   │       ├── Convert binary / decimal / hex by hand
+│   │       └── Inspect how text is stored as bytes
+│   │
+│   ├── Phase 3 — Logic & Digital Computation
+│   │   ├── 3.1 Boolean Logic
+│   │   ├── 3.2 Truth Tables
+│   │   ├── 3.3 AND / OR / NOT / XOR
+│   │   ├── 3.4 Logic Gates
+│   │   └── PRACTICE — Diagram / By Hand
+│   │       └── Design the logic for a simple digital door lock
+│   │
+│   ├── Phase 4 — Computer Hardware
+│   │   ├── 4.1 CPU
+│   │   ├── 4.2 Instructions
+│   │   ├── 4.3 Registers
+│   │   ├── 4.4 Fetch → Decode → Execute
+│   │   ├── 4.5 RAM
+│   │   ├── 4.6 Cache
+│   │   ├── 4.7 Storage
+│   │   └── PRACTICE — Trace / Diagram
+│   │       └── Draw what happens when the CPU performs 2 + 3
+│   │
+│   ├── Phase 5 — From Source Code to a Running Program
+│   │   ├── 5.1 Source Code
+│   │   ├── 5.2 Syntax & Semantics
+│   │   ├── 5.3 Compiler
+│   │   ├── 5.4 Interpreter
+│   │   ├── 5.5 Bytecode
+│   │   ├── 5.6 JIT
+│   │   └── MINI PROJECT — Mini Expression Runtime
+│   │       ├── Tokenize
+│   │       ├── Parse
+│   │       ├── Evaluate
+│   │       └── Show execution trace
+│   │
+│   └── STORY PROJECT — Tiny Computer Simulator
+│       ├── Registers
+│       ├── Memory
+│       ├── Instructions
+│       └── Step-by-step execution
+│
+│
+├── STORY II — LEARNING TO CONTROL THE MACHINE
+│   │   "We understand the machine. Now we learn to instruct it."
+│   │
+│   ├── Phase 6 — Development Environment
+│   │   ├── 6.1 Files & Folders
+│   │   ├── 6.2 Code Editor / IDE
+│   │   ├── 6.3 Terminal
+│   │   ├── 6.4 Running Programs
+│   │   └── LAB — Build Your Developer Workspace
+│   │
+│   ├── Phase 7 — Variables, Values & Types
+│   │   ├── 7.1 Variables
+│   │   ├── 7.2 Assignment
+│   │   ├── 7.3 Integers / Floats
+│   │   ├── 7.4 Booleans
+│   │   ├── 7.5 Strings
+│   │   ├── 7.6 Operators
+│   │   └── CODING PRACTICE — Small Calculator
+│   │
+│   ├── Phase 8 — Control Flow
+│   │   ├── 8.1 if / else
+│   │   ├── 8.2 Nested Conditions
+│   │   ├── 8.3 for
+│   │   ├── 8.4 while
+│   │   ├── 8.5 break / continue
+│   │   └── MINI PROJECT — Number Guessing Game
+│   │
+│   ├── Phase 9 — Functions & Scope
+│   │   ├── 9.1 Functions
+│   │   ├── 9.2 Parameters
+│   │   ├── 9.3 Return Values
+│   │   ├── 9.4 Local Scope
+│   │   ├── 9.5 Global Scope
+│   │   └── MINI PROJECT — Modular Calculator
+│   │
+│   ├── Phase 10 — Collections
+│   │   ├── 10.1 Lists / Arrays
+│   │   ├── 10.2 Tuples
+│   │   ├── 10.3 Dictionaries
+│   │   ├── 10.4 Sets
+│   │   ├── 10.5 Iteration
+│   │   └── MINI PROJECT — Student Grade Manager
+│   │
+│   ├── Phase 11 — Strings & Files
+│   │   ├── 11.1 String Processing
+│   │   ├── 11.2 Reading Files
+│   │   ├── 11.3 Writing Files
+│   │   ├── 11.4 JSON
+│   │   ├── 11.5 CSV
+│   │   └── MINI PROJECT — Persistent Contact Book
+│   │
+│   ├── Phase 12 — Errors & Defensive Programming
+│   │   ├── 12.1 Syntax Errors
+│   │   ├── 12.2 Runtime Errors
+│   │   ├── 12.3 Logical Bugs
+│   │   ├── 12.4 Exceptions
+│   │   ├── 12.5 Input Validation
+│   │   └── PRACTICE — Repair Broken Programs
+│   │
+│   ├── Phase 13 — Debugging
+│   │   ├── 13.1 Reading Error Messages
+│   │   ├── 13.2 Reproducing Bugs
+│   │   ├── 13.3 Logging
+│   │   ├── 13.4 Breakpoints
+│   │   ├── 13.5 Stack Traces
+│   │   └── LAB — Debug a Deliberately Broken Application
+│   │
+│   ├── Phase 14 — Modules, Packages & Environments
+│   │   ├── 14.1 Imports
+│   │   ├── 14.2 Multiple Files
+│   │   ├── 14.3 Packages
+│   │   ├── 14.4 Dependencies
+│   │   ├── 14.5 Virtual Environments
+│   │   └── MINI PROJECT — Multi-File Task Manager
+│   │
+│   ├── Phase 15 — Programming Consolidation
+│   │   └── PHASE PROJECT — CLI Library Management System
+│   │
+│   └── STORY PROJECT — Personal Productivity Suite
+│       ├── Tasks
+│       ├── Notes
+│       ├── Contacts
+│       ├── Multiple modules
+│       ├── Persistence
+│       └── Error handling
+│
+│
+├── STORY III — THE MATHEMATICAL LANGUAGE OF CS
+│   │   "Code works. Now we learn how computer scientists reason about it."
+│   │
+│   ├── Phase 16 — Discrete Mathematics
+│   │   ├── 16.1 Sets
+│   │   ├── 16.2 Relations
+│   │   ├── 16.3 Functions
+│   │   ├── 16.4 Logic
+│   │   ├── 16.5 Quantifiers
+│   │   └── PRACTICE — Mostly By Hand
+│   │
+│   ├── Phase 17 — Proof & Mathematical Reasoning
+│   │   ├── 17.1 Direct Proof
+│   │   ├── 17.2 Contradiction
+│   │   ├── 17.3 Counterexamples
+│   │   ├── 17.4 Induction
+│   │   └── PRACTICE — Written Proofs
+│   │
+│   ├── Phase 18 — Counting & Probability
+│   │   ├── 18.1 Permutations
+│   │   ├── 18.2 Combinations
+│   │   ├── 18.3 Probability
+│   │   ├── 18.4 Conditional Probability
+│   │   ├── 18.5 Expected Value
+│   │   └── PRACTICE — Hand Calculations + Small Simulation
+│   │
+│   ├── Phase 19 — Statistics for Computing
+│   │   ├── 19.1 Mean / Median
+│   │   ├── 19.2 Variance
+│   │   ├── 19.3 Distributions
+│   │   ├── 19.4 Sampling
+│   │   └── MINI LAB — Analyze a Small Dataset
+│   │
+│   ├── Phase 20 — Linear Algebra & Calculus Intuition
+│   │   ├── 20.1 Vectors
+│   │   ├── 20.2 Matrices
+│   │   ├── 20.3 Functions
+│   │   ├── 20.4 Derivatives
+│   │   └── VISUAL LAB — 2D Vector Transformations
+│   │
+│   └── STORY CHECKPOINT — Mathematical Computing Notebook
+│       └── No large project required
+│
+│
+├── STORY IV — ORGANIZING LARGE SOFTWARE
+│   │
+│   ├── Phase 21 — Object Thinking
+│   │   ├── 21.1 State
+│   │   ├── 21.2 Behavior
+│   │   ├── 21.3 Entities
+│   │   ├── 21.4 Responsibilities
+│   │   └── PRACTICE — Model a School on Paper
+│   │
+│   ├── Phase 22 — Classes & Objects
+│   │   ├── 22.1 Classes
+│   │   ├── 22.2 Instances
+│   │   ├── 22.3 Constructors
+│   │   ├── 22.4 Identity
+│   │   ├── 22.5 Equality
+│   │   └── MINI PROJECT — Bank Account System
+│   │
+│   ├── Phase 23 — Encapsulation & Abstraction
+│   │   ├── 23.1 Public API
+│   │   ├── 23.2 Internal State
+│   │   ├── 23.3 Invariants
+│   │   ├── 23.4 Interfaces
+│   │   └── MINI PROJECT — Digital Wallet
+│   │
+│   ├── Phase 24 — Inheritance & Polymorphism
+│   │   ├── 24.1 is-a
+│   │   ├── 24.2 Overriding
+│   │   ├── 24.3 super()
+│   │   ├── 24.4 Polymorphism
+│   │   └── PRACTICE — Employee Hierarchy
+│   │
+│   ├── Phase 25 — Composition
+│   │   ├── 25.1 has-a
+│   │   ├── 25.2 Association
+│   │   ├── 25.3 Aggregation
+│   │   ├── 25.4 Composition
+│   │   ├── 25.5 Delegation
+│   │   └── PRACTICE — Redesign Inheritance Using Composition
+│   │
+│   ├── Phase 26 — SOLID
+│   │   ├── 26.1 SRP
+│   │   ├── 26.2 OCP
+│   │   ├── 26.3 LSP
+│   │   ├── 26.4 ISP
+│   │   ├── 26.5 DIP
+│   │   └── REFACTORING LAB — Fix a Poorly Designed Ordering System
+│   │
+│   ├── Phase 27 — Code Quality & Refactoring
+│   │   ├── 27.1 Naming
+│   │   ├── 27.2 Duplication
+│   │   ├── 27.3 Long Methods
+│   │   ├── 27.4 God Objects
+│   │   ├── 27.5 Coupling
+│   │   ├── 27.6 Cohesion
+│   │   └── LAB — Clean Up Legacy Code
+│   │
+│   ├── Phase 28 — Design Patterns
+│   │   ├── 28.1 Factory
+│   │   ├── 28.2 Builder
+│   │   ├── 28.3 Adapter
+│   │   ├── 28.4 Facade
+│   │   ├── 28.5 Decorator
+│   │   ├── 28.6 Strategy
+│   │   ├── 28.7 Observer
+│   │   └── DESIGN EXERCISE — Decide Which Pattern Fits Which Problem
+│   │
+│   ├── Phase 29 — Low-Level Design
+│   │   ├── 29.1 Requirements
+│   │   ├── 29.2 Entities
+│   │   ├── 29.3 Relationships
+│   │   ├── 29.4 Interfaces
+│   │   ├── 29.5 UML
+│   │   └── DESIGN PROJECT — Elevator System
+│   │
+│   ├── Phase 30 — OOP Consolidation
+│   │   └── PHASE PROJECT — Parking Management System
+│   │
+│   └── STORY PROJECT — Hospital or Library Management System
+│
+│
+├── STORY V — DATA STRUCTURES & ALGORITHMS
+│   │   "Our software is organized. Now we make it efficient."
+│   │
+│   ├── Phase 31 — Complexity Analysis
+│   │   ├── 31.1 Big-O
+│   │   ├── 31.2 Time Complexity
+│   │   ├── 31.3 Space Complexity
+│   │   ├── 31.4 Best / Average / Worst Case
+│   │   └── PRACTICE — Analyze Existing Code by Hand
+│   │
+│   ├── Phase 32 — Arrays & Strings
+│   │   ├── 32.1 Memory Layout
+│   │   ├── 32.2 Indexing
+│   │   ├── 32.3 Insertion / Deletion
+│   │   ├── 32.4 Dynamic Arrays
+│   │   └── CODING PRACTICE
+│   │
+│   ├── Phase 33 — Linked Lists
+│   │   ├── 33.1 Nodes
+│   │   ├── 33.2 Singly Linked Lists
+│   │   ├── 33.3 Doubly Linked Lists
+│   │   └── IMPLEMENTATION — Build a Linked List
+│   │
+│   ├── Phase 34 — Stacks, Queues & Deques
+│   │   ├── 34.1 Stack
+│   │   ├── 34.2 Queue
+│   │   ├── 34.3 Deque
+│   │   └── MINI PROJECT — Browser History + Task Queue
+│   │
+│   ├── Phase 35 — Recursion
+│   │   ├── 35.1 Base Case
+│   │   ├── 35.2 Recursive Case
+│   │   ├── 35.3 Call Stack
+│   │   ├── 35.4 Recursion Trees
+│   │   └── PRACTICE — Trace Recursion by Hand + Code
+│   │
+│   ├── Phase 36 — Hashing
+│   │   ├── 36.1 Hash Functions
+│   │   ├── 36.2 Hash Tables
+│   │   ├── 36.3 Collisions
+│   │   ├── 36.4 Load Factor
+│   │   └── IMPLEMENTATION — Build a Basic Hash Map
+│   │
+│   ├── Phase 37 — Trees
+│   │   ├── 37.1 Binary Trees
+│   │   ├── 37.2 Traversals
+│   │   ├── 37.3 BST
+│   │   ├── 37.4 Balanced Tree Intuition
+│   │   └── PRACTICE — Draw & Traverse Trees
+│   │
+│   ├── Phase 38 — Heaps & Priority Queues
+│   │   ├── 38.1 Min Heap
+│   │   ├── 38.2 Max Heap
+│   │   ├── 38.3 Heapify
+│   │   └── MINI PROJECT — Emergency Patient Scheduler
+│   │
+│   ├── Phase 39 — Sorting
+│   │   ├── 39.1 Bubble / Selection / Insertion
+│   │   ├── 39.2 Merge Sort
+│   │   ├── 39.3 Quick Sort
+│   │   ├── 39.4 Heap Sort
+│   │   └── VISUAL PROJECT — Sorting Visualizer
+│   │
+│   ├── Phase 40 — Searching
+│   │   ├── 40.1 Linear Search
+│   │   ├── 40.2 Binary Search
+│   │   ├── 40.3 Binary Search on Answer
+│   │   └── CODING PRACTICE
+│   │
+│   ├── Phase 41 — Graphs
+│   │   ├── 41.1 Representation
+│   │   ├── 41.2 BFS
+│   │   ├── 41.3 DFS
+│   │   ├── 41.4 Topological Sort
+│   │   ├── 41.5 Dijkstra
+│   │   └── PHASE PROJECT — City Route Planner
+│   │
+│   ├── Phase 42 — Algorithmic Patterns
+│   │   ├── 42.1 Two Pointers
+│   │   ├── 42.2 Sliding Window
+│   │   ├── 42.3 Prefix Sum
+│   │   ├── 42.4 Divide & Conquer
+│   │   └── PRACTICE — Mixed Coding Problems
+│   │
+│   ├── Phase 43 — Greedy Algorithms
+│   │   ├── 43.1 Greedy Choice
+│   │   ├── 43.2 Local vs Global Optimum
+│   │   └── PRACTICE — Explain Why Greedy Works or Fails
+│   │
+│   ├── Phase 44 — Backtracking
+│   │   ├── 44.1 Decision Trees
+│   │   ├── 44.2 Choose → Explore → Undo
+│   │   └── MINI PROJECT — Sudoku Solver
+│   │
+│   ├── Phase 45 — Dynamic Programming
+│   │   ├── 45.1 Overlapping Subproblems
+│   │   ├── 45.2 Optimal Substructure
+│   │   ├── 45.3 Memoization
+│   │   ├── 45.4 Tabulation
+│   │   ├── 45.5 State / Transition Design
+│   │   └── PRACTICE — Selected DP Problems
+│   │
+│   ├── Phase 46 — Specialized Data Structures
+│   │   ├── 46.1 Tries
+│   │   ├── 46.2 Union-Find
+│   │   ├── 46.3 Bloom Filters
+│   │   └── MINI PROJECT — Autocomplete Engine
+│   │
+│   ├── Phase 47 — Algorithm Correctness
+│   │   ├── 47.1 Preconditions
+│   │   ├── 47.2 Postconditions
+│   │   ├── 47.3 Loop Invariants
+│   │   ├── 47.4 Termination
+│   │   └── WRITTEN PRACTICE — Prove a Few Simple Algorithms
+│   │
+│   ├── Phase 48 — DSA Consolidation
+│   │   └── PHASE PROJECT — Implement a Reusable Data Structures Library
+│   │
+│   └── STORY PROJECT — Search & Route Engine
+│
+│
+├── STORY VI — INSIDE THE COMPUTER
+│
+│   ├── Phase 49 — Computer Architecture
+│   │   ├── 49.1 Instruction Sets
+│   │   ├── 49.2 Registers
+│   │   ├── 49.3 Assembly Intuition
+│   │   ├── 49.4 Cache
+│   │   ├── 49.5 Pipelining
+│   │   ├── 49.6 Multicore
+│   │   └── LAB — Trace Assembly from Simple Code
+│   │
+│   ├── Phase 50 — Memory & Program Representation
+│   │   ├── 50.1 Stack
+│   │   ├── 50.2 Heap
+│   │   ├── 50.3 Static / Global Storage
+│   │   ├── 50.4 References / Pointers
+│   │   ├── 50.5 Memory Safety
+│   │   └── VISUAL PRACTICE — Draw Memory Layouts
+│   │
+│   ├── Phase 51 — Programming Language Foundations
+│   │   ├── 51.1 Grammars
+│   │   ├── 51.2 Lexing
+│   │   ├── 51.3 Parsing
+│   │   ├── 51.4 AST
+│   │   ├── 51.5 Type Systems
+│   │   ├── 51.6 Runtime Models
+│   │   └── PROJECT — Tiny Programming Language
+│   │
+│   ├── Phase 52 — Operating Systems
+│   │   ├── 52.1 Kernel
+│   │   ├── 52.2 System Calls
+│   │   ├── 52.3 Processes
+│   │   ├── 52.4 Threads
+│   │   ├── 52.5 Scheduling
+│   │   ├── 52.6 Virtual Memory
+│   │   ├── 52.7 Filesystems
+│   │   └── LAB — Inspect Processes, Memory & Files on a Real OS
+│   │
+│   ├── Phase 53 — Concurrency & Parallelism
+│   │   ├── 53.1 Race Conditions
+│   │   ├── 53.2 Critical Sections
+│   │   ├── 53.3 Mutexes
+│   │   ├── 53.4 Semaphores
+│   │   ├── 53.5 Deadlocks
+│   │   ├── 53.6 Atomics
+│   │   └── MINI PROJECT — Multithreaded Job Processor
+│   │
+│   ├── Phase 54 — Systems Programming
+│   │   └── PHASE PROJECT — Concurrent File Indexer
+│   │
+│   └── STORY PROJECT — Mini Operating-System Simulator
+│
+│
+├── STORY VII — CONNECTING COMPUTERS
+│
+│   ├── Phase 55 — Networking Foundations
+│   │   ├── 55.1 OSI / TCP-IP
+│   │   ├── 55.2 MAC
+│   │   ├── 55.3 IP
+│   │   ├── 55.4 Subnets
+│   │   ├── 55.5 Routers
+│   │   ├── 55.6 NAT
+│   │   ├── 55.7 Ports
+│   │   └── DIAGRAM PRACTICE — Trace a Packet
+│   │
+│   ├── Phase 56 — TCP / UDP / Sockets
+│   │   ├── 56.1 TCP Handshake
+│   │   ├── 56.2 Reliability
+│   │   ├── 56.3 Ordering
+│   │   ├── 56.4 UDP
+│   │   ├── 56.5 Sockets
+│   │   └── MINI PROJECT — TCP Chat
+│   │
+│   ├── Phase 57 — DNS & Internet
+│   │   ├── 57.1 Domains
+│   │   ├── 57.2 Resolution
+│   │   ├── 57.3 Caching
+│   │   ├── 57.4 Routing Intuition
+│   │   └── TRACE EXERCISE — What Happens After Typing a URL?
+│   │
+│   ├── Phase 58 — HTTP
+│   │   ├── 58.1 Request / Response
+│   │   ├── 58.2 Methods
+│   │   ├── 58.3 Headers
+│   │   ├── 58.4 Status Codes
+│   │   ├── 58.5 Cookies
+│   │   ├── 58.6 Caching
+│   │   └── MINI PROJECT — Basic HTTP Server
+│   │
+│   ├── Phase 59 — API Design
+│   │   ├── 59.1 REST
+│   │   ├── 59.2 Resources
+│   │   ├── 59.3 CRUD
+│   │   ├── 59.4 Validation
+│   │   ├── 59.5 Pagination
+│   │   ├── 59.6 Filtering
+│   │   ├── 59.7 Versioning
+│   │   ├── 59.8 Idempotency
+│   │   └── PHASE PROJECT — Task Management API
+│   │
+│   └── STORY PROJECT — Networked Chat / Collaboration System
+│
+│
+├── STORY VIII — DATA THAT SURVIVES
+│
+│   ├── Phase 60 — Database Foundations
+│   │   ├── 60.1 Why Databases Exist
+│   │   ├── 60.2 DBMS
+│   │   ├── 60.3 Tables
+│   │   ├── 60.4 Rows / Columns
+│   │   ├── 60.5 Keys
+│   │   └── DESIGN PRACTICE — Draw a School Database
+│   │
+│   ├── Phase 61 — SQL
+│   │   ├── SELECT
+│   │   ├── INSERT
+│   │   ├── UPDATE
+│   │   ├── DELETE
+│   │   ├── JOIN
+│   │   ├── GROUP BY
+│   │   ├── CTE
+│   │   └── SQL PRACTICE — Query a Sample Business Database
+│   │
+│   ├── Phase 62 — Data Modeling
+│   │   ├── 62.1 Entities
+│   │   ├── 62.2 Relationships
+│   │   ├── 62.3 Primary / Foreign Keys
+│   │   ├── 62.4 Constraints
+│   │   ├── 62.5 Normalization
+│   │   └── DESIGN PROJECT — E-Commerce Schema
+│   │
+│   ├── Phase 63 — Database Internals
+│   │   ├── 63.1 Pages
+│   │   ├── 63.2 B-Trees
+│   │   ├── 63.3 Indexes
+│   │   ├── 63.4 Query Plans
+│   │   └── LAB — Compare Indexed vs Non-Indexed Queries
+│   │
+│   ├── Phase 64 — Transactions & Concurrency
+│   │   ├── 64.1 ACID
+│   │   ├── 64.2 Isolation
+│   │   ├── 64.3 Locks
+│   │   ├── 64.4 Deadlocks
+│   │   └── MINI PROJECT — Banking Transaction Simulator
+│   │
+│   ├── Phase 65 — Operating & Scaling Databases
+│   │   ├── 65.1 Connection Pools
+│   │   ├── 65.2 Migrations
+│   │   ├── 65.3 Backups
+│   │   ├── 65.4 Replication
+│   │   ├── 65.5 Partitioning
+│   │   ├── 65.6 Sharding
+│   │   └── ARCHITECTURE EXERCISE — Scale a Growing Database
+│   │
+│   └── STORY PROJECT — E-Commerce Data Layer
+│
+│
+├── STORY IX — SECURITY & HUMAN-CENTERED SOFTWARE
+│
+│   ├── Phase 66 — Security Foundations
+│   │   ├── 66.1 CIA
+│   │   ├── 66.2 Threats
+│   │   ├── 66.3 Vulnerabilities
+│   │   ├── 66.4 Risk
+│   │   ├── 66.5 Least Privilege
+│   │   └── WRITTEN EXERCISE — Threat Model a Simple App
+│   │
+│   ├── Phase 67 — Cryptography for Developers
+│   │   ├── 67.1 Hashing
+│   │   ├── 67.2 Symmetric Encryption
+│   │   ├── 67.3 Asymmetric Encryption
+│   │   ├── 67.4 Signatures
+│   │   ├── 67.5 TLS
+│   │   └── PRACTICE — Choose the Correct Crypto Tool for Scenarios
+│   │
+│   ├── Phase 68 — Authentication & Authorization
+│   │   ├── 68.1 Password Hashing
+│   │   ├── 68.2 Sessions
+│   │   ├── 68.3 Cookies
+│   │   ├── 68.4 JWT
+│   │   ├── 68.5 OAuth / OIDC
+│   │   ├── 68.6 MFA
+│   │   ├── 68.7 RBAC
+│   │   └── PHASE PROJECT — Authentication + Permissions System
+│   │
+│   ├── Phase 69 — Application Security
+│   │   ├── 69.1 Input Validation
+│   │   ├── 69.2 SQL Injection
+│   │   ├── 69.3 XSS
+│   │   ├── 69.4 CSRF
+│   │   ├── 69.5 CORS
+│   │   ├── 69.6 Secrets
+│   │   ├── 69.7 Dependencies
+│   │   ├── 69.8 Rate Limiting
+│   │   └── SECURITY LAB — Harden a Deliberately Vulnerable App
+│   │
+│   ├── Phase 70 — Human-Computer Interaction
+│   │   ├── 70.1 Usability
+│   │   ├── 70.2 Feedback
+│   │   ├── 70.3 Accessibility
+│   │   ├── 70.4 Error Prevention
+│   │   └── DESIGN EXERCISE — Critique and Redesign a Poor UI
+│   │
+│   ├── Phase 71 — Graphics & Interactive Computing
+│   │   ├── 71.1 Pixels
+│   │   ├── 71.2 Coordinates
+│   │   ├── 71.3 Colors
+│   │   ├── 71.4 Transformations
+│   │   ├── 71.5 Rendering Pipeline
+│   │   └── OPTIONAL MINI PROJECT — Simple Drawing App
+│   │
+│   └── STORY PROJECT — Secure Accessible Application
+│
+│
+├── STORY X — PROFESSIONAL SOFTWARE ENGINEERING
+│
+│   ├── Phase 72 — Git & Collaboration
+│   │   ├── 72.1 Repository
+│   │   ├── 72.2 Commit
+│   │   ├── 72.3 Branch
+│   │   ├── 72.4 Merge
+│   │   ├── 72.5 Pull Request
+│   │   └── LAB — Simulated Team Workflow
+│   │
+│   ├── Phase 73 — Requirements Engineering
+│   │   ├── 73.1 Functional Requirements
+│   │   ├── 73.2 Non-Functional Requirements
+│   │   ├── 73.3 User Stories
+│   │   ├── 73.4 Acceptance Criteria
+│   │   └── WRITTEN PROJECT — Product Specification
+│   │
+│   ├── Phase 74 — Testing
+│   │   ├── 74.1 Unit
+│   │   ├── 74.2 Integration
+│   │   ├── 74.3 E2E
+│   │   ├── 74.4 Fakes / Mocks
+│   │   ├── 74.5 Regression
+│   │   └── PHASE PROJECT — Automated Test Suite
+│   │
+│   ├── Phase 75 — Software Architecture
+│   │   ├── 75.1 Separation of Concerns
+│   │   ├── 75.2 Coupling
+│   │   ├── 75.3 Cohesion
+│   │   ├── 75.4 Layers
+│   │   ├── 75.5 Modular Monolith
+│   │   ├── 75.6 Microservices Trade-offs
+│   │   └── ARCHITECTURE EXERCISE — Design a Business Application
+│   │
+│   ├── Phase 76 — Development Process
+│   │   ├── 76.1 Planning
+│   │   ├── 76.2 Iteration
+│   │   ├── 76.3 Agile
+│   │   ├── 76.4 Code Review
+│   │   ├── 76.5 Technical Debt
+│   │   ├── 76.6 Documentation
+│   │   └── LAB — Simulate One Development Sprint
+│   │
+│   ├── Phase 77 — CI/CD
+│   │   ├── 77.1 Build
+│   │   ├── 77.2 Lint
+│   │   ├── 77.3 Test
+│   │   ├── 77.4 Package
+│   │   ├── 77.5 Deploy
+│   │   ├── 77.6 Rollback
+│   │   └── PHASE PROJECT — Automated Pipeline
+│   │
+│   ├── Phase 78 — Containers & Deployment
+│   │   ├── 78.1 Processes
+│   │   ├── 78.2 Environment Variables
+│   │   ├── 78.3 Docker
+│   │   ├── 78.4 Images
+│   │   ├── 78.5 Containers
+│   │   ├── 78.6 Reverse Proxy
+│   │   └── LAB — Containerize an Existing Application
+│   │
+│   ├── Phase 79 — Cloud Fundamentals
+│   │   ├── 79.1 Compute
+│   │   ├── 79.2 Storage
+│   │   ├── 79.3 Networking
+│   │   ├── 79.4 Managed Databases
+│   │   ├── 79.5 IAM
+│   │   └── ARCHITECTURE EXERCISE — Map a Local App to Cloud Services
+│   │
+│   ├── Phase 80 — Observability & Production Debugging
+│   │   ├── 80.1 Logs
+│   │   ├── 80.2 Metrics
+│   │   ├── 80.3 Traces
+│   │   ├── 80.4 Alerts
+│   │   ├── 80.5 Root Cause Analysis
+│   │   └── LAB — Diagnose a Simulated Production Failure
+│   │
+│   └── STORY PROJECT — Production-Style SaaS Application
+│
+│
+├── STORY XI — SYSTEM DESIGN & DISTRIBUTED SYSTEMS
+│
+│   ├── Phase 81 — System Design Foundations
+│   │   ├── 81.1 Functional Requirements
+│   │   ├── 81.2 Scale
+│   │   ├── 81.3 Latency
+│   │   ├── 81.4 Throughput
+│   │   ├── 81.5 Availability
+│   │   ├── 81.6 Capacity Estimation
+│   │   └── PRACTICE — Estimate a Small Service on Paper
+│   │
+│   ├── Phase 82 — Scaling Applications
+│   │   ├── 82.1 Vertical
+│   │   ├── 82.2 Horizontal
+│   │   ├── 82.3 Stateless Services
+│   │   ├── 82.4 Load Balancing
+│   │   └── DESIGN EXERCISE — Scale a Single-Server App
+│   │
+│   ├── Phase 83 — Caching
+│   │   ├── 83.1 Browser
+│   │   ├── 83.2 CDN
+│   │   ├── 83.3 Application Cache
+│   │   ├── 83.4 Distributed Cache
+│   │   ├── 83.5 Invalidation
+│   │   └── DESIGN EXERCISE — Decide What to Cache
+│   │
+│   ├── Phase 84 — Async & Event-Driven Systems
+│   │   ├── 84.1 Queues
+│   │   ├── 84.2 Producers
+│   │   ├── 84.3 Consumers
+│   │   ├── 84.4 Pub/Sub
+│   │   ├── 84.5 Events
+│   │   ├── 84.6 Retries
+│   │   └── MINI PROJECT — Background Job System
+│   │
+│   ├── Phase 85 — Distributed Systems
+│   │   ├── 85.1 Partial Failure
+│   │   ├── 85.2 Network Partitions
+│   │   ├── 85.3 Replication
+│   │   ├── 85.4 Strong Consistency
+│   │   ├── 85.5 Eventual Consistency
+│   │   ├── 85.6 CAP
+│   │   └── DIAGRAM EXERCISE — Reason Through Failure Scenarios
+│   │
+│   ├── Phase 86 — Coordination & Consensus
+│   │   ├── 86.1 Leader Election
+│   │   ├── 86.2 Quorums
+│   │   ├── 86.3 Consensus Intuition
+│   │   ├── 86.4 Distributed Locks
+│   │   ├── 86.5 Leases
+│   │   └── OPTIONAL SIMULATOR — Leader Election
+│   │
+│   ├── Phase 87 — Reliability Patterns
+│   │   ├── 87.1 Timeouts
+│   │   ├── 87.2 Retries
+│   │   ├── 87.3 Backoff
+│   │   ├── 87.4 Circuit Breakers
+│   │   ├── 87.5 Rate Limiting
+│   │   ├── 87.6 Graceful Degradation
+│   │   └── DESIGN PRACTICE — Handle Five Failure Scenarios
+│   │
+│   ├── Phase 88 — Complete System Design
+│   │   └── DESIGN PROJECT — Design One Large System End to End
+│   │
+│   └── STORY PROJECT — Distributed Cloud Application
+│
+│
+├── STORY XII — OTHER CORE CS AREAS
+│
+│   ├── Phase 89 — Artificial Intelligence Foundations
+│   │   ├── 89.1 Search
+│   │   ├── 89.2 Knowledge & Reasoning
+│   │   ├── 89.3 Machine Learning
+│   │   ├── 89.4 Neural Networks
+│   │   ├── 89.5 LLM Overview
+│   │   └── OPTIONAL MINI PROJECT — Simple Classifier
+│   │
+│   ├── Phase 90 — Specialized Computing Platforms
+│   │   ├── 90.1 Mobile
+│   │   ├── 90.2 Embedded / IoT
+│   │   ├── 90.3 GPUs
+│   │   ├── 90.4 Serverless
+│   │   └── EXPLORATION — Choose One and Build a Tiny Prototype
+│   │
+│   ├── Phase 91 — Computing, Society & Ethics
+│   │   ├── 91.1 Privacy
+│   │   ├── 91.2 Bias
+│   │   ├── 91.3 Accessibility
+│   │   ├── 91.4 Intellectual Property
+│   │   ├── 91.5 Sustainability
+│   │   ├── 91.6 Professional Responsibility
+│   │   └── WRITTEN CASE STUDY — Analyze One Ethical Computing Problem
+│   │
+│   └── No story project required here.
+│
+│
+├── STORY XIII — MAINTAINING REAL SOFTWARE
+│
+│   ├── Phase 92 — Working in Existing Codebases
+│   │   ├── 92.1 Read Before Changing
+│   │   ├── 92.2 Trace Execution
+│   │   ├── 92.3 Dependencies
+│   │   ├── 92.4 Boundaries
+│   │   ├── 92.5 Small Safe Changes
+│   │   └── LAB — Add One Feature to an Existing Repository
+│   │
+│   ├── Phase 93 — Legacy Code & Maintenance
+│   │   ├── 93.1 Characterization Tests
+│   │   ├── 93.2 Safe Refactoring
+│   │   ├── 93.3 Backward Compatibility
+│   │   ├── 93.4 Migrations
+│   │   ├── 93.5 Deprecation
+│   │   └── PHASE PROJECT — Modernize a Small Legacy App
+│   │
+│   ├── Phase 94 — Engineering Communication
+│   │   ├── 94.1 README
+│   │   ├── 94.2 Design Documents
+│   │   ├── 94.3 Comments
+│   │   ├── 94.4 Bug Reports
+│   │   ├── 94.5 PR Descriptions
+│   │   └── WRITTEN PRACTICE — Produce an Engineering Documentation Pack
+│   │
+│   └── STORY PROJECT — Maintain, Upgrade & Release Existing Software
+│
+│
+├── STORY XIV — GRAND CAPSTONE
+│   │   "Stop learning isolated topics. Build the entire system."
+│   │
+│   ├── Phase 95 — Capstone Planning
+│   │   ├── 95.1 Problem
+│   │   ├── 95.2 Requirements
+│   │   ├── 95.3 Architecture
+│   │   ├── 95.4 Database Design
+│   │   ├── 95.5 Milestones
+│   │   └── DELIVERABLE — Design Document
+│   │
+│   ├── Phase 96 — Build the Application
+│   │   ├── Interface
+│   │   ├── Backend
+│   │   ├── API
+│   │   ├── Database
+│   │   ├── Authentication
+│   │   ├── Testing
+│   │   ├── CI/CD
+│   │   ├── Deployment
+│   │   └── Observability
+│   │
+│   ├── Phase 97 — Break, Measure & Harden
+│   │   ├── Load Testing
+│   │   ├── Bottlenecks
+│   │   ├── Failure Simulation
+│   │   ├── Security Review
+│   │   ├── Refactoring
+│   │   └── Performance Comparison
+│   │
+│   ├── Phase 98 — Portfolio Release
+│   │   ├── README
+│   │   ├── Architecture Diagram
+│   │   ├── Database Diagram
+│   │   ├── API Documentation
+│   │   ├── Tests
+│   │   ├── Deployment
+│   │   └── Trade-offs
+│   │
+│   └── GRAND PROJECT — Production-Grade Software Platform
+│       ├── Users
+│       ├── Roles
+│       ├── Teams
+│       ├── Projects
+│       ├── Tasks
+│       ├── Search
+│       ├── Notifications
+│       ├── Authentication
+│       ├── Database
+│       ├── Caching
+│       ├── Background jobs
+│       ├── Tests
+│       ├── Security
+│       ├── Docker
+│       ├── CI/CD
+│       ├── Monitoring
+│       └── Production deployment
+│
+│
+└── STORY XV — INTERVIEW & JOB READINESS
+    │
+    │   No artificial "projects" here.
+    │   The activity IS explaining, solving and interviewing.
+    │
+    ├── Phase 99 — Coding Interview Method
+    │   ├── Clarify
+    │   ├── Examples
+    │   ├── Brute Force
+    │   ├── Optimize
+    │   ├── Code
+    │   └── Test
+    │
+    ├── Phase 100 — DSA Interview Practice
+    │   ├── Arrays / Strings
+    │   ├── Hashing
+    │   ├── Trees
+    │   ├── Graphs
+    │   ├── Binary Search
+    │   ├── Backtracking
+    │   └── Dynamic Programming
+    │
+    ├── Phase 101 — CS Fundamentals Interview Review
+    │   ├── OOP
+    │   ├── Operating Systems
+    │   ├── Networking
+    │   ├── Databases
+    │   ├── Concurrency
+    │   └── Security
+    │
+    ├── Phase 102 — Low-Level Design Interviews
+    │   ├── Requirements
+    │   ├── Entities
+    │   ├── Relationships
+    │   ├── Interfaces
+    │   └── Trade-offs
+    │
+    ├── Phase 103 — System Design Interviews
+    │   ├── Requirements
+    │   ├── Estimation
+    │   ├── APIs
+    │   ├── Data
+    │   ├── Architecture
+    │   ├── Scaling
+    │   └── Failure Modes
+    │
+    ├── Phase 104 — Behavioral Interviews
+    │   ├── STAR
+    │   ├── Project Stories
+    │   ├── Failure
+    │   ├── Conflict
+    │   ├── Ownership
+    │   └── Technical Decisions
+    │
+    └── Phase 105 — Final Mock Interview Loop
+        ├── Coding round
+        ├── CS fundamentals round
+        ├── LLD round
+        ├── System design round
+        ├── Behavioral round
+        └── Portfolio walkthrough
+
+are all these tpics in CS.md
+==================================================
+CRITICAL — VERIFY TOPIC GRANULARITY, NOT JUST PRESENCE
+==================================================
+
+Do NOT only answer:
+
+"Yes, all hierarchy topics appear somewhere in CS.md."
+
+I need a deeper curriculum audit.
+
+For EVERY phase and sub-topic in the 105-phase hierarchy, compare it against the actual CS.md lesson bodies and determine whether its current teaching granularity is correct.
+
+A topic being mentioned somewhere does NOT automatically mean it is properly covered.
+
+Classify every hierarchy item as ONE of:
+
+1. STANDALONE
+   The concept is important/deep enough to require its own lesson/sub-phase.
+
+2. MERGED — CORRECT
+   The concept is intentionally taught together with another closely related concept and separating it would create unnecessary fragmentation.
+
+3. MERGED — SHOULD SEPARATE
+   The concept currently exists inside another lesson, but it is substantial enough that learners need dedicated explanation, examples, practice, or progression.
+
+4. SPLIT — CORRECT
+   A broad hierarchy topic has correctly been divided into multiple lessons because it contains distinct concepts.
+
+5. SPLIT — SHOULD MERGE
+   Several lessons are so closely related or individually too small that separating them creates repetition or interrupts the learning story.
+
+6. MENTIONED ONLY
+   The term appears in CS.md, but it is not actually taught sufficiently.
+
+7. MISSING
+   The hierarchy requires the concept but meaningful coverage does not exist.
+
+8. DUPLICATED
+   The same concept is unnecessarily taught in multiple places instead of preview → teach → revisit progression.
+
+9. REVISITED — CORRECT
+   The concept appears multiple times intentionally at increasing depth.
+
+==================================================
+HOW TO DECIDE WHETHER TO MERGE OR SEPARATE
+==================================================
+
+Do NOT decide based on heading size or arbitrary consistency.
+
+Ask:
+
+Does this concept introduce a new mental model?
+
+Does it have enough depth to require its own explanation?
+
+Does it require its own worked example?
+
+Does it require distinct practice?
+
+Is it a prerequisite for several later concepts?
+
+Would combining it with another topic overwhelm a beginner?
+
+Would separating it create a tiny/artificial lesson?
+
+Does understanding Topic B naturally depend on Topic A immediately beforehand?
+
+Are two concepts normally learned together because separating them would create repetition?
+
+Use curriculum logic rather than formatting logic.
+
+Examples:
+
+Bits + Bytes
+→ probably one closely connected lesson.
+
+Binary + Hexadecimal
+→ may be separate sub-lessons inside the same phase.
+
+Stacks + Queues + Deques
+→ one phase is reasonable, but each needs distinct teaching.
+
+Inheritance + Polymorphism
+→ can share a phase because polymorphism naturally follows inheritance, but both must receive meaningful coverage.
+
+Encapsulation + Abstraction
+→ can share a phase but must NOT be treated as synonyms.
+
+SOLID
+→ one phase is appropriate, with SRP/OCP/LSP/ISP/DIP as substantial sub-lessons.
+
+Design Patterns
+→ one phase is appropriate; do not create eight full phases merely because there are eight patterns.
+
+Operating Systems
+→ broad enough that Kernel, Processes, Threads, Scheduling, Virtual Memory and Filesystems need distinct sub-lessons even though they belong to one phase.
+
+HTTP
+→ methods, headers, status codes, cookies and caching belong within the HTTP phase rather than becoming separate phases.
+
+Dynamic Programming
+→ deserves a dedicated phase because it introduces a major algorithmic mental model.
+
+==================================================
+CHECK DEPTH, NOT KEYWORDS
+==================================================
+
+Searching CS.md and finding the word "Bloom Filter" is NOT enough.
+
+For each required topic determine whether the learner actually receives enough to understand:
+
+WHY it exists
+WHAT problem it solves
+HOW it works
+an example or visual when useful
+trade-offs when relevant
+practice when appropriate
+connection to the surrounding curriculum
+
+The required depth should be proportional to the importance of the topic.
+
+Do NOT require every small topic to have all of these sections.
+
+==================================================
+CHECK LEARNING ORDER
+==================================================
+
+Also identify topics that exist but are taught in the wrong order.
+
+Classify those as:
+
+ORDER ISSUE
+
+Example:
+
+If Topic B requires Topic A,
+but Topic A is taught later,
+report it even if both topics exist.
+
+Check dependencies across the entire roadmap.
+
+==================================================
+CHECK PREVIEW VS DUPLICATION
+==================================================
+
+Repeated topics are not automatically wrong.
+
+Distinguish:
+
+PREVIEW
+→ learner sees the idea briefly
+
+FORMAL TEACHING
+→ learner learns it properly
+
+REVISIT
+→ concept returns later with greater depth/application
+
+This is GOOD.
+
+But:
+
+FULL TEACHING
+→ same FULL TEACHING again
+→ same explanation again
+
+is unnecessary duplication.
+
+For example, hardware may introduce cache conceptually and Computer Architecture may revisit cache technically.
+
+That is intentional progression, not duplication.
+
+==================================================
+OUTPUT
+==================================================
+
+Before modifying CS.md, give me an audit table:
+
+| Phase | Hierarchy Topic | Current Location | Status | Depth | Recommendation |
+|------|-----------------|------------------|--------|-------|----------------|
+| 24 | Polymorphism | Phase 24 | MERGED — CORRECT | Good | Keep |
+| 26 | DIP | Phase 26 | STANDALONE SUB-LESSON | Good | Keep |
+| ... | ... | ... | ... | ... | ... |
+
+Do this for the entire 105-phase hierarchy.
+
+Then provide four important lists:
+
+A. Topics genuinely missing
+
+B. Topics mentioned but under-taught
+
+C. Topics that should be separated
+
+D. Topics that should be merged
+
+Also provide:
+
+E. Correct intentional revisits
+
+F. Unnecessary duplication
+
+G. Learning-order/dependency problems
+
+==================================================
+VERY IMPORTANT
+==================================================
+
+DO NOT change CS.md during this audit.
+
+DO NOT add phases simply because a topic is important.
+
+DO NOT force the hierarchy into a one-topic = one-phase structure.
+
+DO NOT merge lessons merely to reduce phase count.
+
+DO NOT split lessons merely to match headings.
+
+First determine the pedagogically correct structure.
+
+The goal is:
+
+ZERO → COMPUTER SCIENCE FUNDAMENTALS → PROGRAMMER
+→ SOFTWARE ENGINEER → COMPUTER SCIENTIST → JOB READY
+
+The learner should encounter concepts at the right time,
+at the right depth,
+and with the right amount of separation.
+
+At the end tell me explicitly:
+
+1. Are all required topics meaningfully taught?
+2. Which are only mentioned but not taught?
+3. Which currently merged topics should remain merged?
+4. Which currently merged topics should be separated?
+5. Which separate topics should actually be merged?
+6. Which repeated topics are healthy revisits?
+7. Which repeated topics are true duplication?
+8. Are there prerequisite/order problems?
+9. Would you change the 105-phase hierarchy itself? If yes, explain WHY before making any changes.
+
+STOP after the audit.
+
+Do not edit, commit, or push anything.
+</user_query>

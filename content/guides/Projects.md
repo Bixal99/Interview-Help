@@ -322,8 +322,9 @@ Whichever you pick, the finished project must:
 - Use at least **two functions in two separate files** that import from each other (no single-file scripts).
 - Use variables, `if`/`else`, and at least one loop as the core control flow.
 - Use a collection (list or dict) from Phase 10 to hold the running data.
-- Persist data to a file between runs, using the `with open(...)` pattern from Phase 11.
+- Persist data to a file between runs, using the `with open(...)` pattern from Phase 11 (prefer **JSON** via `json.load`/`json.dump` for structured state, or plain text if the brief stays simpler).
 - Handle at least one invalid-input case with `try`/`except` from Phase 12, instead of crashing.
+- Optional but recommended: create a project `.venv` (Phase 14) even if you only use the standard library.
 - Give the user one clear main action and keep all other features secondary.
 
 #### TECH STACK
@@ -2143,8 +2144,8 @@ No paid API, commercial license, or paid cloud resource is required. Use only ge
 6. **Phase 36 - Hashing:** Add hash-based indexes and an LRU cache for popular searches; define eviction and invalidation rules.
 7. **Phases 39-40 - Sorting & Searching:** Sort by distance, date, and popularity and use binary search where a sorted in-memory structure is justified.
 8. **Phase 41 - Graphs:** Model users and resources as a graph and add breadth-first recommendations within a chosen hop limit.
-9. **Phases 43-46 - Greedy, Backtracking, Dynamic Programming & Specialized Structures:** Use two-pointer, sliding-window, or greedy patterns for one suitable feed or scheduling feature and explain the choice.
-10. **Phase 48 - DSA Consolidation:** Refactor the domain into cohesive classes and produce a low-level design for the borrow workflow.
+9. **Phases 43-46 - Greedy, Backtracking, Dynamic Programming & Specialized Structures:** Use two-pointer, sliding-window, or greedy patterns for one suitable feed or scheduling feature and explain the choice; use a trie or Union-Find only if a real feature needs it.
+10. **Phase 48 - DSA Consolidation:** Combine structures under load - e.g. an in-memory LRU (hash map + doubly linked list) for popular searches, with both structures kept in sync - not a redesign of the domain class model (that is Phase 29/30).
 11. **Phases 50, 52-53 - Memory, Operating Systems & Concurrency:** Run API and worker processes separately, handle signals, limit concurrency, and shut down without losing accepted work.
 12. **Phases 55-57 - Networking Foundations, TCP/UDP/Sockets & DNS:** Define the browser-to-API network path, timeouts, connection reuse, and one simulated network failure.
 13. **Phases 58-59 - HTTP & API Design:** Publish versioned HTTP endpoints with validation, pagination, idempotency, and consistent error responses.

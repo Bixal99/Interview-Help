@@ -161,6 +161,8 @@ This roadmap is being rebuilt into the 15-story shape above in batches, so that 
 | A     | Curriculum gap repair Stories I–III (Phases 1–20) — content only, no lean-template rewrite                                                  | Done this turn - missing/under-taught concepts filled; preview→formal labeled; Phase Index exit criteria updated; lean rewrite still deferred |
 | B     | Curriculum gap repair Stories IV–V (Phases 21–48) — content only, no lean-template rewrite                                                  | Done - 25→29 & 32→42 progressions labeled; 36→37 transition fixed; Dijkstra/topo taught; Union-Find/Bloom taught; Phase 48 = LRU consolidation; portfolio Phase 48 step corrected; Composio resources added for §41.3/§46.2/§46.3 (replaced unverified topo ID); lean rewrite still deferred |
 | C     | Curriculum gap repair Stories VI–VIII (Phases 49–65) — content only, no lean-template rewrite                                               | Done - 49 ISA/pipeline; 50 pointers (systems); 51 formal-after-5; 52 filesystem; 54 applies FS; 61 GROUP BY/HAVING/CTEs; 63/64/65 trade-offs & ACID/isolation & repl/part/shard clarity; Story VII untouched; Composio YouTube+web+fetch pass completed for new SEE IT blocks; lean rewrite still deferred |
+| D     | Curriculum gap repair Stories IX–X (Phases 66–80) — content only, no lean-template rewrite                                                  | Done this turn - 66 foundations; 67 owns hash/encrypt/sign + TLS + passwords; 68 MFA/RBAC; 69 rate limiting; 78 env vs secrets; 79 shared-responsibility wording; 80 logs/metrics/traces + SLI/SLO; Story XI untouched; Composio resources; lean rewrite still deferred |
+| E     | Curriculum gap repair Stories XI–XII (Phases 81–91) — content only, no lean-template rewrite                                                | Done this turn - 81 condensed to process/map/estimation; 82–87 clear ownership; CAP≠ACID C; 86 vs 87; 88 learning capstone; 89 broad AI; 90 platform compare; 91 ethics scenarios; Phase 92+ untouched; Composio resources; lean rewrite still deferred |
 
 
 Every phase number in the Phase Index below now has a real, permanent home in this document. Rows marked "current" already have a body section at that number - the prose there is the relocated original, not yet rewritten to the newer template. Rows with no annotation are "planned": the number is reserved and linked from elsewhere, but the section has not been written yet and will appear in the batch noted in [Migration status](#migration-status).
@@ -297,10 +299,10 @@ Every phase number in the Phase Index below now has a real, permanent home in th
 
 | #   | Phase                                      | Goal                         | Ready to continue when...                             |
 | --- | ------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| 66  | Security Foundations *(current)*           | Threats and trust boundaries | Name your system's trust boundaries and threats       |
-| 67  | Cryptography for Developers *(current)*    | Use crypto, don't invent it  | Explain hashing vs encryption vs signing correctly    |
-| 68  | Authentication & Authorization *(current)* | Prove and permit identity    | Explain sessions vs JWT and design a permission check |
-| 69  | Application Security *(current)*           | Stop the common attacks      | Prevent SQLi, XSS, and CSRF with the matching defenses |
+| 66  | Security Foundations *(current)*           | Threats, trust boundaries, CIA | Name trust boundaries and a light STRIDE threat        |
+| 67  | Cryptography for Developers *(current)*    | Hash / encrypt / sign + TLS    | Explain hashing vs encryption vs signing; sketch TLS   |
+| 68  | Authentication & Authorization *(current)* | Sessions, MFA, RBAC, JWT       | Explain MFA factors and an RBAC permission check       |
+| 69  | Application Security *(current)*           | OWASP basics + rate limits     | Prevent SQLi/XSS/CSRF; apply a basic rate limit        |
 | 70  | Human-Computer Interaction *(current)*     | Software has users           | Critique and redesign a confusing interface           |
 | 71  | Graphics & Interactive Computing *(current)* | Pixels, frames, input        | Explain a basic rendering/input loop                  |
 
@@ -317,8 +319,8 @@ Every phase number in the Phase Index below now has a real, permanent home in th
 | 76  | Development Process *(current)*                                  | Ship predictably                | Explain your team's workflow and why each gate exists    |
 | 77  | CI/CD *(current)*                                                | Automate the path to production | Explain a pipeline stage and what it would catch         |
 | 78  | Containers & Deployment *(current)*                              | Package and ship                | Containerize and run a small service                     |
-| 79  | Cloud Fundamentals *(current)*                                   | Someone else's computer         | Explain compute/storage/network as cloud building blocks |
-| 80  | Observability & Production Debugging *(current)*                 | See what's actually happening   | Read logs/metrics/traces to find a live problem          |
+| 79  | Cloud Fundamentals *(current)*                                   | Shared responsibility           | Explain IaaS/PaaS/SaaS and who owns which risk layer     |
+| 80  | Observability & Production Debugging *(current)*                 | Logs, metrics, traces           | Separate logs/metrics/traces; define a simple SLI/SLO    |
 
 
 ### Story XI - System Design & Distributed Systems
@@ -326,11 +328,11 @@ Every phase number in the Phase Index below now has a real, permanent home in th
 
 | #   | Phase                                 | Goal                                 | Ready to continue when...                                    |
 | --- | ------------------------------------- | ------------------------------------ | ------------------------------------------------------------ |
-| 81  | System Design Foundations *(current)* | One server to many                   | Walk a system from single-server to load-balanced            |
+| 81  | System Design Foundations *(current)* | How to think + estimate          | Clarify, estimate, draw simplest shape, name next lever      |
 | 82  | Scaling Applications *(current)*      | Handle more load                     | Identify a bottleneck and the fix that removes it            |
 | 83  | Caching *(current)*                   | Trade staleness for speed            | Choose a cache strategy and explain its invalidation risk    |
 | 84  | Asynchronous & Event-Driven Systems *(current)* | Decouple with queues/events  | Explain when a queue beats a direct call                     |
-| 85  | Distributed Systems *(current)*       | Reason about failure across machines | Explain the CAP theorem with a concrete example              |
+| 85  | Distributed Systems *(current)*       | CAP + consistency across machines | Explain CAP with a concrete partition (≠ ACID C)           |
 | 86  | Coordination & Consensus *(current)*  | Agree despite failure                | Explain what a consensus algorithm buys you                  |
 | 87  | Reliability Patterns *(current)*      | Survive partial failure              | Explain retries, timeouts, circuit breakers, and their risks |
 | 88  | Complete System Design *(current)*    | Put it all together                  | Run a full system design walkthrough unprompted              |
@@ -341,9 +343,9 @@ Every phase number in the Phase Index below now has a real, permanent home in th
 
 | #   | Phase                               | Goal                         | Ready to continue when...                                     |
 | --- | ----------------------------------- | ---------------------------- | ------------------------------------------------------------- |
-| 89  | Artificial Intelligence Foundations *(current)* | What ML/AI actually is       | Explain the difference between classical ML and deep learning |
-| 90  | Specialized Computing Platforms *(current)*     | Mobile, embedded, and beyond | Name a constraint unique to one specialized platform          |
-| 91  | Computing, Society & Ethics *(current)*         | Software has consequences    | Write a short case-study response on a real ethical trade-off |
+| 89  | Artificial Intelligence Foundations *(current)* | Broad AI/ML survey (not LLM-only) | Separate search/planning, classical ML, and deep learning |
+| 90  | Specialized Computing Platforms *(current)*     | Platform constraint comparison   | Compare mobile/embedded/edge by scarce resource            |
+| 91  | Computing, Society & Ethics *(current)*         | Ethical engineering scenarios    | Write case responses with stakeholders and mitigations     |
 
 
 ### Story XIII - Maintaining Real Software
@@ -7269,7 +7271,7 @@ Queues rarely star on their own - they're the *engine* underneath breadth-first 
 | Easy       | Implement Stack using Queues                           |
 | Medium     | Design Circular Queue                                  |
 | Medium     | Sliding Window Maximum (monotonic deque)               |
-| Hard       | Design a rate limiter (revisited properly in Phase 81) |
+| Hard       | Design a rate limiter (basic control in Phase 69; distributed design depth in Story XI) |
 
 
 **WHY THE NEXT TOPIC IS NEEDED - Recursion:** Stacks and queues are about *managing order explicitly, with data you hold in your own hands*. Recursion is what happens when you let the *call stack itself* a structure the language runtime manages for you - do that job.
@@ -14608,19 +14610,156 @@ Design a normalized schema (Phase 62.1) for a small e-commerce system (users, pr
 
 **Track:** Data & Security
 
-**WHAT YOU WILL BE ABLE TO DO:** Name your system's trust boundaries and threats, and explain why plain HTTP over TCP is an unsafe default - confidentiality, integrity, and authentication via TLS/HTTPS.
+**WHAT YOU WILL BE ABLE TO DO:** Name your system's trust boundaries and threats (CIA + a light STRIDE pass), and say why "encrypt the wire later" is not a substitute for knowing who you trust.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 55 (packets cross machines you do not control), Phase 56 (TCP delivers bytes, not trust), Phase 58 (HTTP is readable text on that channel).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 55 (packets cross machines you do not control), Phase 56 (TCP delivers bytes, not trust), Phase 58 (HTTP is readable text on that channel), Phase 60-65 (data at rest has its own attackers).
 
-Security is not one final chapter bolted onto the end of this roadmap - as the "System / Weakness / Attack / Consequence / Defense / Trade-off" pattern below shows, every defense in this phase exists as a direct response to a weakness in a system you've already built in an earlier phase.
+Security is not one final chapter bolted onto the end of this roadmap - every later defense (TLS, passwords, sessions, injection fixes) answers a weakness you can already name once you draw trust boundaries.
 
-## 66.1 TLS/HTTPS - Securing the Connection Itself
+## 66.1 Threats, Trust Boundaries & the CIA Triad
 
-**WHY YOU ARE LEARNING THIS:** Every layer built in Phase 55 and Phase 58 was designed for a network where nobody was listening. IP routes a packet through machines you do not control and cannot see. TCP guarantees the bytes arrive intact, and says nothing about who else read them on the way. HTTP writes credentials, session cookies, and personal data as plain, human-readable text into those bytes. The result is that on any shared network, every byte of every request is available to anyone on the path, and can be modified in flight without either endpoint noticing. TLS exists because the previous limitation was not a performance ceiling or a correctness bug but an assumption of trust that the internet's design never justified.
+**WHY YOU ARE LEARNING THIS:** Jumping straight into TLS recipes teaches *a* defense before you can say *what* you are defending. Foundations mean: what must stay secret, what must stay untampered, who is allowed to act, and where the system stops trusting the outside world. Phase 67 owns the crypto toolkit (hashing, encryption, signing, TLS). This phase owns the map those tools sit on.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
-- Best animated explanation: [SSL, TLS, HTTPS Explained (ByteByteGo)](https://www.youtube.com/watch?v=j9QmMEWmcfo); [Trust Boundaries vs Attack Surfaces (Practical DevSecOps)](https://www.youtube.com/watch?v=wkqzZZBe6jE) *(Composio YouTube)* - walks the handshake as a sequence diagram and, importantly, explains *why* the protocol switches from asymmetric to symmetric encryption partway through, which is the part almost every other explanation glosses over
+- Best framing: [Trust Boundaries vs Attack Surfaces (Practical DevSecOps)](https://www.youtube.com/watch?v=wkqzZZBe6jE) *(Composio YouTube)*
+- Alternative: [STRIDE Threat Modeling for Beginners (Netsec Explained)](https://www.youtube.com/watch?v=rEnJYNkUde0) *(Composio YouTube)* - Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, Elevation of privilege
+- Written: [OWASP Threat Modeling](https://owasp.org/www-community/Threat_Modeling); Cloudflare / NIST high-level CIA explanations
+- Practice: draw one box diagram of a toy web app (browser, TLS edge, app server, DB) and mark every arrow that crosses a trust boundary
+
+**STEP-BY-STEP EXPLANATION**
+
+**CIA triad** (the three properties most defenses buy):
+
+| Letter | Means | Broken when... |
+| ------ | ----- | -------------- |
+| **Confidentiality** | Only intended parties can read | Packet sniffing, leaked DB dump, chatty logs |
+| **Integrity** | Data is not silently altered | Tampered cookies, bit-flips, unsigned updates |
+| **Availability** | The service can be used when needed | DDoS, lockout-as-DoS, accidental `DROP TABLE` |
+
+**Trust boundary:** a line where data or control crosses from a less-trusted place to a more-trusted place (browser → your API; internet → VPC; user input → SQL engine; CI runner → production secrets). Attacks concentrate on those lines.
+
+**Light STRIDE** (name the threat class, do not run a full pen-test course):
+
+1. **S**poofing identity  
+2. **T**ampering with data  
+3. **R**epudiation (denying an action without audit)  
+4. **I**nformation disclosure  
+5. **D**enial of service  
+6. **E**levation of privilege  
+
+```text
+Browser  --HTTP-->  Your API  --SQL-->  Database
+   ^                   ^                  ^
+   |                   |                  |
+ untrusted           semi-trusted      most trusted
+                     (after auth)
+
+Every arrow is a trust boundary. TLS protects the first hop in transit.
+Password hashing protects secrets if the DB dump leaks.
+AuthZ checks stop elevation even after AuthN succeeds.
+Parameterized SQL stops "data" becoming "instructions" at the DB boundary.
+```
+
+**PICTURE IT LIKE THIS**
+
+A museum: the street is untrusted, the lobby is semi-trusted, the vault is trusted. Guards (auth), locked cases (encryption), visitor badges (sessions), and "do not touch" ropes (authorization) each protect a different boundary. Buying a better lock for the street door (TLS) does not replace knowing which rooms are vaults.
+
+**SMALL WORKING EXAMPLE**
+
+```python playground=cs-phase-66-trust-map
+# Sketch trust boundaries for a tiny app. Not crypto - ownership of risk.
+
+components = ["browser", "load_balancer", "app", "postgres", "object_storage"]
+edges = [
+    ("browser", "load_balancer", "public internet"),
+    ("load_balancer", "app", "private VPC"),
+    ("app", "postgres", "private VPC + DB creds"),
+    ("app", "object_storage", "cloud IAM"),
+]
+
+print("Trust map:")
+for src, dst, zone in edges:
+    print(f"  {src:14} -> {dst:14}  [{zone}]")
+
+threats = {
+    "browser->load_balancer": "eavesdropping / MITM if no TLS (Phase 67)",
+    "app->postgres": "SQLi if input crosses as instructions (Phase 69)",
+    "stolen postgres dump": "password hashes must not be reversible (Phase 67)",
+}
+print("\nNamed risks:")
+for k, v in threats.items():
+    print(f"  {k}: {v}")
+```
+
+**PRACTICE UNTIL IT FEELS FAMILIAR**
+
+
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | Define CIA in your own words with one failure example each |
+| Medium | STRIDE a login form: name one concrete threat per letter (skip fancy tooling) |
+| Hard | Draw trust boundaries for "mobile app + API + managed DB + third-party email" |
+
+
+**WHY THE NEXT TOPIC IS NEEDED - Cryptography for Developers:** Foundations name *what* must be protected. You still need the developer toolbox that actually protects confidentiality and integrity in transit and at rest - hashing vs encryption vs signing, TLS/HTTPS, and password hashing. That is Phase 67.
+
+---
+
+> **Phase 66 complete?** [Continue to Phase 67](#phase-67)
+
+---
+
+
+
+# PHASE 67 - Cryptography for Developers
+
+**Track:** Data & Security
+
+**WHAT YOU WILL BE ABLE TO DO:** Explain hashing vs encryption vs signing; walk a TLS/HTTPS handshake at developer depth; and store passwords with a slow adaptive hash (Argon2id / bcrypt) - never plaintext, never a fast general-purpose hash alone.
+
+**WHAT YOU SHOULD KNOW FIRST:** Phase 66 (trust boundaries and CIA - you know *why* the channel and the database need protection), Phase 55-58 (HTTP rides on TCP across untrusted networks).
+
+## 67.1 Hashing vs Encryption vs Signing
+
+**WHY YOU ARE LEARNING THIS:** Interviews and production bugs both start from mixing these three words. They are different tools: one is one-way fingerprinting, one is reversible secrecy, one is proof of origin/integrity. TLS and password storage (next sections) are *applications* of these ideas - not synonyms for "crypto."
+
+**SEE IT BEFORE YOU MEMORIZE IT**
+
+- [7 Cryptography Concepts EVERY Developer Should Know (Fireship)](https://www.youtube.com/watch?v=NuyzuNBFWxQ) *(Composio YouTube)*
+- [Hashing Algorithms and Security (Computerphile)](https://www.youtube.com/watch?v=b4b8ktEV4Bg) *(Composio YouTube)*
+- [Hashing and Digital Signatures (Professor Messer)](https://www.youtube.com/watch?v=EcGmQjl6XEo) *(Composio YouTube)*
+- Written: libsodium / OWASP crypto cheat-sheet high-level guidance - prefer battle-tested libraries; never invent protocols
+
+**STEP-BY-STEP EXPLANATION**
+
+
+| Tool | Direction | Main job | Example use |
+| ---- | --------- | -------- | ----------- |
+| **Hash** | One-way | Integrity / fingerprints / password storage (with slow KDF) | `SHA-256(file)`, Argon2id(password) |
+| **Encryption** | Reversible with a key | Confidentiality | TLS record layer, sealed DB fields |
+| **Signing** | Private key signs; public verifies | Authenticity + integrity | TLS certificates, JWT `RS256`, software updates |
+
+Rules of thumb: hashes are not encryption; encrypting a password for login is usually the wrong design (use a slow hash); a signature proves who produced the bytes, not that the bytes are secret.
+
+```text
+Hash:        message ──► digest          (cannot get message back)
+Encrypt:     plaintext + key ──► ciphertext ──(+ key)──► plaintext
+Sign:        message + private key ──► signature
+             verify(message, signature, public key) → ok / fail
+```
+
+**WHY THE NEXT TOPIC IS NEEDED - TLS/HTTPS:** Phase 66 said the HTTP channel is untrusted. TLS is how browsers and servers combine asymmetric crypto (handshake / certificates) with symmetric crypto (bulk data) to buy confidentiality, integrity, and server authentication on that channel.
+
+---
+
+## 67.2 TLS/HTTPS - Securing the Connection Itself (Canonical)
+
+**WHY YOU ARE LEARNING THIS:** Every layer built in Phase 55 and Phase 58 was designed for a network where nobody was listening. IP routes a packet through machines you do not control and cannot see. TCP guarantees the bytes arrive intact, and says nothing about who else read them on the way. HTTP writes credentials, session cookies, and personal data as plain, human-readable text into those bytes. The result is that on any shared network, every byte of every request is available to anyone on the path, and can be modified in flight without either endpoint noticing. TLS exists because the previous limitation was not a performance ceiling or a correctness bug but an assumption of trust that the internet's design never justified. Phase 66 named the trust boundary; this section is the canonical developer treatment of the protocol that defends it.
+
+**SEE IT BEFORE YOU MEMORIZE IT**
+
+- Best animated explanation: [SSL, TLS, HTTPS Explained (ByteByteGo)](https://www.youtube.com/watch?v=j9QmMEWmcfo) *(Composio YouTube)* - walks the handshake as a sequence diagram and, importantly, explains *why* the protocol switches from asymmetric to symmetric encryption partway through
 - Alternative: [SSL, TLS, HTTP, HTTPS Explained (PowerCert Animated Videos)](https://www.youtube.com/watch?v=hExRDVZHhig) - the clearest fully-animated version, and it places TLS correctly in the layer stack from Phase 55
 - Another angle: [Public Key Cryptography (Computerphile)](https://www.youtube.com/watch?v=GSIDS_lvRv4) explains the underlying mathematics without requiring any, and [What is Public Key Infrastructure? (IBM Technology)](https://www.youtube.com/watch?v=0ctat6RBrFo) covers the certificate-authority trust chain, which is the part that turns "encrypted" into "encrypted *to the right person*"
 - Interactive simulator: [Wireshark](https://www.wireshark.org/) is the essential tool here. Capture a page load, filter on `tls.handshake`, and read the real `ClientHello` and `ServerHello`. Then set `SSLKEYLOGFILE` in your environment, point Wireshark at it, and watch the same traffic become readable, which demonstrates exactly what the session key protects. Complement it with [SSL Labs' Server Test](https://www.ssllabs.com/ssltest/), which grades any public site's TLS configuration and explains every deduction, and [badssl.com](https://badssl.com/), which hosts deliberately broken certificates so you can see each failure mode your browser guards against
@@ -14862,27 +15001,13 @@ openssl x509 -req -in site.csr -CA ca.crt -CAkey ca.key -CAcreateserial \
 | Hard       | Write down the complete threat model for 0-RTT data: what an attacker can do, which HTTP methods are therefore safe to send in it, and connect the answer back to idempotency from Phase 59 |
 
 
-**WHY THE NEXT TOPIC IS NEEDED - Authentication:** TLS protects data *in transit*. It says nothing about *who* is on the other end of that now-encrypted connection. HTTP is stateless (Phase 58) - the server forgets who you are the instant a response is sent - so proving and remembering identity across multiple requests needs its own mechanism.
+**WHY THE NEXT TOPIC IS NEEDED - Password Hashing:** TLS protects secrets *in transit*. The login password still has to be verified later (Phase 68), and storing it the naive way turns your database into the most dangerous asset you own. That storage problem is the next section.
 
 ---
 
-> **Phase 66 complete?** [Continue to Phase 67](#phase-67)
+## 67.3 Password Hashing
 
----
-
-
-
-# PHASE 67 - Cryptography for Developers
-
-**Track:** Data & Security
-
-**WHAT YOU WILL BE ABLE TO DO:** Explain hashing vs encryption vs signing correctly, and store passwords with a slow adaptive hash (Argon2id / bcrypt) - never plaintext, never a fast general-purpose hash alone.
-
-**WHAT YOU SHOULD KNOW FIRST:** Phase 66 (TLS already used asymmetric and symmetric crypto - this phase is the developer-facing toolbox, especially passwords at rest).
-
-## 67.1 Password Hashing
-
-**WHY YOU ARE LEARNING THIS:** Sessions in Phase 68 assumed a login had already succeeded, and left the actual verification as a black box. Opening that box exposes an uncomfortable fact: to check a password, the naive design stores the password, and storing it means that the database from Phase 60, with its backups, its read replicas, its logs, and its administrators, now holds every user's real secret in readable form. Because people reuse passwords across services, a breach of your database becomes a breach of your users' email, banking, and work accounts. Password hashing exists because the previous limitation is not that verification was slow or awkward, but that the only known way to do it made your own storage layer the most dangerous asset you own.
+**WHY YOU ARE LEARNING THIS:** When Phase 68 builds login and sessions, verification must not require storing the real password. Storing it means that the database from Phase 60 - with its backups, read replicas, logs, and administrators - holds every user's secret in readable form. Because people reuse passwords across services, a breach of your database becomes a breach of email, banking, and work accounts. Password hashing exists because the previous limitation is not that verification was slow, but that the only naive way to do it made your storage layer the most dangerous asset you own.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -15166,7 +15291,7 @@ def is_breached(password: str) -> bool:
 | Hard       | Read [NIST SP 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html) section 5.1.1 and rewrite your application's password policy to match it, listing every rule you had to delete                                  |
 
 
-**WHY THE NEXT TOPIC IS NEEDED - JWT & OAuth:** Server-side sessions (Phase 68) work well for a single application with one team's servers. They get awkward once identity needs to work *across* multiple independent services (a mobile app, a partner's website using your login) - checking a central session store on every single request from every service becomes a bottleneck and a tight coupling problem.
+**WHY THE NEXT TOPIC IS NEEDED - Authentication & Authorization:** Crypto protects channels and stored secrets. It still does not answer *who* is calling or *what* they may do. Sessions, MFA, RBAC, JWT, and OAuth live in Phase 68.
 
 ---
 
@@ -15180,9 +15305,9 @@ def is_breached(password: str) -> bool:
 
 **Track:** Data & Security
 
-**WHAT YOU WILL BE ABLE TO DO:** Explain sessions vs JWT, design a permission check (authentication vs authorization), and choose cookie attributes that close common session theft paths.
+**WHAT YOU WILL BE ABLE TO DO:** Explain sessions vs JWT; teach MFA and RBAC at working depth; design a permission check (authentication vs authorization); and choose cookie attributes that close common session theft paths.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 58 (HTTP is stateless - identity must be carried somehow), Phase 66 (credentials travel under TLS), Phase 67 (password verification uses a slow hash).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 58 (HTTP is stateless - identity must be carried somehow), Phase 66 (trust boundaries), Phase 67 (TLS in transit; slow password hashes at rest).
 
 ## 68.1 Authentication, Sessions & Cookies
 
@@ -15204,7 +15329,7 @@ A cookie is nothing more than a small key-value string that a server asks a brow
 
 In the **server-side session** model, the cookie holds only an opaque, unguessable identifier. All the real state, meaning which user this is and what they are allowed to do, lives in a store on the server keyed by that identifier. The identifier is meaningless to anyone who steals it in isolation, and it is also the only thing needed to impersonate the user, which is why it must be generated from a cryptographically secure random source and must be long enough that guessing is infeasible. Sequential or predictable session ids are a complete authentication bypass.
 
-In the **signed-cookie** model, the cookie holds the actual data along with a signature computed with a server-held secret. The server does not store anything. On each request it recomputes the signature and rejects the cookie if it does not match, which makes the data tamper-evident without being secret. This is a middle point between the two extremes and it inherits the revocation problem discussed in Phase 68.2.
+In the **signed-cookie** model, the cookie holds the actual data along with a signature computed with a server-held secret. The server does not store anything. On each request it recomputes the signature and rejects the cookie if it does not match, which makes the data tamper-evident without being secret. This is a middle point between the two extremes and it inherits the revocation problem discussed in Phase 68.3.
 
 The cookie **attributes** are where the security actually lives, and each one closes a specific attack. `HttpOnly` makes the cookie invisible to JavaScript, which means an XSS vulnerability can no longer read the session id, converting a total account takeover into a lesser problem. `Secure` prevents the cookie from being sent over plain HTTP, which closes the window where an accidental HTTP request leaks the session to the network. `SameSite` controls whether the cookie is attached to cross-site requests, and setting it to `Lax` or `Strict` is what makes CSRF from Phase 69 largely structural rather than something you must defend against per endpoint. `Domain` and `Path` scope where the cookie is sent, and over-broad scoping on a shared domain leaks sessions between unrelated applications. `Max-Age` or `Expires` determines whether the cookie survives closing the browser.
 
@@ -15310,7 +15435,7 @@ CORRECT (regenerate on privilege change)
 **WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
 
 
-| Concern                   | Server-side session                  | Signed cookie                | Stateless token (Phase 68.2)       |
+| Concern                   | Server-side session                  | Signed cookie                | Stateless token (Phase 68.3)       |
 | ------------------------- | ------------------------------------ | ---------------------------- | ---------------------------- |
 | Where state lives         | server store                         | client, tamper-evident       | client, tamper-evident       |
 | Lookup per request        | one store read                       | none, verify signature       | none, verify signature       |
@@ -15435,7 +15560,7 @@ print("after logout:", resolve(sid))
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW**
 
-"HTTP is stateless, so how does a site remember that I am logged in" is the opening question, and the expected answer names the cookie as the transport and the session store as the memory. From there the questions get specific. "Where should the session id come from" is testing whether you know that a predictable id is a full bypass. "Walk me through what `HttpOnly` and `SameSite` each prevent" is testing whether you understand cookies as a security surface rather than a storage mechanism. "What is the difference between authentication and authorization, and where have you seen the distinction go wrong" is extremely common and the strong answer is the object-ownership check in the code above. Expect also "what must happen at login besides checking the password," where regenerating the session id is the answer being fished for, and "how do you invalidate a session," which is the setup for the JWT comparison in Phase 68.2.
+"HTTP is stateless, so how does a site remember that I am logged in" is the opening question, and the expected answer names the cookie as the transport and the session store as the memory. From there the questions get specific. "Where should the session id come from" is testing whether you know that a predictable id is a full bypass. "Walk me through what `HttpOnly` and `SameSite` each prevent" is testing whether you understand cookies as a security surface rather than a storage mechanism. "What is the difference between authentication and authorization, and where have you seen the distinction go wrong" is extremely common and the strong answer is the object-ownership check in the code above. Expect also "what must happen at login besides checking the password," where regenerating the session id is the answer being fished for, and "how do you invalidate a session," which is the setup for the JWT comparison in Phase 68.3.
 
 **PRACTICE UNTIL IT FEELS FAMILIAR**
 
@@ -15453,17 +15578,90 @@ print("after logout:", resolve(sid))
 | Medium     | Move your session store from process memory to Redis, then run two application instances behind a load balancer and confirm a login on one is visible to the other                                                |
 | Medium     | Complete three labs from [PortSwigger's authentication section](https://portswigger.net/web-security/authentication) and write down the root cause of each                                                        |
 | Hard       | Implement login rate limiting and account lockout, then explain how your design avoids becoming a denial-of-service vector against legitimate users                                                               |
-| Hard       | Add a "log out of all devices" feature to a session-based app, then explain why the equivalent is hard for stateless tokens (Phase 68.2)                                                                                |
+| Hard       | Add a "log out of all devices" feature to a session-based app, then explain why the equivalent is hard for stateless tokens (Phase 68.3)                                                                                |
 | Hard       | Design and implement remember-me functionality with a separate long-lived token, and write down its threat model versus reusing the session cookie with a long expiry                                             |
 | Hard       | Implement TOTP two-factor authentication from scratch against RFC 6238, then explain what session state must change the moment the second factor is verified                                                      |
 | Hard       | Read the [OWASP Session Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) and audit your own implementation against every item, listing what you failed |
 
 
-**WHY THE NEXT TOPIC IS NEEDED - Password Hashing:** Sessions solve "remember who's logged in." They say nothing about how the login credentials themselves should be stored, and storing them the naive way is one of the most consequential mistakes in this entire roadmap.
+**WHY THE NEXT TOPIC IS NEEDED - MFA & RBAC:** A password (+ session) proves *something you know*. Real systems add *something you have* (MFA) and then decide *what that identity may do* (authorization / RBAC) - otherwise every logged-in user is effectively an admin.
 
-## 68.2 JWT & OAuth
+---
 
-**WHY YOU ARE LEARNING THIS:** Server-side sessions from Phase 68 assumed one application, owned by one team, running against one session store. Two things break that assumption. First, scale and architecture: once a request can land on any of fifty service instances across three regions, every one of them needs to consult that store, and it becomes a shared stateful dependency on the hot path of every request in the system. Second, and more fundamentally, sessions have no answer at all for a *different company's* application needing to act on your user's behalf. The only mechanism available in the session model is for the user to hand over their password, which grants unlimited, unrevocable, unauditable access to everything. JWT addresses the first limitation by making the token self-verifying. OAuth addresses the second by making delegation a first-class operation instead of credential sharing.
+## 68.2 MFA & RBAC
+
+**WHY YOU ARE LEARNING THIS:** Phase 68.1 established "who is this session?" Password theft, phishing, and credential stuffing still defeat single-factor login. **MFA** adds another factor. Separately, knowing *who* someone is does not say whether they may delete a user or read payroll - that is **authorization**, commonly expressed as **RBAC** (roles → permissions).
+
+**SEE IT BEFORE YOU MEMORIZE IT**
+
+- MFA: [MFA Explained (Hired In IT)](https://www.youtube.com/watch?v=BxkkC6uvv7A) *(Composio YouTube)*; TOTP labs already in Hard practice above
+- RBAC vs ABAC: [RBAC vs ABAC (IBM Technology)](https://www.youtube.com/watch?v=rvZ35YW4t5k) *(Composio YouTube)*
+- Written: [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html); [NIST on MFA](https://www.nist.gov/itl/applied-cybersecurity/tig/back-basics-multi-factor-authentication)
+
+**STEP-BY-STEP EXPLANATION**
+
+**Factors** (pick at least two independent classes for MFA):
+
+1. **Something you know** - password, PIN  
+2. **Something you have** - TOTP app, hardware key, SMS (weaker), email code  
+3. **Something you are** - biometrics (usually unlocks a device key, not a server secret)
+
+Prefer **TOTP / WebAuthn** over SMS when you can: SIM-swap attacks make SMS a weak second factor. After MFA succeeds, **regenerate the session id** (same fixation rule as password login).
+
+**RBAC** maps `user → role(s) → permissions`, then every sensitive action checks a permission - not "is logged in."
+
+```text
+user Ada  → roles {editor, billing_viewer}
+role editor → permissions {post:write, post:read}
+role billing_viewer → permissions {invoice:read}
+
+DELETE /users/9  requires permission user:delete
+  Ada logged in? yes
+  Ada has user:delete? no  → 403 Forbidden (authenticated but not authorized)
+```
+
+**Least privilege:** grant the smallest role that works; prefer deny-by-default. Object ownership checks ("may Ada edit *this* post?") still matter even with roles - RBAC is not a substitute for per-resource checks.
+
+**SMALL WORKING EXAMPLE**
+
+```python playground=cs-phase-68-rbac
+# Tiny RBAC: roles grant permissions; actions require a permission.
+
+ROLE_PERMS = {
+    "viewer": {"post:read"},
+    "editor": {"post:read", "post:write"},
+    "admin": {"post:read", "post:write", "user:delete"},
+}
+
+def allowed(roles, permission):
+    have = set()
+    for r in roles:
+        have |= ROLE_PERMS.get(r, set())
+    return permission in have
+
+ada = ["editor"]
+print("Ada write post?", allowed(ada, "post:write"))   # True
+print("Ada delete user?", allowed(ada, "user:delete")) # False
+
+# MFA is orthogonal: even admin still needs second factor at login / step-up.
+print("step-up MFA required for user:delete: yes")
+```
+
+**PRACTICE UNTIL IT FEELS FAMILIAR**
+
+
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | Name three MFA factor classes; say why SMS is weaker than TOTP |
+| Medium | Design roles for a blog (reader, author, admin) and list permissions each needs |
+| Hard | Add a permission check middleware sketch that returns 401 vs 403 correctly |
+
+
+**WHY THE NEXT TOPIC IS NEEDED - JWT & OAuth:** Server-side sessions work well for one app and one session store. They get awkward across many services or when another company's app needs delegated access - JWT and OAuth address those shapes.
+
+## 68.3 JWT & OAuth
+
+**WHY YOU ARE LEARNING THIS:** Server-side sessions from Phase 68.1 assumed one application, owned by one team, running against one session store. Two things break that assumption. First, scale and architecture: once a request can land on any of fifty service instances across three regions, every one of them needs to consult that store, and it becomes a shared stateful dependency on the hot path of every request in the system. Second, and more fundamentally, sessions have no answer at all for a *different company's* application needing to act on your user's behalf. The only mechanism available in the session model is for the user to hand over their password, which grants unlimited, unrevocable, unauditable access to everything. JWT addresses the first limitation by making the token self-verifying. OAuth addresses the second by making delegation a first-class operation instead of credential sharing.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -15833,7 +16031,7 @@ print("   server check passes:",
 
 **Track:** Data & Security
 
-**WHAT YOU WILL BE ABLE TO DO:** Stop the common web attacks - SQL injection with parameterized queries, XSS with context-aware escaping, CSRF with SameSite plus synchronizer tokens - and map each to an OWASP Top Ten risk.
+**WHAT YOU WILL BE ABLE TO DO:** Stop the common web attacks - SQL injection with parameterized queries, XSS with context-aware escaping, CSRF with SameSite plus synchronizer tokens - apply basic rate limiting, and map each to an OWASP Top Ten risk.
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 61 (SQL is the injection surface), Phase 58 (browsers attach cookies automatically), Phase 68 (sessions and cookies are what CSRF rides).
 
@@ -16324,6 +16522,74 @@ Take the REST API you designed in Phase 59's mini-project and, for each endpoint
 
 
 **MASTERY CHECKPOINT FOR PHASE 69:** Explain how a password should be stored and why each part of that answer matters, explain the difference between a session cookie and a JWT, and pick any one attack above and explain both the exploit and the fix without looking it up.
+
+**WHY THE NEXT TOPIC IS NEEDED - Rate Limiting:** Injection and CSRF defenses assume the attacker still has to *reach* your expensive endpoints. Without a throttle, login hashing (Phase 67), password spraying, and scrape bots become availability and cost problems. Basic rate limiting is the next control - not a full distributed design interview (that returns in Story XI).
+
+---
+
+## 69.2 Basic Rate Limiting
+
+**WHY YOU ARE LEARNING THIS:** Application security is not only "wrong string in SQL." It is also "too many attempts." Rate limiting bounds how often an identity, IP, or API key may call a sensitive endpoint. Keep this *basic*: fixed window or token bucket on one machine. Distributed rate limiters belong with system design later.
+
+**SEE IT BEFORE YOU MEMORIZE IT**
+
+- [Rate Limiter System Design: Token Bucket (ByteByteGo)](https://www.youtube.com/watch?v=YXkOdWBwqaA) *(Composio YouTube)* - algorithms; ignore multi-region depth for now
+- Alternative: [Token Bucket in 100 Seconds](https://www.youtube.com/watch?v=my5dGtncxfw) *(Composio YouTube)*
+- Written: HTTP `429 Too Many Requests`; `Retry-After` header
+
+**STEP-BY-STEP EXPLANATION**
+
+| Algorithm | Idea | Good for |
+| --------- | ---- | -------- |
+| **Fixed window** | Count requests per calendar minute/hour | Simple quotas |
+| **Sliding window** | Smooth the fixed-window cliff at boundaries | Fairer quotas |
+| **Token bucket** | Tokens refill at a rate; each request spends one | Bursts + sustained limit |
+
+Apply limits **before** expensive work (Argon2 verify, outbound SMS). Prefer keys like `(ip, route)` for anonymous and `(user_id, route)` when authenticated. Return **429** with a clear body; avoid lockouts that become easy DoS against a victim username without careful design.
+
+```text
+Login endpoint:
+  1. rate_limit(ip) and rate_limit(username_attempt)
+  2. only then Argon2 verify
+  3. on success: regenerate session; optional MFA step-up
+```
+
+**SMALL WORKING EXAMPLE**
+
+```python playground=cs-phase-69-rate-limit
+# Token bucket (single process). Capacity=5, refill 1 token / second.
+
+import time
+
+class TokenBucket:
+    def __init__(self, capacity, refill_per_sec):
+        self.capacity = capacity
+        self.refill = refill_per_sec
+        self.tokens = capacity
+        self.t = time.monotonic()
+
+    def allow(self):
+        now = time.monotonic()
+        self.tokens = min(self.capacity, self.tokens + (now - self.t) * self.refill)
+        self.t = now
+        if self.tokens >= 1:
+            self.tokens -= 1
+            return True
+        return False
+
+bucket = TokenBucket(5, 1.0)
+print([bucket.allow() for _ in range(7)])  # five True, then False...
+```
+
+**PRACTICE UNTIL IT FEELS FAMILIAR**
+
+
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | Explain 429 and when to send `Retry-After` |
+| Medium | Place rate limits on login vs public read API differently and justify |
+| Hard | Show how account lockout without rate limits becomes a DoS against a victim |
+
 
 **WHY THE NEXT TOPIC IS NEEDED - Human-Computer Interaction:** A secure system that users cannot understand will be circumvented - passwords on sticky notes, ignored warnings, shared accounts. Security without usable design fails in the real world. That is Phase 70.
 
@@ -16897,7 +17163,7 @@ A useful mini-spec answers these questions:
 5. **Acceptance criteria** - concrete checks a reviewer can run without re-interpreting the ask.
 6. **Non-goals** - what is explicitly out of scope for *this* slice.
 
-**User stories** ("As a … I want … so that …") are a *format*, not a substitute for acceptance criteria. A story without Given/When/Then (or equivalent checks) is still ambiguous.
+**User stories** ("As a … I want … so that …") are a *format*, not a substitute for acceptance criteria. A story without Given/When/Then (or equivalent checks) is still ambiguous. Good acceptance criteria become Phase 74 tests almost verbatim - if you cannot say how you will *check* done, you do not yet have a requirement.
 
 ```text
 Vague:  "Add notifications"
@@ -17638,7 +17904,7 @@ Common building blocks (names vary):
 2. **Ready** - has acceptance criteria, owner, and size small enough to finish soon.
 3. **In progress** - WIP limits exist so multitasking does not fake progress.
 4. **Review** - code review + product acceptance against the criteria from Phase 73.
-5. **Done** - definition of done includes tests, docs/notes, and deployability - not "merged somehow."
+5. **Done** - definition of done includes tests, docs/notes, deployability, and "no secrets committed" - not "merged somehow."
 
 **Scrum** time-boxes planning/review/retro. **Kanban** optimizes flow and WIP. Most healthy teams borrow: small batches, visible work, frequent feedback, retrospectives that change the process.
 
@@ -18201,9 +18467,9 @@ git log --format='%H %aI' main | head -50        # deployment frequency
 
 **Track:** Professional Software Engineering
 
-**WHAT YOU WILL BE ABLE TO DO:** Package a small service in a container image and explain what Dockerfile layers, images, and containers each contribute to reproducible deploys.
+**WHAT YOU WILL BE ABLE TO DO:** Package a small service in a container image; explain Dockerfile layers; and distinguish **config env vars** from **secrets** (never bake secrets into an image).
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 77 (CI builds artifacts; containers are a common artifact shape), Phase 60-65 (the app still needs a real filesystem and network underneath the box).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 77 (CI builds artifacts; containers are a common artifact shape; pipelines inject secrets at runtime), Phase 60-65 (the app still needs a real filesystem and network underneath the box).
 
 ## 78.1 Package Once, Run Anywhere (Almost)
 
@@ -18212,7 +18478,8 @@ git log --format='%H %aI' main | head -50        # deployment frequency
 **SEE IT BEFORE YOU MEMORIZE IT**
 
 - Overview: [Docker explained (The Coding Sloth)](https://www.youtube.com/watch?v=DQdB7wFEygo) *(Composio YouTube)*
-- Hands-on: [prakhar1989/docker-curriculum](https://github.com/prakhar1989/docker-curriculum) *(Composio GitHub)*; official getting-started multi-container teaching app *(Composio DeepWiki on docker/getting-started)*
+- Secrets vs env: [What is Secrets Management? (IBM Technology)](https://www.youtube.com/watch?v=iETENR5MEB8) *(Composio YouTube)*; [Hiding secrets in env vars (Corey Schafer)](https://www.youtube.com/watch?v=IolxqkL7cD8) *(Composio YouTube)* - local habit, not a vault
+- Hands-on: [prakhar1989/docker-curriculum](https://github.com/prakhar1989/docker-curriculum) *(Composio GitHub)*
 - Written: Docker docs "Get Started"; twelve-factor config/port binding habits from [12factor.net](https://12factor.net/) *(Composio fetch)*
 
 **STEP-BY-STEP EXPLANATION**
@@ -18224,13 +18491,23 @@ git log --format='%H %aI' main | head -50        # deployment frequency
 | **Dockerfile** | Recipe of layers: base OS/runtime → copy code → install deps → set command |
 | **Registry** | Where images are stored and pulled (Docker Hub, GHCR, private) |
 
-Layers cache: change app code often, change OS rarely - put volatile steps last so rebuilds stay fast.
+**Env vars vs secrets (do not blur them):**
+
+| | Environment variables | Secrets |
+| - | --------------------- | ------- |
+| **Purpose** | Non-sensitive config (`PORT`, `LOG_LEVEL`, feature flags) | Credentials (`DB_PASSWORD`, API keys, private keys) |
+| **OK in image?** | Defaults sometimes | **Never** bake into layers or `ENV` in Dockerfile |
+| **Where they live** | Process environment / orchestrator config | Secret store / CI secret injector / sealed volume |
+| **Leak risk** | Often appear in crash dumps and `docker inspect` | Same - treat as sensitive; rotate when exposed |
+
+Twelve-factor "store config in the environment" is about *injecting at runtime*, not about committing `.env` files with production passwords to Git. Local `.env` (gitignored) is a convenience; production uses a secrets manager or platform secret.
 
 ```text
 Host OS
   └─ container runtime
        └─ your process (only what the image installed)
 Networks/volumes attach storage and ports without baking secrets into the image.
+Runtime injects: PORT=8080 (config) + DB_PASSWORD from secret store.
 ```
 
 **SMALL WORKING EXAMPLE**
@@ -18255,15 +18532,21 @@ def rebuild_from(change_index):
 
 rebuild_from(3)  # only app + cmd rebuild
 rebuild_from(1)  # deps onward rebuild
+
+# Secrets must NOT be Dockerfile ENV layers:
+bad = 'ENV DB_PASSWORD=supersecret'   # baked into image history forever
+good = 'runtime inject from secret store / orchestrator'
+print("bad:", bad)
+print("good:", good)
 ```
 
 **PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | Define image vs container in one sentence each |
-| Medium | Write a 6-line Dockerfile for a hello HTTP server; explain layer order |
-| Hard | Containerize a Phase 75-style service and run it with a mapped port |
+| Easy | Define image vs container; give one example of config vs secret |
+| Medium | Write a 6-line Dockerfile for a hello HTTP server; explain layer order and where the DB password comes from |
+| Hard | Containerize a Phase 75-style service and run it with a mapped port - password via runtime env, not the image |
 
 **WHY THE NEXT TOPIC IS NEEDED - Cloud Fundamentals:** Containers still need somewhere to run - VMs, managed container services, object storage, load balancers. Cloud is "someone else's computer" as productized building blocks. That is Phase 79.
 
@@ -18295,14 +18578,16 @@ rebuild_from(1)  # deps onward rebuild
 
 **STEP-BY-STEP EXPLANATION**
 
-**Shared responsibility (simplified):**
+**Shared responsibility (wording that stays accurate):** the cloud provider secures *of* the cloud (hardware, hypervisor, physical facilities, and often the managed control plane). You secure *in* the cloud (your guest OS on IaaS, your app code, your identity policies, your data classification, your encryption keys you choose to manage, and your network allow-lists). Moving to PaaS shifts more of the stack to the provider - it does **not** move responsibility for *your* application bugs, leaked secrets, or open S3/buckets with public ACLs.
 
 ```text
                  You manage ←――――――――――――――→ Provider manages
-IaaS (VMs):      OS, runtime, app, data         hardware, hypervisor, network fabric
-PaaS:            app + data                     OS, runtime, scaling plumbing
-SaaS:            configuration / users          almost everything else
+IaaS (VMs):      OS patches, runtime, app, data, IAM roles    hardware, hypervisor, regions
+PaaS:            app code, data, secrets, IAM                 OS, runtime, much scaling plumbing
+SaaS:            users, config, data you enter                almost the product stack
 ```
+
+Misread to avoid: "we're on AWS so security is handled." Shared responsibility means **both** parties have jobs; the contract draws the line, it does not delete yours.
 
 Building blocks you will keep meeting:
 
@@ -18366,9 +18651,8 @@ print("\nIf PaaS for web: you still own app code, secrets, and data correctness.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
-- Primer: OpenTelemetry intros *(Composio YouTube)*; written [Observability primer (OpenTelemetry)](https://opentelemetry.io/docs/concepts/observability-primer/) *(Composio fetch)*
-- DeepWiki: three pillars + OTel APIs/SDKs on `open-telemetry/opentelemetry-specification` *(Composio DeepWiki)*
-- Scholar theme: observable systems need correlated logs/metrics/traces *(Composio Scholar)*
+- Primer: [Metrics, Logs and Traces: What To Observe and Why](https://www.youtube.com/watch?v=aJpzr8648XE) *(Composio YouTube)*; [What is OpenTelemetry? (Better Stack)](https://www.youtube.com/watch?v=LzLULxhyIpU) *(Composio YouTube)*
+- Written: [Observability primer (OpenTelemetry)](https://opentelemetry.io/docs/concepts/observability-primer/) *(Composio fetch)*; Google SRE book chapters on SLIs/SLOs (skim definitions only)
 - Practice: add structured logs to a tiny service, then invent three metrics you would graph
 
 **STEP-BY-STEP EXPLANATION**
@@ -18376,8 +18660,16 @@ print("\nIf PaaS for web: you still own app code, secrets, and data correctness.
 | Signal | Good for | Weak at |
 | ------ | -------- | ------- |
 | **Logs** | Exact errors, audit trail, "what happened to request X" | High cardinality noise; hard to aggregate alone |
-| **Metrics** | SLOs, saturation, rate/error/duration (RED) | Often lose per-user detail |
-| **Traces** | Where time went across services | Need propagation; sampling trade-offs |
+| **Metrics** | Rates, saturation, SLI time series | Often lose per-user detail |
+| **Traces** | Where time went across services (spans linked by a trace id) | Need context propagation; sampling trade-offs |
+
+**SLI / SLO (light, not a full SRE course):**
+
+- **SLI** (Service Level Indicator) - a *measurement* of user-visible goodness (e.g. "fraction of HTTP requests faster than 300 ms", "successful checkouts / attempted checkouts").
+- **SLO** (Service Level Objective) - a *target* on that SLI over a window (e.g. "99.9% of requests < 300 ms over 30 days").
+- **SLA** - a *business/legal* contract that may use SLOs; usually outside beginner scope.
+
+Pick SLIs from user journeys, not from "CPU is high." Metrics power SLOs; logs/traces explain *why* an SLO is burning.
 
 **Production debugging loop:** (1) symptom → (2) which signal moved → (3) narrow blast radius → (4) confirm with a trace or log field → (5) fix + regression test (Phase 74) → (6) alert so it cannot silently return.
 
@@ -18411,9 +18703,9 @@ for e in events:
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | Define logs vs metrics vs traces in one line each |
+| Easy | Define logs vs metrics vs traces in one line each; define SLI vs SLO in one line each |
 | Medium | Given "checkout is slow," list two metrics and one trace question you would check first |
-| Hard | Sketch an OpenTelemetry-style instrumentation plan for a 2-service app |
+| Hard | Sketch an OpenTelemetry-style instrumentation plan for a 2-service app; name one SLI you would chart |
 
 **WHY THE NEXT TOPIC IS NEEDED - System Design:** You can now collaborate, specify, test, structure, process, automate, package, host, and observe software. The next story asks what changes when *one machine is not enough* - load, caches, queues, and distributed failure. That is Story XI, starting at Phase 81.
 
@@ -18428,521 +18720,132 @@ for e in events:
 
 **Track:** System Design & Distributed Systems
 
-**WHAT YOU WILL BE ABLE TO DO:** Walk a system from a single server to a load-balanced multi-tier shape - and explain what each added component (LB, stateless app, shared data store) buys you.
+**WHAT YOU WILL BE ABLE TO DO:** Approach a system-design problem the way an interview or design review expects - clarify requirements, do back-of-the-envelope estimation, draw the simplest shape that could work, and name which later phase owns each scaling lever.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phases 72-80 (professional delivery loop) and everything before them. System design is where those subjects become one toolbox.
+**WHAT YOU SHOULD KNOW FIRST:** Phases 72-80 (you can ship and observe software), Phases 55-65 (networks and databases already exist), Phase 68 (sessions break the moment a second app server appears).
 
-## 81.1 The Scaling Journey - One Server to a Distributed System
+## 81.1 How to Think About System Design
 
-**WHY YOU ARE LEARNING THIS:** Every phase up to here optimised inside one machine. Big O made a single function faster, indexes made a single query faster, and CI made a single codebase safer to change. The limitation they all share is that one machine has a hard ceiling: a fixed number of cores, a fixed amount of memory, a single network interface, one power supply, and one failure that takes everything with it. A perfectly written application on a perfectly tuned server still stops serving at some request rate, and no further optimisation of the code changes that number by more than a constant factor. Scalability exists because the remaining problem is not correctness or efficiency but arithmetic, and the only answers involve more than one machine, which introduces a category of problem that did not exist before: the network between them.
-
-**Why this phase is structured as a journey, not a topic list:** No engineering team wakes up and builds a sharded, cached, load-balanced, microservice-based system on day one. Every piece below was added because a *specific, concrete* problem appeared at the previous stage - the same before/problem/solution/trade-off pattern from every earlier phase, now applied at the level of whole systems instead of single functions.
-
-**STEP-BY-STEP EXPLANATION**
-
-Two words get used interchangeably and mean opposite things. **Vertical scaling** means a bigger machine: more cores, more memory, faster disks. It is by far the simplest option, requires no application changes at all, and should genuinely be your first move, because a single large server today handles traffic that needed a rack fifteen years ago. It has two hard limits: the largest machine available is finite and its price rises superlinearly, and one machine is still one failure domain. **Horizontal scaling** means more machines, which is effectively unbounded and gives you redundancy for free, and costs you the ability to assume that any two requests share memory. That single lost assumption is the source of every difficulty in the rest of this phase.
-
-The prerequisite for horizontal scaling is **statelessness**, and it is worth being precise about what that means. A stateless application server does not mean the system has no state, it means the state does not live *in the application process*. Session data, uploaded files, in-memory caches, and background job schedules all have to move to a shared store, because any request may land on any instance. This is exactly why sessions from Phase 68 reappear here as a problem: the moment a second server exists, memory-local sessions break, and the two available fixes, a shared session store or stateless tokens, are precisely 15.2 and 15.4.
-
-Before choosing anything you need numbers, and **back-of-the-envelope estimation** is the skill that turns system design from opinion into arithmetic. The pattern is always the same: start from users and their behaviour, derive requests per second, derive storage per year, derive bandwidth, then compare each against what one machine can do. A few reference figures make this quick: a single well-tuned application server handles a few thousand requests per second for simple work, a Postgres instance handles a few thousand writes per second and tens of thousands of cached reads, Redis handles low hundreds of thousands of operations per second, memory access is about 100 nanoseconds, an SSD read is about 100 microseconds, and a round trip across a continent is about 50 to 150 milliseconds. Those numbers tell you which stage of the journey you actually need, and the most common design error is jumping to stage six when the arithmetic says stage two.
-
-**Read-heavy and write-heavy systems diverge sharply**, and identifying which you have determines almost everything that follows. Most consumer systems are read-dominated by one or two orders of magnitude, and reads are comparatively easy: cache them, replicate them, put a CDN in front of them, all without touching correctness because a stale read is often acceptable. Writes cannot be cached away and cannot be replicated to more primaries without either sharding or accepting conflicts, which is why write scaling forces the hard choices and why the ratio is the first thing to establish.
-
-**Caching** deserves its own treatment because it is the highest-use change available and the easiest to get subtly wrong. The essential concepts are the **hit rate**, which determines whether the cache helps at all, and the **invalidation strategy**, which determines whether it is correct. Cache-aside, where the application checks the cache, falls back to the database, and populates on miss, is the default and is simple to reason about. Write-through updates both together, keeping them consistent at the cost of write latency. Write-behind buffers writes and is fastest but can lose data. The failure modes have names because they occur repeatedly: **stampede**, where a popular key expires and a thousand concurrent requests all hit the database at once, fixed by locking or by probabilistic early expiry; **penetration**, where requests for keys that do not exist bypass the cache entirely, fixed by caching the negative result; and the **cold cache** problem, where a restart sends full traffic to the database and can prevent the system from ever recovering.
-
-**Asynchronous processing** is the other tool that changes the shape of a system rather than just its size. Anything that does not have to happen before the response is sent should not: sending email, resizing images, generating reports, updating search indexes. Moving that work to a queue converts a slow synchronous request into a fast one plus a background job, and it also decouples failure, since a temporarily broken email provider no longer fails the signup. The cost is that the system becomes eventually consistent in a way users can observe, and that the queue itself needs retries with backoff, idempotent consumers because messages will be delivered more than once, and a dead letter queue for what never succeeds.
-
-Finally, the honest warning about **microservices**, which is the stage most often adopted for the wrong reason. Splitting a system into services solves an *organisational* scaling problem, letting teams deploy independently, and it does not by itself make anything faster. What it does is convert reliable in-process function calls into unreliable network calls, replace a single database transaction with a distributed one that no longer has atomicity, and turn a stack trace into a distributed tracing problem. Those costs are worth paying when the team coordination bottleneck is real, and they are pure loss when it is not, which is why a well-structured modular monolith is the correct answer far more often than the industry's enthusiasm suggests.
-
-```text
-STAGE 1 -- Single Server
-One machine runs the application code AND the database (Phase 60).
-        Fine for: low traffic, early-stage products.
-        Problem that appears: traffic grows. The single machine's CPU,
-        memory, and disk I/O are a hard, physical ceiling -- eventually
-        one server cannot serve every request fast enough.
-
-STAGE 2 -- Vertical Scaling
-Fix: buy a bigger machine (more CPU, more RAM).
-        Trade-off: there's a hard ceiling (the biggest machine money can
-        buy) and zero redundancy -- one machine is still one point of failure.
-
-STAGE 3 -- Horizontal Scaling + Load Balancer
-Fix: run the application on MULTIPLE identical servers, and put a LOAD
-BALANCER in front that distributes incoming requests across them
-(round-robin, least-connections, or other strategies).
-        New problem this introduces: if a user's session (Phase 68) is
-        stored in one server's local memory, a request that lands on a
-        DIFFERENT server won't recognize them -- server-side state doesn't
-        automatically travel with the load-balanced request.
-        Fix for THAT: store sessions in a shared, external store (e.g. a
-        fast key-value store) that every application server can reach,
-        or move to stateless tokens (JWT, Phase 67) that don't need
-        server-side lookup at all.
-
-STAGE 4 -- Caching
-Problem that appears next: even with multiple app servers, they're all
-still hammering the SAME single database (Phase 60) for the same
-frequently-requested data (e.g. a popular product page, read thousands
-of times a minute, that barely ever changes).
-Fix: a CACHE -- a fast, typically in-memory key-value store sitting in
-front of the database, holding the results of expensive or frequent
-queries.
-        Trade-off (the exact same shape Phase 41 first introduced with Big O):
-        cache reads are much faster, but the cached data can become STALE
-        if the underlying data changes and the cache isn't updated or
-        invalidated -- "cache invalidation" is a genuinely hard problem,
-        not a minor detail.
-
-STAGE 5 -- Database Replication (revisit Phase 65)
-Problem that appears next: the database itself, even with a cache
-absorbing much of the read load, is still a single point of failure and
-a ceiling on write throughput.
-Fix: replication -- a primary handles writes, read replicas absorb read
-traffic and provide failover if the primary goes down.
-        Trade-off: replication lag (14.6) -- a read from a replica can
-        be slightly stale.
-
-STAGE 6 -- Partitioning / Sharding (revisit Phase 65)
-Problem that appears next: even replication doesn't help once a SINGLE
-table's data no longer fits comfortably on one machine, or write volume
-alone exceeds what one primary can handle.
-Fix: sharding -- split the data itself across multiple database servers.
-        Trade-off: cross-shard queries and transactions become
-        significantly harder (Phase 65), and choosing a good shard key
-        (the column that decides which shard a row lives on) becomes a
-        first-class design decision.
-
-STAGE 7 -- Microservices
-Problem that appears next: as the ENGINEERING TEAM (not just the traffic)
-grows, one giant application ("a monolith") becomes a coordination
-bottleneck -- every team's changes touch the same codebase and the same
-deployment, and a bug in one unrelated feature can take down everything.
-Fix: split the system into independently deployable services, each
-owning its own data and communicating over the network (using the HTTP
-APIs from Phase 58, or asynchronous message queues).
-        Trade-off: you've traded in-process function calls (fast,
-        reliable, transactional) for NETWORK calls between services
-        (Phase 55) -- which can fail, arrive late, or arrive out of
-        order, and now every cross-service operation has to handle
-        partial failure instead of assuming atomicity (Phase 64)
-        for free. This is the exact on-ramp into Phase 85's distributed
-        systems problems.
-```
+**WHY YOU ARE LEARNING THIS:** Stories I–X taught components. System design is the skill of *selecting* components under load, failure, and incomplete requirements. Phase 81 teaches the *process and map*. Phases 82–87 own the mechanisms (bottlenecks, caching, queues, CAP, consensus, reliability). Phase 88 is the learning capstone that walks a full design; Story XV applies the same skill under interview pressure.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
-- Best animated explanation: [System Design Was HARD, Until I Learned These 30 Concepts (ByteByteGo)](https://www.youtube.com/watch?v=s9Qh9fWeOAk) and [Scalability Simply Explained in 10 Minutes (ByteByteGo)](https://www.youtube.com/watch?v=EWS_CIxttVw) *(Composio YouTube; replaced dead scaling ID)* - the second is the stage-progression framing that matches this section's structure
-- Alternative: [System Design Basics (Gaurav Sen)](https://www.youtube.com/watch?v=xpDnVSmNFX0) and [System Design Primer: How to start with distributed systems? (Gaurav Sen)](https://www.youtube.com/watch?v=SqcXvc3ZmRU) *(Composio YouTube)* reason out loud through each decision rather than presenting conclusions, which is closer to what an interview actually asks for
-- Another angle: [Load Balancing Algorithms (ByteByteGo)](https://www.youtube.com/watch?v=dBmxNsS3BGE) for stage 3 specifically, [Top Caching Strategies (ByteByteGo)](https://www.youtube.com/watch?v=dGAgxozNWFE) for stage 4, and [Don't Build a Distributed Monolith (Sam Newman)](https://www.youtube.com/watch?v=p2GlRToY5HI) for the honest case against jumping to stage 7
-- Interactive simulator: load testing your own system is the simulator, and it is the only way these numbers become real. Use [k6](https://k6.io/) or [Locust](https://locust.io/) to ramp traffic against a single server until latency degrades, record the exact requests per second where it breaks, then add a load balancer and a second instance and measure the new number. Also useful: [Latency Numbers Every Programmer Should Know, visualised interactively](https://colin-scott.github.io/personal_website/research/interactive_latency.html), and [Excalidraw](https://excalidraw.com/) for drawing the architectures you are reasoning about, which is literally what you will do in an interview
-- Written documentation: [System Design Primer](https://github.com/donnemartin/system-design-primer) is an extensive, well-organized reference covering every stage above in far more depth, with real interview solutions. [Designing Data-Intensive Applications](https://dataintensive.net/) is the definitive book for this entire phase, [the AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html) for the operational view, and [Google's SRE Book](https://sre.google/sre-book/table-of-contents/) for how these systems are actually run
-- GitHub implementation: [System Design Primer](https://github.com/donnemartin/system-design-primer) again for worked solutions, [awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) which collects real engineering-blog post-mortems from companies at each stage, and [Nginx](https://github.com/nginx/nginx) plus [HAProxy](https://github.com/haproxy/haproxy) as the actual load balancers you will configure
-- Practice platform: [ByteByteGo's system design course](https://bytebytego.com/) and [Educative's Grokking the System Design Interview](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers) are the standard paid options. Free and arguably more valuable: read one company engineering blog post-mortem per week from [awesome-scalability](https://github.com/binhnguyennus/awesome-scalability), and actually build stage 1 through stage 4 for a small project of your own with Docker Compose
+- Process: [How to Answer System Design Interview Questions (Exponent)](https://www.youtube.com/watch?v=L9TfZdODuFQ) *(Composio YouTube)*; [How to Approach Capacity Estimation (System Design Daily)](https://www.youtube.com/watch?v=L_ZwlSRIG5E) *(Composio YouTube)*
+- Map overview: [Scalability Simply Explained (ByteByteGo)](https://www.youtube.com/watch?v=EWS_CIxttVw) *(Composio YouTube)* - stage progression; treat deep caching/async as previews of Phases 83–84, not the homework of this phase
+- Alternative: [System Design Basics (Gaurav Sen)](https://www.youtube.com/watch?v=xpDnVSmNFX0) *(Composio YouTube)*
+- Written: [System Design Primer](https://github.com/donnemartin/system-design-primer) *(Composio GitHub)* - reference atlas, not a substitute for 82–87
+- Practice medium: [Excalidraw](https://excalidraw.com/) + a timer; prefer diagrams and arithmetic over premature code
+
+**STEP-BY-STEP EXPLANATION**
+
+**The process (rehearse this every time):**
+
+1. **Clarify** - functional requirements, explicit non-goals, users, read:write, latency, availability, consistency needs.
+2. **Estimate** - average and peak RPS, storage/year, bandwidth, working-set size. Numbers license every later choice (including *not* sharding).
+3. **API + data sketch** - endpoints and primary tables/keys (Phases 59–65). Access patterns surface here.
+4. **Simplest design** - one box or app+DB. Do not draw nine boxes first.
+5. **Walk bottlenecks** - what breaks first; which phase owns the fix.
+6. **Trade-offs + failure** - every stage costs complexity; name it.
+
+**Vertical vs horizontal (owned lightly here; depth in Phase 82):**
+
+| | Vertical | Horizontal |
+| - | -------- | ---------- |
+| Idea | Bigger machine | More machines |
+| Wins | Simple; no app rewrite | Near-unbounded; redundancy |
+| Costs | Finite ceiling; one failure domain | Statelessness required; shared state moves out |
+
+**Stateless app tier:** "stateless" means session/files/job state do not live *in* the app process. Fixes when you add a second server: shared session store **or** tokens (Phase 68) - preview only; Phase 82 practices bottleneck diagnosis.
+
+**Ownership map (do not re-teach these here):**
+
+```text
+Phase 81  process + map + estimation habit
+Phase 82  find the scarce resource; scale that tier (LB, replicas)
+Phase 83  caching strategies + invalidation / stampede
+Phase 84  queues / events; at-least-once + idempotency
+Phase 85  CAP / PACELC; consistency models across machines
+Phase 86  consensus (Raft-level intuition); leader agreement
+Phase 87  timeouts, retries, circuit breakers (client-side survival)
+Phase 88  full walkthrough combining the toolbox
+```
+
+**Journey map (preview only - mechanisms live later):**
+
+```text
+1 single server          → ceiling: one box
+2 vertical scale         → still one failure domain
+3 LB + N app servers     → Phase 82 (sessions must leave local memory)
+4 cache                  → Phase 83 (staleness budget)
+5 DB replication         → Phase 65 revisit + Phase 85 consistency
+6 sharding               → Phase 65 write scale; Phase 85 coordination cost
+7 service split          → organizational scale; network failure → 85–87
+(+ async off request path → Phase 84; reliability wrappers → Phase 87)
+```
+
+**Healthy revisit:** Phase 65 already taught replication vs partitioning vs sharding. Here you only ask *when the numbers force them*. CAP (Phase 85) is the limit those choices operate under - not something to solve with "add a cache."
 
 **PICTURE IT LIKE THIS**
 
-A single restaurant, growing. On opening night one person cooks and serves, which is stage one: everything in one place, and it works perfectly at ten covers a night. As demand grows, the first fix is a bigger kitchen and a better stove, which is vertical scaling, and it genuinely works for a long while. Eventually the kitchen is as large as the building allows and the constraint stops being equipment.
+An architect does not start by picking marble finishes. First: how many people, what loads, what code allows, what fails in a fire. Estimation is the load calculation. The stage map is the structural system. Finishes (Redis, Kafka, Raft) come after the arithmetic says you need them - that is Phases 82–87.
 
-So you separate the kitchen from the dining room, which is stage two, splitting the application from the database. Then you open three more identical branches with a host at the entrance directing arrivals to whichever has a free table, which is stage three, a load balancer. The immediate new problem is exactly the one the roadmap names: a customer who left their coat at branch one and is now seated at branch three cannot retrieve it, because the coat check was local to a building. The fix is a shared cloakroom every branch can reach, which is the shared session store.
-
-The kitchen still prepares the same popular dish hundreds of times an hour, so you batch-prepare it and keep it hot on the pass, which is caching, and the trade-off is immediate and familiar: it is served much faster, and if the recipe changed this morning the tray on the pass is now wrong. That is cache invalidation, and the fact that it is genuinely hard rather than a detail is why "how do you know when to throw the tray away" is the real question.
-
-Replication is keeping a second complete kitchen that can take over if the first floods, and sharding is the point where one menu no longer fits any single kitchen, so desserts move to a dedicated pastry kitchen entirely. The moment that happens, an order that spans both kitchens needs coordination that used to be free, which is exactly what cross-shard queries cost. And microservices are giving each kitchen its own head chef, own suppliers, and own schedule, which resolves the argument where twelve chefs shared one stove and creates a new one about how the kitchens talk to each other when the phone line between them drops.
-
-**Internal Working, where the traffic actually goes at each stage**
+**Internal Working, back-of-the-envelope (the skill this phase owns)**
 
 ```text
-STAGE 1                        STAGE 2-3
-  user                           user
-   |                              |
-   v                            [ DNS ]
- [server: app + DB]               |
-   one box, one failure           v
-   domain, ~1k rps          [ load balancer ]  health checks, TLS
-                              /     |     \
-                          [app1] [app2] [app3]   stateless, any
-                              \     |     /      request -> any box
-                                    v
-                              [ database ]  <- the new bottleneck
+"URL shortener: 100M new links / month"
 
-STAGE 4-6
-  user
-   |
- [ CDN ]  <- static assets, never reach your servers at all
-   |
- [ load balancer ]
-   |
- [app1] [app2] [app3] ... [appN]         scale by adding boxes
-   |        |
-   |     [ cache ]  Redis. 95% of reads stop here.
-   |        |          hit  -> 0.5 ms
-   |        v          miss -> fall through
-   |   [ primary DB ] ------ replication ------> [replica] [replica]
-   |     writes only                              reads, slightly stale
-   |
-   +--> [ queue ] --> [ workers ]   email, thumbnails, indexing:
-                                    anything the response need not wait for
+WRITES: 100M/30/86400 ≈ 40/s avg → ~200/s peak
+  → one primary DB is fine. Do not shard yet.
 
-  WHERE EACH CEILING ACTUALLY IS
-    load balancer   100k+ rps            rarely the bottleneck
-    app instance    1-5k rps each        add more, it is linear
-    cache           100-500k ops/sec     rarely the bottleneck
-    read replicas   scale reads linearly, bounded by replication lag
-    PRIMARY DB      1-10k writes/sec     <-- the real ceiling, and the
-                                             only fix is sharding (14.6)
+READS: assume 100:1 → ~4k/s avg, ~20k peak
+  → cache is mandatory (Phase 83); replicas if miss path still hot (65/82).
 
-  Which is why the whole journey is really: "how far can I push
-  reads before I am forced to shard writes."
+STORAGE: ~260B/row → ~26 GB/month → ~1.5 TB / 5 years
+  → fits one disk. Sharding is for write volume or working set, not vanity.
+
+CONCLUSION WITH NUMBERS: stages 1–5, not 6–7.
+Designing microservices unasked is the common interview failure mode.
 ```
-
-**Internal Working, back-of-the-envelope estimation, worked**
-
-```text
-"Design a URL shortener for 100 million new links per month."
-
-WRITES
-   100M / month
-     / 30 days / 86400 s  = ~40 writes/sec average
-   peak is typically 2-5x average  -> ~200 writes/sec peak
-   -> ONE Postgres primary handles this comfortably.
-      No sharding needed for writes. Stage 5 at most.
-
-READS
-   redirects are the read path. Assume 100:1 read/write.
-   -> 4,000 reads/sec average, ~20,000 peak
-   -> far beyond one database, trivially within reach of a cache.
-      Stage 4 is mandatory. This is a read-heavy system.
-
-STORAGE
-   per row: short_code 7B + long_url ~200B + metadata ~50B = ~260B
-   100M/month x 260B          = 26 GB / month
-   x 12                       = ~312 GB / year
-   x 5 years                  = ~1.5 TB
-   -> fits on one machine's disk. Sharding is for WRITE volume
-      or working-set size, and neither applies yet.
-
-CACHE SIZING
-   access is Zipfian: ~20% of links get ~80% of traffic.
-   hot set for one month = 20M links x 260B = ~5 GB
-   -> comfortably fits in RAM. Expect a 90%+ hit rate.
-   -> 20,000 peak reads/sec x 10% miss = 2,000 rps to the DB.
-      Survivable on the primary, comfortable with replicas.
-
-BANDWIDTH
-   20,000 rps x ~500B response = 10 MB/s = 80 Mbps.  Trivial.
-
-KEY SPACE
-   base62, 7 chars = 62^7 = 3.5 x 10^12 codes
-   at 1.2B/year, that is ~2900 years of headroom. 7 is correct;
-   6 gives 56B, which is only ~46 years. Do this arithmetic before
-   choosing, because changing the length later breaks every old link.
-
-THE CONCLUSION THAT MATTERS: this system needs stages 1-5, not 6-7.
-Naming that, with numbers, is the whole point of the exercise, and
-the most common interview error is designing for stage 7 unasked.
-```
-
-**Internal Working, the three cache failure modes with names**
-
-```text
-1. STAMPEDE (thundering herd) -- a hot key expires
-      t=0    key "product:1" expires
-      t=0    1,000 concurrent requests all MISS
-      t=0    1,000 identical queries hit the database at once
-      t=0    database saturates; latency spikes for everything
-   Fix A: a lock -- the first miss acquires it and refills, the
-          rest wait briefly for the result
-   Fix B: probabilistic early expiry -- each reader independently
-          refreshes slightly early, so refreshes spread out
-   Fix C: serve the stale value while refreshing in the background
-
-2. PENETRATION -- requests for keys that do not exist
-      attacker requests /product/999999999 repeatedly
-      cache MISS every time (nothing to cache)
-      every request reaches the database
-   Fix: cache the NEGATIVE result too, with a short TTL.
-        Or a Bloom filter (Phase 58) in front to reject ids that
-        provably do not exist.
-
-3. COLD CACHE -- the restart that will not recover
-      cache restarts, empty
-      100% of a traffic level that ASSUMED a 95% hit rate now
-      reaches the database
-      database cannot serve 20x its normal load -> it falls over
-      -> the cache cannot warm because nothing is being served
-   Fix: warm the cache before accepting traffic, restart nodes
-        gradually, and shed load rather than collapsing.
-
-  And the invalidation question underneath all three:
-      TTL only            simple, staleness bounded by the TTL
-      write-through       consistent, slower writes
-      explicit deletion   fresh, and easy to miss a code path
-      event-driven        correct and complex; the data owner
-                          publishes changes and caches subscribe
-```
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Stage                               | Fixes                                   | Costs                                                                  | Do it when                                       |
-| ----------------------------------- | --------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------ |
-| 1, single server                    | nothing yet                             | one failure domain, hard ceiling                                       | always start here                                |
-| Vertical scaling                    | everything, with zero code change       | finite ceiling, superlinear price, still one failure domain            | first, and further than most people think        |
-| 2, split app and DB                 | independent tuning and scaling of each  | a network hop, two things to operate                                   | as soon as either competes for resources         |
-| 3, load balancer plus N app servers | app-tier throughput and redundancy      | requires statelessness, sessions must move out                         | app CPU is the bottleneck                        |
-| 4, cache                            | read latency and database load, cheaply | staleness, invalidation bugs, three named failure modes                | reads dominate, which is usually                 |
-| 5, replication                      | read throughput, failover               | replication lag, read-your-own-writes bugs                             | reads exceed one machine even with cache         |
-| 6, sharding                         | write throughput and dataset size       | cross-shard queries and transactions get hard, resharding is a project | write volume or data size exceeds one primary    |
-| 7, microservices                    | team autonomy and independent deploys   | network failure, distributed transactions, operational overhead        | team coordination is the bottleneck, not traffic |
-| Async queues                        | response latency, failure isolation     | observable eventual consistency, needs idempotency and retries         | work does not need to block the response         |
-
-
-Two trade-offs are worth stating as rules because they are so consistently violated. First, every stage after two costs operational complexity permanently, so the correct order is to exhaust the cheap options before the expensive ones, and vertical scaling plus a cache resolves an enormous fraction of real scaling problems. Second, stages six and seven are qualitatively different from the rest, because they are the two that are genuinely hard to undo: unsharding a database and recombining services are both multi-quarter projects. Everything up to stage five is reversible in an afternoon, which is precisely why the ordering exists.
 
 **SMALL WORKING EXAMPLE**
 
-```python
-# ---------------------------------------------------------------
-# The estimation you should be able to do in your head, written
-# down so the arithmetic is checkable rather than asserted.
-# ---------------------------------------------------------------
+```python playground=cs-phase-81-estimate
+# Estimation habit - arithmetic first, architecture second.
+# Caching/queue code belongs in Phases 83–84; this only sizes the problem.
+
 def estimate(name, monthly_writes, read_write_ratio, bytes_per_row,
              peak_multiplier=3, hot_fraction=0.2, years=5):
     w_avg = monthly_writes / 30 / 86_400
     w_peak = w_avg * peak_multiplier
-    r_avg = w_avg * read_write_ratio
     r_peak = w_peak * read_write_ratio
     storage_year = monthly_writes * 12 * bytes_per_row
     hot_bytes = monthly_writes * bytes_per_row * hot_fraction
 
-    print(f"\n=== {name} ===")
-    print(f"writes   {w_avg:>10,.0f}/s avg   {w_peak:>10,.0f}/s peak")
-    print(f"reads    {r_avg:>10,.0f}/s avg   {r_peak:>10,.0f}/s peak")
-    print(f"storage  {storage_year/1e9:>10,.1f} GB/yr  {storage_year*years/1e12:>6,.2f} TB/{years}yr")
-    print(f"hot set  {hot_bytes/1e9:>10,.1f} GB  -> fits in RAM: {hot_bytes < 64e9}")
+    print(f"=== {name} ===")
+    print(f"writes peak ≈ {w_peak:,.0f}/s   reads peak ≈ {r_peak:,.0f}/s")
+    print(f"storage ≈ {storage_year/1e9:.1f} GB/yr; hot set ≈ {hot_bytes/1e9:.1f} GB")
+    print(f"  shard writes (>10k/s)? {'YES' if w_peak > 10_000 else 'no → Phase 82/65 later'}")
+    print(f"  need cache (>5k reads/s)? {'YES → Phase 83' if r_peak > 5_000 else 'maybe later'}")
+    print(f"  need async off path? ask: must user wait? (Phase 84)")
 
-    # Compare each number against a real single-machine ceiling.
-    print(f"  needs sharding (>10k writes/s)? {'YES' if w_peak > 10_000 else 'no'}")
-    print(f"  needs a cache  (>5k reads/s)?   {'YES' if r_peak > 5_000 else 'no'}")
-    print(f"  needs replicas (>20k reads/s)?  {'YES' if r_peak > 20_000 else 'no'}")
-
-estimate("URL shortener",  100_000_000, read_write_ratio=100, bytes_per_row=260)
-estimate("Twitter-like",   500_000_000, read_write_ratio=1000, bytes_per_row=300)
-estimate("Bank ledger",     10_000_000, read_write_ratio=10,  bytes_per_row=500)
-# Note how differently the three land. The shortener needs a cache and
-# not sharding; the social feed needs everything; the ledger needs
-# almost nothing structurally and everything in terms of correctness.
-
-# ---------------------------------------------------------------
-# Cache-aside with all three named failure modes handled.
-# ---------------------------------------------------------------
-import time, threading, random, hashlib
-
-class Cache:
-    def __init__(self):
-        self.data: dict[str, tuple[object, float, float]] = {}   # value, expiry, ttl
-        self.locks: dict[str, threading.Lock] = {}
-        self.hits = self.misses = self.db_calls = 0
-
-    def get(self, key, loader, ttl=60, beta=1.0):
-        entry = self.data.get(key)
-        now = time.time()
-
-        if entry is not None:
-            value, expiry, entry_ttl = entry
-            # STAMPEDE FIX: probabilistic early expiry. Each reader
-            # independently decides to refresh slightly early, so a
-            # thousand readers do not all expire at the same instant.
-            jitter = entry_ttl * beta * random.random() * 0.1
-            if now < expiry - jitter:
-                self.hits += 1
-                return value
-
-        self.misses += 1
-        # STAMPEDE FIX: one loader per key. The rest wait for its result
-        # instead of each issuing an identical query.
-        lock = self.locks.setdefault(key, threading.Lock())
-        with lock:
-            entry = self.data.get(key)
-            if entry and time.time() < entry[1]:
-                return entry[0]                  # someone else refilled it
-            self.db_calls += 1
-            value = loader()
-            # PENETRATION FIX: cache the negative result too, briefly,
-            # so repeated requests for a nonexistent id do not each
-            # reach the database.
-            effective_ttl = ttl if value is not None else 5
-            self.data[key] = (value, time.time() + effective_ttl, effective_ttl)
-            return value
-
-    def stats(self):
-        total = self.hits + self.misses
-        return (f"hit rate {self.hits/total:.1%}  "
-                f"db calls {self.db_calls} out of {total} requests")
-
-cache = Cache()
-DB = {f"product:{i}": {"id": i, "name": f"item {i}"} for i in range(1000)}
-
-def load(key):
-    time.sleep(0.01)                      # a real query costs something
-    return DB.get(key)
-
-# Zipfian traffic: a few keys get most of the requests, as in reality.
-def zipf_key(n=1000, s=1.2):
-    weights = [1 / (i + 1) ** s for i in range(n)]
-    total = sum(weights)
-    r, acc = random.random() * total, 0.0
-    for i, w in enumerate(weights):
-        acc += w
-        if acc >= r:
-            return f"product:{i}"
-    return "product:0"
-
-threads = [
-    threading.Thread(target=lambda: [
-        cache.get(zipf_key(), lambda k=None: load(zipf_key()), ttl=30)
-        for _ in range(50)
-    ])
-    for _ in range(20)
-]
-for t in threads: t.start()
-for t in threads: t.join()
-print("\n" + cache.stats())
-print("nonexistent key is cached negatively:", cache.get("product:99999", lambda: load("product:99999")))
-
-# ---------------------------------------------------------------
-# Load balancing: the three algorithms, and why the third matters.
-# ---------------------------------------------------------------
-import itertools
-
-class RoundRobin:
-    def __init__(self, servers): self.it = itertools.cycle(servers)
-    def pick(self, _key=None): return next(self.it)
-
-class LeastConnections:
-    def __init__(self, servers): self.load = {s: 0 for s in servers}
-    def pick(self, _key=None):
-        # Better than round-robin when request cost varies, which it
-        # always does: round-robin sends a heavy request to a box that
-        # is already busy with three others.
-        return min(self.load, key=self.load.get)
-
-class ConsistentHash:
-    """Sticky routing. Needed when the target holds state -- a cache
-    node, or sessions that were not externalised (Phase 65)."""
-    def __init__(self, servers, vnodes=150):
-        self.ring = sorted(
-            (int(hashlib.md5(f"{s}:{v}".encode()).hexdigest(), 16), s)
-            for s in servers for v in range(vnodes)
-        )
-    def pick(self, key):
-        h = int(hashlib.md5(str(key).encode()).hexdigest(), 16)
-        for point, server in self.ring:
-            if h <= point:
-                return server
-        return self.ring[0][1]
-
-servers = ["app1", "app2", "app3"]
-for lb in [RoundRobin(servers), LeastConnections(servers), ConsistentHash(servers)]:
-    picks = [lb.pick(f"user{i}") for i in range(6)]
-    print(f"{type(lb).__name__:<18} {picks}")
-# ConsistentHash gives the SAME user the SAME server every time, which
-# is what "sticky sessions" means -- and note it is a workaround for
-# not having externalised state, not a goal in itself.
+estimate("URL shortener", 100_000_000, 100, 260)
+estimate("Bank ledger", 10_000_000, 10, 500)
 ```
-
-```yaml
-# docker-compose.yml -- build stages 1 through 5 locally. Doing this
-# once teaches more than any diagram, because you can load-test it.
-services:
-  lb:
-    image: nginx:alpine
-    ports: ["8080:80"]
-    volumes: ["./nginx.conf:/etc/nginx/nginx.conf:ro"]
-    depends_on: [app1, app2, app3]
-
-  app1: &app
-    build: .
-    environment:
-      DATABASE_URL:       postgresql://primary/app     # writes
-      REPLICA_URL:        postgresql://replica/app     # reads
-      REDIS_URL:          redis://cache:6379           # shared cache
-      SESSION_STORE:      redis://cache:6379           # NOT local memory
-    depends_on: [primary, replica, cache]
-  app2: *app
-  app3: *app          # identical and stateless: that is the point
-
-  cache:
-    image: redis:7-alpine
-    command: redis-server --maxmemory 512mb --maxmemory-policy allkeys-lru
-
-  primary:
-    image: postgres:16
-    environment: { POSTGRES_DB: app, POSTGRES_PASSWORD: dev }
-    command: >
-      postgres -c wal_level=replica -c max_wal_senders=4
-               -c hot_standby=on
-
-  replica:
-    image: postgres:16
-    environment: { PGUSER: postgres, POSTGRES_PASSWORD: dev }
-    depends_on: [primary]
-
-  worker:
-    build: .
-    command: python worker.py        # async stage: email, thumbnails
-    depends_on: [queue, primary]
-
-  queue:
-    image: rabbitmq:3-management
-```
-
-```bash
-# Find your actual ceiling instead of guessing at it. This is the
-# single most useful exercise in this whole section.
-k6 run --vus 50  --duration 60s load.js     # baseline
-k6 run --vus 500 --duration 60s load.js     # find where p99 degrades
-
-# Then scale one stage and measure the SAME thing again:
-docker compose up --scale app=1   # record rps at p99 < 200 ms
-docker compose up --scale app=3   # is it 3x? if not, the bottleneck
-                                  # was never the app tier
-```
-
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
-
-System design interviews are graded on the process rather than the diagram, and this section is the process. The opening move is always to establish requirements and numbers before proposing anything: how many users, what read to write ratio, what latency target, what consistency requirement. Interviewers are specifically listening for whether you do the arithmetic, because a candidate who says "40 writes per second average, so one database is fine" has demonstrated something a candidate who immediately draws six shards has not. Expect "how would you scale this," where the strong answer walks the stages in order and names the bottleneck that forces each step rather than listing technologies. Expect "vertical or horizontal scaling," where the expected nuance is that vertical is simpler and should come first, and horizontal is unbounded but requires statelessness. Expect "what breaks when you add a second server," where sessions are the canonical answer and it connects back to Phase 68. On caching, "what do you cache and how do you invalidate it" is nearly universal, and naming the stampede problem unprompted is a strong signal. And expect to be asked when *not* to use microservices, which is a test of judgment rather than knowledge, where the correct answer is that they solve a team coordination problem and cost you transactions, reliable calls, and debuggability, so a modular monolith is right until the coordination cost is genuinely the binding constraint.
 
 **PRACTICE UNTIL IT FEELS FAMILIAR**
 
 
-| Difficulty | Task                                                                                                                                                                                                              |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Run the estimation function above for a system of your choosing and state which stage of the journey it needs, with numbers                                                                                       |
-| Easy       | List the eight stages from memory and name the specific bottleneck that forces each transition                                                                                                                    |
-| Easy       | Explain the difference between vertical and horizontal scaling, and give one reason to prefer each                                                                                                                |
-| Easy       | Explain what breaks when you add a second application server, and give the two available fixes                                                                                                                    |
-| Easy       | Look up the latency numbers for memory, SSD, and a cross-continent round trip, and write the three ratios between them                                                                                            |
-| Medium     | Load-test a single-instance application with [k6](https://k6.io/) and find the exact requests per second where p99 latency exceeds 200 ms                                                                         |
-| Medium     | Add a load balancer and three instances, repeat the test, and explain why the improvement was or was not 3x                                                                                                       |
-| Medium     | Implement cache-aside in front of a real database and measure the hit rate under Zipfian traffic                                                                                                                  |
-| Medium     | Reproduce a cache stampede by expiring a hot key under concurrent load, then fix it with a lock and prove the database call count dropped                                                                         |
-| Medium     | Reproduce cache penetration with requests for nonexistent ids, then fix it with negative caching                                                                                                                  |
-| Medium     | Move sessions from local memory to Redis and demonstrate that a login on one instance is visible on another                                                                                                       |
-| Medium     | Bring up the full Docker Compose stack above and verify writes go to the primary while reads go to the replica                                                                                                    |
-| Medium     | Move email sending to a queue with a worker, then kill the worker mid-job and show the message is retried rather than lost                                                                                        |
-| Medium     | Implement all three load-balancing algorithms and measure the distribution imbalance of each under variable request cost                                                                                          |
-| Hard       | Design a URL shortener end to end with full estimation, then build stages 1 through 4 of it and load-test each stage                                                                                              |
-| Hard       | Do the same estimation and design for a chat application, a social feed, and a ride-dispatch system, and write down which stage each one is forced to by which specific number                                    |
-| Hard       | Take a system with a 95 percent cache hit rate, restart the cache under full load, and demonstrate the cold-cache collapse. Then implement warming and load shedding so it survives                               |
-| Hard       | Implement idempotent queue consumers and prove that processing the same message twice has no additional effect                                                                                                    |
-| Hard       | Take a monolith and extract one service, then write down every capability you lost: the transaction that no longer exists, the call that can now fail, and the stack trace you no longer get                      |
-| Hard       | Read three post-mortems from [awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) and, for each, identify which stage the company was at and what forced the next one                      |
-| Hard       | Read [Designing Data-Intensive Applications](https://dataintensive.net/) chapter 1, then write down the definitions of reliability, scalability, and maintainability it gives, and score your own project on each |
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | List the six process steps from memory |
+| Easy | Vertical vs horizontal in one sentence each; name what "stateless app" means |
+| Medium | Estimate a chat app (state assumptions). Say which phase owns your first scaling lever |
+| Medium | Draw (Excalidraw) single-server → LB+apps → DB only - stop before inventing cache/queue detail |
+| Hard | For three prompts (shortener, feed, ledger), write which stages the *numbers* force and which phases teach them |
+| Hard | Narrate a 10-minute mock: clarify → estimate → simplest diagram → "I'd open Phase 83 next because…" |
 
 
-**WHY THE NEXT TOPIC IS NEEDED - Scaling Applications:** A load-balanced diagram is only the starting shape. Under real traffic you must name *which* resource is scarce and pick the scaling move that multiplies that resource - Phase 82.
+**WHY THE NEXT TOPIC IS NEEDED - Scaling Applications:** A journey map is not a diagnosis. Under load you must name the scarce resource (CPU, disk, lock, network) and pick the move that multiplies *that* resource. That is Phase 82.
 
 ---
 
@@ -18958,35 +18861,39 @@ System design interviews are graded on the process rather than the diagram, and 
 
 **WHAT YOU WILL BE ABLE TO DO:** Identify a concrete bottleneck (CPU, memory, disk, network, or lock) under load and name the scaling move that removes *that* bottleneck - not a generic "add servers" answer.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 81 (single server → load-balanced shape), Phase 49-54 (machines have finite CPU/RAM/I/O), Phase 55-59 (networks add latency and failure).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 81 (process + estimation + journey *map*), Phase 49-54 (machines have finite CPU/RAM/I/O), Phase 55-59 (networks add latency and failure).
 
 ## 82.1 Find the Bottleneck, Then Scale
 
-**WHY YOU ARE LEARNING THIS:** "Scale it" is not a design. Vertical scaling (bigger box) and horizontal scaling (more boxes) fix different limits. Guessing wrong wastes money and still leaves users waiting. This phase trains the habit: measure → name the scarce resource → pick the fix that multiplies *that* resource.
+**WHY YOU ARE LEARNING THIS:** Phase 81 taught you to estimate and draw the simplest shape. "Scale it" is still not a design. Vertical scaling (bigger box) and horizontal scaling (more boxes) fix different limits. Guessing wrong wastes money and still leaves users waiting. This phase owns the habit: measure → name the scarce resource → pick the fix that multiplies *that* resource (including load balancers and when to add app replicas).
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
-- Foundations: [Load Balancing system design (Exponent)](https://www.youtube.com/watch?v=chyZRNT7eEo) *(Composio YouTube)*; [donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer) *(Composio GitHub + DeepWiki)*
-- Written: scalability curricula on horizontal/stateless app tiers *(Composio web)*; DDIA chapter 1 vocabulary (reliability, scalability, maintainability)
-- Practice: for one of your apps, list the first thing that would break at 100× traffic
+- Foundations: [Load Balancing system design (Exponent)](https://www.youtube.com/watch?v=chyZRNT7eEo) *(Composio YouTube)*; [Load Balancing Algorithms (ByteByteGo)](https://www.youtube.com/watch?v=dBmxNsS3BGE) *(Composio YouTube)*
+- Written: [donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer) *(Composio GitHub)*; DDIA chapter 1 vocabulary (reliability, scalability, maintainability)
+- Practice: for one of your apps, list the first thing that would break at 100× traffic - prefer a diagram + numbers over code
 
 **STEP-BY-STEP EXPLANATION**
 
 | Symptom | Likely scarce resource | First moves |
 | ------- | ---------------------- | ----------- |
-| CPU pegged, latency climbs with compute | CPU | Optimize hot path; then more app replicas behind a load balancer |
-| RAM grows with sessions / caches | Memory | Externalize session; bound caches; then more nodes |
+| CPU pegged, latency climbs with compute | CPU | Optimize hot path; then more app replicas behind a **load balancer** |
+| RAM grows with sessions / caches | Memory | Externalize session (Phase 68); bound caches (Phase 83); then more nodes |
 | Disk / DB IOPS saturated | Storage I/O | Indexes, read replicas, shard later (Phase 65) |
 | Timeouts while DB is fine | Network / downstream | Timeouts + pools; async (Phase 84); circuit breakers (Phase 87) |
 | One lock / global mutex | Contention | Partition work; avoid global serialization |
 
-**Vertical vs horizontal:** vertical is simple until you hit a ceiling or a single point of failure. Horizontal needs **stateless app tiers** (or sticky sessions as a conscious trade-off) and shared durable state in DB/cache/queue.
+**Load balancer (this phase owns the app-tier shape):** clients hit one VIP; the LB distributes to healthy app instances (round-robin, least-connections, etc.). Health checks remove bad nodes. Sticky sessions are a conscious trade-off that fights horizontal scale - prefer shared session store or tokens.
+
+**Vertical vs horizontal:** vertical is simple until you hit a ceiling or a single point of failure. Horizontal needs **stateless app tiers** and shared durable state in DB/cache/queue. Phase 81 named the words; here you diagnose *which* ceiling you hit.
 
 ```text
 Load → LB → [app][app][app] → DB / cache / queue
                  ↑
         scale this tier when CPU-bound and stateless
 ```
+
+**Not owned here:** cache strategies (83), queue design (84), CAP proofs (85).
 
 **SMALL WORKING EXAMPLE**
 
@@ -19035,7 +18942,7 @@ else:
 
 ## 83.1 Speed With a Staleness Budget
 
-**WHY YOU ARE LEARNING THIS:** A cache is a copy kept for speed. Copies go wrong. The hard part is not "put Redis in front" - it is deciding **who fills the cache**, **who updates it on write**, and **what users see when the copy is stale or missing**.
+**WHY YOU ARE LEARNING THIS:** Phase 81 only *named* caching on the journey map. A cache is a copy kept for speed. Copies go wrong. This phase owns **who fills the cache**, **who updates it on write**, and **what users see when the copy is stale or missing** - including stampede/penetration/cold-cache failure modes.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -19117,7 +19024,7 @@ get_user(1)
 
 ## 84.1 Decouple With Queues and Events
 
-**WHY YOU ARE LEARNING THIS:** A checkout HTTP handler that also sends email, resizes images, and updates search will time out and fail partially. Asynchronous designs **accept work quickly**, then process it elsewhere - at the cost of eventual visibility and harder debugging (Phase 80 traces help).
+**WHY YOU ARE LEARNING THIS:** Phase 81 only flagged async as a later lever. A checkout HTTP handler that also sends email, resizes images, and updates search will time out and fail partially. This phase owns asynchronous designs that **accept work quickly**, then process it elsewhere - at the cost of eventual visibility and harder debugging (Phase 80 traces help). Not a Kafka internals course.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -19197,9 +19104,11 @@ print("actions", actions)
 
 ## 85.1 The CAP Theorem
 
-**WHY YOU ARE LEARNING THIS:** Once a system is distributed across multiple machines (Stage 5 onward above), a fundamental, provable limit appears that no amount of good engineering can design around - only work through deliberately.
+**WHY YOU ARE LEARNING THIS:** Once a system is distributed across multiple machines (after you replicate or shard - Phase 65 revisited under load via Phase 81's map and Phase 82), a fundamental, provable limit appears that no amount of good engineering can design around - only work through deliberately.
 
-**The theorem, plainly:** in the presence of a **network Partition** (some machines can't talk to others - inevitable when the amount of work grows; networks fail), a distributed system must choose between **Consistency** (every read sees the latest write, even if it means refusing to answer during the partition) and **Availability** (every request gets a response, even if it might be slightly stale). You cannot have perfect versions of both at the same time, during a partition.
+**Progression 65 → 85:** Phase 65 taught *how* replication, partitioning, and sharding work inside a database story. Phase 85 teaches what those techniques *cannot* promise once the network can partition: **CAP consistency is not ACID consistency**. The C in ACID (Phase 64) is about integrity constraints inside a database. The C in CAP means *linearizability* across replicas during a partition - a different, stronger, and easier-to-lose property. Conflating them is a common interview failure.
+
+**The theorem, plainly:** in the presence of a **network Partition** (some machines can't talk to others - inevitable when the amount of work grows; networks fail), a distributed system must choose between **Consistency** (every read sees the latest write, even if it means refusing to answer during the partition) and **Availability** (every request gets a response, even if it might be slightly stale). You cannot have perfect versions of both at the same time, during a partition. Keep this concrete - two nodes, one cut cable - not a huge theory chapter.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -19572,7 +19481,7 @@ docker network connect mynet node3     # heal, then check for conflicts
 
 **WHY YOU ARE LEARNING THIS:** Phase 65 introduced replication as a scaling technique and named replication lag as its cost. Phase 85 established that during a partition you must choose between consistency and availability. Both left the same gap: they described the trade-off without giving the application anything it can reason about. "Eventually consistent" is not a specification, because "eventually" is not a number and "consistent" without qualification does not say which anomalies are possible. An engineer who knows only that the replica might be stale cannot answer the question that actually matters, which is whether a specific piece of code is correct. Named consistency models exist because the previous limitation was not a lack of mechanisms but a lack of vocabulary precise enough to check anything against.
 
-**Why this needs its own phase, beyond Phase 65 and 17.1:** Earlier phases named replication as a scaling technique and flagged "replication lag" as a cost. This phase asks the harder question those earlier mentions glossed over: *exactly* how stale can a replica be, and what specific guarantee (if any) does an application get about what it will read?
+**Why this needs its own phase, beyond Phase 65 and Phase 81:** Earlier phases named replication as a scaling technique and flagged "replication lag" as a cost. This phase asks the harder question those earlier mentions glossed over: *exactly* how stale can a replica be, and what specific guarantee (if any) does an application get about what it will read?
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -19598,7 +19507,7 @@ Below causal consistency sit the four **session guarantees**, which are weaker i
 
 The mechanical question underneath all of this is **how conflicting writes are detected and resolved**, because with more than one writable replica two clients can concurrently write the same key. **Last write wins** using timestamps is the simplest approach and it silently discards data, which is acceptable for a cache and unacceptable for a shopping cart. **Vector clocks** solve the detection problem properly: each replica maintains a counter per node, and comparing two vectors tells you whether one causally precedes the other or whether they are genuinely concurrent, at which point the system can surface the conflict rather than guess. **CRDTs**, conflict-free replicated data types, take the more elegant route of designing the data structure so that merging is commutative, associative, and idempotent, which makes conflicts mathematically impossible rather than merely detectable. A grow-only counter, an add-only set, and the text sequences that power collaborative editors are all CRDTs, and the reason they matter is that they let you have availability and convergence with no coordination and no lost data, at the cost of only supporting operations that can be made to commute.
 
-The final practical point is that **consistency is chosen per operation, not per system**, which mirrors the quorum discussion in 17.2. A single application legitimately wants linearizability for account balances, causal consistency for comment threads, read-your-own-writes for profile edits, and bare eventual consistency for view counters. Designing the whole system to the strongest requirement any part of it has is the most common way to make a distributed system needlessly slow.
+The final practical point is that **consistency is chosen per operation, not per system**, which mirrors the quorum discussion in Phase 85. A single application legitimately wants linearizability for account balances, causal consistency for comment threads, read-your-own-writes for profile edits, and bare eventual consistency for view counters. Designing the whole system to the strongest requirement any part of it has is the most common way to make a distributed system needlessly slow.
 
 **BEFORE VS. AFTER**
 
@@ -20049,13 +19958,15 @@ psql -h replica -c "SET synchronous_commit = on"   # or route this
 
 **Track:** System Design & Distributed Systems
 
-**WHAT YOU WILL BE ABLE TO DO:** Explain what a consensus algorithm (e.g. Raft) buys you - leader election and replicated log agreement - when machines can fail or lose contact.
+**WHAT YOU WILL BE ABLE TO DO:** Explain what a consensus algorithm (e.g. Raft) buys you - leader election and replicated log agreement - when machines can fail or lose contact. Distinct from Phase 87: consensus is *how replicas agree*; reliability patterns are *how a client survives a sick dependency*.
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 85 (CAP is the problem statement consensus responds to), Phase 53 (agreement across threads foreshadows agreement across machines).
 
 ## 86.1 Consensus & Fault Tolerance
 
-**WHY YOU ARE LEARNING THIS:** Stage 5 of Phase 81 casually said "if the primary fails, a replica can be promoted" - but *how* do the remaining machines agree on exactly *which* replica becomes the new primary, especially if several machines can't currently talk to each other (Phase 85's partition) and any one of them might crash at any moment, mid-decision? Getting a group of unreliable machines to agree on a single value, even when some of them fail, is the consensus problem - and it is provably impossible to solve perfectly in an asynchronous network with even one faulty node (a foundational result called the FLP impossibility result), which is *why* real consensus algorithms make specific, careful trade-offs rather than claiming a perfect solution.
+**WHY YOU ARE LEARNING THIS:** Phase 65/82 said "if the primary fails, a replica can be promoted" - but *how* do the remaining machines agree on exactly *which* replica becomes the new primary, especially if several machines can't currently talk to each other (Phase 85's partition) and any one of them might crash at any moment, mid-decision? Getting a group of unreliable machines to agree on a single value, even when some of them fail, is the consensus problem - and it is provably impossible to solve perfectly in an asynchronous network with even one faulty node (FLP), which is *why* real consensus algorithms make specific, careful trade-offs rather than claiming a perfect solution.
+
+**Role split:** **Phase 86** = agreement among replicas (Raft-level intuition; no Paxos implementation homework). **Phase 87** = timeouts, retries, circuit breakers on the *caller* side when a dependency is slow or down.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -20485,7 +20396,7 @@ docker unpause etcd1                           # heal and watch it rejoin
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW**
 
-Deep distributed-systems questions ("how would you build a leader-election mechanism," "what happens if the network partitions your cluster") are less common in general software interviews but common in senior/staff-level and infrastructure-focused interviews - the expected answer connects directly back to the CAP theorem (17.2) and the majority-quorum idea above, rather than a memorized algorithm name. The question that is asked most often in that setting is "why a majority rather than any quorum," and the expected answer is the overlap argument: two majorities of the same set must share a member, and no member votes twice in a term, so two conflicting decisions cannot both succeed. Expect "why are clusters always odd-numbered," where the answer is that an even size adds a node's cost and latency without increasing the number of failures tolerated. Expect "what is split brain and what prevents it," where the mechanism is that the minority side cannot reach a majority and is therefore unavailable rather than wrong. A strong candidate raises **fencing tokens** unprompted when locks or leases come up, because it demonstrates awareness that a leader can be paused past its lease expiry and that the protected resource must also check. If FLP impossibility comes up, the useful framing is that real systems keep safety unconditionally and trade away liveness during network trouble, which is why timeouts exist and are hard to tune. And the most practical question, often asked as a follow-up to a system design round, is "would you put this data through consensus," where the expected judgment is no for the data path and yes for metadata such as leadership and configuration.
+Deep distributed-systems questions ("how would you build a leader-election mechanism," "what happens if the network partitions your cluster") are less common in general software interviews but common in senior/staff-level and infrastructure-focused interviews - the expected answer connects directly back to the CAP theorem (Phase 85) and the majority-quorum idea above, rather than a memorized algorithm name. The question that is asked most often in that setting is "why a majority rather than any quorum," and the expected answer is the overlap argument: two majorities of the same set must share a member, and no member votes twice in a term, so two conflicting decisions cannot both succeed. Expect "why are clusters always odd-numbered," where the answer is that an even size adds a node's cost and latency without increasing the number of failures tolerated. Expect "what is split brain and what prevents it," where the mechanism is that the minority side cannot reach a majority and is therefore unavailable rather than wrong. A strong candidate raises **fencing tokens** unprompted when locks or leases come up, because it demonstrates awareness that a leader can be paused past its lease expiry and that the protected resource must also check. If FLP impossibility comes up, the useful framing is that real systems keep safety unconditionally and trade away liveness during network trouble, which is why timeouts exist and are hard to tune. And the most practical question, often asked as a follow-up to a system design round, is "would you put this data through consensus," where the expected judgment is no for the data path and yes for metadata such as leadership and configuration.
 
 **PRACTICE UNTIL IT FEELS FAMILIAR**
 
@@ -20530,13 +20441,13 @@ Deep distributed-systems questions ("how would you build a leader-election mecha
 
 **Track:** System Design & Distributed Systems
 
-**WHAT YOU WILL BE ABLE TO DO:** Explain retries, timeouts, and circuit breakers - and the failure mode each pattern prevents *and* the failure mode it can introduce if misconfigured.
+**WHAT YOU WILL BE ABLE TO DO:** Explain retries, timeouts, and circuit breakers - and the failure mode each pattern prevents *and* the failure mode it can introduce if misconfigured. This is *caller-side* survival, not replica agreement (Phase 86).
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 84-86 (async and consensus still call unreliable networks), Phase 80 (you need signals to know a dependency is sick), Phase 77 (deploy/rollback is part of surviving bad releases).
 
 ## 87.1 Survive Partial Failure
 
-**WHY YOU ARE LEARNING THIS:** In a distributed system, **something is always broken**. Retries without backoff amplify outages. Missing timeouts hold threads forever. Without a circuit breaker, a dead dependency takes the whole fleet down. These patterns are how services fail *locally* instead of globally.
+**WHY YOU ARE LEARNING THIS:** Consensus (86) keeps a *cluster* agreeing. Reliability patterns keep *your service* from melting when a dependency is sick. In a distributed system, **something is always broken**. Retries without backoff amplify outages. Missing timeouts hold threads forever. Without a circuit breaker, a dead dependency takes the whole fleet down. These patterns are how services fail *locally* instead of globally.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -20622,13 +20533,13 @@ for t, ok in enumerate([False, False, False, False, True], start=1):
 
 **Track:** System Design & Distributed Systems
 
-**WHAT YOU WILL BE ABLE TO DO:** Run a full system-design walkthrough unprompted - requirements → capacity → components → data → trade-offs → failure modes - using Phases 81-87 as a toolbox.
+**WHAT YOU WILL BE ABLE TO DO:** Run a full system-design walkthrough unprompted - requirements → capacity → components → data → trade-offs → failure modes - using Phases 81-87 as a toolbox. This is the **Story XI learning capstone** (interview application of the same skill returns in Story XV / Phase 103).
 
 **WHAT YOU SHOULD KNOW FIRST:** Phases 81-87 (foundations through reliability patterns). This phase combines them; it does not introduce a new building block.
 
 ## 88.1 Putting It Together - Worked System Design Walkthrough
 
-**WHY YOU ARE LEARNING THIS:** Phases 81-87 gave you a toolbox and a fundamental limit, and both are inert on their own. The limitation they leave is that knowing every technique does not tell you which to reach for when a requirement arrives underspecified, nor in what order, nor how to justify leaving something out. That selection process is a distinct skill, it is what a system design interview is actually measuring, and it is what real design meetings consist of. This section exists because the gap between "I can explain sharding" and "I can decide whether this system needs sharding" is where most people are, and closing it requires walking complete examples rather than learning more components.
+**WHY YOU ARE LEARNING THIS:** Phases 81-87 gave you a process (81), mechanisms (82-87), and a fundamental limit (85). Knowing every technique does not tell you which to reach for when a requirement arrives underspecified. That selection process is a distinct skill - what a system design interview measures and what real design meetings consist of. This section closes the gap between "I can explain sharding" and "I can decide whether this system needs sharding" by walking complete examples.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -20648,13 +20559,13 @@ System design interviews are scored on process, and the process has a shape you 
 
 **Step one, clarify and scope, roughly five minutes.** The prompt is deliberately vague, and the first thing being tested is whether you narrow it before designing. Establish the functional requirements as a short explicit list, then ask what is out of scope, then establish the non-functional requirements that actually determine the architecture: how many users, what read-to-write ratio, what latency target, what availability target, and what consistency requirement. Write these on the board. Candidates who skip this step design the wrong system confidently, which is worse than designing slowly.
 
-**Step two, estimate, roughly five minutes.** Convert the requirements into numbers using the arithmetic from 17.1: requests per second at average and peak, storage per year, bandwidth, and the size of the working set. The point is not precision, it is that these numbers determine every subsequent decision and make them defensible. A candidate who computes 200 writes per second has established that one database suffices and has earned the right to not shard, which is a much stronger position than either sharding unnecessarily or omitting it without justification.
+**Step two, estimate, roughly five minutes.** Convert the requirements into numbers using the arithmetic from Phase 81: requests per second at average and peak, storage per year, bandwidth, and the size of the working set. The point is not precision, it is that these numbers determine every subsequent decision and make them defensible. A candidate who computes 200 writes per second has established that one database suffices and has earned the right to not shard, which is a much stronger position than either sharding unnecessarily or omitting it without justification.
 
 **Step three, define the API and data model, roughly five minutes.** Name the endpoints with their methods and shapes, drawing on Phase 59, and sketch the tables with their keys and indexes, drawing on Phase 60. This step is where hidden requirements surface, because writing down the query you need to serve reveals whether your schema can serve it. It is also where the access patterns become explicit, and access patterns are what determine the storage choice.
 
 **Step four, draw the simplest design that meets the requirements, roughly five minutes.** Start at stage one or two of the journey. Resist the urge to draw the final architecture, because arriving at complexity through identified bottlenecks is the thing being assessed, and a diagram with nine components presented up front cannot demonstrate it.
 
-**Step five, scale it by identifying bottlenecks, roughly fifteen minutes and the core of the interview.** Walk the stages: what breaks first at this traffic, what fixes it, and what new problem the fix introduces. Each step should name a specific number that forces it. This is where the caching, replication, and sharding discussions belong, and where the consistency choices from 17.2 get made per operation rather than globally.
+**Step five, scale it by identifying bottlenecks, roughly fifteen minutes and the core of the interview.** Walk the journey map from Phase 81, but pull mechanism depth from the owning phases: what breaks first (82), whether a cache helps and how you invalidate (83), whether work leaves the request path (84), what CAP choice you are making (85), whether you need consensus for leadership (86), and which caller-side patterns keep you alive (87). Each step should name a specific number that forces it. Consistency choices from Phase 85 get made per operation rather than globally.
 
 **Step six, deep dive on whatever the interviewer probes, roughly ten minutes.** They will pick one component and push. Common targets are the unique-id generation scheme, the cache invalidation strategy, the shard key choice, and the fan-out approach for a feed. Having a concrete opinion with a stated trade-off is what is wanted, not the single correct answer, because there rarely is one.
 
@@ -20692,7 +20603,7 @@ Then the design is stressed against failures deliberately: what happens in a fir
    |                            "at N rps, X saturates"
    |                            "so I add Y"
    |                            "which introduces Z"
-   |                        This is 17.1's stage walk, narrated.
+   |                        This is Phase 81's map, walked with 82–87 depth, narrated.
    v
  35-45   DEEP DIVE          they pick one component and push.
    |                        Have an opinion AND its trade-off.
@@ -20732,7 +20643,7 @@ PROMPT: "Design a URL shortener."
                 will click it). Analytics may be eventually consistent.
                 ^ note these differ. That is the interesting part.
 
-2. ESTIMATE                                    (from 17.1's arithmetic)
+2. ESTIMATE                                    (from Phase 81's arithmetic)
      writes   40/s avg, ~200/s peak       -> one primary. NO sharding.
      reads    4,000/s avg, 20,000/s peak  -> cache is MANDATORY
      storage  ~312 GB/yr, 1.5 TB over 5   -> one machine's disk
@@ -20801,17 +20712,17 @@ PROMPT: "Design a URL shortener."
        replication lag
      deploy: canary, because redirects are the whole product (16.3)
      failure modes: cache down -> 20x load hits the database. This
-       is the cold-cache problem from 17.1, so shed load and warm
+       is the cold-cache problem from Phase 83, so shed load and warm
        before accepting traffic.
 ```
 
-**Practice / Mini-Project:** Design a URL shortener (a classic, tractable system design exercise) by walking the full stage progression from 17.1:
+**Practice / Mini-Project:** Design a URL shortener (a classic, tractable system design exercise) by walking the full journey map from Phase 81:
 
 1. What does a single-server version look like? (a table mapping short codes to long URLs - Phase 61)
-2. What happens when read traffic (people clicking short links) grows? (caching - 17.1 Stage 4, since reads vastly outnumber writes for this system)
+2. What happens when read traffic (people clicking short links) grows? (caching - Phase 83, since reads vastly outnumber writes for this system)
 3. How do you generate unique short codes across multiple servers without collisions? (this connects back to hashing, Phase 58, and to coordinating unique IDs across shards, Phase 65)
 4. What would you replicate, and what would you shard, if this needed to serve billions of URLs?
-5. Where would consistency vs. availability trade-offs (17.2) show up, and which would you choose?
+5. Where would consistency vs. availability trade-offs (Phase 85) show up, and which would you choose?
 
 Repeat this same five-question shape for a chat application, a social media feed, and a ride-sharing dispatch system - each stresses a different part of the stage progression (feeds stress caching and fan-out; ride dispatch stresses real-time location data and geographic partitioning).
 
@@ -20975,7 +20886,7 @@ class Shortener:
         if row is None:
             # NEGATIVE CACHING: without this, a crawler hitting random
             # codes bypasses the cache entirely and every request
-            # reaches the database. (17.1's penetration failure mode.)
+            # reaches the database. (Phase 83's penetration failure mode.)
             self.cache.set(code, "", ttl=60)
             return 404, {"error": "not found"}
         long_url, expires_at = row
@@ -21075,7 +20986,7 @@ design_sheet("Ride dispatch",   dau=5_000_000, actions_per_user_per_day=600,
 
 **HOW TO EXPLAIN THIS IN AN INTERVIEW**
 
-System design interviews are explicitly graded on process, not a single correct diagram: clarify requirements and scale first (how many users, how much traffic), propose a simple design, then progressively identify its bottlenecks and solve them one at a time - exactly the stage-by-stage shape of 17.1, narrated out loud. Three specific behaviours account for most of the difference between outcomes. First, doing the arithmetic out loud, because a candidate who computes 200 writes per second and then declines to shard has demonstrated judgment, while a candidate who shards without computing has demonstrated pattern matching. Second, naming what you are deliberately not building and why, since an interviewer cannot distinguish "chose not to" from "did not think of" unless you say so. Third, stating the cost of every choice, because every technique in this phase trades something away and an unqualified recommendation reads as memorised. The most common recoverable mistake is drawing the full architecture in the first five minutes, which forecloses the bottleneck discussion that the remaining forty are for. The most common unrecoverable one is designing before scoping, since a beautiful answer to the wrong question scores nothing. When you do not know something, say what you would measure to find out, because that is a genuinely good answer and pretending is not.
+System design interviews are explicitly graded on process, not a single correct diagram: clarify requirements and scale first (how many users, how much traffic), propose a simple design, then progressively identify its bottlenecks and solve them one at a time - exactly the stage-by-stage map from Phase 81, narrated out loud. Three specific behaviours account for most of the difference between outcomes. First, doing the arithmetic out loud, because a candidate who computes 200 writes per second and then declines to shard has demonstrated judgment, while a candidate who shards without computing has demonstrated pattern matching. Second, naming what you are deliberately not building and why, since an interviewer cannot distinguish "chose not to" from "did not think of" unless you say so. Third, stating the cost of every choice, because every technique in this phase trades something away and an unqualified recommendation reads as memorised. The most common recoverable mistake is drawing the full architecture in the first five minutes, which forecloses the bottleneck discussion that the remaining forty are for. The most common unrecoverable one is designing before scoping, since a beautiful answer to the wrong question scores nothing. When you do not know something, say what you would measure to find out, because that is a genuinely good answer and pretending is not.
 
 **PRACTICE UNTIL IT FEELS FAMILIAR**
 
@@ -21099,7 +21010,7 @@ System design interviews are explicitly graded on process, not a single correct 
 | Hard       | Do a mock interview on [Pramp](https://www.pramp.com/) or [interviewing.io](https://interviewing.io/) and write down every question you could not answer                                                                                                       |
 | Hard       | Design a notification system covering email, SMS, and push, with at-least-once delivery, per-channel retries, and user preferences. Explain how you prevent duplicate notifications reaching a user                                                            |
 | Hard       | Design a video streaming platform and work out the storage multiplication from transcoding into five renditions, with real numbers                                                                                                                             |
-| Hard       | Design a payment ledger where correctness dominates, using idempotency keys from Phase 59 and linearizable writes from 17.2, and state the throughput ceiling you accepted                                                                                   |
+| Hard       | Design a payment ledger where correctness dominates, using idempotency keys from Phase 59 and linearizable writes from Phase 85, and state the throughput ceiling you accepted                                                                                   |
 | Hard       | Take one design you completed and write the operations section in full: every metric you would alert on, every threshold, the deploy strategy, and the top three failure modes with their mitigations                                                          |
 | Hard       | Read three worked solutions in [System Design Primer](https://github.com/donnemartin/system-design-primer#system-design-interview-questions-with-solutions), then redo one from scratch and diff your answer against theirs, listing every decision you missed |
 
@@ -21118,70 +21029,82 @@ System design interviews are explicitly graded on process, not a single correct 
 
 **Track:** Other Core Computer Science Areas
 
-**WHAT YOU WILL BE ABLE TO DO:** Explain what ML/AI actually is in CS terms - learning from data vs hand-written rules - and clearly separate classical machine learning from deep learning.
+**WHAT YOU WILL BE ABLE TO DO:** Explain what ML/AI means in CS terms - learning from data, search/planning over large spaces, and classical ML vs deep learning - without collapsing everything into "LLMs."
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 31-48 (you already reason about algorithms, probability-ish trade-offs, and optimization under constraints), Phase 60-65 (training data is still data with quality and privacy issues), Phase 66-69 (models can become attack surfaces and privacy leaks).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 31-48 (algorithms, graphs, optimization under constraints), Phase 60-65 (training data is still data with quality and privacy issues), Phase 66-69 (models can become attack surfaces and privacy leaks).
 
 ## 89.1 Learning From Data (Without the Hype)
 
-**WHY YOU ARE LEARNING THIS:** "AI" in product marketing is vague. In CS it usually means systems that **improve performance on a task using data** (or search/planning over large spaces). You do not need to become a researcher here - you need a vocabulary that stops you from confusing a linear classifier, a neural net, and a rules engine.
+**WHY YOU ARE LEARNING THIS:** "AI" in product marketing is vague. In CS it usually means systems that **improve performance on a task using data** *or* **search/plan** over huge state spaces. You do not need AI.md depth or an LLM specialization here - you need a vocabulary that separates a rules engine, a classical learner, a neural net, and a search-based agent.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
 - Intuition: [Neural Networks (3Blue1Brown)](https://www.youtube.com/watch?v=aircAruvnKk) *(Composio YouTube)*; [ML vs deep learning overview (IBM Technology)](https://www.youtube.com/watch?v=q6kJ71tEYqM) *(Composio YouTube)*
-- Written: [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) *(Composio web + fetch)*; supervised/unsupervised curriculum framing *(Composio web)*
-- Hands-on path: [ageron/handson-ml3](https://github.com/ageron/handson-ml3) *(Composio GitHub + DeepWiki)* - classical ML notebooks before deep learning chapters
-- Scholar angle: ML foundations texts treat features, loss, and generalization as the core *(Composio Scholar)*
+- Classical AI (search): [A* Search and Heuristics Intuition](https://www.youtube.com/watch?v=71CEj4gKDnE) *(Composio YouTube)* - planning/search is AI too, not only neural nets
+- Written: [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) *(Composio web + fetch)*
+- Hands-on path: [ageron/handson-ml3](https://github.com/ageron/handson-ml3) *(Composio GitHub)* - classical ML notebooks before deep learning chapters
 
 **STEP-BY-STEP EXPLANATION**
 
 | Idea | Meaning |
 | ---- | ------- |
+| **Search / planning** | Explore a state space with heuristics (BFS/A*, game trees) - "classical AI" |
 | **Supervised learning** | Learn a mapping examples → labels (spam/not, price, class) |
 | **Unsupervised learning** | Find structure without labels (clusters, dimensionality reduction) |
 | **Classical ML** | Often hand-designed features + models like linear/logistic regression, trees, SVM, k-NN |
-| **Deep learning** | Multi-layer neural nets learn representations from raw-ish inputs (images, text, audio) |
+| **Deep learning** | Multi-layer nets learn representations from raw-ish inputs (images, text, audio) |
+| **Generative / LLMs** | Models that sample text/images; still trained with loss on data - one branch, not all of AI |
 | **Train / validation / test** | Fit on train; tune on validation; report honestly on held-out test |
 
-Deep learning is still optimization of a loss on data - it is not magic. It shines when you have **lots of data** and features are hard to hand-engineer. Classical ML often wins on tabular data, small datasets, and interpretability needs.
+Deep learning is still optimization of a loss on data - it is not magic. It shines when you have **lots of data** and features are hard to hand-engineer. Classical ML often wins on tabular data, small datasets, and interpretability. Search/planning still powers routing, compilers, games, and many agents that are not "trained" in the ML sense.
 
 ```text
-Rules engine:  if amount > 1000 and country_new → flag
-Classical ML:  features (amount, velocity, …) → model → score
-Deep learning: raw pixels / tokens → layers → score
+Rules engine:     if amount > 1000 and country_new → flag
+Search/planning:  explore moves / paths with a heuristic
+Classical ML:     features (amount, velocity, …) → model → score
+Deep learning:    raw pixels / tokens → layers → score
+LLM (narrow):     next-token prediction → useful text tools (not the whole field)
 ```
 
 **SMALL WORKING EXAMPLE**
 
 ```python playground=cs-phase-89-classical-vs-deep
-# Tiny analogy: "classical" = hand features; "deep" = stacked transforms.
-# Not a real training loop - a mental model you can run.
+# Tiny analogy: classical features vs stacked transforms vs search.
+# Prefer reasoning over training loops here.
 
 def classical_score(amount, velocity):
-    # human-chosen features
     return 0.7 * amount + 0.3 * velocity
 
 def deep_ish(x, weights_layers):
-    # stacked linear-ish transforms (toy)
     for W in weights_layers:
         x = [sum(a * b for a, b in zip(x, row)) for row in W]
     return x[0]
 
-print("classical", classical_score(amount=10, velocity=2))
-print("deep-ish", deep_ish([10, 2], weights_layers=[
-    [[0.5, 0.1], [0.2, 0.4]],
-    [[0.6, 0.3]],
-]))
-print("Same goal: map inputs → score. Different who invents the features.")
+def greedy_plan(start, goal, neighbors):
+    # toy "planning": always step to neighbor closest to goal
+    path = [start]
+    cur = start
+    for _ in range(20):
+        if cur == goal:
+            break
+        opts = neighbors(cur)
+        cur = min(opts, key=lambda p: abs(p - goal))
+        path.append(cur)
+    return path
+
+print("classical", classical_score(10, 2))
+print("deep-ish", deep_ish([10, 2], [[[0.5, 0.1], [0.2, 0.4]], [[0.6, 0.3]]]))
+print("plan", greedy_plan(0, 10, lambda x: [x + 1, x + 2, x - 1]))
+print("Same CS family: map inputs → useful decisions. Different mechanisms.")
 ```
 
 **PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | Define supervised vs unsupervised in one sentence each |
-| Medium | Give one problem better for classical ML and one for deep learning, with why |
-| Hard | Read one Hands-on ML chapter and explain train/val/test leakage in your own words |
+| Easy | Define supervised vs unsupervised; name one classical-AI search problem |
+| Medium | Give one problem better for classical ML, one for deep learning, one for search/planning |
+| Hard | Explain why "we added an LLM" is not a system design for fraud detection by itself |
 
 **WHY THE NEXT TOPIC IS NEEDED - Specialized Platforms:** Desktop/server assumptions (plenty of RAM, always-on power, big screens) fail on phones, microcontrollers, and robots. Those constraints change what algorithms and architectures are even possible. That is Phase 90.
 
@@ -21197,32 +21120,37 @@ print("Same goal: map inputs → score. Different who invents the features.")
 
 **Track:** Other Core Computer Science Areas
 
-**WHAT YOU WILL BE ABLE TO DO:** Name at least one hard constraint unique to a specialized platform (mobile, embedded/IoT, or similar) and explain how it changes a design you would use on a laptop server.
+**WHAT YOU WILL BE ABLE TO DO:** Compare specialized platforms (mobile, embedded/IoT, browser/edge) by scarce resource - and redesign one feature for a non-laptop constraint without turning this into five specialist courses.
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 49-54 (CPU, memory, OS, concurrency - the same physics, tighter budgets), Phase 78-79 (packaging and cloud do not erase device limits), Phase 89 (on-device ML is an emerging special case of those limits).
 
 ## 90.1 When the Machine Is Not a Laptop
 
-**WHY YOU ARE LEARNING THIS:** Most of this roadmap assumes a general-purpose computer. Phones, watches, cars, sensors, and factory controllers are computers too - with **power, memory, real-time, and safety** budgets that make "just use another microservice" absurd. Specialization is CS under constraints.
+**WHY YOU ARE LEARNING THIS:** Most of this roadmap assumes a general-purpose computer. Phones, watches, cars, sensors, and factory controllers are computers too - with **power, memory, real-time, and safety** budgets that make "just use another microservice" absurd. This phase is a **survey comparison**, not mobile engineering school or embedded certification.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
-- Embedded/IoT constraints: [Embedded systems session (IEEE)](https://www.youtube.com/watch?v=Pgc5z1e4bL0) *(Composio YouTube)*; embedded/real-time/power curriculum notes *(Composio web)*
-- Mobile architecture constraints: [Mobile development architecture series](https://www.youtube.com/watch?v=nH03mvy7J-8) *(Composio YouTube)*
-- Practice: pick one app you use on your phone and list what would break if RAM were 10× smaller and the network were intermittent
+- Platform compare: [Edge Devices Explained | Edge vs IoT vs Embedded](https://www.youtube.com/watch?v=aGOQIJJv1Tw) *(Composio YouTube)*; [What is edge computing?](https://www.youtube.com/watch?v=3hScMLH7B4o) *(Composio YouTube)*
+- Mobile constraints: [Mobile Development: Native or Cross-Platform](https://www.youtube.com/watch?v=V3VUf9rB--8) *(Composio YouTube)* - pick for constraint awareness, not framework wars
+- Practice: diagram (not code) one feature three ways - phone / sensor / server
 
 **STEP-BY-STEP EXPLANATION**
 
-| Platform family | Typical hard constraints |
-| --------------- | ------------------------ |
-| **Mobile** | Battery, thermal throttling, flaky networks, store review, background limits, privacy permissions |
-| **Embedded / IoT** | Tiny RAM/flash, real-time deadlines, years on a battery, no interactive debugger in the field |
-| **Browser / edge** | Sandbox, cold starts, limited CPU before jank, offline-first expectations |
+**Comparison lens (scarce resource first):**
 
-Design moves that show you understood the platform:
+| Platform family | Scarce resource | Typical hard constraints | Design move that shows you got it |
+| --------------- | --------------- | ------------------------ | --------------------------------- |
+| **Mobile** | Battery + thermal | Flaky networks, background limits, store review, permissions | Offline queue; defer sync; respect OS kill |
+| **Embedded / IoT** | RAM/flash + mW | Real-time deadlines, years on battery, rare OTA | Duty-cycle radio; bounded buffers; fail-safe defaults |
+| **Browser / edge** | Main-thread ms | Sandbox, cold starts, offline expectations | Ship less JS; cache carefully; degrade UI |
+| **Cloud server** (baseline) | Usually $ / ops | Elastic CPU/RAM if you pay | Not always available on-device |
+
+Same algorithm, different winner: a chat app on a phone batches sync; on a sensor it may only uplink hourly; on a server it fans out in real time (Phase 84).
+
+Design moves that show survey-level mastery:
 
 1. **Measure the scarce resource** (mAh, ms, KB) before optimizing aesthetics.
-2. **Fail soft offline** - queue writes; don't assume always-on APIs (Phase 84 helps).
+2. **Fail soft offline** - queue writes; don't assume always-on APIs.
 3. **Push work up or down the stack** - server when the device can't; on-device when privacy/latency demand it.
 4. **Respect update reality** - cars and sensors may update rarely; bugs live longer.
 
@@ -21237,30 +21165,35 @@ Easy SSH debug             Field devices, OTA risk
 
 **SMALL WORKING EXAMPLE**
 
+Prefer a **written comparison** over a framework tutorial:
+
+```text
+Feature: "upload photo + notify friends"
+
+Mobile:   compress on device; queue if offline; push via OS APIs
+IoT cam:  maybe no friends - uplink event only; tiny buffer; sleep radio
+Server:   fan-out notifications asynchronously (Phase 84)
+Ethics:   who consented to the photo? (Phase 91)
+```
+
 ```python playground=cs-phase-90-budget
-# Toy "device budget": decide if a feature fits.
+# Toy budget check - illustration only, not an embedded SDK.
 
 battery_mah = 200
-radio_cost_mah = 15   # per sync
-cpu_cost_mah = 2      # per local compute
-syncs_per_day = 48    # every 30 min
-
+radio_cost_mah = 15
+syncs_per_day = 48
 radio_day = syncs_per_day * radio_cost_mah
-local_day = 24 * 60 * cpu_cost_mah  # absurd on purpose
 print(f"radio/day={radio_day} mAh  battery={battery_mah}")
-if radio_day > battery_mah * 0.3:
-    print("FAIL: sync cadence too aggressive — batch or duty-cycle the radio.")
-else:
-    print("OK: radio budget plausible; still measure in the field.")
+print("FAIL" if radio_day > battery_mah * 0.3 else "OK", "- batch or duty-cycle the radio")
 ```
 
 **PRACTICE UNTIL IT FEELS FAMILIAR**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | List three constraints that differ between a phone and a server VM |
-| Medium | Redesign a chat app sync policy for airplane-mode friendliness |
-| Hard | Argue when on-device ML beats cloud ML for a wearable |
+| Easy | Fill the comparison table for one app you use daily |
+| Medium | Redesign chat sync for airplane mode vs a battery sensor |
+| Hard | Argue when on-device ML beats cloud ML for a wearable - constraints only |
 
 **WHY THE NEXT TOPIC IS NEEDED - Ethics:** Specialized platforms and AI amplify impact - who is scored, watched, locked out, or put at risk. Technical ability without ethical judgment is incomplete CS. That is Phase 91.
 
@@ -21287,9 +21220,9 @@ else:
 **SEE IT BEFORE YOU MEMORIZE IT**
 
 - Professional standard: [ACM Code of Ethics and Professional Conduct](https://www.acm.org/code-of-ethics) *(Composio fetch)*
-- Bias / fairness overview: [AI ethics discussions](https://www.youtube.com/watch?v=r1R-AqPNvts) *(Composio YouTube)*; algorithmic bias literature *(Composio Scholar)*
-- Risk framing: NIST AI Risk Management Framework materials *(Composio web)*; fairness metrics caveats *(Composio DeepWiki / course materials)*
-- Practice: pick a real news case (facial recognition, content moderation, medical triage) and write a one-page stakeholder map
+- Framing: [Software Engineering Ethics Explained - IEEE CS/ACM](https://www.youtube.com/watch?v=OgZq59CVjTA) *(Composio YouTube)*; [Engineering Ethics (Crash Course)](https://www.youtube.com/watch?v=5KZx81crb48) *(Composio YouTube)*
+- Bias / fairness overview: [AI ethics discussions](https://www.youtube.com/watch?v=r1R-AqPNvts) *(Composio YouTube)*
+- Practice: write case responses - prefer prose/diagrams over code
 
 **STEP-BY-STEP EXPLANATION**
 
@@ -21299,6 +21232,16 @@ A usable mini-response has four parts:
 2. **Stakeholders** - users, non-users, operators, regulators, future selves.
 3. **Harms & benefits** - including unequal error rates, privacy, autonomy, safety.
 4. **Mitigations** - technical (thresholds, human review, opt-out) *and* process (audit, red team, refuse to ship).
+
+**Scenario drills (survey - pick two and write half a page each):**
+
+| Scenario | Tension | Ask yourself |
+| -------- | ------- | ------------ |
+| Resume screening model | Accuracy vs historical bias in labels | Which features are proxies? Who appeals? |
+| Content moderation | Safety vs over-censorship / speech | False positive cost vs false negative cost? |
+| Location-sharing "for safety" | Care vs surveillance | Consent, retention, who can subpoena? |
+| Medical triage ranking | Throughput vs fairness across groups | Error rates by group; human override? |
+| Dark-pattern checkout | Conversion vs informed consent | Would you defend this in an ACM hearing? |
 
 Common failure modes: optimizing a metric that is not the moral goal; training data that encodes historical injustice; dark patterns that "work" in A/B tests; security that excludes accessibility.
 
@@ -21312,7 +21255,7 @@ Better:             "False positives deny loans to group X at 3× rate.
 **SMALL WORKING EXAMPLE**
 
 ```python playground=cs-phase-91-case-scaffold
-# Scaffold for an ethics case write-up (fill the strings).
+# Scaffold only - the deliverable is the written case, not the dict.
 
 case = {
     "system": "resume screening model",
@@ -21329,9 +21272,9 @@ case = {
 
 print("CASE:", case["system"])
 print("RISK:", case["risk"])
-print("DO NOT ONLY OPTIMIZE:", case["metric_optimized"])
 for m in case["mitigations"]:
     print(" -", m)
+print("NOW: rewrite as a half-page stakeholder response (no more code).")
 ```
 
 **PRACTICE UNTIL IT FEELS FAMILIAR**
@@ -21339,7 +21282,7 @@ for m in case["mitigations"]:
 | Difficulty | Task |
 | ---------- | ---- |
 | Easy | Quote one ACM Code principle and give a software example |
-| Medium | Write a half-page case response for a content-moderation false positive |
+| Medium | Write a half-page case for content-moderation false positive *and* location-sharing |
 | Hard | Critique an AI feature you use daily: metric, harm, mitigation, residual risk |
 
 **WHY THE NEXT TOPIC IS NEEDED - Maintaining Real Software:** Survey knowledge is not enough - most of your career is changing systems you did not create. Story XIII starts with reading unfamiliar codebases at Phase 92.

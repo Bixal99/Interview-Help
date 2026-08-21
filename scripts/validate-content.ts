@@ -115,6 +115,29 @@ for (const sourcePath of ["content/roadmaps/CS.md", "content/roadmaps/Git.md", "
 if (!mermaidCount) errors.push("content/: no Mermaid diagrams were detected");
 if (!youtubeCount) errors.push("content/: no YouTube resources were detected");
 
+// CS Stories IV–V: flag lingering Title Case lean section labels (compact-note anti-pattern)
+{
+  const cs = sourceAt("content/roadmaps/CS.md");
+  const start = cs.indexOf("# PHASE 21 -");
+  const end = cs.indexOf("# PHASE 49 -");
+  if (start >= 0 && end > start) {
+    const chunk = cs.slice(start, end);
+    const antiPattern =
+      /^\*\*((?:Why This Matters|The Problem|How It Works|Visual Model|Learning Resources|Trade-offs|Interview note|What This Unlocks Next|Worked Example)):?\*\*/gm;
+    const found = new Set<string>();
+    for (const match of chunk.matchAll(antiPattern)) {
+      found.add(match[1]);
+    }
+    if (found.size) {
+      warnings.push(
+        `content/roadmaps/CS.md: ${found.size} Title Case lean section label(s) in Stories IV–V still use compact-note form (use ALL-CAPS canonical kickers): ${[...found].join(", ")}`,
+      );
+    }
+  }
+  if (!fs.existsSync(projectPath("content/standards/LEARNING_CONTENT_STANDARD.md"))) {
+    errors.push("content/standards/LEARNING_CONTENT_STANDARD.md: learning content standard is missing");
+  }
+}
 for (const entry of [...roadmapRegistry, ...guideRegistry]) {
   if (!extractHeadings(sourceAt(entry.sourcePath)).some((heading) => heading.text)) errors.push(`${entry.sourcePath}: searchable headings are missing`);
 }

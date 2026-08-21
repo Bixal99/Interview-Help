@@ -79,7 +79,7 @@ Not every lesson uses every row. Binary needs conversion by hand. HCI does not n
 
 Two notes on using this. If you are learning something for the first time, read the elements in order, because the order is the argument. If you are revising something you once knew, go straight to **Why This Matters** and **What This Unlocks Next**: those two elements alone reconstruct the reasoning, and the middle is detail you can reload on demand.
 
-Live lessons below still use the older bold labels until later batches rewrite them. The meaning is the same; only the names get cleaner.
+Live lessons below still use older bold labels until rewritten. **Stories IV–VII (Phases 21–59) use the lean / frozen semantic vocabulary** (`WHY THIS MATTERS`, `HOW IT WORKS`, …), which the platform renders as standalone section headings — same reading rhythm as Phase 1, without copying Phase 1’s exact words. Authoring contract: [Learning Content Standard](../standards/LEARNING_CONTENT_STANDARD.md) and [CS Course Profile](../standards/course-profiles/cs.md). Story VIII+ must follow that frozen standard from the start.
 
 **Diagram conventions.** Diagrams are plain ASCII inside code fences, deliberately, so that they render identically on GitHub, in any editor, in a terminal, and in a diff. Throughout, `|` and `v` mean "then this happens", `+--` joins related paths, `-->` and `->` mean a request or data movement, `X` marks a failure point, and boxes drawn with `+---+` are components or memory regions. Where a diagram shows a sequence over time, time runs downward.
 
@@ -152,17 +152,25 @@ This roadmap is being rebuilt into the 15-story shape above in batches, so that 
 | 1     | Inspect the codebase and this file; publish the target Story Map, Phase Index, and legacy content map                                        | Done                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | 2     | Renumber/relocate all old Phase 1-43 content into its final 1-105 position                                                                   | Done                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | 3     | Story I - III (write new Phases 1-4, 10-13, 15-20; rewrite relocated Phases 5-9, 14)                                                         | Done - new Phases 1-4, 10-13, 15-20 written; relocated Phases 5, 9, 14 had stale cross-phase references and transitions corrected, full prose rewrite to the newer template still pending                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| 4     | Story IV (rewrite relocated Phases 21-30)                                                                                                    | Done - relocated Phases 21-30 had stale cross-phase prerequisites, transitions, and checkpoint labels corrected (several pointed backward at already-covered phases or forward past the actual next phase after the OOP block was reordered); resources and diagrams verified; full prose rewrite to the newer template still pending                                                                                                                                                                                                                                                                                    |
-| 5     | Story V (write new Phases 42, 47; rewrite relocated Phases 31-41, 43-46, 48)                                                                 | Done - new Phases 42 (Algorithmic Patterns) and 47 (Algorithm Correctness) written; relocated Phases 31-41 and 43-46 had stale cross-phase references, backwards transitions, and duplicated "WHAT YOU WILL BE ABLE TO DO" lines (from phases that were split from the same old phase) corrected; Phase 48 previously contained a full duplicate of the Phase 21-30 OOP/SOLID lesson and has been completely rewritten as an actual DSA-combination capstone (LRU cache); relocation disclaimers removed from all of Story V once verified; full prose rewrite of Phases 31-41/43-46 to the newer template still pending |
+| 4     | Story IV (rewrite relocated Phases 21-30)                                                                                                    | Done - Phases 21-30 rewritten to lean lesson template (phase-level Learning Resources; Why/Problem/How/Visual/Example/Trade-offs; consolidated Practice; What This Unlocks Next); project links, nav, diagrams, and Phase 75 domain/infra bridge preserved; ~71% of prior Story IV length (~110k chars)                                                                                                                                                                                                                                                                                    |
+| 5     | Story V (write new Phases 42, 47; rewrite relocated Phases 31-41, 43-46, 48)                                                                 | Done - new Phases 42/47 written; relocated Phases 31-41/43-46 corrected; Phase 48 = LRU capstone; **lean-template rewrite of Phases 31–48 complete** (see Batch I) |
 | 6     | Stories VI - VIII (write new Phases 49, 51, 54; rewrite relocated Phases 50, 52, 53, 55-65)                                                  | Stories VI-VIII Done - Story VIII (60-65) audited with Composio (YouTube, web search, fetch, GitHub, DeepWiki, Drive); unique ability lines; prereqs/transitions fixed; stale 14.x/Phase 34.x refs remapped; resources refreshed (SQLBolt, Bustub, Spanning Tree B-trees, ByteByteGo ACID, Exponent sharding); disclaimers removed; full prose rewrite still pending |
 | 7     | Stories IX - XI (write new Phases 70, 71, 73, 76, 78-80, 82-84, 87; rewrite relocated Phases 66, 67, 68, 69, 72, 74, 75, 77, 81, 85, 86, 88) | Stories IX-XI Done - Story IX-X as before; Story XI: new Phases 82-84, 87 written; relocated 81/85/86/88 unique abilities/prereqs/transitions fixed, stale 36.x/37.x/39.x/40.x/41.x refs remapped, disclaimers removed, Composio resources (YouTube, web, fetch, Scholar, GitHub, DeepWiki; Drive/Sheets empty; Gmail 403). |
 | 8     | Stories XII - XV (write new Phases 89-94, 96-98, 100-101; rewrite relocated Phases 95, 99, 102-105)                                          | Done - Stories XII-XV: new Phases 89-94, 96-98, 100-101; Phase 95 SEE IT/nav refreshed; Phases 99, 102-105 rewritten to newer template. Composio resources (YouTube, web, fetch, Scholar, GitHub, DeepWiki, News). Semantic Scholar / scrape_do not connected; Gmail/Drive not used for curriculum links |
 | 9     | Resource validation, anchor validation, formatting cleanup, duplicate removal, technical accuracy pass                                       | Done - validator accepts `#phase-N` short anchors (clears Projects.md/Git.md WARNs); Git.md CS links remapped 39→72; Phase 95 stale Phase 43.2 refs → 104; dead YouTube IDs replaced via Composio batch check (~20); channel/@ handles converted to watch/playlist URLs; no playground dupes; handbook/primer fetch verified |
 | A     | Curriculum gap repair Stories I–III (Phases 1–20) — content only, no lean-template rewrite                                                  | Done this turn - missing/under-taught concepts filled; preview→formal labeled; Phase Index exit criteria updated; lean rewrite still deferred |
-| B     | Curriculum gap repair Stories IV–V (Phases 21–48) — content only, no lean-template rewrite                                                  | Done - 25→29 & 32→42 progressions labeled; 36→37 transition fixed; Dijkstra/topo taught; Union-Find/Bloom taught; Phase 48 = LRU consolidation; portfolio Phase 48 step corrected; Composio resources added for §41.3/§46.2/§46.3 (replaced unverified topo ID); lean rewrite still deferred |
+| B     | Curriculum gap repair Stories IV–V (Phases 21–48) — content only, no lean-template rewrite                                                  | Done - gap repair complete; lean rewrite of Story V completed in Batch I |
 | C     | Curriculum gap repair Stories VI–VIII (Phases 49–65) — content only, no lean-template rewrite                                               | Done - 49 ISA/pipeline; 50 pointers (systems); 51 formal-after-5; 52 filesystem; 54 applies FS; 61 GROUP BY/HAVING/CTEs; 63/64/65 trade-offs & ACID/isolation & repl/part/shard clarity; Story VII untouched; Composio YouTube+web+fetch pass completed for new SEE IT blocks; lean rewrite still deferred |
 | D     | Curriculum gap repair Stories IX–X (Phases 66–80) — content only, no lean-template rewrite                                                  | Done this turn - 66 foundations; 67 owns hash/encrypt/sign + TLS + passwords; 68 MFA/RBAC; 69 rate limiting; 78 env vs secrets; 79 shared-responsibility wording; 80 logs/metrics/traces + SLI/SLO; Story XI untouched; Composio resources; lean rewrite still deferred |
 | E     | Curriculum gap repair Stories XI–XII (Phases 81–91) — content only, no lean-template rewrite                                                | Done this turn - 81 condensed to process/map/estimation; 82–87 clear ownership; CAP≠ACID C; 86 vs 87; 88 learning capstone; 89 broad AI; 90 platform compare; 91 ethics scenarios; Phase 92+ untouched; Composio resources; lean rewrite still deferred |
+| F     | Curriculum gap repair Stories XIII–XV (Phases 92–105) — content only, no lean-template rewrite                                              | Done this turn - 95 planning-only (no build/harden/release theft); 96–98 ownership clear; 100/102/103 learn→interview distinctions; removed artificial interview mini-project pushes; Composio resources; lean rewrite still deferred; Batches A–F complete |
+| G     | Pre-lean polish: 34.3 Deques; 29→75 architecture bridge; 56 vs 54 sockets ownership                                                       | Done this turn - hierarchy audit approved; Story V not modernized beyond 34.3 micro-fix |
+| H     | Lean-template rewrite Story IV pilot (Phases 21–30)                                                                                         | Done - lean labels; ~71% prior length; Story V (31+) untouched except prior 34.3 micro-fix |
+| I     | Lean-template rewrite Story V (Phases 31–48)                                                                                                | Done this turn - lean labels; phase-level Learning Resources; protected DSA mechanics/traces/complexity/Dijkstra/topo/Union-Find/Bloom/LRU/34.3 kept; ~87% prior length (prefer long over cutting mechanics); Story VI (49+) untouched |
+| J     | Platform Learning Content Standard + kicker presentation (Stories IV–V)                                                                     | Done - standard + CS/Odoo profiles; lean labels as kickers; IV–V ALL-CAPS sections |
+| K     | Teaching-flow audit Stories IV–V + freeze standard (practice catalog; no Story VI)                                                          | Done this turn - audit thin/long/broken; repaired Phase 28 Factory/Decorator/Strategy+Command + Phase 34 deque/practice only; standard FROZEN; Story VI not started |
+| L     | Lean-to-standard rewrite Story VI (Phases 49–54)                                                                                            | Done this turn - frozen Learning Content Standard + CS profile; phase-level Learning Resources; protected FDE/cache/ISA-pipeline/VM/pointers/lang foundations/process-thread/FS/concurrency/syscalls-sockets kept; all 8 playground IDs unique once; nav 48→…→55; 105 phases; Story VII (55+) untouched |
+| M     | Lean-to-standard rewrite Story VII (Phases 55–59)                                                                                           | Done this turn - frozen Learning Content Standard + CS profile; prereq-box rule applied (short orientation); phase-level Learning Resources; protected encapsulation/addressing/TCP-UDP/DNS/HTTP/REST + 54↔56 ownership callout; 5 playground IDs unique once; nav 54→…→60; 105 phases; Story VIII (60+) untouched |
 
 
 Every phase number in the Phase Index below now has a real, permanent home in this document. Rows marked "current" already have a body section at that number - the prose there is the relocated original, not yet rewritten to the newer template. Rows with no annotation are "planned": the number is reserved and linked from elsewhere, but the section has not been written yet and will appear in the batch noted in [Migration status](#migration-status).
@@ -239,7 +247,7 @@ Every phase number in the Phase Index below now has a real, permanent home in th
 | 31  | Complexity Analysis *(current)*         | A ruler for comparing solutions | State the Big O of your own code, unprompted                   |
 | 32  | Arrays & Strings *(current)*            | Contiguous storage              | Implement common array/string operations from scratch          |
 | 33  | Linked Lists *(current)*                | Pointer-chained storage         | Implement singly/doubly linked list operations from scratch    |
-| 34  | Stacks, Queues & Deques *(current)*     | LIFO/FIFO access                | Implement array- and list-backed stacks/queues                 |
+| 34  | Stacks, Queues & Deques *(current)*     | LIFO/FIFO + both-ends access    | Implement stacks/queues; use a deque when both ends matter     |
 | 35  | Recursion *(current)*                   | Let structure branch            | Write a correct base case and trace a call stack by hand       |
 | 36  | Hashing *(current)*                     | O(1) "have I seen this"         | Reach for a hash map by instinct                               |
 | 37  | Trees *(current)*                       | Model hierarchy                 | Implement traversal and validate a BST                         |
@@ -363,10 +371,10 @@ Every phase number in the Phase Index below now has a real, permanent home in th
 
 | #   | Phase                            | Goal                           | Ready to continue when...                               |
 | --- | -------------------------------- | ------------------------------ | ------------------------------------------------------- |
-| 95  | Capstone Planning *(current)*    | Scope a real system            | Write a capstone spec that is honestly buildable        |
-| 96  | Build the Production Application *(current)* | Integrate everything           | Ship a working multi-user application                   |
-| 97  | Break, Measure & Harden *(current)*          | Find your own system's limits  | Load-test it, find a failure, and fix it                |
-| 98  | Portfolio Release *(current)*                | Present it like a professional | Publish the project with docs, diagrams, and a write-up |
+| 95  | Capstone Planning *(current)*    | Scope MVP only                 | Write a buildable spec with musts, non-goals, done-when     |
+| 96  | Build the Production Application *(current)* | Ship the walking app           | Multi-user MVP on a public URL with CI                      |
+| 97  | Break, Measure & Harden *(current)*          | Find limits                    | Load-test, find a failure, fix and prove                    |
+| 98  | Portfolio Release *(current)*                | Package the proof              | Publish docs, diagrams, and a decision write-up             |
 
 
 ### Story XV - Interview & Job Readiness
@@ -374,13 +382,13 @@ Every phase number in the Phase Index below now has a real, permanent home in th
 
 | #   | Phase                                   | Goal                                  | Ready to continue when...                                 |
 | --- | --------------------------------------- | ------------------------------------- | --------------------------------------------------------- |
-| 99  | Coding Interview Method *(current)*     | A repeatable approach                 | Narrate your approach out loud before coding              |
-| 100 | DSA Interview Practice *(current)*      | Reps under time pressure              | Solve mixed-topic problems at interview pace              |
-| 101 | CS Fundamentals Interview Review *(current)* | Fast recall of Stories I-III, VI-VIII | Answer fundamentals questions without notes               |
-| 102 | Low-Level Design Interviews *(current)* | Design under pressure                 | Run an LLD prompt end to end in 30-45 minutes             |
-| 103 | System Design Interviews *(current)*    | Communicate trade-offs live           | Run a system design interview without notes               |
-| 104 | Behavioral Interviews *(current)*       | Tell your own story well              | Answer a behavioral question with a structured story      |
-| 105 | Final Mock Interview Loop *(current)*   | Full-loop dress rehearsal             | Complete a coding + design + behavioral loop back to back |
+| 99  | Coding Interview Method *(current)*     | Narrate under observation         | Run the six-step timed coding process aloud               |
+| 100 | DSA Interview Practice *(current)*      | Story V under a clock             | Timed mixed Mediums — not a second DSA course             |
+| 101 | CS Fundamentals Interview Review *(current)* | Fast recall cards            | Two-minute answers without notes                          |
+| 102 | Low-Level Design Interviews *(current)* | Phase 29 skill, interview pace    | 30–45 min LLD prompt — no artificial project              |
+| 103 | System Design Interviews *(current)*    | Phase 88 process, live            | 45 min design interview — not a re-teach of 81–87         |
+| 104 | Behavioral Interviews *(current)*       | STAR from real work               | Structured stories from your capstone/career              |
+| 105 | Final Mock Interview Loop *(current)*   | Dress rehearsal only              | Full loop + debrief — not new curriculum                  |
 
 
 
@@ -2994,31 +3002,30 @@ The **derivative** of a function at a point is the slope of the line that just t
 
 **WHAT YOU SHOULD KNOW FIRST:** Phases 6-15 (programming fundamentals): variables, control flow, functions, collections, files, errors, debugging. Phases 16-20 (mathematical foundations) help but are not required to start object thinking.
 
+**LEARNING RESOURCES:**
+
+- [Object-Oriented Programming, Simplified (Programming with Mosh)](https://www.youtube.com/watch?v=pTB0EiLXUC8) - names the problem each pillar solves
+- [Python Tutor](https://pythontutor.com/visualize.html) - run procedural vs class versions side by side
+- [Real Python - OOP](https://realpython.com/python3-object-oriented-programming/)
+- [cosmicpython/book](https://github.com/cosmicpython/book) - browse domain models once the idea clicks
+
 ## 21.1 Procedural Code Hits a Wall
 
-**WHY YOU ARE LEARNING THIS:** A program of standalone functions and loose variables works at small scale. As features grow, *who is allowed to touch this data* becomes untrackable - any function can mutate any dict, and a bug can come from anywhere.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Balance rules live in five functions; three call sites forget to check negatives; a typo mutates `balance` directly and bypasses every safeguard.
+A program of standalone functions and loose variables works at small scale. As features grow, *who is allowed to touch this data* becomes untrackable - any function can mutate any dict, and a bug can come from anywhere.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- Best animated: [Object-Oriented Programming, Simplified (Programming with Mosh)](https://www.youtube.com/watch?v=pTB0EiLXUC8) - names the problem each pillar solves
-- Alternative: [Object Oriented Programming - The Four Pillars of OOP (Keep On Coding)](https://www.youtube.com/watch?v=1ONhXmQuWP8)
-- Another angle: [What is Object Oriented Programming? Explained in 2 Minutes](https://www.youtube.com/watch?v=fZ8SAf99JbQ)
-- Interactive: [Python Tutor](https://pythontutor.com/visualize.html) - run procedural vs class versions side by side later
-- Written: [GeeksforGeeks - Introduction of OOP](https://www.geeksforgeeks.org/dsa/introduction-of-object-oriented-programming/) · [OOP Tutorial Roadmap](https://adnantasdemir.com/en/posts/oop-tutorial-roadmap)
-- GitHub: [hassan-mohagheghian/python-software-engineering-roadmap](https://github.com/hassan-mohagheghian/python-software-engineering-roadmap)
-- Practice: List three bugs in a procedural bank sketch that encapsulation would have prevented
+Balance rules live in five functions; three call sites forget to check negatives; a typo mutates `balance` directly and bypasses every safeguard.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 **Procedural style** separates data (dicts, lists, globals) from behavior (functions). That is fine until invariants matter: "balance never goes negative," "an order always has at least one line item," "a user always has a unique id."
 
 When invariants are enforced only by *convention* ("please call `withdraw` instead of editing the dict"), large codebases eventually violate the convention. OOP's first move is not inheritance - it is **ownership**: put the data next to the only functions allowed to change it.
 
-**THE MAIN IDEA IN SIMPLE WORDS:** Stop scattering rules across call sites. Make one unit own both the data and the rules.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 PROCEDURAL (rules hope callers cooperate):
@@ -3036,23 +3043,9 @@ OOP direction of travel:
   +------------------+
          ^
    callers may only talk to the public methods
-
 ```
 
-**PICTURE IT LIKE THIS**
-
-A kitchen where anyone can open the oven mid-bake versus a restaurant line where only the chef touches the mise en place.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                  | What it buys                   | What it costs                                            |
-| ----------------------- | ------------------------------ | -------------------------------------------------------- |
-| Loose functions + dicts | Fast to start; little ceremony | Invariants are optional; bugs multiply with contributors |
-| Early OOP ceremony      | One place owns rules           | More boilerplate before it pays off                      |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 # Procedural: nothing stops misuse
@@ -3065,52 +3058,35 @@ def withdraw(bal, amount):
 
 balance = withdraw(balance, 30)
 balance = -1_000_000  # still "works" - invariant is dead
-
 print(balance)
-
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
 
-Interviewers ask: "What's wrong with this procedural design?" Strong answers name *invariants* and *scattered responsibility*, not "because OOP is better."
+| Choice                  | What it buys                   | What it costs                                            |
+| ----------------------- | ------------------------------ | -------------------------------------------------------- |
+| Loose functions + dicts | Fast to start; little ceremony | Invariants are optional; bugs multiply with contributors |
+| Early OOP ceremony      | One place owns rules           | More boilerplate before it pays off                      |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**INTERVIEW NOTE:**
 
-
-| Difficulty | Task                                                                                          |
-| ---------- | --------------------------------------------------------------------------------------------- |
-| Easy       | Write procedural `deposit`/`withdraw` on a dict; then list three ways a caller can corrupt it |
-| Medium     | Refactor the same logic so invalid balances become impossible from outside                    |
-| Hard       | Explain when procedural style is still the right call (scripts, tiny tools, data pipelines)   |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** We need a language construct that says: this data and these operations are one thing. That construct is the **class**.
+Interviewers ask "What's wrong with this procedural design?" Strong answers name *invariants* and *scattered responsibility*, not "because OOP is better."
 
 ## 21.2 Objects as Models of the Domain
 
-**WHY YOU ARE LEARNING THIS:** Syntax alone does not make good OOP. The point is to model *things that keep state and answer messages* - accounts, carts, rides, tickets - so the code reads like the problem.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Code organized by technical layer only (`utils.py` with 80 helpers) forces every feature to hunt across files for the rule that belongs to one business concept.
+Syntax alone does not make good OOP. The point is to model *things that keep state and answer messages* - accounts, carts, rides, tickets - so the code reads like the problem.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [Four Pillars of OOP Explained! (The Python Dude)](https://www.youtube.com/watch?v=eo5WSe8pOB0)
-- [OOP Concepts Simplified (Hayk Simonyan)](https://www.youtube.com/watch?v=BwS2IR_TEVE)
-- [Fundamental Concepts of OOP (Computer Science Lessons)](https://www.youtube.com/watch?v=m_MQYyJpIjg)
-- [Real Python - OOP](https://realpython.com/python3-object-oriented-programming/) · [OOP & Design Patterns Roadmap (Chanh Le)](https://chanhle.dev/en/blog/object-oriented-programming-design-patterns-roadmap)
-- [Interactive Python OOP guide](https://python-academy.org/en/guide/oop)
-- Browse domain models in [cosmicpython/book](https://github.com/cosmicpython/book)
-- Name five nouns in an app you use daily that deserve to be objects
+Code organized by technical layer only (`utils.py` with 80 helpers) forces every feature to hunt across files for the rule that belongs to one business concept.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-An **object** is a bundle of state + behavior that represents something meaningful. Good OOP starts by listing nouns and verbs of the domain ("Customer places Order", "ParkingLot assigns Spot"), then asking which noun owns which verb.
+An **object** is a bundle of state + behavior that represents something meaningful. Good OOP starts by listing nouns and verbs of the domain ("Customer places Order", "ParkingLot assigns Spot"), then asking which noun owns which verb. Bad OOP starts by inventing inheritance trees for sport. Prefer boring, accurate domain objects over clever hierarchies.
 
-Bad OOP starts by inventing inheritance trees for sport. Prefer boring, accurate domain objects over clever hierarchies.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Model the nouns that own rules. Methods are the verbs those nouns can honestly perform.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 Domain sketch (parking lot):
@@ -3124,23 +3100,9 @@ Questions OOP forces you to answer:
   - Who owns the list of free spots?
   - Who knows pricing rules?
   - What is illegal state? (two cars, one spot)
-
 ```
 
-**PICTURE IT LIKE THIS**
-
-A board game: pieces have positions and legal moves. The rulebook is not a random pile of free functions - it is attached to what you can do with each piece.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice            | What it buys                  | What it costs                                           |
-| ----------------- | ----------------------------- | ------------------------------------------------------- |
-| Domain objects    | Code maps to product language | Requires talking to the problem, not only the framework |
-| Utils-only design | Quick helpers                 | No clear owner of business rules                        |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class Ride:
@@ -3164,34 +3126,39 @@ class Ride:
 r = Ride("Bilal", 4.0)
 r.start()
 print(r.complete(), r.status)
-
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice            | What it buys                  | What it costs                                           |
+| ----------------- | ----------------------------- | ------------------------------------------------------- |
+| Domain objects    | Code maps to product language | Requires talking to the problem, not only the framework |
+| Utils-only design | Quick helpers                 | No clear owner of business rules                        |
+
+**INTERVIEW NOTE:**
 
 In LLD prompts, start by listing entities and illegal states out loud. Interviewers grade that more than fancy patterns.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**PRACTICE:**
 
+| Difficulty | Task                                                                                          |
+| ---------- | --------------------------------------------------------------------------------------------- |
+| Easy       | Write procedural `deposit`/`withdraw` on a dict; list three ways a caller can corrupt it      |
+| Easy       | For a library app, list entities and one invariant each                                       |
+| Medium     | Refactor bank logic so invalid balances become impossible from outside                        |
+| Medium     | For a food-delivery app, decide which object owns "cancel order"                              |
+| Hard       | Explain when procedural style is still right (scripts, tiny tools, data pipelines)            |
+| Hard       | Argue why `EmailSender` is usually *not* the same object as `Order`                           |
 
-| Difficulty | Task                                                                |
-| ---------- | ------------------------------------------------------------------- |
-| Easy       | For a library app, list entities and one invariant each             |
-| Medium     | For a food-delivery app, decide which object owns "cancel order"    |
-| Hard       | Argue why `EmailSender` is usually *not* the same object as `Order` |
+**WHAT THIS UNLOCKS NEXT:**
 
-
-**WHY THE NEXT TOPIC IS NEEDED:** To turn domain nouns into running code, we need the blueprint/instance split: **classes and objects**.
-
-**CHECK YOUR UNDERSTANDING AFTER PHASE 21:** Explain, without jargon, why "just use functions" fails for invariants. Name one domain object from an app you know and one illegal state it must prevent.
+To turn domain nouns into running code, we need the blueprint/instance split: **classes and objects**.
 
 ---
 
 > **Phase 21 complete?** [Build the Phase 21 mini-project](../guides/Projects.md#cs-phase-21-project) · [Continue to Phase 22](#phase-22)
 
 ---
-
-
 
 # PHASE 22 - Classes & Objects
 
@@ -3201,31 +3168,28 @@ In LLD prompts, start by listing entities and illegal states out loud. Interview
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 21.
 
-## 22.1 Class = Blueprint, Object = Instance
-
-**WHY YOU ARE LEARNING THIS:** We need a reusable definition of a domain thing without copying the same fields and methods by hand for every account, ride, or user.
-
-**THE PROBLEM THIS SOLVES:** Copy-pasting parallel dicts and helper functions: change one rule, miss three copies.
-
-**SEE IT BEFORE YOU MEMORIZE IT**
+**LEARNING RESOURCES:**
 
 - [Corey Schafer - Classes and Instances](https://www.youtube.com/watch?v=ZDa-Z5JzLYM)
-- [Tech With Tim - Python OOP For Beginners](https://www.youtube.com/watch?v=JeznW_7DlB0)
-- [freeCodeCamp - OOP Crash Course in Python](https://www.freecodecamp.org/news/crash-course-object-oriented-programming-in-python/)
-- [Python Tutor - visualize two instances](https://pythontutor.com/visualize.html)
-- [Python docs - Classes](https://docs.python.org/3/tutorial/classes.html) · [Real Python - Python Classes](https://realpython.com/python-classes/)
-- [faif/python-patterns](https://github.com/faif/python-patterns) - scan class examples
-- Create two `Dog` instances; mutate one; prove the other is unchanged
+- [Python Tutor](https://pythontutor.com/visualize.html) - visualize two instances and method binding
+- [Python docs - Classes](https://docs.python.org/3/tutorial/classes.html)
+- [Real Python - Python Classes](https://realpython.com/python-classes/)
 
-**STEP-BY-STEP EXPLANATION**
+## 22.1 Class = Blueprint, Object = Instance
 
-A **class** is the blueprint: it declares what data instances hold and what operations they support. An **object** (instance) is one concrete thing built from that blueprint, with its own state.
+**WHY THIS MATTERS:**
 
-Methods live once on the class. Attribute values live per object on the heap. Beginners often think each object copies all methods into itself - Python Tutor cures that in sixty seconds.
+We need a reusable definition of a domain thing without copying the same fields and methods by hand for every account, ride, or user.
 
-**THE MAIN IDEA IN SIMPLE WORDS:** Share behavior once; give each instance its own state.
+**THE PROBLEM:**
 
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+Copy-pasting parallel dicts and helper functions: change one rule, miss three copies.
+
+**HOW IT WORKS:**
+
+A **class** is the blueprint: it declares what data instances hold and what operations they support. An **object** (instance) is one concrete thing built from that blueprint, with its own state. Methods live once on the class. Attribute values live per object on the heap. Beginners often think each object copies all methods into itself - Python Tutor cures that in sixty seconds.
+
+**VISUAL MODEL:**
 
 ```text
 Dog = class (blueprint)
@@ -3241,20 +3205,7 @@ After: a = Dog("Rex"); b = Dog("Sam")
    object a          object b
 ```
 
-**PICTURE IT LIKE THIS**
-
-Cookie cutter vs cookies. One cutter; many cookies with different icing.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice              | What it buys                       | What it costs                                     |
-| ------------------- | ---------------------------------- | ------------------------------------------------- |
-| Class + instances   | Shared behavior, independent state | Requires learning object identity and `self`      |
-| One big global dict | Simple                             | No isolation; collisions and accidental overwrite |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class Dog:
@@ -3271,46 +3222,30 @@ print(b.bark())  # Sam says woof
 print(a.bark is b.bark)  # True: same function on the class
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
 
-Be ready to draw two objects on the heap and say where methods live.
-
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                                          |
-| ---------- | ------------------------------------------------------------- |
-| Easy       | Class `Book(title, pages)` with `summary()`; create two books |
-| Medium     | Explain why `a.bark is b.bark` is True but names may differ   |
-| Hard       | Implement `__eq__` for books by title (preview Phase 30)      |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Creating an object needs initial state wiring - the constructor and the first parameter `self`.
+| Choice              | What it buys                       | What it costs                                     |
+| ------------------- | ---------------------------------- | ------------------------------------------------- |
+| Class + instances   | Shared behavior, independent state | Requires learning object identity and `self`      |
+| One big global dict | Simple                             | No isolation; collisions and accidental overwrite |
 
 ## 22.2 Identity, Equality, and References
 
-**WHY YOU ARE LEARNING THIS:** Once you have multiple objects, you must know whether two variables point at the *same* object or merely *look* the same.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Bugs like "I updated the user in the list but checkout still sees the old one" come from misunderstanding references.
+Once you have multiple objects, you must know whether two variables point at the *same* object or merely *look* the same.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [Dave Gray - Classes, Objects, Inheritance & Polymorphism](https://www.youtube.com/watch?v=RpBBzci_cBk)
-- [Python Tutor](https://pythontutor.com/visualize.html) - alias two names, mutate, watch both change
-- [Real Python OOP](https://realpython.com/python3-object-oriented-programming/)
-- [Corey Schafer - Class Variables](https://www.youtube.com/watch?v=BJ-VvGyQxho) - shared vs instance state
-- Experiment in a scratch file until `is` vs `==` is muscle memory
-- Predict outputs before running; verify in Python Tutor
+Bugs like "I updated the user in the list but checkout still sees the old one" come from misunderstanding references.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 In Python, variables hold **references** to objects - the language's safe version of what lower-level languages call **pointers**: a name that *points at* a heap object rather than storing the whole object inline. You never do pointer arithmetic in Python, but every aliasing bug is still a "two names, one object" pointer bug. `a is b` asks identity (same object / same reference). `a == b` asks equality (same value via `__eq__`, defaulting to identity).
 
 Aliasing means two names, one object: mutate through either name and both see the change. This is how every OOP language passes objects around. Linked lists (Phase 33) make the same idea explicit as `node.next` fields - those are references too.
 
-**THE MAIN IDEA IN SIMPLE WORDS:** Separate "same object" (same reference/pointer) from "same value." Design equality intentionally.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 aliasing:
@@ -3327,20 +3262,7 @@ u1 is u2 -> True
 mutate u1.name -> u2.name also changes
 ```
 
-**PICTURE IT LIKE THIS**
-
-Two house keys to the same apartment versus two apartments with the same floor plan.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice            | What it buys                       | What it costs                               |
-| ----------------- | ---------------------------------- | ------------------------------------------- |
-| `is` for identity | Detect shared mutable state        | Wrong tool for value comparison             |
-| Custom `__eq__`   | Value semantics for domain objects | Must consider hashing if used in sets/dicts |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class User:
@@ -3360,49 +3282,32 @@ b.name = "Ada Lovelace"
 print(a.name)           # Ada Lovelace - alias
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice            | What it buys                       | What it costs                               |
+| ----------------- | ---------------------------------- | ------------------------------------------- |
+| `is` for identity | Detect shared mutable state        | Wrong tool for value comparison             |
+| Custom `__eq__`   | Value semantics for domain objects | Must consider hashing if used in sets/dicts |
+
+**INTERVIEW NOTE:**
 
 If they ask `is` vs `==`, give a one-liner and a micro-example.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                                   |
-| ---------- | ------------------------------------------------------ |
-| Easy       | Show aliasing with a list attribute on an object       |
-| Medium     | Implement `__eq__` for `Money(amount, currency)`       |
-| Hard       | Explain why mutable objects as dict keys are dangerous |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Next we flesh out what lives on an object: attributes, methods, and how `self` wires them.
-
-**CHECK YOUR UNDERSTANDING AFTER 22.2:** In Python Tutor, create two instances, alias one, and narrate identity vs equality out loud.
-
 ## 22.3 Attributes, Methods, and self
 
-**WHY YOU ARE LEARNING THIS:** Objects must respond to messages with access to their own state. Python passes the receiver explicitly as the first parameter.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Functions that take `account_dict` as the first argument everywhere - easy to pass the wrong dict and corrupt the wrong account.
+Objects must respond to messages with access to their own state. Python passes the receiver explicitly as the first parameter.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [Corey Schafer - Classes and Instances](https://www.youtube.com/watch?v=ZDa-Z5JzLYM) - watch the `self` explanation
-- [Tech With Tim - Python OOP](https://www.youtube.com/watch?v=JeznW_7DlB0)
-- [Python Tutor](https://pythontutor.com/visualize.html) - step through a method call
-- [Python docs - Classes](https://docs.python.org/3/tutorial/classes.html)
-- [python-academy.org OOP guide](https://python-academy.org/en/guide/oop)
-- Trace method dispatch in [faif/python-patterns](https://github.com/faif/python-patterns)
-- Rewrite three free functions as methods on one class
+Functions that take `account_dict` as the first argument everywhere - easy to pass the wrong dict and corrupt the wrong account.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-**Attributes** hold state (usually on `self`). **Methods** are functions bound to the class; when called on an instance, Python passes that instance as `self`.
+**Attributes** hold state (usually on `self`). **Methods** are functions bound to the class; when called on an instance, Python passes that instance as `self`. `account.withdraw(50)` desugars to `Account.withdraw(account, 50)`. That is not magic - it is explicit receiver passing, unlike some languages that hide `this`.
 
-`account.withdraw(50)` desugars to `Account.withdraw(account, 50)`. That is not magic - it is explicit receiver passing, unlike some languages that hide `this`.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** `self` is the instance receiving the message. Methods are functions that always know which object they operate on.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 Call: acct.withdraw(30)
@@ -3420,20 +3325,7 @@ Call: acct.withdraw(30)
   reads/writes acct._balance only
 ```
 
-**PICTURE IT LIKE THIS**
-
-A vending machine button that only works on *your* selected item - the machine knows which slot is active.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                        | What it buys         | What it costs                                    |
-| ----------------------------- | -------------------- | ------------------------------------------------ |
-| Explicit self                 | Clear; easy to debug | Verbose compared to languages with implicit this |
-| Module-level functions + dict | Less ceremony        | No enforced binding of data to operations        |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class Counter:
@@ -3454,47 +3346,32 @@ Counter.increment(c, 10)  # same as c.increment(10) - explicit desugaring
 print(c.value)  # 15
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice                        | What it buys         | What it costs                                    |
+| ----------------------------- | -------------------- | ------------------------------------------------ |
+| Explicit self                 | Clear; easy to debug | Verbose compared to languages with implicit this |
+| Module-level functions + dict | Less ceremony        | No enforced binding of data to operations        |
+
+**INTERVIEW NOTE:**
 
 Weak: "self means itself." Strong: "self is the instance Python passes as the first argument when a bound method is called."
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+## 22.4 __init__ and Object Lifecycle
 
+**WHY THIS MATTERS:**
 
-| Difficulty | Task                                                             |
-| ---------- | ---------------------------------------------------------------- |
-| Easy       | `Timer` with `start`, `tick`, `seconds` attributes/methods       |
-| Medium     | Explain bound vs unbound method access on the class              |
-| Hard       | Implement a method that returns a new instance (immutable-style) |
+Every object needs a valid starting state. Scattered initialization after construction invites half-built objects in the wild.
 
+**THE PROBLEM:**
 
-**WHY THE NEXT TOPIC IS NEEDED:** Objects are born with initial state - that birth ceremony is `__init__` and the object lifecycle.
+Creating an object then calling five setter methods before it is usable - callers forget step 3 and invariants break silently.
 
-## 22.4 **init** and Object Lifecycle
+**HOW IT WORKS:**
 
-**WHY YOU ARE LEARNING THIS:** Every object needs a valid starting state. Scattered initialization after construction invites half-built objects in the wild.
+`__init__` runs immediately after the object is created. It should establish invariants: required fields set, defaults applied, invalid combinations rejected. Python separates allocation (`__new__`) from initialization (`__init__`). For 99% of classes you only customize `__init__`. Think: "What must be true the moment this object exists?"
 
-**THE PROBLEM THIS SOLVES:** Creating an object then calling five setter methods before it is usable - callers forget step 3 and invariants break silently.
-
-**SEE IT BEFORE YOU MEMORIZE IT**
-
-- [Corey Schafer - Classes and Instances](https://www.youtube.com/watch?v=ZDa-Z5JzLYM) - `__init__` section
-- [Mosh - OOP Simplified](https://www.youtube.com/watch?v=pTB0EiLXUC8)
-- [Python Tutor](https://pythontutor.com/visualize.html) - watch `__new__` then `__init__` (optional deep dive)
-- [Real Python - Python Classes](https://realpython.com/python-classes/)
-- [GeeksforGeeks OOP tutorial](https://www.geeksforgeeks.org/interview-prep/object-oriented-programming-oop-tutorial/)
-- Study constructors in [ashishps1/awesome-low-level-design](https://github.com/ashishps1/awesome-low-level-design)
-- Make invalid construction raise `ValueError`
-
-**STEP-BY-STEP EXPLANATION**
-
-`__init__` runs immediately after the object is created. It should establish invariants: required fields set, defaults applied, invalid combinations rejected.
-
-Python separates allocation (`__new__`) from initialization (`__init__`). For $99$ of classes you only customize `__init__`. Think: "What must be true the moment this object exists?"
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Construction is the gatekeeper - reject illegal objects at birth, not after they enter the system.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 obj = MyClass(a, b)
@@ -3506,20 +3383,7 @@ obj = MyClass(a, b)
 If __init__ raises -> object discarded (no half-alive zombie)
 ```
 
-**PICTURE IT LIKE THIS**
-
-Hospital intake: vitals checked at admission, not after the patient is already in surgery.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                                 | What it buys                     | What it costs                                      |
-| -------------------------------------- | -------------------------------- | -------------------------------------------------- |
-| Strict **init**                        | Fewer invalid objects downstream | Constructor can grow heavy - split factories later |
-| Two-phase init (create then configure) | Flexible for ORMs/serialization  | Easy to forget configuration step                  |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class BankAccount:
@@ -3537,23 +3401,36 @@ print(acct.balance())
 # BankAccount("X", -1)  # ValueError at construction
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
 
-Interviewers love: "What should happen if construction fails?" Answer: raise; never return a partially initialized object.
+| Choice                                 | What it buys                     | What it costs                                      |
+| -------------------------------------- | -------------------------------- | -------------------------------------------------- |
+| Strict `__init__`                      | Fewer invalid objects downstream | Constructor can grow heavy - split factories later |
+| Two-phase init (create then configure) | Flexible for ORMs/serialization  | Easy to forget configuration step                  |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**INTERVIEW NOTE:**
 
+"What should happen if construction fails?" Answer: raise; never return a partially initialized object.
 
-| Difficulty | Task                                                         |
-| ---------- | ------------------------------------------------------------ |
-| Easy       | `Rectangle(width, height)` rejecting non-positive dimensions |
-| Medium     | `Order(customer, items)` requiring at least one line item    |
-| Hard       | Design a `Connection` that cannot exist without host + port  |
+**PRACTICE:**
 
+| Difficulty | Task                                                          |
+| ---------- | ------------------------------------------------------------- |
+| Easy       | Class `Book(title, pages)` with `summary()`; create two books |
+| Easy       | Show aliasing with a list attribute on an object              |
+| Easy       | `Timer` with `start`, `tick`, `seconds`                       |
+| Easy       | `Rectangle(width, height)` rejecting non-positive dimensions  |
+| Medium     | Explain why `a.bark is b.bark` is True but names may differ   |
+| Medium     | Implement `__eq__` for `Money(amount, currency)`              |
+| Medium     | Explain bound vs unbound method access on the class           |
+| Medium     | `Order(customer, items)` requiring at least one line item     |
+| Hard       | Explain why mutable objects as dict keys are dangerous        |
+| Hard       | Implement a method that returns a new instance (immutable-style) |
+| Hard       | Design a `Connection` that cannot exist without host + port   |
 
-**WHY THE NEXT TOPIC IS NEEDED:** Once state exists on objects, the next wall is *who may change it* - that is encapsulation.
+**WHAT THIS UNLOCKS NEXT:**
 
-**CHECK YOUR UNDERSTANDING AFTER 22.4:** Write a class whose `__init__` rejects invalid input and explain what Python does if `__init__` raises.
+Once state exists on objects, the next wall is *who may change it* - that is encapsulation.
 
 ---
 
@@ -3561,42 +3438,40 @@ Interviewers love: "What should happen if construction fails?" Answer: raise; ne
 
 ---
 
-
-
 # PHASE 23 - Encapsulation & Abstraction
 
 **Track:** Pillars
 
 **WHAT YOU WILL BE ABLE TO DO:** Make invalid object states unreachable from outside callers.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 22 (state, methods, **init**).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 22 (state, methods, `__init__`).
+
+**LEARNING RESOURCES:**
+
+- [Object-Oriented Programming, Simplified (Mosh) - encapsulation pillar](https://www.youtube.com/watch?v=pTB0EiLXUC8)
+- [Real Python - OOP in Python](https://realpython.com/python3-object-oriented-programming/)
+- [Python docs - abc module](https://docs.python.org/3/library/abc.html) · [PEP 3119](https://peps.python.org/pep-3119/)
+- [DigitalOcean - SOLID / ISP](https://www.digitalocean.com/community/tutorials/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
+- [cosmicpython/book](https://github.com/cosmicpython/book) - domain invariants in Order/Batch examples
+- [heykarimoff/solid.python](https://github.com/heykarimoff/solid.python)
 
 ## 23.1 Private State and Public API
 
-**WHY YOU ARE LEARNING THIS:** Once objects hold mutable state, every external mutation is a potential invariant violation. Encapsulation is the discipline of making *only* approved operations touch that state.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Callers do `account._balance = -999` or forget validation because nothing stops them from reaching into the object.
+Once objects hold mutable state, every external mutation is a potential invariant violation. Encapsulation is the discipline of making *only* approved operations touch that state.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [Mosh - OOP Simplified (encapsulation pillar)](https://www.youtube.com/watch?v=pTB0EiLXUC8)
-- [Four Pillars of OOP (Keep On Coding)](https://www.youtube.com/watch?v=1ONhXmQuWP8)
-- [Corey Schafer - Python OOP #1](https://www.youtube.com/watch?v=ZDa-Z5JzLYM)
-- [Python Tutor](https://pythontutor.com/visualize.html) - step through a method that guards `_balance`
-- [Real Python - OOP in Python](https://realpython.com/python3-object-oriented-programming/) · [Python docs - Classes](https://docs.python.org/3/tutorial/classes.html)
-- [python-academy.org OOP guide](https://python-academy.org/en/guide/oop)
-- [heykarimoff/solid.python](https://github.com/heykarimoff/solid.python) - see how public APIs stay small
-- Refactor a procedural bank dict so `_balance` cannot be set from outside
+Callers do `account._balance = -999` or forget validation because nothing stops them from reaching into the object.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 **Encapsulation** bundles data with the operations allowed to change it, and hides everything else. In Python, privacy is *convention*: a leading underscore (`_balance`) signals "do not touch unless you are this class." Stronger tools (`@property`, name mangling) come later; the design habit comes first.
 
 The public API is the contract: `deposit`, `withdraw`, `balance`. Internals (`_balance`, helper methods) are implementation details. When a bug appears, you fix one class - not fifty call sites that remembered the rules differently.
 
-**THE MAIN IDEA IN SIMPLE WORDS:** Hide mutable state behind methods. Callers talk to the API, not the fields.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 WITHOUT encapsulation:
@@ -3612,21 +3487,7 @@ WITH encapsulation:
             rejects or updates safely
 ```
 
-**PICTURE IT LIKE THIS**
-
-ATM vs open vault. You interact with buttons; you never wire the cash drawer yourself.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                                  | What it buys                                        | What it costs                                              |
-| --------------------------------------- | --------------------------------------------------- | ---------------------------------------------------------- |
-| Public methods only                     | One place enforces rules; easier to test and change | More boilerplate than raw dicts                            |
-| Exposed attributes                      | Fast for prototypes                                 | Invariants become optional; refactors break silently       |
-| Java-style private + getters everywhere | Hard boundary                                       | Ceremony overload in Python; prefer properties when needed |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class BankAccount:
@@ -3658,47 +3519,33 @@ print(acct.balance())  # 120
 # acct._balance = -1  # possible in Python but violates the contract
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
 
-Strong answer: encapsulation is about *invariants* and *change control*, not the `private` keyword. Weak answer: "underscore makes it private."
+| Choice                                  | What it buys                                        | What it costs                                              |
+| --------------------------------------- | --------------------------------------------------- | ---------------------------------------------------------- |
+| Public methods only                     | One place enforces rules; easier to test and change | More boilerplate than raw dicts                            |
+| Exposed attributes                      | Fast for prototypes                                 | Invariants become optional; refactors break silently       |
+| Java-style private + getters everywhere | Hard boundary                                       | Ceremony overload in Python; prefer properties when needed |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**INTERVIEW NOTE:**
 
-
-| Difficulty | Task                                                                                   |
-| ---------- | -------------------------------------------------------------------------------------- |
-| Easy       | Add `transfer(to, amount)` that uses `withdraw`/`deposit` without exposing `_balance`  |
-| Medium     | Explain why Python has no true private fields and what conventions replace them        |
-| Hard       | Design a `Wallet` where balance is read-only from outside but still mutable internally |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Hiding fields is step one. Step two is deciding *which rules must always hold* - that is invariants and validation.
+Encapsulation is about *invariants* and *change control*, not the `private` keyword.
 
 ## 23.2 Invariants and Validation
 
-**WHY YOU ARE LEARNING THIS:** Every domain object has truths that must never break: $\text{balance}\geq0$, $\text{item count}\geq1$, and $\text{vehicles per spot}\leq1$. Encapsulation exists to enforce those invariants at the boundary.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Validation sprinkled at UI, API, and database layers while the object itself accepts garbage - fix one layer, miss another.
+Every domain object has truths that must never break: balance ≥ 0, item count ≥ 1, vehicles per spot ≤ 1. Encapsulation exists to enforce those invariants at the boundary.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [Corey Schafer - Class Variables](https://www.youtube.com/watch?v=BJ-VvGyQxho) - shared vs instance invariants
-- [Dave Gray - OOP in Python](https://www.youtube.com/watch?v=RpBBzci_cBk)
-- [Python Tutor](https://pythontutor.com/visualize.html) - watch `__init__` reject bad input
-- [Real Python OOP learning path](https://realpython.com/learning-paths/object-oriented-programming-oop-python/)
-- [GeeksforGeeks OOP tutorial](https://www.geeksforgeeks.org/interview-prep/object-oriented-programming-oop-tutorial/)
-- [cosmicpython/book](https://github.com/cosmicpython/book) - domain invariants in `Order`/`Batch` examples
-- List three invariants for a parking spot; enforce them in one class
+Validation sprinkled at UI, API, and database layers while the object itself accepts garbage - fix one layer, miss another.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-An **invariant** is a condition that is always true for a valid object. Enforce invariants at **construction** (`__init__`) and at **every mutator** (methods that change state). Fail fast with clear exceptions.
+An **invariant** is a condition that is always true for a valid object. Enforce invariants at **construction** (`__init__`) and at **every mutator** (methods that change state). Fail fast with clear exceptions. Do not rely on "callers will remember to validate." The object is the last line of defense. Layered validation (HTTP form + domain object) is fine - the domain object must still reject illegal state even if the UI is bypassed.
 
-Do not rely on "callers will remember to validate." The object is the last line of defense. Layered validation (HTTP form + domain object) is fine - the domain object must still reject illegal state even if the UI is bypassed.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Identify invariants early. Reject illegal transitions inside the object, not across the codebase.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 Order invariant: len(items) >= 1
@@ -3710,21 +3557,7 @@ Order invariant: len(items) >= 1
   illegal state never exists in the wild
 ```
 
-**PICTURE IT LIKE THIS**
-
-Seatbelt and airbag: multiple layers, but the car frame still must not crumple on a fender bump.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                          | What it buys                            | What it costs                                              |
-| ------------------------------- | --------------------------------------- | ---------------------------------------------------------- |
-| Validate in object              | Single source of truth for domain rules | Constructor/methods can grow; extract validators if needed |
-| Validate only at UI             | Fast demos                              | API/scripts/tests bypass UI and corrupt data               |
-| Validate everywhere redundantly | Defense in depth if coordinated         | Drift: rules disagree across layers                        |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class Order:
@@ -3755,49 +3588,33 @@ print(o.items())
 # Order("Ada", [])  # ValueError
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
 
-LLD interview gold: state invariants out loud before drawing classes. "What illegal state must be impossible?"
+| Choice                          | What it buys                            | What it costs                                              |
+| ------------------------------- | --------------------------------------- | ---------------------------------------------------------- |
+| Validate in object              | Single source of truth for domain rules | Constructor/methods can grow; extract validators if needed |
+| Validate only at UI             | Fast demos                              | API/scripts/tests bypass UI and corrupt data               |
+| Validate everywhere redundantly | Defense in depth if coordinated         | Drift: rules disagree across layers                        |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**INTERVIEW NOTE:**
 
-
-| Difficulty | Task                                                          |
-| ---------- | ------------------------------------------------------------- |
-| Easy       | `Temperature` in Celsius rejecting below absolute zero        |
-| Medium     | `ParkingSpot` rejecting two vehicles                          |
-| Hard       | `BankAccount` with daily withdraw limit enforced in one place |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Encapsulation hides *how*. Abstraction hides *which implementation* callers depend on - contracts over concrete classes.
-
-**CHECK YOUR UNDERSTANDING AFTER 23.2:** Write a class whose invalid states are unreachable and name three invariants it enforces.
+LLD gold: state invariants out loud before drawing classes. "What illegal state must be impossible?"
 
 ## 23.3 Abstract Base Classes
 
-**WHY YOU ARE LEARNING THIS:** Callers that import concrete `StripePayment` and `PayPalPayment` everywhere cannot swap, test, or extend without rippling edits. Abstraction gives a *name* for the capability without picking an implementation.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Business logic full of `if provider == 'stripe': ... elif provider == 'paypal': ...` - every new provider rewrites the core.
+Callers that import concrete `StripePayment` and `PayPalPayment` everywhere cannot swap, test, or extend without rippling edits. Abstraction gives a *name* for the capability without picking an implementation.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [Corey Schafer - Python OOP (ABC preview)](https://www.youtube.com/watch?v=ZDa-Z5JzLYM)
-- [Tech With Tim - Python OOP](https://www.youtube.com/watch?v=JeznW_7DlB0)
-- [Mosh - OOP Simplified](https://www.youtube.com/watch?v=pTB0EiLXUC8)
-- [Python docs - abc module](https://docs.python.org/3/library/abc.html) · [PEP 3119](https://peps.python.org/pep-3119/)
-- [Python Tutor](https://pythontutor.com/visualize.html) - trace polymorphic call through ABC reference
-- [faif/python-patterns](https://github.com/faif/python-patterns) - see Strategy/Factory using abstractions
-- Define `Notifier` ABC with two concrete notifiers; write code that only imports `Notifier`
+Business logic full of `if provider == 'stripe': ... elif provider == 'paypal': ...` - every new provider rewrites the core.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-An **Abstract Base Class (ABC)** declares methods subclasses must implement. You cannot instantiate the ABC itself; you instantiate concrete classes that honor the contract.
+An **Abstract Base Class (ABC)** declares methods subclasses must implement. You cannot instantiate the ABC itself; you instantiate concrete classes that honor the contract. In Python, `abc.ABC` plus `@abstractmethod` makes missing implementations a construction-time error. Callers type-hint against `PaymentGateway`, not `StripeGateway`. Tests inject `FakeGateway`. New gateways add a file - they do not edit checkout.
 
-In Python, `abc.ABC` plus `@abstractmethod` makes missing implementations a construction-time error. Callers type-hint against `PaymentGateway`, not `StripeGateway`. Tests inject `FakeGateway`. New gateways add a file - they do not edit checkout.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Program to interfaces (capabilities), not implementations.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```mermaid
 classDiagram
@@ -3817,23 +3634,7 @@ classDiagram
     Caller --> PaymentGateway : holds reference
 ```
 
-
-
-**PICTURE IT LIKE THIS**
-
-Electrical outlet standard: any compliant plug works; you do not rewire the house per appliance brand.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                  | What it buys                            | What it costs                                         |
-| ----------------------- | --------------------------------------- | ----------------------------------------------------- |
-| ABC contract            | Swappable implementations; test doubles | More types/files; over-abstracting tiny scripts hurts |
-| Concrete classes only   | Simple at first                         | Provider switches become surgery                      |
-| Duck typing without ABC | Flexible, Pythonic                      | No compile-time-ish guard; typos fail at runtime      |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 from abc import ABC, abstractmethod
@@ -3858,46 +3659,33 @@ print(checkout(StripeGateway(), 19.99))
 print(checkout(FakeGateway(), 19.99))
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice                  | What it buys                            | What it costs                                         |
+| ----------------------- | --------------------------------------- | ----------------------------------------------------- |
+| ABC contract            | Swappable implementations; test doubles | More types/files; over-abstracting tiny scripts hurts |
+| Concrete classes only   | Simple at first                         | Provider switches become surgery                      |
+| Duck typing without ABC | Flexible, Pythonic                      | No compile-time-ish guard; typos fail at runtime      |
+
+**INTERVIEW NOTE:**
 
 Explain ABC vs Protocol vs duck typing. Strong: "ABC documents and enforces required methods for subclasses."
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                                                   |
-| ---------- | ---------------------------------------------------------------------- |
-| Easy       | `Shape` ABC with `area()`; `Circle` and `Square` implementations       |
-| Medium     | `Storage` ABC with in-memory and fake S3 implementation                |
-| Hard       | Why might you choose `typing.Protocol` instead of ABC in Python 3.10+? |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** One fat interface forces implementers to stub unused methods - interface segregation fixes that at object level.
-
 ## 23.4 Interface Segregation at Object Level
 
-**WHY YOU ARE LEARNING THIS:** When one ABC has twelve methods, every implementer carries dead weight and callers accidentally depend on things they should not. Small, focused contracts keep changes local.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** `Animal` ABC requires `fly()`, `swim()`, `bark()` - `Dog` throws on `fly()`; callers must know which animals support which verbs.
+When one ABC has twelve methods, every implementer carries dead weight and callers accidentally depend on things they should not. Small, focused contracts keep changes local.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [Alex Hyett - SOLID in Python (ISP segment)](https://www.youtube.com/watch?v=kF7rQmSRlq0)
-- [Fireship - Design Patterns in 10 minutes](https://www.youtube.com/watch?v=tv-_1er1mWI)
-- [DigitalOcean - SOLID / ISP](https://www.digitalocean.com/community/tutorials/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
-- [heykarimoff/solid.python](https://github.com/heykarimoff/solid.python)
-- [AlgoMaster SOLID with code](https://blog.algomaster.io/p/solid-principles-explained-with-code)
-- Split a fat `Worker` interface into `Payable` + `Schedulable`
+`Animal` ABC requires `fly()`, `swim()`, `bark()` - `Dog` throws on `fly()`; callers must know which animals support which verbs.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-**Interface Segregation Principle (ISP)** at object level means: many small, role-specific ABCs beat one "god interface." A `ReportExporter` exposes `to_pdf()`; a separate `ReportScheduler` exposes `schedule()`. Classes implement only what they need.
+**Interface Segregation Principle (ISP)** at object level means: many small, role-specific ABCs beat one "god interface." A `ReportExporter` exposes `to_pdf()`; a separate `ReportScheduler` exposes `schedule()`. Classes implement only what they need. This is abstraction applied to *surface area*: callers import the smallest type that satisfies their job. Tests stub one interface, not a kitchen-sink mock.
 
-This is abstraction applied to *surface area*: callers import the smallest type that satisfies their job. Tests stub one interface, not a kitchen-sink mock.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Split interfaces by client need. No class should implement methods it cannot honestly support.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 BEFORE (fat):
@@ -3912,21 +3700,7 @@ AFTER (segregated):
   OfficeBot(Printable, Scannable)
 ```
 
-**PICTURE IT LIKE THIS**
-
-Swiss Army knife vs dedicated chef's knife. Bring the tool the task needs, not every blade ever made.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice               | What it buys                           | What it costs                             |
-| -------------------- | -------------------------------------- | ----------------------------------------- |
-| Small ABCs           | Honest implementations; targeted mocks | More types to work through                |
-| One mega-ABC         | One import                             | NotImplementedError mines; LSP violations |
-| No ABCs, duck typing | Minimal files                          | Implicit contracts; harder onboarding     |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 from abc import ABC, abstractmethod
@@ -3957,31 +3731,44 @@ print_report(SimplePrinter(), "Q3 summary")
 print_report(OfficeDevice(), "Q3 summary")
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
 
-ISP interview: give a fat interface example and show the split. Mention callers depend on abstractions *they use*, not ones they happen to share.
+| Choice               | What it buys                           | What it costs                             |
+| -------------------- | -------------------------------------- | ----------------------------------------- |
+| Small ABCs           | Honest implementations; targeted mocks | More types to work through                |
+| One mega-ABC         | One import                             | NotImplementedError mines; LSP violations |
+| No ABCs, duck typing | Minimal files                          | Implicit contracts; harder onboarding     |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**INTERVIEW NOTE:**
 
+Give a fat interface example and show the split. Callers depend on abstractions *they use*, not ones they happen to share.
 
-| Difficulty | Task                                                               |
-| ---------- | ------------------------------------------------------------------ |
-| Easy       | Split `Bird` with fly/swim into `Flyer` and `Swimmer`              |
-| Medium     | Design interfaces for a library: `Borrowable`, `Reservable`        |
-| Hard       | When is one combined interface still correct? (true cohesion case) |
+**PRACTICE:**
 
+| Difficulty | Task                                                                                   |
+| ---------- | -------------------------------------------------------------------------------------- |
+| Easy       | Add `transfer(to, amount)` that uses `withdraw`/`deposit` without exposing `_balance`  |
+| Easy       | `Temperature` in Celsius rejecting below absolute zero                                 |
+| Easy       | `Shape` ABC with `area()`; `Circle` and `Square`                                       |
+| Easy       | Split `Bird` with fly/swim into `Flyer` and `Swimmer`                                  |
+| Medium     | Explain why Python has no true private fields and what conventions replace them        |
+| Medium     | `ParkingSpot` rejecting two vehicles                                                   |
+| Medium     | `Storage` ABC with in-memory and fake S3 implementation                                |
+| Medium     | Design interfaces for a library: `Borrowable`, `Reservable`                            |
+| Hard       | Design a `Wallet` where balance is read-only outside but mutable internally            |
+| Hard       | `BankAccount` with daily withdraw limit enforced in one place                          |
+| Hard       | Why might you choose `typing.Protocol` instead of ABC in Python 3.10+?                 |
+| Hard       | When is one combined interface still correct? (true cohesion case)                     |
 
-**WHY THE NEXT TOPIC IS NEEDED:** Abstraction names capabilities. Inheritance reuses implementation along an is-a line - the next pillar, and the one most often misused.
+**WHAT THIS UNLOCKS NEXT:**
 
-**CHECK YOUR UNDERSTANDING AFTER 23.4:** Define an ABC with two implementations and explain why a caller should depend on the ABC, not a concrete class.
+Abstraction names capabilities. Inheritance reuses implementation along an is-a line - the next pillar, and the one most often misused.
 
 ---
 
 > **Phase 23 complete?** [Build the Phase 23 mini-project](../guides/Projects.md#cs-phase-23-project) · [Continue to Phase 24](#phase-24)
 
 ---
-
-
 
 # PHASE 24 - Inheritance & Polymorphism
 
@@ -3991,32 +3778,29 @@ ISP interview: give a fat interface example and show the split. Mention callers 
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 23 (abstraction, ABCs).
 
+**LEARNING RESOURCES:**
+
+- [Corey Schafer - Inheritance](https://www.youtube.com/watch?v=RSl87lqOXDE)
+- [CodeAesthetic - The Flaws of Inheritance](https://www.youtube.com/watch?v=hxGOiiR9ZKg)
+- [Real Python - Inheritance and Composition](https://realpython.com/inheritance-composition-python/)
+- [Refactoring Guru - Replace Conditional with Polymorphism](https://refactoring.guru/replace-conditional-with-polymorphism)
+- [Python docs - Classes / inheritance](https://docs.python.org/3/tutorial/classes.html#inheritance)
+
 ## 24.1 is-a and super()
 
-**WHY YOU ARE LEARNING THIS:** When two classes share real behavior (not just names), duplicating methods violates DRY and guarantees drift. Inheritance shares implementation when the subtype *is a* specialized version of the supertype.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Copy-pasting `save()` into `AdminUser` and `GuestUser`; fix a bug in one, forget the other.
+When two classes share real behavior (not just names), duplicating methods violates DRY and guarantees drift. Inheritance shares implementation when the subtype *is a* specialized version of the supertype.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [Dave Gray - Inheritance & Polymorphism](https://www.youtube.com/watch?v=RpBBzci_cBk)
-- [Corey Schafer - Inheritance](https://www.youtube.com/watch?v=RSl87lqOXDE)
-- [Mosh - OOP Simplified](https://www.youtube.com/watch?v=pTB0EiLXUC8)
-- [Python docs - Classes / inheritance](https://docs.python.org/3/tutorial/classes.html#inheritance)
-- [Real Python - Inheritance and Composition](https://realpython.com/inheritance-composition-python/)
-- [Python Tutor](https://pythontutor.com/visualize.html) - watch MRO lookup for `greet()`
-- [faif/python-patterns](https://github.com/faif/python-patterns)
-- Model `Employee` -> `Manager` with shared `pay()` using `super()`
+Copy-pasting `save()` into `AdminUser` and `GuestUser`; fix a bug in one, forget the other.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-**Inheritance** links classes: `Manager(Employee)` means every manager is an employee with extra behavior or overrides. Subclasses inherit attributes and methods; they extend or replace them.
+**Inheritance** links classes: `Manager(Employee)` means every manager is an employee with extra behavior or overrides. Subclasses inherit attributes and methods; they extend or replace them. Use `super()` to delegate to parent implementation instead of hard-coding the parent class name - that keeps refactors safe when the MRO changes. Ask: "Would I say this sentence aloud? A Manager *is an* Employee." If not, prefer composition (Phase 25).
 
-Use `super()` to delegate to parent implementation instead of hard-coding the parent class name. That keeps refactors safe when the MRO changes. Ask: "Would I say this sentence aloud? A Manager *is an* Employee." If not, prefer composition (Phase 25).
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Inherit when the relationship is true is-a and you need shared implementation.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```mermaid
 classDiagram
@@ -4031,29 +3815,9 @@ classDiagram
     Employee <|-- Manager
 ```
 
+Call `mgr.pay()`: find `pay` on `Manager` → `super()` calls `Employee.pay` → add the manager's bonus.
 
-
-Call `mgr.pay()`:
-
-1. Find `pay` on `Manager`.
-2. `super()` calls `Employee.pay`.
-3. Add the manager's bonus.
-
-**PICTURE IT LIKE THIS**
-
-Biological taxonomy: a golden retriever is a dog is a mammal. You do not inherit from "Vehicle" just because both have wheels.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                 | What it buys                         | What it costs                                     |
-| ---------------------- | ------------------------------------ | ------------------------------------------------- |
-| is-a inheritance       | Shared code; polymorphic collections | Tight coupling; fragile hierarchies if misapplied |
-| Copy-paste shared code | No hierarchy learning curve          | Drift; no substitutability story                  |
-| Deep trees (4+ levels) | Maximum reuse on paper               | MRO pain; hard to reason; favor composition       |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class Employee:
@@ -4078,47 +3842,33 @@ m = Manager("Pat", 70_000, 3)
 print(e.pay(), m.pay())  # 50000 70300
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
 
-Classic trap: "When do you use inheritance?" Good: "True is-a and shared behavior." Bad: "Whenever I see two similar classes."
+| Choice                 | What it buys                         | What it costs                                     |
+| ---------------------- | ------------------------------------ | ------------------------------------------------- |
+| is-a inheritance       | Shared code; polymorphic collections | Tight coupling; fragile hierarchies if misapplied |
+| Copy-paste shared code | No hierarchy learning curve          | Drift; no substitutability story                  |
+| Deep trees (4+ levels) | Maximum reuse on paper               | MRO pain; hard to reason; favor composition       |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**INTERVIEW NOTE:**
 
-
-| Difficulty | Task                                                              |
-| ---------- | ----------------------------------------------------------------- |
-| Easy       | `Shape` base with `Circle`/`Rectangle` area                       |
-| Medium     | `User` -> `AdminUser` with extra `permissions` and `super()` init |
-| Hard       | Explain MRO for `class A(B,C): pass` with simple diagram          |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Sharing code is not enough - subtypes must honor the parent's contract when they replace behavior (overriding).
+"When do you use inheritance?" Good: "True is-a and shared behavior." Bad: "Whenever I see two similar classes."
 
 ## 24.2 Overriding and Extension
 
-**WHY YOU ARE LEARNING THIS:** Subclasses must customize behavior without breaking callers who only know the parent type. Override methods deliberately; extend with `super()`, do not accidentally narrow guarantees.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** `Square` extends `Rectangle` but overrides `set_width` to also set height - code expecting independent width/height breaks (classic LSP violation preview).
+Subclasses must customize behavior without breaking callers who only know the parent type. Override methods deliberately; extend with `super()`, do not accidentally narrow guarantees.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [CodeAesthetic - The Flaws of Inheritance](https://www.youtube.com/watch?v=hxGOiiR9ZKg)
-- [Corey Schafer - Inheritance](https://www.youtube.com/watch?v=RSl87lqOXDE)
-- [DigitalOcean - SOLID (LSP)](https://www.digitalocean.com/community/tutorials/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
-- [GeeksforGeeks OOP](https://www.geeksforgeeks.org/interview-prep/object-oriented-programming-oop-tutorial/)
-- [ashishps1/awesome-low-level-design](https://github.com/ashishps1/awesome-low-level-design)
-- [Low Level Design Mastery SOLID](https://www.lowleveldesignmastery.com/blog/solid-principles/)
-- Override `greet()` in subclass; call `super().greet()` then add role-specific text
+`Square` extends `Rectangle` but overrides `set_width` to also set height - code expecting independent width/height breaks (classic LSP violation preview).
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-**Overriding** replaces a parent method in the subclass. **Extension** adds new methods or calls parent logic via `super()`. Callers holding a `Employee` reference should not break when it actually points at `Manager`.
+**Overriding** replaces a parent method in the subclass. **Extension** adds new methods or calls parent logic via `super()`. Callers holding an `Employee` reference should not break when it actually points at `Manager`. Rules of thumb: override when behavior truly differs; call `super()` when you add to rather than replace logic; never weaken preconditions or strengthen postconditions in ways callers cannot expect.
 
-Rules of thumb: override when behavior truly differs; call `super()` when you add to rather than replace logic; never weaken preconditions or strengthen postconditions in ways callers cannot expect.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Override to specialize; extend with super() to accumulate behavior.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 Parent.send():
@@ -4131,21 +3881,7 @@ Child.send():
     metrics()
 ```
 
-**PICTURE IT LIKE THIS**
-
-Recipe variation: you still bake a cake, but add frosting. You do not substitute salt for sugar and call it the same recipe.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                   | What it buys                             | What it costs                                   |
-| ------------------------ | ---------------------------------------- | ----------------------------------------------- |
-| Override + super()       | Specialization without losing base steps | Must read parent docs to avoid double work      |
-| Override without super() | Clean break when parent logic is wrong   | Surprises callers expecting parent side effects |
-| Hide parent method       | Quick hack                               | Breaks substitutability - smell for composition |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class Logger:
@@ -4166,50 +3902,33 @@ class AuditLogger(TimestampLogger):
 AuditLogger().log("user login")
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
 
-They may show broken inheritance (Square/Rectangle). Explain *why* callers break - substitutability, preview of LSP in Phase 26.
+| Choice                   | What it buys                             | What it costs                                   |
+| ------------------------ | ---------------------------------------- | ----------------------------------------------- |
+| Override + super()       | Specialization without losing base steps | Must read parent docs to avoid double work      |
+| Override without super() | Clean break when parent logic is wrong   | Surprises callers expecting parent side effects |
+| Hide parent method       | Quick hack                               | Breaks substitutability - smell for composition |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**INTERVIEW NOTE:**
 
-
-| Difficulty | Task                                                  |
-| ---------- | ----------------------------------------------------- |
-| Easy       | `Animal.speak()` overridden in `Dog` and `Cat`        |
-| Medium     | `DiscountPolicy` base with `HolidayDiscount` override |
-| Hard       | Refactor a bad `Stack extends List` into composition  |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** When many subtypes share one method name but different behavior, callers want one call - that is polymorphism.
-
-**CHECK YOUR UNDERSTANDING AFTER 24.2:** Implement a small hierarchy with `super()` and explain when inheritance would be the wrong tool.
+They may show broken Square/Rectangle inheritance. Explain *why* callers break - substitutability, preview of LSP in Phase 26.
 
 ## 24.3 Duck Typing
 
-**WHY YOU ARE LEARNING THIS:** Python does not require a shared base class for polymorphism. If it walks like a duck and quacks (`write(data)`), treat it like a writer. That flexibility removes boilerplate - and demands discipline.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Forcing every adapter through one ABC before you have two implementations - design paralysis on day one.
+Python does not require a shared base class for polymorphism. If it walks like a duck and quacks (`write(data)`), treat it like a writer. That flexibility removes boilerplate - and demands discipline.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [Dave Gray - Polymorphism section](https://www.youtube.com/watch?v=RpBBzci_cBk)
-- [Tech With Tim - OOP](https://www.youtube.com/watch?v=JeznW_7DlB0)
-- [Mosh - OOP Simplified](https://www.youtube.com/watch?v=pTB0EiLXUC8)
-- [Real Python - Duck Typing](https://realpython.com/python3-object-oriented-programming/)
-- [PEP 3119 / abc vs duck typing](https://peps.python.org/pep-3119/)
-- [Python Tutor](https://pythontutor.com/visualize.html)
-- [faif/python-patterns](https://github.com/faif/python-patterns)
-- Write `save(doc, sink)` that works for `FileSink` and `CloudSink` without a shared base
+Forcing every adapter through one ABC before you have two implementations - design paralysis on day one.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-**Duck typing**: behavior determines usability. Functions accept any object with the needed methods. Static type checkers use `Protocol`; runtime Python just calls the method.
+**Duck typing**: behavior determines usability. Functions accept any object with the needed methods. Static type checkers use `Protocol`; runtime Python just calls the method. Use duck typing when integrations are diverse and stable method names exist. Add ABCs when you need enforcement, documentation for a team, or test doubles with clear contracts.
 
-Use duck typing when integrations are diverse and stable method names exist. Add ABCs when you need enforcement, documentation for a team, or test doubles with clear contracts.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Call the method you need; trust (or type-hint) the behavior, not the class name.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 def persist(doc, sink):
@@ -4220,21 +3939,7 @@ CloudSink.write ok
 RandomSink      AttributeError at call site
 ```
 
-**PICTURE IT LIKE THIS**
-
-USB-C: if the plug fits and negotiates power, the port does not ask for the manufacturer's inheritance tree.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                | What it buys                                 | What it costs                              |
-| --------------------- | -------------------------------------------- | ------------------------------------------ |
-| Duck typing           | Minimal ceremony; great for Python libraries | Errors at runtime if method missing        |
-| Strict ABC everywhere | Early failure; clear docs                    | Heavy for one-off scripts                  |
-| isinstance checks     | Explicit branches                            | Open/closed violation; grows without bound |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class FileSink:
@@ -4255,52 +3960,33 @@ persist("hello", FileSink("/tmp/out.txt"))
 persist("hello", CloudSink())
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice                | What it buys                                 | What it costs                              |
+| --------------------- | -------------------------------------------- | ------------------------------------------ |
+| Duck typing           | Minimal ceremony; great for Python libraries | Errors at runtime if method missing        |
+| Strict ABC everywhere | Early failure; clear docs                    | Heavy for one-off scripts                  |
+| isinstance checks     | Explicit branches                            | Open/closed violation; grows without bound |
+
+**INTERVIEW NOTE:**
 
 Contrast duck typing vs Java interfaces. Mention `Protocol` for static typing without inheritance.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                                     |
-| ---------- | -------------------------------------------------------- |
-| Easy       | One function, three shapes with `area()`                 |
-| Medium     | Add type hints with `Protocol` for `Writable`            |
-| Hard       | When duck typing caused a production bug - how ABCs help |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Production codebases often still have legacy `if type == ...` - replacing those chains is the payoff.
-
 ## 24.4 Replacing Type Checks
 
-**WHY YOU ARE LEARNING THIS:** `if isinstance(x, Dog): bark elif isinstance(x, Cat): meow` repeats everywhere and forgets new types. Polymorphism moves the variation *into* the object.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Adding `Bird` forces editing twelve functions; one branch typo silences errors.
+`if isinstance(x, Dog): bark elif isinstance(x, Cat): meow` repeats everywhere and forgets new types. Polymorphism moves the variation *into* the object.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [CodeAesthetic - Inheritance flaws / type checks](https://www.youtube.com/watch?v=hxGOiiR9ZKg)
-- [Fireship - Design Patterns](https://www.youtube.com/watch?v=tv-_1er1mWI)
-- [Refactoring Guru - Replace Conditional with Polymorphism](https://refactoring.guru/replace-conditional-with-polymorphism)
-- [Chanh Le OOP roadmap](https://chanhle.dev/en/blog/object-oriented-programming-design-patterns-roadmap)
-- [kamranahmedse/design-patterns-for-humans](https://github.com/kamranahmedse/design-patterns-for-humans)
-- [python-academy.org OOP](https://python-academy.org/en/guide/oop)
-- Refactor one `if/elif` animal zoo into polymorphic `speak()`
+Adding `Bird` forces editing twelve functions; one branch typo silences errors.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-The refactor **Replace Conditional with Polymorphism** is interview-grade daily work. Each branch becomes a class or method on the object. The caller becomes:
+The refactor **Replace Conditional with Polymorphism** is interview-grade daily work. Each branch becomes a class or method on the object. The caller becomes `for pet in pets: pet.speak()`. No type registry. Open for extension (new class), closed for modification (caller unchanged). This is the behavioral heart of OOP before patterns name it Strategy.
 
-```python
-for pet in pets:
-    pet.speak()
-```
-
-No type registry. Open for extension (new class), closed for modification (caller unchanged). This is the behavioral heart of OOP before patterns name it Strategy.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Push variation into objects; callers stay dumb and stable.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 BEFORE:
@@ -4313,21 +3999,7 @@ AFTER:
   SmsNotifier.send()
 ```
 
-**PICTURE IT LIKE THIS**
-
-Thermostat vs telling every guest how to adjust the boiler. Set the temperature; let the device decide how to heat.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice              | What it buys                      | What it costs                          |
-| ------------------- | --------------------------------- | -------------------------------------- |
-| Polymorphic call    | Add types without editing callers | Needs sensible type boundaries upfront |
-| Central if/elif     | Obvious control flow in one file  | Becomes god-function; merge conflicts  |
-| Dict dispatch table | Lightweight polymorphism          | Still central registry; less IDE help  |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class Notifier:
@@ -4349,31 +4021,43 @@ def broadcast(notifiers: list[Notifier], msg: str) -> None:
 broadcast([EmailNotifier(), SmsNotifier()], "deploy done")
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice              | What it buys                      | What it costs                          |
+| ------------------- | --------------------------------- | -------------------------------------- |
+| Polymorphic call    | Add types without editing callers | Needs sensible type boundaries upfront |
+| Central if/elif     | Obvious control flow in one file  | Becomes god-function; merge conflicts  |
+| Dict dispatch table | Lightweight polymorphism          | Still central registry; less IDE help  |
+
+**INTERVIEW NOTE:**
 
 Show before/after of if/elif vs polymorphism on a whiteboard. Count how many files change when adding a type.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**PRACTICE:**
 
+| Difficulty | Task                                                              |
+| ---------- | ----------------------------------------------------------------- |
+| Easy       | `Shape` base with `Circle`/`Rectangle` area                       |
+| Easy       | `Animal.speak()` overridden in `Dog` and `Cat`                    |
+| Easy       | Replace shape if/elif with `area()` polymorphism                  |
+| Medium     | `User` -> `AdminUser` with extra `permissions` and `super()` init |
+| Medium     | `DiscountPolicy` base with `HolidayDiscount` override             |
+| Medium     | Add type hints with `Protocol` for `Writable`                     |
+| Medium     | Payment if/elif -> polymorphic `charge()`                         |
+| Hard       | Explain MRO for `class A(B,C): pass` with simple diagram          |
+| Hard       | Refactor a bad `Stack extends List` into composition              |
+| Hard       | When duck typing caused a production bug - how ABCs help          |
+| Hard       | When *not* to polymorph (two cases, unlikely to grow)             |
 
-| Difficulty | Task                                                  |
-| ---------- | ----------------------------------------------------- |
-| Easy       | Replace shape if/elif with `area()` polymorphism      |
-| Medium     | Payment if/elif -> polymorphic `charge()`             |
-| Hard       | When *not* to polymorph (two cases, unlikely to grow) |
+**WHAT THIS UNLOCKS NEXT:**
 
-
-**WHY THE NEXT TOPIC IS NEEDED:** Polymorphism shares interfaces; composition shares *objects* without pretending is-a - often the healthier reuse.
-
-**CHECK YOUR UNDERSTANDING AFTER 24.4:** Refactor a three-branch type check into polymorphic method calls and count files touched when adding a fourth type.
+Polymorphism shares interfaces; composition shares *objects* without pretending is-a - often the healthier reuse.
 
 ---
 
 > **Phase 24 complete?** [Build the Phase 24 mini-project](../guides/Projects.md#cs-phase-24-project) · [Continue to Phase 25](#phase-25)
 
 ---
-
-
 
 # PHASE 25 - Composition
 
@@ -4383,31 +4067,28 @@ Show before/after of if/elif vs polymorphism on a whiteboard. Count how many fil
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 24 (polymorphism, duck typing).
 
+**LEARNING RESOURCES:**
+
+- [CodeAesthetic - The Flaws of Inheritance](https://www.youtube.com/watch?v=hxGOiiR9ZKg)
+- [ArjanCodes - Understanding Composition Over Inheritance](https://www.youtube.com/watch?v=P-N01AeMoX8)
+- [Real Python - Inheritance and Composition](https://realpython.com/inheritance-composition-python/)
+- [Refactoring Guru - Replace Inheritance with Delegation](https://refactoring.guru/replace-inheritance-with-delegation)
+
 ## 25.1 has-a vs is-a
 
-**WHY YOU ARE LEARNING THIS:** Inheritance couples you to parent implementation details forever. Most "reuse" is really *using* another object, not *being* a specialized version of it.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** `class Car(Engine)` nonsense; `Car` breaks when `Engine` API changes because the hierarchy lied about the relationship.
+Inheritance couples you to parent implementation details forever. Most "reuse" is really *using* another object, not *being* a specialized version of it.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [CodeAesthetic - Flaws of Inheritance](https://www.youtube.com/watch?v=hxGOiiR9ZKg)
-- [ArjanCodes - Understanding Composition Over Inheritance](https://www.youtube.com/watch?v=P-N01AeMoX8)
-- [Mosh - OOP Simplified](https://www.youtube.com/watch?v=pTB0EiLXUC8)
-- [Real Python - Inheritance and Composition](https://realpython.com/inheritance-composition-python/)
-- [DigitalOcean - SOLID (composition/inheritance)](https://www.digitalocean.com/community/tutorials/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
-- [faif/python-patterns](https://github.com/faif/python-patterns)
-- Rewrite `Stack extends list` as `Stack` with internal `list`
+`class Car(Engine)` nonsense; `Car` breaks when `Engine` API changes because the hierarchy lied about the relationship.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-**has-a (composition)**: `Car` has an `Engine`. **is-a (inheritance)**: `ElectricCar` is a `Car`. Favor has-a when behavior is assembled from parts (logger, clock, repository) rather than a strict taxonomy.
+**has-a (composition)**: `Car` has an `Engine`. **is-a (inheritance)**: `ElectricCar` is a `Car`. Favor has-a when behavior is assembled from parts (logger, clock, repository) rather than a strict taxonomy. Composition keeps objects small and swappable. You pass an `Engine` interface into `Car` in tests; you do not subclass `Car` fifty times for every feature combo.
 
-Composition keeps objects small and swappable. You pass a `Engine` interface into `Car` in tests; you do not subclass `Car` fifty times for every feature combo.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Combine objects. Inherit only when substitutability is true and stable.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 INHERITANCE (tight):
@@ -4420,21 +4101,7 @@ COMPOSITION (flexible):
     logger: Logger
 ```
 
-**PICTURE IT LIKE THIS**
-
-Lego bricks vs melting wax into one blob. Swap one brick without remolding the sculpture.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice           | What it buys                        | What it costs                                   |
-| ---------------- | ----------------------------------- | ----------------------------------------------- |
-| Composition      | Flexible; avoids fragile base class | More wiring in **init**                         |
-| Deep inheritance | Fast initial reuse                  | Parent change breaks children; diamond problems |
-| Mixin soup       | Partial reuse                       | MRO confusion; hard debugging                   |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class Engine:
@@ -4457,47 +4124,33 @@ class Car:
 Car(Engine(), GPS()).start_trip()
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
 
-Favorite senior question: "Stack extending List - what's wrong?" Answer: exposes full list API; violates is-a.
+| Choice           | What it buys                        | What it costs                                   |
+| ---------------- | ----------------------------------- | ----------------------------------------------- |
+| Composition      | Flexible; avoids fragile base class | More wiring in `__init__`                       |
+| Deep inheritance | Fast initial reuse                  | Parent change breaks children; diamond problems |
+| Mixin soup       | Partial reuse                       | MRO confusion; hard debugging                   |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**INTERVIEW NOTE:**
 
-
-| Difficulty | Task                                                            |
-| ---------- | --------------------------------------------------------------- |
-| Easy       | `Notebook` has `list` of pages, not extends list                |
-| Medium     | `Report` has `Formatter` + `Exporter`                           |
-| Hard       | When inheritance *is* correct (uniform interface, true subtype) |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Composition often delegates work to parts - explicit delegation patterns come next.
+"Stack extending List - what's wrong?" Answer: exposes full list API; violates is-a.
 
 ## 25.2 Delegation Patterns
 
-**WHY YOU ARE LEARNING THIS:** When a public method mostly forwards to a collaborator, you are **delegating**. Wrapping, adapters, and strategy injection all use delegation instead of subclassing.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Subclassing `dict` to add `to_json()` exposes every dict mutator and breaks JSON invariants silently.
+When a public method mostly forwards to a collaborator, you are **delegating**. Wrapping, adapters, and strategy injection all use delegation instead of subclassing.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [Fireship - 10 Design Patterns](https://www.youtube.com/watch?v=tv-_1er1mWI)
-- [Composition over Inheritance Explained (Metaphorically Speaking)](https://www.youtube.com/watch?v=HNzP1aLAffM)
-- [Refactoring Guru - Replace Inheritance with Delegation](https://refactoring.guru/replace-inheritance-with-delegation)
-- [GeeksforGeeks OOP](https://www.geeksforgeeks.org/interview-prep/object-oriented-programming-oop-tutorial/)
-- [kamranahmedse/design-patterns-for-humans](https://github.com/kamranahmedse/design-patterns-for-humans)
-- [freeCodeCamp OOP crash course](https://www.freecodecamp.org/news/crash-course-object-oriented-programming-in-python/)
-- Implement `Playlist` that delegates storage to `list` but controls shuffle API
+Subclassing `dict` to add `to_json()` exposes every dict mutator and breaks JSON invariants silently.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-**Delegation** implements a method by calling a composed object's method. Python's `__getattr__` can forward unknown attributes automatically - use sparingly; explicit methods read better in interviews.
+**Delegation** implements a method by calling a composed object's method. Python's `__getattr__` can forward unknown attributes automatically - use sparingly; explicit methods read better in interviews. Delegation powers Adapter (Phase 28), Strategy (Phase 28), and many stdlib types (`collections.UserDict`). Pattern: outer object controls policy; inner object provides mechanism.
 
-Delegation powers Adapter (Phase 28), Strategy (Phase 28), and many stdlib types (`collections.UserDict`). Pattern: outer object controls policy; inner object provides mechanism.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Outer object owns policy; inner object provides mechanism - forward calls deliberately.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 Playlist.shuffle():
@@ -4508,21 +4161,7 @@ Playlist.add(track):
     self._items.append(track)  # delegate after invariant
 ```
 
-**PICTURE IT LIKE THIS**
-
-Hotel concierge: you ask the desk; they call housekeeping. You do not inherit from housekeeping.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                   | What it buys        | What it costs                       |
-| ------------------------ | ------------------- | ----------------------------------- |
-| Explicit delegation      | Clear API surface   | Boilerplate forwarding methods      |
-| **getattr** auto-forward | Less code           | Hidden surface; harder stack traces |
-| Inherit for delegation   | Quick super() calls | Couples to parent forever           |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class UserDict:
@@ -4554,31 +4193,38 @@ cd["b"] = 2
 print(list(cd.keys()), cd.writes)
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
 
-Explain delegation vs inheritance in one sentence: "Inheritance is being; delegation is hiring."
+| Choice                   | What it buys        | What it costs                       |
+| ------------------------ | ------------------- | ----------------------------------- |
+| Explicit delegation      | Clear API surface   | Boilerplate forwarding methods      |
+| `__getattr__` auto-forward | Less code         | Hidden surface; harder stack traces |
+| Inherit for delegation   | Quick super() calls | Couples to parent forever           |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**INTERVIEW NOTE:**
 
+Inheritance is being; delegation is hiring.
 
-| Difficulty | Task                                                               |
-| ---------- | ------------------------------------------------------------------ |
-| Easy       | `Timer` delegates sleep to `time.sleep` wrapper for tests          |
-| Medium     | `Repository` delegating to dict with extra logging                 |
+**PRACTICE:**
+
+| Difficulty | Task                                                            |
+| ---------- | --------------------------------------------------------------- |
+| Easy       | `Notebook` has `list` of pages, not extends list                |
+| Easy       | `Timer` delegates sleep to a wrapper for tests                  |
+| Medium     | `Report` has `Formatter` + `Exporter`                           |
+| Medium     | `Repository` delegating to dict with extra logging              |
+| Hard       | When inheritance *is* correct (uniform interface, true subtype) |
 | Hard       | Implement transparent forwarding with `__getattr__` and list risks |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED:** Composition in code (Phase 25) answered "prefer has-a over is-a." Low-level design needs the *same* idea drawn as relationships with lifetimes: association, aggregation, and composition edges on a class diagram (Phase 29). First, though, the four pillars need a set of principles that say when each tool helps versus hurts - **SOLID**.
-
-**CHECK YOUR UNDERSTANDING AFTER PHASE 25:** Convert one bad is-a hierarchy into has-a composition and explain what became easier to test. Then, in one sentence, say how that has-a choice would look as a diagram edge when you reach Phase 29.
+Composition in code answered "prefer has-a over is-a." Low-level design needs the *same* idea drawn as relationships with lifetimes: association, aggregation, and composition edges on a class diagram (Phase 29). First, though, the four pillars need a set of principles that say when each tool helps versus hurts - **SOLID**.
 
 ---
 
 > **Phase 25 complete?** [Build the Phase 25 mini-project](../guides/Projects.md#cs-phase-25-project) · [Continue to Phase 26](#phase-26)
 
 ---
-
-
 
 # PHASE 26 - SOLID
 
@@ -4588,31 +4234,29 @@ Explain delegation vs inheritance in one sentence: "Inheritance is being; delega
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 25 (composition, delegation).
 
-## 26.1 SRP / OCP / LSP
-
-**WHY YOU ARE LEARNING THIS:** **Single Responsibility**: one reason to change per class. **Open/Closed**: extend behavior without editing stable code. **Liskov Substitution**: subtypes must not break callers expecting the parent.
-
-**THE PROBLEM THIS SOLVES:** One `Report` class edits SQL, CSV formatting, and email delivery - any change risks everything.
-
-**SEE IT BEFORE YOU MEMORIZE IT**
+**LEARNING RESOURCES:**
 
 - [Alex Hyett - SOLID in Python](https://www.youtube.com/watch?v=kF7rQmSRlq0)
-- [in28minutes - SOLID Principles in 8 Minutes](https://www.youtube.com/watch?v=yxf2spbpTSw)
-- [DigitalOcean SOLID](https://www.digitalocean.com/community/tutorials/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
-- [AlgoMaster SOLID with code](https://blog.algomaster.io/p/solid-principles-explained-with-code)
-- [Low Level Design Mastery SOLID visual](https://www.lowleveldesignmastery.com/blog/solid-principles/)
+- [DigitalOcean - SOLID the first five principles](https://www.digitalocean.com/community/tutorials/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
 - [heykarimoff/solid.python](https://github.com/heykarimoff/solid.python)
-- Map each letter S/O/L to a refactor on a report exporter
+- [AlgoMaster - SOLID explained with code](https://blog.algomaster.io/p/solid-principles-explained-with-code)
+- [cosmicpython/book](https://github.com/cosmicpython/book)
 
-**STEP-BY-STEP EXPLANATION**
+## 26.1 SRP / OCP / LSP
 
-**SRP**: split classes until each has one job (data vs format vs transport). **OCP**: add `PdfExporter` without opening `ExportService` if it depends on abstractions. **LSP**: if `Rectangle` breaks when used as `Square`, the hierarchy lied.
+**WHY THIS MATTERS:**
 
-Caveat: SOLID is for code that *changes with teams*. A 50-line script does not need five interfaces. Over-application creates abstract forests - balance with YAGNI.
+**Single Responsibility**: one reason to change per class. **Open/Closed**: extend behavior without editing stable code. **Liskov Substitution**: subtypes must not break callers expecting the parent.
 
-**THE MAIN IDEA IN SIMPLE WORDS:** One class, one job; extend via new types; subtypes must honor contracts.
+**THE PROBLEM:**
 
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+One `Report` class edits SQL, CSV formatting, and email delivery - any change risks everything.
+
+**HOW IT WORKS:**
+
+**SRP**: split classes until each has one job (data vs format vs transport). **OCP**: add `PdfExporter` without opening `ExportService` if it depends on abstractions. **LSP**: if `Rectangle` breaks when used as `Square`, the hierarchy lied. Caveat: SOLID is for code that *changes with teams*. A 50-line script does not need five interfaces. Over-application creates abstract forests - balance with YAGNI.
+
+**VISUAL MODEL:**
 
 ```text
 SRP: ReportData, CsvFormatter, EmailSender
@@ -4620,21 +4264,7 @@ OCP: ExportPipeline uses Exporter ABC; add JsonExporter
 LSP: every PaymentGateway.charge works for checkout()
 ```
 
-**PICTURE IT LIKE THIS**
-
-Building codes: electrical, plumbing, structural - separate inspectors (SRP); add solar without rewiring entire city (OCP); any licensed door fits frame (LSP).
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                         | What it buys                  | What it costs                   |
-| ------------------------------ | ----------------------------- | ------------------------------- |
-| Apply SOLID on growing modules | Change isolation; testability | Upfront design time             |
-| SOLID everywhere day one       | Theoretical purity            | Slow delivery; abstract fatigue |
-| Ignore SOLID in shared libs    | Fast hack                     | Compound interest on pain       |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 from abc import ABC, abstractmethod
@@ -4663,46 +4293,33 @@ publish(CsvExporter(), rows)
 publish(JsonExporter(), rows)
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice                         | What it buys                  | What it costs                   |
+| ------------------------------ | ----------------------------- | ------------------------------- |
+| Apply SOLID on growing modules | Change isolation; testability | Upfront design time             |
+| SOLID everywhere day one       | Theoretical purity            | Slow delivery; abstract fatigue |
+| Ignore SOLID in shared libs    | Fast hack                     | Compound interest on pain       |
+
+**INTERVIEW NOTE:**
 
 They want letter expansions *and* a violation example. Mention pragmatic SOLID - not religion.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                                         |
-| ---------- | ------------------------------------------------------------ |
-| Easy       | SRP split on a god `Invoice` class                           |
-| Medium     | Show LSP violation with Square/Rectangle narrative           |
-| Hard       | When would you violate OCP on purpose? (stable, tiny domain) |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** ISP and DIP complete the set - shrinking interfaces and inverting dependencies.
-
 ## 26.2 ISP / DIP (all five deeply)
 
-**WHY YOU ARE LEARNING THIS:** **Interface Segregation**: clients should not depend on methods they do not use. **Dependency Inversion**: high-level policy depends on abstractions; details implement them.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** `Database` ABC with `query`, `send_email`, `generate_pdf` - tests mock twelve no-op methods.
+**Interface Segregation**: clients should not depend on methods they do not use. **Dependency Inversion**: high-level policy depends on abstractions; details implement them.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [Alex Hyett - SOLID](https://www.youtube.com/watch?v=kF7rQmSRlq0)
-- [in28minutes - SOLID Principles in 8 Minutes](https://www.youtube.com/watch?v=yxf2spbpTSw)
-- [DigitalOcean - SOLID (DIP / ISP)](https://www.digitalocean.com/community/tutorials/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
-- [DigitalOcean SOLID](https://www.digitalocean.com/community/tutorials/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
-- [heykarimoff/solid.python](https://github.com/heykarimoff/solid.python) · [cosmicpython/book](https://github.com/cosmicpython/book)
-- DIP: inject `Clock` abstraction into service; fake in tests
+`Database` ABC with `query`, `send_email`, `generate_pdf` - tests mock twelve no-op methods.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-**ISP** (Phase 23 preview): split fat ports. **DIP**: `OrderService` depends on `OrderRepository` interface, not `PostgresOrderRepository`. Composition root (main/app wiring) constructs concrete implementations.
+**ISP** (Phase 23 preview): split fat ports. **DIP**: `OrderService` depends on `OrderRepository` interface, not `PostgresOrderRepository`. Composition root (main/app wiring) constructs concrete implementations. All five together: SRP finds classes, OCP/LSP/ISP shape boundaries, DIP flips dependency direction for tests and swapping infra. Do not apply blindly in CRUD scripts - apply where change cost is real.
 
-All five together: SRP finds classes, OCP/LSP/ISP shape boundaries, DIP flips dependency direction for tests and swapping infra. Do not apply blindly in CRUD scripts - apply where change cost is real.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Small interfaces; high-level code owns policy; low-level details plug in.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 DIP wiring:
@@ -4715,21 +4332,7 @@ DIP wiring:
   PostgresOrderRepository implements ABC
 ```
 
-**PICTURE IT LIKE THIS**
-
-Power strip with universal sockets (abstraction) vs hard-wiring every appliance to the breaker (concrete dependency).
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                     | What it buys                    | What it costs                     |
-| -------------------------- | ------------------------------- | --------------------------------- |
-| DIP + ISP                  | Targeted mocks; swappable infra | More wiring/bootstrap code        |
-| Concrete imports in domain | Less indirection                | Tests hit real DB; refactors hurt |
-| Mega mock interfaces       | One fake file                   | Brittle when interface grows      |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 from abc import ABC, abstractmethod
@@ -4764,31 +4367,38 @@ fake.fixed = 1005.0
 print(svc.elapsed())  # 5.0 without sleeping
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice                     | What it buys                    | What it costs                     |
+| -------------------------- | ------------------------------- | --------------------------------- |
+| DIP + ISP                  | Targeted mocks; swappable infra | More wiring/bootstrap code        |
+| Concrete imports in domain | Less indirection                | Tests hit real DB; refactors hurt |
+| Mega mock interfaces       | One fake file                   | Brittle when interface grows      |
+
+**INTERVIEW NOTE:**
 
 Connect SOLID to testing (Phase 30): DIP is *why* fakes work. Warn against SOLID buzzword salad without examples.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**PRACTICE:**
 
+| Difficulty | Task                                                         |
+| ---------- | ------------------------------------------------------------ |
+| Easy       | SRP split on a god `Invoice` class                           |
+| Easy       | ISP split on a fat `Worker` interface                        |
+| Medium     | Show LSP violation with Square/Rectangle narrative           |
+| Medium     | DIP repository injection for in-memory tests                 |
+| Hard       | When would you violate OCP on purpose? (stable, tiny domain) |
+| Hard       | Narrate all five letters for parking lot in 90 seconds       |
 
-| Difficulty | Task                                                   |
-| ---------- | ------------------------------------------------------ |
-| Easy       | ISP split on a fat `Worker` interface                  |
-| Medium     | DIP repository injection for in-memory tests           |
-| Hard       | Narrate all five letters for parking lot in 90 seconds |
+**WHAT THIS UNLOCKS NEXT:**
 
-
-**WHY THE NEXT TOPIC IS NEEDED:** SOLID tells you what a healthy design looks like. It does not yet tell you how to *get there* from code that already violates it - that is refactoring: naming the smell, then applying a named, mechanical fix.
-
-**CHECK YOUR UNDERSTANDING AFTER PHASE 26:** Give a before/after for each SOLID letter and one case where over-application hurts.
+SOLID tells you what a healthy design looks like. It does not yet tell you how to *get there* from code that already violates it - that is refactoring: naming the smell, then applying a named, mechanical fix.
 
 ---
 
 > **Phase 26 complete?** [Build the Phase 26 mini-project](../guides/Projects.md#cs-phase-26-project) · [Continue to Phase 27](#phase-27)
 
 ---
-
-
 
 # PHASE 27 - Code Quality & Refactoring
 
@@ -4798,30 +4408,28 @@ Connect SOLID to testing (Phase 30): DIP is *why* fakes work. Warn against SOLID
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 26 (SOLID).
 
-## 27.1 God Object and Feature Envy
+**LEARNING RESOURCES:**
 
-**WHY YOU ARE LEARNING THIS:** A **god object** knows everything and does everything. **Feature envy** is when a method cares more about another class's fields than its own. Both scream misplaced responsibility.
-
-**THE PROBLEM THIS SOLVES:** `ApplicationManager` with 2,000 lines handling HTTP, SQL, email, PDF, and caching.
-
-**SEE IT BEFORE YOU MEMORIZE IT**
-
-- [CodeAesthetic - inheritance / design flaws](https://www.youtube.com/watch?v=hxGOiiR9ZKg)
-- [Alex Hyett - SOLID intro](https://www.youtube.com/watch?v=kF7rQmSRlq0)
 - [Refactoring Guru - Code Smells](https://refactoring.guru/refactoring/smells)
 - [Refactoring Guru - Feature Envy](https://refactoring.guru/smells/feature-envy)
-- [cosmicpython/book](https://github.com/cosmicpython/book) - watch service layer boundaries
-- Highlight feature envy in a 30-line sample; propose new class
+- [Refactoring Guru - Extract Class](https://refactoring.guru/extract-class)
+- [CodeAesthetic - design flaws](https://www.youtube.com/watch?v=hxGOiiR9ZKg)
 
-**STEP-BY-STEP EXPLANATION**
+## 27.1 God Object and Feature Envy
 
-Smells are heuristics, not sins. **God object** symptoms: imports half the project, name ends with `Manager`/`Util`/`Helper`, impossible unit test without booting the world. **Feature envy**: method takes other object's internals as parameters and never uses `self`.
+**WHY THIS MATTERS:**
 
-Fix direction: move behavior to the class whose data it uses (Tell, Don't Ask) or extract a new collaborator.
+A **god object** knows everything and does everything. **Feature envy** is when a method cares more about another class's fields than its own. Both scream misplaced responsibility.
 
-**THE MAIN IDEA IN SIMPLE WORDS:** If a class or method cannot be described in one sentence, split it.
+**THE PROBLEM:**
 
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+`ApplicationManager` with 2,000 lines handling HTTP, SQL, email, PDF, and caching.
+
+**HOW IT WORKS:**
+
+Smells are heuristics, not sins. **God object** symptoms: imports half the project, name ends with `Manager`/`Util`/`Helper`, impossible unit test without booting the world. **Feature envy**: method takes other object's internals as parameters and never uses `self`. Fix direction: move behavior to the class whose data it uses (Tell, Don't Ask) or extract a new collaborator.
+
+**VISUAL MODEL:**
 
 ```text
 Feature Envy:
@@ -4833,21 +4441,7 @@ God Object:
   AppController: auth + db + email + config  -> split layers
 ```
 
-**PICTURE IT LIKE THIS**
-
-One person trying to be cashier, chef, and plumber simultaneously versus a team with clear jobs.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice        | What it buys                   | What it costs                         |
-| ------------- | ------------------------------ | ------------------------------------- |
-| Split early   | Tests shrink; changes localize | More classes to work through          |
-| Wait for pain | Fewer files now                | Expensive, risky later extractions    |
-| Pattern first | Names the fix                  | Patterns on smelly design still smell |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class Order:
@@ -4874,46 +4468,33 @@ class ReceiptPrinter:
 ReceiptPrinter().print(Order([("book", 20.0), ("pen", 2.0)]))
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
 
-Code smell round: name smell, cite symptom, propose refactor - not a pattern name drop.
+| Choice        | What it buys                   | What it costs                         |
+| ------------- | ------------------------------ | ------------------------------------- |
+| Split early   | Tests shrink; changes localize | More classes to work through          |
+| Wait for pain | Fewer files now                | Expensive, risky later extractions    |
+| Pattern first | Names the fix                  | Patterns on smelly design still smell |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**INTERVIEW NOTE:**
 
-
-| Difficulty | Task                                                    |
-| ---------- | ------------------------------------------------------- |
-| Easy       | Find god method > 40 lines; list three responsibilities |
-| Medium     | Spot feature envy; move method to correct class         |
-| Hard       | When splitting goes too far (hyper-class explosion)     |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Extract Class is the workhorse refactor that implements those splits.
+Name smell, cite symptom, propose refactor - not a pattern name drop.
 
 ## 27.2 Extract Class
 
-**WHY YOU ARE LEARNING THIS:** **Extract Class** moves a cluster of fields + methods into a new type when one class has two distinct sub-models intertwined.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** `User` stores profile, bcrypt hash, last_login, and email template strings - auth team and marketing team conflict every sprint.
+**Extract Class** moves a cluster of fields + methods into a new type when one class has two distinct sub-models intertwined.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [Refactoring Guru - Extract Class](https://refactoring.guru/extract-class)
-- [Real Python OOP](https://realpython.com/python3-object-oriented-programming/)
-- [Fireship - Design Patterns](https://www.youtube.com/watch?v=tv-_1er1mWI)
-- [heykarimoff/solid.python](https://github.com/heykarimoff/solid.python)
-- [Refactoring.Guru refactoring catalog](https://refactoring.guru/refactoring)
-- Extract `Credentials` from bloated `User`
+`User` stores profile, bcrypt hash, last_login, and email template strings - auth team and marketing team conflict every sprint.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-Steps: (1) identify cohesive field/method group, (2) create new class, (3) move members, (4) leave a reference from original object, (5) run tests. In Python, dataclasses often host extracted value objects.
+Steps: (1) identify cohesive field/method group, (2) create new class, (3) move members, (4) leave a reference from original object, (5) run tests. In Python, dataclasses often host extracted value objects. Extract Class often precedes introducing design patterns (Phase 28) and the interface-heavy relationships used in low-level design (Phase 29). Refactor first; pattern second.
 
-Extract Class often precedes introducing design patterns (Phase 28) and the interface-heavy relationships used in low-level design (Phase 29). Refactor first; pattern second.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** When one class has two stories, give the second story its own class.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 BEFORE User: name, email, password_hash, verify(), reset_token
@@ -4923,21 +4504,7 @@ AFTER:
   Credentials: password_hash, verify(), reset_token
 ```
 
-**PICTURE IT LIKE THIS**
-
-Splitting a wallet: cash pouch vs ID pouch - same owner, different compartments, easier to audit.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                | What it buys           | What it costs                                 |
-| --------------------- | ---------------------- | --------------------------------------------- |
-| Extract Class         | SRP win; clearer tests | Temporary indirection while migrating callers |
-| Add comments/sections | Fast                   | Still one change hotspot                      |
-| Inherit to split      | Reuse syntax           | Usually wrong relationship                    |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class Credentials:
@@ -4964,23 +4531,32 @@ u = User("Ada", "ada@ex.com", dummy_hash("secret"), dummy_hash)
 print(u.authenticate("secret"), u.authenticate("wrong"))
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
 
-Live refactor question: show Extract Class on whiteboard without naming SOLID yet - then map to SRP.
+| Choice                | What it buys           | What it costs                                 |
+| --------------------- | ---------------------- | --------------------------------------------- |
+| Extract Class         | SRP win; clearer tests | Temporary indirection while migrating callers |
+| Add comments/sections | Fast                   | Still one change hotspot                      |
+| Inherit to split      | Reuse syntax           | Usually wrong relationship                    |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**INTERVIEW NOTE:**
 
+Live refactor: show Extract Class on whiteboard without naming SOLID yet - then map to SRP.
+
+**PRACTICE:**
 
 | Difficulty | Task                                                       |
 | ---------- | ---------------------------------------------------------- |
+| Easy       | Find god method > 40 lines; list three responsibilities    |
 | Easy       | Extract `Address` from `Customer`                          |
+| Medium     | Spot feature envy; move method to correct class            |
 | Medium     | Extract `Inventory` from `Store`                           |
+| Hard       | When splitting goes too far (hyper-class explosion)        |
 | Hard       | Sequence: Extract Class then introduce interface for tests |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED:** Refactoring fixes one smelly design at a time by hand. **Design patterns** name the recurring shapes those refactors converge on, so you can recognize and apply them directly instead of rediscovering them from scratch.
-
-**CHECK YOUR UNDERSTANDING AFTER PHASE 27:** Name one smell in sample code and demonstrate Extract Class in under fifteen minutes.
+Refactoring fixes one smelly design at a time by hand. **Design patterns** name the recurring shapes those refactors converge on, so you can recognize and apply them directly instead of rediscovering them from scratch.
 
 ---
 
@@ -4988,63 +4564,55 @@ Live refactor question: show Extract Class on whiteboard without naming SOLID ye
 
 ---
 
-
-
 # PHASE 28 - Design Patterns
 
 **Track:** Patterns
 
-**WHAT YOU WILL BE ABLE TO DO:** Choose creational patterns when construction logic is complex or must stay centralized.
+**WHAT YOU WILL BE ABLE TO DO:** Apply one creational, one structural, and one behavioral pattern with a clear before/after and know when *not* to reach for a pattern.
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 26 (SOLID, especially DIP/SRP).
 
+**LEARNING RESOURCES:**
+
+- [Fireship - Design Patterns in 10 minutes](https://www.youtube.com/watch?v=tv-_1er1mWI)
+- [Refactoring Guru - Design Patterns](https://refactoring.guru/design-patterns/factory-method)
+- [faif/python-patterns](https://github.com/faif/python-patterns)
+- [kamranahmedse/design-patterns-for-humans](https://github.com/kamranahmedse/design-patterns-for-humans)
+- [Christopher Okhravi - Strategy Pattern](https://www.youtube.com/watch?v=v9ejT8FO-7I)
+
 ## 28.1 Factory
 
-**WHY YOU ARE LEARNING THIS:** Callers should not embed `if env == prod` construction logic. A **Factory** centralizes which concrete class gets built.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** `main.py` imports five concrete payment classes and branches - adding Stripe edits checkout, billing, and tests.
+After SOLID, you know high-level code should depend on abstractions. That rule fails the moment `checkout.py` still contains `if provider == "stripe": return StripeGateway()`. Every new provider edits the same call sites. A **Factory** moves "which concrete class?" into one place so callers ask for a *capability*, not a brand name.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [Fireship - Design Patterns](https://www.youtube.com/watch?v=tv-_1er1mWI)
-- [Christopher Okhravi - Factory pattern](https://www.youtube.com/watch?v=EcFVTgRHJLM)
-- [Refactoring Guru - Factory Method / Abstract Factory](https://refactoring.guru/design-patterns/factory-method)
-- [faif/python-patterns](https://github.com/faif/python-patterns) - factory folder
-- [kamranahmedse/design-patterns-for-humans](https://github.com/kamranahmedse/design-patterns-for-humans)
-- Factory that returns `Notifier` by config string
+`main.py` (and billing, and tests) each import five concrete payment classes and branch on config. Adding Stripe means touching checkout, retries, webhooks, and every test that constructed gateways by hand. The construction knowledge is duplicated, so the design violates DIP in practice even if an interface exists on paper.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-**Simple factory** function maps keys to objects. **Factory Method** subclass decides product type. **Abstract Factory** builds families (UI widgets for Windows vs Mac).
+Three related ideas share the word "factory" - learn the difference once:
 
-Use when: construction varies by config, you want one place to swap implementations (DIP), or hiding `new` details reduces coupling. Skip when: one class, one constructor, no variation.
+1. **Simple factory** (most common in Python): a function or small class with a registry (`{"email": EmailNotifier, ...}`) that returns an interface type. Not a formal GoF pattern, but it solves most DIP construction problems.
+2. **Factory Method**: a creator class declares `create_product()`; subclasses override it to pick the concrete type. Useful when the *framework* owns the lifecycle and the app plugs in product types.
+3. **Abstract Factory**: builds *families* of related objects (WindowsButton + WindowsMenu vs MacButton + MacMenu) so you never mix one family's parts with another's.
 
-**THE MAIN IDEA IN SIMPLE WORDS:** Centralize object creation; callers ask for capability, not concrete type.
+Use a factory when construction varies by config/environment, when you want one swap point for tests (`FakeGateway`), or when hiding `Class()` details reduces coupling. Skip when there is one class, one constructor, and no variation - a factory then is ceremony.
 
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
-checkout.py -> PaymentFactory.create("stripe")
-                         -> StripeGateway()
+BEFORE (branches leak everywhere):
+  checkout.py -> if stripe: Stripe()  elif paypal: PayPal() ...
+  tests.py    -> if stripe: Stripe()  ...   (duplicated knowledge)
 
-tests pass factory FakeGateway without editing checkout
+AFTER (one construction door):
+  checkout.py -> PaymentFactory.create(config) -> StripeGateway | PayPalGateway | FakeGateway
+  tests.py    -> PaymentFactory.create("fake")  (same door)
 ```
 
-**PICTURE IT LIKE THIS**
-
-Restaurant kitchen pass: waiters call "one pasta"; kitchen picks the right station - diners don't enter the walk-in freezer.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                      | What it buys                         | What it costs                        |
-| --------------------------- | ------------------------------------ | ------------------------------------ |
-| Factory                     | Swap implementations; cleaner main() | Indirection; registry can hide types |
-| Direct construction         | Obvious flow                         | Branches sprout everywhere           |
-| DI container mega-framework | Enterprise wiring                    | Overkill for small apps              |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class Notifier:
@@ -5066,50 +4634,38 @@ def notifier_factory(kind: str) -> Notifier:
     except KeyError:
         raise ValueError(f"unknown notifier: {kind}")
 
+# Callers depend on Notifier, not on EmailNotifier / SmsNotifier.
 notifier_factory("email").send("hello")
 notifier_factory("sms").send("hello")
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
 
-Factory vs Abstract Factory vs Builder - know the interview distinctions with one example each.
+| Choice                      | What it buys                         | What it costs                        |
+| --------------------------- | ------------------------------------ | ------------------------------------ |
+| Factory                     | Swap implementations; cleaner main() | Indirection; registry can hide types |
+| Direct construction         | Obvious flow                         | Branches sprout everywhere           |
+| DI container mega-framework | Enterprise wiring                    | Overkill for small apps              |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**INTERVIEW NOTE:**
 
-
-| Difficulty | Task                                                 |
-| ---------- | ---------------------------------------------------- |
-| Easy       | Factory for `Parser` json vs csv                     |
-| Medium     | Factory Method with subclass `RegionalFactory`       |
-| Hard       | When factory registry is worse than explicit imports |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Singleton and Builder handle *one instance* and *step-by-step construction* - different creational problems.
+Factory vs Abstract Factory vs Builder - one concrete example each. Strong answer: "I reach for a simple factory first; Abstract Factory only when I must keep product *families* consistent."
 
 ## 28.2 Singleton and Builder
 
-**WHY YOU ARE LEARNING THIS:** **Singleton** guarantees one instance (config, connection pool). **Builder** assembles complex objects stepwise when telescoping constructors explode.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Global `settings = Settings()` imported everywhere; tests cannot isolate.  `Pizza(size, cheese, pepperoni, ... 12 args)` unreadable.
+**Singleton** guarantees one instance (config, connection pool). **Builder** assembles complex objects stepwise when telescoping constructors explode.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [Fireship - Design Patterns](https://www.youtube.com/watch?v=tv-_1er1mWI)
-- [Christopher Okhravi - Singleton Pattern](https://www.youtube.com/watch?v=hUE_j6q0LTQ)
-- [Refactoring Guru - Singleton / Builder](https://refactoring.guru/design-patterns/singleton)
-- [faif/python-patterns](https://github.com/faif/python-patterns)
-- [Real Python OOP](https://realpython.com/python3-object-oriented-programming/)
-- Builder for `HttpRequest` with method, headers, body
+Global `settings = Settings()` imported everywhere; tests cannot isolate. `Pizza(size, cheese, pepperoni, ... 12 args)` unreadable.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-**Singleton** in Python: module-level instance or `@classmethod` guarded `_instance`. Treat as scarce - hidden global state complicates tests. Prefer explicit app context injection when possible.
+**Singleton** in Python: module-level instance or `@classmethod` guarded `_instance`. Treat as scarce - hidden global state complicates tests. Prefer explicit app context injection when possible. **Builder** separates construction from representation: `RequestBuilder().url(...).header(...).build()`. Works with immutable products. Often pairs with Director in Gang of Four; Python often uses fluent builder methods.
 
-**Builder** separates construction from representation: `RequestBuilder().url(...).header(...).build()`. Works with immutable products. Often pairs with Director in Gang of Four; Python often uses fluent builder methods.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Singleton sparingly for true single resources; Builder for complex, optional-heavy products.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 Singleton (caution):
@@ -5119,21 +4675,7 @@ Builder:
   PizzaBuilder().size("L").pepperoni().build()
 ```
 
-**PICTURE IT LIKE THIS**
-
-Singleton = city mayor (one office). Builder = custom sandwich line - add toppings step by step.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice               | What it buys                                 | What it costs                                      |
-| -------------------- | -------------------------------------------- | -------------------------------------------------- |
-| Builder              | Readable optional params; immutable products | More classes                                       |
-| Telescoping **init** | One class                                    | Call sites error-prone                             |
-| Singleton            | Convenient global access                     | Hidden coupling; test pain - often an anti-pattern |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class HttpRequest:
@@ -5173,48 +4715,33 @@ req = HttpRequestBuilder().method("POST").url("/api").header("Auth", "x").body("
 print(req.method, req.url, req.headers)
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
 
-Strong candidates criticize Singleton as global state and suggest DI instead. Builder: when **init** has >4 optional params.
+| Choice               | What it buys                                 | What it costs                                      |
+| -------------------- | -------------------------------------------- | -------------------------------------------------- |
+| Builder              | Readable optional params; immutable products | More classes                                       |
+| Telescoping `__init__` | One class                                  | Call sites error-prone                             |
+| Singleton            | Convenient global access                     | Hidden coupling; test pain - often an anti-pattern |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**INTERVIEW NOTE:**
 
-
-| Difficulty | Task                                              |
-| ---------- | ------------------------------------------------- |
-| Easy       | Builder for `EmailMessage`                        |
-| Medium     | Module-level config vs Singleton - trade-offs     |
-| Hard       | Director + Builder for report generation pipeline |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Creational patterns birth objects; **structural** patterns reshape relationships between existing ones.
-
-**CHECK YOUR UNDERSTANDING AFTER 28.2:** Implement a factory and a builder; articulate when Singleton hurts testing.
+Strong candidates criticize Singleton as global state and suggest DI instead. Builder: when `__init__` has >4 optional params.
 
 ## 28.3 Adapter and Facade
 
-**WHY YOU ARE LEARNING THIS:** **Adapter** translates one interface into another (legacy SDK -> your port). **Facade** offers a simple front door to a messy subsystem.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Checkout imports twelve modules from `payments/` with different method names; UI code knows every vendor quirk.
+**Adapter** translates one interface into another (legacy SDK -> your port). **Facade** offers a simple front door to a messy subsystem.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [Fireship - Design Patterns](https://www.youtube.com/watch?v=tv-_1er1mWI)
-- [Christopher Okhravi - Strategy Pattern (dispatch mindset)](https://www.youtube.com/watch?v=v9ejT8FO-7I)
-- [Refactoring Guru - Adapter / Facade](https://refactoring.guru/design-patterns/adapter)
-- [faif/python-patterns](https://github.com/faif/python-patterns)
-- [kamranahmedse/design-patterns-for-humans](https://github.com/kamranahmedse/design-patterns-for-humans)
-- Adapter wrapping third-party `legacy_charge(amount_cents)` to your `charge(dollars)`
+Checkout imports twelve modules from `payments/` with different method names; UI code knows every vendor quirk.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-**Adapter** implements your interface by delegating to incompatible class (object adapter via composition preferred). **Facade** does not always implement a full interface - it coordinates calls (`start_video_call()` hides signaling, codec, network).
+**Adapter** implements your interface by delegating to an incompatible class (object adapter via composition preferred). **Facade** does not always implement a full interface - it coordinates calls (`start_video_call()` hides signaling, codec, network). Adapter = integration pattern. Facade = simplification for clients. Both reduce leak of complexity.
 
-Adapter = integration pattern. Facade = simplification for clients. Both reduce leak of complexity.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Wrap mismatched APIs (Adapter); hide subsystem noise (Facade).
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 Adapter:
@@ -5225,21 +4752,7 @@ Facade:
     dims lights, projector.on, amp.set(), player.play()
 ```
 
-**PICTURE IT LIKE THIS**
-
-Travel plug adapter vs hotel concierge who handles check-in, bags, and reservations as one request.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice             | What it buys                    | What it costs                            |
-| ------------------ | ------------------------------- | ---------------------------------------- |
-| Adapter            | Integrate third parties cleanly | Extra wrapper layer                      |
-| Rewrite vendor SDK | Unified API native              | Time, legal, maintenance                 |
-| Facade             | Simple client API               | Can hide needed knobs if over-simplified |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class LegacyPay:
@@ -5269,46 +4782,33 @@ class CheckoutFacade:
 CheckoutFacade(LegacyPaymentAdapter(LegacyPay())).buy("book", 19.5)
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice             | What it buys                    | What it costs                            |
+| ------------------ | ------------------------------- | ---------------------------------------- |
+| Adapter            | Integrate third parties cleanly | Extra wrapper layer                      |
+| Rewrite vendor SDK | Unified API native              | Time, legal, maintenance                 |
+| Facade             | Simple client API               | Can hide needed knobs if over-simplified |
+
+**INTERVIEW NOTE:**
 
 Adapter vs Facade vs Proxy - one-line differentiation with example.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                            |
-| ---------- | ----------------------------------------------- |
-| Easy       | Adapter for CSV library with different read API |
-| Medium     | Facade over file+zip+upload subsystem           |
-| Hard       | Two-way adapter risks - when not worth it       |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Decorator adds responsibilities dynamically - alternative to subclassing every combo.
-
 ## 28.4 Decorator
 
-**WHY YOU ARE LEARNING THIS:** **Decorator** wraps an object to add behavior before/after delegating, composing features like nesting gifts.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Subclass explosion: `LoggingEmail`, `RetryEmail`, `LoggingRetryEmail`, ...
+You often need to add logging, retries, or metrics around an object *without* editing its class and *without* creating a new subclass for every combination. **Decorator** wraps an object that shares the same interface, adds behavior before/after, then delegates.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [Fireship - Design Patterns](https://www.youtube.com/watch?v=tv-_1er1mWI)
-- [Christopher Okhravi - Decorator Pattern](https://www.youtube.com/watch?v=GCraGHx6gso)
-- [Refactoring Guru - Decorator](https://refactoring.guru/design-patterns/decorator)
-- [faif/python-patterns](https://github.com/faif/python-patterns/blob/master/patterns/structural/decorator.py)
-- [Real Python - Decorators vs Decorator pattern](https://realpython.com/primer-on-python-decorators/)
-- Stack `Logging` + `Timing` decorators on `Repository`
+Features multiply by subclassing: `LoggingEmail`, `RetryEmail`, `LoggingRetryEmail`, `CachingLoggingRetryEmail`, ... Each combo becomes its own type. The hierarchy explodes, and changing the base send path means hunting through every subclass.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-Decorator and Python function decorators share a name but differ: pattern wraps objects with same interface; `@decorator` wraps functions. Object decorator holds inner instance, forwards calls, adds behavior.
+Object Decorator ≠ Python's `@decorator` syntax (related idea, different layer). The pattern: a wrapper holds an inner instance of the same interface, forwards calls, and inserts extra work. Stack wrappers to compose features (`Retry(Logging(Email()))`). Use for cross-cutting concerns. Stop when wrap order becomes hard to reason about - then prefer explicit middleware pipelines or a single orchestrator.
 
-Use for cross-cutting concerns (metrics, caching, auth) without editing core class. Stop when stack order becomes incomprehensible.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Wrap collaborators to add behavior; compose stacks instead of multiplying subclasses.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 Notifier
@@ -5318,21 +4818,7 @@ Notifier
 send(): log -> retry delegate -> inner.send()
 ```
 
-**PICTURE IT LIKE THIS**
-
-Russian nesting dolls: each layer adds a ring; core doll unchanged.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                   | What it buys            | What it costs                        |
-| ------------------------ | ----------------------- | ------------------------------------ |
-| Decorator stack          | Flexible feature combos | Debugging deep stacks; order matters |
-| Inheritance stack        | Familiar OOP            | Combinatorial class explosion        |
-| Copy-paste cross-cutting | Fast once               | Inconsistent behavior                |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class Notifier:
@@ -5359,48 +4845,37 @@ stack = UppercaseDecorator(LoggingDecorator(Notifier()))
 stack.send("hello")
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice                   | What it buys            | What it costs                        |
+| ------------------------ | ----------------------- | ------------------------------------ |
+| Decorator stack          | Flexible feature combos | Debugging deep stacks; order matters |
+| Inheritance stack        | Familiar OOP            | Combinatorial class explosion        |
+| Copy-paste cross-cutting | Fast once               | Inconsistent behavior                |
+
+**INTERVIEW NOTE:**
 
 Compare Decorator vs Proxy vs Middleware. Python `@functools.wraps` is related but function-level.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                       |
-| ---------- | ------------------------------------------ |
-| Easy       | Caching decorator on expensive `compute()` |
-| Medium     | Two decorators; explain call order         |
-| Hard       | When Aspect-Oriented style goes too far    |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Structural patterns shape objects; **behavioral** patterns shape collaboration and algorithms.
-
-**CHECK YOUR UNDERSTANDING AFTER 28.4:** Build an Adapter and a two-layer Decorator; explain difference from Facade.
-
 ## 28.5 Strategy and Command
 
-**WHY YOU ARE LEARNING THIS:** **Strategy** swaps algorithms at runtime. **Command** encapsulates a request as an object (undo, queue, logging).
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Giant `calculate_shipping()` if/elif on country and membership tier; UI buttons call functions directly with no undo history.
+Conditionals that pick an *algorithm* (pricing, shipping, sort order) and conditionals that record an *action* (undo, queue, audit) both grow into unmaintainable switches. **Strategy** and **Command** replace those switches with objects - but they solve different problems.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [Fireship - Design Patterns](https://www.youtube.com/watch?v=tv-_1er1mWI)
-- [Christopher Okhravi - Strategy Pattern](https://www.youtube.com/watch?v=v9ejT8FO-7I)
-- [Refactoring Guru - Strategy / Command](https://refactoring.guru/design-patterns/strategy)
-- [faif/python-patterns](https://github.com/faif/python-patterns)
-- [kamranahmedse/design-patterns-for-humans](https://github.com/kamranahmedse/design-patterns-for-humans)
-- Strategy for pricing rules; Command for text editor actions with undo
+`calculate_shipping()` is a giant if/elif on country and membership tier - every new rule edits the same function. Separately, UI buttons call functions directly, so there is no undo history, no retry queue, and no way to log "what the user asked for" as data.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-**Strategy**: context holds `PricingStrategy` interface; BlackFridayStrategy vs StandardStrategy plug in. **Command**: `SaveCommand.execute()` / `undo()`; invoker queue commands for batch or replay.
+**Strategy** - the context holds a `PricingStrategy` (or similar) interface. Algorithms become classes (`StandardPricing`, `VIPPricing`) you swap at runtime. Open for extension: add a strategy class, do not reopen the context's switch.
 
-Both replace conditional logic with objects - Strategy for algorithms, Command for actions with lifecycle.
+**Command** - wrap a request as an object with `execute()` (and often `undo()`). An invoker runs commands, stores history, or queues them. Useful for editors, remote jobs, and transactional UI.
 
-**THE MAIN IDEA IN SIMPLE WORDS:** Strategy varies how; Command varies what to do and when to undo.
+Both turn "behavior chosen by branching" into "behavior chosen by which object you hold." Strategy = pluggable algorithm. Command = pluggable *action with lifecycle*.
 
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 Strategy:
@@ -5412,21 +4887,7 @@ Command:
   invoker.undo()
 ```
 
-**PICTURE IT LIKE THIS**
-
-Strategy = choose navigation app (fastest vs scenic). Command = write order ticket kitchen can queue or void.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice   | What it buys           | What it costs                  |
-| -------- | ---------------------- | ------------------------------ |
-| Strategy | Runtime algorithm swap | More classes than one function |
-| Command  | Undo/macros/queues     | Overhead for trivial actions   |
-| if/elif  | Visible in one place   | Grows without bound            |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 from abc import ABC, abstractmethod
@@ -5476,46 +4937,33 @@ print(doc)
 print("VIP total", Checkout(VIPPricing()).total([100, 50]))
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice   | What it buys           | What it costs                  |
+| -------- | ---------------------- | ------------------------------ |
+| Strategy | Runtime algorithm swap | More classes than one function |
+| Command  | Undo/macros/queues     | Overhead for trivial actions   |
+| if/elif  | Visible in one place   | Grows without bound            |
+
+**INTERVIEW NOTE:**
 
 Map Strategy to polymorphism (Phase 24). Command to undo stacks in editors/transaction scripts.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                      |
-| ---------- | ----------------------------------------- |
-| Easy       | Strategy for compression formats          |
-| Medium     | Command stack with undo/redo              |
-| Hard       | Macro command composing multiple commands |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Observer broadcasts state changes - critical for UI and event-driven services.
-
 ## 28.6 Observer
 
-**WHY YOU ARE LEARNING THIS:** **Observer** lets dependents subscribe to subject changes without the subject knowing concrete subscriber types.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** UI polling database every second; or subject imports twenty widgets and calls them directly - tight web.
+**Observer** lets dependents subscribe to subject changes without the subject knowing concrete subscriber types.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [Fireship - Design Patterns](https://www.youtube.com/watch?v=tv-_1er1mWI)
-- [Christopher Okhravi - Observer Pattern](https://www.youtube.com/watch?v=_BpmfnqjgzQ)
-- [Refactoring Guru - Observer](https://refactoring.guru/design-patterns/observer)
-- [faif/python-patterns](https://github.com/faif/python-patterns)
-- [GeeksforGeeks Observer](https://www.geeksforgeeks.org/system-design/observer-pattern-set-1-introduction/)
-- Stock ticker subject with two display observers
+UI polling database every second; or subject imports twenty widgets and calls them directly - tight web.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-Subject maintains observer list; on state change, notifies all. Python uses callbacks, `@property` listeners, or frameworks (Django signals, event buses). Watch memory leaks - always unsubscribe.
+Subject maintains observer list; on state change, notifies all. Python uses callbacks, `@property` listeners, or frameworks (Django signals, event buses). Watch memory leaks - always unsubscribe. Modern twist: reactive streams and message queues are industrial Observer. Pattern teaches decoupling producers/consumers.
 
-Modern twist: reactive streams and message queues are industrial Observer. Pattern teaches decoupling producers/consumers.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Subjects notify; observers react; neither hard-codes the other's class.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```mermaid
 classDiagram
@@ -5532,23 +4980,7 @@ classDiagram
     WeatherStation --> WebDashboard : notifies
 ```
 
-
-
-**PICTURE IT LIKE THIS**
-
-Newsletter subscribers: publisher sends edition; readers choose to listen; publisher doesn't know each reader's name.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice              | What it buys                        | What it costs                              |
-| ------------------- | ----------------------------------- | ------------------------------------------ |
-| Observer            | Loose coupling; dynamic subscribers | Notification order; leak if no unsubscribe |
-| Direct calls        | Simple trace                        | Subject knows all dependents               |
-| Event bus middleman | Scalable decoupling                 | Global indirection debugging               |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class Subject:
@@ -5589,31 +5021,48 @@ t.attach(AlertDisplay(150.0))
 t.set_price(155.0)
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice              | What it buys                        | What it costs                              |
+| ------------------- | ----------------------------------- | ------------------------------------------ |
+| Observer            | Loose coupling; dynamic subscribers | Notification order; leak if no unsubscribe |
+| Direct calls        | Simple trace                        | Subject knows all dependents               |
+| Event bus middleman | Scalable decoupling                 | Global indirection debugging               |
+
+**INTERVIEW NOTE:**
 
 Observer vs Pub/Sub vs Mediator - concise compare. Mention weak references for cleanup in long-lived subjects.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**PRACTICE:**
 
+| Difficulty | Task                                                 |
+| ---------- | ---------------------------------------------------- |
+| Easy       | Factory for `Parser` json vs csv                     |
+| Easy       | Builder for `EmailMessage`                           |
+| Easy       | Adapter for CSV library with different read API      |
+| Easy       | Strategy for compression formats; two observers on a Counter |
+| Medium     | Factory Method with subclass `RegionalFactory`       |
+| Medium     | Module-level config vs Singleton - trade-offs        |
+| Medium     | Facade over file+zip+upload subsystem                |
+| Medium     | Two decorators; explain call order                   |
+| Medium     | Command stack with undo/redo                         |
+| Medium     | Unsubscribe mechanism                                |
+| Hard       | When factory registry is worse than explicit imports |
+| Hard       | Director + Builder for report generation pipeline    |
+| Hard       | Two-way adapter risks - when not worth it            |
+| Hard       | When Aspect-Oriented style goes too far              |
+| Hard       | Macro command composing multiple commands            |
+| Hard       | Observer-driven UI without framework magic           |
 
-| Difficulty | Task                                       |
-| ---------- | ------------------------------------------ |
-| Easy       | Two observers on a `Counter` subject       |
-| Medium     | Unsubscribe mechanism                      |
-| Hard       | Observer-driven UI without framework magic |
+**WHAT THIS UNLOCKS NEXT:**
 
-
-**WHY THE NEXT TOPIC IS NEEDED:** Patterns are individual tools. **Low-Level Design** is the repeatable process for combining requirements, entities, relationships, and the right pattern under an interview clock - without it, pattern knowledge stays trivia.
-
-**CHECK YOUR UNDERSTANDING AFTER 28.6:** Implement Strategy + Observer in one domain (e.g., pricing + alerts) without if/elif chains.
+Patterns are individual tools. **Low-Level Design** is the repeatable process for combining requirements, entities, relationships, and the right pattern under an interview clock - without it, pattern knowledge stays trivia.
 
 ---
 
 > **Phase 28 complete?** [Build the Phase 28 mini-project](../guides/Projects.md#cs-phase-28-project) · [Continue to Phase 29](#phase-29)
 
 ---
-
-
 
 # PHASE 29 - Low-Level Design
 
@@ -5623,32 +5072,30 @@ Observer vs Pub/Sub vs Mediator - concise compare. Mention weak references for c
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 25 (composition / has-a in code - this phase names the same idea as diagram relationships with lifetimes), Phase 28 (patterns).
 
+**LEARNING RESOURCES:**
+
+- [ashishps1/awesome-low-level-design](https://github.com/ashishps1/awesome-low-level-design)
+- [cosmicpython/book](https://github.com/cosmicpython/book)
+- [UML Diagrams - Class diagrams overview](https://www.uml-diagrams.org/class-diagrams-overview.html)
+- [InfoWorld - Association, aggregation, composition](https://www.infoworld.com/article/2243500/exploring-association-aggregation-and-composition-in-oop.html)
+- [kumaransg/LLD](https://github.com/kumaransg/LLD) · [prasadgujar/low-level-design-primer](https://github.com/prasadgujar/low-level-design-primer)
+- [Martin Fowler - Presentation Domain Data Layering](https://martinfowler.com/bliki/PresentationDomainDataLayering.html)
+
 ## 29.1 Association / Aggregation / Composition
 
-**WHY YOU ARE LEARNING THIS:** Phase 25 taught "prefer has-a" when writing classes. LLD asks a sharper question on paper: *what kind of has-a?* Not every link between classes is "inherits from," and not every has-a means the same lifetime or ownership. Modeling **relationships** correctly clarifies lifetimes, ownership, and deletion rules.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Everything connected with arrows in every direction; nobody knows who destroys a `ParkingSpot` when the `Lot` closes. Or: you composed objects in code (Phase 25) but cannot explain whether a `Book` dies with the `Library` or outlives it.
+Phase 25 taught "prefer has-a" when writing classes. LLD asks a sharper question on paper: *what kind of has-a?* Not every link between classes is "inherits from," and not every has-a means the same lifetime or ownership. Modeling **relationships** correctly clarifies lifetimes, ownership, and deletion rules.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [InfoWorld - Association, aggregation, composition](https://www.infoworld.com/article/2243500/exploring-association-aggregation-and-composition-in-oop.html)
-- [GeeksforGeeks - Types of relationships](https://www.geeksforgeeks.org/java/association-composition-aggregation-java/)
-- [Mosh - OOP Simplified (modeling nouns)](https://www.youtube.com/watch?v=pTB0EiLXUC8)
-- [Dave Gray - OOP](https://www.youtube.com/watch?v=RpBBzci_cBk)
-- Sketch diagrams on paper or [UML Diagrams - Class diagrams overview](https://www.uml-diagrams.org/class-diagrams-overview.html)
-- [ashishps1/awesome-low-level-design](https://github.com/ashishps1/awesome-low-level-design) - parking lot / library diagrams
-- Classify relationships in a library system as assoc/agg/comp
+Everything connected with arrows in every direction; nobody knows who destroys a `ParkingSpot` when the `Lot` closes. Or: you composed objects in code (Phase 25) but cannot explain whether a `Book` dies with the `Library` or outlives it.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-**Association**: objects know each other (`Teacher` teaches `Student`) - the Phase 25 "uses" / "talks to" relationship with no ownership claim. **Aggregation**: whole has parts, parts can outlive whole (`Department` has `Professors`) - has-a without exclusive lifetime. **Composition**: whole owns parts; parts die with whole (`House` has `Rooms`) - the strongest has-a, matching "this object *creates and owns* its parts" in code.
+**Association**: objects know each other (`Teacher` teaches `Student`) - the Phase 25 "uses" / "talks to" relationship with no ownership claim. **Aggregation**: whole has parts, parts can outlive whole (`Department` has `Professors`) - has-a without exclusive lifetime. **Composition**: whole owns parts; parts die with whole (`House` has `Rooms`) - the strongest has-a, matching "this object *creates and owns* its parts" in code. Strong composition = exclusive lifetime. LLD prompts (parking lot, library) test whether you pick the right edge - the same judgment Phase 25 practiced in code, now drawn before coding.
 
-Strong composition = exclusive lifetime. LLD prompts (parking lot, library) test whether you pick the right edge - the same judgment Phase 25 practiced in code, now drawn before coding.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Draw edges by lifetime and ownership, not by convenience.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
-
+**VISUAL MODEL:**
 
 | Relationship | Example                   | Lifetime / ownership                   |
 | ------------ | ------------------------- | -------------------------------------- |
@@ -5656,22 +5103,7 @@ Strong composition = exclusive lifetime. LLD prompts (parking lot, library) test
 | Aggregation  | `Library` catalogs `Book` | The book can exist after deaccession   |
 | Association  | `Driver` uses `Car`       | The objects have independent lifetimes |
 
-
-**PICTURE IT LIKE THIS**
-
-Playlist (composition of tracks on a streaming copy) vs borrowed library books (aggregation).
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                 | What it buys                              | What it costs                          |
-| ---------------------- | ----------------------------------------- | -------------------------------------- |
-| Accurate composition   | Clear teardown; fewer dangling references | Harder to share parts across owners    |
-| Everything aggregation | Flexible sharing                          | Unclear who deletes what               |
-| Skip modeling          | Fast code start                           | Bugs when features add lifecycle rules |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class Room:
@@ -5701,45 +5133,33 @@ del lib
 print(b.title)  # book still exists
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice                 | What it buys                              | What it costs                          |
+| ---------------------- | ----------------------------------------- | -------------------------------------- |
+| Accurate composition   | Clear teardown; fewer dangling references | Harder to share parts across owners    |
+| Everything aggregation | Flexible sharing                          | Unclear who deletes what               |
+| Skip modeling          | Fast code start                           | Bugs when features add lifecycle rules |
+
+**INTERVIEW NOTE:**
 
 Whiteboard LLD: label edges composition vs aggregation. Interviewers listen for lifecycle words.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                                              |
-| ---------- | ----------------------------------------------------------------- |
-| Easy       | Is `Order`->`LineItem` composition or aggregation? Defend answer. |
-| Medium     | Model `ParkingLot`, `Spot`, `Vehicle` relationships               |
-| Hard       | When shared cache breaks composition assumptions                  |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** CRC cards and UML turn relationship talk into a repeatable design ritual.
-
 ## 29.2 CRC and UML
 
-**WHY YOU ARE LEARNING THIS:** **Class-Responsibility-Collaborator (CRC)** cards force you to name who does what before coding. **UML** class diagrams communicate the same to teammates.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Jumping straight to code; `Manager` class ends up doing auth, email, and SQL because nobody wrote responsibilities on index cards.
+**Class-Responsibility-Collaborator (CRC)** cards force you to name who does what before coding. **UML** class diagrams communicate the same to teammates.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [UML Diagrams - Class diagrams overview](https://www.uml-diagrams.org/class-diagrams-overview.html)
-- [Fireship - Design Patterns (diagram literacy)](https://www.youtube.com/watch?v=tv-_1er1mWI)
-- [kumaransg/LLD](https://github.com/kumaransg/LLD) · [prasadgujar/low-level-design-primer](https://github.com/prasadgujar/low-level-design-primer)
-- [python-academy.org OOP](https://python-academy.org/en/guide/oop)
-- Write CRC cards for elevator system: 4 classes, 2 responsibilities each
+Jumping straight to code; `Manager` class ends up doing auth, email, and SQL because nobody wrote responsibilities on index cards.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-CRC card columns: **Class**, **Responsibilities** (verbs this class owns), **Collaborators** (other classes it talks to). UML class diagram: boxes with attributes/methods; lines for associations; filled diamond for composition.
+CRC card columns: **Class**, **Responsibilities** (verbs this class owns), **Collaborators** (other classes it talks to). UML class diagram: boxes with attributes/methods; lines for associations; filled diamond for composition. You do not need enterprise tooling - index cards or ASCII boxes beat premature code. In interviews, narrate CRC out loud while drawing.
 
-You do not need enterprise tooling - index cards or ASCII boxes beat premature code. In interviews, narrate CRC out loud while drawing.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Name responsibilities before methods. Diagrams are cheap; refactors are expensive.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 CRC Example - ParkingLot:
@@ -5751,21 +5171,7 @@ UML:
   ParkingLot ---- Vehicle (assoc)
 ```
 
-**PICTURE IT LIKE THIS**
-
-Architect blueprint before concrete pour. CRC is the quick sketch; UML is the sheet the crew shares.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                | What it buys                               | What it costs                    |
-| --------------------- | ------------------------------------------ | -------------------------------- |
-| CRC / lightweight UML | Shared language; catches god objects early | Time upfront on tiny scripts     |
-| Code-first            | Immediate feedback                         | Responsibility sprawl            |
-| Heavy UML only        | Formal docs                                | Slow iteration for solo learners |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 # CRC captured as data (runnable documentation)
@@ -5787,47 +5193,33 @@ def describe(cls: str) -> None:
 describe("ParkingLot")
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice                | What it buys                               | What it costs                    |
+| --------------------- | ------------------------------------------ | -------------------------------- |
+| CRC / lightweight UML | Shared language; catches god objects early | Time upfront on tiny scripts     |
+| Code-first            | Immediate feedback                         | Responsibility sprawl            |
+| Heavy UML only        | Formal docs                                | Slow iteration for solo learners |
+
+**INTERVIEW NOTE:**
 
 LLD round: spend first 5 minutes on CRC/entities. Weak candidates start with `class Database`.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                           |
-| ---------- | ---------------------------------------------- |
-| Easy       | CRC for `Library` + `Book` + `Member`          |
-| Medium     | UML for vending machine classes                |
-| Hard       | Elevator: which class owns dispatch algorithm? |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** CRC cards name responsibilities, but not every class holds the same *kind* of responsibility. The next question a real design must answer is which classes carry business rules and which are plumbing - domain vs infrastructure.
-
-**CHECK YOUR UNDERSTANDING AFTER 29.2:** Produce CRC cards for one LLD prompt and label composition vs aggregation edges.
-
 ## 29.3 Domain vs Infrastructure
 
-**WHY YOU ARE LEARNING THIS:** **Domain** code expresses business rules (orders, fees, eligibility). **Infrastructure** talks to the world (SQL, HTTP, SMTP). Mixing them makes rules untestable and frameworks hard to swap.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Flask request handlers compute tax, send email, and build SQL strings - changing web framework rewrites business logic.
+**Domain** code expresses business rules (orders, fees, eligibility). **Infrastructure** talks to the world (SQL, HTTP, SMTP). Mixing them makes rules untestable and frameworks hard to swap. Learn the split here at **object / LLD** scale; Phase 75 reuses the same vocabulary for whole applications.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [cosmicpython/book](https://github.com/cosmicpython/book) - canonical layered example
-- [Martin Fowler - Presentation Domain Data Layering](https://martinfowler.com/bliki/PresentationDomainDataLayering.html)
-- [Alex Hyett - SOLID / layering mindset](https://www.youtube.com/watch?v=kF7rQmSRlq0)
-- [prasadgujar/low-level-design-primer](https://github.com/prasadgujar/low-level-design-primer)
-- Split a Flask route into handler + service + repo
+Flask request handlers compute tax, send email, and build SQL strings - changing web framework rewrites business logic.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-**Domain layer**: entities, value objects, domain services, no imports from Flask/SQLAlchemy. **Application layer**: use cases orchestrate domain + ports. **Infrastructure**: implements repositories, controllers, CLI.
+**Domain layer**: entities, value objects, domain services, no imports from Flask/SQLAlchemy. **Application layer**: use cases orchestrate domain + ports. **Infrastructure**: implements repositories, controllers, CLI. "Clean-ish" acknowledges pragmatism - small scripts skip layers; products that live years earn them. Business rules in the center; adapters on the outside. Same idea returns in Phase 75 - then the "center" is a package boundary, not only a class.
 
-"Clean-ish" acknowledges pragmatism - small scripts skip layers; products that live years earn them.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Business rules in the center; adapters on the outside.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```mermaid
 flowchart TD
@@ -5837,23 +5229,7 @@ flowchart TD
     I["Postgres adapter"] -. implements .-> P
 ```
 
-
-
-**PICTURE IT LIKE THIS**
-
-Restaurant: recipes (domain) vs kitchen equipment brand (infra). Recipes survive if you switch gas to induction.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                 | What it buys                   | What it costs                           |
-| ---------------------- | ------------------------------ | --------------------------------------- |
-| Layered/domain-centric | Testable core; swappable infra | More modules; upfront discipline        |
-| Framework-first        | Fast scaffold                  | Rules trapped in controllers            |
-| Microservices day one  | Isolation                      | Distributed monolith if domains unclear |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 # domain.py - no I/O imports
@@ -5894,45 +5270,33 @@ svc.cash_out("A1", 30)
 print(svc.repo.load("A1")._balance)
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice                 | What it buys                   | What it costs                           |
+| ---------------------- | ------------------------------ | --------------------------------------- |
+| Layered/domain-centric | Testable core; swappable infra | More modules; upfront discipline        |
+| Framework-first        | Fast scaffold                  | Rules trapped in controllers            |
+| Microservices day one  | Isolation                      | Distributed monolith if domains unclear |
+
+**INTERVIEW NOTE:**
 
 Draw circles: entities inside, adapters outside. Mention cosmicpython as study project.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                         |
-| ---------- | -------------------------------------------- |
-| Easy       | List what belongs in domain for library LLD  |
-| Medium     | Extract domain from bloated controller       |
-| Hard       | Where does validation live - edge vs domain? |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Dependency direction enforces which layer may import which.
-
 ## 29.4 Dependency Direction
 
-**WHY YOU ARE LEARNING THIS:** Source code dependencies should point **inward**: infrastructure depends on domain interfaces, never the reverse.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Domain imports `sqlalchemy` models - business rules now require ORM migrations to compile.
+Source code dependencies should point **inward**: infrastructure depends on domain interfaces, never the reverse.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [cosmicpython/book](https://github.com/cosmicpython/book)
-- [DigitalOcean - SOLID (DIP)](https://www.digitalocean.com/community/tutorials/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
-- [AlgoMaster SOLID](https://blog.algomaster.io/p/solid-principles-explained-with-code)
-- [kumaransg/LLD](https://github.com/kumaransg/LLD)
-- Draw forbidden import arrows for a sample project tree
+Domain imports `sqlalchemy` models - business rules now require ORM migrations to compile.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-**Dependency rule**: inner layers define interfaces; outer layers implement them. Domain never mentions HTTP status codes. Controllers translate HTTP <-> DTOs <-> domain commands.
+**Dependency rule**: inner layers define interfaces; outer layers implement them. Domain never mentions HTTP status codes. Controllers translate HTTP <-> DTOs <-> domain commands. Violations to spot: domain importing Flask, entities inheriting ORM base classes (common leak - isolate with mappers).
 
-Violations to spot: domain importing Flask, entities inheriting ORM base classes (common leak - isolate with mappers).
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Depend inward on abstractions; adapters implement those abstractions outward.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 ALLOWED:
@@ -5944,21 +5308,7 @@ FORBIDDEN:
   domain -> flask
 ```
 
-**PICTURE IT LIKE THIS**
-
-City ordinance vs construction company: laws don't reference a builder's toolbox brand.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                       | What it buys                   | What it costs                      |
-| ---------------------------- | ------------------------------ | ---------------------------------- |
-| Strict dependency rule       | Portable domain; clearer tests | Mapping boilerplate DTO <-> entity |
-| ORM-active record everywhere | Less mapping                   | DB schema drives model; rules leak |
-| Shared utils grab-bag        | Quick helpers                  | Hidden coupling across layers      |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 # port defined near domain
@@ -5981,47 +5331,33 @@ class GreetingPolicy:
 print(GreetingPolicy().greet(InMemoryUserStore(), "u1"))
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice                       | What it buys                   | What it costs                      |
+| ---------------------------- | ------------------------------ | ---------------------------------- |
+| Strict dependency rule       | Portable domain; clearer tests | Mapping boilerplate DTO <-> entity |
+| ORM-active record everywhere | Less mapping                   | DB schema drives model; rules leak |
+| Shared utils grab-bag        | Quick helpers                  | Hidden coupling across layers      |
+
+**INTERVIEW NOTE:**
 
 Architecture interview: label arrows on diagram. Fix one backward dependency aloud.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                               |
-| ---------- | -------------------------------------------------- |
-| Easy       | Name three forbidden imports in domain layer       |
-| Medium     | Mapper from ORM row to domain entity sketch        |
-| Hard       | Trade-offs of anemic domain model vs rich entities |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Association, composition, layers, and dependency direction are the vocabulary. The **LLD method** turns that vocabulary into a repeatable sequence of steps you can run under an interview clock.
-
-**CHECK YOUR UNDERSTANDING AFTER 29.4:** Sketch domain vs infra for one app and mark allowed dependency arrows.
-
 ## 29.5 Requirements to Entities
 
-**WHY YOU ARE LEARNING THIS:** LLD interviews fail when candidates code before clarifying scope. Start with actors, use cases, entities, and invariants - then methods.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Jumping to `class ParkingLot` with static methods and no spot lifecycle story.
+LLD interviews fail when candidates code before clarifying scope. Start with actors, use cases, entities, and invariants - then methods.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [ashishps1/awesome-low-level-design](https://github.com/ashishps1/awesome-low-level-design)
-- [kumaransg/LLD](https://github.com/kumaransg/LLD) · [prasadgujar/low-level-design-primer](https://github.com/prasadgujar/low-level-design-primer)
-- [NeetCode - 8 Design Patterns EVERY Developer Should Know](https://www.youtube.com/watch?v=tAuRQs_d9F8)
-- [GeeksforGeeks LLD](https://www.geeksforgeeks.org/system-design/what-is-low-level-design-or-lld-learn-system-design/)
-- 15-minute entity list for public library system
+Jumping to `class ParkingLot` with static methods and no spot lifecycle story.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-**LLD checklist (part 1):** (1) clarify functional reqs, (2) list nouns -> candidate classes, (3) define relationships composition/aggregation, (4) state invariants, (5) identify core use cases, (6) assign responsibilities (CRC), (7) sketch public APIs only.
+**LLD checklist (part 1):** (1) clarify functional reqs, (2) list nouns -> candidate classes, (3) define relationships composition/aggregation, (4) state invariants, (5) identify core use cases, (6) assign responsibilities (CRC), (7) sketch public APIs only. Classic prompts: **parking lot** (spot types, fees, entry/exit), **library** (copies, loans, fines), **elevator** (dispatch, direction, capacity). Same process every time.
 
-Classic prompts: **parking lot** (spot types, fees, entry/exit), **library** (copies, loans, fines), **elevator** (dispatch, direction, capacity). Same process every time.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Clarify, entity, relate, invariant, API - in that order.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 Parking Lot (sketch):
@@ -6031,21 +5367,7 @@ Use cases: enter, exit, pay, find spot
 Invariant: one vehicle per spot
 ```
 
-**PICTURE IT LIKE THIS**
-
-Architect interview: measure twice (requirements), cut once (classes).
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice         | What it buys           | What it costs                       |
-| -------------- | ---------------------- | ----------------------------------- |
-| Structured LLD | Fewer dead-end designs | Feels slow first tries              |
-| Code-first LLD | Shows syntax           | Misses edge reqs; rework under time |
-| Over-UML       | Pretty diagrams        | No time left to code                |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 # Requirements -> entities captured as runnable sketch
@@ -6078,45 +5400,33 @@ print(lot.park("QAT-1"))
 print(lot.park("QAT-2"))
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice         | What it buys           | What it costs                       |
+| -------------- | ---------------------- | ----------------------------------- |
+| Structured LLD | Fewer dead-end designs | Feels slow first tries              |
+| Code-first LLD | Shows syntax           | Misses edge reqs; rework under time |
+| Over-UML       | Pretty diagrams        | No time left to code                |
+
+**INTERVIEW NOTE:**
 
 First five minutes: questions you ask interviewer matter more than code volume.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                                        |
-| ---------- | ----------------------------------------------------------- |
-| Easy       | Library: list entities + two invariants                     |
-| Medium     | Parking lot: hourly vs daily rate - where does policy live? |
-| Hard       | Elevator: single vs multiple cars - what changes in model?  |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Entities need thread-safe APIs and concurrency story in modern LLD - part 2.
-
 ## 29.6 APIs Concurrency SOLID Check (parking lot, library, elevator)
 
-**WHY YOU ARE LEARNING THIS:** After entities, define method signatures, concurrency assumptions, and run a **SOLID sanity pass** before coding details.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Elevator design with global mutable list and no lock - two requests corrupt current floor.
+After entities, define method signatures, concurrency assumptions, and run a **SOLID sanity pass** before coding details.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [ashishps1/awesome-low-level-design](https://github.com/ashishps1/awesome-low-level-design)
-- [Corey Schafer - Property Decorators (clean APIs)](https://www.youtube.com/watch?v=jCzT9XFZ5bw)
-- [Low Level Design Mastery](https://www.lowleveldesignmastery.com/blog/solid-principles/)
-- [kumaransg/LLD](https://github.com/kumaransg/LLD)
-- Full 45-min mock: library loan + fine calculation
+Elevator design with global mutable list and no lock - two requests corrupt current floor.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-**LLD checklist (part 2):** (8) public APIs per use case, (9) concurrency: what is shared mutable? (locks, queues, actors), (10) extensibility: payment types, vehicle types, (11) SOLID pass: any god class? dependency direction? (12) optional code for hottest path.
+**LLD checklist (part 2):** (8) public APIs per use case, (9) concurrency: what is shared mutable? (locks, queues, actors), (10) extensibility: payment types, vehicle types, (11) SOLID pass: any god class? dependency direction? (12) optional code for hottest path. Parking lot: entry kiosk + fee at exit. Library: copy vs title, waitlists. Elevator: scan direction, request queue - mention trade-offs, do not over-engineer threading in a 45-min slot unless asked.
 
-Parking lot: entry kiosk + fee at exit. Library: copy vs title, waitlists. Elevator: scan direction, request queue - mention trade-offs, do not over-engineer threading in a 45-min slot unless asked.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** APIs first; note shared state; SOLID pass; then code the critical path.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 SOLID quick pass:
@@ -6128,21 +5438,7 @@ Concurrency:
   ParkingLot.park -> lock spots list or fine-grained per spot
 ```
 
-**PICTURE IT LIKE THIS**
-
-Building inspector final walkthrough before residents move in - checklist, not decoration.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                    | What it buys               | What it costs                          |
-| ------------------------- | -------------------------- | -------------------------------------- |
-| Explicit concurrency note | Shows production awareness | Easy to over-talk threads without need |
-| Ignore concurrency        | Simpler design             | Red flag for senior backend roles      |
-| Pattern dump              | Sounds learned             | Misses requirements fit                |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 from threading import Lock
@@ -6175,31 +5471,48 @@ e.request(1)
 print(e.step(), e.step())
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice                    | What it buys               | What it costs                          |
+| ------------------------- | -------------------------- | -------------------------------------- |
+| Explicit concurrency note | Shows production awareness | Easy to over-talk threads without need |
+| Ignore concurrency        | Simpler design             | Red flag for senior backend roles      |
+| Pattern dump              | Sounds learned             | Misses requirements fit                |
+
+**INTERVIEW NOTE:**
 
 Closing LLD: recap extensibility + tests + one trade-off you deferred (e.g., persistent storage).
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**PRACTICE:**
 
+| Difficulty | Task                                                              |
+| ---------- | ----------------------------------------------------------------- |
+| Easy       | Is `Order`->`LineItem` composition or aggregation? Defend answer. |
+| Easy       | CRC for `Library` + `Book` + `Member`                             |
+| Easy       | List what belongs in domain for library LLD                       |
+| Easy       | Library entities + invariants; SOLID pass on parking lot          |
+| Medium     | Model `ParkingLot`, `Spot`, `Vehicle` relationships               |
+| Medium     | UML for vending machine classes                                   |
+| Medium     | Extract domain from bloated controller                            |
+| Medium     | Mapper from ORM row to domain entity sketch                       |
+| Medium     | Parking lot: hourly vs daily rate - where does policy live?       |
+| Medium     | Library: fine policy as Strategy                                  |
+| Hard       | When shared cache breaks composition assumptions                  |
+| Hard       | Elevator: which class owns dispatch algorithm?                    |
+| Hard       | Where does validation live - edge vs domain?                      |
+| Hard       | Trade-offs of anemic domain model vs rich entities                |
+| Hard       | Elevator: single vs multiple cars - what changes in model?        |
+| Hard       | Elevator dispatch algorithm - nearest car vs SCAN                 |
 
-| Difficulty | Task                                              |
-| ---------- | ------------------------------------------------- |
-| Easy       | SOLID pass on parking lot classes                 |
-| Medium     | Library: fine policy as Strategy                  |
-| Hard       | Elevator dispatch algorithm - nearest car vs SCAN |
+**WHAT THIS UNLOCKS NEXT:**
 
-
-**WHY THE NEXT TOPIC IS NEEDED:** Method without artifacts rarely convinces hiring managers - **portfolio** phase next.
-
-**CHECK YOUR UNDERSTANDING AFTER PHASE 29:** Run full LLD checklist on parking lot or library out loud in under 45 minutes.
+Method without artifacts rarely convinces hiring managers - **portfolio** phase next.
 
 ---
 
 > **Phase 29 complete?** [Build the Phase 29 mini-project](../guides/Projects.md#cs-phase-29-project) · [Continue to Phase 30](#phase-30)
 
 ---
-
-
 
 # PHASE 30 - OOP Consolidation
 
@@ -6209,32 +5522,30 @@ Closing LLD: recap extensibility + tests + one trade-off you deferred (e.g., per
 
 **WHAT YOU SHOULD KNOW FIRST:** Phases 23-25 (pillars + composition).
 
-## 30.1 Dunder Methods
-
-**WHY YOU ARE LEARNING THIS:** Objects should behave like the built-ins users expect: printable, comparable, callable containers. **Dunder** (double underscore) methods hook into Python syntax.
-
-**THE PROBLEM THIS SOLVES:** `print(order)` shows useless default address; `order1 == order2` compares identity; `len(order)` fails even though orders have items.
-
-**SEE IT BEFORE YOU MEMORIZE IT**
+**LEARNING RESOURCES:**
 
 - [Corey Schafer - Special Methods](https://www.youtube.com/watch?v=3ohzBxoFHAY)
-- [Tech With Tim - OOP](https://www.youtube.com/watch?v=JeznW_7DlB0)
-- [Real Python video topics / OOP](https://realpython.com/python3-object-oriented-programming/)
+- [Corey Schafer - Property Decorators](https://www.youtube.com/watch?v=jCzT9XFZ5bw)
 - [Python docs - Special method names](https://docs.python.org/3/reference/datamodel.html#special-method-names)
-- [Real Python - Operator Overloading](https://realpython.com/operator-function-overloading/)
-- [Python Tutor](https://pythontutor.com/visualize.html) - watch `__repr__` vs `__str__`
-- [faif/python-patterns](https://github.com/faif/python-patterns)
-- Implement `__repr__`, `__eq__`, `__len__` on a `Hand` of cards
+- [Real Python - Properties](https://realpython.com/python-property/) · [Real Python - Testing](https://realpython.com/python-testing/)
+- [cosmicpython/book](https://github.com/cosmicpython/book) - testing and layering mindset
+- [ashishps1/awesome-low-level-design](https://github.com/ashishps1/awesome-low-level-design) · [kumaransg/LLD](https://github.com/kumaransg/LLD)
 
-**STEP-BY-STEP EXPLANATION**
+## 30.1 Dunder Methods
 
-Key dunders for interviews: `__init__`, `__repr__` (unambiguous dev string), `__str__` (user pretty), `__eq__`/`__hash__` (value semantics), `__len__`, `__getitem__` (container feel), `__enter__`/`__exit__` (context managers).
+**WHY THIS MATTERS:**
 
-Rule: `__repr__` should ideally let you recreate the object; `__str__` can be friendly. If you define `__eq__` and use objects in sets/dicts, understand hashability rules.
+Objects should behave like the built-ins users expect: printable, comparable, callable containers. **Dunder** (double underscore) methods hook into Python syntax.
 
-**THE MAIN IDEA IN SIMPLE WORDS:** Dunder methods teach Python how your objects participate in language syntax.
+**THE PROBLEM:**
 
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+`print(order)` shows useless default address; `order1 == order2` compares identity; `len(order)` fails even though orders have items.
+
+**HOW IT WORKS:**
+
+Key dunders for interviews: `__init__`, `__repr__` (unambiguous dev string), `__str__` (user pretty), `__eq__`/`__hash__` (value semantics), `__len__`, `__getitem__` (container feel), `__enter__`/`__exit__` (context managers). Rule: `__repr__` should ideally let you recreate the object; `__str__` can be friendly. If you define `__eq__` and use objects in sets/dicts, understand hashability rules.
+
+**VISUAL MODEL:**
 
 ```text
 order = Order(...)
@@ -6245,21 +5556,7 @@ len(order)       -> __len__
 order[0]         -> __getitem__
 ```
 
-**PICTURE IT LIKE THIS**
-
-Car dashboard symbols: speedometer hookup is standard even if engines differ.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                 | What it buys                          | What it costs                       |
-| ---------------------- | ------------------------------------- | ----------------------------------- |
-| Rich dunders           | Objects feel native; better debugging | Easy to over-implement unused hooks |
-| Plain objects          | Less code                             | Poor REPL/debug experience          |
-| Implement every dunder | Feature complete on paper             | Maintenance burden; YAGNI           |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class Hand:
@@ -6285,47 +5582,33 @@ h = Hand(["AS", "KH"])
 print(h, len(h), h[0], h == Hand(["AS", "KH"]))
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice                 | What it buys                          | What it costs                       |
+| ---------------------- | ------------------------------------- | ----------------------------------- |
+| Rich dunders           | Objects feel native; better debugging | Easy to over-implement unused hooks |
+| Plain objects          | Less code                             | Poor REPL/debug experience          |
+| Implement every dunder | Feature complete on paper             | Maintenance burden; YAGNI           |
+
+**INTERVIEW NOTE:**
 
 Expect `__repr__` vs `__str__` and when `__eq__` without `__hash__` makes objects unhashable.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                                                |
-| ---------- | ------------------------------------------------------------------- |
-| Easy       | Add `__repr__` to a domain class you already wrote                  |
-| Medium     | `Vector` with `__add__` and `__eq__`                                |
-| Hard       | Context manager class with `__enter__`/`__exit__` for timing blocks |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Not every attribute should be public - `@property` bridges encapsulation and Pythonic access.
-
 ## 30.2 property / classmethod / staticmethod / MRO
 
-**WHY YOU ARE LEARNING THIS:** Python offers tools beyond instance methods: computed attributes, alternate constructors, utility functions namespaced on the class, and a predictable inheritance lookup order (MRO).
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Getter/setter methods named `get_balance()`/`set_balance()` everywhere - Java in Python clothing; `@property` reads cleaner.
+Python offers tools beyond instance methods: computed attributes, alternate constructors, utility functions namespaced on the class, and a predictable inheritance lookup order (MRO).
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [Corey Schafer - Class Variables & Methods](https://www.youtube.com/watch?v=BJ-VvGyQxho)
-- [Corey Schafer - Property Decorators](https://www.youtube.com/watch?v=jCzT9XFZ5bw)
-- [Python docs - @property, classmethod, staticmethod](https://docs.python.org/3/library/functions.html#classmethod)
-- [Real Python - Properties](https://realpython.com/python-property/)
-- [Python Tutor](https://pythontutor.com/visualize.html) - MRO walk with multiple inheritance
-- [heykarimoff/solid.python](https://github.com/heykarimoff/solid.python)
-- Replace `get_temperature()` with `@property`; add `@classmethod from_celsius`
+Getter/setter methods named `get_balance()`/`set_balance()` everywhere - Java in Python clothing; `@property` reads cleaner.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-**@property** exposes controlled read/write with attribute syntax. **@classmethod** gets `cls` - great for named constructors (`from_json`). **@staticmethod** needs neither `self` nor `cls`; use for helpers logically grouped with the class.
+**@property** exposes controlled read/write with attribute syntax. **@classmethod** gets `cls` - great for named constructors (`from_json`). **@staticmethod** needs neither `self` nor `cls`; use for helpers logically grouped with the class. **MRO** (Method Resolution Order) is Python's C3 linearization: `ClassName.__mro__` shows lookup order for multiple inheritance. Know it exists before mixin designs bite you.
 
-**MRO** (Method Resolution Order) is Python's C3 linearization: `ClassName.__mro__` shows lookup order for multiple inheritance. Know it exists before mixin designs bite you.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Use properties for invariants; classmethods for factories; staticmethods for namespaced helpers; read MRO before mixins.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 Lookup: D(B,C).greet()
@@ -6338,21 +5621,7 @@ first greet found wins
   store _celsius internally
 ```
 
-**PICTURE IT LIKE THIS**
-
-Property = reception desk: ask for room number politely; desk enforces hotel rules. Classmethod = alternate entrance labeled "staff only."
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                      | What it buys                    | What it costs                      |
-| --------------------------- | ------------------------------- | ---------------------------------- |
-| @property                   | Encapsulation + readable syntax | Overuse on cheap fields adds noise |
-| Public attrs everywhere     | Simple                          | No validation hook                 |
-| Multiple inheritance mixins | Powerful reuse                  | MRO surprises without study        |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class Temperature:
@@ -6381,48 +5650,33 @@ t = Temperature.from_fahrenheit(212)
 print(t.celsius, Temperature.is_boiling(t))
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice                      | What it buys                    | What it costs                      |
+| --------------------------- | ------------------------------- | ---------------------------------- |
+| @property                   | Encapsulation + readable syntax | Overuse on cheap fields adds noise |
+| Public attrs everywhere     | Simple                          | No validation hook                 |
+| Multiple inheritance mixins | Powerful reuse                  | MRO surprises without study        |
+
+**INTERVIEW NOTE:**
 
 MRO question appears in senior loops. Bonus: `@classmethod` factory vs `__init__` overload patterns.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                                              |
-| ---------- | ----------------------------------------------------------------- |
-| Easy       | `Circle` with `@property radius` validating positive              |
-| Medium     | Draw MRO for `class X(A,B): pass` with two simple parents         |
-| Hard       | When `@staticmethod` is wrong and module-level function is better |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Idiomatic objects are necessary but not sufficient - you also need proof they behave correctly as the codebase changes around them. That proof is a test suite that isolates each class from the database and network it depends on.
-
-**CHECK YOUR UNDERSTANDING AFTER 30.2:** Use `@property` and one `@classmethod` factory correctly; explain MRO in one sentence.
-
 ## 30.3 Unit Tests with Fakes
 
-**WHY YOU ARE LEARNING THIS:** Unit tests isolate one class's behavior. **Fakes** (in-memory repos, stub gateways) replace databases and networks so tests stay fast and deterministic.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Tests spin up Postgres and hit Stripe sandbox - flaky, slow, cannot run on a plane.
+Unit tests isolate one class's behavior. **Fakes** (in-memory repos, stub gateways) replace databases and networks so tests stay fast and deterministic.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [Alex Hyett - SOLID / testability](https://www.youtube.com/watch?v=kF7rQmSRlq0)
-- [cosmicpython/book](https://github.com/cosmicpython/book) - testing chapters mindset
-- [heykarimoff/solid.python](https://github.com/heykarimoff/solid.python)
-- [Real Python - Testing](https://realpython.com/python-testing/)
-- Run tests locally with `pytest` on tiny examples
-- Fake `OrderRepository` proving `OrderService.place` without DB
+Tests spin up Postgres and hit Stripe sandbox - flaky, slow, cannot run on a plane.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-A **fake** implements the same interface as production collaborator with simplified behavior (in-memory dict). **Stub** returns canned data. **Mock** asserts interactions were called - use sparingly on behavior, not every line.
+A **fake** implements the same interface as production collaborator with simplified behavior (in-memory dict). **Stub** returns canned data. **Mock** asserts interactions were called - use sparingly on behavior, not every line. OOP helps testing when classes depend on abstractions (DIP) and have narrow public APIs (encapsulation). Test the unit; fake the edges.
 
-OOP helps testing when classes depend on abstractions (DIP) and have narrow public APIs (encapsulation). Test the unit; fake the edges.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Inject fakes at boundaries; assert domain outcomes, not implementation trivia.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 OrderService -> OrderRepository (ABC)
@@ -6435,21 +5689,7 @@ test place_order():
   assert fake.count == 1
 ```
 
-**PICTURE IT LIKE THIS**
-
-Flight simulator vs flying a real plane to practice takeoff checklist.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                 | What it buys              | What it costs                                            |
-| ---------------------- | ------------------------- | -------------------------------------------------------- |
-| Fakes at boundaries    | Fast, reliable tests      | Fakes can drift from real behavior - contract tests help |
-| Integration-only tests | High confidence once      | Slow feedback; hard to localize failures                 |
-| Over-mocking           | Precise interaction tests | Brittle when refactoring internals                       |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 from abc import ABC, abstractmethod
@@ -6490,45 +5730,33 @@ test_place_order()
 print("tests passed")
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice                 | What it buys              | What it costs                                            |
+| ---------------------- | ------------------------- | -------------------------------------------------------- |
+| Fakes at boundaries    | Fast, reliable tests      | Fakes can drift from real behavior - contract tests help |
+| Integration-only tests | High confidence once      | Slow feedback; hard to localize failures                 |
+| Over-mocking           | Precise interaction tests | Brittle when refactoring internals                       |
+
+**INTERVIEW NOTE:**
 
 Mock vs stub vs fake - define clearly. Strong: "I fake repositories, assert domain state, integration-test DB separately."
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                           |
-| ---------- | ---------------------------------------------- |
-| Easy       | Fake clock for timeout logic                   |
-| Medium     | Test invariant violation raises                |
-| Hard       | Contract test between fake and real repository |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Testability is a design outcome - DIP makes it natural, not bolted on.
-
 ## 30.4 Testability via DIP
 
-**WHY YOU ARE LEARNING THIS:** If high-level code imports concrete `S3Uploader`, tests must upload files. **Dependency Inversion** points domain at interfaces; composition root picks implementations.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** `from db import postgres_conn` at top of domain module - every test drags database drivers.
+If high-level code imports concrete `S3Uploader`, tests must upload files. **Dependency Inversion** points domain at interfaces; composition root picks implementations.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [cosmicpython/book](https://github.com/cosmicpython/book)
-- [ashishps1/awesome-low-level-design](https://github.com/ashishps1/awesome-low-level-design)
-- [DigitalOcean - SOLID (DIP)](https://www.digitalocean.com/community/tutorials/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
-- [Alex Hyett - SOLID](https://www.youtube.com/watch?v=kF7rQmSRlq0)
-- Refactor static import to injected port; rerun unit tests
+`from db import postgres_conn` at top of domain module - every test drags database drivers.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-Design for testability: (1) push I/O to edges, (2) inject collaborators via constructor, (3) keep domain pure where possible, (4) wire real implementations only in `main()` or app factory.
+Design for testability: (1) push I/O to edges, (2) inject collaborators via constructor, (3) keep domain pure where possible, (4) wire real implementations only in `main()` or app factory. Test pyramid still applies: many fast unit tests with fakes, fewer integration tests, minimal E2E. OOP + DIP lowers the cost of the base layer.
 
-Test pyramid still applies: many fast unit tests with fakes, fewer integration tests, minimal E2E. OOP + DIP lowers the cost of the base layer.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Domain depends on ports; adapters are swappable; tests use fakes at the port.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 domain/OrderService -> ports/Repository
@@ -6537,21 +5765,7 @@ tests/FakeRepository implements Repository
 main() wires Postgres; tests wire Fake
 ```
 
-**PICTURE IT LIKE THIS**
-
-Modular power strip: test lamp with bench supply before plugging into wall grid.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                | What it buys                      | What it costs                        |
-| --------------------- | --------------------------------- | ------------------------------------ |
-| Constructor injection | Explicit dependencies; easy fakes | Long parameter lists - factory helps |
-| Service locator       | Central lookup                    | Hidden deps; tests harder            |
-| Global singletons     | Easy access                       | Test pollution                       |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 from abc import ABC, abstractmethod
@@ -6580,47 +5794,33 @@ assert mailer.sent == [("ada@ex.com", "welcome!")]
 print("dip test ok")
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice                | What it buys                      | What it costs                        |
+| --------------------- | --------------------------------- | ------------------------------------ |
+| Constructor injection | Explicit dependencies; easy fakes | Long parameter lists - factory helps |
+| Service locator       | Central lookup                    | Hidden deps; tests harder            |
+| Global singletons     | Easy access                       | Test pollution                       |
+
+**INTERVIEW NOTE:**
 
 Explain how you would test a service that sends email and charges card - name fakes for each port.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                    |
-| ---------- | --------------------------------------- |
-| Easy       | Inject `Random`/`Clock` abstraction     |
-| Medium     | Composition root in `main` only         |
-| Hard       | Hexagonal view: domain vs adapter tests |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** A well-tested, DIP-friendly design is real, but nobody hiring you can see your tests run. The next step is documenting the design so a reviewer can assess your thinking in minutes, not hours.
-
-**CHECK YOUR UNDERSTANDING AFTER 30.4:** Write unit tests using a fake collaborator; explain what DIP changed in your imports.
-
 ## 30.5 Documenting Designs
 
-**WHY YOU ARE LEARNING THIS:** Hiring managers skim GitHub for README depth: problem, model, trade-offs, diagrams - not just runnable code.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Repo named `lld-practice` with uncommented classes and no diagram - reviewer closes tab in thirty seconds.
+Hiring managers skim GitHub for README depth: problem, model, trade-offs, diagrams - not just runnable code.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [kumaransg/LLD](https://github.com/kumaransg/LLD) - README patterns
-- [prasadgujar/low-level-design-primer](https://github.com/prasadgujar/low-level-design-primer)
-- [ashishps1/awesome-low-level-design](https://github.com/ashishps1/awesome-low-level-design)
-- [Chanh Le OOP roadmap](https://chanhle.dev/en/blog/object-oriented-programming-design-patterns-roadmap)
-- Write one-page design doc for vending machine LLD
+Repo named `lld-practice` with uncommented classes and no diagram - reviewer closes tab in thirty seconds.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-Portfolio doc template: **Problem**, **Requirements**, **Class diagram / CRC**, **Key patterns & SOLID**, **Trade-offs**, **Tests**, **Future work**. ASCII diagrams are fine. Link to Phase 32 only after the OOP block - show you know curriculum order.
+Portfolio doc template: **Problem**, **Requirements**, **Class diagram / CRC**, **Key patterns & SOLID**, **TRADE-OFFS:**, **Tests**, **Future work**. ASCII diagrams are fine. Quality beats quantity: two polished designs > ten half-finished repos.
 
-Quality beats quantity: two polished designs > ten half-finished repos.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Treat design docs as deliverables, not afterthoughts.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 README sections:
@@ -6631,24 +5831,10 @@ README sections:
   5. How to run tests
 ```
 
-**PICTURE IT LIKE THIS**
-
-Case study in a textbook: figures + narrative + exercises - not only answer key at the back.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice              | What it buys          | What it costs           |
-| ------------------- | --------------------- | ----------------------- |
-| Design-first README | Signals senior habits | Time investment         |
-| Code-only repo      | Shows syntax          | Hard to assess thinking |
-| Slides without code | Good storytelling     | Weak engineering proof  |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
-PORTfolio_TEMPLATE = {
+PORTFOLIO_TEMPLATE = {
     "problem": "Design a public library loan system",
     "entities": ["BookCopy", "Title", "Member", "Loan", "FinePolicy"],
     "patterns": ["Strategy for fines", "Repository for persistence"],
@@ -6656,49 +5842,37 @@ PORTfolio_TEMPLATE = {
     "tests": "unit tests with FakeMemberRepository",
 }
 
-for k, v in PORTfolio_TEMPLATE.items():
-    print(k.upper()+":", v)
+for k, v in PORTFOLIO_TEMPLATE.items():
+    print(k.upper() + ":", v)
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice              | What it buys          | What it costs           |
+| ------------------- | --------------------- | ----------------------- |
+| Design-first README | Signals senior habits | Time investment         |
+| Code-only repo      | Shows syntax          | Hard to assess thinking |
+| Slides without code | Good storytelling     | Weak engineering proof  |
+
+**INTERVIEW NOTE:**
 
 Recruiters may not run code; they forward README to engineer - optimize for that skim.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                               |
-| ---------- | -------------------------------------------------- |
-| Easy       | Add CRC ASCII to an existing project README        |
-| Medium     | One-page trade-off section for parking lot         |
-| Hard       | Compare your design to open-source LLD repo - gaps |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Documented designs feed **interview** narration - Phase 102.
-
 ## 30.6 Sample Projects
 
-**WHY YOU ARE LEARNING THIS:** Ship small but complete LLD samples: parking lot, library catalog, elevator controller - each with tests and clear boundaries.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Tutorial clones without personal design notes look identical to thousands of others.
+Ship small but complete LLD samples: parking lot, library catalog, elevator controller - each with tests and clear boundaries.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- [ashishps1/awesome-low-level-design](https://github.com/ashishps1/awesome-low-level-design)
-- [kumaransg/LLD](https://github.com/kumaransg/LLD)
-- [faif/python-patterns](https://github.com/faif/python-patterns) - contrast pattern demos vs your domain LLD
-- [Fireship patterns overview](https://www.youtube.com/watch?v=tv-_1er1mWI) - cite what you used
-- Pick one prompt; ship code + tests + diagram this week
+Tutorial clones without personal design notes look identical to thousands of others.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
-Suggested trio: (1) **Parking Lot** - composition, strategy for pricing, (2) **Library** - aggregation copy/title, fines, (3) **Elevator** - queue + state machine lite. Each ~300-500 lines Python, pytest, fake repos.
+Suggested trio: (1) **Parking Lot** - composition, strategy for pricing, (2) **Library** - aggregation copy/title, fines, (3) **Elevator** - queue + state machine lite. Each ~300-500 lines Python, pytest, fake repos. Add "what I'd do with another week" section - shows prioritization, not perfectionism.
 
-Add "what I'd do with another week" section - shows prioritization, not perfectionism.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Two or three crisp LLD repos beat a graveyard of unfinished tutorials.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**VISUAL MODEL:**
 
 ```text
 Sample project bar:
@@ -6708,21 +5882,7 @@ Sample project bar:
   - diagram in README
 ```
 
-**PICTURE IT LIKE THIS**
-
-Music portfolio: three pieces, well recorded, with liner notes - not fifty voice memos.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice           | What it buys            | What it costs                                     |
-| ---------------- | ----------------------- | ------------------------------------------------- |
-| Focused LLD trio | Clear interview stories | Repeats similar structure - vary domains slightly |
-| One mega project | Depth                   | Hard to finish; muddy narrative                   |
-| Pattern zoo fork | Shows reading           | Not your design decisions                         |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 # Minimal portfolio manifest (run to keep scope honest)
@@ -6735,23 +5895,42 @@ for p in PROJECTS:
     print(f"{p['name']}: {p['tests']} tests, patterns={p['patterns']}")
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+| Choice           | What it buys            | What it costs                                     |
+| ---------------- | ----------------------- | ------------------------------------------------- |
+| Focused LLD trio | Clear interview stories | Repeats similar structure - vary domains slightly |
+| One mega project | Depth                   | Hard to finish; muddy narrative                   |
+| Pattern zoo fork | Shows reading           | Not your design decisions                         |
+
+**INTERVIEW NOTE:**
 
 Bring one portfolio project to interviews on a branch you can extend live.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**PRACTICE:**
 
+| Difficulty | Task                                                                |
+| ---------- | ------------------------------------------------------------------- |
+| Easy       | Add `__repr__` to a domain class you already wrote                  |
+| Easy       | `Circle` with `@property radius` validating positive                |
+| Easy       | Fake clock for timeout logic                                        |
+| Easy       | Inject Clock abstraction; add pytest to parking lot skeleton        |
+| Medium     | `Vector` with `__add__` and `__eq__`                                |
+| Medium     | Draw MRO for `class X(A,B): pass` with two simple parents           |
+| Medium     | Test invariant violation raises                                     |
+| Medium     | Composition root in `main` only                                     |
+| Medium     | One-page trade-off section for parking lot                          |
+| Medium     | Extract README design doc from code after the fact                  |
+| Hard       | Context manager class with `__enter__`/`__exit__` for timing blocks |
+| Hard       | When `@staticmethod` is wrong and module-level function is better   |
+| Hard       | Contract test between fake and real repository                      |
+| Hard       | Hexagonal view: domain vs adapter tests                             |
+| Hard       | Compare your design to open-source LLD repo - gaps                  |
+| Hard       | Record 5-min Loom explaining trade-offs                             |
 
-| Difficulty | Task                                               |
-| ---------- | -------------------------------------------------- |
-| Easy       | Add pytest to parking lot skeleton                 |
-| Medium     | Extract README design doc from code after the fact |
-| Hard       | Record 5-min Loom explaining trade-offs            |
+**WHAT THIS UNLOCKS NEXT:**
 
-
-**WHY THE NEXT TOPIC IS NEEDED:** Portfolio proves craft; **interviews** test whether you can defend it under pressure.
-
-**CHECK YOUR UNDERSTANDING AFTER PHASE 30:** Publish one LLD README with diagram, patterns, trade-offs, and tests listed.
+Portfolio proves craft; **Story V** (Phase 31 onward) asks which solution is better under algorithm load - complexity, structures, and correctness.
 
 ---
 
@@ -6771,29 +5950,26 @@ Bring one portfolio project to interviews on a branch you can extend live.
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 5 (a rough sense that every operation has a real, physical cost).
 
+**LEARNING RESOURCES:**
+
+- [Big-O Notation - For Coding Interviews (NeetCode)](https://www.youtube.com/watch?v=BgLTDT03QtU)
+- [Big-O Notation in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=g2o22C3CRfU)
+- [Learn Big O notation in 6 minutes (Bro Code)](https://www.youtube.com/watch?v=XMUe3zFhM5c)
+- [VisuAlgo - Sorting](https://visualgo.net/en/sorting) - watch the step-counter climb as array size grows, to *feel* $O(n)$ vs $O(n^2)$ instead of just reading it
+- [MIT OCW 6.006 - Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) (Lectures 1-2 cover asymptotic analysis from first principles)
+- [jwasham/coding-interview-university](https://github.com/jwasham/coding-interview-university) - "Algorithmic complexity / Big-O" section
+
 ## 31.1 Big O Notation - Time & Space Complexity
 
-**WHY YOU ARE LEARNING THIS:** "This code works" is an incomplete sentence in professional engineering; the follow-up question is always "how does it behave as the input grows?" A function that's instant on 10 items but takes an hour on 10 million has a hidden problem you want to catch *before* you ship it, not after a customer hits it in production. There's no earlier concept to outgrow here beyond Phase 5's "everything costs something" - Big O is the ground floor everything from here on is built on.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+"This code works" is an incomplete sentence in professional engineering; the follow-up question is always "how does it behave as the input grows?" A function that's instant on 10 items but takes an hour on 10 million has a hidden problem you want to catch *before* you ship it, not after a customer hits it in production. There's no earlier concept to outgrow here beyond Phase 5's "everything costs something" - Big O is the ground floor everything from here on is built on.
 
-- Best animated explanation: [Big-O Notation - For Coding Interviews (NeetCode)](https://www.youtube.com/watch?v=BgLTDT03QtU)
-- Fast overview: [Big-O Notation in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=g2o22C3CRfU)
-- Another angle: [Learn Big O notation in 6 minutes (Bro Code)](https://www.youtube.com/watch?v=XMUe3zFhM5c)
-- Interactive simulator: [VisuAlgo - Sorting](https://visualgo.net/en/sorting) - watch the step-counter climb as array size grows, to *feel* $O(n)$ vs $O(n^2)$ instead of just reading it
-- Written documentation: [MIT OCW 6.006 - Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) (Lectures 1-2 cover asymptotic analysis from first principles)
-- GitHub: [jwasham/coding-interview-university](https://github.com/jwasham/coding-interview-university) - "Algorithmic complexity / Big-O" section
-- Practice: [LeetCode](https://leetcode.com/) - every editorial states the intended Big O, so you can check your own analysis
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 Big O describes the *upper bound* on how an algorithm's running time (or memory use) grows as input size $n$ grows, deliberately ignoring constant factors and hardware speed. $O(1)$ means constant. $O(\log n)$ grows, but so slowly that doubling the input barely moves it. $O(n)$ scales directly with input size. $O(n\log n)$ and $O(n^2)$ grow faster still. Big O lets you compare two solutions *before* running either one on real data.
 
-**PICTURE IT LIKE THIS**
-
-Looking up a word in a physical dictionary cover-to-cover, page by page, is $O(n)$. Flipping to roughly the middle, deciding "my word comes before this," and repeating on the remaining half is $O(\log n)$ - exactly how binary search works (Phase 40), and why a 1,000-page dictionary takes about 10 comparisons, not 1,000.
-
-**Internal Working, Step by Step**
+**VISUAL MODEL:**
 
 A single `for` loop over `n` elements: the cost counter increments `n` times - $O(n)$. Nest a second loop that also runs over the array: for every one of the `n` outer steps, the inner loop runs `n` more times, so the counter increments $n\times n=n^2$ times - $O(n^2)$. Big O is just naming the shape of that counter's growth curve.
 
@@ -6828,7 +6004,7 @@ Search: O(log n)  -- each comparison eliminates roughly half the remaining space
 
 This is the shape of nearly every improvement in this roadmap: a complexity gets better *because* a new requirement or trade-off was introduced, never for free. Watch for this pattern - it will repeat with hash tables, indexes, caching, and replication.
 
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-31-complexity-examples
 def constant_time(arr):        # O(1) - one index lookup, cost never grows
@@ -6900,12 +6076,11 @@ print("O(2^n):    ", exponential_time(6), "naive fib(6)")
 print("O(n!):     ", len(factorial_time([1, 2, 3])), "perms of 3 items")
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 An interviewer almost never asks "what is Big O" directly - they expect you to state the complexity of *your own solution*, unprompted, right after you write it. "This is $O(n^2)$ because of the nested loop, and I can bring it down to $O(n)$ using a hash map" in the same breath as your solution is one of the highest-signal moments in a technical interview.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Task                                                                               |
 | ---------- | ---------------------------------------------------------------------------------- |
@@ -6913,16 +6088,15 @@ An interviewer almost never asks "what is Big O" directly - they expect you to s
 | Medium     | Compare two nested loops vs. two sequential (non-nested) loops over the same array |
 | Hard       | Analyze naive recursive Fibonacci and explain why it's $O(2^n)$                    |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Arrays & Strings:** Big O is a ruler. A ruler is only useful once you have things to measure. The simplest possible way to store many values - lay them side by side in memory - is the array, and its trade-offs are where that ruler gets its first real workout.
+Big O is a ruler. A ruler is only useful once you have things to measure. The simplest possible way to store many values - lay them side by side in memory - is the array, and its trade-offs are where that ruler gets its first real workout.
 
 ---
 
 > **Phase 31 complete?** [Build the Phase 31 mini-project](../guides/Projects.md#cs-phase-31-project) · [Continue to Phase 32](#phase-32)
 
 ---
-
-
 
 # PHASE 32 - Arrays & Strings
 
@@ -6932,29 +6106,26 @@ An interviewer almost never asks "what is Big O" directly - they expect you to s
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 5 (stack vs. heap memory), Phase 31 (Big O).
 
+**LEARNING RESOURCES:**
+
+- [Top 6 Coding Interview Concepts (NeetCode)](https://www.youtube.com/watch?v=ft0owvS5tQA)
+- [An Overview of Arrays and Memory - DS&A #2 (CS Dojo)](https://www.youtube.com/watch?v=pmN9ExDf3yQ)
+- [Array Data Structure (Telusko)](https://www.youtube.com/watch?v=0OK-kbu9Cwo)
+- [VisuAlgo - Array](https://visualgo.net/en/array)
+- [GeeksforGeeks - Array Data Structure Guide](https://www.geeksforgeeks.org/dsa/array-data-structure-guide/)
+- [trekhleb/javascript-algorithms](https://github.com/trekhleb/javascript-algorithms) (`array` and `string` folders) and [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python)
+
 ## 32.1 Arrays & Strings
 
-**WHY YOU ARE LEARNING THIS:** An array solves a very specific problem: how do you store many values of the same kind so you can find any one of them instantly? The answer is contiguous memory - lay every element down next to its neighbor, in one unbroken block, so "find the 5th element" becomes pure arithmetic ($\text{start address}+5\times\text{element size}$) instead of a search. Big O is what lets you *prove* that arithmetic trick is $O(1)$ instead of just assuming it.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+An array solves a very specific problem: how do you store many values of the same kind so you can find any one of them instantly? The answer is contiguous memory - lay every element down next to its neighbor, in one unbroken block, so "find the 5th element" becomes pure arithmetic ($\text{start address}+5\times\text{element size}$) instead of a search. Big O is what lets you *prove* that arithmetic trick is $O(1)$ instead of just assuming it.
 
-- Best animated explanation: [Top 6 Coding Interview Concepts (NeetCode)](https://www.youtube.com/watch?v=ft0owvS5tQA)
-- Alternative: [An Overview of Arrays and Memory - DS&A #2 (CS Dojo)](https://www.youtube.com/watch?v=pmN9ExDf3yQ)
-- Another angle: [Array Data Structure (Telusko)](https://www.youtube.com/watch?v=0OK-kbu9Cwo)
-- Interactive: [VisuAlgo - Array](https://visualgo.net/en/array)
-- Documentation: [GeeksforGeeks - Array Data Structure Guide](https://www.geeksforgeeks.org/dsa/array-data-structure-guide/)
-- GitHub: [trekhleb/javascript-algorithms](https://github.com/trekhleb/javascript-algorithms) (`array` and `string` folders) and [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python)
-- Practice: [LeetCode](https://leetcode.com/) - [seanprashad/leetcode-patterns](https://github.com/seanprashad/leetcode-patterns) (filter "Array" or "Two Pointers")
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 An array is a fixed-layout block of memory where every element sits at `base_address + index x element_size` $O(1)$ random access. Strings are, inside the computer or system, arrays of characters, which is why the two most common interview patterns - **two pointers** and **sliding window** apply to both equally.
 
-**PICTURE IT LIKE THIS**
-
-A row of numbered parking spaces: told "the car is in space 42," you walk directly there. That's $O(1)$ access. But if a car in space 10 leaves and you want no gaps, every car from 11 onward has to move down one space - the $O(n)$ cost of deleting from the middle of an array.
-
-**Internal Working, Step by Step** a sliding window across `[2, 1, 5, 1, 3, 2]`, window size 3:
+**VISUAL MODEL:** a sliding window across `[2, 1, 5, 1, 3, 2]`, window size 3:
 
 ```text
 [2, 1, 5] 1  3  2   -> sum = 8
@@ -6965,8 +6136,7 @@ A row of numbered parking spaces: told "the car is in space 42," you walk direct
 
 Each step reuses almost all of the previous sum instead of re-adding three numbers from scratch - the whole trick behind turning an $O(n\cdot k)$ brute force into an $O(n)$ sliding window.
 
-**HOW THE TIME AND MEMORY USE GROW**
-
+**TRADE-OFFS:**
 
 | Operation               | Array            | Notes                              |
 | ----------------------- | ---------------- | ---------------------------------- |
@@ -6975,8 +6145,7 @@ Each step reuses almost all of the previous sum instead of re-adding three numbe
 | Insert/delete at end    | $O(1)$ amortized | no shifting needed                 |
 | Insert/delete in middle | $O(n)$           | every following element must shift |
 
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-32-sliding-window
 def max_sliding_window_sum(arr, k):
@@ -6988,12 +6157,11 @@ def max_sliding_window_sum(arr, k):
     return best
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 Arrays and strings are where interviewers check whether you reach for $O(n)$ tools (two pointers, sliding window, prefix sums) by instinct, or default to an $O(n^2)$ brute force. Naming the pattern out loud before you code is a strong signal - and it is the same recognition habit Phase 42 will demand for greedy vs DP vs backtracking.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Problem                                        |
 | ---------- | ---------------------------------------------- |
@@ -7003,16 +6171,15 @@ Arrays and strings are where interviewers check whether you reach for $O(n)$ too
 | Medium     | Product of Array Except Self                   |
 | Hard       | Minimum Window Substring                       |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Linked Lists:** Arrays are fast to *read* and slow to *edit* in the middle, because every element's position is locked to its neighbors. What if a structure didn't need its elements to sit next to each other at all - what if each element just remembered where the next one lived? (Those "next" fields are the same references/pointers Phase 22 introduced, made explicit.)
+Arrays are fast to *read* and slow to *edit* in the middle, because every element's position is locked to its neighbors. What if a structure didn't need its elements to sit next to each other at all - what if each element just remembered where the next one lived? (Those "next" fields are the same references/pointers Phase 22 introduced, made explicit.)
 
 ---
 
 > **Phase 32 complete?** [Continue to Phase 33](#phase-33)
 
 ---
-
-
 
 # PHASE 33 - Linked Lists
 
@@ -7022,29 +6189,26 @@ Arrays and strings are where interviewers check whether you reach for $O(n)$ too
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 5 (stack vs. heap memory), Phase 31 (Big O).
 
+**LEARNING RESOURCES:**
+
+- [Linked List - DS&A in Python #4 (codebasics)](https://www.youtube.com/watch?v=qp8u-frRAnU)
+- [Harvard CS50 2018 - Lecture 4: Linked Lists](https://www.youtube.com/watch?v=wh4TS7RJDTA)
+- [Introduction to Linked Lists - DS&A #5 (CS Dojo)](https://www.youtube.com/watch?v=WwfhLC16bis)
+- [VisuAlgo - Linked List, Stack, Queue, Deque](https://visualgo.net/en/list)
+- [GeeksforGeeks - Linked List Data Structure](https://www.geeksforgeeks.org/dsa/linked-list-data-structure/)
+- [TheAlgorithms/Python - data_structures/linked_list](https://github.com/TheAlgorithms/Python) (singly, doubly, circular)
+
 ## 33.1 Linked Lists
 
-**WHY YOU ARE LEARNING THIS:** Arrays gave you $O(1)$ access but $O(n)$ middle-insertion, because shifting elements is the price of contiguity. A linked list gives up contiguity: each element (a "node") stores a pointer to where the next one lives - these nodes live on the heap from Phase 5, scattered, not contiguous. Insertion and deletion become $O(1)$ *once you're at the right spot*, because you're only rewiring two pointers - nothing has to move.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Arrays gave you $O(1)$ access but $O(n)$ middle-insertion, because shifting elements is the price of contiguity. A linked list gives up contiguity: each element (a "node") stores a pointer to where the next one lives - these nodes live on the heap from Phase 5, scattered, not contiguous. Insertion and deletion become $O(1)$ *once you're at the right spot*, because you're only rewiring two pointers - nothing has to move.
 
-- Best animated explanation: [Linked List - DS&A in Python #4 (codebasics)](https://www.youtube.com/watch?v=qp8u-frRAnU)
-- Alternative: [Harvard CS50 2018 - Lecture 4: Linked Lists](https://www.youtube.com/watch?v=wh4TS7RJDTA)
-- Another angle: [Introduction to Linked Lists - DS&A #5 (CS Dojo)](https://www.youtube.com/watch?v=WwfhLC16bis)
-- Interactive: [VisuAlgo - Linked List, Stack, Queue, Deque](https://visualgo.net/en/list)
-- Documentation: [GeeksforGeeks - Linked List Data Structure](https://www.geeksforgeeks.org/dsa/linked-list-data-structure/)
-- GitHub: [TheAlgorithms/Python - data_structures/linked_list](https://github.com/TheAlgorithms/Python) (singly, doubly, circular)
-- Practice: [LeetCode](https://leetcode.com/)
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 A singly linked list is a chain of nodes; each holds a value and a pointer to the next node. There's no `base_address + index` trick, so random access degrades to $O(n)$. What you buy in exchange is $O(1)$ insertion/deletion *at a known position*.
 
-**PICTURE IT LIKE THIS**
-
-A scavenger hunt: each clue tells you only where to find the *next* clue. You can't jump straight to clue #5 - you must walk the chain. But inserting a brand-new clue between two existing ones is trivial: redirect the pointer.
-
-**Internal Working, Step by Step**
+**VISUAL MODEL:**
 
 ```text
 ARRAY (contiguous memory)          LINKED LIST (scattered memory)
@@ -7056,8 +6220,7 @@ Index:  0    1    2    3   4        head                            tail
 
 To reverse a linked list, walk it once, and at each node flip its pointer to face backward, carrying three running pointers (`previous`, `current`, `next`) so you never lose the rest of the chain mid-flip.
 
-**HOW THE TIME AND MEMORY USE GROW**
-
+**TRADE-OFFS:**
 
 | Operation                   | Linked List      | Array  |
 | --------------------------- | ---------------- | ------ |
@@ -7066,8 +6229,7 @@ To reverse a linked list, walk it once, and at each node flip its pointer to fac
 | Search                      | $O(n)$           | $O(n)$ |
 | Extra memory per element    | pointer overhead | none   |
 
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-33-linked-list
 class Node:
@@ -7086,12 +6248,11 @@ def reverse(head):
     return prev                 # prev is now the new head
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 Linked-list problems are chosen because pointer bugs are easy to spot: losing the head, forgetting to save `next` before overwriting it, an off-by-one that becomes an infinite loop. Interviewers watch how carefully you draw the pointers before touching the code.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Problem                                       |
 | ---------- | --------------------------------------------- |
@@ -7101,16 +6262,15 @@ Linked-list problems are chosen because pointer bugs are easy to spot: losing th
 | Medium     | Remove Nth Node From End of List              |
 | Hard       | Merge k Sorted Lists                          |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Stacks:** A linked list lets you insert and delete anywhere in $O(1)$, but most real problems don't need "anywhere" - they need a strict, disciplined order of access. The first and simplest such order is "whatever went in last comes out first."
+A linked list lets you insert and delete anywhere in $O(1)$, but most real problems don't need "anywhere" - they need a strict, disciplined order of access. The first and simplest such order is "whatever went in last comes out first."
 
 ---
 
 > **Phase 33 complete?** [Continue to Phase 34](#phase-34)
 
 ---
-
-
 
 # PHASE 34 - Stacks, Queues & Deques
 
@@ -7120,28 +6280,26 @@ Linked-list problems are chosen because pointer bugs are easy to spot: losing th
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 5 (stack vs. heap memory), Phase 31 (Big O).
 
+**LEARNING RESOURCES:**
+
+- [Learn Stack data structures in 10 minutes (Bro Code)](https://www.youtube.com/watch?v=KInG04mAjO0)
+- [Learn Queue data structures in 10 minutes (Bro Code)](https://www.youtube.com/watch?v=nqXaPZi99JI)
+- [VisuAlgo - List (includes Deque)](https://visualgo.net/en/list)
+- [Introduction to Stacks and Queues - DS&A #12 (CS Dojo)](https://www.youtube.com/watch?v=A3ZUpyrnCbM)
+- [Queues in 3 minutes (Michael Sambol)](https://www.youtube.com/watch?v=D6gu-_tmEpQ)
+- [Python `collections.deque`](https://docs.python.org/3/library/collections.html#collections.deque) - ring-buffer backed, $O(1)$ at both ends
+
 ## 34.1 Stacks
 
-**WHY YOU ARE LEARNING THIS:** A stack needs no new machinery - it's a linked list (or array) with a rule bolted on: add or remove from one end only. That restriction guarantees Last-In-First-Out (LIFO) order - exactly the discipline behind undo history, function call stacks (the very mechanism from Phase 5), and matching parentheses.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+A stack needs no new machinery - it's a linked list (or array) with a rule bolted on: add or remove from one end only. That restriction guarantees Last-In-First-Out (LIFO) order - exactly the discipline behind undo history, function call stacks (the very mechanism from Phase 5), and matching parentheses.
 
-- Best animated explanation: [Learn Stack data structures in 10 minutes (Bro Code)](https://www.youtube.com/watch?v=KInG04mAjO0)
-- Alternative: [Introduction to Stacks and Queues - DS&A #12 (CS Dojo)](https://www.youtube.com/watch?v=A3ZUpyrnCbM)
-- Another angle: [3.1 Stack in Data Structure (Jenny's Lectures CS IT)](https://www.youtube.com/watch?v=bxRVz8zklWM)
-- Interactive: [VisuAlgo - List (includes Stack)](https://visualgo.net/en/list) and [USF/Galles - Stack](https://www.cs.usfca.edu/~galles/visualization/StackLL.html)
-- GitHub: [trekhleb/javascript-algorithms - data-structures/stack](https://github.com/trekhleb/javascript-algorithms)
-- Practice: [LeetCode](https://leetcode.com/)
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 A stack supports `push` (add to top) and `pop` (remove from top), both $O(1)$. There is no $O(1)$ way to reach into the middle - that restriction *is* the feature: whatever you look at is always the most recently added item.
 
-**PICTURE IT LIKE THIS**
-
-A stack of plates: always place a new plate on top, always take the top one off first - you can't pull one from the middle without knocking the stack over.
-
-**Internal Working, Step by Step**
+**VISUAL MODEL:**
 
 ```text
  push(D)                    pop()
@@ -7156,8 +6314,7 @@ A stack of plates: always place a new plate on top, always take the top one off 
  +---+
 ```
 
-**HOW THE TIME AND MEMORY USE GROW**
-
+**TRADE-OFFS:**
 
 | Operation                    | Cost   |
 | ---------------------------- | ------ |
@@ -7166,8 +6323,7 @@ A stack of plates: always place a new plate on top, always take the top one off 
 | peek                         | $O(1)$ |
 | search for arbitrary element | $O(n)$ |
 
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-34-valid-parentheses
 def is_valid_parentheses(s):
@@ -7181,46 +6337,27 @@ def is_valid_parentheses(s):
     return not stack
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 Stacks are expected for anything with nested or "most-recent-first" structure: parentheses matching, undo systems, and - critically for later - depth-first traversal, since recursion (below) uses a stack internally whether you write one explicitly or not.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**WHAT THIS UNLOCKS NEXT:**
 
-
-| Difficulty | Problem                              |
-| ---------- | ------------------------------------ |
-| Easy       | Valid Parentheses                    |
-| Easy       | Implement Queue using Stacks         |
-| Medium     | Min Stack ($O(1)$ getMin)            |
-| Medium     | Daily Temperatures (monotonic stack) |
-| Hard       | Largest Rectangle in Histogram       |
-
-
-**WHY THE NEXT TOPIC IS NEEDED - Queues:** A stack enforces "last in, first out" - perfect for undo history, wrong for anything needing fairness, like a print queue. Flip the rule to "first in, first out" and you get a queue.
+A stack enforces "last in, first out" - perfect for undo history, wrong for anything needing fairness, like a print queue. Flip the rule to "first in, first out" and you get a queue.
 
 ## 34.2 Queues
 
-**WHY YOU ARE LEARNING THIS:** Same idea as a stack - restrict where you add and remove - but with the opposite rule: add at the rear, remove from the front (FIFO). This makes a queue the correct tool for processing items in arrival order, which is exactly what breadth-first search on a graph (Phase 41) needs.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Same idea as a stack - restrict where you add and remove - but with the opposite rule: add at the rear, remove from the front (FIFO). This makes a queue the correct tool for processing items in arrival order, which is exactly what breadth-first search on a graph (Phase 41) needs.
 
-- Best animated explanation: [Learn Queue data structures in 10 minutes (Bro Code)](https://www.youtube.com/watch?v=nqXaPZi99JI)
-- Alternative: [Queues in 3 minutes (Michael Sambol)](https://www.youtube.com/watch?v=D6gu-_tmEpQ)
-- Another angle: [Queue Data Structure Tutorial (Tech With Tim)](https://www.youtube.com/watch?v=1j2gWyY5CK4)
-- Interactive: [VisuAlgo - List (includes Queue and Deque)](https://visualgo.net/en/list)
-- GitHub: [trekhleb/javascript-algorithms - data-structures/queue](https://github.com/trekhleb/javascript-algorithms)
-- Practice: [LeetCode](https://leetcode.com/)
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 A queue supports `enqueue` (rear) and `dequeue` (front), both $O(1)$ when backed by a circular buffer or a linked list with head *and* tail pointers - a plain array would force an $O(n)$ shift on every dequeue.
 
-**PICTURE IT LIKE THIS**
+That single access rule - out in the same order you went in - is why queues power print jobs, request buffers, and BFS: fairness is the feature. If you ever need both ends, you do not stretch a queue; you use a deque (next section).
 
-A grocery checkout line: join at the back, the cashier serves whoever has waited longest, at the front. Nobody cuts the line.
-
-**Internal Working, Step by Step**
+**VISUAL MODEL:**
 
 ```text
 enqueue(D)                          dequeue()
@@ -7230,8 +6367,7 @@ enqueue(D)                          dequeue()
 front           rear                 front       rear
 ```
 
-**HOW THE TIME AND MEMORY USE GROW**
-
+**TRADE-OFFS:**
 
 | Operation                    | Cost (linked-list or circular-buffer backed) |
 | ---------------------------- | -------------------------------------------- |
@@ -7240,8 +6376,7 @@ front           rear                 front       rear
 | peek (front)                 | $O(1)$                                       |
 | search for arbitrary element | $O(n)$                                       |
 
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-34-deque-window
 from collections import deque
@@ -7259,30 +6394,104 @@ def first_negative_in_every_window(arr, k):
     return result
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 Queues rarely star on their own - they're the *engine* underneath breadth-first search, task scheduling, and rate limiting. "Process level by level" or "in the order received" is the expected cue for a queue.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**WHAT THIS UNLOCKS NEXT:**
 
+Stacks and queues each open *one* end. Many real problems need both ends cheap - sliding windows, undo/redo with a capped history, BFS with inserts at both sides. That structure is the **deque**.
 
-| Difficulty | Problem                                                |
-| ---------- | ------------------------------------------------------ |
-| Easy       | Implement Stack using Queues                           |
-| Medium     | Design Circular Queue                                  |
-| Medium     | Sliding Window Maximum (monotonic deque)               |
-| Hard       | Design a rate limiter (basic control in Phase 69; distributed design depth in Story XI) |
+## 34.3 Deques
 
+**WHY THIS MATTERS:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Recursion:** Stacks and queues are about *managing order explicitly, with data you hold in your own hands*. Recursion is what happens when you let the *call stack itself* a structure the language runtime manages for you - do that job.
+A **deque** (double-ended queue) supports add/remove at *both* ends in $O(1)$. Stacks and queues are special cases of the same idea with one end sealed. The sliding-window sketch in 34.2 already *used* `collections.deque`; this section teaches it as a first-class structure so you reach for it by name, not by accident.
+
+**HOW IT WORKS:**
+
+Operations: `append` / `appendleft`, `pop` / `popleft` (names vary by language). Random middle access stays $O(n)$ - the win is *ends*, not indexing.
+
+Under the hood, Python's `collections.deque` is a linked block of fixed-size arrays (a ring of chunks), so growth at either end stays amortized $O(1)$. That is why sliding-window algorithms keep indices in a deque: expire the front when it leaves the window, and pop the back while it is no longer useful - both cheap.
+
+**VISUAL MODEL:**
+
+```text
+        front                         rear
+          |                             |
+          v                             v
+        +---+---+---+---+---+---+---+---+
+        | A | B | C | D | E |   |   |   |
+        +---+---+---+---+---+---+---+---+
+  popleft / appendleft          append / pop
+```
+
+**When to choose what**
+
+| Need                         | Structure | Why                                      |
+| ---------------------------- | --------- | ---------------------------------------- |
+| Undo / call nesting          | Stack     | Only the most recent end matters         |
+| Fair arrival order / BFS     | Queue     | Only front-out, rear-in                  |
+| Both ends, or sliding window | Deque     | $O(1)$ at both ends; drop expired front  |
+
+In Python, prefer `collections.deque` over `list` when you `pop(0)` or insert at the front - a list makes those $O(n)$. A list is fine as a pure stack (`append`/`pop` at the end only).
+
+**WORKED EXAMPLE:**
+
+```python
+from collections import deque
+
+# Bounded history: newest at the right; drop oldest from the left
+history = deque(maxlen=3)
+for page in ["home", "search", "item", "cart"]:
+    history.append(page)
+print(list(history))  # ['search', 'item', 'cart'] - 'home' fell off
+
+# Monotonic deque idea (indices of useful candidates in a window)
+def max_in_window(nums, k):
+    dq = deque()  # indices, values decreasing from front to back
+    out = []
+    for i, x in enumerate(nums):
+        while dq and dq[0] <= i - k:
+            dq.popleft()
+        while dq and nums[dq[-1]] <= x:
+            dq.pop()
+        dq.append(i)
+        if i >= k - 1:
+            out.append(nums[dq[0]])
+    return out
+
+print(max_in_window([1, 3, -1, -3, 5, 3, 6, 7], 3))
+```
+
+**INTERVIEW NOTE:**
+
+Name the access pattern first: "I need $O(1)$ at both ends" → deque. "Only LIFO" → stack. "Only FIFO" → queue. For Sliding Window Maximum, say you keep candidates in a monotonic deque so the front is always the window max.
+
+**PRACTICE:**
+
+| Difficulty | Problem |
+| ---------- | ------- |
+| Easy | Valid Parentheses (stack) |
+| Easy | Implement Queue using Stacks / Stack using Queues |
+| Easy | Implement a deque with a doubly linked list |
+| Medium | Min Stack ($O(1)$ getMin) |
+| Medium | Design Circular Queue |
+| Medium | Sliding Window Maximum (monotonic deque) |
+| Medium | Design Front Middle Back Queue |
+| Hard | Largest Rectangle in Histogram |
+| Hard | Jump Game VI (deque optimization of DP) |
+| Hard | Design a rate limiter (basic control in Phase 69; distributed depth in Story XI) |
+
+**WHAT THIS UNLOCKS NEXT:**
+
+Stacks, queues, and deques manage order *explicitly*, with data you hold. Recursion lets the *call stack itself* - a structure the runtime manages - do that job.
 
 ---
 
 > **Phase 34 complete?** [Build the Phase 34 mini-project](../guides/Projects.md#cs-phase-34-project) · [Continue to Phase 35](#phase-35)
 
 ---
-
-
 
 # PHASE 35 - Recursion
 
@@ -7292,29 +6501,26 @@ Queues rarely star on their own - they're the *engine* underneath breadth-first 
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 5 (the call stack lives in real memory), Phase 34 (stacks: recursion is a stack you don't manage by hand).
 
+**LEARNING RESOURCES:**
+
+- [This is a Better Way to Understand Recursion (Alex Hyett)](https://www.youtube.com/watch?v=Q83nN97LVOU)
+- [5 Simple Steps for Solving Any Recursive Problem (Reducible)](https://www.youtube.com/watch?v=ngCos392W4w)
+- [Recursion in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=rf60MejMz3E)
+- [VisuAlgo - Recursion](https://visualgo.net/en/recursion) - paste any recursive function and watch its actual call tree
+- [MIT OCW 6.006](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/)
+- [jwasham/coding-interview-university](https://github.com/jwasham/coding-interview-university) - "Recursion" section
+
 ## 35.1 Recursion & the Call Stack
 
-**WHY YOU ARE LEARNING THIS:** A stack you build by hand can hold "things to come back to." A recursive function uses exactly the same idea, except the "stack" is the program's own call stack, managed automatically every time a function calls itself. Recursion exists because some problems are naturally self-similar - a tree is a node with two smaller trees hanging off it; a large problem is a smaller version of the same problem plus one extra step - and forcing that into an explicit loop is often far more awkward than letting the function call itself.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+A stack you build by hand can hold "things to come back to." A recursive function uses exactly the same idea, except the "stack" is the program's own call stack, managed automatically every time a function calls itself. Recursion exists because some problems are naturally self-similar - a tree is a node with two smaller trees hanging off it; a large problem is a smaller version of the same problem plus one extra step - and forcing that into an explicit loop is often far more awkward than letting the function call itself.
 
-- Best animated explanation: [This is a Better Way to Understand Recursion (Alex Hyett)](https://www.youtube.com/watch?v=Q83nN97LVOU)
-- Alternative: [5 Simple Steps for Solving Any Recursive Problem (Reducible)](https://www.youtube.com/watch?v=ngCos392W4w)
-- Another angle: [Recursion in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=rf60MejMz3E)
-- Interactive: [VisuAlgo - Recursion](https://visualgo.net/en/recursion) - paste any recursive function and watch its actual call tree
-- Documentation: [MIT OCW 6.006](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/)
-- GitHub: [jwasham/coding-interview-university](https://github.com/jwasham/coding-interview-university) - "Recursion" section
-- Practice: [LeetCode](https://leetcode.com/)
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 A recursive function calls itself on a smaller version of the same problem, guarded by a **base case** that stops the calls from continuing forever. Every call that hasn't returned yet sits on the call stack, waiting; when the base case is hit, the stack "unwinds," each waiting call finishing its remaining work as control returns to it.
 
-**PICTURE IT LIKE THIS**
-
-Russian nesting dolls: open the outermost, then the one inside, then the one inside that, until you hit a doll that doesn't open (the base case). Then work back outward, one shell at a time.
-
-**Internal Working, Step by Step**
+**VISUAL MODEL:**
 
 ```text
 factorial(4)
@@ -7331,8 +6537,7 @@ factorial(4)
 
 Each downward arrow is a real stack frame being pushed onto the call stack from Phase 5; each `return` is a frame popped, handing its result to the frame above it - the exact same push/pop mechanic from Phase 34's stack, performed automatically by the language runtime.
 
-**HOW THE TIME AND MEMORY USE GROW**
-
+**TRADE-OFFS:**
 
 | Aspect                                       | Cost                                                                                     |
 | -------------------------------------------- | ---------------------------------------------------------------------------------------- |
@@ -7340,8 +6545,7 @@ Each downward arrow is a real stack frame being pushed onto the call stack from 
 | Time (single-path recursion, e.g. factorial) | $O(n)$                                                                                   |
 | Space                                        | $O(\text{recursion depth})$ - every waiting call occupies a stack frame                  |
 
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-35-recursion-factorial
 def factorial(n):
@@ -7350,12 +6554,11 @@ def factorial(n):
     return n * factorial(n - 1)   # recursive case
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 Interviewers watch for two things: can you state a correct base case on the first try (a missing or wrong base case causes infinite recursion and a crash), and can you trace what's "left to do" at each level without a debugger. Drawing the call stack on a whiteboard is often more convincing than the code itself.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Problem                                              |
 | ---------- | ---------------------------------------------------- |
@@ -7365,8 +6568,9 @@ Interviewers watch for two things: can you state a correct base case on the firs
 | Medium     | Power(x, n) via divide-and-conquer                   |
 | Hard       | Sudoku Solver (a preview of Phase 44's backtracking) |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Hierarchical Structures:** Every linear structure so far - array, linked list, stack, queue - has one predecessor and one successor per element. Recursion is the tool that lets a structure branch: one element pointing to *two* children instead of one "next." That branching structure, built with recursion as its native traversal method, is a tree.
+Every linear structure so far - array, linked list, stack, queue - has one predecessor and one successor per element. Recursion is the tool that lets a structure branch: one element pointing to *two* children instead of one "next." That branching structure, built with recursion as its native traversal method, is a tree.
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 35:** Implement a stack and a queue from scratch (array-backed AND linked-list-backed), and write a recursive function that reverses a linked list without using a loop. If you can do this without looking anything up, move on.
 
@@ -7376,8 +6580,6 @@ Interviewers watch for two things: can you state a correct base case on the firs
 
 ---
 
-
-
 # PHASE 36 - Hashing
 
 **Track:** Data Structures & Algorithms
@@ -7386,29 +6588,26 @@ Interviewers watch for two things: can you state a correct base case on the firs
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 33 (contrast: even a good linked-list search is $O(n)$).
 
+**LEARNING RESOURCES:**
+
+- [Introduction to Hash Tables and Dictionaries - DS&A #13 (CS Dojo)](https://www.youtube.com/watch?v=sfWyugl4JWA)
+- [Learn Hash Tables in 13 minutes (Bro Code)](https://www.youtube.com/watch?v=FsfRsGFHuv4)
+- [Data Structures: Hash Tables](https://www.youtube.com/watch?v=shs0KM3wKv8)
+- [VisuAlgo - Hash Table](https://visualgo.net/en/hashtable)
+- [GeeksforGeeks - Binary Tree, BST, Heap and Hash overview](https://www.geeksforgeeks.org/overview-of-data-structures-set-2-binary-tree-bst-heap-and-hash/)
+- [TheAlgorithms/Python - data_structures/hashing](https://github.com/TheAlgorithms/Python)
+
 ## 36.1 Hash Tables
 
-**WHY YOU ARE LEARNING THIS:** Every structure so far - array, linked list, tree, heap - answers "is X here" by comparing X to other values, costing at least $O(\log n)$ even in the best case. A hash table sidesteps comparison entirely: it runs a **hash function** on the key to compute exactly where it should live, the same way an array computes an address from an index. That's what gives it average $O(1)$ lookup, insert, and delete - arguably the single most-used data structure in real interview solutions.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Every structure so far - array, linked list, tree, heap - answers "is X here" by comparing X to other values, costing at least $O(\log n)$ even in the best case. A hash table sidesteps comparison entirely: it runs a **hash function** on the key to compute exactly where it should live, the same way an array computes an address from an index. That's what gives it average $O(1)$ lookup, insert, and delete - arguably the single most-used data structure in real interview solutions.
 
-- Best animated explanation: [Introduction to Hash Tables and Dictionaries - DS&A #13 (CS Dojo)](https://www.youtube.com/watch?v=sfWyugl4JWA)
-- Alternative: [Learn Hash Tables in 13 minutes (Bro Code)](https://www.youtube.com/watch?v=FsfRsGFHuv4)
-- Another angle: [Data Structures: Hash Tables](https://www.youtube.com/watch?v=shs0KM3wKv8)
-- Interactive: [VisuAlgo - Hash Table](https://visualgo.net/en/hashtable)
-- Documentation: [GeeksforGeeks - Binary Tree, BST, Heap and Hash overview](https://www.geeksforgeeks.org/overview-of-data-structures-set-2-binary-tree-bst-heap-and-hash/)
-- GitHub: [TheAlgorithms/Python - data_structures/hashing](https://github.com/TheAlgorithms/Python)
-- Practice: [LeetCode](https://leetcode.com/)
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 A hash table stores key-value pairs in an array of "buckets." A hash function converts each key into a bucket index; two keys hashing to the same bucket ("a collision") are chained together in a small list at that bucket. As long as the hash function spreads keys evenly and the table resizes as it fills, the average bucket holds close to one item, giving $O(1)$ average-case operations.
 
-**PICTURE IT LIKE THIS**
-
-A theater coat-check: instead of searching every hook for your coat, the attendant runs a quick rule ("hook number = last two digits of your ticket") that sends you directly to roughly the right hook - no scanning required, unless two people land on the same hook and share it.
-
-**Internal Working, Step by Step**
+**VISUAL MODEL:**
 
 ```text
 key "dog"  -> hash() -> 0     +---+-------------------------+
@@ -7420,8 +6619,7 @@ key "bird" -> hash() -> 2     | 1 | (empty)                  |
 Average case: O(1) lookup/insert.  Worst case (many collisions): O(n)
 ```
 
-**HOW THE TIME AND MEMORY USE GROW**
-
+**TRADE-OFFS:**
 
 | Operation | Average | Worst Case (heavy collisions) |
 | --------- | ------- | ----------------------------- |
@@ -7429,8 +6627,7 @@ Average case: O(1) lookup/insert.  Worst case (many collisions): O(n)
 | Lookup    | $O(1)$  | $O(n)$                        |
 | Delete    | $O(1)$  | $O(n)$                        |
 
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-36-group-anagrams
 def group_anagrams(words):
@@ -7441,14 +6638,13 @@ def group_anagrams(words):
     return list(groups.values())
 ```
 
-**Trade-offs:** average $O(1)$ speed costs extra memory (the underlying array is kept intentionally sparse to keep collisions rare), gives up ordering entirely (iterate one and values come out in no particular sequence), and its worst case degrades badly if the hash function is poor or an attacker can choose keys that collide on purpose.
+**TRADE-OFFS:** average $O(1)$ speed costs extra memory (the underlying array is kept intentionally sparse to keep collisions rare), gives up ordering entirely (iterate one and values come out in no particular sequence), and its worst case degrades badly if the hash function is poor or an attacker can choose keys that collide on purpose.
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 The single most common upgrade path in an interview is "brute force with nested loops ($O(n^2)$) -> hash map ($O(n)$)." The moment you think "I need to check if I've seen this before," say "hash set" or "hash map" out loud.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Problem                                                   |
 | ---------- | --------------------------------------------------------- |
@@ -7458,16 +6654,15 @@ The single most common upgrade path in an interview is "brute force with nested 
 | Medium     | Longest Consecutive Sequence                              |
 | Hard       | LRU Cache (hash map + doubly linked list) - *preview of Phase 48; full teaching lives there* |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Trees:** A hash table gives $O(1)$ lookup but no hierarchical shape and no ordering for free. Plenty of real data is a tree (file systems, org charts, ASTs), and the next structure makes that branching shape explicit - then adds one ordering rule (BST) so "find a value" becomes repeated halving instead of a full scan.
+A hash table gives $O(1)$ lookup but no hierarchical shape and no ordering for free. Plenty of real data is a tree (file systems, org charts, ASTs), and the next structure makes that branching shape explicit - then adds one ordering rule (BST) so "find a value" becomes repeated halving instead of a full scan.
 
 ---
 
 > **Phase 36 complete?** [Build the Phase 36 mini-project](../guides/Projects.md#cs-phase-36-project) · [Continue to Phase 37](#phase-37)
 
 ---
-
-
 
 # PHASE 37 - Trees
 
@@ -7477,29 +6672,26 @@ The single most common upgrade path in an interview is "brute force with nested 
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 35 (recursion is the native traversal method for anything that branches).
 
+**LEARNING RESOURCES:**
+
+- [Learn Tree traversal in 3 minutes (Bro Code)](https://www.youtube.com/watch?v=b_NjndniOqY)
+- [Learn Binary Search Trees in 20 minutes (Bro Code)](https://www.youtube.com/watch?v=Gt2yBZAhsGM)
+- [Binary tree traversal: Preorder, Inorder, Postorder (mycodeschool)](https://www.youtube.com/watch?v=gm8DUJJhmY4)
+- [Binary Search Trees (BST) Explained in Animated Demo](https://www.youtube.com/watch?v=mtvbVLK5xDQ)
+- [Preorder, Inorder and Postorder in 5 minutes (Gate Smashers)](https://www.youtube.com/watch?v=XRcC7bAtL3c)
+- [The 3 Levels of Binary Trees: Standard, BST, and AVL (Greg Hogg)](https://www.youtube.com/watch?v=VV-KdD9nbpc)
+
 ## 37.1 Trees & Tree Traversal
 
-**WHY YOU ARE LEARNING THIS:** Recursion just showed you a structure that branches instead of chaining linearly. A tree is that branching idea made concrete: one "root" node, with child nodes hanging off it, each of which can have children of its own. A huge number of real relationships are naturally hierarchical - a file system, an org chart, the structure of this very roadmap (Phases contain Concepts) - and forcing a hierarchy into a flat array or a single-chain linked list throws away exactly the relationship you care about.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Recursion just showed you a structure that branches instead of chaining linearly. A tree is that branching idea made concrete: one "root" node, with child nodes hanging off it, each of which can have children of its own. A huge number of real relationships are naturally hierarchical - a file system, an org chart, the structure of this very roadmap (Phases contain Concepts) - and forcing a hierarchy into a flat array or a single-chain linked list throws away exactly the relationship you care about.
 
-- Best animated explanation: [Learn Tree traversal in 3 minutes (Bro Code)](https://www.youtube.com/watch?v=b_NjndniOqY)
-- Alternative: [Binary tree traversal: Preorder, Inorder, Postorder (mycodeschool)](https://www.youtube.com/watch?v=gm8DUJJhmY4)
-- Another angle: [Preorder, Inorder and Postorder in 5 minutes (Gate Smashers)](https://www.youtube.com/watch?v=XRcC7bAtL3c)
-- Interactive: [VisuAlgo - Binary Search Tree / AVL Tree](https://visualgo.net/en/bst)
-- Documentation: [GeeksforGeeks - Binary Tree, BST, Heap and Hash overview](https://www.geeksforgeeks.org/overview-of-data-structures-set-2-binary-tree-bst-heap-and-hash/)
-- GitHub: [TheAlgorithms/Python - data_structures/binary_tree](https://github.com/TheAlgorithms/Python)
-- Practice: [LeetCode](https://leetcode.com/)
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 A tree is made of nodes; each holds a value and pointers to its children (in a *binary* tree, at most two: `left` and `right`). Traversal means visiting every node exactly once. Three standard recursive orders: **preorder** (node, left, right), **inorder** (left, node, right), **postorder** (left, right, node).
 
-**PICTURE IT LIKE THIS**
-
-A company org chart: CEO is the root, VPs are children, directors are children of VPs. "Preorder" is how you'd read an indented company directory: announce a person, then list everyone under them.
-
-**Internal Working, Step by Step**
+**VISUAL MODEL:**
 
 ```text
         A
@@ -7513,16 +6705,14 @@ Inorder   (left, node, right):  D, B, E, A, C
 Postorder (left, right, node):  D, E, B, C, A
 ```
 
-**HOW THE TIME AND MEMORY USE GROW**
-
+**TRADE-OFFS:**
 
 | Operation                        | Cost                                 |
 | -------------------------------- | ------------------------------------ |
 | Traverse all n nodes (any order) | $O(n)$                               |
 | Extra space (recursion stack)    | $O(h)$, where $h$ is the tree height |
 
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-37-tree-traversal
 class TreeNode:
@@ -7537,45 +6727,25 @@ def inorder(node, out):
     inorder(node.right, out)
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 Tree problems test whether recursion has clicked - nearly every tree question ("max depth," "invert this tree," "is this balanced") is solved with a two-or-three-line recursive function once you trust the recursive call to correctly handle the subtree beneath it.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**WHAT THIS UNLOCKS NEXT:**
 
-
-| Difficulty | Problem                                 |
-| ---------- | --------------------------------------- |
-| Easy       | Maximum Depth of Binary Tree            |
-| Easy       | Invert a Binary Tree                    |
-| Medium     | Binary Tree Level Order Traversal       |
-| Hard       | Serialize and Deserialize a Binary Tree |
-
-
-**WHY THE NEXT TOPIC IS NEEDED - BSTs:** A plain tree gives hierarchy but no guarantee about *where* a value lives - finding something means checking every node, $O(n)$. What if one simple ordering rule turned "is this value here" into a series of yes/no turns instead of a full search?
+A plain tree gives hierarchy but no guarantee about *where* a value lives - finding something means checking every node, $O(n)$. What if one simple ordering rule turned "is this value here" into a series of yes/no turns instead of a full search?
 
 ## 37.2 Binary Search Trees (BST)
 
-**WHY YOU ARE LEARNING THIS:** A plain tree has no ordering rule, so searching is $O(n)$ - no better than a linked list. A BST adds one constraint: every left subtree holds smaller values, every right subtree holds larger ones. That rule turns "is this value in the tree" from a full scan into repeated halving - the same divide-and-conquer idea from Binary Search (Phase 40), baked directly into the data's shape.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+A plain tree has no ordering rule, so searching is $O(n)$ - no better than a linked list. A BST adds one constraint: every left subtree holds smaller values, every right subtree holds larger ones. That rule turns "is this value in the tree" from a full scan into repeated halving - the same divide-and-conquer idea from Binary Search (Phase 40), baked directly into the data's shape.
 
-- Best animated explanation: [Learn Binary Search Trees in 20 minutes (Bro Code)](https://www.youtube.com/watch?v=Gt2yBZAhsGM)
-- Alternative: [Binary Search Trees (BST) Explained in Animated Demo](https://www.youtube.com/watch?v=mtvbVLK5xDQ)
-- Another angle: [The 3 Levels of Binary Trees: Standard, BST, and AVL (Greg Hogg)](https://www.youtube.com/watch?v=VV-KdD9nbpc)
-- Interactive: [VisuAlgo - BST / AVL Tree](https://visualgo.net/en/bst)
-- GitHub: [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python)
-- Practice: [LeetCode](https://leetcode.com/)
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 In a BST, every node satisfies: $\text{left subtree}<\text{node}<\text{right subtree}$. Searching compares the target to the current node and goes left or right - each step eliminates roughly half the remaining nodes, giving $O(\log n)$ search *if the tree is balanced*. In-order traversal of a BST always produces sorted values, for free.
 
-**PICTURE IT LIKE THIS**
-
-A "higher or lower" guessing game baked directly into the data: at every node, one comparison tells you which entire half of the remaining tree you can ignore.
-
-**Internal Working, Step by Step**
+**VISUAL MODEL:**
 
 ```text
               (50)
@@ -7588,8 +6758,7 @@ Searching for 60: 60>50 -> right -> 60<70 -> left -> found 60
 In-order traversal: 20, 30, 40, 50, 60, 70, 80  -> always sorted
 ```
 
-**HOW THE TIME AND MEMORY USE GROW**
-
+**TRADE-OFFS:**
 
 | Operation | Balanced BST | Unbalanced (worst case, e.g. sorted insert order) |
 | --------- | ------------ | ------------------------------------------------- |
@@ -7597,8 +6766,7 @@ In-order traversal: 20, 30, 40, 50, 60, 70, 80  -> always sorted
 | Insert    | $O(\log n)$  | $O(n)$                                            |
 | Delete    | $O(\log n)$  | $O(n)$                                            |
 
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-37-bst-search
 def search_bst(node, target):
@@ -7607,30 +6775,32 @@ def search_bst(node, target):
     return search_bst(node.left, target) if target < node.val else search_bst(node.right, target)
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 "Validate BST" is asked because the naive check (each node's immediate children) is wrong - you must carry a valid `(min, max)` range down through the recursion. Getting this right signals you understand the *global* ordering invariant, not just the local one.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**PRACTICE:**
 
-
-| Difficulty | Problem                                        |
-| ---------- | ---------------------------------------------- |
+| Difficulty | Problem                                 |
+| ---------- | --------------------------------------- |
+| Easy       | Maximum Depth of Binary Tree            |
+| Easy       | Invert a Binary Tree                    |
+| Medium     | Binary Tree Level Order Traversal       |
+| Hard       | Serialize and Deserialize a Binary Tree |
 | Easy       | Search in a Binary Search Tree                 |
 | Medium     | Validate Binary Search Tree                    |
 | Medium     | Lowest Common Ancestor of a BST                |
 | Hard       | Serialize and Deserialize a Binary Search Tree |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Heaps:** A BST is great at "find any value fast," but many real problems don't care about *any* value - they only ever need "give me the current minimum (or maximum), right now, as fast as possible," repeatedly, while other values keep getting added.
+A BST is great at "find any value fast," but many real problems don't care about *any* value - they only ever need "give me the current minimum (or maximum), right now, as fast as possible," repeatedly, while other values keep getting added.
 
 ---
 
 > **Phase 37 complete?** [Continue to Phase 38](#phase-38)
 
 ---
-
-
 
 # PHASE 38 - Heaps & Priority Queues
 
@@ -7640,28 +6810,26 @@ def search_bst(node, target):
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 32 (a heap is a binary tree stored compactly in a plain array), Phase 37 (the tree shape a heap is built on).
 
+**LEARNING RESOURCES:**
+
+- [Heaps & Priority Queues - DSA Course Lecture 9 (Greg Hogg)](https://www.youtube.com/watch?v=E2v9hBgG6gE)
+- [Priority Queue Introduction (WilliamFiset)](https://www.youtube.com/watch?v=wptevk0bshY)
+- [Heap - Heap Sort - Heapify - Priority Queues (Abdul Bari)](https://www.youtube.com/watch?v=HqPJF2L5h9U)
+- [VisuAlgo - Heap](https://visualgo.net/en/heap) and [USF/Galles - Heap](https://www.cs.usfca.edu/~galles/visualization/Heap.html)
+- [trekhleb/javascript-algorithms - data-structures/heap](https://github.com/trekhleb/javascript-algorithms)
+- [LeetCode](https://leetcode.com/)
+
 ## 38.1 Heaps / Priority Queues
 
-**WHY YOU ARE LEARNING THIS:** A BST is built for general search - any value, anywhere. A heap narrows its ambition on purpose: it gives up general search entirely and optimizes for one repeated question - "what's the smallest (or largest) element right now?" - answering it in $O(1)$, with $O(\log n)$ insert/remove. Exactly right for "top-k," "k closest," and "process the most urgent thing first" problems.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+A BST is built for general search - any value, anywhere. A heap narrows its ambition on purpose: it gives up general search entirely and optimizes for one repeated question - "what's the smallest (or largest) element right now?" - answering it in $O(1)$, with $O(\log n)$ insert/remove. Exactly right for "top-k," "k closest," and "process the most urgent thing first" problems.
 
-- Best animated explanation: [Heaps & Priority Queues - DSA Course Lecture 9 (Greg Hogg)](https://www.youtube.com/watch?v=E2v9hBgG6gE)
-- Alternative: [Priority Queue Introduction (WilliamFiset)](https://www.youtube.com/watch?v=wptevk0bshY)
-- Another angle: [Heap - Heap Sort - Heapify - Priority Queues (Abdul Bari)](https://www.youtube.com/watch?v=HqPJF2L5h9U)
-- Interactive: [VisuAlgo - Heap](https://visualgo.net/en/heap) and [USF/Galles - Heap](https://www.cs.usfca.edu/~galles/visualization/Heap.html)
-- GitHub: [trekhleb/javascript-algorithms - data-structures/heap](https://github.com/trekhleb/javascript-algorithms)
-- Practice: [LeetCode](https://leetcode.com/)
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 A binary heap is a complete binary tree (filled level by level, left to right) stored compactly in a plain array - a node at index $i$ has children at $2i+1$ and $2i+2$. A min-heap guarantees every parent is smaller than its children, so the smallest element sits at the root - index 0 - readable in $O(1)$.
 
-**PICTURE IT LIKE THIS**
-
-A hospital emergency room: patients aren't seen in arrival order (that's a queue) - they're seen by urgency. New patients keep arriving and get slotted in by severity, not arrival time.
-
-**Internal Working, Step by Step**
+**VISUAL MODEL:**
 
 ```text
 Tree view (min-heap):        Array view:
@@ -7676,8 +6844,7 @@ Inserting 3: place at the end, then "bubble up" against its parent
 repeatedly while it's smaller, until the min-heap rule is restored.
 ```
 
-**HOW THE TIME AND MEMORY USE GROW**
-
+**TRADE-OFFS:**
 
 | Operation                  | Cost        |
 | -------------------------- | ----------- |
@@ -7686,8 +6853,7 @@ repeatedly while it's smaller, until the min-heap rule is restored.
 | Extract min/max            | $O(\log n)$ |
 | Build heap from n elements | $O(n)$      |
 
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-38-heap-k-largest
 import heapq
@@ -7701,12 +6867,11 @@ def k_largest(nums, k):
     return heap
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 "Top k," "k closest," "kth largest," or "running median" should make a heap the first tool you reach for - reaching for a full sort ($O(n\log n)$) when a heap gets you $O(n\log k)$ is a common, noticeable miss.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Problem                                                  |
 | ---------- | -------------------------------------------------------- |
@@ -7716,16 +6881,15 @@ def k_largest(nums, k):
 | Hard       | Find Median from Data Stream (two heaps)                 |
 | Hard       | Merge k Sorted Lists (revisit from Phase 33 with a heap) |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Hashing:** A heap answers "what's the smallest/largest" instantly. A huge class of problems asks a completely different question: "have I seen this exact value before?" Neither a BST nor a heap answers that in $O(1)$ - searching either still costs at least $O(\log n)$.
+A heap answers "what's the smallest/largest" instantly. A huge class of problems asks a completely different question: "have I seen this exact value before?" Neither a BST nor a heap answers that in $O(1)$ - searching either still costs at least $O(\log n)$.
 
 ---
 
 > **Phase 38 complete?** [Build the Phase 38 mini-project](../guides/Projects.md#cs-phase-38-project) · [Continue to Phase 39](#phase-39)
 
 ---
-
-
 
 # PHASE 39 - Sorting
 
@@ -7735,28 +6899,26 @@ def k_largest(nums, k):
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 36 (contrast: hashing buys speed by discarding order; sorting buys order back, deliberately, because some problems need it).
 
+**LEARNING RESOURCES:**
+
+- [15 Sorting Algorithms in 6 Minutes (Timo Bingmann)](https://www.youtube.com/watch?v=kPRA0W1kECg) - the famous "sound of sorting" visualization
+- [10 Sorting Algorithms Easily Explained (Coding with Lewis)](https://www.youtube.com/watch?v=rbbTd-gkajw)
+- [Visualization and Comparison of Sorting Algorithms (Viktor Bohush)](https://www.youtube.com/watch?v=ZZuD6iUe3Pc)
+- [VisuAlgo - Sorting](https://visualgo.net/en/sorting)
+- [TheAlgorithms/Python - sorts/](https://github.com/TheAlgorithms/Python) and [vbohush/SortingAlgorithmAnimations](https://github.com/vbohush/SortingAlgorithmAnimations)
+- [LeetCode](https://leetcode.com/)
+
 ## 39.1 Sorting Algorithms
 
-**WHY YOU ARE LEARNING THIS:** Hash tables solved "is X here" but deliberately threw away order to get there. Sorting restores it: rearranging a collection so comparisons become meaningful again ("is A before B") - the prerequisite for nearly every other ordering trick, including binary search (next) and the "sort first" opening move behind most of Phase 43's greedy algorithms.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Hash tables solved "is X here" but deliberately threw away order to get there. Sorting restores it: rearranging a collection so comparisons become meaningful again ("is A before B") - the prerequisite for nearly every other ordering trick, including binary search (next) and the "sort first" opening move behind most of Phase 43's greedy algorithms.
 
-- Best animated explanation: [15 Sorting Algorithms in 6 Minutes (Timo Bingmann)](https://www.youtube.com/watch?v=kPRA0W1kECg) - the famous "sound of sorting" visualization
-- Alternative: [10 Sorting Algorithms Easily Explained (Coding with Lewis)](https://www.youtube.com/watch?v=rbbTd-gkajw)
-- Another angle: [Visualization and Comparison of Sorting Algorithms (Viktor Bohush)](https://www.youtube.com/watch?v=ZZuD6iUe3Pc)
-- Interactive: [VisuAlgo - Sorting](https://visualgo.net/en/sorting)
-- GitHub: [TheAlgorithms/Python - sorts/](https://github.com/TheAlgorithms/Python) and [vbohush/SortingAlgorithmAnimations](https://github.com/vbohush/SortingAlgorithmAnimations)
-- Practice: [LeetCode](https://leetcode.com/)
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 Merge sort splits the array in half recursively (down to single elements, trivially sorted), then merges sorted halves back together in linear time per level - $O(n\log n)$ overall, and the direct blueprint for the "divide, solve, combine" thinking reused in Dynamic Programming (Phase 45). Quick sort picks a "pivot," partitions smaller-left/larger-right, then recurses on each side.
 
-**PICTURE IT LIKE THIS**
-
-Merging two already-sorted piles of exam papers: compare the top paper of each pile, take the smaller, repeat - you never re-examine a paper you've already placed.
-
-**Internal Working, Step by Step**
+**VISUAL MODEL:**
 
 ```text
 Merge step, merging [1,4,7] and [2,3,9]:
@@ -7768,8 +6930,7 @@ compare 7,9 -> take 7   -> [1,2,3,4,7]
 nothing left in left pile -> take remaining 9 -> [1,2,3,4,7,9]
 ```
 
-**HOW THE TIME AND MEMORY USE GROW**
-
+**TRADE-OFFS:**
 
 | Algorithm      | Best         | Average      | Worst        | Space       | Stable? |
 | -------------- | ------------ | ------------ | ------------ | ----------- | ------- |
@@ -7779,8 +6940,7 @@ nothing left in left pile -> take remaining 9 -> [1,2,3,4,7,9]
 | Quick Sort     | $O(n\log n)$ | $O(n\log n)$ | $O(n^2)$     | $O(\log n)$ | No      |
 | Heap Sort      | $O(n\log n)$ | $O(n\log n)$ | $O(n\log n)$ | $O(1)$      | No      |
 
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-39-merge-sort
 def merge_sort(arr):
@@ -7797,12 +6957,11 @@ def merge_sort(arr):
     return merged + left[i:] + right[j:]
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 You're rarely asked to implement sort from scratch, but you're expected to reach for "sort first" as an opening move - many problems that look $O(n^2)$ become $O(n\log n)$ the instant you sort and apply two pointers.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Problem                                                |
 | ---------- | ------------------------------------------------------ |
@@ -7811,16 +6970,15 @@ You're rarely asked to implement sort from scratch, but you're expected to reach
 | Medium     | Implement Merge Sort and Quick Sort by hand            |
 | Hard       | Count of Smaller Numbers After Self (merge-sort based) |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Binary Search:** Once a collection is sorted, you've unlocked a much faster way to search it than scanning left to right.
+Once a collection is sorted, you've unlocked a much faster way to search it than scanning left to right.
 
 ---
 
 > **Phase 39 complete?** [Continue to Phase 40](#phase-40)
 
 ---
-
-
 
 # PHASE 40 - Searching
 
@@ -7830,28 +6988,26 @@ You're rarely asked to implement sort from scratch, but you're expected to reach
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 39 (a sorted collection is what binary search requires).
 
+**LEARNING RESOURCES:**
+
+- [Learn Binary Search in 10 minutes (Bro Code)](https://www.youtube.com/watch?v=xrMppTpoqdw)
+- [Binary Search Iterative Method (Abdul Bari)](https://www.youtube.com/watch?v=C2apEw9pgtw) and [Binary Search Recursive Method (Abdul Bari)](https://www.youtube.com/watch?v=uEUXGcc2VXM)
+- [Binary Search Algorithm in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=MFhxShGxHWc)
+- [VisuAlgo - Array](https://visualgo.net/en/array)
+- [seanprashad/leetcode-patterns](https://github.com/seanprashad/leetcode-patterns) (filter "Binary Search")
+- [LeetCode](https://leetcode.com/)
+
 ## 40.1 Binary Search
 
-**WHY YOU ARE LEARNING THIS:** Sorting bought you order; binary search is what you spend that order on. Instead of scanning a sorted array left to right ($O(n)$), check the middle element and immediately discard half the remaining array based on one comparison - the same halving logic baked into a BST's shape (Phase 37), performed here on a flat, sorted array.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Sorting bought you order; binary search is what you spend that order on. Instead of scanning a sorted array left to right ($O(n)$), check the middle element and immediately discard half the remaining array based on one comparison - the same halving logic baked into a BST's shape (Phase 37), performed here on a flat, sorted array.
 
-- Best animated explanation: [Learn Binary Search in 10 minutes (Bro Code)](https://www.youtube.com/watch?v=xrMppTpoqdw)
-- Alternative: [Binary Search Iterative Method (Abdul Bari)](https://www.youtube.com/watch?v=C2apEw9pgtw) and [Binary Search Recursive Method (Abdul Bari)](https://www.youtube.com/watch?v=uEUXGcc2VXM)
-- Another angle: [Binary Search Algorithm in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=MFhxShGxHWc)
-- Interactive: [VisuAlgo - Array](https://visualgo.net/en/array)
-- GitHub: [seanprashad/leetcode-patterns](https://github.com/seanprashad/leetcode-patterns) (filter "Binary Search")
-- Practice: [LeetCode](https://leetcode.com/)
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 Binary search maintains `low`/`high` boundaries over a sorted range. At each step, check the middle: if it's the target, done; if the target is smaller, discard the right half; if larger, discard the left half. Each comparison halves the search space - $O(\log n)$ instead of $O(n)$.
 
-**PICTURE IT LIKE THIS**
-
-"Higher or lower," played optimally: always guess the midpoint of the remaining possibilities, so a range of a million numbers is solved in about 20 guesses.
-
-**Internal Working, Step by Step**
+**VISUAL MODEL:**
 
 ```text
 [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]   target = 13
@@ -7864,8 +7020,7 @@ step 3: mid = 13 -> FOUND
 3 comparisons instead of scanning all 10 elements
 ```
 
-**HOW THE TIME AND MEMORY USE GROW**
-
+**TRADE-OFFS:**
 
 | Case            | Cost                                        |
 | --------------- | ------------------------------------------- |
@@ -7873,8 +7028,7 @@ step 3: mid = 13 -> FOUND
 | Average / Worst | $O(\log n)$                                 |
 | Space           | $O(1)$ iterative, $O(\log n)$ recursive     |
 
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-40-binary-search
 def binary_search(arr, target):
@@ -7890,12 +7044,11 @@ def binary_search(arr, target):
     return -1
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 Binary search is deceptively easy to state and notoriously easy to get wrong at the boundaries - an off-by-one in `low`/`high`/`mid` is one of the most common live-coding mistakes. Beyond the classic version, "binary search on the answer" - searching over a *range of possible answers* rather than an array - resurfaces constantly in Phase 43 and Phase 81.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Problem                                                 |
 | ---------- | ------------------------------------------------------- |
@@ -7904,16 +7057,15 @@ Binary search is deceptively easy to state and notoriously easy to get wrong at 
 | Medium     | Find First and Last Position of Element in Sorted Array |
 | Hard       | Median of Two Sorted Arrays                             |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Graphs:** Every structure so far has one thing in common - each element points to at most two neighbors (a linked list's "next," a tree's two children). What happens when an element needs to connect to *any number* of other elements, in *any* pattern - friends on a social network, cities on a map, dependencies in a build system?
+Every structure so far has one thing in common - each element points to at most two neighbors (a linked list's "next," a tree's two children). What happens when an element needs to connect to *any number* of other elements, in *any* pattern - friends on a social network, cities on a map, dependencies in a build system?
 
 ---
 
 > **Phase 40 complete?** [Build the Phase 40 mini-project](../guides/Projects.md#cs-phase-40-project) · [Continue to Phase 41](#phase-41)
 
 ---
-
-
 
 # PHASE 41 - Graphs
 
@@ -7923,23 +7075,24 @@ Binary search is deceptively easy to state and notoriously easy to get wrong at 
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 34 (queues power BFS), Phase 35 (recursion powers DFS), Phase 38 (heaps power Dijkstra), Phase 39 (order still matters once you're inside a graph algorithm).
 
+**LEARNING RESOURCES:**
+
+- [Graph Data Structure Intro, including adjacency list, adjacency matrix, incidence matrix (freeCodeCamp)](https://www.youtube.com/watch?v=DBRW8nwZV-g) - builds all three representations side by side from the same graph
+- [5.1 Graph Traversals: BFS and DFS (Abdul Bari)](https://www.youtube.com/watch?v=pcKY4hjDrxk) - runs both traversals on the same graph so the difference in visit order is unmistakable
+- Topological sort (DFS): [Topological Sort Algorithm | Graph Theory (WilliamFiset)](https://www.youtube.com/watch?v=eL-KzMXSXXI) *(Composio YouTube)*
+- [6.1 Graph Representation in Data Structure: Adjacency Matrix and Adjacency List (Jenny's Lectures CS IT)](https://www.youtube.com/watch?v=5hPfm_uqXmw) - slower, board-based, works through the space cost of each by hand
+- [BFS vs DFS in a graph (Visualcoders)](https://www.youtube.com/watch?v=n6U5kbez_WM) - a short, purely visual side-by-side comparison
+- Topological sort (Kahn): [Topological Sort | Kahn's Algorithm | Graph Theory (WilliamFiset)](https://www.youtube.com/watch?v=cIBFEhD77b4) *(Composio YouTube)*; alternate board walkthrough: [Kahn's Algorithm | Topological Sorting (Gate Smashers)](https://www.youtube.com/watch?v=96owfLr89Lk) *(Composio YouTube)*
+
 ## 41.1 Graph Representation
 
-**WHY YOU ARE LEARNING THIS:** A tree assumes a strict hierarchy - one parent, limited children, no cycles. Real relationships are messier: a city has roads to many other cities, in both directions, sometimes with cycles (you can drive in a loop). A graph drops every one of a tree's restrictions and keeps only the core idea: nodes (**vertices**) connected by relationships (**edges**), which may be directed (one-way, like a Twitter follow) or undirected (two-way, like a Facebook friendship), and may carry weights (a road's distance, a flight's cost).
+**WHY THIS MATTERS:**
 
-**Mental Model:** A tree is just a graph with two extra rules (no cycles, exactly one path between any two nodes) - so everything you already know about tree traversal is a *special case* of graph traversal, not a different subject.
+A tree assumes a strict hierarchy - one parent, limited children, no cycles. Real relationships are messier: a city has roads to many other cities, in both directions, sometimes with cycles (you can drive in a loop). A graph drops every one of a tree's restrictions and keeps only the core idea: nodes (**vertices**) connected by relationships (**edges**), which may be directed (one-way, like a Twitter follow) or undirected (two-way, like a Facebook friendship), and may carry weights (a road's distance, a flight's cost).
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**HOW IT WORKS:**
 
-- Best animated explanation: [Graph Data Structure Intro, including adjacency list, adjacency matrix, incidence matrix (freeCodeCamp)](https://www.youtube.com/watch?v=DBRW8nwZV-g) - builds all three representations side by side from the same graph
-- Alternative: [6.1 Graph Representation in Data Structure: Adjacency Matrix and Adjacency List (Jenny's Lectures CS IT)](https://www.youtube.com/watch?v=5hPfm_uqXmw) - slower, board-based, works through the space cost of each by hand
-- Another angle: [Graph Theory playlist (WilliamFiset)](https://www.youtube.com/playlist?list=PLDV1Zeh2NRsDGO4--qE8yH72HFL1Km93P) - the most complete free graph-theory series on YouTube, starting from representation before touching algorithms
-- Interactive simulator: [VisuAlgo - Graph Data Structures](https://visualgo.net/en/graphds) - draw your own graph node by node and watch the adjacency list and adjacency matrix update in real time as you add each edge
-- Written documentation: [GeeksforGeeks - Graph Data Structure and Algorithms](https://www.geeksforgeeks.org/dsa/graph-data-structure-and-algorithms/)
-- GitHub implementation: [TheAlgorithms/Python - graphs](https://github.com/TheAlgorithms/Python/tree/master/graphs) and [trekhleb/javascript-algorithms - data-structures/graph](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph)
-- Practice platform: [LeetCode Graph tag](https://leetcode.com/tag/graph/) - and [seanprashad/leetcode-patterns](https://github.com/seanprashad/leetcode-patterns) filtered to "Graph"
-
-**STEP-BY-STEP EXPLANATION**
+A tree is just a graph with two extra rules (no cycles, exactly one path between any two nodes) - so everything you already know about tree traversal is a *special case* of graph traversal, not a different subject.
 
 A graph is a pair: a set of vertices, and a set of edges connecting them. Every meaningful decision about a graph comes from four independent properties, and naming them correctly is most of the work in a graph problem:
 
@@ -7950,11 +7103,7 @@ A graph is a pair: a set of vertices, and a set of edges connecting them. Every 
 
 The two representations below are not competing answers to one question. They are answers to two different questions: "who are this node's neighbors?" (adjacency list, fast) versus "are these two specific nodes connected?" (adjacency matrix, fast). Pick based on which question your algorithm asks most.
 
-**PICTURE IT LIKE THIS**
-
-An adjacency list is a phone's contact list: for each person you know, you store just their number, and nothing else. Looking up "everyone Alice knows" is instant, because it is literally one entry. Asking "does Alice know Bob?" means reading down Alice's list until you find Bob or run out. An adjacency matrix is a full attendance grid pinned to a wall, with every person listed across the top *and* down the side, and a tick in every cell where two people know each other. Answering "does Alice know Bob?" is one glance at one cell. But the grid has to be drawn in full even for a school where nobody knows anybody, which is why a matrix for a million-user social network would need a trillion cells, almost all of them empty.
-
-**Diagram - one graph, drawn three ways:**
+**VISUAL MODEL:**
 
 ```text
 The graph itself (undirected, unweighted, 4 vertices, 3 edges):
@@ -7991,7 +7140,7 @@ Weighted variant (add a cost to each edge):
                           zero-cost edge.
 ```
 
-**Internal Working - the two representations that matter in practice:**
+**VISUAL MODEL:**
 
 ```text
 Adjacency List (the default choice  space-efficient for sparse graphs)
@@ -8010,8 +7159,7 @@ D [ 0  1  0  0 ]
 
 Almost every real interview and real system uses an adjacency list, because most real graphs are sparse (a social network has billions of users but each one only follows a few hundred, not billions).
 
-**HOW THE TIME AND MEMORY USE GROW**
-
+**TRADE-OFFS:**
 
 | Operation                   | Adjacency List | Adjacency Matrix                            |
 | --------------------------- | -------------- | ------------------------------------------- |
@@ -8021,10 +7169,9 @@ Almost every real interview and real system uses an adjacency list, because most
 | Add an edge                 | $O(1)$         | $O(1)$                                      |
 | Add a vertex                | $O(1)$         | $O(V^2)$ - the whole matrix must be resized |
 
-
 The crossover point is edge density. A matrix only pays for itself when the graph is dense enough that most cells are actually used, or when the algorithm's inner loop asks "is there an edge here?" far more often than it asks "who are the neighbors?" (the Floyd-Warshall all-pairs shortest-path algorithm is the classic example). Everything else uses a list.
 
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-41-graph-adjacency
 from collections import defaultdict
@@ -8068,39 +7215,21 @@ print(build_matrix([('A','B'),('A','C'),('B','D')], ['A','B','C','D']))
 
 A grid is a graph too, and this is the single most common disguise a graph wears in interviews. A cell at `(row, col)` in an $m\times n$ grid has up to four neighbors, `(row+1, col)`, `(row-1, col)`, `(row, col+1)`, `(row, col-1)`, and you never build an adjacency list at all: you compute the neighbors on demand. Recognizing "this maze/island/matrix problem is a graph problem" is worth more than memorizing any single graph algorithm.
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 Almost no interviewer asks you to compare representations in the abstract. What they do instead is hand you a problem whose input is a list of pairs (`[[0,1],[1,2],[2,0]]`, "prerequisites," "flights," "friendships") and watch whether your first move is to build an adjacency list. Saying "let me convert this edge list into an adjacency map first" before writing any algorithm is a strong, immediate signal, because it shows you recognized the problem as a graph rather than trying to work directly off the raw input. The follow-up that separates candidates is being able to say *why* a list and not a matrix: "the graph is sparse, so a matrix would waste $O(V^2)$ space to store almost nothing."
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**WHAT THIS UNLOCKS NEXT:**
 
-
-| Difficulty | Problem                                                                                                                                                         |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Convert an edge list `[[0,1],[1,2],[2,0]]` into both an adjacency list and an adjacency matrix by hand, then in code                                            |
-| Easy       | Find the Town Judge - a pure representation-and-degree-counting problem, no traversal needed                                                                    |
-| Medium     | Find Center of Star Graph - solvable in $O(1)$ once you see what the edge list guarantees                                                                       |
-| Medium     | Given a grid of `0`s and `1`s, write only the `neighbors(row, col)` helper, with correct bounds checking, before writing any traversal                          |
-| Hard       | Build a weighted, directed graph from a list of currency exchange rates, then state which representation you would choose and defend it against the alternative |
-
-
-**WHY THE NEXT TOPIC IS NEEDED - BFS & DFS:** Representation is just storage. The actual work - "find the shortest path," "is everything connected," "detect a cycle" - comes from *how you walk* the graph. There are exactly two fundamentally different ways to walk one, and they come from two structures you already have: a queue, and a stack (or recursion).
+Representation is just storage. The actual work - "find the shortest path," "is everything connected," "detect a cycle" - comes from *how you walk* the graph. There are exactly two fundamentally different ways to walk one, and they come from two structures you already have: a queue, and a stack (or recursion).
 
 ## 41.2 Breadth-First Search (BFS) & Depth-First Search (DFS)
 
-**WHY YOU ARE LEARNING THIS:** A tree only ever needed recursion to traverse, because a tree has no cycles - you can never walk in a circle forever. A graph can have cycles, so naive recursion can loop forever unless you explicitly remember what you've already visited. Once you add that "visited" bookkeeping, two natural traversal orders emerge, and each is powered by a structure from earlier phases: explore everything one step away before going further (BFS, powered by a **queue**, Phase 34), or go as deep as possible down one path before backtracking (DFS, powered by a **stack** or **recursion**, Phase 35).
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+A tree only ever needed recursion to traverse, because a tree has no cycles - you can never walk in a circle forever. A graph can have cycles, so naive recursion can loop forever unless you explicitly remember what you've already visited. Once you add that "visited" bookkeeping, two natural traversal orders emerge, and each is powered by a structure from earlier phases: explore everything one step away before going further (BFS, powered by a **queue**, Phase 34), or go as deep as possible down one path before backtracking (DFS, powered by a **stack** or **recursion**, Phase 35).
 
-- Best animated explanation: [5.1 Graph Traversals: BFS and DFS (Abdul Bari)](https://www.youtube.com/watch?v=pcKY4hjDrxk) - runs both traversals on the same graph so the difference in visit order is unmistakable
-- Alternative: [BFS vs DFS in a graph (Visualcoders)](https://www.youtube.com/watch?v=n6U5kbez_WM) - a short, purely visual side-by-side comparison
-- Another angle: [Graph Theory playlist (WilliamFiset)](https://www.youtube.com/playlist?list=PLDV1Zeh2NRsDGO4--qE8yH72HFL1Km93P) - the BFS and DFS entries cover shortest path and connected components with animated frames
-- Interactive simulator: [VisuAlgo - Graph Traversal (DFS/BFS)](https://visualgo.net/en/dfsbfs) - the single best tool for this section: draw a graph, pick a start node, and step the traversal one frame at a time while watching the queue or stack fill and drain
-- Written documentation: [GeeksforGeeks - BFS for a Graph](https://www.geeksforgeeks.org/dsa/breadth-first-search-or-bfs-for-a-graph/) and [DFS for a Graph](https://www.geeksforgeeks.org/dsa/depth-first-search-or-dfs-for-a-graph/)
-- GitHub implementation: [TheAlgorithms/Python - graphs (breadth_first_search.py, depth_first_search.py)](https://github.com/TheAlgorithms/Python/tree/master/graphs)
-- Practice platform: [LeetCode BFS tag](https://leetcode.com/tag/breadth-first-search/) and [DFS tag](https://leetcode.com/tag/depth-first-search/)
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 BFS and DFS are the *same algorithm* with one line changed. Both maintain a collection of nodes discovered but not yet processed, and both loop "take a node out, mark it, add its unvisited neighbors." The only difference is which end of that collection you take from: BFS takes from the front (a queue, so the oldest discovery is processed first), DFS takes from the back (a stack, so the newest discovery is processed first). That single choice produces every behavioral difference between them.
 
@@ -8108,11 +7237,7 @@ Because BFS processes nodes in strict order of discovery, and neighbors are disc
 
 One detail causes more bugs in this section than everything else combined: **mark a node visited when you enqueue it, not when you dequeue it.** If you wait until dequeue, a node with several neighbors pointing at it gets added to the queue multiple times before it is ever processed, and the traversal degrades or duplicates work. The code below marks on enqueue for exactly this reason.
 
-**PICTURE IT LIKE THIS**
-
-BFS is how ripples spread across a pond from a dropped stone - everything at distance 1 is reached before anything at distance 2. DFS is how you'd explore a maze by always taking the first unexplored turn and only backtracking when you hit a dead end.
-
-**Internal Working, Step by Step (BFS on the graph above, starting at A):**
+**VISUAL MODEL:**
 
 ```text
 queue = [A], visited = {A}
@@ -8125,7 +7250,7 @@ Visit order: A, B, C, D  -- exactly the order at increasing distance from A
 
 DFS on the same graph, starting at A, would instead go A -> B -> D (as deep as possible), then backtrack to explore C.
 
-**Diagram - the same algorithm, one line different:**
+**VISUAL MODEL:**
 
 ```text
                     SHARED SKELETON
@@ -8173,16 +7298,14 @@ every node at distance 1.             this path found D at depth 3,
                                       but D is really 2 steps from A.
 ```
 
-**HOW THE TIME AND MEMORY USE GROW**
-
+**TRADE-OFFS:**
 
 | Operation                                           | Cost                                                |
 | --------------------------------------------------- | --------------------------------------------------- |
 | BFS / DFS, full traversal                           | $O(V+E)$ - every vertex and every edge visited once |
 | Space (BFS queue / DFS recursion stack, worst case) | $O(V)$                                              |
 
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-41-bfs
 from collections import deque
@@ -8212,41 +7335,27 @@ def dfs(graph, start, visited=None, order=None):
 
 **Before vs. After / Trade-off:** BFS guarantees the *shortest path* in an unweighted graph (because it explores in strict order of distance) at the cost of $O(V)$ queue memory that can spike wide for bushy graphs. DFS uses less memory for deep, narrow graphs and is the natural fit for "does a path exist" or "find all connected components," but gives no shortest-path guarantee.
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 "Shortest path in an unweighted graph" or "minimum number of steps" is a BFS cue. "Does a path exist," "all paths," or "detect a cycle" are DFS cues. **Topological sort** and **Dijkstra** are the next two named tools - taught in §41.3 - for DAG ordering and non-negative weighted shortest paths.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**WHAT THIS UNLOCKS NEXT:**
 
-
-| Difficulty | Problem                                    |
-| ---------- | ------------------------------------------ |
-| Easy       | Number of Islands (grid BFS/DFS)           |
-| Medium     | Course Schedule (topological sort via DFS) |
-| Medium     | Clone Graph                                |
-| Hard       | Word Ladder (shortest transformation, BFS) |
-| Hard       | Network Delay Time (after you finish §41.3) |
-
-
-**WHY THE NEXT TOPIC IS NEEDED - Shortest paths with weights, and ordering a DAG:** BFS only guarantees shortest paths when every edge costs the same. Real networks have different costs, and build systems need a valid order of tasks with dependencies. Those two jobs get their own algorithms next - still built from the same graph representation and the heap/DFS tools you already have.
+BFS only guarantees shortest paths when every edge costs the same. Real networks have different costs, and build systems need a valid order of tasks with dependencies. Those two jobs get their own algorithms next - still built from the same graph representation and the heap/DFS tools you already have.
 
 ---
 
 ## 41.3 Topological Sort & Dijkstra's Algorithm
 
-**WHY YOU ARE LEARNING THIS:** Two graph problems show up constantly in interviews and in real systems, and neither is solved by plain BFS/DFS alone: (1) order tasks so every dependency comes first (**topological sort** on a DAG), and (2) find cheapest paths when edges have different weights (**Dijkstra**).
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** "Course Schedule" / build pipelines need a linear order consistent with prerequisites. "Network Delay Time" / maps need weighted shortest paths. Treating either as unweighted BFS silently gives wrong answers.
+Two graph problems show up constantly in interviews and in real systems, and neither is solved by plain BFS/DFS alone: (1) order tasks so every dependency comes first (**topological sort** on a DAG), and (2) find cheapest paths when edges have different weights (**Dijkstra**).
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- Topological sort (DFS): [Topological Sort Algorithm | Graph Theory (WilliamFiset)](https://www.youtube.com/watch?v=eL-KzMXSXXI) *(Composio YouTube)*
-- Topological sort (Kahn): [Topological Sort | Kahn's Algorithm | Graph Theory (WilliamFiset)](https://www.youtube.com/watch?v=cIBFEhD77b4) *(Composio YouTube)*; alternate board walkthrough: [Kahn's Algorithm | Topological Sorting (Gate Smashers)](https://www.youtube.com/watch?v=96owfLr89Lk) *(Composio YouTube)*
-- Dijkstra: [3.6 Dijkstra Algorithm - Single Source Shortest Path (Abdul Bari)](https://www.youtube.com/watch?v=XB4MIexjvY0) *(Composio YouTube)*; quick visual: [Dijkstra's algorithm in 3 minutes (Michael Sambol)](https://www.youtube.com/watch?v=_lHSawdgXpI) *(Composio YouTube)*
-- Interactive: [VisuAlgo - Single-Source Shortest Paths](https://visualgo.net/en/sssp) *(Composio fetch verified)*
-- Written: graph-theory playlist already linked in §41.1–41.2 (WilliamFiset) - watch the topo/Dijkstra entries after BFS/DFS
+"Course Schedule" / build pipelines need a linear order consistent with prerequisites. "Network Delay Time" / maps need weighted shortest paths. Treating either as unweighted BFS silently gives wrong answers.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 **Topological sort** applies only to a **DAG** (directed acyclic graph). It produces a linear order of vertices such that every directed edge `u → v` has `u` before `v` in the order. Two common implementations:
 
@@ -8276,9 +7385,9 @@ Dijkstra sketch:
         dist[v]=dist[u]+w; push (dist[v], v)
 ```
 
-**THE MAIN IDEA IN SIMPLE WORDS:** Topological sort = "dependencies first" on a DAG. Dijkstra = "always expand the currently cheapest unsettled node" when weights are non-negative. Both reuse Phase 41's adjacency list; Dijkstra adds Phase 38's heap.
+Topological sort = "dependencies first" on a DAG. Dijkstra = "always expand the currently cheapest unsettled node" when weights are non-negative. Both reuse Phase 41's adjacency list; Dijkstra adds Phase 38's heap.
 
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 from collections import defaultdict, deque
@@ -8325,26 +7434,34 @@ print(topo_kahn(4, [(0, 1), (0, 2), (1, 3), (2, 3)]))  # e.g. [0,1,2,3] or [0,2,
 print(dijkstra(3, [(0, 1, 1), (0, 2, 4), (1, 2, 1)], 0))  # [0, 1, 2]
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**PRACTICE:**
 
-
-| Difficulty | Problem |
-| ---------- | ------- |
+| Difficulty | Problem                                                                                                                                                         |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Easy       | Convert an edge list `[[0,1],[1,2],[2,0]]` into both an adjacency list and an adjacency matrix by hand, then in code                                            |
+| Easy       | Find the Town Judge - a pure representation-and-degree-counting problem, no traversal needed                                                                    |
+| Medium     | Find Center of Star Graph - solvable in $O(1)$ once you see what the edge list guarantees                                                                       |
+| Medium     | Given a grid of `0`s and `1`s, write only the `neighbors(row, col)` helper, with correct bounds checking, before writing any traversal                          |
+| Hard       | Build a weighted, directed graph from a list of currency exchange rates, then state which representation you would choose and defend it against the alternative |
+| Easy       | Number of Islands (grid BFS/DFS)           |
+| Medium     | Course Schedule (topological sort via DFS) |
+| Medium     | Clone Graph                                |
+| Hard       | Word Ladder (shortest transformation, BFS) |
+| Hard       | Network Delay Time (after you finish §41.3) |
 | Easy       | Hand-topo-sort a 5-node DAG; then break it with one back-edge and show Kahn fails |
 | Medium     | Course Schedule / Course Schedule II (topo) |
 | Medium     | Network Delay Time (Dijkstra) |
 | Hard       | Explain in two sentences why Dijkstra fails with a negative edge, using a tiny counterexample |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Algorithmic Patterns:** Every structure and algorithm so far answered one narrow question. Real "hard" problems rarely announce which tool they need - the skill that's still missing is reading a new, unfamiliar problem and recognizing *which* of these recurring shapes it actually is before writing a line of code.
+Every structure and algorithm so far answered one narrow question. Real "hard" problems rarely announce which tool they need - the skill that's still missing is reading a new, unfamiliar problem and recognizing *which* of these recurring shapes it actually is before writing a line of code.
 
 ---
 
 > **Phase 41 complete?** [Build the Phase 41 mini-project](../guides/Projects.md#cs-phase-41-project) · [Continue to Phase 42](#phase-42)
 
 ---
-
-
 
 # PHASE 42 - Algorithmic Patterns
 
@@ -8354,20 +7471,22 @@ print(dijkstra(3, [(0, 1, 1), (0, 2, 4), (1, 2, 1)], 0))  # [0, 1, 2]
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 31 (Big O), Phase 32 (two-pointer / sliding-window are already *patterns* on arrays - this phase generalizes that recognition skill), Phase 35 (recursion), Phase 41 (a graph problem is often the same shape wearing a disguise).
 
+**LEARNING RESOURCES:**
+
+- [Dynamic Programming Patterns (NeetCode)](https://www.youtube.com/watch?v=oBt53YbR9Kk) - the opening segment is specifically about classifying a problem before solving it, which is this section's whole point
+- [5 Simple Steps for Solving Any Recursive Problem (Reducible)](https://www.youtube.com/watch?v=ngCos392W4w) - revisit from Phase 35 with fresh eyes; it is really a classification method in disguise
+- [seanprashad/leetcode-patterns](https://github.com/seanprashad/leetcode-patterns) - a table mapping problem statements to the pattern they belong to, built specifically to train this recognition skill
+- Interactive practice: [NeetCode roadmap](https://neetcode.io/roadmap) - grouped by pattern rather than by data structure, so working through it in order trains classification directly
+- [GeeksforGeeks - Prefix Sum Array](https://www.geeksforgeeks.org/dsa/prefix-sum-array-implementation-applications-competitive-programming/)
+- [LeetCode](https://leetcode.com/) - read the first sentence of ten random "Medium" problems and classify each one before reading further, using the checklist below
+
 ## 42.1 Recognizing the Shape of a Problem
 
-**WHY YOU ARE LEARNING THIS:** Phase 32 already trained one habit: name the pattern (two pointers, sliding window) before coding. Every technique in the next four phases - greedy, backtracking, dynamic programming, and the specialized structures after them - solves a *different* family of problems, and picking the wrong one costs real time in an interview or a real bug in production. Before learning what each tool does, it pays to learn how to tell, from the problem statement alone, which tool a new problem actually needs - the same recognition skill, now across algorithm families rather than only array tricks.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Phase 32 already trained one habit: name the pattern (two pointers, sliding window) before coding. Every technique in the next four phases - greedy, backtracking, dynamic programming, and the specialized structures after them - solves a *different* family of problems, and picking the wrong one costs real time in an interview or a real bug in production. Before learning what each tool does, it pays to learn how to tell, from the problem statement alone, which tool a new problem actually needs - the same recognition skill, now across algorithm families rather than only array tricks.
 
-- Best animated explanation: [Dynamic Programming Patterns (NeetCode)](https://www.youtube.com/watch?v=oBt53YbR9Kk) - the opening segment is specifically about classifying a problem before solving it, which is this section's whole point
-- Alternative: [5 Simple Steps for Solving Any Recursive Problem (Reducible)](https://www.youtube.com/watch?v=ngCos392W4w) - revisit from Phase 35 with fresh eyes; it is really a classification method in disguise
-- Another angle: [seanprashad/leetcode-patterns](https://github.com/seanprashad/leetcode-patterns) - a table mapping problem statements to the pattern they belong to, built specifically to train this recognition skill
-- Interactive practice: [NeetCode roadmap](https://neetcode.io/roadmap) - grouped by pattern rather than by data structure, so working through it in order trains classification directly
-- Written documentation: [GeeksforGeeks - Prefix Sum Array](https://www.geeksforgeeks.org/dsa/prefix-sum-array-implementation-applications-competitive-programming/)
-- Practice platform: [LeetCode](https://leetcode.com/) - read the first sentence of ten random "Medium" problems and classify each one before reading further, using the checklist below
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 Four questions, asked in this order, sort almost any "hard" problem into the right family:
 
@@ -8380,11 +7499,7 @@ These are not mutually exclusive in the way a flowchart suggests - a problem can
 
 **The prefix sum - the pattern this phase introduces that no earlier phase covered:** given an array, precompute a running total once, so that the sum of *any* range `[i, j]` can be answered afterward in $O(1)$ instead of re-summing that range every time it's asked. `prefix[k]` holds the sum of the first `k` elements; the sum of range `[i, j]` (inclusive) is `prefix[j+1] - prefix[i]`, because that subtraction removes exactly the elements before index `i`, leaving only the range you asked for.
 
-**PICTURE IT LIKE THIS**
-
-A prefix sum is a odometer, not a stopwatch: instead of re-measuring the distance between any two mile markers by driving it again, you read the total mileage at each marker once, in one pass, and every future question becomes one subtraction.
-
-**Internal Working, Step by Step - prefix sums, and answering three range-sum queries:**
+**VISUAL MODEL:**
 
 ```text
 arr:      [2, 4, 1, 5, 3]
@@ -8406,18 +7521,16 @@ Query: sum of arr[0..4] (the whole array -> expect 15)
        = prefix[5] - prefix[0] = 15 - 0 = 15   correct
 ```
 
-**HOW THE TIME AND MEMORY USE GROW**
-
+**TRADE-OFFS:**
 
 | Approach                    | Build cost                | Cost per range-sum query |
 | --------------------------- | ------------------------- | ------------------------ |
 | Re-sum the range every time | $O(1)$ (nothing to build) | $O(n)$ per query         |
 | Prefix sum                  | $O(n)$, once              | $O(1)$ per query         |
 
-
 The trade-off is the same shape you have seen before, all the way back to Phase 31: pay a one-time upfront cost to make every later operation cheap - exactly what sorting-then-searching did in Phases 39-40, and what building a hash table does before any lookup.
 
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-42-prefix-sum
 def build_prefix_sums(arr):
@@ -8435,12 +7548,11 @@ print(range_sum(prefix, 1, 3))        # 10
 print(range_sum(prefix, 0, 4))        # 15
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 Naming the pattern before coding - "this is a prefix-sum problem because we're asked for repeated range sums" or "this needs DP because the brute-force recursion I'd write revisits the same state" - is worth more to an interviewer than the code itself, because it proves you classified the problem instead of pattern-matching to the nearest thing you memorized.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Problem                            | Which question above applies                                            |
 | ---------- | ---------------------------------- | ----------------------------------------------------------------------- |
@@ -8450,16 +7562,15 @@ Naming the pattern before coding - "this is a prefix-sum problem because we're a
 | Medium     | Jump Game (can you reach the end?) | Question 3 vs 4 - work out which, and why, before looking at the answer |
 | Hard       | Word Break                         | Question 4 (overlapping subproblems - DP)                               |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Greedy Algorithms:** The cheapest tool on the checklist above, when it provably applies, is a locally-best choice made once and never revisited. The next phase is exactly that tool, and exactly how to prove it's safe to use before trusting it.
+The cheapest tool on the checklist above, when it provably applies, is a locally-best choice made once and never revisited. The next phase is exactly that tool, and exactly how to prove it's safe to use before trusting it.
 
 ---
 
 > **Phase 42 complete?** [Continue to Phase 43](#phase-43)
 
 ---
-
-
 
 # PHASE 43 - Greedy Algorithms
 
@@ -8469,22 +7580,22 @@ Naming the pattern before coding - "this is a prefix-sum problem because we're a
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 39 (sorting is the first step of nearly every greedy algorithm), Phase 42 (algorithmic patterns - why "try every option" is sometimes unnecessary).
 
+**LEARNING RESOURCES:**
+
+- [3. Greedy Method: Introduction (Abdul Bari)](https://www.youtube.com/watch?v=ARvQcqJ_-NY) - the clearest treatment of *feasible* versus *optimal* solutions, which is the distinction the whole technique hinges on
+- [Greedy Algorithms Explained (Tech With Tim)](https://www.youtube.com/watch?v=lfQvPHGtu6Q) - code-first, with a worked failure case
+- [Introduction to Greedy Algorithms (GeeksforGeeks)](https://www.youtube.com/watch?v=HzeK7g8cD0Y) - frames it through the activity-selection problem, the canonical example
+- Worked example: [3.2 Job Sequencing with Deadlines, Greedy Method (Abdul Bari)](https://www.youtube.com/watch?v=zPtI8q9gvX8) - watch the sort-then-commit shape appear in a second, different problem
+- [VisuAlgo - Minimum Spanning Tree](https://visualgo.net/en/mst) - Kruskal's and Prim's algorithms are both pure greedy, and stepping through them shows a greedy choice being made and never revisited, edge by edge
+- [GeeksforGeeks - Greedy Algorithms](https://www.geeksforgeeks.org/dsa/greedy-algorithms/)
+
 ## 43.1 Greedy Algorithms
 
-**WHY YOU ARE LEARNING THIS:** The previous phase named a family of problems where trying every option is correct but wasteful. A greedy algorithm is the cheapest possible response to that waste: at each step, take whatever choice looks best right now, commit to it, and never reconsider - no exploring alternatives, no remembering past decisions. This is dramatically cheaper, but it is only *correct* for problems with a specific structure (the "greedy choice property": a locally optimal choice is guaranteed to lead to a globally optimal solution). Using greedy on a problem that lacks this property produces a wrong answer that still looks plausible - which is exactly why proving greedy works is as important as writing the loop.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+The previous phase named a family of problems where trying every option is correct but wasteful. A greedy algorithm is the cheapest possible response to that waste: at each step, take whatever choice looks best right now, commit to it, and never reconsider - no exploring alternatives, no remembering past decisions. This is dramatically cheaper, but it is only *correct* for problems with a specific structure (the "greedy choice property": a locally optimal choice is guaranteed to lead to a globally optimal solution). Using greedy on a problem that lacks this property produces a wrong answer that still looks plausible - which is exactly why proving greedy works is as important as writing the loop.
 
-- Best animated explanation: [3. Greedy Method: Introduction (Abdul Bari)](https://www.youtube.com/watch?v=ARvQcqJ_-NY) - the clearest treatment of *feasible* versus *optimal* solutions, which is the distinction the whole technique hinges on
-- Alternative: [Greedy Algorithms Explained (Tech With Tim)](https://www.youtube.com/watch?v=lfQvPHGtu6Q) - code-first, with a worked failure case
-- Another angle: [Introduction to Greedy Algorithms (GeeksforGeeks)](https://www.youtube.com/watch?v=HzeK7g8cD0Y) - frames it through the activity-selection problem, the canonical example
-- Worked example: [3.2 Job Sequencing with Deadlines, Greedy Method (Abdul Bari)](https://www.youtube.com/watch?v=zPtI8q9gvX8) - watch the sort-then-commit shape appear in a second, different problem
-- Interactive simulator: [VisuAlgo - Minimum Spanning Tree](https://visualgo.net/en/mst) - Kruskal's and Prim's algorithms are both pure greedy, and stepping through them shows a greedy choice being made and never revisited, edge by edge
-- Written documentation: [GeeksforGeeks - Greedy Algorithms](https://www.geeksforgeeks.org/dsa/greedy-algorithms/)
-- GitHub implementation: [TheAlgorithms/Python - greedy_methods](https://github.com/TheAlgorithms/Python/tree/master/greedy_methods)
-- Practice platform: [LeetCode Greedy tag](https://leetcode.com/tag/greedy/) and [seanprashad/leetcode-patterns](https://github.com/seanprashad/leetcode-patterns) filtered to "Greedy"
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 A greedy algorithm is correct when two properties hold, and they are worth stating separately because they fail separately:
 
@@ -8495,7 +7606,7 @@ There is a standard argument for proving the first property, and it is worth lea
 
 Almost every greedy algorithm follows the same three-line shape: **sort by the right key, scan once, commit as you go.** Choosing the sort key *is* the algorithm, and choosing it wrong is how greedy silently produces plausible wrong answers. For interval scheduling, sorting by end time is correct and sorting by start time or by duration is not, and it is worth constructing the counterexample yourself once so the reason sticks.
 
-**Internal Working, Step by Step - interval scheduling, and why end time is the right sort key:**
+**VISUAL MODEL:**
 
 ```text
 Intervals (start, end):  (1,4)  (3,5)  (0,6)  (5,7)  (3,9)  (5,9)  (6,10)  (8,11)
@@ -8563,20 +7674,18 @@ Time: O(number of coin types)
         Greedy is FASTER but SILENTLY WRONG here  this is the core lesson.
 ```
 
-**PICTURE IT LIKE THIS**
+**VISUAL MODEL:**
 
 Making change with the fewest physical coins by always grabbing the biggest coin that still fits - works perfectly with everyday currency, but the example above shows it can fail with an unusual set of denominations. Knowing *when* the shortcut is safe is the actual skill.
 
-**HOW THE TIME AND MEMORY USE GROW**
-
+**TRADE-OFFS:**
 
 | Approach                                                   | Time                                                      | Guarantee                                                   |
 | ---------------------------------------------------------- | --------------------------------------------------------- | ----------------------------------------------------------- |
 | Greedy                                                     | Usually $O(n\log n)$ (often dominated by an initial sort) | Correct ONLY when the greedy-choice property provably holds |
 | Dynamic Programming (Phase 45, same problem, general case) | Higher, e.g. $O(n\times\text{target})$                    | Always correct                                              |
 
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-43-greedy-intervals
 def max_non_overlapping_intervals(intervals):
@@ -8590,12 +7699,11 @@ def max_non_overlapping_intervals(intervals):
     return count
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 Interviewers expect you to justify *why* greedy works for the specific problem - "sorting by end time and always keeping the interval that ends soonest never blocks a better future choice" - not just apply it. If you can't articulate why the greedy choice is safe, default to the exhaustive, memoized approach (Dynamic Programming, Phase 45) instead and mention greedy as a possible optimization you'd need to prove.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Problem                                    |
 | ---------- | ------------------------------------------ |
@@ -8604,16 +7712,15 @@ Interviewers expect you to justify *why* greedy works for the specific problem -
 | Medium     | Jump Game                                  |
 | Hard       | Minimum Number of Arrows to Burst Balloons |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Backtracking:** DP remembers every subproblem's answer; greedy commits to one choice and never looks back. Some problems need the opposite of both: try a choice, and if it turns out to be wrong partway through, *undo it* and try the next option. That controlled trial-and-error, with the ability to walk back a bad decision, is backtracking.
+DP remembers every subproblem's answer; greedy commits to one choice and never looks back. Some problems need the opposite of both: try a choice, and if it turns out to be wrong partway through, *undo it* and try the next option. That controlled trial-and-error, with the ability to walk back a bad decision, is backtracking.
 
 ---
 
 > **Phase 43 complete?** [Continue to Phase 44](#phase-44)
 
 ---
-
-
 
 # PHASE 44 - Backtracking
 
@@ -8623,22 +7730,22 @@ Interviewers expect you to justify *why* greedy works for the specific problem -
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 35 (recursion), Phase 41 (DFS over a branching structure, which backtracking specializes).
 
+**LEARNING RESOURCES:**
+
+- [6.1 N Queens Problem using Backtracking (Abdul Bari)](https://www.youtube.com/watch?v=xFv_Hl4B83A) - draws the state-space tree being pruned in real time, which is the single most useful image in this section
+- [N-Queens, Backtracking, Leetcode 51 (NeetCode)](https://www.youtube.com/watch?v=Ph95IHmRp5M) - the same problem taken all the way to working code
+- [Solve ANY Backtracking Problem on LeetCode: Template and Explanation (Bitflip)](https://www.youtube.com/watch?v=p9m2LHBW81M) - extracts the reusable choose/explore/unchoose skeleton
+- Simplest starting point: [Subsets, Backtracking, Leetcode 78 (NeetCode)](https://www.youtube.com/watch?v=REOH22Xwdkk) - the smallest possible backtracking problem, worth watching before N-Queens
+- [VisuAlgo - Recursion](https://visualgo.net/en/recursion) - paste a backtracking function and watch the decision tree grow and collapse, and [VisuAlgo - N-Queens](https://visualgo.net/en/recursion?slide=3) for the board-level animation
+- [GeeksforGeeks - Backtracking Algorithms](https://www.geeksforgeeks.org/dsa/backtracking-algorithms/)
+
 ## 44.1 Backtracking
 
-**WHY YOU ARE LEARNING THIS:** Some problems ("generate every valid arrangement," "find any solution that satisfies these constraints") have no greedy shortcut and no useful overlapping-subproblem structure for DP - you genuinely have to try possibilities. Backtracking is recursion (Phase 35) with one addition: after exploring a choice, if it leads nowhere, **undo it** (remove it from the current partial solution) and try the next option. The saving grace that keeps this from being pure brute force is *pruning* the instant a partial choice can be proven invalid, stop exploring that branch immediately instead of building it out fully first.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Some problems ("generate every valid arrangement," "find any solution that satisfies these constraints") have no greedy shortcut and no useful overlapping-subproblem structure for DP - you genuinely have to try possibilities. Backtracking is recursion (Phase 35) with one addition: after exploring a choice, if it leads nowhere, **undo it** (remove it from the current partial solution) and try the next option. The saving grace that keeps this from being pure brute force is *pruning* the instant a partial choice can be proven invalid, stop exploring that branch immediately instead of building it out fully first.
 
-- Best animated explanation: [6.1 N Queens Problem using Backtracking (Abdul Bari)](https://www.youtube.com/watch?v=xFv_Hl4B83A) - draws the state-space tree being pruned in real time, which is the single most useful image in this section
-- Alternative: [N-Queens, Backtracking, Leetcode 51 (NeetCode)](https://www.youtube.com/watch?v=Ph95IHmRp5M) - the same problem taken all the way to working code
-- Another angle: [Solve ANY Backtracking Problem on LeetCode: Template and Explanation (Bitflip)](https://www.youtube.com/watch?v=p9m2LHBW81M) - extracts the reusable choose/explore/unchoose skeleton
-- Simplest starting point: [Subsets, Backtracking, Leetcode 78 (NeetCode)](https://www.youtube.com/watch?v=REOH22Xwdkk) - the smallest possible backtracking problem, worth watching before N-Queens
-- Interactive simulator: [VisuAlgo - Recursion](https://visualgo.net/en/recursion) - paste a backtracking function and watch the decision tree grow and collapse, and [VisuAlgo - N-Queens](https://visualgo.net/en/recursion?slide=3) for the board-level animation
-- Written documentation: [GeeksforGeeks - Backtracking Algorithms](https://www.geeksforgeeks.org/dsa/backtracking-algorithms/)
-- GitHub implementation: [TheAlgorithms/Python - backtracking](https://github.com/TheAlgorithms/Python/tree/master/backtracking) - N-Queens, Sudoku, permutations, word search, all in one folder
-- Practice platform: [LeetCode Backtracking tag](https://leetcode.com/tag/backtracking/) and the Backtracking section of the [NeetCode roadmap](https://neetcode.io/roadmap)
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 Every backtracking solution is the same three-step skeleton applied inside a loop over the available choices:
 
@@ -8659,23 +7766,17 @@ Pruning is what separates backtracking from brute force, and it comes in two fla
 
 There is also a decision to make about *how* you avoid duplicates, and it distinguishes the three problem families that look alike:
 
-
 | Family                                    | The loop                                                      | Why                                                                                                |
 | ----------------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | Subsets / combinations                    | `for i in range(start, n)`                                    | Order does not matter, so never look backward; `start` prevents `[1,2]` and `[2,1]` both appearing |
 | Permutations                              | `for i in range(n)` plus a `used` set                         | Order *does* matter, so every position is a candidate, but each element may appear once            |
 | Combinations with duplicates in the input | sort first, then skip `nums[i] == nums[i-1]` when `i > start` | Identical values at the same tree level would generate identical branches                          |
 
-
-**PICTURE IT LIKE THIS**
-
-Backtracking is solving a maze with a piece of chalk and a rule: at every junction, pick an unexplored corridor, draw an arrow on the wall as you enter it, and if you reach a dead end, walk back to the junction and *erase* your arrow before trying the next corridor. Erasing is not tidiness, it is the whole mechanism: the arrow is your state, and leaving a stale arrow behind means the next attempt inherits a decision you already rejected. Pruning is spotting a "flooded, impassable" sign at the mouth of a corridor and not walking down it at all, rather than discovering the flood after twenty minutes of walking.
-
 **MENTAL MODEL**
 
 Think of backtracking as DFS (Phase 41) over a tree of *decisions* rather than a tree of *data* each node is "the choices made so far," each edge is "one more choice," and a dead end triggers backing up to the parent node and trying a sibling choice instead.
 
-**Internal Working, Step by Step (generating all subsets of** `[1, 2]`**):**
+**VISUAL MODEL:** `[1, 2]`**):**
 
 ```text
                   []
@@ -8689,16 +7790,14 @@ Each leaf is a complete decision path. Backtracking means: after fully
 exploring "choose 1," UNDO that choice (pop it off), then explore "don't choose 1."
 ```
 
-**HOW THE TIME AND MEMORY USE GROW**
-
+**TRADE-OFFS:**
 
 | Aspect                | Cost                                                                                                                   |
 | --------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | Time, worst case      | Often exponential ($O(2^n)$ for subsets, $O(n!)$ for permutations) - inherent to exhaustive search                     |
 | What pruning buys you | Cuts off entire invalid branches early; doesn't change the worst-case bound, but often the actual runtime dramatically |
 
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-44-backtracking-subsets
 def subsets(nums):
@@ -8713,12 +7812,11 @@ def subsets(nums):
     return result
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 "Generate all," "find all valid," "how many ways," combined with constraints to check along the way (N-Queens, Sudoku, valid parentheses combinations) are the classic backtracking cues. Interviewers watch for whether you prune early (check partial validity before recursing further) rather than generating every full combination and filtering at the end - the difference between a solution that finishes and one that times out.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Problem         |
 | ---------- | --------------- |
@@ -8728,16 +7826,15 @@ def subsets(nums):
 | Hard       | N-Queens        |
 | Hard       | Sudoku Solver   |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Dynamic Programming:** Backtracking's pruning only helps when a branch is *invalid*. Plenty of exhaustive searches have no invalid branches to prune at all - every branch is valid, but many different branches end up solving the exact same smaller sub-problem over and over (naive Fibonacci, from Phase 35, is the simplest example). Undoing a choice doesn't fix that waste. Remembering an answer you've already computed does.
+Backtracking's pruning only helps when a branch is *invalid*. Plenty of exhaustive searches have no invalid branches to prune at all - every branch is valid, but many different branches end up solving the exact same smaller sub-problem over and over (naive Fibonacci, from Phase 35, is the simplest example). Undoing a choice doesn't fix that waste. Remembering an answer you've already computed does.
 
 ---
 
 > **Phase 44 complete?** [Continue to Phase 45](#phase-45)
 
 ---
-
-
 
 # PHASE 45 - Dynamic Programming
 
@@ -8747,22 +7844,22 @@ def subsets(nums):
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 35 (recursion, and naive Fibonacci's $O(2^n)$ cost), Phase 44 (backtracking explores a search space; DP is what to do when that space has overlapping subproblems instead of invalid branches).
 
+**LEARNING RESOURCES:**
+
+- [Learn Dynamic Programming with Animations, Full Course for Beginners (freeCodeCamp)](https://www.youtube.com/watch?v=66hDgWottdA) - the whole course is built around animating the call tree collapsing into a cache
+- [DP 1. Introduction to Dynamic Programming: Memoization, Tabulation, Space Optimization (take U forward)](https://www.youtube.com/watch?v=tyB0ztf0DNY) - the opening lecture of the most systematic free DP series available
+- [Memoization and Dynamic Programming Explained (Web Dev Simplified)](https://www.youtube.com/watch?v=WbwP4w6TpCk) - the shortest path to the core insight if the longer courses feel heavy
+- Fourth angle, worth the time: [Dynamic Programming: Learn to Solve Algorithmic Problems and Coding Challenges (freeCodeCamp, Alvin Zablan)](https://www.youtube.com/watch?v=oBt53YbR9Kk) - five hours that teach recursion-first DP better than most university courses
+- [Algorithm Visualizer](https://algorithm-visualizer.org/) - run DP algorithms and watch the table fill cell by cell, and [VisuAlgo - Recursion](https://visualgo.net/en/recursion) to see the naive call tree you are about to prune
+- [GeeksforGeeks - Dynamic Programming](https://www.geeksforgeeks.org/dsa/dynamic-programming/) - and [MIT OCW 6.006, Lectures 19-22](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/), which derive DP from first principles rather than from patterns
+
 ## 45.1 Dynamic Programming
 
-**WHY YOU ARE LEARNING THIS:** Naive recursive Fibonacci (Phase 35) is $O(2^n)$ because `fib(5)` calls `fib(3)` *twice* once through `fib(4)`, once directly - and each of those calls redundantly recomputes everything below it. Dynamic Programming (DP) is nothing more than recursion plus a memory: the moment you notice a recursive solution asks the exact same question more than once, store the answer the first time and look it up every time after. This single idea turns a wide class of exponential brute-force solutions into polynomial ones.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Naive recursive Fibonacci (Phase 35) is $O(2^n)$ because `fib(5)` calls `fib(3)` *twice* once through `fib(4)`, once directly - and each of those calls redundantly recomputes everything below it. Dynamic Programming (DP) is nothing more than recursion plus a memory: the moment you notice a recursive solution asks the exact same question more than once, store the answer the first time and look it up every time after. This single idea turns a wide class of exponential brute-force solutions into polynomial ones.
 
-- Best animated explanation: [Learn Dynamic Programming with Animations, Full Course for Beginners (freeCodeCamp)](https://www.youtube.com/watch?v=66hDgWottdA) - the whole course is built around animating the call tree collapsing into a cache
-- Alternative: [DP 1. Introduction to Dynamic Programming: Memoization, Tabulation, Space Optimization (take U forward)](https://www.youtube.com/watch?v=tyB0ztf0DNY) - the opening lecture of the most systematic free DP series available
-- Another angle: [Memoization and Dynamic Programming Explained (Web Dev Simplified)](https://www.youtube.com/watch?v=WbwP4w6TpCk) - the shortest path to the core insight if the longer courses feel heavy
-- Fourth angle, worth the time: [Dynamic Programming: Learn to Solve Algorithmic Problems and Coding Challenges (freeCodeCamp, Alvin Zablan)](https://www.youtube.com/watch?v=oBt53YbR9Kk) - five hours that teach recursion-first DP better than most university courses
-- Interactive simulator: [Algorithm Visualizer](https://algorithm-visualizer.org/) - run DP algorithms and watch the table fill cell by cell, and [VisuAlgo - Recursion](https://visualgo.net/en/recursion) to see the naive call tree you are about to prune
-- Written documentation: [GeeksforGeeks - Dynamic Programming](https://www.geeksforgeeks.org/dsa/dynamic-programming/) - and [MIT OCW 6.006, Lectures 19-22](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/), which derive DP from first principles rather than from patterns
-- GitHub implementation: [TheAlgorithms/Python - dynamic_programming](https://github.com/TheAlgorithms/Python/tree/master/dynamic_programming) - every classic DP problem, implemented and readable
-- Practice platform: [NeetCode roadmap, 1-D and 2-D DP sections](https://neetcode.io/roadmap) and the [LeetCode Dynamic Programming tag](https://leetcode.com/tag/dynamic-programming/)
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 Two conditions must both hold before DP applies, and checking them explicitly is faster than pattern-matching against problems you have seen:
 
@@ -8798,7 +7895,7 @@ Why: each distinct subproblem fib(k) is computed exactly once, then
         Trade-off: O(n) extra space to store the cache.
 ```
 
-**Internal Working, Step by Step**
+**VISUAL MODEL:**
 
 ```text
 fib(5) without memo:                    fib(5) with memo (cache = {}):
@@ -8811,12 +7908,11 @@ fib(3) fib(2) fib(2) fib(1)              fib(3) fib(2)
                                                cached, reused
 ```
 
-**PICTURE IT LIKE THIS**
+**VISUAL MODEL:**
 
 Answering the same trivia question for the tenth time by re-deriving it from scratch versus just remembering the answer you worked out the first time - DP is the discipline of writing that answer down.
 
-**HOW THE TIME AND MEMORY USE GROW**
-
+**TRADE-OFFS:**
 
 | Approach                                  | Time                                       | Space                                                                      |
 | ----------------------------------------- | ------------------------------------------ | -------------------------------------------------------------------------- |
@@ -8824,8 +7920,7 @@ Answering the same trivia question for the tenth time by re-deriving it from scr
 | Memoized (top-down DP)                    | $O(\text{number of distinct subproblems})$ | $O(\text{subproblems})$ for cache + $O(\text{depth})$ call stack           |
 | Tabulated (bottom-up DP)                  | Same as memoized                           | Often reducible to $O(1)$ or $O(k)$ if only the last few states are needed |
 
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-45-fib-memo
 def fib_memo(n, cache={}):
@@ -8844,12 +7939,11 @@ def coin_change(coins, amount):          # classic DP: fewest coins to make `amo
     return dp[amount] if dp[amount] != float('inf') else -1
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 The tell-tale sign of a DP problem is a recursive brute force whose call tree you can prove has overlapping branches - "count the ways," "minimum/maximum cost to reach," "can this be partitioned into." Interviewers want to see you write the brute-force recursion first, identify the repeated subproblem, and *then* add the cache - jumping straight to a DP table without showing that reasoning is a missed signal, not a shortcut.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Problem                        |
 | ---------- | ------------------------------ |
@@ -8859,16 +7953,15 @@ The tell-tale sign of a DP problem is a recursive brute force whose call tree yo
 | Hard       | Edit Distance                  |
 | Hard       | Regular Expression Matching    |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Specialized Data Structures:** Greedy, backtracking, and DP are all *techniques* you apply on top of general-purpose structures - arrays, hash maps, trees. Some problem shapes are common enough, and awkward enough to solve efficiently with only those general tools, that a purpose-built structure exists for them. Backtracking over strings that share prefixes ("pre-", "pref-", "prefix-" all re-checking the same three letters) is exactly such a case - the trie is a tree built so a shared prefix is stored, and checked, exactly once.
+Greedy, backtracking, and DP are all *techniques* you apply on top of general-purpose structures - arrays, hash maps, trees. Some problem shapes are common enough, and awkward enough to solve efficiently with only those general tools, that a purpose-built structure exists for them. Backtracking over strings that share prefixes ("pre-", "pref-", "prefix-" all re-checking the same three letters) is exactly such a case - the trie is a tree built so a shared prefix is stored, and checked, exactly once.
 
 ---
 
 > **Phase 45 complete?** [Continue to Phase 46](#phase-46)
 
 ---
-
-
 
 # PHASE 46 - Specialized Data Structures
 
@@ -8878,21 +7971,22 @@ The tell-tale sign of a DP problem is a recursive brute force whose call tree yo
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 36 (hashing - Bloom filters and hash tables both hash; Union-Find answers a different connectivity question), Phase 37 (trees - a trie is a tree with one character per edge), Phase 41 (connectivity questions that Union-Find answers without a full graph walk every time).
 
+**LEARNING RESOURCES:**
+
+- [Trie Explained in 3 Minutes (Hello Byte)](https://www.youtube.com/watch?v=8H0Cj3GNniA) - builds the tree character by character on screen, which is exactly how the structure should first be seen
+- [Union Find Introduction (WilliamFiset)](https://www.youtube.com/watch?v=ibjEGG7ylHk) *(Composio YouTube)*
+- [What Are Bloom Filters? (Spanning Tree)](https://www.youtube.com/watch?v=kfFacplFY4Y) *(Composio YouTube)*
+- [Data Structures: Tries (HackerRank, Gayle Laakmann McDowell)](https://www.youtube.com/watch?v=zIjfhVPRZCg) - from the author of *Cracking the Coding Interview*, framed around what interviewers actually probe
+- [Union Find - Union and Find Operations (WilliamFiset)](https://www.youtube.com/watch?v=0jNmHPfA_yE) *(Composio YouTube)*
+- [Bloom Filters | Algorithms You Should Know #2 (ByteByteGo)](https://www.youtube.com/watch?v=V3pzxngeLqw) *(Composio YouTube)*
+
 ## 46.1 Tries (Prefix Trees)
 
-**WHY YOU ARE LEARNING THIS:** A hash table (Phase 36) answers "is this exact word in the set" in $O(1)$, but it cannot answer "what words start with this prefix" without scanning every entry - hashing deliberately destroys any relationship between similar keys. A trie is a tree (Phase 37) where each node represents one character, and any path from the root spells out a prefix; words that share a prefix literally share the same nodes in the tree. That shared structure is what makes prefix search fast and memory-efficient for large dictionaries.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+A hash table (Phase 36) answers "is this exact word in the set" in $O(1)$, but it cannot answer "what words start with this prefix" without scanning every entry - hashing deliberately destroys any relationship between similar keys. A trie is a tree (Phase 37) where each node represents one character, and any path from the root spells out a prefix; words that share a prefix literally share the same nodes in the tree. That shared structure is what makes prefix search fast and memory-efficient for large dictionaries.
 
-- Best animated explanation: [Trie Explained in 3 Minutes (Hello Byte)](https://www.youtube.com/watch?v=8H0Cj3GNniA) - builds the tree character by character on screen, which is exactly how the structure should first be seen
-- Alternative: [Data Structures: Tries (HackerRank, Gayle Laakmann McDowell)](https://www.youtube.com/watch?v=zIjfhVPRZCg) - from the author of *Cracking the Coding Interview*, framed around what interviewers actually probe
-- Another angle: [Implement Trie (Prefix Tree), Leetcode 208 (NeetCode)](https://www.youtube.com/watch?v=oobqoCJlHA0) - the full implementation, written live
-- Interactive simulator: [USF/Galles - Trie](https://www.cs.usfca.edu/~galles/visualization/Trie.html) - type words in one at a time and watch shared prefixes merge into shared nodes instead of duplicating
-- Written documentation: [GeeksforGeeks - Trie Data Structure](https://www.geeksforgeeks.org/dsa/trie-insert-and-search/)
-- GitHub implementation: [TheAlgorithms/Python - data_structures/trie](https://github.com/TheAlgorithms/Python/blob/master/data_structures/trie/trie.py) and [trekhleb/javascript-algorithms - data-structures/trie](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/trie)
-- Practice platform: [LeetCode Trie tag](https://leetcode.com/tag/trie/) and the Tries section of the [NeetCode roadmap](https://neetcode.io/roadmap)
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 A trie node holds two things: a map from a single character to a child node, and a boolean marking whether a complete word ends here. The characters themselves are never stored inside nodes; they are stored as the *edges* between nodes, which is why a path from the root spells a prefix. That distinction matters because it explains the `is_word` flag: without it, inserting "cars" would make "car" appear to be in the trie too, since walking `c` then `a` then `r` succeeds either way. The flag is how a trie tells "this is a real word" apart from "this is merely a prefix of one."
 
@@ -8905,11 +7999,7 @@ The complexity comparison against a hash table (Phase 36) is genuinely interesti
 
 Two variants are worth knowing by name. A **compressed trie** (radix tree) merges any chain of single-child nodes into one node holding a whole substring, which cuts the node count dramatically for sparse key sets. **Aho-Corasick** adds failure links to a trie so it can find all occurrences of thousands of patterns in a single pass over the text, and it is the algorithm behind real-world content filters and intrusion-detection signature matching.
 
-**PICTURE IT LIKE THIS**
-
-A trie is exactly how a phone's autocomplete works: typing "c-a-t" walks three nodes down a shared tree; every word starting with "cat" ("cats," "catalog," "catch") branches off from that same third node, so the phone doesn't need to compare your typed prefix against every word in the dictionary - it just walks the path you've already typed.
-
-**Internal Working, Step by Step (inserting "cat" and "car"):**
+**VISUAL MODEL:**
 
 ```text
         root
@@ -8923,8 +8013,7 @@ A trie is exactly how a phone's autocomplete works: typing "c-a-t" walks three n
                           they only diverge at the third character
 ```
 
-**HOW THE TIME AND MEMORY USE GROW**
-
+**TRADE-OFFS:**
 
 | Operation                                | Cost                                                                                        |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------- |
@@ -8933,8 +8022,7 @@ A trie is exactly how a phone's autocomplete works: typing "c-a-t" walks three n
 | Search for all words with a given prefix | $O(L)$ to reach the prefix node, then $O(\text{nodes in that subtree})$ to collect matches  |
 | Space                                    | $O(\text{total characters across all inserted words})$, but shared prefixes are stored once |
 
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-46-trie
 class TrieNode:
@@ -8961,39 +8049,27 @@ class Trie:
         return True
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 "Autocomplete," "spell checker," "longest common prefix," or "word search on a grid with a dictionary" are the direct cues for a trie - the shared-prefix structure is what makes the difference between checking one word against the whole dictionary (slow) and walking one path per character (fast).
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**WHAT THIS UNLOCKS NEXT:**
 
-
-| Difficulty | Problem                                        |
-| ---------- | ---------------------------------------------- |
-| Easy       | Implement Trie (Prefix Tree)                   |
-| Medium     | Design Add and Search Words Data Structure     |
-| Hard       | Word Search II (trie + backtracking on a grid) |
-
-
-**WHY THE NEXT TOPIC IS NEEDED:** Prefix search is only one specialized shape. Two other recurring shapes - "are these in the same connected component / set?" and "might this element already be in a huge set?" - need Union-Find and Bloom filters next.
+Prefix search is only one specialized shape. Two other recurring shapes - "are these in the same connected component / set?" and "might this element already be in a huge set?" - need Union-Find and Bloom filters next.
 
 ---
 
 ## 46.2 Union-Find (Disjoint Set Union)
 
-**WHY YOU ARE LEARNING THIS:** Many problems ask only "are A and B already connected?" and "connect A and B" - Kruskal's MST, dynamic connectivity, account merging. Rebuilding a full graph BFS after every link is wasteful. Union-Find maintains a partition of elements into disjoint sets with nearly $O(1)$ amortized find/union.
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Checking connectivity with repeated BFS/DFS after each merge is too slow when you have thousands of unions.
+Many problems ask only "are A and B already connected?" and "connect A and B" - Kruskal's MST, dynamic connectivity, account merging. Rebuilding a full graph BFS after every link is wasteful. Union-Find maintains a partition of elements into disjoint sets with nearly $O(1)$ amortized find/union.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- Intro: [Union Find Introduction (WilliamFiset)](https://www.youtube.com/watch?v=ibjEGG7ylHk) *(Composio YouTube)*
-- Operations: [Union Find - Union and Find Operations (WilliamFiset)](https://www.youtube.com/watch?v=0jNmHPfA_yE) *(Composio YouTube)*
-- Path compression: [Union Find Path Compression (WilliamFiset)](https://www.youtube.com/watch?v=VHRhJWacxis) *(Composio YouTube)*; short overview: [Union Find in 5 minutes (Potato Coders)](https://www.youtube.com/watch?v=ayW5B2W9hfo) *(Composio YouTube)*
-- Written case study: [Princeton algs4 - Case Study: Union-Find](https://algs4.cs.princeton.edu/15uf/) *(Composio fetch verified)*
-- Reference: [Disjoint-set data structure (Wikipedia)](https://en.wikipedia.org/wiki/Disjoint-set_data_structure) *(Composio fetch verified)*; [GeeksforGeeks - Introduction to Disjoint Set](https://www.geeksforgeeks.org/dsa/introduction-to-disjoint-set-data-structure-or-union-find-algorithm/) *(Composio web)*
+Checking connectivity with repeated BFS/DFS after each merge is too slow when you have thousands of unions.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 Each element starts in its own set. `find(x)` returns the **representative** (root) of x's set. `union(x, y)` merges the two sets if they differ. Two optimizations make it fast:
 
@@ -9002,9 +8078,9 @@ Each element starts in its own set. `find(x)` returns the **representative** (ro
 
 Amortized cost per operation is effectively constant (inverse Ackermann) - treat it as near-$O(1)$ in interviews.
 
-**THE MAIN IDEA IN SIMPLE WORDS:** Forest of trees, one tree per set. Find the root to name the set; link roots to merge.
+Forest of trees, one tree per set. Find the root to name the set; link roots to merge.
 
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 class UnionFind:
@@ -9037,39 +8113,27 @@ uf.union(1, 2)
 print(uf.connected(0, 2), uf.connected(0, 3))  # True False
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Problem |
-| ---------- | ------- |
-| Easy       | Number of Provinces (connected components via Union-Find) |
-| Medium     | Redundant Connection |
-| Medium     | Accounts Merge |
-
 ---
 
 ## 46.3 Bloom Filters
 
-**WHY YOU ARE LEARNING THIS:** Sometimes you need a tiny, fast answer to "have I *probably* seen this key?" over a huge set - caches, spell-checkers, databases avoiding disk hits. A **Bloom filter** is a bit array plus several hash functions: false positives are possible; **false negatives are not** (if it says "no," the key was never inserted).
+**WHY THIS MATTERS:**
 
-**THE PROBLEM THIS SOLVES:** Storing every key in a hash set can be too memory-heavy when you only need a cheap membership *hint*.
+Sometimes you need a tiny, fast answer to "have I *probably* seen this key?" over a huge set - caches, spell-checkers, databases avoiding disk hits. A **Bloom filter** is a bit array plus several hash functions: false positives are possible; **false negatives are not** (if it says "no," the key was never inserted).
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- Visual intro: [What Are Bloom Filters? (Spanning Tree)](https://www.youtube.com/watch?v=kfFacplFY4Y) *(Composio YouTube)*
-- Systems angle: [Bloom Filters | Algorithms You Should Know #2 (ByteByteGo)](https://www.youtube.com/watch?v=V3pzxngeLqw) *(Composio YouTube)*
-- Hashing framing: [What are Bloom Filters? - Hashing (Gaurav Sen)](https://www.youtube.com/watch?v=bgzUdBVr5tE) *(Composio YouTube)*
-- Reference: [Bloom filter (Wikipedia)](https://en.wikipedia.org/wiki/Bloom_filter) *(Composio fetch verified)* - false positives possible, false negatives not
+Storing every key in a hash set can be too memory-heavy when you only need a cheap membership *hint*.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 Start with a bit array of size $m$, all zeros. To insert a key, compute $k$ hash values modulo $m$ and set those bits. To query, compute the same $k$ positions: if any bit is 0, the key is definitely absent; if all are 1, the key is *probably* present (or hashes collided with other keys). You cannot safely delete without extra structure (counting Bloom filters) - plain Bloom filters are insert-and-query only.
 
 Trade-off knobs: larger $m$ and well-chosen $k$ lower the false-positive rate; you never get certainty on "yes" without a slower exact check behind the filter.
 
-**THE MAIN IDEA IN SIMPLE WORDS:** A compressed, lossy set: "no" is trustworthy; "yes" means "check the real store."
+A compressed, lossy set: "no" is trustworthy; "yes" means "check the real store."
 
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python
 import hashlib
@@ -9097,27 +8161,31 @@ bf.add("apple")
 print(bf.might_contain("apple"), bf.might_contain("orange"))  # True, likely False
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**PRACTICE:**
 
-
-| Difficulty | Task |
-| ---------- | ---- |
+| Difficulty | Problem                                        |
+| ---------- | ---------------------------------------------- |
+| Easy       | Implement Trie (Prefix Tree)                   |
+| Medium     | Design Add and Search Words Data Structure     |
+| Hard       | Word Search II (trie + backtracking on a grid) |
+| Easy       | Number of Provinces (connected components via Union-Find) |
+| Medium     | Redundant Connection |
+| Medium     | Accounts Merge |
 | Easy       | Explain why Bloom filters never false-negative on membership |
 | Medium     | When would you put a Bloom filter *in front of* a disk-backed key-value store? |
 | Hard       | Sketch how false-positive rate grows as you insert more keys into a fixed-size filter |
 
-
 **CHECK YOUR UNDERSTANDING AFTER PHASE 46:** Given an unsorted array, implement (1) a hash-map solution to find duplicates in $O(n)$ (Phase 36), (2) a heap-based solution for the k largest elements (Phase 38), (3) merge sort by hand (Phase 39), and (4) a memoized recursive solution to a DP problem where you can point to exactly which subproblem was being recomputed in the naive version. Also: union two sets with Union-Find and explain one Bloom-filter false-positive scenario. If those come out correct and you can state complexities unprompted, you have the full data-structures foundation the rest of Story V builds on.
 
-**WHY THE NEXT TOPIC IS NEEDED - Algorithm Correctness:** Every technique in this story so far has been justified with intuition, a worked example, and a complexity table - convincing, but informal. "It worked on every test I tried" and "it is provably correct for every valid input" are different claims, and an interviewer (or a production incident) can tell which one you actually made. The next phase is the formal tools - loop invariants and induction - for proving an algorithm correct instead of just trusting it.
+**WHAT THIS UNLOCKS NEXT:**
+
+Every technique in this story so far has been justified with intuition, a worked example, and a complexity table - convincing, but informal. "It worked on every test I tried" and "it is provably correct for every valid input" are different claims, and an interviewer (or a production incident) can tell which one you actually made. The next phase is the formal tools - loop invariants and induction - for proving an algorithm correct instead of just trusting it.
 
 ---
 
 > **Phase 46 complete?** [Build the Phase 46 mini-project](../guides/Projects.md#cs-phase-46-project) · [Continue to Phase 47](#phase-47)
 
 ---
-
-
 
 # PHASE 47 - Algorithm Correctness
 
@@ -9127,19 +8195,20 @@ print(bf.might_contain("apple"), bf.might_contain("orange"))  # True, likely Fal
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 17 (induction - the proof technique this phase applies), Phase 35 (recursion), Phase 40 (binary search - the running example below).
 
+**LEARNING RESOURCES:**
+
+- [Insertion Sort — Proof of correctness using loop invariance (Anand Seetharam)](https://www.youtube.com/watch?v=SElE4RlAji0) - works through the invariant for a real algorithm step by step, on screen *(Composio YouTube)*
+- [MIT OCW 6.006, Lecture 3 - Insertion Sort, Merge Sort](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) - the lecture that introduces loop invariants formally, using insertion sort as the running example
+- [Intro to Mathematical Induction (Dr. Trefor Bazett)](https://www.youtube.com/watch?v=GdM_iA1Zek4) - revisit Phase 17's induction from the "this is really the same idea as a loop invariant" angle *(Composio YouTube)*
+- [CLRS-style loop invariant explanation (GeeksforGeeks)](https://www.geeksforgeeks.org/dsa/loop-invariant-condition-examples-sorting-algorithms/)
+
 ## 47.1 Loop Invariants & Induction
 
-**WHY YOU ARE LEARNING THIS:** Every algorithm in this story has been justified by a worked example, a diagram, and a complexity table - genuinely useful for building intuition, but none of that is *proof*. "I ran it on the examples I thought of and it worked" and "this is correct for every valid input, including ones no one has thought of yet" are different claims. Phase 17 already gave you the tool for the second claim - induction - and this phase is that same tool, applied specifically to loops and recursive algorithms instead of to abstract number-theory statements.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Every algorithm in this story has been justified by a worked example, a diagram, and a complexity table - genuinely useful for building intuition, but none of that is *proof*. "I ran it on the examples I thought of and it worked" and "this is correct for every valid input, including ones no one has thought of yet" are different claims. Phase 17 already gave you the tool for the second claim - induction - and this phase is that same tool, applied specifically to loops and recursive algorithms instead of to abstract number-theory statements.
 
-- Best animated explanation: [Insertion Sort — Proof of correctness using loop invariance (Anand Seetharam)](https://www.youtube.com/watch?v=SElE4RlAji0) - works through the invariant for a real algorithm step by step, on screen *(Composio YouTube)*
-- Alternative: [MIT OCW 6.006, Lecture 3 - Insertion Sort, Merge Sort](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) - the lecture that introduces loop invariants formally, using insertion sort as the running example
-- Another angle: [Intro to Mathematical Induction (Dr. Trefor Bazett)](https://www.youtube.com/watch?v=GdM_iA1Zek4) - revisit Phase 17's induction from the "this is really the same idea as a loop invariant" angle *(Composio YouTube)*
-- Written documentation: [CLRS-style loop invariant explanation (GeeksforGeeks)](https://www.geeksforgeeks.org/dsa/loop-invariant-condition-examples-sorting-algorithms/)
-- Practice platform: pick any algorithm you already implemented in this story (binary search, merge sort, BFS) and write its invariant before checking the one below
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 A **loop invariant** is a statement about the program's state that is true *before the loop begins*, true *before and after every iteration*, and, combined with the fact that the loop has ended, is strong enough to *imply the algorithm is correct*. Proving one requires exactly three steps, and they map directly onto induction from Phase 17:
 
@@ -9156,11 +8225,7 @@ Recursion needs the identical three-part argument, just renamed: the base case i
 - **Maintenance:** each iteration checks `arr[mid]`. If it's the target, done. If the target is smaller, the invariant plus the array being sorted (Phase 39) *guarantees* the target cannot be in `arr[mid..high]`, so shrinking to `arr[low..mid-1]` keeps the invariant true. The symmetric argument holds for the other branch.
 - **Termination:** the loop stops when `low > high`, meaning the range `arr[low..high]` is empty. By the invariant, the target could only be in that range - so an empty range proves the target is not in the array at all. This is the step that's easy to skip and that a hand-wavy "it just works" explanation always skips: the invariant is what turns "we didn't find it" into "it provably isn't there."
 
-**PICTURE IT LIKE THIS**
-
-A loop invariant is a fence you rebuild after every step of a demolition, always around exactly the region that might still contain what you're looking for. Proving the invariant is proving the fence is *always* drawn correctly, at every single step, before you ever check what's left standing when the demolition is done.
-
-**Internal Working, Step by Step - the invariant, tracked through binary search on** `[1,3,5,7,9,11,13]`**, target 7:**
+**VISUAL MODEL:** `[1,3,5,7,9,11,13]`**, target 7:**
 
 ```text
 Invariant: "if 7 is in the array, it's within arr[low..high]"
@@ -9182,11 +8247,11 @@ which is only possible if 8 is not in the array at all. That IS the proof
 of correctness for "not found", not just an absence of a positive result.
 ```
 
-**HOW THE TIME AND MEMORY USE GROW**
+**TRADE-OFFS:**
 
 Proving correctness costs nothing at runtime - it's a one-time investment in your understanding, not an extra check the program performs. What it buys is knowing an algorithm is correct for every input in its domain, including the ones you never tested, which no amount of example-based testing can ever fully guarantee (testing can prove an algorithm is *wrong*, by finding one failing case, but it can never prove one is *right* for every case - only a proof can).
 
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-47-invariant-check
 def binary_search(arr, target):
@@ -9210,12 +8275,11 @@ print(binary_search(arr, 7))    # 3
 print(binary_search(arr, 8))    # -1, and the asserts above never fire - the invariant held throughout
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 Senior-level interviews sometimes ask you to state a loop invariant explicitly, especially for anything binary-search-shaped or greedy. Saying "the invariant here is X, it holds before the loop, each iteration preserves it, and when the loop ends it proves Y" is a recognizable, gradeable structure that a vague "and then it just keeps narrowing down" is not.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Task                                                                                                                        |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -9224,16 +8288,15 @@ Senior-level interviews sometimes ask you to state a loop invariant explicitly, 
 | Medium     | Write the induction argument (base case, inductive step) for why `factorial(n)` from Phase 35 is correct for every `n >= 0` |
 | Hard       | Write the invariant that proves the interval-scheduling greedy algorithm from Phase 43 never discards an interval it needed |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - DSA Consolidation:** Proof shows a *single* algorithm is correct in isolation. Real problems are rarely solved by one algorithm working alone - the next phase is where you combine structures and techniques from this entire story to meet requirements that no single one of them satisfies by itself.
+Proof shows a *single* algorithm is correct in isolation. Real problems are rarely solved by one algorithm working alone - the next phase is where you combine structures and techniques from this entire story to meet requirements that no single one of them satisfies by itself.
 
 ---
 
 > **Phase 47 complete?** [Continue to Phase 48](#phase-48)
 
 ---
-
-
 
 # PHASE 48 - DSA Consolidation
 
@@ -9243,21 +8306,22 @@ Senior-level interviews sometimes ask you to state a loop invariant explicitly, 
 
 **WHAT YOU SHOULD KNOW FIRST:** Phases 31-47, together - this phase introduces no new structure or technique; it asks you to combine everything you already have. Hashing (36) and linked lists (33) are the two halves of the LRU example.
 
+**LEARNING RESOURCES:**
+
+- [LRU Cache - DSA Sheet (NeetCode)](https://www.youtube.com/watch?v=7ABFKPK2hD4) - builds the hash-map-plus-linked-list combination piece by piece, from the requirement backward to the design
+- [LRU Cache Implementation (Tech With Tim)](https://www.youtube.com/watch?v=Nu4lHaSh7D4) - a slower, code-first walkthrough of the same structure
+- [Design Twitter, Leetcode 355 (NeetCode)](https://www.youtube.com/watch?v=pNichitDD2E) - a second worked example combining a heap with a hash map, so the pattern generalizes beyond LRU *(Composio YouTube)*
+- [VisuAlgo - List (Doubly Linked List)](https://visualgo.net/en/list) - step through insert/delete-at-both-ends by hand, the exact operation an LRU cache needs on every access
+- [GeeksforGeeks - LRU Cache Implementation](https://www.geeksforgeeks.org/dsa/lru-cache-implementation/)
+- [TheAlgorithms/Python - data_structures/hashing (lru_cache concepts)](https://github.com/TheAlgorithms/Python) and Python's own `functools.lru_cache` [source](https://github.com/python/cpython/blob/main/Lib/functools.py), a real production implementation of exactly this idea
+
 ## 48.1 Combining Structures Under Load
 
-**WHY YOU ARE LEARNING THIS:** Every structure from Phases 32-46 was taught in isolation, each one optimized for a narrow question: an array for "give me index $i$," a hash map for "have I seen this," a heap for "what's the current min." Real problems are rarely that narrow - they ask for two different guarantees *at the same time* ("$O(1)$ lookup by key" **and** "$O(1)$ know-what-was-least-recently-used"), and no single structure from earlier phases provides both. The fix is not a new structure - it's composing two structures you already know, and writing the discipline that keeps them consistent with each other on every operation.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Every structure from Phases 32-46 was taught in isolation, each one optimized for a narrow question: an array for "give me index $i$," a hash map for "have I seen this," a heap for "what's the current min." Real problems are rarely that narrow - they ask for two different guarantees *at the same time* ("$O(1)$ lookup by key" **and** "$O(1)$ know-what-was-least-recently-used"), and no single structure from earlier phases provides both. The fix is not a new structure - it's composing two structures you already know, and writing the discipline that keeps them consistent with each other on every operation.
 
-- Best animated explanation: [LRU Cache - DSA Sheet (NeetCode)](https://www.youtube.com/watch?v=7ABFKPK2hD4) - builds the hash-map-plus-linked-list combination piece by piece, from the requirement backward to the design
-- Alternative: [LRU Cache Implementation (Tech With Tim)](https://www.youtube.com/watch?v=Nu4lHaSh7D4) - a slower, code-first walkthrough of the same structure
-- Another angle: [Design Twitter, Leetcode 355 (NeetCode)](https://www.youtube.com/watch?v=pNichitDD2E) - a second worked example combining a heap with a hash map, so the pattern generalizes beyond LRU *(Composio YouTube)*
-- Interactive simulator: [VisuAlgo - List (Doubly Linked List)](https://visualgo.net/en/list) - step through insert/delete-at-both-ends by hand, the exact operation an LRU cache needs on every access
-- Written documentation: [GeeksforGeeks - LRU Cache Implementation](https://www.geeksforgeeks.org/dsa/lru-cache-implementation/)
-- GitHub implementation: [TheAlgorithms/Python - data_structures/hashing (lru_cache concepts)](https://github.com/TheAlgorithms/Python) and Python's own `functools.lru_cache` [source](https://github.com/python/cpython/blob/main/Lib/functools.py), a real production implementation of exactly this idea
-- Practice platform: [LeetCode Design tag](https://leetcode.com/tag/design/) - every problem there requires combining at least two structures
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 Take the LRU (Least Recently Used) cache as the canonical example, because its requirement is stated as two guarantees that sound like they belong to two different structures: `get(key)` and `put(key, value)` must both run in $O(1)$, **and** when the cache is full, the item to evict must be whichever one was used furthest in the past. A hash map alone gives you $O(1)$ `get`/`put` but no idea of *order of use*. A linked list alone gives you order but only $O(n)$ lookup by key. Neither one, alone, satisfies the requirement - so you run both at once, over the *same* set of items, and make every operation touch both structures together:
 
@@ -9266,11 +8330,7 @@ Take the LRU (Least Recently Used) cache as the canonical example, because its r
 
 The discipline that makes this work is doing both halves of every operation *together, every time, with no exceptions*: every `get` that hits must move that node to the front of the list; every `put` must insert into both the map and the list, and evict from both when over capacity. Update one structure and forget the other, even once, and the two fall out of sync - the map points at a node no longer in the list, or the list has a node the map can no longer find.
 
-**PICTURE IT LIKE THIS**
-
-A coat-check counter (the hash map: "ticket 42 -> hook B") that also keeps a physical queue of hooks ordered by how recently each coat was touched, with a runner who, every single time a coat is looked up, also walks over and moves that coat's hook to the front of the queue. Losing that runner's discipline for even one lookup, and the queue's order silently stops matching reality.
-
-**Internal Working, Step by Step -** `get` **and** `put` **on a capacity-2 LRU cache:**
+**VISUAL MODEL:** `get` **and** `put` **on a capacity-2 LRU cache:**
 
 ```text
 map = {}                       list (front=MRU ... back=LRU) = []
@@ -9286,8 +8346,7 @@ Every operation touched the map AND the list. Neither one, alone,
 could have told you the answer both parts of the requirement need.
 ```
 
-**HOW THE TIME AND MEMORY USE GROW**
-
+**TRADE-OFFS:**
 
 | Operation                 | Hash map alone                 | Linked list alone                               | Combined (LRU cache)                                           |
 | ------------------------- | ------------------------------ | ----------------------------------------------- | -------------------------------------------------------------- |
@@ -9296,10 +8355,9 @@ could have told you the answer both parts of the requirement need.
 | Evict least-recently-used | Not possible - no order at all | $O(1)$ once found, but finding it needs the map | $O(1)$                                                         |
 | Extra space               | $O(\text{capacity})$           | $O(\text{capacity})$                            | $O(\text{capacity})$ - roughly double the constant, same order |
 
-
 Combining two structures essentially never improves the *asymptotic* complexity beyond what the better of the two already offered on its own operation - what it buys is a guarantee that *no single structure* could offer for *all* required operations simultaneously. That trade-off - some extra constant-factor memory and bookkeeping, in exchange for meeting every guarantee at once - is the pattern to recognize, not a specific pair of structures to memorize.
 
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-48-lru-cache
 class Node:
@@ -9350,12 +8408,11 @@ print(cache.get(2))       # -1 -- 2 was evicted
 print(cache.get(3))       # "C"
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 "Design" problems (LRU Cache, LFU Cache, Design Twitter, a rate limiter, a leaderboard) are graded on whether you notice the requirement needs two guarantees no single structure gives you, name both structures explicitly, and are precise about which operations touch which structure. Saying "I'll use a hash map for O(1) lookup and a doubly linked list for O(1) recency ordering, and every get and put updates both" before writing code is the strongest possible opening.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Problem                      | Structures combined                                               |
 | ---------- | ---------------------------- | ----------------------------------------------------------------- |
@@ -9364,20 +8421,19 @@ print(cache.get(3))       # "C"
 | Medium     | Time Based Key-Value Store   | Hash map + sorted list (binary search on timestamps)              |
 | Hard       | LFU Cache                    | Hash map + hash map of doubly linked lists, bucketed by frequency |
 | Hard       | Design Twitter               | Hash map + heap (merge k most-recent feeds)                       |
-
-
-**Consolidation Capstone:** Build the [Phase 48 mini-project](../guides/Projects.md#cs-phase-48-project) now: implement an LRU cache from scratch (no `functools`), then extend it into a small "recently viewed items" service with a `get`, a `put`, and a `most_recent(n)` query - all three still $O(1)$ or $O(n)$ only in the size of the answer requested, never in the size of the whole cache.
+| Capstone | Build the [Phase 48 mini-project](../guides/Projects.md#cs-phase-48-project): LRU from scratch (no `functools`), then a "recently viewed items" service with `get`, `put`, and `most_recent(n)` — still $O(1)$ / $O(n)$ in answer size only. |
 
 **CHECK YOUR UNDERSTANDING AFTER PHASE 48 - Story V complete.** Without looking anything up: implement an LRU cache from scratch; state, for any structure from Phases 32-46, its access/insert/delete complexity and the one guarantee it cannot give you; and for a new problem you have not seen before, identify which single guarantee is missing from any one structure, and which second structure fills the gap. If you can do all three, you have the full data-structures-and-algorithms foundation the rest of this roadmap assumes.
 
-**WHY THE NEXT TOPIC IS NEEDED - Computer Architecture:** We now know how to organize data and choose efficient algorithms. But complexity analysis has been treating operations like memory access and function calls as abstract, uniform costs - one array access counted the same as any other, one function call counted the same as any other. Real computers are not abstract. Memory has levels, from a tiny fast cache down to slow disk. CPUs execute instructions one step at a time, in a fixed cycle. Caches change performance dramatically depending on *how* you access memory, not just *how much*. Programs occupy real, physical memory with a real layout. To understand why our algorithms behave the way they do on actual hardware - not just on the whiteboard - we now need to look inside the computer.
+**WHAT THIS UNLOCKS NEXT:**
+
+We now know how to organize data and choose efficient algorithms. But complexity analysis has been treating operations like memory access and function calls as abstract, uniform costs - one array access counted the same as any other, one function call counted the same as any other. Real computers are not abstract. Memory has levels, from a tiny fast cache down to slow disk. CPUs execute instructions one step at a time, in a fixed cycle. Caches change performance dramatically depending on *how* you access memory, not just *how much*. Programs occupy real, physical memory with a real layout. To understand why our algorithms behave the way they do on actual hardware - not just on the whiteboard - we now need to look inside the computer.
 
 ---
 
 > **Phase 48 complete?** [Build the Phase 48 mini-project](../guides/Projects.md#cs-phase-48-project) · [Continue to Phase 49](#phase-49)
 
 ---
-
 
 
 # PHASE 49 - Computer Architecture
@@ -9390,21 +8446,22 @@ print(cache.get(3))       # "C"
 
 > **Formal after Phase 4:** Phase 4 was the map. Phase 49 is the mechanism - named hardware, an instruction set, caches that change wall-clock time, and a light look at pipelining. Do not skip back to Phase 4 looking for depth that was intentionally deferred here.
 
+**LEARNING RESOURCES:**
+
+- [The Central Processing Unit (CPU): Crash Course Computer Science #7](https://www.youtube.com/watch?v=FZGugFqdr60) - tiny CPU stepped through clock cycles
+- [How Computers Calculate - the ALU: Crash Course Computer Science #5](https://www.youtube.com/watch?v=1I5ZMmrOfnA) - what Execute actually uses
+- [Advanced CPU Designs: Crash Course Computer Science #9](https://www.youtube.com/watch?v=rtAlC5J1U40) - cache, pipelining, and why "wait for RAM" dominates
+- [ISA 1.1 Introduction to the ISA (David Black-Schaffer)](https://www.youtube.com/watch?v=PlavjNH_RRU) - ISA as the software/hardware contract
+- [Fetch-Decode-Execute Cycle visualiser](https://cpu.toolsforteaching.co.uk/) and [NandGame](https://www.nandgame.com/) - step micro-operations; build toward a CPU
+- [What Every Programmer Should Know About Memory (Ulrich Drepper, PDF)](https://people.freebsd.org/~lstewart/articles/cpumemory.pdf) - skim hierarchy/caches; [Nand2Tetris](https://www.nand2tetris.org/) for a full build-from-gates path
+
 ## 49.1 The Fetch-Decode-Execute Cycle
 
-**WHY YOU ARE LEARNING THIS:** Phase 4 showed the three-step loop at a glance. That was enough to stop treating "the CPU runs your program" as magic. Now you need the *parts* inside that loop - the program counter, the instruction register, the ALU, and a handful of general-purpose registers - because every later systems idea (a stack overflow, a context switch, a cache miss) is a story about what those parts are doing when something goes wrong or slow.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Phase 4 showed the three-step loop at a glance - enough to stop treating "the CPU runs your program" as magic. Now you need the *parts* inside that loop: the program counter, the instruction register, the ALU, and a handful of general-purpose registers. Every later systems idea (a stack overflow, a context switch, a cache miss) is a story about what those parts are doing when something goes wrong or slow.
 
-- Best animated explanation: [The Central Processing Unit (CPU): Crash Course Computer Science #7](https://www.youtube.com/watch?v=FZGugFqdr60) - builds a tiny CPU and steps through clock cycles slowly enough to follow by hand
-- Alternative: [How Computers Calculate - the ALU: Crash Course Computer Science #5](https://www.youtube.com/watch?v=1I5ZMmrOfnA) - the arithmetic/logic unit that Execute actually uses
-- Another angle: [Advanced CPU Designs: Crash Course Computer Science #9](https://www.youtube.com/watch?v=rtAlC5J1U40) - cache, pipelining, and why "wait for RAM" became the bottleneck
-- Interactive simulator: [Fetch-Decode-Execute Cycle visualiser](https://cpu.toolsforteaching.co.uk/) - step PC → MAR → MDR → CIR → ALU one micro-operation at a time; also [NandGame](https://www.nandgame.com/) (continue from Phase 3 toward a working CPU)
-- Written documentation: [Nand2Tetris / The Elements of Computing Systems](https://www.nand2tetris.org/) - free course that builds a computer from NAND gates up through a high-level language
-- GitHub: [teivah/nand2tetris](https://github.com/teivah/nand2tetris) - worked solutions and notes for the Nand2Tetris projects
-- Practice: Trace the tiny program in the working example below by hand before you run it
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 A modern CPU still does what Phase 4 sketched, but with named hardware pieces:
 
@@ -9413,6 +8470,8 @@ A modern CPU still does what Phase 4 sketched, but with named hardware pieces:
 3. **Execute.** The **ALU** (arithmetic/logic unit) does the work - add, subtract, AND, compare - using values from **registers** (tiny, on-chip storage, a handful of words) and sometimes from RAM. Results go back into a register or into memory.
 
 This is the **von Neumann** model: instructions and data share the same addressable memory. The CPU cannot tell a number from an instruction except by *when* it fetches it - which is why a wrong jump can "execute" data and crash.
+
+**VISUAL MODEL:**
 
 ```text
         +------------------+
@@ -9429,11 +8488,9 @@ Clock tick 3: EXECUTE ALU computes R1+R2 -> write result into R1
 (repeat billions of times per second)
 ```
 
-**PICTURE IT LIKE THIS**
+Think of a chef with a recipe card (IR), a bookmark on the current step (PC), a few mixing bowls on the counter (registers), a big pantry down the hall (RAM), and a knife/stove (ALU). Fetch grabs the next recipe line; decode decides whether to chop or heat; execute does it. The pantry trip is the expensive part - which is why the next section exists.
 
-A chef with a recipe card (IR), a bookmark on the current step (PC), a few mixing bowls on the counter (registers), a big pantry down the hall (RAM), and a knife/stove (ALU). Fetch grabs the next recipe line; decode decides whether to chop or heat; execute does it. The pantry trip is the expensive part - which is why the next section exists.
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 A toy CPU in Python. Each "instruction" is a tuple. Trace it on paper first; then run it.
 
@@ -9476,36 +8533,23 @@ while True:
 print("result:", memory[12])  # 12
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 You rarely implement a CPU, but you *do* explain crashes and performance. "A segfault is the CPU trying to execute or access an address the OS has not mapped" and "this loop is slow because it thrashes the cache" both require the fetch-decode-execute + memory model, not just Big O.
-
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task |
-| ---------- | ---- |
-| Easy       | On [cpu.toolsforteaching.co.uk](https://cpu.toolsforteaching.co.uk/), step one LOAD and one ADD; write down PC, MAR, MDR, CIR, ACC after each micro-step |
-| Medium     | Extend the toy CPU above with a `JMP` instruction that sets `pc` to an address; write a 3-instruction loop that adds 1 to a counter ten times |
-| Hard       | On [NandGame](https://www.nandgame.com/), reach the CPU levels (or start Nand2Tetris Project 5) and explain what the program counter must do on a conditional jump |
-
-
-**WHY THE NEXT TOPIC IS NEEDED - Caches:** The cycle above pretends every memory access costs the same. On real hardware, RAM is orders of magnitude slower than a register. Without a fix, the CPU would spend most of its life waiting. That fix is the memory hierarchy.
 
 ---
 
 ## 49.2 The Memory Hierarchy & Caches
 
-**WHY YOU ARE LEARNING THIS:** Phase 31's Big O deliberately ignores constant factors and hardware. That is the right tool for comparing algorithms *in the abstract*. It is the wrong tool for explaining why scanning an array beats chasing a linked list of the same length on a real machine - both are $O(n)$, but one walks contiguous cache lines and the other jumps around RAM. Architecture is where that gap becomes a mechanism, not a mystery.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Phase 31's Big O deliberately ignores constant factors and hardware. That is the right tool for comparing algorithms *in the abstract*. It is the wrong tool for explaining why scanning an array beats chasing a linked list of the same length on a real machine - both are $O(n)$, but one walks contiguous cache lines and the other jumps around RAM. Architecture is where that gap becomes a mechanism, not a mystery.
 
-- [Advanced CPU Designs: Crash Course Computer Science #9](https://www.youtube.com/watch?v=rtAlC5J1U40) - cache hits/misses and the dirty bit
-- [Memory & Storage: Crash Course Computer Science #19](https://www.youtube.com/watch?v=TQCr9RV7twk) - the full hierarchy from registers to disk
-- Interactive: re-run any array-vs-linked-list microbenchmark from Phase 32/33 and watch the wall-clock gap; the architecture explanation is here
-- Written: [What Every Programmer Should Know About Memory (Ulrich Drepper, PDF)](https://people.freebsd.org/~lstewart/articles/cpumemory.pdf) - dense but the canonical reference; skim sections 2-3 for hierarchy and caches
+**THE PROBLEM:**
 
-**STEP-BY-STEP EXPLANATION**
+The cycle in 49.1 pretends every memory access costs the same. On real hardware, RAM is orders of magnitude slower than a register. Without a fix, the CPU would spend most of its life waiting.
+
+**HOW IT WORKS:**
 
 Memory is arranged as a pyramid: tiny and fast near the CPU, large and slow farther away.
 
@@ -9520,7 +8564,7 @@ Memory is arranged as a pyramid: tiny and fast near the CPU, large and slow fart
 
 When the CPU needs a value, it asks the nearest level first. A **cache hit** returns data in a few cycles. A **cache miss** fetches a whole **cache line** (typically 64 bytes) from the next level, hoping nearby addresses will be needed soon - **spatial locality**. Values used recently tend to be used again - **temporal locality**. Sequential array scans exploit both; pointer-chasing linked lists often exploit neither.
 
-**BEFORE VS. AFTER**
+**VISUAL MODEL:**
 
 ```text
 Big O view (Phase 31):
@@ -9533,12 +8577,9 @@ Hardware view:
   wall-clock:     often 5-20x apart on the same n
 ```
 
-**PICTURE IT LIKE THIS**
-
 A desk (registers), a bookshelf at arm's reach (L1/L2), a library across town (RAM), and a warehouse in another city (disk). Algorithms that keep working on the same few pages of the bookshelf look "mysteriously fast." Algorithms that keep requesting a random warehouse box look "mysteriously slow" - even when both do $n$ abstract operations.
 
-**HOW THE TIME AND MEMORY USE GROW**
-
+**TRADE-OFFS:**
 
 | Access pattern                         | Typical behavior                         | Why |
 | -------------------------------------- | ---------------------------------------- | --- |
@@ -9548,34 +8589,15 @@ A desk (registers), a bookshelf at arm's reach (L1/L2), a library across town (R
 | Working set fits in L1                 | Near-register speed                      | Temporal locality |
 | Working set exceeds RAM                | Thrashing (Phase 50)                     | Disk enters the hierarchy |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task |
-| ---------- | ---- |
-| Easy       | Without looking, order registers, L1, RAM, SSD from fastest to slowest |
-| Medium     | Explain why `sum(arr)` on a contiguous Python `array`/`numpy` buffer often beats summing a linked list of the same integers, even though both are $O(n)$ |
-| Hard       | Write two loops over a large list of ints: one sequential, one jumping by 16 elements; measure and explain the gap using cache lines (not Big O) |
-
-
-**WHY THE NEXT TOPIC IS NEEDED - ISA & Pipelining:** The cycle and the cache hierarchy still leave two beginner questions unanswered: what *is* an "instruction" as a language the hardware speaks, and how can a CPU finish roughly one instruction per clock when fetch-decode-execute looks like three steps? Those are the next section - still architecture, still beginner depth, not compiler theory.
-
 ---
 
 ## 49.3 Instruction Sets & Pipelining (Light)
 
-**WHY YOU ARE LEARNING THIS:** Phase 4 named "ISA" as a label. Without a short formal pass, "x86 vs ARM" and "why is my CPU waiting" stay marketing words. You need just enough to know that software targets an **instruction set architecture**, and that real CPUs **pipeline** the cycle from 49.1 so stages overlap - with hazards that stall the pipeline.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Phase 4 named "ISA" as a label. Without a short formal pass, "x86 vs ARM" and "why is my CPU waiting" stay marketing words. You need just enough to know that software targets an **instruction set architecture**, and that real CPUs **pipeline** the cycle from 49.1 so stages overlap - with hazards that stall the pipeline.
 
-- Best animated explanation: [Advanced CPU Designs: Crash Course Computer Science #9](https://www.youtube.com/watch?v=rtAlC5J1U40) - pipelining, hazards, and why "wait for RAM" dominates *(Composio YouTube verified)*
-- Alternative: [The Central Processing Unit (CPU): Crash Course Computer Science #7](https://www.youtube.com/watch?v=FZGugFqdr60) - revisit the instruction stream now that you have named registers and the ALU *(Composio YouTube verified)*
-- Another angle: [ISA 1.1 Introduction to the ISA (David Black-Schaffer)](https://www.youtube.com/watch?v=PlavjNH_RRU) - what an instruction set architecture is as a contract *(Composio YouTube)*
-- Interactive: [cpu.toolsforteaching.co.uk](https://cpu.toolsforteaching.co.uk/) - watch how a jump forces the next fetch address to change (a control hazard in miniature)
-- Written: [Nand2Tetris chapters on machine language](https://www.nand2tetris.org/course) - Hack assembly as a tiny ISA; skim only - do not start a full compiler course here
-- Practice: Extend the Phase 49 toy CPU with one `JMP` and one conditional branch; explain in one sentence why the pipeline (if it existed) would need to discard a wrongly-fetched instruction after a mispredicted branch
-
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 An **ISA** (instruction set architecture) is the contract between software and hardware: which opcodes exist, how many registers there are, how memory is addressed, and what a "word" means. Compilers and interpreters from Phase 5 / Phase 51 target an ISA; the silicon implements it. Two machines can share an ISA (same binaries) or differ (x86-64 laptop vs ARM phone) even when both run a fetch-decode-execute loop. You do not need RISC vs CISC taxonomy here - only: **programs are sequences of ISA instructions, not Python source.**
 
@@ -9586,6 +8608,8 @@ An **ISA** (instruction set architecture) is the contract between software and h
 3. **Structural hazard** - two stages need the same hardware unit at once → rare on modern designs with separate resources.
 
 This phase stops before out-of-order execution, speculation depth, or microcode. Those are advanced architecture. You only need: **pipeline = overlap stages; hazards = reasons the overlap pauses.**
+
+**VISUAL MODEL:**
 
 ```text
 Non-pipelined (Phase 4 / early 49.1 picture):
@@ -9601,23 +8625,29 @@ After a mispredicted branch:
         [F][D]  X  <- wrong path flushed; bubbles until correct target is fetched
 ```
 
-**PICTURE IT LIKE THIS**
-
 The ISA is the menu the kitchen (CPU) knows how to cook. Pipelining is hiring three cooks who each own one station (fetch / decode / execute) and keep all stations busy - until someone orders "cancel that plate" (a branch) and half-finished wrong plates get thrown out.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**TRADE-OFFS:**
 
+Pipelining raises throughput without making any single instruction finish in fewer stages - but hazards force stalls and flushes. Poor locality (49.2) hurts both cache hit rate *and* how useful the pipeline is, because the next fetch or data load is hard to predict.
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
+| Easy       | On [cpu.toolsforteaching.co.uk](https://cpu.toolsforteaching.co.uk/), step one LOAD and one ADD; write down PC, MAR, MDR, CIR, ACC after each micro-step |
+| Easy       | Without looking, order registers, L1, RAM, SSD from fastest to slowest |
 | Easy       | In one sentence: what does an ISA define that a programming language does not? |
+| Medium     | Extend the toy CPU above with a `JMP` instruction that sets `pc` to an address; write a 3-instruction loop that adds 1 to a counter ten times |
+| Medium     | Explain why `sum(arr)` on a contiguous buffer often beats summing a linked list of the same integers, even though both are $O(n)$ |
 | Medium     | Name one data hazard and one control hazard using the toy CPU instructions from 49.1 |
-| Hard       | Explain why a linked-list walk can hurt *both* cache hit rate (49.2) *and* pipeline usefulness (harder to prefetch the next instruction/data) without changing Big O |
+| Hard       | On [NandGame](https://www.nandgame.com/), reach the CPU levels (or start Nand2Tetris Project 5) and explain what the program counter must do on a conditional jump |
+| Hard       | Write two loops over a large list of ints: one sequential, one jumping by 16 elements; measure and explain the gap using cache lines (not Big O) |
+| Hard       | Explain why a linked-list walk can hurt *both* cache hit rate (49.2) *and* pipeline usefulness without changing Big O |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**CHECK YOUR UNDERSTANDING AFTER PHASE 49:** Trace three instructions through fetch-decode-execute naming PC, IR, and ALU; say what an ISA is; name one pipeline hazard; and explain one case where cache behavior changes performance without changing Big O.
-
-**WHY THE NEXT TOPIC IS NEEDED - Memory & Program Representation:** The CPU fetches *addresses*. So far those addresses have been a flat fiction - "location 12." On a real machine, every process believes it owns a private, contiguous address space, while physical RAM is shared, fragmented, and sometimes paged out to disk. How that illusion is maintained - and why a bad *pointer* (address) becomes a segfault - is Phase 50.
+Trace three instructions through fetch-decode-execute naming PC, IR, and ALU; say what an ISA is; name one pipeline hazard; and explain one case where cache behavior changes performance without changing Big O. The CPU fetches *addresses* - so far a flat fiction. On a real machine, every process believes it owns a private address space while physical RAM is shared and sometimes paged out. How that illusion is maintained - and why a bad pointer becomes a segfault - is Phase 50.
 
 ---
 
@@ -9637,61 +8667,38 @@ The ISA is the menu the kitchen (CPU) knows how to cook. Pipelining is hiring th
 
 > **Formal after Phase 5:** Phase 5 sketched stack vs heap inside one process. Phase 50 is where virtual memory, page faults, and **systems-depth pointers** (addresses the CPU and MMU actually use) become mechanisms. Phase 22.2's reference semantics were *not* this - do not treat pointers as "already done."
 
+**LEARNING RESOURCES:**
+
+- [Virtual Memory Explained, including Paging (BitLemon)](https://www.youtube.com/watch?v=fGP6VHxqkIM) - virtual-to-physical translation as boxes and arrows
+- [Page Tables and MMU (BitLemon)](https://www.youtube.com/watch?v=B6tJxvYBNrU) and [MultiLevel Page Tables](https://www.youtube.com/watch?v=zNPVmTGt7Ds) - why a flat page table cannot fit, and how levels fix it
+- [Virtual Memory: Address Translation Example Walkthrough (David Black-Schaffer)](https://www.youtube.com/watch?v=6neHHkI0Z0o) - one translation by hand with real numbers
+- [Essentials: Pointer Power! (Computerphile)](https://www.youtube.com/watch?v=t5NszbIerYc) and [Hidden Pointers](https://www.youtube.com/watch?v=knP_5e57biw) - pointers as addresses; the PC as the CPU's pointer
+- [OSTEP chapters 13–23](https://pages.cs.wisc.edu/~remzi/OSTEP/) - address spaces through TLBs and swapping; [xv6-riscv `vm.c`](https://github.com/mit-pdos/xv6-riscv) - a readable page-table implementation
+- [OSTEP homework simulators](https://github.com/remzi-arpacidusseau/ostep-homework) (`paging-linear-translate.py`, `paging-multilevel-translate.py`) - quiz yourself on translations
+
 ## 50.1 Memory & Virtual Memory
 
-**WHY YOU ARE LEARNING THIS:** If every process addressed physical RAM directly, one process could read or overwrite another's memory just by guessing an address - exactly the isolation failure Phase 52 will solve with processes. Virtual memory is the mechanism underneath that isolation: each process gets its own private *virtual* address space; the OS (with hardware help from the CPU's memory management unit) translates virtual addresses to real physical addresses behind the scenes, so no process ever sees another's actual memory layout.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+If every process addressed physical RAM directly, one process could read or overwrite another's memory just by guessing an address - exactly the isolation failure Phase 52 will solve with processes. Virtual memory is the mechanism underneath that isolation: each process gets its own private *virtual* address space; the OS (with hardware help from the CPU's memory management unit) translates virtual addresses to real physical addresses behind the scenes.
 
-- Best animated explanation: [Virtual Memory Explained, including Paging (BitLemon)](https://www.youtube.com/watch?v=fGP6VHxqkIM) - animates the virtual-to-physical translation as boxes and arrows, which is exactly the mental model you need
-- Alternative: [Page Tables and MMU: How Virtual Memory Actually Works Behind the Scenes (BitLemon)](https://www.youtube.com/watch?v=B6tJxvYBNrU) and its follow-up [MultiLevel Page Tables](https://www.youtube.com/watch?v=zNPVmTGt7Ds) - the second answers the question the first one raises, namely how a page table for a 64-bit address space can possibly fit in memory
-- Another angle: [Virtual Memory: Address Translation Example Walkthrough (David Black-Schaffer)](https://www.youtube.com/watch?v=6neHHkI0Z0o) works one translation by hand with real numbers, and [Segmented, Paged and Virtual Memory (Computer Science Lessons)](https://www.youtube.com/watch?v=p9yZNLeOj4s) covers the segmentation approach that paging replaced
-- Interactive simulator: run `cat /proc/self/maps` on Linux (or `vmmap <pid>` on macOS) to print the actual virtual address space layout of a live process, segment by segment. You will see the same stack/heap/text regions from Phase 5, now with their virtual addresses and permissions
-- Written documentation: [OSTEP chapters 13 through 23](https://pages.cs.wisc.edu/~remzi/OSTEP/) are the definitive free treatment, walking from address spaces to segmentation to paging to TLBs to swapping in exactly that order
-- GitHub implementation: [xv6-riscv](https://github.com/mit-pdos/xv6-riscv) - read `vm.c`, which is a real, complete page-table implementation short enough to read in one sitting
-- Practice platform: [OSTEP homework simulators](https://github.com/remzi-arpacidusseau/ostep-homework) `paging-linear-translate.py` and `paging-multilevel-translate.py` generate random page tables and quiz you on translations, then show the answers
+**THE PROBLEM:**
 
-**STEP-BY-STEP EXPLANATION**
+Direct physical addressing makes process isolation impossible, and a program that needs more memory than physically exists simply cannot run.
 
-Address translation works by splitting every virtual address into two parts. The low bits are the **offset** within a page, and the high bits are the **virtual page number**. With 4 KB pages, the low 12 bits are the offset (because $2^{12}=4096$) and everything above is the page number. Translation therefore never touches the offset: it looks up the page number in a page table to find a physical frame number, then concatenates that frame number with the untouched offset. This is why page size and the offset width are the same fact stated twice.
+**HOW IT WORKS:**
 
-The obvious problem with that scheme is table size. A 48-bit virtual address space with 4 KB pages has $2^{36}$ pages, which at 8 bytes per entry would be a 512 GB page table per process. The fix is a **multi-level page table**: the page number is itself split into several indices, each selecting an entry in a smaller table that points to the next level down. Most of the address space is unmapped, so most of those intermediate tables never need to exist at all, and the table's size becomes proportional to how much memory the process actually uses rather than to how much it could theoretically address. x86-64 uses four levels, which means a naive translation would take four memory reads before the real one.
+Address translation splits every virtual address into two parts. The low bits are the **offset** within a page, and the high bits are the **virtual page number**. With 4 KB pages, the low 12 bits are the offset (because $2^{12}=4096$) and everything above is the page number. Translation never touches the offset: it looks up the page number in a page table to find a physical frame number, then concatenates that frame number with the untouched offset.
 
-That cost is what the **TLB** (translation lookaside buffer) exists to eliminate. It is a small, fully-associative hardware cache of recent virtual-page-to-physical-frame mappings, and on a hit, translation is effectively free. TLB hit rates above 99 percent are normal, which is the only reason paging is practical. It is also the hidden reason locality of reference matters so much for performance: an array traversal touches few pages and hits the TLB constantly, while chasing pointers through a linked list scattered across memory misses the TLB repeatedly and pays the multi-level walk each time. The linked-list-versus-array performance gap from Phase 32 is partly this.
+The obvious problem is table size. A 48-bit virtual address space with 4 KB pages has $2^{36}$ pages, which at 8 bytes per entry would be a 512 GB page table per process. The fix is a **multi-level page table**: the page number is itself split into several indices, each selecting an entry in a smaller table that points to the next level down. Most of the address space is unmapped, so most intermediate tables never exist, and table size grows with memory actually used. x86-64 uses four levels - a naive translation would take four memory reads before the real one.
 
-When a process touches a page that is not in physical memory, the hardware raises a **page fault**, which is not an error but a normal, designed control transfer to the OS. The OS then finds a free physical frame (evicting some other page if none is free), reads the needed page in from disk, updates the page table, and restarts the faulting instruction, which now succeeds. Choosing what to evict is the page replacement policy: the theoretically optimal choice is "the page that will be used furthest in the future," which requires knowing the future, so real systems approximate least-recently-used with a clock or second-chance algorithm. When the working set of all running processes exceeds physical RAM, every fault evicts a page that is about to be needed again, and the system spends its time swapping rather than computing. That is **thrashing**, and it is why a machine under memory pressure does not slow down gracefully; it falls off a cliff.
+That cost is what the **TLB** (translation lookaside buffer) exists to eliminate: a small hardware cache of recent virtual-page-to-physical-frame mappings. On a hit, translation is effectively free. TLB hit rates above 99 percent are normal - the only reason paging is practical. It is also why locality matters so much: an array traversal touches few pages and hits the TLB constantly; chasing pointers through a scattered linked list misses the TLB repeatedly. The array-versus-linked-list gap from Phase 32/49.2 is partly this.
 
-Paging buys several things beyond isolation that are worth naming, because they explain features you have used without thinking about them. Two processes running the same program can share one physical copy of its read-only code by mapping the same frames, which is why launching a second instance of an editor costs far less memory than the first. `fork()` can be nearly free through **copy-on-write**: parent and child initially share every frame, marked read-only, and only the specific pages one of them writes get copied. And **memory-mapped files** let you treat a file on disk as an array in memory, with the page-fault mechanism doing the reads on demand.
+When a process touches a page that is not in physical memory, the hardware raises a **page fault** - not an error, but a designed control transfer to the OS. The OS finds a free physical frame (evicting some other page if needed), reads the needed page from disk, updates the page table, and restarts the faulting instruction. Choosing what to evict is page replacement (clock / second-chance approximate LRU). When the working set of all running processes exceeds physical RAM, every fault evicts a page that is about to be needed again - **thrashing** - and the machine falls off a cliff rather than slowing gracefully.
 
-**BEFORE VS. AFTER**
+Paging also buys sharing you have used without naming it: two processes can map the same read-only code frames; `fork()` can be nearly free via **copy-on-write**; **memory-mapped files** treat a file as an array with page faults fetching pages on demand.
 
-```text
-Direct physical addressing
-        Problem: process isolation is impossible; also, a program needing
-        more memory than physically exists simply cannot run.
-
-Virtual memory (paging)
-        Fix: each process's virtual address space is divided into fixed-size
-        "pages"; the OS maps each page to a physical memory "frame" (or,
-        under pressure, to disk).
-
-        Trade-off: address translation costs a lookup on every memory access
-        (sped up by hardware caching, the TLB); and a memory access whose
-        page has been swapped to disk ("a page fault") is dramatically slower
-        than one already in RAM.
-```
-
-**Internal Working, Step by Step**
-
-```text
-Process A's virtual address 0x4000  --(page table lookup)-->  physical frame 17
-Process B's virtual address 0x4000  --(page table lookup)-->  physical frame 42
-
-Both processes can use the SAME virtual address, unaware that the OS
-has mapped them to completely different, isolated physical locations.
-```
-
-Drawn in full, with the address split made explicit:
+**VISUAL MODEL:**
 
 ```text
 A VIRTUAL ADDRESS, 4 KB pages (so a 12-bit offset):
@@ -9715,7 +8722,7 @@ Example: virtual 0x00004AB8, page size 4 KB
    page table[4]   = frame 0x11
    physical addr   = 0x00011AB8     <- frame concatenated with the SAME offset
 
-THE FULL LOOKUP PATH, in the order the hardware tries it:
+THE FULL LOOKUP PATH:
 
   CPU issues virtual address
         |
@@ -9743,14 +8750,12 @@ THE FULL LOOKUP PATH, in the order the hardware tries it:
                    ~10 milliseconds on spinning disk),
                    update the page table, then RESTART the instruction.
 
-  Cost ladder, so the stakes are visible:
-      TLB hit ................ ~1 ns      (free, effectively)
-      TLB miss, table walk ... ~100 ns    (4 memory reads)
+  Cost ladder:
+      TLB hit ................ ~1 ns
+      TLB miss, table walk ... ~100 ns
       page fault, from SSD ... ~100,000 ns
       page fault, from HDD ... ~10,000,000 ns
   A page fault is roughly a MILLION times more expensive than a TLB hit.
-  That ratio is why "it fits in RAM" is the single most important
-  performance question about any workload.
 
 TWO PROCESSES, SAME VIRTUAL ADDRESS, AND ONE SHARED FRAME:
 
@@ -9762,37 +8767,28 @@ TWO PROCESSES, SAME VIRTUAL ADDRESS, AND ONE SHARED FRAME:
   +--------------------+    |     | frame 55    |<------| 0x1000 (stack)     |
                             |     |             |       +--------------------+
                             +---->| frame 63    |<--+
-                                  | (the SAME   |   |
+                                  | (shared     |   |
                                   |  read-only  |   |
-                                  |  program    |   |
                                   |  code)      |   |
                                   +-------------+   |
-                                                    |
-  Both A and B use virtual 0x1000, mapped to        |
-  DIFFERENT frames: that is isolation.              |
-  Both A and B map their code to the SAME frame: ---+
-  that is sharing, and it is why the second copy
-  of a program costs almost nothing to launch.
+  Both A and B use virtual 0x1000, mapped to DIFFERENT frames: isolation.
+  Both A and B map their code to the SAME frame: sharing.
 ```
 
-**PICTURE IT LIKE THIS**
+Virtual memory is like every hotel room having its own "Room 101" nameplate - guests never see the building's actual room numbering; the front desk (OS + MMU) silently translates.
 
-Virtual memory is like every hotel room having its own "Room 101" nameplate - guests never see the building's actual internal wiring or room numbering; the front desk (the OS + MMU) silently translates "your Room 101" to the actual physical location.
-
-**Complexity / Trade-off:** Paging enables running programs larger than physical RAM (the excess lives on disk, swapped in on demand) and hard isolation between processes, at the cost of translation overhead and the risk of "thrashing" - spending more time swapping pages in and out than doing real work, when too many processes compete for too little physical RAM.
-
+**TRADE-OFFS:**
 
 | Mechanism               | What it buys                                                       | What it costs                                                                                     |
 | ----------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
 | Paging                  | Hard isolation between processes, and programs larger than RAM     | A translation on every single memory access                                                       |
 | TLB                     | Makes that translation effectively free on a hit                   | A fixed, small number of entries, so poor locality destroys the hit rate                          |
 | Multi-level page tables | Table size grows with memory actually used, not address space size | Four memory reads on every TLB miss                                                               |
-| Swapping to disk        | The machine keeps running instead of refusing to start a program   | Thrashing, where the system does nothing but swap, at a million times the cost of a normal access |
+| Swapping to disk        | The machine keeps running instead of refusing to start a program   | Thrashing, where the system does nothing but swap                                                 |
 | Copy-on-write           | `fork()` becomes nearly free                                       | A page fault on the first write to each shared page                                               |
 | Shared read-only frames | A second instance of a program costs almost no extra memory        | Requires the OS to track how many mappings point at each frame                                    |
 
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-50-virtual-memory
 import os, mmap
@@ -9834,48 +8830,31 @@ os.remove("demo.bin")
 # an address inside it is actually touched.
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**INTERVIEW NOTE:**
 
-
-| Difficulty | Task                                                                                                                                                                                                  |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Print `/proc/self/maps` (or the equivalent on your OS) and identify the stack, the heap, and the code segment. Confirm the code segment is not writable                                               |
-| Easy       | Given 4 KB pages, translate virtual address `0x00007C34` by hand if the page table maps virtual page `0x7` to frame `0x23`                                                                            |
-| Medium     | Write two loops over the same 1 GB array, one sequential and one strided by 4096 bytes, and measure the difference. Explain the gap in terms of TLB misses rather than cache misses                   |
-| Medium     | Run `[paging-linear-translate.py](https://github.com/remzi-arpacidusseau/ostep-homework)` from the OSTEP homework set with `-c` to check your answers, until you can do translations without the tool |
-| Medium     | Cause a segmentation fault deliberately in C, then explain the crash in terms of the page table rather than in terms of "bad pointer"                                                                 |
-| Hard       | Simulate LRU, FIFO, and clock page replacement on the same reference string and count the faults for each. Then find a reference string where FIFO beats LRU                                          |
-| Hard       | Read `vm.c` in [xv6-riscv](https://github.com/mit-pdos/xv6-riscv) and write down what `walk()` does in three sentences                                                                                |
-
-
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
-
-Understanding virtual memory is what makes "why did my program crash with a segmentation fault" and "why is my program suddenly slow when memory is under pressure" answerable rather than mysterious.
-
-**WHY THE NEXT TOPIC IS NEEDED - Pointers at systems depth:** Virtual memory explains *which* addresses are legal. It does not yet teach what a **pointer** is: a value that *is* an address, used deliberately by programs (and by every load/store the CPU issues). Phase 22.2 showed Python references as an OOP preview; the next section teaches the systems version.
+Virtual memory is what makes "why did my program crash with a segmentation fault" and "why is my program suddenly slow under memory pressure" answerable rather than mysterious.
 
 ---
 
 ## 50.2 Pointers & Addresses (Systems Depth)
 
-**WHY YOU ARE LEARNING THIS:** Phase 22.2 taught that Python names hold *references* to heap objects - identity vs equality, aliasing bugs. That was correct for OOP, and incomplete for systems: underneath, a reference is still "here is a numeric address the MMU must translate." Linked lists (Phase 33), the stack pointer, the program counter (Phase 49), and every `*` in C are the same idea made explicit. If you stop at Python references, segfaults and "dangling pointer" stay metaphors.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Phase 22.2 taught that Python names hold *references* to heap objects - identity vs equality, aliasing bugs. That was correct for OOP, and incomplete for systems: underneath, a reference is still "here is a numeric address the MMU must translate." Linked lists (Phase 33), the stack pointer, the program counter (Phase 49), and every `*` in C are the same idea made explicit. If you stop at Python references, segfaults and "dangling pointer" stay metaphors.
 
-- Best animated explanation: [Essentials: Pointer Power! (Computerphile)](https://www.youtube.com/watch?v=t5NszbIerYc) - pointers as addresses, then linked structures *(Composio YouTube verified)*
-- Alternative: [Essentials: Hidden Pointers (Computerphile)](https://www.youtube.com/watch?v=knP_5e57biw) - the program counter / instruction pointer as "the CPU's pointer" *(Composio YouTube verified)*
-- Another angle: [Virtual Memory Explained (BitLemon)](https://www.youtube.com/watch?v=fGP6VHxqkIM) - reconnect: every pointer value is a *virtual* address until the MMU maps it
-- Interactive: in Python, `id(x)` prints an identity related to where the object lives; contrast with C's `&x` / `*p` mental model in the example below (playground shows the idea without requiring a C compiler)
-- Written: [OSTEP chapters on address spaces](https://pages.cs.wisc.edu/~remzi/OSTEP/) (same book as 50.1) - addresses as the unit processes manipulate
-- Practice: Trace the diagram below on paper, then cause a deliberate "bad address" story (null / freed / out of range) and name which page-table outcome it maps to from 50.1
+**THE PROBLEM:**
 
-**STEP-BY-STEP EXPLANATION**
+Virtual memory explains *which* addresses are legal. It does not yet teach what a **pointer** is: a value that *is* an address, used deliberately by programs (and by every load/store the CPU issues).
 
-1. **An address is a number.** RAM (and the virtual address space) is a huge array of bytes. Location `0x7ffd...` is not magic - it is an integer the CPU puts on the address bus during a load/store (Phase 49).
-2. **A pointer is a value that stores an address.** In C: `int *p = &x;` means `p` holds the address of `x`. Dereference `*p` means "load/store the bytes *at* that address." In Python you rarely see `*` , but every object reference is still an address-sized handle the runtime follows.
-3. **Null / None.** Address `0` (or a sentinel) means "points nowhere." Dereferencing it is illegal → page fault → usually SIGSEGV. Always check before use in low-level code.
-4. **Dangling / use-after-free.** A pointer still holds an old address after the object is gone (stack frame returned, heap block freed). The address may now be unmapped (clean crash) or remapped to something else (silent corruption). This is why "returning a pointer to a local" is a classic bug - Phase 5's stack layout made that inevitable once you see addresses.
-5. **Pointer arithmetic (idea only).** `p + 1` advances by `sizeof(*p)` bytes, not by one - arrays are contiguous addresses (Phase 32). You do not need to master C arithmetic here; you need to know *why* contiguous layout enables `O(1)` indexing.
+**HOW IT WORKS:**
+
+1. **An address is a number.** RAM (and the virtual address space) is a huge array of bytes. Location `0x7ffd...` is an integer the CPU puts on the address bus during a load/store (Phase 49).
+2. **A pointer is a value that stores an address.** In C: `int *p = &x;` means `p` holds the address of `x`. Dereference `*p` means "load/store the bytes *at* that address." In Python you rarely see `*`, but every object reference is still an address-sized handle the runtime follows.
+3. **Null / None.** Address `0` (or a sentinel) means "points nowhere." Dereferencing it is illegal → page fault → usually SIGSEGV.
+4. **Dangling / use-after-free.** A pointer still holds an old address after the object is gone (stack frame returned, heap block freed). The address may now be unmapped (clean crash) or remapped to something else (silent corruption). Returning a pointer to a local is a classic bug - Phase 5's stack layout made that inevitable once you see addresses.
+5. **Pointer arithmetic (idea only).** `p + 1` advances by `sizeof(*p)` bytes, not by one - arrays are contiguous addresses (Phase 32). You do not need to master C arithmetic here; you need to know *why* contiguous layout enables $O(1)$ indexing.
+
+**VISUAL MODEL:**
 
 ```text
 Phase 22.2 (OOP preview)          Phase 50.2 (systems)
@@ -9887,11 +8866,9 @@ Phase 22.2 (OOP preview)          Phase 50.2 (systems)
   Python hides * and &               CPU / C / OS see addresses + page tables
 ```
 
-**PICTURE IT LIKE THIS**
-
 A pointer is a sticky note with a room number (virtual address). Dereferencing is walking to that room. Virtual memory (50.1) is the hotel front desk that maps room numbers to physical keys. A sticky note for a demolished room is a dangling pointer; a blank sticky note is null.
 
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-50-pointers
 # Systems idea in Python: ids are address-like identities; aliases share one object.
@@ -9921,21 +8898,27 @@ def bad_escape():
 print("Python GC/heap hides stack dangling; C would not.")
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task |
-| ---------- | ---- |
-| Easy       | Draw box-and-arrow: variable `p` stores address `0x1000`; memory at `0x1000` holds `42`. Show `*p` |
-| Medium     | Explain how Phase 33's linked-list `next` field is a pointer, and why chasing `next` thrashes caches (49.2) |
-| Hard       | Map three failures to 50.1: null deref, write to read-only page, use-after-unmap - which become SIGSEGV vs silent corruption? |
-
-
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 "A pointer stores an address; dereferencing follows it." Tie segfaults to invalid mappings (50.1), and say Python references are a safer packaging of the same idea - not a reason to skip addresses.
 
-**WHY THE NEXT TOPIC IS NEEDED - Programming Language Foundations:** Hardware now has a clear story: instructions cycle through a CPU, addresses go through page tables, pointers are addresses programs manipulate. But the *language* you write in is still a black box between "source" (Phase 5) and those instructions. Two languages can compile to similar machine code and still disagree about types, memory ownership, and when errors are caught. Before the OS (Phase 52) manages many programs at once, it helps to know what a programming language *is* as a formal system - syntax, semantics, and execution model.
+**PRACTICE:**
+
+| Difficulty | Task                                                                                                                                                                                                  |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Easy       | Print `/proc/self/maps` (or the equivalent on your OS) and identify the stack, the heap, and the code segment. Confirm the code segment is not writable                                               |
+| Easy       | Given 4 KB pages, translate virtual address `0x00007C34` by hand if the page table maps virtual page `0x7` to frame `0x23`                                                                            |
+| Easy       | Draw box-and-arrow: variable `p` stores address `0x1000`; memory at `0x1000` holds `42`. Show `*p`                                                                                                    |
+| Medium     | Write two loops over the same large array, one sequential and one strided by 4096 bytes, and measure the difference. Explain the gap in terms of TLB misses rather than cache misses                 |
+| Medium     | Run `paging-linear-translate.py` from the [OSTEP homework set](https://github.com/remzi-arpacidusseau/ostep-homework) with `-c` until you can do translations without the tool                        |
+| Medium     | Explain how Phase 33's linked-list `next` field is a pointer, and why chasing `next` thrashes caches (49.2)                                                                                           |
+| Hard       | Simulate LRU, FIFO, and clock page replacement on the same reference string and count the faults for each. Then find a reference string where FIFO beats LRU                                          |
+| Hard       | Map three failures to 50.1: null deref, write to read-only page, use-after-unmap - which become SIGSEGV vs silent corruption?                                                                         |
+| Hard       | Read `vm.c` in [xv6-riscv](https://github.com/mit-pdos/xv6-riscv) and write down what `walk()` does in three sentences                                                                                |
+
+**WHAT THIS UNLOCKS NEXT:**
+
+Hardware now has a clear story: instructions cycle through a CPU, addresses go through page tables, pointers are addresses programs manipulate. But the *language* you write in is still a black box between "source" (Phase 5) and those instructions. Two languages can compile to similar machine code and still disagree about types, memory ownership, and when errors are caught. Before the OS (Phase 52) manages many programs at once, it helps to know what a programming language *is* as a formal system - syntax, semantics, and execution model.
 
 ---
 
@@ -9955,21 +8938,25 @@ print("Python GC/heap hides stack dangling; C would not.")
 
 > **Formal after Phase 5:** Phase 5 introduced syntax vs semantics and compiler/interpreter/bytecode/JIT as a map so early coding made sense. Phase 51 is the CS foundations pass - execution models and typing as *guarantees*, not brand names. Do not expect advanced compiler theory (parsers, SSA, optimization pipelines) here.
 
+**LEARNING RESOURCES:**
+
+- [The First Programming Languages: Crash Course Computer Science #11](https://www.youtube.com/watch?v=RU1u-js7db8) - assembly, compilers, and why high-level languages exist
+- [Crafting Interpreters - Introduction](https://craftinginterpreters.com/introduction.html) and [A Map of the Territory](https://craftinginterpreters.com/a-map-of-the-territory.html) - syntax, semantics, and what an implementation is
+- [Code Faster or Safer? Static vs Dynamic Typing](https://www.youtube.com/watch?v=87VOk4aoEkA) - the typing trade-off without language tribalism
+- [Python Tutor](https://pythontutor.com/) - watch Python's execution model (name bindings, heap objects) step by step
+- [munificent/craftinginterpreters](https://github.com/munificent/craftinginterpreters) - complete jlox/clox implementations to skim
+
 ## 51.1 What Makes a Language a Language
 
-**WHY YOU ARE LEARNING THIS:** You have been writing Python for dozens of phases. "Python" is not just a syntax you memorized - it is a set of rules for what programs *mean*, plus a concrete implementation that carries those rules out on the hardware from Phases 49-50. When you later pick up Java, Rust, or Go, or when an interviewer asks "compiled or interpreted?", the useful answer is about *execution models and guarantees*, not brand names.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+You have been writing Python for dozens of phases. "Python" is not just a syntax you memorized - it is a set of rules for what programs *mean*, plus a concrete implementation that carries those rules out on the hardware from Phases 49-50. When you later pick up Java, Rust, or Go, or when an interviewer asks "compiled or interpreted?", the useful answer is about *execution models and guarantees*, not brand names.
 
-- Best overview: [The First Programming Languages: Crash Course Computer Science #11](https://www.youtube.com/watch?v=RU1u-js7db8) - assembly, compilers, and why high-level languages exist
-- Alternative: [Crafting Interpreters - Introduction](https://craftinginterpreters.com/introduction.html) - free book; the opening chapters define syntax, semantics, and "what an implementation is" better than most courses
-- Another angle: [Code Faster or Safer? Static vs Dynamic Typing](https://www.youtube.com/watch?v=87VOk4aoEkA) - the typing trade-off without language tribalism
-- Interactive: [Python Tutor](https://pythontutor.com/) - watch Python's execution model step by step (name bindings, heap objects) - then contrast mentally with a language that has no interpreter visible at all
-- Written: [Crafting Interpreters, Chapter 1-3](https://craftinginterpreters.com/contents.html) - A Tree-Walk Interpreter's front matter on design notes (static vs dynamic typing)
-- GitHub: [munificent/craftinginterpreters](https://github.com/munificent/craftinginterpreters) - the complete jlox/clox implementations
-- Practice: Rewrite the tiny example below in your head as if it were statically typed - what would the compiler reject before runtime?
+**THE PROBLEM:**
 
-**STEP-BY-STEP EXPLANATION**
+Phase 5's map (`source → compiler/interpreter → running program`) is enough to write early code, but too coarse for comparing languages: two tools can both "compile" and still disagree about when types are checked, what the CPU actually runs, and which errors appear before the first instruction executes.
+
+**HOW IT WORKS:**
 
 A programming language has at least three layers:
 
@@ -9978,7 +8965,6 @@ A programming language has at least three layers:
 3. **Pragmatics / implementation** - how an actual system carries those semantics out on hardware: a compiler to native code, a bytecode VM, a tree-walk interpreter, or a mix (CPython compiles to bytecode, then interprets it; PyPy can JIT).
 
 **Execution models (the comparison that matters):**
-
 
 | Model | What runs on the CPU | When errors show up | Examples |
 | ----- | -------------------- | ------------------- | -------- |
@@ -9990,7 +8976,6 @@ A programming language has at least three layers:
 
 **Typing:**
 
-
 | | Static | Dynamic |
 | --- | --- | --- |
 | When types are checked | Before the program runs (compile/typecheck) | While the program runs |
@@ -10000,11 +8985,7 @@ A programming language has at least three layers:
 
 Static vs dynamic is about *when* types are known, not about whether the language has types at all. Python has types; they are attached to *values at runtime*, not to variable names at compile time.
 
-**PICTURE IT LIKE THIS**
-
-Syntax is grammar. Semantics is meaning. The implementation is the actor who performs the script on a stage (the CPU + memory from Phases 49-50). Two actors can perform the same script differently - one memorises every line in advance (AOT compile), one reads from cue cards (interpreter) - and the audience (your users) cares about the performance, not which method was used backstage.
-
-**BEFORE VS. AFTER**
+**VISUAL MODEL:**
 
 ```text
 Phase 5 view:
@@ -10018,7 +8999,9 @@ Language-foundations view:
     -> CPU fetch-decode-execute on real addresses (Phases 49-50)
 ```
 
-**SMALL WORKING EXAMPLE**
+Syntax is grammar. Semantics is meaning. The implementation is the actor who performs the script on a stage (the CPU + memory from Phases 49-50). Two actors can perform the same script differently - one memorises every line in advance (AOT compile), one reads from cue cards (interpreter) - and the audience cares about the performance, not which method was used backstage.
+
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-51-execution-model
 # Dynamic typing: names are labels; types live on values.
@@ -10038,12 +9021,15 @@ print(add("a", "b")) # "ab"
 # argument types, and `add(2, "b")` would be rejected before any CPU cycle.
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
+
+Native AOT compile buys early error detection and peak speed; bytecode VMs buy portability and often a JIT sweet spot; dynamic typing buys iteration speed and pays with late type errors. There is no universally best point on these axes - only a fit to the failure mode you care about most.
+
+**INTERVIEW NOTE:**
 
 "Is Python compiled or interpreted?" - answer the spectrum: CPython compiles to bytecode, then the VM interprets it; say what that implies for startup time, portability, and where type errors appear. "Static vs dynamic" - give one concrete bug each model catches earlier.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
@@ -10051,8 +9037,9 @@ print(add("a", "b")) # "ab"
 | Medium     | Read [Crafting Interpreters - A Map of the Territory](https://craftinginterpreters.com/a-map-of-the-territory.html) and sketch the pipeline from characters → tokens → AST → values for a one-line expression |
 | Hard       | Implement a 50-line tree-walk evaluator for `+` and integer literals only (tokenize, parse to nested tuples, eval) - enough to feel what an interpreter *is* |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Operating Systems:** A language implementation turns source into a running process image. But a real machine runs *many* programs "at once," isolates them, and decides which one gets the CPU this millisecond. That shared-resource manager is the operating system - Phase 52.
+A language implementation turns source into a running process image. But a real machine runs *many* programs "at once," isolates them, and decides which one gets the CPU this millisecond. That shared-resource manager is the operating system - Phase 52.
 
 ---
 
@@ -10070,46 +9057,36 @@ print(add("a", "b")) # "ab"
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 50 (each process gets an isolated virtual address space; pointers are addresses), Phase 34 (queues - ready queues and scheduling are queue management), Phase 51 (a language runtime still runs as one or more OS processes).
 
+**LEARNING RESOURCES:**
+
+- [What is a Thread? (Geekific)](https://www.youtube.com/watch?v=hN2Yrf4tqTY) - program → process → thread in the right order
+- [Process vs Thread (ByteByteGo)](https://www.youtube.com/watch?v=4rLW7zg21gI) - memory diagrams framed the way interviews expect
+- [CPU Cores vs Threads Explained (Max's Tech)](https://www.youtube.com/watch?v=hwTYDQ0zZOw) - OS threads vs hardware hyperthreads
+- [Linux inodes Explained (tutoriaLinux)](https://www.youtube.com/watch?v=6KjMlm8hhFA) and [What is an inode? (You Suck at Programming)](https://www.youtube.com/watch?v=ScDv02ff8oc) - pathnames vs metadata vs hard/symlinks
+- [OSTEP](https://pages.cs.wisc.edu/~remzi/OSTEP/) - chapters 4–6 (processes), 26–27 (threads), 39–40 (filesystems); [xv6-riscv](https://github.com/mit-pdos/xv6-riscv) `proc.c` for a readable scheduler
+- [Linuxize: What Is an Inode](https://linuxize.com/post/what-is-an-inode-in-linux/) and OSTEP `vsfs.py` homework - create/link/unlink bitmaps by hand
+
 ## 52.1 Processes & Threads
 
-**WHY YOU ARE LEARNING THIS:** Phase 5 described a single program's memory. But a real computer runs many programs "at once" on a CPU that can only truly execute one instruction stream per core at any instant. Something has to decide which program's instructions the CPU is executing right now, isolate programs from accidentally corrupting each other's memory, and give the illusion of simultaneity. That something is the operating system, and the unit it manages is the **process** - a running program plus everything it needs (its own memory space, open files, and at least one thread of execution).
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Phase 5 described a single program's memory. But a real computer runs many programs "at once" on a CPU that can only truly execute one instruction stream per core at any instant. Something has to decide which program's instructions the CPU is executing right now, isolate programs from accidentally corrupting each other's memory, and give the illusion of simultaneity. That something is the operating system, and the unit it manages is the **process** - a running program plus everything it needs (its own memory space, open files, and at least one thread of execution).
 
-- Best animated explanation: [What is a Thread? Threads, Process, Program, Parallelism and Scheduler Explained (Geekific)](https://www.youtube.com/watch?v=hN2Yrf4tqTY) - builds up from program to process to thread in the right order, so each term arrives as a refinement of the last rather than as a definition to memorize
-- Alternative: [FANG Interview Question: Process vs Thread (ByteByteGo)](https://www.youtube.com/watch?v=4rLW7zg21gI) - the same distinction drawn as memory diagrams, which is exactly the framing an interviewer wants back
-- Another angle: [Process vs Thread, Simply Explained (TechPrep)](https://www.youtube.com/watch?v=1myWEH8IGt4) and [CPU Cores vs Threads Explained (Max's Tech)](https://www.youtube.com/watch?v=hwTYDQ0zZOw) - the second one is worth watching because "thread" means two different things (an OS thread and a hardware hyperthread) and conflating them causes real confusion
-- Interactive simulator: your own machine. Open Task Manager (Windows), Activity Monitor (macOS), or run `htop` (Linux) and sort by CPU. You are looking at the scheduler's output live: dozens of processes, each with a thread count, sharing a handful of cores
-- Written documentation: [Operating Systems: Three Easy Pieces (Remzi and Andrea Arpaci-Dusseau, free online)](https://pages.cs.wisc.edu/~remzi/OSTEP/) - chapters 4 through 6 on processes and the API, and 26 through 27 on threads. This is the standard free OS textbook and it is genuinely readable
-- GitHub implementation: [xv6-riscv (MIT)](https://github.com/mit-pdos/xv6-riscv) - a complete, tiny, teachable Unix. Read `proc.c` and you are reading the actual scheduler and context switch this section describes, in about 700 lines
-- Practice platform: [Python's](https://docs.python.org/3/library/threading.html) `threading` [and](https://docs.python.org/3/library/threading.html) `multiprocessing` [docs](https://docs.python.org/3/library/threading.html) plus [OSTEP's homework projects](https://github.com/remzi-arpacidusseau/ostep-projects) - real, graded OS assignments including building your own shell and your own thread library
+**THE PROBLEM:**
 
-**STEP-BY-STEP EXPLANATION**
+Without an OS abstraction, a program has direct, unrestricted hardware access - one buggy or malicious program can read/corrupt another's memory, or hog the CPU forever, freezing the whole machine.
 
-A process is defined by what the OS keeps about it, and that list is worth knowing exactly, because every process property follows from it: a process control block holds the process ID, the saved register state, the page table that defines its address space (Phase 50), a table of open file descriptors, the current working directory, and the process's scheduling state. A thread, by contrast, owns only four things: a program counter, a register set, a stack, and a scheduling state. Everything else, the heap, the code, the open files, is shared with every other thread in the same process. That single asymmetry is the whole subject.
+**HOW IT WORKS:**
 
-Processes move through a small set of states, and knowing them makes performance conversations concrete. A process is **new** while being created, **ready** when it could run and is waiting for a core, **running** when it is actually on a core, **blocked** (or waiting) when it has asked for something slow like disk or network and cannot proceed, and **terminated** when finished. A CPU-bound program spends its life bouncing between ready and running. An I/O-bound program spends most of its life blocked, which is why a web server can handle thousands of connections on four cores: almost all of those connections are blocked on the network at any instant, costing nothing.
+A process is defined by what the OS keeps about it in a **process control block (PCB)**: process ID, saved register state, the page table that defines its address space (Phase 50), a table of open file descriptors, the current working directory, and scheduling state. A **thread**, by contrast, owns only four things: a program counter, a register set, a stack, and a scheduling state. Everything else - the heap, the code, the open files - is shared with every other thread in the same process. That single asymmetry is the whole subject.
 
-The scheduler's job is choosing which ready thread becomes running, and the choice is a genuine trade-off rather than a solved problem. Round-robin gives every thread an equal time slice, which is fair but slow for short tasks stuck behind long ones. Shortest-job-first minimizes average waiting time but requires knowing job lengths in advance and can starve long jobs forever. Priority scheduling respects importance but starves low-priority work unless you add priority aging. Linux's default, CFS, approximates "give every thread an equal share of CPU time so far" by always running whichever thread has received the least, which is round-robin's fairness without its fixed-slice clumsiness.
+Processes move through a small set of states: **new** while being created, **ready** when it could run and is waiting for a core, **running** when it is actually on a core, **blocked** (waiting) when it has asked for something slow like disk or network, and **terminated** when finished. A CPU-bound program spends its life bouncing between ready and running. An I/O-bound program spends most of its life blocked - which is why a web server can handle thousands of connections on four cores: almost all of those connections are blocked on the network at any instant.
 
-Two more distinctions carry weight. **Concurrency is not parallelism**: concurrency is a structuring property (multiple things are in progress and their execution interleaves) while parallelism is a hardware property (multiple things execute in the same instant, on different cores). A single-core machine can be highly concurrent and cannot be parallel at all. And in Python specifically, the **Global Interpreter Lock** means only one thread executes Python bytecode at a time, so Python threads give you concurrency for I/O-bound work and no parallelism for CPU-bound work. That is why `multiprocessing` exists in the standard library alongside `threading`: for CPU-bound work in Python you need separate processes, each with its own interpreter and its own GIL.
+The scheduler chooses which ready thread becomes running. Round-robin is fair but slow for short tasks stuck behind long ones. Shortest-job-first minimizes average waiting time but can starve long jobs. Priority scheduling respects importance but needs aging to avoid starvation. Linux's CFS approximates "give every thread an equal share of CPU time so far."
 
-**BEFORE VS. AFTER**
+Two more distinctions carry weight. **Concurrency is not parallelism**: concurrency is structuring (multiple things are in progress and interleave); parallelism is hardware (multiple things execute in the same instant on different cores). And in Python specifically, the **Global Interpreter Lock** means only one thread executes Python bytecode at a time, so Python threads give concurrency for I/O-bound work and no parallelism for CPU-bound work - which is why `multiprocessing` exists alongside `threading`.
 
-```text
-Before an OS abstraction: a program has direct, unrestricted hardware access
-        Problem: one buggy or malicious program can read/corrupt another
-        program's memory, or hog the CPU forever, freezing the whole machine.
-
-The OS's fix: each process gets its own isolated virtual memory space
-(Phase 50), and the OS's scheduler gives every process a fair, time-sliced
-turn on the CPU (a "context switch"), so no one process can permanently hog it.
-
-        Trade-off: isolation and fairness cost overhead  creating a process
-        and switching between processes both take real, measurable time.
-```
-
-**Process vs. Thread:** A process is a fully isolated unit - its own memory space, its own everything. A **thread** is a lighter-weight unit of execution *within* a process - multiple threads in the same process share that process's memory space, which makes communication between them cheap (just shared variables) but reintroduces the exact isolation problem processes were built to solve: two threads can now race to modify the same memory at the same time.
+**VISUAL MODEL:**
 
 ```text
 ONE PROCESS, ONE THREAD              ONE PROCESS, THREE THREADS
@@ -10131,54 +9108,40 @@ ONE PROCESS, ONE THREAD              ONE PROCESS, THREE THREADS
                                      +---------------------------------------+
 
 TWO PROCESSES                        Each thread has its OWN stack and registers.
-+-------------+  +-------------+     Everything else is shared, which is both
-| Process A   |  | Process B   |     the speed advantage AND the bug source.
-| own page    |  | own page    |
-| table ->    |  | table ->    |     To share data between PROCESSES you need an
-| own address |  | own address |     explicit channel: a pipe, a socket, a shared
-| space       |  | space       |     memory segment, or a file. Nothing is
-+-------------+  +-------------+     implicitly shared, which is why they are safe.
-      |                |
-      +--- pipe/socket/shared-memory segment ---+
-             (explicit, OS-mediated, and the reason
-              inter-process communication is slower
-              than just touching a shared variable)
++-------------+  +-------------+     Everything else is shared - speed AND bug source.
+| Process A   |  | Process B   |
+| own page    |  | own page    |     To share data between PROCESSES you need an
+| table ->    |  | table ->    |     explicit channel: pipe, socket, shared memory,
+| own address |  | own address |     or a file.
+| space       |  | space       |
++-------------+  +-------------+
 
-COST, measured roughly, on a modern Linux box:
+A context switch, step by step:
+  CPU running Process A's thread
+        |
+   Timer interrupt fires (A's time slice is up), or A blocks on I/O
+        |
+   OS saves A's registers, stack pointer, program counter (PCB)
+        |
+   OS picks the next ready thread and restores ITS saved state
+        |
+  CPU resumes - now running Process B
+
+COST (rough, modern Linux):
   create a thread ..................... tens of microseconds
   create a process (fork+exec) ........ hundreds of microseconds to milliseconds
   switch between threads (same proc) ... ~1-2 microseconds  (no page table change)
   switch between processes ............. ~2-5 microseconds  (page table + TLB flush)
   a function call ...................... ~1 nanosecond
-
-Those last two lines are the whole argument for thread pools: if a task takes
-50 microseconds and creating a thread to run it takes 50 microseconds, you have
-spent half your budget on setup. Reuse the thread instead of creating one.
 ```
 
-**PICTURE IT LIKE THIS**
+A process is like a separate office building - the people (threads) inside can freely share resources on the same floor, but two different buildings cannot reach into each other's filing cabinets without an explicit channel (IPC).
 
-A process is like a separate office building - the people (threads) inside can freely share resources on the same floor, but two different buildings (processes) can't reach into each other's filing cabinets without going through an explicit, controlled channel (inter-process communication).
+**TRADE-OFFS:**
 
-**Internal Working - a context switch, step by step:**
+Isolation and fairness cost overhead: creating a process and switching between processes both take measurable time. Threads are cheaper to switch (no page-table change) but reintroduce the shared-memory race problem Phase 53 must solve. Thread pools exist because creating a thread for every tiny task can spend half the budget on setup.
 
-```text
-CPU running Process A's thread
-        |
-   Timer interrupt fires (A's time slice is up), or A blocks on I/O
-        |
-   OS scheduler saves A's registers, stack pointer, program counter
-   (everything needed to resume A exactly where it left off)
-        |
-   OS scheduler picks the next process/thread to run (by priority,
-   fairness, or a scheduling algorithm) and restores ITS saved state
-        |
-CPU resumes execution, now running Process B
-```
-
-**Complexity / Cost:** A context switch is pure overhead - no useful work happens during it - which is why threads (cheaper to switch between, since memory doesn't need to be swapped) are often preferred over processes for tasks needing frequent handoffs, and why "thread pools" exist to avoid the even higher cost of creating a brand-new thread for every small task.
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-52-process-vs-thread
 import os, threading, multiprocessing, time
@@ -10209,57 +9172,29 @@ if __name__ == "__main__":
     for p in procs: p.join()
     print(f"parent's counter is still {counter}, untouched by any child")
 
-# --- Why this distinction decides which one you reach for ---
-def cpu_bound(n):
-    return sum(i * i for i in range(n))
-
-def timed(label, run):
-    start = time.perf_counter()
-    run()
-    print(f"{label}: {time.perf_counter() - start:.2f}s")
-
-# In CPython, four threads doing CPU work take about as long as one, because
-# the GIL lets only one of them execute bytecode at a time. Four PROCESSES
-# genuinely use four cores. Run this and the numbers make the GIL undeniable.
+# In CPython, four threads doing CPU work take about as long as one (GIL).
+# Four PROCESSES genuinely use four cores.
 ```
 
-The threads print one shared, incrementing counter. The processes each print `1`. Nothing about the code changed except which class was used, and that difference is exactly the memory-isolation boundary the diagram above draws.
+The threads print one shared, incrementing counter. The processes each print `1`. Nothing about the code changed except which class was used - that difference is exactly the memory-isolation boundary.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**INTERVIEW NOTE:**
 
-
-| Difficulty | Task                                                                                                                                                                                           |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Run the code above and explain in one sentence why the thread counters differ from the process counters                                                                                        |
-| Easy       | Open Task Manager or `htop`, find your browser, and note its process count and thread count. Explain why a browser deliberately uses many processes rather than many threads                   |
-| Medium     | Write the CPU-bound benchmark sketched above with four threads versus four processes, and report the actual wall-clock times on your machine                                                   |
-| Medium     | Write a program that spawns a child process, has the parent send it a message through a pipe, and has the child reply. Compare the code length to sharing a variable between two threads       |
-| Hard       | Implement a fixed-size thread pool from scratch, using only a queue and N worker threads. Then benchmark it against creating one thread per task for 10,000 tiny tasks                         |
-| Hard       | Work through [OSTEP project: build your own shell](https://github.com/remzi-arpacidusseau/ostep-projects), which forces you to use fork, exec, and wait directly rather than through a library |
-
-
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
-
-"What's the difference between a process and a thread" is a near-universal OS interview question - the expected answer centers on memory isolation (separate vs. shared) and the cost trade-off that follows from it (safer but heavier vs. faster but riskier).
-
-**WHY THE NEXT TOPIC IS NEEDED - Filesystems:** Processes need durable storage, not only RAM. A path like `/home/you/notes.txt` is not "the file" - it is a name lookup into a tree of directories that ends at metadata (an inode) and data blocks. Phase 54 will *use* open file descriptors; this section teaches what those descriptors point at.
+"What's the difference between a process and a thread" centers on memory isolation (separate vs shared) and the cost trade-off that follows (safer but heavier vs faster but riskier).
 
 ---
 
 ## 52.2 Filesystem Fundamentals
 
-**WHY YOU ARE LEARNING THIS:** Phase 6 taught you to navigate folders in a terminal. That was user literacy. The OS view is different: a **filesystem** maps human pathnames to on-disk structures so `open` / `read` / `write` work. If Phase 54 teaches file descriptors first, students memorize integers without knowing an **inode**. This phase owns the fundamentals; Phase 54 applies them.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Phase 6 taught you to navigate folders in a terminal - user literacy. The OS view is different: a **filesystem** maps human pathnames to on-disk structures so `open` / `read` / `write` work. If Phase 54 teaches file descriptors first, students memorize integers without knowing an **inode**. This phase owns the fundamentals; Phase 54 applies them.
 
-- Best overview: [OSTEP - File System Implementation](https://pages.cs.wisc.edu/~remzi/OSTEP/) chapters 39-40 *(Composio web + fetch; free text)*
-- Alternative: [Linux inodes Explained (tutoriaLinux)](https://www.youtube.com/watch?v=6KjMlm8hhFA) - `ls -l` → metadata vs names *(Composio YouTube)*
-- Another angle: [Unix/Linux Files Explained - what is an inode? (You Suck at Programming)](https://www.youtube.com/watch?v=ScDv02ff8oc) - hard links / symlinks from the inode model *(Composio YouTube)*
-- Interactive: on Linux/macOS run `ls -li`, `stat filename`, and `df -i`; on Windows, note that NTFS uses a similar "file record" idea even if the word inode is Unix-flavored
-- Written: [Linuxize: What Is an Inode](https://linuxize.com/post/what-is-an-inode-in-linux/) *(Composio fetch verified)*
-- Practice: [OSTEP vsfs simulator](https://github.com/remzi-arpacidusseau/ostep-homework) `vsfs.py` - quiz yourself on create/link/unlink bitmaps
+**THE PROBLEM:**
 
-**STEP-BY-STEP EXPLANATION**
+A path like `/home/you/notes.txt` is not "the file" - it is a name lookup into a tree of directories. Without the inode model, "open a file" stays a slogan.
+
+**HOW IT WORKS:**
 
 Three different "names" for the same file, on purpose:
 
@@ -10268,6 +9203,8 @@ Three different "names" for the same file, on purpose:
 3. **File descriptor** - a small integer in a *per-process* table, allocated when you `open` a path. After open, reads/writes use the fd and a current offset; the kernel no longer re-walks the whole path each time. **Phase 54 applies fds and syscalls; you learn the inode/path story here.**
 
 Path resolution: start at root inode (or current working directory), look up each path component in that directory's data, load the next inode, repeat until the final component. Permissions are checked at each step. Soft (symbolic) links store another path string; hard links are extra directory entries to the same inode.
+
+**VISUAL MODEL:**
 
 ```text
 open("/home/ada/notes.txt")
@@ -10281,11 +9218,9 @@ open("/home/ada/notes.txt")
   Later: read(3, buf, n) uses inode N + offset  (no second path walk)
 ```
 
-**PICTURE IT LIKE THIS**
-
 A library: the card catalog entry is the directory name→inode mapping; the catalog card's shelf code and book facts are the inode; the pages on the shelf are data blocks; your checkout receipt number is the file descriptor - useful only while you still have the book checked out (the open file).
 
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-52-filesystem
 import os
@@ -10310,21 +9245,26 @@ p.unlink()
 print("removed; fd table entry is gone after close")
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task |
-| ---------- | ---- |
-| Easy       | Run `ls -li` (or Windows equivalent properties) and point at the inode/file-id column |
-| Medium     | Explain hard link vs symlink using "same inode" vs "stored path string" |
-| Hard       | Using OSTEP `vsfs.py`, predict bitmaps after `creat` + `link`, then check with `-c` |
-
-
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**INTERVIEW NOTE:**
 
 "A path is a lookup; an inode is the file's metadata and block map; a file descriptor is a process-local handle from `open`." That sentence alone separates filesystem design from "folders in Finder."
 
-**WHY THE NEXT TOPIC IS NEEDED - Concurrency & Parallelism:** Isolating processes from each other solves one safety problem. It does nothing for the *new* problem threads reintroduced: multiple threads inside the *same* process sharing the same memory, potentially reading and writing the same variable at the same time. That is Phase 53.
+**PRACTICE:**
+
+| Difficulty | Task                                                                                                                                                                                           |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Easy       | Run the process/thread playground and explain in one sentence why the thread counters differ from the process counters                                                                         |
+| Easy       | Open Task Manager or `htop`, find your browser, and note its process count and thread count. Explain why a browser deliberately uses many processes                                            |
+| Easy       | Run `ls -li` (or Windows equivalent) and point at the inode/file-id column                                                                                                                     |
+| Medium     | Write the CPU-bound benchmark with four threads versus four processes, and report wall-clock times on your machine                                                                             |
+| Medium     | Explain hard link vs symlink using "same inode" vs "stored path string"                                                                                                                        |
+| Medium     | Write a program that spawns a child process, has the parent send a message through a pipe, and has the child reply - compare code length to sharing a variable between two threads            |
+| Hard       | Implement a fixed-size thread pool from scratch (queue + N worker threads); benchmark against creating one thread per task for 10,000 tiny tasks                                               |
+| Hard       | Using OSTEP `vsfs.py`, predict bitmaps after `creat` + `link`, then check with `-c`                                                                                                            |
+
+**WHAT THIS UNLOCKS NEXT:**
+
+Isolating processes from each other solves one safety problem. It does nothing for the *new* problem threads reintroduced: multiple threads inside the *same* process sharing the same memory, potentially reading and writing the same variable at the same time. That is Phase 53. Phase 54 will *use* open file descriptors; you now know what those descriptors point at.
 
 ---
 
@@ -10342,90 +9282,57 @@ print("removed; fd table entry is gone after close")
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 52 (threads share an address space; processes do not), Phase 49 (a context switch can interleave two threads between any two machine instructions).
 
+**LEARNING RESOURCES:**
+
+- [Race Conditions and How to Prevent Them (Spanning Tree)](https://www.youtube.com/watch?v=MqnpIwN7dz0) - interleaving on shared data, then a correct lock from scratch
+- [OS Synchronization Explained (BitLearn)](https://www.youtube.com/watch?v=lrzCATSCWP8) - mutex, semaphore, and condition variable vocabulary in one pass
+- [How does a Mutex even work? (Low Level)](https://www.youtube.com/watch?v=1tZhmTnk-vc) - compare-and-swap under a mutex
+- [The Deadlock Empire](https://deadlockempire.github.io/) - play the scheduler and break concurrent code by choosing interleavings
+- [OSTEP chapters 25–34](https://pages.cs.wisc.edu/~remzi/OSTEP/) on concurrency; [The Little Book of Semaphores](https://greenteapress.com/wp/semaphores/) - synchronization puzzles with solutions
+- [LeetCode Concurrency tag](https://leetcode.com/tag/concurrency/) - Print in Order, FooBar, Dining Philosophers, Building H2O
+
 ## 53.1 Concurrency, Synchronization & Deadlock
 
-**WHY YOU ARE LEARNING THIS:** Threads share memory for speed and easy communication (Phase 52) - but that shared memory means two threads can interleave their operations on the same variable in an order neither programmer intended, producing a **race condition**: a bug that depends on timing, and so may not show up in testing at all, only in production under load.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Threads share memory for speed and easy communication (Phase 52) - but that shared memory means two threads can interleave their operations on the same variable in an order neither programmer intended, producing a **race condition**: a bug that depends on timing, and so may not show up in testing at all, only in production under load.
 
-- Best animated explanation: [Race Conditions and How to Prevent Them (Spanning Tree)](https://www.youtube.com/watch?v=MqnpIwN7dz0) - animates two threads interleaving on shared data, then builds up a correct lock from scratch, which shows *why* mutual exclusion is harder than it looks
-- Alternative: [OS Synchronization Explained: Race Conditions, Mutex, Locks and Semaphores (BitLearn)](https://www.youtube.com/watch?v=lrzCATSCWP8) - covers the full primitive vocabulary in one pass, so mutex, semaphore, and condition variable stop blurring together
-- Another angle: [How does a Mutex even work? (Low Level)](https://www.youtube.com/watch?v=1tZhmTnk-vc) goes one layer down into the atomic compare-and-swap instruction a mutex is built from, and [Concurrency in Depth: Threads, Locks, Deadlocks and Race Conditions (programmerCave)](https://www.youtube.com/watch?v=MuOgbvKjUG8) covers deadlock specifically
-- Interactive simulator: [The Deadlock Empire](https://deadlockempire.github.io/) - a genuinely excellent browser game where you play the *scheduler* and try to break supposedly-correct concurrent code by choosing which thread runs next. Nothing else teaches interleaving this effectively
-- Written documentation: [OSTEP chapters 25 through 34](https://pages.cs.wisc.edu/~remzi/OSTEP/) on concurrency, including the classic problems, plus [The Little Book of Semaphores (Allen Downey, free)](https://greenteapress.com/wp/semaphores/), which is a whole book of synchronization puzzles with worked solutions
-- GitHub implementation: [Rust's std::sync source](https://github.com/rust-lang/rust/tree/master/library/std/src/sync) - worth reading even if you do not write Rust, because the type system forces the sharing rules to be written down explicitly rather than left as convention
-- Practice platform: [The Deadlock Empire](https://deadlockempire.github.io/) for intuition, [LeetCode's Concurrency tag](https://leetcode.com/tag/concurrency/) for the standard interview set (Print in Order, Print FooBar Alternately, Dining Philosophers, Building H2O), and [OSTEP's concurrency projects](https://github.com/remzi-arpacidusseau/ostep-projects) for building a real lock-based data structure
+**THE PROBLEM:**
 
-**STEP-BY-STEP EXPLANATION**
+Two threads both run `balance = balance + 10` unsynchronized. "Read balance" and "write balance" are separate machine steps. If Thread A reads 100, then Thread B reads 100 before A writes back, both write 110 - one of the two `+10` updates is silently lost.
 
-A race condition requires three ingredients, and removing any one of them removes the bug: shared mutable state, at least two threads accessing it, and at least one of those accesses being a write. That framing is more useful than the definition, because it tells you the three available fixes. Remove sharing (give each thread its own copy, then combine at the end). Remove mutability (use immutable data, which is why functional languages have an easier time here). Or serialize the access with a lock. Most real fixes are the third, but the first is often available and always cheaper.
+**HOW IT WORKS:**
 
-The region of code that must not be interleaved is the **critical section**, and a correct solution to protecting it needs three properties. **Mutual exclusion**: at most one thread is inside at a time. **Progress**: if no thread is inside and some thread wants in, one gets in, so the lock never deadlocks itself. **Bounded waiting**: a thread that wants in eventually gets in, so no thread starves forever. Getting mutual exclusion alone is easy; getting all three is what makes lock implementations subtle, and it is what The Deadlock Empire is training you to see.
+A race condition requires three ingredients; removing any one removes the bug: shared mutable state, at least two threads accessing it, and at least one write. Fixes: remove sharing (private copies, combine at the end), remove mutability (immutable data), or serialize access with a lock. Most real fixes are the third; the first is often available and always cheaper.
 
-The primitives are worth separating clearly, because interviews test the distinctions:
+The region of code that must not be interleaved is the **critical section**. A correct solution needs three properties: **mutual exclusion** (at most one thread inside), **progress** (if no one is inside and someone wants in, someone gets in), and **bounded waiting** (no permanent starvation). Mutual exclusion alone is easy; all three is what makes locks subtle.
 
-- A **mutex** is binary ownership. One thread holds it, others block. Crucially, the thread that locks it is the thread that must unlock it, which is what makes it a lock rather than a signal.
-- A **semaphore** is a counter with two operations, wait (decrement, blocking at zero) and signal (increment). A semaphore initialized to 1 behaves like a mutex, but a semaphore initialized to N lets N threads through, which makes it the right tool for limiting concurrency to a resource pool. It also has no ownership requirement, so one thread can signal what another waited on, which is how it is used for signaling rather than exclusion.
-- A **condition variable** solves a different problem: waiting for a *state* rather than for a *turn*. A consumer holding a lock on an empty queue cannot simply spin, because it holds the lock the producer needs. A condition variable lets it atomically release the lock and sleep, then reacquire the lock when signaled. Every correct use is inside a `while` loop rather than an `if`, because a thread can be woken spuriously or lose a race to another waiter after being signaled.
-- A **read-write lock** allows many concurrent readers or one exclusive writer, which is a large win for read-heavy data and a source of writer starvation if not implemented carefully.
-- An **atomic operation** avoids locks entirely for single-variable updates, by using a hardware instruction like compare-and-swap that cannot be interrupted partway. This is the foundation everything above is built on, and the basis of lock-free data structures.
+Primitives worth separating clearly:
 
-Deadlock has four necessary conditions, all of which must hold simultaneously, which means breaking any single one prevents it. **Mutual exclusion** (resources cannot be shared), **hold and wait** (a thread holding one resource requests another), **no preemption** (resources cannot be forcibly taken back), and **circular wait** (a cycle exists in the "waiting for" graph). Real systems almost always attack circular wait, by imposing a global lock ordering, because the other three are usually properties you actually want. Two related failures are worth naming so you do not misdiagnose them: **livelock**, where threads are actively running but making no progress because they keep politely backing off and retrying in lockstep, and **starvation**, where a thread makes no progress because others keep winning the lock, which is a fairness failure rather than a cycle.
+- A **mutex** is binary ownership. One thread holds it; others block. The thread that locks must unlock - that ownership is what makes it a lock rather than a signal.
+- A **semaphore** is a counter with wait (decrement, block at zero) and signal (increment). Initialized to 1 it behaves like a mutex; initialized to N it limits concurrency to a pool. No ownership requirement - one thread can signal what another waited on.
+- A **condition variable** waits for a *state*, not a *turn*. A consumer holding a lock on an empty queue cannot spin (it holds the lock the producer needs). A CV lets it atomically release the lock and sleep, then reacquire when signaled. Every correct use is inside a `while` loop, not `if` - spurious wakeups and lost races after notify are real.
+- A **read-write lock** allows many concurrent readers or one exclusive writer - a win for read-heavy data, and a writer-starvation risk if careless.
+- An **atomic operation** (compare-and-swap) avoids locks for single-variable updates - the foundation of lock-free structures.
 
-**BEFORE VS. AFTER**
+Deadlock has four necessary conditions; breaking any one prevents it: **mutual exclusion**, **hold and wait**, **no preemption**, and **circular wait**. Real systems almost always attack circular wait with a global lock ordering. Related failures: **livelock** (threads actively running but making no progress) and **starvation** (a thread never wins the lock - fairness failure, not a cycle).
 
-```text
-Two threads both run: balance = balance + 10, unsynchronized
-        Problem (race condition): "read balance" and "write balance" are
-        each two separate machine steps. If Thread A reads balance (100),
-        then Thread B reads balance (100) before A writes back, then both
-        write back 110 -- one of the two +10 updates is silently lost.
-
-Fix: a MUTEX (mutual exclusion lock) around the read-modify-write
-        Thread A acquires the lock, completes its full read-modify-write,
-        releases the lock; only then can Thread B acquire it and proceed.
-
-        Trade-off: correctness is restored, but at the cost of threads now
-        waiting on each other -- the exact opposite of the parallelism
-        threads were introduced to provide, if lock contention is high.
-```
-
-**PICTURE IT LIKE THIS**
-
-A single-occupancy bathroom key: only the person holding the key can be inside; everyone else waits in line. The key is the mutex; the bathroom is the shared, mutable data.
-
-**Internal Working - how a deadlock happens:**
-
-```text
-Thread A: locks Resource 1, then tries to lock Resource 2
-Thread B: locks Resource 2, then tries to lock Resource 1
-
-Thread A is waiting for a resource Thread B holds.
-Thread B is waiting for a resource Thread A holds.
-Neither can ever proceed -- this is a deadlock.
-```
-
-Both failures, drawn on a timeline so the interleaving is visible:
+**VISUAL MODEL:**
 
 ```text
 THE RACE, instruction by instruction. balance starts at 100.
-Each thread runs three machine steps, and the OS may switch between ANY two.
+Each thread runs three machine steps; the OS may switch between ANY two.
 
   time ->   Thread A                    Thread B              balance
   ------------------------------------------------------------------------
     t1      READ balance (gets 100)                             100
-    t2                                  READ balance (gets 100) 100   <-- both
-    t3      ADD 10 (local: 110)                                 100       hold
-    t4                                  ADD 10 (local: 110)     100       100
+    t2                                  READ balance (gets 100) 100
+    t3      ADD 10 (local: 110)                                 100
+    t4                                  ADD 10 (local: 110)     100
     t5      WRITE 110                                           110
-    t6                                  WRITE 110               110   <-- LOST
+    t6                                  WRITE 110               110   <-- LOST UPDATE
 
-  Expected 120. Got 110. One entire +10 vanished, and no line of code
-  is wrong when read on its own. The bug lives in the INTERLEAVING,
-  which is why it appears under load and disappears under a debugger.
-
-  The problematic window is t1..t5 for A: between reading and writing,
-  A's view of the world went stale. That window IS the critical section.
+  Expected 120. Got 110. No line of code is wrong alone - the bug lives in the INTERLEAVING.
 
 WITH A MUTEX, the window is closed:
 
@@ -10439,11 +9346,7 @@ WITH A MUTEX, the window is closed:
     t6                                  READ 110, ADD, WRITE 120 120
     t7                                  UNLOCK                   120
 
-  Correct: 120. Cost: at t2..t4, Thread B does nothing at all.
-  That idle time is the price of correctness, and it is why lock
-  CONTENTION, not locking itself, is what kills throughput.
-
-DEADLOCK, as a wait-for graph. A cycle here means nobody moves, ever.
+DEADLOCK as a wait-for graph (a cycle means nobody moves):
 
      Thread A ------ holds -----> [ Lock 1 ]
         ^                              ^
@@ -10452,37 +9355,25 @@ DEADLOCK, as a wait-for graph. A cycle here means nobody moves, ever.
         |                              |
      [ Lock 2 ] <----- holds ------ Thread B
 
-     Follow the arrows: A waits on Lock 2, which B holds.
-     B waits on Lock 1, which A holds. A CYCLE. Neither ever wakes.
-
-  THE FIX, drawn: impose a global order (always Lock 1 before Lock 2).
-
-     Thread A: lock 1, then lock 2       Thread B: lock 1, then lock 2
-                                                    ^
-     Now whoever gets Lock 1 first proceeds all the way through, and the
-     other simply waits at Lock 1. A cycle is now IMPOSSIBLE, because
-     an arrow can only ever point from a lower-numbered lock to a
-     higher-numbered one, and you cannot form a cycle out of arrows
-     that all point the same direction.
+THE FIX: impose a global order (always Lock 1 before Lock 2).
+  Now arrows only point "up" the order - a cycle is impossible.
 ```
 
-The classic fix is to make sure every thread always acquires locks in the same global order - if both A and B always lock Resource 1 before Resource 2, the circular wait above becomes impossible.
+A single-occupancy bathroom key: only the person holding the key can be inside; everyone else waits. The key is the mutex; the bathroom is the shared mutable data.
 
-**Complexity / Trade-off:** Fine-grained locking (many small locks) allows more true parallelism but is harder to reason about and more deadlock-prone; coarse-grained locking (one big lock) is simpler and safer but can bottleneck a multi-core machine down to effectively single-threaded performance on the locked section.
-
+**TRADE-OFFS:**
 
 | Approach                          | What it buys                                 | What it costs                                                                                       |
 | --------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | No synchronization                | Maximum speed                                | Silent, load-dependent corruption that testing will not catch                                       |
 | One coarse lock                   | Trivially correct and easy to reason about   | Serializes everything; eight cores perform like one inside the locked region                        |
-| Many fine-grained locks           | Real parallelism                             | Deadlock risk, and correctness now depends on a lock-ordering discipline nobody can see in the code |
-| Read-write lock                   | Read-heavy workloads scale nearly linearly   | More complex, and writers can starve under sustained read load                                      |
-| Atomics / lock-free               | No blocking, no deadlock                     | Only works for small updates, and the code is very hard to prove correct                            |
-| Immutable data                    | The race becomes structurally impossible     | Copying cost, and more allocation pressure on the heap                                              |
-| Message passing (no shared state) | Removes the shared-state ingredient entirely | Serialization overhead, and the design must be restructured around it                               |
+| Many fine-grained locks           | Real parallelism                             | Deadlock risk; correctness depends on lock-ordering discipline                                      |
+| Read-write lock                   | Read-heavy workloads scale nearly linearly   | More complex; writers can starve under sustained read load                                          |
+| Atomics / lock-free               | No blocking, no deadlock                     | Only small updates; hard to prove correct                                                           |
+| Immutable data                    | The race becomes structurally impossible     | Copying cost and more heap pressure                                                                 |
+| Message passing (no shared state) | Removes the shared-state ingredient entirely | Serialization overhead; design must be restructured around it                                       |
 
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-53-race-and-lock
 import threading
@@ -10529,11 +9420,9 @@ def deadlocks_2():
         with lock_a:          # B then A  <-- opposite order: the cycle
             pass
 
-# The fix is a rule, not a mechanism: every function acquires locks in one
-# fixed global order. Encoding that order in the lock's identity makes the
-# rule enforceable rather than merely documented.
+# The fix is a rule: every function acquires locks in one fixed global order.
 def ordered(*locks):
-    for lk in sorted(locks, key=id):      # id() gives a stable global order
+    for lk in sorted(locks, key=id):
         lk.acquire()
     try:
         yield
@@ -10552,23 +9441,21 @@ class BoundedQueue:
     def put(self, item):
         with self._cv:
             while len(self._items) == self._capacity:   # while, never if
-                self._cv.wait()                        # releases the lock, sleeps
+                self._cv.wait()
             self._items.append(item)
-            self._cv.notify_all()                      # a consumer may now proceed
+            self._cv.notify_all()
 
     def get(self):
         with self._cv:
             while not self._items:
                 self._cv.wait()
             item = self._items.pop(0)
-            self._cv.notify_all()                      # a producer may now proceed
+            self._cv.notify_all()
             return item
 
-# Why `while` and not `if`: notify_all wakes every waiter, but only one can
-# hold the lock at a time. By the time the second waiter runs, the first may
-# have already taken the only item. `while` re-checks the condition after
-# waking, which is the difference between correct code and an intermittent
-# IndexError in production.
+# Why `while` and not `if`: notify_all wakes every waiter, but only one holds
+# the lock at a time. By the time the second waiter runs, the first may have
+# already taken the only item. `while` re-checks after waking.
 
 # ---------- 5. Semaphore: limit concurrency to N, not to 1 ----------
 connection_pool = threading.Semaphore(5)     # at most 5 threads in here at once
@@ -10578,34 +9465,26 @@ def query(sql):
         ...                                   # up to 5 run concurrently
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**INTERVIEW NOTE:**
 
+"Explain a race condition and how you'd fix it" and "four conditions for deadlock, and how you prevent it" are standard. Concurrency also connects forward: a database transaction (Phase 64) is the same mutual-exclusion problem applied to rows instead of variables.
+
+**PRACTICE:**
 
 | Difficulty | Task                                                                                                                                                                 |
 | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Run the unsafe counter above ten times and record the ten different wrong answers. That variability is the defining signature of a race                              |
+| Easy       | Run the unsafe counter ten times and record the different wrong answers - that variability is the signature of a race                                                |
 | Easy       | Explain why `balance += 1` is not atomic, in terms of the machine instructions it becomes                                                                            |
 | Easy       | Play the first five levels of [The Deadlock Empire](https://deadlockempire.github.io/) and write down which interleaving broke each one                              |
-| Medium     | LeetCode 1114 (Print in Order) and 1115 (Print FooBar Alternately) - the minimum viable synchronization exercises                                                    |
-| Medium     | Take the `BoundedQueue` above, change both `while` loops to `if`, and construct a test with three producers and three consumers that makes it fail                   |
-| Medium     | Implement a read-write lock with only a mutex and a condition variable. Then find the input pattern that starves your writers                                        |
-| Medium     | Write a program that deadlocks reliably, then fix it with a global lock order, then prove the fix by running it 10,000 times                                         |
-| Hard       | LeetCode 1226 (Dining Philosophers) - the canonical deadlock problem. Solve it three different ways: lock ordering, a limiting semaphore, and an arbitrator          |
-| Hard       | Implement a lock-free counter using only atomic compare-and-swap, then explain what the ABA problem is and whether your counter has it                               |
-| Hard       | Work through [The Little Book of Semaphores](https://greenteapress.com/wp/semaphores/) up to the barrier problem, attempting each puzzle before reading the solution |
+| Medium     | LeetCode 1114 (Print in Order) and 1115 (Print FooBar Alternately)                                                                                                   |
+| Medium     | Change both `while` loops in `BoundedQueue` to `if`, and construct a test with three producers and three consumers that fails                                        |
+| Medium     | Write a program that deadlocks reliably, then fix it with a global lock order, then run it 10,000 times                                                              |
+| Hard       | LeetCode 1226 (Dining Philosophers) - solve three ways: lock ordering, limiting semaphore, arbitrator                                                                |
+| Hard       | Implement a lock-free counter using only atomic compare-and-swap; explain the ABA problem                                                                            |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
-
-"Explain a race condition and how you'd fix it" and "what are the four conditions for deadlock, and how do you prevent it" are standard OS interview questions. Concurrency also connects directly forward: a database transaction (Phase 64) is, at its core, the same mutual-exclusion problem applied to rows in a shared table instead of variables in shared memory.
-
-**PRACTICE WITH A SMALL PROJECT**
-
-Write a small multi-threaded counter increment program without a lock, observe the race condition empirically (run it many times, note the final count is sometimes wrong), then add a mutex and confirm it's now always correct.
-
-**CHECK YOUR UNDERSTANDING AFTER PHASE 53:** Explain, without notes, what makes a race condition possible, how a mutex restores mutual exclusion, and one practical rule that breaks the circular-wait condition for deadlock.
-
-**WHY THE NEXT TOPIC IS NEEDED - Systems Programming:** Synchronization keeps threads inside one process honest. The next skill is talking to the OS itself - opening files, creating sockets, calling into the kernel on purpose - so that a program can use real OS services instead of only the language's high-level wrappers. That is Phase 54.
+Without notes: what makes a race possible, how a mutex restores mutual exclusion, and one practical rule that breaks circular wait. Synchronization keeps threads inside one process honest. The next skill is talking to the OS itself - opening files, creating sockets, calling into the kernel on purpose - so a program can use real OS services instead of only the language's high-level wrappers. That is Phase 54.
 
 ---
 
@@ -10623,23 +9502,28 @@ Write a small multi-threaded counter increment program without a lock, observe t
 
 **WHAT YOU SHOULD KNOW FIRST:** Phase 50 (your process has an isolated address space; the kernel mediates access to everything outside it), Phase 52 (processes, **filesystem path → inode → data**, and the idea that the OS owns the hardware), Phase 53 (if you add threads later, shared use of those OS handles still needs care).
 
+**LEARNING RESOURCES:**
+
+- [Syscalls, Kernel vs. User Mode (bin 0x09)](https://www.youtube.com/watch?v=fLS99zJDHOc) - why user mode cannot touch devices directly
+- [How a Linux System Call Works (Linux Foundation)](https://www.youtube.com/watch?v=FkIWDAtVIUM) - short whiteboard walk of the trap into the kernel
+- [Python Sockets Explained in 10 Minutes (NeuralNine)](https://www.youtube.com/watch?v=bwTAVGg_kVs) - a TCP client/server you can type along with
+- [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/) - classic free sockets book (C-focused; ideas transfer); [syscalls(2)](https://man7.org/linux/man-pages/man2/syscalls.2.html)
+- [python/cpython - Lib/socket.py](https://github.com/python/cpython/blob/main/Lib/socket.py) - thin wrappers over the same OS calls
+- Interactive: on Linux run `strace -e openat,read,write,socket,connect python3 -c 'print("hi")'` (or `dtruss` on macOS) and watch the syscalls a "simple" print actually makes
+
 ## 54.1 Talking to the Kernel: Syscalls, File Descriptors & Sockets
 
-**WHY YOU ARE LEARNING THIS:** High-level languages hide the boundary between "your code" and "the operating system." `open("notes.txt")`, `socket.connect(...)`, and even `print(...)` eventually become **system calls** - controlled entries into the kernel that perform privileged work your process is not allowed to do directly (touch the disk controller, the network card, another process's memory). Systems programming is the skill of seeing that boundary clearly and using it deliberately.
+**WHY THIS MATTERS:**
+
+High-level languages hide the boundary between "your code" and "the operating system." `open("notes.txt")`, `socket.connect(...)`, and even `print(...)` eventually become **system calls** - controlled entries into the kernel that perform privileged work your process is not allowed to do directly (touch the disk controller, the network card, another process's memory). Systems programming is the skill of seeing that boundary clearly and using it deliberately.
 
 > **Applies Phase 52.2:** You already know pathnames, inodes, and data blocks. This phase does *not* re-teach the filesystem. It teaches the **syscall / file-descriptor / socket** interface your process uses to *talk to* that filesystem and the network.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE PROBLEM:**
 
-- Best animated explanation: [Syscalls, Kernel vs. User Mode (bin 0x09)](https://www.youtube.com/watch?v=fLS99zJDHOc) - what a syscall is and why user mode cannot touch devices directly
-- Alternative: [Linux Tutorial: How a Linux System Call Works (Linux Foundation)](https://www.youtube.com/watch?v=FkIWDAtVIUM) - short whiteboard walk of the trap into the kernel
-- Another angle: [Python Sockets Explained in 10 Minutes (NeuralNine)](https://www.youtube.com/watch?v=bwTAVGg_kVs) *(Composio YouTube; replaced dead sockets ID)* - a TCP client/server you can type along with
-- Interactive: run `strace -e openat,read,write,socket,connect python3 -c 'print("hi")'` on Linux (or `dtruss` on macOS) and watch the syscalls a "simple" print actually makes
-- Written: [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/) - the classic free sockets book (C-focused, ideas transfer); [Linux man pages: syscalls(2)](https://man7.org/linux/man-pages/man2/syscalls.2.html)
-- GitHub: [python/cpython - Lib/socket.py](https://github.com/python/cpython/blob/main/Lib/socket.py) - thin wrappers over the same OS calls
-- Practice: Build the mini client/server in the working example; then capture it with Wireshark once Story VII begins
+Your process runs in user mode and cannot issue raw device commands. Without a controlled kernel entry, there is no safe way to open a file, talk on the network, or create another process - and without file descriptors, every I/O operation would re-walk the whole pathname tree from Phase 52.2.
 
-**STEP-BY-STEP EXPLANATION**
+**HOW IT WORKS:**
 
 Three ideas unlock most of systems programming:
 
@@ -10647,7 +9531,9 @@ Three ideas unlock most of systems programming:
 
 2. **File descriptors (handles).** On Unix-like systems, almost every open resource - a file, a pipe, a socket, even stdin/stdout - is an integer **file descriptor** in a per-process table. `open(path)` walks the filesystem (Phase 52.2) once, then returns an fd keyed to that inode + offset. After that, `read(fd, ...)` and `write(fd, ...)` are the same shape whether `fd` is a disk file or a network connection. Windows uses HANDLE objects with the same spirit.
 
-3. **Sockets.** A socket is a file-descriptor-shaped endpoint for network communication. Creating one does not send packets yet; `bind`/`listen`/`accept` (server) or `connect` (client) attach it to an address. Story VII deepens protocols (TCP, DNS, HTTP); this phase only needs you to *touch* a socket so the OS boundary is real.
+3. **Sockets.** A socket is a file-descriptor-shaped endpoint for network communication. Creating one does not send packets yet; `bind`/`listen`/`accept` (server) or `connect` (client) attach it to an address. **This phase owns the OS-handle view.** Story VII (Phases 55–56) deepens protocols (TCP, UDP, DNS, HTTP) - the packet and reliability story. Here you only need to *touch* a socket so the OS boundary is real; do not confuse "I opened a socket" with "I understand TCP."
+
+**VISUAL MODEL:**
 
 ```text
 Your process (user mode)
@@ -10661,11 +9547,9 @@ Your process (user mode)
     +---------+----------+
 ```
 
-**PICTURE IT LIKE THIS**
-
 Your program is a guest in a hotel room (the process). It can rearrange furniture inside the room freely (user-space memory). To order room service, open the building's front door, or talk to another guest, it must call the front desk (the kernel). The front desk returns a ticket number (a file descriptor) for each open request - "room service order #3," "phone line #7" - and later `read`/`write` use that ticket.
 
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-54-socket-echo
 import socket
@@ -10692,14 +9576,15 @@ with socket.create_connection((HOST, port), timeout=2) as cli:
     print(cli.recv(1024))   # b'ECHO:hello-kernel'
 ```
 
-**Trade-offs:** Calling the kernel is powerful and necessary for I/O - and expensive compared to pure CPU work. High-performance systems minimize syscall count (buffering, `io_uring`, batching) for the same reason Phase 49 minimized cache misses: the abstract algorithm can be fine while the *implementation boundary* dominates cost.
+**TRADE-OFFS:**
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+Calling the kernel is powerful and necessary for I/O - and expensive compared to pure CPU work. High-performance systems minimize syscall count (buffering, `io_uring`, batching) for the same reason Phase 49 minimized cache misses: the abstract algorithm can be fine while the *implementation boundary* dominates cost.
+
+**INTERVIEW NOTE:**
 
 "What happens when you call `read`?" - user → syscall trap → kernel checks fd table → device or socket buffer → copy data back → return. Naming file descriptors and user/kernel mode is the signal; diving into driver code is not required.
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
@@ -10707,10 +9592,9 @@ with socket.create_connection((HOST, port), timeout=2) as cli:
 | Medium     | Write a TCP client that connects to `example.com:80`, sends a minimal `GET / HTTP/1.0` request, and prints the first response line (preview of Phases 56-58) |
 | Hard       | Implement a tiny line-based chat: one process listens, another connects; both can send lines until either types `quit` |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**CHECK YOUR UNDERSTANDING AFTER PHASE 54 - Story VI complete.** Without notes: trace one instruction through fetch-decode-execute; explain a page fault; contrast process vs thread; fix a race with a lock; and describe what a socket syscall does that ordinary Python assignment cannot.
-
-**WHY THE NEXT TOPIC IS NEEDED - Networking Foundations:** Everything in Story VI still assumes one machine - or at most a localhost socket that never leaves your laptop. The moment two processes need to talk across *different* machines - a browser and a server, two microservices, a phone and a database - you need addressing, routing, and protocols designed for an unreliable network. That is Story VII, starting at Phase 55.
+Without notes: trace one instruction through fetch-decode-execute; explain a page fault; contrast process vs thread; fix a race with a lock; and describe what a socket syscall does that ordinary Python assignment cannot. Everything in Story VI still assumes one machine - or at most a localhost socket that never leaves your laptop. The moment two processes need to talk across *different* machines - a browser and a server, two microservices, a phone and a database - you need addressing, routing, and protocols designed for an unreliable network. That is Story VII, starting at Phase 55.
 
 ---
 
@@ -10726,49 +9610,56 @@ with socket.create_connection((HOST, port), timeout=2) as cli:
 
 **WHAT YOU WILL BE ABLE TO DO:** Trace a packet from your laptop to a remote server through the layers that matter in practice - Application, Transport, Network, Link - and name which layer owns MAC addresses, IP addresses, and ports.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 52 (processes as isolated units) and Phase 54 (sockets as the OS channel those processes use when they no longer share memory - including across machines).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 54 — sockets as OS handles.
 
-## 55.1 The Layered Model: OSI / TCP-IP, and Addressing
+**LEARNING RESOURCES:**
 
-**WHY YOU ARE LEARNING THIS:** Getting a message from one machine to another requires solving several independent problems at once: how to physically move electrical/optical/radio signals, how to find the right destination machine among billions, how to guarantee the message arrives complete and in order, and how to interpret what the message *means*. Bundling all of that into one monolithic protocol would mean any change to physical hardware forces a rewrite of application logic. The fix is a **layered model**: each layer solves exactly one of these problems and exposes a clean interface to the layer above, so layers can evolve independently (Wi-Fi replaced Ethernet cables without a single web application needing to change).
+- [MASTER the OSI Model in Just 5 Minutes (KnowledgeCatch)](https://www.youtube.com/watch?v=8YkL_qc6ozc) - message descending and climbing the layers
+- [What is OSI Model, Real World Examples (ByteByteGo)](https://www.youtube.com/watch?v=0y6FtKsg6J4) - each layer tied to a device or protocol you have used
+- [Cloudflare Learning Center: What is the OSI model](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/)
+- [Beej's Guide to Network Concepts](https://beej.us/guide/bgnet0/html/index-wide.html) - readable foundations before the C sockets book
+- [Wireshark](https://www.wireshark.org/) - capture traffic and expand the packet tree; [Sample Captures](https://wiki.wireshark.org/SampleCaptures) if you want packets without sniffing live
+- [Stanford CS144](https://cs144.github.io/) - build networking pieces from scratch
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+## 55.1 Layered Model OSI/TCP-IP & Addressing
 
-- Best animated explanation: [MASTER the OSI Model in Just 5 Minutes (KnowledgeCatch)](https://www.youtube.com/watch?v=8YkL_qc6ozc) - animates a message descending the layers and climbing back up *(verified via Composio YouTube search)*
-- Alternative: [What is OSI Model, Real World Examples (ByteByteGo)](https://www.youtube.com/watch?v=0y6FtKsg6J4) - ties each layer to a device or protocol you have actually used
-- Another angle: [OSI Model Explained | OSI Animation (TechTerms)](https://www.youtube.com/watch?v=vv4y_uOneC0) for the classic 7-layer walkthrough; [What is TCP/IP and OSI? (NetworkChuck)](https://www.youtube.com/watch?v=CRdL1PcherM) for why engineers mostly use the 4-layer TCP/IP model in practice
-- Interactive simulator: [Wireshark](https://www.wireshark.org/) - capture your own traffic and expand the packet tree; [Wireshark Sample Captures](https://wiki.wireshark.org/SampleCaptures) if you want packets without installing a NIC sniffer first. Pair with [Cisco Packet Tracer](https://www.netacad.com/courses/packet-tracer) to *build* networks rather than only observe them
-- Written documentation: [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/html/) and [Beej's Guide to Network Concepts](https://beej.us/guide/bgnet0/html/index-wide.html) *(Composio web search)*; [Cloudflare Learning Center: What is the OSI model](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/)
-- GitHub implementation: [smoltcp](https://github.com/smoltcp-rs/smoltcp) - a complete TCP/IP stack you can read, layers as modules
-- Practice platform: [Stanford CS144](https://cs144.github.io/) - build networking pieces from scratch, including a Wireshark exercise with sample captures
+**WHY THIS MATTERS:**
 
-**STEP-BY-STEP EXPLANATION**
+Phase 54 gave you a socket - an OS handle your process uses to talk through the kernel. That handle does not explain how bytes leave *your machine* and reach another one among billions. Getting a message across the network requires solving several independent problems at once: how signals move on a wire or air, how to find the right machine, how to deliver bytes (reliably or fast), and how to interpret what those bytes *mean*. A layered model keeps those problems separate so Wi-Fi can replace Ethernet without rewriting every web app.
 
-The mechanism that makes layering work is **encapsulation**: each layer takes the data handed down from above, treats it as an opaque payload, and wraps it in its own header. The receiving machine unwraps in the reverse order. That is why a single Ethernet frame on the wire physically contains an IP header containing a TCP header containing your HTTP request, nested like envelopes inside envelopes, and why each layer can be replaced independently: nobody inspects a payload they do not own.
+**THE PROBLEM:**
 
-Each layer also has its own name for the unit it moves, and using them precisely is a real signal of understanding. The Application layer produces a **message**. Transport wraps it into a **segment** (TCP) or **datagram** (UDP). Network wraps that into a **packet**. Link wraps that into a **frame**. Physical transmits **bits**. So "packet loss" is technically a Network-layer statement, and Wireshark's tree view is showing you all five names for the same bytes at once.
+Without layers, a change to physical hardware forces a rewrite of application logic. Without separate addresses per layer, you cannot say "this NIC on this cable," "this machine on the internet," and "this process on that machine" at the same time - and one IP could not host a web server on 443 and a database on 5432 simultaneously.
 
-Addressing is the part most people learn as trivia and should learn as a hierarchy, because each layer addresses differently on purpose. A **MAC address** is a 48-bit hardware identifier, globally unique per network interface, and it only has meaning on the local network segment. An **IP address** is a logical, routable address that identifies a machine's location in the network topology, and unlike a MAC address it changes when the machine moves networks. A **port number** is 16 bits and identifies which process on that machine should receive the data, which is what allows one IP address to run a web server on 443 and a database on 5432 simultaneously. The combination of source IP, source port, destination IP, and destination port is the four-tuple that uniquely identifies a connection, and it is what lets your machine hold fifty connections to the same server at once.
+**HOW IT WORKS:**
 
-Two protocols glue the addressing layers together and are worth knowing by name. **ARP** answers "I have this IP address on my local network, what MAC address should I put in the frame?" by broadcasting the question to the segment. **NAT** is why the four billion available IPv4 addresses have lasted this long: your router presents one public IP to the internet and rewrites the port numbers of outgoing connections so it can map replies back to the right internal machine. NAT is also the reason two devices behind different home routers cannot simply connect to each other directly, which is a constraint that shapes the design of everything from video calls to peer-to-peer file sharing.
+**Encapsulation** is the mechanism: each layer takes the data handed down from above, treats it as an opaque payload, and wraps it in its own header. The receiver unwraps in reverse. One Ethernet frame on the wire physically contains an IP header containing a TCP header containing your HTTP request - envelopes inside envelopes - so each layer can be replaced independently.
 
-Subnetting is where addressing becomes arithmetic. An address like `192.168.1.10/24` means the first 24 bits identify the network and the remaining 8 identify the host within it, giving 256 addresses of which 254 are usable. The point of the split is routing efficiency: a router does not need a table entry for every machine on the internet, only for every network, because everything inside a network is somebody else's problem to deliver. That single idea is what makes a global routing table possible at all.
+Unit names matter in debugging. Application produces a **message**. Transport wraps a **segment** (TCP) or **datagram** (UDP). Network wraps a **packet**. Link wraps a **frame**. Physical transmits **bits**. "Packet loss" is a Network-layer statement; Wireshark's tree shows all five names for the same bytes.
 
-**Mental Model - the layers that matter most in practice:**
+Addressing is a hierarchy on purpose:
+
+- **MAC** - 48-bit hardware id for a NIC; meaningful only on the local segment.
+- **IP** - logical, routable location in the topology; changes when the machine moves networks.
+- **Port** - 16 bits naming which process on that machine should receive the data.
+
+The **four-tuple** (source IP, source port, destination IP, destination port) uniquely names one connection. Open a second browser tab to the same site and only the local port changes - that is how one server on one port serves millions of clients.
+
+Two glue protocols: **ARP** answers "I have this local IP - what MAC goes in the frame?" by broadcasting on the segment. **NAT** lets a router present one public IPv4 address and rewrite ports so replies map back to the right internal machine - also why two devices behind different home NATs cannot simply connect directly.
+
+Subnetting is routing arithmetic. `192.168.1.10/24` means the first 24 bits identify the network and the remaining 8 the host (256 addresses, 254 usable). Routers need entries for networks, not every host - that is what makes a global routing table possible.
+
+In practice engineers use the **four-layer TCP/IP view** more than all seven OSI boxes: Application / Transport / Network / Link+Physical. OSI remains useful vocabulary; TCP/IP is how stacks are built.
+
+**VISUAL MODEL:**
 
 ```text
-Application  (HTTP, DNS, etc.)         "what does this message MEAN"
-Transport    (TCP, UDP)                "how do I get bytes there reliably (or fast)"
-Network      (IP)                      "which machine, among billions, is this for"
-Link/Physical (Ethernet, Wi-Fi)        "how do bits actually move across a wire/air"
-```
+Application  (HTTP, DNS, …)         "what does this message MEAN"
+Transport    (TCP, UDP)             "how do I get bytes there reliably (or fast)"
+Network      (IP)                   "which machine, among billions, is this for"
+Link/Physical (Ethernet, Wi-Fi)     "how do bits actually move"
 
-Each layer only needs to trust the layer below it to do its one job - the Application layer never has to think about electrical signals, and the Physical layer never has to know it's carrying an HTTP request.
-
-**Internal Working, Step by Step - encapsulation, drawn as it actually appears on the wire:**
-
-```text
-SENDING: your data descends, each layer ADDING its own header.
+SENDING: your data descends; each layer ADDS its own header.
 
   APPLICATION   [ GET /index.html HTTP/1.1  Host: example.com ]
                                 |
@@ -10787,22 +9678,19 @@ SENDING: your data descends, each layer ADDING its own header.
                                 v
   PHYSICAL      101101000111010110100011101011010001110101101000111010...
 
-RECEIVING: the server's stack REMOVES headers in the reverse order,
+RECEIVING: the server's stack REMOVES headers in reverse order,
 each layer reading only its own header and passing the rest up untouched.
 
   PHYSICAL  --> LINK      strips Eth hdr, checks CRC, "this frame is for me"
             --> NETWORK   strips IP hdr,  "this packet is for my IP"
-            --> TRANSPORT strips TCP hdr, "port 443 -> hand to the web server,
-                                           and reorder if segments arrived
-                                           out of sequence"
+            --> TRANSPORT strips TCP hdr, "port 443 -> web server; reorder if needed"
             --> APPLICATION receives exactly the original bytes:
                             GET /index.html HTTP/1.1
 
-THE ONE DETAIL WORTH PAUSING ON:
-the destination MAC address is your ROUTER's, not the server's. Your machine
-has no idea what the server's MAC address is and never will, because MAC
-addresses only have meaning on one local segment. So the frame is addressed
-hop by hop, while the IP packet inside it is addressed end to end:
+THE DETAIL WORTH PAUSING ON:
+destination MAC is your ROUTER's, not the server's. MAC addresses only
+have meaning on one local segment. Frames are addressed hop by hop;
+the IP packet inside is addressed end to end:
 
    You            Router          ISP router        ...        Server
    |                |                 |                          |
@@ -10811,53 +9699,24 @@ hop by hop, while the IP packet inside it is addressed end to end:
    |  router        |  dst MAC =      |--frame 3-->  ...  ------>|
    |                |  ISP router     |                          |
    +----------------+-----------------+--------------------------+
-     ^ The Ethernet header is REWRITTEN at every hop.
-     ^ The IP header's src and dst are the SAME the entire way
-       (only TTL decrements, by 1 per hop, which is exactly what
-        traceroute exploits to discover the path).
+     ^ Ethernet header REWRITTEN every hop.
+     ^ IP src/dst stay the SAME (only TTL decrements - traceroute's trick).
 
-That difference IS the difference between the Link and Network layers,
-and it is why both layers need addresses at all.
+ADDRESSING for one connection:
 
-ADDRESSING, all three kinds at once, for one connection:
+   MAC  aa:bb:cc:dd:ee:ff   <- NIC on this cable segment     (Link)
+   IP   93.184.216.34       <- machine on the internet       (Network)
+   PORT 443                 <- process on that machine       (Transport)
 
-   MAC  aa:bb:cc:dd:ee:ff   <- which NIC on this cable segment  (Link)
-   IP   93.184.216.34       <- which machine on the internet    (Network)
-   PORT 443                 <- which process on that machine    (Transport)
-
-   The four-tuple that names ONE connection uniquely:
+   Four-tuple naming ONE connection:
        (192.168.1.10, 51234)  <-->  (93.184.216.34, 443)
-        your IP     your port        their IP      their port
-
-   Open a second tab to the same site and only ONE number changes:
+   Second tab - only the local port changes:
        (192.168.1.10, 51235)  <-->  (93.184.216.34, 443)
-   Which is precisely how one server on one port serves millions of
-   simultaneous clients without confusing them.
 ```
 
-**PICTURE IT LIKE THIS**
+Mailing a letter: you write the message (Application), address the envelope (Network/IP), use a postal service that may guarantee delivery (Transport), and trucks move the physical mail (Link) - you never drive the truck, and the driver never reads the letter.
 
-Mailing a letter: you write a message (Application), put it in an envelope with a destination address (Network/IP), hand it to a postal service that guarantees delivery and handles lost mail (Transport/TCP), which physically moves it by truck and plane (Link/Physical) - you never think about the truck's route, and the truck driver never reads your letter.
-
-**Documentation**
-
-- [GeeksforGeeks - Computer Network Tutorial](https://www.geeksforgeeks.org/computer-networks/computer-network-tutorials/) - covers the OSI/TCP-IP layered model in depth
-- [MIT OCW 6.006](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) for the algorithmic side (routing, shortest paths) once graphs (Phase 41) meet networking
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Decision                   | What it buys                                                                                                                          | What it costs                                                                                                                                                            |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Layering at all            | Any layer can be replaced without touching the others, which is how Wi-Fi, IPv6, and HTTP/2 all arrived without breaking the internet | Header overhead on every packet, and a copy at each boundary in naive implementations                                                                                    |
-| Fixed layer boundaries     | A universal interface, so any application works over any physical medium                                                              | Information that would help one layer is hidden from it, which is why TCP historically could not tell packet loss from congestion versus loss from a lossy wireless link |
-| Hop-by-hop Link addressing | Routers only need to know their neighbors, not the whole internet                                                                     | Every hop must rewrite the frame header                                                                                                                                  |
-| End-to-end IP addressing   | The path can change mid-connection without the endpoints noticing                                                                     | Routing tables must be maintained globally, by protocols like BGP                                                                                                        |
-| Ports as a 16-bit field    | One machine can host 65,535 distinct services per protocol                                                                            | A hard ceiling of ~65k outbound connections per source IP per destination, which real load balancers do hit                                                              |
-| NAT                        | IPv4 survived far past its expected exhaustion date                                                                                   | Two machines behind different NATs cannot connect directly, which is why STUN, TURN, and relay servers exist                                                             |
-
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-55-layered-fetch
 import socket
@@ -10879,13 +9738,12 @@ def fetch(host, path="/"):
         # connect() performs the TCP three-way handshake (Phase 56).
         s.connect((ip, 80))                      # (IP, PORT): Network + Transport
 
-        # And here is the entire APPLICATION layer: bytes with an agreed meaning.
+        # Application layer: bytes with an agreed meaning.
         request = f"GET {path} HTTP/1.1\r\nHost: {host}\r\nConnection: close\r\n\r\n"
         s.sendall(request.encode())
 
-        # You never chose a MAC address, never built an IP header, never
-        # acknowledged a segment, and never reordered anything. Every layer
-        # below Transport was handled by the OS, which is the whole point.
+        # You never chose a MAC, built an IP header, or ACKed a segment.
+        # Layers below Transport were handled by the OS - that is the point.
         chunks = []
         while True:
             data = s.recv(4096)
@@ -10897,7 +9755,7 @@ def fetch(host, path="/"):
 response = fetch("example.com")
 print(response.split(b"\r\n\r\n")[0].decode())   # just the HTTP headers
 
-# See the four-tuple from the diagram, live:
+# See the four-tuple live:
 s = socket.create_connection(("example.com", 80))
 print("local  (your IP, your port): ", s.getsockname())
 print("remote (their IP, their port):", s.getpeername())
@@ -10905,26 +9763,36 @@ s.close()
 # Open two of these at once and only the local port differs.
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
 
-The layered model itself is rarely asked directly outside of new-grad and infrastructure interviews, but it is the substrate for questions that *are* asked constantly. "Walk me through what happens when you type a URL and press enter" is the single most common systems question in existence, and a strong answer is precisely a tour down and back up these layers: DNS resolution, TCP handshake, TLS handshake, HTTP request, server processing, response, rendering. "Why can't two machines behind home routers connect directly" is testing NAT. "How does one server handle a million connections on port 443" is testing the four-tuple. Naming the layer a problem lives in is also the fastest way to debug out loud: if you can ping an IP but the name does not resolve, that is DNS and nothing else; if the name resolves but the connection is refused, the Network layer is fine and something at Transport or above is not listening.
+| Decision                   | What it buys                                                                 | What it costs                                                                                          |
+| -------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Layering at all            | Replace Wi-Fi, IPv6, HTTP/2 without rewriting applications                   | Header overhead; copies at each boundary in naive stacks                                               |
+| Fixed layer boundaries     | Universal interface over any medium                                          | One layer cannot see info another has (classic: TCP mistaking wireless loss for congestion)            |
+| Hop-by-hop Link addressing | Routers only need neighbors                                                  | Every hop rewrites the frame header                                                                    |
+| End-to-end IP addressing   | Path can change mid-connection                                               | Global routing state (BGP and friends)                                                                 |
+| 16-bit ports               | Tens535 services per protocol per IP                                        | Hard ceiling on outbound connections per source IP toward one destination                              |
+| NAT                        | IPv4 survived past expected exhaustion                                       | Machines behind different NATs cannot connect directly (STUN/TURN/relays)                              |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**INTERVIEW NOTE:**
 
+"Walk me through what happens when you type a URL" is a tour down and up these layers. "Why can't two home machines connect directly?" is NAT. "How does one server handle a million connections on 443?" is the four-tuple. Naming the layer a failure lives in is the fastest debugging habit: ping works but the name fails → DNS; name resolves but connection refused → Transport or above.
 
-| Difficulty | Task                                                                                                                                                                     |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Easy       | Run `ping example.com`, then `nslookup example.com`, then `traceroute example.com` (`tracert` on Windows) and say which layer each command is exercising                 |
-| Easy       | Explain why the TTL field decrementing at each hop is what makes traceroute possible                                                                                     |
-| Easy       | Given `10.0.5.37/24`, state the network address, the broadcast address, and how many usable host addresses the subnet has                                                |
-| Medium     | Capture one HTTP request in [Wireshark](https://www.wireshark.org/) and expand the packet tree. Screenshot it and label the four layers from the diagram above           |
-| Medium     | Write a TCP echo server and client with raw sockets, then run two clients at once and print each connection's four-tuple to confirm they differ                          |
-| Medium     | Use `arp -a` to print your machine's ARP table, then explain why your router's MAC is in it and a remote web server's is not                                             |
-| Hard       | Work through the [Stanford CS144 assignments](https://cs144.github.io/), which build a real TCP implementation on top of a provided IP layer                             |
-| Hard       | Read enough of [smoltcp](https://github.com/smoltcp-rs/smoltcp) to explain how it separates the Link, Network, and Transport layers in code, and where the copies happen |
+**PRACTICE:**
 
+| Difficulty | Task                                                                                                                                                           |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Easy       | Run `ping example.com`, `nslookup example.com`, and `traceroute`/`tracert`, and say which layer each exercises                                                 |
+| Easy       | Explain why TTL decrementing per hop makes traceroute possible                                                                                                 |
+| Easy       | Given `10.0.5.37/24`, state network address, broadcast address, and usable host count                                                                          |
+| Medium     | Capture one HTTP request in Wireshark, expand the packet tree, and label Application / Transport / Network / Link                                              |
+| Medium     | Write a TCP echo client/server; run two clients; print each connection's four-tuple                                                                            |
+| Medium     | Run `arp -a` and explain why your router's MAC appears and a remote web server's does not                                                                      |
+| Hard       | Sketch (or start) Stanford CS144's approach: a real transport on top of a provided IP layer                                                                    |
 
-**WHY THE NEXT TOPIC IS NEEDED - TCP vs UDP:** The layered model explains *that* the Transport layer's job is getting bytes from one machine to another. It doesn't yet explain the fundamental trade-off every Transport protocol has to make: guarantee delivery (and pay in latency), or skip the guarantees (and leave loss to the application). That trade-off is Phase 56.
+**WHAT THIS UNLOCKS NEXT:**
+
+The layered model explains *that* Transport moves bytes between machines. It does not yet explain the fundamental Transport trade-off: guarantee delivery (and pay in latency), or skip the guarantees (and leave loss to the application). That is Phase 56.
 
 ---
 
@@ -10940,68 +9808,46 @@ The layered model itself is rarely asked directly outside of new-grad and infras
 
 **WHAT YOU WILL BE ABLE TO DO:** Explain the TCP three-way handshake and sequence/ACK model, and choose TCP or UDP for a given problem by naming which failure mode (loss vs delay) is worse for that use case.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 55 (layers and the four-tuple: IP + port), Phase 54 (a socket is the OS handle you already opened on localhost).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 55 (layers, four-tuple); Phase 54 (socket = OS handle).
 
-## 56.1 TCP vs UDP
+**LEARNING RESOURCES:**
 
-**WHY YOU ARE LEARNING THIS:** Every network is unreliable at some level - packets can be lost, arrive out of order, or get duplicated. The Transport layer has to decide how to handle that unreliability, and there is no free answer: guaranteeing perfect delivery costs time (acknowledgments, retransmission, reordering), while skipping those guarantees is faster but leaves the application to handle loss itself.
+- [TCP vs UDP Comparison (PowerCert Animated Videos)](https://www.youtube.com/watch?v=uwoD5YsGACg) - steps TCP performs that UDP skips
+- [TCP Three-way Handshake in Detail (Sunny Classroom)](https://www.youtube.com/watch?v=xMtP5ZB3wSk) - flags and sequence numbers
+- [TCP vs UDP Explained with a Hands-On Wireshark Lab (Chris Greer)](https://www.youtube.com/watch?v=V1CxV6Vg7_U) - real captures
+- [RFC 9293 (TCP)](https://www.rfc-editor.org/rfc/rfc9293.html); [High Performance Browser Networking](https://hpbn.co/) chapter 2
+- [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/html/) - sockets API that selects TCP vs UDP
+- [Stanford CS144](https://cs144.github.io/) - byte-stream reassembler and retransmission labs
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+> **Ownership split — Phase 54 vs Phase 56:** Phase 54 taught the **OS view**: a socket is a file-descriptor-like handle created with syscalls (`socket` / `bind` / `listen` / `accept` / `connect`). This phase teaches the **network view**: what TCP and UDP guarantee (or refuse to guarantee) on the wire, and how that shows up when you use those handles. Same word "socket," two layers — do not re-learn file descriptors here.
 
-- Best animated explanation: [TCP vs UDP Comparison (PowerCert Animated Videos)](https://www.youtube.com/watch?v=uwoD5YsGACg) - side-by-side of the steps TCP performs that UDP skips *(Composio YouTube)*
-- Alternative: [MASTER TCP VS UDP in 5 MINS (KnowledgeCatch)](https://www.youtube.com/watch?v=WAxip2eSxn4) - high-quality animation of the parcel-vs-postcard analogy; [TCP Three-way Handshake in Detail (Sunny Classroom)](https://www.youtube.com/watch?v=xMtP5ZB3wSk) for flags and sequence numbers
-- Another angle: [TCP vs UDP Explained with a Hands-On Wireshark Lab (Chris Greer)](https://www.youtube.com/watch?v=V1CxV6Vg7_U) - real captures; [TCP vs UDP Comparison (CertBros)](https://www.youtube.com/watch?v=cA9ZJdqzOoU) for the exam-style summary
-- Interactive simulator: [Wireshark](https://www.wireshark.org/) filtered to `tcp.flags.syn == 1`; [ns-3](https://www.nsnam.org/) for congestion windows
-- Written documentation: [RFC 9293 (TCP)](https://www.rfc-editor.org/rfc/rfc9293.html); [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/html/); [High Performance Browser Networking](https://hpbn.co/) chapter 2
-- GitHub / practice: [Stanford CS144](https://cs144.github.io/) and [smoltcp tcp.rs](https://github.com/smoltcp-rs/smoltcp/blob/main/src/socket/tcp.rs)
+## 56.1 TCP vs UDP (and how sockets expose them)
 
-**STEP-BY-STEP EXPLANATION**
+**WHY THIS MATTERS:**
 
-TCP's guarantees are not one mechanism but four, layered on top of each other, and knowing which mechanism provides which guarantee is what separates a memorized answer from an understood one.
+Every network is unreliable at some level - packets can be lost, reordered, or duplicated. The Transport layer must decide how to handle that. Phase 54's socket API is how user code *selects* the choice (`SOCK_STREAM` ≈ TCP, `SOCK_DGRAM` ≈ UDP). The handle is old news; the protocol behavior is new.
 
-**Sequence numbers** provide ordering. Every byte in a TCP stream has a number, so the receiver can reassemble segments that arrived out of order and detect ones that are missing. The initial sequence number is chosen randomly rather than starting at zero, which is a security measure: predictable sequence numbers would let an attacker inject data into someone else's connection.
+**THE PROBLEM:**
 
-**Acknowledgments and retransmission timers** provide reliability. The receiver acknowledges the highest contiguous byte it has received, and the sender keeps unacknowledged data buffered until an ACK arrives. If the timer expires first, the sender retransmits. The timeout is not a fixed constant but is continuously estimated from measured round-trip times, because a value that works on a local network would be catastrophically wrong on a satellite link.
+A file transfer or bank transaction cannot tolerate silent loss. A live video frame that arrives late is worse than one that never arrives. There is no free answer that fits both: guaranteeing perfect delivery costs round trips and bookkeeping; skipping guarantees is faster but leaves the application to handle loss.
 
-**Flow control** via the receive window prevents a fast sender from overwhelming a slow receiver. Every ACK carries a window size saying "I have room for this many more bytes," and the sender may never have more than that outstanding. This is purely about the endpoints and has nothing to do with the network in between.
+**HOW IT WORKS:**
 
-**Congestion control** is the mechanism that keeps the internet from collapsing, and it is genuinely the most interesting part. The sender maintains a congestion window that starts small, grows exponentially during **slow start** until it reaches a threshold, then grows linearly during **congestion avoidance**. When loss is detected, the window is cut, either drastically on a timeout or by half on three duplicate ACKs (**fast retransmit** and **fast recovery**). The resulting throughput graph is the famous sawtooth. The load-bearing assumption is that packet loss means congestion, which was true when the network was all wires and is unreliable over Wi-Fi and cellular, where loss often means interference instead. That mismatch is why newer algorithms like BBR measure bandwidth and round-trip time directly rather than inferring congestion from loss.
+TCP's guarantees are four mechanisms stacked:
 
-UDP, by contrast, is a header and nothing else: source port, destination port, length, and checksum, eight bytes total against TCP's twenty. It provides no connection, no ordering, no retransmission, no flow control, and no congestion control. What it does provide is *not getting in the way*, which turns out to be exactly what you want if you intend to implement your own reliability with different trade-offs. That is not a hypothetical: **QUIC**, the transport under HTTP/3, is built on UDP precisely so it can implement reliability, ordering, and congestion control in user space where it can be updated without waiting for operating system kernels to ship. QUIC also fixes TCP's **head-of-line blocking** problem, where one lost segment stalls every stream multiplexed over the same connection, because TCP's single ordered byte stream cannot deliver later bytes while an earlier one is missing.
+1. **Sequence numbers** - every byte has a number so the receiver can reorder and detect gaps. The initial sequence number is random (security: predictable ISNs invite injection).
+2. **Acknowledgments and retransmission timers** - receiver ACKs the highest contiguous byte; sender keeps unacked data until ACK or timeout. Timeout is estimated from measured RTT, not a fixed constant.
+3. **Flow control** - every ACK carries a receive window; the sender may not have more than that outstanding. Endpoint-only; unrelated to network congestion.
+4. **Congestion control** - a congestion window starts small (**slow start**, exponential), then grows linearly (**congestion avoidance**). Loss cuts the window (timeout → severe cut; three duplicate ACKs → **fast retransmit/recovery**, often halve). The classic throughput graph is a sawtooth. The load-bearing assumption is "loss means congestion," which fails on Wi-Fi/cellular where loss is often interference - hence algorithms like **BBR** that measure bandwidth and RTT directly.
 
-Two more distinctions matter in practice. TCP is a **stream** protocol with no message boundaries, so `send()` called three times may arrive as one `recv()`, or as five, and any protocol built on TCP must define its own framing (a length prefix, or a delimiter, which is why HTTP headers end with a blank line). UDP is a **datagram** protocol that preserves message boundaries exactly, so one `sendto()` is one `recvfrom()` or nothing at all. Getting this wrong is the single most common bug in first-time socket code.
+UDP is an 8-byte header (ports, length, checksum) against TCP's 20+ and provides *not getting in the way*: no connection, ordering, retransmission, flow control, or congestion control. That is why **QUIC** (HTTP/3's transport) rides UDP - reliability and congestion live in user space and can update without waiting for kernel TCP. QUIC also fixes TCP **head-of-line blocking**: one lost segment on a TCP connection stalls every multiplexed stream; QUIC orders per stream.
 
-**BEFORE VS. AFTER**
+Two practical distinctions:
 
-```text
-Raw, unreliable packet delivery (what the Network/IP layer alone gives you)
-        Problem: packets can arrive late, out of order, duplicated, or not at all.
-        A file transfer or a bank transaction absolutely cannot tolerate silent loss.
+- TCP is a **byte stream** with no message boundaries - three `send()`s may arrive as one `recv()` or five. Protocols must frame (length prefix, delimiter; HTTP's blank line after headers).
+- UDP is **datagram**-oriented - one `sendto()` is one `recvfrom()` or nothing. Getting stream vs datagram wrong is the classic first-time socket bug.
 
-TCP (Transmission Control Protocol)
-        Fix: a three-way handshake establishes a connection; every packet is
-        acknowledged, lost packets are retransmitted, and packets are
-        reassembled in the original order before the application ever sees them.
-        Trade-off: extra round-trips and bookkeeping cost latency.
-
-UDP (User Datagram Protocol)
-        Fix: skip all of that -- just fire packets and don't wait for
-        acknowledgment. Ideal for real-time video/audio/gaming, where a
-        dropped, late packet is more disruptive than a briefly glitchy one.
-        Trade-off: no delivery guarantee, no ordering guarantee -- the
-        application must tolerate or handle loss itself.
-```
-
-**Internal Working - the TCP three-way handshake:**
-
-```text
-Client -> Server:  SYN  (synchronize; "I want to connect")
-Server -> Client:  SYN-ACK  (acknowledge, and synchronize back)
-Client -> Server:  ACK  (acknowledge; connection is now open)
-        -- only now does either side send real application data --
-```
-
-The full picture, from handshake to teardown, with UDP alongside for contrast:
+**VISUAL MODEL:**
 
 ```text
 TCP: CONNECTION SETUP, DATA, AND TEARDOWN
@@ -11009,126 +9855,77 @@ TCP: CONNECTION SETUP, DATA, AND TEARDOWN
   CLIENT                                              SERVER
     |                                                    |
     |------ SYN,  seq=1000 ----------------------------->|   \
-    |                                                    |    | 1 round trip
+    |                                                    |    | 1 RTT
     |<----- SYN-ACK, seq=5000, ack=1001 -----------------|    | BEFORE any
     |                                                    |    | data moves
     |------ ACK,  seq=1001, ack=5001 ------------------->|   /
     |                                                    |
-    |  === connection ESTABLISHED. Only now: data. ===    |
-    |                                                    |
+    |  === ESTABLISHED. Only now: application data. ===  |
     |------ "GET /" seq=1001, 5 bytes ------------------>|
     |<----- ACK ack=1006 -------------------------------|
-    |<----- response, seq=5001 --------------------------|
-    |------ ACK ack=... -------------------------------->|
-    |                                                    |
     |------ FIN --------------------------------------->|   \
-    |<----- ACK ---------------------------------------|    | 4-way teardown
-    |<----- FIN ---------------------------------------|    | (each direction
+    |<----- ACK ----------------------------------------|    | 4-way teardown
+    |<----- FIN ----------------------------------------|    | (each direction
     |------ ACK --------------------------------------->|   /  closes separately)
-    |                                                    |
-    |  client waits in TIME_WAIT (~2 x max segment       |
-    |  lifetime) so a delayed duplicate cannot be        |
-    |  mistaken for data on a NEW connection reusing      |
-    |  the same four-tuple. This is why a restarted       |
-    |  server can hit "address already in use."           |
+
+  Client often waits in TIME_WAIT (~2 x max segment lifetime) so a delayed
+  duplicate cannot be mistaken for data on a NEW connection reusing the same
+  four-tuple - why a restarted server hits "address already in use"
+  (mitigate with SO_REUSEADDR when appropriate).
 
 UDP: THERE IS NO SETUP AND NO TEARDOWN
 
   CLIENT                                              SERVER
-    |------ datagram ---------------------------------->|   0 round trips
-    |------ datagram ------------------------X (lost)   |   of setup. The
-    |------ datagram ---------------------------------->|   first packet
-    |                                                    |   IS the data.
+    |------ datagram ---------------------------------->|   0 RTT of setup.
+    |------ datagram ------------------------X (lost)   |   First packet
+    |------ datagram ---------------------------------->|   IS the data.
   Nobody notices the loss. Nobody retransmits. Nobody reorders.
-  If that matters, the APPLICATION must handle it.
 
-THE COST, made numeric. Assume a 50 ms round trip:
-    TCP  : 50 ms handshake + 50 ms request/response = 100 ms to first byte
-    TCP+TLS 1.3 : 50 + 50 + 50                     = 150 ms
-    UDP  : 50 ms                                    =  50 ms
-    QUIC : combines transport and crypto handshake  =  50 ms, WITH encryption
-                                                       and reliability
-  That saved round trip is the entire commercial reason HTTP/3 exists.
+Cost at ~50 ms RTT (order of magnitude):
+  TCP          ~100 ms to first app byte (handshake + request)
+  TCP+TLS 1.3  ~150 ms
+  UDP          ~50 ms
+  QUIC         ~50 ms with crypto + reliability combined
+  That saved RTT is a commercial reason HTTP/3 exists.
 
-CONGESTION CONTROL: the sawtooth, drawn
+CONGESTION CONTROL: the sawtooth
 
   congestion
   window
     ^
     |                              /|                 /|
     |                            /  |               /  |
-    |                          /    |             /    |     <- congestion
-    |                        /      |           /      |        avoidance:
-    |                      /        |         /        |        +1 per RTT
-    |            ________/          |       /          |        (LINEAR)
-    |           /                   |     /            |
-    |         /  <- slow start:     |   /              |
-    |       /     window DOUBLES    | /                |
-    |     /       per RTT (EXPONENTIAL)                 |
-    |   /                           |                  |
-    | /                             v  loss detected:  v
-    +--------------------------------------------------------> time
-                                    window CUT IN HALF
-                                    (3 duplicate ACKs)
-                                    or cut to 1 (timeout)
+    |                          /    |             /    |  <- congestion avoidance:
+    |                        /      |           /      |     +1 per RTT (LINEAR)
+    |            ________/          |       /          |
+    |           /  <- slow start:   |     /            |
+    |         /     window DOUBLES  |   /              |
+    |       /       per RTT (EXP)   | /                |
+    |     /                         v  loss: cut half  v
+    +----------------------------------------------------> time
+                                    (3 dup ACKs) or to 1 (timeout)
 
-  Read this graph as a policy: "increase gently while things work, back off
-  hard the instant they do not." Every sender on the internet running this
-  independently is what produces a stable shared network with no central
-  coordinator, and it is one of the genuinely great ideas in computing.
+  Policy: increase gently while things work; back off hard on loss.
+  Assumption: LOSS MEANS CONGESTION - false on many Wi-Fi/cellular links
+  (interference). BBR measures bandwidth/RTT directly instead.
 
-  The assumption it rests on: LOSS MEANS CONGESTION. On Wi-Fi and cellular,
-  loss often means interference instead, so TCP cuts its window in response
-  to a problem that more sending would not have worsened. That is exactly
-  the flaw BBR was designed to fix by measuring bandwidth directly.
+HEAD-OF-LINE BLOCKING (why HTTP/3 left TCP)
 
-HEAD-OF-LINE BLOCKING, the problem QUIC solves
-
-  TCP, three HTTP/2 streams multiplexed over ONE connection:
+  TCP, three HTTP/2 streams on ONE connection:
       byte stream:  [A1][B1][C1][A2][XX][C2][A3][B3]
-                                     ^
-                                     |
-                        B2 is LOST. TCP guarantees ORDER, so it cannot
-                        deliver C2, A3, or B3 to the application until
-                        B2 is retransmitted and arrives. Streams A and C
-                        are STALLED by a loss that has nothing to do
-                        with them.
+                                     ^ B2 LOST → TCP cannot deliver C2/A3/B3
+                                       until B2 is retransmitted. A and C stall.
 
   QUIC, same three streams over UDP:
       stream A: [A1][A2][A3]  ---> delivered
-      stream B: [B1][XX]      ---> stalled (correctly: this IS stream B's loss)
+      stream B: [B1][XX]      ---> stalled (its own loss)
       stream C: [C1][C2]      ---> delivered
-
-                        Ordering is now guaranteed PER STREAM instead of
-                        per connection, which is only possible because QUIC
-                        implements ordering itself, on top of UDP, rather
-                        than inheriting TCP's single-stream model.
+  Ordering per stream - only possible because QUIC implements it on UDP.
 ```
 
-**COMPLEXITY / TRADE-OFF TABLE**
+TCP is a signed-for courier (numbered parcels, keep copies until signed, reorder on arrival). UDP is postcards in a mailbox (no receipt; a late live commentary postcard is worse than useless). The interview framing is not "reliable vs unreliable" - it is "which failure would you rather have."
 
-
-|                    | TCP                                                                          | UDP                                                    |
-| ------------------ | ---------------------------------------------------------------------------- | ------------------------------------------------------ |
-| Delivery guarantee | Yes (retransmits lost packets)                                               | No                                                     |
-| Ordering guarantee | Yes                                                                          | No                                                     |
-| Setup cost         | Handshake required (extra round-trip)                                        | None - fire and forget                                 |
-| Typical use        | Web pages (HTTP), file transfer, databases                                   | Video calls, live streaming, DNS lookups, online games |
-| Header size        | 20 bytes minimum                                                             | 8 bytes                                                |
-| Message boundaries | None (a byte stream; you must add your own framing)                          | Preserved exactly (one send, one receive)              |
-| Flow control       | Yes, via the receive window                                                  | No                                                     |
-| Congestion control | Yes, and it backs off automatically                                          | No, so a badly written UDP app can flood a network     |
-| Connection state   | Both ends hold state per connection, which limits how many a server can hold | Stateless, so one socket can serve any number of peers |
-| Failure mode       | Slow (retransmits and stalls)                                                | Lossy (data silently disappears)                       |
-
-
-**PICTURE IT LIKE THIS**
-
-TCP is a registered, signed-for courier. Every parcel is numbered, the sender keeps a copy until a signature comes back, missing parcels are resent, and the recipient is handed them in the original order even if they arrived scrambled. All of that bookkeeping costs a phone call to arrange the delivery before the first parcel moves, and the whole shipment waits if parcel three goes missing.
-
-UDP is dropping postcards in a mailbox. No arrangement, no receipt, no numbering, and no idea whether any of them arrived. For a live commentary of a football match written one postcard per minute, that is the correct choice: a postcard that shows up an hour late is worse than useless, so there is no point paying to guarantee its arrival. Notice that the choice is not "reliable versus unreliable," it is "which failure would you rather have," and that reframing is what interviewers are listening for.
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-56-tcp-udp-framing
 import socket, time
@@ -11136,22 +9933,20 @@ import socket, time
 # ---------- TCP: a stream, with framing you must supply yourself ----------
 def tcp_server(port=9001):
     srv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    srv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)   # skip TIME_WAIT
+    srv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)   # skip TIME_WAIT bind pain
     srv.bind(("127.0.0.1", port))
     srv.listen(5)
     conn, addr = srv.accept()          # blocks until a handshake completes
     print("connected:", addr)
 
-    # THE CLASSIC BUG: this assumes one send() == one recv(). It does not.
-    # TCP is a byte stream with NO message boundaries, so three sends of
-    # 5 bytes may arrive as one recv of 15, or as recvs of 3, 7, and 5.
+    # THE CLASSIC BUG: assumes one send() == one recv(). It does not.
     data = conn.recv(4096)
-    print("naive recv got:", data)      # may be a partial or merged message
+    print("naive recv got:", data)      # may be partial or merged
 
     conn.close(); srv.close()
 
 def recv_exactly(sock, n):
-    """The fix: explicit framing. Read until you have exactly n bytes."""
+    """Explicit framing: read until you have exactly n bytes."""
     buf = b""
     while len(buf) < n:
         chunk = sock.recv(n - len(buf))
@@ -11161,23 +9956,19 @@ def recv_exactly(sock, n):
     return buf
 
 def send_framed(sock, payload: bytes):
-    sock.sendall(len(payload).to_bytes(4, "big") + payload)   # length prefix
+    sock.sendall(len(payload).to_bytes(4, "big") + payload)
 
 def recv_framed(sock) -> bytes:
     length = int.from_bytes(recv_exactly(sock, 4), "big")
     return recv_exactly(sock, length)
 
-# Every protocol built on TCP solves this somehow. HTTP uses a blank line to
-# end headers and Content-Length for the body. This is not optional detail;
-# it is the direct consequence of "stream, not datagram."
-
-# ---------- UDP: datagrams, with boundaries preserved and nothing else ----------
+# ---------- UDP: datagrams, boundaries preserved, nothing else ----------
 def udp_server(port=9002):
     srv = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     srv.bind(("127.0.0.1", port))
     while True:
         data, addr = srv.recvfrom(65535)   # ONE datagram, exactly as sent
-        srv.sendto(data.upper(), addr)     # no connection: reply to the address
+        srv.sendto(data.upper(), addr)
 
 def udp_client(port=9002, message=b"hello"):
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -11187,45 +9978,50 @@ def udp_client(port=9002, message=b"hello"):
         reply, _ = s.recvfrom(65535)
         return reply
     except socket.timeout:
-        return None        # this is the UDP failure mode: silence. You must
-                           # decide whether to retry, and how many times, and
-                           # whether a duplicate arriving later is a problem.
+        return None        # UDP failure mode: silence - you decide retries
 
-# ---------- Measuring the handshake cost from the diagram ----------
 def time_tcp_connect(host="example.com", port=80):
     start = time.perf_counter()
-    s = socket.create_connection((host, port))   # includes the 3-way handshake
+    s = socket.create_connection((host, port))   # includes 3-way handshake
     elapsed = (time.perf_counter() - start) * 1000
     s.close()
     return elapsed
 
-print(f"TCP connect (one round trip): {time_tcp_connect():.1f} ms")
-# Run this against a nearby and a distant server. The difference is pure
-# propagation delay, and it is the number every latency argument is about.
+print(f"TCP connect (one RTT of setup): {time_tcp_connect():.1f} ms")
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
 
-"When would you choose UDP over TCP" tests whether you understand that reliability isn't automatically the right choice - for a live video call, a slightly glitchy but current frame beats a perfect but stale, delayed one. Follow-ups that separate strong answers from memorized ones: "walk me through the three-way handshake and say what each side learns from it," "what is TIME_WAIT for and why does it make my server fail to restart," "why does HTTP/3 run over UDP if UDP is unreliable," and "your service is slow over cellular but fine over Ethernet, and the packet loss rate is 2 percent in both cases, why." That last one is congestion control mistaking interference for congestion, and it is a real production story rather than trivia.
+|                    | TCP                                               | UDP                                              |
+| ------------------ | ------------------------------------------------- | ------------------------------------------------ |
+| Delivery / order   | Yes (retransmit + reorder)                        | No                                               |
+| Setup cost         | Handshake (extra RTT)                             | None                                             |
+| Typical use        | HTTP, file transfer, databases                    | Video/gaming, DNS queries, custom reliability    |
+| Header             | ≥20 bytes                                         | 8 bytes                                          |
+| Message boundaries | None - you must frame                             | Preserved                                        |
+| Flow / congestion  | Yes                                               | No (a bad UDP sender can flood a path)           |
+| Connection state   | Per-connection state on both ends                 | Stateless; one socket, many peers                |
+| Failure mode       | Slow (stalls / retransmits)                       | Lossy (silent disappearance)                     |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**INTERVIEW NOTE:**
 
+"When would you choose UDP?" - name which failure is worse. Follow-ups: walk the handshake; what is TIME_WAIT; why HTTP/3 over UDP; "2% loss on cellular vs Ethernet, same loss rate, different performance" → congestion control mistaking interference for congestion.
 
-| Difficulty | Task                                                                                                                                                                                                                 |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Capture a page load in Wireshark, filter `tcp.flags.syn == 1`, and count how many separate connections your browser opened                                                                                           |
-| Easy       | State which protocol you would pick for each of: a bank transfer, a DNS query, a live video call, a software download, a multiplayer game position update. Justify each in one sentence about which failure is worse |
-| Easy       | Explain why the initial sequence number is random rather than zero                                                                                                                                                   |
-| Medium     | Write the TCP echo server above, send three 5-byte messages in a tight loop from a client, and print what the server actually received. Then fix it with length-prefix framing                                       |
-| Medium     | Build a UDP client that retries up to three times with exponential backoff on timeout, and explain what new problem duplicate delivery now creates for you                                                           |
-| Medium     | Trigger "address already in use" by restarting a server immediately, then explain the cause in terms of TIME_WAIT and fix it with `SO_REUSEADDR`                                                                     |
-| Medium     | Measure TCP connect time to a server in your city and one on another continent. Compute how many round trips a TLS 1.2 handshake would add at each distance                                                          |
-| Hard       | Implement reliability over UDP yourself: sequence numbers, acknowledgments, and a retransmission timer. You will have written a small piece of TCP, which is the point                                               |
-| Hard       | Complete the [CS144 TCP labs](https://cs144.github.io/), specifically the byte-stream reassembler and the retransmission timer, until the provided tests pass                                                        |
-| Hard       | Read about BBR versus CUBIC and explain, in terms of the sawtooth diagram, what BBR measures instead of loss and why that helps on wireless links                                                                    |
+**PRACTICE:**
 
+| Difficulty | Task                                                                                                                                                         |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Easy       | In Wireshark, filter `tcp.flags.syn == 1` on a page load; count connections your browser opened                                                              |
+| Easy       | Pick TCP or UDP for: bank transfer, DNS query, live video, software download, game position update - one sentence each on which failure is worse             |
+| Easy       | Explain why the initial sequence number is random                                                                                                            |
+| Medium     | TCP echo: send three 5-byte messages in a tight loop; show naive `recv` merging; fix with length-prefix framing                                              |
+| Medium     | UDP client with up to three retries and exponential backoff; say what duplicate delivery now risks                                                           |
+| Medium     | Trigger "address already in use," explain TIME_WAIT, mitigate with `SO_REUSEADDR`                                                                            |
+| Hard       | Implement sequence numbers + ACK + retransmit timer over UDP (a tiny piece of TCP)                                                                           |
 
-**WHY THE NEXT TOPIC IS NEEDED - DNS:** TCP and UDP both need a destination IP address to send anything. But humans type "google.com," not `142.250.64.78`. Something has to translate a human-readable name into the numeric address the Network layer actually needs - Phase 57.
+**WHAT THIS UNLOCKS NEXT:**
+
+TCP and UDP both need a destination IP. Humans type names, not `142.250.64.78`. Something must translate names to addresses - Phase 57.
 
 ---
 
@@ -11241,231 +10037,174 @@ print(f"TCP connect (one round trip): {time_tcp_connect():.1f} ms")
 
 **WHAT YOU WILL BE ABLE TO DO:** Trace a DNS resolution end to end - stub resolver → recursive resolver → root → TLD → authoritative - and explain why TTL caching makes DNS changes take predictable time rather than "mysterious propagation."
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 55 (IP addresses are what the Network layer routes), Phase 56 (DNS queries usually ride UDP; large answers and zone transfers use TCP).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 55 — IP addressing; Phase 56 — UDP/TCP.
 
-## 57.1 DNS - The Internet's Address Book
+**LEARNING RESOURCES:**
 
-**WHY YOU ARE LEARNING THIS:** IP addresses are how machines find each other, but they're meaningless to humans and prone to changing (a company can move its servers to a new address). DNS (Domain Name System) is a distributed, hierarchical lookup service that translates a human-friendly domain name into the current IP address behind it - and it's distributed and cached specifically because a single central lookup server for the entire internet would be both a performance bottleneck and a single point of failure.
+- [How a DNS Server works (PowerCert)](https://www.youtube.com/watch?v=mpQZVYPuDGU) - full recursive walk
+- [DNS Explained in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=UVR9lhUGAyU)
+- [Cloudflare Learning Center: What is DNS](https://www.cloudflare.com/learning/dns/what-is-dns/)
+- [RFC 1035](https://www.rfc-editor.org/rfc/rfc1035) - the wire format still underneath modern DNS
+- Interactive: `dig +trace example.com`; [dnschecker.org](https://dnschecker.org/) for worldwide views
+- [EmilHernvall/dnsguide](https://github.com/EmilHernvall/dnsguide) - build a resolver step by step
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+## 57.1 DNS
 
-- Best animated explanation: [How a DNS Server (Domain Name System) works (PowerCert)](https://www.youtube.com/watch?v=mpQZVYPuDGU) - the full recursive walk *(Composio YouTube)*
-- Alternative: [DNS Explained in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=UVR9lhUGAyU); [What is DNS (Domain Name System)? (PowerCert)](https://www.youtube.com/watch?v=K9YWlljNsNw)
-- Another angle: [How DNS Works (Computerphile)](https://www.youtube.com/watch?v=uOfonONtIuk); [DNS Records Explained (PowerCert)](https://www.youtube.com/watch?v=HnUDtycXSNE); [What is DNS? (NetworkChuck)](https://www.youtube.com/watch?v=NiQTs9DbtW4)
-- Interactive: `dig +trace example.com` locally; [dnschecker.org](https://dnschecker.org/) for worldwide views; Cloudflare DoH API at `https://one.one.one.one/dns-query?name=example.com&type=A` with `Accept: application/dns-json` *(Composio web search)*
-- Written: [Cloudflare Learning Center: What is DNS](https://www.cloudflare.com/learning/dns/what-is-dns/); dig tutorial with worked examples at [DNScale dig tutorial](https://dnscale.eu/learning/dig-tutorial); [RFC 1035](https://www.rfc-editor.org/rfc/rfc1035)
-- GitHub / practice: [EmilHernvall/dnsguide](https://github.com/EmilHernvall/dnsguide)
+**WHY THIS MATTERS:**
 
-**STEP-BY-STEP EXPLANATION**
+Phase 55's Network layer routes IP addresses. Phase 56's Transport delivers to those IPs. Humans type `example.com`, and those addresses change when infrastructure moves. DNS is the distributed hierarchical lookup that maps names to current addresses - distributed and cached because one central phone book for the internet would be both a bottleneck and a single point of failure.
 
-The name is a hierarchy read right to left, and getting that direction right makes the lookup order obvious. In `www.example.com.` the trailing dot is the root, then `com` is the top-level domain, then `example` is the domain registered under it, then `www` is a subdomain that `example.com`'s own name servers control. Each level delegates authority for everything below it, which is why the root servers do not know anything about `example.com` and never need to: they only know which servers handle `com`.
+**THE PROBLEM:**
 
-There are three distinct roles, and conflating them is the most common source of confusion. A **stub resolver** is the tiny client in your operating system that just asks one question and takes the answer. A **recursive resolver** (your ISP's, or `8.8.8.8`, or `1.1.1.1`) does the actual multi-hop walk on your behalf and caches everything it learns. An **authoritative name server** holds the real records for a zone and is the only source of truth. The thirteen root server addresses are the one piece of information every resolver must have hardcoded, and they are thirteen *addresses*, not thirteen machines: anycast routing means hundreds of physical servers worldwide answer on those same IPs, and your packet reaches whichever is closest.
+Without DNS, every config would hardcode brittle IPs. Without hierarchy and caching, every lookup would walk the whole world and slam the root. Without TTLs, there would be no honest story for how long an old answer may still be served after you "already changed" the record.
 
-The record types are worth memorizing because they come up constantly in both interviews and real work. **A** maps a name to an IPv4 address and **AAAA** to an IPv6 address. **CNAME** aliases one name to another name, which is why it cannot coexist with other records at the same name and cannot be used at a zone apex. **MX** designates mail servers, with a priority number so mail has a fallback. **TXT** holds arbitrary text and is what SPF, DKIM, and domain-ownership verification all abuse for their own purposes. **NS** delegates a subtree to other name servers, which is the record that makes the hierarchy work at all. **SOA** holds zone metadata including the default TTL. **PTR** does reverse lookups, mapping an IP back to a name, and mail servers check it as a spam signal.
+**HOW IT WORKS:**
 
-Caching is where the design's real trade-off lives. Every record carries a **TTL** in seconds, and every cache along the path is entitled to serve the record until it expires. This is what makes DNS fast, and it is also why DNS changes are not instant: you cannot recall a record you have already handed out. The operational consequence is a standard playbook, which is a genuinely good interview answer: before a planned migration, lower the TTL to 60 seconds and wait for the old, longer TTL to fully expire everywhere; then make the change; then raise the TTL back once the new address is confirmed. Skipping the first step is why "DNS propagation" is treated as mysterious when it is in fact perfectly predictable arithmetic.
+Read names **right to left**. In `www.example.com.` the trailing dot is the root, `com` the TLD, `example` the registered domain, `www` a subdomain under that zone's own name servers. Each level **delegates** authority for everything below it - root does not know `example.com`; it only knows who handles `com`.
 
-DNS also quietly does more than name resolution. Returning multiple A records for one name gives you crude round-robin load balancing for free. Returning *different* answers depending on where the query came from is how content delivery networks route you to a nearby edge server, which means DNS is load-balancing infrastructure and not merely a lookup table. And because DNS traditionally travels as plaintext UDP on port 53, anyone on the path can see and tamper with every name you look up, which is what DNSSEC (signing records so tampering is detectable), DoH (DNS over HTTPS), and DoT (DNS over TLS) exist to address. Note that DNSSEC and DoH solve different problems: DNSSEC provides integrity without confidentiality, and DoH provides confidentiality without proving the record is genuine.
+Three roles (do not conflate them):
 
-**Internal Working, Step by Step (a simplified DNS lookup for "example.com"):**
+- **Stub resolver** - tiny OS client: ask one question, take the answer.
+- **Recursive resolver** - ISP / `8.8.8.8` / `1.1.1.1`: does the multi-hop walk and caches.
+- **Authoritative name server** - source of truth for a zone.
 
-```text
-Your computer asks a DNS resolver: "what's the IP for example.com?"
-resolver checks its cache -- if cached and not expired, return immediately (fast path)
-        |  (cache miss)
-resolver asks a root server: "who handles .com?"
-root server points to a .com TLD (top-level domain) server
-resolver asks the TLD server: "who handles example.com?"
-TLD server points to example.com's authoritative name server
-resolver asks that name server: "what's the IP for example.com?"
-authoritative server replies with the actual IP -- resolver caches it and returns it to you
-```
+The thirteen root *addresses* are hardcoded into resolvers; **anycast** means hundreds of physical machines answer those IPs, and your packet hits a nearby one.
 
-Drawn in full, with the cache layers that make the slow path rare:
+Record types you will actually use: **A** / **AAAA** (IPv4 / IPv6), **CNAME** (alias - cannot coexist with other data at the apex), **MX** (mail + priority), **TXT** (SPF/DKIM/verification abuse), **NS** (delegation), **SOA** (zone metadata including default TTL), **PTR** (reverse - IP → name).
+
+**TTL** is the design's real trade-off. Every cache may serve a record until expiry. DNS is fast because of that - and changes are not instant because you cannot recall a record already handed out. Migration playbook (strong interview answer): lower TTL to ~60s → wait for the *old* long TTL to expire everywhere → change the address → raise TTL once confirmed. "Propagation" is expiry arithmetic, not magic.
+
+DNS also load-balances: multiple A records (round-robin) and **geo-aware** answers (CDNs). Plaintext UDP/53 historically meant on-path visibility/tampering - hence DNSSEC (integrity), DoH/DoT (confidentiality). They solve different problems.
+
+**VISUAL MODEL:**
 
 ```text
-THE CACHE LADDER. Each layer is checked in order, and most lookups
-never get past the first three.
+CACHE LADDER. Each layer checked in order; most lookups never leave the top.
 
-  your browser's own DNS cache ......... ~seconds to minutes
+  browser DNS cache ................ ~seconds to minutes
         | miss
-        v
-  your OS stub resolver cache .......... honors the record's TTL
+  OS stub resolver cache ........... honors the record's TTL
         | miss
-        v
-  your router's cache .................. often present on home networks
+  (home router cache, often)
         | miss
-        v
   RECURSIVE RESOLVER (ISP, 8.8.8.8, 1.1.1.1)
         |
-        +-- HIT  -> answer returned in ~1-20 ms. THIS IS THE COMMON CASE.
+        +-- HIT  -> answer in ~1-20 ms. THIS IS THE COMMON CASE.
         |
-        +-- MISS -> now, and only now, the recursive walk below happens
+        +-- MISS -> recursive walk below
 
-THE RECURSIVE WALK, for www.example.com
+THE RECURSIVE WALK for www.example.com
 
   RESOLVER                                            SERVER ASKED
      |
-     |-- "A record for www.example.com?" ----------> [ ROOT server ]
-     |<- "I don't know, but .com is handled by ----  (knows only TLDs)
-     |    a.gtld-servers.net"  (an NS referral)
+     |-- "A for www.example.com?" -----------------> [ ROOT ]
+     |<- NS referral: .com handled by a.gtld-... ---  (knows only TLDs)
      |
-     |-- "A record for www.example.com?" ----------> [ .com TLD server ]
-     |<- "I don't know, but example.com is  --------  (knows only which
-     |    handled by ns1.example.com"                  name servers own
-     |    (another NS referral)                        each registered
-     |                                                 .com domain)
+     |-- "A for www.example.com?" -----------------> [ .com TLD ]
+     |<- NS referral: example.com -> ns1.example...   (knows zone owners)
      |
-     |-- "A record for www.example.com?" ----------> [ example.com's
-     |<- "93.184.216.34, TTL 3600"  <-- AUTHORITATIVE   authoritative NS ]
+     |-- "A for www.example.com?" -----------------> [ authoritative ]
+     |<- "93.184.216.34, TTL 3600"  <-- AUTHORITATIVE ANSWER
      |
      v
-  cache it for 3600 seconds, return it to the client.
-  The NEXT person to ask this resolver gets it in 1 ms instead of ~120 ms.
+  cache 3600s, return to client. Next asker: ~1 ms.
 
-  Note the pattern: nobody except the last server actually knows the answer.
-  Each earlier server only knows WHO TO ASK NEXT. That is delegation, and it
-  is why the root servers are not overwhelmed by the entire internet's
-  traffic: they answer a tiny, nearly-static set of questions about TLDs.
+  Pattern: nobody except the last server knows the answer. Earlier servers
+  only know WHO TO ASK NEXT - why roots are not crushed by all internet traffic.
 
-READING A NAME, right to left, which is the order the walk follows:
+READING A NAME, right to left (order the walk follows):
 
      www  .  example  .  com  .
       |         |        |    |
-      |         |        |    +-- the ROOT (usually written implicitly)
-      |         |        +------- top-level domain, delegated by root
-      |         +---------------- the registered domain, delegated by .com
-      +-------------------------- a subdomain, controlled by example.com itself
+      |         |        |    +-- ROOT
+      |         |        +------- TLD (delegated by root)
+      |         +---------------- registered domain (delegated by .com)
+      +-------------------------- subdomain (controlled by example.com)
 
-  Ask "who is authoritative for each level" and the hierarchy is the answer:
-  root delegates .com, .com delegates example.com, example.com delegates
-  (or directly answers for) www.
+WHY A TTL CHANGE IS NOT INSTANT:
 
-WHY A TTL CHANGE IS NOT INSTANT, on a timeline:
+  t=0     record had TTL 86400. You change the IP on YOUR auth server.
+  t=0     resolvers that cached 1h ago keep serving OLD IP for ~23h more.
+  Playbook: (1) lower TTL to 60s  (2) WAIT for old TTL to expire everywhere
+            (3) change IP  (4) raise TTL once confirmed.
+  There is no step that recalls an already-handed-out record.
+  "DNS propagation" is expiry arithmetic, not magic.
 
-  t=0     record has TTL 86400 (24h). You change the IP.
-  t=0     YOUR authoritative server serves the new IP immediately.
-  t=0     Every resolver that cached the old value 1 hour ago
-          keeps serving the OLD IP for another 23 hours.
-  t=23h   Those caches expire and finally see the new value.
+ONE NAME, MANY ANSWERS (load balancing / CDN):
 
-  The correct playbook, which is a strong interview answer:
-     step 1: lower TTL to 60s
-     step 2: WAIT for the old, long TTL to fully expire (up to 24h here)
-     step 3: now change the IP -> the world converges within ~60s
-     step 4: raise the TTL back once confirmed
-
-  There is no step that makes an already-handed-out record come back.
-  That is the entire reason "DNS propagation" feels mysterious: it is not
-  propagation at all, it is expiry.
-
-ONE NAME, MANY ANSWERS: DNS as load balancing
-
-  dig example.com  ->  A 93.184.216.34
-                       A 93.184.216.35     <- clients pick one; crude
-                       A 93.184.216.36        round-robin, free, no
-                                              extra infrastructure
-
-  And GEO-AWARE DNS, which is how every CDN works:
-
-     query from Europe  --> resolver in Europe  --> A 151.101.x.x (Frankfurt edge)
-     query from Asia    --> resolver in Asia    --> A 151.101.y.y (Singapore edge)
-
-  Same name. Different truthful answers. This is why DNS is correctly
-  described as routing infrastructure rather than as a lookup table, and
-  it is also why "just check the IP" is a bad way to debug a CDN.
+  dig example.com  ->  several A records  (crude round-robin)
+  query from EU    ->  Frankfurt edge A
+  query from Asia  ->  Singapore edge A
+  Same name. Different truthful answers. DNS is routing infrastructure.
 ```
 
-**Complexity / Trade-off:** Caching at every level (browser, OS, resolver) is what makes DNS fast in practice despite this multi-hop worst case - most lookups hit a cache and never touch a root or TLD server at all. The trade-off is staleness: if a site's IP changes, cached DNS records elsewhere on the internet may serve the old address until their cache expires (governed by a "time to live," or TTL, the record owner sets).
-
-
-| Design decision                        | What it buys                                                                                    | What it costs                                                                                        |
-| -------------------------------------- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| Hierarchical delegation                | No single server needs to know the whole internet, and each organization controls its own names | A cold lookup takes multiple round trips                                                             |
-| Caching with TTLs                      | The overwhelming majority of lookups are answered in single-digit milliseconds                  | Changes are not instant, and a long TTL turns a planned migration into a day of waiting              |
-| UDP on port 53 by default              | One packet out, one packet back, no handshake, minimal latency                                  | 512-byte practical limit before falling back to TCP, and a trivially spoofable, amplifiable protocol |
-| Anycast root servers                   | Thirteen well-known addresses, hundreds of physical machines, automatic proximity routing       | Operationally complex, and diagnosing "which root did I actually reach" is hard                      |
-| Multiple A records / geo-aware answers | Free load balancing and CDN routing with no extra infrastructure                                | Clients cache one answer, so DNS-based balancing reacts slowly to a failed server                    |
-| Plaintext by default                   | Universally interoperable, and trivially debuggable with `dig`                                  | Every name you look up is visible to the network, which DoH and DoT address                          |
-| DNSSEC                                 | Records are signed, so tampering is detectable                                                  | Complex key management, larger responses, and it provides integrity without any confidentiality      |
-
-
-**PICTURE IT LIKE THIS**
-
-DNS is the phone system's directory assistance, rebuilt so that no single operator holds the whole book. You call your local operator and ask for a company by name. They do not know it, but they know which regional office covers that area code, who in turn knows which local exchange holds that company's listing, who finally reads you the number. Your operator writes the number on a sticky note with an expiry date so the next caller asking the same question gets it instantly. And that sticky note is exactly why the company cannot change its number silently: for as long as the note is unexpired, callers keep dialing the old one, no matter how quickly the company updated its own records.
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-57-dns-lookup
-import socket, subprocess
+import socket
 
-# 1. The one-line version everybody uses. It hides the entire walk above.
-print(socket.gethostbyname("example.com"))                  # -> '93.184.216.34'
+# 1. The one-line version - hides the entire walk.
+print(socket.gethostbyname("example.com"))
 
-# 2. The version that shows you ALL the answers, which matters for CDNs
-#    and for round-robin, where taking only the first record is a bug.
+# 2. ALL answers (CDN / round-robin: taking only the first can be a bug).
 for family, socktype, proto, canonname, sockaddr in socket.getaddrinfo(
         "example.com", 443, proto=socket.IPPROTO_TCP):
-    print(family.name, sockaddr)      # AF_INET / AF_INET6 entries, all of them
+    print(family.name, sockaddr)
 
-# 3. Reverse lookup (PTR): IP back to a name.
+# 3. Reverse lookup (PTR).
 try:
-    print(socket.gethostbyaddr("8.8.8.8"))   # -> ('dns.google', [...], [...])
+    print(socket.gethostbyaddr("8.8.8.8"))
 except socket.herror:
     print("no PTR record")
 
-# 4. Query specific record types. dnspython is the standard library-adjacent
-#    tool for this; `pip install dnspython` first.
-import dns.resolver
+# 4. Specific record types (optional: pip install dnspython).
+try:
+    import dns.resolver
+    for rtype in ("A", "AAAA", "MX", "NS", "TXT", "SOA"):
+        try:
+            answer = dns.resolver.resolve("example.com", rtype)
+            print(f"{rtype:5} TTL={answer.rrset.ttl:<6}",
+                  [r.to_text() for r in answer])
+        except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN):
+            print(f"{rtype:5} (none)")
+except ImportError:
+    print("dnspython not installed - use dig for typed queries")
 
-for rtype in ("A", "AAAA", "MX", "NS", "TXT", "SOA"):
-    try:
-        answer = dns.resolver.resolve("example.com", rtype)
-        print(f"{rtype:5} TTL={answer.rrset.ttl:<6}",
-              [r.to_text() for r in answer])
-    except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN):
-        print(f"{rtype:5} (none)")
-
-# The TTL printed here is what every cache on the path will honor. Print it
-# before any migration: it tells you exactly how long the old value will
-# survive in the wild, which is the number the playbook above depends on.
-
-# 5. Watch the recursive walk happen, hop by hop. This is the single most
-#    instructive command in this whole section.
-print(subprocess.run(["dig", "+trace", "example.com"],
-                     capture_output=True, text=True).stdout)
-# The output is literally the diagram above: root referral, then TLD
-# referral, then the authoritative answer, each on its own block.
-
-# 6. Ask a SPECIFIC resolver, which is how you tell "my cache is stale"
-#    apart from "the record is actually wrong".
-#    dig @1.1.1.1 example.com   vs   dig @<authoritative NS> example.com
-#    If they disagree, you are looking at a cache, not at the truth.
+# 5. On your machine: dig +trace example.com  (the diagram as output)
+# 6. dig @1.1.1.1 example.com  vs  dig @<authoritative NS> example.com
+#    Disagreement → you are looking at a cache, not the truth.
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
 
-DNS shows up in three predictable places. First, inside "what happens when you type a URL and press enter," where a strong answer names the cache ladder rather than saying only "DNS resolves the name." Second, as a debugging scenario: "we deployed a new server, some users see it and some do not, why," where the expected answer is caching and TTLs rather than anything about the servers. Third, in system design, where DNS is the correct first answer to "how do users find the nearest data center" and a reasonable answer to "how do you do the simplest possible load balancing," with the important caveat that clients cache the answer, so DNS alone cannot fail over quickly. A follow-up worth being ready for is "why is DNS usually UDP and when does it use TCP," which is answered by response size and zone transfers. Being able to say "let me check whether the resolver and the authoritative server agree" is a very strong signal, because it shows you know where the two possible failure locations are.
+| Design decision                   | What it buys                                      | What it costs                                              |
+| --------------------------------- | ------------------------------------------------- | ---------------------------------------------------------- |
+| Hierarchical delegation           | No server holds the whole internet                | Cold lookup: multiple RTTs                                 |
+| Caching with TTLs                 | Most lookups finish in milliseconds               | Changes wait for expiry                                    |
+| UDP/53 by default                 | One packet each way                               | Size limits; spoofing / amplification risk                 |
+| Anycast roots                     | Thirteen addresses, many machines                 | Hard to debug "which root did I hit"                       |
+| Multiple / geo A records          | Free LB and CDN steering                          | Clients cache one answer - slow failover                   |
+| DNSSEC vs DoH                     | Integrity vs confidentiality                      | Neither alone is "secure DNS" end to end                   |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**INTERVIEW NOTE:**
 
+Inside "type a URL," name the cache ladder. "Some users see the new server, some don't" → TTL, not the app. System design: DNS for nearest PoP / crude LB, with the caveat clients cache. "UDP vs TCP for DNS" → size and zone transfers. "Compare resolver vs authoritative" is a strong debugging signal.
 
-| Difficulty | Task                                                                                                                                                                                                           |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Run `dig +trace example.com` and label each block of output against the recursive-walk diagram above                                                                                                           |
-| Easy       | Look up the A, MX, NS, and TXT records for a domain you use, and explain what each one is for                                                                                                                  |
-| Easy       | Explain, in two sentences, why lowering a TTL takes effect only after the *old* TTL expires                                                                                                                    |
-| Medium     | Query the same domain via `dig @1.1.1.1` and `dig @8.8.8.8` and compare TTLs. Explain why the numbers differ even though the record is identical                                                               |
-| Medium     | Find a large site's A records from two different geographic locations (use [dnschecker.org](https://dnschecker.org/)) and explain what the difference tells you about its infrastructure                       |
-| Medium     | Write a script that resolves a list of 100 domains twice and reports the timing difference between the cold and warm runs                                                                                      |
-| Medium     | Write out the full TTL-lowering migration playbook for a domain currently on a 24-hour TTL, with the actual wait times                                                                                         |
-| Hard       | Parse a raw DNS response packet yourself from a UDP socket, without dnspython, using [RFC 1035](https://www.rfc-editor.org/rfc/rfc1035) as the reference. Name compression will be the part that surprises you |
-| Hard       | Build a working DNS server by following [dnsguide](https://github.com/EmilHernvall/dnsguide) through the recursive-resolve chapter                                                                             |
-| Hard       | Explain what a DNS amplification attack is, why UDP makes it possible, and what an open resolver has to do with it                                                                                             |
+**PRACTICE:**
 
+| Difficulty | Task                                                                                                                                     |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Easy       | Run `dig +trace example.com` and label each block against the recursive-walk diagram                                                     |
+| Easy       | Look up A, MX, NS, TXT for a domain you use; say what each is for                                                                        |
+| Easy       | In two sentences: why lowering TTL only helps after the *old* TTL expires                                                                |
+| Medium     | `dig @1.1.1.1` vs `dig @8.8.8.8` for the same name; explain differing remaining TTLs                                                    |
+| Medium     | Compare A records via dnschecker.org from two regions; say what that implies about infrastructure                                        |
+| Medium     | Write the full TTL-lowering cutover playbook for a domain currently on 86400                                                             |
+| Hard       | Sketch parsing a DNS response from a raw UDP socket (RFC 1035); name compression will surprise you                                       |
 
-**WHY THE NEXT TOPIC IS NEEDED - HTTP:** DNS gets you the IP address. TCP (Phase 56) gets you a reliable connection to that address. Neither one says anything about what the message you send actually *means* - that's the Application layer's job, and for the web, that protocol is HTTP.
+**WHAT THIS UNLOCKS NEXT:**
+
+DNS gets you an IP. TCP gets you a reliable byte stream to it. Neither defines what the message *means*. For the web, that application protocol is HTTP - Phase 58.
 
 ---
 
@@ -11481,54 +10220,46 @@ DNS shows up in three predictable places. First, inside "what happens when you t
 
 **WHAT YOU WILL BE ABLE TO DO:** Read a raw HTTP request and response by hand - method, path, headers, status code, body - and explain safe vs idempotent methods, plus why HTTP/2 and HTTP/3 exist.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 56 (TCP gives HTTP a reliable ordered byte stream), Phase 57 (browsers resolve names before opening the connection).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 56 — TCP byte streams; Phase 57 — DNS.
 
-**COMPANION DEEP-DIVE:** This phase establishes the protocol foundation. Continue with `[Web.md](./Web.md)` for the complete web-developer path: semantic HTML, CSS, JavaScript/TypeScript, browser APIs, frontend and backend frameworks, databases, REST/OpenAPI, authentication, web security, testing, performance, realtime systems, deployment, observability, projects, and interviews.
+**LEARNING RESOURCES:**
 
-## 58.1 HTTP - The Protocol Underneath Every Website
+- [HTTP Explained (NeetCodeIO)](https://www.youtube.com/watch?v=wOPrIhmi7l0) - request/response from the socket up
+- [HTTP 1 vs HTTP 2 vs HTTP 3 (ByteByteGo)](https://www.youtube.com/watch?v=UMwQjFzTQXw)
+- [HTTP Status Codes Explained in 5 Minutes (ByteByteGo)](https://www.youtube.com/watch?v=qmpUfWN7hh4)
+- [MDN - Overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview)
+- [High Performance Browser Networking](https://hpbn.co/) - latency and version history with measurements
+- Practice: browser DevTools Network tab; [httpbin.org](https://httpbin.org/); [Codecrafters HTTP server](https://codecrafters.io/challenges/http-server)
 
-**WHY YOU ARE LEARNING THIS:** TCP (Phase 56) guarantees bytes arrive reliably and in order, but it has no concept of "a request for a web page" or "a response containing HTML." HTTP is the application-layer protocol built on top of TCP that defines exactly that: a client sends a structured **request** (a method, a target resource, headers, optionally a body), and a server sends back a structured **response** (a status code, headers, a body) - a simple, human-readable, text-based exchange that every browser, mobile app, and server understands the same way.
+**COMPANION DEEP-DIVE:** Protocol foundation here. Continue with `[Web.md](./Web.md)` for HTML/CSS/JS, frameworks, auth, and production web systems.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+## 58.1 HTTP
 
-- Best animated explanation: [HTTP Explained (NeetCodeIO)](https://www.youtube.com/watch?v=wOPrIhmi7l0) - request/response from the socket up, connecting back to Phase 56
-- Alternative: [HTTP 1 vs HTTP 2 vs HTTP 3 (ByteByteGo)](https://www.youtube.com/watch?v=UMwQjFzTQXw) *(Composio YouTube)* and [HTTP/1 to HTTP/2 to HTTP/3 (ByteByteGo)](https://www.youtube.com/watch?v=a-sBfyiXysI)
-- Another angle: [HTTP Status Codes Explained in 5 Minutes (ByteByteGo)](https://www.youtube.com/watch?v=qmpUfWN7hh4); [Understanding HTTP: Methods, Status Codes, and Headers (REAL ENGINEER)](https://www.youtube.com/watch?v=3JW6QPezCSA); [QUIC and HTTP/3 Explained: Solving Head-of-Line Blocking (System Design Bite Sized)](https://www.youtube.com/watch?v=MbkCu_vhx7E) - picks up where Phase 56's head-of-line-blocking idea left off
-- Interactive: browser DevTools Network tab; [httpbin.org](https://httpbin.org/); [Postman](https://www.postman.com/) or [HTTPie](https://httpie.io/)
-- Written: [MDN - Overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview); [MDN - How the Web Works](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works); [High Performance Browser Networking](https://hpbn.co/)
-- Practice: [Codecrafters "Build your own HTTP server"](https://codecrafters.io/challenges/http-server); Python's [`http.server`](https://github.com/python/cpython/blob/main/Lib/http/server.py)
+**WHY THIS MATTERS:**
 
-**STEP-BY-STEP EXPLANATION**
+TCP (Phase 56) delivers an ordered byte stream with no notion of "please fetch this page." HTTP is the application-layer convention on top: a client sends a structured **request** (method, target, headers, optional body); a server returns a structured **response** (status, headers, body). After DNS (Phase 57) and the TCP handshake, this is the text (or frames) you can read with your eyes on HTTP/1.1.
 
-HTTP is a stateless, client-server, request-response protocol: the server keeps no memory of previous requests from the same client (state, when needed, is bolted on top via cookies/sessions - Phase 66). Every request carries a **method** describing intent `GET` (retrieve), `POST` (create), `PUT`/`PATCH` (update), `DELETE` (remove) - and every response carries a **status code** signaling the outcome: `2xx` success, `3xx` redirection, `4xx` client error (you asked for something invalid `404 Not Found`, `401 Unauthorized`), `5xx` server error (the server broke while handling a valid request).
+**THE PROBLEM:**
 
-Two properties of the methods matter more than the list itself, because they determine what a client is allowed to do on failure. A method is **safe** if it does not change server state, which is true of `GET`, `HEAD`, and `OPTIONS` and is why a crawler may fetch every `GET` on your site but must never follow a `POST`. A method is **idempotent** if performing it twice has the same effect as performing it once, which is true of `GET`, `PUT`, and `DELETE` but not of `POST`. That distinction is not pedantry: it decides whether a client can safely retry after a timeout. A timed-out `PUT` can be retried freely. A timed-out `POST` cannot, because the request may have succeeded and only the response was lost, and retrying would create a second order. Solving that properly requires an idempotency key that the client generates and the server remembers, which is exactly how payment APIs work.
+Without a shared request/response shape, every app invents a private dialect on the socket. Without method properties (safe / idempotent), clients and proxies cannot know when a retry is harmless. Without version evolution, a page of twenty assets would still pay a full handshake per file.
 
-Headers are where most of HTTP's real behavior lives, and a handful carry most of the weight. `Host` is mandatory in HTTP/1.1 and is what makes virtual hosting possible: one IP address and one port can serve thousands of different sites because the request says which one it wants. `Content-Type` declares what the body is, and `Accept` declares what the client is willing to receive, which together implement content negotiation. `Content-Length` or `Transfer-Encoding: chunked` tells the receiver where the body ends, which is the framing problem from Phase 56 solved at the application layer. `Cache-Control`, `ETag`, and `If-None-Match` implement conditional requests: the server can answer `304 Not Modified` with no body at all, which is the single largest bandwidth saving on the web. `Authorization` carries credentials, and `Set-Cookie` and `Cookie` are the bolt-on that gives a stateless protocol memory, which is Phase 68's whole subject.
+**HOW IT WORKS:**
 
-The version history is worth knowing because each version is a fix for a measured problem rather than a redesign for its own sake. **HTTP/1.0** opened a fresh TCP connection per request, which meant paying the three-way handshake for every image on a page. **HTTP/1.1** added persistent connections and pipelining, but pipelined responses still had to come back in order, so one slow response blocked everything behind it, and browsers worked around this by opening six connections per host. **HTTP/2** replaced the text protocol with a binary framed one supporting true multiplexing, so many requests share one connection with no ordering requirement, plus header compression, which matters because headers are repetitive and often larger than the bodies of small API responses. But HTTP/2's multiplexing sits on TCP's single ordered byte stream, so one lost packet still stalls every stream, which is exactly the head-of-line blocking idea from Phase 56. **HTTP/3** moves to QUIC over UDP so that ordering is guaranteed per stream instead of per connection, and folds the TLS handshake into the transport handshake to save a round trip.
+HTTP is **stateless** client-server request/response: the server keeps no memory of prior requests unless you bolt on cookies/sessions (later security story). Methods carry intent (`GET`, `POST`, `PUT`/`PATCH`, `DELETE`, …). Status classes: `2xx` success, `3xx` redirect, `4xx` client error, `5xx` server error.
 
-**Internal Working, Step by Step - the full "type a URL and press enter" chain:**
+Two properties matter operationally:
 
-```text
-1. Browser parses the URL, needs the server's IP  -> DNS lookup (Phase 35.3)
-2. Browser opens a TCP connection to that IP        -> three-way handshake (Phase 35.2)
-3. If HTTPS: a TLS handshake negotiates encryption   -> (Phase 67)
-4. Browser sends an HTTP request over that connection:
-       GET /index.html HTTP/1.1
-       Host: example.com
-5. Server processes the request and sends back a response:
-       HTTP/1.1 200 OK
-       Content-Type: text/html
-       <html>...</html>
-6. Browser renders the response body
-```
+- **Safe** - does not change server state (`GET`, `HEAD`, `OPTIONS`). Crawlers may fetch every safe URL; they must not blindly `POST`.
+- **Idempotent** - N identical requests leave the same state as one (`GET`, `PUT`, `DELETE`; not `POST`). A timed-out `PUT` may be retried; a timed-out `POST` may have already created the order - hence **idempotency keys** on payment APIs.
 
-Drawn with the real bytes, the timing, and where each earlier phase contributes:
+Headers carry most real behavior: `Host` (mandatory in 1.1 - virtual hosting on one IP), `Content-Type` / `Accept`, `Content-Length` or chunked transfer (Phase 56's framing problem at the app layer), `Cache-Control` / `ETag` / `If-None-Match` → `304`, `Authorization`, `Cookie` / `Set-Cookie`.
+
+Versions fix measured pain: **1.0** new TCP per request; **1.1** persistence (pipelining still ordered; browsers opened ~6 connections); **2** binary frames, multiplexing, header compression - still one TCP stream → HOL blocking from Phase 56; **3** QUIC/UDP, per-stream ordering, combined transport+TLS handshake.
+
+**VISUAL MODEL:**
 
 ```text
-THE ACTUAL BYTES ON THE WIRE. HTTP/1.1 is plain text, which is why you
-can read it with your eyes and type it by hand into a socket.
+THE ACTUAL BYTES (HTTP/1.1 is plain text - readable by eye / curl -v).
 
   REQUEST                                 RESPONSE
   ----------------------------------      ----------------------------------
@@ -11536,204 +10267,122 @@ can read it with your eyes and type it by hand into a socket.
   Host: example.com                       Content-Type: text/html
   User-Agent: Mozilla/5.0                 Content-Length: 1256
   Accept: text/html                       Cache-Control: max-age=3600
-  Accept-Encoding: gzip                   ETag: "a1b2c3"
-  Cookie: session=abc123                  Set-Cookie: session=abc123
-  If-None-Match: "a1b2c3"                 Date: Tue, 04 Aug 2026 13:00:00 GMT
+  If-None-Match: "a1b2c3"                 ETag: "a1b2c3"
   <BLANK LINE>                            <BLANK LINE>
   (no body for GET)                       <html>...1256 bytes...</html>
-      ^                                       ^
-      |                                       |
-   THE BLANK LINE is the framing.          Content-Length says exactly
-   Everything before it is headers.        where the body ends, which is
-   Everything after is body.               how the reader knows when to
-                                           stop without closing the socket.
 
-  And because the client sent If-None-Match, the server is allowed to reply:
+  Blank line ends headers. Content-Length (or chunked) ends the body
+  without closing the socket. Conditional match may yield:
 
   HTTP/1.1 304 Not Modified
   ETag: "a1b2c3"
   <BLANK LINE>
-  (NO BODY AT ALL -- the client already has it)
+  (NO BODY - client already has it)
 
-  That is a conditional request, and it is why revisiting a site is so much
-  faster than the first visit even when nothing is cached locally as final.
+FULL TIMELINE (~50 ms RTT, cold cache) - earlier phases attributed:
 
-THE FULL TIMELINE, with every phase attributed to its section.
-Assume a 50 ms round trip and a cold cache.
+  t=0     DNS lookup (Phase 57) .................... ~20 ms cached / ~120 cold
+  t=20    TCP handshake (Phase 56) ................. 1 RTT
+  t=70    TLS handshake ............................ ~1 RTT (TLS 1.3)
+  t=120   HTTP request + response .................. ~1 RTT + server work
+  t=180   HTML discovers css/js/img -> repeat above
+  Notice: tiny fraction is server CPU. Latency (RTTs) dominates perception -
+  every HTTP version since 1.0 attacks round trips.
 
-  t=0 ms    ---- DNS lookup (12.3) ---------------------- ~20 ms if cached
-                                                          ~120 ms if not
-  t=20 ms   ---- TCP handshake (Phase 56) ---------------- 50 ms (1 RTT)
-              SYN ->  <- SYN-ACK  ACK ->
-  t=70 ms   ---- TLS handshake (15.1) -------------------- 50 ms (TLS 1.3)
-              ClientHello ->  <- ServerHello+cert  Finished ->
-  t=120 ms  ---- HTTP request sent ----------------------- 25 ms (half RTT)
-  t=145 ms  ---- server does its work ------------------- 10 ms
-                (route the URL, query the database (14),
-                 check the session cookie (15.2), render)
-  t=155 ms  ---- response travels back ------------------- 25 ms
-  t=180 ms  ---- browser parses HTML, discovers it needs
-                style.css, app.js, logo.png
-                  -> and now it does ALL OF THE ABOVE AGAIN for each,
-                     which is precisely the problem HTTP/2 multiplexing
-                     and HTTP/3 exist to solve.
+VERSIONS as the same page load:
 
-  Notice how little of that 180 ms was the server's actual work: 10 ms out
-  of 180. Everything else is round trips. THAT is why latency, not
-  throughput, is the number that matters for perceived web performance,
-  and why every HTTP version since 1.0 has been an attack on round trips.
-
-THE VERSIONS, drawn as the same page load:
-
-  HTTP/1.0: one connection per request
-     conn1: [handshake][GET /       ][close]
-     conn2:                          [handshake][GET style.css][close]
-     conn3:                                                     [handshake]...
-            ^ paying a handshake per file. Brutal.
-
-  HTTP/1.1: persistent connections, but responses must come back IN ORDER
-     conn1: [handshake][GET /][GET css][GET js]
-                       [resp /.......][css][js]
-                              ^ if / is slow, css and js WAIT.
-            Browsers worked around this by opening 6 connections per host.
-
-  HTTP/2: one connection, binary frames, TRUE multiplexing
-     conn1: [handshake][req/ ][reqcss][reqjs ]
-                       [css..][js....][/.....]   <- ANY order. Interleaved.
-            But all of it rides ONE TCP byte stream, so one lost packet
-            still stalls everything (Phase 56's head-of-line blocking).
-
-  HTTP/3: same multiplexing, over QUIC/UDP, ordering PER STREAM
-     conn1: [combined transport+TLS handshake -- 1 RTT total]
-            stream1: [/....]     delivered independently
-            stream2: [css..]     delivered independently
-            stream3: [js...]     a loss here stalls ONLY stream 3
+  HTTP/1.0: one connection per request - handshake per file.
+  HTTP/1.1: persistent; responses still ordered; browsers open ~6 conns/host.
+  HTTP/2:   one connection, binary frames, true multiplexing - but one TCP
+            byte stream, so one lost packet stalls every stream (Phase 56 HOL).
+  HTTP/3:   same multiplexing over QUIC/UDP; ordering PER STREAM;
+            combined transport+TLS handshake (~1 RTT total).
 ```
 
-**Complexity / Trade-off:** HTTP being stateless and text-based makes it simple, debuggable (you can read raw HTTP with your own eyes), and cacheable - but statelessness means every request must carry everything the server needs to understand it (or the server must reconstruct context from a cookie/token), which is precisely the problem sessions and tokens exist to solve (Phase 68).
-
-
-| Design decision                              | What it buys                                                                                                            | What it costs                                                                                                                   |
-| -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Statelessness                                | Any server can handle any request, which is what makes horizontal scaling and load balancing possible at all (Phase 81) | Every request must re-establish context, so authentication data travels on every single request                                 |
-| Plain text (through 1.1)                     | You can debug it with `telnet` and read it with your eyes                                                               | Verbose and repetitive; headers often exceed the body size for small API calls                                                  |
-| Binary framing (2 and 3)                     | Multiplexing and header compression, so one connection serves a whole page                                              | You now need tooling to inspect it, and a bug in the framing layer is far harder to see                                         |
-| Rich caching semantics                       | A `304 Not Modified` costs a round trip and no bytes, which is the single biggest bandwidth saving on the web           | Cache invalidation is genuinely hard, and a wrong `Cache-Control` header can pin stale content for a year                       |
-| Method safety and idempotency as conventions | Clients, proxies, and crawlers can reason about retries and prefetching without knowing your application                | They are only conventions; a `GET` that deletes something will break caches and crawlers in ways that are very hard to diagnose |
-| One connection per host (1.0)                | Trivially simple                                                                                                        | A handshake per file, which is why 1.0 pages were slow                                                                          |
-| Multiplexing over one connection (2)         | No per-file handshakes and no six-connection workaround                                                                 | Inherits TCP head-of-line blocking, which is why HTTP/3 had to change transports entirely                                       |
-
-
-**PICTURE IT LIKE THIS**
-
-HTTP is ordering by mail from a catalogue company that deliberately keeps no customer records. Every order form you send must be complete on its own: what you want (the method and path), which branch of the company you are writing to (the `Host` header), what format you want it in (`Accept`), and proof of who you are (`Authorization` or `Cookie`), because the clerk who opens your envelope has never heard of you and will forget you the moment they seal the reply. That sounds inefficient, and it is, but it is also why the company can hire a thousand interchangeable clerks and route your envelope to whichever one is free, which is the entire reason the web scales. The reply always arrives with a numbered stamp on it: 200 means here is your item, 301 means we moved and here is the new address, 404 means we have no such item, 401 means we could not verify who you are, and 500 means the clerk dropped something in the back room and it was not your fault.
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-58-raw-http
 import socket
 
-# ---------- 1. HTTP by hand, so you can see there is no magic ----------
-# This is the whole protocol: connect a socket, write text, read text.
 def raw_http_get(host, path="/"):
     with socket.create_connection((host, 80), timeout=5) as s:
         request = (
             f"GET {path} HTTP/1.1\r\n"
-            f"Host: {host}\r\n"                 # mandatory in 1.1: virtual hosting
-            f"Connection: close\r\n"            # tell the server not to keep it open
+            f"Host: {host}\r\n"
+            f"Connection: close\r\n"
             f"Accept: text/html\r\n"
-            f"\r\n"                             # THE BLANK LINE ends the headers
+            f"\r\n"
         )
         s.sendall(request.encode("ascii"))
-
         raw = b""
         while chunk := s.recv(65536):
             raw += chunk
-
-    head, _, body = raw.partition(b"\r\n\r\n")   # split on that same blank line
+    head, _, body = raw.partition(b"\r\n\r\n")
     return head.decode(), body
 
 head, body = raw_http_get("example.com")
 print(head)
 print(f"\n[body: {len(body)} bytes]")
 
-# ---------- 2. A conditional request: the 304 from the diagram ----------
 def conditional_get(host, path, etag):
     with socket.create_connection((host, 80), timeout=5) as s:
         s.sendall((
             f"GET {path} HTTP/1.1\r\n"
             f"Host: {host}\r\n"
-            f'If-None-Match: "{etag}"\r\n'       # "only send it if it changed"
+            f'If-None-Match: "{etag}"\r\n'
             f"Connection: close\r\n\r\n"
         ).encode())
-        return s.recv(65536).split(b"\r\n")[0]   # just the status line
+        return s.recv(65536).split(b"\r\n")[0]
 
-# A 304 response here means the server saved you the entire body.
+# Idempotency sketch: same Idempotency-Key on every POST retry so a lost
+# response cannot create a second charge. (Use requests + a real API in practice.)
 
-# ---------- 3. The idempotency problem, and the standard fix ----------
-import uuid, requests     # pip install requests
-
-def charge_once(amount_cents, idempotency_key=None):
-    """POST is NOT idempotent, so a timeout leaves you unable to safely retry.
-    An idempotency key makes it safe: the server remembers the key and returns
-    the ORIGINAL result instead of performing the action a second time."""
-    key = idempotency_key or str(uuid.uuid4())
-    for attempt in range(3):
-        try:
-            return requests.post(
-                "https://api.example.com/charges",
-                json={"amount": amount_cents},
-                headers={"Idempotency-Key": key},   # SAME key on every retry
-                timeout=5,
-            )
-        except requests.Timeout:
-            continue        # safe to retry ONLY because of the key above
-    raise RuntimeError("gave up after 3 attempts")
-
-# Without the key, this loop could charge a customer three times: each POST
-# may have succeeded server-side with only the response lost. This is the
-# single most important practical consequence of the safe/idempotent table.
-
-# ---------- 4. A minimal server, to see the other side of the exchange ----------
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         body = b"<h1>hello</h1>"
-        self.send_response(200)                       # the status line
-        self.send_header("Content-Type", "text/html") # what the body is
-        self.send_header("Content-Length", str(len(body)))  # where it ends
-        self.send_header("Cache-Control", "max-age=60")     # how long it is fresh
-        self.end_headers()                            # writes the blank line
+        self.send_response(200)
+        self.send_header("Content-Type", "text/html")
+        self.send_header("Content-Length", str(len(body)))
+        self.send_header("Cache-Control", "max-age=60")
+        self.end_headers()
         self.wfile.write(body)
 
 # HTTPServer(("127.0.0.1", 8000), Handler).serve_forever()
-# Then: curl -v http://127.0.0.1:8000/   and compare the output to the
-# byte diagram above, line by line.
+# curl -v http://127.0.0.1:8000/  and match lines to the byte diagram.
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**TRADE-OFFS:**
 
-Being able to narrate "what happens when you type a URL and press enter" end-to-end, correctly sequencing DNS -> TCP -> TLS -> HTTP request/response -> rendering, is one of the most common opening system-design and networking interview questions - because it touches nearly every concept in Phases 55-58 at once. Beyond that opener, the reliably-asked follow-ups are worth rehearsing: "what is the difference between 401 and 403" (unauthenticated versus authenticated-but-not-permitted), "what is the difference between PUT and PATCH" (full replacement versus partial update, and the idempotency consequence), "your client timed out on a POST, do you retry" (not without an idempotency key), "how does one IP address serve a thousand different websites" (the `Host` header), and "why does HTTP/3 use UDP" (per-stream ordering and a combined handshake). Volunteering the safe-versus-idempotent distinction unprompted is a strong signal, because it is the part that has real operational consequences and the part most candidates have never thought about.
+| Design decision                | What it buys                                      | What it costs                                            |
+| ------------------------------ | ------------------------------------------------- | -------------------------------------------------------- |
+| Statelessness                  | Any server can handle any request (scale-out)     | Context must ride every request (cookies/tokens)         |
+| Plain text through 1.1         | Debuggable with eyes / `curl -v`                  | Verbose; headers can dwarf small bodies                  |
+| Binary framing (2/3)           | Multiplex + compression                           | Need tooling to inspect                                  |
+| Caching semantics              | 304 saves bandwidth                               | Wrong Cache-Control pins stale content                   |
+| Safe/idempotent conventions    | Proxies and clients can retry/prefetch safely     | Only conventions - a mutating GET breaks the web         |
+| HTTP/2 on TCP vs HTTP/3 on QUIC| Multiplex without 6 connections                   | TCP HOL vs new UDP path / middlebox issues               |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**INTERVIEW NOTE:**
 
+Narrate URL bar → DNS → TCP → TLS → HTTP → render. Follow-ups: 401 vs 403; PUT vs PATCH; retry a timed-out POST?; how one IP hosts many sites (`Host`); why HTTP/3 uses UDP. Volunteering safe vs idempotent is a strong signal.
 
-| Difficulty | Task                                                                                                                                                                                       |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Easy       | Use `curl -v https://example.com` and label every line of output against the byte diagram above                                                                                            |
-| Easy       | For each of 200, 201, 301, 304, 400, 401, 403, 404, 409, 422, 429, 500, 502, 503, write one sentence on when you would return it                                                           |
-| Easy       | Open DevTools, load a page twice, and find a request that returned 304 on the second load. Explain what saved the bandwidth                                                                |
-| Medium     | Write the raw-socket `GET` above, then extend it to follow 301 and 302 redirects, with a cap on how many hops you will follow                                                              |
-| Medium     | Send a request to [httpbin.org/anything](https://httpbin.org/anything) and study exactly which headers your client added without being asked                                               |
-| Medium     | Implement chunked transfer encoding in the minimal server above, so it can stream a response of unknown length                                                                             |
-| Medium     | Classify each HTTP method as safe, idempotent, both, or neither, then explain which classification lets a proxy retry a failed request                                                     |
-| Hard       | Build a working HTTP/1.1 server through the [Codecrafters HTTP server challenge](https://codecrafters.io/challenges/http-server), including persistent connections and concurrent requests |
-| Hard       | Implement conditional requests end to end: compute an `ETag` on the server, honor `If-None-Match`, and return a real 304                                                                   |
-| Hard       | Capture an HTTP/2 session in Wireshark (with TLS keys logged) and identify the separate streams inside one connection                                                                      |
+**PRACTICE:**
 
+| Difficulty | Task                                                                                                              |
+| ---------- | ----------------------------------------------------------------------------------------------------------------- |
+| Easy       | `curl -v https://example.com` and label lines against the byte diagram                                            |
+| Easy       | One sentence each for when you return 200, 201, 301, 304, 400, 401, 403, 404, 409, 422, 429, 500, 502, 503       |
+| Easy       | Load a page twice in DevTools; find a 304; say what bandwidth was saved                                           |
+| Medium     | Extend the raw-socket GET to follow 301/302 with a hop limit                                                      |
+| Medium     | Classify methods as safe, idempotent, both, or neither; say which lets a proxy retry                              |
+| Medium     | Hit httpbin.org/anything and list headers your client added unprompted                                            |
+| Hard       | Implement ETag / If-None-Match end to end with a real 304                                                         |
 
-**WHY THE NEXT TOPIC IS NEEDED - REST API Design:** HTTP gives you the basic building blocks - methods, status codes, headers. It doesn't tell you *how* to organize a whole API's worth of endpoints in a way that's predictable and easy for other developers to use. That organizing convention is REST - Phase 59.
+**WHAT THIS UNLOCKS NEXT:**
+
+HTTP gives methods, status codes, and headers. It does not tell you how to organize a whole API so other developers can guess the next endpoint. That convention is REST - Phase 59.
 
 ---
 
@@ -11749,193 +10398,89 @@ Being able to narrate "what happens when you type a URL and press enter" end-to-
 
 **WHAT YOU WILL BE ABLE TO DO:** Design a small REST API with correct resource nouns, HTTP methods, and status codes - including pagination, versioning, and how to model non-CRUD actions without inventing a private RPC dialect.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 58 (methods, status codes, headers, and safe vs idempotent).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 58 — methods, status codes, safe vs idempotent.
 
-**COMPANION DEEP-DIVE:** This phase is the API-design layer on top of HTTP. Continue with `[Web.md](./Web.md)` for frameworks, OpenAPI, auth, and production web systems.
+**LEARNING RESOURCES:**
+
+- [What is REST API? Examples and How To Use It (ByteByteGo)](https://www.youtube.com/watch?v=-mN3VyJuCjM)
+- [Good APIs vs Bad APIs: 7 Tips for API Design (ByteByteGo)](https://www.youtube.com/watch?v=_gQaygjm_hg)
+- [Microsoft REST API Guidelines](https://github.com/microsoft/api-guidelines/blob/vNext/azure/Guidelines.md); [Google API Design Guide](https://cloud.google.com/apis/design)
+- [Stripe API reference](https://docs.stripe.com/api) - production taste worth studying
+- [Fielding dissertation, chapter 5](https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) - original REST constraints
+- [FastAPI](https://github.com/fastapi/fastapi); try [Swagger Editor](https://editor.swagger.io/) / [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
+
+**COMPANION DEEP-DIVE:** API-design layer on HTTP. Continue with `[Web.md](./Web.md)` for frameworks, OpenAPI, auth, and production systems.
 
 ## 59.1 REST API Design
 
-**WHY YOU ARE LEARNING THIS:** Before conventions like REST, APIs were often designed ad hoc - one team's "get a user" might be `/getUser?id=5`, another's `/fetch_user/5`, another's `/api/v2/user-lookup`. Every API had to be learned from scratch. REST (Representational State Transfer) is a set of constraints that, when followed, make an API's shape *predictable*: resources (nouns, not verbs) are addressed by URL, and the HTTP method (Phase 58) already tells you the action - so the URL only ever needs to say *what*, never *what to do to it*.
+**WHY THIS MATTERS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Phase 58 gave you the HTTP vocabulary. Without conventions, teams invent `/getUser?id=5`, `/fetch_user/5`, and `/api/v2/user-lookup` for the same idea - every API learned from scratch. REST's useful core: **resources** (nouns) addressed by URL; **HTTP methods** carry the verb - so the path says *what*, not *what to do to it*.
 
-- Best animated explanation: [What is REST API? Examples and How To Use It (ByteByteGo)](https://www.youtube.com/watch?v=-mN3VyJuCjM) *(Composio YouTube)*
-- Alternative: [Good APIs vs Bad APIs: 7 Tips for API Design (ByteByteGo)](https://www.youtube.com/watch?v=_gQaygjm_hg)
-- Another angle: [Deep Dive into REST API Design (Software Developer Diaries)](https://www.youtube.com/watch?v=7nm1pYuKAhY); [9 Must-Know REST API Design Principles (ByteMonk)](https://www.youtube.com/watch?v=pJ83mmqcvoQ)
-- Interactive: [Swagger Editor](https://editor.swagger.io/); [GitHub REST API](https://docs.github.com/en/rest); [JSONPlaceholder](https://jsonplaceholder.typicode.com/); [Hoppscotch](https://hoppscotch.io/)
-- Written: [Microsoft's REST API Guidelines](https://github.com/microsoft/api-guidelines/blob/vNext/azure/Guidelines.md); [Google's API Design Guide](https://cloud.google.com/apis/design); [Stripe API reference](https://docs.stripe.com/api); [Fielding's dissertation, chapter 5](https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
-- GitHub: [FastAPI](https://github.com/fastapi/fastapi); [json-server](https://github.com/typicode/json-server)
+**THE PROBLEM:**
 
-**STEP-BY-STEP EXPLANATION**
+Ad hoc RPC-style paths do not compose with caching, uniform auth, or guessable documentation. Returning `200 OK` with an error buried in JSON breaks every generic client. Collections without pagination melt under growth. Non-CRUD actions ("cancel order") tempt verb URLs that throw away the uniform interface - or over-purist nouns nobody can read.
 
-REST is a set of six constraints, and most of the value is in the first three. **Client-server** separates the user interface from the data storage so each can evolve independently. **Statelessness** means every request carries everything the server needs, which is what allows any server behind a load balancer to handle any request (Phase 81). **Cacheability** means responses must declare whether they can be cached, which is what lets a CDN or browser answer without touching your servers. The remaining three are a **uniform interface** (the resource-and-method convention this section is about), **layered system** (a client cannot tell whether it is talking to your server or a proxy in front of it), and **code on demand** as an optional constraint that is essentially never used. The single most common misuse of the word "REST" is calling an API RESTful when it violates statelessness, which is the constraint that actually carries the scaling benefit.
+**HOW IT WORKS:**
 
-Resource naming rewards a few specific habits. Use plural nouns for collections (`/users`, not `/user`), so that `/users` is the collection and `/users/5` is a member of it, and the two never need different words. Nest only to express ownership (`/users/5/orders` means the orders belonging to user 5), and stop nesting at one or two levels, because `/users/5/orders/9/items/3/reviews` is unusable and the deeper resource almost always has its own identity worth addressing directly as `/reviews/3`. Use hyphens rather than underscores or camelCase in paths. Keep filtering, sorting, and pagination in the query string rather than the path, because they are not resource identity: `GET /orders?status=pending&sort=-created_at&page=2` describes a view of a collection, not a different collection.
+Fielding's constraints that carry day-to-day value: **client-server**, **stateless** (every request carries what the server needs - scale-out precondition), **cacheable** responses, **uniform interface** (resource + method), **layered system**. Optional code-on-demand is rare. Calling something "REST" while violating statelessness drops the scaling benefit.
 
-The awkward cases are where design taste actually shows, and being able to discuss them well is what separates a senior answer from a junior one. Actions that are genuinely not CRUD, like "send a password reset" or "publish an article" or "cancel an order," have three defensible treatments. You can model the action's *result* as a resource, so `POST /users/5/password-resets` creates a reset request. You can model it as a state change, so `PATCH /articles/9` with `{"status": "published"}`. Or you can accept a controller-style endpoint, `POST /orders/9/cancel`, which is not strictly REST but is honest and readable. What matters in an interview is not picking the "correct" one, because there is not one, but naming the trade-off: the resource-oriented version composes better with caching and permissions, and the verb version is clearer to read and harder to get subtly wrong.
+Naming habits: plural collections (`/users`, `/users/5`); nest only for ownership (`/users/5/orders`) and stop at one or two levels; hyphens in paths; filtering/sorting/pagination in the **query string** (`GET /orders?status=pending&sort=-created_at`), not the path.
 
-Three more concerns separate a toy API from a real one. **Pagination** is mandatory for any collection that can grow, and there are two approaches with a real trade-off: offset-based (`?page=2&per_page=20`) is trivial to implement and breaks when items are inserted while a client is paging, while cursor-based (`?after=eyJpZCI6MTAwfQ`) is stable under concurrent writes and cannot jump to an arbitrary page. **Versioning** has to be decided before your first external consumer, and the practical options are a URL prefix (`/v1/users`), a header (`Accept: application/vnd.api+json; version=1`), or a strict additive-only policy where you never remove or rename a field. **Error responses** should be structured and machine-readable rather than a bare string, and there is an actual standard for this in [RFC 9457, Problem Details for HTTP APIs](https://www.rfc-editor.org/rfc/rfc9457.html), which gives you a type, title, status, detail, and instance for every error.
+Non-CRUD options (name the trade-off; no single "correct"):
 
-**BEFORE VS. AFTER**
+1. Result as resource: `POST /users/5/password-resets`
+2. State change: `PATCH /articles/9` with `{"status": "published"}`
+3. Controller-style: `POST /orders/9/cancel` - not purist, often clearest
 
-```text
-Ad hoc / RPC-style API
-  /getUser?id=5
-  /createUser
-  /deleteUserById?id=5
-        Problem: every endpoint invents its own verb and shape; a new
-        developer has to read documentation for every single one.
+**Pagination:** offset (`?page=2&per_page=20`) is simple and breaks under concurrent inserts; cursor (`?after=…`) is stable and index-friendly but cannot jump to "page 7." **Versioning:** `/v1/…`, header version, or additive-only forever. **Errors:** structured bodies ([RFC 9457 Problem Details](https://www.rfc-editor.org/rfc/rfc9457.html)) - type, title, status, detail. Use real status codes: 401 vs 403, 400 vs 422, 409 for business conflict, 201 + `Location` on create, 204 on empty delete success.
 
-RESTful API -- resources are nouns, HTTP methods carry the verb
-  GET    /users/5       -- retrieve user 5
-  POST   /users         -- create a new user
-  PUT    /users/5       -- replace user 5 entirely
-  PATCH  /users/5       -- partially update user 5
-  DELETE /users/5       -- remove user 5
-        Trade-off: some real-world actions don't map cleanly to CRUD nouns
-        (e.g. "send a password reset email") -- REST purists model these as
-        sub-resources (POST /users/5/password-resets) rather than verbs
-        in the URL, which can feel unnatural at first.
-```
-
-**STEP-BY-STEP EXPLANATION**
-
-A well-designed REST API is also expected to use status codes meaningfully (not `200 OK` with an error message buried in the body), be stateless (each request contains everything needed to process it, consistent with HTTP's own statelessness), and use nested URLs to express relationships (`/users/5/orders` "the orders belonging to user 5").
-
-**Internal Working, Step by Step - how one request becomes one row, and back:**
+**VISUAL MODEL:**
 
 ```text
-CLIENT                                                          SERVER
-  |
-  |  PATCH /v1/orders/9  HTTP/1.1
-  |  Host: api.example.com
-  |  Authorization: Bearer eyJhbGc...        <-- Phase 68
-  |  Content-Type: application/json
-  |  Idempotency-Key: 7f3c...                <-- Phase 58
-  |
-  |  {"status": "shipped"}
-  |------------------------------------------------------------->|
-  |                                                               |
-  |   [1] ROUTING: match the method + path against the route table
-  |       PATCH /v1/orders/:id  ->  handler update_order(id=9)
-  |       No match? -> 404. Path matches but method does not? -> 405
-  |       Method Not Allowed, WITH an `Allow` header listing what IS
-  |       permitted. Returning 404 here instead is a common, sloppy bug.
-  |                                                               |
-  |   [2] AUTHENTICATION: who is this? (verify the token, 15.4)
-  |       fails -> 401 Unauthorized  + WWW-Authenticate header
-  |                                                               |
-  |   [3] AUTHORIZATION: may THIS user modify order 9? (15.2)
-  |       fails -> 403 Forbidden
-  |       NOTE: 401 means "I don't know who you are."
-  |             403 means "I know exactly who you are, and no."
-  |             Choosing between them wrongly is the single most
-  |             common status-code mistake in real APIs.
-  |                                                               |
-  |   [4] VALIDATION: is "shipped" a legal status? is the body JSON?
-  |       fails -> 400 Bad Request (malformed) or
-  |                422 Unprocessable Content (well-formed but invalid),
-  |                with a STRUCTURED error body naming the bad field
-  |                                                               |
-  |   [5] IDEMPOTENCY CHECK: have I seen key 7f3c before?
-  |       yes -> return the ORIGINAL stored response. Do nothing else.
-  |                                                               |
-  |   [6] BUSINESS RULE: can an order go from `paid` to `shipped`?
-  |       If it is already `cancelled`, this is a CONFLICT, not a
-  |       validation error -> 409 Conflict
-  |                                                               |
-  |   [7] PERSIST: BEGIN; UPDATE orders SET status=... WHERE id=9; COMMIT
-  |       (Phase 37.5: the transaction is what makes step 7 all-or-nothing)
-  |                                                               |
-  |   [8] SERIALIZE the resource's new representation and choose a code
-  |                                                               |
-  |<-------------------------------------------------------------|
-  |  HTTP/1.1 200 OK
-  |  Content-Type: application/json
-  |  ETag: "v7"                        <-- so the client can do 13.1's
-  |  Cache-Control: no-store               conditional requests later
-  |
-  |  {"id": 9, "status": "shipped", "updated_at": "..."}
+Ad hoc / RPC-style:
+  /getUser?id=5   /createUser   /deleteUserById?id=5
+REST - nouns in the path, verbs in the method:
+  GET|POST /users     GET|PUT|PATCH|DELETE /users/5
 
-THE RESOURCE / METHOD GRID. This is the whole uniform interface,
-and its predictability is the entire point:
+One PATCH request, step by step:
 
-                    COLLECTION  /orders        MEMBER  /orders/9
-                  +---------------------------+---------------------------+
-  GET             | list, filter, paginate    | fetch one                 |
-                  | 200, or 200 + empty array | 200, or 404               |
-                  +---------------------------+---------------------------+
-  POST            | CREATE a new one          | (not used)                |
-                  | 201 + Location header     | 405                       |
-                  +---------------------------+---------------------------+
-  PUT             | (rarely: replace all)     | REPLACE entirely          |
-                  |                           | 200/204, or 201 if created|
-                  +---------------------------+---------------------------+
-  PATCH           | (not used)                | PARTIAL update            |
-                  |                           | 200/204                   |
-                  +---------------------------+---------------------------+
-  DELETE          | (rarely: clear all)       | remove                    |
-                  |                           | 204, or 404, or 200       |
-                  +---------------------------+---------------------------+
+  PATCH /v1/orders/9  + Authorization + Idempotency-Key + {"status":"shipped"}
+   [1] ROUTING: method+path match → else 404; path ok method wrong → 405 + Allow
+   [2] AUTHENTICATION: who? fail → 401
+   [3] AUTHORIZATION: may THIS user? fail → 403
+       (401 = I don't know you; 403 = I know you and no)
+   [4] VALIDATION: malformed → 400; well-formed but invalid → 422
+   [5] IDEMPOTENCY: seen key? return ORIGINAL response; do nothing else
+   [6] BUSINESS RULE: cancelled→shipped is CONFLICT → 409 (not 422)
+   [7] PERSIST (Story VIII owns durable storage)
+   [8] 200 + representation (+ ETag for later conditional requests)
 
-  Read the grid and notice you already know what `GET /invoices/44` does
-  without reading any documentation. That predictability IS the value REST
-  delivers, and it is why "no verbs in the URL" is a rule worth following
-  even when a verb would read more naturally.
+RESOURCE / METHOD GRID (uniform interface):
 
-  On 201: it MUST include a `Location` header pointing at the new resource,
-  because the client did not choose the id and has no other way to learn it.
+                    COLLECTION /orders        MEMBER /orders/9
+  GET               list/filter/paginate      fetch one (200/404)
+  POST              create (201+Location)     405
+  PUT               (rare replace-all)        full replace
+  PATCH             —                         partial update
+  DELETE            (rare clear-all)          remove (204/404)
 
-PAGINATION, and why the two styles are not interchangeable:
+  Predictability IS the value: you already know what GET /invoices/44 means.
+  On 201: MUST include Location - client did not choose the id.
 
-  OFFSET-BASED:  GET /orders?page=2&per_page=20   -> SQL LIMIT 20 OFFSET 20
+PAGINATION:
 
-     page 1: [ 1  2  3 ... 20 ]
-     ...then someone inserts a NEW order at the top...
-     page 2: [ 20 21 22 ... 39 ]
-               ^^ item 20 appears TWICE, and one item is never seen.
-     Also: OFFSET 1000000 forces the database to count and discard a
-     million rows, so deep pages get slower and slower (Phase 37.4).
+  OFFSET  ?page=2&per_page=20  → LIMIT/OFFSET
+    Insert at top while paging → duplicates/skips; deep OFFSET gets slow.
 
-  CURSOR-BASED:  GET /orders?after=<id-or-token>&limit=20
-                 -> SQL WHERE id > 100 ORDER BY id LIMIT 20
+  CURSOR  ?after=<token>&limit=20  → WHERE id > cursor ORDER BY id LIMIT n
+    Stable under inserts; page 50,000 as fast as page 1; no jump to "page 7".
 
-     page 1: [ 1 .. 20 ], cursor = 20
-     page 2: WHERE id > 20  -> stable no matter what was inserted, and
-             it uses the index directly, so page 50,000 is as fast as
-             page 1.
-     Cost: you cannot jump to "page 7", and you cannot show a total
-     page count without a separate query.
-
-  Offset is right for an admin table with page numbers. Cursor is right
-  for an infinite scroll or any API a third party will iterate. Saying
-  which and why is a strong interview answer.
+  Offset fits admin tables with page numbers. Cursor fits infinite scroll /
+  third-party iteration. Saying which and why is a strong interview answer.
 ```
 
-**PICTURE IT LIKE THIS**
-
-REST's uniformity is like standardized road signs: once you know a red octagon means "stop" anywhere in the country, you don't need to relearn traffic rules in every new city. A consistent API means a developer who's used one REST endpoint can guess the shape of the next one correctly.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Decision                                | What it buys                                                                          | What it costs                                                                                                        |
-| --------------------------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Resources as nouns, verbs in the method | The API is guessable, so documentation becomes a reference rather than a prerequisite | Genuinely non-CRUD actions have to be contorted into resources, which sometimes reads worse than a plain verb would  |
-| Statelessness                           | Any server can serve any request, which is the precondition for horizontal scaling    | Auth data rides on every request, and anything expensive to reconstruct must be cached explicitly                    |
-| One resource per endpoint               | Simple, cacheable, and easy to authorize per resource                                 | Clients often need several round trips to assemble one screen, which is the exact problem GraphQL was built to solve |
-| Offset pagination                       | Trivial to implement, supports page numbers and totals                                | Duplicates and skips under concurrent writes, and deep offsets get progressively slower                              |
-| Cursor pagination                       | Stable under writes, and constant-time at any depth                                   | No page numbers, no total count, and the cursor is opaque to clients                                                 |
-| URL versioning (`/v1/`)                 | Unmistakable, easy to route, easy to run two versions side by side                    | Version proliferates through every path, and clients rarely migrate off old versions voluntarily                     |
-| Additive-only, unversioned              | One code path forever, and no migration deadlines                                     | You can never remove or rename a field, so the schema accumulates permanently                                        |
-| Structured errors (RFC 9457)            | Clients can handle errors programmatically instead of matching on strings             | More work per error path, and the temptation to return 200 with an error body instead                                |
-
-
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
-
-API design questions ("design a REST API for a bookstore") are graded on: correct resource naming (plural nouns, no verbs in the URL), correct method-to-action mapping, meaningful status codes, and sensible handling of relationships and pagination for large collections. The follow-ups that separate levels: "how would you paginate this, and what breaks if items are being inserted while a client pages" (offset versus cursor), "how do you version this API" (and whether you would rather never version it), "where would you put filtering" (query string, not path), "how do you model 'cancel an order'" (there is no single right answer, so name the trade-off), "what is the difference between 401 and 403, and between 400 and 422," and "your `POST /orders` timed out, what does the client do now" (idempotency key, from Phase 58). The single most common failure mode is designing endpoints without ever mentioning status codes or errors, so state them as you go rather than waiting to be asked.
-
-**SMALL WORKING EXAMPLE**
+**WORKED EXAMPLE:**
 
 ```python playground=cs-phase-59-rest-fastapi
 from fastapi import FastAPI, HTTPException, Response, status, Query, Header
@@ -11946,8 +10491,6 @@ import base64, json
 
 app = FastAPI(title="Orders API", version="1.0.0")
 
-# --- Resources as data shapes. Pydantic validates them, and FastAPI turns
-#     these annotations into an OpenAPI spec automatically. ---
 class OrderIn(BaseModel):
     item: str = Field(min_length=1, max_length=200)
     quantity: int = Field(gt=0, le=1000)
@@ -11958,10 +10501,8 @@ class OrderPatch(BaseModel):
 
 DB: dict[int, dict] = {}
 NEXT_ID = 1
-SEEN_KEYS: dict[str, dict] = {}          # idempotency-key -> stored response
+SEEN_KEYS: dict[str, dict] = {}
 
-# --- COLLECTION: list, with CURSOR pagination and filtering in the query
-#     string, because neither one is part of resource identity ---
 @app.get("/v1/orders")
 def list_orders(
     status_filter: str | None = Query(default=None, alias="status"),
@@ -11971,23 +10512,16 @@ def list_orders(
     rows = sorted(DB.values(), key=lambda r: r["id"])
     if status_filter:
         rows = [r for r in rows if r["status"] == status_filter]
-
-    if after:                                     # decode the opaque cursor
+    if after:
         last_id = json.loads(base64.urlsafe_b64decode(after))["id"]
         rows = [r for r in rows if r["id"] > last_id]
-
     page = rows[:limit]
     next_cursor = None
     if len(rows) > limit:
         next_cursor = base64.urlsafe_b64encode(
             json.dumps({"id": page[-1]["id"]}).encode()).decode()
-
-    # An empty collection is 200 with an empty list, NOT 404. 404 means the
-    # collection itself does not exist, which is a different fact.
     return {"data": page, "next_cursor": next_cursor}
 
-# --- COLLECTION: create. 201 + Location, because the client did not
-#     choose the id and has no other way to find out what it is. ---
 @app.post("/v1/orders", status_code=status.HTTP_201_CREATED)
 def create_order(
     body: OrderIn,
@@ -11995,20 +10529,17 @@ def create_order(
     idempotency_key: str | None = Header(default=None, alias="Idempotency-Key"),
 ):
     if idempotency_key and idempotency_key in SEEN_KEYS:
-        return SEEN_KEYS[idempotency_key]          # replay, do NOT create again
-
+        return SEEN_KEYS[idempotency_key]
     global NEXT_ID
     order = {"id": NEXT_ID, "status": "paid",
              "created_at": datetime.now(timezone.utc).isoformat(), **body.model_dump()}
     DB[NEXT_ID] = order
     NEXT_ID += 1
-
     response.headers["Location"] = f"/v1/orders/{order['id']}"
     if idempotency_key:
         SEEN_KEYS[idempotency_key] = order
     return order
 
-# --- MEMBER: fetch one ---
 @app.get("/v1/orders/{order_id}")
 def get_order(order_id: int):
     if order_id not in DB:
@@ -12020,79 +10551,66 @@ def get_order(order_id: int):
         })
     return DB[order_id]
 
-# --- MEMBER: partial update. PATCH, not PUT, because the client is sending
-#     only the fields it wants changed. ---
 @app.patch("/v1/orders/{order_id}")
 def update_order(order_id: int, body: OrderPatch):
     if order_id not in DB:
         raise HTTPException(404, detail="Order not found")
-
     order = DB[order_id]
-    changes = body.model_dump(exclude_unset=True)   # exclude_unset is the
-                                                    # whole difference between
-                                                    # PATCH and PUT semantics
-    # A business-rule violation is a CONFLICT (409), not a validation error
-    # (422). The request was perfectly well-formed; the world just says no.
+    changes = body.model_dump(exclude_unset=True)
     if order["status"] == "cancelled" and changes.get("status") == "shipped":
         raise HTTPException(409, detail="Cannot ship a cancelled order")
-
     order.update(changes)
     return order
 
-# --- MEMBER: delete. 204 means "done, and there is deliberately no body." ---
 @app.delete("/v1/orders/{order_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_order(order_id: int):
     if DB.pop(order_id, None) is None:
         raise HTTPException(404, detail="Order not found")
     return Response(status_code=status.HTTP_204_NO_CONTENT)
 
-# --- SUB-RESOURCE: nesting expresses OWNERSHIP, and stops at one level ---
 @app.get("/v1/users/{user_id}/orders")
 def orders_for_user(user_id: int):
     return {"data": [o for o in DB.values() if o.get("user_id") == user_id]}
 
-# --- A non-CRUD action, modelled as a state change rather than a verb.
-#     The alternative, POST /v1/orders/{id}/cancel, is also defensible;
-#     what matters is being able to say why you chose one. ---
-#     PATCH /v1/orders/9  {"status": "cancelled"}   <- handled above
-
-# Run: uvicorn main:app --reload
-# Then open http://127.0.0.1:8000/docs for a live, clickable OpenAPI page
-# generated entirely from the type annotations above. Every status code,
-# every field constraint, and every example is derived from this code, so
-# the documentation cannot silently drift out of date.
+# Run: uvicorn main:app --reload  → http://127.0.0.1:8000/docs
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**TRADE-OFFS:**
 
+| Decision                     | What it buys                         | What it costs                                      |
+| ---------------------------- | ------------------------------------ | -------------------------------------------------- |
+| Nouns + method verbs         | Guessable API                        | Non-CRUD actions need careful modeling             |
+| Statelessness                | Horizontal scale                     | Auth/context on every request                      |
+| One resource per endpoint    | Cacheable, clear authz               | Chatty UIs (motivation for GraphQL later)          |
+| Offset vs cursor pagination  | Pages/totals vs stability/speed      | Duplicates vs no random access                     |
+| URL versioning vs additive   | Clear dual-run vs one path forever   | Version sprawl vs never removing fields            |
+| Structured errors            | Machine-readable clients             | Discipline on every error path                     |
 
-| Difficulty | Task                                                                                                                                                                                       |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Easy       | Rewrite these as RESTful routes: `/getAllBooks`, `/createBook`, `/deleteBookById?id=7`, `/searchBooksByAuthor?name=x`                                                                      |
-| Easy       | For a bookstore, write the full method-and-path grid for books, authors, and orders, with the status code each returns on success and on failure                                           |
-| Easy       | Explain why `POST /v1/orders` must return a `Location` header and `GET /v1/orders/9` must not                                                                                              |
-| Medium     | Run the FastAPI code above, open `/docs`, and exercise every endpoint. Then find a request that should return 409 and one that should return 422                                           |
-| Medium     | Implement offset pagination alongside the cursor version, then write a test that inserts a row mid-iteration and demonstrates the duplicate                                                |
-| Medium     | Design the API for "mark a task complete" and "list only incomplete tasks" three different ways, and argue for one                                                                         |
-| Medium     | Write a structured error format following [RFC 9457](https://www.rfc-editor.org/rfc/rfc9457.html) and apply it to every error path in the code above                                       |
-| Medium     | Study [the Stripe API reference](https://docs.stripe.com/api) and list three specific decisions they made that this section recommends, and one they deliberately did not                  |
-| Hard       | Design the full REST surface for a system with a genuinely non-CRUD workflow, such as a multi-step approval process, and justify every endpoint that is not a plain noun                   |
-| Hard       | Add versioning to the API above so that `/v1` and `/v2` can run simultaneously with different response shapes, sharing one storage layer                                                   |
-| Hard       | Take an existing API you use and write the OpenAPI spec for it by hand in [Swagger Editor](https://editor.swagger.io/). The gaps you cannot fill in are the places its design is ambiguous |
+**INTERVIEW NOTE:**
 
+"Design a bookstore API" is graded on nouns, methods, status codes, relationships, and pagination. Follow-ups: offset vs cursor under inserts; versioning; filter in query string; model cancel; 401/403 and 400/422; timed-out POST → idempotency key (Phase 58). State errors as you design - do not wait to be asked.
 
-**PRACTICE WITH A SMALL PROJECT**
+**PRACTICE:**
 
-Design the full REST API surface (all endpoints, methods, and status codes) for a simple to-do list app with users and tasks, including how you'd handle "mark a task complete" and "list only incomplete tasks."
+| Difficulty | Task                                                                                                                           |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Easy       | Rewrite: `/getAllBooks`, `/createBook`, `/deleteBookById?id=7`, `/searchBooksByAuthor?name=x`                                  |
+| Easy       | Method/path grid for books, authors, orders with success and failure status codes                                              |
+| Easy       | Why `POST /v1/orders` returns `Location` and `GET /v1/orders/9` does not                                                       |
+| Medium     | Run the FastAPI example; exercise `/docs`; force a 409 and a 422                                                               |
+| Medium     | Design "mark task complete" and "list incomplete" three ways; argue for one                                                    |
+| Medium     | Study Stripe's API: three decisions this phase recommends, one deliberate exception                                            |
+| Hard       | Design REST for a multi-step approval workflow; justify every non-plain-noun endpoint                                          |
 
-**WHY THE NEXT TOPIC IS NEEDED - Databases:** An API's job is to expose data and let it be created, read, updated, and deleted. Where does that data actually live between requests, given that HTTP itself remembers nothing? It has to be written somewhere durable - and the naive first answer, a plain file, breaks down almost immediately at any real scale.
+**WHAT THIS UNLOCKS NEXT:**
+
+An API exposes data across machines - but HTTP remembers nothing between requests. Now that machines can communicate, persistent applications need somewhere to store and query shared data. A flat file collapses under concurrency, crash safety, and ad-hoc queries. That is why Story VIII starts with database foundations at Phase 60.
 
 ---
 
 > **Phase 59 complete?** [Build the Phase 59 mini-project](../guides/Projects.md#cs-phase-59-project) · [Continue to Phase 60](#phase-60)
 
 ---
-
 
 
 # PHASE 60 - Database Foundations
@@ -17673,11 +16191,13 @@ pytest --count=20 tests/integration       # via pytest-repeat
 
 **WHAT YOU WILL BE ABLE TO DO:** Keep policy independent of frameworks and I/O - separate domain logic from adapters so tests and swaps stay cheap.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 74 (tests stay cheap when domain can run without a real database or web server).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 74 (tests stay cheap when domain can run without a real database or web server). **Phase 29** (you already drew domain vs infrastructure and dependency direction at *object / LLD* scale).
+
+> **Bridge from Phase 29:** In Story IV you practiced the same two ideas on a whiteboard for one feature: which classes hold business rules vs plumbing, and which way imports may point. Phase 75 does **not** reteach OOP. It lifts that object-level design into **application architecture**: the same domain/infra split and inward dependency rule, now across packages, deployable services, and framework boundaries. If Phase 29 felt like "draw the parking lot," this phase is "keep the whole product's rules out of Flask and SQLAlchemy."
 
 ## 75.1 Domain vs Infrastructure
 
-**WHY YOU ARE LEARNING THIS:** **Domain** code expresses business rules (orders, fees, eligibility). **Infrastructure** talks to the world (SQL, HTTP, SMTP). Mixing them makes rules untestable and frameworks hard to swap.
+**WHY YOU ARE LEARNING THIS:** **Domain** code expresses business rules (orders, fees, eligibility). **Infrastructure** talks to the world (SQL, HTTP, SMTP). Mixing them makes rules untestable and frameworks hard to swap. You met this vocabulary in Phase 29.3; here the unit of design is the *application*, not a single class diagram.
 
 **THE PROBLEM THIS SOLVES:** Flask request handlers compute tax, send email, and build SQL strings - changing web framework rewrites business logic.
 
@@ -21385,10 +19905,9 @@ for k, v in map_.items():
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
-- Feathers lens: [Working Effectively with Legacy Code themes (Tech Lead Journal)](https://www.youtube.com/watch?v=mwVRHDD0tEk) *(Composio YouTube)*
-- Characterization tests: [Characterization testing walkthrough (Andrew Burgess)](https://www.youtube.com/watch?v=2q5PdGdlL8Y) *(Composio YouTube)*; [Characterization Test (Martin Fowler bliki)](https://martinfowler.com/bliki/CharacterizationTest.html) *(Composio fetch)*
-- Kata: [emilybache/GildedRose-Refactoring-Kata](https://github.com/emilybache/GildedRose-Refactoring-Kata) *(Composio GitHub + DeepWiki)* - pin behavior, then refactor
-- Scholar / practice literature on maintaining legacy systems *(Composio Scholar)*
+- Feathers lens: [Seams: How to Test Legacy Code (Michael Feathers)](https://www.youtube.com/watch?v=j4VkzzYM4k4) *(Composio YouTube)*; [Working Effectively with Legacy Code themes (Tech Lead Journal)](https://www.youtube.com/watch?v=mwVRHDD0tEk) *(Composio YouTube)*
+- Characterization tests: [Characterization Test (Martin Fowler bliki)](https://martinfowler.com/bliki/CharacterizationTest.html) *(Composio fetch)*
+- Kata: [emilybache/GildedRose-Refactoring-Kata](https://github.com/emilybache/GildedRose-Refactoring-Kata) *(Composio GitHub)* - pin behavior, then refactor
 
 **STEP-BY-STEP EXPLANATION**
 
@@ -21461,10 +19980,9 @@ print("characterization OK; seam ready for safer changes")
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
-- ADR idea: [Architecture Decision Records (CodeOpinion)](https://www.youtube.com/watch?v=6H6zfCNeqek) *(Composio YouTube)*; design docs: [What is a design doc? (Clément Mihailescu)](https://www.youtube.com/watch?v=bgHL41e7vgI) *(Composio YouTube)*
+- ADR idea: [Architecture Decision Records (CodeOpinion)](https://www.youtube.com/watch?v=6H6zfCNeqek) *(Composio YouTube)*; [Architectural Decision Records (Go Cloud Architects)](https://www.youtube.com/watch?v=GhB7vz3sg-0) *(Composio YouTube)*
 - Canonical: [Documenting Architecture Decisions (Michael Nygard)](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) *(Composio fetch)*; [adr.github.io](https://adr.github.io/) *(Composio fetch)*
-- Templates: [adr/madr](https://github.com/adr/madr) *(Composio DeepWiki)*; [joelparkerhenderson/architecture-decision-record](https://github.com/joelparkerhenderson/architecture-decision-record) *(Composio GitHub)*
-- Research: ADRs as living documentation *(Composio Scholar)*
+- Templates: [adr/madr](https://github.com/adr/madr) *(Composio GitHub)*; [joelparkerhenderson/architecture-decision-record](https://github.com/joelparkerhenderson/architecture-decision-record) *(Composio GitHub)*
 
 **STEP-BY-STEP EXPLANATION**
 
@@ -21535,451 +20053,107 @@ for c in adr["consequences"]:
 
 **Track:** Ship & Hire
 
-**WHAT YOU WILL BE ABLE TO DO:** Write a capstone spec that is honestly buildable - MVP scope, architecture sketch, risks, and a trade-off log - before you write production features.
+**WHAT YOU WILL BE ABLE TO DO:** Write a capstone spec that is honestly buildable - MVP musts, explicit non-goals, architecture sketch, risks, and a trade-off log - *before* you implement production features.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phases 92-94 (you can onboard, change legacy safely, and record decisions); the capstone assumes you will pull earlier stories as needed.
+**WHAT YOU SHOULD KNOW FIRST:** Phases 92-94 (onboard, change safely, record decisions); Phase 73 (specs); Phase 81 (estimation habit). Building, hardening, and portfolio packaging are Phases **96–98**, not this phase.
 
-## 95.1 Building Projects That Force Integration
+## 95.1 Scope a Capstone You Can Actually Finish
 
-**WHY YOU ARE LEARNING THIS:** Every phase before this one taught concepts one at a time, in isolation, with the problem already stated and the relevant tool already named by the section heading. That isolation is what made them learnable, and it is also precisely their limitation. Real systems never present a problem with its category attached. You are handed a symptom, and deciding whether it is an indexing problem, a concurrency problem, a caching problem, or a schema problem *is the work*. Reading Phase 37.4 teaches you what an index is; watching your own query drop from four seconds to nine milliseconds because you finally added one teaches you what an index is *for*, and the second kind of knowledge is the only kind that survives being asked about under pressure. Projects exist because integration is a separate skill from comprehension, and the only way to practise it is to build something whose failure modes you did not choose in advance.
+**WHY YOU ARE LEARNING THIS:** Capstones fail most often from unbounded ambition, not from missing a framework. Phase 95 owns **planning ownership**: what you will build, what you will not, how you will know MVP is done, and which roadmap tools you expect to use. Phase 96 ships the walking skeleton. Phase 97 breaks and hardens it. Phase 98 packages proof for humans.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
-- Scope / MVP: [How To Create An MVP (Rob Walling)](https://www.youtube.com/watch?v=YwEEV0wHnaA) *(Composio YouTube)*; [What is Project Scope? (Mike Clayton)](https://www.youtube.com/watch?v=NXw0bvvYWYo) *(Composio YouTube)*
-- Capstone design handbook: [Technical Design | CS Capstone Handbook](https://capstone.alexulbrich.com/guides/technical-design/) *(Composio fetch verified)* — components, interfaces, data model, and time-boxed spikes
-- Research angle: [A systematic mapping study on SE practices for MVPs (arxiv)](https://arxiv.org/abs/2305.08299) *(Composio Scholar + fetch)* — ideation and evaluation practices teams actually use
-- Pedagogy still applies: [Project Based Learning (Khalid Warsame)](https://www.youtube.com/watch?v=f9InPKUNCjI); escape tutorial hell: [bigboxSWE](https://www.youtube.com/watch?v=343EWZS9O88)
-- Idea catalogues (GitHub): [build-your-own-x](https://github.com/codecrafters-io/build-your-own-x) *(Composio GitHub: 500k+ stars)*; [app-ideas](https://github.com/florinpop17/app-ideas) *(Composio GitHub)*; [project-based-learning](https://github.com/practical-tutorials/project-based-learning) *(Composio fetch verified)*
-- Deployability contract: [The Twelve-Factor App](https://12factor.net/) *(Composio fetch verified)*
-- DeepWiki note: [system-design-primer](https://github.com/donnemartin/system-design-primer) is a *design methodology*, not a runnable app *(Composio DeepWiki)* — use it for architecture vocabulary, not as a clone target
-- Practice: [CodeCrafters](https://codecrafters.io/) for graded reimplementations; pick one [app-ideas](https://github.com/florinpop17/app-ideas) Tier-2/3 idea and write the one-page spec *before* coding
+- Scope / MVP: [How To Create An MVP (Rob Walling)](https://www.youtube.com/watch?v=YwEEV0wHnaA) *(Composio YouTube)*; [What is Project Scope? (Mike Clayton)](https://www.youtube.com/watch?v=NXw0bvvYWYo) *(Composio YouTube)*; [Michael Seibel - How to Plan an MVP (Y Combinator)](https://www.youtube.com/watch?v=1hHMwLxN6EM) *(Composio YouTube)*
+- Capstone design handbook: [Technical Design | CS Capstone Handbook](https://capstone.alexulbrich.com/guides/technical-design/) *(Composio fetch)*
+- Idea catalogues (pick one idea - do not build the catalogue): [app-ideas](https://github.com/florinpop17/app-ideas) *(Composio GitHub)*; [build-your-own-x](https://github.com/codecrafters-io/build-your-own-x) *(Composio GitHub)* for optional *reimplementation* depth later
+- Deployability contract for later phases: [The Twelve-Factor App](https://12factor.net/) *(Composio fetch)*
+- Practice: write the one-page spec *before* opening an editor for Phase 96
 
 **STEP-BY-STEP EXPLANATION**
 
-A project teaches differently from an exercise because of one property: **you own the problem statement**. That single difference cascades into everything else this phase is for.
+**A project is "real" when it has:** (1) a user (even future-you), (2) state that survives restarts, (3) a way to fail. Those three force auth, persistence, and error handling in Phase 96 - you only *name* them here.
 
-**Why the ladder is ordered the way it is.** The progression below is not sorted by how impressive each project looks. It is sorted so that each project *creates the pain* that motivates the next one, which is the same before/problem/solution/trade-off shape the entire roadmap uses, except that this time you generate the "before" yourself. The file-based application is deliberately placed before the database-backed one so that you personally experience concurrent writes corrupting your file and full scans getting slow, and then read Phase 37.1 as a description of a problem you already have rather than a hypothetical one. This ordering is the mechanism of the phase. Skipping to the impressive project at the end skips the mechanism.
+**Ownership map for Story XIV:**
 
-**What "real" means.** A project counts as real when it has a user (even if that user is you next month), it persists state across restarts, and it can fail. Those three properties are what force the concepts: a user means the interface matters, persistence means you meet serialization and schema evolution, and failure means you meet error handling, retries, and the difference between an error you can recover from and one you cannot. A script that transforms one file into another and exits has none of these, which is why it teaches so much less than its line count suggests.
+```text
+95  PLAN   MVP, non-goals, sketch, risks, trade-off log, success checks
+96  BUILD  walking skeleton → multi-user app on a public URL
+97  HARDEN load-test, find a failure, fix, prove
+98  RELEASE docs, diagrams, write-up, portfolio packaging
+```
 
-**Scope control is the actual skill being trained.** The most common project failure is not technical, it is that the project never ends. The discipline is to define, before writing any code, the smallest version that satisfies the three properties above, build only that, and *then* extend. This is the same instinct that Phase 39.3's incremental deployment and Phase 40.3's "start simple, then scale" rely on, and practising it on your own work is how it becomes automatic. A finished small project teaches more than an abandoned ambitious one, because only the finished one makes you deal with the unglamorous last twenty percent where deployment, error messages, and edge cases live.
+Do **not** implement auth, CI, caches, or load tests in this phase. List them as planned work owned by 96–97.
 
-**Reimplementation versus creation.** Two project genres teach different things and you want both. Building your own Redis, Git, or HTTP server gives you a *specification you did not write and cannot negotiate with*, which forces genuine understanding of a real protocol or data structure and gives you an unfakeable answer when an interviewer asks how something works. Building your own application gives you the design decisions, the ambiguity, and the ownership. Reimplementation projects teach depth, application projects teach judgment.
+**One-page spec template (fill every line):**
 
-**Reading other people's code is part of this phase.** Every project above is code you wrote, which means every assumption in it is one you already agree with. Contributing even a small fix to an existing repository is the only exercise here that puts you in a codebase whose conventions, history, and constraints are not yours. It is also the closest available simulation of the first month of a real job, and it exercises Phase 39.1's code review and version control in the only setting where they genuinely matter, which is with someone else on the other side of the pull request.
+1. **Problem** - who hurts, what outcome improves  
+2. **MVP musts** - 3–5 user-visible capabilities  
+3. **Non-goals** - at least 5 temptations you refuse for v1  
+4. **Users & auth** - anonymous? registered? roles?  
+5. **Data** - core nouns/tables (sketch only)  
+6. **Architecture sketch** - boxes: client / API / DB (+ optional queue later)  
+7. **Risks** - top 3 (security, scope, ops) and mitigation *ideas*  
+8. **Trade-off log** - empty table ready for decisions you will make in 96–97  
+9. **Done when** - concrete acceptance checks a stranger could run  
 
-**The write-up is not optional documentation, it is the learning step.** Writing down each trade-off you made converts an implicit decision into an explicit one you can defend, and defending decisions is exactly what Phase 104 grades in behavioral interviews. The project is the experience; the write-up is what turns the experience into something you can retrieve six months later in an interview room.
-
-Projects are not saved for the end of this roadmap - the moment you have enough of a phase to build *something* real with it, build it. Each project reuses concepts from the phases before it, so later projects are strictly more ambitious than earlier ones.
+**Scope discipline:** a finished small capstone teaches more than an abandoned distributed system. Prefer "expense splitter with auth" over "Uber for X with Kafka." Distributed extensions are optional stretch after 96–97 work, not the MVP.
 
 **PICTURE IT LIKE THIS**
 
-Reading every phase of this roadmap without building anything is like studying a complete set of architectural drawings, structural load tables, and plumbing codes, and concluding you can build a house. The drawings are genuinely correct and genuinely necessary. What they do not contain is the discovery that the site slopes more than the survey suggested, that the two subcontractors you hired disagree about who runs the conduit, and that the beautiful window you specified faces the neighbour's wall.
-
-Each project on the ladder below is a progressively larger structure. The CLI tool is a garden shed: one room, no plumbing, and it either stands or it does not. The file-based application is the same shed with a water butt attached, and the first time it overflows you understand drainage in a way no code section conveys. The database-backed rebuild is running proper pipes, at which point you appreciate why they are standardised. The authenticated API is fitting locks, and attacking your own endpoint is testing them by trying to break in yourself rather than trusting the box they came in. The deployed full-stack application is the building inspection, which is the first time someone other than you decides whether it works. And the distributed extension is the second building on the same plot, where you learn the thing no single-building experience teaches: that the hard part is no longer either structure, it is what runs between them.
-
-**Internal Working, Step by Step**
-
-The ladder, and the specific pain each rung is positioned to create:
-
-```text
-Simple CLI tool
-        Uses: Phase 5 (execution model), Phase 32 (a data structure to
-        actually organize whatever the tool manages)
-
-Data-structure-driven project (e.g. a task scheduler using a heap,
-or a text adventure game using a graph for its map)
-        Uses: Phases 32-46 -- a real excuse to reach for the right
-        structure for a real problem, not just a LeetCode prompt
-
-File-based application (e.g. a personal expense tracker reading/
-writing to a file, before a real database)
-        Uses: Phase 5's memory model, and sets up the NEXT project's
-        motivating problem directly -- you will personally feel Phase
-        11.2's "problems with files" the first time two processes
-        corrupt your file, or you need to query it and realize you're
-        scanning the whole thing by hand
-
-Database-backed application (rebuild the tracker above on a real
-relational database)
-        Uses: Phase 60 in full -- schema design, SQL, at least one
-        index, and a transaction around any multi-step operation
-
-REST API (expose the database-backed application over HTTP)
-        Uses: Phase 58 -- correct verbs, status codes, resource naming
-
-Authenticated API (add real user accounts to the API above)
-        Uses: Phase 66 -- password hashing, sessions or JWT, and
-        deliberately try to attack your OWN endpoint with each of the
-        four attacks from Phase 69.1, then fix what you find
-
-Full-stack application (a real frontend talking to the authenticated
-API, deployed somewhere reachable over the internet)
-        Uses: Phases 55-59 in full, plus Phase 72 (set up even a
-        minimal CI pipeline that runs your tests on every commit)
-
-Scalable / distributed extension (add a cache in front of your
-database, or split one piece of the application into a second
-service that talks to the first over HTTP)
-        Uses: Phase 81's early stages for real, on infrastructure you
-        control and can actually observe getting faster (or breaking)
-```
-
-Notice what the ladder actually does. Each rung is engineered so that its *limitation* is felt rather than read:
-
-```text
-PROJECT               THE PAIN IT CREATES          THE PHASE THAT ANSWERS IT
-------------------------------------------------------------------------------
-CLI tool              "where do I put state        Phase 32: pick the right
-                       between runs?"               structure, then persist it
-
-Data-structure         "a list works but takes      Phases 36-38: the structure
-project                forever at 10,000 items"     whose shape fits the access
-                                                    pattern
-
-File-based app         two processes write at       Phase 60.1: this is the
-                       once and the file is now     exact problem a database
-                       garbage; a query means       was invented to solve
-                       scanning every line
-
-Database-backed        "my multi-step update        Phase 64.1: this is what a
-                       half-applied and now the     transaction is
-                       data is inconsistent"
-
-REST API               "the browser sent OPTIONS    Phase 58 and 69.1: verbs,
-                       and my server 404'd it"      status codes, and CORS
-
-Authenticated API      you attack your own          Phase 69.1: you cannot
-                       endpoint and one of the      unlearn an attack that
-                       four attacks works           worked on your own code
-
-Full-stack deployed    "it works on my machine"     Phase 77: hermetic builds
-                                                    and CI exist for this exact
-                                                    sentence
-
-Distributed extension  the cache returns stale      Phase 81: cache
-                       data, or service B is        invalidation, timeouts, and
-                       down and A hangs forever     partial failure are real
-```
-
-The internal loop of a single project, which is the same loop every time regardless of which rung you are on:
-
-```text
-1. WRITE THE SMALLEST SPEC
-   One paragraph. What it does, who uses it, what "done" means.
-   If you cannot write this, the project is not scoped yet.
-              |
-              v
-2. BUILD THE WALKING SKELETON
-   The thinnest end-to-end path that produces one real result.
-   Ugly is fine. Incomplete is fine. Not-end-to-end is not fine,
-   because integration bugs only appear once the path connects.
-              |
-              v
-3. RUN IT ON REAL INPUT
-   Not test input you chose. Your actual expenses, your actual
-   files, your actual habits. Real data is where the edge cases
-   are, and it is why this step cannot be skipped.
-              |
-              v
-4. LET IT BREAK, THEN DIAGNOSE BEFORE FIXING
-   The diagnosis is the lesson, not the fix. Write down what you
-   thought was wrong before you knew. That gap is what improves.
-              |
-              v
-5. WRITE THE TRADE-OFF LOG
-   For each real decision: what you chose, what you rejected,
-   and what your choice costs. Three lines each is enough.
-              |
-              v
-6. ONLY NOW ADD THE NEXT FEATURE
-   Return to step 2 with a slightly larger skeleton.
-```
-
-Where the projects sit relative to the phases, so you can start building far earlier than the end of the document:
-
-```text
-PHASE:  1   2-9        10-11      12-13     14        15      16      17-18
-        |   |          |          |         |         |       |       |
-CLI ----+   |          |          |         |         |       |       |
-Data -------+          |          |         |         |       |       |
-File ---+--------------+          |         |         |       |       |
-DB ------------------------------------------+        |       |       |
-API ------------------------------+----------+        |       |       |
-Auth ------------------------------------------------+       |       |
-Full-stack -----------------------+----------+--------+------+       |
-Distributed -------------------------------------------------+-------+
-
-Read down a column: after finishing the OOP block (Phase 30) you can already
-build two of these. The last three are the only ones that
-genuinely require most of the document.
-```
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                                              | What it buys                                                                                                                     | What it costs                                                                        | When it is the right call                                                       |
-| --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
-| Small finished project                              | You reach the unglamorous last $20$ where deployment, error handling and edge cases live, which is where most of the learning is | Looks less impressive in a list                                                      | Almost always, especially early                                                 |
-| Large ambitious project                             | Forces genuine architecture and integration across many phases                                                                   | High risk of abandonment, and an abandoned project teaches roughly nothing           | Once you have finished three smaller ones and know your own completion rate     |
-| Reimplementation (your own Redis, Git, HTTP server) | A specification you cannot negotiate with, so understanding must be real; unfakeable interview answers                           | No product decisions, so it trains no design judgment                                | When you want depth in a specific system you already use                        |
-| Original application                                | Ambiguity, ownership, and real design trade-offs to defend                                                                       | Easy to accidentally avoid every hard part by redefining the requirement             | When you want judgment rather than depth                                        |
-| Following a tutorial                                | Fast exposure to an unfamiliar stack, and a working reference                                                                    | Produces the feeling of building without being stuck, which is the part that teaches | As a reference *alongside* your own build, never as the build itself            |
-| Contributing to an existing repository              | The only exercise that puts you in code whose conventions are not yours; real code review                                        | Slow, and the first contribution is mostly process overhead                          | Once per stack at minimum, because nothing else simulates a real job            |
-| Writing the trade-off log                           | Converts implicit decisions into defensible ones, which is exactly what Phase 104 grades                                        | Twenty minutes per project that feels like it is not progress                        | Every time, without exception                                                   |
-| Deploying it publicly                               | You meet configuration, secrets, TLS, and "works on my machine" for real                                                         | Ongoing cost and maintenance, plus a real attack surface                             | At least once, because the gap between local and deployed is a phase of its own |
-
+Blueprints before concrete. The blueprint names rooms and load paths. Pouring the foundation is Phase 96. Stress-testing the structure is Phase 97. The open-house brochure is Phase 98.
 
 **SMALL WORKING EXAMPLE**
 
-A minimal, working scope-control tool. The point is not the code, it is that it makes the two failure modes of this phase visible before they cost you a month.
+```python playground=cs-phase-95-capstone-spec
+# Capstone planning scaffold — fill strings; do not build features here.
 
-```python
-"""Project scoping and trade-off log: the two disciplines of Phase 95."""
-from dataclasses import dataclass, field
-
-@dataclass
-class TradeOff:
-    decision: str
-    chose: str
-    rejected: str
-    cost: str          # the honest price of the choice
-
-    def defensible(self) -> bool:
-        """A decision you cannot name a cost for is one you did not make."""
-        return bool(self.cost.strip()) and "none" not in self.cost.lower()
-
-@dataclass
-class Project:
-    name: str
-    spec: str                              # must fit in one paragraph
-    has_user: bool                         # someone, even future you
-    persists_state: bool                   # survives a restart
-    can_fail: bool                         # has real error paths
-    phases_used: list = field(default_factory=list)
-    trade_offs: list = field(default_factory=list)
-    shipped: bool = False
-
-    def is_real(self) -> list:
-        """The three properties that make a project teach. Returns what's missing."""
-        missing = []
-        if not self.has_user:
-            missing.append("no user, so the interface never matters")
-        if not self.persists_state:
-            missing.append("no persistence, so you never meet schema evolution")
-        if not self.can_fail:
-            missing.append("no failure paths, so you never meet error handling")
-        return missing
-
-    def scope_warnings(self) -> list:
-        warnings = []
-        words = len(self.spec.split())
-        if words > 120:
-            warnings.append(
-                "spec is %d words: not scoped yet, cut until one paragraph" % words
-            )
-        if not self.spec.strip():
-            warnings.append("no spec at all: this is the most common way projects die")
-        if len(self.phases_used) > 6 and not self.shipped:
-            warnings.append(
-                "touches %d phases and is unshipped: shrink the skeleton"
-                % len(self.phases_used)
-            )
-        return warnings
-
-    def audit(self) -> None:
-        print("=" * 62)
-        print("PROJECT: %s" % self.name)
-        print("Phases used: %s" % (", ".join(self.phases_used) or "none declared"))
-
-        missing = self.is_real()
-        print("\nReality check: %s" % ("PASS" if not missing else "INCOMPLETE"))
-        for m in missing:
-            print("   - %s" % m)
-
-        for w in self.scope_warnings():
-            print("   ! %s" % w)
-
-        print("\nTrade-off log: %d decision(s)" % len(self.trade_offs))
-        if not self.trade_offs:
-            print("   ! empty. The log IS the learning step, not documentation.")
-        for t in self.trade_offs:
-            mark = "ok " if t.defensible() else "WEAK"
-            print("   [%s] %s" % (mark, t.decision))
-            print("        chose %s over %s" % (t.chose, t.rejected))
-            print("        cost: %s" % (t.cost or "UNNAMED, so undecided"))
-
-tracker = Project(
-    name="Expense tracker, file-backed (rung 3 of the ladder)",
-    spec=(
-        "A CLI that records expenses to a local file and reports monthly totals "
-        "by category. Used by me, daily. Done when I have used it for one full "
-        "month without editing the file by hand."
-    ),
-    has_user=True,
-    persists_state=True,
-    can_fail=True,
-    phases_used=["1 (memory model)", "3 (structures)", "14.1 (motivating problem)"],
-    trade_offs=[
-        TradeOff(
-            decision="Storage format",
-            chose="append-only JSON lines",
-            rejected="a single rewritten JSON array",
-            cost="reads must scan the whole file, and a crash mid-write "
-                 "leaves a partial final line I have to tolerate on read",
-        ),
-        TradeOff(
-            decision="Concurrent access",
-            chose="ignore it, single user assumed",
-            rejected="file locking",
-            cost="two simultaneous invocations interleave writes and corrupt "
-                 "a record; this is exactly the pain that motivates Phase 37.1",
-        ),
-        TradeOff(
-            decision="Category list",
-            chose="free-text strings",
-            rejected="a fixed enum",
-            cost="typos silently create new categories, which is an "
-                 "un-normalised design and previews Phase 37.3",
-        ),
+spec = {
+    "problem": "Roommates lose track of shared expenses",
+    "mvp_musts": [
+        "signup/login",
+        "create a group",
+        "add an expense",
+        "see balances per person",
     ],
-    shipped=True,
-)
+    "non_goals": [
+        "receipt OCR",
+        "native mobile apps",
+        "real-time collab",
+        "multi-currency FX",
+        "microservice split",
+    ],
+    "done_when": [
+        "two users can register and share one group",
+        "CI green + public URL reachable",
+        "README clone/run works for a stranger",
+    ],
+    "owned_later": {
+        "96": "implement MVP vertical slice + deploy",
+        "97": "load-test list endpoint; fix the first cliff",
+        "98": "architecture diagram + decision write-up",
+    },
+}
 
-tracker.audit()
+print("MVP:")
+for m in spec["mvp_musts"]:
+    print(" [ ]", m)
+print("\nExplicitly NOT now:")
+for n in spec["non_goals"]:
+    print(" ---", n)
+print("\nHandoff:", spec["owned_later"])
 ```
-
-```text
-==============================================================
-PROJECT: Expense tracker, file-backed (rung 3 of the ladder)
-Phases used: 1 (memory model), 3 (structures), 14.1 (motivating problem)
-
-Reality check: PASS
-
-Trade-off log: 3 decision(s)
-   [ok ] Storage format
-        chose append-only JSON lines over a single rewritten JSON array
-        cost: reads must scan the whole file, and a crash mid-write leaves a
-              partial final line I have to tolerate on read
-   [ok ] Concurrent access
-        chose ignore it, single user assumed over file locking
-        cost: two simultaneous invocations interleave writes and corrupt a
-              record; this is exactly the pain that motivates Phase 37.1
-   [ok ] Category list
-        chose free-text strings over a fixed enum
-        cost: typos silently create new categories, which is an un-normalised
-              design and previews Phase 37.3
-```
-
-The walking skeleton discipline from step 2, made concrete. This is the entire rung-3 project in its thinnest end-to-end form, deliberately including the two flaws named in the trade-off log above, because feeling them is the point of the rung:
-
-```python
-"""Rung 3: the thinnest end-to-end version. Flaws are intentional."""
-import json
-import os
-from collections import defaultdict
-
-LEDGER = "expenses.jsonl"
-
-def record(amount: float, category: str, note: str = "") -> None:
-    # Append-only: crash-safe per line, but a torn final line is possible.
-    with open(LEDGER, "a", encoding="utf-8") as f:
-        f.write(json.dumps({"amount": amount, "category": category, "note": note}))
-        f.write("\n")
-
-def monthly_totals() -> dict:
-    totals = defaultdict(float)
-    if not os.path.exists(LEDGER):
-        return {}
-    with open(LEDGER, encoding="utf-8") as f:
-        for line_no, line in enumerate(f, 1):
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                row = json.loads(line)
-            except json.JSONDecodeError:
-                # The torn-write case, met in practice rather than in theory.
-                print("skipping corrupt line %d" % line_no)
-                continue
-            totals[row["category"]] += row["amount"]
-    return dict(totals)
-
-record(12.40, "coffee", "monday")
-record(64.00, "groceries")
-record(3.10, "Coffee")           # the un-normalised category flaw, live
-print(monthly_totals())
-```
-
-{'coffee': 12.4, 'groceries': 64.0, 'Coffee': 3.1}
-
-Two lessons arrive from running this rather than reading it. The full scan in `monthly_totals` is fine at 50 rows and unacceptable at 500,000, which is Phase 37.4's index motivation felt directly. And `coffee` and `Coffee` are now two categories, which is Phase 37.3's normalisation motivation arriving as a bug in your own data rather than a paragraph in a book.
-
-Useful commands while working through the ladder:
-
-```bash
-# Prove the concurrency flaw on rung 3 rather than taking it on faith.
-# Two writers, no locking, interleaved at the OS level:
-for i in $(seq 1 200); do (python -c "
-import app; app.record($i, 'stress')" &) ; done
-wait
-grep -c '' expenses.jsonl        # fewer lines than 200, or a torn one
-
-# Rung 4: watch the index from Phase 37.4 do its work on your own data.
-sqlite3 expenses.db "EXPLAIN QUERY PLAN
-  SELECT SUM(amount) FROM expenses WHERE category='coffee';"
-# SCAN expenses          <- before
-sqlite3 expenses.db "CREATE INDEX idx_cat ON expenses(category);"
-# SEARCH expenses USING INDEX idx_cat   <- after
-
-# Rung 6: attack your own endpoint, per Phase 38.5.
-curl -s "http://localhost:8000/items?q=x'%20OR%20'1'='1"
-curl -s -X POST http://localhost:8000/transfer -d 'to=attacker' \
-     -H 'Cookie: session=YOURS'      # succeeds => no CSRF token
-
-# Rung 7: the "works on my machine" test from Phase 39.3.
-docker run --rm -v "$PWD:/app" -w /app python:3.11-slim \
-  sh -c "pip install -q -r requirements.txt && pytest -q"
-
-# Rung 8: confirm the cache is actually doing something.
-ab -n 1000 -c 10 http://localhost:8000/report   # before
-ab -n 1000 -c 10 http://localhost:8000/report   # after adding the cache
-```
-
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
-
-Projects are graded differently from every other phase in this document, and the difference catches people out. Nobody is checking whether the project is impressive. They are checking whether *you made decisions and know why*.
-
-The question is almost always some variant of "walk me through a project you're proud of," and the failure mode is describing what it does. A feature tour tells the interviewer nothing they cannot read from a README. What they are listening for is the shape of a decision: here was the constraint, here were the two options, here is why I chose this one, and here is what it cost me. That shape is the entire trade-off log from step 5, which is why the log exists.
-
-Expect the follow-up "what would you do differently," and understand that it is not a trap. An answer of "nothing" reads as either no reflection or no experience of the project breaking. A strong answer names something specific and structural: I stored categories as free text and got dirty data, so I would normalise them; I skipped locking and corrupted my own file, so I would have moved to a database sooner. Naming your own design flaw is close to unfakeable evidence that you actually built and ran the thing.
-
-The other high-value follow-up is "how would this behave at a hundred times the traffic," which is Phase 81 arriving in the middle of a project discussion. Having actually added a cache in rung 8 and watched it return stale data is worth more here than having read about cache invalidation, because you can describe the failure rather than the mechanism.
-
-One practical note: the reimplementation projects buy you disproportionate credibility precisely because they cannot be bluffed. Someone who has written their own HTTP server answers questions about keep-alive, chunked encoding, and the request line differently from someone who has read about them, and the difference is audible in about two sentences.
 
 **PRACTICE UNTIL IT FEELS FAMILIAR**
 
 
-| Difficulty | Exercise                                                                                                                                                                                              |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Write the one-paragraph spec for a project you have been vaguely intending to build, then check it against the three reality properties: does it have a user, does it persist state, can it fail      |
-| Easy       | Take any project you have already built and write its trade-off log retroactively, three lines per decision. Count how many decisions you cannot name a cost for                                      |
-| Easy       | Build rung 1, a CLI tool that manages something you actually track, and stop the moment it is usable rather than when it is finished                                                                  |
-| Medium     | Build rung 3 exactly as written above, use it on real data for two weeks, then deliberately run the concurrency stress command and observe your own file corrupt                                      |
-| Medium     | Rebuild rung 3 on SQLite without looking at Phase 60 first. Write down every problem you hit, then read Phase 60 and mark which ones it names                                                         |
-| Medium     | Put your rung 4 project behind a REST API, then run it through the Phase 36.2 checklist and count how many of your own endpoint designs you have to change                                            |
-| Medium     | Add authentication to that API, then run all four Phase 38.5 attacks against yourself. Fix whichever one works, and write down why you did not think of it                                            |
-| Hard       | Take one CodeCrafters track, your own Redis, Git, or HTTP server, to at least the halfway stage, then write a page explaining a protocol detail you did not previously know existed                   |
-| Hard       | Deploy a project publicly with TLS, a real domain, CI running your tests on every commit, and a rollback you have actually rehearsed rather than merely configured                                    |
-| Hard       | Split one deployed project into two services, add a cache, then deliberately kill the second service and the cache in turn and document what your system does in each case against what you predicted |
-| Hard       | Contribute a merged fix to a repository you did not write, and write down every convention you had to discover that was nowhere in the documentation                                                  |
-| Hard       | Take the largest project you have and produce the Phase 40.3 design sheet for it as if you were the interviewer, then find the two decisions you cannot currently defend and fix them                 |
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | Fill the nine-line template for an idea you actually want |
+| Medium | Cut your MVP until a stranger could use it in one sitting; list 5 non-goals |
+| Hard | Write risks + "done when" checks; get a peer to mark anything still vague |
 
 
-Each project should end with you writing a short explanation of every trade-off you made and why - the same before/problem/solution/trade-off shape used throughout this roadmap, now applied to a decision that was actually yours.
-
-**WHY THE NEXT TOPIC IS NEEDED - Build:** A finished spec is still a plan. Phase 96 is where you ship a walking multi-user application against that plan - and discover which lines of the trade-off log were fiction.
+**WHY THE NEXT TOPIC IS NEEDED - Build:** A finished spec is still a plan. Phase 96 ships a walking multi-user application against that plan - and discovers which lines were fiction.
 
 ---
 
@@ -21995,11 +20169,11 @@ Each project should end with you writing a short explanation of every trade-off 
 
 **WHAT YOU WILL BE ABLE TO DO:** Ship a working multi-user application from your Phase 95 spec - auth, persistence, API, UI, CI, and a public URL - without abandoning the MVP.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 95 (honest scope and trade-off log); Phases 55-60 and 66-69 (web, data, auth/security); Phase 72 and 77 (Git, CI, deploy habits).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 95 (honest MVP scope and trade-off log only - no premature build); Phases 55-60 and 66-69 (web, data, auth/security); Phase 72 and 77 (Git, CI, deploy habits).
 
 ## 96.1 Walking Skeleton Before Features
 
-**WHY YOU ARE LEARNING THIS:** Capstones die in the middle: beautiful UI with no auth, or a perfect schema with no deploy. The skill is **vertical slices** - one complete user journey end-to-end - then thicken. Horizontal layers ("all models first") feel productive and ship nothing.
+**WHY YOU ARE LEARNING THIS:** Phase 95 planned. Capstones still die in the middle: beautiful UI with no auth, or a perfect schema with no deploy. This phase owns **shipping** - vertical slices to a multi-user app on a public URL. Hardening and portfolio polish are 97–98.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -22086,11 +20260,11 @@ for n in slice_["explicitly_not_now"]:
 
 **WHAT YOU WILL BE ABLE TO DO:** Load-test your capstone, find a real failure mode, fix it with evidence (before/after numbers), and leave at least one alert or health check behind.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 96 (a deployed multi-user app); Phases 74-75 (tests); Phase 81 concepts (caching, timeouts, partial failure) even if you only apply one.
+**WHAT YOU SHOULD KNOW FIRST:** Phase 96 (a deployed multi-user app); Phases 74 and 80 (tests + observability signals); Phases 82–83 for the first bottleneck/cache fix if needed. This phase owns **evidence of breakage and repair**, not a second system-design course.
 
 ## 97.1 Load, Fail, Fix, Prove
 
-**WHY YOU ARE LEARNING THIS:** Production systems are not graded on elegance in stillness. They are graded on what happens when traffic spikes, a dependency slows, or a bad input arrives. Finding that yourself - with numbers - is how a student project becomes an engineering artifact.
+**WHY YOU ARE LEARNING THIS:** Phase 96 shipped. Production systems are graded on what happens when traffic spikes or a dependency slows. Finding that yourself - with numbers - turns a student project into an engineering artifact. Portfolio packaging is still Phase 98.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -22351,11 +20525,11 @@ for pattern, when in triggers.items():
 
 **WHAT YOU WILL BE ABLE TO DO:** Solve mixed-topic medium problems at interview pace - pick a pattern from constraints, implement cleanly, and self-test within ~40 minutes.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 99 method; Stories IV-V DSA and Story VI algorithm patterns. Prefer pattern lists over random grinding.
+**WHAT YOU SHOULD KNOW FIRST:** Phase 99 method; **Story V taught the DSA** (structures, algorithms, patterns). This phase is **timed interview practice**, not a second DSA course - no new syllabus chapters.
 
 ## 100.1 Patterns Under Time Pressure
 
-**WHY YOU ARE LEARNING THIS:** Volume without pattern recognition plateaus. Interview problems cluster into a few shapes; the transferable skill is *identifying the shape from constraints*, then applying a template - not memorising individual solutions. Education research on interview prep in DSA courses likewise emphasises structured practice over ad-hoc grinding *(Composio Scholar: Kapoor et al., SIGCSE)*.
+**WHY YOU ARE LEARNING THIS:** Story V built understanding. Volume without pattern recognition still plateaus under a clock. Interview problems cluster into a few shapes; the transferable skill is *identifying the shape from constraints*, then applying a template. Do **not** re-read all of Story V here - drill triggers and timing.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -22436,18 +20610,17 @@ for a in log:
 
 **WHAT YOU WILL BE ABLE TO DO:** Answer common fundamentals questions - processes/threads, memory, HTTP, ACID/indexes, CAP trade-offs - in under two minutes each without notes.
 
-**WHAT YOU SHOULD KNOW FIRST:** Stories I-III (programming + systems intro), Story VII-VIII (networks/databases), and Phase 99 communication habits. This is synthesis, not new theory.
+**WHAT YOU SHOULD KNOW FIRST:** Stories I-III, VII-VIII (already taught). Phase 99 habits. This is **fast recall**, not a new OS/DB course - if a card fails, revisit the owning phase by number.
 
 ## 101.1 Fast Recall Without Notes
 
-**WHY YOU ARE LEARNING THIS:** Coding rounds prove you can invent under pressure; fundamentals rounds prove you *retained* the mental models this roadmap already taught. Hiring in 2026 still mixes aptitude and fundamentals with coding - not syntax alone *(Composio News: aptitude-over-syntax / AI-era hiring coverage)*.
+**WHY YOU ARE LEARNING THIS:** Coding rounds prove invention under pressure; fundamentals rounds prove retention of models this roadmap already taught. Two-minute cards only - do not re-watch full courses here.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
-- OS flash review: [Top 15 OS Interview Questions (Gate Smashers)](https://www.youtube.com/watch?v=K1GFwYzCQlw) *(Composio YouTube)*; [Complete OS Interview Question in One Shot](https://www.youtube.com/watch?v=h8J7X1cEG4E) *(Composio YouTube)*
-- Data: [ACID Properties in Databases With Examples (ByteByteGo)](https://www.youtube.com/watch?v=GAe5oB742dw) *(Composio YouTube)*; [Principles of the CAP Theorem (CockroachDB)](https://www.youtube.com/watch?v=ol2T-KbtaWw) *(Composio YouTube)*
-- Written anchors: revisit your own Story VII-VIII notes; [Tech Interview Handbook](https://www.techinterviewhandbook.org/) cheatsheets *(Composio DeepWiki)*
-- Scholar signal: students often overweight LeetCode vs coursework - keep fundamentals in the loop *(Composio Scholar: “I Value LeetCode Over My Coursework…”)*
+- Drill from *your* notes on Phases 49–65 and 85; optional flash videos only after a failed card
+- Written anchors: [Tech Interview Handbook](https://www.techinterviewhandbook.org/) cheatsheets *(Composio fetch)* — skim, do not restart the curriculum
+- Pair: speak cards aloud with a timer; wrong card → open the owning phase, not a new YouTube marathon
 
 **STEP-BY-STEP EXPLANATION**
 
@@ -22518,11 +20691,11 @@ for q, a in cards:
 
 **WHAT YOU WILL BE ABLE TO DO:** Run an LLD prompt end to end in 30-45 minutes - clarify requirements, model entities, define APIs, apply SOLID sparingly, and justify one real trade-off out loud.
 
-**WHAT YOU SHOULD KNOW FIRST:** OOP/SOLID from earlier stories; Phase 99 narration habits. Prefer composition over inheritance unless you have a true is-a.
+**WHAT YOU SHOULD KNOW FIRST:** **Phase 29 (and Story IV) taught OOP/LLD for learning.** This phase is the **interview application** of that skill under a clock - not a second design curriculum. Prefer composition over inheritance unless you have a true is-a.
 
 ## 102.1 Design Objects Under Pressure
 
-**WHY YOU ARE LEARNING THIS:** Senior signal is *when not* to apply a pattern. Naming twelve patterns without justifying composition vs inheritance fails. LLD grades judgment and clear API boundaries, not buzzword density.
+**WHY YOU ARE LEARNING THIS:** Phase 29 built the models. Senior interview signal is *when not* to apply a pattern under time pressure. Naming twelve patterns without justifying composition vs inheritance fails. LLD rounds grade judgment and clear API boundaries, not buzzword density - and they are **not** a place to invent portfolio projects.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -22589,7 +20762,7 @@ print("no medium left?", lot.park("car-10", "M"))
 
 ---
 
-> **Phase 102 complete?** [Build the Phase 102 mini-project](../guides/Projects.md#cs-phase-102-project) · [Continue to Phase 103](#phase-103)
+> **Phase 102 complete?** [Continue to Phase 103](#phase-103)
 
 ---
 
@@ -22601,19 +20774,18 @@ print("no medium left?", lot.park("car-10", "M"))
 
 **WHAT YOU WILL BE ABLE TO DO:** Run a 45-minute system design interview without notes - scope requirements, estimate, sketch a simple design, walk bottlenecks, and name trade-offs and ops.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phases 81+ distributed ideas; Phase 102 LLD communication; your capstone from Story XIV as a concrete example you can deepen.
+**WHAT YOU SHOULD KNOW FIRST:** **Phase 88 taught system design as learning** (full walkthrough with the 81–87 toolbox). This phase is the **live interview application** of that process - timed, narrated, no new mechanisms. Your Story XIV capstone is a concrete example you can deepen under questions.
 
 ## 103.1 Structure Ambiguity Live
 
-**WHY YOU ARE LEARNING THIS:** Coding has a right answer; system design grades how you impose structure on an underspecified prompt. Jumping to a final diagram in five minutes fails. Clarifying scale, estimating, then iterating bottlenecks is the skill.
+**WHY YOU ARE LEARNING THIS:** Phase 88 practiced the toolbox without interview theater. Coding has a right answer; system design interviews grade how you impose structure on an underspecified prompt *while someone watches*. Jumping to a final diagram in five minutes fails. Clarifying scale, estimating, then iterating bottlenecks is the skill - revisit Phase 81's process and Phase 88's walkthrough; do not re-teach Redis/Kafka/Raft here.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
-- Rubric: [System Design Interview: A Step-By-Step Guide](https://www.youtube.com/watch?v=i7twT3x5yv8) *(Composio YouTube)*; [5 Tips for System Design Interviews](https://www.youtube.com/watch?v=CtmBGH8MkX4) *(Composio YouTube)*
-- Mistakes: [System Design Interview – BIGGEST Mistakes to Avoid](https://www.youtube.com/watch?v=OvufRkoD-D0) *(Composio YouTube)*; [How to Crack Any System Design Interview](https://www.youtube.com/watch?v=o-k7h2G3Gco) *(Composio YouTube)*
+- Rubric: [System Design Interview: A Step-By-Step Guide](https://www.youtube.com/watch?v=i7twT3x5yv8) *(Composio YouTube)*; [5 Tips for System Design Interviews (Gaurav Sen)](https://www.youtube.com/watch?v=CtmBGH8MkX4) *(Composio YouTube)*
+- Interview prep (not a second course): [How to Answer System Design Interview Questions (Exponent)](https://www.youtube.com/watch?v=L9TfZdODuFQ) *(Composio YouTube)*
 - Classic: [Intro to Architecture and Systems Design Interviews (Jackson Gabbard)](https://www.youtube.com/watch?v=ZgdS0EUmn70)
-- Written / GitHub: [donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer); handbook `/system-design/` *(Composio DeepWiki)*
-- Draw where you'll interview: [Excalidraw](https://excalidraw.com/)
+- Draw where you'll interview: [Excalidraw](https://excalidraw.com/); atlas only if stuck: [system-design-primer](https://github.com/donnemartin/system-design-primer)
 
 **STEP-BY-STEP EXPLANATION**
 
@@ -22760,11 +20932,11 @@ print("→", story["lesson"])
 
 **WHAT YOU WILL BE ABLE TO DO:** Complete a coding + design + behavioral loop back to back in one sitting, with a written debrief of what to fix before real interviews.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phases 99-104. Treat this as a dress rehearsal, not new content. Hiring trends still reward demonstrated judgment under pressure alongside coding *(Composio News: 2026 SE interview / aptitude coverage)*.
+**WHAT YOU SHOULD KNOW FIRST:** Phases 99-104. Treat this as a dress rehearsal, not new content and not a new portfolio project. Hiring trends still reward demonstrated judgment under pressure alongside coding.
 
 ## 105.1 Dress Rehearsal End to End
 
-**WHY YOU ARE LEARNING THIS:** Real loops stack fatigue. Candidates who ace a single practice round still fumble the third hour. The skill is recovery between rounds and honest debrief after.
+**WHY YOU ARE LEARNING THIS:** Real loops stack fatigue. Candidates who ace a single practice round still fumble the third hour. The skill is recovery between rounds and honest debrief after - not another curriculum chapter.
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
@@ -22827,7 +20999,7 @@ for item in debrief["next_week_only"]:
 
 ---
 
-> **Phase 105 complete?** [Build the Phase 105 mini-project](../guides/Projects.md#cs-phase-105-project) · [Build the complete CS portfolio project](../guides/Projects.md#cs-main-portfolio-project) · [Return to the phase index](#phase-index)
+> **Phase 105 complete?** [Build the complete CS portfolio project](../guides/Projects.md#cs-main-portfolio-project) · [Return to the phase index](#phase-index)
 
 ---
 

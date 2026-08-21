@@ -16,6 +16,7 @@ import { convertMarkdownHref, githubSlug } from "@/lib/content-utils";
 import { withMarkdownMath } from "@/lib/format-math";
 import { getExercise } from "@/lib/code-playground/exercises";
 import { parseFenceInfo } from "@/lib/code-playground/fence-meta";
+import { parseKicker } from "@/lib/lesson-kickers";
 
 type MarkdownNode = {
   type: string;
@@ -75,48 +76,6 @@ function tidyDashes(value: string) {
   return value
     .replace(/[\u2013\u2014]/g, ", ")
     .replace(/\s{2,}/g, " ");
-}
-
-function sentenceCase(value: string) {
-  const lower = value.toLowerCase();
-  return lower.replace(/^[a-z]/, (letter) => letter.toUpperCase());
-}
-
-const KICKER_TITLES: Array<[RegExp, string]> = [
-  [/why you are learning this/i, "Why You Need to Learn This"],
-  [/the problem this solves/i, "The Problem"],
-  [/the main idea/i, "The Solution"],
-  [/step-by-step explanation/i, "How the Solution Works"],
-  [/compiler vs interpreter/i, "Compiler vs Interpreter"],
-  [/internal working/i, "How Code Becomes Machine Code"],
-  [/where a variable actually lives/i, "How a Program Uses Memory"],
-  [/see it before you memorize/i, "Visual Learning"],
-  [/^diagram\b/i, "Visual Explanation"],
-  [/how it works internally/i, "How It Works Internally"],
-  [/picture it like this/i, "Simple Real-World Analogy"],
-  [/what you gain/i, "Trade-offs & Limitations"],
-  [/small working example/i, "Working Example"],
-  [/try it yourself/i, "Try It Yourself"],
-  [/how to explain this in an interview/i, "Interview Preparation"],
-  [/practice until it feels familiar/i, "Practice Exercises"],
-  [/^practice\b/i, "Practice Exercises"],
-  [/why the next topic is needed/i, "What Comes Next"],
-];
-
-function parseKicker(label: string): { title: string; kind: "interview" | "section" } | null {
-  const cleaned = label.replace(/:$/, "").trim();
-  if (/^notes?$/i.test(cleaned)) return null;
-  const [lead] = cleaned.split(/\s+[-–—]\s+/, 2);
-  for (const [pattern, title] of KICKER_TITLES) {
-    if (pattern.test(cleaned) || pattern.test(lead)) {
-      return { title, kind: /interview/i.test(title) ? "interview" : "section" };
-    }
-  }
-  const letters = lead.replace(/[^A-Za-z]/g, "");
-  if (letters.length < 8) return null;
-  const upperRatio = letters.replace(/[^A-Z]/g, "").length / letters.length;
-  if (upperRatio < 0.8) return null;
-  return { title: sentenceCase(lead), kind: "section" };
 }
 
 function memoryHeading(label: string): string | null {

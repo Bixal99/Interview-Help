@@ -5937,10 +5937,10 @@ Continue only when the completed milestone works and the working tree is clean.
 
 ## Odoo Engineering
 
-Study this roadmap first: [ODOO.md](../roadmaps/ODOO.md). Build story/phase projects as you go; ship the main portfolio and capstone work in Story XIX (Phase 95). Existing numbered Odoo mini-project cards below still map to the older 20-phase labels — treat them as skill drills aligned to the nearest topic until the project catalog is remapped to the 95-phase curriculum.
+Study this roadmap first: [ODOO.md](../roadmaps/ODOO.md). Build story/phase projects as you go; ship the capstone in Story XXIII (Phase 95) and interview/portfolio drills in Story XXIV (Phase 96). Mini-project cards below are remapped to the **24-story / 96-phase** `ODOO.md` curriculum.
 
-<a id="odoo-phase-1-project"></a>
-### ODOO PHASE 1 MINI-PROJECT
+<a id="odoo-phase-3-project"></a>
+### ODOO PHASE 3 MINI-PROJECT
 
 #### PROJECT: ERP PROCESS MAP
 
@@ -5989,10 +5989,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 1](../roadmaps/ODOO.md#phase-1) | [CONTINUE TO ODOO PHASE 2](../roadmaps/ODOO.md#phase-2)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 3](../roadmaps/ODOO.md#phase-3) | [CONTINUE TO ODOO PHASE 4](../roadmaps/ODOO.md#phase-4)
 
-<a id="odoo-phase-2-project"></a>
-### ODOO PHASE 2 MINI-PROJECT
+<a id="odoo-phase-4-project"></a>
+### ODOO PHASE 4 MINI-PROJECT
 
 #### PROJECT: REQUEST-TO-DATABASE TRACE
 
@@ -6041,10 +6041,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 2](../roadmaps/ODOO.md#phase-2) | [CONTINUE TO ODOO PHASE 3](../roadmaps/ODOO.md#phase-3)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 4](../roadmaps/ODOO.md#phase-4) | [CONTINUE TO ODOO PHASE 5](../roadmaps/ODOO.md#phase-5)
 
-<a id="odoo-phase-3-project"></a>
-### ODOO PHASE 3 MINI-PROJECT
+<a id="odoo-phase-5-project"></a>
+### ODOO PHASE 5 MINI-PROJECT
 
 #### PROJECT: REPRODUCIBLE ODOO DEV STACK
 
@@ -6093,10 +6093,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 3](../roadmaps/ODOO.md#phase-3) | [CONTINUE TO ODOO PHASE 4](../roadmaps/ODOO.md#phase-4)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 5](../roadmaps/ODOO.md#phase-5) | [CONTINUE TO ODOO PHASE 7](../roadmaps/ODOO.md#phase-7)
 
-<a id="odoo-phase-4-project"></a>
-### ODOO PHASE 4 MINI-PROJECT
+<a id="odoo-phase-7-project"></a>
+### ODOO PHASE 7 MINI-PROJECT
 
 #### PROJECT: MINIMAL TODO ADDON
 
@@ -6145,10 +6145,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 4](../roadmaps/ODOO.md#phase-4) | [CONTINUE TO ODOO PHASE 5](../roadmaps/ODOO.md#phase-5)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 7](../roadmaps/ODOO.md#phase-7) | [CONTINUE TO ODOO PHASE 9](../roadmaps/ODOO.md#phase-9)
 
-<a id="odoo-phase-5-project"></a>
-### ODOO PHASE 5 MINI-PROJECT
+<a id="odoo-phase-9-project"></a>
+### ODOO PHASE 9 MINI-PROJECT
 
 #### PROJECT: LIBRARY DOMAIN MODELS
 
@@ -6197,10 +6197,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 5](../roadmaps/ODOO.md#phase-5) | [CONTINUE TO ODOO PHASE 6](../roadmaps/ODOO.md#phase-6)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 9](../roadmaps/ODOO.md#phase-9) | [CONTINUE TO ODOO PHASE 14](../roadmaps/ODOO.md#phase-14)
 
-<a id="odoo-phase-6-project"></a>
-### ODOO PHASE 6 MINI-PROJECT
+<a id="odoo-phase-14-project"></a>
+### ODOO PHASE 14 MINI-PROJECT
 
 #### PROJECT: RECORDSET QUERY EXPLORER
 
@@ -6249,10 +6249,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 6](../roadmaps/ODOO.md#phase-6) | [CONTINUE TO ODOO PHASE 7](../roadmaps/ODOO.md#phase-7)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 14](../roadmaps/ODOO.md#phase-14) | [CONTINUE TO ODOO PHASE 29](../roadmaps/ODOO.md#phase-29)
 
-<a id="odoo-phase-7-project"></a>
-### ODOO PHASE 7 MINI-PROJECT
+<a id="odoo-phase-29-project"></a>
+### ODOO PHASE 29 MINI-PROJECT
 
 #### PROJECT: MULTI-COMPANY ACCESS LAB
 
@@ -6301,10 +6301,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 7](../roadmaps/ODOO.md#phase-7) | [CONTINUE TO ODOO PHASE 8](../roadmaps/ODOO.md#phase-8)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 29](../roadmaps/ODOO.md#phase-29) | [CONTINUE TO ODOO PHASE 23](../roadmaps/ODOO.md#phase-23)
 
-<a id="odoo-phase-8-project"></a>
-### ODOO PHASE 8 MINI-PROJECT
+<a id="odoo-phase-23-project"></a>
+### ODOO PHASE 23 MINI-PROJECT
 
 #### PROJECT: INHERITED LIBRARY VIEWS
 
@@ -6353,10 +6353,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 8](../roadmaps/ODOO.md#phase-8) | [CONTINUE TO ODOO PHASE 9](../roadmaps/ODOO.md#phase-9)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 23](../roadmaps/ODOO.md#phase-23) | [CONTINUE TO ODOO PHASE 25](../roadmaps/ODOO.md#phase-25)
 
-<a id="odoo-phase-9-project"></a>
-### ODOO PHASE 9 MINI-PROJECT
+<a id="odoo-phase-25-project"></a>
+### ODOO PHASE 25 MINI-PROJECT
 
 #### PROJECT: ROLE-AWARE NAVIGATION MODULE
 
@@ -6405,10 +6405,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 9](../roadmaps/ODOO.md#phase-9) | [CONTINUE TO ODOO PHASE 10](../roadmaps/ODOO.md#phase-10)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 25](../roadmaps/ODOO.md#phase-25) | [CONTINUE TO ODOO PHASE 18](../roadmaps/ODOO.md#phase-18)
 
-<a id="odoo-phase-10-project"></a>
-### ODOO PHASE 10 MINI-PROJECT
+<a id="odoo-phase-18-project"></a>
+### ODOO PHASE 18 MINI-PROJECT
 
 #### PROJECT: VALIDATED ORDER WORKFLOW
 
@@ -6457,10 +6457,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 10](../roadmaps/ODOO.md#phase-10) | [CONTINUE TO ODOO PHASE 11](../roadmaps/ODOO.md#phase-11)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 18](../roadmaps/ODOO.md#phase-18) | [CONTINUE TO ODOO PHASE 32](../roadmaps/ODOO.md#phase-32)
 
-<a id="odoo-phase-11-project"></a>
-### ODOO PHASE 11 MINI-PROJECT
+<a id="odoo-phase-32-project"></a>
+### ODOO PHASE 32 MINI-PROJECT
 
 #### PROJECT: SALE ORDER EXTENSION
 
@@ -6509,10 +6509,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 11](../roadmaps/ODOO.md#phase-11) | [CONTINUE TO ODOO PHASE 12](../roadmaps/ODOO.md#phase-12)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 32](../roadmaps/ODOO.md#phase-32) | [CONTINUE TO ODOO PHASE 36](../roadmaps/ODOO.md#phase-36)
 
-<a id="odoo-phase-12-project"></a>
-### ODOO PHASE 12 MINI-PROJECT
+<a id="odoo-phase-36-project"></a>
+### ODOO PHASE 36 MINI-PROJECT
 
 #### PROJECT: BULK UPDATE WIZARD
 
@@ -6561,10 +6561,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 12](../roadmaps/ODOO.md#phase-12) | [CONTINUE TO ODOO PHASE 13](../roadmaps/ODOO.md#phase-13)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 36](../roadmaps/ODOO.md#phase-36) | [CONTINUE TO ODOO PHASE 50](../roadmaps/ODOO.md#phase-50)
 
-<a id="odoo-phase-13-project"></a>
-### ODOO PHASE 13 MINI-PROJECT
+<a id="odoo-phase-50-project"></a>
+### ODOO PHASE 50 MINI-PROJECT
 
 #### PROJECT: IDEMPOTENT WEBHOOK MODULE
 
@@ -6613,10 +6613,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 13](../roadmaps/ODOO.md#phase-13) | [CONTINUE TO ODOO PHASE 14](../roadmaps/ODOO.md#phase-14)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 50](../roadmaps/ODOO.md#phase-50) | [CONTINUE TO ODOO PHASE 51](../roadmaps/ODOO.md#phase-51)
 
-<a id="odoo-phase-14-project"></a>
-### ODOO PHASE 14 MINI-PROJECT
+<a id="odoo-phase-51-project"></a>
+### ODOO PHASE 51 MINI-PROJECT
 
 #### PROJECT: EXTERNAL SYNC CLIENT
 
@@ -6665,10 +6665,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 14](../roadmaps/ODOO.md#phase-14) | [CONTINUE TO ODOO PHASE 15](../roadmaps/ODOO.md#phase-15)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 51](../roadmaps/ODOO.md#phase-51) | [CONTINUE TO ODOO PHASE 52](../roadmaps/ODOO.md#phase-52)
 
-<a id="odoo-phase-15-project"></a>
-### ODOO PHASE 15 MINI-PROJECT
+<a id="odoo-phase-52-project"></a>
+### ODOO PHASE 52 MINI-PROJECT
 
 #### PROJECT: PAYMENT SANDBOX INTEGRATION
 
@@ -6717,10 +6717,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 15](../roadmaps/ODOO.md#phase-15) | [CONTINUE TO ODOO PHASE 16](../roadmaps/ODOO.md#phase-16)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 52](../roadmaps/ODOO.md#phase-52) | [CONTINUE TO ODOO PHASE 58](../roadmaps/ODOO.md#phase-58)
 
-<a id="odoo-phase-16-project"></a>
-### ODOO PHASE 16 MINI-PROJECT
+<a id="odoo-phase-58-project"></a>
+### ODOO PHASE 58 MINI-PROJECT
 
 #### PROJECT: OWL KPI WIDGET
 
@@ -6769,10 +6769,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 16](../roadmaps/ODOO.md#phase-16) | [CONTINUE TO ODOO PHASE 17](../roadmaps/ODOO.md#phase-17)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 58](../roadmaps/ODOO.md#phase-58) | [CONTINUE TO ODOO PHASE 64](../roadmaps/ODOO.md#phase-64)
 
-<a id="odoo-phase-17-project"></a>
-### ODOO PHASE 17 MINI-PROJECT
+<a id="odoo-phase-64-project"></a>
+### ODOO PHASE 64 MINI-PROJECT
 
 #### PROJECT: ORM QUERY TUNING REPORT
 
@@ -6821,10 +6821,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 17](../roadmaps/ODOO.md#phase-17) | [CONTINUE TO ODOO PHASE 18](../roadmaps/ODOO.md#phase-18)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 64](../roadmaps/ODOO.md#phase-64) | [CONTINUE TO ODOO PHASE 71](../roadmaps/ODOO.md#phase-71)
 
-<a id="odoo-phase-18-project"></a>
-### ODOO PHASE 18 MINI-PROJECT
+<a id="odoo-phase-71-project"></a>
+### ODOO PHASE 71 MINI-PROJECT
 
 #### PROJECT: UPGRADE-SAFE TEST SUITE
 
@@ -6873,10 +6873,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 18](../roadmaps/ODOO.md#phase-18) | [CONTINUE TO ODOO PHASE 19](../roadmaps/ODOO.md#phase-19)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 71](../roadmaps/ODOO.md#phase-71) | [CONTINUE TO ODOO PHASE 95](../roadmaps/ODOO.md#phase-95)
 
-<a id="odoo-phase-19-project"></a>
-### ODOO PHASE 19 MINI-PROJECT
+<a id="odoo-phase-95-project"></a>
+### ODOO PHASE 95 MINI-PROJECT
 
 #### PROJECT: PORTFOLIO-READY BUSINESS MODULE
 
@@ -6925,10 +6925,10 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 19](../roadmaps/ODOO.md#phase-19) | [CONTINUE TO ODOO PHASE 20](../roadmaps/ODOO.md#phase-20)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 95](../roadmaps/ODOO.md#phase-95) | [CONTINUE TO ODOO PHASE 96](../roadmaps/ODOO.md#phase-96)
 
-<a id="odoo-phase-20-project"></a>
-### ODOO PHASE 20 MINI-PROJECT
+<a id="odoo-phase-96-project"></a>
+### ODOO PHASE 96 MINI-PROJECT
 
 #### PROJECT: TIMED ODOO DEBUG DRILL
 
@@ -6977,7 +6977,7 @@ git status
 
 Continue only when the project still works and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 20](../roadmaps/ODOO.md#phase-20) | [BUILD THE ODOO MAIN PORTFOLIO PROJECT](#odoo-main-portfolio-project)
+> **PROJECT NAVIGATION:** [REVIEW ODOO PHASE 96](../roadmaps/ODOO.md#phase-96) | [BUILD THE ODOO MAIN PORTFOLIO PROJECT](#odoo-main-portfolio-project)
 
 <a id="odoo-main-portfolio-project"></a>
 ## ODOO MAIN PORTFOLIO PROJECT
@@ -7147,7 +7147,7 @@ Continue only when the completed milestone works and the working tree is clean.
 5. A live public Odoo server needs persistent compute and storage; use only a free VM you already control, never enter billing details for this project, and keep the Docker deployment portable.
 6. Back up the PostgreSQL volume, restore it into a new local environment, and verify one complete registration workflow after restoration.
 
-> **MAIN PROJECT NAVIGATION:** [REVIEW ODOO PHASE 19](../roadmaps/ODOO.md#phase-19) | [REVIEW ODOO PHASE 20](../roadmaps/ODOO.md#phase-20) | [RETURN TO THE ODOO ROADMAP](../roadmaps/ODOO.md#phase-index)
+> **MAIN PROJECT NAVIGATION:** [REVIEW ODOO PHASE 95](../roadmaps/ODOO.md#phase-95) | [REVIEW ODOO PHASE 96](../roadmaps/ODOO.md#phase-96) | [RETURN TO THE ODOO ROADMAP](../roadmaps/ODOO.md#phase-index)
 
 ## Web Development
 

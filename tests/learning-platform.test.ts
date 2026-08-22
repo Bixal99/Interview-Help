@@ -75,6 +75,16 @@ describe("course parsing", () => {
     });
   });
 
+  it("groups Odoo phases into 24 stories covering 96 phases", () => {
+    const ids = Array.from({ length: 96 }, (_, index) => String(index + 1));
+    const chapters = chaptersFor("odoo", ids);
+    expect(chapters).toHaveLength(24);
+    expect(chapters[0]).toMatchObject({ id: "story-1", phaseIds: ["1", "2", "3"] });
+    expect(chapters[10]).toMatchObject({ id: "story-11", phaseIds: ["43"] });
+    expect(chapters[23]).toMatchObject({ id: "story-24", phaseIds: ["96"] });
+    expect(chapters.flatMap((chapter) => chapter.phaseIds)).toEqual(ids);
+  });
+
   it("groups CS phases into sequential storyline chapters", () => {
     const chapters = chaptersFor("computer-science", Array.from({ length: 105 }, (_, index) => String(index + 1)));
     expect(chapters[0]).toMatchObject({ id: "story-1", phaseIds: ["1", "2", "3", "4", "5"] });

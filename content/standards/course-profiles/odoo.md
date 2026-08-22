@@ -55,7 +55,7 @@ Official Odoo docs, OCA examples, version-pinned tutorials. Avoid version-agnost
 ## Non-goals
 
 - Not a second CS DSA course
-- Not a full frontend OWL deep-dive unless a dedicated story exists
+- Not a second full OWL framework course outside Story XIII (OWL is taught there for Odoo engineering, not as a generic JS curriculum)
 - Not copying CS phase numbers or Story IV/V structure
 
 ## Readiness confirmation
@@ -66,4 +66,6 @@ The **frozen** platform standard + kicker renderer are course-agnostic. Odoo inh
 - Invisible-template / flow vs contextual vs utility visibility
 - Practice catalog and resource policy
 
-This profile supplies ERP-specific teaching choices only — not CS curriculum structure. **Do not construct Odoo content in this batch.**
+This profile supplies ERP-specific teaching choices only — not CS curriculum structure.
+
+**Construction status:** `content/roadmaps/ODOO.md` is authored against this profile and the platform standard as a **19-story / 95-phase** zero→Odoo Engineer curriculum (business-first, then platform, modules, ORM, UI, security, integrations, OWL, ops, upgrades, hire). Do **not** copy CS story/phase numbering.

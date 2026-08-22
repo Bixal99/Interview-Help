@@ -1,4 +1,4 @@
-# The Zero-to-Hero Computer Science & Software Engineering Roadmap
+﻿# The Zero-to-Hero Computer Science & Software Engineering Roadmap
 
 *Mohammad Bilal's complete, self-paced path from true zero knowledge to professional-level engineering. Each new idea solves a problem left by the previous one.*
 
@@ -79,7 +79,7 @@ Not every lesson uses every row. Binary needs conversion by hand. HCI does not n
 
 Two notes on using this. If you are learning something for the first time, read the elements in order, because the order is the argument. If you are revising something you once knew, go straight to **Why This Matters** and **What This Unlocks Next**: those two elements alone reconstruct the reasoning, and the middle is detail you can reload on demand.
 
-Live lessons below still use older bold labels until rewritten. **Stories IV–VII (Phases 21–59)** follow the lean semantic vocabulary for authors; the renderer keeps **generic checklist labels in flow** (no repeated Why→Problem→How form chrome) and shows **utility chrome** plus **contextual journey headings** when authors write them. **Story VIII (Phases 60–65)** is authored against the amended **invisible-template** from the start — continuous prose, selective contextual headings, utility chrome only for ability/prereq/resources/practice/unlock. Every meaningful lesson ends with a **visible narrative closer** (Practice → What Comes Next → navigation). Authoring contract: [Learning Content Standard](../standards/LEARNING_CONTENT_STANDARD.md) and [CS Course Profile](../standards/course-profiles/cs.md). **Story IX (Phases 66–71)** is authored against the amended **invisible-template** from the start — continuous prose, selective contextual headings, utility chrome only for ability/prereq/resources/practice/unlock, and narrative closers after Practice. **Story X (Phases 72–80)** is authored against the amended **invisible-template** from the start — continuous prose, selective contextual headings, utility chrome only for ability/prereq/resources/practice/unlock, and narrative closers after Practice. **Story XI (Phases 81–88)** is authored against the amended **invisible-template** from the start — continuous prose, selective contextual headings, utility chrome only for ability/prereq/resources/practice/unlock, and narrative closers after Practice. **Story XII (Phases 89–91)** is authored against the amended **invisible-template** from the start — continuous prose, selective contextual headings, utility chrome only for ability/prereq/resources/practice/unlock, and narrative closers after Practice (survey maps, not Story XI depth). **Story XIII (Phases 92–94)** is authored against the amended **invisible-template** from the start — continuous prose, selective contextual headings, utility chrome only for ability/prereq/resources/practice/unlock, and narrative closers after Practice (maintenance workflow: observe → trace → hypothesis → smallest safe change → verify). **Story XIV+ continues under that same amended standard.**
+Live lessons below still use older bold labels until rewritten. **Stories IV–VII (Phases 21–59)** follow the lean semantic vocabulary for authors; the renderer keeps **generic checklist labels in flow** (no repeated Why→Problem→How form chrome) and shows **utility chrome** plus **contextual journey headings** when authors write them. **Story VIII (Phases 60–65)** is authored against the amended **invisible-template** from the start — continuous prose, selective contextual headings, utility chrome only for ability/prereq/resources/practice/unlock. Every meaningful lesson ends with a **visible narrative closer** (Practice → What Comes Next → navigation). Authoring contract: [Learning Content Standard](../standards/LEARNING_CONTENT_STANDARD.md) and [CS Course Profile](../standards/course-profiles/cs.md). **Story IX (Phases 66–71)** is authored against the amended **invisible-template** from the start — continuous prose, selective contextual headings, utility chrome only for ability/prereq/resources/practice/unlock, and narrative closers after Practice. **Story X (Phases 72–80)** is authored against the amended **invisible-template** from the start — continuous prose, selective contextual headings, utility chrome only for ability/prereq/resources/practice/unlock, and narrative closers after Practice. **Story XI (Phases 81–88)** is authored against the amended **invisible-template** from the start — continuous prose, selective contextual headings, utility chrome only for ability/prereq/resources/practice/unlock, and narrative closers after Practice. **Story XII (Phases 89–91)** is authored against the amended **invisible-template** from the start — continuous prose, selective contextual headings, utility chrome only for ability/prereq/resources/practice/unlock, and narrative closers after Practice (survey maps, not Story XI depth). **Story XIII (Phases 92–94)** is authored against the amended **invisible-template** from the start — continuous prose, selective contextual headings, utility chrome only for ability/prereq/resources/practice/unlock, and narrative closers after Practice (maintenance workflow: observe → trace → hypothesis → smallest safe change → verify). **Story XIV (Phases 95–98)** is authored against the amended **invisible-template** from the start — continuous prose, selective contextual headings, utility chrome only for ability/prereq/resources/practice/unlock, and narrative closers after Practice (capstone integrate: plan → build → harden → release). **Story XV (Phases 99–105)** is authored against the amended **invisible-template** from the start — continuous prose, selective contextual headings, utility chrome only for ability/prereq/resources/practice/unlock, and narrative closers after Practice (interview application: narrate → timed DSA → recall → LLD → SD → STAR → dress rehearsal; no Phase 106). **Stories IV–XV** are now on the frozen lean / invisible-template authoring system. **Stories I–III (Phases 1–20)** still carry older bold labels in places — the planned whole-CS continuity audit (not this Story XV turn) should bring those openings and handoffs into the same teacher voice without adding a Phase 106.
 
 **Diagram conventions.** Diagrams are plain ASCII inside code fences, deliberately, so that they render identically on GitHub, in any editor, in a terminal, and in a diff. Throughout, `|` and `v` mean "then this happens", `+--` joins related paths, `-->` and `->` mean a request or data movement, `X` marks a failure point, and boxes drawn with `+---+` are components or memory regions. Where a diagram shows a sequence over time, time runs downward.
 
@@ -91,7 +91,7 @@ Live lessons below still use older bold labels until rewritten. **Stories IV–V
 
 ## The Story Map
 
-*This is the target shape of the roadmap: 15 stories, each answering the question a learner is actually asking at that point. Phases are being migrated into this shape batch by batch - see [Migration Status](#migration-status) for what is live versus still pending.*
+*This is the shape of the roadmap: 15 stories, each answering the question a learner is actually asking at that point. All 105 phases below are live — see [Migration Status](#migration-status) for the completed rebuild history.*
 
 
 | Story                                              | Question it answers                                            |
@@ -142,9 +142,11 @@ Every arrow in this map is a real prerequisite dependency argued for in the less
 
 
 
+<a id="migration-status"></a>
+
 ### Migration status
 
-This roadmap is being rebuilt into the 15-story shape above in batches, so that nothing already working - links, diagrams, projects, playgrounds - gets lost mid-rewrite. The old 1-43 phase numbering has already been fully renumbered and relocated into the 105-phase positions below (see the [Legacy Content Map](#legacy-content-map) for exactly where each old phase landed); what remains is rewriting that relocated prose into the newer lesson template below and filling in the phases that never existed under the old numbering.
+This roadmap was rebuilt into the 15-story / 105-phase shape above in batches so that links, diagrams, projects, and playgrounds were not lost mid-rewrite. The old 1-43 numbering is fully renumbered and relocated (see the [Legacy Content Map](#legacy-content-map)). Every Phase Index row now has a `# PHASE N` body; Stories IV–XV follow the frozen invisible-template authoring system. Stories I–III remain pedagogically complete with some residual pre-template chrome — do not restyle them unless a factual or teaching defect appears.
 
 
 | Batch | Scope                                                                                                                                        | Status                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -179,15 +181,19 @@ This roadmap is being rebuilt into the 15-story shape above in batches, so that 
 | S     | Invisible-template rewrite Story XI (Phases 81–88) — system design & distributed systems; Story XII untouched | Done this turn - authored against amended standard from the start (contextual headings + bridges; no identical Why→Problem→How skeleton); depth preferred over cut %; strengthened thin 82–84/87; trimmed chrome/farms on 85–86/88 without gutting CAP/PACELC/consensus/walkthrough; protected estimation/bottleneck/cache-aside/queues/CAP≠ACID C/Raft intuition/reliability/88 learning capstone kept; 5 playground IDs unique once; Projects.md#cs-phase-86-project and #cs-phase-88-project preserved; nav 80→…→89; 105 phases; Phase 80/89 bodies unchanged; Story XII (89+) untouched |
 | T     | Invisible-template rewrite Story XII (Phases 89–91) — AI/platforms/ethics survey; Story XIII untouched | Done this turn - authored against amended standard from the start (contextual headings + bridges; no identical Why→Problem→How skeleton); survey maps preferred over Story XI depth; removed SEE IT farms / legacy chrome; kept + slightly strengthened first-timer distinctions, comparison tables, diagrams, playgrounds; no encyclopedia inflation; 3 playground IDs unique once; no Projects.md cards; nav 88→89→90→91→92; 105 phases; Phase 88/92 bodies unchanged; Story XIII (92+) untouched |
 | U     | Invisible-template rewrite Story XIII (Phases 92–94) — maintenance workflow; Story XIV untouched | Done this turn - authored against amended standard from the start (contextual headings + bridges; no identical Why→Problem→How skeleton); grew thin/checklist XIII for teaching quality (observe→trace→hypothesis→smallest safe change→verify); Quarry Bookstore running scenario; protected onboarding map, characterization+seams, refactor-vs-rewrite, light deprecation/compat, debt-as-risk, ADR scaffold; healthy callbacks to 74/75/73 only; 3 playground IDs unique once; no Projects.md cards; nav 91→92→93→94→95; 105 phases; Phase 91/95 bodies unchanged; Story XIV (95+) untouched |
+| V     | Invisible-template rewrite Story XIV (Phases 95–98) — grand capstone integrate; Story XV untouched | Done this turn - authored against amended standard from the start (contextual headings + bridges; no identical Why→Problem→How skeleton); grew thin/checklist XIV for teaching quality (plan→walking skeleton→load/fail/fix/prove→portfolio release); preferred Open Community Resource Exchange + expense-splitter scaffold; Phase 95 planning-only; protected walking-skeleton order, over-eng safeguards, before/after evidence, hiring README; integrate callbacks only (no re-teach web/auth/DB/CI/design); 4 playground IDs unique once; Projects.md Phase 95 retargeted to planning deliverable + light 96–98 portfolio nav; nav 94→95→96→97→98→99; 105 phases; Phase 94/99 bodies unchanged; Story XV (99+) untouched |
+| W     | Invisible-template rewrite Story XV (Phases 99–105) — interview & job readiness; Stories IV–XV on frozen standard | Done - authored against amended standard from the start (contextual headings + bridges; no identical Why→Problem→How skeleton); tone is retrieve/explain/design/communicate under pressure (not learn more CS); grew thin Phase 105 for course closure + full mock loop + weakness→owning-phase repair; strengthened six-step method, stuck/recovery, pattern journal, flash-card repair, 29→102 / 88→103 boundaries, STAR-from-real-work; stripped Composio chrome / SEE IT farms; 7 playground IDs unique once; Projects.md 102/105 retargeted to LLD rehearsal notes + mock/debrief log (not product builds); nav 98→…→105; exactly 105 phases; no Phase 106; Phase 95–98 (XIV) bodies unchanged; Stories I–III residual pre-template chrome left as-is under freeze |
 
 
-Every phase number in the Phase Index below now has a real, permanent home in this document. Rows marked "current" already have a body section at that number - the prose there is the relocated original, not yet rewritten to the newer template. Rows with no annotation are "planned": the number is reserved and linked from elsewhere, but the section has not been written yet and will appear in the batch noted in [Migration status](#migration-status).
+Every phase number in the Phase Index below has a real `# PHASE N` teaching body in this document. All rows are marked *(current)*. Future edits should be factual corrections, broken resources, genuine pedagogical defects, or necessary maintenance — not stylistic rewrites.
 
 ---
 
+<a id="phase-index"></a>
+
 ## Phase Index
 
-*Target structure - 105 phases across 15 stories. Mark a row *(current)* only when a `# PHASE N` body exists below — not when the row is merely planned. Relocated bodies may still need a full newer-template prose rewrite even when marked current. See the [Legacy Content Map](#legacy-content-map) for how each old 1-43 phase maps here.*
+*105 phases across 15 stories. Every row is *(current)* — a `# PHASE N` body exists below. See the [Legacy Content Map](#legacy-content-map) for how each old 1-43 phase mapped here.*
 
 ### Story I - Before You Write Code
 
@@ -379,10 +385,10 @@ Every phase number in the Phase Index below now has a real, permanent home in th
 
 | #   | Phase                            | Goal                           | Ready to continue when...                               |
 | --- | -------------------------------- | ------------------------------ | ------------------------------------------------------- |
-| 95  | Capstone Planning *(current)*    | Scope MVP only                 | Write a buildable spec with musts, non-goals, done-when     |
-| 96  | Build the Production Application *(current)* | Ship the walking app           | Multi-user MVP on a public URL with CI                      |
-| 97  | Break, Measure & Harden *(current)*          | Find limits                    | Load-test, find a failure, fix and prove                    |
-| 98  | Portfolio Release *(current)*                | Package the proof              | Publish docs, diagrams, and a decision write-up             |
+| 95  | Capstone Planning *(current, invisible-template)*    | Scope MVP only                 | Write a buildable spec with musts, non-goals, done-when     |
+| 96  | Build the Production Application *(current, invisible-template)* | Ship the walking app           | Multi-user MVP on a public URL with CI                      |
+| 97  | Break, Measure & Harden *(current, invisible-template)*          | Find limits                    | Load-test, find a failure, fix and prove                    |
+| 98  | Portfolio Release *(current, invisible-template)*                | Package the proof              | Publish docs, diagrams, and a decision write-up             |
 
 
 ### Story XV - Interview & Job Readiness
@@ -390,20 +396,22 @@ Every phase number in the Phase Index below now has a real, permanent home in th
 
 | #   | Phase                                   | Goal                                  | Ready to continue when...                                 |
 | --- | --------------------------------------- | ------------------------------------- | --------------------------------------------------------- |
-| 99  | Coding Interview Method *(current)*     | Narrate under observation         | Run the six-step timed coding process aloud               |
-| 100 | DSA Interview Practice *(current)*      | Story V under a clock             | Timed mixed Mediums — not a second DSA course             |
-| 101 | CS Fundamentals Interview Review *(current)* | Fast recall cards            | Two-minute answers without notes                          |
-| 102 | Low-Level Design Interviews *(current)* | Phase 29 skill, interview pace    | 30–45 min LLD prompt — no artificial project              |
-| 103 | System Design Interviews *(current)*    | Phase 88 process, live            | 45 min design interview — not a re-teach of 81–87         |
-| 104 | Behavioral Interviews *(current)*       | STAR from real work               | Structured stories from your capstone/career              |
-| 105 | Final Mock Interview Loop *(current)*   | Dress rehearsal only              | Full loop + debrief — not new curriculum                  |
+| 99  | Coding Interview Method *(current, invisible-template)*     | Narrate under observation         | Run the six-step timed coding process aloud               |
+| 100 | DSA Interview Practice *(current, invisible-template)*      | Story V under a clock             | Timed mixed Mediums — not a second DSA course             |
+| 101 | CS Fundamentals Interview Review *(current, invisible-template)* | Fast recall cards            | Two-minute answers without notes                          |
+| 102 | Low-Level Design Interviews *(current, invisible-template)* | Phase 29 skill, interview pace    | 30–45 min LLD prompt — no artificial project              |
+| 103 | System Design Interviews *(current, invisible-template)*    | Phase 88 process, live            | 45 min design interview — not a re-teach of 81–87         |
+| 104 | Behavioral Interviews *(current, invisible-template)*       | STAR from real work               | Structured stories from your capstone/career              |
+| 105 | Final Mock Interview Loop *(current, invisible-template)*   | Dress rehearsal only              | Full loop + debrief — not new curriculum                  |
 
 
 
+
+<a id="legacy-content-map"></a>
 
 ### Legacy Content Map
 
-*Where each currently-live Phase 1-43 section is headed once its story is rebuilt. Nothing here is deleted - each row is a move or a merge, and this table is the checklist for that move.*
+*Historical record: where each old Phase 1-43 section landed in the 1-105 rebuild. The move is complete — this table is an audit trail, not a todo list.*
 
 
 | Current phase | Current title                                  | Moves to (new phase #)                                                 |
@@ -453,7 +461,7 @@ Every phase number in the Phase Index below now has a real, permanent home in th
 | 43            | Interview Mastery                              | 99, 103, 104, 105                                                      |
 
 
-All Phase Index rows through Story XV now have a `# PHASE N` body. Batch 9 (resource/anchor/format pass) is complete. Optional remaining work: deeper prose rewrites of older Stories I-XI that still use the pre-template chapter style.
+All Phase Index rows through Story XV have a `# PHASE N` body. Batch 9 (resource/anchor/format pass) and Stories IV–XV invisible-template modernization are complete. Stories I–III are pedagogically complete; residual pre-template chrome is frozen unless a factual or teaching defect appears.
 
 ---
 
@@ -15711,61 +15719,76 @@ Story XIII made you able to **maintain real software**: onboard with a map and a
 
 **Track:** Ship & Hire
 
-**WHAT YOU WILL BE ABLE TO DO:** Write a capstone spec that is honestly buildable - MVP musts, explicit non-goals, architecture sketch, risks, and a trade-off log - *before* you implement production features.
+**WHAT YOU WILL BE ABLE TO DO:** Write a one-page capstone plan that is honestly finishable — MVP musts, explicit non-goals, architecture sketch, risks, empty trade-off log, and stranger-runnable done-when checks — *before* you implement production features.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phases 92-94 (onboard, change safely, record decisions); Phase 73 (specs); Phase 81 (estimation habit). Building, hardening, and portfolio packaging are Phases **96–98**, not this phase.
+**WHAT YOU SHOULD KNOW FIRST:** Phases 92–94 — onboard, change safely, record decisions. Phase 73 — specs name *what*. Phase 81 — estimation habit, not a second system-design course. Building, hardening, and portfolio packaging are Phases **96–98**.
+
+**LEARNING RESOURCES:**
+
+- [Michael Seibel — How to Plan an MVP (Y Combinator)](https://www.youtube.com/watch?v=1hHMwLxN6EM)
+- [How To Create An MVP (Rob Walling)](https://www.youtube.com/watch?v=YwEEV0wHnaA)
+- [Technical Design | CS Capstone Handbook](https://capstone.alexulbrich.com/guides/technical-design/)
+- [The Twelve-Factor App](https://12factor.net/) — deployability contract you will *apply* in 96–97, not rebuild here
+- Preferred portfolio product: [Open Community Resource Exchange](../guides/Projects.md#cs-main-portfolio-project)
 
 ## 95.1 Scope a Capstone You Can Actually Finish
 
-**WHY YOU ARE LEARNING THIS:** Capstones fail most often from unbounded ambition, not from missing a framework. Phase 95 owns **planning ownership**: what you will build, what you will not, how you will know MVP is done, and which roadmap tools you expect to use. Phase 96 ships the walking skeleton. Phase 97 breaks and hardens it. Phase 98 packages proof for humans.
+Phase 94 closed Story XIII with a durable decision trail. You can maintain other people’s software and leave a *why*. Story XIV asks a different question: can you **own one coherent product end to end** — plan → build → harden → release — without abandoning it halfway? Capstones fail most often from unbounded ambition, not from missing a framework. This phase owns **planning only**. Do not implement auth, CI, caches, workers, or load tests here. Name them as work owned by 96–97.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**PICK ONE RUNNING PRODUCT (AND KEEP ITS NOUNS):**
 
-- Scope / MVP: [How To Create An MVP (Rob Walling)](https://www.youtube.com/watch?v=YwEEV0wHnaA) *(Composio YouTube)*; [What is Project Scope? (Mike Clayton)](https://www.youtube.com/watch?v=NXw0bvvYWYo) *(Composio YouTube)*; [Michael Seibel - How to Plan an MVP (Y Combinator)](https://www.youtube.com/watch?v=1hHMwLxN6EM) *(Composio YouTube)*
-- Capstone design handbook: [Technical Design | CS Capstone Handbook](https://capstone.alexulbrich.com/guides/technical-design/) *(Composio fetch)*
-- Idea catalogues (pick one idea - do not build the catalogue): [app-ideas](https://github.com/florinpop17/app-ideas) *(Composio GitHub)*; [build-your-own-x](https://github.com/codecrafters-io/build-your-own-x) *(Composio GitHub)* for optional *reimplementation* depth later
-- Deployability contract for later phases: [The Twelve-Factor App](https://12factor.net/) *(Composio fetch)*
-- Practice: write the one-page spec *before* opening an editor for Phase 96
+| Path | When it fits | Core verb (example) |
+| ---- | ------------ | ------------------- |
+| **Preferred:** [Open Community Resource Exchange](../guides/Projects.md#cs-main-portfolio-project) | You have been building it through earlier phases | neighbors **list / request / approve / return** items |
+| **Teaching scaffold:** multi-user expense splitter (examples below) | You need a small alternate with the same shape | roommates **split / settle** shared costs |
+| **Alternate mini:** Integrated Systems Capstone (planning card only this phase) | You want a tiny API+DB+auth sketch as practice scope | one clear main action + persistence |
 
-**STEP-BY-STEP EXPLANATION**
+Whatever you choose, lock **users**, **one core verb**, a future **deploy URL**, a **critical load path**, and a **README** as the same nouns through Phases 95–98. Do not switch products mid-story.
 
-**A project is "real" when it has:** (1) a user (even future-you), (2) state that survives restarts, (3) a way to fail. Those three force auth, persistence, and error handling in Phase 96 - you only *name* them here.
-
-**Ownership map for Story XIV:**
+**STORY XIV OWNERSHIP MAP:**
 
 ```text
-95  PLAN   MVP, non-goals, sketch, risks, trade-off log, success checks
-96  BUILD  walking skeleton → multi-user app on a public URL
-97  HARDEN load-test, find a failure, fix, prove
-98  RELEASE docs, diagrams, write-up, portfolio packaging
+95  PLAN    MVP musts, non-goals, sketch, risks, empty trade-off log, done-when
+96  BUILD   walking skeleton → multi-user app on a public URL (CI + auth + one CRUD)
+97  HARDEN  load / fail / fix / prove with before-after numbers + health/logs
+98  RELEASE hiring-grade README, diagram, demo, decisions, limitations, license
 ```
 
-Do **not** implement auth, CI, caches, or load tests in this phase. List them as planned work owned by 96–97.
+A project is “real” when it has (1) a user, (2) state that survives restarts, and (3) a way to fail. Those three force auth, persistence, and error handling in Phase 96 — you only **name** them here. You already learned sessions/RBAC (66–69), HTTP/APIs (58–59), and databases (60–65). Phase 95 does not re-teach them; it decides *which* of those tools this product will use.
 
-**One-page spec template (fill every line):**
+**THE ONE-PAGE SPEC (FILL EVERY LINE):**
 
-1. **Problem** - who hurts, what outcome improves  
-2. **MVP musts** - 3–5 user-visible capabilities  
-3. **Non-goals** - at least 5 temptations you refuse for v1  
-4. **Users & auth** - anonymous? registered? roles?  
-5. **Data** - core nouns/tables (sketch only)  
-6. **Architecture sketch** - boxes: client / API / DB (+ optional queue later)  
-7. **Risks** - top 3 (security, scope, ops) and mitigation *ideas*  
-8. **Trade-off log** - empty table ready for decisions you will make in 96–97  
-9. **Done when** - concrete acceptance checks a stranger could run  
+1. **Problem** — who hurts, what outcome improves  
+2. **MVP musts** — 3–5 *user-visible* capabilities (not “add Redis”)  
+3. **Non-goals** — at least five temptations you refuse for v1  
+4. **Users & auth** — anonymous? registered? roles? (apply 68; do not redesign auth theory)  
+5. **Data** — core nouns/tables (sketch only — normalize later in 96)  
+6. **Architecture sketch** — boxes: client / API / DB (+ optional queue *later*)  
+7. **Risks** — top three (security, scope, ops) and mitigation *ideas*  
+8. **Trade-off log** — empty table ready for decisions you will make in 96–97 (Phase 94 ADR muscle)  
+9. **Done when** — concrete acceptance checks a stranger could run  
 
-**Scope discipline:** a finished small capstone teaches more than an abandoned distributed system. Prefer "expense splitter with auth" over "Uber for X with Kafka." Distributed extensions are optional stretch after 96–97 work, not the MVP.
+**SCOPE DISCIPLINE:**
 
-**PICTURE IT LIKE THIS**
+A finished small capstone teaches more than an abandoned distributed system. Prefer “two users can list and borrow one resource” (or “two roommates share one expense group”) over “Uber for X with Kafka.” Microservices, multi-region, receipt OCR, native apps, and real-time collab are **non-goals** unless your Phase 95 done-when already depends on them — and it should not. Distributed extensions are optional stretch *after* 96–97 prove the MVP, not the definition of MVP.
 
-Blueprints before concrete. The blueprint names rooms and load paths. Pouring the foundation is Phase 96. Stress-testing the structure is Phase 97. The open-house brochure is Phase 98.
+```text
+Blueprint before concrete:
+  95 names rooms, doors, and the load path you will stress later
+  96 pours the walking skeleton (repo → URL → DB → auth → one CRUD)
+  97 stress-tests the structure and leaves numbers
+  98 is the open-house brochure a stranger can skim in five minutes
+```
 
-**SMALL WORKING EXAMPLE**
+**WORKED PLANNING SCAFFOLD (EXPENSE SPLITTER — SWAP NOUNS FOR YOUR PRODUCT):**
 
 ```python playground=cs-phase-95-capstone-spec
 # Capstone planning scaffold — fill strings; do not build features here.
+# Prefer Open Community Resource Exchange nouns if that is your portfolio path:
+#   problem / list item / request loan / approve / return
 
 spec = {
+    "product": "Shared Expense Groups",  # or "Open Community Resource Exchange"
     "problem": "Roommates lose track of shared expenses",
     "mvp_musts": [
         "signup/login",
@@ -15780,18 +15803,28 @@ spec = {
         "multi-currency FX",
         "microservice split",
     ],
+    "users_auth": "registered users; group membership as authorization",
+    "data_sketch": ["User", "Group", "Membership", "Expense"],
+    "architecture": "Browser → API → Postgres (no queue in MVP)",
+    "risks": [
+        "scope creep into OCR/mobile (cut via non-goals)",
+        "auth half-done (owned by Phase 96 walking skeleton)",
+        "no public URL until late (owned by Phase 96 step 2)",
+    ],
+    "tradeoff_log": [],  # fill in 96–97; leave ready
     "done_when": [
         "two users can register and share one group",
         "CI green + public URL reachable",
         "README clone/run works for a stranger",
     ],
     "owned_later": {
-        "96": "implement MVP vertical slice + deploy",
-        "97": "load-test list endpoint; fix the first cliff",
-        "98": "architecture diagram + decision write-up",
+        "96": "walking skeleton + MVP vertical slice + deploy",
+        "97": "load-test list path; fix first cliff; health + logs",
+        "98": "README, diagram, demo, decisions, limitations, license",
     },
 }
 
+print("PRODUCT:", spec["product"])
 print("MVP:")
 for m in spec["mvp_musts"]:
     print(" [ ]", m)
@@ -15799,73 +15832,99 @@ print("\nExplicitly NOT now:")
 for n in spec["non_goals"]:
     print(" ---", n)
 print("\nHandoff:", spec["owned_later"])
+assert len(spec["tradeoff_log"]) == 0, "Phase 95: log stays empty until you decide in 96–97"
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+If your product is the Resource Exchange, rewrite `mvp_musts` to list/search, request, approve, return — same nine fields, same ownership handoff. The planning card at [Projects.md — Phase 95](../guides/Projects.md#cs-phase-95-project) is a **planning deliverable**, not a build sprint.
 
+**WHAT THIS PHASE IS NOT:**
+
+- Not implementing auth, migrations, CI, caches, workers, or load scripts (96–97).  
+- Not re-teaching web stacks, OWASP, or system design (VII–XI).  
+- Not picking five products “to explore.” One coherent capstone.
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | Fill the nine-line template for an idea you actually want |
-| Medium | Cut your MVP until a stranger could use it in one sitting; list 5 non-goals |
-| Hard | Write risks + "done when" checks; get a peer to mark anything still vague |
+| Easy | Fill the nine-line template for the product you will actually ship through 98 |
+| Medium | Cut MVP until a stranger could use the core verb in one sitting; list ≥5 non-goals |
+| Hard | Write risks + done-when checks; have a peer mark anything still vague or implementation-shaped |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Build:** A finished spec is still a plan. Phase 96 ships a walking multi-user application against that plan - and discovers which lines were fiction.
-
----
-
-> **Phase 95 complete?** [Build the Phase 95 mini-project](../guides/Projects.md#cs-phase-95-project) · [Continue to Phase 96](#phase-96)
+A finished spec is still a plan. Fiction dies when you must put a multi-user app on a **public URL** with CI green. Phase 96 ships a **walking skeleton** — vertical slices in a ruthless order — against this plan, and discovers which lines were hopeful.
 
 ---
 
+> **Phase 95 complete?** [Build the Phase 95 mini-project](../guides/Projects.md#cs-phase-95-project) · [Main portfolio](../guides/Projects.md#cs-main-portfolio-project) · [Continue to Phase 96](#phase-96)
 
+---
 
 # PHASE 96 - Build the Production Application
 
 **Track:** Ship & Hire
 
-**WHAT YOU WILL BE ABLE TO DO:** Ship a working multi-user application from your Phase 95 spec - auth, persistence, API, UI, CI, and a public URL - without abandoning the MVP.
+**WHAT YOU WILL BE ABLE TO DO:** Ship a working multi-user application from your Phase 95 spec — auth, persistence, API, UI, CI, and a public URL — without abandoning the MVP or inventing a second architecture mid-build.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 95 (honest MVP scope and trade-off log only - no premature build); Phases 55-60 and 66-69 (web, data, auth/security); Phase 72 and 77 (Git, CI, deploy habits).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 95 — honest MVP and empty trade-off log. Phases 55–65 and 66–69 — web, data, auth/security (apply; do not re-course). Phases 72 and 77 — Git and CI/deploy habits.
+
+**LEARNING RESOURCES:**
+
+- [How to Approach a Fullstack Project (The Coding Koala)](https://www.youtube.com/watch?v=vUXKot0bpWQ) — order of attack, not a stack mandate
+- [The Twelve-Factor App](https://12factor.net/) — config, backing services, disposability
+- [Dev → Staging → Production (Cloud Champ)](https://www.youtube.com/watch?v=J9JbzsufemE) — prove the pipeline early
+- Capstone build target: [Open Community Resource Exchange](../guides/Projects.md#cs-main-portfolio-project) (or your Phase 95 alternate with the same walking-skeleton order)
 
 ## 96.1 Walking Skeleton Before Features
 
-**WHY YOU ARE LEARNING THIS:** Phase 95 planned. Capstones still die in the middle: beautiful UI with no auth, or a perfect schema with no deploy. This phase owns **shipping** - vertical slices to a multi-user app on a public URL. Hardening and portfolio polish are 97–98.
+Phase 95 locked musts, non-goals, and done-when. Capstones still die in the middle: a beautiful UI with no auth, or a perfect schema that never leaves localhost. This phase owns **shipping** — a walking skeleton, then vertical slices, until a second person can use the core verb on a **public URL**. Hardening with numbers is Phase 97. Portfolio packaging is Phase 98.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+You already have the ingredients. Auth is Phase 68 knowledge. Migrations and indexes are Story VIII. CI is Phase 77. Here you **integrate** them into one product under your Phase 95 constraints — not replay those lessons.
 
-- Approach: [How to Approach a Fullstack Project (The Coding Koala)](https://www.youtube.com/watch?v=vUXKot0bpWQ) *(Composio YouTube)*
-- Stack walkthrough (use as reference, not a copy script): [Python + JavaScript Full Stack (Tech With Tim)](https://www.youtube.com/watch?v=PppslXOR7TA) *(Composio YouTube)*; [MERN with Deployment (freeCodeCamp)](https://www.youtube.com/watch?v=F9gB5b4jgOI) *(Composio YouTube)*
-- How companies actually ship: [Dev → Staging → Production in 5 mins (Cloud Champ)](https://www.youtube.com/watch?v=J9JbzsufemE) *(Composio YouTube)*
-- Written: [Twelve-Factor App](https://12factor.net/) *(Composio fetch verified)* — config, backing services, disposability
-- Capstone planning companion: [Capstone Architecture & Feature Scope (StackLesson)](https://www.stacklesson.com/mern-stack-tutorial/mern-capstone/ch28-lesson-01-capstone-architecture-and-planning/) *(Composio web)*
-- Ideas if stuck: [florinpop17/app-ideas](https://github.com/florinpop17/app-ideas) *(Composio GitHub)*
-
-**STEP-BY-STEP EXPLANATION**
-
-Build order that survives contact with reality:
+**WALKING SKELETON ORDER (DO NOT SKIP AHEAD):**
 
 ```text
-1. Repo + CI green on empty "hello" test
-2. Deploy empty app to a public URL (prove the pipeline)
+1. Repo + CI green on an empty "hello" test
+2. Deploy empty app to a public URL (prove the pipeline before features)
 3. Database + one table + one migration
-4. Register / login (or magic link) — real password hashing
-5. One authenticated CRUD path (your product's core noun)
-6. Minimal UI that exercises that path
-7. Seed data + README "how to run"
+4. Register / login (or magic link) — real password hashing (you already know why from 67–68)
+5. One authenticated CRUD path (your product's core noun / verb)
+6. Minimal UI that exercises that path end to end
+7. Seed data + README "how to run" for a stranger
 8. ONLY THEN: second feature from the Phase 95 backlog
 ```
 
-**Done** means: a second person can create an account, use the core feature, and you can roll forward via CI. Looks don't count.
+Looks do not count. **Done for Phase 96** means: a second person can create an account, use the core feature, CI is green, and the public URL works. If step 2 is still “I’ll deploy later,” you do not have a walking skeleton — you have a laptop demo.
 
-**SMALL WORKING EXAMPLE**
+**VERTICAL SLICE, NOT HORIZONTAL LAYERS:**
+
+```text
+Wrong:  perfect UI week → perfect schema week → auth week → "deploy someday"
+Right:  thin path: signup → create resource/group → one write → one list → on URL
+```
+
+For Open Community Resource Exchange, the first authenticated CRUD might be “list an item” or “create a borrow request” — pick **one** core verb from your Phase 95 musts. For the expense splitter scaffold, it is “add an expense to a shared group.” Same skeleton either way.
+
+**OVER-ENGINEERING SAFEGUARDS (WRITE THESE ON A STICKY):**
+
+| Temptation | Why it kills MVP | What to do instead |
+| ---------- | ---------------- | ------------------ |
+| Microservices / message bus “for scale” | Two deploys before one user | One API process + one DB until 97 proves a bottleneck |
+| Custom auth framework | Weeks of crypto theater | Use a boring session/cookie or known library; apply 66–69 |
+| Perfect design system | Pixels without a public URL | Minimal HTML/UI that exercises the path |
+| Premature cache/queue | Invalidation bugs before traffic | Add only if Phase 97 evidence demands it |
+| Second feature before seed + README | Nobody else can run it | Finish steps 1–7 first |
+
+When you make a real crossroads (sessions vs JWT-in-localStorage, monolith vs extract), **log it in the Phase 95 trade-off table** or a short ADR (Phase 94). Do not invent architecture essays instead of shipping the slice.
+
+**SLICE CHECKLIST (FILL AS YOU SHIP):**
 
 ```python playground=cs-phase-96-slice-checklist
-# Capstone "vertical slice" checklist — fill as you ship.
+# Capstone vertical-slice checklist — same nouns as Phase 95.
 
 slice_ = {
-    "name": "shared expense group (MVP)",
+    "product": "Shared Expense Groups",  # or Resource Exchange
     "must": [
         "signup/login",
         "create group",
@@ -15877,81 +15936,102 @@ slice_ = {
         "mobile apps",
         "real-time collab",
         "multi-currency FX",
+        "Kafka / microservices",
+    ],
+    "skeleton_order": [
+        "CI green",
+        "public URL (empty ok first)",
+        "DB + migration",
+        "auth",
+        "authenticated CRUD",
+        "minimal UI",
+        "seed + README",
+        "second feature only after",
     ],
     "evidence": {
-        "public_url": None,   # fill when deployed
+        "public_url": None,  # fill when deployed
         "ci_green": False,
         "seed_script": False,
         "readme_clone_ok": False,
+        "second_user_ok": False,
     },
 }
 
 print("MVP musts:")
 for m in slice_["must"]:
     print(" [ ]", m)
-print("\nNot in MVP (write these on a sticky note):")
+print("\nNot in MVP:")
 for n in slice_["explicitly_not_now"]:
     print(" ---", n)
+print("\nEvidence keys:", list(slice_["evidence"].keys()))
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**WHAT THIS PHASE IS NOT:**
+
+- Not a fullstack YouTube course — pick a stack you already practiced and walk the skeleton.  
+- Not Phase 97 load testing or Phase 98 portfolio polish (light README “how to run” yes; hiring-grade case study no).  
+- Not expanding MVP because a tutorial looked cool — non-goals still win.
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | Convert your Phase 95 spec into a must / not-now list like above |
-| Medium | Ship steps 1-6 against your own idea; stop when the core noun works for two users |
-| Hard | Add one background job (email or report) and prove it runs in staging |
+| Easy | Convert your Phase 95 spec into must / not-now / evidence keys like the playground |
+| Medium | Ship skeleton steps 1–7 for your product; stop when two users can exercise the core verb on a public URL |
+| Hard | Add *one* second Phase 95 backlog feature only after seed + README work; log one trade-off decision |
 
-**WHY THE NEXT TOPIC IS NEEDED - Break it:** A demo that works for you is not evidence it works under load or failure. Phase 97 is where you measure and attack your own system on purpose.
+**WHAT THIS UNLOCKS NEXT:**
 
----
-
-> **Phase 96 complete?** [Continue to Phase 97](#phase-97)
+A demo that works for you is not evidence it works under load or failure. Phase 97 is where you **break, measure, and harden** on purpose — same critical path, before/after numbers, health and logs — without turning the capstone into a second system-design course.
 
 ---
 
+> **Phase 96 complete?** [Continue the main portfolio build](../guides/Projects.md#cs-main-portfolio-project) · [Continue to Phase 97](#phase-97)
 
+---
 
 # PHASE 97 - Break, Measure & Harden
 
 **Track:** Ship & Hire
 
-**WHAT YOU WILL BE ABLE TO DO:** Load-test your capstone, find a real failure mode, fix it with evidence (before/after numbers), and leave at least one alert or health check behind.
+**WHAT YOU WILL BE ABLE TO DO:** Load-test your capstone’s critical path, find a real failure mode, fix it with before/after evidence, and leave health checks plus structured logs behind — so Phase 98 can show proof, not vibes.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 96 (a deployed multi-user app); Phases 74 and 80 (tests + observability signals); Phases 82–83 for the first bottleneck/cache fix if needed. This phase owns **evidence of breakage and repair**, not a second system-design course.
+**WHAT YOU SHOULD KNOW FIRST:** Phase 96 — deployed multi-user app on a public URL. Phases 74 and 80 — tests and observability signals. Phases 82–83 — bottleneck/cache levers if evidence points there. This phase owns **evidence of breakage and repair**, not a pen-test course or a redesign of 81–88.
+
+**LEARNING RESOURCES:**
+
+- [Load testing websites (Grafana k6 docs)](https://grafana.com/docs/k6/latest/testing-guides/load-testing-websites/)
+- [How to do Performance Testing with k6 (Alex Hyett)](https://www.youtube.com/watch?v=ghuo8m7AXEM)
+- [locust.io](https://locust.io/) — Python alternative if that matches your stack
+- [API Load Testing types (Nick Chapsas)](https://www.youtube.com/watch?v=r-Jte8Y8zag) — smoke / load / stress / soak vocabulary
+- Harden the same product: [Open Community Resource Exchange](../guides/Projects.md#cs-main-portfolio-project)
 
 ## 97.1 Load, Fail, Fix, Prove
 
-**WHY YOU ARE LEARNING THIS:** Phase 96 shipped. Production systems are graded on what happens when traffic spikes or a dependency slows. Finding that yourself - with numbers - turns a student project into an engineering artifact. Portfolio packaging is still Phase 98.
+Phase 96 put your Resource Exchange (or expense splitter) on a URL. Production systems are graded on what happens when traffic spikes or a dependency slows. Finding that yourself — with **numbers** — turns a student project into an engineering artifact. Portfolio packaging is still Phase 98.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
-
-- k6: [How to do Performance Testing with k6 (Alex Hyett)](https://www.youtube.com/watch?v=ghuo8m7AXEM) *(Composio YouTube)*; [Load testing websites (Grafana k6 docs)](https://grafana.com/docs/k6/latest/testing-guides/load-testing-websites/) *(Composio fetch verified)*
-- Locust (Python): [Load Testing with locust.io (Nicolai Gram)](https://www.youtube.com/watch?v=SOu6hgklQRA) *(Composio YouTube)*; [locust.io](https://locust.io/) *(Composio fetch verified)*
-- Stress vs soak vocabulary: [API Load Testing types (Nick Chapsas)](https://www.youtube.com/watch?v=r-Jte8Y8zag) *(Composio YouTube)*
-- Tooling: [grafana/k6](https://github.com/grafana/k6) *(Composio GitHub: 30k+ stars)*
-- News / landscape: compare current load-testing tool roundups before picking *(Composio News)* — prefer a tool you can script in CI
-
-**STEP-BY-STEP EXPLANATION**
-
-A minimal hardening loop:
+**THE HARDENING LOOP:**
 
 ```text
-1. Pick ONE critical path (login + create + list)
+1. Pick ONE critical path (login + create + list) — same nouns as 95/96
 2. Write a load script (k6 or Locust) with a success threshold
    e.g. p95 < 500ms at 20 VUs for 2 minutes
 3. Run it. Capture: RPS, error %, p95, which endpoint broke first
-4. Fix ONE bottleneck (index, N+1 query, missing cache, timeout)
-5. Re-run the SAME script. Paste before/after into README
+4. Fix ONE bottleneck (index, N+1 query, missing cache, timeout, pool size)
+5. Re-run the SAME script. Paste before/after into the README draft
 6. Add: /health (liveness) + structured error logs + one alert stub
 ```
 
-Types of test (pick at least two): **smoke** (1 VU, does it work?), **load** (expected traffic), **stress** (push until break), **soak** (low load, long duration — leaks and connection exhaustion).
+Pick at least two test types: **smoke** (1 VU — does it work?), **load** (expected traffic), **stress** (push until break), **soak** (low load, long duration — leaks and connection exhaustion). Do not collect five tools; collect one comparable before/after pair.
 
-**SMALL WORKING EXAMPLE**
+**SECURITY AND FAILURE (LIGHT APPLICATION OF STORY IX — NOT A PEN-TEST COURSE):**
+
+You already practiced trust boundaries, authz, and OWASP basics in 66–69. Here, apply a **short checklist** against *your* app: unauthenticated write blocked? IDOR on another user’s group/resource rejected? Rate limit or basic abuse control on login/create? Crash on empty input handled? That is enough. Do not turn Phase 97 into a red-team curriculum or a second Story IX. If you find a real auth hole, fix it and note it in the trade-off / limitations log — then return to load evidence.
+
+**WORKED LOAD SKETCH + EVIDENCE RECORD:**
 
 ```javascript
-// k6 sketch — save as load.js and point at YOUR deployed URL
+// k6 sketch — save as load.js; point BASE_URL at YOUR deployed URL
 import http from "k6/http";
 import { check, sleep } from "k6";
 
@@ -15967,18 +16047,21 @@ export const options = {
 export default function () {
   const res = http.get(`${__ENV.BASE_URL}/api/health`);
   check(res, { "health 200": (r) => r.status === 200 });
+  // Extend: login → create → list on your critical path
   sleep(1);
 }
 ```
 
 ```python playground=cs-phase-97-before-after
-# Record the evidence the README needs.
+# Record the evidence Phase 98's README needs. Swap path for Resource Exchange
+# e.g. GET /api/resources?category=tools or GET /api/groups/{id}/expenses
 
 run = {
     "path": "GET /api/groups/{id}/expenses",
     "before": {"p95_ms": 1800, "error_rate": 0.04, "bottleneck": "full table scan"},
     "fix": "CREATE INDEX idx_expenses_group_id ON expenses(group_id)",
     "after": {"p95_ms": 120, "error_rate": 0.0},
+    "ops": ["/health returns 200", "structured error logs on 5xx", "alert stub on error_rate"],
 }
 
 print("Path:", run["path"])
@@ -15986,78 +16069,100 @@ print("Before p95:", run["before"]["p95_ms"], "ms | errors:", run["before"]["err
 print("Fix:", run["fix"])
 print("After  p95:", run["after"]["p95_ms"], "ms | errors:", run["after"]["error_rate"])
 print("Speedup ~", round(run["before"]["p95_ms"] / run["after"]["p95_ms"], 1), "x")
+for o in run["ops"]:
+    print(" ops:", o)
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**FIX ONE THING THAT EVIDENCE NAMED:**
+
+| Symptom | Likely lever (you already met these) | Trap |
+| ------- | ------------------------------------ | ---- |
+| List path p95 collapses under VUs | Index on foreign key / filter (Story VIII) | Rewriting the whole ORM layer |
+| N+1 queries in list | Eager load / single query | “Add Redis” before measuring |
+| Pool exhaustion on soak | Cap connections; timeouts (80 / 82) | Ignoring soak because smoke passed |
+| Auth endpoint hammered | Basic rate limit (69) | Building a WAF course |
+
+Log the decision in your trade-off table. Phase 98 will quote these numbers; inventing them later is not hardening.
+
+**WHAT THIS PHASE IS NOT:**
+
+- Not a second complete system-design interview (81–88).  
+- Not a penetration-testing certification.  
+- Not adding microservices because stress failed once — fix the measured bottleneck first.
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | Add `/health` and hit it from k6/Locust with 1 VU |
-| Medium | Break your app under stress; fix one root cause; show before/after |
-| Hard | Soak for 30+ minutes; fix a leak or connection pool issue you would not have seen in a 2-minute run |
+| Easy | Add `/health` and hit it from k6/Locust with 1 VU; record the command |
+| Medium | Break your critical path under stress; fix one root cause; show before/after numbers |
+| Hard | Soak ≥30 minutes; fix a leak or pool issue a 2-minute run would miss; note one Story IX checklist finding |
 
-**WHY THE NEXT TOPIC IS NEEDED - Portfolio:** A hardened system that only you understand still fails the hiring test. Phase 98 turns the build into a professional release: docs, diagrams, and a write-up a stranger can follow.
+**WHAT THIS UNLOCKS NEXT:**
 
----
-
-> **Phase 97 complete?** [Continue to Phase 98](#phase-98)
+A hardened system that only you understand still fails the hiring test. Phase 98 turns the build into a **professional release**: README, diagram, demo, decisions, load evidence, and known limitations a stranger can evaluate in minutes.
 
 ---
 
+> **Phase 97 complete?** [Continue portfolio harden/release work](../guides/Projects.md#cs-main-portfolio-project) · [Continue to Phase 98](#phase-98)
 
+---
 
 # PHASE 98 - Portfolio Release
 
 **Track:** Ship & Hire
 
-**WHAT YOU WILL BE ABLE TO DO:** Publish the capstone with a hiring-grade README, architecture diagram, demo link, trade-off write-up, and known limitations - so a stranger can evaluate you in under five minutes.
+**WHAT YOU WILL BE ABLE TO DO:** Publish the capstone with a hiring-grade README, architecture diagram, demo (live URL and/or 30s walkthrough), trade-off write-up, load evidence, known limitations, and license — so a stranger can evaluate you in under five minutes.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phases 95-97 (spec, shipped app, measured fix); Phase 94 (ADRs / decision writing).
+**WHAT YOU SHOULD KNOW FIRST:** Phases 95–97 — spec, shipped app, measured fix. Phase 94 — ADRs / decision writing. You are packaging proof, not starting a new product.
+
+**LEARNING RESOURCES:**
+
+- [How To Write a USEFUL README (Learn Fast Make Things)](https://www.youtube.com/watch?v=E6NO0rgFub4)
+- [Portfolio Checklist for Software Engineers (Vets Who Code)](https://vetswhocode.io/portfolio-checklist)
+- [How to Write a Portfolio Case Study](https://cloudwebschool.com/docs/career/portfolio-projects/portfolio-case-study-writing/)
+- [Documenting Architecture Decisions (Michael Nygard)](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) — decisions section borrows Phase 94 shape
+- Release the same product: [Open Community Resource Exchange](../guides/Projects.md#cs-main-portfolio-project)
 
 ## 98.1 Package the Proof
 
-**WHY YOU ARE LEARNING THIS:** Recruiters and engineers do not run your mental model. They skim a README, click a demo, and decide in minutes whether you can ship. The release is not decoration - it is the **interface** to everything you learned in Stories I-XIII.
+Phases 95–97 gave you an honestly scoped, publicly deployed, load-evidenced system. Recruiters and engineers do not run your mental model. They skim a README, click a demo, and decide in minutes whether you can ship. The release is not decoration — it is the **interface** to everything you integrated across Stories I–XIII into one coherent capstone.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
-
-- README craft: [How To Write a USEFUL README (Learn Fast Make Things)](https://www.youtube.com/watch?v=E6NO0rgFub4) *(Composio YouTube)*; [GitHub README Tutorial (The BlackFemale Engineer)](https://www.youtube.com/watch?v=1FLsHruskDg) *(Composio YouTube)*
-- Portfolio pitfalls: [The #1 Mistake of GitHub Portfolios (Philipp Lackner)](https://www.youtube.com/watch?v=cnPRFaoybzs) *(Composio YouTube)*
-- Checklist: [Portfolio Checklist for Software Engineers (Vets Who Code)](https://vetswhocode.io/portfolio-checklist) *(Composio fetch verified)*
-- Case-study shape: [How to Write a Portfolio Case Study](https://cloudwebschool.com/docs/career/portfolio-projects/portfolio-case-study-writing/) *(Composio web)*
-- Docs modes: [Capstone Documentation Sprint](https://datafield.dev/technical-writing/part-09/capstone-project-documentation.html) *(Composio web)* — README vs tutorial vs ADR vs troubleshooting
-- Track applications separately (your process, not the product): keep a job/pipeline sheet if you use one *(Composio Sheets: e.g. a personal tracker with a Jobs tab)* — do not confuse that with the project README
-
-**STEP-BY-STEP EXPLANATION**
-
-README order that survives a 60-second skim:
+**README ORDER THAT SURVIVES A 60-SECOND SKIM:**
 
 ```text
-1. One-sentence outcome ("Multi-user expense app with auth, deploy, and load-test evidence")
-2. Live demo URL + 30s screen recording
-3. Architecture diagram (C4 context or one Mermaid box diagram)
-4. 3-5 decisions with costs (from Phase 95/97)
-5. Before/after load numbers (from Phase 97)
+1. One-sentence outcome (product + auth + deploy + load evidence)
+2. Live demo URL + 30s screen recording / walkthrough
+3. Architecture diagram (C4 context or one Mermaid/Excalidraw box diagram)
+4. 3–5 decisions with costs (from Phase 95 log / 96–97 ADRs)
+5. Before/after load numbers (from Phase 97 — real script, same thresholds)
 6. Clone → run in <10 minutes (exact commands)
 7. How to run tests / load script
-8. Known limitations / what you would do next
+8. Known limitations / what you would do next (honor Phase 95 non-goals)
 9. License
 ```
 
 If removing the demo link would make the README feel empty, you over-wrote marketing and under-shipped proof.
 
-**SMALL WORKING EXAMPLE**
+**ENGINEERING DEMO (30 SECONDS):**
+
+Show the core verb, not a slide tour: sign in → perform the main action (list/request/approve, or add expense) → show the result → glance at `/health` or the before/after line in the README. Narrate one decision (“sessions in httpOnly cookies, not JWT in localStorage — cost is shared session store”). That recording is what Story XV will force you to explain under time pressure — package it now while the path is fresh.
+
+**RELEASE SKELETON (SWAP NOUNS FOR RESOURCE EXCHANGE):**
 
 ```text playground=cs-phase-98-readme-skeleton
 # Shared Expense Groups
+# (Resource Exchange: "Open Community Resource Exchange — list, request, approve, return")
 
 Multi-user expense tracking with auth, Postgres, CI, and a public deploy.
 
 Demo: https://example.com
-Load evidence: p95 120ms @ 20 VUs (was 1800ms)
+Walkthrough: docs/demo-30s.mp4
+Load evidence: p95 120ms @ 20 VUs (was 1800ms) — scripts/load.js
 
 ## Architecture (draw as Mermaid/Excalidraw in the real README)
 Browser --> API --> Postgres
-                 \-> Redis (optional)
+                 \-> Redis (only if Phase 97 required it)
 
 ## Key decisions
 Auth: sessions + httpOnly cookie (not JWT in localStorage)
@@ -16073,63 +16178,103 @@ docker compose up --build
 ## Known limitations
 - No receipt OCR (explicit Phase 95 cut)
 - Single-region deploy only
+- No microservice split (on purpose)
+
+## License
+MIT (or your chosen OSI license)
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**HONESTY BEATS HYPE:**
+
+Known limitations that match Phase 95 non-goals read as engineering judgment. Fake “handles millions of users” claims die in the first follow-up. Paste real p95 numbers. Link the load script. Prefer one crisp diagram over three decorative ones.
+
+**WHAT THIS PHASE IS NOT:**
+
+- Not building a fifth feature “for the portfolio.”  
+- Not a job-application tracker (keep that separate from the product README).  
+- Not Story XV — you are not yet training timed interview narration; you are leaving the artifact those interviews will interrogate.
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | Rewrite your README to the nine-section order above |
-| Medium | Add a Mermaid/Excalidraw diagram and a 30s demo video |
-| Hard | Have a peer clone cold and time them to first successful login; fix every friction point |
+| Easy | Rewrite your README to the nine-section order; include real Phase 97 numbers |
+| Medium | Add a Mermaid/Excalidraw diagram and a ≤30s demo video of the core verb |
+| Hard | Peer cold-clone: time them to first successful use of the core verb; fix every friction point |
 
-**WHY THE NEXT TOPIC IS NEEDED - Interviews:** The portfolio proves you can ship. Story XV trains you to *explain* that work under time pressure - coding, system design, and behavioral interviews.
+**WHAT THIS UNLOCKS NEXT:**
 
----
-
-> **Phase 98 complete?** [Continue to Phase 99](#phase-99)
+Story XIV ends here: you planned an MVP you could finish (95), shipped a walking multi-user system on a public URL (96), hardened it with before/after evidence (97), and packaged proof a stranger can trust (98). The portfolio **proves you can ship**. What it does not yet prove is that you can **explain** that work under a clock — coding, design, and behavioral interviews with follow-ups. Story XV (Phase 99+) is interview readiness: narrate, timebox, and defend decisions from *this* capstone — not a new product, and not a second DSA or system-design course. Phase 99 starts with narrating before you code.
 
 ---
 
+> **Phase 98 complete?** [Finish main portfolio release checkpoint](../guides/Projects.md#cs-main-portfolio-project) · [Continue to Phase 99](#phase-99)
 
+---
 
 # PHASE 99 - Coding Interview Method
 
 **Track:** Ship & Hire
 
-**WHAT YOU WILL BE ABLE TO DO:** Run a timed coding interview with a repeatable six-step process - clarify, example, approach + Big O, code, self-test, trade-offs - narrating decisions out loud.
+**WHAT YOU WILL BE ABLE TO DO:** Run a timed coding interview with a repeatable six-step process — clarify, hand example, approach + Big O, code, self-test, trade-offs — narrating decisions out loud so an observer can score you on more than a silent green check.
 
-**WHAT YOU SHOULD KNOW FIRST:** DSA from Stories IV-V and VI patterns; you can already solve medium problems alone. This phase is communication under observation, not new algorithms.
+**WHAT YOU SHOULD KNOW FIRST:** Stories IV–V DSA (you can already solve Mediums alone). Phase 98 portfolio — proof you can ship. This phase is **communication under observation**, not new algorithms.
+
+**LEARNING RESOURCES:**
+
+- [How to Solve ANY Coding Interview Question in 6 Steps](https://www.youtube.com/watch?v=Q4C3ZRJLnac)
+- [Software Engineering Job Interview – Full Mock Interview (freeCodeCamp)](https://www.youtube.com/watch?v=1qw5ITr3k9E)
+- [Tech Interview Handbook – coding interview prep](https://www.techinterviewhandbook.org/coding-interview-prep/)
+- [NeetCode roadmap](https://neetcode.io/roadmap) — pattern map for Phase 100 reps, not a second syllabus here
+- Peer practice: [Pramp](https://www.pramp.com/) or [interviewing.io](https://interviewing.io/)
 
 ## 99.1 Narrate Before You Code
 
-**WHY YOU ARE LEARNING THIS:** Interviewers score four axes: problem solving, coding, verification, and communication. A silent optimal solution loses on two of them. Externalising your thinking is a separate, trainable skill from solving the problem.
+Phase 98 closed Story XIV: a stranger can evaluate your capstone in five minutes. Recruiters still cannot hear how you think. Story XV is not “learn more CS.” It is **retrieve, explain, design, and communicate under a clock** using everything this roadmap already taught. Coding rounds score four axes — problem solving, coding, verification, and communication. A silent optimal solution still loses on two of them. Externalizing your thinking is a separate, trainable skill from solving the problem alone at home.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
-
-- Process: [How to Solve ANY Coding Interview Question in 6 Steps](https://www.youtube.com/watch?v=Q4C3ZRJLnac) *(Composio YouTube)*; [How to EASILY solve LeetCode problems (NeetCode)](https://www.youtube.com/watch?v=0pqPalQbPdc) *(Composio YouTube)*
-- Live mock: [Software Engineering Job Interview – Full Mock Interview (freeCodeCamp)](https://www.youtube.com/watch?v=1qw5ITr3k9E) *(Composio YouTube)*; [Google Coding Interview With A Facebook Software Engineer (Clement)](https://www.youtube.com/watch?v=rw4s4M3hFfs)
-- Written: [Tech Interview Handbook – coding interview prep](https://www.techinterviewhandbook.org/coding-interview-prep/) *(Composio fetch verified)*; [NeetCode roadmap](https://neetcode.io/roadmap) *(Composio fetch verified)*; [Sean Prashad LeetCode Patterns](https://seanprashad.com/leetcode-patterns/) *(Composio fetch verified)*
-- GitHub: [yangshun/tech-interview-handbook](https://github.com/yangshun/tech-interview-handbook) *(Composio GitHub)*; [jwasham/coding-interview-university](https://github.com/jwasham/coding-interview-university) *(Composio GitHub)*
-- DeepWiki structure note: handbook splits coding (`/coding-interview-prep/`), system design (`/system-design/`), and behavioral (`/behavioral-interview/`) *(Composio DeepWiki)*
-- Practice with a human: [Pramp](https://www.pramp.com/); [interviewing.io](https://interviewing.io/)
-
-**STEP-BY-STEP EXPLANATION**
+**THE SIX-STEP CLOCK (≈40 MINUTES):**
 
 ```text
-0-2 min   CLARIFY     restate; sizes; empties; may I mutate input?
-2-5       EXAMPLE     work one case by hand (insight arrives here)
-5-8       APPROACH    name pattern + time/space; ask "code this?"
-8-28      CODE        narrate decisions, not keystrokes
-28-35     SELF-TEST   normal + empty + single + duplicates + large
-35-45     TRADE-OFFS  can it be better? at what cost?
+0–2 min   CLARIFY     restate; sizes; empties; duplicates; may I mutate input?
+2–5       EXAMPLE     work one case by hand (insight often arrives here)
+5–8       APPROACH    name pattern + time/space; ask “code this?”
+8–28      CODE        narrate decisions, not keystrokes
+28–35     SELF-TEST   normal + empty + single + duplicates + large
+35–40/45  TRADE-OFFS  can it be better? at what cost?
 ```
 
-**Constraints are free hints:** $n \approx 10^5$ rules out $O(n^2)$; $n \approx 20$ often wants backtracking; sorted + large $n$ points at binary search or two pointers.
+Treat the clock as a script, not a vibe. If you skip clarify, you invent constraints. If you skip the hand example, you code the wrong problem. If you skip self-test, you “finish” with a bug the interviewer finds in ten seconds.
 
-**Being stuck productively:** say what you tried, name the blocker, solve a simpler version, ask one specific question. Silence and bluffing both fail.
+**CONSTRAINTS ARE FREE HINTS:**
 
-**SMALL WORKING EXAMPLE**
+| Constraint signal | Likely direction |
+| ----------------- | ---------------- |
+| $n \approx 10^5$ | Avoid $O(n^2)$; prefer $O(n)$ / $O(n \log n)$ |
+| $n \approx 20$ | Backtracking / subsets often fit |
+| Sorted + large $n$ | Binary search or two pointers |
+| “Contiguous subarray” | Sliding window |
+| “Nearest / shortest unweighted” | BFS |
+
+Say the trigger out loud before you reach for a template. Naming the pattern is part of the score.
+
+**WHEN YOU ARE STUCK — RECOVERY SCRIPT (SAY IT ALOUD):**
+
+1. “Here is what I have tried…” (one sentence)  
+2. “The blocker is…” (one concrete unknown — not “I’m confused”)  
+3. “I will solve a simpler version first…” (drop a constraint; fix $n$; ignore duplicates)  
+4. Ask **one** specific question (“May the input contain negatives?”)  
+5. If still blocked after ~3 minutes of productive struggle, state a brute force with its complexity and ask whether to optimize next  
+
+Silence and bluffing both fail. Productive stuckness is visible work.
+
+**FOUR AXES — SELF-GRADE AFTER EVERY MOCK:**
+
+| Axis | You pass when… |
+| ---- | -------------- |
+| Problem solving | Constraints → approach before code |
+| Coding | Readable structure; edge cases considered while writing |
+| Verification | Self-test catches a bug *before* the interviewer does |
+| Communication | Observer could restate your plan without reading the editor |
 
 ```python playground=cs-phase-99-interview-timer
 # Interview timer checklist — run before every timed practice.
@@ -16159,15 +16304,23 @@ for pattern, when in triggers.items():
     print(f"{pattern:16s} <- {when}")
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**WHAT THIS PHASE IS NOT:**
+
+- Not a second DSA course (Story V owns that).  
+- Not building a new portfolio app.  
+- Not “grind until mute fluency” — narration is the product.
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | Record yourself clarifying + stating approach for two Easy problems (no code yet) |
-| Medium | Full 40-minute mock on one Medium; self-grade the four axes |
-| Hard | Two Mediums back-to-back with a partner; watch the recording |
+| Easy | Record yourself clarifying + stating approach + Big O for two Easy problems (no code yet) |
+| Medium | Full 40-minute mock on one Medium; self-grade the four axes; note where the recovery script was needed |
+| Hard | Two Mediums back-to-back with a partner; watch the recording and mark silent stretches |
 
-**WHY THE NEXT TOPIC IS NEEDED - DSA under the clock:** Method without reps still freezes. Phase 100 is timed mixed-topic practice so the six steps become automatic.
+**WHAT THIS UNLOCKS NEXT:**
+
+A method without reps still freezes when the pattern is unfamiliar. Phase 100 is timed mixed-topic practice plus an error/pattern journal so the six steps become automatic — Story V under a clock, not a second syllabus.
 
 ---
 
@@ -16175,45 +16328,54 @@ for pattern, when in triggers.items():
 
 ---
 
-
-
 # PHASE 100 - DSA Interview Practice
 
 **Track:** Ship & Hire
 
-**WHAT YOU WILL BE ABLE TO DO:** Solve mixed-topic medium problems at interview pace - pick a pattern from constraints, implement cleanly, and self-test within ~40 minutes.
+**WHAT YOU WILL BE ABLE TO DO:** Solve mixed-topic Medium problems at interview pace — pick a pattern from constraints, implement cleanly, self-test within ~40 minutes, and log every miss so the next week’s drill is targeted.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 99 method; **Story V taught the DSA** (structures, algorithms, patterns). This phase is **timed interview practice**, not a second DSA course - no new syllabus chapters.
+**WHAT YOU SHOULD KNOW FIRST:** Phase 99 six-step method. **Story V taught the DSA.** This phase is **timed interview practice**, not a second DSA course — no new syllabus chapters.
+
+**LEARNING RESOURCES:**
+
+- [NeetCode roadmap](https://neetcode.io/roadmap)
+- [Sean Prashad LeetCode Patterns](https://seanprashad.com/leetcode-patterns/)
+- [Tech Interview Handbook – study plan](https://www.techinterviewhandbook.org/coding-interview-study-plan/)
+- [How I would learn LeetCode if I could start over (NeetCodeIO)](https://www.youtube.com/watch?v=aHZW7TuY_yo)
+- Solutions *after* your attempt only: [neetcode-gh/leetcode](https://github.com/neetcode-gh/leetcode)
 
 ## 100.1 Patterns Under Time Pressure
 
-**WHY YOU ARE LEARNING THIS:** Story V built understanding. Volume without pattern recognition still plateaus under a clock. Interview problems cluster into a few shapes; the transferable skill is *identifying the shape from constraints*, then applying a template. Do **not** re-read all of Story V here - drill triggers and timing.
+Phase 99 gave you a script. Under a clock, volume without pattern recognition still plateaus. Interview problems cluster into a few shapes; the transferable skill is **identifying the shape from constraints**, then applying a template you already learned in Story V. Do not re-read Phases 31–48 as a course here. Drill triggers, timing, and an honest journal of what broke.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
-
-- Pattern map: [NeetCode roadmap](https://neetcode.io/roadmap) *(Composio fetch verified)*; [Sean Prashad LeetCode Patterns](https://seanprashad.com/leetcode-patterns/) *(Composio fetch verified)*
-- Study plan shape: [Tech Interview Handbook – study plan](https://www.techinterviewhandbook.org/coding-interview-study-plan/) *(Composio DeepWiki / handbook)*
-- How to restart grinding: [How I would learn Leetcode if I could start over (NeetCodeIO)](https://www.youtube.com/watch?v=aHZW7TuY_yo) *(Composio YouTube)*; [How I ACTUALLY got good at Leetcode (NeetCode)](https://www.youtube.com/watch?v=RJr7ofDgE24) *(Composio YouTube)*
-- Common concepts: [Most Common Concepts for Coding Interviews](https://www.youtube.com/watch?v=UrcwDOEBzZE) *(Composio YouTube)*
-- GitHub solution repos: use [neetcode-gh/leetcode](https://github.com/neetcode-gh/leetcode) *after* your attempt, never before *(Composio GitHub ecosystem)*
-- Scholar context: classroom interview prep activities improve outcomes when tied to DSA coursework *(Composio Scholar: "Implementation and evaluation of technical interview preparation activities...")*
-
-**STEP-BY-STEP EXPLANATION**
-
-Weekly loop (adjust volume to your calendar):
+**WEEKLY LOOP (ADJUST VOLUME TO YOUR CALENDAR):**
 
 ```text
 1. Pick ONE pattern bucket (e.g. sliding window) for 3 days
 2. 2 Easy warmups + 2 Mediums timed (40 min each, Phase 99 process)
-3. After each: write 3 lines — trigger, template, mistake
-4. Day 4: MIXED set (interviewer won't announce the pattern)
+3. After each attempt: write 3–5 lines — trigger, template, mistake, next drill
+4. Day 4: MIXED set (the interviewer will not announce the pattern)
 5. Day 5: one mock with a human or recorded self-mock
 6. Skip Hard until Mediums are reliable under the clock
 ```
 
-**Quality bar for a Medium:** correct on first self-test pass, named complexity unprompted, and you can explain *why not* the obvious brute force.
+**QUALITY BAR FOR A MEDIUM:**
 
-**SMALL WORKING EXAMPLE**
+Correct on first self-test pass, named complexity unprompted, and you can explain *why not* the obvious brute force. If you “got it” after peeking at a solution, log it as a miss — the journal is for truth, not ego.
+
+**ERROR / PATTERN JOURNAL (THE REAL ARTIFACT):**
+
+After every timed problem, capture:
+
+| Field | Why it matters |
+| ----- | -------------- |
+| Problem + minutes | Pace reality |
+| Pattern guessed vs actual | Pattern-ID skill |
+| Passed self-test? | Verification habit |
+| One-line mistake | Actionable repair |
+| Score tag | `keep` / `re-drill pattern ID` / `re-drill self-test` |
+
+Weekly review: the tags tell you whether next week is “more sliding window” or “always test empties before done.” Without the log, Phase 100 becomes random grinding — a second Story V without teaching.
 
 ```python playground=cs-phase-100-pattern-log
 # Tiny pattern journal — fill after each timed problem.
@@ -16244,15 +16406,23 @@ for a in log:
     print(f"[{a.score():20s}] {a.problem} ({a.minutes}m) — {a.note}")
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**WHAT THIS PHASE IS NOT:**
+
+- Not re-teaching arrays, graphs, DP, or Union-Find from scratch.  
+- Not collecting Hard trophies before Medium pace is stable.  
+- Not a portfolio feature build.
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | Complete NeetCode Arrays & Hashing Easy set with Phase 99 narration |
-| Medium | Mixed 5 Mediums from different roadmap buckets in one week, timed |
-| Hard | Blind mock: partner picks any Medium; you may not look up the pattern name |
+| Easy | Complete one NeetCode Arrays & Hashing Easy set with Phase 99 narration; log every attempt |
+| Medium | Mixed 5 Mediums from different roadmap buckets in one week, timed; journal scores |
+| Hard | Blind mock: partner picks any Medium; you may not look up the pattern name; debrief from the log |
 
-**WHY THE NEXT TOPIC IS NEEDED - Fundamentals recall:** Many loops also ask OS, networking, and databases cold. Phase 101 is fast recall of Stories I-III and VI-VIII without notes.
+**WHAT THIS UNLOCKS NEXT:**
+
+Coding rounds prove invention under pressure. Many loops also ask OS, networking, and databases cold. Phase 101 is fast recall of models this roadmap already taught — two-minute cards, failed card → revisit the **owning phase by number**, not a new YouTube marathon.
 
 ---
 
@@ -16260,50 +16430,65 @@ for a in log:
 
 ---
 
-
-
 # PHASE 101 - CS Fundamentals Interview Review
 
 **Track:** Ship & Hire
 
-**WHAT YOU WILL BE ABLE TO DO:** Answer common fundamentals questions - processes/threads, memory, HTTP, ACID/indexes, CAP trade-offs - in under two minutes each without notes.
+**WHAT YOU WILL BE ABLE TO DO:** Answer common fundamentals questions — processes/threads, memory, HTTP, ACID/indexes, CAP trade-offs — in under two minutes each without notes, and map every failed card back to the phase that owns the model.
 
-**WHAT YOU SHOULD KNOW FIRST:** Stories I-III, VII-VIII (already taught). Phase 99 habits. This is **fast recall**, not a new OS/DB course - if a card fails, revisit the owning phase by number.
+**WHAT YOU SHOULD KNOW FIRST:** Stories I–III and VI–VIII (already taught). Phase 99 narration habits. This is **fast recall**, not a new OS/DB course.
+
+**LEARNING RESOURCES:**
+
+- Your own notes / diagrams from Phases 49–65 and 85 — primary drill source
+- [Tech Interview Handbook](https://www.techinterviewhandbook.org/) cheatsheets — skim anchors, do not restart the curriculum
+- Optional after a failed card only: reopen the owning `#phase-N` body in this roadmap
+- Pair timer: speak cards aloud; wrong → owning phase, not a binge playlist
 
 ## 101.1 Fast Recall Without Notes
 
-**WHY YOU ARE LEARNING THIS:** Coding rounds prove invention under pressure; fundamentals rounds prove retention of models this roadmap already taught. Two-minute cards only - do not re-watch full courses here.
+Phases 99–100 prove you can invent under a clock. Fundamentals rounds prove you **retained** the models Stories I–III and VI–VIII already taught. Two-minute cards only. If a card fails, the repair path is numbered: reopen the owning phase, re-explain once, re-drill the card — the same weakness→repair loop Phase 105 will demand after a full mock.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**TWO-MINUTE CARD SHAPE:**
 
-- Drill from *your* notes on Phases 49–65 and 85; optional flash videos only after a failed card
-- Written anchors: [Tech Interview Handbook](https://www.techinterviewhandbook.org/) cheatsheets *(Composio fetch)* — skim, do not restart the curriculum
-- Pair: speak cards aloud with a timer; wrong card → open the owning phase, not a new YouTube marathon
+```text
+definition → one diagram in words → one failure mode → one interview follow-up
+```
 
-**STEP-BY-STEP EXPLANATION**
-
-Build a **two-minute card** for each topic: definition → one diagram in words → one failure mode → one interview follow-up.
+**SAMPLE CARDS (BUILD YOUR OWN DECK FROM YOUR NOTES):**
 
 ```text
 PROCESSES vs THREADS
   def: process = isolated address space; thread = shared heap, own stack
   fail: data race when threads share without sync
   follow-up: when would you prefer processes?
+  owning phases: 52–53 (process/thread); concurrency in 53
 
 INDEXES
   def: secondary structure for lookups; speeds reads, slows writes
   fail: wrong/missing index → full scan
   follow-up: composite index column order?
+  owning phase: 63
 
 ACID vs CAP
-  ACID: single-node transaction guarantees
-  CAP: distributed — pick 2 under partition (usually CP or AP)
-  fail: claiming “we have CAP consistency and ACID” without scope
+  ACID: single-node transaction guarantees (Phase 64)
+  CAP: distributed — pick 2 under partition; usually CP or AP (Phase 85)
+  fail: claiming “CAP consistency and ACID” without scope
 ```
 
-Drill aloud. If you need the book, you are not interview-ready on that card yet.
+Drill aloud. If you need the book mid-answer, you are not interview-ready on that card yet — mark it failed and schedule the owning-phase revisit the same day.
 
-**SMALL WORKING EXAMPLE**
+**WEAKNESS → OWNING-PHASE REPAIR (DO NOT SKIP):**
+
+| Failed topic (examples) | Revisit first |
+| ----------------------- | ------------- |
+| Process vs thread / VM / page fault | 49–53 |
+| TCP vs UDP / DNS / HTTP status | 56–58 |
+| Indexes / normalization / isolation | 62–64 |
+| CAP / partition trade-offs | 85 (and 88 only for walkthrough habit) |
+| Authn vs authz / sessions | 68 |
+
+Do not open a random “OS crash course” video series. The roadmap already owns the depth; interview prep owns the **speed**.
 
 ```python playground=cs-phase-101-flash-cards
 # Fundamentals flash deck — answer aloud, then flip.
@@ -16325,15 +16510,25 @@ for q, a in cards:
     print("-" * 40)
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+Extend the deck with cards from *your* capstone stack (Phase 98 README nouns): whatever you deployed is fair game for follow-ups.
+
+**WHAT THIS PHASE IS NOT:**
+
+- Not re-watching Story VI–VIII end to end.  
+- Not memorizing encyclopedia lists without failure modes.  
+- Not a coding round in disguise.
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | Speak all eight cards above with a timer (≤2 min each) |
-| Medium | Partner asks follow-ups ("what breaks if...") for OS + DB |
-| Hard | Whiteboard a request path: browser → TLS → load balancer → app → DB index |
+| Easy | Speak eight cards with a timer (≤2 min each); mark fails |
+| Medium | Partner asks follow-ups (“what breaks if…”) for OS + DB; repair fails via owning phases |
+| Hard | Whiteboard a request path: browser → TLS → load balancer → app → DB index; name owning phases when stuck |
 
-**WHY THE NEXT TOPIC IS NEEDED - Object design live:** After recall comes *design under a clock*: classes, APIs, and SOLID judgment. Phase 102 is low-level design interviews.
+**WHAT THIS UNLOCKS NEXT:**
+
+Recall is still retrieval of known models. Next comes **design under a clock**: classes, APIs, and SOLID judgment live. Phase 102 is the interview application of Phase 29 / Story IV — timed LLD, not a new OOP course and not a new portfolio product.
 
 ---
 
@@ -16341,28 +16536,36 @@ for q, a in cards:
 
 ---
 
-
-
 # PHASE 102 - Low-Level Design Interviews
 
 **Track:** Ship & Hire
 
-**WHAT YOU WILL BE ABLE TO DO:** Run an LLD prompt end to end in 30-45 minutes - clarify requirements, model entities, define APIs, apply SOLID sparingly, and justify one real trade-off out loud.
+**WHAT YOU WILL BE ABLE TO DO:** Run an LLD prompt end to end in 30–45 minutes — clarify requirements, model entities, define APIs, apply SOLID sparingly, and justify one real trade-off out loud.
 
-**WHAT YOU SHOULD KNOW FIRST:** **Phase 29 (and Story IV) taught OOP/LLD for learning.** This phase is the **interview application** of that skill under a clock - not a second design curriculum. Prefer composition over inheritance unless you have a true is-a.
+**WHAT YOU SHOULD KNOW FIRST:** **Phase 29 (and Story IV) taught OOP/LLD for learning.** This phase is the **interview application** of that skill under a clock — not a second design curriculum. Prefer composition over inheritance unless you have a true is-a. Capstone domain from Story XIV is fair rehearsal material.
+
+**LEARNING RESOURCES:**
+
+- [Parking Lot Design | OOD Interview](https://www.youtube.com/watch?v=tVRyb4HaHgw)
+- [How to Answer a LLD Interview Problem (AlgoMaster)](https://blog.algomaster.io/p/how-to-answer-a-lld-interview-problem)
+- [Object-Oriented Design Interview guide](https://www.systemdesignhandbook.com/guides/object-oriented-design-interview/)
+- Patterns late, not first: [Refactoring Guru](https://refactoring.guru/design-patterns)
+- Rehearsal card (notes/sketch, not a product): [Projects.md — Phase 102 LLD rehearsal](../guides/Projects.md#cs-phase-102-project)
 
 ## 102.1 Design Objects Under Pressure
 
-**WHY YOU ARE LEARNING THIS:** Phase 29 built the models. Senior interview signal is *when not* to apply a pattern under time pressure. Naming twelve patterns without justifying composition vs inheritance fails. LLD rounds grade judgment and clear API boundaries, not buzzword density - and they are **not** a place to invent portfolio projects.
+Phase 29 built the models. Senior interview signal is *when not* to apply a pattern under time pressure. Naming twelve patterns without justifying composition vs inheritance fails. LLD rounds grade judgment and clear API boundaries, not buzzword density — and they are **not** a place to invent portfolio projects. Use parking-lot / elevator / library prompts, **or** sketch objects from your Story XIV capstone domain (Resource Exchange nouns, expense groups) as talking practice. Do not start a new app “for LLD.”
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**PHASE 29 → 102 BOUNDARY:**
 
-- Walkthrough: [Parking Lot Design | OOD Interview](https://www.youtube.com/watch?v=tVRyb4HaHgw) *(Composio YouTube)*
-- Written method: [How to Answer a LLD Interview Problem (AlgoMaster)](https://blog.algomaster.io/p/how-to-answer-a-lld-interview-problem) *(Composio web)*; [Object-Oriented Design Interview guide](https://www.systemdesignhandbook.com/guides/object-oriented-design-interview/) *(Composio web)*; [CalibreOS LLD framework](https://www.calibreos.com/learn/lld-framework) *(Composio web)*
-- Patterns (use late): [Refactoring Guru](https://refactoring.guru/design-patterns); [Hello Interview – LLD patterns](https://www.hellointerview.com/learn/low-level-design/in-a-hurry/patterns) *(Composio web)*
-- SOLID intuition: [Alex Hyett - SOLID](https://www.youtube.com/watch?v=kF7rQmSRlq0); [CodeAesthetic - Inheritance flaws](https://www.youtube.com/watch?v=hxGOiiR9ZKg)
+```text
+29   LEARN   CRC, relationships, LLD method, SOLID with time to think
+102  APPLY   same skill, 30–45 min, observed, narrated, one trade-off deep
+```
 
-**STEP-BY-STEP EXPLANATION**
+No artificial “Timed OOP Design Kata” product. The artifact is a timed sketch, API list, and spoken trade-off — see the rehearsal card if you want a checklist file to commit.
+
+**30–45 MINUTE SCRIPT:**
 
 ```text
 1. Clarify actors, scale, must-have vs out-of-scope (5 min)
@@ -16370,12 +16573,15 @@ for q, a in cards:
 3. Sketch class diagram + public APIs (10 min)
 4. Walk one happy path + one failure path (10 min)
 5. Trade-off: inheritance vs composition OR sync vs async (5 min)
-6. Patterns ONLY if an axis of change appears (Strategy, Factory, Observer...)
+6. Patterns ONLY if an axis of change appears (Strategy, Factory, Observer…)
 ```
 
-**Anti-patterns:** Singleton everywhere; deep inheritance for convenience; designing the database schema before the domain API.
+**ANTI-PATTERNS UNDER THE CLOCK:**
 
-**SMALL WORKING EXAMPLE**
+- Singleton everywhere  
+- Deep inheritance for convenience  
+- Designing the database schema before the domain API  
+- Building a working multi-file product instead of a design conversation  
 
 ```python playground=cs-phase-102-parking-lot-sketch
 # Tiny parking-lot LLD sketch — entities and APIs, not a full app.
@@ -16408,44 +16614,56 @@ print("parked at", lot.park("car-9", "M"))
 print("no medium left?", lot.park("car-10", "M"))
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+Swap nouns for your capstone if that helps: `Spot` → `Resource`, `park` → `approve_loan`, same discipline — entities, APIs, failure modes, one trade-off.
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | 2-minute trade-off story: composition vs inheritance for one domain |
-| Medium | 40-minute LLD: parking lot OR elevator OR library; record yourself |
-| Hard | Add concurrency: two threads call `park` — what breaks, how do you fix it? |
+| Easy | 2-minute trade-off story: composition vs inheritance for one domain you already built |
+| Medium | 40-minute LLD: parking lot **or** elevator **or** your capstone domain; record yourself; keep notes only (rehearsal card) |
+| Hard | Add concurrency: two threads call `park` — what breaks, how do you fix it? Speak locks vs queues without implementing a product |
 
-**WHY THE NEXT TOPIC IS NEEDED - Ambiguous large systems:** LLD has classes you can name. System design removes the bounding box: scale, APIs, and bottlenecks under ambiguity. Phase 103.
+**WHAT THIS UNLOCKS NEXT:**
 
----
-
-> **Phase 102 complete?** [Continue to Phase 103](#phase-103)
+LLD still has classes you can name. System design removes the bounding box: scale, APIs, and bottlenecks under ambiguity while someone watches. Phase 103 is the **live interview application** of Phase 88’s process — not a re-teach of Phases 81–87.
 
 ---
 
+> **Phase 102 complete?** [LLD rehearsal card](../guides/Projects.md#cs-phase-102-project) · [Continue to Phase 103](#phase-103)
 
+---
 
 # PHASE 103 - System Design Interviews
 
 **Track:** Ship & Hire
 
-**WHAT YOU WILL BE ABLE TO DO:** Run a 45-minute system design interview without notes - scope requirements, estimate, sketch a simple design, walk bottlenecks, and name trade-offs and ops.
+**WHAT YOU WILL BE ABLE TO DO:** Run a 45-minute system design interview without notes — scope requirements, estimate, sketch a simple design, walk bottlenecks, and name trade-offs and ops.
 
-**WHAT YOU SHOULD KNOW FIRST:** **Phase 88 taught system design as learning** (full walkthrough with the 81–87 toolbox). This phase is the **live interview application** of that process - timed, narrated, no new mechanisms. Your Story XIV capstone is a concrete example you can deepen under questions.
+**WHAT YOU SHOULD KNOW FIRST:** **Phase 88 taught system design as learning** (full walkthrough with the 81–87 toolbox). This phase is the **live interview application** of that process — timed, narrated, no new mechanisms. Your Story XIV capstone is a concrete example you can deepen under questions.
+
+**LEARNING RESOURCES:**
+
+- [System Design Interview: A Step-By-Step Guide](https://www.youtube.com/watch?v=i7twT3x5yv8)
+- [5 Tips for System Design Interviews (Gaurav Sen)](https://www.youtube.com/watch?v=CtmBGH8MkX4)
+- [How to Answer System Design Interview Questions (Exponent)](https://www.youtube.com/watch?v=L9TfZdODuFQ)
+- Draw where you’ll interview: [Excalidraw](https://excalidraw.com/)
+- Atlas only if stuck: [system-design-primer](https://github.com/donnemartin/system-design-primer)
 
 ## 103.1 Structure Ambiguity Live
 
-**WHY YOU ARE LEARNING THIS:** Phase 88 practiced the toolbox without interview theater. Coding has a right answer; system design interviews grade how you impose structure on an underspecified prompt *while someone watches*. Jumping to a final diagram in five minutes fails. Clarifying scale, estimating, then iterating bottlenecks is the skill - revisit Phase 81's process and Phase 88's walkthrough; do not re-teach Redis/Kafka/Raft here.
+Phase 88 practiced the toolbox without interview theater. Coding has a right answer; system design interviews grade how you **impose structure** on an underspecified prompt while someone watches. Jumping to a final diagram in five minutes fails. Clarifying scale, estimating, then iterating bottlenecks is the skill. Revisit Phase 81’s process and Phase 88’s walkthrough when rusty. Do **not** re-teach Redis, Kafka, or Raft here — those live in 83–86.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**PHASE 88 → 103 BOUNDARY:**
 
-- Rubric: [System Design Interview: A Step-By-Step Guide](https://www.youtube.com/watch?v=i7twT3x5yv8) *(Composio YouTube)*; [5 Tips for System Design Interviews (Gaurav Sen)](https://www.youtube.com/watch?v=CtmBGH8MkX4) *(Composio YouTube)*
-- Interview prep (not a second course): [How to Answer System Design Interview Questions (Exponent)](https://www.youtube.com/watch?v=L9TfZdODuFQ) *(Composio YouTube)*
-- Classic: [Intro to Architecture and Systems Design Interviews (Jackson Gabbard)](https://www.youtube.com/watch?v=ZgdS0EUmn70)
-- Draw where you'll interview: [Excalidraw](https://excalidraw.com/); atlas only if stuck: [system-design-primer](https://github.com/donnemartin/system-design-primer)
+```text
+88   LEARN   full walkthrough; toolbox from 81–87; learning capstone
+103  APPLY   45 min live; narrate; deepen YOUR capstone under follow-ups
+```
 
-**STEP-BY-STEP EXPLANATION**
+When the interviewer asks “how would this handle 10× traffic?”, answer with **your** Phase 97 load evidence and Phase 98 diagram as talking points — then generalize. That is interview application of Story XIV, not a new build.
+
+**45-MINUTE SCRIPT (PHASE 88 PROCESS, LIVE):**
 
 ```text
 1. Clarify functional + non-functional (latency, consistency, budget)
@@ -16457,9 +16675,7 @@ print("no medium left?", lot.park("car-10", "M"))
 7. Close with ops: metrics, alerts, deploy, top failure modes
 ```
 
-**Depth levels:** mid names a cache; senior names key/TTL/invalidation/cold-start; staff also covers migration and org cost. State what you *chose not* to build and why.
-
-**SMALL WORKING EXAMPLE**
+**DEPTH LEVELS:** mid names a cache; senior names key/TTL/invalidation/cold-start; staff also covers migration and org cost. State what you *chose not* to build and why — Phase 95 non-goals are excellent honesty.
 
 ```text playground=cs-phase-103-url-shortener-outline
 PROMPT: URL shortener
@@ -16488,15 +16704,25 @@ OPS:
   - alert: error rate > 1%, cache miss storm
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+Alternate prompts: chat, feed, rate limiter — **or** “design the next 10× of your Resource Exchange / expense splitter” using Phase 98 nouns. Same script; different nouns.
+
+**WHAT THIS PHASE IS NOT:**
+
+- Not Phases 81–87 again as a lecture.  
+- Not implementing Kafka for the portfolio “because interviews mention it.”  
+- Not skipping estimates to draw pretty boxes.
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
 | Easy | Estimate QPS + storage for a URL shortener on paper in 10 minutes |
-| Medium | Full 45-minute Excalidraw mock: chat OR feed OR rate limiter |
-| Hard | Same prompt twice: once CP-leaning, once AP-leaning; defend both |
+| Medium | Full 45-minute Excalidraw mock: chat **or** feed **or** rate limiter **or** your capstone at 10× |
+| Hard | Same prompt twice: once CP-leaning, once AP-leaning; defend both with Phase 85 vocabulary |
 
-**WHY THE NEXT TOPIC IS NEEDED - Your own story:** Technical rounds don't cover teamwork, conflict, or ownership. Phase 104 is behavioral interviews with structured stories.
+**WHAT THIS UNLOCKS NEXT:**
+
+Technical rounds do not cover teamwork, conflict, or ownership. Phase 104 is behavioral interviews with **STAR stories mined from real work and your capstone** — invented stories fail under follow-ups.
 
 ---
 
@@ -16504,29 +16730,31 @@ OPS:
 
 ---
 
-
-
 # PHASE 104 - Behavioral Interviews
 
 **Track:** Ship & Hire
 
-**WHAT YOU WILL BE ABLE TO DO:** Answer a behavioral question with a structured STAR story from *your* projects - situation, task, action, result - in about two minutes with a clear lesson.
+**WHAT YOU WILL BE ABLE TO DO:** Answer a behavioral question with a structured STAR story from *your* projects — situation, task, action, result — in about two minutes with a clear lesson.
 
-**WHAT YOU SHOULD KNOW FIRST:** Story XIV portfolio work and real team/school projects. Invented stories fail under follow-ups; mine your own timeline.
+**WHAT YOU SHOULD KNOW FIRST:** Story XIV portfolio work and real team/school/career projects. Invented stories fail under follow-ups; mine your own timeline. Phase 94 ADR muscle helps when the story is a technical decision.
+
+**LEARNING RESOURCES:**
+
+- [SOFTWARE ENGINEER Behavioral Interview Questions & ANSWERS (STAR)](https://www.youtube.com/watch?v=ktUHzfvCNs8)
+- [Cracking the Behavioral Interview for Software Developers](https://www.youtube.com/watch?v=ld0cvWnrVsU)
+- [Behavioral interviews – Tech Interview Handbook](https://www.techinterviewhandbook.org/behavioral-interview/)
+- [Behavioral questions list](https://www.techinterviewhandbook.org/behavioral-interview-questions/)
+- Your Phase 98 README + Phase 97 before/after numbers — primary story fuel
 
 ## 104.1 STAR From Your Real Work
 
-**WHY YOU ARE LEARNING THIS:** Behavioral rounds test judgment, collaboration, and ownership. Vague answers ("I worked hard with the team") score poorly. Concrete actions and measurable results score. Handbook guidance centres on STAR and prepared stories *(Composio fetch: techinterviewhandbook.org/behavioral-interview/)*.
+Behavioral rounds test judgment, collaboration, and ownership. Vague answers (“I worked hard with the team”) score poorly. Concrete actions and measurable results score. The structure is STAR; the content must be **yours** — capstone load cliffs, auth decisions, scope cuts from Phase 95, PR conflicts from Phase 72, maintenance choices from Story XIII.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**PREPARE 6–8 STORIES THAT COVER:**
 
-- STAR technique: [SOFTWARE ENGINEER Behavioral Interview Questions & ANSWERS (STAR)](https://www.youtube.com/watch?v=ktUHzfvCNs8) *(Composio YouTube)*; [STAR INTERVIEW QUESTIONS & ANSWERS](https://www.youtube.com/watch?v=uQEuo7woEEk) *(Composio YouTube)*
-- SWE-specific: [Cracking the Behavioral Interview for Software Developers](https://www.youtube.com/watch?v=ld0cvWnrVsU) *(Composio YouTube)*; [Top 10 Behavioral Software Engineering Interview Questions](https://www.youtube.com/watch?v=T25I2FQ9Mok) *(Composio YouTube)*
-- Written: [Behavioral interviews – Tech Interview Handbook](https://www.techinterviewhandbook.org/behavioral-interview/) *(Composio fetch verified)*; [Behavioral questions list](https://www.techinterviewhandbook.org/behavioral-interview-questions/) *(Composio DeepWiki)*
+conflict · failure · leadership without title · tight deadline · disagreement with a decision · mentoring · a technical trade-off you owned · (optional) customer/user impact
 
-**STEP-BY-STEP EXPLANATION**
-
-Prepare **6-8 stories** that cover: conflict, failure, leadership without title, tight deadline, disagreement with a decision, mentoring, and a technical trade-off you owned.
+**STAR SHAPE:**
 
 ```text
 S  Situation   context in 2 sentences (who, when, stakes)
@@ -16535,9 +16763,11 @@ A  Action      what YOU did (verbs); trade-offs; communication
 R  Result      measurable if possible + what you learned
 ```
 
-Keep Action longest. Practice cutting Situation. End with one sentence lesson so follow-ups have a hook.
+Keep Action longest. Practice cutting Situation. End with one sentence lesson so follow-ups have a hook. Capstone talking points that interviewers love: demo path, one decision with cost, Phase 97 p95 numbers, known limitations that match non-goals.
 
-**SMALL WORKING EXAMPLE**
+**INVENTED STORIES FAIL:**
+
+If you cannot answer “What would you do differently?” with a real alternative you considered, the story was fiction. Prefer an honest small failure from Phase 97 over a heroic fake.
 
 ```python playground=cs-phase-104-star-card
 # STAR card template — fill with YOUR project, then speak it in ≤2 min.
@@ -16566,15 +16796,19 @@ print("R:", story["R"])
 print("→", story["lesson"])
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+Rewrite every field with *your* Resource Exchange / expense / career nouns before you call the card done.
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | Write 6 STAR cards from real work; no fiction |
-| Medium | Record answers to conflict + failure + leadership prompts |
-| Hard | Partner interrupts with "what would you do differently?" after each |
+| Easy | Write 6 STAR cards from real work; no fiction; at least two from Story XIV |
+| Medium | Record answers to conflict + failure + leadership prompts (≤2 min each) |
+| Hard | Partner interrupts with “what would you do differently?” after each; revise cards |
 
-**WHY THE NEXT TOPIC IS NEEDED - Full loop:** Separate rounds hide stamina and context-switching cost. Phase 105 is a full mock: coding + design + behavioral back to back.
+**WHAT THIS UNLOCKS NEXT:**
+
+Separate rounds hide stamina and context-switching cost. Phase 105 is the dress rehearsal: coding + design + behavioral back to back, then an honest debrief that maps weaknesses back to owning phases — and closes this roadmap.
 
 ---
 
@@ -16582,43 +16816,69 @@ print("→", story["lesson"])
 
 ---
 
-
-
 # PHASE 105 - Final Mock Interview Loop
 
 **Track:** Ship & Hire
 
-**WHAT YOU WILL BE ABLE TO DO:** Complete a coding + design + behavioral loop back to back in one sitting, with a written debrief of what to fix before real interviews.
+**WHAT YOU WILL BE ABLE TO DO:** Complete a coding + design + behavioral loop back to back in one sitting, write a debrief that maps each weakness to an owning phase or drill, and leave this roadmap ready for real interviews — not for a Phase 106.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phases 99-104. Treat this as a dress rehearsal, not new content and not a new portfolio project. Hiring trends still reward demonstrated judgment under pressure alongside coding.
+**WHAT YOU SHOULD KNOW FIRST:** Phases 99–104. Treat this as a **dress rehearsal**, not new curriculum and not a new portfolio product. Your Phase 98 release is the example you defend; Phases 99–104 are the skills you stack under fatigue.
+
+**LEARNING RESOURCES:**
+
+- [Software Engineering Job Interview – Full Mock Interview (freeCodeCamp)](https://www.youtube.com/watch?v=1qw5ITr3k9E)
+- Book peers: [Pramp](https://www.pramp.com/) / [interviewing.io](https://interviewing.io/)
+- Loop + debrief log (schedule/rubrics/repair list — not software): [Projects.md — Phase 105 mock loop](../guides/Projects.md#cs-phase-105-project)
+- Portfolio as interview example: [Open Community Resource Exchange / main portfolio](../guides/Projects.md#cs-main-portfolio-project)
+- Return bridges when a card or round fails: [Phase Index](#phase-index) (Phase 1 onward by number)
 
 ## 105.1 Dress Rehearsal End to End
 
-**WHY YOU ARE LEARNING THIS:** Real loops stack fatigue. Candidates who ace a single practice round still fumble the third hour. The skill is recovery between rounds and honest debrief after - not another curriculum chapter.
+Real interview loops stack fatigue. Candidates who ace a single practice round still fumble the third hour. The skill is **recovery between rounds** and an honest debrief after — not another chapter of CS. There is no Phase 106. When this dress rehearsal is done, the curriculum body is complete; what remains is the job loop: apply, mock weekly, repair by owning phase, ship improvements to the portfolio when evidence demands it.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
-
-- Full mock energy: [Software Engineering Job Interview – Full Mock Interview (freeCodeCamp)](https://www.youtube.com/watch?v=1qw5ITr3k9E) *(Composio YouTube)*
-- Peer practice: [Pramp Series example](https://www.youtube.com/watch?v=uJpx7KjFNmY) *(Composio YouTube)*; book [Pramp](https://www.pramp.com/) / [interviewing.io](https://interviewing.io/)
-- Landscape: skills- and aptitude-forward hiring notes for 2026 *(Composio News)* — keep storytelling + fundamentals in the loop, not only syntax
-- Scholar: mock interview + reflection improves classroom transfer *(Composio Scholar: “Interview Preparation through Intentional Reflection...”)*
-
-**STEP-BY-STEP EXPLANATION**
-
-One-day schedule (adjust lengths to match target companies):
+**ONE-DAY SCHEDULE (ADJUST LENGTHS TO TARGET COMPANIES):**
 
 ```text
 09:00  Coding Medium (40 min) — Phase 99 process, record screen
 10:00  Break + water (10 min) — no scrolling solutions
 10:10  LLD or System Design (45 min) — Excalidraw / shared doc
+       (pick 102 or 103 based on the role; do the other later in the week)
 11:00  Break (10 min)
-11:10  Behavioral (30 min) — 3 STAR prompts
-11:45  DEBRIEF (30 min) — write scores before watching the recording
+11:10  Behavioral (30 min) — 3 STAR prompts from your Phase 104 deck
+11:45  DEBRIEF (30–45 min) — write scores BEFORE watching the recording
 ```
 
-**Debrief rubric (1-5 each):** clarify, approach, correctness, tests, communication, trade-offs, recovery after mistakes. Pick **one** coding fix, **one** design fix, **one** story fix for the next week - not twenty.
+Half-day option if you cannot block a morning: coding + one design **or** behavioral, full debrief — still counts as a rehearsal, then fill the missing round within three days.
 
-**SMALL WORKING EXAMPLE**
+**BETWEEN-ROUND RECOVERY:**
+
+- Stand, water, bathroom — no Twitter, no solution tabs  
+- One sentence intention for the next round (“I will estimate before boxes”)  
+- If the coding round went badly, do **not** rewrite it during the break; park it for debrief  
+
+**DEBRIEF RUBRIC (1–5 EACH) — WRITE BEFORE THE RECORDING:**
+
+| Round | Axes |
+| ----- | ---- |
+| Coding | clarify · approach · correctness · tests · communication · trade-offs · recovery after mistakes |
+| Design (LLD or SD) | scope · estimates · depth · ops / failure modes · trade-off clarity |
+| Behavioral | specificity · your actions · measurable result · lesson |
+
+Pick **one** coding fix, **one** design fix, **one** story fix for the next week — not twenty. Ambition without prioritization is how rehearsals become anxiety.
+
+**WEAKNESS → OWNING-PHASE REPAIR LIST:**
+
+| Symptom in the mock | Repair target |
+| ------------------- | ------------- |
+| Froze / silent stretch | Phase 99 recovery script; re-record clarify+approach only |
+| Wrong pattern / overtime | Phase 100 journal; drill that bucket timed |
+| Blank on OS/HTTP/DB | Phase 101 card → owning phase number same day |
+| Pattern soup / no API | Phase 102 timed sketch (rehearsal card) |
+| Skipped estimates / jumped to Kafka | Phase 103 script; reopen 81/88 process only |
+| Vague “we” stories | Phase 104 STAR rewrite from real capstone/career |
+| Stamina collapse in round 3 | Another Phase 105 half-loop within a week |
+
+This is the same loop Phase 101 taught for cards, now applied to the whole interview surface.
 
 ```python playground=cs-phase-105-debrief
 # Post-mock debrief — fill immediately after the loop.
@@ -16627,6 +16887,11 @@ debrief = {
     "coding": {"clarify": 4, "approach": 3, "tests": 2, "comms": 4},
     "design": {"scope": 4, "estimates": 2, "depth": 3, "ops": 1},
     "behavioral": {"specificity": 3, "actions": 4, "results": 2},
+    "repair_by_phase": [
+        "101: re-drill CAP card → Phase 85",
+        "100: sliding_window self-test before 'done'",
+        "104: quantify STAR results with Phase 97 p95",
+    ],
     "next_week_only": [
         "always self-test before saying done",
         "speak estimates before drawing boxes",
@@ -16640,26 +16905,48 @@ def avg(d: dict) -> float:
 print("coding", round(avg(debrief["coding"]), 1))
 print("design", round(avg(debrief["design"]), 1))
 print("behavioral", round(avg(debrief["behavioral"]), 1))
+print("repair:")
+for item in debrief["repair_by_phase"]:
+    print(" *", item)
 print("focus:")
 for item in debrief["next_week_only"]:
     print(" *", item)
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**USE THE PORTFOLIO AS EVIDENCE, NOT A NEW BUILD:**
+
+In design and behavioral rounds, point at the live URL, the 30s demo, the before/after load line, and one decision with cost. Do **not** start a “timed interview harness” app. The rehearsal card is a schedule + rubrics + repair list you can keep in Markdown.
+
+**COURSE CLOSURE — WHAT COMPLETION MEANS:**
+
+You have walked Phases 1–105: foundations → systems → design → maintenance → a shipped capstone → interview readiness. Story XV’s job was never to teach a new field; it was to prove you can **retrieve and communicate** under pressure. Celebrate that. Then:
+
+1. Keep a weekly mock habit (even half-loops).  
+2. Repair by owning phase number — the Phase Index is your map back to Phase 1 bridges.  
+3. Treat the portfolio as living proof: update README/evidence when you harden further; do not invent interview-only products.  
+4. Apply to roles; use real loops as the next practice surface.  
+
+There is **no Phase 106** in this roadmap. The “next topic” is the job market and deliberate practice — not another curriculum chapter.
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | Half-loop: coding + one behavioral; full debrief |
-| Medium | Full three-round loop with a peer interviewer |
-| Hard | Two full loops in one week; compare debriefs — scores should rise |
+| Easy | Half-loop: coding + one behavioral; full debrief with repair-by-phase list |
+| Medium | Full three-round loop with a peer interviewer; fill the Phase 105 rehearsal log |
+| Hard | Two full loops in one week; compare debriefs — scores should rise; no new product features |
 
-**WHY THE NEXT TOPIC IS NEEDED - You're done with the CS path body:** Return to the [phase index](#phase-index), ship remaining Projects.md artifacts, and schedule real interviews. Revisit weak phases by number, not by rereading everything.
+**WHAT COMES NEXT:**
+
+This roadmap’s teaching body ends here. You are not missing a secret advanced story after 105. Return to the [Phase Index](#phase-index) when a weakness needs depth; keep [the main portfolio](../guides/Projects.md#cs-main-portfolio-project) as the artifact you defend; schedule real interviews and keep the mock → debrief → owning-phase repair loop alive. End of the CS path — beginning of professional practice.
+
+---
+
+> **Phase 105 complete?** [Mock loop + debrief log](../guides/Projects.md#cs-phase-105-project) · [Main portfolio (interview example)](../guides/Projects.md#cs-main-portfolio-project) · [Return to the phase index](#phase-index)
 
 ---
 
-> **Phase 105 complete?** [Build the complete CS portfolio project](../guides/Projects.md#cs-main-portfolio-project) · [Return to the phase index](#phase-index)
-
----
+<a id="appendix-a-suggested-path-splits"></a>
 
 ## Appendix A - Suggested Path Splits
 
@@ -16711,6 +16998,8 @@ Phases 1 through 105, in order. Do not skip the bridges - the "WHY THE NEXT TOPI
 Finish 23-25 and 30 (pillars + Python idioms) -> **Phase 31** -> return for 26-29 and 75 before **Phase 48** revision
 
 ---
+
+<a id="appendix-b-resource-index-youtube-github-interactive-sites"></a>
 
 ## Appendix B - Resource Index (YouTube + GitHub + Interactive Sites)
 

@@ -12,3 +12,16 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# Local scratch / backups (should not be committed)
+*.bak
+_audit*.txt
+scripts/_recovered_writes/
+scripts/_hist_out.txt
+scripts/_rebuild_out.txt
+scripts/_splice_*
+scripts/_story_*
+scripts/_fix_*
+scripts/_rebuild_*
+scripts/_odoo_gen/_depth_report.json
+scripts/_odoo_gen/_phase_stats.json

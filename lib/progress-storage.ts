@@ -94,7 +94,7 @@ function asProgress(value: unknown): LearningProgress | null {
   const record = value as Partial<LearningProgress>;
   if (![2, 3, 4].includes(record.version as number) || !record.courses || typeof record.courses !== "object") return null;
   const progress: LearningProgress = {
-    version: record.version,
+    version: record.version as LearningProgress["version"],
     activePath: typeof record.activePath === "string" ? record.activePath : undefined,
     courses: record.courses as LearningProgress["courses"],
     legacyIds: Array.isArray(record.legacyIds) ? record.legacyIds.filter((item): item is string => typeof item === "string") : undefined,

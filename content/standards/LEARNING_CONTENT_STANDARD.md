@@ -214,7 +214,7 @@ Odoo must use **this same standard** (hierarchy + dynamic semantic moves + pract
 | CS Stories IV–VII | No mass rewrite for heading cosmetics; renderer flow hides generic skeleton; fix bridges when a continuity defect is approved |
 | CS Stories VIII–XV | **Author against this amended standard from the start** (contextual headings + bridges; no identical skeleton) |
 | Other CS stories (I–III, legacy labels) | Valid; modernize only when that story is scheduled |
-| ODOO.md | Same standard later; own Course Profile; no CS skeleton copy |
+| ODOO.md | Author against this standard + [odoo Course Profile](./course-profiles/odoo.md); 19-story / 95-phase curriculum; no CS skeleton copy |
 | Other roadmaps | Inherit when next edited; no mass rewrite required by this freeze |
 
 Changing presentation rules again requires an explicit product decision — not a drive-by template tweak mid-story.

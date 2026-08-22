@@ -884,44 +884,51 @@ Continue only when the project still works and the working tree is clean.
 > **PROJECT NAVIGATION:** [REVIEW CS PHASE 30](../roadmaps/CS.md#phase-30) | [BUILD THE CS OOP-BLOCK PORTFOLIO PROJECT](#oop-main-portfolio-project) | [CONTINUE TO CS PHASE 102](../roadmaps/CS.md#phase-102)
 
 <a id="cs-phase-102-project"></a>
-### CS PHASE 102 MINI-PROJECT
+### CS PHASE 102 REHEARSAL CARD
 
-#### PROJECT: TIMED OOP DESIGN KATA
+#### ARTIFACT: TIMED LLD REHEARSAL NOTES (NOT A PRODUCT)
 
 #### SPECIFICATION
 
-Build **Timed OOP Design Kata** as a focused exercise for **Interviews**. Keep the data and interface small enough to finish, but implement the following behavior:
+Produce a **timed low-level design rehearsal artifact** for Phase 102. This is **interview notes / sketch / recording checklist** — not a new portfolio app and not an artificial “OOP kata product.”
 
-- Solve a timed object-design change, write tests, and answer follow-up questions about responsibilities, patterns, and alternatives.
-- Give the user one clear main action and keep all other features secondary.
-- Use Interviews in the design and make that use visible in the code or interface.
-- Keep the working data after restart when persistence is relevant.
-- Handle empty input, invalid input, and the normal user journey without crashing.
+Choose **one** domain for the rehearsal:
+
+- Classic prompt: parking lot, elevator, or library
+- **Or** your Story XIV capstone domain (Resource Exchange / expense splitter nouns) as talking practice
+
+Your artifact must include:
+
+- Timer plan for a 30–45 minute LLD (clarify → entities → APIs → happy/failure path → one trade-off)
+- Entity / class sketch (ASCII, Excalidraw export, or short Markdown)
+- Public API list (method signatures in words is enough)
+- One happy path and one failure path spoken aloud (optional recording link)
+- One real trade-off (composition vs inheritance, or sync vs async) with a cost
+- Explicit note: **do not** implement a multi-file product, persistence layer, or UI for this card
+
+Optional: keep the main portfolio as the **example** you mention in follow-ups — do not add Phase-102 features to it.
 
 #### TECH STACK
 
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; add pytest only when the phase introduces testing
+- Any editor; Markdown or plain text is enough
+- Optional: tiny Python sketch matching the CS Phase 102 playground — still not a shippable app
 
 #### BUILD IT STEP BY STEP
 
-1. Create `timed-oop-design-kata` with `src`, `tests`, and a small `main.py` entry point; create a Python virtual environment.
-2. Solve a timed object-design change, write tests, and answer follow-up questions about responsibilities, patterns, and alternatives.
-3. Use Interviews in the design and make that use visible in the code or interface.
-4. Keep the working data after restart when persistence is relevant.
-5. Handle empty input, invalid input, and the normal user journey without crashing.
-6. Add one normal example and one edge or failure example specifically for **Interviews**.
-7. Run the project with `python -m src.main`, then run `pytest`; both must finish without errors.
+1. Create `cs/lld-rehearsal-notes/` (or `LLD_REHEARSAL.md` in your notes folder).
+2. Run one timed 30–45 minute LLD on the chosen domain; write the sketch and APIs as you go.
+3. Record (or self-check) the spoken trade-off and failure path.
+4. Link the main portfolio only as an interview example if useful: [Open Community Resource Exchange](#cs-main-portfolio-project).
+5. Stop when the notes prove you can design under a clock — do **not** start a new product.
 
 ### Git Checkpoint
 
-You have completed **TIMED OOP DESIGN KATA**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+You have completed the **TIMED LLD REHEARSAL NOTES**. From the portfolio or notes repository root, save only this rehearsal artifact:
 
 ```bash
 git status
-git add -- oop/timed-oop-design-kata
-git commit -m "feat(timed-oop-design-kata): complete timed oop design kata"
+git add -- cs/lld-rehearsal-notes
+git commit -m "docs(lld-rehearsal-notes): record Phase 102 timed LLD sketch"
 ```
 
 Verify the checkpoint:
@@ -931,9 +938,9 @@ git log -1 --oneline
 git status
 ```
 
-Continue only when the project still works and the working tree is clean.
+Continue only when the notes are saved and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 102](../roadmaps/CS.md#phase-102) | [CONTINUE TO CS PHASE 34](../roadmaps/CS.md#phase-34)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 102](../roadmaps/CS.md#phase-102) | [MAIN PORTFOLIO (INTERVIEW EXAMPLE)](#cs-main-portfolio-project) | [CONTINUE TO CS PHASE 103](../roadmaps/CS.md#phase-103)
 
 <a id="oop-main-portfolio-project"></a>
 <a id="cs-phase-34-project"></a>
@@ -1823,43 +1830,55 @@ Continue only when the project still works and the working tree is clean.
 <a id="cs-phase-95-project"></a>
 ### CS PHASE 95 MINI-PROJECT
 
-#### PROJECT: INTEGRATED SYSTEMS CAPSTONE
+#### PROJECT: CAPSTONE MVP PLAN (PLANNING ONLY)
 
 #### SPECIFICATION
 
-Build **Integrated Systems Capstone** as a focused exercise for **Projects**. Keep the data and interface small enough to finish, but implement the following behavior:
+Produce a **one-page planning deliverable** for the capstone you will ship through Phases 96–98. Do **not** implement API, auth, cache, worker, CI, or load tests in this card — those belong to later phases.
 
-- Combine a tested API, relational database, authentication, cache, worker, metrics, and recovery check into one small system.
-- Give the user one clear main action and keep all other features secondary.
-- Use Projects in the design and make that use visible in the code or interface.
-- Keep the working data after restart when persistence is relevant.
-- Handle empty input, invalid input, and the normal user journey without crashing.
+Choose **one** coherent product and keep its nouns through 98:
+
+- **Preferred:** [Open Community Resource Exchange](#cs-main-portfolio-project) (if you have been building it)
+- **Alternate scaffold:** a small multi-user app (for example an expense splitter) **or** a scoped Integrated Systems Capstone mini — still planning-only here
+
+Your one-pager must include:
+
+- Problem statement (who hurts, what improves)
+- MVP musts (3–5 user-visible capabilities)
+- Non-goals (≥5 temptations refused for v1)
+- Users & auth sketch (roles only — no implementation)
+- Data nouns / table sketch (names only)
+- Architecture boxes: client / API / DB (+ optional queue marked *later*)
+- Top 3 risks with mitigation *ideas*
+- Empty trade-off log ready for decisions in 96–97
+- Done-when checks a stranger could run after Phase 96
+- Ownership handoff: what 96 builds, what 97 hardens, what 98 packages
 
 #### TECH STACK
 
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; use SQLite only for database projects
+- Any editor; Markdown or plain text is enough
+- Optional: a tiny Python dict scaffold (see CS Phase 95 playground) — still no production features
 
 #### BUILD IT STEP BY STEP
 
-1. Create `integrated-systems-capstone` with `src`, `tests`, and `examples` folders; use a Python virtual environment.
-2. Combine a tested API, relational database, authentication, cache, worker, metrics, and recovery check into one small system.
-3. Use Projects in the design and make that use visible in the code or interface.
-4. Keep the working data after restart when persistence is relevant.
-5. Handle empty input, invalid input, and the normal user journey without crashing.
-6. Add one normal example and one edge or failure example specifically for **Projects**.
-7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
+1. Create `cs/capstone-mvp-plan/` (or a `PLAN.md` at the root of your chosen portfolio repo).
+2. Fill every planning field above for **one** product only.
+3. Link the preferred main portfolio card if that is your path: [Open Community Resource Exchange](#cs-main-portfolio-project).
+4. Explicitly list auth, CI, deploy, cache, worker, and load tests as **owned by Phases 96–97**, not this card.
+5. Peer-check (or self-check): mark any line that sounds like an implementation task and move it to the handoff section.
+6. Stop when the plan is honest and finishable — do not start coding the walking skeleton until Phase 96.
 
 ### Git Checkpoint
 
-You have completed **INTEGRATED SYSTEMS CAPSTONE**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+You have completed the **CAPSTONE MVP PLAN**. From the portfolio repository root, review and save only this planning artifact:
 
 ```bash
 git status
-git add -- cs/integrated-systems-capstone
-git commit -m "feat(integrated-systems-capstone): complete integrated systems capstone"
+git add -- cs/capstone-mvp-plan
+git commit -m "docs(capstone-mvp-plan): record Phase 95 MVP scope and non-goals"
 ```
+
+If the plan lives inside `open-community-resource-exchange` as `PLAN.md`, stage that path instead.
 
 Verify the checkpoint:
 
@@ -1868,49 +1887,51 @@ git log -1 --oneline
 git status
 ```
 
-Continue only when the project still works and the working tree is clean.
+Continue only when the plan is saved and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 95](../roadmaps/CS.md#phase-95) | [CONTINUE TO CS PHASE 105](../roadmaps/CS.md#phase-105)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 95](../roadmaps/CS.md#phase-95) | [CONTINUE TO CS PHASE 96](../roadmaps/CS.md#phase-96) | [MAIN PORTFOLIO (BUILD/HARDEN/RELEASE IN 96–98)](#cs-main-portfolio-project)
 
 <a id="cs-phase-105-project"></a>
-### CS PHASE 105 MINI-PROJECT
+### CS PHASE 105 REHEARSAL CARD
 
-#### PROJECT: TIMED INTERVIEW HARNESS
+#### ARTIFACT: MOCK INTERVIEW LOOP + DEBRIEF LOG (NOT SOFTWARE)
 
 #### SPECIFICATION
 
-Build **Timed Interview Harness** as a focused exercise for **Interview Mastery**. Keep the data and interface small enough to finish, but implement the following behavior:
+Produce a **mock interview loop + debrief log** for Phase 105. This is schedule, rubrics, and a weakness→owning-phase repair list — **not** a timed-interview-harness app and not a new portfolio feature.
 
-- Create a timer-driven harness that serves coding, debugging, and system-design prompts and runs prepared correctness checks afterward.
-- Give the user one clear main action and keep all other features secondary.
-- Use Interview Mastery in the design and make that use visible in the code or interface.
-- Keep the working data after restart when persistence is relevant.
-- Handle empty input, invalid input, and the normal user journey without crashing.
+Your log must include:
+
+- Scheduled loop (coding 40m + LLD or system design 45m + behavioral 30m + debrief 30–45m), or a documented half-loop with a date to finish the missing round
+- Self-scores (1–5) on coding / design / behavioral axes **written before** watching any recording
+- Exactly **three** next-week fixes (one coding, one design, one story) — not a laundry list
+- Weakness → owning-phase repair list (e.g. blank CAP card → Phase 85; skipped estimates → Phase 103 script)
+- Optional peer/interviewer name and date
+- Explicit note: use [main portfolio](#cs-main-portfolio-project) as the **interview example** you defend — do not build harness software
 
 #### TECH STACK
 
-- Python 3.12
-- VSCodium or any text editor
-- Python standard library; use SQLite only for database projects
+- Any editor; Markdown or plain text is enough
+- Timer (phone/watch); Excalidraw or paper for design rounds
+- Optional: tiny Python debrief dict matching the CS Phase 105 playground — still not an app
 
 #### BUILD IT STEP BY STEP
 
-1. Create `timed-interview-harness` with `src`, `tests`, and `examples` folders; use a Python virtual environment.
-2. Create a timer-driven harness that serves coding, debugging, and system-design prompts and runs prepared correctness checks afterward.
-3. Use Interview Mastery in the design and make that use visible in the code or interface.
-4. Keep the working data after restart when persistence is relevant.
-5. Handle empty input, invalid input, and the normal user journey without crashing.
-6. Add one normal example and one edge or failure example specifically for **Interview Mastery**.
-7. Run the examples from the command line and run `pytest`; compare the observed output with the known answers.
+1. Create `cs/mock-interview-debrief/` (or `MOCK_DEBRIEF.md`).
+2. Run the dress-rehearsal loop (or half-loop) from CS Phase 105; record screen if possible.
+3. Fill scores and the three next-week fixes **before** reviewing the recording.
+4. Map each weakness to an owning phase number or Phase 99–104 drill.
+5. Link the portfolio only as evidence you discuss: [Open Community Resource Exchange](#cs-main-portfolio-project).
+6. Stop when the log is honest — do **not** implement a prompt-serving harness.
 
 ### Git Checkpoint
 
-You have completed **TIMED INTERVIEW HARNESS**. Run the card's final command, test, or output check. From the portfolio repository root, review and save only this project's folder:
+You have completed the **MOCK INTERVIEW LOOP + DEBRIEF LOG**. From the portfolio or notes repository root, save only this rehearsal artifact:
 
 ```bash
 git status
-git add -- cs/timed-interview-harness
-git commit -m "feat(timed-interview-harness): complete timed interview harness"
+git add -- cs/mock-interview-debrief
+git commit -m "docs(mock-interview-debrief): record Phase 105 dress rehearsal and repairs"
 ```
 
 Verify the checkpoint:
@@ -1920,9 +1941,9 @@ git log -1 --oneline
 git status
 ```
 
-Continue only when the project still works and the working tree is clean.
+Continue only when the log is saved and the working tree is clean.
 
-> **PROJECT NAVIGATION:** [REVIEW CS PHASE 105](../roadmaps/CS.md#phase-105) | [BUILD THE CS MAIN PORTFOLIO PROJECT](#cs-main-portfolio-project)
+> **PROJECT NAVIGATION:** [REVIEW CS PHASE 105](../roadmaps/CS.md#phase-105) | [MAIN PORTFOLIO (INTERVIEW EXAMPLE)](#cs-main-portfolio-project) | [RETURN TO CS PHASE INDEX](../roadmaps/CS.md#phase-index)
 
 <a id="cs-oop-block-portfolio-project"></a>
 ## CS PHASES 21-30 PORTFOLIO PROJECT
@@ -2130,7 +2151,7 @@ A full-stack service where neighbors list useful items, request a loan, approve 
 
 No paid API, commercial license, or paid cloud resource is required. Use only generated, public, or permissioned data.
 
-> **HOW STORIES XIV AND XV WORK HERE:** Phases 95-98 (Grand Capstone) are a required capstone-completion step: apply that roadmap's final engineering, integration, automation, migration, quality, or portfolio work. Phases 99-105 (Interview & Job Readiness) do not add another product feature. They are post-build interview and presentation practice using the completed project. The software is functionally complete after Phase 98; do Phases 99-105 to complete the career-preparation roadmap.
+> **HOW STORIES XIV AND XV WORK HERE:** Phases 95–98 (Grand Capstone) complete this product: **95** locks an honest MVP plan (see [Phase 95 planning card](#cs-phase-95-project)); **96** ships the walking skeleton to a public URL; **97** load-tests, fails, fixes, and proves with before/after evidence; **98** packages hiring-grade README, diagram, demo, limitations, and license. Phases 99–105 (Interview & Job Readiness) do not add another product feature — they are post-build interview practice using the completed project. The software is functionally complete after Phase 98; do Phases 99–105 to complete the career-preparation roadmap.
 >
 > *Numbering note: this project was written against the earlier 43-phase outline. It has been updated to the current phase numbers below; the underlying build steps are unchanged.*
 
@@ -2154,7 +2175,7 @@ No paid API, commercial license, or paid cloud resource is required. Use only ge
 16. **Phases 72, 74, 77 - Git & Collaboration, Testing, CI/CD:** Create unit, integration, contract, and browser tests plus a free GitHub Actions CI workflow.
 17. **Phases 81, 85, 88 - System Design Foundations, Distributed Systems, Complete System Design:** Add caching, background work, health endpoints, metrics, and a load test; document the next scaling bottleneck.
 18. **Phases 85-86 - Distributed Systems & Coordination/Consensus:** Make notifications idempotent, use an outbox table, simulate retry and duplication, and explain consistency choices.
-19. **PHASES 95-98 - Grand Capstone (REQUIRED CAPSTONE-COMPLETION STEP):** Polish one end-to-end workflow, seed demo accounts, choose an open-source license, and make the public demo safe.
+19. **PHASES 95-98 - Grand Capstone (REQUIRED CAPSTONE-COMPLETION STEP):** **95** — one-page MVP/non-goals/done-when plan (planning card). **96** — walking skeleton to multi-user public URL. **97** — load/fail/fix/prove with evidence. **98** — polish demo workflow, documentation, license, and public portfolio assets.
 20. **PHASES 99-105 - Interview & Job Readiness (POST-BUILD PRACTICE; NO NEW PRODUCT FEATURE):** Rehearse a timed coding change and a system-design explanation using this project as the concrete example.
 
 #### GIT MILESTONE CHECKPOINTS
@@ -5916,7 +5937,7 @@ Continue only when the completed milestone works and the working tree is clean.
 
 ## Odoo Engineering
 
-Study this roadmap first: [ODOO.md](../roadmaps/ODOO.md). Build each mini-project after its phase, then build the main portfolio project after Phase 20.
+Study this roadmap first: [ODOO.md](../roadmaps/ODOO.md). Build story/phase projects as you go; ship the main portfolio and capstone work in Story XIX (Phase 95). Existing numbered Odoo mini-project cards below still map to the older 20-phase labels — treat them as skill drills aligned to the nearest topic until the project catalog is remapped to the 95-phase curriculum.
 
 <a id="odoo-phase-1-project"></a>
 ### ODOO PHASE 1 MINI-PROJECT

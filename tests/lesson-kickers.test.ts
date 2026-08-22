@@ -2,25 +2,60 @@ import { describe, expect, it } from "vitest";
 import { looksLikeUnrecognizedSectionLabel, parseKicker } from "../lib/lesson-kickers";
 
 describe("lesson kickers", () => {
-  it("promotes legacy Phase 1 labels", () => {
-    expect(parseKicker("WHY YOU ARE LEARNING THIS:")?.title).toBe("Why You Need to Learn This");
-    expect(parseKicker("THE PROBLEM THIS SOLVES")?.title).toBe("The Problem");
-    expect(parseKicker("STEP-BY-STEP EXPLANATION")?.title).toBe("How the Solution Works");
+  it("promotes legacy Phase 1 labels with flow visibility for teaching chrome", () => {
+    expect(parseKicker("WHY YOU ARE LEARNING THIS:")).toMatchObject({
+      title: "Why This Matters",
+      visibility: "flow",
+    });
+    expect(parseKicker("THE PROBLEM THIS SOLVES")).toMatchObject({
+      title: "The Problem",
+      visibility: "flow",
+    });
+    expect(parseKicker("STEP-BY-STEP EXPLANATION")).toMatchObject({
+      title: "How It Works",
+      visibility: "flow",
+    });
   });
 
-  it("promotes lean canonical labels (Story IV–V style)", () => {
-    expect(parseKicker("Why This Matters:")?.title).toBe("Why This Matters");
-    expect(parseKicker("WHY THIS MATTERS")?.title).toBe("Why This Matters");
-    expect(parseKicker("The Problem:")?.title).toBe("The Problem");
-    expect(parseKicker("How It Works:")?.title).toBe("How It Works");
-    expect(parseKicker("Visual Model")?.title).toBe("Visual Model");
-    expect(parseKicker("Example")?.title).toBe("Worked Example");
-    expect(parseKicker("WORKED EXAMPLE")?.title).toBe("Worked Example");
-    expect(parseKicker("Trade-offs")?.title).toBe("Trade-offs");
-    expect(parseKicker("Learning Resources")?.title).toBe("Learning Resources");
-    expect(parseKicker("Interview note:")?.title).toBe("Interview Note");
-    expect(parseKicker("What This Unlocks Next:")?.title).toBe("What This Unlocks Next");
-    expect(parseKicker("Practice")?.title).toBe("Practice Exercises");
+  it("keeps checklist teaching slots as flow (invisible template)", () => {
+    expect(parseKicker("Why This Matters:")?.visibility).toBe("flow");
+    expect(parseKicker("WHY THIS MATTERS")?.visibility).toBe("flow");
+    expect(parseKicker("The Problem:")?.visibility).toBe("flow");
+    expect(parseKicker("How It Works:")?.visibility).toBe("flow");
+    expect(parseKicker("Visual Model")?.visibility).toBe("flow");
+    expect(parseKicker("Example")?.visibility).toBe("flow");
+    expect(parseKicker("WORKED EXAMPLE")?.visibility).toBe("flow");
+    expect(parseKicker("Trade-offs")?.visibility).toBe("flow");
+    expect(parseKicker("Interview note:")?.visibility).toBe("flow");
+  });
+
+  it("keeps utility chrome as visible headings", () => {
+    expect(parseKicker("Learning Resources")).toMatchObject({
+      title: "Learning Resources",
+      visibility: "utility",
+    });
+    expect(parseKicker("Practice")).toMatchObject({
+      title: "Practice Exercises",
+      visibility: "utility",
+    });
+    expect(parseKicker("What This Unlocks Next:")).toMatchObject({
+      title: "What This Unlocks Next",
+      visibility: "utility",
+    });
+    expect(parseKicker("WHAT YOU SHOULD KNOW FIRST")).toMatchObject({
+      title: "Before You Start",
+      visibility: "utility",
+    });
+  });
+
+  it("promotes contextual ALL-CAPS journey titles as visible headings", () => {
+    expect(parseKicker("FROM THE SOCKET TO THE NETWORK:")).toMatchObject({
+      title: "From the socket to the network",
+      visibility: "heading",
+    });
+    expect(parseKicker("ONE PACKET, FOUR ENVELOPES")).toMatchObject({
+      visibility: "heading",
+    });
   });
 
   it("does not treat short bold phrases as kickers", () => {

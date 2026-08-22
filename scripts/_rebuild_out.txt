@@ -1,0 +1,7 @@
+﻿phase count 105
+Story VIII: chars=50003 SEE_IT=0 UNLOCKS=7
+Story IX: chars=41487 SEE_IT=0 UNLOCKS=11
+Story X: chars=55828 SEE_IT=0 UNLOCKS=10
+Story XI: chars=69302 SEE_IT=0 UNLOCKS=9
+Story XII chars 16649
+OK rebuild

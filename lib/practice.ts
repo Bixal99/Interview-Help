@@ -11,7 +11,9 @@ export function extractPractice(markdown: string): PracticeBlock | null {
   if (!heading || heading.index === undefined) return null;
   const start = heading.index;
   const rest = markdown.slice(start);
-  const endRel = rest.search(/\n\*\*WHY THE NEXT|\n---\s*\n|\n> \*\*Phase /i);
+  const endRel = rest.search(
+    /\n\*\*(?:WHAT THIS UNLOCKS NEXT|WHAT COMES NEXT|WHY THE NEXT TOPIC)|\n---\s*\n|\n> \*\*Phase /i,
+  );
   const raw = rest.slice(0, endRel < 0 ? rest.length : endRel).trim();
   const choices = [...raw.matchAll(/^\s*(?:[-*]\s*)?([A-D])[).]\s+(.+)$/gm)].map((match, index) => ({
     id: match[1].toLowerCase(),

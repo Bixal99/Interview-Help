@@ -1,0 +1,220 @@
+﻿hits 45
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/app/courses/%5Bcourse%5D/phase/%5Bphase%5D/page.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-128c000b
+  {'id': '3tnj.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905325}
+  file 3tnj.tsx 2527 1787067905.3253176
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/app/layout.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-14ef4edd
+  {'id': 'xI9u.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905856}
+  {'id': '6Cs1.tsx', 'timestamp': 1787068179678}
+  file xI9u.tsx 2447 1787067905.8563168
+  file 6Cs1.tsx 2385 1787068179.677998
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/ReadME.md
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-1a89e5a9
+  {'id': 'w801.md', 'timestamp': 1786058366059}
+  file w801.md 0 1786058366.0594132
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/tutorial-shell.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-1d38965b
+  {'id': 'gvqG.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905458}
+  file gvqG.tsx 1047 1787067905.4583158
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/app/courses/page.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-20e6f801
+  {'id': 'esPF.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905150}
+  {'id': 'tNe8.tsx', 'timestamp': 1787231724004}
+  file tNe8.tsx 1530 1787231724.0039966
+  file esPF.tsx 1249 1787067905.150319
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/project-chrome.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-2264e02e
+  {'id': 'Up3f.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905752}
+  file Up3f.tsx 2126 1787067905.7523177
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/app/paths/page.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-27816cf7
+  {'id': 'w1aE.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905325}
+  file w1aE.tsx 812 1787067905.3253176
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/landing/landing-loop.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-2c2d7b0a
+  {'id': 'Dbkd.tsx', 'timestamp': 1787231768624}
+  file Dbkd.tsx 2054 1787231768.6240551
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/app/globals.css
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-2f5cea09
+  {'id': 'fhOh.css', 'source': 'Undo Reject Diff', 'timestamp': 1787067904817}
+  {'id': 'dc1h.css', 'timestamp': 1787093080725}
+  {'id': 'vliU.css', 'timestamp': 1787099758474}
+  {'id': 'iw20.css', 'timestamp': 1787162955887}
+  {'id': 'SRmU.css', 'timestamp': 1787172705004}
+  {'id': 'QPTM.css', 'timestamp': 1787232331137}
+  file QPTM.css 147449 1787232331.1367013
+  file SRmU.css 145267 1787172705.0036206
+  file iw20.css 126657 1787162955.8867066
+  file vliU.css 34457 1787099758.4741416
+  file dc1h.css 23701 1787093080.724932
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/document-shell.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-421338de
+  {'id': '6Jdc.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067904817}
+  file 6Jdc.tsx 666 1787067904.8173175
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/DESIGN.md
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-45681f99
+  {'id': '9eYS.md', 'source': 'Undo Reject Diff', 'timestamp': 1787067904907}
+  {'id': 'qVZK.md', 'timestamp': 1787068179743}
+  file qVZK.md 2028 1787068179.7425115
+  file 9eYS.md 1640 1787067904.9073212
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/course-card.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-45cc62c
+  {'id': 'tkeW.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905856}
+  {'id': '012N.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787068111126}
+  file 012N.tsx 636 1787068111.1255548
+  file tkeW.tsx 636 1787067905.8563168
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/lib/course-catalog.ts
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-45f42f04
+  {'id': 'Thhj.ts', 'source': 'Undo Reject Diff', 'timestamp': 1787067905227}
+  {'id': 'mZj9.ts', 'source': 'Undo Reject Diff', 'timestamp': 1787068110942}
+  file mZj9.ts 7688 1787068110.941556
+  file Thhj.ts 7688 1787067905.2273185
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/landing/home.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-46c69445
+  {'id': 'kAuA.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787069497657}
+  file kAuA.tsx 11844 1787069497.6568315
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/app/search/page.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-4a9fd0cd
+  {'id': 'Zot6.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067904981}
+  file Zot6.tsx 711 1787067904.9813168
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/landing/footer.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-5126a9c9
+  {'id': 'Obnd.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787180154600}
+  {'id': 'k2bz.tsx', 'timestamp': 1787231784261}
+  file Obnd.tsx 4770 1787180154.6000776
+  file k2bz.tsx 3494 1787231784.2605152
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/checkpoint-control.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-60304744
+  {'id': 'h2LB.tsx', 'timestamp': 1787099758921}
+  file h2LB.tsx 7122 1787099758.9211428
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/tailwind.config.ts
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-60630e0b
+  {'id': 'jxpP.ts', 'source': 'Undo Reject Diff', 'timestamp': 1787067904457}
+  file jxpP.ts 698 1787067904.457447
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/progress-dashboard.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-633f3068
+  {'id': 'xsHf.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905856}
+  file xsHf.tsx 2945 1787067905.8563168
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/icons/app-icon.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-6990dde2
+  {'id': 'HzY0.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787068110942}
+  file HzY0.tsx 3745 1787068110.941556
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/code-block.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-7484c62f
+  {'id': 'RyPf.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905728}
+  {'id': '2uce.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787068111129}
+  {'id': 'utDl.tsx', 'timestamp': 1787162956049}
+  file utDl.tsx 4487 1787162956.0487027
+  file 2uce.tsx 2517 1787068111.1285546
+  file RyPf.tsx 2517 1787067905.7283168
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/search-experience.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\-7e29cbf
+  {'id': 'TWi5.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905856}
+  file TWi5.tsx 3077 1787067905.8563168
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/phase-checkpoint.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\1278f8fe
+  {'id': 'qKOn.tsx', 'timestamp': 1787258689283}
+  file qKOn.tsx 3108 1787258689.282929
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/app/not-found.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\1a0dc025
+  {'id': 'B2vI.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905152}
+  file B2vI.tsx 491 1787067905.15232
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/app-chrome.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\1aac04a
+  {'id': 'VU7W.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905852}
+  file VU7W.tsx 0 1787067905.852318
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/lesson-chrome.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\1dae08c1
+  {'id': 'B4BL.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905167}
+  file B4BL.tsx 1795 1787067905.1673198
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/next.config.ts
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\23d6aad0
+  {'id': '6Gsw.ts', 'timestamp': 1787068179859}
+  file 6Gsw.ts 312 1787068179.858509
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/theme-toggle.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\27ce0d3c
+  {'id': 'RMUA.tsx', 'timestamp': 1787068179405}
+  file RMUA.tsx 688 1787068179.4054692
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/course-home-actions.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\28091053
+  {'id': 'hC80.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905856}
+  file hC80.tsx 720 1787067905.8563168
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/site-footer.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\293eafb3
+  {'id': '74Vw.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067904817}
+  {'id': 'eIe8.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787068111126}
+  file 74Vw.tsx 767 1787067904.8173175
+  file eIe8.tsx 767 1787068111.1255548
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/PRODUCT.md
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\2a47276
+  {'id': '89Fg.md', 'source': 'Undo Reject Diff', 'timestamp': 1787067905590}
+  {'id': 'kB4A.md', 'timestamp': 1787068179817}
+  file kB4A.md 2659 1787068179.816522
+  file 89Fg.md 2507 1787067905.5903163
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/exercise-block.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\2b0adf7c
+  {'id': 'eIMF.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905231}
+  file eIMF.tsx 2761 1787067905.2313173
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/youtube-band.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\2b2a8083
+  {'id': 'EPVc.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905730}
+  {'id': 'yyUP.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787068111174}
+  file EPVc.tsx 2511 1787067905.7303166
+  file yyUP.tsx 2511 1787068111.1735559
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/app/projects/page.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\2ee12421
+  {'id': '0MBi.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905856}
+  file 0MBi.tsx 1518 1787067905.8563168
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/continue-strip.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\31b61496
+  {'id': 'wDAK.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905752}
+  file wDAK.tsx 891 1787067905.7523177
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/subject-bar.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\3455bc44
+  {'id': 'jhrV.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067904786}
+  file jhrV.tsx 1008 1787067904.7863173
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/tutorial-index.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\47331347
+  {'id': 'gg7q.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905730}
+  {'id': 'oLX2.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787068111218}
+  file gg7q.tsx 2524 1787067905.7303166
+  file oLX2.tsx 2524 1787068111.2175548
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/site-header.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\4a7113a5
+  {'id': '3e3z.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905728}
+  {'id': 'f32j.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787068111107}
+  {'id': 'J0PG.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787180154589}
+  file J0PG.tsx 3052 1787180154.589076
+  file 3e3z.tsx 2534 1787067905.7283168
+  file f32j.tsx 2534 1787068111.1065547
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/gate-banner.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\51dd00c0
+  {'id': 'rp34.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905731}
+  file rp34.tsx 676 1787067905.731325
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/app/courses/%5Bcourse%5D/page.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\6d077add
+  {'id': '9M76.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905856}
+  file 9M76.tsx 3063 1787067905.8563168
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/checkpoint-functions.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\70941efa
+  {'id': 'qSj1.tsx', 'timestamp': 1787099758842}
+  file qSj1.tsx 4625 1787099758.8421457
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/lib/icons.ts
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\71bbd7d
+  {'id': 'Dus2.ts', 'source': 'Undo Reject Diff', 'timestamp': 1787068110929}
+  file Dus2.ts 3828 1787068110.9285545
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/app/practice/page.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\740480
+  {'id': 'wECD.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905325}
+  file wECD.tsx 1001 1787067905.3253176
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/components/phase-checkpoint-art.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\746a2b94
+  {'id': 'kCZJ.tsx', 'timestamp': 1787093081131}
+  file kCZJ.tsx 19067 1787093081.1312585
+RES file:///c%3A/Users/msi/OneDrive/Desktop/Qatar/app/page.tsx
+DIR C:\Users\msi\AppData\Roaming\Cursor\User\History\7fd68988
+  {'id': 'Ycpd.tsx', 'source': 'Undo Reject Diff', 'timestamp': 1787067905856}
+  {'id': 'yhv8.tsx', 'timestamp': 1787068179571}
+  file yhv8.tsx 2625 1787068179.5714593
+  file Ycpd.tsx 2552 1787067905.8563168

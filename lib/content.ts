@@ -212,7 +212,9 @@ export function getLessonView(slug: string, phaseId: string, lessonSlug: string)
       codeExamples: lesson.codeExamples,
     },
     practice,
-    whatComesNext: isLastLesson && !phase.project ? whatComesNext : null,
+    // Show whenever the lesson authors a handoff — including mid-phase (61.1→61.2)
+    // and last lessons that also have a project (practice → handoff → project nav).
+    whatComesNext,
     isFirstLesson,
     isLastLesson,
     projectHref,
@@ -252,14 +254,9 @@ export function getProjectView(slug: string, phaseId: string) {
   const next = nextAfterProject(course, phaseId) ?? neighborsFor(pages, href).next;
   const phaseIndex = course.phases.findIndex((item) => item.id === phaseId);
   const nextPhase = phaseIndex >= 0 ? course.phases[phaseIndex + 1] : undefined;
-  const lastLesson = phase.lessons[phase.lessons.length - 1];
-  let whatComesNext = null;
-  if (lastLesson) {
-    const practice = extractPractice(lastLesson.markdown);
-    const sourcePath = lastLesson.sourcePath ?? phase.sourcePath ?? course.sourcePath;
-    const stripped = extractCompleteCta(withoutPractice(lastLesson.markdown, practice), sourcePath).markdown;
-    whatComesNext = extractWhatComesNext(stripped).whatComesNext;
-  }
+  // Narrative handoff lives on the last lesson (Practice → handoff → nav).
+  // Keep the project page free of a duplicate closer.
+  const whatComesNext = null;
   const projectMarkdown = extractProjectNav(phase.project.markdown);
   return {
     course: { slug: course.slug, shortName: course.shortName, sourcePath: "content/guides/Projects.md" },

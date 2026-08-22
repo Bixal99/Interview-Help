@@ -21,15 +21,17 @@ Journey questions differ from CS, for example:
 
 Exact phase count and titles belong in `ODOO.md`, not here.
 
-## Dominant semantic sections
+## Dominant teaching emphasis (authoring — not a UI form)
 
-| Topic type | Emphasize |
-| ---------- | --------- |
-| Concepts (ORM, registry, ACL) | WHY / PROBLEM / HOW IT WORKS / WORKED EXAMPLE |
-| XML views / inheritance | HOW IT WORKS + VISUAL MODEL (arch trees) + EXAMPLE |
-| Security | PROBLEM (AccessError) + HOW IT WORKS + PRACTICE scenarios |
-| Integrations / payments | TRADE-OFFS + idempotency / safety notes |
-| Portfolio / hire | PRACTICE as module deliverables, not LeetCode |
+Same invisible-template rule as the platform standard: checklist slots guide authors; learners see continuous Odoo teaching with selective contextual headings — not Why → Problem → How on every page.
+
+| Topic type | Emphasize in the *writing* |
+| ---------- | -------------------------- |
+| Concepts (ORM, registry, ACL) | Motivation + mechanism + worked example |
+| XML views / inheritance | Mechanism + arch-tree visuals + example |
+| Security | AccessError failure modes + mechanism + scenario practice |
+| Integrations / payments | Trade-offs + idempotency / safety notes |
+| Portfolio / hire | Practice as module deliverables, not LeetCode |
 
 ## Protected content
 
@@ -41,6 +43,10 @@ Exact phase count and titles belong in `ODOO.md`, not here.
 ## Practice / playground policy
 
 Use the platform practice catalog in the Learning Content Standard. Odoo-typical choices: configuration, debugging, written explanation, comparison, business scenario, architecture/design for module boundaries, and mini-projects when building a module teaches. Prefer TransactionCase-style tests over generic coding playgrounds.
+
+## Narrative closers
+
+Inherit the platform **Narrative closer** rule (Practice → visible handoff → navigation). Example shape later: model persistence without Views creates the need for Views — do not construct Odoo content in CS batches.
 
 ## Resource policy
 
@@ -54,4 +60,10 @@ Official Odoo docs, OCA examples, version-pinned tutorials. Avoid version-agnost
 
 ## Readiness confirmation
 
-The **frozen** platform standard + kicker renderer are course-agnostic. Odoo uses the same presentation and practice rules; this profile supplies ERP-specific teaching choices only — not CS curriculum structure.
+The **frozen** platform standard + kicker renderer are course-agnostic. Odoo inherits:
+
+- Markdown hierarchy (`#` / `##` / bold semantic moves)
+- Invisible-template / flow vs contextual vs utility visibility
+- Practice catalog and resource policy
+
+This profile supplies ERP-specific teaching choices only — not CS curriculum structure. **Do not construct Odoo content in this batch.**

@@ -217,9 +217,37 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYou
         }
         const kicker = parseKicker(label);
         if (kicker) {
-          if (kicker.title === "Visual Learning" || kicker.title === "What Comes Next") return null;
           const rest = bits.slice(1);
           const restText = tidyDashes(textContent(rest)).replace(/^[:\s]+/, "").trim();
+
+          // Checklist / generic teaching slots: keep the prose, hide the form chrome.
+          if (kicker.visibility === "flow") {
+            if (kicker.title === "Visual Learning") {
+              pendingVisual = !visualShown;
+              return null;
+            }
+            if (!restText) {
+              if (kicker.kind === "interview") pendingVisual = !visualShown;
+              return null;
+            }
+            if (kicker.kind === "interview") {
+              return (
+                <>
+                  {renderProse(rest)}
+                  {takeVisual()}
+                </>
+              );
+            }
+            const before = pendingVisual ? takeVisual() : null;
+            return (
+              <>
+                {before}
+                {renderProse(rest)}
+              </>
+            );
+          }
+
+          // Utility chrome + contextual journey titles: visible standalone headings.
           if (kicker.kind === "interview") {
             if (restText) {
               return (

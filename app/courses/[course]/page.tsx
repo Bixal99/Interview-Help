@@ -7,6 +7,7 @@ import { CourseWelcome } from "@/components/course-welcome";
 import { Pager } from "@/components/pager";
 import { courseCatalog } from "@/lib/course-catalog";
 import { getCourseHome } from "@/lib/content";
+import { lessonCountForNav, phaseCountWithProjects } from "@/lib/navigation";
 
 export function generateStaticParams() { return courseCatalog.map((course) => ({ course: course.slug })); }
 
@@ -21,17 +22,15 @@ export default async function CourseHomePage({ params }: { params: Promise<{ cou
   const { course: slug } = await params;
   const course = getCourseHome(slug);
   if (!course) notFound();
-  const phaseCount = course.nav.chapters.reduce(
-    (sum, chapter) => sum + chapter.phases.filter((phase) => phase.hasProject).length,
-    0,
-  );
+  const lessonCount = lessonCountForNav(course.nav);
+  const projectCount = phaseCountWithProjects(course.nav);
   return (
     <main id="main-content">
       <div className="ih-band px-4 py-6 sm:px-8 lg:px-12">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
           <h1 className="text-3xl font-bold uppercase tracking-wide sm:text-4xl lg:text-6xl">{course.shortName} Tutorial</h1>
           <div className="w-full max-w-md shrink-0 lg:w-[22rem]">
-            <CourseProgressBar slug={course.slug} phaseCount={phaseCount} variant="band" />
+            <CourseProgressBar slug={course.slug} lessonCount={lessonCount} projectCount={projectCount} variant="band" />
             <div className="mt-4">
               <Pager backHref="/courses" backLabel="Back" proceedHref={course.startHref} proceedLabel="Start" />
             </div>

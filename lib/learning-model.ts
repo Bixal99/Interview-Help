@@ -13,6 +13,8 @@ export type LessonChild = { id: string; title: string };
 export type Lesson = {
   id: string;
   slug: string;
+  aliases: string[];
+  kind: "lesson" | "story-project" | "story-checkpoint";
   title: string;
   markdown: string;
   videos: VideoResource[];
@@ -27,6 +29,7 @@ export type PhaseProject = {
   phaseId: string;
   title: string;
   markdown: string;
+  sourcePath: string;
   gitCheckpoint?: string;
 };
 
@@ -94,11 +97,19 @@ export type CourseProgressState = {
 };
 
 export type LearningProgress = {
-  version: 2 | 3 | 4;
+  version: 2 | 3 | 4 | 5;
   activePath?: string;
   courses: Record<string, CourseProgressState>;
   legacyIds?: string[];
 };
+
+export type ChapterRequirement = {
+  lessons: { id: string; href: string }[];
+  projectRequired: boolean;
+  projectHref?: string;
+};
+
+export type ChapterRequirementLookup = Record<string, Record<string, ChapterRequirement>>;
 
 export type SearchHit = {
   id: string;

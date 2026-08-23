@@ -79,6 +79,8 @@ const KICKER_RULES: KickerRule[] = [
     kind: "interview",
   },
 
+  { pattern: /^chapter roadmap\b/i, title: "Chapter Roadmap", visibility: "heading" },
+  { pattern: /^chapter opening\b/i, title: "Chapter Opening", visibility: "heading" },
   // Legacy specialty titles that were already contextual in Phase 1
   { pattern: /compiler vs interpreter/i, title: "Compiler vs Interpreter", visibility: "heading" },
   { pattern: /internal working/i, title: "How Code Becomes Machine Code", visibility: "heading" },
@@ -114,7 +116,7 @@ export function parseKicker(label: string): LessonKicker | null {
     }
   }
   const letters = lead.replace(/[^A-Za-z]/g, "");
-  if (letters.length < 8) return null;
+  if (letters.length < 4) return null;
   const upperRatio = letters.replace(/[^A-Z]/g, "").length / letters.length;
   if (upperRatio < 0.8) return null;
   // Contextual journey title — visible heading, not checklist chrome

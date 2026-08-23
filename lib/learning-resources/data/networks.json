@@ -1,0 +1,1064 @@
+{
+  "lessons": {
+    "1.1": [
+      {
+        "type": "video",
+        "title": "What is OSI Model | Real World Examples (ByteByteGo)",
+        "description": "Anchors \"network\" to devices you already use",
+        "url": "https://www.youtube.com/watch?v=0y6FtKsg6J4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/0y6FtKsg6J4/hqdefault.jpg",
+        "videoId": "0y6FtKsg6J4",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "TCP / IP in 50 seconds (NeetCodeIO)",
+        "description": "The stack as a one-breath overview before we unpack it",
+        "url": "https://www.youtube.com/watch?v=zDmIuTl6Wmg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/zDmIuTl6Wmg/hqdefault.jpg",
+        "videoId": "zDmIuTl6Wmg",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Network Engineer Roadmap from Zero to Hero",
+        "description": "Role map for people aiming at infra careers",
+        "url": "https://rajuginni.com/devops/network-engineer-roadmap/",
+        "source": "rajuginni.com"
+      },
+      {
+        "type": "interactive",
+        "title": "Cisco Packet Tracer",
+        "description": "Place two PCs and a switch; watch a ping cross a link you built",
+        "url": "https://www.netacad.com/courses/packet-tracer",
+        "source": "netacad.com"
+      },
+      {
+        "type": "interactive",
+        "title": "AlgoMaster CN Roadmap",
+        "description": "The topic map this document expands into a chain",
+        "url": "https://algomaster.io/roadmaps/cn",
+        "source": "algomaster.io"
+      },
+      {
+        "type": "article",
+        "title": "An Introduction to Computer Networks",
+        "description": "Free textbook, start at chapter 1",
+        "url": "https://intronetworks.cs.luc.edu/",
+        "source": "intronetworks.cs.luc.edu"
+      },
+      {
+        "type": "github",
+        "title": "nyquist/awesome-networking",
+        "description": "Curated resource index",
+        "url": "https://github.com/nyquist/awesome-networking",
+        "source": "GitHub"
+      }
+    ],
+    "1.2": [
+      {
+        "type": "video",
+        "title": "Understanding Routing! (Sabin Civil Engineering)",
+        "description": "Packets traveling a path (routing comes later; the *packet* idea is visible here)",
+        "url": "https://www.youtube.com/watch?v=gQtgtKtvRdo",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/gQtgtKtvRdo/hqdefault.jpg",
+        "videoId": "gQtgtKtvRdo",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Routers, Switches, Packets and Frames (NGT Academy)",
+        "description": "Vocabulary of chunks on the wire",
+        "url": "https://www.youtube.com/watch?v=zhlMLRNY5-4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/zhlMLRNY5-4/hqdefault.jpg",
+        "videoId": "zhlMLRNY5-4",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "High Performance Browser Networking - Latency & Bandwidth",
+        "description": "The best written primer in the industry",
+        "url": "https://hpbn.co/primer-on-latency-and-bandwidth/",
+        "source": "hpbn.co"
+      },
+      {
+        "type": "article",
+        "title": "Cloudflare Learning - What is latency?",
+        "description": "",
+        "url": "https://www.cloudflare.com/learning/performance/glossary/what-is-latency/",
+        "source": "cloudflare.com"
+      },
+      {
+        "type": "github",
+        "title": "OfekiAlm/practical-networking-from-zero-to-hero",
+        "description": "",
+        "url": "https://github.com/OfekiAlm/practical-networking-from-zero-to-hero/",
+        "source": "GitHub"
+      }
+    ],
+    "2.1": [
+      {
+        "type": "video",
+        "title": "How a Switch & Router work? (NETWORK WALKS)",
+        "description": "Devices sit on physical links; notice the cables/air as first-class",
+        "url": "https://www.youtube.com/watch?v=F1O8qs8hkm4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/F1O8qs8hkm4/hqdefault.jpg",
+        "videoId": "F1O8qs8hkm4",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "AlgoMaster - Transmission Media",
+        "description": "",
+        "url": "https://algomaster.io/roadmaps/cn",
+        "source": "algomaster.io"
+      },
+      {
+        "type": "github",
+        "title": "CiscoDevNet/netprog_basics",
+        "description": "",
+        "url": "https://github.com/CiscoDevNet/netprog_basics",
+        "source": "GitHub"
+      }
+    ],
+    "2.2": [
+      {
+        "type": "reference",
+        "title": "HPBN - latency and bandwidth primer",
+        "description": "",
+        "url": "https://hpbn.co/primer-on-latency-and-bandwidth/",
+        "source": "hpbn.co"
+      },
+      {
+        "type": "reference",
+        "title": "Cloudflare - bandwidth vs latency",
+        "description": "",
+        "url": "https://www.cloudflare.com/learning/performance/glossary/what-is-latency/",
+        "source": "cloudflare.com"
+      },
+      {
+        "type": "github",
+        "title": "caesar0301/awesome-pcaptools",
+        "description": "Later you will capture link-level frames",
+        "url": "https://github.com/caesar0301/awesome-pcaptools",
+        "source": "GitHub"
+      }
+    ],
+    "3.1": [
+      {
+        "type": "video",
+        "title": "Routers, Switches, Packets and Frames (NGT Academy)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=zhlMLRNY5-4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/zhlMLRNY5-4/hqdefault.jpg",
+        "videoId": "zhlMLRNY5-4",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Network Ports Explained (PowerCert)",
+        "description": "Ports are L4; still useful contrast vs MAC",
+        "url": "https://www.youtube.com/watch?v=g2fT-g9PX9o",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/g2fT-g9PX9o/hqdefault.jpg",
+        "videoId": "g2fT-g9PX9o",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "Wireshark",
+        "description": "Expand Ethernet header on any capture",
+        "url": "https://www.wireshark.org/",
+        "source": "wireshark.org"
+      },
+      {
+        "type": "reference",
+        "title": "Cloudflare - What is a MAC address?",
+        "description": "",
+        "url": "https://www.cloudflare.com/learning/network-layer/what-is-a-mac-address/",
+        "source": "cloudflare.com"
+      },
+      {
+        "type": "github",
+        "title": "smoltcp",
+        "description": "Link-layer modules in a real stack",
+        "url": "https://github.com/smoltcp-rs/smoltcp",
+        "source": "GitHub"
+      },
+      {
+        "type": "reference",
+        "title": "Wireshark Sample Captures",
+        "description": "",
+        "url": "https://wiki.wireshark.org/SampleCaptures",
+        "source": "wiki.wireshark.org"
+      }
+    ],
+    "3.2": [
+      {
+        "type": "video",
+        "title": "How a Switch & Router work?",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=F1O8qs8hkm4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/F1O8qs8hkm4/hqdefault.jpg",
+        "videoId": "F1O8qs8hkm4",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "Cloudflare - MTU",
+        "description": "",
+        "url": "https://www.cloudflare.com/learning/network-layer/what-is-mtu/",
+        "source": "cloudflare.com"
+      }
+    ],
+    "4.1": [
+      {
+        "type": "video",
+        "title": "How a Switch & Router work?",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=F1O8qs8hkm4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/F1O8qs8hkm4/hqdefault.jpg",
+        "videoId": "F1O8qs8hkm4",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How do Routers work? What is a Routing Table? (Practical Networking)",
+        "description": "Contrast L2 forward vs L3 route",
+        "url": "https://www.youtube.com/watch?v=FzfrSDaWeLE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/FzfrSDaWeLE/hqdefault.jpg",
+        "videoId": "FzfrSDaWeLE",
+        "embedSupported": true
+      },
+      {
+        "type": "github",
+        "title": "networktocode/awesome-network-automation",
+        "description": "",
+        "url": "https://github.com/networktocode/awesome-network-automation",
+        "source": "GitHub"
+      }
+    ],
+    "4.2": [
+      {
+        "type": "reference",
+        "title": "Cloudflare - What is a VLAN?",
+        "description": "",
+        "url": "https://www.cloudflare.com/learning/network-layer/what-is-a-lan/",
+        "source": "cloudflare.com"
+      }
+    ],
+    "5.1": [
+      {
+        "type": "video",
+        "title": "What is a Subnet Mask??? (NetworkChuck)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=oZGZRtaGyG8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/oZGZRtaGyG8/hqdefault.jpg",
+        "videoId": "oZGZRtaGyG8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "What is Subnetting? - Subnetting Mastery Part 1 (Practical Networking)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=BWZ-MHIhqjM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/BWZ-MHIhqjM/hqdefault.jpg",
+        "videoId": "BWZ-MHIhqjM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "IP addressing and Subnetting | CIDR (TechTerms)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=OqsXzkXfwRw",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/OqsXzkXfwRw/hqdefault.jpg",
+        "videoId": "OqsXzkXfwRw",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "subnetcalculator.com",
+        "description": "",
+        "url": "https://www.subnet-calculator.com/",
+        "source": "subnet-calculator.com"
+      },
+      {
+        "type": "reference",
+        "title": "Cloudflare - What is an IP address?",
+        "description": "",
+        "url": "https://www.cloudflare.com/learning/dns/glossary/what-is-my-ip-address/",
+        "source": "cloudflare.com"
+      }
+    ],
+    "5.2": [
+      {
+        "type": "reference",
+        "title": "Cloudflare - What is IPv6?",
+        "description": "",
+        "url": "https://www.cloudflare.com/learning/dns/what-is-ipv6/",
+        "source": "cloudflare.com"
+      }
+    ],
+    "6.1": [
+      {
+        "type": "video",
+        "title": "Understanding Routing!",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=gQtgtKtvRdo",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/gQtgtKtvRdo/hqdefault.jpg",
+        "videoId": "gQtgtKtvRdo",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How Routers Actually Work (TechVision Animated)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=FAY43J3FvZk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/FAY43J3FvZk/hqdefault.jpg",
+        "videoId": "FAY43J3FvZk",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How do Routers work? (Practical Networking)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=FzfrSDaWeLE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/FzfrSDaWeLE/hqdefault.jpg",
+        "videoId": "FzfrSDaWeLE",
+        "embedSupported": true
+      }
+    ],
+    "6.2": [
+      {
+        "type": "reference",
+        "title": "Cloudflare - What is BGP?",
+        "description": "",
+        "url": "https://www.cloudflare.com/learning/security/glossary/what-is-bgp/",
+        "source": "cloudflare.com"
+      }
+    ],
+    "7.1": [
+      {
+        "type": "video",
+        "title": "DNS video later; for ARP watch Chris Greer Wireshark ARP filters",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=OU-A2EmVrKQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/OU-A2EmVrKQ/hqdefault.jpg",
+        "videoId": "OU-A2EmVrKQ",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "Cloudflare - What is ICMP?",
+        "description": "",
+        "url": "https://www.cloudflare.com/learning/ddos/glossary/internet-control-message-protocol-icmp/",
+        "source": "cloudflare.com"
+      }
+    ],
+    "7.2": [
+      {
+        "type": "video",
+        "title": "How Routers Actually Work - NAT Explained",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=FAY43J3FvZk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/FAY43J3FvZk/hqdefault.jpg",
+        "videoId": "FAY43J3FvZk",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "Cloudflare - What is NAT?",
+        "description": "",
+        "url": "https://www.cloudflare.com/learning/network-layer/what-is-nat/",
+        "source": "cloudflare.com"
+      }
+    ],
+    "8.1": [
+      {
+        "type": "video",
+        "title": "MASTER the OSI Model in Just 5 Minutes (KnowledgeCatch)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=8YkL_qc6ozc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/8YkL_qc6ozc/hqdefault.jpg",
+        "videoId": "8YkL_qc6ozc",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "What is OSI Model | Real World Examples (ByteByteGo)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=0y6FtKsg6J4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/0y6FtKsg6J4/hqdefault.jpg",
+        "videoId": "0y6FtKsg6J4",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "OSI Model Explained (TechTerms)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=vv4y_uOneC0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/vv4y_uOneC0/hqdefault.jpg",
+        "videoId": "vv4y_uOneC0",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "Cloudflare OSI model",
+        "description": "",
+        "url": "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/",
+        "source": "cloudflare.com"
+      },
+      {
+        "type": "github",
+        "title": "smoltcp",
+        "description": "",
+        "url": "https://github.com/smoltcp-rs/smoltcp",
+        "source": "GitHub"
+      }
+    ],
+    "8.2": [
+      {
+        "type": "video",
+        "title": "Network Ports Explained (PowerCert)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=g2fT-g9PX9o",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/g2fT-g9PX9o/hqdefault.jpg",
+        "videoId": "g2fT-g9PX9o",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "Beej's Guide",
+        "description": "Sockets intro",
+        "url": "https://beej.us/guide/bgnet/html/",
+        "source": "beej.us"
+      }
+    ],
+    "9.1": [
+      {
+        "type": "video",
+        "title": "TCP vs UDP Comparison (PowerCert)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=uwoD5YsGACg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/uwoD5YsGACg/hqdefault.jpg",
+        "videoId": "uwoD5YsGACg",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "TCP vs UDP Explained Visually (ByteQuest)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=Xu85vTSZRWs",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Xu85vTSZRWs/hqdefault.jpg",
+        "videoId": "Xu85vTSZRWs",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "CertBros TCP vs UDP",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=cA9ZJdqzOoU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/cA9ZJdqzOoU/hqdefault.jpg",
+        "videoId": "cA9ZJdqzOoU",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "Beej on datagram sockets",
+        "description": "",
+        "url": "https://beej.us/guide/bgnet/html/",
+        "source": "beej.us"
+      },
+      {
+        "type": "github",
+        "title": "brandon-rhodes/fopnp",
+        "description": "",
+        "url": "https://github.com/brandon-rhodes/fopnp",
+        "source": "GitHub"
+      }
+    ],
+    "9.2": [
+      {
+        "type": "reference",
+        "title": "Cloudflare - What is QUIC?",
+        "description": "",
+        "url": "https://www.cloudflare.com/learning/performance/what-is-http3/",
+        "source": "cloudflare.com"
+      }
+    ],
+    "10.1": [
+      {
+        "type": "video",
+        "title": "TCP vs UDP Comparison (PowerCert)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=uwoD5YsGACg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/uwoD5YsGACg/hqdefault.jpg",
+        "videoId": "uwoD5YsGACg",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "TCP Three-way Handshake (Sunny Classroom)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=xMtP5ZB3wSk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/xMtP5ZB3wSk/hqdefault.jpg",
+        "videoId": "xMtP5ZB3wSk",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "TCP Fundamentals with Wireshark (Chris Greer)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=xdQ9sgpkrX8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/xdQ9sgpkrX8/hqdefault.jpg",
+        "videoId": "xdQ9sgpkrX8",
+        "embedSupported": true
+      },
+      {
+        "type": "documentation",
+        "title": "RFC 9293",
+        "description": "",
+        "url": "https://www.rfc-editor.org/rfc/rfc9293.html",
+        "source": "rfc-editor.org"
+      },
+      {
+        "type": "reference",
+        "title": "Stanford CS144",
+        "description": "",
+        "url": "https://cs144.github.io/",
+        "source": "cs144.github.io"
+      },
+      {
+        "type": "github",
+        "title": "smoltcp tcp.rs",
+        "description": "",
+        "url": "https://github.com/smoltcp-rs/smoltcp",
+        "source": "GitHub"
+      }
+    ],
+    "10.2": [
+      {
+        "type": "video",
+        "title": "Chris Greer TCP Wireshark series",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=xdQ9sgpkrX8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/xdQ9sgpkrX8/hqdefault.jpg",
+        "videoId": "xdQ9sgpkrX8",
+        "embedSupported": true
+      }
+    ],
+    "11.1": [
+      {
+        "type": "reference",
+        "title": "Beej's Guide to Network Programming",
+        "description": "*the* classic",
+        "url": "https://beej.us/guide/bgnet/html/",
+        "source": "beej.us"
+      },
+      {
+        "type": "github",
+        "title": "beejjorgensen/bgnet",
+        "description": "",
+        "url": "https://github.com/beejjorgensen/bgnet",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "nguyenchiemminhvu/LinuxNetworkProgramming",
+        "description": "",
+        "url": "https://github.com/nguyenchiemminhvu/LinuxNetworkProgramming",
+        "source": "GitHub"
+      }
+    ],
+    "11.2": [
+      {
+        "type": "github",
+        "title": "shuveb/zerohttpd",
+        "description": "Tiny HTTP server architectures",
+        "url": "https://github.com/shuveb/zerohttpd",
+        "source": "GitHub"
+      }
+    ],
+    "12.1": [
+      {
+        "type": "video",
+        "title": "How a DNS Server works (PowerCert)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=mpQZVYPuDGU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/mpQZVYPuDGU/hqdefault.jpg",
+        "videoId": "mpQZVYPuDGU",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "DNS Explained in 100 Seconds (Fireship)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=UVR9lhUGAyU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/UVR9lhUGAyU/hqdefault.jpg",
+        "videoId": "UVR9lhUGAyU",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How DNS Works Visually (Ryan Schachte)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=vrxwXXytEuI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/vrxwXXytEuI/hqdefault.jpg",
+        "videoId": "vrxwXXytEuI",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "Cloudflare - What is DNS?",
+        "description": "",
+        "url": "https://www.cloudflare.com/learning/dns/what-is-dns/",
+        "source": "cloudflare.com"
+      }
+    ],
+    "12.2": [
+      {
+        "type": "video",
+        "title": "DNS Records Explained (PowerCert)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=HnUDtycXSNE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/HnUDtycXSNE/hqdefault.jpg",
+        "videoId": "HnUDtycXSNE",
+        "embedSupported": true
+      }
+    ],
+    "13.1": [
+      {
+        "type": "video",
+        "title": "HTTP Explained (NeetCodeIO)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=wOPrIhmi7l0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/wOPrIhmi7l0/hqdefault.jpg",
+        "videoId": "wOPrIhmi7l0",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "What Is REST API? (ByteByteGo)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=-mN3VyJuCjM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/-mN3VyJuCjM/hqdefault.jpg",
+        "videoId": "-mN3VyJuCjM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "WebSocket Protocol Explained (NeetCodeIO)",
+        "description": "When HTTP request/response is not enough",
+        "url": "https://www.youtube.com/watch?v=5f0gZruaH9Y",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/5f0gZruaH9Y/hqdefault.jpg",
+        "videoId": "5f0gZruaH9Y",
+        "embedSupported": true
+      },
+      {
+        "type": "github",
+        "title": "shuveb/zerohttpd",
+        "description": "",
+        "url": "https://github.com/shuveb/zerohttpd",
+        "source": "GitHub"
+      }
+    ],
+    "13.2": [
+      {
+        "type": "reference",
+        "title": "Cloudflare HTTP/3",
+        "description": "",
+        "url": "https://www.cloudflare.com/learning/performance/what-is-http3/",
+        "source": "cloudflare.com"
+      }
+    ],
+    "14.1": [
+      {
+        "type": "video",
+        "title": "SSL, TLS, HTTP, HTTPS Explained (PowerCert)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=hExRDVZHhig",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/hExRDVZHhig/hqdefault.jpg",
+        "videoId": "hExRDVZHhig",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "SSL, TLS, HTTPS Explained (ByteByteGo)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=j9QmMEWmcfo",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/j9QmMEWmcfo/hqdefault.jpg",
+        "videoId": "j9QmMEWmcfo",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "TLS Handshake (Sunny Classroom)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=sEkw8ZcxtFk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/sEkw8ZcxtFk/hqdefault.jpg",
+        "videoId": "sEkw8ZcxtFk",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "Cloudflare - What is TLS?",
+        "description": "",
+        "url": "https://www.cloudflare.com/learning/ssl/what-is-tls/",
+        "source": "cloudflare.com"
+      }
+    ],
+    "14.2": [
+      {
+        "type": "reference",
+        "title": "SSL Labs server test",
+        "description": "",
+        "url": "https://www.ssllabs.com/ssltest/",
+        "source": "ssllabs.com"
+      }
+    ],
+    "15.1": [
+      {
+        "type": "video",
+        "title": "Learn Wireshark! Tutorial for BEGINNERS (Chris Greer)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=OU-A2EmVrKQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/OU-A2EmVrKQ/hqdefault.jpg",
+        "videoId": "OU-A2EmVrKQ",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Wireshark for BEGINNERS // Capture Network Traffic",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=nWvscuxqais",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/nWvscuxqais/hqdefault.jpg",
+        "videoId": "nWvscuxqais",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "3 Tips for Wireshark Beginners",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=Ch7wbgK6xb4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Ch7wbgK6xb4/hqdefault.jpg",
+        "videoId": "Ch7wbgK6xb4",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "Wireshark",
+        "description": "",
+        "url": "https://www.wireshark.org/",
+        "source": "wireshark.org"
+      },
+      {
+        "type": "github",
+        "title": "caesar0301/awesome-pcaptools",
+        "description": "",
+        "url": "https://github.com/caesar0301/awesome-pcaptools",
+        "source": "GitHub"
+      }
+    ],
+    "16.1": [
+      {
+        "type": "reference",
+        "title": "AlgoMaster wireless section",
+        "description": "",
+        "url": "https://algomaster.io/roadmaps/cn",
+        "source": "algomaster.io"
+      }
+    ],
+    "17.1": [
+      {
+        "type": "video",
+        "title": "Reverse Proxy vs API Gateway vs Load Balancer (ByteByteGo)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=RqfaTIWc3LQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/RqfaTIWc3LQ/hqdefault.jpg",
+        "videoId": "RqfaTIWc3LQ",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Top 6 Load Balancing Algorithms (ByteByteGo)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=dBmxNsS3BGE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/dBmxNsS3BGE/hqdefault.jpg",
+        "videoId": "dBmxNsS3BGE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "What is a Load Balancer? (IBM Technology)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=sCR3SAVdyCc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/sCR3SAVdyCc/hqdefault.jpg",
+        "videoId": "sCR3SAVdyCc",
+        "embedSupported": true
+      }
+    ],
+    "17.2": [
+      {
+        "type": "video",
+        "title": "What Is A CDN? How Does It Work? (ByteByteGo)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=RI9np1LWzqw",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/RI9np1LWzqw/hqdefault.jpg",
+        "videoId": "RI9np1LWzqw",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "Cloudflare - What is a CDN?",
+        "description": "",
+        "url": "https://www.cloudflare.com/learning/cdn/what-is-a-cdn/",
+        "source": "cloudflare.com"
+      }
+    ],
+    "18.1": [
+      {
+        "type": "reference",
+        "title": "Cloudflare - What is BGP?",
+        "description": "",
+        "url": "https://www.cloudflare.com/learning/security/glossary/what-is-bgp/",
+        "source": "cloudflare.com"
+      },
+      {
+        "type": "reference",
+        "title": "Hurricane Electric BGP toolkit",
+        "description": "",
+        "url": "https://bgp.he.net/",
+        "source": "bgp.he.net"
+      }
+    ],
+    "19.1": [
+      {
+        "type": "reference",
+        "title": "Stanford CS144",
+        "description": "",
+        "url": "https://cs144.github.io/",
+        "source": "cs144.github.io"
+      },
+      {
+        "type": "github",
+        "title": "OfekiAlm/practical-networking-from-zero-to-hero",
+        "description": "",
+        "url": "https://github.com/OfekiAlm/practical-networking-from-zero-to-hero/",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "PKUFlyingPig/CS144-Computer-Network",
+        "description": "",
+        "url": "https://github.com/PKUFlyingPig/CS144-Computer-Network",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "aos/computer-networking-study",
+        "description": "",
+        "url": "https://github.com/aos/computer-networking-study",
+        "source": "GitHub"
+      },
+      {
+        "type": "reference",
+        "title": "AlgoMaster CN projects list",
+        "description": "",
+        "url": "https://algomaster.io/roadmaps/cn",
+        "source": "algomaster.io"
+      },
+      {
+        "type": "reference",
+        "title": "Beej",
+        "description": "",
+        "url": "https://beej.us/guide/bgnet/html/",
+        "source": "beej.us"
+      }
+    ],
+    "19.2": [
+      {
+        "type": "github",
+        "title": "networktocode/awesome-network-automation",
+        "description": "",
+        "url": "https://github.com/networktocode/awesome-network-automation",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "CiscoDevNet/netprog_basics",
+        "description": "",
+        "url": "https://github.com/CiscoDevNet/netprog_basics",
+        "source": "GitHub"
+      }
+    ],
+    "15.2": [
+      {
+        "type": "video",
+        "title": "What is TCP/IP?",
+        "description": "Layered debugging starts with the stack.",
+        "url": "https://www.youtube.com/watch?v=PpsEaqJV_A0",
+        "source": "YouTube",
+        "channel": "Techquickie",
+        "videoId": "PpsEaqJV_A0",
+        "thumbnail": "https://i.ytimg.com/vi/PpsEaqJV_A0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "TCP/IP and OSI — Best Explanation",
+        "description": "Where to look when packets misbehave.",
+        "url": "https://www.youtube.com/watch?v=3b_TAYtzuho",
+        "source": "YouTube",
+        "channel": "_Drunk Engineer_",
+        "videoId": "3b_TAYtzuho",
+        "thumbnail": "https://i.ytimg.com/vi/3b_TAYtzuho/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "tool",
+        "title": "Wireshark",
+        "description": "Capture and inspect packets layer by layer.",
+        "url": "https://www.wireshark.org/",
+        "source": "Wireshark",
+        "difficulty": "beginner"
+      }
+    ],
+    "16.2": [
+      {
+        "type": "video",
+        "title": "What is TCP/IP?",
+        "description": "TCP retries and Wi-Fi interference context.",
+        "url": "https://www.youtube.com/watch?v=PpsEaqJV_A0",
+        "source": "YouTube",
+        "channel": "Techquickie",
+        "videoId": "PpsEaqJV_A0",
+        "thumbnail": "https://i.ytimg.com/vi/PpsEaqJV_A0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "TCP congestion control (RFC 5681)",
+        "description": "How TCP responds to loss on noisy links.",
+        "url": "https://datatracker.ietf.org/doc/html/rfc5681",
+        "source": "IETF",
+        "difficulty": "beginner"
+      }
+    ],
+    "18.2": [
+      {
+        "type": "documentation",
+        "title": "Resource Public Key Infrastructure (RPKI)",
+        "description": "Why route origin validation matters.",
+        "url": "https://www.rfc-editor.org/rfc/rfc6480",
+        "source": "IETF",
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "SSL, TLS, HTTPS Explained",
+        "description": "Trust chains related to routing security.",
+        "url": "https://www.youtube.com/watch?v=j9QmMEWmcfo",
+        "source": "YouTube",
+        "channel": "ByteByteGo",
+        "videoId": "j9QmMEWmcfo",
+        "thumbnail": "https://i.ytimg.com/vi/j9QmMEWmcfo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "20.1": [
+      {
+        "type": "video",
+        "title": "What is TCP/IP?",
+        "description": "URL-to-packet walkthrough foundation.",
+        "url": "https://www.youtube.com/watch?v=PpsEaqJV_A0",
+        "source": "YouTube",
+        "channel": "Techquickie",
+        "videoId": "PpsEaqJV_A0",
+        "thumbnail": "https://i.ytimg.com/vi/PpsEaqJV_A0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "tool",
+        "title": "DNS lookup (Google)",
+        "description": "Trace DNS resolution for any hostname.",
+        "url": "https://dns.google/",
+        "source": "Google",
+        "difficulty": "beginner"
+      }
+    ],
+    "20.2": [
+      {
+        "type": "video",
+        "title": "SSL, TLS, HTTPS Explained",
+        "description": "Debugging stories around TLS handshakes.",
+        "url": "https://www.youtube.com/watch?v=j9QmMEWmcfo",
+        "source": "YouTube",
+        "channel": "ByteByteGo",
+        "videoId": "j9QmMEWmcfo",
+        "thumbnail": "https://i.ytimg.com/vi/j9QmMEWmcfo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "github",
+        "title": "Computer Networking: A Top-Down Approach resources",
+        "description": "Supplemental exercises and wireshark labs.",
+        "url": "https://github.com/csg-knu/Computer-Networking-A-Top-Down-Approach",
+        "source": "GitHub",
+        "difficulty": "beginner"
+      }
+    ]
+  },
+  "phases": {},
+  "projects": {}
+}

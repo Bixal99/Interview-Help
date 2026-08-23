@@ -961,7 +961,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 
 - Best animated explanation: [Kubernetes Components Explained (TechWorld with Nana)](https://www.youtube.com/watch?v=Krpb44XR0bk) - start here for the clearest visual model of kubernetes operations before the detailed internal steps
 - Alternative: [Kubernetes Architecture in 6 Minutes (ByteByteGo)](https://www.youtube.com/watch?v=TlHvYWVUZyc) - use this second to compare terminology and see the same pressure from another engineering angle
-- Another angle: [Kubernetes ConfigMaps and Secrets Project (Abhishek.Veeramalla)](https://www.youtube.com/watch?v=f-DqMTxs5z8) - use this after the theory to connect the model to an implementation or provider-specific case
+- Another angle: [Kubernetes ConfigMap and Secret as Kubernetes Volumes | Demo (TechWorld with Nana)](https://www.youtube.com/watch?v=FAnQTgr04mU) - use this after the theory to connect the model to an implementation or provider-specific case
 - Interactive simulator: [Killercoda Kubernetes](https://killercoda.com/kubernetes) - turn the chapter into observable behavior instead of console tourism
 - Written documentation: [Kubernetes documentation](https://kubernetes.io/docs/home/) - use the primary source for current limits, semantics, and supported configuration
 - GitHub implementation: [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) - inspect how the concept is represented in real code and configuration
@@ -1235,7 +1235,7 @@ A strong answer begins with requirements and the previous limitation, traces the
 **SEE IT BEFORE YOU MEMORIZE IT**
 
 - Best animated explanation: [AWS Tutorial for Beginners (Kevin Stratvert)](https://www.youtube.com/watch?v=Nzv-tzU-UAw) - start here for the clearest visual model of cloud infrastructure for devops before the detailed internal steps
-- Alternative: [Best VPC Explanation (Abhishek.Veeramalla)](https://www.youtube.com/watch?v=P8g7Z4NYk3Q) - use this second to compare terminology and see the same pressure from another engineering angle
+- Alternative: [Best VPC Explanation for Beginners (Abhishek.Veeramalla)](https://www.youtube.com/watch?v=ngDkstGcAbI) - use this second to compare terminology and see the same pressure from another engineering angle
 - Another angle: [AWS IAM Core Concepts (Be A Better Dev)](https://www.youtube.com/watch?v=_ZCTvmaPgao) - use this after the theory to connect the model to an implementation or provider-specific case
 - Interactive simulator: [LocalStack getting started](https://docs.localstack.cloud/getting-started/) - turn the chapter into observable behavior instead of console tourism
 - Written documentation: [AWS DevOps guidance](https://docs.aws.amazon.com/whitepapers/latest/introduction-devops-aws/welcome.html) - use the primary source for current limits, semantics, and supported configuration

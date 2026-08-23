@@ -4,47 +4,75 @@ import { Check } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 import { tryPlaygroundHref, writeTryItCode } from "@/lib/code-playground/try-it-storage";
+import { notepadHref, writeNotepadEntry } from "@/lib/code-playground/notepad-storage";
 import type { PlaygroundLanguage } from "@/lib/code-playground/types";
-import { getPracticeRunner } from "@/lib/practice-runners";
+import { classifyPracticeTask } from "@/lib/practice-classify";
+import { getModelAnswer } from "@/lib/practice-model-answer";
+import { getPracticeRunner, hasCuratedRunner } from "@/lib/practice-runners";
 import type { PracticeRunnerSpec } from "@/lib/practice-runners";
 import type { PracticeBlock, PracticeItem } from "@/lib/practice";
 import { useLearningProgress } from "./progress-client";
 import { PlaygroundLanguageIcon } from "./code-playground/language-mark";
 import { PracticeRichText } from "./practice-rich-text";
 
-type RunnableEntry = { item: PracticeItem; runner: PracticeRunnerSpec };
+type PracticeEntry =
+  | { kind: "coding"; item: PracticeItem; runner: PracticeRunnerSpec }
+  | { kind: "written"; item: PracticeItem; modelAnswer: string };
+
+function buildEntry(lessonId: string, item: PracticeItem): PracticeEntry {
+  const isCoding = hasCuratedRunner(lessonId, item.id) || classifyPracticeTask(item.label) === "coding";
+  if (isCoding) {
+    const runner = getPracticeRunner(lessonId, item.id, item.label);
+    if (runner) return { kind: "coding", item, runner };
+  }
+  return { kind: "written", item, modelAnswer: getModelAnswer(lessonId, item.id, item.label) };
+}
 
 function launchPracticeChain(
-  runnableItems: RunnableEntry[],
+  entries: PracticeEntry[],
   startIndex: number,
   startLanguage: PlaygroundLanguage,
   lessonHref: string,
   push: (href: string) => void,
 ) {
-  const hrefs = runnableItems.map((entry, index) => {
-    const language = index === startIndex ? startLanguage : entry.runner.options[0].language;
-    const option = entry.runner.options.find((item) => item.language === language) ?? entry.runner.options[0];
-    return tryPlaygroundHref(option.language);
-  });
+  const hrefs = entries.map((entry, index) =>
+    entry.kind === "coding"
+      ? tryPlaygroundHref(index === startIndex ? startLanguage : entry.runner.options[0].language)
+      : notepadHref(),
+  );
 
-  runnableItems.forEach((entry, index) => {
-    const language = index === startIndex ? startLanguage : entry.runner.options[0].language;
-    const option = entry.runner.options.find((item) => item.language === language) ?? entry.runner.options[0];
-    const languageOptions = entry.runner.options.length > 1
-      ? entry.runner.options.map((item) => ({ language: item.language, source: item.code, label: item.label }))
-      : undefined;
-    writeTryItCode(option.language, {
-      source: option.code,
-      title: entry.item.label,
-      instructions: entry.item.label,
-      observe: entry.runner.observe,
-      backHref: lessonHref,
-      prevHref: index > 0 ? hrefs[index - 1] : lessonHref,
-      nextHref: index < hrefs.length - 1 ? hrefs[index + 1] : undefined,
-      problemIndex: index + 1,
-      problemTotal: hrefs.length,
-      languageOptions,
-    }, hrefs[index]);
+  entries.forEach((entry, index) => {
+    const prevHref = index > 0 ? hrefs[index - 1] : lessonHref;
+    const nextHref = index < hrefs.length - 1 ? hrefs[index + 1] : undefined;
+    if (entry.kind === "coding") {
+      const language = index === startIndex ? startLanguage : entry.runner.options[0].language;
+      const option = entry.runner.options.find((item) => item.language === language) ?? entry.runner.options[0];
+      const languageOptions = entry.runner.options.length > 1
+        ? entry.runner.options.map((item) => ({ language: item.language, source: item.code, label: item.label }))
+        : undefined;
+      writeTryItCode(option.language, {
+        source: option.code,
+        title: entry.item.label,
+        instructions: entry.item.label,
+        observe: entry.runner.observe,
+        backHref: lessonHref,
+        prevHref,
+        nextHref,
+        problemIndex: index + 1,
+        problemTotal: hrefs.length,
+        languageOptions,
+      }, hrefs[index]);
+    } else {
+      writeNotepadEntry({
+        prompt: entry.item.label,
+        modelAnswer: entry.modelAnswer,
+        backHref: lessonHref,
+        prevHref,
+        nextHref,
+        problemIndex: index + 1,
+        problemTotal: hrefs.length,
+      }, hrefs[index]);
+    }
   });
 
   push(hrefs[startIndex]);
@@ -84,14 +112,8 @@ export function ExerciseBlock({
   );
   const total = practice.items.length;
   const progress = total ? Math.round((doneCount / total) * 100) : 0;
-  const runnableItems = useMemo(
-    () =>
-      practice.items
-        .map((item) => {
-          const runner = getPracticeRunner(lessonId, item.id, item.label);
-          return runner ? { item, runner } : null;
-        })
-        .filter((entry): entry is RunnableEntry => entry !== null),
+  const entries = useMemo(
+    () => practice.items.map((item) => buildEntry(lessonId, item)),
     [practice.items, lessonId],
   );
 
@@ -147,12 +169,12 @@ export function ExerciseBlock({
       <ul className="ih-exercise-stack">
         {practice.items.map((item, index) => {
           const on = completed || checked.includes(item.id);
-          const runner = getPracticeRunner(lessonId, item.id, item.label);
-          const myPos = runnableItems.findIndex((entry) => entry.item.id === item.id);
+          const entry = entries[index];
+          const runner = entry.kind === "coding" ? entry.runner : null;
           const selectedLang = editorLang[item.id] ?? runner?.options[0]?.language;
 
           return (
-            <li key={item.id} className={runner ? "ih-exercise-item has-link" : undefined}>
+            <li key={item.id} className="ih-exercise-item has-link">
               <div
                 className={`ih-exercise-card${on ? " is-on" : ""}`}
                 style={{ "--ih-stack": index } as React.CSSProperties}
@@ -197,8 +219,8 @@ export function ExerciseBlock({
                       className="ih-exercise-open-runner"
                       onClick={() =>
                         launchPracticeChain(
-                          runnableItems,
-                          myPos,
+                          entries,
+                          index,
                           selectedLang,
                           `${pathname}#practice-exercises`,
                           (href) => router.push(href),
@@ -208,7 +230,25 @@ export function ExerciseBlock({
                       Practice Yourself »
                     </button>
                   </div>
-                ) : null}
+                ) : (
+                  <div className="ih-exercise-open-runner-group">
+                    <button
+                      type="button"
+                      className="ih-exercise-open-runner is-notepad"
+                      onClick={() =>
+                        launchPracticeChain(
+                          entries,
+                          index,
+                          "python",
+                          `${pathname}#practice-exercises`,
+                          (href) => router.push(href),
+                        )
+                      }
+                    >
+                      Practice Yourself »
+                    </button>
+                  </div>
+                )}
               </div>
             </li>
           );

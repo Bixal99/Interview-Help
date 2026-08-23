@@ -1,0 +1,2331 @@
+{
+  "lessons": {},
+  "phases": {
+    "1": [
+      {
+        "type": "video",
+        "title": "What is ERP? (YouTube)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=10JeksrGVjI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/10JeksrGVjI/hqdefault.jpg",
+        "videoId": "10JeksrGVjI",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "ERP Systems Explained (YouTube)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=Bb4jVGiQKKA",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Bb4jVGiQKKA/hqdefault.jpg",
+        "videoId": "Bb4jVGiQKKA",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "ERP explained without jargon (YouTube)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=EHiH7hp0PBU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/EHiH7hp0PBU/hqdefault.jpg",
+        "videoId": "EHiH7hp0PBU",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Odoo ERP overview (YouTube)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=s-4zNx7wCFk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/s-4zNx7wCFk/hqdefault.jpg",
+        "videoId": "s-4zNx7wCFk",
+        "embedSupported": true
+      },
+      {
+        "type": "documentation",
+        "title": "Odoo 18 — Server Framework 101 Architecture",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101/01_architecture.html",
+        "source": "odoo.com"
+      }
+    ],
+    "2": [
+      {
+        "type": "video",
+        "title": "Odoo Beginner's Guide (YouTube)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=QuC6rc2q2mg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/QuC6rc2q2mg/hqdefault.jpg",
+        "videoId": "QuC6rc2q2mg",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Odoo ERP overview (YouTube)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=s-4zNx7wCFk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/s-4zNx7wCFk/hqdefault.jpg",
+        "videoId": "s-4zNx7wCFk",
+        "embedSupported": true
+      },
+      {
+        "type": "documentation",
+        "title": "Odoo 18 — Architecture",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101/01_architecture.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Odoo 18 — Server Framework 101",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/odoo on GitHub",
+        "description": "",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      }
+    ],
+    "3": [
+      {
+        "type": "video",
+        "title": "Odoo Beginner's Guide (YouTube)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=QuC6rc2q2mg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/QuC6rc2q2mg/hqdefault.jpg",
+        "videoId": "QuC6rc2q2mg",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Odoo ERP overview (YouTube)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=s-4zNx7wCFk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/s-4zNx7wCFk/hqdefault.jpg",
+        "videoId": "s-4zNx7wCFk",
+        "embedSupported": true
+      },
+      {
+        "type": "documentation",
+        "title": "Odoo 18 developer docs",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Server Framework 101",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101.html",
+        "source": "odoo.com"
+      }
+    ],
+    "4": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 — Architecture",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101/01_architecture.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Server Framework 101",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Odoo developer landing",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/odoo",
+        "description": "",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "odoo/docker",
+        "description": "",
+        "url": "https://github.com/odoo/docker",
+        "source": "GitHub"
+      }
+    ],
+    "5": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 — Install from source",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/administration/on_premise/source.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Odoo 18 — Architecture",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101/01_architecture.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Backend tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/backend.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/odoo",
+        "description": "",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "odoo/docker",
+        "description": "Alternative path",
+        "url": "https://github.com/odoo/docker",
+        "source": "GitHub"
+      }
+    ],
+    "6": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 — Architecture",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101/01_architecture.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Server Framework 101",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Backend reference / tutorials",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/backend.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/odoo",
+        "description": "",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "odoo/tutorials",
+        "description": "",
+        "url": "https://github.com/odoo/tutorials",
+        "source": "GitHub"
+      }
+    ],
+    "7": [
+      {
+        "type": "documentation",
+        "title": "Server Framework 101",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Backend tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/backend.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Odoo 18 developer docs",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/tutorials",
+        "description": "",
+        "url": "https://github.com/odoo/tutorials",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "odoo/odoo",
+        "description": "Copy structure from a tiny official module",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      }
+    ],
+    "8": [
+      {
+        "type": "documentation",
+        "title": "Server Framework 101",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Install from source",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/administration/on_premise/source.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Backend tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/backend.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/tutorials",
+        "description": "",
+        "url": "https://github.com/odoo/tutorials",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "odoo/documentation",
+        "description": "",
+        "url": "https://github.com/odoo/documentation",
+        "source": "GitHub"
+      }
+    ],
+    "9": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 ORM — Models",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html#models",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Server Framework 101 — Models",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101/04_models_and_basic_fields.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Backend tutorial overview",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/backend.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/tutorials — estate sample",
+        "description": "",
+        "url": "https://github.com/odoo/tutorials",
+        "source": "GitHub"
+      },
+      {
+        "type": "video",
+        "title": "Manifest & first module (video)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=5YIwP9-55Qk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/5YIwP9-55Qk/hqdefault.jpg",
+        "videoId": "5YIwP9-55Qk",
+        "embedSupported": true
+      }
+    ],
+    "10": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 ORM — Fields",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html#fields",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Basic fields tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101/04_models_and_basic_fields.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Backend reference",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/backend.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/tutorials",
+        "description": "",
+        "url": "https://github.com/odoo/tutorials",
+        "source": "GitHub"
+      },
+      {
+        "type": "video",
+        "title": "First module fields walkthrough (video)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=5YIwP9-55Qk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/5YIwP9-55Qk/hqdefault.jpg",
+        "videoId": "5YIwP9-55Qk",
+        "embedSupported": true
+      }
+    ],
+    "11": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 ORM — Relational fields",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html#relational-fields",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Relational fields tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101/06_basicviews.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Backend tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/backend.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/tutorials",
+        "description": "",
+        "url": "https://github.com/odoo/tutorials",
+        "source": "GitHub"
+      },
+      {
+        "type": "video",
+        "title": "ORM relationships video",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=ASPjB-WowBU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ASPjB-WowBU/hqdefault.jpg",
+        "videoId": "ASPjB-WowBU",
+        "embedSupported": true
+      }
+    ],
+    "12": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 ORM — Computed fields",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html#computed-fields",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Compute / depends / store",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html#decorators",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Server Framework 101",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/tutorials",
+        "description": "",
+        "url": "https://github.com/odoo/tutorials",
+        "source": "GitHub"
+      },
+      {
+        "type": "video",
+        "title": "ORM deep dive (video)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=ASPjB-WowBU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ASPjB-WowBU/hqdefault.jpg",
+        "videoId": "ASPjB-WowBU",
+        "embedSupported": true
+      }
+    ],
+    "13": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 ORM — Environment",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html#environment",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Recordsets",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html#recordsets",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Backend tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/backend.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Server Framework 101",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "video",
+        "title": "ORM video",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=ASPjB-WowBU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ASPjB-WowBU/hqdefault.jpg",
+        "videoId": "ASPjB-WowBU",
+        "embedSupported": true
+      },
+      {
+        "type": "github",
+        "title": "odoo/odoo",
+        "description": "",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      }
+    ],
+    "14": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 ORM — CRUD",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html#model-reference",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Backend tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/backend.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Server Framework 101",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/tutorials",
+        "description": "",
+        "url": "https://github.com/odoo/tutorials",
+        "source": "GitHub"
+      },
+      {
+        "type": "video",
+        "title": "ORM video",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=ASPjB-WowBU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ASPjB-WowBU/hqdefault.jpg",
+        "videoId": "ASPjB-WowBU",
+        "embedSupported": true
+      }
+    ],
+    "15": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 ORM — Domains",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html#search-domains",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Backend tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/backend.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Server Framework 101",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/tutorials",
+        "description": "",
+        "url": "https://github.com/odoo/tutorials",
+        "source": "GitHub"
+      },
+      {
+        "type": "video",
+        "title": "ORM video",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=ASPjB-WowBU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ASPjB-WowBU/hqdefault.jpg",
+        "videoId": "ASPjB-WowBU",
+        "embedSupported": true
+      }
+    ],
+    "16": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 ORM — Recordsets",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html#recordsets",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Backend tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/backend.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Server Framework 101",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/tutorials",
+        "description": "",
+        "url": "https://github.com/odoo/tutorials",
+        "source": "GitHub"
+      },
+      {
+        "type": "video",
+        "title": "ORM video",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=ASPjB-WowBU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ASPjB-WowBU/hqdefault.jpg",
+        "videoId": "ASPjB-WowBU",
+        "embedSupported": true
+      }
+    ],
+    "17": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 ORM — Performance",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Prefetching / cache notes in ORM docs",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html#field-access",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Server Framework 101",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Backend tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/backend.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "video",
+        "title": "ORM video",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=ASPjB-WowBU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ASPjB-WowBU/hqdefault.jpg",
+        "videoId": "ASPjB-WowBU",
+        "embedSupported": true
+      },
+      {
+        "type": "github",
+        "title": "odoo/odoo",
+        "description": "",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      }
+    ],
+    "18": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 ORM — Model methods",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Override create/write patterns",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html#model-reference",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Server Framework 101",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Backend tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/backend.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "video",
+        "title": "ORM / backend video",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=ASPjB-WowBU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ASPjB-WowBU/hqdefault.jpg",
+        "videoId": "ASPjB-WowBU",
+        "embedSupported": true
+      },
+      {
+        "type": "github",
+        "title": "odoo/tutorials",
+        "description": "",
+        "url": "https://github.com/odoo/tutorials",
+        "source": "GitHub"
+      }
+    ],
+    "19": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 ORM — Constraints",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html#constraints-and-indexes",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Exceptions",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Server Framework 101",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Backend tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/backend.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/tutorials",
+        "description": "",
+        "url": "https://github.com/odoo/tutorials",
+        "source": "GitHub"
+      }
+    ],
+    "20": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 ORM — onchange",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html#onchange",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "View / form interaction",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Backend tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/backend.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/tutorials",
+        "description": "",
+        "url": "https://github.com/odoo/tutorials",
+        "source": "GitHub"
+      },
+      {
+        "type": "video",
+        "title": "Module UI video",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=5YIwP9-55Qk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/5YIwP9-55Qk/hqdefault.jpg",
+        "videoId": "5YIwP9-55Qk",
+        "embedSupported": true
+      }
+    ],
+    "21": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 ORM — fields / methods",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Server Framework 101",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Backend tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/backend.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/tutorials",
+        "description": "",
+        "url": "https://github.com/odoo/tutorials",
+        "source": "GitHub"
+      },
+      {
+        "type": "video",
+        "title": "Backend workflow patterns (video)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=ASPjB-WowBU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ASPjB-WowBU/hqdefault.jpg",
+        "videoId": "ASPjB-WowBU",
+        "embedSupported": true
+      },
+      {
+        "type": "github",
+        "title": "odoo/odoo",
+        "description": "",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      }
+    ],
+    "22": [
+      {
+        "type": "documentation",
+        "title": "View architectures (Odoo 18)",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/user_interface/view_architectures.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Server Framework 101 — Security intro (data loading context)",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101/04_securityintro.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/odoo — base data XML patterns",
+        "description": "",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      }
+    ],
+    "23": [
+      {
+        "type": "documentation",
+        "title": "View architectures (Odoo 18)",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/user_interface/view_architectures.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "video",
+        "title": "Form / list UI walkthrough",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=hwfhO2IGhmc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/hwfhO2IGhmc/hqdefault.jpg",
+        "videoId": "hwfhO2IGhmc",
+        "embedSupported": true
+      }
+    ],
+    "24": [
+      {
+        "type": "documentation",
+        "title": "View architectures (Odoo 18)",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/user_interface/view_architectures.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "video",
+        "title": "Multiple view types demo",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=r11U1pqGqQQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/r11U1pqGqQQ/hqdefault.jpg",
+        "videoId": "r11U1pqGqQQ",
+        "embedSupported": true
+      }
+    ],
+    "25": [
+      {
+        "type": "documentation",
+        "title": "View architectures + actions usage",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/user_interface/view_architectures.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "video",
+        "title": "Menus and actions",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=mzg3EGD_6Gw",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/mzg3EGD_6Gw/hqdefault.jpg",
+        "videoId": "mzg3EGD_6Gw",
+        "embedSupported": true
+      }
+    ],
+    "26": [
+      {
+        "type": "documentation",
+        "title": "View architectures — inheritance",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/user_interface/view_architectures.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "video",
+        "title": "XPath inheritance deep dive",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=hwfhO2IGhmc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/hwfhO2IGhmc/hqdefault.jpg",
+        "videoId": "hwfhO2IGhmc",
+        "embedSupported": true
+      }
+    ],
+    "27": [
+      {
+        "type": "documentation",
+        "title": "Access rights (applications)",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/applications/general/users/access_rights.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Security reference",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/security.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Server Framework 101 — security intro",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101/04_securityintro.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Restrict data access tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/restrict_data_access.html",
+        "source": "odoo.com"
+      }
+    ],
+    "28": [
+      {
+        "type": "documentation",
+        "title": "Security reference — access rights",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/security.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Restrict data access",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/restrict_data_access.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Server Framework 101 — security",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101/04_securityintro.html",
+        "source": "odoo.com"
+      }
+    ],
+    "29": [
+      {
+        "type": "documentation",
+        "title": "Security reference — record rules",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/security.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Restrict data access tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/restrict_data_access.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "video",
+        "title": "Record rules deep dive",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=r11U1pqGqQQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/r11U1pqGqQQ/hqdefault.jpg",
+        "videoId": "r11U1pqGqQQ",
+        "embedSupported": true
+      }
+    ],
+    "30": [
+      {
+        "type": "documentation",
+        "title": "Security reference",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/security.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Restrict data access",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/restrict_data_access.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "video",
+        "title": "Security context pitfalls",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=r11U1pqGqQQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/r11U1pqGqQQ/hqdefault.jpg",
+        "videoId": "r11U1pqGqQQ",
+        "embedSupported": true
+      }
+    ],
+    "31": [
+      {
+        "type": "documentation",
+        "title": "Security reference",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/security.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Access rights / multi-company UX",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/applications/general/users/access_rights.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Restrict data access",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/restrict_data_access.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "video",
+        "title": "Multi-company patterns",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=hwfhO2IGhmc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/hwfhO2IGhmc/hqdefault.jpg",
+        "videoId": "hwfhO2IGhmc",
+        "embedSupported": true
+      }
+    ],
+    "32": [
+      {
+        "type": "github",
+        "title": "odoo/odoo — inheritance patterns in addons",
+        "description": "",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      },
+      {
+        "type": "documentation",
+        "title": "View architectures (pair with model inherit)",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/user_interface/view_architectures.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "video",
+        "title": "Inherit vs inherits",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=mzg3EGD_6Gw",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/mzg3EGD_6Gw/hqdefault.jpg",
+        "videoId": "mzg3EGD_6Gw",
+        "embedSupported": true
+      }
+    ],
+    "33": [
+      {
+        "type": "github",
+        "title": "odoo/odoo — product.template / product.product delegation",
+        "description": "",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      },
+      {
+        "type": "video",
+        "title": "_inherit vs _inherits explained",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=hwfhO2IGhmc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/hwfhO2IGhmc/hqdefault.jpg",
+        "videoId": "hwfhO2IGhmc",
+        "embedSupported": true
+      }
+    ],
+    "34": [
+      {
+        "type": "documentation",
+        "title": "View architectures",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/user_interface/view_architectures.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "sale / purchase / stock view XML in odoo/odoo",
+        "description": "",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      }
+    ],
+    "35": [
+      {
+        "type": "documentation",
+        "title": "View architectures",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/user_interface/view_architectures.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Security reference",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/security.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/odoo addons: sale, purchase, stock",
+        "description": "",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      }
+    ],
+    "36": [
+      {
+        "type": "documentation",
+        "title": "ORM — Transient models (Odoo 18)",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html#transient-models",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Actions — window target `new`",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/actions.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "View architectures",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/user_interface/view_architectures.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/odoo",
+        "description": "Search `TransientModel` under `addons/` for real wizards",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      }
+    ],
+    "37": [
+      {
+        "type": "documentation",
+        "title": "ORM API (Odoo 18)",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Data files",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/data.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/odoo",
+        "description": "`addons/base/models/ir_sequence.py`",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      }
+    ],
+    "38": [
+      {
+        "type": "github",
+        "title": "ORM / automation patterns in core",
+        "description": "Search `ir.cron` XML under `addons/`",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      },
+      {
+        "type": "documentation",
+        "title": "Odoo 18 developer reference",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend.html",
+        "source": "odoo.com"
+      }
+    ],
+    "39": [
+      {
+        "type": "github",
+        "title": "odoo/odoo",
+        "description": "`base_automation` module",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      }
+    ],
+    "40": [
+      {
+        "type": "github",
+        "title": "odoo/odoo `mail` module",
+        "description": "",
+        "url": "https://github.com/odoo/odoo/tree/18.0/addons/mail",
+        "source": "GitHub"
+      },
+      {
+        "type": "documentation",
+        "title": "OWL / web client mention of messaging",
+        "description": "Portal/web context later",
+        "url": "https://www.odoo.com/documentation/18.0/developer/howtos/frontend_owl_components.html",
+        "source": "odoo.com"
+      }
+    ],
+    "41": [
+      {
+        "type": "documentation",
+        "title": "QWeb / reports in Odoo docs",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "View architectures",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/user_interface/view_architectures.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/odoo",
+        "description": "Browse `report_` templates in `sale`, `account`, `stock`",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      }
+    ],
+    "42": [
+      {
+        "type": "documentation",
+        "title": "Data files (Odoo 18)",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/data.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "External IDs / export in UI",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer.html",
+        "source": "odoo.com"
+      }
+    ],
+    "43": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 Developer docs",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "ORM API",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html",
+        "source": "odoo.com"
+      }
+    ],
+    "44": [
+      {
+        "type": "documentation",
+        "title": "Web Controllers — Odoo 18",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/http.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Web Services howto",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/howtos/web_services.html",
+        "source": "odoo.com"
+      }
+    ],
+    "45": [
+      {
+        "type": "documentation",
+        "title": "Odoo Websites applications",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/applications/websites.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "HTTP controllers",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/http.html",
+        "source": "odoo.com"
+      }
+    ],
+    "46": [
+      {
+        "type": "documentation",
+        "title": "HTTP controllers",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/http.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Security in Odoo",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/security.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/odoo `portal` module",
+        "description": "",
+        "url": "https://github.com/odoo/odoo/tree/18.0/addons/portal",
+        "source": "GitHub"
+      }
+    ],
+    "47": [
+      {
+        "type": "documentation",
+        "title": "Web Services — Odoo 18",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/howtos/web_services.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "HTTP controllers",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/http.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Security in Odoo",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/security.html",
+        "source": "odoo.com"
+      }
+    ],
+    "48": [
+      {
+        "type": "documentation",
+        "title": "Web Services — Odoo 18",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/howtos/web_services.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/odoo",
+        "description": "External API examples in documentation sources",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      }
+    ],
+    "49": [
+      {
+        "type": "documentation",
+        "title": "HTTP controllers — Odoo 18",
+        "description": "Note `auth='bearer'`",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/http.html",
+        "source": "odoo.com"
+      }
+    ],
+    "50": [
+      {
+        "type": "documentation",
+        "title": "HTTP controllers",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/http.html",
+        "source": "odoo.com"
+      }
+    ],
+    "51": [
+      {
+        "type": "documentation",
+        "title": "Web Services",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/howtos/web_services.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "HTTP",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/http.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "ORM API",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html",
+        "source": "odoo.com"
+      }
+    ],
+    "52": [
+      {
+        "type": "github",
+        "title": "odoo/odoo `payment` and `payment_*` addons",
+        "description": "Especially `payment_stripe` as a reference",
+        "url": "https://github.com/odoo/odoo/tree/18.0/addons",
+        "source": "GitHub"
+      }
+    ],
+    "53": [
+      {
+        "type": "documentation",
+        "title": "OWL components (Odoo 18)",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/frontend/owl_components.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Discover the JS framework — OWL components tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/discover_js_framework/01_owl_components.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Services reference",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/frontend/services.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "video",
+        "title": "OWL introduction (YouTube)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=YJg7dvwXQF8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/YJg7dvwXQF8/hqdefault.jpg",
+        "videoId": "YJg7dvwXQF8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Odoo architecture overview (YouTube)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=WnsYmsq4Qr8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/WnsYmsq4Qr8/hqdefault.jpg",
+        "videoId": "WnsYmsq4Qr8",
+        "embedSupported": true
+      },
+      {
+        "type": "github",
+        "title": "ged-odoo/odoo-js-training-public",
+        "description": "",
+        "url": "https://github.com/ged-odoo/odoo-js-training-public",
+        "source": "GitHub"
+      }
+    ],
+    "54": [
+      {
+        "type": "documentation",
+        "title": "OWL components reference",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/frontend/owl_components.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Discover JS framework — 01 Owl components",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/discover_js_framework/01_owl_components.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Frontend OWL components howto",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/howtos/frontend_owl_components.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "video",
+        "title": "OWL introduction (YouTube)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=YJg7dvwXQF8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/YJg7dvwXQF8/hqdefault.jpg",
+        "videoId": "YJg7dvwXQF8",
+        "embedSupported": true
+      },
+      {
+        "type": "github",
+        "title": "odoo/owl",
+        "description": "",
+        "url": "https://github.com/odoo/owl",
+        "source": "GitHub"
+      }
+    ],
+    "55": [
+      {
+        "type": "documentation",
+        "title": "Services reference",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/frontend/services.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "OWL components",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/frontend/owl_components.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Discover JS framework tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/discover_js_framework/01_owl_components.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "ged-odoo/odoo-js-training-public",
+        "description": "",
+        "url": "https://github.com/ged-odoo/odoo-js-training-public",
+        "source": "GitHub"
+      }
+    ],
+    "56": [
+      {
+        "type": "documentation",
+        "title": "Assets reference",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/frontend/assets.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "OWL components — file layout",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/frontend/owl_components.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Discover JS framework tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/discover_js_framework/01_owl_components.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "video",
+        "title": "Architecture overview (YouTube)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=WnsYmsq4Qr8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/WnsYmsq4Qr8/hqdefault.jpg",
+        "videoId": "WnsYmsq4Qr8",
+        "embedSupported": true
+      }
+    ],
+    "57": [
+      {
+        "type": "documentation",
+        "title": "Frontend OWL components howto",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/howtos/frontend_owl_components.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "OWL components reference",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/frontend/owl_components.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "video",
+        "title": "OWL intro (YouTube)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=YJg7dvwXQF8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/YJg7dvwXQF8/hqdefault.jpg",
+        "videoId": "YJg7dvwXQF8",
+        "embedSupported": true
+      },
+      {
+        "type": "github",
+        "title": "ged-odoo/odoo-js-training-public",
+        "description": "",
+        "url": "https://github.com/ged-odoo/odoo-js-training-public",
+        "source": "GitHub"
+      }
+    ],
+    "58": [
+      {
+        "type": "documentation",
+        "title": "Frontend OWL components howto",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/howtos/frontend_owl_components.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Services — orm / notification",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/frontend/services.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Discover JS framework",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/discover_js_framework/01_owl_components.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "video",
+        "title": "OWL intro (YouTube)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=YJg7dvwXQF8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/YJg7dvwXQF8/hqdefault.jpg",
+        "videoId": "YJg7dvwXQF8",
+        "embedSupported": true
+      }
+    ],
+    "59": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 Developer docs",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "ORM API",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html",
+        "source": "odoo.com"
+      }
+    ],
+    "60": [
+      {
+        "type": "documentation",
+        "title": "Odoo data model / backend data",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/data.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "ORM API",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Architecture tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101/01_architecture.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/odoo",
+        "description": "",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      }
+    ],
+    "61": [
+      {
+        "type": "reference",
+        "title": "PostgreSQL EXPLAIN",
+        "description": "",
+        "url": "https://www.postgresql.org/docs/current/sql-explain.html",
+        "source": "postgresql.org"
+      },
+      {
+        "type": "documentation",
+        "title": "Odoo ORM performance notes",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html#performance",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Deploy / PostgreSQL notes",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/administration/on_premise/deploy.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "video",
+        "title": "Architecture (YouTube)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=WnsYmsq4Qr8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/WnsYmsq4Qr8/hqdefault.jpg",
+        "videoId": "WnsYmsq4Qr8",
+        "embedSupported": true
+      }
+    ],
+    "62": [
+      {
+        "type": "documentation",
+        "title": "ORM API — transaction / environment",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "reference",
+        "title": "PostgreSQL concurrency control",
+        "description": "",
+        "url": "https://www.postgresql.org/docs/current/mvcc-intro.html",
+        "source": "postgresql.org"
+      },
+      {
+        "type": "documentation",
+        "title": "Performance reference",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/performance.html",
+        "source": "odoo.com"
+      }
+    ],
+    "63": [
+      {
+        "type": "reference",
+        "title": "PostgreSQL EXPLAIN",
+        "description": "",
+        "url": "https://www.postgresql.org/docs/current/sql-explain.html",
+        "source": "postgresql.org"
+      },
+      {
+        "type": "documentation",
+        "title": "ORM performance",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html#performance",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Odoo performance / profiling",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/performance.html",
+        "source": "odoo.com"
+      }
+    ],
+    "64": [
+      {
+        "type": "documentation",
+        "title": "ORM performance section",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html#performance",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Odoo performance profiling",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/performance.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/odoo",
+        "description": "",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      }
+    ],
+    "65": [
+      {
+        "type": "documentation",
+        "title": "Odoo Performance / Profiling",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/performance.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "ORM performance",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html#performance",
+        "source": "odoo.com"
+      },
+      {
+        "type": "reference",
+        "title": "PostgreSQL EXPLAIN",
+        "description": "",
+        "url": "https://www.postgresql.org/docs/current/sql-explain.html",
+        "source": "postgresql.org"
+      }
+    ],
+    "66": [
+      {
+        "type": "documentation",
+        "title": "CLI / logging notes in Odoo docs",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/cli.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Testing reference",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/testing.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Security reference",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/security.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/odoo",
+        "description": "",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      }
+    ],
+    "67": [
+      {
+        "type": "documentation",
+        "title": "Testing Odoo",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/testing.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "ORM API",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/odoo tests helpers",
+        "description": "",
+        "url": "https://github.com/odoo/odoo/tree/18.0/odoo/tests",
+        "source": "GitHub"
+      }
+    ],
+    "68": [
+      {
+        "type": "documentation",
+        "title": "Testing Odoo — Form helper",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/testing.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "ORM API",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html",
+        "source": "odoo.com"
+      }
+    ],
+    "69": [
+      {
+        "type": "documentation",
+        "title": "Testing Odoo",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/testing.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Security in Odoo",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/security.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Restrict access tutorial",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/tutorials/restrict_data_access.html",
+        "source": "odoo.com"
+      }
+    ],
+    "70": [
+      {
+        "type": "documentation",
+        "title": "Testing Odoo — HttpCase & tours",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/testing.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "JS framework / tours in Odoo docs",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/frontend.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "HTTP controllers",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/http.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "github",
+        "title": "odoo/odoo",
+        "description": "",
+        "url": "https://github.com/odoo/odoo",
+        "source": "GitHub"
+      }
+    ],
+    "71": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 Developer docs",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "ORM API",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html",
+        "source": "odoo.com"
+      }
+    ],
+    "72": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 Developer docs",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "ORM API",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html",
+        "source": "odoo.com"
+      }
+    ],
+    "73": [
+      {
+        "type": "documentation",
+        "title": "Source install (Odoo 18)",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/administration/on_premise/source.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "System configuration / deploy",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/administration/on_premise/deploy.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "CLI reference",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/cli.html",
+        "source": "odoo.com"
+      }
+    ],
+    "74": [
+      {
+        "type": "documentation",
+        "title": "Source install",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/administration/on_premise/source.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Deploy / system configuration",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/administration/on_premise/deploy.html",
+        "source": "odoo.com"
+      }
+    ],
+    "75": [
+      {
+        "type": "documentation",
+        "title": "Deploy — HTTPS section",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/administration/on_premise/deploy.html",
+        "source": "odoo.com"
+      }
+    ],
+    "76": [
+      {
+        "type": "documentation",
+        "title": "Builtin server / workers (deploy docs)",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/administration/on_premise/deploy.html",
+        "source": "odoo.com"
+      }
+    ],
+    "77": [
+      {
+        "type": "documentation",
+        "title": "Deploy — PostgreSQL section",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/administration/on_premise/deploy.html",
+        "source": "odoo.com"
+      }
+    ],
+    "78": [
+      {
+        "type": "documentation",
+        "title": "Deploy documentation",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/administration/on_premise/deploy.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "reference",
+        "title": "PostgreSQL backup/restore",
+        "description": "",
+        "url": "https://www.postgresql.org/docs/current/backup.html",
+        "source": "postgresql.org"
+      }
+    ],
+    "79": [
+      {
+        "type": "documentation",
+        "title": "Odoo.sh documentation hub",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/administration/odoo_sh.html",
+        "source": "odoo.com"
+      }
+    ],
+    "80": [
+      {
+        "type": "github",
+        "title": "odoo/docker",
+        "description": "",
+        "url": "https://github.com/odoo/docker",
+        "source": "GitHub"
+      },
+      {
+        "type": "documentation",
+        "title": "Deploy docs — workers note for Docker",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/administration/on_premise/deploy.html",
+        "source": "odoo.com"
+      }
+    ],
+    "81": [
+      {
+        "type": "documentation",
+        "title": "CLI / logging",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/cli.html",
+        "source": "odoo.com"
+      }
+    ],
+    "82": [
+      {
+        "type": "documentation",
+        "title": "Module manifests",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/module.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Upgrades reference",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/upgrades.html",
+        "source": "odoo.com"
+      }
+    ],
+    "83": [
+      {
+        "type": "documentation",
+        "title": "ORM fields",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html",
+        "source": "odoo.com"
+      }
+    ],
+    "84": [
+      {
+        "type": "documentation",
+        "title": "Upgrade scripts",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/upgrades/upgrade_scripts.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Upgrade utils",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/upgrades/upgrade_utils.html",
+        "source": "odoo.com"
+      }
+    ],
+    "85": [
+      {
+        "type": "documentation",
+        "title": "Upgrades reference",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/upgrades.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Odoo 18 developer docs",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer.html",
+        "source": "odoo.com"
+      }
+    ],
+    "86": [
+      {
+        "type": "documentation",
+        "title": "Odoo 18 Developer docs",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer.html",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "ORM API",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html",
+        "source": "odoo.com"
+      }
+    ],
+    "87": [
+      {
+        "type": "documentation",
+        "title": "Inheritance",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html#inheritance",
+        "source": "odoo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "View inheritance",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/user_interface/view_architectures.html",
+        "source": "odoo.com"
+      }
+    ],
+    "88": [
+      {
+        "type": "documentation",
+        "title": "Testing",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/testing.html",
+        "source": "odoo.com"
+      }
+    ],
+    "89": [
+      {
+        "type": "documentation",
+        "title": "Developer docs",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer.html",
+        "source": "odoo.com"
+      }
+    ],
+    "90": [
+      {
+        "type": "documentation",
+        "title": "Odoo functional apps overview",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/",
+        "source": "odoo.com"
+      },
+      {
+        "type": "reference",
+        "title": "`Projects.md`",
+        "description": "Process-map style deliverables",
+        "url": "../guides/Projects.md"
+      }
+    ],
+    "91": [
+      {
+        "type": "documentation",
+        "title": "Modules",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/module.html",
+        "source": "odoo.com"
+      }
+    ],
+    "92": [
+      {
+        "type": "reference",
+        "title": "Automated actions / studio",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/",
+        "source": "odoo.com"
+      }
+    ],
+    "93": [
+      {
+        "type": "documentation",
+        "title": "ORM API",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html",
+        "source": "odoo.com"
+      }
+    ],
+    "94": [
+      {
+        "type": "documentation",
+        "title": "Security",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/security.html",
+        "source": "odoo.com"
+      }
+    ],
+    "95": [
+      {
+        "type": "reference",
+        "title": "`Projects.md`",
+        "description": "",
+        "url": "../guides/Projects.md"
+      },
+      {
+        "type": "reference",
+        "title": "`Interview.md`",
+        "description": "",
+        "url": "../guides/Interview.md"
+      },
+      {
+        "type": "documentation",
+        "title": "Testing reference",
+        "description": "",
+        "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/testing.html",
+        "source": "odoo.com"
+      }
+    ],
+    "96": [
+      {
+        "type": "reference",
+        "title": "`Interview.md`",
+        "description": "",
+        "url": "../guides/Interview.md"
+      },
+      {
+        "type": "reference",
+        "title": "`Projects.md`",
+        "description": "Portfolio talking points",
+        "url": "../guides/Projects.md"
+      }
+    ]
+  },
+  "projects": {}
+}

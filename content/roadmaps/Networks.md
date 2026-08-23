@@ -908,7 +908,7 @@ print(vlan_tag(10).hex())
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
-- [Subnet Mask - Explained (PowerCert)](https://www.youtube.com/watch?v=s_Ntt6eTn94)
+- [What is a Subnet Mask??? (NetworkChuck)](https://www.youtube.com/watch?v=oZGZRtaGyG8)
 - [What is Subnetting? - Subnetting Mastery Part 1 (Practical Networking)](https://www.youtube.com/watch?v=BWZ-MHIhqjM)
 - [IP addressing and Subnetting | CIDR (TechTerms)](https://www.youtube.com/watch?v=OqsXzkXfwRw)
 - [subnetcalculator.com](https://www.subnet-calculator.com/) or similar
@@ -3312,7 +3312,7 @@ print("Design prompt checklist:", ", ".join(checklist))
 | TCP vs UDP | [PowerCert](https://www.youtube.com/watch?v=uwoD5YsGACg) / [ByteQuest](https://www.youtube.com/watch?v=Xu85vTSZRWs) / [CertBros](https://www.youtube.com/watch?v=cA9ZJdqzOoU) |
 | DNS | [PowerCert](https://www.youtube.com/watch?v=mpQZVYPuDGU) / [Fireship](https://www.youtube.com/watch?v=UVR9lhUGAyU) / [Ryan Schachte](https://www.youtube.com/watch?v=vrxwXXytEuI) |
 | Routing | [Sabin](https://www.youtube.com/watch?v=gQtgtKtvRdo) / [NETWORK WALKS](https://www.youtube.com/watch?v=F1O8qs8hkm4) / [Practical Networking](https://www.youtube.com/watch?v=FzfrSDaWeLE) |
-| Subnetting | [PowerCert](https://www.youtube.com/watch?v=s_Ntt6eTn94) / [Practical Networking Mastery](https://www.youtube.com/watch?v=BWZ-MHIhqjM) |
+| Subnetting | [NetworkChuck](https://www.youtube.com/watch?v=oZGZRtaGyG8) / [Practical Networking Mastery](https://www.youtube.com/watch?v=BWZ-MHIhqjM) |
 | HTTP | [NeetCodeIO](https://www.youtube.com/watch?v=wOPrIhmi7l0) |
 | TLS | [PowerCert](https://www.youtube.com/watch?v=hExRDVZHhig) / [ByteByteGo](https://www.youtube.com/watch?v=j9QmMEWmcfo) |
 | Wireshark | [Chris Greer beginners](https://www.youtube.com/watch?v=OU-A2EmVrKQ) |

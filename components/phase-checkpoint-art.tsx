@@ -4,10 +4,10 @@ import { CheckpointFunctions } from "@/components/checkpoint-functions";
 import { CheckpointRun } from "@/components/checkpoint-run";
 import { CheckpointTerminal } from "@/components/checkpoint-terminal";
 import { ComplexityArt } from "@/components/complexity-art";
-
-type Topic = { id: string; title: string };
+import { WhatIsArt } from "@/components/what-is-art";
 
 type ArtKind =
+  | "what-is"
   | "terminal"
   | "run"
   | "complexity"
@@ -29,8 +29,9 @@ type ArtKind =
   | "testing"
   | "default";
 
-function checkpointArtKind(title: string, topics: Topic[]): ArtKind {
-  const text = `${title} ${topics.map((topic) => `${topic.id} ${topic.title}`).join(" ")}`.toLowerCase();
+function checkpointArtKind(title: string): ArtKind {
+  const text = title.toLowerCase();
+  if (/what is computer science|^what is cs\b/.test(text)) return "what-is";
   if (/\bgraphs?\b|bfs|dfs|shortest path|dijkstra/.test(text)) return "graph";
   if (/how programs run|source, interpreter/.test(text)) return "run";
   if (/control flow|conditionals|loops and iteration/.test(text)) return "control";
@@ -312,7 +313,7 @@ function DefaultArt({ number }: { number: string }) {
   );
 }
 
-const ART: Record<Exclude<ArtKind, "terminal" | "run" | "control" | "functions">, (number: string) => ReactNode> = {
+const ART: Record<Exclude<ArtKind, "what-is" | "terminal" | "run" | "control" | "functions">, (number: string) => ReactNode> = {
   complexity: () => <ComplexityArt />,
   graph: () => <GraphArt />,
   tree: () => <TreeArt />,
@@ -334,13 +335,12 @@ const ART: Record<Exclude<ArtKind, "terminal" | "run" | "control" | "functions">
 export function PhaseCheckpointArt({
   number,
   title,
-  topics,
 }: {
   number: string;
   title: string;
-  topics: Topic[];
 }) {
-  const kind = checkpointArtKind(title, topics);
+  const kind = checkpointArtKind(title);
+  if (kind === "what-is") return <WhatIsArt />;
   if (kind === "terminal") return <TerminalArt title={title} />;
   if (kind === "run") return <CheckpointRun />;
   if (kind === "control") return <CheckpointControl />;

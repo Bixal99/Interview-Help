@@ -47,7 +47,12 @@ function ArrowHead({
 }
 
 function arrowAngle(fromX: number, fromY: number, toX: number, toY: number) {
-  return (Math.atan2(toY - fromY, toX - fromX) * 180) / Math.PI;
+  // Math.atan2 is not guaranteed to be bit-identical across JS engines, so the
+  // raw value can differ by a few ULPs between server and client renders and
+  // trip a hydration mismatch. Rounding to a stable precision keeps the
+  // rendered attribute string identical on both sides.
+  const degrees = (Math.atan2(toY - fromY, toX - fromX) * 180) / Math.PI;
+  return Math.round(degrees * 1000) / 1000;
 }
 
 function shortenEnd(fromX: number, fromY: number, toX: number, toY: number) {
@@ -216,7 +221,7 @@ const FLOW_STEPS = [
     ),
   },
   {
-    kicker: "Binary search · Phase 7",
+    kicker: "Binary search · Chapter 7",
     title: "O(log n)",
     hint: "Each comparison drops about half the remaining space",
     kind: "win",

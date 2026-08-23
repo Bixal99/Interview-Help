@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
-import type { CourseProgressState, LearningProgress } from "@/lib/learning-model";
+import type { ChapterRequirementLookup, CourseProgressState, LearningProgress } from "@/lib/learning-model";
 import type { MigrationLookup } from "@/lib/progress-lookup";
 import {
   PROGRESS_KEY,
@@ -9,11 +9,13 @@ import {
   canEnterPhase,
   coursePercent,
   courseState,
+  emptyCourseProgress,
   emptyProgress,
   isProjectComplete,
   migrateV1Progress,
   parseProgress,
   parseProgressV2,
+  requiredHrefForPhase,
   resumeHref,
   stepsFor,
   toggleList,
@@ -28,8 +30,9 @@ type ProgressApi = {
   ready: boolean;
   progress: LearningProgress;
   course: (slug: string) => CourseProgressState;
-  percent: (slug: string, phaseCount: number) => number;
-  canEnter: (slug: string, phaseId: string, phaseIds: string[]) => boolean;
+  percent: (slug: string, lessonCount: number, projectCount?: number) => number;
+  canEnter: (slug: string, phaseId: string, phaseIds: string[], lessonIdsByPhase?: Record<string, string[]>) => boolean;
+  requiredHref: (slug: string, phaseId: string, phaseIds: string[]) => string | undefined;
   projectDone: (slug: string, phaseId: string) => boolean;
   visit: (slug: string, phaseId: string, lessonId: string) => void;
   completeLesson: (slug: string, lessonId: string) => void;
@@ -41,6 +44,7 @@ type ProgressApi = {
   exportJson: () => string;
   importJson: (value: unknown) => void;
   reset: () => void;
+  resetCourse: (slug: string) => void;
 };
 
 const ProgressContext = createContext<ProgressApi | null>(null);
@@ -60,14 +64,24 @@ function persist(progress: LearningProgress) {
   window.dispatchEvent(new Event(EVENT));
 }
 
-export function ProgressProvider({ children, lookup }: { children: React.ReactNode; lookup?: MigrationLookup[] }) {
+export function ProgressProvider({
+  children,
+  lookup,
+  requirements,
+}: {
+  children: React.ReactNode;
+  lookup?: MigrationLookup[];
+  requirements?: ChapterRequirementLookup;
+}) {
   const [progress, setProgress] = useState<LearningProgress>(emptyProgress);
   const [ready, setReady] = useState(false);
   const progressRef = useRef(progress);
   const hydratedRef = useRef(false);
   const lookupRef = useRef(lookup ?? []);
+  const requirementsRef = useRef(requirements);
   progressRef.current = progress;
   if (lookup) lookupRef.current = lookup;
+  if (requirements) requirementsRef.current = requirements;
 
   const apply = useCallback((next: LearningProgress) => {
     if (!hydratedRef.current) return;
@@ -114,12 +128,31 @@ export function ProgressProvider({ children, lookup }: { children: React.ReactNo
     if (!hydratedRef.current) return;
     const current = progressRef.current;
     const state = courseState(current, slug);
-    if (state.currentPhaseId === phaseId && state.currentLessonId === lessonId && state.visitedLessons.includes(lessonId)) return;
-    apply(withCourse(current, slug, {
-      currentPhaseId: phaseId,
-      currentLessonId: lessonId,
-      visitedLessons: [...new Set([...state.visitedLessons, lessonId])],
-    }));
+    const previousLessonId = state.currentLessonId;
+    const alreadyHere =
+      state.currentPhaseId === phaseId &&
+      state.currentLessonId === lessonId &&
+      state.visitedLessons.includes(lessonId);
+    if (alreadyHere) return;
+
+    const shouldCompletePrevious = Boolean(
+      previousLessonId &&
+        previousLessonId !== lessonId &&
+        !previousLessonId.startsWith("project:") &&
+        !previousLessonId.startsWith("glossary:") &&
+        !previousLessonId.startsWith("phase:"),
+    );
+
+    apply(
+      withCourse(current, slug, {
+        currentPhaseId: phaseId,
+        currentLessonId: lessonId,
+        visitedLessons: [...new Set([...state.visitedLessons, lessonId])],
+        ...(shouldCompletePrevious
+          ? { completedLessons: [...new Set([...state.completedLessons, previousLessonId!])] }
+          : {}),
+      }),
+    );
   }, [apply, ready]);
 
   const completeLesson = useCallback((slug: string, lessonId: string) => {
@@ -134,8 +167,11 @@ export function ProgressProvider({ children, lookup }: { children: React.ReactNo
     ready,
     progress,
     course: (slug) => courseState(progress, slug),
-    percent: (slug, phaseCount) => coursePercent(courseState(progress, slug), phaseCount),
-    canEnter: (slug, phaseId, phaseIds) => canEnterPhase(progress, stepsFor(progress, slug, phaseIds), slug, phaseId),
+    percent: (slug, lessonCount, projectCount) => coursePercent(courseState(progress, slug), lessonCount, projectCount),
+    canEnter: (slug, phaseId, phaseIds) =>
+      canEnterPhase(progress, stepsFor(progress, slug, phaseIds), slug, phaseId, requirementsRef.current),
+    requiredHref: (slug, phaseId, phaseIds) =>
+      requiredHrefForPhase(progress, stepsFor(progress, slug, phaseIds), slug, phaseId, requirementsRef.current),
     projectDone: (slug, phaseId) => isProjectComplete(progress, slug, phaseId),
     visit,
     completeLesson,
@@ -167,9 +203,28 @@ export function ProgressProvider({ children, lookup }: { children: React.ReactNo
     importJson: (value) => apply(validateImportedProgress(value)),
     reset: () => {
       if (!hydratedRef.current) return;
-      localStorage.removeItem(PROGRESS_KEY);
-      localStorage.removeItem(PROGRESS_KEY_V2);
-      apply(emptyProgress());
+      try {
+        localStorage.removeItem(PROGRESS_KEY);
+        localStorage.removeItem(PROGRESS_KEY_V2);
+        sessionStorage.removeItem("ih-progress-campaign");
+      } catch {
+        // Private mode may refuse storage; still clear in-memory state.
+      }
+      const cleared = emptyProgress();
+      progressRef.current = cleared;
+      setProgress(cleared);
+      persist(cleared);
+    },
+    resetCourse: (slug) => {
+      if (!hydratedRef.current) return;
+      const current = progressRef.current;
+      apply({
+        ...current,
+        courses: {
+          ...current.courses,
+          [slug]: emptyCourseProgress(),
+        },
+      });
     },
   }), [progress, ready, visit, completeLesson, apply]);
 

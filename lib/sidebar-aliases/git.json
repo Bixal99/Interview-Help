@@ -1,0 +1,44 @@
+{
+  "units": {
+    "setup": "Setup & State",
+    "collaborate": "Branch & Merge",
+    "recover": "Undo & Recover",
+    "professional": "Release & Workflow"
+  },
+  "phases": {
+    "1": "Foundations & Safe Setup",
+    "2": "Three-state Model",
+    "3": "Commits & History",
+    "4": "Git Internals & The",
+    "5": "Branching & Parallel Work",
+    "6": "Merging & Conflict",
+    "7": "Remotes & Collaboration",
+    "8": "Safe Undoing Without Data",
+    "9": "Recovery & Shared-history",
+    "10": "Rebase & Intentional",
+    "11": "Productive Everyday Git",
+    "12": "Investigation & Tags",
+    "13": "Large & Multi-repository",
+    "14": "Professional Team",
+    "15": "CI & Trust"
+  },
+  "lessons": {
+    "1.1": "From `final-final` Folders",
+    "2.1": "Working Tree & Index",
+    "3.1": "Snapshots & Parents",
+    "4.1": "Objects & Refs",
+    "5.1": "Branch Refs & Upstreams",
+    "6.1": "Merge Bases & Merge",
+    "7.1": "Object Exchange",
+    "8.1": "Restore & Amend",
+    "9.1": "Reflog Rescue & Secret",
+    "10.1": "Merge Versus Rebase",
+    "11.1": "Stash & Patch Selection",
+    "12.1": "Blame & Bisect",
+    "13.1": "Attributes & Large Files",
+    "14.1": "Feature Branches & Flows",
+    "15.1": "From Commit To Trusted"
+  },
+  "children": {},
+  "project": "Project"
+}

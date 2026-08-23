@@ -41,9 +41,9 @@ Computer Science · Git · Web · Data · AI · Networks · Cloud · DevOps · C
 | Paper home · course tiles · real counts | One lesson at a time · winding graph · playground | Phase builds · interview drills · browser progress |
 
 ```text
-Home  →  Pick a course  →  Phase checkpoint  →  Lesson  →  Project
+Home  →  Pick a course  →  Chapter checkpoint  →  Lesson  →  Project
                 ↓                                      ↓
-           /progress graph                    Mark build complete → next phase
+           /progress graph                    Mark project complete → next chapter
 ```
 
 Architecture layers:
@@ -157,7 +157,8 @@ quarry/
 ├── lib/                         # Catalog, Markdown parse, progress, playground
 ├── content/
 │   ├── roadmaps/                # Eleven course sources
-│   ├── guides/                  # Projects.md · Interview.md
+│   ├── guides/                  # Shared project workflow · Interview.md
+│   ├── projects/                # Eleven chapter-project catalogs
 │   └── templates/               # CV template
 ├── data/                        # Job tracker spreadsheet
 ├── scripts/                     # validate-content
@@ -196,7 +197,8 @@ Markdown under `content/` is canonical.
 | Path | Role |
 |:---|:---|
 | [`content/roadmaps`](./content/roadmaps) | Course source |
-| [`content/guides/Projects.md`](./content/guides/Projects.md) | Phase project briefs |
+| [`content/guides/Projects.md`](./content/guides/Projects.md) | Shared project workflow and legacy anchor index |
+| [`content/projects`](./content/projects) | Required chapter-project briefs, grouped by course and unit |
 | [`content/guides/Interview.md`](./content/guides/Interview.md) | Interview drills |
 | [`content/templates`](./content/templates) | CV template |
 | [`data/Job_Tracker.xlsx`](./data/Job_Tracker.xlsx) | Job tracker (`/downloads/job-tracker`) |

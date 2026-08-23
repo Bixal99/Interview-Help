@@ -1,0 +1,482 @@
+{
+  "lessons": {
+    "1.1": [
+      {
+        "type": "video",
+        "title": "How Git Works: Explained in 4 Minutes - ByteByteGo",
+        "description": "It supplies the whole map before configuration details.",
+        "url": "https://www.youtube.com/watch?v=e9lnsKot_SQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/e9lnsKot_SQ/hqdefault.jpg",
+        "videoId": "e9lnsKot_SQ",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "Pro Git: Getting Started",
+        "description": "It names the architectural reason Git can work offline.",
+        "url": "https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Git downloads",
+        "description": "The required CLI is free and open source.",
+        "url": "https://git-scm.com/downloads",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "reference",
+        "title": "Forgejo",
+        "description": "They keep Git separate from any one proprietary host.",
+        "url": "https://forgejo.org/",
+        "source": "forgejo.org"
+      }
+    ],
+    "2.1": [
+      {
+        "type": "reference",
+        "title": "Pro Git: Recording Changes",
+        "description": "It owns the canonical file lifecycle.",
+        "url": "https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "video",
+        "title": "Git Internals - How Git Works - Fear Not The SHA! - GitLab",
+        "description": "It connects a visible state to the internal mechanism.",
+        "url": "https://www.youtube.com/watch?v=P6jD966jzlk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/P6jD966jzlk/hqdefault.jpg",
+        "videoId": "P6jD966jzlk",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Git Visualizer",
+        "description": "It makes state changes visible before the graph becomes complex.",
+        "url": "https://git-school.github.io/visualizing-git/",
+        "source": "git-school.github.io"
+      },
+      {
+        "type": "tool",
+        "title": "Git Katas: basic exercises",
+        "description": "Repetition makes `status` a reflex.",
+        "url": "https://github.com/eficode-academy/git-katas",
+        "source": "GitHub"
+      }
+    ],
+    "3.1": [
+      {
+        "type": "reference",
+        "title": "Pro Git: Viewing History",
+        "description": "It teaches history as a queryable graph.",
+        "url": "https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Conventional Commits 1.0.0",
+        "description": "Structured messages can support release automation without replacing judgment.",
+        "url": "https://www.conventionalcommits.org/en/v1.0.0/",
+        "source": "conventionalcommits.org"
+      },
+      {
+        "type": "video",
+        "title": "How Git Works: Explained in 4 Minutes - ByteByteGo",
+        "description": "The concise visual reinforces that commits identify complete trees.",
+        "url": "https://www.youtube.com/watch?v=e9lnsKot_SQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/e9lnsKot_SQ/hqdefault.jpg",
+        "videoId": "e9lnsKot_SQ",
+        "embedSupported": true
+      },
+      {
+        "type": "github",
+        "title": "git/git commit history",
+        "description": "Real history reveals conventions and trade-offs better than toy slogans.",
+        "url": "https://github.com/git/git/commits/master/",
+        "source": "GitHub"
+      }
+    ],
+    "4.1": [
+      {
+        "type": "course",
+        "title": "Lecture 6: Version Control (git) (2020) - Missing Semester",
+        "description": "It derives Git from a data model rather than a command list.",
+        "url": "https://www.youtube.com/watch?v=2sjqTHE0zok",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/2sjqTHE0zok/hqdefault.jpg",
+        "videoId": "2sjqTHE0zok",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Git Internals - How Git Works - Fear Not The SHA! - GitLab",
+        "description": "The visual explanation is both free and technically grounded.",
+        "url": "https://www.youtube.com/watch?v=P6jD966jzlk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/P6jD966jzlk/hqdefault.jpg",
+        "videoId": "P6jD966jzlk",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "Pro Git: Git Objects",
+        "description": "It is the primary internals walkthrough.",
+        "url": "https://git-scm.com/book/en/v2/Git-Internals-Git-Objects",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "reference",
+        "title": "git/git",
+        "description": "The implementation and tests settle ambiguous mental models.",
+        "url": "https://github.com/git/git",
+        "source": "GitHub"
+      }
+    ],
+    "5.1": [
+      {
+        "type": "interactive",
+        "title": "Learn Git Branching",
+        "description": "Predicting label movement is the core branch skill.",
+        "url": "https://learngitbranching.js.org/?locale=en_US",
+        "source": "learngitbranching.js.org"
+      },
+      {
+        "type": "video",
+        "title": "Learn Git - Full Course for Beginners - freeCodeCamp.org",
+        "description": "The evolving repository connects syntax to state.",
+        "url": "https://www.youtube.com/watch?v=zTjRZNkhiEU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/zTjRZNkhiEU/hqdefault.jpg",
+        "videoId": "zTjRZNkhiEU",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "Pro Git: Branches in a Nutshell",
+        "description": "It explains why branches are lightweight.",
+        "url": "https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "reference",
+        "title": "Oh My Git!",
+        "description": "It counters the simulator limitation with real Git.",
+        "url": "https://ohmygit.org/",
+        "source": "ohmygit.org"
+      }
+    ],
+    "6.1": [
+      {
+        "type": "video",
+        "title": "Git MERGE vs REBASE: Everything You Need to Know (ByteByteGo)",
+        "description": "It provides a clear animated walkthrough of merge mechanics and conflicts.",
+        "url": "https://www.youtube.com/watch?v=0chZFIZLR_0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/0chZFIZLR_0/hqdefault.jpg",
+        "videoId": "0chZFIZLR_0",
+        "embedSupported": true
+      },
+      {
+        "type": "tool",
+        "title": "GitHub Skills: Resolve Merge Conflicts",
+        "description": "It adds hosted workflow context but does not replace deeper local labs.",
+        "url": "https://github.com/skills/resolve-merge-conflicts",
+        "source": "GitHub"
+      },
+      {
+        "type": "reference",
+        "title": "Pro Git: Basic Branching and Merging",
+        "description": "It anchors terminology and mechanisms.",
+        "url": "https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "tool",
+        "title": "Git Katas",
+        "description": "Deliberate repetition builds safe abort/continue habits.",
+        "url": "https://github.com/eficode-academy/git-katas",
+        "source": "GitHub"
+      }
+    ],
+    "7.1": [
+      {
+        "type": "tool",
+        "title": "GitHub Skills: Introduction to GitHub",
+        "description": "It shows the hosting layer while Git remains the data model.",
+        "url": "https://github.com/skills/introduction-to-github",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "GitHub Skills: Review Pull Requests",
+        "description": "Review is a collaboration state machine, not a Git object.",
+        "url": "https://github.com/skills/review-pull-requests",
+        "source": "GitHub"
+      },
+      {
+        "type": "reference",
+        "title": "Pro Git: Working with Remotes",
+        "description": "It precisely separates refs and transport.",
+        "url": "https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "reference",
+        "title": "Forgejo",
+        "description": "They prevent GitHub from being mistaken for Git or the only professional host.",
+        "url": "https://forgejo.org/",
+        "source": "forgejo.org"
+      }
+    ],
+    "8.1": [
+      {
+        "type": "documentation",
+        "title": "git-reset documentation",
+        "description": "Exact state changes must come from primary documentation.",
+        "url": "https://git-scm.com/docs/git-reset",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "reference",
+        "title": "Pro Git: Reset Demystified",
+        "description": "It turns similar syntax into a state model.",
+        "url": "https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "interactive",
+        "title": "Learn Git Branching",
+        "description": "The graph is visible, but simulation must be paired with local state inspection.",
+        "url": "https://learngitbranching.js.org/?locale=en_US",
+        "source": "learngitbranching.js.org"
+      },
+      {
+        "type": "tool",
+        "title": "Git Katas",
+        "description": "Safe judgment requires rehearsed distinctions.",
+        "url": "https://github.com/eficode-academy/git-katas",
+        "source": "GitHub"
+      }
+    ],
+    "9.1": [
+      {
+        "type": "video",
+        "title": "Recovering Lost Commits with Git Reflog - Train To Code",
+        "description": "It demonstrates the shortest real recovery loop.",
+        "url": "https://www.youtube.com/watch?v=hsAPjNZHv-E",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/hsAPjNZHv-E/hqdefault.jpg",
+        "videoId": "hsAPjNZHv-E",
+        "embedSupported": true
+      },
+      {
+        "type": "documentation",
+        "title": "git-reflog documentation",
+        "description": "Reflog guarantees must not be guessed.",
+        "url": "https://git-scm.com/docs/git-reflog",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "reference",
+        "title": "Pro Git: Maintenance and Data Recovery",
+        "description": "It connects reachability to recovery limits.",
+        "url": "https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "tool",
+        "title": "git-filter-repo",
+        "description": "It is the recommended serious history-rewriting tool for repository cleanup.",
+        "url": "https://github.com/newren/git-filter-repo",
+        "source": "GitHub"
+      }
+    ],
+    "10.1": [
+      {
+        "type": "video",
+        "title": "Learn Git Rebase in 6 minutes // explained with live animations! - The Modern Coder",
+        "description": "The live graph makes replacement explicit.",
+        "url": "https://www.youtube.com/watch?v=f1wnYdLEpgI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/f1wnYdLEpgI/hqdefault.jpg",
+        "videoId": "f1wnYdLEpgI",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Git MERGE vs REBASE: Everything You Need to Know - ByteByteGo",
+        "description": "It frames a trade-off rather than a universal winner.",
+        "url": "https://www.youtube.com/watch?v=0chZFIZLR_0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/0chZFIZLR_0/hqdefault.jpg",
+        "videoId": "0chZFIZLR_0",
+        "embedSupported": true
+      },
+      {
+        "type": "documentation",
+        "title": "git-rebase documentation",
+        "description": "Exact rewrite behavior must be primary-source grounded.",
+        "url": "https://git-scm.com/docs/git-rebase",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "interactive",
+        "title": "Learn Git Branching",
+        "description": "It develops graph prediction safely.",
+        "url": "https://learngitbranching.js.org/?locale=en_US",
+        "source": "learngitbranching.js.org"
+      }
+    ],
+    "11.1": [
+      {
+        "type": "reference",
+        "title": "Pro Git: Stashing and Cleaning",
+        "description": "It explains stash as commits and documents boundaries.",
+        "url": "https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "reference",
+        "title": "Pro Git: Interactive Staging",
+        "description": "Selective staging is the foundation of atomic history.",
+        "url": "https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "documentation",
+        "title": "git-worktree documentation",
+        "description": "Worktrees solve parallel checkout without repository copies.",
+        "url": "https://git-scm.com/docs/git-worktree",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "tool",
+        "title": "Git Katas",
+        "description": "These tools become safe only through state-aware repetition.",
+        "url": "https://github.com/eficode-academy/git-katas",
+        "source": "GitHub"
+      }
+    ],
+    "12.1": [
+      {
+        "type": "documentation",
+        "title": "git-bisect documentation",
+        "description": "Automation semantics and cleanup must be exact.",
+        "url": "https://git-scm.com/docs/git-bisect",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Semantic Versioning 2.0.0",
+        "description": "Versions should communicate API compatibility, not aesthetics.",
+        "url": "https://semver.org/",
+        "source": "semver.org"
+      },
+      {
+        "type": "documentation",
+        "title": "Conventional Commits 1.0.0",
+        "description": "Structured history can support - never replace - release judgment.",
+        "url": "https://www.conventionalcommits.org/en/v1.0.0/",
+        "source": "conventionalcommits.org"
+      }
+    ],
+    "13.1": [
+      {
+        "type": "documentation",
+        "title": "gitattributes documentation",
+        "description": "Repository policy must be precise and versioned.",
+        "url": "https://git-scm.com/docs/gitattributes",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "tool",
+        "title": "Git LFS",
+        "description": "It solves binary transport differently from ordinary Git objects; hosted quotas may apply.",
+        "url": "https://git-lfs.com/",
+        "source": "git-lfs.com"
+      },
+      {
+        "type": "reference",
+        "title": "Pro Git: Submodules",
+        "description": "It explains the exact dependency pin and operational cost.",
+        "url": "https://git-scm.com/book/en/v2/Git-Tools-Submodules",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "documentation",
+        "title": "git-sparse-checkout documentation",
+        "description": "Sparse checkout reduces working-tree scope, not necessarily clone history.",
+        "url": "https://git-scm.com/docs/git-sparse-checkout",
+        "source": "git-scm.com"
+      }
+    ],
+    "14.1": [
+      {
+        "type": "video",
+        "title": "3 Git Workflows Every Developer Should Know (And When to Use Each) - TechWorld with Nana",
+        "description": "It offers a current professional overview.",
+        "url": "https://www.youtube.com/watch?v=GQQqf-C2ha4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/GQQqf-C2ha4/hqdefault.jpg",
+        "videoId": "GQQqf-C2ha4",
+        "embedSupported": true
+      },
+      {
+        "type": "documentation",
+        "title": "Trunk Based Development",
+        "description": "It connects integration frequency to delivery design.",
+        "url": "https://trunkbaseddevelopment.com/",
+        "source": "trunkbaseddevelopment.com"
+      },
+      {
+        "type": "reference",
+        "title": "Atlassian Git Workflows",
+        "description": "It provides accessible workflow diagrams and trade-offs.",
+        "url": "https://www.atlassian.com/git/tutorials/comparing-workflows",
+        "source": "atlassian.com"
+      },
+      {
+        "type": "article",
+        "title": "Google Code Review Developer Guide",
+        "description": "Branch diagrams fail without a healthy human review loop.",
+        "url": "https://google.github.io/eng-practices/review/",
+        "source": "google.github.io"
+      }
+    ],
+    "15.1": [
+      {
+        "type": "tool",
+        "title": "GitHub Skills: Hello GitHub Actions",
+        "description": "It gives a hosted CI example while remaining optional.",
+        "url": "https://github.com/skills/hello-github-actions",
+        "source": "GitHub"
+      },
+      {
+        "type": "documentation",
+        "title": "Git hooks documentation",
+        "description": "Hooks assist local feedback but do not replace central enforcement.",
+        "url": "https://git-scm.com/docs/githooks",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "reference",
+        "title": "Git signing configuration",
+        "description": "Cryptographic evidence needs operational context.",
+        "url": "https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "article",
+        "title": "Google Code Review Developer Guide",
+        "description": "Trust is both technical and social.",
+        "url": "https://google.github.io/eng-practices/review/",
+        "source": "google.github.io"
+      }
+    ]
+  },
+  "phases": {},
+  "projects": {}
+}

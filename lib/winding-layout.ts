@@ -54,7 +54,7 @@ function windingControls(previous: Point, next: Point) {
   };
 }
 
-function cubicPoint(p0: Point, p1: Point, p2: Point, p3: Point, t: number): Point {
+export function cubicPoint(p0: Point, p1: Point, p2: Point, p3: Point, t: number): Point {
   const mt = 1 - t;
   const a = mt * mt * mt;
   const b = 3 * mt * mt * t;
@@ -110,6 +110,62 @@ export function windingMetrics(points: Point[]) {
   }
   total += WINDING_LEAD;
   return { lengths, total };
+}
+
+function arcLengthTable(from: Point, c1: Point, c2: Point, to: Point, samples: number) {
+  const table: { length: number; point: Point }[] = [{ length: 0, point: from }];
+  let previous = from;
+  let total = 0;
+  for (let index = 1; index <= samples; index += 1) {
+    const point = cubicPoint(from, c1, c2, to, index / samples);
+    total += Math.hypot(point.x - previous.x, point.y - previous.y);
+    table.push({ length: total, point });
+    previous = point;
+  }
+  return { table, total };
+}
+
+function pointAtArcLength(table: { length: number; point: Point }[], target: number): Point {
+  for (let index = 1; index < table.length; index += 1) {
+    const next = table[index];
+    const prev = table[index - 1];
+    if (next.length < target) continue;
+    const span = next.length - prev.length || 1;
+    const u = (target - prev.length) / span;
+    return {
+      x: prev.point.x + (next.point.x - prev.point.x) * u,
+      y: prev.point.y + (next.point.y - prev.point.y) * u,
+    };
+  }
+  return table[table.length - 1].point;
+}
+
+/** Node clearance along a segment, shared by dots and marching-ant fill. */
+export function windingSegmentLessonInset(segLen: number) {
+  return Math.min(48, Math.max(40, segLen * 0.1));
+}
+
+/** Arc distance along a segment (0…segLen) for lesson index, matching windingSegmentLessonPoints. */
+export function windingSegmentLessonArcOffset(count: number, lessonIndex: number, segLen: number) {
+  if (count <= 0 || segLen <= 0) return 0;
+  if (count === 1) return segLen / 2;
+  const inset = windingSegmentLessonInset(segLen);
+  const span = Math.max(0, segLen - 2 * inset);
+  const index = Math.max(0, Math.min(count - 1, lessonIndex));
+  return inset + (span / (count - 1)) * index;
+}
+
+/** Place lesson dots at equal arc-length gaps along the full segment between chapter nodes. */
+export function windingSegmentLessonPoints(from: Point, to: Point, count: number): Point[] {
+  if (!count) return [];
+  const { c1, c2 } = windingControls(from, to);
+  const samples = Math.max(64, count * 16);
+  const { table, total } = arcLengthTable(from, c1, c2, to, samples);
+  if (count === 1) return [pointAtArcLength(table, total / 2)];
+
+  return Array.from({ length: count }, (_, index) =>
+    pointAtArcLength(table, windingSegmentLessonArcOffset(count, index, total)),
+  );
 }
 
 export function closestPathLength(

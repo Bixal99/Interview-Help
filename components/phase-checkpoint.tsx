@@ -1,61 +1,51 @@
 import { Pager } from "@/components/pager";
 import { PhaseCheckpointArt } from "@/components/phase-checkpoint-art";
-import { PracticeRichText } from "@/components/practice-rich-text";
+import { ProgressVisit } from "@/components/progress-visit";
+import { parseUnitHeading } from "@/lib/curriculum-labels";
 import type { Neighbor } from "@/lib/navigation";
 
+function tidyTitle(value: string) {
+  return value.replace(/[\u2013\u2014]/g, ",").replace(/\s{2,}/g, " ").trim();
+}
+
 export function PhaseCheckpoint({
+  courseSlug,
+  phaseId,
   phaseNumber,
   phaseTitle,
-  track,
-  goal,
-  topics,
+  unitTitle,
   prev,
   proceedHref,
 }: {
+  courseSlug: string;
+  phaseId: string;
   phaseNumber: string;
   phaseTitle: string;
-  track?: string;
-  goal?: string;
-  topics: { id: string; title: string }[];
+  unitTitle?: string;
   prev: Neighbor | null;
   proceedHref: string;
 }) {
+  const unit = unitTitle ? parseUnitHeading(unitTitle) : null;
+
   return (
     <div className="ih-checkpoint-page flex min-h-dvh flex-col lg:h-dvh lg:overflow-hidden">
-      <div className="ih-band flex min-h-0 flex-1 items-start overflow-y-auto px-6 py-5 sm:px-10 lg:items-center lg:overflow-hidden lg:px-12">
-        <div className="ih-checkpoint-row mx-auto flex w-full max-w-[1200px] flex-col items-center gap-6 pb-4 lg:h-full lg:flex-row lg:justify-between lg:gap-10 lg:pb-0">
-          <div className="min-w-0 w-full lg:max-w-[34rem]">
-            <div className="flex items-end gap-5">
-              <div
-                className="grid size-11 shrink-0 place-items-center bg-[#04AA6D] text-xl font-bold tabular-nums leading-none text-white sm:size-12 sm:text-2xl"
-                aria-hidden="true"
-              >
-                {phaseNumber}
-              </div>
-              {track ? (
-                <p className="translate-y-[4px] text-lg font-bold uppercase leading-none tracking-[0.2em] text-[#04AA6D] sm:text-xl">{track}</p>
-              ) : null}
-            </div>
-            <h1 className="mt-2 text-left text-3xl font-bold uppercase tracking-wide sm:text-4xl">
-              {phaseTitle}
-            </h1>
-            {goal ? <p className="mt-3 text-base leading-relaxed text-white/85"><PracticeRichText text={goal} /></p> : null}
-            {topics.length > 0 ? (
-              <div className="mt-5">
-                <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#04AA6D]">What you will cover</p>
-                <ul className="mt-2 list-none space-y-1.5 p-0">
-                  {topics.map((topic) => (
-                    <li key={topic.id} className="flex gap-3 text-[15px] leading-snug text-white/90">
-                      <span className="w-10 shrink-0 font-bold tabular-nums text-[#04AA6D]">{topic.id}</span>
-                      <span>{topic.title}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+      <ProgressVisit slug={courseSlug} phaseId={phaseId} stopId={`phase:${phaseId}`} />
+      <div className="ih-band ih-checkpoint-band flex min-h-0 flex-1 items-start overflow-y-auto px-6 py-8 sm:px-10 lg:items-center lg:overflow-hidden lg:px-12 lg:py-10">
+        <div className="ih-checkpoint-row mx-auto flex w-full max-w-[1200px] flex-col items-stretch gap-8 pb-4 lg:h-full lg:flex-row lg:items-center lg:justify-between lg:gap-12 lg:pb-0">
+          <header className="ih-checkpoint-hero min-w-0 w-full lg:max-w-[42rem]">
+            {unit ? (
+              <p className="ih-checkpoint-unit">
+                {unit.mark ? <span className="ih-checkpoint-unit-mark">{unit.mark}</span> : null}
+                <span className="ih-checkpoint-unit-name">{unit.name}</span>
+              </p>
             ) : null}
-          </div>
-          <div className="ih-checkpoint-art-slot w-full shrink-0 lg:w-[36rem]">
-            <PhaseCheckpointArt number={phaseNumber} title={phaseTitle} topics={topics} />
+            <p className="ih-checkpoint-meta">
+              <span className="ih-checkpoint-badge">Chapter {phaseNumber}</span>
+            </p>
+            <h1 className="ih-checkpoint-title">{tidyTitle(phaseTitle)}</h1>
+          </header>
+          <div className="ih-checkpoint-art-slot w-full shrink-0 lg:w-[34rem] xl:w-[36rem]">
+            <PhaseCheckpointArt number={phaseNumber} title={phaseTitle} />
           </div>
         </div>
       </div>

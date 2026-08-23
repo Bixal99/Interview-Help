@@ -832,7 +832,7 @@ This project is mirrored in the [full **Parallel Feature Branch Lab** card](../g
 
 | Resource | Type | What to watch or practice | Why it belongs here |
 | --- | --- | --- | --- |
-| [Git Branching and Merging - Detailed Tutorial - SuperSimpleDev](https://www.youtube.com/watch?v=Q1kHG842HoI) | Free verified video | Draw the graph before each merge and compare result. | It provides a detailed visual walkthrough; open directly because embedding is disabled. |
+| [Git MERGE vs REBASE: Everything You Need to Know (ByteByteGo)](https://www.youtube.com/watch?v=0chZFIZLR_0) | Free verified video | Draw the graph before each merge and compare result. | It provides a clear animated walkthrough of merge mechanics and conflicts. |
 | [GitHub Skills: Resolve Merge Conflicts](https://github.com/skills/resolve-merge-conflicts) | Free public MIT exercise; platform not open source | Complete the web conflict, then reproduce it in CLI. | It adds hosted workflow context but does not replace deeper local labs. |
 | [Pro Git: Basic Branching and Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) | Official open-source book | Identify fast-forward, common ancestor, and merge commit. | It anchors terminology and mechanisms. |
 | [Git Katas](https://github.com/eficode-academy/git-katas) | Public open-source exercises | Repeat merge and conflict setups. | Deliberate repetition builds safe abort/continue habits. |

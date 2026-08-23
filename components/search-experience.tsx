@@ -18,7 +18,7 @@ const FILTERS: { id: Filter; label: string }[] = [
   { id: "project", label: "Projects" },
   { id: "command", label: "Commands" },
   { id: "course", label: "Courses" },
-  { id: "phase", label: "Phases" },
+  { id: "phase", label: "Chapters" },
   { id: "interview", label: "Interview" },
   { id: "example", label: "Examples" },
   { id: "concept", label: "Concepts" },

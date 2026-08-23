@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const STAGES = [
   { n: "01", title: "One lesson", hint: "Stay on the page until the idea is clear.", fill: "#D9EEE1" },
-  { n: "02", title: "Phase project", hint: "Build the matching project before you move on.", fill: "#FFF4A3" },
+  { n: "02", title: "Chapter project", hint: "Build the matching project before you move on.", fill: "#FFF4A3" },
   { n: "03", title: "Interview", hint: "Say the trade-off out loud, then keep going.", fill: "#FFC0C7" },
   { n: "04", title: "Hire-ready", hint: "The loop repeats until the work holds.", fill: "#96D4FA" },
 ] as const;

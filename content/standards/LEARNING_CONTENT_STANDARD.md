@@ -170,9 +170,9 @@ Practice is **not** “always LeetCode” and **not** “always a mini-project.�
 | Database query | SQL / modeling exercises |
 | UI exercise | HCI / forms / usability critique |
 | Business scenario | Stakeholders, constraints, ethics |
-| Mini-project | Only when *building* improves understanding |
+| Mini-project | When constructing or operating an artifact improves understanding |
 
-**Project rule:** Add a `Projects.md` card only when constructing something genuinely teaches. Interview phases should not invent portfolio work that steals later stories.
+**Chapter project rule:** Every displayed chapter has one required applied project in its course project catalog. Choose the artifact that genuinely practices the chapter: code, lab, design, analysis, runbook, or rehearsal. The card maps every regular lesson ID to an observable application, stays inside the current or earlier prerequisites, and joins the shared storyline for its unit. Interview chapters use timed rehearsal evidence rather than inventing portfolio features that steal later work.
 
 Playgrounds: only when execution teaches; keep `playground=` IDs unique.
 

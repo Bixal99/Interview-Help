@@ -17,7 +17,7 @@ const STEPS: { title: string; body: string; icon: AppIconName }[] = [
   },
   {
     title: "Build the project",
-    body: "Each phase has a matching mini-project. Finish it before the next chapter unlocks.",
+    body: "Each chapter has a matching mini-project. Finish it before the next chapter unlocks.",
     icon: "project",
   },
   {

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { ProgressDashboard, type ProgressCourseView } from "@/components/progress-dashboard";
 import { getCourseNav, getCourseSummaries } from "@/lib/content";
-import { phaseCountWithProjects } from "@/lib/navigation";
+import { lessonCountForNav } from "@/lib/navigation";
 import { phasePath } from "@/lib/parse-course";
 
-export const metadata: Metadata = { title: "Progress", description: "Walk each roadmap as a trail of phases you clear in order." };
+export const metadata: Metadata = { title: "Progress", description: "Walk each roadmap lesson by lesson and see where you left off." };
 
 export default function ProgressPage() {
   const courses: ProgressCourseView[] = getCourseSummaries().map((course) => {
@@ -14,7 +14,8 @@ export default function ProgressPage() {
       shortName: course.shortName,
       barLabel: course.barLabel,
       description: course.description,
-      phaseCount: nav ? phaseCountWithProjects(nav) : 0,
+      lessonCount: nav ? lessonCountForNav(nav) : 0,
+      phaseCount: nav?.chapters.reduce((sum, chapter) => sum + chapter.phases.length, 0) ?? 0,
       chapters: (nav?.chapters ?? []).map((chapter) => ({
         id: chapter.id,
         title: chapter.title,
@@ -25,6 +26,10 @@ export default function ProgressPage() {
           goal: phase.goal,
           hasProject: phase.hasProject,
           href: phasePath(course.slug, phase.id),
+          lessonIds: phase.lessons.filter((lesson) => lesson.kind === "lesson").map((lesson) => lesson.id),
+          lessons: phase.lessons
+            .filter((lesson) => lesson.kind === "lesson")
+            .map((lesson) => ({ id: lesson.id, slug: lesson.slug, title: lesson.title })),
         })),
       })),
     };

@@ -146,7 +146,7 @@ FOUNDATIONS -> CLOUD CORE -> DATA SERVICES -> TRAFFIC & EVENTS
 
 - Best animated explanation: [Cloud Computing Explained: The Most Important Concepts To Know (Be A Better Dev)](https://www.youtube.com/watch?v=ZaA0kNm18pE) - start here for the clearest visual model of the cloud engineer's ground floor before the detailed internal steps
 - Alternative: [What Does a Cloud Engineer ACTUALLY Do? (Tech With Soleyman)](https://www.youtube.com/watch?v=kriafQfqGZE) - use this second to compare terminology and see the same pressure from another engineering angle
-- Another angle: [Learn Networking in 3 Hours | Networking Fundamentals + AWS VPC Networking (Abhishek.Veeramalla)](https://www.youtube.com/watch?v=iSOfkw_YyOU) - use this after the theory to connect the model to an implementation or provider-specific case
+- Another angle: [AWS Networking Basics For Programmers | Hands On (Travis Media)](https://www.youtube.com/watch?v=2doSoMN2xvI) - use this after the theory to connect the model to an implementation or provider-specific case
 - Interactive simulator: [SadServers troubleshooting scenarios](https://sadservers.com/) - turn the chapter into observable behavior instead of console tourism
 - Written documentation: [Microsoft Learn: describe cloud concepts](https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/) - use the primary source for current limits, semantics, and supported configuration
 - GitHub implementation: [bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises) - inspect how the concept is represented in real code and configuration

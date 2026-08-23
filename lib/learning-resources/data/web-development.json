@@ -1,0 +1,2319 @@
+{
+  "lessons": {
+    "1.1": [
+      {
+        "type": "video",
+        "title": "🌐 How the Web Really Works! DNS, HTTP & HTTPS Explained with Animations 🚀 (Thapa Technical)",
+        "description": "Title promises animations; short (9 min) visual walkthrough of DNS, HTTP & HTTPS.",
+        "url": "https://www.youtube.com/watch?v=PANUQGHgxCI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/PANUQGHgxCI/hqdefault.jpg",
+        "videoId": "PANUQGHgxCI",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How The Web Works - The Big Picture (Academind)",
+        "description": "Academind provides a thorough, accurate high‑level client‑server overview; reputable channel, 12 min.",
+        "url": "https://www.youtube.com/watch?v=hJHvdBlSxug",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/hJHvdBlSxug/hqdefault.jpg",
+        "videoId": "hJHvdBlSxug",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "DNS Explained in 100 Seconds (Fireship)",
+        "description": "Fireship’s 2 min DNS‑focused animation adds a focused, practical perspective.",
+        "url": "https://www.youtube.com/watch?v=UVR9lhUGAyU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/UVR9lhUGAyU/hqdefault.jpg",
+        "videoId": "UVR9lhUGAyU",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "httpbin",
+        "description": "Send requests and inspect the exact headers, status, and body returned by a real HTTP service",
+        "url": "https://httpbin.org/",
+        "source": "httpbin.org"
+      },
+      {
+        "type": "documentation",
+        "title": "How the web works (MDN)",
+        "description": "",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works",
+        "source": "MDN"
+      },
+      {
+        "type": "github",
+        "title": "mdn/content",
+        "description": "Inspect the source behind MDN's HTTP and browser-platform explanations",
+        "url": "https://github.com/mdn/content",
+        "source": "GitHub"
+      }
+    ],
+    "1.2": [
+      {
+        "type": "video",
+        "title": "21+ Browser Dev Tools & Tips You Need To Know (Fireship)",
+        "description": "Fireship uses fast‑paced animated demos of DevTools tricks; 9 min, high engagement.",
+        "url": "https://www.youtube.com/watch?v=TcTSqhpm80Y",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/TcTSqhpm80Y/hqdefault.jpg",
+        "videoId": "TcTSqhpm80Y",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "HTML vs DOM? Let’s debug them #DevToolsTips (Chrome for Developers)",
+        "description": "Chrome for Developers (Google) gives an accurate, concise HTML vs DOM explanation; official source.",
+        "url": "https://www.youtube.com/watch?v=J-02VNxE7lE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/J-02VNxE7lE/hqdefault.jpg",
+        "videoId": "J-02VNxE7lE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Chrome DevTools Complete Course - Learn to debug your frontend code (Mehul Mohan)",
+        "description": "Complete and detailed 1 h 53 min course offers deep, practical debugging workflows beyond quick tips.",
+        "url": "https://www.youtube.com/watch?v=Y3u2groOG-A",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Y3u2groOG-A/hqdefault.jpg",
+        "videoId": "Y3u2groOG-A",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Chrome DevTools",
+        "description": "Inspect and edit a live page, then trace console and network activity",
+        "url": "https://developer.chrome.com/docs/devtools/",
+        "source": "developer.chrome.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Visual Studio Code documentation",
+        "description": "",
+        "url": "https://code.visualstudio.com/docs",
+        "source": "code.visualstudio.com"
+      },
+      {
+        "type": "github",
+        "title": "ChromeDevTools/devtools-frontend",
+        "description": "Study the actual frontend that powers Chrome DevTools",
+        "url": "https://github.com/ChromeDevTools/devtools-frontend",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "The Odin Project Foundations",
+        "description": "Build and run projects with Git, terminal, editor, and browser tooling",
+        "url": "https://www.theodinproject.com/paths/foundations/courses/foundations",
+        "source": "theodinproject.com"
+      }
+    ],
+    "2.1": [
+      {
+        "type": "video",
+        "title": "Semantic HTML Tags | HTML5 Semantic Elements Tutorial (Dave Gray)",
+        "description": "Dave Gray’s tutorial includes visual demos of semantic tags; 24 min, solid production.",
+        "url": "https://www.youtube.com/watch?v=kX3TfdUqpuU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/kX3TfdUqpuU/hqdefault.jpg",
+        "videoId": "kX3TfdUqpuU",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Web Accessibility: What Is Semantic HTML? (Stefany Newman - Accessibility Instructor)",
+        "description": "Stefany Newman, accessibility instructor, gives accurate semantics fundamentals; credible niche expert.",
+        "url": "https://www.youtube.com/watch?v=4AjCRUuvwbI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/4AjCRUuvwbI/hqdefault.jpg",
+        "videoId": "4AjCRUuvwbI",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Semantic HTML for accessible web design: Fix your site in minutes (Elementor)",
+        "description": "Elementor’s 2 min clip ties semantic HTML to SEO & accessibility, offering a practical business view.",
+        "url": "https://www.youtube.com/watch?v=l89I-em1Lnc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/l89I-em1Lnc/hqdefault.jpg",
+        "videoId": "l89I-em1Lnc",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "W3C Nu HTML Checker",
+        "description": "Paste a page and turn every semantic or structural error into a repair drill",
+        "url": "https://validator.w3.org/nu/",
+        "source": "validator.w3.org"
+      },
+      {
+        "type": "documentation",
+        "title": "HTML reference (MDN)",
+        "description": "",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+        "source": "MDN"
+      },
+      {
+        "type": "github",
+        "title": "mdn/content",
+        "description": "Trace semantic HTML and accessibility examples back to maintained source",
+        "url": "https://github.com/mdn/content",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "freeCodeCamp Responsive Web Design",
+        "description": "Complete semantic and accessibility projects with automated checks",
+        "url": "https://www.freecodecamp.org/learn/2022/responsive-web-design/",
+        "source": "freecodecamp.org"
+      }
+    ],
+    "2.2": [
+      {
+        "type": "video",
+        "title": "Learn HTML forms in 8 minutes 📝 (Bro Code)",
+        "description": "Use this first for a compact visual pass through controls, labels, methods, and submission before reading the protocol details below",
+        "url": "https://www.youtube.com/watch?v=2O8pkybH6po",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/2O8pkybH6po/hqdefault.jpg",
+        "videoId": "2O8pkybH6po",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Learn HTML Forms In 25 Minutes (Web Dev Simplified)",
+        "description": "Slows the same material down and builds a complete form, which makes the relationship between markup and submitted name-value pairs easier to see",
+        "url": "https://www.youtube.com/watch?v=fNcJuPIZ2WE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/fNcJuPIZ2WE/hqdefault.jpg",
+        "videoId": "fNcJuPIZ2WE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "HTML Forms Tutorial: From Basics to Form Validation (Tech Hive)",
+        "description": "Concentrates on constraint validation and failure feedback, the exact boundary where browser convenience must be separated from server security",
+        "url": "https://www.youtube.com/watch?v=X9RZ4a88n3c",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/X9RZ4a88n3c/hqdefault.jpg",
+        "videoId": "X9RZ4a88n3c",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "minigames.dev",
+        "description": "Use Form Builder Rush to practise accessible controls and native form behaviour",
+        "url": "https://minigames.dev/",
+        "source": "minigames.dev"
+      },
+      {
+        "type": "documentation",
+        "title": "Web forms (MDN)",
+        "description": "",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms",
+        "source": "MDN"
+      },
+      {
+        "type": "github",
+        "title": "mdn/content",
+        "description": "Explore form, media, responsive-image, and metadata examples",
+        "url": "https://github.com/mdn/content",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Frontend Mentor form challenges",
+        "description": "Implement real forms, validation states, images, and metadata",
+        "url": "https://www.frontendmentor.io/challenges?type=free&languages=HTML%7CCSS%7CJS",
+        "source": "frontendmentor.io"
+      }
+    ],
+    "3.1": [
+      {
+        "type": "video",
+        "title": "Learn CSS Specificity In 11 Minutes (Web Dev Simplified)",
+        "description": "Web Dev Simplified explains CSS specificity with animated diagrams; 11 min, high engagement.",
+        "url": "https://www.youtube.com/watch?v=CHyPGSpIhSs",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/CHyPGSpIhSs/hqdefault.jpg",
+        "videoId": "CHyPGSpIhSs",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "CSS Layers Are Changing How Specificity Works (Web Dev Simplified)",
+        "description": "Same channel’s deeper look at CSS layers and modern specificity; accurate and credible.",
+        "url": "https://www.youtube.com/watch?v=Pr1PezCc4FU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Pr1PezCc4FU/hqdefault.jpg",
+        "videoId": "Pr1PezCc4FU",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How to Understand CSS Specificity (CSS Cascade) | CSS Beginner Tutorial (Professor K Explains)",
+        "description": "Professor K offers a beginner‑friendly, step‑by‑step walkthrough of the cascade and specificity.",
+        "url": "https://www.youtube.com/watch?v=6QeYiCS3Yj8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/6QeYiCS3Yj8/hqdefault.jpg",
+        "videoId": "6QeYiCS3Yj8",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "CSS Diner",
+        "description": "Solve selector puzzles before testing cascade and specificity changes in DevTools",
+        "url": "https://flukeout.github.io/",
+        "source": "flukeout.github.io"
+      },
+      {
+        "type": "documentation",
+        "title": "CSS cascading and inheritance (MDN)",
+        "description": "",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade",
+        "source": "MDN"
+      },
+      {
+        "type": "github",
+        "title": "mdn/content",
+        "description": "Find runnable cascade, specificity, inheritance, and box-model samples",
+        "url": "https://github.com/mdn/content",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "web.dev Learn CSS",
+        "description": "Complete cascade, specificity, inheritance, selector, and box-model modules",
+        "url": "https://web.dev/learn/css/",
+        "source": "web.dev"
+      }
+    ],
+    "3.2": [
+      {
+        "type": "video",
+        "title": "CSS Variables in 100 Seconds (Fireship)",
+        "description": "Fireship’s 1m56s video uses their signature animated whiteboard style to clearly illustrate CSS variables and theming.",
+        "url": "https://www.youtube.com/watch?v=NtRmIp4eMjs",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/NtRmIp4eMjs/hqdefault.jpg",
+        "videoId": "NtRmIp4eMjs",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Color & custom properties - Designing in the Browser (Chrome for Developers)",
+        "description": "Chrome for Developers provides an accurate, in‑depth walkthrough of color and custom properties with real‑world examples.",
+        "url": "https://www.youtube.com/watch?v=HxJnvCOC2vQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/HxJnvCOC2vQ/hqdefault.jpg",
+        "videoId": "HxJnvCOC2vQ",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "CSS Variables | Custom Properties Tutorial for beginners (Coding2GO)",
+        "description": "Coding2GO offers a beginner‑focused, practical tutorial that walks through setting up and using CSS variables in a project.",
+        "url": "https://www.youtube.com/watch?v=W5_5WvYjPeI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/W5_5WvYjPeI/hqdefault.jpg",
+        "videoId": "W5_5WvYjPeI",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "WebAIM Contrast Checker",
+        "description": "Change foreground and background tokens and see WCAG contrast results immediately",
+        "url": "https://webaim.org/resources/contrastchecker/",
+        "source": "webaim.org"
+      },
+      {
+        "type": "documentation",
+        "title": "CSS colors (MDN)",
+        "description": "",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_colors",
+        "source": "MDN"
+      },
+      {
+        "type": "github",
+        "title": "mdn/content",
+        "description": "Inspect maintained examples for color, fonts, and custom properties",
+        "url": "https://github.com/mdn/content",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Frontend Mentor",
+        "description": "Reproduce typography, tokens, themes, and accessible color systems from designs",
+        "url": "https://www.frontendmentor.io/challenges",
+        "source": "frontendmentor.io"
+      }
+    ],
+    "4.1": [
+      {
+        "type": "video",
+        "title": "Learn Flexbox CSS in 8 minutes (Slaying The Dragon)",
+        "description": "Slaying The Dragon’s 8‑minute Flexbox guide includes animated diagrams that visualise axis, alignment and flex properties.",
+        "url": "https://www.youtube.com/watch?v=phWxA89Dy94",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/phWxA89Dy94/hqdefault.jpg",
+        "videoId": "phWxA89Dy94",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Learn CSS Flexbox in 20 Minutes (Course) (Coding2GO)",
+        "description": "Coding2GO’s 20‑minute Flexbox course is a complete and detailed, up‑to‑date (2024) explanation by a reputable educator.",
+        "url": "https://www.youtube.com/watch?v=wsTv9y931o8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/wsTv9y931o8/hqdefault.jpg",
+        "videoId": "wsTv9y931o8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "CSS Flexbox vs Grid - Are you using them right? (Coding2GO)",
+        "description": "The Flexbox vs Grid comparison gives a practical perspective on when to choose Flexbox, complementing the core Flexbox lesson.",
+        "url": "https://www.youtube.com/watch?v=aEj6k-gi9-s",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/aEj6k-gi9-s/hqdefault.jpg",
+        "videoId": "aEj6k-gi9-s",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Flexbox Froggy",
+        "description": "Place elements by changing one flex rule at a time across 24 visual levels",
+        "url": "https://flexboxfroggy.com/",
+        "source": "flexboxfroggy.com"
+      },
+      {
+        "type": "documentation",
+        "title": "CSS flexible box layout (MDN)",
+        "description": "",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout",
+        "source": "MDN"
+      },
+      {
+        "type": "github",
+        "title": "thomaspark/flexboxfroggy",
+        "description": "Read the source of the Flexbox learning game and its level definitions",
+        "url": "https://github.com/thomaspark/flexboxfroggy",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Frontend Mentor",
+        "description": "Rebuild cards, navigation, and dashboards using Flexbox intentionally",
+        "url": "https://www.frontendmentor.io/challenges",
+        "source": "frontendmentor.io"
+      }
+    ],
+    "4.2": [
+      {
+        "type": "video",
+        "title": "Learn CSS Grid - A 13 Minute Deep Dive (Slaying The Dragon)",
+        "description": "Slaying The Dragon’s 13‑minute deep dive uses visual demos and animations to teach CSS Grid with media queries.",
+        "url": "https://www.youtube.com/watch?v=EiNiSFIPIQE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/EiNiSFIPIQE/hqdefault.jpg",
+        "videoId": "EiNiSFIPIQE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Responsive CSS Grid Tutorial (Angela Design)",
+        "description": "Angela Design delivers a thorough, credible Grid tutorial with clear visual examples and responsive design focus.",
+        "url": "https://www.youtube.com/watch?v=68O6eOGAGqA",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/68O6eOGAGqA/hqdefault.jpg",
+        "videoId": "68O6eOGAGqA",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "CSS Grid Course - The Only Grid Tutorial You'll Ever Need! (Coding2GO)",
+        "description": "Coding2GO’s longer Grid course offers a step‑by‑step, project‑based approach, adding a practical implementation angle.",
+        "url": "https://www.youtube.com/watch?v=JYfiaSKeYhE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/JYfiaSKeYhE/hqdefault.jpg",
+        "videoId": "JYfiaSKeYhE",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Grid Garden",
+        "description": "Grow a two-dimensional layout while learning tracks, spans, and grid areas",
+        "url": "https://cssgridgarden.com/",
+        "source": "cssgridgarden.com"
+      },
+      {
+        "type": "documentation",
+        "title": "CSS grid layout (MDN)",
+        "description": "",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout",
+        "source": "MDN"
+      },
+      {
+        "type": "github",
+        "title": "thomaspark/gridgarden",
+        "description": "Connect each Grid Garden puzzle to its HTML, CSS, and solution logic",
+        "url": "https://github.com/thomaspark/gridgarden",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Frontend Mentor",
+        "description": "Implement responsive page layouts with Grid, container queries, and breakpoints",
+        "url": "https://www.frontendmentor.io/challenges",
+        "source": "frontendmentor.io"
+      }
+    ],
+    "5.1": [
+      {
+        "type": "video",
+        "title": "100+ JavaScript Concepts you Need to Know (Fireship)",
+        "description": "Fireship’s 12‑minute overview uses fast‑paced animations to cover over 100 core JavaScript concepts.",
+        "url": "https://www.youtube.com/watch?v=lkIFF4maKMU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/lkIFF4maKMU/hqdefault.jpg",
+        "videoId": "lkIFF4maKMU",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "JavaScript in 100 Seconds (Fireship)",
+        "description": "Fireship’s 2‑minute ‘JavaScript in 100 Seconds’ gives a concise, accurate snapshot of the language fundamentals.",
+        "url": "https://www.youtube.com/watch?v=DHjqpvDnNGE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/DHjqpvDnNGE/hqdefault.jpg",
+        "videoId": "DHjqpvDnNGE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Learn All the JavaScript Basics in 20 Minutes (Coding2GO)",
+        "description": "Coding2GO’s 20‑minute tutorial provides a more detailed, hands‑on walkthrough of JavaScript basics for learners.",
+        "url": "https://www.youtube.com/watch?v=xKOyDDuQSVY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/xKOyDDuQSVY/hqdefault.jpg",
+        "videoId": "xKOyDDuQSVY",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Python Tutor JavaScript",
+        "description": "Step through variables, calls, objects, and scope with live memory diagrams",
+        "url": "https://pythontutor.com/javascript.html",
+        "source": "Python Tutor"
+      },
+      {
+        "type": "documentation",
+        "title": "JavaScript Guide (MDN)",
+        "description": "",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
+        "source": "MDN"
+      },
+      {
+        "type": "github",
+        "title": "freeCodeCamp/freeCodeCamp",
+        "description": "Browse thousands of tested JavaScript lessons and project implementations",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "freeCodeCamp JavaScript Algorithms and Data Structures",
+        "description": "Practise syntax, objects, functions, and algorithms",
+        "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/",
+        "source": "freecodecamp.org"
+      }
+    ],
+    "5.2": [
+      {
+        "type": "video",
+        "title": "JavaScript Event Loop & Asynchronous Programming (freeCodeCamp.org)",
+        "description": "FreeCodeCamp’s 46‑minute video employs detailed animations and diagrams to explain the event loop and async model.",
+        "url": "https://www.youtube.com/watch?v=jzOy07fw2vY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/jzOy07fw2vY/hqdefault.jpg",
+        "videoId": "jzOy07fw2vY",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "What the heck is the event loop anyway? | Philip Roberts | JSConf EU (JSConf)",
+        "description": "JSConf’s classic talk by Philip Roberts offers a credible, in‑depth verbal explanation of the JavaScript event loop.",
+        "url": "https://www.youtube.com/watch?v=8aGhZQkoFbQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/8aGhZQkoFbQ/hqdefault.jpg",
+        "videoId": "8aGhZQkoFbQ",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Asynchronous JavaScript & EVENT LOOP from scratch 🔥 | Namaste JavaScript Ep.15 (Akshay Saini)",
+        "description": "Akshay Saini’s 41‑minute tutorial gives a practical, from‑scratch walkthrough of async JavaScript and the event loop.",
+        "url": "https://www.youtube.com/watch?v=8zKuNo4ay8E",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/8zKuNo4ay8E/hqdefault.jpg",
+        "videoId": "8zKuNo4ay8E",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Loupe",
+        "description": "Watch the call stack, Web APIs, callback queue, and event loop move in real time",
+        "url": "http://latentflip.com/loupe/",
+        "source": "latentflip.com"
+      },
+      {
+        "type": "documentation",
+        "title": "HTML DOM API (MDN)",
+        "description": "",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API",
+        "source": "MDN"
+      },
+      {
+        "type": "github",
+        "title": "mdn/content",
+        "description": "Study maintained DOM, Fetch, Promise, and execution-model examples",
+        "url": "https://github.com/mdn/content",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "The Modern JavaScript Tutorial tasks",
+        "description": "Solve DOM, events, promises, fetch, and async/await exercises",
+        "url": "https://javascript.info/",
+        "source": "javascript.info"
+      }
+    ],
+    "6.1": [
+      {
+        "type": "video",
+        "title": "Debugging JavaScript - Chrome DevTools 101 (Chrome for Developers)",
+        "description": "Chrome for Developers; 7m28s UI walkthrough of debugging panel; 916k views; high channel credibility",
+        "url": "https://www.youtube.com/watch?v=H0XScE08hy8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/H0XScE08hy8/hqdefault.jpg",
+        "videoId": "H0XScE08hy8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Inspect Network Activity - Chrome DevTools 101 (Chrome for Developers)",
+        "description": "Chrome for Developers; focused on Network panel; clear step‑by‑step guide; 414k views",
+        "url": "https://www.youtube.com/watch?v=e1gAyQuIFQo",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/e1gAyQuIFQo/hqdefault.jpg",
+        "videoId": "e1gAyQuIFQo",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Demystifying the Browser Networking Tab in Developer Tools With Examples (Hussein Nasser)",
+        "description": "Hussein Nasser; practical examples of network fields; 20m55s depth; 157k views",
+        "url": "https://www.youtube.com/watch?v=LBgfSwX4GDI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/LBgfSwX4GDI/hqdefault.jpg",
+        "videoId": "LBgfSwX4GDI",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Chrome DevTools Network panel",
+        "description": "Record a page load and inspect timing, payload, cache, and failure details",
+        "url": "https://developer.chrome.com/docs/devtools/network/",
+        "source": "developer.chrome.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Chrome DevTools",
+        "description": "",
+        "url": "https://developer.chrome.com/docs/devtools/",
+        "source": "developer.chrome.com"
+      },
+      {
+        "type": "github",
+        "title": "ChromeDevTools/devtools-frontend",
+        "description": "Connect debugging features to their production implementation",
+        "url": "https://github.com/ChromeDevTools/devtools-frontend",
+        "source": "GitHub"
+      }
+    ],
+    "6.2": [
+      {
+        "type": "video",
+        "title": "Vite in 100 Seconds (Fireship)",
+        "description": "Fireship; 2m29s fast‑paced animated overview of Vite; 1.12M views; strong visual style",
+        "url": "https://www.youtube.com/watch?v=KCrXgy8qtjM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/KCrXgy8qtjM/hqdefault.jpg",
+        "videoId": "KCrXgy8qtjM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Vite Crash Course – Frontend Build Tool (freeCodeCamp.org)",
+        "description": "FreeCodeCamp.org; 40m15s up‑to‑date (2025) crash course; complete and detailed coverage; 92k views",
+        "url": "https://www.youtube.com/watch?v=do62-z3z6FM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/do62-z3z6FM/hqdefault.jpg",
+        "videoId": "do62-z3z6FM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Learn Vite – Frontend Build Tool Course (freeCodeCamp.org)",
+        "description": "FreeCodeCamp.org; 1h31m full course exploring config and environment variables; 259k views",
+        "url": "https://www.youtube.com/watch?v=VAeRhmpcWEQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/VAeRhmpcWEQ/hqdefault.jpg",
+        "videoId": "VAeRhmpcWEQ",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "StackBlitz",
+        "description": "Fork a browser-based npm project and compare package scripts, modules, and Vite builds",
+        "url": "https://stackblitz.com/",
+        "source": "stackblitz.com"
+      },
+      {
+        "type": "documentation",
+        "title": "About npm",
+        "description": "",
+        "url": "https://docs.npmjs.com/about-npm",
+        "source": "docs.npmjs.com"
+      },
+      {
+        "type": "github",
+        "title": "vitejs/vite",
+        "description": "Inspect the dev server, plugin system, build pipeline, and examples",
+        "url": "https://github.com/vitejs/vite",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Vite Getting Started",
+        "description": "Scaffold, configure, build, preview, and inspect a clean production bundle",
+        "url": "https://vite.dev/guide/",
+        "source": "vite.dev"
+      }
+    ],
+    "7.1": [
+      {
+        "type": "video",
+        "title": "TypeScript in 100 Seconds (Fireship)",
+        "description": "Fireship; 2m25s animated summary of TypeScript strict mode; 1.18M views; high credibility",
+        "url": "https://www.youtube.com/watch?v=zQnBQ4tB3ZA",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/zQnBQ4tB3ZA/hqdefault.jpg",
+        "videoId": "zQnBQ4tB3ZA",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "What is TypeScript Strict Mode? (Harry Wolff)",
+        "description": "Harry Wolff; 16m4s detailed explanation of strict mode; 4.9k views; accurate content",
+        "url": "https://www.youtube.com/watch?v=O4CtL-iw72U",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/O4CtL-iw72U/hqdefault.jpg",
+        "videoId": "O4CtL-iw72U",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "TypeScript Strict Mode Deep Dive: strictNullChecks & More (Sukrid LearnHub)",
+        "description": "Sukrid LearnHub; 13m54s deep dive into strictNullChecks and related flags; 2026‑06‑28 release (most recent)",
+        "url": "https://www.youtube.com/watch?v=QcN4-wpb_SQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/QcN4-wpb_SQ/hqdefault.jpg",
+        "videoId": "QcN4-wpb_SQ",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "TypeScript Playground",
+        "description": "Toggle strict options and see inferred types and compiler errors immediately",
+        "url": "https://www.typescriptlang.org/play/",
+        "source": "typescriptlang.org"
+      },
+      {
+        "type": "documentation",
+        "title": "TypeScript Handbook",
+        "description": "",
+        "url": "https://www.typescriptlang.org/docs/handbook/intro.html",
+        "source": "typescriptlang.org"
+      },
+      {
+        "type": "github",
+        "title": "microsoft/TypeScript",
+        "description": "Explore compiler tests that define inference and strict-mode behaviour",
+        "url": "https://github.com/microsoft/TypeScript",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Beginner's TypeScript",
+        "description": "Solve browser-based typing and inference exercises",
+        "url": "https://www.totaltypescript.com/tutorials/beginners-typescript",
+        "source": "totaltypescript.com"
+      }
+    ],
+    "7.2": [
+      {
+        "type": "video",
+        "title": "Learn TypeScript Generics In 13 Minutes (Web Dev Simplified)",
+        "description": "Web Dev Simplified; 12m52s clear visuals for generics; 422k views; reputable channel",
+        "url": "https://www.youtube.com/watch?v=EcCTIExsqmI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/EcCTIExsqmI/hqdefault.jpg",
+        "videoId": "EcCTIExsqmI",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "TypeScript Tutorial #18 - Generics (Net Ninja)",
+        "description": "Net Ninja; 9m44s thorough code‑first tutorial on generics; 128k views; strong accuracy",
+        "url": "https://www.youtube.com/watch?v=IOzkOXSz9gE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/IOzkOXSz9gE/hqdefault.jpg",
+        "videoId": "IOzkOXSz9gE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "TypeScript Generics are EASY once you know this (ByteGrad)",
+        "description": "ByteGrad; 22m21s practical examples and common pitfalls; 176k views",
+        "url": "https://www.youtube.com/watch?v=ymSRTXT-iK4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ymSRTXT-iK4/hqdefault.jpg",
+        "videoId": "ymSRTXT-iK4",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "TypeScript Playground",
+        "description": "Experiment with generics, constraints, unions, and utility types without setup",
+        "url": "https://www.typescriptlang.org/play/",
+        "source": "typescriptlang.org"
+      },
+      {
+        "type": "documentation",
+        "title": "TypeScript Generics",
+        "description": "",
+        "url": "https://www.typescriptlang.org/docs/handbook/2/generics.html",
+        "source": "typescriptlang.org"
+      },
+      {
+        "type": "github",
+        "title": "type-challenges/type-challenges",
+        "description": "Solve progressively harder generic and type-level exercises",
+        "url": "https://github.com/type-challenges/type-challenges",
+        "source": "GitHub"
+      }
+    ],
+    "8.1": [
+      {
+        "type": "video",
+        "title": "PROPS in React explained 📧 (Bro Code)",
+        "description": "Bro Code; 12m9s includes visual diagrams of props flow; 233k views; engaging style",
+        "url": "https://www.youtube.com/watch?v=uvEAvxWvwOs",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/uvEAvxWvwOs/hqdefault.jpg",
+        "videoId": "uvEAvxWvwOs",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "React.js components, props, and state explained (Engineer Man)",
+        "description": "Engineer Man; 8m53s concise, accurate walkthrough of components, props, and state; 22k views",
+        "url": "https://www.youtube.com/watch?v=UAssn1S0UkU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/UAssn1S0UkU/hqdefault.jpg",
+        "videoId": "UAssn1S0UkU",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "React State Vs Props (Web Dev Simplified)",
+        "description": "Web Dev Simplified; 5m46s focused comparison of state vs props; practical perspective; 250k views",
+        "url": "https://www.youtube.com/watch?v=IYvD9oBCuJI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/IYvD9oBCuJI/hqdefault.jpg",
+        "videoId": "IYvD9oBCuJI",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "React Tic-Tac-Toe tutorial",
+        "description": "Edit the official sandbox while practising components, props, state, and keys",
+        "url": "https://react.dev/learn/tutorial-tic-tac-toe",
+        "source": "React"
+      },
+      {
+        "type": "documentation",
+        "title": "React Learn",
+        "description": "",
+        "url": "https://react.dev/learn",
+        "source": "React"
+      },
+      {
+        "type": "github",
+        "title": "react/react",
+        "description": "Inspect React's reconciler, hooks packages, tests, and examples",
+        "url": "https://github.com/facebook/react",
+        "source": "GitHub"
+      }
+    ],
+    "8.2": [
+      {
+        "type": "video",
+        "title": "How Do React Hooks Actually Work? React.js Deep Dive #3 (Philip Fabianek)",
+        "description": "Deep dive into React hooks with clear diagrams; credible solo creator; 14 min duration; high likes/views",
+        "url": "https://www.youtube.com/watch?v=1VVfMVQabx0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/1VVfMVQabx0/hqdefault.jpg",
+        "videoId": "1VVfMVQabx0",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "useEffect Hook - Manage Component Lifecycle #reactjstutorial (Studytonight with Abhishek)",
+        "description": "Focused walkthrough of useEffect lifecycle; accurate content; 22 min for depth; embeddable",
+        "url": "https://www.youtube.com/watch?v=UhdJikhstRw",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/UhdJikhstRw/hqdefault.jpg",
+        "videoId": "UhdJikhstRw",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "STOP using useState for React forms (there's an alternative method) (WebDevEducation)",
+        "description": "Practical alternative to useState for forms; short 3:30 demo; complements useEffect discussion",
+        "url": "https://www.youtube.com/watch?v=SaEc7jLWvGY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/SaEc7jLWvGY/hqdefault.jpg",
+        "videoId": "SaEc7jLWvGY",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "React effects sandbox",
+        "description": "Run and modify the embedded examples to see effect setup and cleanup",
+        "url": "https://react.dev/learn/synchronizing-with-effects",
+        "source": "React"
+      },
+      {
+        "type": "github",
+        "title": "react/react",
+        "description": "Trace effect and state behaviour through implementation tests",
+        "url": "https://github.com/facebook/react",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Full Stack Open Part 2",
+        "description": "Build controlled forms, effects, data fetching, and reusable components",
+        "url": "https://fullstackopen.com/en/part2",
+        "source": "fullstackopen.com"
+      }
+    ],
+    "9.1": [
+      {
+        "type": "video",
+        "title": "React Router in Depth #4 - Nested Routes & Layouts (Net Ninja)",
+        "description": "Net Ninja uses visual diagrams for nested routes & layouts; 11 min; strong channel reputation",
+        "url": "https://www.youtube.com/watch?v=l8CS9AMBSIQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/l8CS9AMBSIQ/hqdefault.jpg",
+        "videoId": "l8CS9AMBSIQ",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Nested Routes Tutorial - React Router Dom V6 (PedroTech)",
+        "description": "Concise 8:38 tutorial on React Router v6 nested routes; solid accuracy and good view count",
+        "url": "https://www.youtube.com/watch?v=PWi9V9d_Jsc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/PWi9V9d_Jsc/hqdefault.jpg",
+        "videoId": "PWi9V9d_Jsc",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "React Router V7 Tutorial - Routing, Nested Routes, Data Loading, Layouts... (PedroTech)",
+        "description": "Complete and detailed 51 min coverage of React Router v7 features; future‑proof for newer version",
+        "url": "https://www.youtube.com/watch?v=h7MTWLv3xvw",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/h7MTWLv3xvw/hqdefault.jpg",
+        "videoId": "h7MTWLv3xvw",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "React Router tutorial",
+        "description": "Build nested routes, loaders, actions, and error boundaries step by step",
+        "url": "https://reactrouter.com/tutorials/address-book",
+        "source": "reactrouter.com"
+      },
+      {
+        "type": "documentation",
+        "title": "React Router routing",
+        "description": "",
+        "url": "https://reactrouter.com/start/framework/routing",
+        "source": "reactrouter.com"
+      },
+      {
+        "type": "github",
+        "title": "remix-run/react-router",
+        "description": "Study route matching, nested layouts, loaders, and navigation",
+        "url": "https://github.com/remix-run/react-router",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Full Stack Open Part 7",
+        "description": "Implement routing, custom hooks, state management, and application structure",
+        "url": "https://fullstackopen.com/en/part7",
+        "source": "fullstackopen.com"
+      }
+    ],
+    "9.2": [
+      {
+        "type": "video",
+        "title": "React Query in 100 Seconds (Fireship)",
+        "description": "Fireship’s fast‑paced animated overview of TanStack Query in 2:33; high views/likes",
+        "url": "https://www.youtube.com/watch?v=novnyCaa7To",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/novnyCaa7To/hqdefault.jpg",
+        "videoId": "novnyCaa7To",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "TanStack Query - How to become a React Query God (Austin Davis)",
+        "description": "In‑depth 28 min tutorial on mastering TanStack Query; recent (2025) and detailed",
+        "url": "https://www.youtube.com/watch?v=mPaCnwpFvZY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/mPaCnwpFvZY/hqdefault.jpg",
+        "videoId": "mPaCnwpFvZY",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "This Context API Mistake Ruins Your Whole React App (All Components Re-Render) (ByteGrad)",
+        "description": "Context API mistake video gives practical perspective on state sharing; 5:37; complements query usage",
+        "url": "https://www.youtube.com/watch?v=16yMmAJSGek",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/16yMmAJSGek/hqdefault.jpg",
+        "videoId": "16yMmAJSGek",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "TanStack Query examples",
+        "description": "Change query keys and stale settings in runnable examples",
+        "url": "https://tanstack.com/query/latest/docs/framework/react/examples/simple",
+        "source": "tanstack.com"
+      },
+      {
+        "type": "documentation",
+        "title": "TanStack Query Overview",
+        "description": "",
+        "url": "https://tanstack.com/query/latest/docs/framework/react/overview",
+        "source": "tanstack.com"
+      },
+      {
+        "type": "github",
+        "title": "TanStack/query",
+        "description": "Compare cache, invalidation, retry, and server-state examples",
+        "url": "https://github.com/TanStack/query",
+        "source": "GitHub"
+      }
+    ],
+    "10.1": [
+      {
+        "type": "video",
+        "title": "What is CSR SSR SSG and ISR (Hitesh Choudhary)",
+        "description": "Hitesh Choudhary explains CSR/SSR/SSG/ISR with clear visuals; 16:57; popular and credible",
+        "url": "https://www.youtube.com/watch?v=YkxrbxoqHDw",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/YkxrbxoqHDw/hqdefault.jpg",
+        "videoId": "YkxrbxoqHDw",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Next.js 13 Crash Course Tutorial #2 - SSR & Server Components (theory) (Net Ninja)",
+        "description": "Net Ninja’s Next.js 13 crash course covers app router & server components; 7:32 with diagrams",
+        "url": "https://www.youtube.com/watch?v=YEG2_fSJswc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/YEG2_fSJswc/hqdefault.jpg",
+        "videoId": "YEG2_fSJswc",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Next.js 15 Tutorial - 49 - Server-side Rendering (SSR) (Codevolution)",
+        "description": "Next.js 15 SSR tutorial (4:55) provides up‑to‑date version‑specific details",
+        "url": "https://www.youtube.com/watch?v=R8ZwbehCGP0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/R8ZwbehCGP0/hqdefault.jpg",
+        "videoId": "R8ZwbehCGP0",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Next.js Learn",
+        "description": "Build the official dashboard and observe static, dynamic, server, and client boundaries",
+        "url": "https://nextjs.org/learn",
+        "source": "Next.js"
+      },
+      {
+        "type": "documentation",
+        "title": "Next.js App Router",
+        "description": "",
+        "url": "https://nextjs.org/docs/app",
+        "source": "Next.js"
+      },
+      {
+        "type": "github",
+        "title": "vercel/next.js",
+        "description": "Inspect App Router, rendering, caching, and server-component examples",
+        "url": "https://github.com/vercel/next.js",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Next.js Dashboard course",
+        "description": "Build rendering, streaming, routing, search, and pagination features",
+        "url": "https://nextjs.org/learn/dashboard-app",
+        "source": "Next.js"
+      }
+    ],
+    "10.2": [
+      {
+        "type": "video",
+        "title": "Next.js Patterns: Authentication (Best Practices for Server Components, Actions, Middleware) (Delba)",
+        "description": "Delba presents authentication patterns with visual flowcharts; 12:14; recent (2024) and high engagement",
+        "url": "https://www.youtube.com/watch?v=N_sUsq_y10U",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/N_sUsq_y10U/hqdefault.jpg",
+        "videoId": "N_sUsq_y10U",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Next.js Server Actions vs API Routes: The Final Answer for 2025 (Tobi Mey)",
+        "description": "Clear 7:22 comparison of Server Actions vs API Routes; accurate for 2025 version",
+        "url": "https://www.youtube.com/watch?v=NWx8oVLEdwE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/NWx8oVLEdwE/hqdefault.jpg",
+        "videoId": "NWx8oVLEdwE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Next.js 15 Authentication COMPLETE Guide (+ Best Practices, Pitfalls) (ByteGrad)",
+        "description": "Complete and detailed 37:45 guide on Next.js 15 authentication best practices; practical implementation focus",
+        "url": "https://www.youtube.com/watch?v=bwRj1O30JWg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/bwRj1O30JWg/hqdefault.jpg",
+        "videoId": "bwRj1O30JWg",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Vercel Academy",
+        "description": "Implement server actions, validation, authentication, and deployment in one guided app",
+        "url": "https://vercel.com/academy/nextjs-foundations",
+        "source": "vercel.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Next.js Route Handlers",
+        "description": "",
+        "url": "https://nextjs.org/docs/app/getting-started/route-handlers",
+        "source": "Next.js"
+      },
+      {
+        "type": "github",
+        "title": "vercel/next.js",
+        "description": "Explore route handlers, server actions, middleware, and auth examples",
+        "url": "https://github.com/vercel/next.js",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Next.js authentication chapter",
+        "description": "Add credentials, protected routes, validation, and secure server mutations",
+        "url": "https://nextjs.org/learn/dashboard-app/adding-authentication",
+        "source": "Next.js"
+      }
+    ],
+    "11.1": [
+      {
+        "type": "video",
+        "title": "JavaScript Visualized - Event Loop, Web APIs, (Micro)task Queue (Lydia Hallie)",
+        "description": "Lydia Hallie's visual walkthrough of the event loop uses clear diagrams and animation, accurately covering queues and microtasks.",
+        "url": "https://www.youtube.com/watch?v=eiC58R16hb8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/eiC58R16hb8/hqdefault.jpg",
+        "videoId": "eiC58R16hb8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How NodeJS Works? (Piyush Garg)",
+        "description": "Piyush Garg gives a thorough, educator‑style explanation of Node.js internals and the event loop with solid accuracy.",
+        "url": "https://www.youtube.com/watch?v=y0aTs56DJWk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/y0aTs56DJWk/hqdefault.jpg",
+        "videoId": "y0aTs56DJWk",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "#39 Understanding Middleware in Express | Working with Express JS | A Complete NODE JS Course (procademy)",
+        "description": "Procademy's short lecture focuses on Express middleware, offering a practical perspective on integration.",
+        "url": "https://www.youtube.com/watch?v=w5ix6zyphac",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/w5ix6zyphac/hqdefault.jpg",
+        "videoId": "w5ix6zyphac",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "StackBlitz Node starter",
+        "description": "Run Node in the browser and experiment with modules, events, and HTTP handlers",
+        "url": "https://stackblitz.com/fork/node",
+        "source": "stackblitz.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Introduction to Node.js",
+        "description": "",
+        "url": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs",
+        "source": "Node.js"
+      },
+      {
+        "type": "github",
+        "title": "nodejs/node",
+        "description": "Connect event-loop and runtime concepts to Node's implementation and tests",
+        "url": "https://github.com/nodejs/node",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "NodeSchool",
+        "description": "Practise Node modules, async I/O, streams, HTTP, and command-line workflows",
+        "url": "https://nodeschool.io/",
+        "source": "nodeschool.io"
+      }
+    ],
+    "11.2": [
+      {
+        "type": "video",
+        "title": "Build a documented / type-safe API with hono, drizzle, zod, OpenAPI and scalar (Syntax)",
+        "description": "Shows one request contract flowing through validation, types, persistence, and generated documentation, which makes the boundary architecture concrete",
+        "url": "https://www.youtube.com/watch?v=sNh9PoM9sUE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/sNh9PoM9sUE/hqdefault.jpg",
+        "videoId": "sNh9PoM9sUE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Fasity Complete Course - learn how to build REST API's (Awais Mirza)",
+        "description": "Provides a longer implementation path for routing, schemas, plugins, and project structure when the compact example is no longer enough",
+        "url": "https://www.youtube.com/watch?v=xdzqcG5dS7Q",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/xdzqcG5dS7Q/hqdefault.jpg",
+        "videoId": "xdzqcG5dS7Q",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How To Handle Errors Like A Senior Dev (Web Dev Simplified)",
+        "description": "Focuses on the failure path and centralized error translation, the part most happy-path API tutorials leave implicit",
+        "url": "https://www.youtube.com/watch?v=ovnyeq-Xxrc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ovnyeq-Xxrc/hqdefault.jpg",
+        "videoId": "ovnyeq-Xxrc",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "StackBlitz Node starter",
+        "description": "Build a small API and deliberately trigger validation, logging, and error paths",
+        "url": "https://stackblitz.com/fork/node",
+        "source": "stackblitz.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Zod",
+        "description": "",
+        "url": "https://zod.dev/",
+        "source": "zod.dev"
+      },
+      {
+        "type": "github",
+        "title": "expressjs/express",
+        "description": "Inspect routing, middleware, validation boundaries, and error handling",
+        "url": "https://github.com/expressjs/express",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "roadmap.sh Backend projects",
+        "description": "Build validated APIs with structured errors, logs, configuration, and tests",
+        "url": "https://roadmap.sh/backend/projects",
+        "source": "roadmap.sh"
+      }
+    ],
+    "12.1": [
+      {
+        "type": "video",
+        "title": "HTTP Status Codes Explained In 5 Minutes (ByteByteGo)",
+        "description": "ByteByteGo uses animated graphics to explain HTTP status codes clearly within a short 5‑minute video.",
+        "url": "https://www.youtube.com/watch?v=qmpUfWN7hh4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/qmpUfWN7hh4/hqdefault.jpg",
+        "videoId": "qmpUfWN7hh4",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "APIs Explained (in 4 Minutes) (Exponent)",
+        "description": "Exponent provides a high‑view, concise explanation of REST APIs that accurately covers resources and methods.",
+        "url": "https://www.youtube.com/watch?v=bxuYDT-BWaI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/bxuYDT-BWaI/hqdefault.jpg",
+        "videoId": "bxuYDT-BWaI",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "HTTP Request Methods | GET, POST, PUT, DELETE (Curious Code)",
+        "description": "Curious Code focuses specifically on request methods (GET, POST, etc.) offering a practical developer‑centric view.",
+        "url": "https://www.youtube.com/watch?v=tkfVQK6UxDI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/tkfVQK6UxDI/hqdefault.jpg",
+        "videoId": "tkfVQK6UxDI",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "httpbin",
+        "description": "Exercise GET, POST, PUT, PATCH, DELETE, headers, redirects, and status responses",
+        "url": "https://httpbin.org/",
+        "source": "httpbin.org"
+      },
+      {
+        "type": "documentation",
+        "title": "HTTP request methods (MDN)",
+        "description": "",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods",
+        "source": "MDN"
+      },
+      {
+        "type": "github",
+        "title": "OAI/OpenAPI-Specification",
+        "description": "Read the machine-readable contract standard used by REST tooling",
+        "url": "https://github.com/OAI/OpenAPI-Specification",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Postman API Fundamentals",
+        "description": "Create collections that exercise methods, headers, status codes, and assertions",
+        "url": "https://academy.postman.com/",
+        "source": "academy.postman.com"
+      }
+    ],
+    "12.2": [
+      {
+        "type": "video",
+        "title": "API Pagination: Making Billions of Products Scrolling Possible (ByteByteGo)",
+        "description": "ByteByteGo’s pagination video features animated diagrams that illustrate scrolling and paging concepts clearly.",
+        "url": "https://www.youtube.com/watch?v=14K_a2kKTxU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/14K_a2kKTxU/hqdefault.jpg",
+        "videoId": "14K_a2kKTxU",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "What is API Versioning? Two Strategies for Designing Better APIs (Erik Wilde)",
+        "description": "Erik Wilde gives an accurate, concise explanation of API versioning strategies, essential for version‑sensitive design.",
+        "url": "https://www.youtube.com/watch?v=vsb4ZkUytrU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/vsb4ZkUytrU/hqdefault.jpg",
+        "videoId": "vsb4ZkUytrU",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Deep Dive into REST API Design and Implementation Best Practices (Software Developer Diaries)",
+        "description": "Software Developer Diaries provides a deeper dive into pagination, filtering, and error handling with practical examples.",
+        "url": "https://www.youtube.com/watch?v=7nm1pYuKAhY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/7nm1pYuKAhY/hqdefault.jpg",
+        "videoId": "7nm1pYuKAhY",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Swagger Editor",
+        "description": "Design an OpenAPI contract and catch schema, response, pagination, and error-model mistakes",
+        "url": "https://editor.swagger.io/",
+        "source": "editor.swagger.io"
+      },
+      {
+        "type": "documentation",
+        "title": "RFC 9457 - Problem Details for HTTP APIs",
+        "description": "",
+        "url": "https://www.rfc-editor.org/rfc/rfc9457.html",
+        "source": "rfc-editor.org"
+      },
+      {
+        "type": "github",
+        "title": "OAI/OpenAPI-Specification",
+        "description": "Model pagination, reusable errors, and versioned API contracts",
+        "url": "https://github.com/OAI/OpenAPI-Specification",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "roadmap.sh API projects",
+        "description": "Design pagination, filtering, stable errors, idempotency, and versioning",
+        "url": "https://roadmap.sh/projects?g=backend",
+        "source": "roadmap.sh"
+      }
+    ],
+    "13.1": [
+      {
+        "type": "video",
+        "title": "What is a database schema? (ness-intricity101)",
+        "description": "The video uses visual diagrams to explain database schemas, making relational modeling easy to grasp.",
+        "url": "https://www.youtube.com/watch?v=3BZz8R7mqu0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/3BZz8R7mqu0/hqdefault.jpg",
+        "videoId": "3BZz8R7mqu0",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "What is an ORM and what does it do? (Code With Bubb)",
+        "description": "Code With Bubb delivers a clear, accurate overview of ORMs and their role, from a reputable educator.",
+        "url": "https://www.youtube.com/watch?v=EwpT466EyP4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/EwpT466EyP4/hqdefault.jpg",
+        "videoId": "EwpT466EyP4",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Selena Deckelmann: Sane schema migrations with Alembic and Postgres (Postgres Open)",
+        "description": "Postgres Open presents a practical, long‑form guide on schema migrations with Alembic, adding hands‑on perspective.",
+        "url": "https://www.youtube.com/watch?v=y4EQsBssn_0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/y4EQsBssn_0/hqdefault.jpg",
+        "videoId": "y4EQsBssn_0",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "SQLBolt",
+        "description": "Execute SQL lessons in the browser before mapping the same tables through an ORM",
+        "url": "https://sqlbolt.com/",
+        "source": "sqlbolt.com"
+      },
+      {
+        "type": "documentation",
+        "title": "PostgreSQL Tutorial",
+        "description": "",
+        "url": "https://www.postgresql.org/docs/current/tutorial.html",
+        "source": "postgresql.org"
+      },
+      {
+        "type": "github",
+        "title": "prisma/prisma",
+        "description": "Study schema, migration, client-generation, and relational-query examples",
+        "url": "https://github.com/prisma/prisma",
+        "source": "GitHub"
+      }
+    ],
+    "13.2": [
+      {
+        "type": "video",
+        "title": "ACID Properties in Databases With Examples (ByteByteGo)",
+        "description": "Gives the transaction model visually before the text connects atomicity and isolation to concurrent web requests",
+        "url": "https://www.youtube.com/watch?v=GAe5oB742dw",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/GAe5oB742dw/hqdefault.jpg",
+        "videoId": "GAe5oB742dw",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "N + 1 Queries: The Easiest Way To Improve Performance (Web Dev Simplified)",
+        "description": "Turns an abstract performance warning into a visible one-query-per-row failure and then repairs the query shape",
+        "url": "https://www.youtube.com/watch?v=3w2g50NojVQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/3w2g50NojVQ/hqdefault.jpg",
+        "videoId": "3w2g50NojVQ",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "SQL indexing best practices | How to make your database FASTER! (CockroachDB)",
+        "description": "Adds the database engine's perspective, showing why an index helps selected access paths while adding write and storage cost",
+        "url": "https://www.youtube.com/watch?v=BIlFTFrEFOI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/BIlFTFrEFOI/hqdefault.jpg",
+        "videoId": "BIlFTFrEFOI",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "PostgreSQL psql Simulator",
+        "description": "Practise EXPLAIN, indexes, BEGIN, COMMIT, and ROLLBACK interactively",
+        "url": "https://devops-daily.com/games/postgres-terminal-simulator",
+        "source": "devops-daily.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Prisma transactions",
+        "description": "",
+        "url": "https://www.prisma.io/docs/orm/prisma-client/queries/transactions",
+        "source": "prisma.io"
+      },
+      {
+        "type": "github",
+        "title": "prisma/prisma",
+        "description": "Trace transactions, relation loading, batching, and query-engine behaviour",
+        "url": "https://github.com/prisma/prisma",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Use The Index, Luke",
+        "description": "Diagnose query plans, indexes, joins, pagination, and performance trade-offs",
+        "url": "https://use-the-index-luke.com/",
+        "source": "use-the-index-luke.com"
+      }
+    ],
+    "14.1": [
+      {
+        "type": "video",
+        "title": "Session vs Token Authentication in 100 Seconds (Fireship)",
+        "description": "Establishes the two storage models quickly so the detailed explanation can concentrate on their operational and security consequences",
+        "url": "https://www.youtube.com/watch?v=UBUNrFtufWo",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/UBUNrFtufWo/hqdefault.jpg",
+        "videoId": "UBUNrFtufWo",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Cross-Site Request Forgery (CSRF) Explained (PwnFunction)",
+        "description": "Animates the attack created by automatically attached cookies and shows why SameSite and anti-CSRF tokens exist",
+        "url": "https://www.youtube.com/watch?v=eWEgUcHPle0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/eWEgUcHPle0/hqdefault.jpg",
+        "videoId": "eWEgUcHPle0",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Cookies vs Sessions for Authentication – Which is Better? (LearnIT)",
+        "description": "Compares the choices as engineering trade-offs instead of treating either mechanism as a universal winner",
+        "url": "https://www.youtube.com/watch?v=kbdYuwkIQv8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/kbdYuwkIQv8/hqdefault.jpg",
+        "videoId": "kbdYuwkIQv8",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "PortSwigger CSRF labs",
+        "description": "Exploit and then repair cookie- and session-based CSRF failures",
+        "url": "https://portswigger.net/web-security/learning-paths/csrf",
+        "source": "portswigger.net"
+      },
+      {
+        "type": "documentation",
+        "title": "OWASP Authentication Cheat Sheet",
+        "description": "",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html",
+        "source": "cheatsheetseries.owasp.org"
+      },
+      {
+        "type": "github",
+        "title": "OWASP/CheatSheetSeries",
+        "description": "Review maintained authentication, password, session, cookie, and CSRF guidance",
+        "url": "https://github.com/OWASP/CheatSheetSeries",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "PortSwigger Authentication labs",
+        "description": "Exploit and fix password, session, and cookie flaws",
+        "url": "https://portswigger.net/web-security/learning-paths/authentication-vulnerabilities",
+        "source": "portswigger.net"
+      }
+    ],
+    "14.2": [
+      {
+        "type": "video",
+        "title": "OAuth 2 Explained In Simple Terms (ByteByteGo)",
+        "description": "ByteByteGo delivers clear animated diagrams for OAuth2 concepts.",
+        "url": "https://www.youtube.com/watch?v=ZV5yTm4pT8g",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ZV5yTm4pT8g/hqdefault.jpg",
+        "videoId": "ZV5yTm4pT8g",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Authentication Explained: When to Use Basic, Bearer, OAuth2, JWT & SSO (Hayk Simonyan)",
+        "description": "Complete and detailed, accurate coverage of JWT, OAuth2, and related auth methods by a credible instructor.",
+        "url": "https://www.youtube.com/watch?v=9JPnN1Z_iSY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/9JPnN1Z_iSY/hqdefault.jpg",
+        "videoId": "9JPnN1Z_iSY",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "API Authentication: JWT, OAuth2, and More (ByteMonk)",
+        "description": "Practical API‑focused walk‑through of JWT and OAuth2 implementation.",
+        "url": "https://www.youtube.com/watch?v=xJA8tP74KD0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/xJA8tP74KD0/hqdefault.jpg",
+        "videoId": "xJA8tP74KD0",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "OAuth 2.0 Playground",
+        "description": "Walk through authorization-code exchanges and inspect every redirect and token",
+        "url": "https://www.oauth.com/playground/",
+        "source": "oauth.com"
+      },
+      {
+        "type": "documentation",
+        "title": "OAuth 2.0 Security BCP - RFC 9700",
+        "description": "",
+        "url": "https://www.rfc-editor.org/rfc/rfc9700.html",
+        "source": "rfc-editor.org"
+      },
+      {
+        "type": "github",
+        "title": "OWASP/CheatSheetSeries",
+        "description": "Review OAuth, JWT, authorization, and access-control guidance",
+        "url": "https://github.com/OWASP/CheatSheetSeries",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "PortSwigger OAuth labs",
+        "description": "Practise OAuth flows, state validation, account linking, and authorization failures",
+        "url": "https://portswigger.net/web-security/oauth",
+        "source": "portswigger.net"
+      }
+    ],
+    "15.1": [
+      {
+        "type": "video",
+        "title": "React Testing for Beginners: Start Here! (Programming with Mosh)",
+        "description": "Mosh’s high‑production tutorial includes diagrams and visual aids throughout the testing guide.",
+        "url": "https://www.youtube.com/watch?v=8Xwq35cPwYg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/8Xwq35cPwYg/hqdefault.jpg",
+        "videoId": "8Xwq35cPwYg",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "React Vite Testing Tutorial For Beginners - Vitest Testing Crash Course (PedroTech)",
+        "description": "PedroTech provides a thorough, accurate Vitest & React Testing Library walkthrough.",
+        "url": "https://www.youtube.com/watch?v=CxSL0knFxAs",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/CxSL0knFxAs/hqdefault.jpg",
+        "videoId": "CxSL0knFxAs",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "React Testing Full Course 2026 | Vitest and React Testing Library Tutorial (RoadsideCoder)",
+        "description": "Recent full‑course (2026) offering practical, up‑to‑date testing techniques.",
+        "url": "https://www.youtube.com/watch?v=6dOpQIwyV6g",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/6dOpQIwyV6g/hqdefault.jpg",
+        "videoId": "6dOpQIwyV6g",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Testing Playground",
+        "description": "Paste rendered markup and practise user-centred Testing Library queries",
+        "url": "https://testing-playground.com/",
+        "source": "testing-playground.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Vitest Guide",
+        "description": "",
+        "url": "https://vitest.dev/guide/",
+        "source": "vitest.dev"
+      },
+      {
+        "type": "github",
+        "title": "vitest-dev/vitest",
+        "description": "Inspect assertions, mocking, runners, browser mode, and real test suites",
+        "url": "https://github.com/vitest-dev/vitest",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Testing Library examples",
+        "description": "Write behaviour-first unit and component tests using accessible queries",
+        "url": "https://testing-library.com/docs/example-intro/",
+        "source": "testing-library.com"
+      }
+    ],
+    "15.2": [
+      {
+        "type": "video",
+        "title": "What is Playwright? (🎭 Playwright introduction tutorial, features & demo) (Testopic)",
+        "description": "Introduces the real-browser execution model and the evidence Playwright captures when a high-level test fails",
+        "url": "https://www.youtube.com/watch?v=wGr5rz8WGCE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/wGr5rz8WGCE/hqdefault.jpg",
+        "videoId": "wGr5rz8WGCE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Get started with end-to-end testing: Playwright | Episode 1 - Introduction (Visual Studio Code)",
+        "description": "Uses the official tooling workflow to connect locators, assertions, traces, and repeatable test runs",
+        "url": "https://www.youtube.com/watch?v=4-LwodVujTg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/4-LwodVujTg/hqdefault.jpg",
+        "videoId": "4-LwodVujTg",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Playwright MiniProject: End-to-End Automation with the To-do App (Best Practices) 🔥 (Automation Step by Step)",
+        "description": "Follows one complete journey and exposes the fixture, cleanup, and flakiness decisions hidden by tiny demos",
+        "url": "https://www.youtube.com/watch?v=5wSztvWhx14",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/5wSztvWhx14/hqdefault.jpg",
+        "videoId": "5wSztvWhx14",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Playwright UI Mode",
+        "description": "Time-travel through browser tests, locators, traces, and failures",
+        "url": "https://playwright.dev/docs/test-ui-mode",
+        "source": "playwright.dev"
+      },
+      {
+        "type": "documentation",
+        "title": "Playwright",
+        "description": "",
+        "url": "https://playwright.dev/docs/intro",
+        "source": "playwright.dev"
+      },
+      {
+        "type": "github",
+        "title": "microsoft/playwright",
+        "description": "Study browser automation, fixtures, traces, locators, and end-to-end examples",
+        "url": "https://github.com/microsoft/playwright",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Playwright writing tests",
+        "description": "Automate a complete user journey and debug it through UI mode and traces",
+        "url": "https://playwright.dev/docs/writing-tests",
+        "source": "playwright.dev"
+      }
+    ],
+    "16.1": [
+      {
+        "type": "video",
+        "title": "The ultimate guide to web performance (Beyond Fireship)",
+        "description": "Fireship uses fast-paced animated diagrams to illustrate LCP, INP, and CLS concepts clearly.",
+        "url": "https://www.youtube.com/watch?v=0fONene3OIA",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/0fONene3OIA/hqdefault.jpg",
+        "videoId": "0fONene3OIA",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "SEO and Core Web Vitals in HTML | Sigma Web Development Course - Tutorial #6 (CodeWithHarry)",
+        "description": "CodeWithHarry provides a thorough, accurate walkthrough of Core Web Vitals with high view count and strong credibility.",
+        "url": "https://www.youtube.com/watch?v=CyRlWlaJnTY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/CyRlWlaJnTY/hqdefault.jpg",
+        "videoId": "CyRlWlaJnTY",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How to Fix CLS Issues - More than 0.25 (Core Web Vitals Series - Part 1) (BlogVwant - A Vlog for Bloggers)",
+        "description": "Practical, step‑by‑step guide focused on fixing CLS issues, offering a hands‑on perspective.",
+        "url": "https://www.youtube.com/watch?v=wwI4m-94Z4w",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/wwI4m-94Z4w/hqdefault.jpg",
+        "videoId": "wwI4m-94Z4w",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "PageSpeed Insights",
+        "description": "Run field and lab measurements for LCP, INP, CLS, accessibility, and SEO",
+        "url": "https://pagespeed.web.dev/",
+        "source": "pagespeed.web.dev"
+      },
+      {
+        "type": "documentation",
+        "title": "Web Vitals",
+        "description": "",
+        "url": "https://web.dev/articles/vitals",
+        "source": "web.dev"
+      },
+      {
+        "type": "github",
+        "title": "GoogleChrome/lighthouse",
+        "description": "Inspect how performance, accessibility, and SEO audits are implemented",
+        "url": "https://github.com/GoogleChrome/lighthouse",
+        "source": "GitHub"
+      }
+    ],
+    "16.2": [
+      {
+        "type": "video",
+        "title": "How to make your JavaScript Bundle Smaller (Beyond Fireship)",
+        "description": "Connects dependency choice, tree shaking, and code splitting to the amount of JavaScript the browser must download and execute",
+        "url": "https://www.youtube.com/watch?v=kwUfeWe7DCw",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/kwUfeWe7DCw/hqdefault.jpg",
+        "videoId": "kwUfeWe7DCw",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "gzip file compression in 100 Seconds (Fireship)",
+        "description": "Isolates transfer compression so it is not confused with removing code or reducing runtime work",
+        "url": "https://www.youtube.com/watch?v=NLtt4S9ErIA",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/NLtt4S9ErIA/hqdefault.jpg",
+        "videoId": "NLtt4S9ErIA",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Webpack - Ep. 25 - SplitChunks and the Bundle Analyzer (Law)",
+        "description": "Demonstrates the measurement tools that reveal duplicated modules and chunk boundaries instead of optimizing by guesswork",
+        "url": "https://www.youtube.com/watch?v=ydJK4ncfIqQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ydJK4ncfIqQ/hqdefault.jpg",
+        "videoId": "ydJK4ncfIqQ",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Chrome Coverage panel",
+        "description": "Reveal unused JavaScript and CSS before splitting or removing bundles",
+        "url": "https://developer.chrome.com/docs/devtools/coverage/",
+        "source": "developer.chrome.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Cache-Control (MDN)",
+        "description": "",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control",
+        "source": "MDN"
+      },
+      {
+        "type": "github",
+        "title": "vitejs/vite",
+        "description": "Explore Rollup integration, code splitting, assets, and optimized production builds",
+        "url": "https://github.com/vitejs/vite",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "web.dev Performance",
+        "description": "Practise caching, compression, loading, code splitting, and bundle reduction",
+        "url": "https://web.dev/performance/",
+        "source": "web.dev"
+      }
+    ],
+    "17.1": [
+      {
+        "type": "video",
+        "title": "Difference Between Development, Staging, and Prod Environment? (CodeWithHarry)",
+        "description": "CodeWithHarry delivers an accurate, detailed explanation of dev, staging, and prod environments with strong viewership.",
+        "url": "https://www.youtube.com/watch?v=H2p4wowlD3Q",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/H2p4wowlD3Q/hqdefault.jpg",
+        "videoId": "H2p4wowlD3Q",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "7 Ways to Deploy a Node.js App (Fireship)",
+        "description": "Fireship presents practical deployment options for Node.js apps, complementing the environment discussion.",
+        "url": "https://www.youtube.com/watch?v=uEVmD6n8Il0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/uEVmD6n8Il0/hqdefault.jpg",
+        "videoId": "uEVmD6n8Il0",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Vercel New Project",
+        "description": "Import a repository, configure environment variables, deploy, and inspect logs",
+        "url": "https://vercel.com/new",
+        "source": "vercel.com"
+      },
+      {
+        "type": "documentation",
+        "title": "The Twelve-Factor App",
+        "description": "",
+        "url": "https://12factor.net/",
+        "source": "12factor.net"
+      },
+      {
+        "type": "github",
+        "title": "docker/getting-started",
+        "description": "Run a complete containerised application and deployment walkthrough",
+        "url": "https://github.com/docker/getting-started",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Vercel deployment guide",
+        "description": "Deploy preview and production environments with correct secrets and logs",
+        "url": "https://vercel.com/docs/deployments",
+        "source": "vercel.com"
+      }
+    ],
+    "17.2": [
+      {
+        "type": "video",
+        "title": "Top 5 Most-Used Deployment Strategies (ByteByteGo)",
+        "description": "Compares rolling, blue-green, canary, and related release shapes visually so their traffic and rollback behavior can be contrasted",
+        "url": "https://www.youtube.com/watch?v=AWVTKBUnoIg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/AWVTKBUnoIg/hqdefault.jpg",
+        "videoId": "AWVTKBUnoIg",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How to design a modern CI/CD Pipeline (DevOps Journey)",
+        "description": "Explains how checks, artifacts, promotion, and deployment fit into one ordered feedback system",
+        "url": "https://www.youtube.com/watch?v=KnSBNd3b0qI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/KnSBNd3b0qI/hqdefault.jpg",
+        "videoId": "KnSBNd3b0qI",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "GitLab CI/CD Pipeline Tutorial for Beginners (Valentin Despa)",
+        "description": "Provides a concrete pipeline implementation after the vendor-neutral theory is understood",
+        "url": "https://www.youtube.com/watch?v=z7nLsJvEyMY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/z7nLsJvEyMY/hqdefault.jpg",
+        "videoId": "z7nLsJvEyMY",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Play with Docker",
+        "description": "Build and run containers in a disposable browser lab before automating CI",
+        "url": "https://labs.play-with-docker.com/",
+        "source": "labs.play-with-docker.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Docker build best practices",
+        "description": "",
+        "url": "https://docs.docker.com/build/building/best-practices/",
+        "source": "docs.docker.com"
+      },
+      {
+        "type": "github",
+        "title": "actions/starter-workflows",
+        "description": "Adapt maintained CI, build, test, and deployment workflow templates",
+        "url": "https://github.com/actions/starter-workflows",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "GitHub Skills: Actions",
+        "description": "Create a workflow that tests, builds, deploys, and supports a safe rollback",
+        "url": "https://skills.github.com/",
+        "source": "skills.github.com"
+      }
+    ],
+    "18.1": [
+      {
+        "type": "video",
+        "title": "GraphQL Explained in 100 Seconds (Fireship)",
+        "description": "Supplies the schema, query, resolver, and response-shape vocabulary in one compact visual pass",
+        "url": "https://www.youtube.com/watch?v=eIQh02xuVw4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/eIQh02xuVw4/hqdefault.jpg",
+        "videoId": "eIQh02xuVw4",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "What Is GraphQL? REST vs. GraphQL (ByteByteGo)",
+        "description": "Frames GraphQL as a response to client-data coordination pressure and makes the REST trade-off explicit",
+        "url": "https://www.youtube.com/watch?v=yWzKJPw_VzM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/yWzKJPw_VzM/hqdefault.jpg",
+        "videoId": "yWzKJPw_VzM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Learn GraphQL in 7 Minutes For Beginners (PedroTech)",
+        "description": "Turns the conceptual graph into a small executable query before the section introduces N+1 and operational limits",
+        "url": "https://www.youtube.com/watch?v=Zg4XIpnLWQg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Zg4XIpnLWQg/hqdefault.jpg",
+        "videoId": "Zg4XIpnLWQg",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Apollo Sandbox",
+        "description": "Explore schemas and run queries, variables, fragments, and mutations",
+        "url": "https://studio.apollographql.com/sandbox/explorer",
+        "source": "studio.apollographql.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Learn GraphQL",
+        "description": "",
+        "url": "https://graphql.org/learn/",
+        "source": "graphql.org"
+      },
+      {
+        "type": "github",
+        "title": "graphql/graphql-js",
+        "description": "Inspect the reference JavaScript implementation of GraphQL execution",
+        "url": "https://github.com/graphql/graphql-js",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Apollo GraphQL tutorials",
+        "description": "Build schemas, resolvers, clients, caching, and production graph features",
+        "url": "https://www.apollographql.com/tutorials/",
+        "source": "apollographql.com"
+      }
+    ],
+    "18.2": [
+      {
+        "type": "video",
+        "title": "WebSockets in 100 Seconds & Beyond with Socket.io (Fireship)",
+        "description": "Fireship uses fast-paced animated graphics to illustrate WebSocket mechanics in 8 min, high views/likes indicate clarity.",
+        "url": "https://www.youtube.com/watch?v=1BfCnjr_Vjg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/1BfCnjr_Vjg/hqdefault.jpg",
+        "videoId": "1BfCnjr_Vjg",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "HTTP Polling vs SSE vs WebSocket vs WebHooks (Hello Byte)",
+        "description": "Hello Byte provides a thorough, accurate comparison of HTTP Polling, SSE, WebSocket, and WebHooks with detailed explanations.",
+        "url": "https://www.youtube.com/watch?v=JQoPuXAf92U",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/JQoPuXAf92U/hqdefault.jpg",
+        "videoId": "JQoPuXAf92U",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Top 3 Things You Should Know About Webhooks! (ByteByteGo)",
+        "description": "ByteByteGo focuses specifically on Webhooks, offering practical tips and visual cues in a concise 4‑min video.",
+        "url": "https://www.youtube.com/watch?v=x_jjhcDrISk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/x_jjhcDrISk/hqdefault.jpg",
+        "videoId": "x_jjhcDrISk",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "WebSocket King",
+        "description": "Open a socket, send frames, reconnect, and compare the flow with ordinary HTTP",
+        "url": "https://websocketking.com/",
+        "source": "websocketking.com"
+      },
+      {
+        "type": "documentation",
+        "title": "WebSocket API (MDN)",
+        "description": "",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API",
+        "source": "MDN"
+      },
+      {
+        "type": "github",
+        "title": "websockets/ws",
+        "description": "Study production WebSocket clients, servers, heartbeats, and streaming examples",
+        "url": "https://github.com/websockets/ws",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Postman WebSocket requests",
+        "description": "Test message flows, reconnection, and realtime payload contracts",
+        "url": "https://learning.postman.com/docs/sending-requests/websocket/websocket/",
+        "source": "learning.postman.com"
+      }
+    ],
+    "19.1": [
+      {
+        "type": "video",
+        "title": "Web Developer Portfolio Tips (Get The Interview!) (The Website Architect)",
+        "description": "Organizes the portfolio around reviewer attention and evidence rather than decorative volume",
+        "url": "https://www.youtube.com/watch?v=WQWiyYqutj0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/WQWiyYqutj0/hqdefault.jpg",
+        "videoId": "WQWiyYqutj0",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "The Junior Web Developer Portfolio That’ll Get You Hired (Dylan Cole)",
+        "description": "Shows what a junior candidate can realistically prove with a small number of focused projects",
+        "url": "https://www.youtube.com/watch?v=bOTadUAiDBA",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/bOTadUAiDBA/hqdefault.jpg",
+        "videoId": "bOTadUAiDBA",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Hire/Not-Hired: Fast Portfolio Reviews (Flux Academy)",
+        "description": "Exposes the reviewer's real scanning behavior, making broken links, unclear roles, and missing explanations visible as hiring costs",
+        "url": "https://www.youtube.com/watch?v=KO5eOtR2njU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/KO5eOtR2njU/hqdefault.jpg",
+        "videoId": "KO5eOtR2njU",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Frontend Mentor",
+        "description": "Turn professional briefs into portfolio-ready responsive projects",
+        "url": "https://www.frontendmentor.io/challenges",
+        "source": "frontendmentor.io"
+      },
+      {
+        "type": "documentation",
+        "title": "About repository READMEs (GitHub Docs)",
+        "description": "",
+        "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes",
+        "source": "docs.github.com"
+      },
+      {
+        "type": "github",
+        "title": "realworld-apps/realworld",
+        "description": "Compare the same production-grade app across many frontend and backend stacks",
+        "url": "https://github.com/realworld-apps/realworld",
+        "source": "GitHub"
+      }
+    ],
+    "19.2": [
+      {
+        "type": "video",
+        "title": "Everything You NEED to Know About WEB APP Architecture (ForrestKnight)",
+        "description": "Gives the end-to-end component map before the capstone is divided into small vertical slices",
+        "url": "https://www.youtube.com/watch?v=sDlCSIDwpDs",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/sDlCSIDwpDs/hqdefault.jpg",
+        "videoId": "sDlCSIDwpDs",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Become a Fullstack Developer from Scratch – Full Beginner’s Tutorial (freeCodeCamp.org)",
+        "description": "Provides a long build-along for observing how frontend, API, and persistence meet, best used as comparison rather than copied architecture",
+        "url": "https://www.youtube.com/watch?v=LzMnsfqjzkA",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/LzMnsfqjzkA/hqdefault.jpg",
+        "videoId": "LzMnsfqjzkA",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "My Full-Stack Capstone Project: Building a Community App with React & Node.js (Escape Their Programming)",
+        "description": "Adds a project-owner narrative about scope, integration, and presentation, which is the perspective this phase is designed to develop",
+        "url": "https://www.youtube.com/watch?v=2sH4MjPhIiQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/2sH4MjPhIiQ/hqdefault.jpg",
+        "videoId": "2sH4MjPhIiQ",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "roadmap.sh Projects",
+        "description": "Choose a capstone brief and track requirements from MVP through production polish",
+        "url": "https://roadmap.sh/projects",
+        "source": "roadmap.sh"
+      },
+      {
+        "type": "documentation",
+        "title": "Full Stack Open",
+        "description": "",
+        "url": "https://fullstackopen.com/en/",
+        "source": "fullstackopen.com"
+      },
+      {
+        "type": "github",
+        "title": "realworld-apps/realworld",
+        "description": "Use the shared API specification as a serious full-stack capstone target",
+        "url": "https://github.com/realworld-apps/realworld",
+        "source": "GitHub"
+      }
+    ],
+    "20.1": [
+      {
+        "type": "video",
+        "title": "10 JavaScript Interview Questions You HAVE TO KNOW (James Q Quick)",
+        "description": "James Q Quick mixes code animations with concise explanations of 10 key JavaScript interview questions.",
+        "url": "https://www.youtube.com/watch?v=kUTbEcO-lrk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/kUTbEcO-lrk/hqdefault.jpg",
+        "videoId": "kUTbEcO-lrk",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Top 30 JavaScript Interview Questions 2025 | JavaScript Interview Questions & Answers | Intellipaat (Intellipaat)",
+        "description": "Intellipaat offers an extensive, up‑to‑date 1½‑hour Q&A covering a broad set of JavaScript interview topics.",
+        "url": "https://www.youtube.com/watch?v=MX48mv73jf8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/MX48mv73jf8/hqdefault.jpg",
+        "videoId": "MX48mv73jf8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Top 10 JavaScript Interview Questions EXPLAINED! | Tanay Pratap Hindi (Tanay Pratap)",
+        "description": "Tanay Pratap presents the top 10 questions in Hindi with visual code walkthroughs, adding linguistic diversity.",
+        "url": "https://www.youtube.com/watch?v=tOo9c6SK_do",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/tOo9c6SK_do/hqdefault.jpg",
+        "videoId": "tOo9c6SK_do",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "JavaScript Quiz",
+        "description": "Test language edge cases, then explain each answer aloud instead of memorising it",
+        "url": "https://javascriptquiz.com/",
+        "source": "javascriptquiz.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Frontend Interview Handbook",
+        "description": "",
+        "url": "https://www.frontendinterviewhandbook.com/",
+        "source": "frontendinterviewhandbook.com"
+      },
+      {
+        "type": "github",
+        "title": "aershov24/full-stack-interview-questions",
+        "description": "Drill curated frontend, JavaScript, React, Node, and database questions",
+        "url": "https://github.com/aershov24/full-stack-interview-questions",
+        "source": "GitHub"
+      }
+    ],
+    "20.2": [
+      {
+        "type": "video",
+        "title": "How to Answer System Design Interview Questions (Complete Guide) (Exponent)",
+        "description": "Exponent combines diagrammatic illustrations with clear narration on system‑design interview strategies.",
+        "url": "https://www.youtube.com/watch?v=L9TfZdODuFQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/L9TfZdODuFQ/hqdefault.jpg",
+        "videoId": "L9TfZdODuFQ",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How to Prepare for System Design Interviews w/ Meta Staff Engineer (Hello Interview)",
+        "description": "Hello Interview delivers a detailed, credible preparation guide from a Meta staff engineer’s viewpoint.",
+        "url": "https://www.youtube.com/watch?v=Ru54dxzCyD0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Ru54dxzCyD0/hqdefault.jpg",
+        "videoId": "Ru54dxzCyD0",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Cracking the Behavioral Interview for Software Developers (Keep On Coding)",
+        "description": "Keep On Coding focuses on behavioral interview techniques for developers, complementing the technical content.",
+        "url": "https://www.youtube.com/watch?v=ld0cvWnrVsU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ld0cvWnrVsU/hqdefault.jpg",
+        "videoId": "ld0cvWnrVsU",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Excalidraw",
+        "description": "Practise drawing browser, API, cache, queue, and database designs under interview time limits",
+        "url": "https://excalidraw.com/",
+        "source": "excalidraw.com"
+      },
+      {
+        "type": "documentation",
+        "title": "System Design in a Hurry",
+        "description": "",
+        "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+        "source": "hellointerview.com"
+      },
+      {
+        "type": "github",
+        "title": "donnemartin/system-design-primer",
+        "description": "Practise requirements, APIs, data models, scaling, and trade-off discussions",
+        "url": "https://github.com/donnemartin/system-design-primer",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "System Design Primer exercises",
+        "description": "Run timed full-stack design mocks and defend every trade-off",
+        "url": "https://github.com/donnemartin/system-design-primer#system-design-interview-questions-with-solutions",
+        "source": "GitHub"
+      }
+    ]
+  },
+  "phases": {},
+  "projects": {}
+}

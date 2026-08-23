@@ -20,7 +20,7 @@ The curriculum already exists in the repo. The site does not invent lessons, vid
 
 ## Operating Context
 
-- Canonical teaching text: `content/roadmaps/*.md`, `content/guides/Projects.md`, `content/guides/Interview.md`, and README.md.
+- Canonical teaching text: `content/roadmaps/*.md`, `content/projects/*.md`, `content/guides/Projects.md`, `content/guides/Interview.md`, and README.md.
 - Progress lives only in the browser (`localStorage`). No account, no paywall.
 - Recommended Software Engineer loop: Computer Science Phases 1–25 → Git 1–10 → Computer Science Phases 26 onward.
 - OOP is not a separate course in the UI. Old `/courses/object-oriented-programming` URLs redirect into Computer Science.

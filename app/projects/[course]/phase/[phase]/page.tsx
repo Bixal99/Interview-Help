@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { GateBanner } from "@/components/gate-banner";
 import { ProjectChrome } from "@/components/project-chrome";
-import { TutorialShell } from "@/components/tutorial-shell";
-import { getAllProjectParams, getProjectView, getRequiredProjectHref } from "@/lib/content";
+import { getAllProjectParams, getProjectView, getRequiredLessonHref } from "@/lib/content";
+import { lessonIdsByPhase } from "@/lib/navigation";
+import { chapterDocumentTitle } from "@/lib/curriculum-labels";
 import { parseProjectBrief } from "@/lib/parse-project-brief";
 
 export function generateStaticParams() {
@@ -13,7 +14,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ course: string; phase: string }> }): Promise<Metadata> {
   const { course, phase } = await params;
   const view = getProjectView(course, phase);
-  return view ? { title: view.project.title } : {};
+  if (!view) return {};
+  const title = chapterDocumentTitle(view.phase.number, view.project.title);
+  return { title: { absolute: title } };
 }
 
 export default async function PhaseProjectPage({ params }: { params: Promise<{ course: string; phase: string }> }) {
@@ -21,13 +24,22 @@ export default async function PhaseProjectPage({ params }: { params: Promise<{ c
   const view = getProjectView(course, phase);
   if (!view) notFound();
   const phaseIds = view.nav.chapters.flatMap((chapter) => chapter.phases.map((item) => item.id));
+  const lessonsByPhase = lessonIdsByPhase(view.nav);
   return (
     <main id="main-content">
-      <TutorialShell nav={view.nav}>
-        <GateBanner slug={view.course.slug} phaseId={view.phase.id} phaseIds={phaseIds} requiredHref={getRequiredProjectHref(view.course.slug, view.phase.id)} />
-        <ProjectChrome
+      <GateBanner
+        slug={view.course.slug}
+        phaseId={view.phase.id}
+        phaseIds={phaseIds}
+        lessonIdsByPhase={lessonsByPhase}
+        requiredHref={getRequiredLessonHref(view.course.slug, view.phase.id)}
+      />
+      <ProjectChrome
           slug={view.course.slug}
           phaseId={view.phase.id}
+          chapterNumber={view.phase.number}
+          lessonIds={view.phase.lessonIds}
+          unitTitle={view.unit?.title}
           projectId={view.project.id}
           title={view.project.title}
           brief={parseProjectBrief(view.project.markdown)}
@@ -37,7 +49,6 @@ export default async function PhaseProjectPage({ params }: { params: Promise<{ c
           proceedLabel={view.proceedLabel}
           whatComesNext={view.whatComesNext}
         />
-      </TutorialShell>
     </main>
   );
 }

@@ -1,0 +1,5513 @@
+{
+  "stories": [
+    { "number": 1, "title": "BEFORE YOU WRITE CODE" },
+    { "number": 2, "title": "LEARNING TO CONTROL THE MACHINE" },
+    { "number": 3, "title": "THE MATHEMATICAL LANGUAGE OF CS" },
+    { "number": 4, "title": "ORGANIZING LARGE SOFTWARE" },
+    { "number": 5, "title": "DATA STRUCTURES & ALGORITHMS" },
+    { "number": 6, "title": "INSIDE THE COMPUTER" },
+    { "number": 7, "title": "CONNECTING COMPUTERS" },
+    { "number": 8, "title": "DATA THAT SURVIVES" },
+    { "number": 9, "title": "SECURITY & HUMAN-CENTERED SOFTWARE" },
+    { "number": 10, "title": "PROFESSIONAL SOFTWARE ENGINEERING" },
+    { "number": 11, "title": "SYSTEM DESIGN & DISTRIBUTED SYSTEMS" },
+    { "number": 12, "title": "OTHER CORE CS AREAS" },
+    { "number": 13, "title": "MAINTAINING REAL SOFTWARE" },
+    { "number": 14, "title": "GRAND CAPSTONE" },
+    { "number": 15, "title": "INTERVIEW & JOB READINESS" }
+  ],
+  "phases": [
+    {
+      "number": 1,
+      "title": "What Is Computer Science?",
+      "lessons": [
+        {
+          "id": "1.1",
+          "title": "Problems, Inputs & Outputs",
+          "children": []
+        },
+        {
+          "id": "1.2",
+          "title": "Algorithms",
+          "children": []
+        },
+        {
+          "id": "1.3",
+          "title": "CS vs Programming vs Software Engineering",
+          "children": []
+        },
+        {
+          "id": "1.4",
+          "title": "Abstraction",
+          "children": []
+        },
+        {
+          "id": "1.5",
+          "title": "Decomposition",
+          "children": []
+        },
+        {
+          "id": "1.6",
+          "title": "Computational Thinking",
+          "children": []
+        },
+        {
+          "id": "1.7",
+          "title": "PRACTICE — Written / By Hand",
+          "children": [
+            {
+              "id": "1.7.1",
+              "title": "Write an algorithm for using an ATM"
+            },
+            {
+              "id": "1.7.2",
+              "title": "Explain CS vs programming in your own words"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "How Computers Represent Information",
+      "lessons": [
+        {
+          "id": "2.1",
+          "title": "Bits & Bytes",
+          "children": []
+        },
+        {
+          "id": "2.2",
+          "title": "Binary",
+          "children": []
+        },
+        {
+          "id": "2.3",
+          "title": "Hexadecimal",
+          "children": []
+        },
+        {
+          "id": "2.4",
+          "title": "Signed / Unsigned Numbers",
+          "children": []
+        },
+        {
+          "id": "2.5",
+          "title": "Floating Point",
+          "children": []
+        },
+        {
+          "id": "2.6",
+          "title": "ASCII / Unicode / UTF-8",
+          "children": []
+        },
+        {
+          "id": "2.7",
+          "title": "Integer Overflow",
+          "children": []
+        },
+        {
+          "id": "2.8",
+          "title": "Endianness",
+          "children": []
+        },
+        {
+          "id": "2.9",
+          "title": "PRACTICE — Mixed",
+          "children": [
+            {
+              "id": "2.9.1",
+              "title": "Convert binary / decimal / hex by hand"
+            },
+            {
+              "id": "2.9.2",
+              "title": "Inspect how text is stored as bytes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Logic & Digital Computation",
+      "lessons": [
+        {
+          "id": "3.1",
+          "title": "Boolean Logic",
+          "children": []
+        },
+        {
+          "id": "3.2",
+          "title": "Truth Tables",
+          "children": []
+        },
+        {
+          "id": "3.3",
+          "title": "AND / OR / NOT / XOR",
+          "children": []
+        },
+        {
+          "id": "3.4",
+          "title": "Logic Gates",
+          "children": []
+        },
+        {
+          "id": "3.5",
+          "title": "Combinational Circuits",
+          "children": []
+        },
+        {
+          "id": "3.6",
+          "title": "Sequential Circuits",
+          "children": []
+        },
+        {
+          "id": "3.7",
+          "title": "Flip-Flops & State",
+          "children": []
+        },
+        {
+          "id": "3.8",
+          "title": "PRACTICE — Diagram / By Hand",
+          "children": [
+            {
+              "id": "3.8.1",
+              "title": "Design the logic for a simple digital door lock"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Computer Hardware",
+      "lessons": [
+        {
+          "id": "4.1",
+          "title": "CPU",
+          "children": []
+        },
+        {
+          "id": "4.2",
+          "title": "Instructions",
+          "children": []
+        },
+        {
+          "id": "4.3",
+          "title": "Registers",
+          "children": []
+        },
+        {
+          "id": "4.4",
+          "title": "Fetch → Decode → Execute",
+          "children": []
+        },
+        {
+          "id": "4.5",
+          "title": "RAM",
+          "children": []
+        },
+        {
+          "id": "4.6",
+          "title": "Cache",
+          "children": []
+        },
+        {
+          "id": "4.7",
+          "title": "Storage",
+          "children": []
+        },
+        {
+          "id": "4.8",
+          "title": "Input / Output Devices",
+          "children": []
+        },
+        {
+          "id": "4.9",
+          "title": "Buses",
+          "children": []
+        },
+        {
+          "id": "4.10",
+          "title": "PRACTICE — Trace / Diagram",
+          "children": [
+            {
+              "id": "4.10.1",
+              "title": "Draw what happens when the CPU performs 2 + 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "From Source Code to a Running Program",
+      "lessons": [
+        {
+          "id": "5.1",
+          "title": "Source Code",
+          "children": []
+        },
+        {
+          "id": "5.2",
+          "title": "Syntax & Semantics",
+          "children": []
+        },
+        {
+          "id": "5.3",
+          "title": "Compiler",
+          "children": []
+        },
+        {
+          "id": "5.4",
+          "title": "Interpreter",
+          "children": []
+        },
+        {
+          "id": "5.5",
+          "title": "Bytecode",
+          "children": []
+        },
+        {
+          "id": "5.6",
+          "title": "JIT",
+          "children": []
+        },
+        {
+          "id": "5.7",
+          "title": "Lexer",
+          "children": []
+        },
+        {
+          "id": "5.8",
+          "title": "Parser",
+          "children": []
+        },
+        {
+          "id": "5.9",
+          "title": "Linking",
+          "children": []
+        },
+        {
+          "id": "5.10",
+          "title": "Loading",
+          "children": []
+        },
+        {
+          "id": "5.11",
+          "title": "MINI PROJECT — Mini Expression Runtime",
+          "children": [
+            {
+              "id": "5.11.1",
+              "title": "Tokenize"
+            },
+            {
+              "id": "5.11.2",
+              "title": "Parse"
+            },
+            {
+              "id": "5.11.3",
+              "title": "Evaluate"
+            },
+            {
+              "id": "5.11.4",
+              "title": "Show execution trace"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Development Environment",
+      "lessons": [
+        {
+          "id": "6.1",
+          "title": "Files & Folders",
+          "children": []
+        },
+        {
+          "id": "6.2",
+          "title": "Code Editor / IDE",
+          "children": []
+        },
+        {
+          "id": "6.3",
+          "title": "Terminal",
+          "children": []
+        },
+        {
+          "id": "6.4",
+          "title": "Running Programs",
+          "children": []
+        },
+        {
+          "id": "6.5",
+          "title": "PATH",
+          "children": []
+        },
+        {
+          "id": "6.6",
+          "title": "Environment Variables",
+          "children": []
+        },
+        {
+          "id": "6.7",
+          "title": "Command-Line Arguments",
+          "children": []
+        },
+        {
+          "id": "6.8",
+          "title": "LAB — Build Your Developer Workspace",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Variables, Values & Types",
+      "lessons": [
+        {
+          "id": "7.1",
+          "title": "Variables",
+          "children": []
+        },
+        {
+          "id": "7.2",
+          "title": "Assignment",
+          "children": []
+        },
+        {
+          "id": "7.3",
+          "title": "Integers / Floats",
+          "children": []
+        },
+        {
+          "id": "7.4",
+          "title": "Booleans",
+          "children": []
+        },
+        {
+          "id": "7.5",
+          "title": "Strings",
+          "children": []
+        },
+        {
+          "id": "7.6",
+          "title": "Operators",
+          "children": []
+        },
+        {
+          "id": "7.7",
+          "title": "Type Conversion",
+          "children": []
+        },
+        {
+          "id": "7.8",
+          "title": "Mutability",
+          "children": []
+        },
+        {
+          "id": "7.9",
+          "title": "CODING PRACTICE — Small Calculator",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Control Flow",
+      "lessons": [
+        {
+          "id": "8.1",
+          "title": "if / else",
+          "children": []
+        },
+        {
+          "id": "8.2",
+          "title": "Nested Conditions",
+          "children": []
+        },
+        {
+          "id": "8.3",
+          "title": "for",
+          "children": []
+        },
+        {
+          "id": "8.4",
+          "title": "while",
+          "children": []
+        },
+        {
+          "id": "8.5",
+          "title": "break / continue",
+          "children": []
+        },
+        {
+          "id": "8.6",
+          "title": "Boolean Conditions",
+          "children": []
+        },
+        {
+          "id": "8.7",
+          "title": "MINI PROJECT — Number Guessing Game",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Functions & Scope",
+      "lessons": [
+        {
+          "id": "9.1",
+          "title": "Functions",
+          "children": []
+        },
+        {
+          "id": "9.2",
+          "title": "Parameters",
+          "children": []
+        },
+        {
+          "id": "9.3",
+          "title": "Return Values",
+          "children": []
+        },
+        {
+          "id": "9.4",
+          "title": "Local Scope",
+          "children": []
+        },
+        {
+          "id": "9.5",
+          "title": "Global Scope",
+          "children": []
+        },
+        {
+          "id": "9.6",
+          "title": "Call Stack Intuition",
+          "children": []
+        },
+        {
+          "id": "9.7",
+          "title": "Pure vs Side-Effecting Functions",
+          "children": []
+        },
+        {
+          "id": "9.8",
+          "title": "MINI PROJECT — Modular Calculator",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Collections",
+      "lessons": [
+        {
+          "id": "10.1",
+          "title": "Lists / Arrays",
+          "children": []
+        },
+        {
+          "id": "10.2",
+          "title": "Tuples",
+          "children": []
+        },
+        {
+          "id": "10.3",
+          "title": "Dictionaries",
+          "children": []
+        },
+        {
+          "id": "10.4",
+          "title": "Sets",
+          "children": []
+        },
+        {
+          "id": "10.5",
+          "title": "Iteration",
+          "children": []
+        },
+        {
+          "id": "10.6",
+          "title": "Nested Collections",
+          "children": []
+        },
+        {
+          "id": "10.7",
+          "title": "MINI PROJECT — Student Grade Manager",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Strings & Files",
+      "lessons": [
+        {
+          "id": "11.1",
+          "title": "String Processing",
+          "children": []
+        },
+        {
+          "id": "11.2",
+          "title": "Reading Files",
+          "children": []
+        },
+        {
+          "id": "11.3",
+          "title": "Writing Files",
+          "children": []
+        },
+        {
+          "id": "11.4",
+          "title": "JSON",
+          "children": []
+        },
+        {
+          "id": "11.5",
+          "title": "CSV",
+          "children": []
+        },
+        {
+          "id": "11.6",
+          "title": "Paths",
+          "children": []
+        },
+        {
+          "id": "11.7",
+          "title": "Text vs Binary Files",
+          "children": []
+        },
+        {
+          "id": "11.8",
+          "title": "Serialization",
+          "children": []
+        },
+        {
+          "id": "11.9",
+          "title": "MINI PROJECT — Persistent Contact Book",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Errors & Defensive Programming",
+      "lessons": [
+        {
+          "id": "12.1",
+          "title": "Syntax Errors",
+          "children": []
+        },
+        {
+          "id": "12.2",
+          "title": "Runtime Errors",
+          "children": []
+        },
+        {
+          "id": "12.3",
+          "title": "Logical Bugs",
+          "children": []
+        },
+        {
+          "id": "12.4",
+          "title": "Exceptions",
+          "children": []
+        },
+        {
+          "id": "12.5",
+          "title": "Input Validation",
+          "children": []
+        },
+        {
+          "id": "12.6",
+          "title": "Assertions",
+          "children": []
+        },
+        {
+          "id": "12.7",
+          "title": "Fail Fast",
+          "children": []
+        },
+        {
+          "id": "12.8",
+          "title": "PRACTICE — Repair Broken Programs",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Debugging",
+      "lessons": [
+        {
+          "id": "13.1",
+          "title": "Reading Error Messages",
+          "children": []
+        },
+        {
+          "id": "13.2",
+          "title": "Reproducing Bugs",
+          "children": []
+        },
+        {
+          "id": "13.3",
+          "title": "Logging",
+          "children": []
+        },
+        {
+          "id": "13.4",
+          "title": "Breakpoints",
+          "children": []
+        },
+        {
+          "id": "13.5",
+          "title": "Stack Traces",
+          "children": []
+        },
+        {
+          "id": "13.6",
+          "title": "Watches",
+          "children": []
+        },
+        {
+          "id": "13.7",
+          "title": "Step Into / Over / Out",
+          "children": []
+        },
+        {
+          "id": "13.8",
+          "title": "LAB — Debug a Deliberately Broken Application",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Modules, Packages & Environments",
+      "lessons": [
+        {
+          "id": "14.1",
+          "title": "Imports",
+          "children": []
+        },
+        {
+          "id": "14.2",
+          "title": "Multiple Files",
+          "children": []
+        },
+        {
+          "id": "14.3",
+          "title": "Packages",
+          "children": []
+        },
+        {
+          "id": "14.4",
+          "title": "Dependencies",
+          "children": []
+        },
+        {
+          "id": "14.5",
+          "title": "Virtual Environments",
+          "children": []
+        },
+        {
+          "id": "14.6",
+          "title": "Package Managers",
+          "children": []
+        },
+        {
+          "id": "14.7",
+          "title": "Semantic Versioning",
+          "children": []
+        },
+        {
+          "id": "14.8",
+          "title": "Lock Files",
+          "children": []
+        },
+        {
+          "id": "14.9",
+          "title": "MINI PROJECT — Multi-File Task Manager",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Programming Consolidation",
+      "lessons": [
+        {
+          "id": "15.1",
+          "title": "PHASE PROJECT — CLI Library Management System",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Discrete Mathematics",
+      "lessons": [
+        {
+          "id": "16.1",
+          "title": "Sets",
+          "children": []
+        },
+        {
+          "id": "16.2",
+          "title": "Relations",
+          "children": []
+        },
+        {
+          "id": "16.3",
+          "title": "Functions",
+          "children": []
+        },
+        {
+          "id": "16.4",
+          "title": "Logic",
+          "children": []
+        },
+        {
+          "id": "16.5",
+          "title": "Quantifiers",
+          "children": []
+        },
+        {
+          "id": "16.6",
+          "title": "Propositional Logic",
+          "children": []
+        },
+        {
+          "id": "16.7",
+          "title": "Predicate Logic",
+          "children": []
+        },
+        {
+          "id": "16.8",
+          "title": "PRACTICE — Mostly By Hand",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Proof & Mathematical Reasoning",
+      "lessons": [
+        {
+          "id": "17.1",
+          "title": "Direct Proof",
+          "children": []
+        },
+        {
+          "id": "17.2",
+          "title": "Contradiction",
+          "children": []
+        },
+        {
+          "id": "17.3",
+          "title": "Counterexamples",
+          "children": []
+        },
+        {
+          "id": "17.4",
+          "title": "Induction",
+          "children": []
+        },
+        {
+          "id": "17.5",
+          "title": "Proof by Contrapositive",
+          "children": []
+        },
+        {
+          "id": "17.6",
+          "title": "PRACTICE — Written Proofs",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Counting & Probability",
+      "lessons": [
+        {
+          "id": "18.1",
+          "title": "Permutations",
+          "children": []
+        },
+        {
+          "id": "18.2",
+          "title": "Combinations",
+          "children": []
+        },
+        {
+          "id": "18.3",
+          "title": "Probability",
+          "children": []
+        },
+        {
+          "id": "18.4",
+          "title": "Conditional Probability",
+          "children": []
+        },
+        {
+          "id": "18.5",
+          "title": "Expected Value",
+          "children": []
+        },
+        {
+          "id": "18.6",
+          "title": "Bayes' Theorem",
+          "children": []
+        },
+        {
+          "id": "18.7",
+          "title": "PRACTICE — Hand Calculations + Small Simulation",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Statistics for Computing",
+      "lessons": [
+        {
+          "id": "19.1",
+          "title": "Mean / Median",
+          "children": []
+        },
+        {
+          "id": "19.2",
+          "title": "Variance",
+          "children": []
+        },
+        {
+          "id": "19.3",
+          "title": "Distributions",
+          "children": []
+        },
+        {
+          "id": "19.4",
+          "title": "Sampling",
+          "children": []
+        },
+        {
+          "id": "19.5",
+          "title": "Standard Deviation",
+          "children": []
+        },
+        {
+          "id": "19.6",
+          "title": "Correlation",
+          "children": []
+        },
+        {
+          "id": "19.7",
+          "title": "MINI LAB — Analyze a Small Dataset",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Linear Algebra & Calculus Intuition",
+      "lessons": [
+        {
+          "id": "20.1",
+          "title": "Vectors",
+          "children": []
+        },
+        {
+          "id": "20.2",
+          "title": "Matrices",
+          "children": []
+        },
+        {
+          "id": "20.3",
+          "title": "Functions",
+          "children": []
+        },
+        {
+          "id": "20.4",
+          "title": "Derivatives",
+          "children": []
+        },
+        {
+          "id": "20.5",
+          "title": "Dot Products",
+          "children": []
+        },
+        {
+          "id": "20.6",
+          "title": "Matrix Transformations",
+          "children": []
+        },
+        {
+          "id": "20.7",
+          "title": "Gradients",
+          "children": []
+        },
+        {
+          "id": "20.8",
+          "title": "VISUAL LAB — 2D Vector Transformations",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Object Thinking",
+      "lessons": [
+        {
+          "id": "21.1",
+          "title": "State",
+          "children": []
+        },
+        {
+          "id": "21.2",
+          "title": "Behavior",
+          "children": []
+        },
+        {
+          "id": "21.3",
+          "title": "Entities",
+          "children": []
+        },
+        {
+          "id": "21.4",
+          "title": "Responsibilities",
+          "children": []
+        },
+        {
+          "id": "21.5",
+          "title": "PRACTICE — Model a School on Paper",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Classes & Objects",
+      "lessons": [
+        {
+          "id": "22.1",
+          "title": "Classes",
+          "children": []
+        },
+        {
+          "id": "22.2",
+          "title": "Instances",
+          "children": []
+        },
+        {
+          "id": "22.3",
+          "title": "Constructors",
+          "children": []
+        },
+        {
+          "id": "22.4",
+          "title": "Identity",
+          "children": []
+        },
+        {
+          "id": "22.5",
+          "title": "Equality",
+          "children": []
+        },
+        {
+          "id": "22.6",
+          "title": "MINI PROJECT — Bank Account System",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "title": "Encapsulation & Abstraction",
+      "lessons": [
+        {
+          "id": "23.1",
+          "title": "Public API",
+          "children": []
+        },
+        {
+          "id": "23.2",
+          "title": "Internal State",
+          "children": []
+        },
+        {
+          "id": "23.3",
+          "title": "Invariants",
+          "children": []
+        },
+        {
+          "id": "23.4",
+          "title": "Interfaces",
+          "children": []
+        },
+        {
+          "id": "23.5",
+          "title": "Information Hiding",
+          "children": []
+        },
+        {
+          "id": "23.6",
+          "title": "MINI PROJECT — Digital Wallet",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "title": "Inheritance & Polymorphism",
+      "lessons": [
+        {
+          "id": "24.1",
+          "title": "is-a",
+          "children": []
+        },
+        {
+          "id": "24.2",
+          "title": "Overriding",
+          "children": []
+        },
+        {
+          "id": "24.3",
+          "title": "super()",
+          "children": []
+        },
+        {
+          "id": "24.4",
+          "title": "Polymorphism",
+          "children": []
+        },
+        {
+          "id": "24.5",
+          "title": "Abstract Classes / Interfaces",
+          "children": []
+        },
+        {
+          "id": "24.6",
+          "title": "PRACTICE — Employee Hierarchy",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "title": "Composition",
+      "lessons": [
+        {
+          "id": "25.1",
+          "title": "has-a",
+          "children": []
+        },
+        {
+          "id": "25.2",
+          "title": "Association",
+          "children": []
+        },
+        {
+          "id": "25.3",
+          "title": "Aggregation",
+          "children": []
+        },
+        {
+          "id": "25.4",
+          "title": "Composition",
+          "children": []
+        },
+        {
+          "id": "25.5",
+          "title": "Delegation",
+          "children": []
+        },
+        {
+          "id": "25.6",
+          "title": "PRACTICE — Redesign Inheritance Using Composition",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "title": "SOLID",
+      "lessons": [
+        {
+          "id": "26.1",
+          "title": "Single Responsibility Principle",
+          "children": []
+        },
+        {
+          "id": "26.2",
+          "title": "Open/Closed Principle",
+          "children": []
+        },
+        {
+          "id": "26.3",
+          "title": "Liskov Substitution Principle",
+          "children": []
+        },
+        {
+          "id": "26.4",
+          "title": "Interface Segregation Principle",
+          "children": []
+        },
+        {
+          "id": "26.5",
+          "title": "Dependency Inversion Principle",
+          "children": []
+        },
+        {
+          "id": "26.6",
+          "title": "REFACTORING LAB — Fix a Poorly Designed Ordering System",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "title": "Code Quality & Refactoring",
+      "lessons": [
+        {
+          "id": "27.1",
+          "title": "Naming",
+          "children": []
+        },
+        {
+          "id": "27.2",
+          "title": "Duplication",
+          "children": []
+        },
+        {
+          "id": "27.3",
+          "title": "Long Methods",
+          "children": []
+        },
+        {
+          "id": "27.4",
+          "title": "God Objects",
+          "children": []
+        },
+        {
+          "id": "27.5",
+          "title": "Coupling",
+          "children": []
+        },
+        {
+          "id": "27.6",
+          "title": "Cohesion",
+          "children": []
+        },
+        {
+          "id": "27.7",
+          "title": "Code Smells",
+          "children": []
+        },
+        {
+          "id": "27.8",
+          "title": "Refactoring Safely",
+          "children": []
+        },
+        {
+          "id": "27.9",
+          "title": "LAB — Clean Up Legacy Code",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "title": "Design Patterns",
+      "lessons": [
+        {
+          "id": "28.1",
+          "title": "Factory",
+          "children": []
+        },
+        {
+          "id": "28.2",
+          "title": "Builder",
+          "children": []
+        },
+        {
+          "id": "28.3",
+          "title": "Adapter",
+          "children": []
+        },
+        {
+          "id": "28.4",
+          "title": "Facade",
+          "children": []
+        },
+        {
+          "id": "28.5",
+          "title": "Decorator",
+          "children": []
+        },
+        {
+          "id": "28.6",
+          "title": "Strategy",
+          "children": []
+        },
+        {
+          "id": "28.7",
+          "title": "Observer",
+          "children": []
+        },
+        {
+          "id": "28.8",
+          "title": "Dependency Injection",
+          "children": []
+        },
+        {
+          "id": "28.9",
+          "title": "Repository Pattern",
+          "children": []
+        },
+        {
+          "id": "28.10",
+          "title": "DESIGN EXERCISE — Decide Which Pattern Fits Which Problem",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "title": "Low-Level Design",
+      "lessons": [
+        {
+          "id": "29.1",
+          "title": "Requirements",
+          "children": []
+        },
+        {
+          "id": "29.2",
+          "title": "Entities",
+          "children": []
+        },
+        {
+          "id": "29.3",
+          "title": "Relationships",
+          "children": []
+        },
+        {
+          "id": "29.4",
+          "title": "Interfaces",
+          "children": []
+        },
+        {
+          "id": "29.5",
+          "title": "UML",
+          "children": []
+        },
+        {
+          "id": "29.6",
+          "title": "Sequence Diagrams",
+          "children": []
+        },
+        {
+          "id": "29.7",
+          "title": "State Diagrams",
+          "children": []
+        },
+        {
+          "id": "29.8",
+          "title": "DESIGN PROJECT — Elevator System",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "title": "OOP Consolidation",
+      "lessons": [
+        {
+          "id": "30.1",
+          "title": "PHASE PROJECT — Parking Management System",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "title": "Complexity Analysis",
+      "lessons": [
+        {
+          "id": "31.1",
+          "title": "Big-O",
+          "children": []
+        },
+        {
+          "id": "31.2",
+          "title": "Time Complexity",
+          "children": []
+        },
+        {
+          "id": "31.3",
+          "title": "Space Complexity",
+          "children": []
+        },
+        {
+          "id": "31.4",
+          "title": "Best / Average / Worst Case",
+          "children": []
+        },
+        {
+          "id": "31.5",
+          "title": "Big-Ω",
+          "children": []
+        },
+        {
+          "id": "31.6",
+          "title": "Big-Θ",
+          "children": []
+        },
+        {
+          "id": "31.7",
+          "title": "Amortized Analysis",
+          "children": []
+        },
+        {
+          "id": "31.8",
+          "title": "PRACTICE — Analyze Existing Code by Hand",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "title": "Arrays & Strings",
+      "lessons": [
+        {
+          "id": "32.1",
+          "title": "Memory Layout",
+          "children": []
+        },
+        {
+          "id": "32.2",
+          "title": "Indexing",
+          "children": []
+        },
+        {
+          "id": "32.3",
+          "title": "Insertion / Deletion",
+          "children": []
+        },
+        {
+          "id": "32.4",
+          "title": "Dynamic Arrays",
+          "children": []
+        },
+        {
+          "id": "32.5",
+          "title": "String Representation",
+          "children": []
+        },
+        {
+          "id": "32.6",
+          "title": "CODING PRACTICE",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "title": "Linked Lists",
+      "lessons": [
+        {
+          "id": "33.1",
+          "title": "Nodes",
+          "children": []
+        },
+        {
+          "id": "33.2",
+          "title": "Singly Linked Lists",
+          "children": []
+        },
+        {
+          "id": "33.3",
+          "title": "Doubly Linked Lists",
+          "children": []
+        },
+        {
+          "id": "33.4",
+          "title": "Circular Lists",
+          "children": []
+        },
+        {
+          "id": "33.5",
+          "title": "IMPLEMENTATION — Build a Linked List",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "title": "Stacks, Queues & Deques",
+      "lessons": [
+        {
+          "id": "34.1",
+          "title": "Stack",
+          "children": []
+        },
+        {
+          "id": "34.2",
+          "title": "Queue",
+          "children": []
+        },
+        {
+          "id": "34.3",
+          "title": "Deque",
+          "children": []
+        },
+        {
+          "id": "34.4",
+          "title": "Priority Queue Intuition",
+          "children": []
+        },
+        {
+          "id": "34.5",
+          "title": "MINI PROJECT — Browser History + Task Queue",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "title": "Recursion",
+      "lessons": [
+        {
+          "id": "35.1",
+          "title": "Base Case",
+          "children": []
+        },
+        {
+          "id": "35.2",
+          "title": "Recursive Case",
+          "children": []
+        },
+        {
+          "id": "35.3",
+          "title": "Call Stack",
+          "children": []
+        },
+        {
+          "id": "35.4",
+          "title": "Recursion Trees",
+          "children": []
+        },
+        {
+          "id": "35.5",
+          "title": "Tail Recursion",
+          "children": []
+        },
+        {
+          "id": "35.6",
+          "title": "PRACTICE — Trace Recursion by Hand + Code",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "title": "Hashing",
+      "lessons": [
+        {
+          "id": "36.1",
+          "title": "Hash Functions",
+          "children": []
+        },
+        {
+          "id": "36.2",
+          "title": "Hash Tables",
+          "children": []
+        },
+        {
+          "id": "36.3",
+          "title": "Collisions",
+          "children": []
+        },
+        {
+          "id": "36.4",
+          "title": "Load Factor",
+          "children": []
+        },
+        {
+          "id": "36.5",
+          "title": "Chaining",
+          "children": []
+        },
+        {
+          "id": "36.6",
+          "title": "Open Addressing",
+          "children": []
+        },
+        {
+          "id": "36.7",
+          "title": "IMPLEMENTATION — Build a Basic Hash Map",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "title": "Trees",
+      "lessons": [
+        {
+          "id": "37.1",
+          "title": "Binary Trees",
+          "children": []
+        },
+        {
+          "id": "37.2",
+          "title": "Traversals",
+          "children": []
+        },
+        {
+          "id": "37.3",
+          "title": "Binary Search Trees",
+          "children": []
+        },
+        {
+          "id": "37.4",
+          "title": "Balanced Tree Intuition",
+          "children": []
+        },
+        {
+          "id": "37.5",
+          "title": "AVL Trees",
+          "children": []
+        },
+        {
+          "id": "37.6",
+          "title": "Red-Black Tree Intuition",
+          "children": []
+        },
+        {
+          "id": "37.7",
+          "title": "PRACTICE — Draw & Traverse Trees",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "title": "Heaps & Priority Queues",
+      "lessons": [
+        {
+          "id": "38.1",
+          "title": "Min Heap",
+          "children": []
+        },
+        {
+          "id": "38.2",
+          "title": "Max Heap",
+          "children": []
+        },
+        {
+          "id": "38.3",
+          "title": "Heapify",
+          "children": []
+        },
+        {
+          "id": "38.4",
+          "title": "Priority Queues",
+          "children": []
+        },
+        {
+          "id": "38.5",
+          "title": "MINI PROJECT — Emergency Patient Scheduler",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "title": "Sorting",
+      "lessons": [
+        {
+          "id": "39.1",
+          "title": "Bubble Sort",
+          "children": []
+        },
+        {
+          "id": "39.2",
+          "title": "Selection Sort",
+          "children": []
+        },
+        {
+          "id": "39.3",
+          "title": "Insertion Sort",
+          "children": []
+        },
+        {
+          "id": "39.4",
+          "title": "Merge Sort",
+          "children": []
+        },
+        {
+          "id": "39.5",
+          "title": "Quick Sort",
+          "children": []
+        },
+        {
+          "id": "39.6",
+          "title": "Heap Sort",
+          "children": []
+        },
+        {
+          "id": "39.7",
+          "title": "Stable vs Unstable Sorting",
+          "children": []
+        },
+        {
+          "id": "39.8",
+          "title": "Comparison vs Non-Comparison Sorting",
+          "children": []
+        },
+        {
+          "id": "39.9",
+          "title": "VISUAL PROJECT — Sorting Visualizer",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "title": "Searching",
+      "lessons": [
+        {
+          "id": "40.1",
+          "title": "Linear Search",
+          "children": []
+        },
+        {
+          "id": "40.2",
+          "title": "Binary Search",
+          "children": []
+        },
+        {
+          "id": "40.3",
+          "title": "Binary Search on Answer",
+          "children": []
+        },
+        {
+          "id": "40.4",
+          "title": "CODING PRACTICE",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "title": "Graphs",
+      "lessons": [
+        {
+          "id": "41.1",
+          "title": "Graph Representation",
+          "children": []
+        },
+        {
+          "id": "41.2",
+          "title": "BFS",
+          "children": []
+        },
+        {
+          "id": "41.3",
+          "title": "DFS",
+          "children": []
+        },
+        {
+          "id": "41.4",
+          "title": "Topological Sort",
+          "children": []
+        },
+        {
+          "id": "41.5",
+          "title": "Dijkstra",
+          "children": []
+        },
+        {
+          "id": "41.6",
+          "title": "Connected Components",
+          "children": []
+        },
+        {
+          "id": "41.7",
+          "title": "Minimum Spanning Trees",
+          "children": []
+        },
+        {
+          "id": "41.8",
+          "title": "Kruskal",
+          "children": []
+        },
+        {
+          "id": "41.9",
+          "title": "Prim",
+          "children": []
+        },
+        {
+          "id": "41.10",
+          "title": "PHASE PROJECT — City Route Planner",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "title": "Algorithmic Patterns",
+      "lessons": [
+        {
+          "id": "42.1",
+          "title": "Two Pointers",
+          "children": []
+        },
+        {
+          "id": "42.2",
+          "title": "Sliding Window",
+          "children": []
+        },
+        {
+          "id": "42.3",
+          "title": "Prefix Sum",
+          "children": []
+        },
+        {
+          "id": "42.4",
+          "title": "Divide & Conquer",
+          "children": []
+        },
+        {
+          "id": "42.5",
+          "title": "Fast / Slow Pointers",
+          "children": []
+        },
+        {
+          "id": "42.6",
+          "title": "Monotonic Stack",
+          "children": []
+        },
+        {
+          "id": "42.7",
+          "title": "Interval Patterns",
+          "children": []
+        },
+        {
+          "id": "42.8",
+          "title": "PRACTICE — Mixed Coding Problems",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "title": "Greedy Algorithms",
+      "lessons": [
+        {
+          "id": "43.1",
+          "title": "Greedy Choice",
+          "children": []
+        },
+        {
+          "id": "43.2",
+          "title": "Local vs Global Optimum",
+          "children": []
+        },
+        {
+          "id": "43.3",
+          "title": "PRACTICE — Explain Why Greedy Works or Fails",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "title": "Backtracking",
+      "lessons": [
+        {
+          "id": "44.1",
+          "title": "Decision Trees",
+          "children": []
+        },
+        {
+          "id": "44.2",
+          "title": "Choose → Explore → Undo",
+          "children": []
+        },
+        {
+          "id": "44.3",
+          "title": "Pruning",
+          "children": []
+        },
+        {
+          "id": "44.4",
+          "title": "MINI PROJECT — Sudoku Solver",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "title": "Dynamic Programming",
+      "lessons": [
+        {
+          "id": "45.1",
+          "title": "Overlapping Subproblems",
+          "children": []
+        },
+        {
+          "id": "45.2",
+          "title": "Optimal Substructure",
+          "children": []
+        },
+        {
+          "id": "45.3",
+          "title": "Memoization",
+          "children": []
+        },
+        {
+          "id": "45.4",
+          "title": "Tabulation",
+          "children": []
+        },
+        {
+          "id": "45.5",
+          "title": "State / Transition Design",
+          "children": []
+        },
+        {
+          "id": "45.6",
+          "title": "Space Optimization",
+          "children": []
+        },
+        {
+          "id": "45.7",
+          "title": "PRACTICE — Selected DP Problems",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "title": "Specialized Data Structures",
+      "lessons": [
+        {
+          "id": "46.1",
+          "title": "Tries",
+          "children": []
+        },
+        {
+          "id": "46.2",
+          "title": "Union-Find",
+          "children": []
+        },
+        {
+          "id": "46.3",
+          "title": "Bloom Filters",
+          "children": []
+        },
+        {
+          "id": "46.4",
+          "title": "Segment Trees",
+          "children": []
+        },
+        {
+          "id": "46.5",
+          "title": "Fenwick Trees",
+          "children": []
+        },
+        {
+          "id": "46.6",
+          "title": "MINI PROJECT — Autocomplete Engine",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "title": "Algorithm Correctness",
+      "lessons": [
+        {
+          "id": "47.1",
+          "title": "Preconditions",
+          "children": []
+        },
+        {
+          "id": "47.2",
+          "title": "Postconditions",
+          "children": []
+        },
+        {
+          "id": "47.3",
+          "title": "Loop Invariants",
+          "children": []
+        },
+        {
+          "id": "47.4",
+          "title": "Termination",
+          "children": []
+        },
+        {
+          "id": "47.5",
+          "title": "WRITTEN PRACTICE — Prove Simple Algorithms",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "title": "DSA Consolidation",
+      "lessons": [
+        {
+          "id": "48.1",
+          "title": "PHASE PROJECT — Reusable Data Structures Library",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "title": "Computer Architecture",
+      "lessons": [
+        {
+          "id": "49.1",
+          "title": "Instruction Sets",
+          "children": []
+        },
+        {
+          "id": "49.2",
+          "title": "Registers",
+          "children": []
+        },
+        {
+          "id": "49.3",
+          "title": "Assembly Intuition",
+          "children": []
+        },
+        {
+          "id": "49.4",
+          "title": "Cache",
+          "children": []
+        },
+        {
+          "id": "49.5",
+          "title": "Pipelining",
+          "children": []
+        },
+        {
+          "id": "49.6",
+          "title": "Multicore",
+          "children": []
+        },
+        {
+          "id": "49.7",
+          "title": "RISC vs CISC",
+          "children": []
+        },
+        {
+          "id": "49.8",
+          "title": "Branch Prediction",
+          "children": []
+        },
+        {
+          "id": "49.9",
+          "title": "Cache Locality",
+          "children": []
+        },
+        {
+          "id": "49.10",
+          "title": "SIMD Intuition",
+          "children": []
+        },
+        {
+          "id": "49.11",
+          "title": "LAB — Trace Assembly from Simple Code",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "title": "Memory & Program Representation",
+      "lessons": [
+        {
+          "id": "50.1",
+          "title": "Stack",
+          "children": []
+        },
+        {
+          "id": "50.2",
+          "title": "Heap",
+          "children": []
+        },
+        {
+          "id": "50.3",
+          "title": "Static / Global Storage",
+          "children": []
+        },
+        {
+          "id": "50.4",
+          "title": "References / Pointers",
+          "children": []
+        },
+        {
+          "id": "50.5",
+          "title": "Memory Safety",
+          "children": []
+        },
+        {
+          "id": "50.6",
+          "title": "Allocation / Deallocation",
+          "children": []
+        },
+        {
+          "id": "50.7",
+          "title": "Garbage Collection",
+          "children": []
+        },
+        {
+          "id": "50.8",
+          "title": "Memory Leaks",
+          "children": []
+        },
+        {
+          "id": "50.9",
+          "title": "Dangling Pointers",
+          "children": []
+        },
+        {
+          "id": "50.10",
+          "title": "Ownership / Borrowing Intuition",
+          "children": []
+        },
+        {
+          "id": "50.11",
+          "title": "VISUAL PRACTICE — Draw Memory Layouts",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 51,
+      "title": "Programming Language Foundations",
+      "lessons": [
+        {
+          "id": "51.1",
+          "title": "Grammars",
+          "children": []
+        },
+        {
+          "id": "51.2",
+          "title": "Lexing",
+          "children": []
+        },
+        {
+          "id": "51.3",
+          "title": "Parsing",
+          "children": []
+        },
+        {
+          "id": "51.4",
+          "title": "AST",
+          "children": []
+        },
+        {
+          "id": "51.5",
+          "title": "Type Systems",
+          "children": []
+        },
+        {
+          "id": "51.6",
+          "title": "Runtime Models",
+          "children": []
+        },
+        {
+          "id": "51.7",
+          "title": "Regular Languages",
+          "children": []
+        },
+        {
+          "id": "51.8",
+          "title": "Finite-State Machines",
+          "children": []
+        },
+        {
+          "id": "51.9",
+          "title": "Regular Expressions",
+          "children": []
+        },
+        {
+          "id": "51.10",
+          "title": "Context-Free Grammars",
+          "children": []
+        },
+        {
+          "id": "51.11",
+          "title": "Static vs Dynamic Typing",
+          "children": []
+        },
+        {
+          "id": "51.12",
+          "title": "Intermediate Representation",
+          "children": []
+        },
+        {
+          "id": "51.13",
+          "title": "Code Generation",
+          "children": []
+        },
+        {
+          "id": "51.14",
+          "title": "Compiler Optimization Intuition",
+          "children": []
+        },
+        {
+          "id": "51.15",
+          "title": "PROJECT — Tiny Programming Language",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 52,
+      "title": "Operating Systems",
+      "lessons": [
+        {
+          "id": "52.1",
+          "title": "Kernel",
+          "children": []
+        },
+        {
+          "id": "52.2",
+          "title": "System Calls",
+          "children": []
+        },
+        {
+          "id": "52.3",
+          "title": "Processes",
+          "children": []
+        },
+        {
+          "id": "52.4",
+          "title": "Threads",
+          "children": []
+        },
+        {
+          "id": "52.5",
+          "title": "Scheduling",
+          "children": []
+        },
+        {
+          "id": "52.6",
+          "title": "Virtual Memory",
+          "children": []
+        },
+        {
+          "id": "52.7",
+          "title": "Filesystems",
+          "children": []
+        },
+        {
+          "id": "52.8",
+          "title": "User Mode vs Kernel Mode",
+          "children": []
+        },
+        {
+          "id": "52.9",
+          "title": "Paging",
+          "children": []
+        },
+        {
+          "id": "52.10",
+          "title": "Page Faults",
+          "children": []
+        },
+        {
+          "id": "52.11",
+          "title": "Inter-Process Communication",
+          "children": []
+        },
+        {
+          "id": "52.12",
+          "title": "Context Switching",
+          "children": []
+        },
+        {
+          "id": "52.13",
+          "title": "LAB — Inspect Processes, Memory & Files",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 53,
+      "title": "Concurrency & Parallelism",
+      "lessons": [
+        {
+          "id": "53.1",
+          "title": "Race Conditions",
+          "children": []
+        },
+        {
+          "id": "53.2",
+          "title": "Critical Sections",
+          "children": []
+        },
+        {
+          "id": "53.3",
+          "title": "Mutexes",
+          "children": []
+        },
+        {
+          "id": "53.4",
+          "title": "Semaphores",
+          "children": []
+        },
+        {
+          "id": "53.5",
+          "title": "Deadlocks",
+          "children": []
+        },
+        {
+          "id": "53.6",
+          "title": "Atomics",
+          "children": []
+        },
+        {
+          "id": "53.7",
+          "title": "Thread Safety",
+          "children": []
+        },
+        {
+          "id": "53.8",
+          "title": "Condition Variables",
+          "children": []
+        },
+        {
+          "id": "53.9",
+          "title": "Futures / Promises",
+          "children": []
+        },
+        {
+          "id": "53.10",
+          "title": "Async Programming",
+          "children": []
+        },
+        {
+          "id": "53.11",
+          "title": "MINI PROJECT — Multithreaded Job Processor",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 54,
+      "title": "Systems Programming",
+      "lessons": [
+        {
+          "id": "54.1",
+          "title": "File Descriptors",
+          "children": []
+        },
+        {
+          "id": "54.2",
+          "title": "Process Control",
+          "children": []
+        },
+        {
+          "id": "54.3",
+          "title": "Pipes",
+          "children": []
+        },
+        {
+          "id": "54.4",
+          "title": "Signals",
+          "children": []
+        },
+        {
+          "id": "54.5",
+          "title": "Sockets",
+          "children": []
+        },
+        {
+          "id": "54.6",
+          "title": "Memory-Mapped Files",
+          "children": []
+        },
+        {
+          "id": "54.7",
+          "title": "PHASE PROJECT — Concurrent File Indexer",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 55,
+      "title": "Networking Foundations",
+      "lessons": [
+        {
+          "id": "55.1",
+          "title": "OSI / TCP-IP",
+          "children": []
+        },
+        {
+          "id": "55.2",
+          "title": "MAC",
+          "children": []
+        },
+        {
+          "id": "55.3",
+          "title": "IP",
+          "children": []
+        },
+        {
+          "id": "55.4",
+          "title": "Subnets",
+          "children": []
+        },
+        {
+          "id": "55.5",
+          "title": "Routers",
+          "children": []
+        },
+        {
+          "id": "55.6",
+          "title": "NAT",
+          "children": []
+        },
+        {
+          "id": "55.7",
+          "title": "Ports",
+          "children": []
+        },
+        {
+          "id": "55.8",
+          "title": "Ethernet",
+          "children": []
+        },
+        {
+          "id": "55.9",
+          "title": "ARP",
+          "children": []
+        },
+        {
+          "id": "55.10",
+          "title": "DHCP",
+          "children": []
+        },
+        {
+          "id": "55.11",
+          "title": "Firewalls",
+          "children": []
+        },
+        {
+          "id": "55.12",
+          "title": "IPv4 vs IPv6",
+          "children": []
+        },
+        {
+          "id": "55.13",
+          "title": "DIAGRAM PRACTICE — Trace a Packet",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 56,
+      "title": "TCP / UDP / Sockets",
+      "lessons": [
+        {
+          "id": "56.1",
+          "title": "TCP Handshake",
+          "children": []
+        },
+        {
+          "id": "56.2",
+          "title": "Reliability",
+          "children": []
+        },
+        {
+          "id": "56.3",
+          "title": "Ordering",
+          "children": []
+        },
+        {
+          "id": "56.4",
+          "title": "UDP",
+          "children": []
+        },
+        {
+          "id": "56.5",
+          "title": "Sockets",
+          "children": []
+        },
+        {
+          "id": "56.6",
+          "title": "Flow Control",
+          "children": []
+        },
+        {
+          "id": "56.7",
+          "title": "Congestion Control",
+          "children": []
+        },
+        {
+          "id": "56.8",
+          "title": "MINI PROJECT — TCP Chat",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 57,
+      "title": "DNS & Internet",
+      "lessons": [
+        {
+          "id": "57.1",
+          "title": "Domains",
+          "children": []
+        },
+        {
+          "id": "57.2",
+          "title": "Resolution",
+          "children": []
+        },
+        {
+          "id": "57.3",
+          "title": "Caching",
+          "children": []
+        },
+        {
+          "id": "57.4",
+          "title": "Routing Intuition",
+          "children": []
+        },
+        {
+          "id": "57.5",
+          "title": "DNS Records",
+          "children": []
+        },
+        {
+          "id": "57.6",
+          "title": "Recursive vs Authoritative DNS",
+          "children": []
+        },
+        {
+          "id": "57.7",
+          "title": "TRACE EXERCISE — What Happens After Typing a URL?",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 58,
+      "title": "HTTP",
+      "lessons": [
+        {
+          "id": "58.1",
+          "title": "Request / Response",
+          "children": []
+        },
+        {
+          "id": "58.2",
+          "title": "Methods",
+          "children": []
+        },
+        {
+          "id": "58.3",
+          "title": "Headers",
+          "children": []
+        },
+        {
+          "id": "58.4",
+          "title": "Status Codes",
+          "children": []
+        },
+        {
+          "id": "58.5",
+          "title": "Cookies",
+          "children": []
+        },
+        {
+          "id": "58.6",
+          "title": "Caching",
+          "children": []
+        },
+        {
+          "id": "58.7",
+          "title": "HTTPS",
+          "children": []
+        },
+        {
+          "id": "58.8",
+          "title": "HTTP/1.1 vs HTTP/2 vs HTTP/3",
+          "children": []
+        },
+        {
+          "id": "58.9",
+          "title": "Browser → Server Lifecycle",
+          "children": []
+        },
+        {
+          "id": "58.10",
+          "title": "WebSockets",
+          "children": []
+        },
+        {
+          "id": "58.11",
+          "title": "MINI PROJECT — Basic HTTP Server",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 59,
+      "title": "API Design",
+      "lessons": [
+        {
+          "id": "59.1",
+          "title": "REST",
+          "children": []
+        },
+        {
+          "id": "59.2",
+          "title": "Resources",
+          "children": []
+        },
+        {
+          "id": "59.3",
+          "title": "CRUD",
+          "children": []
+        },
+        {
+          "id": "59.4",
+          "title": "Validation",
+          "children": []
+        },
+        {
+          "id": "59.5",
+          "title": "Pagination",
+          "children": []
+        },
+        {
+          "id": "59.6",
+          "title": "Filtering",
+          "children": []
+        },
+        {
+          "id": "59.7",
+          "title": "Versioning",
+          "children": []
+        },
+        {
+          "id": "59.8",
+          "title": "Idempotency",
+          "children": []
+        },
+        {
+          "id": "59.9",
+          "title": "Authentication",
+          "children": []
+        },
+        {
+          "id": "59.10",
+          "title": "Authorization",
+          "children": []
+        },
+        {
+          "id": "59.11",
+          "title": "Error Models",
+          "children": []
+        },
+        {
+          "id": "59.12",
+          "title": "OpenAPI",
+          "children": []
+        },
+        {
+          "id": "59.13",
+          "title": "GraphQL Overview",
+          "children": []
+        },
+        {
+          "id": "59.14",
+          "title": "gRPC Overview",
+          "children": []
+        },
+        {
+          "id": "59.15",
+          "title": "PHASE PROJECT — Task Management API",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 60,
+      "title": "Database Foundations",
+      "lessons": [
+        {
+          "id": "60.1",
+          "title": "Why Databases Exist",
+          "children": []
+        },
+        {
+          "id": "60.2",
+          "title": "DBMS",
+          "children": []
+        },
+        {
+          "id": "60.3",
+          "title": "Tables",
+          "children": []
+        },
+        {
+          "id": "60.4",
+          "title": "Rows / Columns",
+          "children": []
+        },
+        {
+          "id": "60.5",
+          "title": "Keys",
+          "children": []
+        },
+        {
+          "id": "60.6",
+          "title": "Relational vs Non-Relational",
+          "children": []
+        },
+        {
+          "id": "60.7",
+          "title": "DESIGN PRACTICE — Draw a School Database",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 61,
+      "title": "SQL",
+      "lessons": [
+        {
+          "id": "61.1",
+          "title": "SELECT",
+          "children": []
+        },
+        {
+          "id": "61.2",
+          "title": "INSERT",
+          "children": []
+        },
+        {
+          "id": "61.3",
+          "title": "UPDATE",
+          "children": []
+        },
+        {
+          "id": "61.4",
+          "title": "DELETE",
+          "children": []
+        },
+        {
+          "id": "61.5",
+          "title": "JOIN",
+          "children": []
+        },
+        {
+          "id": "61.6",
+          "title": "GROUP BY",
+          "children": []
+        },
+        {
+          "id": "61.7",
+          "title": "CTE",
+          "children": []
+        },
+        {
+          "id": "61.8",
+          "title": "Subqueries",
+          "children": []
+        },
+        {
+          "id": "61.9",
+          "title": "Window Functions",
+          "children": []
+        },
+        {
+          "id": "61.10",
+          "title": "Transactions",
+          "children": []
+        },
+        {
+          "id": "61.11",
+          "title": "SQL PRACTICE — Query a Sample Business Database",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 62,
+      "title": "Data Modeling",
+      "lessons": [
+        {
+          "id": "62.1",
+          "title": "Entities",
+          "children": []
+        },
+        {
+          "id": "62.2",
+          "title": "Relationships",
+          "children": []
+        },
+        {
+          "id": "62.3",
+          "title": "Primary / Foreign Keys",
+          "children": []
+        },
+        {
+          "id": "62.4",
+          "title": "Constraints",
+          "children": []
+        },
+        {
+          "id": "62.5",
+          "title": "Normalization",
+          "children": []
+        },
+        {
+          "id": "62.6",
+          "title": "ER Diagrams",
+          "children": []
+        },
+        {
+          "id": "62.7",
+          "title": "Denormalization Trade-offs",
+          "children": []
+        },
+        {
+          "id": "62.8",
+          "title": "DESIGN PROJECT — E-Commerce Schema",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 63,
+      "title": "Database Internals",
+      "lessons": [
+        {
+          "id": "63.1",
+          "title": "Pages",
+          "children": []
+        },
+        {
+          "id": "63.2",
+          "title": "B-Trees",
+          "children": []
+        },
+        {
+          "id": "63.3",
+          "title": "Indexes",
+          "children": []
+        },
+        {
+          "id": "63.4",
+          "title": "Query Plans",
+          "children": []
+        },
+        {
+          "id": "63.5",
+          "title": "Sequential vs Index Scan",
+          "children": []
+        },
+        {
+          "id": "63.6",
+          "title": "Write-Ahead Log",
+          "children": []
+        },
+        {
+          "id": "63.7",
+          "title": "Buffer Cache",
+          "children": []
+        },
+        {
+          "id": "63.8",
+          "title": "LAB — Compare Indexed vs Non-Indexed Queries",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 64,
+      "title": "Transactions & Concurrency",
+      "lessons": [
+        {
+          "id": "64.1",
+          "title": "ACID",
+          "children": []
+        },
+        {
+          "id": "64.2",
+          "title": "Isolation",
+          "children": []
+        },
+        {
+          "id": "64.3",
+          "title": "Locks",
+          "children": []
+        },
+        {
+          "id": "64.4",
+          "title": "Deadlocks",
+          "children": []
+        },
+        {
+          "id": "64.5",
+          "title": "Dirty Reads",
+          "children": []
+        },
+        {
+          "id": "64.6",
+          "title": "Non-Repeatable Reads",
+          "children": []
+        },
+        {
+          "id": "64.7",
+          "title": "Phantom Reads",
+          "children": []
+        },
+        {
+          "id": "64.8",
+          "title": "MVCC",
+          "children": []
+        },
+        {
+          "id": "64.9",
+          "title": "MINI PROJECT — Banking Transaction Simulator",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 65,
+      "title": "Operating & Scaling Databases",
+      "lessons": [
+        {
+          "id": "65.1",
+          "title": "Connection Pools",
+          "children": []
+        },
+        {
+          "id": "65.2",
+          "title": "Migrations",
+          "children": []
+        },
+        {
+          "id": "65.3",
+          "title": "Backups",
+          "children": []
+        },
+        {
+          "id": "65.4",
+          "title": "Replication",
+          "children": []
+        },
+        {
+          "id": "65.5",
+          "title": "Partitioning",
+          "children": []
+        },
+        {
+          "id": "65.6",
+          "title": "Sharding",
+          "children": []
+        },
+        {
+          "id": "65.7",
+          "title": "Read Replicas",
+          "children": []
+        },
+        {
+          "id": "65.8",
+          "title": "Failover",
+          "children": []
+        },
+        {
+          "id": "65.9",
+          "title": "NoSQL Models",
+          "children": [
+            {
+              "id": "65.9.1",
+              "title": "Document Databases"
+            },
+            {
+              "id": "65.9.2",
+              "title": "Key-Value Databases"
+            },
+            {
+              "id": "65.9.3",
+              "title": "Wide-Column Databases"
+            },
+            {
+              "id": "65.9.4",
+              "title": "Graph Databases"
+            }
+          ]
+        },
+        {
+          "id": "65.10",
+          "title": "ARCHITECTURE EXERCISE — Scale a Growing Database",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 66,
+      "title": "Security Foundations",
+      "lessons": [
+        {
+          "id": "66.1",
+          "title": "Confidentiality / Integrity / Availability",
+          "children": []
+        },
+        {
+          "id": "66.2",
+          "title": "Threats",
+          "children": []
+        },
+        {
+          "id": "66.3",
+          "title": "Vulnerabilities",
+          "children": []
+        },
+        {
+          "id": "66.4",
+          "title": "Risk",
+          "children": []
+        },
+        {
+          "id": "66.5",
+          "title": "Least Privilege",
+          "children": []
+        },
+        {
+          "id": "66.6",
+          "title": "Attack Surface",
+          "children": []
+        },
+        {
+          "id": "66.7",
+          "title": "Defense in Depth",
+          "children": []
+        },
+        {
+          "id": "66.8",
+          "title": "WRITTEN EXERCISE — Threat Model a Simple App",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 67,
+      "title": "Cryptography for Developers",
+      "lessons": [
+        {
+          "id": "67.1",
+          "title": "Hashing",
+          "children": []
+        },
+        {
+          "id": "67.2",
+          "title": "Symmetric Encryption",
+          "children": []
+        },
+        {
+          "id": "67.3",
+          "title": "Asymmetric Encryption",
+          "children": []
+        },
+        {
+          "id": "67.4",
+          "title": "Signatures",
+          "children": []
+        },
+        {
+          "id": "67.5",
+          "title": "TLS",
+          "children": []
+        },
+        {
+          "id": "67.6",
+          "title": "Salts",
+          "children": []
+        },
+        {
+          "id": "67.7",
+          "title": "Key Derivation",
+          "children": []
+        },
+        {
+          "id": "67.8",
+          "title": "Certificates / PKI",
+          "children": []
+        },
+        {
+          "id": "67.9",
+          "title": "Why Developers Should Not Invent Cryptography",
+          "children": []
+        },
+        {
+          "id": "67.10",
+          "title": "PRACTICE — Choose the Correct Crypto Tool",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 68,
+      "title": "Authentication & Authorization",
+      "lessons": [
+        {
+          "id": "68.1",
+          "title": "Password Hashing",
+          "children": []
+        },
+        {
+          "id": "68.2",
+          "title": "Sessions",
+          "children": []
+        },
+        {
+          "id": "68.3",
+          "title": "Cookies",
+          "children": []
+        },
+        {
+          "id": "68.4",
+          "title": "JWT",
+          "children": []
+        },
+        {
+          "id": "68.5",
+          "title": "OAuth / OIDC",
+          "children": []
+        },
+        {
+          "id": "68.6",
+          "title": "MFA",
+          "children": []
+        },
+        {
+          "id": "68.7",
+          "title": "RBAC",
+          "children": []
+        },
+        {
+          "id": "68.8",
+          "title": "ABAC Overview",
+          "children": []
+        },
+        {
+          "id": "68.9",
+          "title": "Access vs Refresh Tokens",
+          "children": []
+        },
+        {
+          "id": "68.10",
+          "title": "PHASE PROJECT — Authentication + Permissions System",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 69,
+      "title": "Application Security",
+      "lessons": [
+        {
+          "id": "69.1",
+          "title": "Input Validation",
+          "children": []
+        },
+        {
+          "id": "69.2",
+          "title": "SQL Injection",
+          "children": []
+        },
+        {
+          "id": "69.3",
+          "title": "XSS",
+          "children": []
+        },
+        {
+          "id": "69.4",
+          "title": "CSRF",
+          "children": []
+        },
+        {
+          "id": "69.5",
+          "title": "CORS",
+          "children": []
+        },
+        {
+          "id": "69.6",
+          "title": "Secrets",
+          "children": []
+        },
+        {
+          "id": "69.7",
+          "title": "Dependency Security",
+          "children": []
+        },
+        {
+          "id": "69.8",
+          "title": "Rate Limiting",
+          "children": []
+        },
+        {
+          "id": "69.9",
+          "title": "SSRF",
+          "children": []
+        },
+        {
+          "id": "69.10",
+          "title": "Path Traversal",
+          "children": []
+        },
+        {
+          "id": "69.11",
+          "title": "Broken Access Control",
+          "children": []
+        },
+        {
+          "id": "69.12",
+          "title": "Secure Headers",
+          "children": []
+        },
+        {
+          "id": "69.13",
+          "title": "OWASP Top 10",
+          "children": []
+        },
+        {
+          "id": "69.14",
+          "title": "SECURITY LAB — Harden a Vulnerable App",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 70,
+      "title": "Human-Computer Interaction",
+      "lessons": [
+        {
+          "id": "70.1",
+          "title": "Usability",
+          "children": []
+        },
+        {
+          "id": "70.2",
+          "title": "Feedback",
+          "children": []
+        },
+        {
+          "id": "70.3",
+          "title": "Accessibility",
+          "children": []
+        },
+        {
+          "id": "70.4",
+          "title": "Error Prevention",
+          "children": []
+        },
+        {
+          "id": "70.5",
+          "title": "Information Architecture",
+          "children": []
+        },
+        {
+          "id": "70.6",
+          "title": "Interaction Design",
+          "children": []
+        },
+        {
+          "id": "70.7",
+          "title": "Responsive Design Principles",
+          "children": []
+        },
+        {
+          "id": "70.8",
+          "title": "DESIGN EXERCISE — Critique and Redesign a Poor UI",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 71,
+      "title": "Graphics & Interactive Computing",
+      "lessons": [
+        {
+          "id": "71.1",
+          "title": "Pixels",
+          "children": []
+        },
+        {
+          "id": "71.2",
+          "title": "Coordinates",
+          "children": []
+        },
+        {
+          "id": "71.3",
+          "title": "Colors",
+          "children": []
+        },
+        {
+          "id": "71.4",
+          "title": "Transformations",
+          "children": []
+        },
+        {
+          "id": "71.5",
+          "title": "Rendering Pipeline",
+          "children": []
+        },
+        {
+          "id": "71.6",
+          "title": "Raster vs Vector",
+          "children": []
+        },
+        {
+          "id": "71.7",
+          "title": "OPTIONAL MINI PROJECT — Simple Drawing App",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 72,
+      "title": "Git & Collaboration",
+      "lessons": [
+        {
+          "id": "72.1",
+          "title": "Repository",
+          "children": []
+        },
+        {
+          "id": "72.2",
+          "title": "Commit",
+          "children": []
+        },
+        {
+          "id": "72.3",
+          "title": "Branch",
+          "children": []
+        },
+        {
+          "id": "72.4",
+          "title": "Merge",
+          "children": []
+        },
+        {
+          "id": "72.5",
+          "title": "Pull Request",
+          "children": []
+        },
+        {
+          "id": "72.6",
+          "title": "Remote / Origin",
+          "children": []
+        },
+        {
+          "id": "72.7",
+          "title": "Rebase",
+          "children": []
+        },
+        {
+          "id": "72.8",
+          "title": "Merge Conflicts",
+          "children": []
+        },
+        {
+          "id": "72.9",
+          "title": "Tags / Releases",
+          "children": []
+        },
+        {
+          "id": "72.10",
+          "title": ".gitignore",
+          "children": []
+        },
+        {
+          "id": "72.11",
+          "title": "LAB — Simulated Team Workflow",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 73,
+      "title": "Requirements Engineering",
+      "lessons": [
+        {
+          "id": "73.1",
+          "title": "Functional Requirements",
+          "children": []
+        },
+        {
+          "id": "73.2",
+          "title": "Non-Functional Requirements",
+          "children": []
+        },
+        {
+          "id": "73.3",
+          "title": "User Stories",
+          "children": []
+        },
+        {
+          "id": "73.4",
+          "title": "Acceptance Criteria",
+          "children": []
+        },
+        {
+          "id": "73.5",
+          "title": "Stakeholders",
+          "children": []
+        },
+        {
+          "id": "73.6",
+          "title": "Constraints",
+          "children": []
+        },
+        {
+          "id": "73.7",
+          "title": "Scope / Scope Creep",
+          "children": []
+        },
+        {
+          "id": "73.8",
+          "title": "WRITTEN PROJECT — Product Specification",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 74,
+      "title": "Testing",
+      "lessons": [
+        {
+          "id": "74.1",
+          "title": "Unit Testing",
+          "children": []
+        },
+        {
+          "id": "74.2",
+          "title": "Integration Testing",
+          "children": []
+        },
+        {
+          "id": "74.3",
+          "title": "End-to-End Testing",
+          "children": []
+        },
+        {
+          "id": "74.4",
+          "title": "Fakes / Mocks",
+          "children": []
+        },
+        {
+          "id": "74.5",
+          "title": "Regression Testing",
+          "children": []
+        },
+        {
+          "id": "74.6",
+          "title": "Test Pyramid",
+          "children": []
+        },
+        {
+          "id": "74.7",
+          "title": "Property-Based Testing",
+          "children": []
+        },
+        {
+          "id": "74.8",
+          "title": "Performance Testing",
+          "children": []
+        },
+        {
+          "id": "74.9",
+          "title": "Test Coverage",
+          "children": []
+        },
+        {
+          "id": "74.10",
+          "title": "PHASE PROJECT — Automated Test Suite",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 75,
+      "title": "Software Architecture",
+      "lessons": [
+        {
+          "id": "75.1",
+          "title": "Separation of Concerns",
+          "children": []
+        },
+        {
+          "id": "75.2",
+          "title": "Coupling",
+          "children": []
+        },
+        {
+          "id": "75.3",
+          "title": "Cohesion",
+          "children": []
+        },
+        {
+          "id": "75.4",
+          "title": "Layers",
+          "children": []
+        },
+        {
+          "id": "75.5",
+          "title": "Modular Monolith",
+          "children": []
+        },
+        {
+          "id": "75.6",
+          "title": "Microservices Trade-offs",
+          "children": []
+        },
+        {
+          "id": "75.7",
+          "title": "Client-Server Architecture",
+          "children": []
+        },
+        {
+          "id": "75.8",
+          "title": "MVC",
+          "children": []
+        },
+        {
+          "id": "75.9",
+          "title": "Hexagonal / Clean Architecture Intuition",
+          "children": []
+        },
+        {
+          "id": "75.10",
+          "title": "ARCHITECTURE EXERCISE — Design a Business Application",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 76,
+      "title": "Development Process",
+      "lessons": [
+        {
+          "id": "76.1",
+          "title": "Planning",
+          "children": []
+        },
+        {
+          "id": "76.2",
+          "title": "Iteration",
+          "children": []
+        },
+        {
+          "id": "76.3",
+          "title": "Agile",
+          "children": []
+        },
+        {
+          "id": "76.4",
+          "title": "Code Review",
+          "children": []
+        },
+        {
+          "id": "76.5",
+          "title": "Technical Debt",
+          "children": []
+        },
+        {
+          "id": "76.6",
+          "title": "Documentation",
+          "children": []
+        },
+        {
+          "id": "76.7",
+          "title": "Scrum / Kanban Overview",
+          "children": []
+        },
+        {
+          "id": "76.8",
+          "title": "Issue Tracking",
+          "children": []
+        },
+        {
+          "id": "76.9",
+          "title": "Estimation",
+          "children": []
+        },
+        {
+          "id": "76.10",
+          "title": "LAB — Simulate One Development Sprint",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 77,
+      "title": "CI/CD",
+      "lessons": [
+        {
+          "id": "77.1",
+          "title": "Build",
+          "children": []
+        },
+        {
+          "id": "77.2",
+          "title": "Lint",
+          "children": []
+        },
+        {
+          "id": "77.3",
+          "title": "Test",
+          "children": []
+        },
+        {
+          "id": "77.4",
+          "title": "Package",
+          "children": []
+        },
+        {
+          "id": "77.5",
+          "title": "Deploy",
+          "children": []
+        },
+        {
+          "id": "77.6",
+          "title": "Rollback",
+          "children": []
+        },
+        {
+          "id": "77.7",
+          "title": "Build Artifacts",
+          "children": []
+        },
+        {
+          "id": "77.8",
+          "title": "Environments",
+          "children": []
+        },
+        {
+          "id": "77.9",
+          "title": "Deployment Strategies",
+          "children": [
+            {
+              "id": "77.9.1",
+              "title": "Rolling Deployment"
+            },
+            {
+              "id": "77.9.2",
+              "title": "Blue/Green Deployment"
+            },
+            {
+              "id": "77.9.3",
+              "title": "Canary Deployment"
+            }
+          ]
+        },
+        {
+          "id": "77.10",
+          "title": "PHASE PROJECT — Automated Pipeline",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 78,
+      "title": "Containers & Deployment",
+      "lessons": [
+        {
+          "id": "78.1",
+          "title": "Processes",
+          "children": []
+        },
+        {
+          "id": "78.2",
+          "title": "Environment Variables",
+          "children": []
+        },
+        {
+          "id": "78.3",
+          "title": "Docker",
+          "children": []
+        },
+        {
+          "id": "78.4",
+          "title": "Images",
+          "children": []
+        },
+        {
+          "id": "78.5",
+          "title": "Containers",
+          "children": []
+        },
+        {
+          "id": "78.6",
+          "title": "Reverse Proxy",
+          "children": []
+        },
+        {
+          "id": "78.7",
+          "title": "Dockerfile",
+          "children": []
+        },
+        {
+          "id": "78.8",
+          "title": "Volumes",
+          "children": []
+        },
+        {
+          "id": "78.9",
+          "title": "Container Networking",
+          "children": []
+        },
+        {
+          "id": "78.10",
+          "title": "Docker Compose",
+          "children": []
+        },
+        {
+          "id": "78.11",
+          "title": "Container Registries",
+          "children": []
+        },
+        {
+          "id": "78.12",
+          "title": "Kubernetes / Orchestration Overview",
+          "children": []
+        },
+        {
+          "id": "78.13",
+          "title": "LAB — Containerize an Existing Application",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 79,
+      "title": "Cloud Fundamentals",
+      "lessons": [
+        {
+          "id": "79.1",
+          "title": "Compute",
+          "children": []
+        },
+        {
+          "id": "79.2",
+          "title": "Storage",
+          "children": []
+        },
+        {
+          "id": "79.3",
+          "title": "Networking",
+          "children": []
+        },
+        {
+          "id": "79.4",
+          "title": "Managed Databases",
+          "children": []
+        },
+        {
+          "id": "79.5",
+          "title": "IAM",
+          "children": []
+        },
+        {
+          "id": "79.6",
+          "title": "Regions / Availability Zones",
+          "children": []
+        },
+        {
+          "id": "79.7",
+          "title": "Autoscaling",
+          "children": []
+        },
+        {
+          "id": "79.8",
+          "title": "Serverless",
+          "children": []
+        },
+        {
+          "id": "79.9",
+          "title": "Object Storage",
+          "children": []
+        },
+        {
+          "id": "79.10",
+          "title": "Infrastructure as Code",
+          "children": []
+        },
+        {
+          "id": "79.11",
+          "title": "Secrets Management",
+          "children": []
+        },
+        {
+          "id": "79.12",
+          "title": "ARCHITECTURE EXERCISE — Map a Local App to Cloud Services",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 80,
+      "title": "Observability & Production Debugging",
+      "lessons": [
+        {
+          "id": "80.1",
+          "title": "Logs",
+          "children": []
+        },
+        {
+          "id": "80.2",
+          "title": "Metrics",
+          "children": []
+        },
+        {
+          "id": "80.3",
+          "title": "Traces",
+          "children": []
+        },
+        {
+          "id": "80.4",
+          "title": "Alerts",
+          "children": []
+        },
+        {
+          "id": "80.5",
+          "title": "Root Cause Analysis",
+          "children": []
+        },
+        {
+          "id": "80.6",
+          "title": "Health Checks",
+          "children": []
+        },
+        {
+          "id": "80.7",
+          "title": "Dashboards",
+          "children": []
+        },
+        {
+          "id": "80.8",
+          "title": "SLI / SLO / SLA",
+          "children": []
+        },
+        {
+          "id": "80.9",
+          "title": "Incident Response",
+          "children": []
+        },
+        {
+          "id": "80.10",
+          "title": "Postmortems",
+          "children": []
+        },
+        {
+          "id": "80.11",
+          "title": "LAB — Diagnose a Simulated Production Failure",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 81,
+      "title": "System Design Foundations",
+      "lessons": [
+        {
+          "id": "81.1",
+          "title": "Functional Requirements",
+          "children": []
+        },
+        {
+          "id": "81.2",
+          "title": "Scale",
+          "children": []
+        },
+        {
+          "id": "81.3",
+          "title": "Latency",
+          "children": []
+        },
+        {
+          "id": "81.4",
+          "title": "Throughput",
+          "children": []
+        },
+        {
+          "id": "81.5",
+          "title": "Availability",
+          "children": []
+        },
+        {
+          "id": "81.6",
+          "title": "Capacity Estimation",
+          "children": []
+        },
+        {
+          "id": "81.7",
+          "title": "Reliability",
+          "children": []
+        },
+        {
+          "id": "81.8",
+          "title": "Durability",
+          "children": []
+        },
+        {
+          "id": "81.9",
+          "title": "PRACTICE — Estimate a Small Service on Paper",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 82,
+      "title": "Scaling Applications",
+      "lessons": [
+        {
+          "id": "82.1",
+          "title": "Vertical Scaling",
+          "children": []
+        },
+        {
+          "id": "82.2",
+          "title": "Horizontal Scaling",
+          "children": []
+        },
+        {
+          "id": "82.3",
+          "title": "Stateless Services",
+          "children": []
+        },
+        {
+          "id": "82.4",
+          "title": "Load Balancing",
+          "children": []
+        },
+        {
+          "id": "82.5",
+          "title": "Reverse Proxies",
+          "children": []
+        },
+        {
+          "id": "82.6",
+          "title": "Service Discovery",
+          "children": []
+        },
+        {
+          "id": "82.7",
+          "title": "DESIGN EXERCISE — Scale a Single-Server App",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 83,
+      "title": "Caching",
+      "lessons": [
+        {
+          "id": "83.1",
+          "title": "Browser Cache",
+          "children": []
+        },
+        {
+          "id": "83.2",
+          "title": "CDN",
+          "children": []
+        },
+        {
+          "id": "83.3",
+          "title": "Application Cache",
+          "children": []
+        },
+        {
+          "id": "83.4",
+          "title": "Distributed Cache",
+          "children": []
+        },
+        {
+          "id": "83.5",
+          "title": "Cache Invalidation",
+          "children": []
+        },
+        {
+          "id": "83.6",
+          "title": "Cache-Aside",
+          "children": []
+        },
+        {
+          "id": "83.7",
+          "title": "Write-Through",
+          "children": []
+        },
+        {
+          "id": "83.8",
+          "title": "TTL",
+          "children": []
+        },
+        {
+          "id": "83.9",
+          "title": "Eviction",
+          "children": []
+        },
+        {
+          "id": "83.10",
+          "title": "DESIGN EXERCISE — Decide What to Cache",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 84,
+      "title": "Async & Event-Driven Systems",
+      "lessons": [
+        {
+          "id": "84.1",
+          "title": "Queues",
+          "children": []
+        },
+        {
+          "id": "84.2",
+          "title": "Producers",
+          "children": []
+        },
+        {
+          "id": "84.3",
+          "title": "Consumers",
+          "children": []
+        },
+        {
+          "id": "84.4",
+          "title": "Pub/Sub",
+          "children": []
+        },
+        {
+          "id": "84.5",
+          "title": "Events",
+          "children": []
+        },
+        {
+          "id": "84.6",
+          "title": "Retries",
+          "children": []
+        },
+        {
+          "id": "84.7",
+          "title": "Dead-Letter Queues",
+          "children": []
+        },
+        {
+          "id": "84.8",
+          "title": "Message Ordering",
+          "children": []
+        },
+        {
+          "id": "84.9",
+          "title": "At-Least-Once Delivery",
+          "children": []
+        },
+        {
+          "id": "84.10",
+          "title": "Idempotent Consumers",
+          "children": []
+        },
+        {
+          "id": "84.11",
+          "title": "MINI PROJECT — Background Job System",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 85,
+      "title": "Distributed Systems",
+      "lessons": [
+        {
+          "id": "85.1",
+          "title": "Partial Failure",
+          "children": []
+        },
+        {
+          "id": "85.2",
+          "title": "Network Partitions",
+          "children": []
+        },
+        {
+          "id": "85.3",
+          "title": "Replication",
+          "children": []
+        },
+        {
+          "id": "85.4",
+          "title": "Strong Consistency",
+          "children": []
+        },
+        {
+          "id": "85.5",
+          "title": "Eventual Consistency",
+          "children": []
+        },
+        {
+          "id": "85.6",
+          "title": "CAP",
+          "children": []
+        },
+        {
+          "id": "85.7",
+          "title": "PACELC Intuition",
+          "children": []
+        },
+        {
+          "id": "85.8",
+          "title": "Distributed Clocks Intuition",
+          "children": []
+        },
+        {
+          "id": "85.9",
+          "title": "DIAGRAM EXERCISE — Reason Through Failure Scenarios",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 86,
+      "title": "Coordination & Consensus",
+      "lessons": [
+        {
+          "id": "86.1",
+          "title": "Leader Election",
+          "children": []
+        },
+        {
+          "id": "86.2",
+          "title": "Quorums",
+          "children": []
+        },
+        {
+          "id": "86.3",
+          "title": "Consensus Intuition",
+          "children": []
+        },
+        {
+          "id": "86.4",
+          "title": "Distributed Locks",
+          "children": []
+        },
+        {
+          "id": "86.5",
+          "title": "Leases",
+          "children": []
+        },
+        {
+          "id": "86.6",
+          "title": "Raft Intuition",
+          "children": []
+        },
+        {
+          "id": "86.7",
+          "title": "OPTIONAL SIMULATOR — Leader Election",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 87,
+      "title": "Reliability Patterns",
+      "lessons": [
+        {
+          "id": "87.1",
+          "title": "Timeouts",
+          "children": []
+        },
+        {
+          "id": "87.2",
+          "title": "Retries",
+          "children": []
+        },
+        {
+          "id": "87.3",
+          "title": "Backoff",
+          "children": []
+        },
+        {
+          "id": "87.4",
+          "title": "Circuit Breakers",
+          "children": []
+        },
+        {
+          "id": "87.5",
+          "title": "Rate Limiting",
+          "children": []
+        },
+        {
+          "id": "87.6",
+          "title": "Graceful Degradation",
+          "children": []
+        },
+        {
+          "id": "87.7",
+          "title": "Bulkheads",
+          "children": []
+        },
+        {
+          "id": "87.8",
+          "title": "Health Checks",
+          "children": []
+        },
+        {
+          "id": "87.9",
+          "title": "Failover",
+          "children": []
+        },
+        {
+          "id": "87.10",
+          "title": "DESIGN PRACTICE — Handle Failure Scenarios",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 88,
+      "title": "Complete System Design",
+      "lessons": [
+        {
+          "id": "88.1",
+          "title": "Requirements",
+          "children": []
+        },
+        {
+          "id": "88.2",
+          "title": "Capacity Estimation",
+          "children": []
+        },
+        {
+          "id": "88.3",
+          "title": "API Gateway",
+          "children": []
+        },
+        {
+          "id": "88.4",
+          "title": "Load Balancers",
+          "children": []
+        },
+        {
+          "id": "88.5",
+          "title": "Application Services",
+          "children": []
+        },
+        {
+          "id": "88.6",
+          "title": "Databases",
+          "children": []
+        },
+        {
+          "id": "88.7",
+          "title": "Caches",
+          "children": []
+        },
+        {
+          "id": "88.8",
+          "title": "Queues",
+          "children": []
+        },
+        {
+          "id": "88.9",
+          "title": "Search",
+          "children": []
+        },
+        {
+          "id": "88.10",
+          "title": "CDN",
+          "children": []
+        },
+        {
+          "id": "88.11",
+          "title": "Object Storage",
+          "children": []
+        },
+        {
+          "id": "88.12",
+          "title": "Reliability & Failure Modes",
+          "children": []
+        },
+        {
+          "id": "88.13",
+          "title": "DESIGN PROJECT — Design One Large System End to End",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 89,
+      "title": "Artificial Intelligence Foundations",
+      "lessons": [
+        {
+          "id": "89.1",
+          "title": "Search",
+          "children": []
+        },
+        {
+          "id": "89.2",
+          "title": "Knowledge & Reasoning",
+          "children": []
+        },
+        {
+          "id": "89.3",
+          "title": "Machine Learning",
+          "children": []
+        },
+        {
+          "id": "89.4",
+          "title": "Neural Networks",
+          "children": []
+        },
+        {
+          "id": "89.5",
+          "title": "LLM Overview",
+          "children": []
+        },
+        {
+          "id": "89.6",
+          "title": "Supervised Learning",
+          "children": []
+        },
+        {
+          "id": "89.7",
+          "title": "Unsupervised Learning",
+          "children": []
+        },
+        {
+          "id": "89.8",
+          "title": "Training vs Inference",
+          "children": []
+        },
+        {
+          "id": "89.9",
+          "title": "Overfitting",
+          "children": []
+        },
+        {
+          "id": "89.10",
+          "title": "OPTIONAL MINI PROJECT — Simple Classifier",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 90,
+      "title": "Specialized Computing Platforms",
+      "lessons": [
+        {
+          "id": "90.1",
+          "title": "Mobile",
+          "children": []
+        },
+        {
+          "id": "90.2",
+          "title": "Embedded / IoT",
+          "children": []
+        },
+        {
+          "id": "90.3",
+          "title": "GPUs",
+          "children": []
+        },
+        {
+          "id": "90.4",
+          "title": "Serverless",
+          "children": []
+        },
+        {
+          "id": "90.5",
+          "title": "Edge Computing",
+          "children": []
+        },
+        {
+          "id": "90.6",
+          "title": "Cloud Computing",
+          "children": []
+        },
+        {
+          "id": "90.7",
+          "title": "EXPLORATION — Choose One and Build a Tiny Prototype",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 91,
+      "title": "Computing, Society & Ethics",
+      "lessons": [
+        {
+          "id": "91.1",
+          "title": "Privacy",
+          "children": []
+        },
+        {
+          "id": "91.2",
+          "title": "Bias",
+          "children": []
+        },
+        {
+          "id": "91.3",
+          "title": "Accessibility",
+          "children": []
+        },
+        {
+          "id": "91.4",
+          "title": "Intellectual Property",
+          "children": []
+        },
+        {
+          "id": "91.5",
+          "title": "Sustainability",
+          "children": []
+        },
+        {
+          "id": "91.6",
+          "title": "Professional Responsibility",
+          "children": []
+        },
+        {
+          "id": "91.7",
+          "title": "Open-Source Licenses",
+          "children": []
+        },
+        {
+          "id": "91.8",
+          "title": "Software Licensing",
+          "children": []
+        },
+        {
+          "id": "91.9",
+          "title": "Responsible AI",
+          "children": []
+        },
+        {
+          "id": "91.10",
+          "title": "WRITTEN CASE STUDY — Analyze an Ethical Computing Problem",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 92,
+      "title": "Working in Existing Codebases",
+      "lessons": [
+        {
+          "id": "92.1",
+          "title": "Read Before Changing",
+          "children": []
+        },
+        {
+          "id": "92.2",
+          "title": "Trace Execution",
+          "children": []
+        },
+        {
+          "id": "92.3",
+          "title": "Dependencies",
+          "children": []
+        },
+        {
+          "id": "92.4",
+          "title": "Boundaries",
+          "children": []
+        },
+        {
+          "id": "92.5",
+          "title": "Small Safe Changes",
+          "children": []
+        },
+        {
+          "id": "92.6",
+          "title": "Repository Navigation",
+          "children": []
+        },
+        {
+          "id": "92.7",
+          "title": "Search / References",
+          "children": []
+        },
+        {
+          "id": "92.8",
+          "title": "Read Tests First",
+          "children": []
+        },
+        {
+          "id": "92.9",
+          "title": "LAB — Add One Feature to an Existing Repository",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 93,
+      "title": "Legacy Code & Maintenance",
+      "lessons": [
+        {
+          "id": "93.1",
+          "title": "Characterization Tests",
+          "children": []
+        },
+        {
+          "id": "93.2",
+          "title": "Safe Refactoring",
+          "children": []
+        },
+        {
+          "id": "93.3",
+          "title": "Backward Compatibility",
+          "children": []
+        },
+        {
+          "id": "93.4",
+          "title": "Migrations",
+          "children": []
+        },
+        {
+          "id": "93.5",
+          "title": "Deprecation",
+          "children": []
+        },
+        {
+          "id": "93.6",
+          "title": "Feature Flags",
+          "children": []
+        },
+        {
+          "id": "93.7",
+          "title": "Incremental Migration",
+          "children": []
+        },
+        {
+          "id": "93.8",
+          "title": "Dependency Upgrades",
+          "children": []
+        },
+        {
+          "id": "93.9",
+          "title": "PHASE PROJECT — Modernize a Small Legacy App",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 94,
+      "title": "Engineering Communication",
+      "lessons": [
+        {
+          "id": "94.1",
+          "title": "README",
+          "children": []
+        },
+        {
+          "id": "94.2",
+          "title": "Design Documents",
+          "children": []
+        },
+        {
+          "id": "94.3",
+          "title": "Comments",
+          "children": []
+        },
+        {
+          "id": "94.4",
+          "title": "Bug Reports",
+          "children": []
+        },
+        {
+          "id": "94.5",
+          "title": "PR Descriptions",
+          "children": []
+        },
+        {
+          "id": "94.6",
+          "title": "Architecture Decision Records",
+          "children": []
+        },
+        {
+          "id": "94.7",
+          "title": "API Documentation",
+          "children": []
+        },
+        {
+          "id": "94.8",
+          "title": "Runbooks",
+          "children": []
+        },
+        {
+          "id": "94.9",
+          "title": "Release Notes",
+          "children": []
+        },
+        {
+          "id": "94.10",
+          "title": "WRITTEN PRACTICE — Engineering Documentation Pack",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 95,
+      "title": "Capstone Planning",
+      "lessons": [
+        {
+          "id": "95.1",
+          "title": "Problem",
+          "children": []
+        },
+        {
+          "id": "95.2",
+          "title": "Requirements",
+          "children": []
+        },
+        {
+          "id": "95.3",
+          "title": "Architecture",
+          "children": []
+        },
+        {
+          "id": "95.4",
+          "title": "Database Design",
+          "children": []
+        },
+        {
+          "id": "95.5",
+          "title": "Milestones",
+          "children": []
+        },
+        {
+          "id": "95.6",
+          "title": "Risks",
+          "children": []
+        },
+        {
+          "id": "95.7",
+          "title": "Trade-offs",
+          "children": []
+        },
+        {
+          "id": "95.8",
+          "title": "DELIVERABLE — Design Document",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 96,
+      "title": "Build the Application",
+      "lessons": [
+        {
+          "id": "96.1",
+          "title": "Interface",
+          "children": []
+        },
+        {
+          "id": "96.2",
+          "title": "Backend",
+          "children": []
+        },
+        {
+          "id": "96.3",
+          "title": "API",
+          "children": []
+        },
+        {
+          "id": "96.4",
+          "title": "Database",
+          "children": []
+        },
+        {
+          "id": "96.5",
+          "title": "Authentication",
+          "children": []
+        },
+        {
+          "id": "96.6",
+          "title": "Authorization",
+          "children": []
+        },
+        {
+          "id": "96.7",
+          "title": "Testing",
+          "children": []
+        },
+        {
+          "id": "96.8",
+          "title": "CI/CD",
+          "children": []
+        },
+        {
+          "id": "96.9",
+          "title": "Deployment",
+          "children": []
+        },
+        {
+          "id": "96.10",
+          "title": "Observability",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 97,
+      "title": "Break, Measure & Harden",
+      "lessons": [
+        {
+          "id": "97.1",
+          "title": "Load Testing",
+          "children": []
+        },
+        {
+          "id": "97.2",
+          "title": "Bottlenecks",
+          "children": []
+        },
+        {
+          "id": "97.3",
+          "title": "Failure Simulation",
+          "children": []
+        },
+        {
+          "id": "97.4",
+          "title": "Security Review",
+          "children": []
+        },
+        {
+          "id": "97.5",
+          "title": "Refactoring",
+          "children": []
+        },
+        {
+          "id": "97.6",
+          "title": "Performance Comparison",
+          "children": []
+        },
+        {
+          "id": "97.7",
+          "title": "Profiling",
+          "children": []
+        },
+        {
+          "id": "97.8",
+          "title": "CPU Profiling",
+          "children": []
+        },
+        {
+          "id": "97.9",
+          "title": "Memory Profiling",
+          "children": []
+        },
+        {
+          "id": "97.10",
+          "title": "Database Profiling",
+          "children": []
+        },
+        {
+          "id": "97.11",
+          "title": "Capacity Limits",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 98,
+      "title": "Portfolio Release",
+      "lessons": [
+        {
+          "id": "98.1",
+          "title": "README",
+          "children": []
+        },
+        {
+          "id": "98.2",
+          "title": "Architecture Diagram",
+          "children": []
+        },
+        {
+          "id": "98.3",
+          "title": "Database Diagram",
+          "children": []
+        },
+        {
+          "id": "98.4",
+          "title": "API Documentation",
+          "children": []
+        },
+        {
+          "id": "98.5",
+          "title": "Tests",
+          "children": []
+        },
+        {
+          "id": "98.6",
+          "title": "Deployment",
+          "children": []
+        },
+        {
+          "id": "98.7",
+          "title": "Trade-offs",
+          "children": []
+        },
+        {
+          "id": "98.8",
+          "title": "Demo",
+          "children": []
+        },
+        {
+          "id": "98.9",
+          "title": "Screenshots",
+          "children": []
+        },
+        {
+          "id": "98.10",
+          "title": "Release Notes",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 99,
+      "title": "Coding Interview Method",
+      "lessons": [
+        {
+          "id": "99.1",
+          "title": "Clarify",
+          "children": []
+        },
+        {
+          "id": "99.2",
+          "title": "Examples",
+          "children": []
+        },
+        {
+          "id": "99.3",
+          "title": "Brute Force",
+          "children": []
+        },
+        {
+          "id": "99.4",
+          "title": "Optimize",
+          "children": []
+        },
+        {
+          "id": "99.5",
+          "title": "Code",
+          "children": []
+        },
+        {
+          "id": "99.6",
+          "title": "Test",
+          "children": []
+        },
+        {
+          "id": "99.7",
+          "title": "Complexity Analysis",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 100,
+      "title": "DSA Interview Practice",
+      "lessons": [
+        {
+          "id": "100.1",
+          "title": "Arrays / Strings",
+          "children": []
+        },
+        {
+          "id": "100.2",
+          "title": "Hashing",
+          "children": []
+        },
+        {
+          "id": "100.3",
+          "title": "Trees",
+          "children": []
+        },
+        {
+          "id": "100.4",
+          "title": "Graphs",
+          "children": []
+        },
+        {
+          "id": "100.5",
+          "title": "Binary Search",
+          "children": []
+        },
+        {
+          "id": "100.6",
+          "title": "Backtracking",
+          "children": []
+        },
+        {
+          "id": "100.7",
+          "title": "Dynamic Programming",
+          "children": []
+        },
+        {
+          "id": "100.8",
+          "title": "Heaps",
+          "children": []
+        },
+        {
+          "id": "100.9",
+          "title": "Intervals",
+          "children": []
+        },
+        {
+          "id": "100.10",
+          "title": "Greedy",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 101,
+      "title": "CS Fundamentals Interview Review",
+      "lessons": [
+        {
+          "id": "101.1",
+          "title": "OOP",
+          "children": []
+        },
+        {
+          "id": "101.2",
+          "title": "Operating Systems",
+          "children": []
+        },
+        {
+          "id": "101.3",
+          "title": "Networking",
+          "children": []
+        },
+        {
+          "id": "101.4",
+          "title": "Databases",
+          "children": []
+        },
+        {
+          "id": "101.5",
+          "title": "Concurrency",
+          "children": []
+        },
+        {
+          "id": "101.6",
+          "title": "Security",
+          "children": []
+        },
+        {
+          "id": "101.7",
+          "title": "Computer Architecture",
+          "children": []
+        },
+        {
+          "id": "101.8",
+          "title": "Programming Languages",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 102,
+      "title": "Low-Level Design Interviews",
+      "lessons": [
+        {
+          "id": "102.1",
+          "title": "Requirements",
+          "children": []
+        },
+        {
+          "id": "102.2",
+          "title": "Entities",
+          "children": []
+        },
+        {
+          "id": "102.3",
+          "title": "Relationships",
+          "children": []
+        },
+        {
+          "id": "102.4",
+          "title": "Interfaces",
+          "children": []
+        },
+        {
+          "id": "102.5",
+          "title": "Trade-offs",
+          "children": []
+        },
+        {
+          "id": "102.6",
+          "title": "Class Diagrams",
+          "children": []
+        },
+        {
+          "id": "102.7",
+          "title": "Extensibility",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 103,
+      "title": "System Design Interviews",
+      "lessons": [
+        {
+          "id": "103.1",
+          "title": "Requirements",
+          "children": []
+        },
+        {
+          "id": "103.2",
+          "title": "Estimation",
+          "children": []
+        },
+        {
+          "id": "103.3",
+          "title": "APIs",
+          "children": []
+        },
+        {
+          "id": "103.4",
+          "title": "Data",
+          "children": []
+        },
+        {
+          "id": "103.5",
+          "title": "Architecture",
+          "children": []
+        },
+        {
+          "id": "103.6",
+          "title": "Scaling",
+          "children": []
+        },
+        {
+          "id": "103.7",
+          "title": "Failure Modes",
+          "children": []
+        },
+        {
+          "id": "103.8",
+          "title": "Caching",
+          "children": []
+        },
+        {
+          "id": "103.9",
+          "title": "Queues",
+          "children": []
+        },
+        {
+          "id": "103.10",
+          "title": "Consistency",
+          "children": []
+        },
+        {
+          "id": "103.11",
+          "title": "Observability",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 104,
+      "title": "Behavioral Interviews",
+      "lessons": [
+        {
+          "id": "104.1",
+          "title": "STAR",
+          "children": []
+        },
+        {
+          "id": "104.2",
+          "title": "Project Stories",
+          "children": []
+        },
+        {
+          "id": "104.3",
+          "title": "Failure",
+          "children": []
+        },
+        {
+          "id": "104.4",
+          "title": "Conflict",
+          "children": []
+        },
+        {
+          "id": "104.5",
+          "title": "Ownership",
+          "children": []
+        },
+        {
+          "id": "104.6",
+          "title": "Technical Decisions",
+          "children": []
+        },
+        {
+          "id": "104.7",
+          "title": "Leadership",
+          "children": []
+        },
+        {
+          "id": "104.8",
+          "title": "Ambiguity",
+          "children": []
+        },
+        {
+          "id": "104.9",
+          "title": "Learning From Mistakes",
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": 105,
+      "title": "Final Mock Interview Loop",
+      "lessons": [
+        {
+          "id": "105.1",
+          "title": "Coding Round",
+          "children": []
+        },
+        {
+          "id": "105.2",
+          "title": "CS Fundamentals Round",
+          "children": []
+        },
+        {
+          "id": "105.3",
+          "title": "Low-Level Design Round",
+          "children": []
+        },
+        {
+          "id": "105.4",
+          "title": "System Design Round",
+          "children": []
+        },
+        {
+          "id": "105.5",
+          "title": "Behavioral Round",
+          "children": []
+        },
+        {
+          "id": "105.6",
+          "title": "Portfolio Walkthrough",
+          "children": []
+        },
+        {
+          "id": "105.7",
+          "title": "Resume Walkthrough",
+          "children": []
+        },
+        {
+          "id": "105.8",
+          "title": "Final Feedback & Weak-Area Review",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "story": 1,
+      "kind": "story-project",
+      "number": 1,
+      "title": "Tiny Computer Simulator",
+      "children": [
+        {
+          "id": "SP1.1",
+          "title": "Registers"
+        },
+        {
+          "id": "SP1.2",
+          "title": "Memory"
+        },
+        {
+          "id": "SP1.3",
+          "title": "Instructions"
+        },
+        {
+          "id": "SP1.4",
+          "title": "Step-by-step execution"
+        }
+      ]
+    },
+    {
+      "story": 2,
+      "kind": "story-project",
+      "number": 2,
+      "title": "Personal Productivity Suite",
+      "children": [
+        {
+          "id": "SP2.1",
+          "title": "Tasks"
+        },
+        {
+          "id": "SP2.2",
+          "title": "Notes"
+        },
+        {
+          "id": "SP2.3",
+          "title": "Contacts"
+        },
+        {
+          "id": "SP2.4",
+          "title": "Multiple Modules"
+        },
+        {
+          "id": "SP2.5",
+          "title": "Persistence"
+        },
+        {
+          "id": "SP2.6",
+          "title": "Error Handling"
+        }
+      ]
+    },
+    {
+      "story": 3,
+      "kind": "story-checkpoint",
+      "number": 3,
+      "title": "Mathematical Computing Notebook",
+      "children": [
+        {
+          "id": "SP3.1",
+          "title": "No large project required"
+        }
+      ]
+    },
+    {
+      "story": 4,
+      "kind": "story-project",
+      "number": 4,
+      "title": "Hospital or Library Management System",
+      "children": [
+        {
+          "id": "SP4.1",
+          "title": "Requirements"
+        },
+        {
+          "id": "SP4.2",
+          "title": "Domain Model"
+        },
+        {
+          "id": "SP4.3",
+          "title": "Classes & Objects"
+        },
+        {
+          "id": "SP4.4",
+          "title": "Relationships"
+        },
+        {
+          "id": "SP4.5",
+          "title": "Interfaces"
+        },
+        {
+          "id": "SP4.6",
+          "title": "Refactoring"
+        }
+      ]
+    },
+    {
+      "story": 5,
+      "kind": "story-project",
+      "number": 5,
+      "title": "Search & Route Engine",
+      "children": [
+        {
+          "id": "SP5.1",
+          "title": "Graph Model"
+        },
+        {
+          "id": "SP5.2",
+          "title": "Search"
+        },
+        {
+          "id": "SP5.3",
+          "title": "Shortest Paths"
+        },
+        {
+          "id": "SP5.4",
+          "title": "Indexing"
+        },
+        {
+          "id": "SP5.5",
+          "title": "Performance Analysis"
+        }
+      ]
+    },
+    {
+      "story": 6,
+      "kind": "story-project",
+      "number": 6,
+      "title": "Mini Operating-System Simulator",
+      "children": [
+        {
+          "id": "SP6.1",
+          "title": "Processes"
+        },
+        {
+          "id": "SP6.2",
+          "title": "Scheduling"
+        },
+        {
+          "id": "SP6.3",
+          "title": "Memory"
+        },
+        {
+          "id": "SP6.4",
+          "title": "Files"
+        },
+        {
+          "id": "SP6.5",
+          "title": "System Calls"
+        }
+      ]
+    },
+    {
+      "story": 7,
+      "kind": "story-project",
+      "number": 7,
+      "title": "Networked Chat / Collaboration System",
+      "children": [
+        {
+          "id": "SP7.1",
+          "title": "Client / Server"
+        },
+        {
+          "id": "SP7.2",
+          "title": "Sockets"
+        },
+        {
+          "id": "SP7.3",
+          "title": "Protocol"
+        },
+        {
+          "id": "SP7.4",
+          "title": "Multiple Clients"
+        },
+        {
+          "id": "SP7.5",
+          "title": "Failure Handling"
+        }
+      ]
+    },
+    {
+      "story": 8,
+      "kind": "story-project",
+      "number": 8,
+      "title": "E-Commerce Data Layer",
+      "children": [
+        {
+          "id": "SP8.1",
+          "title": "Schema"
+        },
+        {
+          "id": "SP8.2",
+          "title": "Queries"
+        },
+        {
+          "id": "SP8.3",
+          "title": "Transactions"
+        },
+        {
+          "id": "SP8.4",
+          "title": "Indexing"
+        },
+        {
+          "id": "SP8.5",
+          "title": "Migrations"
+        },
+        {
+          "id": "SP8.6",
+          "title": "Scaling Strategy"
+        }
+      ]
+    },
+    {
+      "story": 9,
+      "kind": "story-project",
+      "number": 9,
+      "title": "Secure Accessible Application",
+      "children": [
+        {
+          "id": "SP9.1",
+          "title": "Authentication"
+        },
+        {
+          "id": "SP9.2",
+          "title": "Authorization"
+        },
+        {
+          "id": "SP9.3",
+          "title": "Threat Model"
+        },
+        {
+          "id": "SP9.4",
+          "title": "Application Security"
+        },
+        {
+          "id": "SP9.5",
+          "title": "Accessibility"
+        },
+        {
+          "id": "SP9.6",
+          "title": "Usability"
+        }
+      ]
+    },
+    {
+      "story": 10,
+      "kind": "story-project",
+      "number": 10,
+      "title": "Production-Style SaaS Application",
+      "children": [
+        {
+          "id": "SP10.1",
+          "title": "Requirements"
+        },
+        {
+          "id": "SP10.2",
+          "title": "Architecture"
+        },
+        {
+          "id": "SP10.3",
+          "title": "Database"
+        },
+        {
+          "id": "SP10.4",
+          "title": "API"
+        },
+        {
+          "id": "SP10.5",
+          "title": "Authentication"
+        },
+        {
+          "id": "SP10.6",
+          "title": "Testing"
+        },
+        {
+          "id": "SP10.7",
+          "title": "Containers"
+        },
+        {
+          "id": "SP10.8",
+          "title": "CI/CD"
+        },
+        {
+          "id": "SP10.9",
+          "title": "Cloud Deployment"
+        },
+        {
+          "id": "SP10.10",
+          "title": "Observability"
+        }
+      ]
+    },
+    {
+      "story": 11,
+      "kind": "story-project",
+      "number": 11,
+      "title": "Distributed Cloud Application",
+      "children": [
+        {
+          "id": "SP11.1",
+          "title": "Services"
+        },
+        {
+          "id": "SP11.2",
+          "title": "Load Balancing"
+        },
+        {
+          "id": "SP11.3",
+          "title": "Database"
+        },
+        {
+          "id": "SP11.4",
+          "title": "Cache"
+        },
+        {
+          "id": "SP11.5",
+          "title": "Message Queue"
+        },
+        {
+          "id": "SP11.6",
+          "title": "Failure Handling"
+        },
+        {
+          "id": "SP11.7",
+          "title": "Observability"
+        }
+      ]
+    },
+    {
+      "story": 12,
+      "kind": "story-checkpoint",
+      "number": 12,
+      "title": "Story Checkpoint 12",
+      "children": [
+        {
+          "id": "SP12.1",
+          "title": "No story project required"
+        }
+      ]
+    },
+    {
+      "story": 13,
+      "kind": "story-project",
+      "number": 13,
+      "title": "Maintain, Upgrade & Release Existing Software",
+      "children": [
+        {
+          "id": "SP13.1",
+          "title": "Understand Existing System"
+        },
+        {
+          "id": "SP13.2",
+          "title": "Characterization Tests"
+        },
+        {
+          "id": "SP13.3",
+          "title": "Refactor"
+        },
+        {
+          "id": "SP13.4",
+          "title": "Upgrade Dependencies"
+        },
+        {
+          "id": "SP13.5",
+          "title": "Migrate"
+        },
+        {
+          "id": "SP13.6",
+          "title": "Document"
+        },
+        {
+          "id": "SP13.7",
+          "title": "Release"
+        }
+      ]
+    }
+  ]
+}

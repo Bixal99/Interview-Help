@@ -1,0 +1,51 @@
+{
+  "units": {
+    "support": "Support & Endpoints",
+    "network": "Networks & Virtualization",
+    "identity": "Servers & AD",
+    "ops": "Recovery & Security",
+    "hire": "Hybrid & Hire"
+  },
+  "phases": {
+    "1": "Support Mindset",
+    "2": "Hardware & Endpoints",
+    "3": "Windows Client",
+    "4": "Linux Administration",
+    "5": "Networking For",
+    "6": "Virtualization & Homelab",
+    "7": "Windows Server & Storage",
+    "8": "Active Directory Domain",
+    "9": "Group Policy",
+    "10": "Microsoft Entra ID",
+    "11": "Storage & Backups",
+    "12": "Databases & ERP Operations",
+    "13": "Security For",
+    "14": "Monitoring & Patching",
+    "15": "Administration Automation",
+    "16": "Help Desk & ITSM",
+    "17": "Cloud & Hybrid",
+    "18": "Small-company Capstone"
+  },
+  "lessons": {
+    "1.1": "Evidence Before Action",
+    "2.1": "From Components To A",
+    "3.1": "Windows As An Operated",
+    "4.1": "Files & Processes",
+    "5.1": "Address & Name",
+    "6.1": "Hosts & Guests",
+    "7.1": "Shared Service Is More",
+    "8.1": "Central Identity & Devices",
+    "9.1": "From Sign-in To Controlled",
+    "10.1": "Cloud Identity Is Not",
+    "11.1": "Recovery Is The Product",
+    "12.1": "Application & Database",
+    "13.1": "Reduce Privilege",
+    "14.1": "Turn Signals Into Action",
+    "15.1": "Make The Safe Path",
+    "16.1": "Administration As A",
+    "17.1": "One Service Across Several",
+    "18.1": "From Lab Tasks To"
+  },
+  "children": {},
+  "project": "Project"
+}

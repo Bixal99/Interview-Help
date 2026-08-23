@@ -1,7 +1,10 @@
 import type { ParsedCourse } from "./learning-model";
+import { chaptersFor } from "./learning-paths";
 import { lessonPath, phasePath, projectPathFor } from "./parse-course";
+import { glossaryPath } from "./unit-glossary";
+import type { ProjectArtifactKind } from "./parse-project-brief";
 
-export type NeighborKind = "home" | "lesson" | "project" | "phase";
+export type NeighborKind = "home" | "lesson" | "project" | "phase" | "glossary";
 
 export type Neighbor = {
   href: string;
@@ -15,6 +18,7 @@ export type Neighbor = {
 export type CourseNavLesson = {
   id: string;
   slug: string;
+  kind: "lesson" | "story-project" | "story-checkpoint";
   title: string;
   children: { id: string; title: string }[];
 };
@@ -24,9 +28,17 @@ export type CourseNavPhase = {
   title: string;
   goal?: string;
   hasProject: boolean;
+  projectTitle?: string;
+  projectKind?: ProjectArtifactKind;
   lessons: CourseNavLesson[];
 };
-export type CourseNavChapter = { id: string; title: string; summary: string; phases: CourseNavPhase[] };
+export type CourseNavChapter = {
+  id: string;
+  title: string;
+  summary: string;
+  phases: CourseNavPhase[];
+  glossaryHref: string;
+};
 export type CourseNav = {
   slug: string;
   shortName: string;
@@ -43,18 +55,51 @@ export function phaseCountWithProjects(nav: CourseNav) {
   );
 }
 
+export function regularLessonIds(phase: CourseNavPhase) {
+  return phase.lessons.filter((lesson) => lesson.kind === "lesson").map((lesson) => lesson.id);
+}
+
+export function lessonIdsByPhase(nav: CourseNav) {
+  const map: Record<string, string[]> = {};
+  for (const chapter of nav.chapters) {
+    for (const phase of chapter.phases) {
+      map[phase.id] = regularLessonIds(phase);
+    }
+  }
+  return map;
+}
+
+export function lessonCountForNav(nav: CourseNav) {
+  return Object.values(lessonIdsByPhase(nav)).reduce((sum, ids) => sum + ids.length, 0);
+}
+
 type Page = {
-  kind: "lesson" | "project" | "phase";
+  kind: "lesson" | "project" | "phase" | "glossary";
   course: string;
   phaseId: string;
   phaseTitle: string;
   lessonId?: string;
   lessonSlug?: string;
   lessonTitle?: string;
+  unitId?: string;
+  unitTitle?: string;
   href: string;
 };
 
 export function coursePages(course: ParsedCourse): Page[] {
+  const chapters = chaptersFor(
+    course.slug,
+    course.phases.map((phase) => phase.id),
+  );
+  const chapterByLastPhase = new Map(
+    chapters
+      .map((chapter) => {
+        const last = chapter.phaseIds[chapter.phaseIds.length - 1];
+        return last ? ([last, chapter] as const) : null;
+      })
+      .filter((entry): entry is readonly [string, (typeof chapters)[number]] => Boolean(entry)),
+  );
+
   const pages: Page[] = [];
   for (const phase of course.phases) {
     pages.push({
@@ -64,7 +109,9 @@ export function coursePages(course: ParsedCourse): Page[] {
       phaseTitle: phase.title,
       href: phasePath(course.slug, phase.id),
     });
-    for (const lesson of phase.lessons) {
+    const regularLessons = phase.lessons.filter((lesson) => lesson.kind === "lesson");
+    const storyArtifacts = phase.lessons.filter((lesson) => lesson.kind !== "lesson");
+    for (const lesson of regularLessons) {
       pages.push({
         kind: "lesson",
         course: course.slug,
@@ -83,6 +130,30 @@ export function coursePages(course: ParsedCourse): Page[] {
         phaseId: phase.id,
         phaseTitle: phase.title,
         href: projectPathFor(course.slug, phase.id),
+      });
+    }
+    for (const lesson of storyArtifacts) {
+      pages.push({
+        kind: "lesson",
+        course: course.slug,
+        phaseId: phase.id,
+        phaseTitle: phase.title,
+        lessonId: lesson.id,
+        lessonSlug: lesson.slug,
+        lessonTitle: lesson.title,
+        href: lessonPath(course.slug, phase.id, lesson),
+      });
+    }
+    const chapter = chapterByLastPhase.get(phase.id);
+    if (chapter) {
+      pages.push({
+        kind: "glossary",
+        course: course.slug,
+        phaseId: phase.id,
+        phaseTitle: phase.title,
+        unitId: chapter.id,
+        unitTitle: chapter.title,
+        href: glossaryPath(course.slug, chapter.id),
       });
     }
   }
@@ -109,6 +180,7 @@ export function firstLessonInPhase(course: ParsedCourse, phaseId: string) {
 function pageLabel(page: Page) {
   if (page.kind === "project") return `Start phase project`;
   if (page.kind === "phase") return page.phaseTitle;
+  if (page.kind === "glossary") return "Glossary";
   return page.lessonTitle ?? "Lesson";
 }
 
@@ -130,7 +202,9 @@ export function neighborsFor(
           ? `${previous.phaseTitle} project`
           : previous.kind === "phase"
             ? previous.phaseTitle
-            : previous.lessonTitle ?? "Previous",
+            : previous.kind === "glossary"
+              ? "Glossary"
+              : previous.lessonTitle ?? "Previous",
         kind: previous.kind,
         course: previous.course,
         phaseId: previous.phaseId,
@@ -166,7 +240,11 @@ export function neighborsFor(
     next = { ...next!, label: "Start phase project" };
   }
   if (current.kind === "project" && next) {
-    next = { ...next, label: next.kind === "project" ? next.label : `Next phase`, requiresProject: true };
+    next = {
+      ...next,
+      label: next.phaseId === current.phaseId ? next.label : "Next phase",
+      requiresProject: true,
+    };
   }
   return { prev, next };
 }

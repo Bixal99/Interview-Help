@@ -16,7 +16,8 @@ import { convertMarkdownHref, githubSlug } from "@/lib/content-utils";
 import { withMarkdownMath } from "@/lib/format-math";
 import { getExercise } from "@/lib/code-playground/exercises";
 import { parseFenceInfo } from "@/lib/code-playground/fence-meta";
-import { parseKicker } from "@/lib/lesson-kickers";
+import { extractSeeItResources } from "@/lib/learning-resources/extract-inline";
+import { learningResourceToVisual } from "@/lib/learning-resources/normalize";
 
 type MarkdownNode = {
   type: string;
@@ -72,37 +73,6 @@ function textContent(value: React.ReactNode): string {
   return "";
 }
 
-function tidyDashes(value: string) {
-  return value
-    .replace(/[\u2013\u2014]/g, ", ")
-    .replace(/\s{2,}/g, " ");
-}
-
-function memoryHeading(label: string): string | null {
-  if (/^the stack\b/i.test(label)) return "The Stack";
-  if (/^the heap\b/i.test(label)) return "The Heap";
-  if (/^static/i.test(label)) return "Static & Global Memory";
-  return null;
-}
-
-const KEYWORDS = /\b(compilers?|interpreters?|variables?|function calls?|recursive calls?|network requests?|electrical signals?|the stack|the heap|pointers?|process(?:es)?|CPU|bytecode|machine code|source code|runtime|loops?|stack overflow|Big O)\b/gi;
-
-function emphasizeText(text: string): React.ReactNode {
-  const cleaned = tidyDashes(text);
-  const nodes: React.ReactNode[] = [];
-  const pattern = new RegExp(KEYWORDS.source, "gi");
-  let last = 0;
-  let match: RegExpExecArray | null;
-  let index = 0;
-  while ((match = pattern.exec(cleaned))) {
-    if (match.index > last) nodes.push(cleaned.slice(last, match.index));
-    nodes.push(<strong key={`k-${index++}`}>{match[0]}</strong>);
-    last = match.index + match[0].length;
-  }
-  if (last < cleaned.length) nodes.push(cleaned.slice(last));
-  return nodes.length === 1 ? nodes[0] : nodes;
-}
-
 function classNamesOf(value: unknown) {
   if (!isValidElement<{ className?: string | string[] }>(value)) return "";
   const className = value.props.className;
@@ -113,14 +83,18 @@ function isMathNode(value: unknown) {
   return /\bkatex\b|\bmath-inline\b|\bmath-display\b/.test(classNamesOf(value));
 }
 
+/**
+ * Format inline copy: handle math expressions via PracticeRichText,
+ * but otherwise pass through content literally as authored.
+ */
 function formatCopy(value: React.ReactNode): React.ReactNode {
   if (value == null || typeof value === "boolean") return value;
   if (typeof value === "string" || typeof value === "number") {
     const text = String(value);
     if (/\$|[OΘΩθω]\(|[A-Za-z0-9]\^[A-Za-z0-9]/.test(text)) {
-      return <PracticeRichText text={tidyDashes(text)} />;
+      return <PracticeRichText text={text} />;
     }
-    return emphasizeText(text);
+    return text;
   }
   if (Array.isArray(value)) {
     return value.map((child, index) => <React.Fragment key={index}>{formatCopy(child)}</React.Fragment>);
@@ -137,43 +111,52 @@ function formatCopy(value: React.ReactNode): React.ReactNode {
   return value;
 }
 
-function renderProse(value: React.ReactNode) {
-  const text = tidyDashes(textContent(value)).replace(/^[:\s]+/, "").trim();
-  if (!text) return null;
-  const topics = text.split(/(?=\b(?:The stack|The heap)\b)/).map((item) => item.trim()).filter(Boolean);
-  if (topics.length >= 2) {
-    return (
-      <ul className="ih-prose-list">
-        {topics.map((item, index) => <li key={index}>{formatCopy(item)}</li>)}
-      </ul>
-    );
-  }
-  return <p>{formatCopy(value)}</p>;
-}
+type DocSegment =
+  | { kind: "markdown"; text: string }
+  | { kind: "visual"; heading: string; resources: VisualResource[] };
 
-function tidyNote(note?: string) {
-  if (!note) return undefined;
-  const cleaned = note.replace(/^[:\s-]+/, "").replace(/\s{2,}/g, " ").trim();
-  if (!cleaned) return undefined;
-  return cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
-}
-
-function extractVisual(markdown: string): { markdown: string; resources: VisualResource[] } {
+function segmentMarkdown(markdown: string): DocSegment[] {
   const source = markdown.replace(/\r\n/g, "\n");
-  const match = source.match(/\*\*SEE IT BEFORE YOU MEMORIZE IT\*\*[^\n]*\n+(?:[ \t]*[-*].+\n?)*/i);
-  if (!match) return { markdown: source, resources: [] };
-  const resources: VisualResource[] = [];
-  for (const line of match[0].split("\n")) {
-    const item = /^\s*[-*]\s+([^:]+):\s+\[([^\]]+)\]\(([^)]+)\)(?:\s*[-–—:]\s*(.+))?/.exec(line);
-    if (!item) continue;
-    resources.push({
-      kind: item[1].trim(),
-      title: item[2].trim(),
-      href: item[3].trim(),
-      note: tidyNote(item[4]),
-    });
+  const segments: DocSegment[] = [];
+  const regex = /(?:^|\n)(\*\*(?:SEE IT BEFORE YOU MEMORIZE IT|LEARNING RESOURCES:?)\*\*[^\n]*)\n+((?:(?:[ \t]*[-*]\s+.+\n*)|(?:\|.+\n*))+)/gi;
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+
+  while ((match = regex.exec(source)) !== null) {
+    const matchStart = match.index + (match[0].startsWith("\n") ? 1 : 0);
+    if (matchStart > lastIndex) {
+      const prevText = source.slice(lastIndex, matchStart).trim();
+      if (prevText) {
+        segments.push({ kind: "markdown", text: prevText });
+      }
+    }
+    const headingRaw = match[1].replace(/\*/g, "").replace(/:$/, "").trim();
+    const fullBlock = match[0].trim();
+    const resources = extractSeeItResources(fullBlock);
+    if (resources.length > 0) {
+      segments.push({
+        kind: "visual",
+        heading: headingRaw,
+        resources: resources.map(learningResourceToVisual),
+      });
+    } else {
+      segments.push({ kind: "markdown", text: fullBlock });
+    }
+    lastIndex = match.index + match[0].length;
   }
-  return { markdown: source.replace(match[0], "\n\n"), resources };
+
+  if (lastIndex < source.length) {
+    const remainingText = source.slice(lastIndex).trim();
+    if (remainingText) {
+      segments.push({ kind: "markdown", text: remainingText });
+    }
+  }
+
+  if (segments.length === 0) {
+    segments.push({ kind: "markdown", text: source });
+  }
+
+  return segments;
 }
 
 export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYouTube = true }: { markdown: string; sourcePath: string; progressScope?: string; embedYouTube?: boolean }) {
@@ -181,29 +164,21 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYou
     function MarkdownHeading({ children, id, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
       const text = textContent(children);
       const headingId = id ?? githubSlug(text);
-      const phaseNumber = tag === "h1" ? /^PHASE\s+(\d+)\b/i.exec(text)?.[1] : undefined;
-      const isTrackable = Boolean(progressScope && (/^PHASE\s+\d+/i.test(text) || /^(Practice|Phase Project|Git Checkpoint)/i.test(text)));
+      const phaseNumber = tag === "h1" ? /^(?:PHASE|CHAPTER)\s+(\d+)\b/i.exec(text)?.[1] : undefined;
+      const isTrackable = Boolean(progressScope && (/^(?:PHASE|CHAPTER)\s+\d+/i.test(text) || /^(Practice|Phase Project|Chapter Project|Git Checkpoint)/i.test(text)));
       return React.createElement(tag, { ...props, id: headingId }, <>{phaseNumber && <span id={`phase-${phaseNumber}`} aria-hidden="true" />}<span className="flex items-start gap-3"><a href={`#${headingId}`} className="min-w-0 flex-1 !text-inherit !no-underline">{children}</a>{isTrackable && <ProgressToggle id={`${progressScope}:${headingId}`} />}</span></>);
     }
     return MarkdownHeading;
   };
 
-  const extracted = extractVisual(markdown);
-  const resources = extracted.resources;
-  const body = withMarkdownMath(extracted.markdown);
-  let visualShown = false;
-  let pendingVisual = false;
-
-  function takeVisual() {
-    if (visualShown) return null;
-    if (resources.length === 0) return null;
-    visualShown = true;
-    pendingVisual = false;
-    return <VisualLearning resources={resources} sourcePath={sourcePath} embedYouTube={embedYouTube} />;
-  }
-
   const components: Components = {
     h1: Heading("h1"), h2: Heading("h2"), h3: Heading("h3"), h4: Heading("h4"),
+    ul({ children }) {
+      return <ul>{children}</ul>;
+    },
+    ol({ children }) {
+      return <ol>{children}</ol>;
+    },
     em({ children }) {
       return <>{formatCopy(children)}</>;
     },
@@ -215,86 +190,25 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYou
         if (/^notes?:/i.test(label)) {
           return <div className="ih-note">{formatCopy(children)}</div>;
         }
-        const kicker = parseKicker(label);
-        if (kicker) {
+        const isAllUppercase = /^[A-Z0-9\s—–\-,"'/?!]{3,}:?$/.test(label);
+        const isSpecialKicker = /^(?:Key words|Practice|CHAPTER OPENING|WHAT COMPUTERS|HOW TO|TRY IT|CLOSING|WHAT THIS UNLOCKS|CHAPTER ROADMAP|WHAT WE LEARNED|WHAT YOU SHOULD|KNOWLEDGE CHECK|PROGRESSIVE PRACTICE|PRACTICE UNTIL|STEP-BY-STEP)/i.test(label);
+        const isHeadingLabel = (isAllUppercase || isSpecialKicker) && (label.endsWith(":") || bits.length === 1);
+
+        if (isHeadingLabel && label.length >= 3) {
+          const cleanLabel = label.replace(/:$/, "").trim();
           const rest = bits.slice(1);
-          const restText = tidyDashes(textContent(rest)).replace(/^[:\s]+/, "").trim();
-
-          // Checklist / generic teaching slots: keep the prose, hide the form chrome.
-          if (kicker.visibility === "flow") {
-            if (kicker.title === "Visual Learning") {
-              pendingVisual = !visualShown;
-              return null;
-            }
-            if (!restText) {
-              if (kicker.kind === "interview") pendingVisual = !visualShown;
-              return null;
-            }
-            if (kicker.kind === "interview") {
-              return (
-                <>
-                  {renderProse(rest)}
-                  {takeVisual()}
-                </>
-              );
-            }
-            const before = pendingVisual ? takeVisual() : null;
-            return (
-              <>
-                {before}
-                {renderProse(rest)}
-              </>
-            );
-          }
-
-          // Utility chrome + contextual journey titles: visible standalone headings.
-          if (kicker.kind === "interview") {
-            if (restText) {
-              return (
-                <>
-                  <h2 className="ih-lesson-kicker">{kicker.title}</h2>
-                  {renderProse(rest)}
-                  {takeVisual()}
-                </>
-              );
-            }
-            pendingVisual = !visualShown;
-            return <h2 className="ih-lesson-kicker">{kicker.title}</h2>;
-          }
-          const before = pendingVisual ? takeVisual() : null;
+          const restText = textContent(rest).trim();
           return (
             <>
-              {before}
-              <h2 className="ih-lesson-kicker">{kicker.title}</h2>
-              {restText ? renderProse(rest) : null}
+              <h2 className="ih-lesson-kicker">{cleanLabel}</h2>
+              {restText ? <p>{formatCopy(rest)}</p> : null}
             </>
           );
         }
       }
-      if (pendingVisual) {
-        return (
-          <>
-            {renderProse(children)}
-            {takeVisual()}
-          </>
-        );
-      }
-      return renderProse(children);
+      return <p>{formatCopy(children)}</p>;
     },
     li({ children }) {
-      const bits = Array.isArray(children) ? children : [children];
-      const first = bits[0];
-      if (isValidElement<{ children?: React.ReactNode }>(first) && first.type === "strong") {
-        const heading = memoryHeading(textContent(first.props.children).trim());
-        if (heading) {
-          const rest = bits.slice(1);
-          return (
-            <li>
-              <strong>{heading}:</strong> {textContent(rest).trim() ? formatCopy(rest) : null}
-            </li>
-          );
-        }
-      }
       return <li>{formatCopy(children)}</li>;
     },
     blockquote({ children }) {
@@ -342,16 +256,40 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYou
       return <CodeBlock language={language} code={source} />;
     },
     hr() {
-      if (!visualShown) return takeVisual();
-      return null;
+      return <hr />;
     },
     table({ children, ...props }) { return <div className="table-wrap" role="region" aria-label="Scrollable table" tabIndex={0}><table {...props}>{children}</table></div>; },
   };
 
+  const segments = segmentMarkdown(markdown);
+
   return (
     <article className="markdown-body">
-      <ReactMarkdown remarkPlugins={[remarkMath, remarkGfm, remarkSafeNamedAnchors, remarkPlaygroundMeta]} rehypePlugins={[rehypeSlug, rehypeKatex, rehypeHighlight]} components={components} skipHtml>{body}</ReactMarkdown>
-      {takeVisual()}
+      {segments.map((segment, index) => {
+        if (segment.kind === "visual") {
+          return (
+            <VisualLearning
+              key={index}
+              resources={segment.resources}
+              sourcePath={sourcePath}
+              heading={segment.heading}
+              embedYouTube={embedYouTube}
+            />
+          );
+        }
+        const body = withMarkdownMath(segment.text);
+        return (
+          <ReactMarkdown
+            key={index}
+            remarkPlugins={[remarkMath, remarkGfm, remarkSafeNamedAnchors, remarkPlaygroundMeta]}
+            rehypePlugins={[rehypeSlug, rehypeKatex, rehypeHighlight]}
+            components={components}
+            skipHtml
+          >
+            {body}
+          </ReactMarkdown>
+        );
+      })}
     </article>
   );
 }

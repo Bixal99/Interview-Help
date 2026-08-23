@@ -6,11 +6,17 @@ import type { ProjectBrief } from "../lib/parse-project-brief";
 
 const emptyBrief: ProjectBrief = {
   title: "Fallback",
+  kind: "code",
+  chapterOutcome: "Practice testing",
+  lessonCoverage: [],
   topic: "testing",
   intro: "",
   spec: ["Do the thing"],
+  deliverables: ["Working result"],
   tech: [],
   steps: ["Create src, tests, and examples folders"],
+  validation: ["Normal case"],
+  completionCriteria: ["Done"],
   gitBody: null,
 };
 
@@ -27,14 +33,12 @@ describe("project starters", () => {
     expect(project.files["tests/test_runtime.py"]).toContain("def test_normal");
   });
 
-  it("turns every project starter into a file tree", () => {
+  it("returns file trees only for explicitly registered starters", () => {
     const phase5 = getProjectStarter("cs-phase-5-project", emptyBrief);
     const phase31 = getProjectStarter("cs-phase-31-project", emptyBrief);
     const other = getProjectStarter("unknown-project", emptyBrief);
-    expect(isProjectVfs(phase5.project)).toBe(true);
-    expect(isProjectVfs(phase31.project)).toBe(true);
-    expect(isProjectVfs(other.project)).toBe(true);
-    expect(other.project.entryFile).toBe("src/main.py");
-    expect(other.project.folders).toEqual(expect.arrayContaining(["src", "tests", "examples"]));
+    expect(phase5 && isProjectVfs(phase5.project)).toBe(true);
+    expect(phase31 && isProjectVfs(phase31.project)).toBe(true);
+    expect(other).toBeNull();
   });
 });

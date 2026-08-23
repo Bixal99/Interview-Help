@@ -1,0 +1,974 @@
+{
+  "lessons": {
+    "1.1": [
+      {
+        "type": "video",
+        "title": "But what is a neural network? (3Blue1Brown)",
+        "description": "Intuition before math",
+        "url": "https://www.youtube.com/watch?v=aircAruvnKk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/aircAruvnKk/hqdefault.jpg",
+        "videoId": "aircAruvnKk",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Neural Networks Explained in 5 minutes (IBM Technology)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=jmmW0F0biz0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/jmmW0F0biz0/hqdefault.jpg",
+        "videoId": "jmmW0F0biz0",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Advice for ML beginners (Karpathy / Lex)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=I2ZK3ngNvvI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/I2ZK3ngNvvI/hqdefault.jpg",
+        "videoId": "I2ZK3ngNvvI",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "Google ML Crash Course",
+        "description": "",
+        "url": "https://developers.google.com/machine-learning/crash-course",
+        "source": "developers.google.com"
+      },
+      {
+        "type": "reference",
+        "title": "Vibe Engines AI Engineer Roadmap",
+        "description": "",
+        "url": "https://vibeengines.com/roadmap/ai-engineer",
+        "source": "vibeengines.com"
+      },
+      {
+        "type": "github",
+        "title": "josephmisiti/awesome-machine-learning",
+        "description": "",
+        "url": "https://github.com/josephmisiti/awesome-machine-learning",
+        "source": "GitHub"
+      }
+    ],
+    "2.1": [
+      {
+        "type": "video",
+        "title": "How word vectors encode meaning (3Blue1Brown)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=FJtFZwbvkI4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/FJtFZwbvkI4/hqdefault.jpg",
+        "videoId": "FJtFZwbvkI4",
+        "embedSupported": true
+      }
+    ],
+    "2.2": [
+      {
+        "type": "video",
+        "title": "Gradient descent, how neural networks learn (3Blue1Brown)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=IHZwWFHWa-w",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/IHZwWFHWa-w/hqdefault.jpg",
+        "videoId": "IHZwWFHWa-w",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Gradient Descent, Step-by-Step (StatQuest)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=sDv4f4s2SB8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/sDv4f4s2SB8/hqdefault.jpg",
+        "videoId": "sDv4f4s2SB8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Stochastic Gradient Descent (StatQuest)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=vMh0zPT0tLI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/vMh0zPT0tLI/hqdefault.jpg",
+        "videoId": "vMh0zPT0tLI",
+        "embedSupported": true
+      }
+    ],
+    "3.1": [
+      {
+        "type": "github",
+        "title": "yunjey/pytorch-tutorial",
+        "description": "Later, but shapes start here",
+        "url": "https://github.com/yunjey/pytorch-tutorial",
+        "source": "GitHub"
+      }
+    ],
+    "7.1": [
+      {
+        "type": "video",
+        "title": "But what is a neural network? (3Blue1Brown)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=aircAruvnKk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/aircAruvnKk/hqdefault.jpg",
+        "videoId": "aircAruvnKk",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Neural Networks Explained in 5 minutes (IBM)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=jmmW0F0biz0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/jmmW0F0biz0/hqdefault.jpg",
+        "videoId": "jmmW0F0biz0",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Karpathy micrograd intro",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=VMj-3S1tku0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/VMj-3S1tku0/hqdefault.jpg",
+        "videoId": "VMj-3S1tku0",
+        "embedSupported": true
+      },
+      {
+        "type": "github",
+        "title": "karpathy/micrograd",
+        "description": "",
+        "url": "https://github.com/karpathy/micrograd",
+        "source": "GitHub"
+      }
+    ],
+    "8.1": [
+      {
+        "type": "video",
+        "title": "Backpropagation, intuitively (3Blue1Brown)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=Ilg3gGewQ5U",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Ilg3gGewQ5U/hqdefault.jpg",
+        "videoId": "Ilg3gGewQ5U",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Backpropagation calculus (3Blue1Brown)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=tIeHLnjs5U8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/tIeHLnjs5U8/hqdefault.jpg",
+        "videoId": "tIeHLnjs5U8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "StatQuest Backpropagation Main Ideas",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=IN2XmBhILt4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/IN2XmBhILt4/hqdefault.jpg",
+        "videoId": "IN2XmBhILt4",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Karpathy micrograd video",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=VMj-3S1tku0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/VMj-3S1tku0/hqdefault.jpg",
+        "videoId": "VMj-3S1tku0",
+        "embedSupported": true
+      },
+      {
+        "type": "github",
+        "title": "karpathy/micrograd",
+        "description": "",
+        "url": "https://github.com/karpathy/micrograd",
+        "source": "GitHub"
+      }
+    ],
+    "8.2": [
+      {
+        "type": "video",
+        "title": "SGD Clearly Explained (StatQuest)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=vMh0zPT0tLI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/vMh0zPT0tLI/hqdefault.jpg",
+        "videoId": "vMh0zPT0tLI",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Gradient Descent (3Blue1Brown)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=IHZwWFHWa-w",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/IHZwWFHWa-w/hqdefault.jpg",
+        "videoId": "IHZwWFHWa-w",
+        "embedSupported": true
+      }
+    ],
+    "9.1": [
+      {
+        "type": "github",
+        "title": "yunjey/pytorch-tutorial",
+        "description": "",
+        "url": "https://github.com/yunjey/pytorch-tutorial",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "pytorch/tutorials",
+        "description": "",
+        "url": "https://github.com/pytorch/tutorials",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "patrickloeber/pytorchTutorial",
+        "description": "",
+        "url": "https://github.com/patrickloeber/pytorchTutorial",
+        "source": "GitHub"
+      }
+    ],
+    "10.1": [
+      {
+        "type": "reference",
+        "title": "CS231n",
+        "description": "",
+        "url": "https://cs231n.stanford.edu/",
+        "source": "cs231n.stanford.edu"
+      },
+      {
+        "type": "github",
+        "title": "pytorch vision tutorials",
+        "description": "",
+        "url": "https://github.com/pytorch/tutorials",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "Netron",
+        "description": "",
+        "url": "https://github.com/lutzroeder/netron",
+        "source": "GitHub"
+      }
+    ],
+    "10.2": [
+      {
+        "type": "reference",
+        "title": "fast.ai",
+        "description": "",
+        "url": "https://course.fast.ai/",
+        "source": "course.fast.ai"
+      }
+    ],
+    "11.2": [
+      {
+        "type": "video",
+        "title": "Karpathy makemore",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=PaCmpygFfXo",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/PaCmpygFfXo/hqdefault.jpg",
+        "videoId": "PaCmpygFfXo",
+        "embedSupported": true
+      }
+    ],
+    "12.1": [
+      {
+        "type": "video",
+        "title": "Word Embedding and Word2Vec (StatQuest)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=viZrOnJclY0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/viZrOnJclY0/hqdefault.jpg",
+        "videoId": "viZrOnJclY0",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How word vectors encode meaning (3Blue1Brown)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=FJtFZwbvkI4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/FJtFZwbvkI4/hqdefault.jpg",
+        "videoId": "FJtFZwbvkI4",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Word Embeddings: Word2Vec (Hex)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=iErmK_sJtag",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/iErmK_sJtag/hqdefault.jpg",
+        "videoId": "iErmK_sJtag",
+        "embedSupported": true
+      }
+    ],
+    "13.1": [
+      {
+        "type": "video",
+        "title": "Attention in transformers, step-by-step (3Blue1Brown)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=eMlx5fFNoYc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/eMlx5fFNoYc/hqdefault.jpg",
+        "videoId": "eMlx5fFNoYc",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Transformers, the tech behind LLMs (3Blue1Brown)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=wjZofJX0v4M",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/wjZofJX0v4M/hqdefault.jpg",
+        "videoId": "wjZofJX0v4M",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Transformers Step-by-Step (ByteByteGo)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=avjX3QrYkls",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/avjX3QrYkls/hqdefault.jpg",
+        "videoId": "avjX3QrYkls",
+        "embedSupported": true
+      },
+      {
+        "type": "github",
+        "title": "karpathy/nanoGPT",
+        "description": "",
+        "url": "https://github.com/karpathy/nanoGPT",
+        "source": "GitHub"
+      }
+    ],
+    "13.2": [
+      {
+        "type": "video",
+        "title": "Grant Sanderson talk on visualizing transformers",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=KJtZARuO3JY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/KJtZARuO3JY/hqdefault.jpg",
+        "videoId": "KJtZARuO3JY",
+        "embedSupported": true
+      },
+      {
+        "type": "github",
+        "title": "huggingface/transformers",
+        "description": "",
+        "url": "https://github.com/huggingface/transformers",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "huggingface/course",
+        "description": "",
+        "url": "https://github.com/huggingface/course",
+        "source": "GitHub"
+      }
+    ],
+    "14.1": [
+      {
+        "type": "video",
+        "title": "Deep Dive into LLMs like ChatGPT (Karpathy)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=7xTGNNLPyMI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/7xTGNNLPyMI/hqdefault.jpg",
+        "videoId": "7xTGNNLPyMI",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "9 AI Concepts Explained (ByteByteAI)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=nVnxG10D5W0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/nVnxG10D5W0/hqdefault.jpg",
+        "videoId": "nVnxG10D5W0",
+        "embedSupported": true
+      },
+      {
+        "type": "github",
+        "title": "mlabonne/llm-course",
+        "description": "",
+        "url": "https://github.com/mlabonne/llm-course",
+        "source": "GitHub"
+      },
+      {
+        "type": "reference",
+        "title": "Vibe Engines AI Engineer",
+        "description": "",
+        "url": "https://vibeengines.com/roadmap/ai-engineer",
+        "source": "vibeengines.com"
+      }
+    ],
+    "15.1": [
+      {
+        "type": "video",
+        "title": "What is RAG? (IBM Technology)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=T-D1OfcDW1M",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/T-D1OfcDW1M/hqdefault.jpg",
+        "videoId": "T-D1OfcDW1M",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "RAG Explained For Beginners (KodeKloud)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=_HQ2H_0Ayy0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/_HQ2H_0Ayy0/hqdefault.jpg",
+        "videoId": "_HQ2H_0Ayy0",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "codebasics RAG",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=dDkynerzV-Q",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/dDkynerzV-Q/hqdefault.jpg",
+        "videoId": "dDkynerzV-Q",
+        "embedSupported": true
+      },
+      {
+        "type": "github",
+        "title": "run-llama/llama_index",
+        "description": "",
+        "url": "https://github.com/run-llama/llama_index",
+        "source": "GitHub"
+      }
+    ],
+    "15.2": [
+      {
+        "type": "video",
+        "title": "What is Agentic RAG? (IBM)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=0z9_MhcYvcY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/0z9_MhcYvcY/hqdefault.jpg",
+        "videoId": "0z9_MhcYvcY",
+        "embedSupported": true
+      }
+    ],
+    "16.1": [
+      {
+        "type": "video",
+        "title": "LoRA & QLoRA Fine-tuning Explained (Mark Hennings)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=t1caDsMzWBk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/t1caDsMzWBk/hqdefault.jpg",
+        "videoId": "t1caDsMzWBk",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "LoRA/QLoRA Explained Simply (Wes Roth)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=lixMONUAjfs",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/lixMONUAjfs/hqdefault.jpg",
+        "videoId": "lixMONUAjfs",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Keerti Purswani LoRA internals",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=3LGw54I9FDs",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/3LGw54I9FDs/hqdefault.jpg",
+        "videoId": "3LGw54I9FDs",
+        "embedSupported": true
+      },
+      {
+        "type": "github",
+        "title": "mlabonne/llm-course",
+        "description": "",
+        "url": "https://github.com/mlabonne/llm-course",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "huggingface/peft",
+        "description": "",
+        "url": "https://github.com/huggingface/peft",
+        "source": "GitHub"
+      }
+    ],
+    "17.1": [
+      {
+        "type": "video",
+        "title": "Build a ReAct Agent with LangGraph",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=eRo1DvdL6pI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/eRo1DvdL6pI/hqdefault.jpg",
+        "videoId": "eRo1DvdL6pI",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Building a LangGraph ReAct Mini Agent (Sam Witteveen)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=pEMhPBQMNjg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/pEMhPBQMNjg/hqdefault.jpg",
+        "videoId": "pEMhPBQMNjg",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Building Effective Agents with LangGraph",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=aHCDrAbH_go",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/aHCDrAbH_go/hqdefault.jpg",
+        "videoId": "aHCDrAbH_go",
+        "embedSupported": true
+      },
+      {
+        "type": "github",
+        "title": "langchain-ai/langgraph",
+        "description": "",
+        "url": "https://github.com/langchain-ai/langgraph",
+        "source": "GitHub"
+      }
+    ],
+    "18.1": [
+      {
+        "type": "github",
+        "title": "EthicalML/awesome-production-machine-learning",
+        "description": "",
+        "url": "https://github.com/EthicalML/awesome-production-machine-learning",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "mlabonne/llm-course",
+        "description": "",
+        "url": "https://github.com/mlabonne/llm-course",
+        "source": "GitHub"
+      }
+    ],
+    "18.2": [
+      {
+        "type": "github",
+        "title": "BerriAI/litellm",
+        "description": "",
+        "url": "https://github.com/BerriAI/litellm",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "HuaizhengZhang/AI-Infra-from-Zero-to-Hero",
+        "description": "",
+        "url": "https://github.com/HuaizhengZhang/AI-Infra-from-Zero-to-Hero",
+        "source": "GitHub"
+      }
+    ],
+    "19.1": [
+      {
+        "type": "github",
+        "title": "ashishpatel26/500-AI-...Projects",
+        "description": "Ideas, not copy-paste",
+        "url": "https://github.com/ashishpatel26/500-AI-Machine-learning-Deep-learning-Computer-vision-NLP-Projects-with-code",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "NirantK/awesome-project-ideas",
+        "description": "",
+        "url": "https://github.com/NirantK/awesome-project-ideas",
+        "source": "GitHub"
+      }
+    ],
+    "1.2": [
+      {
+        "type": "video",
+        "title": "Cross Validation",
+        "description": "Train/validation/test splits for honest generalization.",
+        "url": "https://www.youtube.com/watch?v=fSytzGwwBVw",
+        "source": "YouTube",
+        "channel": "StatQuest",
+        "videoId": "fSytzGwwBVw",
+        "thumbnail": "https://i.ytimg.com/vi/fSytzGwwBVw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Underfitting & Overfitting Explained",
+        "description": "Why held-out data reveals true performance.",
+        "url": "https://www.youtube.com/watch?v=o3DztvnfAJg",
+        "source": "YouTube",
+        "channel": "NStatum",
+        "videoId": "o3DztvnfAJg",
+        "thumbnail": "https://i.ytimg.com/vi/o3DztvnfAJg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "3.2": [
+      {
+        "type": "video",
+        "title": "What is Pandas? Why and How to Use Pandas in Python",
+        "description": "Quick pandas tour for exploratory analysis.",
+        "url": "https://www.youtube.com/watch?v=dcqPhpY7tWk",
+        "source": "YouTube",
+        "channel": "Python Programmer",
+        "videoId": "dcqPhpY7tWk",
+        "thumbnail": "https://i.ytimg.com/vi/dcqPhpY7tWk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "Pandas documentation",
+        "description": "Official docs for DataFrame operations and plotting.",
+        "url": "https://pandas.pydata.org/docs/",
+        "source": "Pandas",
+        "difficulty": "beginner"
+      }
+    ],
+    "4.1": [
+      {
+        "type": "video",
+        "title": "Gradient Descent in 3 Minutes",
+        "description": "Linear regression as loss minimization.",
+        "url": "https://www.youtube.com/watch?v=qg4PchTECck",
+        "source": "YouTube",
+        "channel": "Visually Explained",
+        "videoId": "qg4PchTECck",
+        "thumbnail": "https://i.ytimg.com/vi/qg4PchTECck/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Gradient Descent, How Neural Networks Learn",
+        "description": "Loss landscapes and weight updates.",
+        "url": "https://www.youtube.com/watch?v=IHZwWFHWa-w",
+        "source": "YouTube",
+        "channel": "3Blue1Brown",
+        "videoId": "IHZwWFHWa-w",
+        "thumbnail": "https://i.ytimg.com/vi/IHZwWFHWa-w/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "4.2": [
+      {
+        "type": "video",
+        "title": "StatQuest: Logistic Regression",
+        "description": "Decision boundaries and sigmoid outputs.",
+        "url": "https://www.youtube.com/watch?v=yIYKR4sgzI8",
+        "source": "YouTube",
+        "channel": "StatQuest",
+        "videoId": "yIYKR4sgzI8",
+        "thumbnail": "https://i.ytimg.com/vi/yIYKR4sgzI8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.1": [
+      {
+        "type": "video",
+        "title": "ROC and AUC, Clearly Explained!",
+        "description": "Metrics beyond accuracy for imbalanced data.",
+        "url": "https://www.youtube.com/watch?v=4jRBRDbJemM",
+        "source": "YouTube",
+        "channel": "StatQuest",
+        "videoId": "4jRBRDbJemM",
+        "thumbnail": "https://i.ytimg.com/vi/4jRBRDbJemM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.2": [
+      {
+        "type": "video",
+        "title": "Cross Validation",
+        "description": "K-fold validation and variance estimation.",
+        "url": "https://www.youtube.com/watch?v=fSytzGwwBVw",
+        "source": "YouTube",
+        "channel": "StatQuest",
+        "videoId": "fSytzGwwBVw",
+        "thumbnail": "https://i.ytimg.com/vi/fSytzGwwBVw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Underfitting & Overfitting Explained",
+        "description": "Bias-variance tradeoff intuition.",
+        "url": "https://www.youtube.com/watch?v=o3DztvnfAJg",
+        "source": "YouTube",
+        "channel": "NStatum",
+        "videoId": "o3DztvnfAJg",
+        "thumbnail": "https://i.ytimg.com/vi/o3DztvnfAJg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "6.1": [
+      {
+        "type": "video",
+        "title": "Decision and Classification Trees, Clearly Explained",
+        "description": "How trees split features.",
+        "url": "https://www.youtube.com/watch?v=_L39rN6gz7Y",
+        "source": "YouTube",
+        "channel": "StatQuest",
+        "videoId": "_L39rN6gz7Y",
+        "thumbnail": "https://i.ytimg.com/vi/_L39rN6gz7Y/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "What is Random Forest?",
+        "description": "Ensemble of trees for robust predictions.",
+        "url": "https://www.youtube.com/watch?v=gkXX4h3qYm4",
+        "source": "YouTube",
+        "channel": "IBM Technology",
+        "videoId": "gkXX4h3qYm4",
+        "thumbnail": "https://i.ytimg.com/vi/gkXX4h3qYm4/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "6.2": [
+      {
+        "type": "video",
+        "title": "Decision Trees, Random Forests and Gradient Boosting",
+        "description": "Boosting vs bagging comparison.",
+        "url": "https://www.youtube.com/watch?v=uV2gdNt2MLc",
+        "source": "YouTube",
+        "channel": "Leon Lok",
+        "videoId": "uV2gdNt2MLc",
+        "thumbnail": "https://i.ytimg.com/vi/uV2gdNt2MLc/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "7.2": [
+      {
+        "type": "video",
+        "title": "Underfitting & Overfitting Explained",
+        "description": "Regularization and early stopping context.",
+        "url": "https://www.youtube.com/watch?v=o3DztvnfAJg",
+        "source": "YouTube",
+        "channel": "NStatum",
+        "videoId": "o3DztvnfAJg",
+        "thumbnail": "https://i.ytimg.com/vi/o3DztvnfAJg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "Scikit-learn regularization",
+        "description": "Dropout equivalents and penalty terms in classical ML.",
+        "url": "https://scikit-learn.org/stable/modules/linear_model.html",
+        "source": "scikit-learn",
+        "difficulty": "beginner"
+      }
+    ],
+    "9.2": [
+      {
+        "type": "video",
+        "title": "Gradient Descent, How Neural Networks Learn",
+        "description": "Training loops and debugging loss curves.",
+        "url": "https://www.youtube.com/watch?v=IHZwWFHWa-w",
+        "source": "YouTube",
+        "channel": "3Blue1Brown",
+        "videoId": "IHZwWFHWa-w",
+        "thumbnail": "https://i.ytimg.com/vi/IHZwWFHWa-w/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "github",
+        "title": "PyTorch tutorials",
+        "description": "Official examples for datasets and training loops.",
+        "url": "https://github.com/pytorch/tutorials",
+        "source": "GitHub",
+        "difficulty": "beginner"
+      }
+    ],
+    "11.1": [
+      {
+        "type": "video",
+        "title": "Recurrent Neural Networks (RNNs), Clearly Explained",
+        "description": "State carried across time steps.",
+        "url": "https://www.youtube.com/watch?v=AsNTP8Kwu80",
+        "source": "YouTube",
+        "channel": "StatQuest",
+        "videoId": "AsNTP8Kwu80",
+        "thumbnail": "https://i.ytimg.com/vi/AsNTP8Kwu80/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "12.2": [
+      {
+        "type": "video",
+        "title": "Attention in Transformers, Step-by-Step",
+        "description": "Similarity and retrieval in vector spaces.",
+        "url": "https://www.youtube.com/watch?v=eMlx5fFNoYc",
+        "source": "YouTube",
+        "channel": "3Blue1Brown",
+        "videoId": "eMlx5fFNoYc",
+        "thumbnail": "https://i.ytimg.com/vi/eMlx5fFNoYc/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "14.2": [
+      {
+        "type": "video",
+        "title": "Illustrated Guide to Transformers",
+        "description": "Prompting patterns via attention mechanics.",
+        "url": "https://www.youtube.com/watch?v=4Bdc55j80l8",
+        "source": "YouTube",
+        "channel": "The AI Hacker",
+        "videoId": "4Bdc55j80l8",
+        "thumbnail": "https://i.ytimg.com/vi/4Bdc55j80l8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "OpenAI prompt engineering guide",
+        "description": "Patterns and failure modes for LLM prompts.",
+        "url": "https://platform.openai.com/docs/guides/prompt-engineering",
+        "source": "OpenAI",
+        "difficulty": "beginner"
+      }
+    ],
+    "16.2": [
+      {
+        "type": "article",
+        "title": "RLHF explained (Hugging Face)",
+        "description": "Preferences, alignment, and safety trade-offs.",
+        "url": "https://huggingface.co/blog/rlhf",
+        "source": "Hugging Face",
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Attention in Transformers, Step-by-Step",
+        "description": "Foundation for preference modeling in LLMs.",
+        "url": "https://www.youtube.com/watch?v=eMlx5fFNoYc",
+        "source": "YouTube",
+        "channel": "3Blue1Brown",
+        "videoId": "eMlx5fFNoYc",
+        "thumbnail": "https://i.ytimg.com/vi/eMlx5fFNoYc/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "17.2": [
+      {
+        "type": "documentation",
+        "title": "LangGraph docs",
+        "description": "Memory, graphs, and human-in-the-loop agents.",
+        "url": "https://langchain-ai.github.io/langgraph/",
+        "source": "LangChain",
+        "difficulty": "beginner"
+      },
+      {
+        "type": "github",
+        "title": "LangGraph examples",
+        "description": "Reference agent workflows with memory.",
+        "url": "https://github.com/langchain-ai/langgraph",
+        "source": "GitHub",
+        "difficulty": "beginner"
+      }
+    ],
+    "19.2": [
+      {
+        "type": "documentation",
+        "title": "ML reproducibility checklist",
+        "description": "Versioning data, code, and environment.",
+        "url": "https://ml-ops.org/content/reproducible-ml",
+        "source": "MLOps Community",
+        "difficulty": "beginner"
+      },
+      {
+        "type": "github",
+        "title": "DVC — Data Version Control",
+        "description": "Track datasets and experiments reproducibly.",
+        "url": "https://github.com/iterative/dvc",
+        "source": "GitHub",
+        "difficulty": "beginner"
+      }
+    ],
+    "20.1": [
+      {
+        "type": "video",
+        "title": "Cross Validation",
+        "description": "Core ML drill: splits and metrics.",
+        "url": "https://www.youtube.com/watch?v=fSytzGwwBVw",
+        "source": "YouTube",
+        "channel": "StatQuest",
+        "videoId": "fSytzGwwBVw",
+        "thumbnail": "https://i.ytimg.com/vi/fSytzGwwBVw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Decision and Classification Trees, Clearly Explained",
+        "description": "Explain-like-production tree models.",
+        "url": "https://www.youtube.com/watch?v=_L39rN6gz7Y",
+        "source": "YouTube",
+        "channel": "StatQuest",
+        "videoId": "_L39rN6gz7Y",
+        "thumbnail": "https://i.ytimg.com/vi/_L39rN6gz7Y/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "20.2": [
+      {
+        "type": "video",
+        "title": "Illustrated Guide to Transformers",
+        "description": "LLM system design building blocks.",
+        "url": "https://www.youtube.com/watch?v=4Bdc55j80l8",
+        "source": "YouTube",
+        "channel": "The AI Hacker",
+        "videoId": "4Bdc55j80l8",
+        "thumbnail": "https://i.ytimg.com/vi/4Bdc55j80l8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "OpenAI API docs",
+        "description": "Production LLM integration patterns.",
+        "url": "https://platform.openai.com/docs/",
+        "source": "OpenAI",
+        "difficulty": "beginner"
+      }
+    ]
+  },
+  "phases": {},
+  "projects": {}
+}

@@ -4,19 +4,20 @@ import { cache } from "react";
 import { catalogBySlug, contentBySlug, courseCatalog, courseBarLabels, guideRegistry, type CourseDefinition } from "./course-catalog";
 import { extractHeadings, stripMarkdown, type Heading } from "./content-utils";
 import { chaptersFor, learningPaths, pathForCourse, sequentialPath } from "./learning-paths";
-import type { ParsedCourse, SearchHit } from "./learning-model";
+import type { ChapterRequirementLookup, ParsedCourse, SearchHit } from "./learning-model";
 import { coursePages, firstLessonHref, firstPhaseHref, neighborsFor, type CourseNav, type Neighbor } from "./navigation";
 import { findLesson, findPhase, headingRouteMap, lessonPath, parseCourseMarkdown, phasePath, projectPathFor, withSourcePath } from "./parse-course";
-import { attachProjects, allProjectsByCourse, parseProjectsDocument } from "./parse-projects";
+import { attachProjects, parseProjectsDocument } from "./parse-projects";
 import { parseProjectBrief } from "./parse-project-brief";
 import { parseInterviewPlaybook } from "./parse-interview";
 import type { ProjectStudioCourse } from "./studio-types";
 import { extractCompleteCta } from "./complete-cta";
-import { extractProjectNav, extractWhatComesNext, projectProceedLabel, projectReviewLabel } from "./lesson-sections";
-import { extractPractice, withoutPractice } from "./practice";
+import { extractProjectNav, projectProceedLabel, projectReviewLabel } from "./lesson-sections";
+import { extractPractice } from "./practice";
 import { lookupFromCourses } from "./progress-lookup";
 import { nextStep, previousStep } from "./progress-storage";
 import { projectPath } from "./paths";
+import { buildUnitGlossary, glossaryPath, stripLessonGlossaryTerms } from "./unit-glossary";
 
 export type CourseSummary = CourseDefinition & {
   title: string;
@@ -36,32 +37,44 @@ export const readMarkdown = cache((sourcePath: string) => {
   return fs.readFileSync(fullPath, "utf8");
 });
 
-export const getAllProjects = cache(() => parseProjectsDocument(readMarkdown("content/guides/Projects.md")));
+export const getAllProjects = cache(() =>
+  courseCatalog.flatMap((course) => parseProjectsDocument(readMarkdown(course.projectSourcePath), course.projectSourcePath)),
+);
 
 export const getInterviewPlaybook = cache(() => parseInterviewPlaybook(readMarkdown("content/guides/Interview.md")));
 
 export const getProjectStudio = cache((): ProjectStudioCourse[] => {
-  const grouped = allProjectsByCourse(getAllProjects());
   return courseCatalog.flatMap((course) => {
-    const items = grouped.get(course.slug);
-    if (!items?.length) return [];
+    const parsed = getParsedCourse(course.slug);
+    if (!parsed) return [];
+    const units = chaptersFor(course.slug, parsed.phases.map((phase) => phase.id));
+    const unitByPhase = new Map(units.flatMap((unit) => unit.phaseIds.map((phaseId) => [phaseId, unit] as const)));
+    const items = parsed.phases.flatMap((phase) => {
+      if (!phase.project) return [];
+      const unit = unitByPhase.get(phase.id);
+      if (!unit) return [];
+      const brief = parseProjectBrief(phase.project.markdown);
+      return [{
+        id: phase.project.id,
+        phaseId: phase.id,
+        chapterNumber: phase.number,
+        unitId: unit.id,
+        unitTitle: unit.title,
+        kind: brief.kind,
+        title: brief.title || phase.project.title,
+        intro: brief.intro,
+        topic: brief.topic,
+        tech: brief.tech.slice(0, 4),
+        href: `/projects/${course.slug}/phase/${phase.id}`,
+      }];
+    });
+    if (!items.length) return [];
     return [{
       slug: course.slug,
       shortName: course.shortName,
       barLabel: courseBarLabels[course.slug] ?? course.shortName,
       description: course.description,
-      items: items.map((project) => {
-        const brief = parseProjectBrief(project.markdown);
-        return {
-          id: project.id,
-          phaseId: project.phaseId,
-          title: brief.title || project.title,
-          intro: brief.intro,
-          topic: brief.topic,
-          tech: brief.tech.slice(0, 4),
-          href: `/projects/${course.slug}/phase/${project.phaseId}`,
-        };
-      }),
+      items,
     }];
   });
 });
@@ -120,6 +133,19 @@ export const getCourseChapters = cache((slug: string) => {
 
 export const getProgressLookup = cache(() => lookupFromCourses(getCourses()));
 
+export const getChapterRequirements = cache((): ChapterRequirementLookup =>
+  Object.fromEntries(getCourses().map((course) => [
+    course.slug,
+    Object.fromEntries(course.phases.map((phase) => [phase.id, {
+      lessons: phase.lessons
+        .filter((lesson) => lesson.kind === "lesson")
+        .map((lesson) => ({ id: lesson.id, href: lessonPath(course.slug, phase.id, lesson) })),
+      projectRequired: Boolean(phase.project),
+      projectHref: phase.project ? projectPathFor(course.slug, phase.id) : undefined,
+    }])),
+  ])),
+);
+
 export function toCourseNav(course: NonNullable<ReturnType<typeof getParsedCourse>>): CourseNav {
   const chapters = chaptersFor(course.slug, course.phases.map((phase) => phase.id));
   const phaseMap = Object.fromEntries(course.phases.map((phase) => [phase.id, phase]));
@@ -133,6 +159,7 @@ export function toCourseNav(course: NonNullable<ReturnType<typeof getParsedCours
       id: chapter.id,
       title: chapter.title,
       summary: chapter.summary,
+      glossaryHref: glossaryPath(course.slug, chapter.id),
       phases: chapter.phaseIds.flatMap((id) => {
         const phase = phaseMap[id];
         if (!phase) return [];
@@ -142,9 +169,12 @@ export function toCourseNav(course: NonNullable<ReturnType<typeof getParsedCours
           title: phase.title,
           goal: phase.goal,
           hasProject: Boolean(phase.project),
+          projectTitle: phase.project ? parseProjectBrief(phase.project.markdown).title || phase.project.title : undefined,
+          projectKind: phase.project ? parseProjectBrief(phase.project.markdown).kind : undefined,
           lessons: phase.lessons.map((lesson) => ({
             id: lesson.id,
             slug: lesson.slug,
+            kind: lesson.kind,
             title: lesson.title,
             children: lesson.children,
           })),
@@ -184,13 +214,18 @@ export function getLessonView(slug: string, phaseId: string, lessonSlug: string)
   const pages = coursePages(course);
   const href = lessonPath(slug, phaseId, lesson);
   const { prev, next } = neighborsFor(pages, href);
-  const practice = extractPractice(lesson.markdown);
   const sourcePath = lesson.sourcePath ?? phase.sourcePath ?? course.sourcePath;
-  const withoutComplete = extractCompleteCta(withoutPractice(lesson.markdown, practice), sourcePath).markdown;
-  const { markdown, whatComesNext } = extractWhatComesNext(withoutComplete);
-  const lessonIndex = phase.lessons.findIndex((item) => item.slug === lesson.slug);
-  const isFirstLesson = lessonIndex === 0;
-  const isLastLesson = lessonIndex === phase.lessons.length - 1;
+  const practice = extractPractice(lesson.markdown);
+  const bodyWithoutPractice = practice
+    ? lesson.markdown.replace(practice.raw, "").replace(/\n{3,}/g, "\n\n").trim()
+    : lesson.markdown;
+  const withoutTopHeading = bodyWithoutPractice.replace(/^#{1,3}\s+[^\n]+\n+/, "").trim();
+  const withoutGlossary = stripLessonGlossaryTerms(withoutTopHeading);
+  const markdown = extractCompleteCta(withoutGlossary, sourcePath).markdown;
+  const regularLessons = phase.lessons.filter((item) => item.kind === "lesson");
+  const lessonIndex = regularLessons.findIndex((item) => item.slug === lesson.slug);
+  const isFirstLesson = lesson.kind === "lesson" && lessonIndex === 0;
+  const isLastLesson = lesson.kind === "lesson" && lessonIndex === regularLessons.length - 1;
   const projectHref = phase.project ? projectPathFor(slug, phaseId) : null;
   return {
     course: { slug: course.slug, shortName: course.shortName, sourcePath },
@@ -212,9 +247,6 @@ export function getLessonView(slug: string, phaseId: string, lessonSlug: string)
       codeExamples: lesson.codeExamples,
     },
     practice,
-    // Show whenever the lesson authors a handoff — including mid-phase (61.1→61.2)
-    // and last lessons that also have a project (practice → handoff → project nav).
-    whatComesNext,
     isFirstLesson,
     isLastLesson,
     projectHref,
@@ -250,24 +282,35 @@ export function getProjectView(slug: string, phaseId: string) {
   if (!phase?.project) return null;
   const pages = coursePages(course);
   const href = projectPathFor(slug, phaseId);
-  const { prev } = neighborsFor(pages, href);
-  const next = nextAfterProject(course, phaseId) ?? neighborsFor(pages, href).next;
+  const projectNeighbors = neighborsFor(pages, href);
+  const { prev } = projectNeighbors;
+  const next = projectNeighbors.next?.phaseId === phaseId
+    ? projectNeighbors.next
+    : nextAfterProject(course, phaseId) ?? projectNeighbors.next;
   const phaseIndex = course.phases.findIndex((item) => item.id === phaseId);
   const nextPhase = phaseIndex >= 0 ? course.phases[phaseIndex + 1] : undefined;
+  const unit = toCourseNav(course).chapters.find((chapter) => chapter.phases.some((item) => item.id === phaseId));
   // Narrative handoff lives on the last lesson (Practice → handoff → nav).
   // Keep the project page free of a duplicate closer.
   const whatComesNext = null;
   const projectMarkdown = extractProjectNav(phase.project.markdown);
   return {
-    course: { slug: course.slug, shortName: course.shortName, sourcePath: "content/guides/Projects.md" },
+    course: { slug: course.slug, shortName: course.shortName, sourcePath: phase.project.sourcePath },
     nav: toCourseNav(course),
-    phase: { id: phase.id, number: phase.number, title: phase.title, track: phase.track },
+    phase: {
+      id: phase.id,
+      number: phase.number,
+      title: phase.title,
+      track: phase.track,
+      lessonIds: phase.lessons.filter((lesson) => lesson.kind === "lesson").map((lesson) => lesson.id),
+    },
+    unit: unit ? { id: unit.id, title: unit.title } : null,
     project: { ...phase.project, markdown: projectMarkdown },
     whatComesNext,
     reviewHref: phasePath(slug, phaseId),
     reviewLabel: projectReviewLabel(phase),
-    proceedHref: nextPhase ? phasePath(slug, nextPhase.id) : next?.href,
-    proceedLabel: nextPhase ? projectProceedLabel(nextPhase.title) : next?.label ?? "Continue",
+    proceedHref: next?.phaseId === phaseId ? next.href : nextPhase ? phasePath(slug, nextPhase.id) : next?.href,
+    proceedLabel: next?.phaseId === phaseId ? next.label : nextPhase ? projectProceedLabel(nextPhase.title) : next?.label ?? "Continue",
     prev,
     next: next ? { ...next, requiresProject: true } : null,
     startHref: firstLessonHref(course),
@@ -310,6 +353,39 @@ export const getAllProjectParams = cache(() =>
     course.phases.filter((phase) => phase.project).map((phase) => ({ course: course.slug, phase: phase.id })),
   ),
 );
+
+export const getAllGlossaryParams = cache(() =>
+  getCourses().flatMap((course) => {
+    const chapters = chaptersFor(
+      course.slug,
+      course.phases.map((phase) => phase.id),
+    );
+    return chapters.map((chapter) => ({ course: course.slug, unit: chapter.id }));
+  }),
+);
+
+export function getGlossaryView(slug: string, unitId: string) {
+  const course = getParsedCourse(slug);
+  if (!course) return null;
+  const chapters = chaptersFor(
+    course.slug,
+    course.phases.map((phase) => phase.id),
+  );
+  const chapter = chapters.find((item) => item.id === unitId);
+  if (!chapter) return null;
+  const href = glossaryPath(slug, unitId);
+  const pages = coursePages(course);
+  const { prev, next } = neighborsFor(pages, href);
+  return {
+    course: { slug: course.slug, shortName: course.shortName },
+    nav: toCourseNav(course),
+    chapter,
+    sections: buildUnitGlossary(course, chapter),
+    prev,
+    next,
+    href,
+  };
+}
 
 export type SearchEntry = SearchHit;
 
@@ -405,13 +481,25 @@ export const getSearchIndex = cache((): SearchHit[] => {
   return entries;
 });
 
-export function getRequiredProjectHref(slug: string, phaseId: string) {
+export function getRequiredLessonHref(slug: string, phaseId: string) {
   const course = getParsedCourse(slug);
   if (!course) return undefined;
   const path = pathForCourse(slug);
   const steps = path?.steps ?? sequentialPath(slug, course.phases.map((phase) => phase.id));
   const previous = previousStep(steps, slug, phaseId);
-  return previous ? `/projects/${previous.course}/phase/${previous.phaseId}` : undefined;
+  if (!previous) return undefined;
+  const prevCourse = previous.course === slug ? course : getParsedCourse(previous.course);
+  if (!prevCourse) return undefined;
+  const prevPhase = prevCourse.phases.find((phase) => phase.id === previous.phaseId);
+  if (!prevPhase) return `/courses/${previous.course}/phase/${previous.phaseId}`;
+  const regularLessons = prevPhase.lessons.filter((lesson) => lesson.kind === "lesson");
+  if (!regularLessons.length) return phasePath(previous.course, previous.phaseId);
+  return lessonPath(previous.course, previous.phaseId, regularLessons[0]);
+}
+
+/** @deprecated use getRequiredLessonHref */
+export function getRequiredProjectHref(slug: string, phaseId: string) {
+  return getRequiredLessonHref(slug, phaseId);
 }
 
 export function resolveCourseHash(slug: string, hash: string) {

@@ -1,0 +1,656 @@
+{
+  "lessons": {
+    "4.4": [
+      {
+        "type": "video",
+        "title": "The Fetch-Execute Cycle: What's Your Computer Actually Doing?",
+        "description": "Best video for Fetch Decode Execute — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=Z5JC9Ve1sfI",
+        "source": "YouTube",
+        "channel": "Tom Scott",
+        "videoId": "Z5JC9Ve1sfI",
+        "thumbnail": "https://i.ytimg.com/vi/Z5JC9Ve1sfI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "The Fetch Decode Execute Cycle | GCSE Computer Science | BBC Bitesize | Too Tall Productions",
+        "description": "Alternative explanation of Fetch Decode Execute.",
+        "url": "https://www.youtube.com/watch?v=v97HAhwQMj8",
+        "source": "YouTube",
+        "channel": "Too Tall Productions",
+        "videoId": "v97HAhwQMj8",
+        "thumbnail": "https://i.ytimg.com/vi/v97HAhwQMj8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "4.6": [
+      {
+        "type": "video",
+        "title": "CPU Cache Explained - What is Cache Memory?",
+        "description": "Best video for CPU Cache — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=yi0FhRqDJfo",
+        "source": "YouTube",
+        "channel": "PowerCert Animated Videos",
+        "videoId": "yi0FhRqDJfo",
+        "thumbnail": "https://i.ytimg.com/vi/yi0FhRqDJfo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "What is CPU Cache?",
+        "description": "Alternative explanation of CPU Cache.",
+        "url": "https://www.youtube.com/watch?v=sHqNMHf2UNI",
+        "source": "YouTube",
+        "channel": "Techquickie",
+        "videoId": "sHqNMHf2UNI",
+        "thumbnail": "https://i.ytimg.com/vi/sHqNMHf2UNI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "4.7": [
+      {
+        "type": "video",
+        "title": "How do hard drives work? - Kanawat Senanan",
+        "description": "Best video for Storage — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=wteUW2sL7bc",
+        "source": "YouTube",
+        "channel": "TED-Ed",
+        "videoId": "wteUW2sL7bc",
+        "thumbnail": "https://i.ytimg.com/vi/wteUW2sL7bc/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "SSD vs Hard Drive vs Hybrid Drive",
+        "description": "Alternative explanation of Storage.",
+        "url": "https://www.youtube.com/watch?v=1cyMTl_QXSc",
+        "source": "YouTube",
+        "channel": "PowerCert Animated Videos",
+        "videoId": "1cyMTl_QXSc",
+        "thumbnail": "https://i.ytimg.com/vi/1cyMTl_QXSc/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "4.9": [
+      {
+        "type": "video",
+        "title": "The Bus | How the computer works?",
+        "description": "Best video for Buses — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=VvEikwvyN8k",
+        "source": "YouTube",
+        "channel": "notez on tek",
+        "videoId": "VvEikwvyN8k",
+        "thumbnail": "https://i.ytimg.com/vi/VvEikwvyN8k/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Computer Architecture - System Bus (address, data & control)",
+        "description": "Alternative explanation of Buses.",
+        "url": "https://www.youtube.com/watch?v=alYwqzO6ZEQ",
+        "source": "YouTube",
+        "channel": "TeachingCS",
+        "videoId": "alYwqzO6ZEQ",
+        "thumbnail": "https://i.ytimg.com/vi/alYwqzO6ZEQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "4.5": [
+      {
+        "type": "video",
+        "title": "Registers and RAM: Crash Course Computer Science #6",
+        "description": "Best video for RAM — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=fpnE6UAfbtU",
+        "source": "YouTube",
+        "channel": "CrashCourse",
+        "videoId": "fpnE6UAfbtU",
+        "thumbnail": "https://i.ytimg.com/vi/fpnE6UAfbtU/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Memory & Storage: Crash Course Computer Science #19",
+        "description": "Alternative explanation of RAM.",
+        "url": "https://www.youtube.com/watch?v=TQCr9RV7twk",
+        "source": "YouTube",
+        "channel": "CrashCourse",
+        "videoId": "TQCr9RV7twk",
+        "thumbnail": "https://i.ytimg.com/vi/TQCr9RV7twk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "4.8": [
+      {
+        "type": "video",
+        "title": "How Computers Work: CPU, Memory, Input & Output",
+        "description": "Best video for Input Output Devices — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=DKGZlaPlVLY",
+        "source": "YouTube",
+        "channel": "CodeAI",
+        "videoId": "DKGZlaPlVLY",
+        "thumbnail": "https://i.ytimg.com/vi/DKGZlaPlVLY/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "COMPUTER INPUT AND OUTPUT DEVICES FOR CHILDREN || BASIC COMPUTER || COMPUTER FUNDAMENTALS",
+        "description": "Alternative explanation of Input Output Devices.",
+        "url": "https://www.youtube.com/watch?v=DuYF3uD9AYQ",
+        "source": "YouTube",
+        "channel": "Make It Easy Education",
+        "videoId": "DuYF3uD9AYQ",
+        "thumbnail": "https://i.ytimg.com/vi/DuYF3uD9AYQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.4": [
+      {
+        "type": "video",
+        "title": "Programming Languages + Interpreters",
+        "description": "Best video for Interpreter — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=ZB_A9qS_xOQ",
+        "source": "YouTube",
+        "channel": "Linus Lee",
+        "videoId": "ZB_A9qS_xOQ",
+        "thumbnail": "https://i.ytimg.com/vi/ZB_A9qS_xOQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Interpreters and Compilers (Bits and Bytes, Episode 6)",
+        "description": "Alternative explanation of Interpreter.",
+        "url": "https://www.youtube.com/watch?v=_C5AHaS1mOA",
+        "source": "YouTube",
+        "channel": "Bits and Bytes TVO",
+        "videoId": "_C5AHaS1mOA",
+        "thumbnail": "https://i.ytimg.com/vi/_C5AHaS1mOA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.2": [
+      {
+        "type": "video",
+        "title": "Syntax Vs Semantics - Programming Languages",
+        "description": "Best video for Syntax and Semantics — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=vP-mn62EF0o",
+        "source": "YouTube",
+        "channel": "Udacity",
+        "videoId": "vP-mn62EF0o",
+        "thumbnail": "https://i.ytimg.com/vi/vP-mn62EF0o/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "&quot;Syntax and Semantics: the difference&quot; - Q&A",
+        "description": "Alternative explanation of Syntax and Semantics.",
+        "url": "https://www.youtube.com/watch?v=PbmsOTKtlno",
+        "source": "YouTube",
+        "channel": "ORBITS - Luciano Floridi",
+        "videoId": "PbmsOTKtlno",
+        "thumbnail": "https://i.ytimg.com/vi/PbmsOTKtlno/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.3": [
+      {
+        "type": "video",
+        "title": "How Compilers Work",
+        "description": "Best video for Compiler — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=xLuKxomEUiQ",
+        "source": "YouTube",
+        "channel": "Timothy Blumberg",
+        "videoId": "xLuKxomEUiQ",
+        "thumbnail": "https://i.ytimg.com/vi/xLuKxomEUiQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "How do computers read code?",
+        "description": "Alternative explanation of Compiler.",
+        "url": "https://www.youtube.com/watch?v=QXjU9qTsYCc",
+        "source": "YouTube",
+        "channel": "Frame of Essence",
+        "videoId": "QXjU9qTsYCc",
+        "thumbnail": "https://i.ytimg.com/vi/QXjU9qTsYCc/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.7": [
+      {
+        "type": "video",
+        "title": "Introduction to Lexical Analyzer",
+        "description": "Best video for Lexer — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=4nx8LEGy9kI",
+        "source": "YouTube",
+        "channel": "Neso Academy",
+        "videoId": "4nx8LEGy9kI",
+        "thumbnail": "https://i.ytimg.com/vi/4nx8LEGy9kI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Introduction to Lexical Analyzer",
+        "description": "Alternative explanation of Lexer.",
+        "url": "https://www.youtube.com/watch?v=xnolCgyx2LM",
+        "source": "YouTube",
+        "channel": "TutorialsPoint",
+        "videoId": "xnolCgyx2LM",
+        "thumbnail": "https://i.ytimg.com/vi/xnolCgyx2LM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.5": [
+      {
+        "type": "video",
+        "title": "Java Bytecode Explained",
+        "description": "Best video for Bytecode — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=pWOTpGyVv64",
+        "source": "YouTube",
+        "channel": "Parleys",
+        "videoId": "pWOTpGyVv64",
+        "thumbnail": "https://i.ytimg.com/vi/pWOTpGyVv64/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Java Bytecode Crash Course",
+        "description": "Alternative explanation of Bytecode.",
+        "url": "https://www.youtube.com/watch?v=e2zmmkc5xI0",
+        "source": "YouTube",
+        "channel": "Oracle Developers",
+        "videoId": "e2zmmkc5xI0",
+        "thumbnail": "https://i.ytimg.com/vi/e2zmmkc5xI0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.8": [
+      {
+        "type": "video",
+        "title": "Introduction to Parsers",
+        "description": "Best video for Parser — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=OIKL6wFjFOo",
+        "source": "YouTube",
+        "channel": "Neso Academy",
+        "videoId": "OIKL6wFjFOo",
+        "thumbnail": "https://i.ytimg.com/vi/OIKL6wFjFOo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Parsing explained: grammars, trees, and everything in between",
+        "description": "Alternative explanation of Parser.",
+        "url": "https://www.youtube.com/watch?v=HuSCzN5IPAo",
+        "source": "YouTube",
+        "channel": "Premature Abstraction",
+        "videoId": "HuSCzN5IPAo",
+        "thumbnail": "https://i.ytimg.com/vi/HuSCzN5IPAo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.9": [
+      {
+        "type": "video",
+        "title": "How do linkers resolve symbols? Systems Programming CS Lecture",
+        "description": "Best video for Linking — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=6XVUIeAaROU",
+        "source": "YouTube",
+        "channel": "Chris Kanich",
+        "videoId": "6XVUIeAaROU",
+        "thumbnail": "https://i.ytimg.com/vi/6XVUIeAaROU/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "How the C++ Linker Works",
+        "description": "Alternative explanation of Linking.",
+        "url": "https://www.youtube.com/watch?v=H4s55GgAg0I",
+        "source": "YouTube",
+        "channel": "The Cherno",
+        "videoId": "H4s55GgAg0I",
+        "thumbnail": "https://i.ytimg.com/vi/H4s55GgAg0I/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "6.2": [
+      {
+        "type": "video",
+        "title": "Learn Visual Studio Code in 15 minutes: 2026 Official Beginner Tutorial",
+        "description": "Best video for IDE Code Editor — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=f8_uF_IDV50",
+        "source": "YouTube",
+        "channel": "Visual Studio Code",
+        "videoId": "f8_uF_IDV50",
+        "thumbnail": "https://i.ytimg.com/vi/f8_uF_IDV50/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "I tried 10 code editors",
+        "description": "Alternative explanation of IDE Code Editor.",
+        "url": "https://www.youtube.com/watch?v=8PhdfcX9tG0",
+        "source": "YouTube",
+        "channel": "Fireship",
+        "videoId": "8PhdfcX9tG0",
+        "thumbnail": "https://i.ytimg.com/vi/8PhdfcX9tG0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.10": [
+      {
+        "type": "video",
+        "title": "Various stages of program execution | Assembler, Linker & Loader | Log2Base2",
+        "description": "Best video for Loading — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=cJDRShqtTbk",
+        "source": "YouTube",
+        "channel": "Log2Base2®",
+        "videoId": "cJDRShqtTbk",
+        "thumbnail": "https://i.ytimg.com/vi/cJDRShqtTbk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "No really, how does Linux run executables?",
+        "description": "Alternative explanation of Loading.",
+        "url": "https://www.youtube.com/watch?v=Ia5jyz8sOCM",
+        "source": "YouTube",
+        "channel": "Jacob Pradels",
+        "videoId": "Ia5jyz8sOCM",
+        "thumbnail": "https://i.ytimg.com/vi/Ia5jyz8sOCM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "6.1": [
+      {
+        "type": "video",
+        "title": "Computer Skills Course: File Management, Part 1",
+        "description": "Best video for Files and Folders — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=k-EID5_2D9U",
+        "source": "YouTube",
+        "channel": "Dane Hartman",
+        "videoId": "k-EID5_2D9U",
+        "thumbnail": "https://i.ytimg.com/vi/k-EID5_2D9U/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Files & File Systems: Crash Course Computer Science #20",
+        "description": "Alternative explanation of Files and Folders.",
+        "url": "https://www.youtube.com/watch?v=KN8YgJnShPM",
+        "source": "YouTube",
+        "channel": "CrashCourse",
+        "videoId": "KN8YgJnShPM",
+        "thumbnail": "https://i.ytimg.com/vi/KN8YgJnShPM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "6.4": [
+      {
+        "type": "video",
+        "title": "before you code, learn how computers work",
+        "description": "Best video for Running Programs — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=97i2BAUw5Xc",
+        "source": "YouTube",
+        "channel": "Low Level",
+        "videoId": "97i2BAUw5Xc",
+        "thumbnail": "https://i.ytimg.com/vi/97i2BAUw5Xc/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "How a Computer Works - from silicon to apps",
+        "description": "Alternative explanation of Running Programs.",
+        "url": "https://www.youtube.com/watch?v=5f3NJnvnk7k",
+        "source": "YouTube",
+        "channel": "Improbable Matter",
+        "videoId": "5f3NJnvnk7k",
+        "thumbnail": "https://i.ytimg.com/vi/5f3NJnvnk7k/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "6.5": [
+      {
+        "type": "video",
+        "title": "What are Environment Variables, and how do I use them? (get,set)",
+        "description": "Best video for PATH environment — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=ADh_OFBfdEE",
+        "source": "YouTube",
+        "channel": "Jacob Sorber",
+        "videoId": "ADh_OFBfdEE",
+        "thumbnail": "https://i.ytimg.com/vi/ADh_OFBfdEE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Understanding $PATH",
+        "description": "Alternative explanation of PATH environment.",
+        "url": "https://www.youtube.com/watch?v=G8gSozyMfKA",
+        "source": "YouTube",
+        "channel": "Udacity",
+        "videoId": "G8gSozyMfKA",
+        "thumbnail": "https://i.ytimg.com/vi/G8gSozyMfKA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "6.6": [
+      {
+        "type": "video",
+        "title": "Linux for Programmers #7 | Environment Variables",
+        "description": "Best video for Environment Variables — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=yM8v5i2Qjgg",
+        "source": "YouTube",
+        "channel": "Akamai Developers",
+        "videoId": "yM8v5i2Qjgg",
+        "thumbnail": "https://i.ytimg.com/vi/yM8v5i2Qjgg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "What are Environment Variables ? with Examples on Windows & Linux",
+        "description": "Alternative explanation of Environment Variables.",
+        "url": "https://www.youtube.com/watch?v=bd65z5VZ7L4",
+        "source": "YouTube",
+        "channel": "JimShapedCoding",
+        "videoId": "bd65z5VZ7L4",
+        "thumbnail": "https://i.ytimg.com/vi/bd65z5VZ7L4/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "7.1": [
+      {
+        "type": "video",
+        "title": "Python variables for beginners ❎",
+        "description": "Best video for Programming Variables — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=LKFrQXaoSMQ",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "LKFrQXaoSMQ",
+        "thumbnail": "https://i.ytimg.com/vi/LKFrQXaoSMQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "#4 Python Tutorial for Beginners | Variables in Python",
+        "description": "Alternative explanation of Programming Variables.",
+        "url": "https://www.youtube.com/watch?v=TqPzwenhMj0",
+        "source": "YouTube",
+        "channel": "Telusko",
+        "videoId": "TqPzwenhMj0",
+        "thumbnail": "https://i.ytimg.com/vi/TqPzwenhMj0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "6.7": [
+      {
+        "type": "video",
+        "title": "Command line arguments - Go programming language tutorial (16)",
+        "description": "Best video for Command Line Arguments — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=gRQTJquwTFw",
+        "source": "YouTube",
+        "channel": "Begin Coding Fast",
+        "videoId": "gRQTJquwTFw",
+        "thumbnail": "https://i.ytimg.com/vi/gRQTJquwTFw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Command Line Arguments in Java",
+        "description": "Alternative explanation of Command Line Arguments.",
+        "url": "https://www.youtube.com/watch?v=Up17-azeuyE",
+        "source": "YouTube",
+        "channel": "Neso Academy",
+        "videoId": "Up17-azeuyE",
+        "thumbnail": "https://i.ytimg.com/vi/Up17-azeuyE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "7.2": [
+      {
+        "type": "video",
+        "title": "Coding Basics: Variables | Programming for Beginners |",
+        "description": "Best video for Assignment — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=ghCbURMWBD8",
+        "source": "YouTube",
+        "channel": "Transcode",
+        "videoId": "ghCbURMWBD8",
+        "thumbnail": "https://i.ytimg.com/vi/ghCbURMWBD8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Variables and assignment | Intro to CS - Python | Khan Academy",
+        "description": "Alternative explanation of Assignment.",
+        "url": "https://www.youtube.com/watch?v=52RHZdBSjTw",
+        "source": "YouTube",
+        "channel": "Khan Academy",
+        "videoId": "52RHZdBSjTw",
+        "thumbnail": "https://i.ytimg.com/vi/52RHZdBSjTw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "7.3": [
+      {
+        "type": "video",
+        "title": "Python Tutorial for Beginners 3: Integers and Floats - Working with Numeric Data",
+        "description": "Best video for Integers and Floats — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=khKv-8q7YmY",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "khKv-8q7YmY",
+        "thumbnail": "https://i.ytimg.com/vi/khKv-8q7YmY/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Floats and Integers | How To Python",
+        "description": "Alternative explanation of Integers and Floats.",
+        "url": "https://www.youtube.com/watch?v=77TsTM3XxmA",
+        "source": "YouTube",
+        "channel": "b001",
+        "videoId": "77TsTM3XxmA",
+        "thumbnail": "https://i.ytimg.com/vi/77TsTM3XxmA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "7.4": [
+      {
+        "type": "video",
+        "title": "Understanding Boolean Data Types and Using the Boolean NOT (!) operator to Switch Arduino Pin States",
+        "description": "Best video for Booleans — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=HzSiJn62TCY",
+        "source": "YouTube",
+        "channel": "Programming Electronics Academy",
+        "videoId": "HzSiJn62TCY",
+        "thumbnail": "https://i.ytimg.com/vi/HzSiJn62TCY/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Boolean Logic & Logic Gates: Crash Course Computer Science #3",
+        "description": "Alternative explanation of Booleans.",
+        "url": "https://www.youtube.com/watch?v=gI-qXk7XojA",
+        "source": "YouTube",
+        "channel": "CrashCourse",
+        "videoId": "gI-qXk7XojA",
+        "thumbnail": "https://i.ytimg.com/vi/gI-qXk7XojA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "7.5": [
+      {
+        "type": "video",
+        "title": "How to Use Strings in Python - Python Tutorial for Beginners",
+        "description": "Best video for Strings — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=Ctqi5Y4X-jA",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "Ctqi5Y4X-jA",
+        "thumbnail": "https://i.ytimg.com/vi/Ctqi5Y4X-jA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Strings - Visually Explained",
+        "description": "Alternative explanation of Strings.",
+        "url": "https://www.youtube.com/watch?v=vheAwWSyEC8",
+        "source": "YouTube",
+        "channel": "Visually Explained",
+        "videoId": "vheAwWSyEC8",
+        "thumbnail": "https://i.ytimg.com/vi/vheAwWSyEC8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ]
+  },
+  "phases": {},
+  "projects": {}
+}

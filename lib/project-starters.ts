@@ -85,32 +85,6 @@ print("If you actually need every pair (unique friendships, brute-force compare)
 print("linear misses pairs. Quadratic is then the correct algorithm, not the slow one.")
 `;
 
-function fallbackStarter(brief: ProjectBrief): string {
-  const specLines = brief.spec.length
-    ? brief.spec.map((item, index) => `print("${index + 1}. ${item.replace(/"/g, "'")}")`).join("\n")
-    : `print("1. Implement the behavior described on the build page.")`;
-  const stepLines = brief.steps.slice(0, 5).map((item, index) => `# Step ${index + 1}: ${item}`).join("\n");
-  const title = brief.title || "Build";
-  const topic = brief.topic || "this topic";
-  return `# ${title}
-# Each comment says what the next line does.
-
-print("=== ${title} ===")  # name of this build
-print("Topic: ${topic}")  # the skill this program practices
-print()
-
-# What this program must do:
-${specLines}
-
-print()
-${stepLines}
-
-print()
-print("Starter ran. Read every comment, then extend the program until the list above is true.")
-print("Done when a normal case, a boundary case, and a failure case all print.")
-`;
-}
-
 const STARTERS: Record<string, ProjectStarter> = {
   "cs-phase-5-project": {
     language: "python",
@@ -143,10 +117,6 @@ if __name__ == "__main__":
   },
 };
 
-export function getProjectStarter(projectId: string, brief: ProjectBrief): ProjectStarter {
-  return STARTERS[projectId] ?? {
-    language: "python",
-    project: projectFromSingleScript(fallbackStarter(brief)),
-    observe: "Run the starter, then replace the print list with working functions until every requirement on the build page is true.",
-  };
+export function getProjectStarter(projectId: string, _brief: ProjectBrief): ProjectStarter | null {
+  return STARTERS[projectId] ?? null;
 }

@@ -1,0 +1,2287 @@
+{
+  "lessons": {
+    "1.1": [
+      {
+        "type": "video",
+        "title": "What is Data Pipeline? (ByteByteGo)",
+        "description": "Builds the end-to-end path from source systems to decisions with clear animation",
+        "url": "https://www.youtube.com/watch?v=kGT4PcTEPP8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/kGT4PcTEPP8/hqdefault.jpg",
+        "videoId": "kGT4PcTEPP8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How I'd Learn Data Engineering in 2026 (Data with Baraa)",
+        "description": "Role map and learning order from a practicing engineer",
+        "url": "https://www.youtube.com/watch?v=1nVGaNbvuXg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/1nVGaNbvuXg/hqdefault.jpg",
+        "videoId": "1nVGaNbvuXg",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Fundamentals of Data Engineering (Matt Housley and Joe Reis, GOTO)",
+        "description": "The mental model behind modern data platforms",
+        "url": "https://www.youtube.com/watch?v=VdGVmqiJkeg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/VdGVmqiJkeg/hqdefault.jpg",
+        "videoId": "VdGVmqiJkeg",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Kaggle Datasets",
+        "description": "Pick any public dataset and write one paragraph: what decision could this support, and who would own the pipeline?",
+        "url": "https://www.kaggle.com/datasets",
+        "source": "kaggle.com"
+      },
+      {
+        "type": "interactive",
+        "title": "SQLBolt",
+        "description": "Even before deep SQL, feel what \"asking a table a question\" means in Lesson 1",
+        "url": "https://sqlbolt.com/",
+        "source": "sqlbolt.com"
+      },
+      {
+        "type": "documentation",
+        "title": "DataExpert-io/data-engineer-handbook",
+        "description": "Curated map of the modern data stack",
+        "url": "https://github.com/DataExpert-io/data-engineer-handbook",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "DataTalksClub/data-engineering-zoomcamp",
+        "description": "A full free course that walks the lifecycle with real tools",
+        "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Exercism",
+        "description": "Pick a language track and practice writing small, testable transforms (the micro-skill every lifecycle step needs)",
+        "url": "https://exercism.org/",
+        "source": "exercism.org"
+      }
+    ],
+    "1.2": [
+      {
+        "type": "video",
+        "title": "Data Pipeline Overview thinking (ByteByteGo)",
+        "description": "Revisit with an eye for source *shapes*, not only pipes",
+        "url": "https://www.youtube.com/watch?v=kGT4PcTEPP8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/kGT4PcTEPP8/hqdefault.jpg",
+        "videoId": "kGT4PcTEPP8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "ETL explained with a clear example (Chandoo)",
+        "description": "Transform thinking before you meet warehouses",
+        "url": "https://www.youtube.com/watch?v=wDTzxdShbd8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/wDTzxdShbd8/hqdefault.jpg",
+        "videoId": "wDTzxdShbd8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Fundamentals of Data Engineering (GOTO)",
+        "description": "How platforms absorb structured and semi-structured sources",
+        "url": "https://www.youtube.com/watch?v=VdGVmqiJkeg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/VdGVmqiJkeg/hqdefault.jpg",
+        "videoId": "VdGVmqiJkeg",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "db-fiddle.com",
+        "description": "Create a tiny structured table and query it",
+        "url": "https://www.db-fiddle.com/",
+        "source": "db-fiddle.com"
+      },
+      {
+        "type": "interactive",
+        "title": "Python Tutor",
+        "description": "Step through parsing a nested `dict` that mimics JSON",
+        "url": "https://pythontutor.com/",
+        "source": "Python Tutor"
+      },
+      {
+        "type": "documentation",
+        "title": "pandas docs - data structures overview",
+        "description": "How tabular tools expect rectangular data",
+        "url": "https://pandas.pydata.org/docs/user_guide/dsintro.html",
+        "source": "pandas.pydata.org"
+      },
+      {
+        "type": "github",
+        "title": "DataExpert-io/data-engineer-handbook",
+        "description": "Glossary and stack notes for source types",
+        "url": "https://github.com/DataExpert-io/data-engineer-handbook",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Kaggle",
+        "description": "Open one CSV (structured), one JSON-lines dataset, and one text/image set; write the shape of each",
+        "url": "https://www.kaggle.com/",
+        "source": "kaggle.com"
+      }
+    ],
+    "2.1": [
+      {
+        "type": "video",
+        "title": "What is ETL with a clear example (Chandoo)",
+        "description": "Transform thinking with a concrete business example before pipelines",
+        "url": "https://www.youtube.com/watch?v=wDTzxdShbd8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/wDTzxdShbd8/hqdefault.jpg",
+        "videoId": "wDTzxdShbd8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Data Analysis with Python (freeCodeCamp)",
+        "description": "Early modules reinforce tabular thinking even when the tool is Python",
+        "url": "https://www.youtube.com/watch?v=r-uOLxNrNk8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/r-uOLxNrNk8/hqdefault.jpg",
+        "videoId": "r-uOLxNrNk8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How I'd Learn Data Engineering in 2026 (Data with Baraa)",
+        "description": "Where spreadsheet literacy sits in a larger path",
+        "url": "https://www.youtube.com/watch?v=1nVGaNbvuXg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/1nVGaNbvuXg/hqdefault.jpg",
+        "videoId": "1nVGaNbvuXg",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Kaggle Datasets",
+        "description": "Download a messy CSV and tidy it by hand first",
+        "url": "https://www.kaggle.com/datasets",
+        "source": "kaggle.com"
+      },
+      {
+        "type": "interactive",
+        "title": "Python Tutor",
+        "description": "Step through a small cleaning loop that normalizes strings and types",
+        "url": "https://pythontutor.com/",
+        "source": "Python Tutor"
+      },
+      {
+        "type": "github",
+        "title": "guipsamora/pandas_exercises",
+        "description": "Later you will automate this hygiene; skim an exercise now to see the end state",
+        "url": "https://github.com/guipsamora/pandas_exercises",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Exercism",
+        "description": "Practice pure cleaning functions (trim, parse, validate) without a spreadsheet UI",
+        "url": "https://exercism.org/",
+        "source": "exercism.org"
+      }
+    ],
+    "2.2": [
+      {
+        "type": "video",
+        "title": "ETL with a clear example (Chandoo)",
+        "description": "Watch as \"transform\" thinking, then recreate the summary as a PivotTable",
+        "url": "https://www.youtube.com/watch?v=wDTzxdShbd8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/wDTzxdShbd8/hqdefault.jpg",
+        "videoId": "wDTzxdShbd8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "SQL in 100 Seconds (Fireship)",
+        "description": "Preview of the language that replaces brittle spreadsheet aggregation",
+        "url": "https://www.youtube.com/watch?v=zsjvFFKOm3c",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/zsjvFFKOm3c/hqdefault.jpg",
+        "videoId": "zsjvFFKOm3c",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "freeCodeCamp SQL course",
+        "description": "Early SELECT/GROUP BY mental model mapped back to pivots",
+        "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/HXV3zeQKqGY/hqdefault.jpg",
+        "videoId": "HXV3zeQKqGY",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Mode SQL Tutorial",
+        "description": "Skim aggregation lessons and map each to a Pivot field well",
+        "url": "https://mode.com/sql-tutorial",
+        "source": "mode.com"
+      },
+      {
+        "type": "github",
+        "title": "WebDevSimplified/Learn-SQL",
+        "description": "See the SQL form of the same ideas",
+        "url": "https://github.com/WebDevSimplified/Learn-SQL",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "SQLBolt",
+        "description": "Lessons on filtering and grouping mirror Pivot filters and value fields",
+        "url": "https://sqlbolt.com/",
+        "source": "sqlbolt.com"
+      }
+    ],
+    "3.1": [
+      {
+        "type": "video",
+        "title": "How to Learn Python for Data Engineers Fast (Data with Baraa)",
+        "description": "Pragmatic Python scoped to data work",
+        "url": "https://www.youtube.com/watch?v=GRo-HX_Ova8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/GRo-HX_Ova8/hqdefault.jpg",
+        "videoId": "GRo-HX_Ova8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Data Analysis with Python (freeCodeCamp)",
+        "description": "Full path through Numpy, Pandas, and plotting",
+        "url": "https://www.youtube.com/watch?v=r-uOLxNrNk8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/r-uOLxNrNk8/hqdefault.jpg",
+        "videoId": "r-uOLxNrNk8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Python Pandas Tutorial Part 1 (Corey Schafer)",
+        "description": "Loading and inspecting tabular data (useful preview even before Phase 8)",
+        "url": "https://www.youtube.com/watch?v=ZyhVh-qRZPA",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ZyhVh-qRZPA/hqdefault.jpg",
+        "videoId": "ZyhVh-qRZPA",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Python Tutor",
+        "description": "Step through loops, lists, and dicts line by line",
+        "url": "https://pythontutor.com/",
+        "source": "Python Tutor"
+      },
+      {
+        "type": "interactive",
+        "title": "Kaggle Learn Python",
+        "description": "Short hands-on lessons in the browser",
+        "url": "https://www.kaggle.com/learn/python",
+        "source": "kaggle.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Python official tutorial",
+        "description": "",
+        "url": "https://docs.python.org/3/tutorial/",
+        "source": "Python Docs"
+      },
+      {
+        "type": "github",
+        "title": "donnemartin/data-science-ipython-notebooks",
+        "description": "",
+        "url": "https://github.com/donnemartin/data-science-ipython-notebooks",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Exercism Python track",
+        "description": "",
+        "url": "https://exercism.org/tracks/python",
+        "source": "exercism.org"
+      }
+    ],
+    "3.2": [
+      {
+        "type": "video",
+        "title": "Data Analysis with Python (freeCodeCamp)",
+        "description": "File-based analysis workflow in practice",
+        "url": "https://www.youtube.com/watch?v=r-uOLxNrNk8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/r-uOLxNrNk8/hqdefault.jpg",
+        "videoId": "r-uOLxNrNk8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How to Learn Python for Data Engineers Fast (Data with Baraa)",
+        "description": "Environment and project habits for data work",
+        "url": "https://www.youtube.com/watch?v=GRo-HX_Ova8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/GRo-HX_Ova8/hqdefault.jpg",
+        "videoId": "GRo-HX_Ova8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Python Pandas Tutorial (Corey Schafer)",
+        "description": "Reading CSVs as the gateway skill",
+        "url": "https://www.youtube.com/watch?v=ZyhVh-qRZPA",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ZyhVh-qRZPA/hqdefault.jpg",
+        "videoId": "ZyhVh-qRZPA",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Python Tutor",
+        "description": "Trace file-free versions of your parsing logic",
+        "url": "https://pythontutor.com/",
+        "source": "Python Tutor"
+      },
+      {
+        "type": "interactive",
+        "title": "Kaggle",
+        "description": "Notebooks vs scripted kernels on real datasets",
+        "url": "https://www.kaggle.com/",
+        "source": "kaggle.com"
+      },
+      {
+        "type": "documentation",
+        "title": "pathlib docs",
+        "description": "",
+        "url": "https://docs.python.org/3/library/pathlib.html",
+        "source": "Python Docs"
+      },
+      {
+        "type": "github",
+        "title": "DataTalksClub/data-engineering-zoomcamp",
+        "description": "Project layout, dependencies, and data ingestion patterns",
+        "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Exercism",
+        "description": "",
+        "url": "https://exercism.org/",
+        "source": "exercism.org"
+      }
+    ],
+    "4.1": [
+      {
+        "type": "video",
+        "title": "SQL in 100 Seconds (Fireship)",
+        "description": "Dense mental model of what SQL is for",
+        "url": "https://www.youtube.com/watch?v=zsjvFFKOm3c",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/zsjvFFKOm3c/hqdefault.jpg",
+        "videoId": "zsjvFFKOm3c",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "SQL for Beginners (freeCodeCamp / freeCodeCamp.org)",
+        "description": "Long-form foundations with practice",
+        "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/HXV3zeQKqGY/hqdefault.jpg",
+        "videoId": "HXV3zeQKqGY",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "CS50 SQL (Harvard)",
+        "description": "Rigorous introduction from first principles",
+        "url": "https://www.youtube.com/watch?v=WXk7yDqsKxs",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/WXk7yDqsKxs/hqdefault.jpg",
+        "videoId": "WXk7yDqsKxs",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "SQLBolt",
+        "description": "Browser lessons with immediate feedback",
+        "url": "https://sqlbolt.com/",
+        "source": "sqlbolt.com"
+      },
+      {
+        "type": "interactive",
+        "title": "Mode SQL Tutorial",
+        "description": "Analytics-flavored practice",
+        "url": "https://mode.com/sql-tutorial",
+        "source": "mode.com"
+      },
+      {
+        "type": "documentation",
+        "title": "SQLite SELECT docs",
+        "description": "",
+        "url": "https://www.sqlite.org/lang_select.html",
+        "source": "sqlite.org"
+      },
+      {
+        "type": "github",
+        "title": "WebDevSimplified/Learn-SQL",
+        "description": "",
+        "url": "https://github.com/WebDevSimplified/Learn-SQL",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "LeetCode Database",
+        "description": "",
+        "url": "https://leetcode.com/problemset/database",
+        "source": "leetcode.com"
+      }
+    ],
+    "4.2": [
+      {
+        "type": "video",
+        "title": "SQL Full Course for Beginners (Alex The Analyst)",
+        "description": "Practical expressions and cleaning-in-SQL patterns",
+        "url": "https://www.youtube.com/watch?v=OT1RErkfLNQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/OT1RErkfLNQ/hqdefault.jpg",
+        "videoId": "OT1RErkfLNQ",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "freeCodeCamp SQL",
+        "description": "Functions and CASE in a structured course flow",
+        "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/HXV3zeQKqGY/hqdefault.jpg",
+        "videoId": "HXV3zeQKqGY",
+        "embedSupported": true
+      },
+      {
+        "type": "course",
+        "title": "Data with Baraa SQL playlist",
+        "description": "Modern SQL teaching with visuals",
+        "url": "https://www.youtube.com/playlist?list=PLNcg_FV9n7qZY_2eAtUzEUulNjTJREhQe",
+        "source": "YouTube"
+      },
+      {
+        "type": "interactive",
+        "title": "SQL Fiddle",
+        "description": "Try casts and CASE across dialects carefully",
+        "url": "https://sqlfiddle.com/",
+        "source": "sqlfiddle.com"
+      },
+      {
+        "type": "interactive",
+        "title": "db-fiddle.com",
+        "description": "Quick experiments with dates and strings",
+        "url": "https://www.db-fiddle.com/",
+        "source": "db-fiddle.com"
+      },
+      {
+        "type": "github",
+        "title": "WebDevSimplified/Learn-SQL",
+        "description": "",
+        "url": "https://github.com/WebDevSimplified/Learn-SQL",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "LeetCode Database",
+        "description": "",
+        "url": "https://leetcode.com/problemset/database",
+        "source": "leetcode.com"
+      }
+    ],
+    "5.1": [
+      {
+        "type": "video",
+        "title": "SQL Joins Explained Visually (Data with Baraa)",
+        "description": "Set diagrams that stick",
+        "url": "https://www.youtube.com/watch?v=aY7z4HcHm5M",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/aY7z4HcHm5M/hqdefault.jpg",
+        "videoId": "aY7z4HcHm5M",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Animated SQL Joins (Anton Putra)",
+        "description": "Motion builds intuition for match behavior",
+        "url": "https://www.youtube.com/watch?v=Yh4CrPHVBdE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Yh4CrPHVBdE/hqdefault.jpg",
+        "videoId": "Yh4CrPHVBdE",
+        "embedSupported": true
+      },
+      {
+        "type": "course",
+        "title": "Data with Baraa SQL playlist",
+        "description": "Joins in a full course arc",
+        "url": "https://www.youtube.com/playlist?list=PLNcg_FV9n7qZY_2eAtUzEUulNjTJREhQe",
+        "source": "YouTube"
+      },
+      {
+        "type": "interactive",
+        "title": "SQL Join Visualizer",
+        "description": "Toggle join types on sample sets",
+        "url": "https://dev-toolbox.tech/tools/sql-join-visualizer",
+        "source": "dev-toolbox.tech"
+      },
+      {
+        "type": "interactive",
+        "title": "SQLBolt",
+        "description": "Join lessons with exercises",
+        "url": "https://sqlbolt.com/",
+        "source": "sqlbolt.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Mode SQL Tutorial - Joins",
+        "description": "",
+        "url": "https://mode.com/sql-tutorial",
+        "source": "mode.com"
+      },
+      {
+        "type": "github",
+        "title": "WebDevSimplified/Learn-SQL",
+        "description": "",
+        "url": "https://github.com/WebDevSimplified/Learn-SQL",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "LeetCode Database",
+        "description": "",
+        "url": "https://leetcode.com/problemset/database",
+        "source": "leetcode.com"
+      }
+    ],
+    "5.2": [
+      {
+        "type": "video",
+        "title": "SQL Joins visual (Data with Baraa)",
+        "description": "Then mentally place GROUP BY after the join",
+        "url": "https://www.youtube.com/watch?v=aY7z4HcHm5M",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/aY7z4HcHm5M/hqdefault.jpg",
+        "videoId": "aY7z4HcHm5M",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Alex The Analyst SQL course",
+        "description": "Group by and reporting patterns",
+        "url": "https://www.youtube.com/watch?v=OT1RErkfLNQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/OT1RErkfLNQ/hqdefault.jpg",
+        "videoId": "OT1RErkfLNQ",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Fireship SQL in 100 Seconds",
+        "description": "Re-watch focusing on aggregation's role",
+        "url": "https://www.youtube.com/watch?v=zsjvFFKOm3c",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/zsjvFFKOm3c/hqdefault.jpg",
+        "videoId": "zsjvFFKOm3c",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Mode SQL Tutorial",
+        "description": "Aggregations section",
+        "url": "https://mode.com/sql-tutorial",
+        "source": "mode.com"
+      },
+      {
+        "type": "interactive",
+        "title": "SQL Fiddle",
+        "description": "Test `HAVING` vs `WHERE` live",
+        "url": "https://sqlfiddle.com/",
+        "source": "sqlfiddle.com"
+      },
+      {
+        "type": "github",
+        "title": "WebDevSimplified/Learn-SQL",
+        "description": "",
+        "url": "https://github.com/WebDevSimplified/Learn-SQL",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "LeetCode Database",
+        "description": "",
+        "url": "https://leetcode.com/problemset/database",
+        "source": "leetcode.com"
+      }
+    ],
+    "6.1": [
+      {
+        "type": "course",
+        "title": "Data with Baraa SQL playlist",
+        "description": "CTEs and structured query design in context",
+        "url": "https://www.youtube.com/playlist?list=PLNcg_FV9n7qZY_2eAtUzEUulNjTJREhQe",
+        "source": "YouTube"
+      },
+      {
+        "type": "video",
+        "title": "Alex The Analyst SQL course",
+        "description": "Subquery patterns in practical reporting",
+        "url": "https://www.youtube.com/watch?v=OT1RErkfLNQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/OT1RErkfLNQ/hqdefault.jpg",
+        "videoId": "OT1RErkfLNQ",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "freeCodeCamp SQL",
+        "description": "Subquery coverage inside a full curriculum",
+        "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/HXV3zeQKqGY/hqdefault.jpg",
+        "videoId": "HXV3zeQKqGY",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Mode SQL Tutorial",
+        "description": "Subqueries / CTEs lessons",
+        "url": "https://mode.com/sql-tutorial",
+        "source": "mode.com"
+      },
+      {
+        "type": "interactive",
+        "title": "db-fiddle.com",
+        "description": "Rewrite a nested subquery as a CTE live",
+        "url": "https://www.db-fiddle.com/",
+        "source": "db-fiddle.com"
+      },
+      {
+        "type": "github",
+        "title": "WebDevSimplified/Learn-SQL",
+        "description": "",
+        "url": "https://github.com/WebDevSimplified/Learn-SQL",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "LeetCode Database",
+        "description": "",
+        "url": "https://leetcode.com/problemset/database",
+        "source": "leetcode.com"
+      }
+    ],
+    "6.2": [
+      {
+        "type": "video",
+        "title": "SQL Window Functions (Data with Baraa)",
+        "description": "Visual framing of partitions and frames",
+        "url": "https://www.youtube.com/watch?v=o666k19mZwE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/o666k19mZwE/hqdefault.jpg",
+        "videoId": "o666k19mZwE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Window Functions course-style walkthrough (Data with Baraa)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=Wvg4PjbMTO8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Wvg4PjbMTO8/hqdefault.jpg",
+        "videoId": "Wvg4PjbMTO8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "SQL Window Functions (Maven Analytics)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=rIcB4zMYMas",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/rIcB4zMYMas/hqdefault.jpg",
+        "videoId": "rIcB4zMYMas",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Mode SQL Tutorial - Window Functions",
+        "description": "",
+        "url": "https://mode.com/sql-tutorial",
+        "source": "mode.com"
+      },
+      {
+        "type": "interactive",
+        "title": "db-fiddle.com",
+        "description": "Experiment with `ROWS BETWEEN` frames",
+        "url": "https://www.db-fiddle.com/",
+        "source": "db-fiddle.com"
+      },
+      {
+        "type": "github",
+        "title": "WebDevSimplified/Learn-SQL",
+        "description": "",
+        "url": "https://github.com/WebDevSimplified/Learn-SQL",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "LeetCode Database",
+        "description": "",
+        "url": "https://leetcode.com/problemset/database",
+        "source": "leetcode.com"
+      }
+    ],
+    "7.1": [
+      {
+        "type": "video",
+        "title": "StatQuest: Mean, Median, Mode (Josh Starmer)",
+        "description": "Crystal-clear center-of-data intuition",
+        "url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/SzZ6GpcfoQY/hqdefault.jpg",
+        "videoId": "SzZ6GpcfoQY",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "TED-Ed on visualization / seeing data",
+        "description": "Why pictures of distributions beat tables of means",
+        "url": "https://www.youtube.com/watch?v=5Zg-C8AAIGg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/5Zg-C8AAIGg/hqdefault.jpg",
+        "videoId": "5Zg-C8AAIGg",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Seeing Theory (Brown University)",
+        "description": "Interactive probability and distributions",
+        "url": "https://seeing-theory.brown.edu/",
+        "source": "seeing-theory.brown.edu"
+      },
+      {
+        "type": "interactive",
+        "title": "Guess the Correlation",
+        "description": "Calibrate your eye for relationships",
+        "url": "https://guessthecorrelation.com/",
+        "source": "guessthecorrelation.com"
+      },
+      {
+        "type": "github",
+        "title": "donnemartin/data-science-ipython-notebooks",
+        "description": "Statistics notebooks to skim",
+        "url": "https://github.com/donnemartin/data-science-ipython-notebooks",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Kaggle",
+        "description": "Compute describe-stats on a real dataset",
+        "url": "https://www.kaggle.com/",
+        "source": "kaggle.com"
+      }
+    ],
+    "7.2": [
+      {
+        "type": "video",
+        "title": "StatQuest: p-values explained",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=vemZtEM63GY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/vemZtEM63GY/hqdefault.jpg",
+        "videoId": "vemZtEM63GY",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "StatQuest: Hypothesis Testing",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=0oc49DyA3hU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/0oc49DyA3hU/hqdefault.jpg",
+        "videoId": "0oc49DyA3hU",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Seeing Theory",
+        "description": "Frequentist ideas visually",
+        "url": "https://seeing-theory.brown.edu/",
+        "source": "seeing-theory.brown.edu"
+      },
+      {
+        "type": "interactive",
+        "title": "Guess the Correlation",
+        "description": "Humility about pattern detection",
+        "url": "https://guessthecorrelation.com/",
+        "source": "guessthecorrelation.com"
+      },
+      {
+        "type": "github",
+        "title": "donnemartin/data-science-ipython-notebooks",
+        "description": "",
+        "url": "https://github.com/donnemartin/data-science-ipython-notebooks",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Kaggle",
+        "description": "Critique an experiment writeup in a public notebook discussion",
+        "url": "https://www.kaggle.com/",
+        "source": "kaggle.com"
+      }
+    ],
+    "8.1": [
+      {
+        "type": "video",
+        "title": "Pandas explained with animation (Manim / related explainers)",
+        "description": "Mental model for DataFrame operations",
+        "url": "https://www.youtube.com/watch?v=J5JcKZr9Bys",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/J5JcKZr9Bys/hqdefault.jpg",
+        "videoId": "J5JcKZr9Bys",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Pandas for Data Science (Rob Mulla)",
+        "description": "Practical analyst workflow",
+        "url": "https://www.youtube.com/watch?v=DkjCaAMBGWM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/DkjCaAMBGWM/hqdefault.jpg",
+        "videoId": "DkjCaAMBGWM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Python Pandas Tutorial (Corey Schafer)",
+        "description": "Careful fundamentals",
+        "url": "https://www.youtube.com/watch?v=ZyhVh-qRZPA",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ZyhVh-qRZPA/hqdefault.jpg",
+        "videoId": "ZyhVh-qRZPA",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Pandas Tutor",
+        "description": "Visualizes how DataFrame operations transform tables",
+        "url": "https://pandastutor.com/",
+        "source": "pandastutor.com"
+      },
+      {
+        "type": "interactive",
+        "title": "Python Tutor",
+        "description": "For the small Python pieces around Pandas",
+        "url": "https://pythontutor.com/",
+        "source": "Python Tutor"
+      },
+      {
+        "type": "documentation",
+        "title": "pandas user guide",
+        "description": "",
+        "url": "https://pandas.pydata.org/docs/user_guide/index.html",
+        "source": "pandas.pydata.org"
+      },
+      {
+        "type": "github",
+        "title": "pandas-dev/pandas",
+        "description": "",
+        "url": "https://github.com/pandas-dev/pandas",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Kaggle Pandas course",
+        "description": "",
+        "url": "https://www.kaggle.com/learn/pandas",
+        "source": "kaggle.com"
+      }
+    ],
+    "8.2": [
+      {
+        "type": "video",
+        "title": "Complete Python Pandas Data Science Tutorial (Keith Galli)",
+        "description": "Groupby/merge in practical flow",
+        "url": "https://www.youtube.com/watch?v=2uvysYbKdjM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/2uvysYbKdjM/hqdefault.jpg",
+        "videoId": "2uvysYbKdjM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Pandas freeCodeCamp course",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=gtjxAH8uaP0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/gtjxAH8uaP0/hqdefault.jpg",
+        "videoId": "gtjxAH8uaP0",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Rob Mulla Pandas",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=DkjCaAMBGWM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/DkjCaAMBGWM/hqdefault.jpg",
+        "videoId": "DkjCaAMBGWM",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Pandas Tutor",
+        "description": "Especially merge/groupby visualizations",
+        "url": "https://pandastutor.com/",
+        "source": "pandastutor.com"
+      },
+      {
+        "type": "interactive",
+        "title": "Kaggle",
+        "description": "",
+        "url": "https://www.kaggle.com/learn/pandas",
+        "source": "kaggle.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Merge, join, concatenate",
+        "description": "",
+        "url": "https://pandas.pydata.org/docs/user_guide/merging.html",
+        "source": "pandas.pydata.org"
+      },
+      {
+        "type": "github",
+        "title": "guipsamora/pandas_exercises",
+        "description": "",
+        "url": "https://github.com/guipsamora/pandas_exercises",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Kaggle",
+        "description": "",
+        "url": "https://www.kaggle.com/",
+        "source": "kaggle.com"
+      }
+    ],
+    "9.1": [
+      {
+        "type": "video",
+        "title": "TED-Ed: How to spot a misleading graph",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=5Zg-C8AAIGg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/5Zg-C8AAIGg/hqdefault.jpg",
+        "videoId": "5Zg-C8AAIGg",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "HBR storytelling with data ideas",
+        "description": "Narrative framing around visuals",
+        "url": "https://www.youtube.com/watch?v=r5_34YnCmMY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/r5_34YnCmMY/hqdefault.jpg",
+        "videoId": "r5_34YnCmMY",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Data to Viz",
+        "description": "Decision tree from data shape to chart family",
+        "url": "https://www.data-to-viz.com/",
+        "source": "data-to-viz.com"
+      },
+      {
+        "type": "interactive",
+        "title": "Python Graph Gallery",
+        "description": "Copyable examples with code",
+        "url": "https://python-graph-gallery.com/",
+        "source": "python-graph-gallery.com"
+      },
+      {
+        "type": "github",
+        "title": "donnemartin/data-science-ipython-notebooks",
+        "description": "",
+        "url": "https://github.com/donnemartin/data-science-ipython-notebooks",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Kaggle",
+        "description": "Recreate a chart honestly from a public dataset",
+        "url": "https://www.kaggle.com/",
+        "source": "kaggle.com"
+      }
+    ],
+    "9.2": [
+      {
+        "type": "video",
+        "title": "HBR / storytelling focus",
+        "description": "Structure the narrative a dashboard should support",
+        "url": "https://www.youtube.com/watch?v=r5_34YnCmMY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/r5_34YnCmMY/hqdefault.jpg",
+        "videoId": "r5_34YnCmMY",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Data Analysis with Python (freeCodeCamp)",
+        "description": "Plotting foundations that transfer to Plotly",
+        "url": "https://www.youtube.com/watch?v=r-uOLxNrNk8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/r-uOLxNrNk8/hqdefault.jpg",
+        "videoId": "r-uOLxNrNk8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Data with Baraa DE path",
+        "description": "Where BI sits relative to engineering",
+        "url": "https://www.youtube.com/watch?v=1nVGaNbvuXg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/1nVGaNbvuXg/hqdefault.jpg",
+        "videoId": "1nVGaNbvuXg",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Python Graph Gallery",
+        "description": "Plotly/Matplotlib patterns",
+        "url": "https://python-graph-gallery.com/",
+        "source": "python-graph-gallery.com"
+      },
+      {
+        "type": "interactive",
+        "title": "data-to-viz.com",
+        "description": "Keep chart choice honest inside dashboards",
+        "url": "https://www.data-to-viz.com/",
+        "source": "data-to-viz.com"
+      },
+      {
+        "type": "github",
+        "title": "donnemartin/data-science-ipython-notebooks",
+        "description": "",
+        "url": "https://github.com/donnemartin/data-science-ipython-notebooks",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "Kaggle",
+        "description": "Publish a notebook \"dashboard\" section with clear hierarchy",
+        "url": "https://www.kaggle.com/",
+        "source": "kaggle.com"
+      }
+    ],
+    "10.1": [
+      {
+        "type": "video",
+        "title": "Data Analysis with Python (freeCodeCamp)",
+        "description": "End-to-end exploration habits",
+        "url": "https://www.youtube.com/watch?v=r-uOLxNrNk8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/r-uOLxNrNk8/hqdefault.jpg",
+        "videoId": "r-uOLxNrNk8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Rob Mulla Pandas workflow",
+        "description": "Practical EDA pacing",
+        "url": "https://www.youtube.com/watch?v=DkjCaAMBGWM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/DkjCaAMBGWM/hqdefault.jpg",
+        "videoId": "DkjCaAMBGWM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "StatQuest mean/median",
+        "description": "Keep distribution checks in your EDA pack",
+        "url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/SzZ6GpcfoQY/hqdefault.jpg",
+        "videoId": "SzZ6GpcfoQY",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Kaggle",
+        "description": "Competitions and datasets force EDA before models",
+        "url": "https://www.kaggle.com/",
+        "source": "kaggle.com"
+      },
+      {
+        "type": "interactive",
+        "title": "Pandas Tutor",
+        "description": "Verify that wrangling steps during EDA do what you think",
+        "url": "https://pandastutor.com/",
+        "source": "pandastutor.com"
+      },
+      {
+        "type": "github",
+        "title": "guipsamora/pandas_exercises",
+        "description": "",
+        "url": "https://github.com/guipsamora/pandas_exercises",
+        "source": "GitHub"
+      }
+    ],
+    "10.2": [
+      {
+        "type": "video",
+        "title": "HBR storytelling",
+        "description": "Structure the memo like a story with a point",
+        "url": "https://www.youtube.com/watch?v=r5_34YnCmMY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/r5_34YnCmMY/hqdefault.jpg",
+        "videoId": "r5_34YnCmMY",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Data with Baraa DE 2026",
+        "description": "How metrics connect to platform work",
+        "url": "https://www.youtube.com/watch?v=1nVGaNbvuXg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/1nVGaNbvuXg/hqdefault.jpg",
+        "videoId": "1nVGaNbvuXg",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "ByteByteGo pipelines",
+        "description": "Remember metrics sit at the end of a trust pipeline",
+        "url": "https://www.youtube.com/watch?v=kGT4PcTEPP8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/kGT4PcTEPP8/hqdefault.jpg",
+        "videoId": "kGT4PcTEPP8",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Kaggle",
+        "description": "Practice cohort/funnel tables on public data",
+        "url": "https://www.kaggle.com/",
+        "source": "kaggle.com"
+      },
+      {
+        "type": "interactive",
+        "title": "Mode SQL Tutorial",
+        "description": "SQL patterns for funnel-like queries",
+        "url": "https://mode.com/sql-tutorial",
+        "source": "mode.com"
+      },
+      {
+        "type": "github",
+        "title": "DataTalksClub/data-engineering-zoomcamp",
+        "description": "See how analytics depends on solid upstream data",
+        "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "LeetCode Database",
+        "description": "",
+        "url": "https://leetcode.com/problemset/database",
+        "source": "leetcode.com"
+      }
+    ],
+    "11.1": [
+      {
+        "type": "video",
+        "title": "Database Normalization Explained (Decomplexify)",
+        "description": "Stepwise normal forms with clear examples",
+        "url": "https://www.youtube.com/watch?v=GFQaEYEc8_8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/GFQaEYEc8_8/hqdefault.jpg",
+        "videoId": "GFQaEYEc8_8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Postgres in 100 Seconds (Fireship)",
+        "description": "Modern relational engine context",
+        "url": "https://www.youtube.com/watch?v=n2Fluyr3lbc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/n2Fluyr3lbc/hqdefault.jpg",
+        "videoId": "n2Fluyr3lbc",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "B-Trees and database structure (Spanning Tree)",
+        "description": "Why keys and ordered storage matter underneath",
+        "url": "https://www.youtube.com/watch?v=K1a2Bk8NrYQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/K1a2Bk8NrYQ/hqdefault.jpg",
+        "videoId": "K1a2Bk8NrYQ",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "dbdiagram.io",
+        "description": "Draw entities, keys, and relationships visually",
+        "url": "https://dbdiagram.io/",
+        "source": "dbdiagram.io"
+      },
+      {
+        "type": "interactive",
+        "title": "learnpg.xyz",
+        "description": "Practice relational SQL against a real Postgres feel",
+        "url": "https://learnpg.xyz/",
+        "source": "learnpg.xyz"
+      },
+      {
+        "type": "github",
+        "title": "DataExpert-io/data-engineer-handbook",
+        "description": "Modeling notes in a broader DE map",
+        "url": "https://github.com/DataExpert-io/data-engineer-handbook",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "LeetCode Database",
+        "description": "",
+        "url": "https://leetcode.com/problemset/database",
+        "source": "leetcode.com"
+      }
+    ],
+    "11.2": [
+      {
+        "type": "video",
+        "title": "Database Indexing Explained",
+        "description": "Why indexes change lookup cost",
+        "url": "https://www.youtube.com/watch?v=lYh6LrSIDvY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/lYh6LrSIDvY/hqdefault.jpg",
+        "videoId": "lYh6LrSIDvY",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How indexing works (Arpit Bhayani)",
+        "description": "Practitioner-depth intuition",
+        "url": "https://www.youtube.com/watch?v=3G293is403I",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/3G293is403I/hqdefault.jpg",
+        "videoId": "3G293is403I",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "B-Trees (Spanning Tree)",
+        "description": "The data structure under most relational indexes",
+        "url": "https://www.youtube.com/watch?v=K1a2Bk8NrYQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/K1a2Bk8NrYQ/hqdefault.jpg",
+        "videoId": "K1a2Bk8NrYQ",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "learnpg.xyz",
+        "description": "Run queries and inspect behavior",
+        "url": "https://learnpg.xyz/",
+        "source": "learnpg.xyz"
+      },
+      {
+        "type": "interactive",
+        "title": "dbdiagram.io",
+        "description": "Mark candidate index columns while designing",
+        "url": "https://dbdiagram.io/",
+        "source": "dbdiagram.io"
+      },
+      {
+        "type": "github",
+        "title": "DataTalksClub/data-engineering-zoomcamp",
+        "description": "Later modules touch performance-aware loading",
+        "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+        "source": "GitHub"
+      }
+    ],
+    "12.1": [
+      {
+        "type": "video",
+        "title": "Data Warehouse vs Data Lake (Alex The Analyst)",
+        "description": "Clarifies roles of systems",
+        "url": "https://www.youtube.com/watch?v=-bSkREem8dM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/-bSkREem8dM/hqdefault.jpg",
+        "videoId": "-bSkREem8dM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "What is Data Pipeline? (ByteByteGo)",
+        "description": "How data moves into analytical stores",
+        "url": "https://www.youtube.com/watch?v=kGT4PcTEPP8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/kGT4PcTEPP8/hqdefault.jpg",
+        "videoId": "kGT4PcTEPP8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Data Pipeline Overview (ByteByteGo)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=Yj9qOWnipTQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Yj9qOWnipTQ/hqdefault.jpg",
+        "videoId": "Yj9qOWnipTQ",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "dbdiagram.io",
+        "description": "Sketch an analytics-facing schema separately from OLTP",
+        "url": "https://dbdiagram.io/",
+        "source": "dbdiagram.io"
+      },
+      {
+        "type": "interactive",
+        "title": "Mode SQL Tutorial",
+        "description": "Practice analytical SQL shapes",
+        "url": "https://mode.com/sql-tutorial",
+        "source": "mode.com"
+      },
+      {
+        "type": "documentation",
+        "title": "DataExpert-io/data-engineer-handbook",
+        "description": "",
+        "url": "https://github.com/DataExpert-io/data-engineer-handbook",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "DataTalksClub/data-engineering-zoomcamp",
+        "description": "",
+        "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+        "source": "GitHub"
+      }
+    ],
+    "12.2": [
+      {
+        "type": "video",
+        "title": "Star Schema Explained (Kahan Data Solutions)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=gRE3E7VUzRU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/gRE3E7VUzRU/hqdefault.jpg",
+        "videoId": "gRE3E7VUzRU",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Star vs Snowflake (codebasics)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=hQvCOBv_-LE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/hQvCOBv_-LE/hqdefault.jpg",
+        "videoId": "hQvCOBv_-LE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Modeling styles (Kahan)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=qXXNhLv986I",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/qXXNhLv986I/hqdefault.jpg",
+        "videoId": "qXXNhLv986I",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "dbdiagram.io",
+        "description": "Draw a star: fact in center, dims around",
+        "url": "https://dbdiagram.io/",
+        "source": "dbdiagram.io"
+      },
+      {
+        "type": "interactive",
+        "title": "Pragmatic Works style walkthrough",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=mPnnygpy2lY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/mPnnygpy2lY/hqdefault.jpg",
+        "videoId": "mPnnygpy2lY",
+        "embedSupported": true
+      },
+      {
+        "type": "github",
+        "title": "dbt-labs/jaffle-shop",
+        "description": "Marts that smell like facts/dims",
+        "url": "https://github.com/dbt-labs/jaffle-shop",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "DataTalksClub/data-engineering-zoomcamp",
+        "description": "",
+        "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+        "source": "GitHub"
+      }
+    ],
+    "12.3": [
+      {
+        "type": "video",
+        "title": "SCD explained (Seattle Data Guy)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=1FZ7et0pN4c",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/1FZ7et0pN4c/hqdefault.jpg",
+        "videoId": "1FZ7et0pN4c",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "SCD Type 1/2/3 (practical walkthrough)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=sZFCYpojP4I",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/sZFCYpojP4I/hqdefault.jpg",
+        "videoId": "sZFCYpojP4I",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Star schema modeling (Kahan)",
+        "description": "Dims in context before versioning",
+        "url": "https://www.youtube.com/watch?v=gRE3E7VUzRU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/gRE3E7VUzRU/hqdefault.jpg",
+        "videoId": "gRE3E7VUzRU",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "dbdiagram.io",
+        "description": "Add valid_from/valid_to columns to a dim",
+        "url": "https://dbdiagram.io/",
+        "source": "dbdiagram.io"
+      },
+      {
+        "type": "interactive",
+        "title": "dbt jaffle shop",
+        "description": "Study how transform layers prepare dim-like tables",
+        "url": "https://github.com/dbt-labs/jaffle-shop",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "DataTalksClub/data-engineering-zoomcamp",
+        "description": "",
+        "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+        "source": "GitHub"
+      }
+    ],
+    "13.1": [
+      {
+        "type": "video",
+        "title": "What is Data Pipeline? (ByteByteGo)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=kGT4PcTEPP8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/kGT4PcTEPP8/hqdefault.jpg",
+        "videoId": "kGT4PcTEPP8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "ETL with a clear example (Chandoo)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=wDTzxdShbd8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/wDTzxdShbd8/hqdefault.jpg",
+        "videoId": "wDTzxdShbd8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "IBM-style pipelines overview",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=6kEGUCrBEU0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/6kEGUCrBEU0/hqdefault.jpg",
+        "videoId": "6kEGUCrBEU0",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "docs.getdbt.com",
+        "description": "ELT transforms as code (preview of Phase 15)",
+        "url": "https://docs.getdbt.com/",
+        "source": "docs.getdbt.com"
+      },
+      {
+        "type": "interactive",
+        "title": "Airflow docs",
+        "description": "Orchestration around pipelines (Phase 14)",
+        "url": "https://airflow.apache.org/docs/",
+        "source": "airflow.apache.org"
+      },
+      {
+        "type": "documentation",
+        "title": "DataExpert-io/data-engineer-handbook",
+        "description": "",
+        "url": "https://github.com/DataExpert-io/data-engineer-handbook",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "DataTalksClub/data-engineering-zoomcamp",
+        "description": "",
+        "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+        "source": "GitHub"
+      }
+    ],
+    "13.2": [
+      {
+        "type": "video",
+        "title": "Apache Parquet Explained",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=5NA57Pfpdr4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/5NA57Pfpdr4/hqdefault.jpg",
+        "videoId": "5NA57Pfpdr4",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Column-oriented storage / Parquet",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=Zt7rqtJ3uWA",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Zt7rqtJ3uWA/hqdefault.jpg",
+        "videoId": "Zt7rqtJ3uWA",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "ByteByteGo pipelines",
+        "description": "Rethink retries with idempotency in mind",
+        "url": "https://www.youtube.com/watch?v=kGT4PcTEPP8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/kGT4PcTEPP8/hqdefault.jpg",
+        "videoId": "kGT4PcTEPP8",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "DuckDB in 100 seconds context",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=uHm6FEb2Re4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/uHm6FEb2Re4/hqdefault.jpg",
+        "videoId": "uHm6FEb2Re4",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Airflow docs",
+        "description": "Retries imply idempotent tasks",
+        "url": "https://airflow.apache.org/docs/",
+        "source": "airflow.apache.org"
+      },
+      {
+        "type": "github",
+        "title": "DataTalksClub/data-engineering-zoomcamp",
+        "description": "",
+        "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+        "source": "GitHub"
+      }
+    ],
+    "14.1": [
+      {
+        "type": "video",
+        "title": "Airflow for beginners (codebasics)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=P6gsMOoXFLU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/P6gsMOoXFLU/hqdefault.jpg",
+        "videoId": "P6gsMOoXFLU",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Airflow tutorial (Darshil Parmar)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=5peQThvQmQk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/5peQThvQmQk/hqdefault.jpg",
+        "videoId": "5peQThvQmQk",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Airflow deep dive style (coder2j)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=K9AnJ9_ZAXE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/K9AnJ9_ZAXE/hqdefault.jpg",
+        "videoId": "K9AnJ9_ZAXE",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Airflow documentation",
+        "description": "",
+        "url": "https://airflow.apache.org/docs/",
+        "source": "airflow.apache.org"
+      },
+      {
+        "type": "github",
+        "title": "apache/airflow",
+        "description": "",
+        "url": "https://github.com/apache/airflow",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "DataTalksClub/data-engineering-zoomcamp",
+        "description": "",
+        "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+        "source": "GitHub"
+      }
+    ],
+    "14.2": [
+      {
+        "type": "video",
+        "title": "Docker for Data Engineers",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=COMEVcZtx1s",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/COMEVcZtx1s/hqdefault.jpg",
+        "videoId": "COMEVcZtx1s",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Airflow + Docker workflows in beginner series",
+        "description": "Notice containerized setups",
+        "url": "https://www.youtube.com/watch?v=P6gsMOoXFLU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/P6gsMOoXFLU/hqdefault.jpg",
+        "videoId": "P6gsMOoXFLU",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Data Engineering Zoomcamp",
+        "description": "",
+        "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+        "source": "GitHub"
+      },
+      {
+        "type": "interactive",
+        "title": "Airflow docs",
+        "description": "",
+        "url": "https://airflow.apache.org/docs/",
+        "source": "airflow.apache.org"
+      },
+      {
+        "type": "github",
+        "title": "apache/airflow",
+        "description": "",
+        "url": "https://github.com/apache/airflow",
+        "source": "GitHub"
+      }
+    ],
+    "15.1": [
+      {
+        "type": "video",
+        "title": "What is dbt? (dbt Labs)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=rItxGK0cYj8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/rItxGK0cYj8/hqdefault.jpg",
+        "videoId": "rItxGK0cYj8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "dbt for analytics engineering (Seattle Data Guy)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=8FZZivIfJVo",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/8FZZivIfJVo/hqdefault.jpg",
+        "videoId": "8FZZivIfJVo",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "dbt models (Kahan)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=SVvRP8CS0qY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/SVvRP8CS0qY/hqdefault.jpg",
+        "videoId": "SVvRP8CS0qY",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "docs.getdbt.com",
+        "description": "",
+        "url": "https://docs.getdbt.com/",
+        "source": "docs.getdbt.com"
+      },
+      {
+        "type": "interactive",
+        "title": "dbt Learn / jaffle shop tutorials",
+        "description": "",
+        "url": "https://github.com/dbt-labs/jaffle-shop",
+        "source": "GitHub"
+      }
+    ],
+    "15.2": [
+      {
+        "type": "video",
+        "title": "dbt overview (dbt Labs)",
+        "description": "Revisit focusing on trust/testing culture",
+        "url": "https://www.youtube.com/watch?v=rItxGK0cYj8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/rItxGK0cYj8/hqdefault.jpg",
+        "videoId": "rItxGK0cYj8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "BugBytes dbt",
+        "description": "Practical project flow",
+        "url": "https://www.youtube.com/watch?v=C9wEdUjTNk8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/C9wEdUjTNk8/hqdefault.jpg",
+        "videoId": "C9wEdUjTNk8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Seattle Data Guy on dbt",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=8FZZivIfJVo",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/8FZZivIfJVo/hqdefault.jpg",
+        "videoId": "8FZZivIfJVo",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "docs.getdbt.com",
+        "description": "",
+        "url": "https://docs.getdbt.com/",
+        "source": "docs.getdbt.com"
+      },
+      {
+        "type": "github",
+        "title": "dbt-labs/jaffle-shop",
+        "description": "",
+        "url": "https://github.com/dbt-labs/jaffle-shop",
+        "source": "GitHub"
+      }
+    ],
+    "16.1": [
+      {
+        "type": "video",
+        "title": "Warehouse vs lake framing (Alex The Analyst)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=-bSkREem8dM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/-bSkREem8dM/hqdefault.jpg",
+        "videoId": "-bSkREem8dM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "DuckDB (Fireship)",
+        "description": "Lightweight analytical SQL engine useful for local/lake patterns",
+        "url": "https://www.youtube.com/watch?v=uHm6FEb2Re4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/uHm6FEb2Re4/hqdefault.jpg",
+        "videoId": "uHm6FEb2Re4",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "ByteByteGo pipelines",
+        "description": "Platform pieces in an end-to-end path",
+        "url": "https://www.youtube.com/watch?v=kGT4PcTEPP8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/kGT4PcTEPP8/hqdefault.jpg",
+        "videoId": "kGT4PcTEPP8",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "docs.getdbt.com",
+        "description": "",
+        "url": "https://docs.getdbt.com/",
+        "source": "docs.getdbt.com"
+      },
+      {
+        "type": "github",
+        "title": "DataTalksClub/data-engineering-zoomcamp",
+        "description": "",
+        "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+        "source": "GitHub"
+      }
+    ],
+    "16.2": [
+      {
+        "type": "video",
+        "title": "Warehouse vs lake (Alex)",
+        "description": "Revisit with \"who pays for scans?\" mindset",
+        "url": "https://www.youtube.com/watch?v=-bSkREem8dM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/-bSkREem8dM/hqdefault.jpg",
+        "videoId": "-bSkREem8dM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "dbt CI mindset (BugBytes / dbt content)",
+        "description": "Separate environments via targets",
+        "url": "https://www.youtube.com/watch?v=C9wEdUjTNk8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/C9wEdUjTNk8/hqdefault.jpg",
+        "videoId": "C9wEdUjTNk8",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "docs.getdbt.com",
+        "description": "",
+        "url": "https://docs.getdbt.com/",
+        "source": "docs.getdbt.com"
+      },
+      {
+        "type": "github",
+        "title": "igorbarinov/awesome-data-engineering",
+        "description": "",
+        "url": "https://github.com/igorbarinov/awesome-data-engineering",
+        "source": "GitHub"
+      }
+    ],
+    "17.1": [
+      {
+        "type": "video",
+        "title": "Spark explained visually (Data with Baraa)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=nKRwjXRs4mY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/nKRwjXRs4mY/hqdefault.jpg",
+        "videoId": "nKRwjXRs4mY",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Apache Spark in 100 Seconds (Fireship)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=IELMSD2kdmk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/IELMSD2kdmk/hqdefault.jpg",
+        "videoId": "IELMSD2kdmk",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Spark tutorial style (Ansh Lamba)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=FNJze2Ea780",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/FNJze2Ea780/hqdefault.jpg",
+        "videoId": "FNJze2Ea780",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "spark.apache.org documentation",
+        "description": "",
+        "url": "https://spark.apache.org/docs/latest/",
+        "source": "spark.apache.org"
+      },
+      {
+        "type": "github",
+        "title": "apache/spark",
+        "description": "",
+        "url": "https://github.com/apache/spark",
+        "source": "GitHub"
+      },
+      {
+        "type": "tool",
+        "title": "DataTalksClub/data-engineering-zoomcamp",
+        "description": "",
+        "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+        "source": "GitHub"
+      }
+    ],
+    "17.2": [
+      {
+        "type": "video",
+        "title": "Spark visual (Baraa)",
+        "description": "Rewatch focusing on shuffle intuition",
+        "url": "https://www.youtube.com/watch?v=nKRwjXRs4mY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/nKRwjXRs4mY/hqdefault.jpg",
+        "videoId": "nKRwjXRs4mY",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Fireship Spark",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=IELMSD2kdmk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/IELMSD2kdmk/hqdefault.jpg",
+        "videoId": "IELMSD2kdmk",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Ansh Lamba Spark",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=FNJze2Ea780",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/FNJze2Ea780/hqdefault.jpg",
+        "videoId": "FNJze2Ea780",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Spark docs - performance tuning",
+        "description": "",
+        "url": "https://spark.apache.org/docs/latest/sql-performance-tuning.html",
+        "source": "spark.apache.org"
+      },
+      {
+        "type": "github",
+        "title": "apache/spark",
+        "description": "",
+        "url": "https://github.com/apache/spark",
+        "source": "GitHub"
+      }
+    ],
+    "18.1": [
+      {
+        "type": "video",
+        "title": "Apache Kafka Fundamentals (ByteByteGo)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=-RDyEFvnTXI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/-RDyEFvnTXI/hqdefault.jpg",
+        "videoId": "-RDyEFvnTXI",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Why is Kafka fast? (ByteByteGo)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=UNUz1-msbOM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/UNUz1-msbOM/hqdefault.jpg",
+        "videoId": "UNUz1-msbOM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Kafka in 100 Seconds (Fireship)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=uvb00oaa3k8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/uvb00oaa3k8/hqdefault.jpg",
+        "videoId": "uvb00oaa3k8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Kafka Tutorial for Beginners (TechWorld with Nana)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=QkdkLdMBuL0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/QkdkLdMBuL0/hqdefault.jpg",
+        "videoId": "QkdkLdMBuL0",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Confluent Developer tutorials",
+        "description": "",
+        "url": "https://developer.confluent.io/tutorials/",
+        "source": "developer.confluent.io"
+      },
+      {
+        "type": "interactive",
+        "title": "What is Apache Kafka? (Confluent)",
+        "description": "",
+        "url": "https://developer.confluent.io/what-is-apache-kafka/",
+        "source": "developer.confluent.io"
+      },
+      {
+        "type": "github",
+        "title": "DataTalksClub/data-engineering-zoomcamp",
+        "description": "",
+        "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+        "source": "GitHub"
+      }
+    ],
+    "18.2": [
+      {
+        "type": "video",
+        "title": "Why is Kafka fast? (ByteByteGo)",
+        "description": "Internals that also inform reliability trade-offs",
+        "url": "https://www.youtube.com/watch?v=UNUz1-msbOM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/UNUz1-msbOM/hqdefault.jpg",
+        "videoId": "UNUz1-msbOM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Kafka Fundamentals (ByteByteGo)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=-RDyEFvnTXI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/-RDyEFvnTXI/hqdefault.jpg",
+        "videoId": "-RDyEFvnTXI",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Confluent Developer tutorials",
+        "description": "",
+        "url": "https://developer.confluent.io/tutorials/",
+        "source": "developer.confluent.io"
+      }
+    ],
+    "19.1": [
+      {
+        "type": "video",
+        "title": "What is Data Pipeline? (ByteByteGo)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=kGT4PcTEPP8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/kGT4PcTEPP8/hqdefault.jpg",
+        "videoId": "kGT4PcTEPP8",
+        "embedSupported": true
+      },
+      {
+        "type": "course",
+        "title": "SQL Data Warehouse Portfolio Project playlist (Data with Baraa)",
+        "description": "",
+        "url": "https://www.youtube.com/playlist?list=PLNcg_FV9n7qaUWeyUkPfiVtMbKlrfMqA8",
+        "source": "YouTube"
+      },
+      {
+        "type": "video",
+        "title": "What is Git and GitHub? (Alex The Analyst)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=QzvA7r-WndM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/QzvA7r-WndM/hqdefault.jpg",
+        "videoId": "QzvA7r-WndM",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Kaggle",
+        "description": "",
+        "url": "https://www.kaggle.com/",
+        "source": "kaggle.com"
+      },
+      {
+        "type": "interactive",
+        "title": "dbt Jaffle Shop quickstart",
+        "description": "",
+        "url": "https://docs.getdbt.com/guides/clone-jaffle-shop",
+        "source": "docs.getdbt.com"
+      },
+      {
+        "type": "github",
+        "title": "DataTalksClub/data-engineering-zoomcamp",
+        "description": "",
+        "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+        "source": "GitHub"
+      }
+    ],
+    "19.2": [
+      {
+        "type": "video",
+        "title": "Great Expectations Tutorial (Anuj Syal)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=oxOj30rl_xs",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/oxOj30rl_xs/hqdefault.jpg",
+        "videoId": "oxOj30rl_xs",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Data Quality with Great Expectations (Avery Smith)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=7Nk0HiiWi_Q",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/7Nk0HiiWi_Q/hqdefault.jpg",
+        "videoId": "7Nk0HiiWi_Q",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "dbt docs - tests",
+        "description": "",
+        "url": "https://docs.getdbt.com/docs/build/data-tests",
+        "source": "docs.getdbt.com"
+      },
+      {
+        "type": "interactive",
+        "title": "greatexpectations.io",
+        "description": "",
+        "url": "https://greatexpectations.io/",
+        "source": "greatexpectations.io"
+      },
+      {
+        "type": "github",
+        "title": "dbt-labs/jaffle-shop",
+        "description": "",
+        "url": "https://github.com/dbt-labs/jaffle-shop",
+        "source": "GitHub"
+      }
+    ],
+    "20.1": [
+      {
+        "type": "video",
+        "title": "SQL Joins Visually Explained (Data with Baraa)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=aY7z4HcHm5M",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/aY7z4HcHm5M/hqdefault.jpg",
+        "videoId": "aY7z4HcHm5M",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "SQL Window Functions Basics (Data with Baraa)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=o666k19mZwE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/o666k19mZwE/hqdefault.jpg",
+        "videoId": "o666k19mZwE",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "LeetCode Database",
+        "description": "",
+        "url": "https://leetcode.com/problemset/database/",
+        "source": "leetcode.com"
+      },
+      {
+        "type": "interactive",
+        "title": "SQLBolt",
+        "description": "",
+        "url": "https://sqlbolt.com/",
+        "source": "sqlbolt.com"
+      },
+      {
+        "type": "interactive",
+        "title": "SQL JOIN Visualizer",
+        "description": "",
+        "url": "https://www.dev-toolbox.tech/tools/sql-join-visualizer",
+        "source": "dev-toolbox.tech"
+      }
+    ],
+    "20.2": [
+      {
+        "type": "video",
+        "title": "Telling Stories with Data (HBR)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=r5_34YnCmMY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/r5_34YnCmMY/hqdefault.jpg",
+        "videoId": "r5_34YnCmMY",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Simple explanation of A/B Testing (codebasics)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=eiIhTbFP0ls",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/eiIhTbFP0ls/hqdefault.jpg",
+        "videoId": "eiIhTbFP0ls",
+        "embedSupported": true
+      }
+    ],
+    "20.3": [
+      {
+        "type": "video",
+        "title": "What is Data Pipeline? (ByteByteGo)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=kGT4PcTEPP8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/kGT4PcTEPP8/hqdefault.jpg",
+        "videoId": "kGT4PcTEPP8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Database vs Warehouse vs Lake (Alex The Analyst)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=-bSkREem8dM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/-bSkREem8dM/hqdefault.jpg",
+        "videoId": "-bSkREem8dM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "ByteByteGo Kafka Fundamentals",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=-RDyEFvnTXI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/-RDyEFvnTXI/hqdefault.jpg",
+        "videoId": "-RDyEFvnTXI",
+        "embedSupported": true
+      }
+    ],
+    "20.4": [
+      {
+        "type": "video",
+        "title": "Descriptive Statistics Tutorial",
+        "description": "Behavioral interview prep with data storytelling.",
+        "url": "https://www.youtube.com/watch?v=SplCk-t1BeA",
+        "source": "YouTube",
+        "channel": "Grad Coach",
+        "videoId": "SplCk-t1BeA",
+        "thumbnail": "https://i.ytimg.com/vi/SplCk-t1BeA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "article",
+        "title": "STAR method for interviews",
+        "description": "Structure behavioral answers with evidence.",
+        "url": "https://www.themuse.com/advice/star-interview-method",
+        "source": "The Muse",
+        "difficulty": "beginner"
+      }
+    ]
+  },
+  "phases": {},
+  "projects": {}
+}

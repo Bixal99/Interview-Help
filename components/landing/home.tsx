@@ -44,7 +44,7 @@ export function LandingHome({
               From first principles to hire-ready
             </h1>
             <p className="ih-hero-lead">
-              Self-paced technical roadmaps. One lesson per page, then that phase&apos;s project. No account and no paywall.
+              Self-paced technical roadmaps. One section per page, then that chapter&apos;s project. No account and no paywall.
             </p>
             <div className="ih-hero-actions">
               <Link href="/courses" className="ih-landing-cta">
@@ -57,7 +57,7 @@ export function LandingHome({
             <p className="ih-hero-stats">
               <span>{stats.courseCount} roadmaps</span>
               <span>{stats.lessonCount.toLocaleString("en-US")} lessons</span>
-              <span>{stats.projectCount.toLocaleString("en-US")} phase projects</span>
+              <span>{stats.projectCount.toLocaleString("en-US")} chapter projects</span>
             </p>
           </div>
           <HeroStage />
@@ -78,7 +78,7 @@ export function LandingHome({
         <div className="ih-landing-inner">
           <h2>How to use this website</h2>
           <p className="ih-landing-lead">
-            The same loop on every roadmap: one lesson, then that phase&apos;s project, then the next chapter.
+            The same loop on every roadmap: one section, then that chapter&apos;s project, then the next chapter.
           </p>
           <LandingLoop />
           {paths.length > 0 ? (

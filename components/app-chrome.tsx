@@ -2,8 +2,10 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
+import { CourseChromeProgressBridge } from "@/components/course-chrome-progress";
 import { LandingFooter } from "@/components/landing/footer";
 import { LandingHeader } from "@/components/landing/header";
+import { PageTransition } from "@/components/page-transition";
 
 function isPhaseCheckpoint(pathname: string) {
   return /^\/courses\/[^/]+\/phase\/[^/]+$/.test(pathname);
@@ -13,8 +15,14 @@ function isPlayground(pathname: string) {
   return /^\/playground(?:\/|$)/.test(pathname);
 }
 
+/** Course home, lessons, checkpoints, and course projects — no marketing footer. */
+function isInsideCourse(pathname: string) {
+  return /^\/courses\/[^/]+/.test(pathname) || /^\/projects\/[^/]+/.test(pathname);
+}
+
 export function AppChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const page = <PageTransition>{children}</PageTransition>;
 
   useEffect(() => {
     try {
@@ -25,22 +33,24 @@ export function AppChrome({ children }: { children: React.ReactNode }) {
     document.documentElement.classList.remove("dark");
   }, []);
 
-  if (pathname === "/") return children;
+  if (pathname === "/") return page;
   if (isPhaseCheckpoint(pathname)) {
-    return <div className="ih-w3 min-h-screen">{children}</div>;
+    return <div className="ih-w3 min-h-screen">{page}</div>;
   }
-  if (isPlayground(pathname)) {
+  if (isPlayground(pathname) || isInsideCourse(pathname)) {
     return (
-      <div className="ih-w3 min-h-screen">
-        <LandingHeader />
-        {children}
-      </div>
+      <CourseChromeProgressBridge>
+        <div className="ih-w3 min-h-screen">
+          <LandingHeader />
+          {page}
+        </div>
+      </CourseChromeProgressBridge>
     );
   }
   return (
     <div className="ih-w3">
       <LandingHeader />
-      {children}
+      {page}
       <LandingFooter />
     </div>
   );

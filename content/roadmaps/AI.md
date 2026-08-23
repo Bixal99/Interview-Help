@@ -2303,7 +2303,7 @@ print(prompt)
 
 **SEE IT BEFORE YOU MEMORIZE IT**
 
-- [What is Agentic RAG? (IBM)](https://www.youtube.com/watch?v=0z_MhcYvcY)
+- [What is Agentic RAG? (IBM)](https://www.youtube.com/watch?v=0z9_MhcYvcY)
 - Cohere/HF reranker blogs
 - LlamaIndex query engine patterns
 

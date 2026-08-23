@@ -1,0 +1,374 @@
+{
+  "lessons": {
+    "1.2": [
+      {
+        "type": "video",
+        "title": "Cross Validation",
+        "description": "Train/validation/test splits for honest generalization.",
+        "url": "https://www.youtube.com/watch?v=fSytzGwwBVw",
+        "source": "YouTube",
+        "channel": "StatQuest",
+        "videoId": "fSytzGwwBVw",
+        "thumbnail": "https://i.ytimg.com/vi/fSytzGwwBVw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Underfitting & Overfitting Explained",
+        "description": "Why held-out data reveals true performance.",
+        "url": "https://www.youtube.com/watch?v=o3DztvnfAJg",
+        "source": "YouTube",
+        "channel": "NStatum",
+        "videoId": "o3DztvnfAJg",
+        "thumbnail": "https://i.ytimg.com/vi/o3DztvnfAJg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "3.2": [
+      {
+        "type": "video",
+        "title": "What is Pandas? Why and How to Use Pandas in Python",
+        "description": "Quick pandas tour for exploratory analysis.",
+        "url": "https://www.youtube.com/watch?v=dcqPhpY7tWk",
+        "source": "YouTube",
+        "channel": "Python Programmer",
+        "videoId": "dcqPhpY7tWk",
+        "thumbnail": "https://i.ytimg.com/vi/dcqPhpY7tWk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "Pandas documentation",
+        "description": "Official docs for DataFrame operations and plotting.",
+        "url": "https://pandas.pydata.org/docs/",
+        "source": "Pandas",
+        "difficulty": "beginner"
+      }
+    ],
+    "4.1": [
+      {
+        "type": "video",
+        "title": "Gradient Descent in 3 Minutes",
+        "description": "Linear regression as loss minimization.",
+        "url": "https://www.youtube.com/watch?v=qg4PchTECck",
+        "source": "YouTube",
+        "channel": "Visually Explained",
+        "videoId": "qg4PchTECck",
+        "thumbnail": "https://i.ytimg.com/vi/qg4PchTECck/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Gradient Descent, How Neural Networks Learn",
+        "description": "Loss landscapes and weight updates.",
+        "url": "https://www.youtube.com/watch?v=IHZwWFHWa-w",
+        "source": "YouTube",
+        "channel": "3Blue1Brown",
+        "videoId": "IHZwWFHWa-w",
+        "thumbnail": "https://i.ytimg.com/vi/IHZwWFHWa-w/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "4.2": [
+      {
+        "type": "video",
+        "title": "StatQuest: Logistic Regression",
+        "description": "Decision boundaries and sigmoid outputs.",
+        "url": "https://www.youtube.com/watch?v=yIYKR4sgzI8",
+        "source": "YouTube",
+        "channel": "StatQuest",
+        "videoId": "yIYKR4sgzI8",
+        "thumbnail": "https://i.ytimg.com/vi/yIYKR4sgzI8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.1": [
+      {
+        "type": "video",
+        "title": "ROC and AUC, Clearly Explained!",
+        "description": "Metrics beyond accuracy for imbalanced data.",
+        "url": "https://www.youtube.com/watch?v=4jRBRDbJemM",
+        "source": "YouTube",
+        "channel": "StatQuest",
+        "videoId": "4jRBRDbJemM",
+        "thumbnail": "https://i.ytimg.com/vi/4jRBRDbJemM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.2": [
+      {
+        "type": "video",
+        "title": "Cross Validation",
+        "description": "K-fold validation and variance estimation.",
+        "url": "https://www.youtube.com/watch?v=fSytzGwwBVw",
+        "source": "YouTube",
+        "channel": "StatQuest",
+        "videoId": "fSytzGwwBVw",
+        "thumbnail": "https://i.ytimg.com/vi/fSytzGwwBVw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Underfitting & Overfitting Explained",
+        "description": "Bias-variance tradeoff intuition.",
+        "url": "https://www.youtube.com/watch?v=o3DztvnfAJg",
+        "source": "YouTube",
+        "channel": "NStatum",
+        "videoId": "o3DztvnfAJg",
+        "thumbnail": "https://i.ytimg.com/vi/o3DztvnfAJg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "6.1": [
+      {
+        "type": "video",
+        "title": "Decision and Classification Trees, Clearly Explained",
+        "description": "How trees split features.",
+        "url": "https://www.youtube.com/watch?v=_L39rN6gz7Y",
+        "source": "YouTube",
+        "channel": "StatQuest",
+        "videoId": "_L39rN6gz7Y",
+        "thumbnail": "https://i.ytimg.com/vi/_L39rN6gz7Y/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "What is Random Forest?",
+        "description": "Ensemble of trees for robust predictions.",
+        "url": "https://www.youtube.com/watch?v=gkXX4h3qYm4",
+        "source": "YouTube",
+        "channel": "IBM Technology",
+        "videoId": "gkXX4h3qYm4",
+        "thumbnail": "https://i.ytimg.com/vi/gkXX4h3qYm4/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "6.2": [
+      {
+        "type": "video",
+        "title": "Decision Trees, Random Forests and Gradient Boosting",
+        "description": "Boosting vs bagging comparison.",
+        "url": "https://www.youtube.com/watch?v=uV2gdNt2MLc",
+        "source": "YouTube",
+        "channel": "Leon Lok",
+        "videoId": "uV2gdNt2MLc",
+        "thumbnail": "https://i.ytimg.com/vi/uV2gdNt2MLc/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "7.2": [
+      {
+        "type": "video",
+        "title": "Underfitting & Overfitting Explained",
+        "description": "Regularization and early stopping context.",
+        "url": "https://www.youtube.com/watch?v=o3DztvnfAJg",
+        "source": "YouTube",
+        "channel": "NStatum",
+        "videoId": "o3DztvnfAJg",
+        "thumbnail": "https://i.ytimg.com/vi/o3DztvnfAJg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "Scikit-learn regularization",
+        "description": "Dropout equivalents and penalty terms in classical ML.",
+        "url": "https://scikit-learn.org/stable/modules/linear_model.html",
+        "source": "scikit-learn",
+        "difficulty": "beginner"
+      }
+    ],
+    "9.2": [
+      {
+        "type": "video",
+        "title": "Gradient Descent, How Neural Networks Learn",
+        "description": "Training loops and debugging loss curves.",
+        "url": "https://www.youtube.com/watch?v=IHZwWFHWa-w",
+        "source": "YouTube",
+        "channel": "3Blue1Brown",
+        "videoId": "IHZwWFHWa-w",
+        "thumbnail": "https://i.ytimg.com/vi/IHZwWFHWa-w/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "github",
+        "title": "PyTorch tutorials",
+        "description": "Official examples for datasets and training loops.",
+        "url": "https://github.com/pytorch/tutorials",
+        "source": "GitHub",
+        "difficulty": "beginner"
+      }
+    ],
+    "11.1": [
+      {
+        "type": "video",
+        "title": "Recurrent Neural Networks (RNNs), Clearly Explained",
+        "description": "State carried across time steps.",
+        "url": "https://www.youtube.com/watch?v=AsNTP8Kwu80",
+        "source": "YouTube",
+        "channel": "StatQuest",
+        "videoId": "AsNTP8Kwu80",
+        "thumbnail": "https://i.ytimg.com/vi/AsNTP8Kwu80/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "12.2": [
+      {
+        "type": "video",
+        "title": "Attention in Transformers, Step-by-Step",
+        "description": "Similarity and retrieval in vector spaces.",
+        "url": "https://www.youtube.com/watch?v=eMlx5fFNoYc",
+        "source": "YouTube",
+        "channel": "3Blue1Brown",
+        "videoId": "eMlx5fFNoYc",
+        "thumbnail": "https://i.ytimg.com/vi/eMlx5fFNoYc/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "14.2": [
+      {
+        "type": "video",
+        "title": "Illustrated Guide to Transformers",
+        "description": "Prompting patterns via attention mechanics.",
+        "url": "https://www.youtube.com/watch?v=4Bdc55j80l8",
+        "source": "YouTube",
+        "channel": "The AI Hacker",
+        "videoId": "4Bdc55j80l8",
+        "thumbnail": "https://i.ytimg.com/vi/4Bdc55j80l8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "OpenAI prompt engineering guide",
+        "description": "Patterns and failure modes for LLM prompts.",
+        "url": "https://platform.openai.com/docs/guides/prompt-engineering",
+        "source": "OpenAI",
+        "difficulty": "beginner"
+      }
+    ],
+    "16.2": [
+      {
+        "type": "article",
+        "title": "RLHF explained (Hugging Face)",
+        "description": "Preferences, alignment, and safety trade-offs.",
+        "url": "https://huggingface.co/blog/rlhf",
+        "source": "Hugging Face",
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Attention in Transformers, Step-by-Step",
+        "description": "Foundation for preference modeling in LLMs.",
+        "url": "https://www.youtube.com/watch?v=eMlx5fFNoYc",
+        "source": "YouTube",
+        "channel": "3Blue1Brown",
+        "videoId": "eMlx5fFNoYc",
+        "thumbnail": "https://i.ytimg.com/vi/eMlx5fFNoYc/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "17.2": [
+      {
+        "type": "documentation",
+        "title": "LangGraph docs",
+        "description": "Memory, graphs, and human-in-the-loop agents.",
+        "url": "https://langchain-ai.github.io/langgraph/",
+        "source": "LangChain",
+        "difficulty": "beginner"
+      },
+      {
+        "type": "github",
+        "title": "LangGraph examples",
+        "description": "Reference agent workflows with memory.",
+        "url": "https://github.com/langchain-ai/langgraph",
+        "source": "GitHub",
+        "difficulty": "beginner"
+      }
+    ],
+    "19.2": [
+      {
+        "type": "documentation",
+        "title": "ML reproducibility checklist",
+        "description": "Versioning data, code, and environment.",
+        "url": "https://ml-ops.org/content/reproducible-ml",
+        "source": "MLOps Community",
+        "difficulty": "beginner"
+      },
+      {
+        "type": "github",
+        "title": "DVC — Data Version Control",
+        "description": "Track datasets and experiments reproducibly.",
+        "url": "https://github.com/iterative/dvc",
+        "source": "GitHub",
+        "difficulty": "beginner"
+      }
+    ],
+    "20.1": [
+      {
+        "type": "video",
+        "title": "Cross Validation",
+        "description": "Core ML drill: splits and metrics.",
+        "url": "https://www.youtube.com/watch?v=fSytzGwwBVw",
+        "source": "YouTube",
+        "channel": "StatQuest",
+        "videoId": "fSytzGwwBVw",
+        "thumbnail": "https://i.ytimg.com/vi/fSytzGwwBVw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Decision and Classification Trees, Clearly Explained",
+        "description": "Explain-like-production tree models.",
+        "url": "https://www.youtube.com/watch?v=_L39rN6gz7Y",
+        "source": "YouTube",
+        "channel": "StatQuest",
+        "videoId": "_L39rN6gz7Y",
+        "thumbnail": "https://i.ytimg.com/vi/_L39rN6gz7Y/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "20.2": [
+      {
+        "type": "video",
+        "title": "Illustrated Guide to Transformers",
+        "description": "LLM system design building blocks.",
+        "url": "https://www.youtube.com/watch?v=4Bdc55j80l8",
+        "source": "YouTube",
+        "channel": "The AI Hacker",
+        "videoId": "4Bdc55j80l8",
+        "thumbnail": "https://i.ytimg.com/vi/4Bdc55j80l8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "OpenAI API docs",
+        "description": "Production LLM integration patterns.",
+        "url": "https://platform.openai.com/docs/",
+        "source": "OpenAI",
+        "difficulty": "beginner"
+      }
+    ]
+  },
+  "phases": {},
+  "projects": {}
+}

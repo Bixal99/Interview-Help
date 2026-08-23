@@ -1,18 +1,18 @@
 "use client";
 
-import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
-import { AppIcon, CourseIdentityIcon } from "@/components/icons/app-icon";
-import { ICON_SIZE } from "@/lib/icons";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { AppIcon } from "@/components/icons/app-icon";
 import { useLearningProgress } from "./progress-client";
 import { WindingRoadmap } from "./winding-roadmap";
-import { phaseProgressPercent, trailStatuses } from "@/lib/progress-map";
+import { trailStatuses } from "@/lib/progress-map";
+import { coursePercent, lessonsDone } from "@/lib/progress-storage";
 
 export type ProgressCourseView = {
   slug: string;
   shortName: string;
   barLabel: string;
   description: string;
+  lessonCount: number;
   phaseCount: number;
   chapters: {
     id: string;
@@ -25,6 +25,8 @@ export type ProgressCourseView = {
       goal?: string;
       hasProject: boolean;
       href: string;
+      lessonIds: string[];
+      lessons: { id: string; slug: string; title: string }[];
     }[];
   }[];
 };
@@ -34,11 +36,10 @@ function resumeHrefFor(slug: string, phaseId: string, lessonId?: string) {
 }
 
 const SELECTED_KEY = "ih-progress-campaign";
-const TILES = ["#D9EEE1", "#FFF4A3", "#FFC0C7", "#96D4FA", "#F3ECEA"];
 
 export function ProgressDashboard({ courses }: { courses: ProgressCourseView[] }) {
   const { ready, resume, exportJson, importJson, reset, course } = useLearningProgress();
-  const file = useRef<HTMLInputElement>(null);
+  const fileRef = useRef<HTMLInputElement>(null);
   const current = ready ? resume(resumeHrefFor) : null;
   const [selected, setSelected] = useState(courses[0]?.slug ?? "");
   const [resetOpen, setResetOpen] = useState(false);
@@ -66,34 +67,46 @@ export function ProgressDashboard({ courses }: { courses: ProgressCourseView[] }
   const percents = useMemo(() => {
     const map: Record<string, number> = {};
     for (const item of courses) {
-      const phases = item.chapters.flatMap((chapter) => chapter.phases);
       const state = course(item.slug);
-      const statuses = trailStatuses(phases, state.completedProjects, state.completedPhases, state.currentPhaseId);
-      map[item.slug] = phaseProgressPercent(statuses);
+      map[item.slug] = coursePercent(state, item.lessonCount, item.phaseCount);
     }
     return map;
   }, [courses, course]);
 
   const active = courses.find((item) => item.slug === selected) ?? courses[0];
   const activeState = active ? course(active.slug) : null;
-  const phases = useMemo(() => active?.chapters.flatMap((chapter) => chapter.phases) ?? [], [active]);
+  const phaseList = useMemo(
+    () =>
+      active?.chapters.flatMap((chapter) =>
+        chapter.phases.map((phase) => ({
+          id: phase.id,
+          hasProject: phase.hasProject,
+          lessonIds: phase.lessonIds,
+          href: phase.href,
+        })),
+      ) ?? [],
+    [active],
+  );
   const statuses = useMemo(() => {
     if (!active || !activeState) return [];
-    return trailStatuses(phases, activeState.completedProjects, activeState.completedPhases, activeState.currentPhaseId);
-  }, [active, activeState, phases]);
-  const here = phases.find((_, index) => statuses[index] === "here") ?? phases[0];
-  const liveIndex = useMemo(() => {
-    if (statuses.length && statuses.every((status) => status === "cleared")) return statuses.length - 1;
-    const index = statuses.findIndex((status) => status === "here");
-    return index >= 0 ? index : 0;
-  }, [statuses]);
+    return trailStatuses(
+      phaseList,
+      activeState.completedLessons,
+      activeState.currentPhaseId,
+      activeState.currentLessonId,
+      activeState.completedProjects,
+    );
+  }, [active, activeState, phaseList]);
+  const here = phaseList.find((_, index) => statuses[index] === "here") ?? phaseList[0];
   const continueHref =
-    current?.slug === active?.slug && current.href ? current.href : here?.href ?? `/courses/${active?.slug ?? ""}`;
-  const continueLabel = current?.slug === active?.slug ? "Continue" : "Start here";
-  const pathPercent = phaseProgressPercent(statuses);
-  const totalPhases = courses.reduce((sum, item) => sum + item.phaseCount, 0);
-  const clearedPhases = courses.reduce((sum, item) => sum + Math.round(((percents[item.slug] ?? 0) / 100) * item.phaseCount), 0);
-  const overall = totalPhases ? Math.round((clearedPhases / totalPhases) * 100) : 0;
+    current?.slug === active?.slug && current.href
+      ? current.href
+      : here?.href ?? `/courses/${active?.slug ?? ""}`;
+  const totalLessons = courses.reduce((sum, item) => sum + item.lessonCount, 0);
+  const totalProjects = courses.reduce((sum, item) => sum + item.phaseCount, 0);
+  const clearedLessons = courses.reduce((sum, item) => sum + lessonsDone(course(item.slug)), 0);
+  const clearedProjects = courses.reduce((sum, item) => sum + Math.min(item.phaseCount, new Set(course(item.slug).completedProjects).size), 0);
+  const overall = totalLessons + totalProjects ? Math.round(((clearedLessons + clearedProjects) / (totalLessons + totalProjects)) * 100) : 0;
 
   async function onImport(event: React.ChangeEvent<HTMLInputElement>) {
     const picked = event.target.files?.[0];
@@ -107,18 +120,29 @@ export function ProgressDashboard({ courses }: { courses: ProgressCourseView[] }
   }
 
   function onExport() {
-    const blob = new Blob([exportJson()], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const anchor = document.createElement("a");
-    anchor.href = url;
-    anchor.download = "interview-help-progress.json";
-    anchor.click();
-    URL.revokeObjectURL(url);
+    try {
+      const blob = new Blob([exportJson()], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement("a");
+      anchor.href = url;
+      anchor.download = "interview-help-progress.json";
+      document.body.appendChild(anchor);
+      anchor.click();
+      anchor.remove();
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      window.alert(error instanceof Error ? error.message : "Could not export progress.");
+    }
   }
 
   function confirmReset() {
-    reset();
-    setResetOpen(false);
+    try {
+      reset();
+      setSelected(courses[0]?.slug ?? "");
+      setResetOpen(false);
+    } catch (error) {
+      window.alert(error instanceof Error ? error.message : "Could not reset progress.");
+    }
   }
 
   function pick(slug: string) {
@@ -128,30 +152,58 @@ export function ProgressDashboard({ courses }: { courses: ProgressCourseView[] }
 
   if (!active) return null;
 
-  const markColor = TILES[courses.findIndex((item) => item.slug === active.slug) % TILES.length];
+  const mapToolbar: ReactNode = (
+    <div className="ih-progress-map-toolbar">
+      <button type="button" className="ih-progress-tool" onClick={onExport}>
+        <AppIcon name="exportProgress" size={16} /> Export
+      </button>
+      <button type="button" className="ih-progress-tool" onClick={() => fileRef.current?.click()}>
+        <AppIcon name="importProgress" size={16} /> Import
+      </button>
+      <button type="button" className="ih-progress-tool is-danger" onClick={() => setResetOpen(true)}>
+        <AppIcon name="resetProgress" size={16} /> Reset
+      </button>
+      <input
+        ref={fileRef}
+        type="file"
+        accept="application/json"
+        hidden
+        onChange={onImport}
+      />
+    </div>
+  );
 
   return (
     <main id="main-content" className="ih-studio ih-progress-page">
       <div className="ih-studio-shell">
         <header className="ih-studio-hero">
-          <h1>Progress</h1>
-          <p className="ih-studio-lead">
-            Live completion across each roadmap — pick a course and continue from where you left off.
-          </p>
+          <div className="ih-progress-hero-row">
+            <div>
+              <h1>Progress</h1>
+              <p className="ih-studio-lead">
+                Live completion across each roadmap. Pick a course and continue from where you left off.
+              </p>
+            </div>
+          </div>
           <ul className="ih-studio-stats">
             <li>
               <b>{courses.length}</b>
               <span>roadmaps</span>
             </li>
             <li>
-              <b>{clearedPhases}</b>
-              <span>phases cleared</span>
+              <b>{clearedLessons}</b>
+              <span>lessons complete</span>
+            </li>
+            <li>
+              <b>{clearedProjects}</b>
+              <span>projects complete</span>
             </li>
             <li>
               <b>{`${overall}%`}</b>
               <span>overall complete</span>
             </li>
           </ul>
+          <p className="ih-progress-note">Stored only in this browser. Export a backup before you clear site data.</p>
         </header>
 
         <section className="ih-studio-board">
@@ -175,44 +227,16 @@ export function ProgressDashboard({ courses }: { courses: ProgressCourseView[] }
             })}
           </div>
 
-          <div className="ih-studio-section-head">
-            <span className="ih-studio-mark" style={{ background: markColor }}>
-              <CourseIdentityIcon slug={active.slug} size={ICON_SIZE.heading} />
-            </span>
-            <div>
-              <h2>{active.shortName}</h2>
-              <p>{active.description}</p>
-              <p className="ih-progress-meta">
-                {`${pathPercent}% complete · now on phase ${liveIndex + 1} of ${phases.length}`}
-              </p>
-            </div>
-            <Link href={continueHref} className="ih-progress-continue">
-              {continueLabel}
-              <AppIcon name="next" size={16} />
-            </Link>
+          <div className="ih-progress-map">
+            <WindingRoadmap
+              key={active.slug}
+              course={active}
+              continueHref={continueHref}
+              continueLabel="Continue"
+              showIntro={false}
+              toolbar={mapToolbar}
+            />
           </div>
-
-          <WindingRoadmap
-            key={active.slug}
-            course={active}
-            continueHref={continueHref}
-            continueLabel={continueLabel}
-            showIntro={false}
-          />
-
-          <div className="ih-progress-tools">
-            <button type="button" className="btn-prev" onClick={onExport}>
-              <AppIcon name="exportProgress" size={16} /> Export
-            </button>
-            <button type="button" className="btn-prev" onClick={() => file.current?.click()}>
-              <AppIcon name="importProgress" size={16} /> Import
-            </button>
-            <button type="button" className="btn-prev" onClick={() => setResetOpen(true)}>
-              <AppIcon name="resetProgress" size={16} /> Reset
-            </button>
-            <input ref={file} type="file" accept="application/json" className="sr-only" onChange={onImport} />
-          </div>
-          <p className="ih-progress-note">Stored only in this browser. Export a backup before you clear site data.</p>
         </section>
       </div>
 

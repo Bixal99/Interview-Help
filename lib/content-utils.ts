@@ -31,6 +31,7 @@ function normalizeSourcePath(value: string, lowercase = true): string {
 }
 
 const routeBySourcePath = new Map(contentRegistry.map((entry) => [normalizeSourcePath(entry.sourcePath), entry.route]));
+for (const course of roadmapRegistry) routeBySourcePath.set(normalizeSourcePath(course.projectSourcePath), "/projects");
 routeBySourcePath.set("data/job_tracker.xlsx", "/downloads/job-tracker");
 routeBySourcePath.set("content", "/about");
 routeBySourcePath.set("content/roadmaps", "/courses");
@@ -43,6 +44,23 @@ export const markdownRouteMap: Record<string, string> = Object.fromEntries([
   ["readme.md", "/about"] as const,
 ]);
 
+/** Map common Greek letters to ASCII so lesson URLs stay routable in Next.js. */
+const GREEK_TO_ASCII: Record<string, string> = {
+  α: "alpha",
+  β: "beta",
+  γ: "gamma",
+  δ: "delta",
+  ε: "epsilon",
+  θ: "theta",
+  λ: "lambda",
+  μ: "mu",
+  π: "pi",
+  σ: "sigma",
+  τ: "tau",
+  φ: "phi",
+  ω: "omega",
+};
+
 export function githubSlug(value: string): string {
   return value
     .trim()
@@ -50,6 +68,7 @@ export function githubSlug(value: string): string {
     .replace(/<[^>]*>/g, "")
     .replace(/[`*_~]/g, "")
     .replace(/&amp;/g, "")
+    .replace(/[αβγδεθλμπστφω]/gu, (ch) => GREEK_TO_ASCII[ch] ?? ch)
     .replace(/[^\p{L}\p{N}\s-]/gu, "")
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-");
@@ -67,7 +86,7 @@ export function extractHeadings(markdown: string): Heading[] {
     const match = /^(#{1,4})\s+(.+?)\s*#*$/.exec(line);
     if (!match) continue;
     const text = match[2].replace(/\[([^\]]+)\]\([^)]*\)/g, "$1").trim();
-    const phaseMatch = /^PHASE\s+(\d+)\b/i.exec(text);
+    const phaseMatch = /^(?:PHASE|CHAPTER)\s+(\d+)\b/i.exec(text);
     headings.push({
       depth: match[1].length,
       text: plainFormula(text),

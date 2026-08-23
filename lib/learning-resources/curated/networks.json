@@ -1,0 +1,128 @@
+{
+  "lessons": {
+    "15.2": [
+      {
+        "type": "video",
+        "title": "What is TCP/IP?",
+        "description": "Layered debugging starts with the stack.",
+        "url": "https://www.youtube.com/watch?v=PpsEaqJV_A0",
+        "source": "YouTube",
+        "channel": "Techquickie",
+        "videoId": "PpsEaqJV_A0",
+        "thumbnail": "https://i.ytimg.com/vi/PpsEaqJV_A0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "TCP/IP and OSI — Best Explanation",
+        "description": "Where to look when packets misbehave.",
+        "url": "https://www.youtube.com/watch?v=3b_TAYtzuho",
+        "source": "YouTube",
+        "channel": "_Drunk Engineer_",
+        "videoId": "3b_TAYtzuho",
+        "thumbnail": "https://i.ytimg.com/vi/3b_TAYtzuho/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "tool",
+        "title": "Wireshark",
+        "description": "Capture and inspect packets layer by layer.",
+        "url": "https://www.wireshark.org/",
+        "source": "Wireshark",
+        "difficulty": "beginner"
+      }
+    ],
+    "16.2": [
+      {
+        "type": "video",
+        "title": "What is TCP/IP?",
+        "description": "TCP retries and Wi-Fi interference context.",
+        "url": "https://www.youtube.com/watch?v=PpsEaqJV_A0",
+        "source": "YouTube",
+        "channel": "Techquickie",
+        "videoId": "PpsEaqJV_A0",
+        "thumbnail": "https://i.ytimg.com/vi/PpsEaqJV_A0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "TCP congestion control (RFC 5681)",
+        "description": "How TCP responds to loss on noisy links.",
+        "url": "https://datatracker.ietf.org/doc/html/rfc5681",
+        "source": "IETF",
+        "difficulty": "beginner"
+      }
+    ],
+    "18.2": [
+      {
+        "type": "documentation",
+        "title": "Resource Public Key Infrastructure (RPKI)",
+        "description": "Why route origin validation matters.",
+        "url": "https://www.rfc-editor.org/rfc/rfc6480",
+        "source": "IETF",
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "SSL, TLS, HTTPS Explained",
+        "description": "Trust chains related to routing security.",
+        "url": "https://www.youtube.com/watch?v=j9QmMEWmcfo",
+        "source": "YouTube",
+        "channel": "ByteByteGo",
+        "videoId": "j9QmMEWmcfo",
+        "thumbnail": "https://i.ytimg.com/vi/j9QmMEWmcfo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "20.1": [
+      {
+        "type": "video",
+        "title": "What is TCP/IP?",
+        "description": "URL-to-packet walkthrough foundation.",
+        "url": "https://www.youtube.com/watch?v=PpsEaqJV_A0",
+        "source": "YouTube",
+        "channel": "Techquickie",
+        "videoId": "PpsEaqJV_A0",
+        "thumbnail": "https://i.ytimg.com/vi/PpsEaqJV_A0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "tool",
+        "title": "DNS lookup (Google)",
+        "description": "Trace DNS resolution for any hostname.",
+        "url": "https://dns.google/",
+        "source": "Google",
+        "difficulty": "beginner"
+      }
+    ],
+    "20.2": [
+      {
+        "type": "video",
+        "title": "SSL, TLS, HTTPS Explained",
+        "description": "Debugging stories around TLS handshakes.",
+        "url": "https://www.youtube.com/watch?v=j9QmMEWmcfo",
+        "source": "YouTube",
+        "channel": "ByteByteGo",
+        "videoId": "j9QmMEWmcfo",
+        "thumbnail": "https://i.ytimg.com/vi/j9QmMEWmcfo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "github",
+        "title": "Computer Networking: A Top-Down Approach resources",
+        "description": "Supplemental exercises and wireshark labs.",
+        "url": "https://github.com/csg-knu/Computer-Networking-A-Top-Down-Approach",
+        "source": "GitHub",
+        "difficulty": "beginner"
+      }
+    ]
+  },
+  "phases": {},
+  "projects": {}
+}

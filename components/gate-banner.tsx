@@ -1,24 +1,24 @@
 "use client";
 
-import Link from "next/link";
+import { CourseChromeGatePublisher } from "./course-chrome-progress";
 import { useLearningProgress } from "./progress-client";
 
+/** Keeps the blocked-chapter CTA in the nav; no in-page banner. */
 export function GateBanner({
   slug,
   phaseId,
   phaseIds,
+  lessonIdsByPhase,
   requiredHref,
 }: {
   slug: string;
   phaseId: string;
   phaseIds: string[];
+  lessonIdsByPhase?: Record<string, string[]>;
   requiredHref?: string;
 }) {
-  const { canEnter, ready } = useLearningProgress();
-  if (!ready || canEnter(slug, phaseId, phaseIds)) return null;
-  return (
-    <div className="border-b hairline bg-paper px-4 py-3 text-sm sm:px-8 lg:px-12">
-      Complete the previous phase project first{requiredHref ? <>: <Link href={requiredHref} className="text-accent underline">open the required project</Link></> : null}.
-    </div>
-  );
+  const { canEnter, ready, requiredHref: progressRequiredHref } = useLearningProgress();
+  const blocked = ready && !canEnter(slug, phaseId, phaseIds, lessonIdsByPhase);
+  const gateHref = blocked ? progressRequiredHref(slug, phaseId, phaseIds) ?? requiredHref : undefined;
+  return <CourseChromeGatePublisher href={gateHref} active={blocked} />;
 }

@@ -1,0 +1,1310 @@
+{
+  "lessons": {
+    "2.8": [
+      {
+        "type": "video",
+        "title": "Little and Big-Endian, Explained",
+        "description": "How byte order affects multi-byte values in memory.",
+        "url": "https://www.youtube.com/watch?v=oiL87U5WKsw",
+        "source": "YouTube",
+        "channel": "Harry Wu",
+        "videoId": "oiL87U5WKsw",
+        "thumbnail": "https://i.ytimg.com/vi/oiL87U5WKsw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "interactive",
+        "title": "Endianness Converter",
+        "description": "Flip between big- and little-endian representations.",
+        "url": "https://www.scadacore.com/tools/programming-calculators/online-hex-converter/",
+        "source": "SCADAcore",
+        "difficulty": "beginner"
+      }
+    ],
+    "4.8": [
+      {
+        "type": "video",
+        "title": "How Computers Work: CPU, Memory, Input & Output",
+        "description": "Khan-style walkthrough of I/O alongside CPU and memory.",
+        "url": "https://www.youtube.com/watch?v=DKGZlaPlVLY",
+        "source": "YouTube",
+        "channel": "Khan Academy",
+        "videoId": "DKGZlaPlVLY",
+        "thumbnail": "https://i.ytimg.com/vi/DKGZlaPlVLY/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Input Devices: Crash Course Games #24",
+        "description": "Controllers and human input mapped to machine signals.",
+        "url": "https://www.youtube.com/watch?v=rR_mmsfIzzs",
+        "source": "Crash Course",
+        "channel": "CrashCourse",
+        "videoId": "rR_mmsfIzzs",
+        "thumbnail": "https://i.ytimg.com/vi/rR_mmsfIzzs/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.8": [
+      {
+        "type": "video",
+        "title": "Parsing Explained",
+        "description": "Why grammars matter and how parsers read structured text.",
+        "url": "https://www.youtube.com/watch?v=bxpc9Pp5pZM",
+        "source": "YouTube",
+        "channel": "Computerphile",
+        "videoId": "bxpc9Pp5pZM",
+        "thumbnail": "https://i.ytimg.com/vi/bxpc9Pp5pZM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Parsing Bottom Up",
+        "description": "Alternative parsing strategy with concrete examples.",
+        "url": "https://www.youtube.com/watch?v=tH5AOX9929g",
+        "source": "YouTube",
+        "channel": "Computerphile",
+        "videoId": "tH5AOX9929g",
+        "thumbnail": "https://i.ytimg.com/vi/tH5AOX9929g/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "github",
+        "title": "Nearley parser toolkit",
+        "description": "Practical parser generator for experimenting with grammars.",
+        "url": "https://github.com/kach/nearley",
+        "source": "GitHub",
+        "difficulty": "beginner"
+      }
+    ],
+    "11.8": [
+      {
+        "type": "video",
+        "title": "Serialization formats: JSON and Protobuf",
+        "description": "How programs exchange structured data on the wire.",
+        "url": "https://www.youtube.com/watch?v=uGYZn6xk-hA",
+        "source": "YouTube",
+        "channel": "Ivan talks about computers",
+        "videoId": "uGYZn6xk-hA",
+        "thumbnail": "https://i.ytimg.com/vi/uGYZn6xk-hA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "What is JSON?",
+        "description": "Quick JSON primer for configs and APIs.",
+        "url": "https://www.youtube.com/watch?v=cj3h3Fb10QY",
+        "source": "YouTube",
+        "channel": "Hostinger Academy",
+        "videoId": "cj3h3Fb10QY",
+        "thumbnail": "https://i.ytimg.com/vi/cj3h3Fb10QY/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "JSON specification",
+        "description": "Official reference for valid JSON syntax.",
+        "url": "https://www.json.org/json-en.html",
+        "source": "JSON.org",
+        "difficulty": "beginner"
+      }
+    ],
+    "14.8": [
+      {
+        "type": "video",
+        "title": "Shared Exclusive Locking Protocol",
+        "description": "How databases coordinate concurrent access with locks.",
+        "url": "https://www.youtube.com/watch?v=94C0V7f2zm4",
+        "source": "YouTube",
+        "channel": "Gate Smashers",
+        "videoId": "94C0V7f2zm4",
+        "thumbnail": "https://i.ytimg.com/vi/94C0V7f2zm4/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "Python fcntl module",
+        "description": "File locking on Unix-like systems for scripts and tools.",
+        "url": "https://docs.python.org/3/library/fcntl.html",
+        "source": "Python Docs",
+        "difficulty": "beginner"
+      }
+    ],
+    "17.1": [
+      {
+        "type": "video",
+        "title": "Direct Proofs — Discrete Mathematics",
+        "description": "Building proofs step-by-step from assumptions.",
+        "url": "https://www.youtube.com/watch?v=YFZzLQN5qOU",
+        "source": "YouTube",
+        "channel": "TrevTutor",
+        "videoId": "YFZzLQN5qOU",
+        "thumbnail": "https://i.ytimg.com/vi/YFZzLQN5qOU/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Direct Proofs Examples",
+        "description": "Worked examples including divisibility proofs.",
+        "url": "https://www.youtube.com/watch?v=uDJfx4bK3Jc",
+        "source": "YouTube",
+        "channel": "TrevTutor",
+        "videoId": "uDJfx4bK3Jc",
+        "thumbnail": "https://i.ytimg.com/vi/uDJfx4bK3Jc/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "17.2": [
+      {
+        "type": "video",
+        "title": "Proof by Contradiction — Prime Numbers",
+        "description": "Visual proof that primes are infinite.",
+        "url": "https://www.youtube.com/watch?v=4NUlubBrmFY",
+        "source": "YouTube",
+        "channel": "The Visual Engineer",
+        "videoId": "4NUlubBrmFY",
+        "thumbnail": "https://i.ytimg.com/vi/4NUlubBrmFY/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Discrete Math Proofs in 22 Minutes",
+        "description": "Survey of proof styles including contradiction.",
+        "url": "https://www.youtube.com/watch?v=HIkIqt_ytdc",
+        "source": "YouTube",
+        "channel": "TrevTutor",
+        "videoId": "HIkIqt_ytdc",
+        "thumbnail": "https://i.ytimg.com/vi/HIkIqt_ytdc/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "17.3": [
+      {
+        "type": "video",
+        "title": "Disproving Implications with Counterexamples",
+        "description": "When one counterexample kills a false claim.",
+        "url": "https://www.youtube.com/watch?v=TcfVpnRRAvk",
+        "source": "YouTube",
+        "channel": "Dr. Trefor Bazett",
+        "videoId": "TcfVpnRRAvk",
+        "thumbnail": "https://i.ytimg.com/vi/TcfVpnRRAvk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "17.4": [
+      {
+        "type": "video",
+        "title": "What Does Mathematical Induction Really Look Like?",
+        "description": "Intuitive domino-style explanation of induction.",
+        "url": "https://www.youtube.com/watch?v=5Hn8vUE3cBQ",
+        "source": "YouTube",
+        "channel": "Zach Star",
+        "videoId": "5Hn8vUE3cBQ",
+        "thumbnail": "https://i.ytimg.com/vi/5Hn8vUE3cBQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "The Magic of Induction",
+        "description": "Numberphile take on why induction works.",
+        "url": "https://www.youtube.com/watch?v=DhZORrqL3xI",
+        "source": "YouTube",
+        "channel": "Numberphile",
+        "videoId": "DhZORrqL3xI",
+        "thumbnail": "https://i.ytimg.com/vi/DhZORrqL3xI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "17.5": [
+      {
+        "type": "video",
+        "title": "Proof by Contraposition — Discrete Mathematics",
+        "description": "Prove the contrapositive instead of the original statement.",
+        "url": "https://www.youtube.com/watch?v=X-hJ7krLBn0",
+        "source": "YouTube",
+        "channel": "TrevTutor",
+        "videoId": "X-hJ7krLBn0",
+        "thumbnail": "https://i.ytimg.com/vi/X-hJ7krLBn0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Proof by Contrapositive | Method & First Example",
+        "description": "Clear first example with logical equivalence.",
+        "url": "https://www.youtube.com/watch?v=0YqZIHFmVzg",
+        "source": "YouTube",
+        "channel": "Dr. Trefor Bazett",
+        "videoId": "0YqZIHFmVzg",
+        "thumbnail": "https://i.ytimg.com/vi/0YqZIHFmVzg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "18.1": [
+      {
+        "type": "video",
+        "title": "Permutations and Combinations Tutorial",
+        "description": "When order matters vs when it does not.",
+        "url": "https://www.youtube.com/watch?v=XJnIdRXUi7A",
+        "source": "YouTube",
+        "channel": "The Organic Chemistry Tutor",
+        "videoId": "XJnIdRXUi7A",
+        "thumbnail": "https://i.ytimg.com/vi/XJnIdRXUi7A/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "18.2": [
+      {
+        "type": "video",
+        "title": "Permutations and Combinations Tutorial",
+        "description": "Combination counting with worked problems.",
+        "url": "https://www.youtube.com/watch?v=XJnIdRXUi7A",
+        "source": "YouTube",
+        "channel": "The Organic Chemistry Tutor",
+        "videoId": "XJnIdRXUi7A",
+        "thumbnail": "https://i.ytimg.com/vi/XJnIdRXUi7A/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "interactive",
+        "title": "Combinatorics practice",
+        "description": "Interactive counting problems with instant checks.",
+        "url": "https://brilliant.org/courses/combinatorics/",
+        "source": "Brilliant",
+        "difficulty": "beginner"
+      }
+    ],
+    "18.3": [
+      {
+        "type": "video",
+        "title": "Math Antics — Basic Probability",
+        "description": "Foundational probability with clear visuals.",
+        "url": "https://www.youtube.com/watch?v=KzfWUEJjG18",
+        "source": "YouTube",
+        "channel": "mathantics",
+        "videoId": "KzfWUEJjG18",
+        "thumbnail": "https://i.ytimg.com/vi/KzfWUEJjG18/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Probability Explained | Khan Academy",
+        "description": "Independent and dependent events.",
+        "url": "https://www.youtube.com/watch?v=uzkc-qNVoOk",
+        "source": "YouTube",
+        "channel": "Khan Academy",
+        "videoId": "uzkc-qNVoOk",
+        "thumbnail": "https://i.ytimg.com/vi/uzkc-qNVoOk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "18.4": [
+      {
+        "type": "video",
+        "title": "Probability Explained | Khan Academy",
+        "description": "Conditional probability with tree diagrams.",
+        "url": "https://www.youtube.com/watch?v=uzkc-qNVoOk",
+        "source": "YouTube",
+        "channel": "Khan Academy",
+        "videoId": "uzkc-qNVoOk",
+        "thumbnail": "https://i.ytimg.com/vi/uzkc-qNVoOk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "18.5": [
+      {
+        "type": "video",
+        "title": "Finding Probability Example | Khan Academy",
+        "description": "Expected value intuition through worked examples.",
+        "url": "https://www.youtube.com/watch?v=yUaI0JriZtY",
+        "source": "YouTube",
+        "channel": "Khan Academy",
+        "videoId": "yUaI0JriZtY",
+        "thumbnail": "https://i.ytimg.com/vi/yUaI0JriZtY/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "18.6": [
+      {
+        "type": "video",
+        "title": "Bayes Theorem, the Geometry of Changing Beliefs",
+        "description": "3Blue1Brown visual proof of Bayes' rule.",
+        "url": "https://www.youtube.com/watch?v=HZGCoVF3YvM",
+        "source": "YouTube",
+        "channel": "3Blue1Brown",
+        "videoId": "HZGCoVF3YvM",
+        "thumbnail": "https://i.ytimg.com/vi/HZGCoVF3YvM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "The Quick Proof of Bayes' Theorem",
+        "description": "Short companion clip for the main video.",
+        "url": "https://www.youtube.com/watch?v=U_85TaXbeIo",
+        "source": "YouTube",
+        "channel": "3Blue1Brown",
+        "videoId": "U_85TaXbeIo",
+        "thumbnail": "https://i.ytimg.com/vi/U_85TaXbeIo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "19.1": [
+      {
+        "type": "video",
+        "title": "Descriptive Statistics: Mean, Median, Mode, Variance & SD",
+        "description": "Full tutorial on central tendency and spread.",
+        "url": "https://www.youtube.com/watch?v=SplCk-t1BeA",
+        "source": "YouTube",
+        "channel": "Grad Coach",
+        "videoId": "SplCk-t1BeA",
+        "thumbnail": "https://i.ytimg.com/vi/SplCk-t1BeA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "19.3": [
+      {
+        "type": "video",
+        "title": "Descriptive Statistics Tutorial",
+        "description": "How distributions summarize datasets.",
+        "url": "https://www.youtube.com/watch?v=SplCk-t1BeA",
+        "source": "YouTube",
+        "channel": "Grad Coach",
+        "videoId": "SplCk-t1BeA",
+        "thumbnail": "https://i.ytimg.com/vi/SplCk-t1BeA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "interactive",
+        "title": "Seeing Theory",
+        "description": "Beautiful interactive visualizations of probability distributions.",
+        "url": "https://seeing-theory.brown.edu/",
+        "source": "Brown University",
+        "difficulty": "beginner"
+      }
+    ],
+    "19.4": [
+      {
+        "type": "video",
+        "title": "Cross Validation",
+        "description": "Why train/validation splits matter for honest evaluation.",
+        "url": "https://www.youtube.com/watch?v=fSytzGwwBVw",
+        "source": "YouTube",
+        "channel": "StatQuest",
+        "videoId": "fSytzGwwBVw",
+        "thumbnail": "https://i.ytimg.com/vi/fSytzGwwBVw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "19.5": [
+      {
+        "type": "video",
+        "title": "Standard Deviation Formula",
+        "description": "Population vs sample variance explained clearly.",
+        "url": "https://www.youtube.com/watch?v=Uk98hiMQgN0",
+        "source": "YouTube",
+        "channel": "The Organic Chemistry Tutor",
+        "videoId": "Uk98hiMQgN0",
+        "thumbnail": "https://i.ytimg.com/vi/Uk98hiMQgN0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "19.6": [
+      {
+        "type": "video",
+        "title": "Descriptive Statistics Tutorial",
+        "description": "Correlation vs causation and scatter relationships.",
+        "url": "https://www.youtube.com/watch?v=SplCk-t1BeA",
+        "source": "YouTube",
+        "channel": "Grad Coach",
+        "videoId": "SplCk-t1BeA",
+        "thumbnail": "https://i.ytimg.com/vi/SplCk-t1BeA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "20.1": [
+      {
+        "type": "video",
+        "title": "Vectors | Essence of Linear Algebra",
+        "description": "Visual introduction to vectors as arrows in space.",
+        "url": "https://www.youtube.com/watch?v=fNk_zzaMoSs",
+        "source": "YouTube",
+        "channel": "3Blue1Brown",
+        "videoId": "fNk_zzaMoSs",
+        "thumbnail": "https://i.ytimg.com/vi/fNk_zzaMoSs/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "20.2": [
+      {
+        "type": "video",
+        "title": "Linear Transformations and Matrices",
+        "description": "Matrices as transformations of space.",
+        "url": "https://www.youtube.com/watch?v=kYB8IZa5AuE",
+        "source": "YouTube",
+        "channel": "3Blue1Brown",
+        "videoId": "kYB8IZa5AuE",
+        "thumbnail": "https://i.ytimg.com/vi/kYB8IZa5AuE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "20.3": [
+      {
+        "type": "video",
+        "title": "Inverse Matrices, Column Space and Null Space",
+        "description": "Functions between vector spaces.",
+        "url": "https://www.youtube.com/watch?v=uQhTuRlWMxw",
+        "source": "YouTube",
+        "channel": "3Blue1Brown",
+        "videoId": "uQhTuRlWMxw",
+        "thumbnail": "https://i.ytimg.com/vi/uQhTuRlWMxw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "20.4": [
+      {
+        "type": "video",
+        "title": "Gradient Descent in 3 Minutes",
+        "description": "Derivatives as slopes driving optimization.",
+        "url": "https://www.youtube.com/watch?v=qg4PchTECck",
+        "source": "YouTube",
+        "channel": "Visually Explained",
+        "videoId": "qg4PchTECck",
+        "thumbnail": "https://i.ytimg.com/vi/qg4PchTECck/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "interactive",
+        "title": "Desmos Graphing Calculator",
+        "description": "Plot functions and inspect slopes interactively.",
+        "url": "https://www.desmos.com/calculator",
+        "source": "Desmos",
+        "difficulty": "beginner"
+      }
+    ],
+    "20.5": [
+      {
+        "type": "video",
+        "title": "Vectors | Essence of Linear Algebra",
+        "description": "Dot products as projection and similarity.",
+        "url": "https://www.youtube.com/watch?v=fNk_zzaMoSs",
+        "source": "YouTube",
+        "channel": "3Blue1Brown",
+        "videoId": "fNk_zzaMoSs",
+        "thumbnail": "https://i.ytimg.com/vi/fNk_zzaMoSs/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "20.7": [
+      {
+        "type": "video",
+        "title": "Gradients and Partial Derivatives",
+        "description": "3D visualization of gradient vectors.",
+        "url": "https://www.youtube.com/watch?v=GkB4vW16QHI",
+        "source": "YouTube",
+        "channel": "Physics Videos by Eugene Khutoryansky",
+        "videoId": "GkB4vW16QHI",
+        "thumbnail": "https://i.ytimg.com/vi/GkB4vW16QHI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Gradient Descent in 3 Minutes",
+        "description": "How gradients guide machine-learning updates.",
+        "url": "https://www.youtube.com/watch?v=qg4PchTECck",
+        "source": "YouTube",
+        "channel": "Visually Explained",
+        "videoId": "qg4PchTECck",
+        "thumbnail": "https://i.ytimg.com/vi/qg4PchTECck/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "21.2": [
+      {
+        "type": "video",
+        "title": "Fundamental Concepts of Object Oriented Programming",
+        "description": "Behavior, abstraction, and encapsulation overview.",
+        "url": "https://www.youtube.com/watch?v=m_MQYyJpIjg",
+        "source": "YouTube",
+        "channel": "Computer Science Lessons",
+        "videoId": "m_MQYyJpIjg",
+        "thumbnail": "https://i.ytimg.com/vi/m_MQYyJpIjg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "21.3": [
+      {
+        "type": "video",
+        "title": "Intro to Object Oriented Programming — Crash Course",
+        "description": "Entities as objects with state and behavior.",
+        "url": "https://www.youtube.com/watch?v=SiBw7os-_zI",
+        "source": "YouTube",
+        "channel": "freeCodeCamp.org",
+        "videoId": "SiBw7os-_zI",
+        "thumbnail": "https://i.ytimg.com/vi/SiBw7os-_zI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "21.4": [
+      {
+        "type": "video",
+        "title": "Object-Oriented Programming, Simplified",
+        "description": "Responsibilities split across encapsulated objects.",
+        "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "pTB0EiLXUC8",
+        "thumbnail": "https://i.ytimg.com/vi/pTB0EiLXUC8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "22.1": [
+      {
+        "type": "video",
+        "title": "Intro to Object Oriented Programming — Crash Course",
+        "description": "Classes as blueprints for objects.",
+        "url": "https://www.youtube.com/watch?v=SiBw7os-_zI",
+        "source": "YouTube",
+        "channel": "freeCodeCamp.org",
+        "videoId": "SiBw7os-_zI",
+        "thumbnail": "https://i.ytimg.com/vi/SiBw7os-_zI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "22.2": [
+      {
+        "type": "video",
+        "title": "Python OOP — Full Course for Beginners",
+        "description": "Creating and using class instances.",
+        "url": "https://www.youtube.com/watch?v=iLRZi0Gu8Go",
+        "source": "YouTube",
+        "channel": "freeCodeCamp.org",
+        "videoId": "iLRZi0Gu8Go",
+        "thumbnail": "https://i.ytimg.com/vi/iLRZi0Gu8Go/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "22.3": [
+      {
+        "type": "video",
+        "title": "Python OOP — Full Course for Beginners",
+        "description": "Constructors and initialization patterns.",
+        "url": "https://www.youtube.com/watch?v=iLRZi0Gu8Go",
+        "source": "YouTube",
+        "channel": "freeCodeCamp.org",
+        "videoId": "iLRZi0Gu8Go",
+        "thumbnail": "https://i.ytimg.com/vi/iLRZi0Gu8Go/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "22.4": [
+      {
+        "type": "video",
+        "title": "Object-Oriented Programming, Simplified",
+        "description": "Object identity vs references.",
+        "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "pTB0EiLXUC8",
+        "thumbnail": "https://i.ytimg.com/vi/pTB0EiLXUC8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "22.5": [
+      {
+        "type": "video",
+        "title": "Object-Oriented Programming, Simplified",
+        "description": "Equality vs identity in OOP languages.",
+        "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "pTB0EiLXUC8",
+        "thumbnail": "https://i.ytimg.com/vi/pTB0EiLXUC8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "23.1": [
+      {
+        "type": "video",
+        "title": "Abstraction vs Encapsulation",
+        "description": "Public APIs hiding internal details.",
+        "url": "https://www.youtube.com/watch?v=57SIpmA3vcg",
+        "source": "YouTube",
+        "channel": "Biz of Tech",
+        "videoId": "57SIpmA3vcg",
+        "thumbnail": "https://i.ytimg.com/vi/57SIpmA3vcg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "23.2": [
+      {
+        "type": "video",
+        "title": "Object-Oriented Programming, Simplified",
+        "description": "Internal state guarded by methods.",
+        "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "pTB0EiLXUC8",
+        "thumbnail": "https://i.ytimg.com/vi/pTB0EiLXUC8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "23.3": [
+      {
+        "type": "video",
+        "title": "Fundamental Concepts of Object Oriented Programming",
+        "description": "Invariants that must hold after every method.",
+        "url": "https://www.youtube.com/watch?v=m_MQYyJpIjg",
+        "source": "YouTube",
+        "channel": "Computer Science Lessons",
+        "videoId": "m_MQYyJpIjg",
+        "thumbnail": "https://i.ytimg.com/vi/m_MQYyJpIjg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "23.4": [
+      {
+        "type": "video",
+        "title": "Object-Oriented Programming, Simplified",
+        "description": "Interfaces as contracts between components.",
+        "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "pTB0EiLXUC8",
+        "thumbnail": "https://i.ytimg.com/vi/pTB0EiLXUC8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "24.1": [
+      {
+        "type": "video",
+        "title": "Object-Oriented Programming (OOP) | Animated",
+        "description": "is-a relationships through inheritance.",
+        "url": "https://www.youtube.com/watch?v=RJUIcFfUPKs",
+        "source": "YouTube",
+        "channel": "codechips",
+        "videoId": "RJUIcFfUPKs",
+        "thumbnail": "https://i.ytimg.com/vi/RJUIcFfUPKs/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "24.2": [
+      {
+        "type": "video",
+        "title": "Object-Oriented Programming, Simplified",
+        "description": "Method overriding in subclasses.",
+        "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "pTB0EiLXUC8",
+        "thumbnail": "https://i.ytimg.com/vi/pTB0EiLXUC8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "24.3": [
+      {
+        "type": "video",
+        "title": "Python OOP — Full Course for Beginners",
+        "description": "Calling parent constructors with super().",
+        "url": "https://www.youtube.com/watch?v=iLRZi0Gu8Go",
+        "source": "YouTube",
+        "channel": "freeCodeCamp.org",
+        "videoId": "iLRZi0Gu8Go",
+        "thumbnail": "https://i.ytimg.com/vi/iLRZi0Gu8Go/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "24.4": [
+      {
+        "type": "video",
+        "title": "Object-Oriented Programming, Simplified",
+        "description": "Polymorphism and dynamic dispatch.",
+        "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "pTB0EiLXUC8",
+        "thumbnail": "https://i.ytimg.com/vi/pTB0EiLXUC8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "24.5": [
+      {
+        "type": "video",
+        "title": "Object-Oriented Programming, Simplified",
+        "description": "Abstract classes and interface patterns.",
+        "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "pTB0EiLXUC8",
+        "thumbnail": "https://i.ytimg.com/vi/pTB0EiLXUC8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "25.1": [
+      {
+        "type": "video",
+        "title": "Composition over Inheritance Explained",
+        "description": "has-a relationships with real analogies.",
+        "url": "https://www.youtube.com/watch?v=HNzP1aLAffM",
+        "source": "YouTube",
+        "channel": "Metaphorically Speaking",
+        "videoId": "HNzP1aLAffM",
+        "thumbnail": "https://i.ytimg.com/vi/HNzP1aLAffM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "25.2": [
+      {
+        "type": "video",
+        "title": "The Flaws of Inheritance",
+        "description": "Association between loosely coupled objects.",
+        "url": "https://www.youtube.com/watch?v=hxGOiiR9ZKg",
+        "source": "YouTube",
+        "channel": "CodeAesthetic",
+        "videoId": "hxGOiiR9ZKg",
+        "thumbnail": "https://i.ytimg.com/vi/hxGOiiR9ZKg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "25.3": [
+      {
+        "type": "video",
+        "title": "Inheritance vs Composition",
+        "description": "Aggregation without strong ownership.",
+        "url": "https://www.youtube.com/watch?v=EqHX7DAL0Jk",
+        "source": "YouTube",
+        "channel": "Machine tired of learning",
+        "videoId": "EqHX7DAL0Jk",
+        "thumbnail": "https://i.ytimg.com/vi/EqHX7DAL0Jk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "25.4": [
+      {
+        "type": "video",
+        "title": "The Flaws of Inheritance",
+        "description": "Composition for stronger encapsulation.",
+        "url": "https://www.youtube.com/watch?v=hxGOiiR9ZKg",
+        "source": "YouTube",
+        "channel": "CodeAesthetic",
+        "videoId": "hxGOiiR9ZKg",
+        "thumbnail": "https://i.ytimg.com/vi/hxGOiiR9ZKg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "25.5": [
+      {
+        "type": "video",
+        "title": "Inheritance vs Composition",
+        "description": "Delegation as forwarding behavior.",
+        "url": "https://www.youtube.com/watch?v=EqHX7DAL0Jk",
+        "source": "YouTube",
+        "channel": "Machine tired of learning",
+        "videoId": "EqHX7DAL0Jk",
+        "thumbnail": "https://i.ytimg.com/vi/EqHX7DAL0Jk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "26.1": [
+      {
+        "type": "video",
+        "title": "SOLID Principles Explained",
+        "description": "Single Responsibility — one reason to change.",
+        "url": "https://www.youtube.com/watch?v=V3TUEeB0kW0",
+        "source": "YouTube",
+        "channel": "Awesome",
+        "videoId": "V3TUEeB0kW0",
+        "thumbnail": "https://i.ytimg.com/vi/V3TUEeB0kW0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "26.2": [
+      {
+        "type": "video",
+        "title": "SOLID Principles: Do You Really Understand Them?",
+        "description": "Open/closed without modifying existing code.",
+        "url": "https://www.youtube.com/watch?v=kF7rQmSRlq0",
+        "source": "YouTube",
+        "channel": "Alex Hyett",
+        "videoId": "kF7rQmSRlq0",
+        "thumbnail": "https://i.ytimg.com/vi/kF7rQmSRlq0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "26.3": [
+      {
+        "type": "video",
+        "title": "SOLID Principles Explained",
+        "description": "Liskov substitution and safe subtypes.",
+        "url": "https://www.youtube.com/watch?v=V3TUEeB0kW0",
+        "source": "YouTube",
+        "channel": "Awesome",
+        "videoId": "V3TUEeB0kW0",
+        "thumbnail": "https://i.ytimg.com/vi/V3TUEeB0kW0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "26.4": [
+      {
+        "type": "video",
+        "title": "SOLID Principles: Do You Really Understand Them?",
+        "description": "Interface segregation for focused APIs.",
+        "url": "https://www.youtube.com/watch?v=kF7rQmSRlq0",
+        "source": "YouTube",
+        "channel": "Alex Hyett",
+        "videoId": "kF7rQmSRlq0",
+        "thumbnail": "https://i.ytimg.com/vi/kF7rQmSRlq0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "26.5": [
+      {
+        "type": "video",
+        "title": "SOLID Principles Explained",
+        "description": "Dependency inversion and abstractions.",
+        "url": "https://www.youtube.com/watch?v=V3TUEeB0kW0",
+        "source": "YouTube",
+        "channel": "Awesome",
+        "videoId": "V3TUEeB0kW0",
+        "thumbnail": "https://i.ytimg.com/vi/V3TUEeB0kW0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "27.1": [
+      {
+        "type": "video",
+        "title": "JavaScript Clean Code Course",
+        "description": "Naming that reveals intent.",
+        "url": "https://www.youtube.com/watch?v=626BcUO84og",
+        "source": "YouTube",
+        "channel": "freeCodeCamp.org",
+        "videoId": "626BcUO84og",
+        "thumbnail": "https://i.ytimg.com/vi/626BcUO84og/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "27.2": [
+      {
+        "type": "video",
+        "title": "Code Smells & Refactoring Techniques",
+        "description": "Removing duplication safely.",
+        "url": "https://www.youtube.com/watch?v=FHWwtpsKGMM",
+        "source": "YouTube",
+        "channel": "programmerCave",
+        "videoId": "FHWwtpsKGMM",
+        "thumbnail": "https://i.ytimg.com/vi/FHWwtpsKGMM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "27.3": [
+      {
+        "type": "video",
+        "title": "A Few Common Code Smells",
+        "description": "Splitting long methods into focused units.",
+        "url": "https://www.youtube.com/watch?v=KGsnhdcBvd0",
+        "source": "YouTube",
+        "channel": "The Shaggy Dev",
+        "videoId": "KGsnhdcBvd0",
+        "thumbnail": "https://i.ytimg.com/vi/KGsnhdcBvd0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "27.4": [
+      {
+        "type": "video",
+        "title": "Code Smells & Refactoring Techniques",
+        "description": "Breaking up god objects.",
+        "url": "https://www.youtube.com/watch?v=FHWwtpsKGMM",
+        "source": "YouTube",
+        "channel": "programmerCave",
+        "videoId": "FHWwtpsKGMM",
+        "thumbnail": "https://i.ytimg.com/vi/FHWwtpsKGMM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "27.5": [
+      {
+        "type": "video",
+        "title": "Code Smells & Refactoring Techniques",
+        "description": "Reducing tight coupling between modules.",
+        "url": "https://www.youtube.com/watch?v=FHWwtpsKGMM",
+        "source": "YouTube",
+        "channel": "programmerCave",
+        "videoId": "FHWwtpsKGMM",
+        "thumbnail": "https://i.ytimg.com/vi/FHWwtpsKGMM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "27.6": [
+      {
+        "type": "video",
+        "title": "A Few Common Code Smells",
+        "description": "Grouping related behavior for cohesion.",
+        "url": "https://www.youtube.com/watch?v=KGsnhdcBvd0",
+        "source": "YouTube",
+        "channel": "The Shaggy Dev",
+        "videoId": "KGsnhdcBvd0",
+        "thumbnail": "https://i.ytimg.com/vi/KGsnhdcBvd0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "27.7": [
+      {
+        "type": "video",
+        "title": "A Few Common Code Smells",
+        "description": "Catalog of smells and how to fix them.",
+        "url": "https://www.youtube.com/watch?v=KGsnhdcBvd0",
+        "source": "YouTube",
+        "channel": "The Shaggy Dev",
+        "videoId": "KGsnhdcBvd0",
+        "thumbnail": "https://i.ytimg.com/vi/KGsnhdcBvd0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "27.8": [
+      {
+        "type": "video",
+        "title": "JavaScript Clean Code Course",
+        "description": "Refactoring in small, tested steps.",
+        "url": "https://www.youtube.com/watch?v=626BcUO84og",
+        "source": "YouTube",
+        "channel": "freeCodeCamp.org",
+        "videoId": "626BcUO84og",
+        "thumbnail": "https://i.ytimg.com/vi/626BcUO84og/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "github",
+        "title": "Refactoring catalog (Martin Fowler)",
+        "description": "Canonical reference for safe refactorings.",
+        "url": "https://github.com/wycats/artifice",
+        "source": "GitHub",
+        "difficulty": "beginner"
+      }
+    ],
+    "28.1": [
+      {
+        "type": "video",
+        "title": "10 Design Patterns Explained in 10 Minutes",
+        "description": "Factory pattern overview.",
+        "url": "https://www.youtube.com/watch?v=tv-_1er1mWI",
+        "source": "YouTube",
+        "channel": "Fireship",
+        "videoId": "tv-_1er1mWI",
+        "thumbnail": "https://i.ytimg.com/vi/tv-_1er1mWI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "28.2": [
+      {
+        "type": "video",
+        "title": "10 Design Patterns Explained in 10 Minutes",
+        "description": "Builder pattern for complex objects.",
+        "url": "https://www.youtube.com/watch?v=tv-_1er1mWI",
+        "source": "YouTube",
+        "channel": "Fireship",
+        "videoId": "tv-_1er1mWI",
+        "thumbnail": "https://i.ytimg.com/vi/tv-_1er1mWI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "28.3": [
+      {
+        "type": "video",
+        "title": "10 Design Patterns Explained in 10 Minutes",
+        "description": "Adapter for incompatible interfaces.",
+        "url": "https://www.youtube.com/watch?v=tv-_1er1mWI",
+        "source": "YouTube",
+        "channel": "Fireship",
+        "videoId": "tv-_1er1mWI",
+        "thumbnail": "https://i.ytimg.com/vi/tv-_1er1mWI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "28.4": [
+      {
+        "type": "video",
+        "title": "10 Design Patterns Explained in 10 Minutes",
+        "description": "Facade simplifying subsystems.",
+        "url": "https://www.youtube.com/watch?v=tv-_1er1mWI",
+        "source": "YouTube",
+        "channel": "Fireship",
+        "videoId": "tv-_1er1mWI",
+        "thumbnail": "https://i.ytimg.com/vi/tv-_1er1mWI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "28.5": [
+      {
+        "type": "video",
+        "title": "10 Design Patterns Explained in 10 Minutes",
+        "description": "Decorator for extending behavior.",
+        "url": "https://www.youtube.com/watch?v=tv-_1er1mWI",
+        "source": "YouTube",
+        "channel": "Fireship",
+        "videoId": "tv-_1er1mWI",
+        "thumbnail": "https://i.ytimg.com/vi/tv-_1er1mWI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "28.6": [
+      {
+        "type": "video",
+        "title": "Strategy Pattern, The Best Software Design Pattern",
+        "description": "Swapping algorithms at runtime.",
+        "url": "https://www.youtube.com/watch?v=E9-4uaoncVY",
+        "source": "YouTube",
+        "channel": "Jono Williams",
+        "videoId": "E9-4uaoncVY",
+        "thumbnail": "https://i.ytimg.com/vi/E9-4uaoncVY/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "28.7": [
+      {
+        "type": "video",
+        "title": "Design Patterns: Factory, Observer, Strategy",
+        "description": "Observer for event-driven updates.",
+        "url": "https://www.youtube.com/watch?v=NP7RmrHn1Q0",
+        "source": "YouTube",
+        "channel": "ByteMonk",
+        "videoId": "NP7RmrHn1Q0",
+        "thumbnail": "https://i.ytimg.com/vi/NP7RmrHn1Q0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "28.8": [
+      {
+        "type": "video",
+        "title": "10 Design Patterns Explained in 10 Minutes",
+        "description": "Dependency injection basics.",
+        "url": "https://www.youtube.com/watch?v=tv-_1er1mWI",
+        "source": "YouTube",
+        "channel": "Fireship",
+        "videoId": "tv-_1er1mWI",
+        "thumbnail": "https://i.ytimg.com/vi/tv-_1er1mWI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "28.9": [
+      {
+        "type": "video",
+        "title": "Design Patterns in Java Every Developer Should Know",
+        "description": "Repository pattern for data access.",
+        "url": "https://www.youtube.com/watch?v=NP7RmrHn1Q0",
+        "source": "YouTube",
+        "channel": "ByteMonk",
+        "videoId": "NP7RmrHn1Q0",
+        "thumbnail": "https://i.ytimg.com/vi/NP7RmrHn1Q0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "github",
+        "title": "Design patterns in Python",
+        "description": "Readable pattern examples to study and adapt.",
+        "url": "https://github.com/faif/python-patterns",
+        "source": "GitHub",
+        "difficulty": "beginner"
+      }
+    ],
+    "29.1": [
+      {
+        "type": "video",
+        "title": "UML Class Diagrams",
+        "description": "Capturing requirements as model elements.",
+        "url": "https://www.youtube.com/watch?v=6XrL5jXmTwM",
+        "source": "YouTube",
+        "channel": "Lucid Software",
+        "videoId": "6XrL5jXmTwM",
+        "thumbnail": "https://i.ytimg.com/vi/6XrL5jXmTwM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "29.2": [
+      {
+        "type": "video",
+        "title": "UML Class Diagrams",
+        "description": "Entity modeling with classes and attributes.",
+        "url": "https://www.youtube.com/watch?v=6XrL5jXmTwM",
+        "source": "YouTube",
+        "channel": "Lucid Software",
+        "videoId": "6XrL5jXmTwM",
+        "thumbnail": "https://i.ytimg.com/vi/6XrL5jXmTwM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "29.3": [
+      {
+        "type": "video",
+        "title": "UML Class Diagrams",
+        "description": "Relationships: association, aggregation, composition.",
+        "url": "https://www.youtube.com/watch?v=6XrL5jXmTwM",
+        "source": "YouTube",
+        "channel": "Lucid Software",
+        "videoId": "6XrL5jXmTwM",
+        "thumbnail": "https://i.ytimg.com/vi/6XrL5jXmTwM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "29.4": [
+      {
+        "type": "video",
+        "title": "UML Class Diagrams",
+        "description": "Interfaces on class diagrams.",
+        "url": "https://www.youtube.com/watch?v=6XrL5jXmTwM",
+        "source": "YouTube",
+        "channel": "Lucid Software",
+        "videoId": "6XrL5jXmTwM",
+        "thumbnail": "https://i.ytimg.com/vi/6XrL5jXmTwM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "29.5": [
+      {
+        "type": "video",
+        "title": "UML Class Diagrams",
+        "description": "Full UML class diagram walkthrough.",
+        "url": "https://www.youtube.com/watch?v=6XrL5jXmTwM",
+        "source": "YouTube",
+        "channel": "Lucid Software",
+        "videoId": "6XrL5jXmTwM",
+        "thumbnail": "https://i.ytimg.com/vi/6XrL5jXmTwM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "tool",
+        "title": "PlantUML online editor",
+        "description": "Text-to-diagram UML for quick iteration.",
+        "url": "https://www.plantuml.com/plantuml/uml/",
+        "source": "PlantUML",
+        "difficulty": "beginner"
+      }
+    ],
+    "29.6": [
+      {
+        "type": "video",
+        "title": "UML Sequence Diagrams — Georgia Tech",
+        "description": "Sequence diagrams for object interactions.",
+        "url": "https://www.youtube.com/watch?v=XIQKt5Bs7II",
+        "source": "YouTube",
+        "channel": "Udacity",
+        "videoId": "XIQKt5Bs7II",
+        "thumbnail": "https://i.ytimg.com/vi/XIQKt5Bs7II/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "How to Make a UML Sequence Diagram",
+        "description": "Step-by-step sequence diagram tutorial.",
+        "url": "https://www.youtube.com/watch?v=pCK6prSq8aw",
+        "source": "YouTube",
+        "channel": "Lucid Software",
+        "videoId": "pCK6prSq8aw",
+        "thumbnail": "https://i.ytimg.com/vi/pCK6prSq8aw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "29.7": [
+      {
+        "type": "video",
+        "title": "UML Behavioral Diagrams — Sequence",
+        "description": "State machines and behavioral modeling intro.",
+        "url": "https://www.youtube.com/watch?v=XIQKt5Bs7II",
+        "source": "YouTube",
+        "channel": "Udacity",
+        "videoId": "XIQKt5Bs7II",
+        "thumbnail": "https://i.ytimg.com/vi/XIQKt5Bs7II/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ]
+  },
+  "phases": {},
+  "projects": {}
+}

@@ -8,7 +8,7 @@ export function slugForProjectPrefix(prefix: string) {
   return prefixToSlug[prefix.toLowerCase()];
 }
 
-export function parseProjectsDocument(markdown: string): PhaseProject[] {
+export function parseProjectsDocument(markdown: string, sourcePath = "content/guides/Projects.md"): PhaseProject[] {
   const matches = [...markdown.matchAll(/<a id="([a-z-]+)-phase-(f?\d+)-project"><\/a>/gi)];
   return matches.map((match, index) => {
     const coursePrefix = match[1].toLowerCase();
@@ -25,6 +25,7 @@ export function parseProjectsDocument(markdown: string): PhaseProject[] {
       phaseId,
       title: (titleMatch?.[1] ?? fallbackTitle ?? `${coursePrefix} phase ${phaseId} project`).trim(),
       markdown: body,
+      sourcePath,
       gitCheckpoint: gitIndex >= 0 ? body.slice(gitIndex).trim() : undefined,
     };
   });

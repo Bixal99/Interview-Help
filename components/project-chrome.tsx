@@ -4,11 +4,11 @@ import { Check } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { tryPlaygroundHref, writeTryItCode } from "@/lib/code-playground/try-it-storage";
+import { notepadHref, writeNotepadEntry } from "@/lib/code-playground/notepad-storage";
+import { getCSProjectInfo } from "@/lib/cs-projects-registry";
 import type { WhatComesNext } from "@/lib/lesson-sections";
 import type { ProjectBrief } from "@/lib/parse-project-brief";
 import { getProjectStarter, starterSource } from "@/lib/project-starters";
-import { ICON_SIZE } from "@/lib/icons";
-import { TechnologyIcon } from "./icons/technology-icon";
 import { Pager } from "./pager";
 import { PracticeRichText } from "./practice-rich-text";
 import { WhatComesNextSection } from "./what-comes-next";
@@ -19,41 +19,23 @@ function gitCommands(gitBody: string | null) {
   return [...gitBody.matchAll(/```(?:bash|sh)?\n([\s\S]*?)```/g)].map((item) => item[1].trim()).filter(Boolean);
 }
 
-const TOOL_SLUG_RULES: [RegExp, string][] = [
-  [/\bvscodium\b/, "vscodium"],
-  [/\bvs code\b|\bvscode\b/, "vscode"],
-  [/\bstreamlit\b/, "streamlit"],
-  [/\bflask\b/, "flask"],
-  [/\bfastapi\b/, "fastapi"],
-  [/\bpython\b/, "python"],
-  [/\breact\b/, "react"],
-  [/\bjavascript\b|\bjs\b/, "javascript"],
-  [/\btypescript\b/, "typescript"],
-  [/\bdocker\b/, "docker"],
-  [/\bpostgres\b/, "postgresql"],
-  [/\bmongo\b/, "mongodb"],
-  [/\bgithub\b/, "github"],
-  [/\bgit\b/, "git"],
-  [/\bsqlite\b/, "sqlite"],
-  [/\blinux\b/, "linux"],
-  [/\bodoo\b/, "odoo"],
-];
-
-function toolSlug(text: string) {
-  const lower = text.toLowerCase();
-  const head = lower.split(/[;,(]/)[0];
-  for (const [pattern, slug] of TOOL_SLUG_RULES) {
-    if (pattern.test(head)) return slug;
-  }
-  for (const [pattern, slug] of TOOL_SLUG_RULES) {
-    if (pattern.test(lower)) return slug;
-  }
-  return "";
+function artifactLabel(kind: ProjectBrief["kind"]) {
+  return {
+    code: "Code project",
+    lab: "Practical lab",
+    design: "Design project",
+    analysis: "Analysis project",
+    runbook: "Runbook project",
+    rehearsal: "Timed rehearsal",
+  }[kind];
 }
 
 export function ProjectChrome({
   slug,
   phaseId,
+  chapterNumber,
+  lessonIds,
+  unitTitle,
   projectId,
   title,
   brief,
@@ -65,6 +47,9 @@ export function ProjectChrome({
 }: {
   slug: string;
   phaseId: string;
+  chapterNumber: string;
+  lessonIds: string[];
+  unitTitle?: string;
   projectId: string;
   title: string;
   brief: ProjectBrief;
@@ -78,8 +63,11 @@ export function ProjectChrome({
   const pathname = usePathname();
   const { projectDone, toggleProject, toggleGit, course, visit } = useLearningProgress();
   const done = projectDone(slug, phaseId);
+  const lessonsReady = lessonIds.every((lessonId) => course(slug).completedLessons.includes(lessonId));
   const gitDone = course(slug).completedGitCheckpoints.includes(phaseId);
   const commands = gitCommands(brief.gitBody);
+  const starter = getProjectStarter(projectId, brief);
+  const csInfo = slug === "computer-science" ? getCSProjectInfo(parseInt(phaseId, 10)) : null;
 
   useEffect(() => {
     visit(slug, phaseId, `project:${phaseId}`);
@@ -91,37 +79,115 @@ export function ProjectChrome({
       backLabel={reviewLabel}
       proceedHref={proceedHref}
       proceedLabel={proceedLabel}
+      proceedDisabled={!done}
+      hint={!done ? "Complete this chapter project to open the next chapter." : undefined}
     />
   );
 
-  function startBuild() {
-    const starter = getProjectStarter(projectId, brief);
+  function startProject() {
+    if (csInfo) {
+      if (csInfo.workspaceType === "notepad") {
+        const href = notepadHref();
+        writeNotepadEntry(
+          {
+            prompt: csInfo.problemStatement || csInfo.projectTitle,
+            modelAnswer: csInfo.solutionMarkdown,
+            title: csInfo.projectTitle,
+            kicker: `Chapter ${csInfo.chapter} Project`,
+            backHref: pathname,
+            prevHref: pathname,
+            showAnswerInitial: true,
+            completeProject: { slug, phaseId },
+          },
+          href
+        );
+        router.push(href);
+        return;
+      } else {
+        const href = tryPlaygroundHref(csInfo.language || "python");
+        writeTryItCode(
+          csInfo.language || "python",
+          {
+            source: csInfo.starterCode,
+            title: `Chapter ${csInfo.chapter} · ${csInfo.projectTitle}`,
+            instructions: csInfo.problemStatement || csInfo.projectTitle,
+            observe: `Run this solution to verify all requirements for ${csInfo.projectTitle}.`,
+            backHref: pathname,
+            prevHref: pathname,
+            requireRunSuccess: false,
+            completeProject: { slug, phaseId },
+          },
+          href
+        );
+        router.push(href);
+        return;
+      }
+    }
+
+    if (!starter) {
+      document.getElementById("project-steps")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
     const href = tryPlaygroundHref(starter.language);
-    writeTryItCode(starter.language, {
-      source: starterSource(starter),
-      title: brief.title || title,
-      instructions: brief.title || title,
-      observe: starter.observe,
-      backHref: pathname,
-      prevHref: pathname,
-      requireRunSuccess: false,
-      completeProject: { slug, phaseId },
-    }, href);
+    writeTryItCode(
+      starter.language,
+      {
+        source: starterSource(starter),
+        title: brief.title || title,
+        instructions: brief.title || title,
+        observe: starter.observe,
+        backHref: pathname,
+        prevHref: pathname,
+        requireRunSuccess: false,
+        completeProject: { slug, phaseId },
+      },
+      href
+    );
     router.push(href);
   }
+
+  const isNotepad = csInfo ? csInfo.workspaceType === "notepad" : false;
+  const buttonLabel = !lessonsReady
+    ? "Finish chapter lessons"
+    : csInfo
+    ? isNotepad
+      ? "Start Building"
+      : "Start Project"
+    : starter
+    ? "Open starter"
+    : "Start project";
 
   return (
     <article className="ih-lesson ih-build">
       <div className="ih-build-top">
         <div>
+          <p className="ih-build-context">{unitTitle ? `${unitTitle} · ` : ""}Chapter {chapterNumber}</p>
           <h1>{title}</h1>
+          <span className="ih-build-kind">{artifactLabel(brief.kind)}</span>
         </div>
-        <button type="button" className="ih-pager-btn ih-pager-start" onClick={startBuild}>
-          <span className="ih-pager-label">Start Building »</span>
+        <button type="button" className="ih-pager-btn ih-pager-start" onClick={startProject} disabled={!lessonsReady}>
+          <span className="ih-pager-label">{buttonLabel} »</span>
         </button>
       </div>
 
       <p className="ih-build-intro"><PracticeRichText text={brief.intro} /></p>
+
+      {brief.lessonCoverage.length ? (
+        <section className="ih-build-section" aria-labelledby="build-lessons">
+          <h2 id="build-lessons">Lessons practiced</h2>
+          <ul className="ih-build-coverage">
+            {brief.lessonCoverage.map((item) => (
+              <li key={item.lessonId}>
+                <span>{item.lessonId}</span>
+                <div>
+                  <strong>{item.lessonTitle}</strong>
+                  <p><PracticeRichText text={item.application} /></p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
 
       {brief.spec.length ? (
         <section className="ih-build-section" aria-labelledby="build-must">
@@ -137,8 +203,17 @@ export function ProjectChrome({
         </section>
       ) : null}
 
+      {brief.deliverables.length ? (
+        <section className="ih-build-section" aria-labelledby="build-deliverables">
+          <h2 id="build-deliverables">Deliverables</h2>
+          <ul className="ih-build-checklist">
+            {brief.deliverables.map((item) => <li key={item}><PracticeRichText text={item} /></li>)}
+          </ul>
+        </section>
+      ) : null}
+
       {brief.steps.length ? (
-        <section className="ih-build-section" aria-labelledby="build-how">
+        <section id="project-steps" className="ih-build-section" aria-labelledby="build-how">
           <h2 id="build-how">How to build it</h2>
           <ol className="ih-build-steps">
             {brief.steps.map((item, index) => (
@@ -151,25 +226,22 @@ export function ProjectChrome({
         </section>
       ) : null}
 
-      {brief.tech.length ? (
-        <section className="ih-build-section" aria-labelledby="build-tools">
-          <h2 id="build-tools">Tools</h2>
-          <ul className="ih-build-tech">
-            {brief.tech.map((item) => {
-              const slug = toolSlug(item);
-              return (
-                <li key={item} className="ih-build-tool">
-                  <button type="button" className="ih-build-tool-btn" aria-label={item}>
-                    {slug ? (
-                      <TechnologyIcon slug={slug} title={item} size={ICON_SIZE.heading} useBrandColor surface="light" decorative className="ih-build-tool-mark" />
-                    ) : (
-                      <span className="ih-build-tool-fallback" aria-hidden="true">{item.slice(0, 2).toUpperCase()}</span>
-                    )}
-                  </button>
-                  <span className="ih-build-tool-tip" aria-hidden="true">{item}</span>
-                </li>
-              );
-            })}
+      {brief.validation.length ? (
+        <section className="ih-build-section" aria-labelledby="build-validation">
+          <h2 id="build-validation">Validation</h2>
+          <ul className="ih-build-checklist">
+            {brief.validation.map((item) => <li key={item}><PracticeRichText text={item} /></li>)}
+          </ul>
+        </section>
+      ) : null}
+
+
+
+      {brief.completionCriteria.length ? (
+        <section className="ih-build-section" aria-labelledby="build-completion">
+          <h2 id="build-completion">Completion criteria</h2>
+          <ul className="ih-build-checklist">
+            {brief.completionCriteria.map((item) => <li key={item}><PracticeRichText text={item} /></li>)}
           </ul>
         </section>
       ) : null}
@@ -186,7 +258,7 @@ export function ProjectChrome({
             <span className="ih-build-check-mark" aria-hidden="true">{gitDone ? <Check size={18} strokeWidth={3} /> : null}</span>
             <span className="ih-build-check-copy">
               <strong>Git checkpoint</strong>
-              <span>I saved this build with a commit.</span>
+              <span>I saved this project checkpoint with a commit.</span>
             </span>
           </button>
           <button
@@ -194,11 +266,12 @@ export function ProjectChrome({
             className={`ih-build-check${done ? " is-on" : ""}`}
             onClick={() => toggleProject(slug, phaseId)}
             aria-pressed={done}
+            disabled={!lessonsReady}
           >
             <span className="ih-build-check-mark" aria-hidden="true">{done ? <Check size={18} strokeWidth={3} /> : null}</span>
             <span className="ih-build-check-copy">
-              <strong>Build finished</strong>
-              <span>I ran it successfully and the behavior matches the list above.</span>
+              <strong>Project finished</strong>
+              <span>{lessonsReady ? "I completed the deliverables and all validation checks above." : "Finish every chapter lesson before completing this project."}</span>
             </span>
           </button>
         </div>

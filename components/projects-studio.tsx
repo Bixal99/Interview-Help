@@ -55,7 +55,7 @@ export function ProjectsStudio({ courses }: { courses: ProjectStudioCourse[] }) 
         const done = ready && projectDone(course.slug, item.phaseId);
         if (status === "done" && !done) return [];
         if (status === "open" && done) return [];
-        const haystack = `${item.title} ${item.intro} ${item.topic ?? ""} ${item.tech.join(" ")} ${course.shortName}`.toLowerCase();
+        const haystack = `${item.title} ${item.intro} ${item.topic ?? ""} ${item.tech.join(" ")} ${item.kind} ${item.unitTitle} ${course.shortName}`.toLowerCase();
         if (terms.some((term) => !haystack.includes(term))) return [];
         return [{ course, item, done }];
       });
@@ -77,11 +77,11 @@ export function ProjectsStudio({ courses }: { courses: ProjectStudioCourse[] }) 
       <div className="ih-studio-shell">
         <header className="ih-studio-hero">
           <h1>Projects</h1>
-          <p>One build per phase. Finish it on its page so the next chapter can open.</p>
+          <p>One build per chapter. Finish it on its page so the next chapter can open.</p>
           <ul className="ih-studio-stats">
             <li>
               <b>{total}</b>
-              <span>phase builds</span>
+              <span>chapter builds</span>
             </li>
             <li>
               <b>{courses.length}</b>
@@ -146,6 +146,11 @@ export function ProjectsStudio({ courses }: { courses: ProjectStudioCourse[] }) 
           {grouped.length ? (
             grouped.map(({ course, rows }) => {
               const color = TILES[courses.findIndex((item) => item.slug === course.slug) % TILES.length];
+              const units = [...new Map(rows.map((row) => [row.item.unitId, row.item.unitTitle])).entries()].map(([id, title]) => ({
+                id,
+                title,
+                rows: rows.filter((row) => row.item.unitId === id),
+              }));
               return (
                 <section key={course.slug} className="ih-studio-section">
                 <div className="ih-studio-section-head">
@@ -158,13 +163,19 @@ export function ProjectsStudio({ courses }: { courses: ProjectStudioCourse[] }) 
                   </div>
                   <span className="ih-studio-count">{rows.length}</span>
                 </div>
-                <ul className="ih-project-grid">
-                  {rows.map(({ item, done }) => {
+                {units.map((unit) => (
+                  <section key={unit.id} className="ih-studio-unit">
+                    <div className="ih-studio-unit-head">
+                      <h3>{unit.title}</h3>
+                      <span>{unit.rows.length} chapter projects</span>
+                    </div>
+                    <ul className="ih-project-grid">
+                  {unit.rows.map(({ item, done }) => {
                     const tools = compactTech(item.tech);
                     return (
                     <li key={item.id}>
                       <Link href={item.href} className={`ih-project-card${done ? " is-done" : ""}`} onMouseMove={onGlow}>
-                        <span className="ih-project-phase">Phase {item.phaseId}</span>
+                        <span className="ih-project-phase">Chapter {item.chapterNumber} · {item.kind}</span>
                         {done ? (
                           <span className="ih-project-flag">
                             <AppIcon name="projectComplete" size={ICON_SIZE.compact} decorative />
@@ -192,7 +203,9 @@ export function ProjectsStudio({ courses }: { courses: ProjectStudioCourse[] }) 
                     </li>
                     );
                   })}
-                </ul>
+                    </ul>
+                  </section>
+                ))}
                 </section>
               );
             })

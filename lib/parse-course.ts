@@ -1,4 +1,5 @@
 import { extractFencedBlocks, extractYouTubeInfo, githubSlug } from "./content-utils";
+import { csLegacyLessonAliases } from "./cs-curriculum-compat";
 import type { Lesson, ParsedCourse, Phase, VideoResource } from "./learning-model";
 
 type Marker = {
@@ -155,14 +156,7 @@ function extractGoal(overview: string, body: string) {
     ?? firstLabeledLine(body, "WHY YOU ARE LEARNING THIS");
 }
 
-const nestedTopics: Record<string, string[]> = {
-  "29.6": ["Parking Lot", "Library", "Elevator"],
-  "69.1": ["SQL Injection", "XSS", "CSRF", "CORS"],
-  "81.1": ["One Server to a Distributed System"],
-  "88.1": ["Worked System Design Walkthrough"],
-};
-
-function extractLessonChildren(lessonId: string, markdown: string) {
+function extractLessonChildren(_lessonId: string, markdown: string) {
   const headings: { id: string; title: string }[] = [];
   let inFence = false;
   for (const line of markdown.split(/\r?\n/)) {
@@ -173,16 +167,15 @@ function extractLessonChildren(lessonId: string, markdown: string) {
     if (inFence) continue;
     const numbered = /^###\s+(\d+\.\d+\.\d+)\s+(.+?)\s*$/.exec(line);
     if (numbered) headings.push({ id: numbered[1], title: numbered[2].trim() });
+    const unit = /^###\s+((?:SP|U)\d+\.\d+)\s+(.+?)\s*$/i.exec(line);
+    if (unit) headings.push({ id: unit[1].toUpperCase(), title: unit[2].trim() });
   }
   if (headings.length) return headings;
-  return (nestedTopics[lessonId] ?? []).map((title, position) => ({
-    id: `${lessonId}.${position + 1}`,
-    title,
-  }));
+  return [];
 }
 
-function parseLessons(lines: string[], start: number, end: number, kind: Marker["kind"]): Lesson[] {
-  const lessons: { index: number; id: string; title: string }[] = [];
+function parseLessons(lines: string[], start: number, end: number, kind: Marker["kind"], courseSlug: string): Lesson[] {
+  const lessons: { index: number; id: string; title: string; kind: Lesson["kind"] }[] = [];
   let inFence = false;
   for (let i = start; i < end; i++) {
     const line = lines[i];
@@ -191,14 +184,27 @@ function parseLessons(lines: string[], start: number, end: number, kind: Marker[
       continue;
     }
     if (inFence) continue;
-    const numbered = /^##\s+(\d+)\.(\d+)\s+(.+?)\s*$/.exec(line);
+    const numbered = /^##\s+(?:LESSON\s+)?(\d+)\.(\d+)\s+(.+?)\s*$/i.exec(line);
+    const unitProject = /^##\s+(STORY|UNIT) PROJECT\s+(\d+)\s*[\u2013\u2014-]\s*(.+?)\s*$/i.exec(line);
+    const unitCheckpoint = /^##\s+(STORY|UNIT) CHECKPOINT\s+(\d+)(?:\s*[\u2013\u2014-]\s*(.+?))?\s*$/i.exec(line);
     const foundational = /^###\s+F(\d+)\.(\d+)\s*[-–—:]?\s*(.+?)\s*$/.exec(line);
     if (kind === "fphase" && foundational) {
-      lessons.push({ index: i, id: `f${foundational[1]}.${foundational[2]}`, title: foundational[3].trim() });
+      lessons.push({ index: i, id: `f${foundational[1]}.${foundational[2]}`, title: foundational[3].trim(), kind: "lesson" });
       continue;
     }
     if (kind === "phase" && numbered) {
-      lessons.push({ index: i, id: `${numbered[1]}.${numbered[2]}`, title: numbered[3].trim() });
+      lessons.push({ index: i, id: `${numbered[1]}.${numbered[2]}`, title: numbered[3].trim(), kind: "lesson" });
+      continue;
+    }
+    if (kind === "phase" && unitProject) {
+      const label = unitProject[1].toLowerCase() === "unit" ? "Unit" : "Story";
+      lessons.push({ index: i, id: `sp${unitProject[2]}`, title: `${label} Project ${unitProject[2]} — ${unitProject[3].trim()}`, kind: "story-project" });
+      continue;
+    }
+    if (kind === "phase" && unitCheckpoint) {
+      const label = unitCheckpoint[1].toLowerCase() === "unit" ? "Unit" : "Story";
+      const suffix = unitCheckpoint[3]?.trim();
+      lessons.push({ index: i, id: `sp${unitCheckpoint[2]}`, title: `${label} Checkpoint ${unitCheckpoint[2]}${suffix ? ` — ${suffix}` : ""}`, kind: "story-checkpoint" });
     }
   }
   return lessons.map((lesson, position) => {
@@ -207,6 +213,12 @@ function parseLessons(lines: string[], start: number, end: number, kind: Marker[
     return {
       id: lesson.id,
       slug: lessonSlug(lesson.title, lesson.id),
+      aliases: courseSlug === "computer-science" && lesson.kind === "lesson"
+        ? csLegacyLessonAliases[lesson.id] ?? []
+        : lesson.title.startsWith("Unit ")
+          ? [lessonSlug(lesson.title.replace(/^Unit /, "Story "), lesson.id)]
+          : [],
+      kind: lesson.kind,
       title: lesson.title,
       markdown,
       videos: extractVideos(markdown),
@@ -229,7 +241,7 @@ export function parseCourseMarkdown(markdown: string, slug = ""): ParsedCourse {
   const markers: Marker[] = [];
   const pending: { id: string; index: number }[] = [];
   let inFence = false;
-  const titleHeading = /^#\s+(.+?)\s*$/.exec(lines.find((line) => /^#\s+/.test(line) && !/^#\s+(PHASE|PART)\b/i.test(line)) ?? "");
+  const titleHeading = /^#\s+(.+?)\s*$/.exec(lines.find((line) => /^#\s+/.test(line) && !/^#\s+(PHASE|CHAPTER|PART)\b/i.test(line)) ?? "");
   const title = titleHeading?.[1]?.replace(/^The Zero-to-Hero\s+/i, "").trim() || slug;
 
   for (let i = 0; i < lines.length; i++) {
@@ -252,14 +264,14 @@ export function parseCourseMarkdown(markdown: string, slug = ""): ParsedCourse {
       pending.length = 0;
       continue;
     }
-    const phaseMatch = depth === 1 ? /^PHASE\s+(\d+)\b/i.exec(text) : null;
+    const phaseMatch = depth === 1 ? /^(?:PHASE|CHAPTER)\s+(\d+)\b/i.exec(text) : null;
     const fMatch = depth === 2 ? /^F(\d+)\b/.exec(text) : null;
     if (phaseMatch) {
       markers.push({
         index: i,
         id: String(Number(phaseMatch[1])),
         number: String(Number(phaseMatch[1])),
-        title: text.replace(/^PHASE\s+\d+\s*[-–—:]?\s*/i, "").trim(),
+        title: text.replace(/^(?:PHASE|CHAPTER)\s+\d+\s*[-–—:]?\s*/i, "").trim(),
         kind: "phase",
         anchors: collectAnchors(pending, i),
       });
@@ -286,11 +298,11 @@ export function parseCourseMarkdown(markdown: string, slug = ""): ParsedCourse {
   const teaserEnd = howTo > 0 && howTo < introEnd ? howTo : Math.min(introEnd, 28);
   const phases: Phase[] = markers.map((marker, position) => {
     const next = markers[position + 1]?.index ?? lines.length;
-    const lessons = parseLessons(lines, marker.index + 1, next, marker.kind);
+    const lessons = parseLessons(lines, marker.index + 1, next, marker.kind, slug);
     const firstLessonLine = lessons.length
       ? (() => {
         for (let i = marker.index + 1; i < next; i++) {
-          if (new RegExp(`^#{2,3}\\s+${lessons[0].id.replace(".", "\\.")}\\b`, "i").test(lines[i])) return i;
+          if (new RegExp(`^#{2,3}\\s+(?:Lesson\\s+)?${lessons[0].id.replace(".", "\\.")}\\b`, "i").test(lines[i])) return i;
         }
         return next;
       })()
@@ -301,7 +313,13 @@ export function parseCourseMarkdown(markdown: string, slug = ""): ParsedCourse {
       id: marker.id,
       number: marker.number,
       title: marker.title,
-      anchorIds: [...new Set(["phase-" + marker.id, ...marker.anchors, githubSlug(`PHASE ${marker.number} - ${marker.title}`)])],
+      anchorIds: [...new Set([
+        "phase-" + marker.id,
+        "chapter-" + marker.id,
+        ...marker.anchors,
+        githubSlug(`PHASE ${marker.number} - ${marker.title}`),
+        githubSlug(`CHAPTER ${marker.number} - ${marker.title}`),
+      ])],
       overview,
       goal: extractGoal(overview, body),
       track: firstLabeledLine(overview, "Track") ?? firstLabeledLine(body, "Track"),
@@ -338,24 +356,43 @@ export function findPhase(course: ParsedCourse, phaseId: string) {
 
 export function findLesson(course: ParsedCourse, phaseId: string, lessonSlugValue: string) {
   const phase = findPhase(course, phaseId);
-  return phase?.lessons.find((lesson) => lesson.slug === lessonSlugValue || lesson.id === lessonSlugValue);
+  const value = lessonSlugValue.toLowerCase();
+  if (!phase) return undefined;
+  // Canonical routes must win over legacy aliases. A pre-realignment lesson
+  // called "Computational Thinking" was folded into 1.4, for example, while
+  // the exact hierarchy now owns that slug at 1.6. Resolving both in one pass
+  // made the earlier alias shadow the real 1.6 page.
+  return phase.lessons.find((lesson) => lesson.slug.toLowerCase() === value || lesson.id.toLowerCase() === value)
+    ?? phase.lessons.find((lesson) => lesson.aliases.some((alias) => alias.toLowerCase() === value));
 }
 
 export function headingRouteMap(course: ParsedCourse) {
   const map = new Map<string, string>();
+  const legacyAliases: { alias: string; href: string }[] = [];
   map.set(githubSlug(course.title), `/courses/${course.slug}`);
   for (const phase of course.phases) {
     const home = phasePath(course.slug, phase.id);
     for (const id of phase.anchorIds) map.set(id.toLowerCase(), home);
     map.set(`phase-${phase.id}`.toLowerCase(), home);
+    map.set(`chapter-${phase.id}`.toLowerCase(), home);
     map.set(githubSlug(`PHASE ${phase.number} - ${phase.title}`).toLowerCase(), home);
+    map.set(githubSlug(`CHAPTER ${phase.number} - ${phase.title}`).toLowerCase(), home);
     for (const lesson of phase.lessons) {
       const href = lessonPath(course.slug, phase.id, lesson);
       map.set(lesson.slug.toLowerCase(), href);
       map.set(githubSlug(`${lesson.id} ${lesson.title}`).toLowerCase(), href);
+      if (lesson.kind === "lesson") {
+        map.set(githubSlug(`Lesson ${lesson.id} ${lesson.title}`).toLowerCase(), href);
+      }
       map.set(lesson.id.toLowerCase(), href);
+      for (const alias of lesson.aliases) legacyAliases.push({ alias: alias.toLowerCase(), href });
     }
     if (phase.project) map.set(phase.project.id.toLowerCase(), projectPathFor(course.slug, phase.id));
+  }
+  // Keep every canonical course/phase/lesson key authoritative. Aliases fill
+  // only otherwise-unused keys, regardless of lesson ordering.
+  for (const { alias, href } of legacyAliases) {
+    if (!map.has(alias)) map.set(alias, href);
   }
   return map;
 }

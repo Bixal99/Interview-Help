@@ -1,0 +1,4133 @@
+{
+  "lessons": {
+    "1.2": [
+      {
+        "type": "video",
+        "title": "Intro to Algorithms: Crash Course Computer Science #13",
+        "description": "Clear animated overview of what algorithms are and why precision matters before programming.",
+        "url": "https://www.youtube.com/watch?v=rL8X2mlNHPM",
+        "source": "Crash Course",
+        "channel": "CrashCourse",
+        "videoId": "rL8X2mlNHPM",
+        "thumbnail": "https://i.ytimg.com/vi/rL8X2mlNHPM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "What exactly is an algorithm?",
+        "description": "Short BBC Ideas explainer connecting everyday step-by-step instructions to computing.",
+        "url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo",
+        "source": "BBC Ideas",
+        "channel": "BBC Ideas",
+        "videoId": "ZnBF2GeAKbo",
+        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "article",
+        "title": "What is an algorithm?",
+        "description": "Written BBC Bitesize reference for reviewing precise steps, termination, and correctness.",
+        "url": "https://www.bbc.co.uk/bitesize/articles/z3whpv4",
+        "source": "BBC Bitesize",
+        "difficulty": "beginner"
+      }
+    ],
+    "1.3": [
+      {
+        "type": "video",
+        "title": "Computer Science Vs Software Engineering",
+        "description": "Compares CS theory, programming craft, and software engineering as distinct but related paths.",
+        "url": "https://www.youtube.com/watch?v=VxvQYZJNLxI",
+        "source": "YouTube",
+        "channel": "Zach Star",
+        "videoId": "VxvQYZJNLxI",
+        "thumbnail": "https://i.ytimg.com/vi/VxvQYZJNLxI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "reference",
+        "title": "What is computer science?",
+        "description": "ACM's concise definition of computer science as the study of computation and information.",
+        "url": "https://www.acm.org/education/education/curricula-recommendations",
+        "source": "ACM",
+        "difficulty": "beginner"
+      }
+    ],
+    "1.4": [
+      {
+        "type": "video",
+        "title": "What Is Abstraction in Computer Science",
+        "description": "Introduces hiding unnecessary detail so you can reason about systems at the right level.",
+        "url": "https://www.youtube.com/watch?v=_y-5nZAbgt4",
+        "source": "YouTube",
+        "channel": "Codexpanse with Rakhim",
+        "videoId": "_y-5nZAbgt4",
+        "thumbnail": "https://i.ytimg.com/vi/_y-5nZAbgt4/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "Abstraction (MDN Glossary)",
+        "description": "Short official reference linking abstraction to simpler interfaces and reduced complexity.",
+        "url": "https://developer.mozilla.org/en-US/docs/Glossary/Abstraction",
+        "source": "MDN",
+        "difficulty": "beginner"
+      }
+    ],
+    "1.5": [
+      {
+        "type": "video",
+        "title": "Computational Thinking: Decomposition",
+        "description": "Shows how to break large problems into smaller, manageable subproblems.",
+        "url": "https://www.youtube.com/watch?v=yQVTijX437c",
+        "source": "YouTube",
+        "channel": "Curriki",
+        "videoId": "yQVTijX437c",
+        "thumbnail": "https://i.ytimg.com/vi/yQVTijX437c/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Decomposition, Abstraction & Algorithmic Thinking",
+        "description": "Connects decomposition with the other computational-thinking pillars taught in this phase.",
+        "url": "https://www.youtube.com/watch?v=qkIVheIgtWw",
+        "source": "YouTube",
+        "channel": "MrBrownCS",
+        "videoId": "qkIVheIgtWw",
+        "thumbnail": "https://i.ytimg.com/vi/qkIVheIgtWw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "1.6": [
+      {
+        "type": "video",
+        "title": "Computational Thinking",
+        "description": "Overview of decomposition, pattern recognition, abstraction, and algorithms working together.",
+        "url": "https://www.youtube.com/watch?v=dHWmnayy8MY",
+        "source": "YouTube",
+        "channel": "Computer Science Lessons",
+        "videoId": "dHWmnayy8MY",
+        "thumbnail": "https://i.ytimg.com/vi/dHWmnayy8MY/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Computational Thinking: What Is It? How Is It Used?",
+        "description": "Visual walkthrough of the four computational-thinking practices with practical examples.",
+        "url": "https://www.youtube.com/watch?v=qbnTZCj0ugI",
+        "source": "YouTube",
+        "channel": "Paxton Patterson",
+        "videoId": "qbnTZCj0ugI",
+        "thumbnail": "https://i.ytimg.com/vi/qbnTZCj0ugI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "2.1": [
+      {
+        "type": "video",
+        "title": "Representing Numbers and Letters with Binary: Crash Course CS #4",
+        "description": "Animated tour of bits, bytes, and how machines store information.",
+        "url": "https://www.youtube.com/watch?v=1GSjbWt0c9M",
+        "source": "Crash Course",
+        "channel": "CrashCourse",
+        "videoId": "1GSjbWt0c9M",
+        "thumbnail": "https://i.ytimg.com/vi/1GSjbWt0c9M/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Computer Science Basics: Bits and Bytes",
+        "description": "Quick visual explainer on bit/byte prefixes, binary representations, and storage sizes.",
+        "url": "https://www.youtube.com/watch?v=k9y025u_D0Y",
+        "source": "GCFLearnFree",
+        "channel": "GCFLearnFree",
+        "videoId": "k9y025u_D0Y",
+        "thumbnail": "https://i.ytimg.com/vi/k9y025u_D0Y/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "interactive",
+        "title": "Binary Numbers — Visualized",
+        "description": "Click-through binary place-value practice with instant feedback.",
+        "url": "https://www.electronics-tutorials.ws/binary/bin_1.html",
+        "source": "Electronics Tutorials",
+        "difficulty": "beginner"
+      }
+    ],
+    "2.2": [
+      {
+        "type": "video",
+        "title": "Computer Science Basics: Binary",
+        "description": "Visual explanation of binary place values and decimal-to-binary conversion.",
+        "url": "https://www.youtube.com/watch?v=M41M9ATm49M",
+        "source": "LearnFree",
+        "channel": "LearnFree",
+        "videoId": "M41M9ATm49M",
+        "thumbnail": "https://i.ytimg.com/vi/M41M9ATm49M/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Binary Numbers and Base Systems as Fast as Possible",
+        "description": "Quick survey of binary, decimal, and hex alongside when each base is used.",
+        "url": "https://www.youtube.com/watch?v=LpuPe81bc2w",
+        "source": "Techquickie",
+        "channel": "Techquickie",
+        "videoId": "LpuPe81bc2w",
+        "thumbnail": "https://i.ytimg.com/vi/LpuPe81bc2w/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "interactive",
+        "title": "Binary Interactive Practice",
+        "description": "Practice converting between decimal and binary with instant feedback.",
+        "url": "https://www.advanced-ict.info/interactive/binary.html",
+        "source": "Advanced ICT",
+        "difficulty": "beginner"
+      }
+    ],
+    "2.4": [
+      {
+        "type": "video",
+        "title": "Twos complement: Negative numbers in binary",
+        "description": "Ben Eater's clear hardware-minded walkthrough of two's complement encoding.",
+        "url": "https://www.youtube.com/watch?v=4qH4unVtJkE",
+        "source": "Ben Eater",
+        "channel": "Ben Eater",
+        "videoId": "4qH4unVtJkE",
+        "thumbnail": "https://i.ytimg.com/vi/4qH4unVtJkE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Binary: Plusses & Minuses (Why We Use Two's Complement)",
+        "description": "Computerphile explains why two's complement beats sign-magnitude for arithmetic.",
+        "url": "https://www.youtube.com/watch?v=lKTsv6iVxV4",
+        "source": "Computerphile",
+        "channel": "Computerphile",
+        "videoId": "lKTsv6iVxV4",
+        "thumbnail": "https://i.ytimg.com/vi/lKTsv6iVxV4/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "reference",
+        "title": "Integer Representations - CS 61C",
+        "description": "Written reference for unsigned ranges, two's complement, and overflow edge cases.",
+        "url": "https://notes.cs61c.org/content/number-rep/integer-representations/",
+        "source": "CS 61C",
+        "difficulty": "beginner"
+      }
+    ],
+    "2.5": [
+      {
+        "type": "video",
+        "title": "Floating Point Numbers - Computerphile",
+        "description": "Introduces why fractions need special encoding and where rounding errors appear.",
+        "url": "https://www.youtube.com/watch?v=PZRI1IfStY0",
+        "source": "Computerphile",
+        "channel": "Computerphile",
+        "videoId": "PZRI1IfStY0",
+        "thumbnail": "https://i.ytimg.com/vi/PZRI1IfStY0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "IEEE 754 Standard for Floating Point Binary Arithmetic",
+        "description": "Deeper layout of sign, exponent, and mantissa bits in IEEE 754.",
+        "url": "https://www.youtube.com/watch?v=RuKkePyo9zk",
+        "source": "YouTube",
+        "videoId": "RuKkePyo9zk",
+        "thumbnail": "https://i.ytimg.com/vi/RuKkePyo9zk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "intermediate"
+      },
+      {
+        "type": "interactive",
+        "title": "IEEE 754 Converter",
+        "description": "Explore how decimal values map to FP16/32/64 bit patterns interactively.",
+        "url": "https://go-tools.org/tools/ieee-754-converter",
+        "source": "Go Tools",
+        "difficulty": "intermediate"
+      }
+    ],
+    "2.6": [
+      {
+        "type": "video",
+        "title": "ASCII, Unicode, UTF-8: Explained Simply",
+        "description": "Connects character codes to the text your programs read and display.",
+        "url": "https://www.youtube.com/watch?v=DntKZ9xJ1sM",
+        "source": "YouTube",
+        "channel": "LeetCoder",
+        "videoId": "DntKZ9xJ1sM",
+        "thumbnail": "https://i.ytimg.com/vi/DntKZ9xJ1sM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "Character encoding (MDN Glossary)",
+        "description": "Official reference linking ASCII, Unicode, and UTF-8 terminology.",
+        "url": "https://developer.mozilla.org/en-US/docs/Glossary/Character_encoding",
+        "source": "MDN",
+        "difficulty": "beginner"
+      }
+    ],
+    "3.1": [
+      {
+        "type": "video",
+        "title": "Boolean Logic & Logic Gates: Crash Course CS #3",
+        "description": "Animated tour of AND, OR, NOT gates and how logic builds computation.",
+        "url": "https://www.youtube.com/watch?v=gI-qXk7XojA",
+        "source": "Crash Course",
+        "channel": "CrashCourse",
+        "videoId": "gI-qXk7XojA",
+        "thumbnail": "https://i.ytimg.com/vi/gI-qXk7XojA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Logic Gates, Truth Tables, Boolean Algebra",
+        "description": "Step-by-step truth-table practice for the gates introduced in this lesson.",
+        "url": "https://www.youtube.com/watch?v=JQBRzsPhw2w",
+        "source": "The Organic Chemistry Tutor",
+        "channel": "The Organic Chemistry Tutor",
+        "videoId": "JQBRzsPhw2w",
+        "thumbnail": "https://i.ytimg.com/vi/JQBRzsPhw2w/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "3.2": [
+      {
+        "type": "video",
+        "title": "How Logic Gates Work - The Learning Circuit",
+        "description": "Hardware-oriented view of gate behavior beyond truth-table symbols.",
+        "url": "https://www.youtube.com/watch?v=lXWpWNKwYbo",
+        "source": "element14 presents",
+        "channel": "element14 presents",
+        "videoId": "lXWpWNKwYbo",
+        "thumbnail": "https://i.ytimg.com/vi/lXWpWNKwYbo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "interactive",
+        "title": "CircuitVerse Logic Circuit Simulator",
+        "description": "Build and simulate logic gates interactively to reinforce this lesson.",
+        "url": "https://circuitverse.org/",
+        "source": "CircuitVerse",
+        "difficulty": "beginner"
+      }
+    ],
+    "2.7": [
+      {
+        "type": "video",
+        "title": "The Integer Overflow Error",
+        "description": "Explains how fixed-width integers wrap when results exceed their range.",
+        "url": "https://www.youtube.com/watch?v=B1OljvfAbSE",
+        "source": "YouTube",
+        "channel": "Uma Abu",
+        "videoId": "B1OljvfAbSE",
+        "thumbnail": "https://i.ytimg.com/vi/B1OljvfAbSE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "reference",
+        "title": "Data representation: Integers and undefined behavior (CS 61)",
+        "description": "Written reference on overflow, signed/unsigned edges, and undefined behavior.",
+        "url": "https://cs61.seas.harvard.edu/site/2022/Datarep5/",
+        "source": "CS 61",
+        "difficulty": "beginner"
+      }
+    ],
+    "3.3": [
+      {
+        "type": "video",
+        "title": "Boolean Logic & Logic Gates: Crash Course CS #3",
+        "description": "Covers AND, OR, NOT, and XOR with animated gate diagrams.",
+        "url": "https://www.youtube.com/watch?v=gI-qXk7XojA",
+        "source": "Crash Course",
+        "channel": "CrashCourse",
+        "videoId": "gI-qXk7XojA",
+        "thumbnail": "https://i.ytimg.com/vi/gI-qXk7XojA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "reference",
+        "title": "XOR Gate - GeeksforGeeks",
+        "description": "Truth-table reference focused on XOR behavior.",
+        "url": "https://www.geeksforgeeks.org/digital-logic/xor-gate/",
+        "source": "GeeksforGeeks",
+        "difficulty": "beginner"
+      }
+    ],
+    "3.5": [
+      {
+        "type": "video",
+        "title": "Introduction to Combinational Circuits",
+        "description": "Outputs depend only on current inputs — no memory state.",
+        "url": "https://www.youtube.com/watch?v=_yHo2qq82P0",
+        "source": "YouTube",
+        "channel": "TutorialsPoint",
+        "videoId": "_yHo2qq82P0",
+        "thumbnail": "https://i.ytimg.com/vi/_yHo2qq82P0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "reference",
+        "title": "Fundamentals of Computer Systems - Combinational Logic",
+        "description": "University notes on combinational circuit design.",
+        "url": "https://www.cs.columbia.edu/~sedwards/classes/2020/3827-summer/combinational.pdf",
+        "source": "Columbia CS",
+        "difficulty": "intermediate"
+      }
+    ],
+    "3.6": [
+      {
+        "type": "video",
+        "title": "How Flip Flops Work - The Learning Circuit",
+        "description": "Introduces sequential circuits and memory elements.",
+        "url": "https://www.youtube.com/watch?v=Hi7rK0hZnfc",
+        "source": "element14 presents",
+        "channel": "element14 presents",
+        "videoId": "Hi7rK0hZnfc",
+        "thumbnail": "https://i.ytimg.com/vi/Hi7rK0hZnfc/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "article",
+        "title": "Sequential Logic Circuits",
+        "description": "Written overview of latches, flip-flops, and clocked behavior.",
+        "url": "https://electronics-tutorial.net/sequential-logic-circuits/",
+        "source": "Electronics Tutorial",
+        "difficulty": "beginner"
+      }
+    ],
+    "3.7": [
+      {
+        "type": "video",
+        "title": "Binary Addition, Half-Adder, Full-Adder Logic Gate Circuits",
+        "description": "Builds adders step-by-step from logic gates.",
+        "url": "https://www.youtube.com/watch?v=hExfiB_UFzA",
+        "source": "YouTube",
+        "channel": "COMPUTER TECH AT HUTCH TECH",
+        "videoId": "hExfiB_UFzA",
+        "thumbnail": "https://i.ytimg.com/vi/hExfiB_UFzA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "article",
+        "title": "Half Adder and Full Adder Circuits",
+        "description": "Diagrams and truth tables for half and full adders.",
+        "url": "https://www.electronicshub.org/half-adder-and-full-adder-circuits/",
+        "source": "Electronics Hub",
+        "difficulty": "beginner"
+      }
+    ],
+    "4.1": [
+      {
+        "type": "video",
+        "title": "The Central Processing Unit (CPU): Crash Course CS #7",
+        "description": "Animated tour of CPU components and their roles.",
+        "url": "https://www.youtube.com/watch?v=FZGugFqdr60",
+        "source": "Crash Course",
+        "channel": "CrashCourse",
+        "videoId": "FZGugFqdr60",
+        "thumbnail": "https://i.ytimg.com/vi/FZGugFqdr60/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Advanced CPU Designs: Crash Course CS #9",
+        "description": "Follow-up on pipelining and performance-oriented CPU design.",
+        "url": "https://www.youtube.com/watch?v=rtAlC5J1U40",
+        "source": "Crash Course",
+        "channel": "CrashCourse",
+        "videoId": "rtAlC5J1U40",
+        "thumbnail": "https://i.ytimg.com/vi/rtAlC5J1U40/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "intermediate"
+      }
+    ],
+    "4.2": [
+      {
+        "type": "video",
+        "title": "The Fetch-Execute Cycle",
+        "description": "Tom Scott explains what your CPU does for every instruction.",
+        "url": "https://www.youtube.com/watch?v=Z5JC9Ve1sfI",
+        "source": "Tom Scott",
+        "channel": "Tom Scott",
+        "videoId": "Z5JC9Ve1sfI",
+        "thumbnail": "https://i.ytimg.com/vi/Z5JC9Ve1sfI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "reference",
+        "title": "Instruction cycle",
+        "description": "Encyclopedic reference for fetch-decode-execute terminology.",
+        "url": "https://en.wikipedia.org/wiki/Instruction_cycle",
+        "source": "Wikipedia",
+        "difficulty": "beginner"
+      }
+    ],
+    "4.3": [
+      {
+        "type": "video",
+        "title": "Registers and RAM: Crash Course CS #6",
+        "description": "Contrasts fast CPU registers with main memory.",
+        "url": "https://www.youtube.com/watch?v=fpnE6UAfbtU",
+        "source": "Crash Course",
+        "channel": "CrashCourse",
+        "videoId": "fpnE6UAfbtU",
+        "thumbnail": "https://i.ytimg.com/vi/fpnE6UAfbtU/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.1": [
+      {
+        "type": "video",
+        "title": "Comparing C to machine language",
+        "description": "Ben Eater shows how source code relates to machine instructions.",
+        "url": "https://www.youtube.com/watch?v=yOyaJXpAYZQ",
+        "source": "Ben Eater",
+        "channel": "Ben Eater",
+        "videoId": "yOyaJXpAYZQ",
+        "thumbnail": "https://i.ytimg.com/vi/yOyaJXpAYZQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "What is a Compiler?",
+        "description": "IBM overview of how source becomes executable programs.",
+        "url": "https://www.ibm.com/think/topics/compiler",
+        "source": "IBM",
+        "difficulty": "beginner"
+      }
+    ],
+    "4.4": [
+      {
+        "type": "video",
+        "title": "The Fetch-Execute Cycle: What's Your Computer Actually Doing?",
+        "description": "Best video for Fetch Decode Execute — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=Z5JC9Ve1sfI",
+        "source": "YouTube",
+        "channel": "Tom Scott",
+        "videoId": "Z5JC9Ve1sfI",
+        "thumbnail": "https://i.ytimg.com/vi/Z5JC9Ve1sfI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "The Fetch Decode Execute Cycle | GCSE Computer Science | BBC Bitesize | Too Tall Productions",
+        "description": "Alternative explanation of Fetch Decode Execute.",
+        "url": "https://www.youtube.com/watch?v=v97HAhwQMj8",
+        "source": "YouTube",
+        "channel": "Too Tall Productions",
+        "videoId": "v97HAhwQMj8",
+        "thumbnail": "https://i.ytimg.com/vi/v97HAhwQMj8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "4.6": [
+      {
+        "type": "video",
+        "title": "CPU Cache Explained - What is Cache Memory?",
+        "description": "Best video for CPU Cache — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=yi0FhRqDJfo",
+        "source": "YouTube",
+        "channel": "PowerCert Animated Videos",
+        "videoId": "yi0FhRqDJfo",
+        "thumbnail": "https://i.ytimg.com/vi/yi0FhRqDJfo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "What is CPU Cache?",
+        "description": "Alternative explanation of CPU Cache.",
+        "url": "https://www.youtube.com/watch?v=sHqNMHf2UNI",
+        "source": "YouTube",
+        "channel": "Techquickie",
+        "videoId": "sHqNMHf2UNI",
+        "thumbnail": "https://i.ytimg.com/vi/sHqNMHf2UNI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "4.7": [
+      {
+        "type": "video",
+        "title": "How do hard drives work? - Kanawat Senanan",
+        "description": "Best video for Storage — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=wteUW2sL7bc",
+        "source": "YouTube",
+        "channel": "TED-Ed",
+        "videoId": "wteUW2sL7bc",
+        "thumbnail": "https://i.ytimg.com/vi/wteUW2sL7bc/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "SSD vs Hard Drive vs Hybrid Drive",
+        "description": "Alternative explanation of Storage.",
+        "url": "https://www.youtube.com/watch?v=1cyMTl_QXSc",
+        "source": "YouTube",
+        "channel": "PowerCert Animated Videos",
+        "videoId": "1cyMTl_QXSc",
+        "thumbnail": "https://i.ytimg.com/vi/1cyMTl_QXSc/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "4.9": [
+      {
+        "type": "video",
+        "title": "The Bus | How the computer works?",
+        "description": "Best video for Buses — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=VvEikwvyN8k",
+        "source": "YouTube",
+        "channel": "notez on tek",
+        "videoId": "VvEikwvyN8k",
+        "thumbnail": "https://i.ytimg.com/vi/VvEikwvyN8k/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Computer Architecture - System Bus (address, data & control)",
+        "description": "Alternative explanation of Buses.",
+        "url": "https://www.youtube.com/watch?v=alYwqzO6ZEQ",
+        "source": "YouTube",
+        "channel": "TeachingCS",
+        "videoId": "alYwqzO6ZEQ",
+        "thumbnail": "https://i.ytimg.com/vi/alYwqzO6ZEQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "4.5": [
+      {
+        "type": "video",
+        "title": "Registers and RAM: Crash Course Computer Science #6",
+        "description": "Best video for RAM — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=fpnE6UAfbtU",
+        "source": "YouTube",
+        "channel": "CrashCourse",
+        "videoId": "fpnE6UAfbtU",
+        "thumbnail": "https://i.ytimg.com/vi/fpnE6UAfbtU/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Memory & Storage: Crash Course Computer Science #19",
+        "description": "Alternative explanation of RAM.",
+        "url": "https://www.youtube.com/watch?v=TQCr9RV7twk",
+        "source": "YouTube",
+        "channel": "CrashCourse",
+        "videoId": "TQCr9RV7twk",
+        "thumbnail": "https://i.ytimg.com/vi/TQCr9RV7twk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.4": [
+      {
+        "type": "video",
+        "title": "Programming Languages + Interpreters",
+        "description": "Best video for Interpreter — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=ZB_A9qS_xOQ",
+        "source": "YouTube",
+        "channel": "Linus Lee",
+        "videoId": "ZB_A9qS_xOQ",
+        "thumbnail": "https://i.ytimg.com/vi/ZB_A9qS_xOQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Interpreters and Compilers (Bits and Bytes, Episode 6)",
+        "description": "Alternative explanation of Interpreter.",
+        "url": "https://www.youtube.com/watch?v=_C5AHaS1mOA",
+        "source": "YouTube",
+        "channel": "Bits and Bytes TVO",
+        "videoId": "_C5AHaS1mOA",
+        "thumbnail": "https://i.ytimg.com/vi/_C5AHaS1mOA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.2": [
+      {
+        "type": "video",
+        "title": "Syntax Vs Semantics - Programming Languages",
+        "description": "Best video for Syntax and Semantics — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=vP-mn62EF0o",
+        "source": "YouTube",
+        "channel": "Udacity",
+        "videoId": "vP-mn62EF0o",
+        "thumbnail": "https://i.ytimg.com/vi/vP-mn62EF0o/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "&quot;Syntax and Semantics: the difference&quot; - Q&A",
+        "description": "Alternative explanation of Syntax and Semantics.",
+        "url": "https://www.youtube.com/watch?v=PbmsOTKtlno",
+        "source": "YouTube",
+        "channel": "ORBITS - Luciano Floridi",
+        "videoId": "PbmsOTKtlno",
+        "thumbnail": "https://i.ytimg.com/vi/PbmsOTKtlno/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.3": [
+      {
+        "type": "video",
+        "title": "How Compilers Work",
+        "description": "Best video for Compiler — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=xLuKxomEUiQ",
+        "source": "YouTube",
+        "channel": "Timothy Blumberg",
+        "videoId": "xLuKxomEUiQ",
+        "thumbnail": "https://i.ytimg.com/vi/xLuKxomEUiQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "How do computers read code?",
+        "description": "Alternative explanation of Compiler.",
+        "url": "https://www.youtube.com/watch?v=QXjU9qTsYCc",
+        "source": "YouTube",
+        "channel": "Frame of Essence",
+        "videoId": "QXjU9qTsYCc",
+        "thumbnail": "https://i.ytimg.com/vi/QXjU9qTsYCc/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.7": [
+      {
+        "type": "video",
+        "title": "Introduction to Lexical Analyzer",
+        "description": "Best video for Lexer — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=4nx8LEGy9kI",
+        "source": "YouTube",
+        "channel": "Neso Academy",
+        "videoId": "4nx8LEGy9kI",
+        "thumbnail": "https://i.ytimg.com/vi/4nx8LEGy9kI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Introduction to Lexical Analyzer",
+        "description": "Alternative explanation of Lexer.",
+        "url": "https://www.youtube.com/watch?v=xnolCgyx2LM",
+        "source": "YouTube",
+        "channel": "TutorialsPoint",
+        "videoId": "xnolCgyx2LM",
+        "thumbnail": "https://i.ytimg.com/vi/xnolCgyx2LM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.5": [
+      {
+        "type": "video",
+        "title": "Java Bytecode Explained",
+        "description": "Best video for Bytecode — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=pWOTpGyVv64",
+        "source": "YouTube",
+        "channel": "Parleys",
+        "videoId": "pWOTpGyVv64",
+        "thumbnail": "https://i.ytimg.com/vi/pWOTpGyVv64/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Java Bytecode Crash Course",
+        "description": "Alternative explanation of Bytecode.",
+        "url": "https://www.youtube.com/watch?v=e2zmmkc5xI0",
+        "source": "YouTube",
+        "channel": "Oracle Developers",
+        "videoId": "e2zmmkc5xI0",
+        "thumbnail": "https://i.ytimg.com/vi/e2zmmkc5xI0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.9": [
+      {
+        "type": "video",
+        "title": "How do linkers resolve symbols? Systems Programming CS Lecture",
+        "description": "Best video for Linking — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=6XVUIeAaROU",
+        "source": "YouTube",
+        "channel": "Chris Kanich",
+        "videoId": "6XVUIeAaROU",
+        "thumbnail": "https://i.ytimg.com/vi/6XVUIeAaROU/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "How the C++ Linker Works",
+        "description": "Alternative explanation of Linking.",
+        "url": "https://www.youtube.com/watch?v=H4s55GgAg0I",
+        "source": "YouTube",
+        "channel": "The Cherno",
+        "videoId": "H4s55GgAg0I",
+        "thumbnail": "https://i.ytimg.com/vi/H4s55GgAg0I/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "6.2": [
+      {
+        "type": "video",
+        "title": "Learn Visual Studio Code in 15 minutes: 2026 Official Beginner Tutorial",
+        "description": "Best video for IDE Code Editor — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=f8_uF_IDV50",
+        "source": "YouTube",
+        "channel": "Visual Studio Code",
+        "videoId": "f8_uF_IDV50",
+        "thumbnail": "https://i.ytimg.com/vi/f8_uF_IDV50/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "I tried 10 code editors",
+        "description": "Alternative explanation of IDE Code Editor.",
+        "url": "https://www.youtube.com/watch?v=8PhdfcX9tG0",
+        "source": "YouTube",
+        "channel": "Fireship",
+        "videoId": "8PhdfcX9tG0",
+        "thumbnail": "https://i.ytimg.com/vi/8PhdfcX9tG0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.10": [
+      {
+        "type": "video",
+        "title": "Various stages of program execution | Assembler, Linker & Loader | Log2Base2",
+        "description": "Best video for Loading — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=cJDRShqtTbk",
+        "source": "YouTube",
+        "channel": "Log2Base2®",
+        "videoId": "cJDRShqtTbk",
+        "thumbnail": "https://i.ytimg.com/vi/cJDRShqtTbk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "No really, how does Linux run executables?",
+        "description": "Alternative explanation of Loading.",
+        "url": "https://www.youtube.com/watch?v=Ia5jyz8sOCM",
+        "source": "YouTube",
+        "channel": "Jacob Pradels",
+        "videoId": "Ia5jyz8sOCM",
+        "thumbnail": "https://i.ytimg.com/vi/Ia5jyz8sOCM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "6.1": [
+      {
+        "type": "video",
+        "title": "Computer Skills Course: File Management, Part 1",
+        "description": "Best video for Files and Folders — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=k-EID5_2D9U",
+        "source": "YouTube",
+        "channel": "Dane Hartman",
+        "videoId": "k-EID5_2D9U",
+        "thumbnail": "https://i.ytimg.com/vi/k-EID5_2D9U/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Files & File Systems: Crash Course Computer Science #20",
+        "description": "Alternative explanation of Files and Folders.",
+        "url": "https://www.youtube.com/watch?v=KN8YgJnShPM",
+        "source": "YouTube",
+        "channel": "CrashCourse",
+        "videoId": "KN8YgJnShPM",
+        "thumbnail": "https://i.ytimg.com/vi/KN8YgJnShPM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "6.4": [
+      {
+        "type": "video",
+        "title": "before you code, learn how computers work",
+        "description": "Best video for Running Programs — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=97i2BAUw5Xc",
+        "source": "YouTube",
+        "channel": "Low Level",
+        "videoId": "97i2BAUw5Xc",
+        "thumbnail": "https://i.ytimg.com/vi/97i2BAUw5Xc/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "How a Computer Works - from silicon to apps",
+        "description": "Alternative explanation of Running Programs.",
+        "url": "https://www.youtube.com/watch?v=5f3NJnvnk7k",
+        "source": "YouTube",
+        "channel": "Improbable Matter",
+        "videoId": "5f3NJnvnk7k",
+        "thumbnail": "https://i.ytimg.com/vi/5f3NJnvnk7k/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "6.5": [
+      {
+        "type": "video",
+        "title": "What are Environment Variables, and how do I use them? (get,set)",
+        "description": "Best video for PATH environment — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=ADh_OFBfdEE",
+        "source": "YouTube",
+        "channel": "Jacob Sorber",
+        "videoId": "ADh_OFBfdEE",
+        "thumbnail": "https://i.ytimg.com/vi/ADh_OFBfdEE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Understanding $PATH",
+        "description": "Alternative explanation of PATH environment.",
+        "url": "https://www.youtube.com/watch?v=G8gSozyMfKA",
+        "source": "YouTube",
+        "channel": "Udacity",
+        "videoId": "G8gSozyMfKA",
+        "thumbnail": "https://i.ytimg.com/vi/G8gSozyMfKA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "6.6": [
+      {
+        "type": "video",
+        "title": "Linux for Programmers #7 | Environment Variables",
+        "description": "Best video for Environment Variables — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=yM8v5i2Qjgg",
+        "source": "YouTube",
+        "channel": "Akamai Developers",
+        "videoId": "yM8v5i2Qjgg",
+        "thumbnail": "https://i.ytimg.com/vi/yM8v5i2Qjgg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "What are Environment Variables ? with Examples on Windows & Linux",
+        "description": "Alternative explanation of Environment Variables.",
+        "url": "https://www.youtube.com/watch?v=bd65z5VZ7L4",
+        "source": "YouTube",
+        "channel": "JimShapedCoding",
+        "videoId": "bd65z5VZ7L4",
+        "thumbnail": "https://i.ytimg.com/vi/bd65z5VZ7L4/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "7.1": [
+      {
+        "type": "video",
+        "title": "Python variables for beginners ❎",
+        "description": "Best video for Programming Variables — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=LKFrQXaoSMQ",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "LKFrQXaoSMQ",
+        "thumbnail": "https://i.ytimg.com/vi/LKFrQXaoSMQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "#4 Python Tutorial for Beginners | Variables in Python",
+        "description": "Alternative explanation of Programming Variables.",
+        "url": "https://www.youtube.com/watch?v=TqPzwenhMj0",
+        "source": "YouTube",
+        "channel": "Telusko",
+        "videoId": "TqPzwenhMj0",
+        "thumbnail": "https://i.ytimg.com/vi/TqPzwenhMj0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "6.7": [
+      {
+        "type": "video",
+        "title": "Command line arguments - Go programming language tutorial (16)",
+        "description": "Best video for Command Line Arguments — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=gRQTJquwTFw",
+        "source": "YouTube",
+        "channel": "Begin Coding Fast",
+        "videoId": "gRQTJquwTFw",
+        "thumbnail": "https://i.ytimg.com/vi/gRQTJquwTFw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Command Line Arguments in Java",
+        "description": "Alternative explanation of Command Line Arguments.",
+        "url": "https://www.youtube.com/watch?v=Up17-azeuyE",
+        "source": "YouTube",
+        "channel": "Neso Academy",
+        "videoId": "Up17-azeuyE",
+        "thumbnail": "https://i.ytimg.com/vi/Up17-azeuyE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "7.2": [
+      {
+        "type": "video",
+        "title": "Coding Basics: Variables | Programming for Beginners |",
+        "description": "Best video for Assignment — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=ghCbURMWBD8",
+        "source": "YouTube",
+        "channel": "Transcode",
+        "videoId": "ghCbURMWBD8",
+        "thumbnail": "https://i.ytimg.com/vi/ghCbURMWBD8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Variables and assignment | Intro to CS - Python | Khan Academy",
+        "description": "Alternative explanation of Assignment.",
+        "url": "https://www.youtube.com/watch?v=52RHZdBSjTw",
+        "source": "YouTube",
+        "channel": "Khan Academy",
+        "videoId": "52RHZdBSjTw",
+        "thumbnail": "https://i.ytimg.com/vi/52RHZdBSjTw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "7.3": [
+      {
+        "type": "video",
+        "title": "Python Tutorial for Beginners 3: Integers and Floats - Working with Numeric Data",
+        "description": "Best video for Integers and Floats — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=khKv-8q7YmY",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "khKv-8q7YmY",
+        "thumbnail": "https://i.ytimg.com/vi/khKv-8q7YmY/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Numbers: Integers and Floats",
+        "description": "Alternative explanation of Integers and Floats.",
+        "url": "https://www.youtube.com/watch?v=zv5Nvx29_5Q",
+        "source": "YouTube",
+        "channel": "AiCore",
+        "videoId": "zv5Nvx29_5Q",
+        "thumbnail": "https://i.ytimg.com/vi/zv5Nvx29_5Q/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "7.4": [
+      {
+        "type": "video",
+        "title": "Understanding Boolean Data Types and Using the Boolean NOT (!) operator to Switch Arduino Pin States",
+        "description": "Best video for Booleans — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=HzSiJn62TCY",
+        "source": "YouTube",
+        "channel": "Programming Electronics Academy",
+        "videoId": "HzSiJn62TCY",
+        "thumbnail": "https://i.ytimg.com/vi/HzSiJn62TCY/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Boolean Logic & Logic Gates: Crash Course Computer Science #3",
+        "description": "Alternative explanation of Booleans.",
+        "url": "https://www.youtube.com/watch?v=gI-qXk7XojA",
+        "source": "YouTube",
+        "channel": "CrashCourse",
+        "videoId": "gI-qXk7XojA",
+        "thumbnail": "https://i.ytimg.com/vi/gI-qXk7XojA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "7.5": [
+      {
+        "type": "video",
+        "title": "How to Use Strings in Python - Python Tutorial for Beginners",
+        "description": "Best video for Strings — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=Ctqi5Y4X-jA",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "Ctqi5Y4X-jA",
+        "thumbnail": "https://i.ytimg.com/vi/Ctqi5Y4X-jA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Strings - Visually Explained",
+        "description": "Alternative explanation of Strings.",
+        "url": "https://www.youtube.com/watch?v=vheAwWSyEC8",
+        "source": "YouTube",
+        "channel": "Visually Explained",
+        "videoId": "vheAwWSyEC8",
+        "thumbnail": "https://i.ytimg.com/vi/vheAwWSyEC8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "11.2": [
+      {
+        "type": "video",
+        "title": "Python Tutorial: File Objects - Reading and Writing to Files",
+        "description": "Best video for File Reading — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=Uh2ebFW8OYM",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "Uh2ebFW8OYM",
+        "thumbnail": "https://i.ytimg.com/vi/Uh2ebFW8OYM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python File Handling for Beginners",
+        "description": "Alternative explanation of File Reading.",
+        "url": "https://www.youtube.com/watch?v=BRrem1k3904",
+        "source": "YouTube",
+        "channel": "Dave Gray",
+        "videoId": "BRrem1k3904",
+        "thumbnail": "https://i.ytimg.com/vi/BRrem1k3904/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "11.3": [
+      {
+        "type": "video",
+        "title": "Write files using Python! ✍",
+        "description": "Best video for File Writing — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=1IYrmTTKOoI",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "1IYrmTTKOoI",
+        "thumbnail": "https://i.ytimg.com/vi/1IYrmTTKOoI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Tutorial: File Objects - Reading and Writing to Files",
+        "description": "Alternative explanation of File Writing.",
+        "url": "https://www.youtube.com/watch?v=Uh2ebFW8OYM",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "Uh2ebFW8OYM",
+        "thumbnail": "https://i.ytimg.com/vi/Uh2ebFW8OYM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "10.5": [
+      {
+        "type": "video",
+        "title": "How to Loop over Lists in Python",
+        "description": "Iterate over list elements — core iteration pattern for collections.",
+        "url": "https://www.youtube.com/watch?v=9ueMumuFv6g",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "9ueMumuFv6g",
+        "thumbnail": "https://i.ytimg.com/vi/9ueMumuFv6g/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Iterate over Python dictionaries using 'for' loop",
+        "description": "Loop over dictionary keys and values when iterating collections.",
+        "url": "https://www.youtube.com/watch?v=0x_7s2h9Q3c",
+        "source": "YouTube",
+        "channel": "ModernPython",
+        "videoId": "0x_7s2h9Q3c",
+        "thumbnail": "https://i.ytimg.com/vi/0x_7s2h9Q3c/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "10.6": [
+      {
+        "type": "video",
+        "title": "Nesting Dictionaries and Lists in Python",
+        "description": "Combine lists and dictionaries inside one another for nested data.",
+        "url": "https://www.youtube.com/watch?v=lffEqO_5Bfk",
+        "source": "YouTube",
+        "channel": "StudySession",
+        "videoId": "lffEqO_5Bfk",
+        "thumbnail": "https://i.ytimg.com/vi/lffEqO_5Bfk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Nested Dictionaries in Python",
+        "description": "Walkthrough of dictionaries nested inside lists and other dictionaries.",
+        "url": "https://www.youtube.com/watch?v=jakXbai-Wic",
+        "source": "YouTube",
+        "channel": "Jenny's Lectures CS IT",
+        "videoId": "jakXbai-Wic",
+        "thumbnail": "https://i.ytimg.com/vi/jakXbai-Wic/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "11.4": [
+      {
+        "type": "video",
+        "title": "Python Tutorial: Working with JSON Data using the json Module",
+        "description": "Load, parse, and write JSON files with Python's json module.",
+        "url": "https://www.youtube.com/watch?v=9N6a-VLBa2I",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "9N6a-VLBa2I",
+        "thumbnail": "https://i.ytimg.com/vi/9N6a-VLBa2I/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Requests Tutorial: Read JSON from Web APIs",
+        "description": "Fetch and parse JSON from HTTP responses — common real-world usage.",
+        "url": "https://www.youtube.com/watch?v=tb8gHvYlCFs",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "tb8gHvYlCFs",
+        "thumbnail": "https://i.ytimg.com/vi/tb8gHvYlCFs/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "intermediate"
+      }
+    ],
+    "8.1": [
+      {
+        "type": "video",
+        "title": "If statements in Python are easy (if, elif, else) 🤔",
+        "description": "Best video for if else — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=FvMPfrgGeKs",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "FvMPfrgGeKs",
+        "thumbnail": "https://i.ytimg.com/vi/FvMPfrgGeKs/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "If Else Statements in Python | Python for Beginners",
+        "description": "Alternative explanation of if else.",
+        "url": "https://www.youtube.com/watch?v=-BOBedcjySI",
+        "source": "YouTube",
+        "channel": "Alex The Analyst",
+        "videoId": "-BOBedcjySI",
+        "thumbnail": "https://i.ytimg.com/vi/-BOBedcjySI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "8.5": [
+      {
+        "type": "video",
+        "title": "#22 Python Tutorial for Beginners | Break Continue Pass in Python",
+        "description": "Best video for break continue — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=yCZBnjF4_tU",
+        "source": "YouTube",
+        "channel": "Telusko",
+        "videoId": "yCZBnjF4_tU",
+        "thumbnail": "https://i.ytimg.com/vi/yCZBnjF4_tU/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python break continue pass ⛔",
+        "description": "Alternative explanation of break continue.",
+        "url": "https://www.youtube.com/watch?v=97NdNoA3XUQ",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "97NdNoA3XUQ",
+        "thumbnail": "https://i.ytimg.com/vi/97NdNoA3XUQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "8.2": [
+      {
+        "type": "video",
+        "title": "Python For Beginners - Nested IF Statements Explained",
+        "description": "Best video for Nested Conditions — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=JYPQxNq-I24",
+        "source": "YouTube",
+        "channel": "TeachingCS",
+        "videoId": "JYPQxNq-I24",
+        "thumbnail": "https://i.ytimg.com/vi/JYPQxNq-I24/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Excel - Creating a Nested IF Function",
+        "description": "Alternative explanation of Nested Conditions.",
+        "url": "https://www.youtube.com/watch?v=9jmcJd8kDyw",
+        "source": "YouTube",
+        "channel": "Chris Menard",
+        "videoId": "9jmcJd8kDyw",
+        "thumbnail": "https://i.ytimg.com/vi/9jmcJd8kDyw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "7.7": [
+      {
+        "type": "video",
+        "title": "Learn type casting in 7 minutes! 💱",
+        "description": "Best video for Type Conversion — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=Qtq83lAoogM",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "Qtq83lAoogM",
+        "thumbnail": "https://i.ytimg.com/vi/Qtq83lAoogM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Type Casting | C Programming Tutorial",
+        "description": "Alternative explanation of Type Conversion.",
+        "url": "https://www.youtube.com/watch?v=xKOPZ4mEH3I",
+        "source": "YouTube",
+        "channel": "Portfolio Courses",
+        "videoId": "xKOPZ4mEH3I",
+        "thumbnail": "https://i.ytimg.com/vi/xKOPZ4mEH3I/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "8.3": [
+      {
+        "type": "video",
+        "title": "Learn Python for loops in 5 minutes! 🔁",
+        "description": "Best video for for loops — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=KWgYha0clzw",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "KWgYha0clzw",
+        "thumbnail": "https://i.ytimg.com/vi/KWgYha0clzw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python For Loops - Python Tutorial for Absolute Beginners",
+        "description": "Alternative explanation of for loops.",
+        "url": "https://www.youtube.com/watch?v=94UHCEmprCY",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "94UHCEmprCY",
+        "thumbnail": "https://i.ytimg.com/vi/94UHCEmprCY/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "7.6": [
+      {
+        "type": "video",
+        "title": "#11 Python Tutorial for Beginners | Operators in Python",
+        "description": "Best video for Operators — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=v5MR5JnKcZI",
+        "source": "YouTube",
+        "channel": "Telusko",
+        "videoId": "v5MR5JnKcZI",
+        "thumbnail": "https://i.ytimg.com/vi/v5MR5JnKcZI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Logical operators in Python are easy 🔣",
+        "description": "Alternative explanation of Operators.",
+        "url": "https://www.youtube.com/watch?v=W7luvtXeQTA",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "W7luvtXeQTA",
+        "thumbnail": "https://i.ytimg.com/vi/W7luvtXeQTA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "9.1": [
+      {
+        "type": "video",
+        "title": "Functions in Python are easy 📞",
+        "description": "Best video for Functions — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=89cGQjB5R4M",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "89cGQjB5R4M",
+        "thumbnail": "https://i.ytimg.com/vi/89cGQjB5R4M/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Functions - Visually Explained",
+        "description": "Alternative explanation of Functions.",
+        "url": "https://www.youtube.com/watch?v=KW6qncswzHw",
+        "source": "YouTube",
+        "channel": "Visually Explained",
+        "videoId": "KW6qncswzHw",
+        "thumbnail": "https://i.ytimg.com/vi/KW6qncswzHw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "9.2": [
+      {
+        "type": "video",
+        "title": "Beginner Python Tutorial 84 - Arguments and Parameters",
+        "description": "Best video for Parameters — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=i_ZEaE5vfE0",
+        "source": "YouTube",
+        "channel": "Caleb Curry",
+        "videoId": "i_ZEaE5vfE0",
+        "thumbnail": "https://i.ytimg.com/vi/i_ZEaE5vfE0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Functions with Arguments in Python | Parameters vs Arguments | Python Tutorials for Beginners #lec60",
+        "description": "Alternative explanation of Parameters.",
+        "url": "https://www.youtube.com/watch?v=uY8QPE0dcSs",
+        "source": "YouTube",
+        "channel": "Jenny's Lectures CS IT",
+        "videoId": "uY8QPE0dcSs",
+        "thumbnail": "https://i.ytimg.com/vi/uY8QPE0dcSs/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "9.4": [
+      {
+        "type": "video",
+        "title": "69 🐍 Python Local vs Global Variables Explained | Variable Scope Made Easy",
+        "description": "Best video for Local Scope — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=at-HLtgFfd8",
+        "source": "YouTube",
+        "channel": "OrionVexa",
+        "videoId": "at-HLtgFfd8",
+        "thumbnail": "https://i.ytimg.com/vi/at-HLtgFfd8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Scope of Variables - Local vs Global",
+        "description": "Alternative explanation of Local Scope.",
+        "url": "https://www.youtube.com/watch?v=elMQ5YtZPxA",
+        "source": "YouTube",
+        "channel": "Neso Academy",
+        "videoId": "elMQ5YtZPxA",
+        "thumbnail": "https://i.ytimg.com/vi/elMQ5YtZPxA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "9.3": [
+      {
+        "type": "video",
+        "title": "Python return statement 🔙",
+        "description": "Best video for Return Values — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=ZnBQfF5JFDM",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "ZnBQfF5JFDM",
+        "thumbnail": "https://i.ytimg.com/vi/ZnBQfF5JFDM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python For Beginners - The Return Statement Explained",
+        "description": "Alternative explanation of Return Values.",
+        "url": "https://www.youtube.com/watch?v=1Ur-r4MgGfE",
+        "source": "YouTube",
+        "channel": "TeachingCS",
+        "videoId": "1Ur-r4MgGfE",
+        "thumbnail": "https://i.ytimg.com/vi/1Ur-r4MgGfE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "8.6": [
+      {
+        "type": "video",
+        "title": "Boolean Logic & Logic Gates: Crash Course Computer Science #3",
+        "description": "Best video for Boolean Conditions — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=gI-qXk7XojA",
+        "source": "YouTube",
+        "channel": "CrashCourse",
+        "videoId": "gI-qXk7XojA",
+        "thumbnail": "https://i.ytimg.com/vi/gI-qXk7XojA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Logic Gates, Truth Tables, Boolean Algebra AND, OR, NOT, NAND & NOR",
+        "description": "Alternative explanation of Boolean Conditions.",
+        "url": "https://www.youtube.com/watch?v=JQBRzsPhw2w",
+        "source": "YouTube",
+        "channel": "The Organic Chemistry Tutor",
+        "videoId": "JQBRzsPhw2w",
+        "thumbnail": "https://i.ytimg.com/vi/JQBRzsPhw2w/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "9.5": [
+      {
+        "type": "video",
+        "title": "Scope of Variables - Local vs Global",
+        "description": "Best video for Global Scope — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=elMQ5YtZPxA",
+        "source": "YouTube",
+        "channel": "Neso Academy",
+        "videoId": "elMQ5YtZPxA",
+        "thumbnail": "https://i.ytimg.com/vi/elMQ5YtZPxA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Tutorial: Variable Scope - Understanding the LEGB rule and global/nonlocal statements",
+        "description": "Alternative explanation of Global Scope.",
+        "url": "https://www.youtube.com/watch?v=QVdf0LgmICw",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "QVdf0LgmICw",
+        "thumbnail": "https://i.ytimg.com/vi/QVdf0LgmICw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "9.7": [
+      {
+        "type": "video",
+        "title": "What are &quot;Pure Functions&quot; and &quot;Side Effects&quot;?",
+        "description": "Best video for Pure Functions — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=4IIWib5MZKg",
+        "source": "YouTube",
+        "channel": "Academind",
+        "videoId": "4IIWib5MZKg",
+        "thumbnail": "https://i.ytimg.com/vi/4IIWib5MZKg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Functional JavaScript Tutorial - #3 Side Effects & Pure Functions",
+        "description": "Alternative explanation of Pure Functions.",
+        "url": "https://www.youtube.com/watch?v=r8fUwk5gLNM",
+        "source": "YouTube",
+        "channel": "Zaiste Programming",
+        "videoId": "r8fUwk5gLNM",
+        "thumbnail": "https://i.ytimg.com/vi/r8fUwk5gLNM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "9.6": [
+      {
+        "type": "video",
+        "title": "The Call Stack",
+        "description": "Best video for Call Stack — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=Q2sFmqvpBe0",
+        "source": "YouTube",
+        "channel": "Computer Science Lessons",
+        "videoId": "Q2sFmqvpBe0",
+        "thumbnail": "https://i.ytimg.com/vi/Q2sFmqvpBe0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "How Assembly Functions Work - The Stack Explained",
+        "description": "Alternative explanation of Call Stack.",
+        "url": "https://www.youtube.com/watch?v=u_-oQx_4jvo",
+        "source": "YouTube",
+        "channel": "Mxy",
+        "videoId": "u_-oQx_4jvo",
+        "thumbnail": "https://i.ytimg.com/vi/u_-oQx_4jvo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "10.2": [
+      {
+        "type": "video",
+        "title": "Python tuples 📋",
+        "description": "Best video for Tuples — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=w6hL_dszMxk",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "w6hL_dszMxk",
+        "thumbnail": "https://i.ytimg.com/vi/w6hL_dszMxk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Lists vs Tuples vs Sets - Visually Explained",
+        "description": "Alternative explanation of Tuples.",
+        "url": "https://www.youtube.com/watch?v=11WrzU81q68",
+        "source": "YouTube",
+        "channel": "Visually Explained",
+        "videoId": "11WrzU81q68",
+        "thumbnail": "https://i.ytimg.com/vi/11WrzU81q68/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "10.1": [
+      {
+        "type": "video",
+        "title": "Python lists, sets, and tuples explained 🍍",
+        "description": "Best video for Lists Arrays — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=gOMW_n2-2Mw",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "gOMW_n2-2Mw",
+        "thumbnail": "https://i.ytimg.com/vi/gOMW_n2-2Mw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "How to Use Lists in Python",
+        "description": "Alternative explanation of Lists Arrays.",
+        "url": "https://www.youtube.com/watch?v=9OeznAkyQz4",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "9OeznAkyQz4",
+        "thumbnail": "https://i.ytimg.com/vi/9OeznAkyQz4/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "10.4": [
+      {
+        "type": "video",
+        "title": "Python Lists vs Tuples vs Sets - Visually Explained",
+        "description": "Best video for Sets — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=11WrzU81q68",
+        "source": "YouTube",
+        "channel": "Visually Explained",
+        "videoId": "11WrzU81q68",
+        "thumbnail": "https://i.ytimg.com/vi/11WrzU81q68/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "What are Sets in Python? Python Tutorial for Absolute Beginners | Mosh",
+        "description": "Alternative explanation of Sets.",
+        "url": "https://www.youtube.com/watch?v=t9j8lCUGZXo",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "t9j8lCUGZXo",
+        "thumbnail": "https://i.ytimg.com/vi/t9j8lCUGZXo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "10.3": [
+      {
+        "type": "video",
+        "title": "Python dictionaries are easy 📙",
+        "description": "Best video for Dictionaries — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=MZZSMaEAC2g",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "MZZSMaEAC2g",
+        "thumbnail": "https://i.ytimg.com/vi/MZZSMaEAC2g/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Tutorial for Beginners 5: Dictionaries - Working with Key-Value Pairs",
+        "description": "Alternative explanation of Dictionaries.",
+        "url": "https://www.youtube.com/watch?v=daefaLgNkw0",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "daefaLgNkw0",
+        "thumbnail": "https://i.ytimg.com/vi/daefaLgNkw0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "11.1": [
+      {
+        "type": "video",
+        "title": "String methods in Python are easy! 〰️",
+        "description": "Best video for String Methods — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=tb6EYiHtcXU",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "tb6EYiHtcXU",
+        "thumbnail": "https://i.ytimg.com/vi/tb6EYiHtcXU/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "ALL 47 STRING METHODS IN PYTHON EXPLAINED",
+        "description": "Alternative explanation of String Methods.",
+        "url": "https://www.youtube.com/watch?v=bnSYeYFRCaA",
+        "source": "YouTube",
+        "channel": "Indently",
+        "videoId": "bnSYeYFRCaA",
+        "thumbnail": "https://i.ytimg.com/vi/bnSYeYFRCaA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "11.5": [
+      {
+        "type": "video",
+        "title": "Python Tutorial: CSV Module - How to Read, Parse, and Write CSV Files",
+        "description": "Best video for CSV Files — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=q5uM4VKywbA",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "q5uM4VKywbA",
+        "thumbnail": "https://i.ytimg.com/vi/q5uM4VKywbA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Learn HOW to Read CSV Files in Python!",
+        "description": "Alternative explanation of CSV Files.",
+        "url": "https://www.youtube.com/watch?v=H-hagjt65cE",
+        "source": "YouTube",
+        "channel": "Earthly",
+        "videoId": "H-hagjt65cE",
+        "thumbnail": "https://i.ytimg.com/vi/H-hagjt65cE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "1.1": [
+      {
+        "type": "video",
+        "title": "Early Computing: Crash Course Computer Science #1",
+        "description": "Animated history of computation — why the field exists before any programming.",
+        "url": "https://www.youtube.com/watch?v=O5nskjZ_GoI",
+        "source": "Crash Course",
+        "channel": "CrashCourse",
+        "videoId": "O5nskjZ_GoI",
+        "thumbnail": "https://i.ytimg.com/vi/O5nskjZ_GoI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Khan Academy and Code.org | What Makes a Computer, a Computer?",
+        "description": "Khan Academy animation on inputs, outputs, and what every computer shares.",
+        "url": "https://www.youtube.com/watch?v=xfKn5OjHLqQ",
+        "source": "Khan Academy",
+        "channel": "Khan Academy",
+        "videoId": "xfKn5OjHLqQ",
+        "thumbnail": "https://i.ytimg.com/vi/xfKn5OjHLqQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "reference",
+        "title": "CS50 course site",
+        "description": "Written companion for deeper reading after the animated intros.",
+        "url": "https://cs50.harvard.edu/x/",
+        "source": "Harvard CS50",
+        "difficulty": "beginner"
+      },
+      {
+        "type": "article",
+        "title": "What is computer science?",
+        "description": "BBC Bitesize overview of problems, algorithms, and computational thinking.",
+        "url": "https://www.bbc.co.uk/bitesize/subjects/z34k7ty",
+        "source": "BBC Bitesize",
+        "difficulty": "beginner"
+      }
+    ],
+    "2.3": [
+      {
+        "type": "video",
+        "title": "Understanding Binary, Hexadecimal, Decimal",
+        "description": "Clear walkthrough of hex as a compact way to write binary values.",
+        "url": "https://www.youtube.com/watch?v=ZL-LhaaMTTE",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "ZL-LhaaMTTE",
+        "thumbnail": "https://i.ytimg.com/vi/ZL-LhaaMTTE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Read and Write in Hexadecimal, The Easy Way!",
+        "description": "Practice converting and reading hexadecimal numbers.",
+        "url": "https://www.youtube.com/watch?v=bt4zavZCrLg",
+        "source": "YouTube",
+        "channel": "Max's Tech",
+        "videoId": "bt4zavZCrLg",
+        "thumbnail": "https://i.ytimg.com/vi/bt4zavZCrLg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "3.4": [
+      {
+        "type": "video",
+        "title": "Understanding Logic Gates",
+        "description": "AND, OR, NOT and how gates build digital computation.",
+        "url": "https://www.youtube.com/watch?v=INEtYZqtjTo",
+        "source": "YouTube",
+        "channel": "Spanning Tree",
+        "videoId": "INEtYZqtjTo",
+        "thumbnail": "https://i.ytimg.com/vi/INEtYZqtjTo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Boolean Logic & Logic Gates: Crash Course Computer Science #3",
+        "description": "Animated overview connecting transistors to gate behavior.",
+        "url": "https://www.youtube.com/watch?v=gI-qXk7XojA",
+        "source": "YouTube",
+        "channel": "CrashCourse",
+        "videoId": "gI-qXk7XojA",
+        "thumbnail": "https://i.ytimg.com/vi/gI-qXk7XojA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "interactive",
+        "title": "CircuitVerse Logic Circuit Simulator",
+        "description": "Build and simulate logic gates interactively.",
+        "url": "https://circuitverse.org/",
+        "source": "CircuitVerse",
+        "difficulty": "beginner"
+      }
+    ],
+    "5.6": [
+      {
+        "type": "video",
+        "title": "Just In Time (JIT) Compilers - Computerphile",
+        "description": "Why JIT can be faster than pure interpretation under the right conditions.",
+        "url": "https://www.youtube.com/watch?v=d7KHAVaX_Rs",
+        "source": "YouTube",
+        "channel": "Computerphile",
+        "videoId": "d7KHAVaX_Rs",
+        "thumbnail": "https://i.ytimg.com/vi/d7KHAVaX_Rs/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "intermediate"
+      },
+      {
+        "type": "video",
+        "title": "Just-In-Time (JIT) Compilers Explained",
+        "description": "Accessible overview of compile-at-runtime behavior.",
+        "url": "https://www.youtube.com/watch?v=KVvGVPc7QM8",
+        "source": "YouTube",
+        "channel": "The Coding Gopher",
+        "videoId": "KVvGVPc7QM8",
+        "thumbnail": "https://i.ytimg.com/vi/KVvGVPc7QM8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "6.3": [
+      {
+        "type": "video",
+        "title": "Command Line Crash Course For Beginners",
+        "description": "Navigate the terminal with core commands every developer needs.",
+        "url": "https://www.youtube.com/watch?v=uwAqEzhyjtw",
+        "source": "YouTube",
+        "channel": "Traversy Media",
+        "videoId": "uwAqEzhyjtw",
+        "thumbnail": "https://i.ytimg.com/vi/uwAqEzhyjtw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "How to use the Command Line | Terminal Basics for Beginners",
+        "description": "Short intro to why the command line is the seat of power on your machine.",
+        "url": "https://www.youtube.com/watch?v=5XgBd6rjuDQ",
+        "source": "YouTube",
+        "channel": "Jesse Showalter",
+        "videoId": "5XgBd6rjuDQ",
+        "thumbnail": "https://i.ytimg.com/vi/5XgBd6rjuDQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "8.4": [
+      {
+        "type": "video",
+        "title": "While loops in Python are easy!",
+        "description": "Execute code while a condition remains true — core while-loop pattern.",
+        "url": "https://www.youtube.com/watch?v=rRTjPnVooxE",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "rRTjPnVooxE",
+        "thumbnail": "https://i.ytimg.com/vi/rRTjPnVooxE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "While Loops in Python | Python for Beginners",
+        "description": "Second pass on while loops with beginner-friendly examples.",
+        "url": "https://www.youtube.com/watch?v=ECduJk00mUU",
+        "source": "YouTube",
+        "channel": "Alex The Analyst",
+        "videoId": "ECduJk00mUU",
+        "thumbnail": "https://i.ytimg.com/vi/ECduJk00mUU/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "11.6": [
+      {
+        "type": "video",
+        "title": "Python Tutorial: Pathlib - The Modern Way to Handle File Paths",
+        "description": "Prefer pathlib over string path concatenation for portable file paths.",
+        "url": "https://www.youtube.com/watch?v=yxa-DJuuTBI",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "yxa-DJuuTBI",
+        "thumbnail": "https://i.ytimg.com/vi/yxa-DJuuTBI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "pathlib — Object-oriented filesystem paths",
+        "description": "Official Python docs for Path, PurePath, and filesystem operations.",
+        "url": "https://docs.python.org/3/library/pathlib.html",
+        "source": "Python Docs",
+        "difficulty": "beginner"
+      }
+    ],
+    "11.7": [
+      {
+        "type": "video",
+        "title": "BINARY vs TEXT File Serialization",
+        "description": "Differences between text and binary files with clear examples.",
+        "url": "https://www.youtube.com/watch?v=Lq9KXnU4_yE",
+        "source": "YouTube",
+        "channel": "The Cherno",
+        "videoId": "Lq9KXnU4_yE",
+        "thumbnail": "https://i.ytimg.com/vi/Lq9KXnU4_yE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "BINARY vs TEXT File Serialization",
+        "description": "How text vs binary formats affect how programs store data.",
+        "url": "https://www.youtube.com/watch?v=Lq9KXnU4_yE",
+        "source": "YouTube",
+        "channel": "The Cherno",
+        "videoId": "Lq9KXnU4_yE",
+        "thumbnail": "https://i.ytimg.com/vi/Lq9KXnU4_yE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "intermediate"
+      }
+    ],
+    "12.1": [
+      {
+        "type": "video",
+        "title": "Syntax vs Runtime vs Logic Errors Explained",
+        "description": "Focus on syntax errors: caught before the program can even run.",
+        "url": "https://www.youtube.com/watch?v=3Gb2thJENdQ",
+        "source": "YouTube",
+        "channel": "Tech·WHYS",
+        "videoId": "3Gb2thJENdQ",
+        "thumbnail": "https://i.ytimg.com/vi/3Gb2thJENdQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Syntax Errors vs Logical Errors",
+        "description": "Contrast syntax mistakes with deeper logical mistakes.",
+        "url": "https://www.youtube.com/watch?v=ELkk3dAZOOk",
+        "source": "YouTube",
+        "channel": "CSE Society",
+        "videoId": "ELkk3dAZOOk",
+        "thumbnail": "https://i.ytimg.com/vi/ELkk3dAZOOk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "12.2": [
+      {
+        "type": "video",
+        "title": "Syntax vs Runtime vs Logic Errors Explained",
+        "description": "Focus on runtime errors that appear only when code executes.",
+        "url": "https://www.youtube.com/watch?v=3Gb2thJENdQ",
+        "source": "YouTube",
+        "channel": "Tech·WHYS",
+        "videoId": "3Gb2thJENdQ",
+        "thumbnail": "https://i.ytimg.com/vi/3Gb2thJENdQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Learn Python EXCEPTION HANDLING in 5 minutes!",
+        "description": "Runtime exceptions interrupt flow — see try/except patterns.",
+        "url": "https://www.youtube.com/watch?v=V_NXT2-QIlE",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "V_NXT2-QIlE",
+        "thumbnail": "https://i.ytimg.com/vi/V_NXT2-QIlE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "12.3": [
+      {
+        "type": "video",
+        "title": "Syntax vs Runtime vs Logic Errors Explained",
+        "description": "Focus on logical bugs: code runs but produces wrong results.",
+        "url": "https://www.youtube.com/watch?v=3Gb2thJENdQ",
+        "source": "YouTube",
+        "channel": "Tech·WHYS",
+        "videoId": "3Gb2thJENdQ",
+        "thumbnail": "https://i.ytimg.com/vi/3Gb2thJENdQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Syntax Errors vs Logical Errors",
+        "description": "How to recognize and tackle logical errors specifically.",
+        "url": "https://www.youtube.com/watch?v=ELkk3dAZOOk",
+        "source": "YouTube",
+        "channel": "CSE Society",
+        "videoId": "ELkk3dAZOOk",
+        "thumbnail": "https://i.ytimg.com/vi/ELkk3dAZOOk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "12.4": [
+      {
+        "type": "video",
+        "title": "Learn Python EXCEPTION HANDLING in 5 minutes!",
+        "description": "try / except / finally for handling exceptions cleanly.",
+        "url": "https://www.youtube.com/watch?v=V_NXT2-QIlE",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "V_NXT2-QIlE",
+        "thumbnail": "https://i.ytimg.com/vi/V_NXT2-QIlE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Tutorial: Using Try/Except Blocks for Error Handling",
+        "description": "Deeper exception handling with practical Python examples.",
+        "url": "https://www.youtube.com/watch?v=NIWwJbo-9_8",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "NIWwJbo-9_8",
+        "thumbnail": "https://i.ytimg.com/vi/NIWwJbo-9_8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "12.5": [
+      {
+        "type": "video",
+        "title": "How to Validate User Inputs in Python",
+        "description": "Check and reject bad input before it corrupts program state.",
+        "url": "https://www.youtube.com/watch?v=LUWyA3m_-r0",
+        "source": "YouTube",
+        "channel": "Fabio Musanni - Programming Channel",
+        "videoId": "LUWyA3m_-r0",
+        "thumbnail": "https://i.ytimg.com/vi/LUWyA3m_-r0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Input Validation",
+        "description": "Length and type checks as foundational validation techniques.",
+        "url": "https://www.youtube.com/watch?v=-8bDdrZhj_k",
+        "source": "YouTube",
+        "channel": "CLARK",
+        "videoId": "-8bDdrZhj_k",
+        "thumbnail": "https://i.ytimg.com/vi/-8bDdrZhj_k/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "12.6": [
+      {
+        "type": "video",
+        "title": "python: what is assert? (beginner)",
+        "description": "What assert does, how it works, and when it helps catch bugs.",
+        "url": "https://www.youtube.com/watch?v=v1MtwCPTmBI",
+        "source": "YouTube",
+        "channel": "anthonywritescode",
+        "videoId": "v1MtwCPTmBI",
+        "thumbnail": "https://i.ytimg.com/vi/v1MtwCPTmBI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "HOW You Should Be Using ASSERT In Python To Catch ERRORS",
+        "description": "Practical patterns for using assert to catch invariant violations.",
+        "url": "https://www.youtube.com/watch?v=96mDQrlceEk",
+        "source": "YouTube",
+        "channel": "Indently",
+        "videoId": "96mDQrlceEk",
+        "thumbnail": "https://i.ytimg.com/vi/96mDQrlceEk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "12.7": [
+      {
+        "type": "video",
+        "title": "The Fail Fast Principle",
+        "description": "Surface errors early instead of letting bad state spread.",
+        "url": "https://www.youtube.com/watch?v=_SlnC4v-PK8",
+        "source": "YouTube",
+        "channel": "ArjanCodes",
+        "videoId": "_SlnC4v-PK8",
+        "thumbnail": "https://i.ytimg.com/vi/_SlnC4v-PK8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "intermediate"
+      },
+      {
+        "type": "article",
+        "title": "Fail Fast",
+        "description": "Written reference for the fail-fast mindset in software design.",
+        "url": "https://martinfowler.com/ieeeSoftware/failFast.pdf",
+        "source": "Martin Fowler",
+        "difficulty": "intermediate"
+      }
+    ],
+    "13.1": [
+      {
+        "type": "video",
+        "title": "Master Stack Traces: Find and Fix Code Errors Fast",
+        "description": "Read error messages and stack traces to locate the failing line.",
+        "url": "https://www.youtube.com/watch?v=1TOnh_a5c3g",
+        "source": "YouTube",
+        "channel": "Tech·WHYS",
+        "videoId": "1TOnh_a5c3g",
+        "thumbnail": "https://i.ytimg.com/vi/1TOnh_a5c3g/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "How to read Java stack traces efficiently",
+        "description": "Transferable skill: scan stack traces from bottom to top for the root cause.",
+        "url": "https://www.youtube.com/watch?v=PFSJlZgNJXM",
+        "source": "YouTube",
+        "channel": "Marco Behler",
+        "videoId": "PFSJlZgNJXM",
+        "thumbnail": "https://i.ytimg.com/vi/PFSJlZgNJXM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "13.2": [
+      {
+        "type": "video",
+        "title": "Stop Wasting Time: Debugging Like a Pro (Reproduce, Isolate, Fix)",
+        "description": "Reproduce → isolate → fix: the systematic bug workflow.",
+        "url": "https://www.youtube.com/watch?v=NZwd15LIBk4",
+        "source": "YouTube",
+        "channel": "Learn In Minutes",
+        "videoId": "NZwd15LIBk4",
+        "thumbnail": "https://i.ytimg.com/vi/NZwd15LIBk4/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "7 DEBUGGING Mistakes You're Making as a Developer",
+        "description": "Common debugging pitfalls that hide reproducible cases.",
+        "url": "https://www.youtube.com/watch?v=y_gxpbCbyXI",
+        "source": "YouTube",
+        "channel": "Learn In Minutes",
+        "videoId": "y_gxpbCbyXI",
+        "thumbnail": "https://i.ytimg.com/vi/y_gxpbCbyXI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "13.3": [
+      {
+        "type": "video",
+        "title": "Python Logging - Tutorial",
+        "description": "Replace print-debugging with proper logging levels and messages.",
+        "url": "https://www.youtube.com/watch?v=urrfJgHwIJA",
+        "source": "YouTube",
+        "channel": "Tech With Tim",
+        "videoId": "urrfJgHwIJA",
+        "thumbnail": "https://i.ytimg.com/vi/urrfJgHwIJA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Tutorial: Logging Basics",
+        "description": "Log to files, set levels, and format log output.",
+        "url": "https://www.youtube.com/watch?v=-ARI4Cz-awo",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "-ARI4Cz-awo",
+        "thumbnail": "https://i.ytimg.com/vi/-ARI4Cz-awo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "13.4": [
+      {
+        "type": "video",
+        "title": "Debugging in VS Code — Breakpoints, Step Through, Watch Variables",
+        "description": "Set breakpoints and pause execution where bugs hide.",
+        "url": "https://www.youtube.com/watch?v=OU4d_0XazAI",
+        "source": "YouTube",
+        "channel": "CodeStartPython",
+        "videoId": "OU4d_0XazAI",
+        "thumbnail": "https://i.ytimg.com/vi/OU4d_0XazAI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Visual Studio Debugging: Step Into vs Step Over vs Step Out",
+        "description": "Debugger stepping commands used alongside breakpoints.",
+        "url": "https://www.youtube.com/watch?v=xF8EAffCUKE",
+        "source": "YouTube",
+        "channel": "Tutor Things",
+        "videoId": "xF8EAffCUKE",
+        "thumbnail": "https://i.ytimg.com/vi/xF8EAffCUKE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "13.5": [
+      {
+        "type": "video",
+        "title": "Master Stack Traces: Find and Fix Code Errors Fast",
+        "description": "Use stack traces to see the call chain that led to a failure.",
+        "url": "https://www.youtube.com/watch?v=1TOnh_a5c3g",
+        "source": "YouTube",
+        "channel": "Tech·WHYS",
+        "videoId": "1TOnh_a5c3g",
+        "thumbnail": "https://i.ytimg.com/vi/1TOnh_a5c3g/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "The Call Stack",
+        "description": "Mental model for how stack frames relate to stack traces.",
+        "url": "https://www.youtube.com/watch?v=Q2sFmqvpBe0",
+        "source": "YouTube",
+        "channel": "Computer Science Lessons",
+        "videoId": "Q2sFmqvpBe0",
+        "thumbnail": "https://i.ytimg.com/vi/Q2sFmqvpBe0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "13.6": [
+      {
+        "type": "video",
+        "title": "Debugging in VS Code — Breakpoints, Step Through, Watch Variables",
+        "description": "Watch expressions and variables while paused in the debugger.",
+        "url": "https://www.youtube.com/watch?v=OU4d_0XazAI",
+        "source": "YouTube",
+        "channel": "CodeStartPython",
+        "videoId": "OU4d_0XazAI",
+        "thumbnail": "https://i.ytimg.com/vi/OU4d_0XazAI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Stop Wasting Time: Debugging Like a Pro (Reproduce, Isolate, Fix)",
+        "description": "Inspect state carefully while isolating the failing case.",
+        "url": "https://www.youtube.com/watch?v=NZwd15LIBk4",
+        "source": "YouTube",
+        "channel": "Learn In Minutes",
+        "videoId": "NZwd15LIBk4",
+        "thumbnail": "https://i.ytimg.com/vi/NZwd15LIBk4/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "13.7": [
+      {
+        "type": "video",
+        "title": "Visual Studio Debugging: Step Into vs Step Over vs Step Out",
+        "description": "Step Into, Over, and Out — control how deep you walk through calls.",
+        "url": "https://www.youtube.com/watch?v=xF8EAffCUKE",
+        "source": "YouTube",
+        "channel": "Tutor Things",
+        "videoId": "xF8EAffCUKE",
+        "thumbnail": "https://i.ytimg.com/vi/xF8EAffCUKE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Debugging in VS Code — Breakpoints, Step Through, Watch Variables",
+        "description": "Practice stepping through Python in VS Code's debugger.",
+        "url": "https://www.youtube.com/watch?v=OU4d_0XazAI",
+        "source": "YouTube",
+        "channel": "CodeStartPython",
+        "videoId": "OU4d_0XazAI",
+        "thumbnail": "https://i.ytimg.com/vi/OU4d_0XazAI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "14.1": [
+      {
+        "type": "video",
+        "title": "Python Tutorial for Beginners 9: Import Modules",
+        "description": "Import modules and explore the Python standard library.",
+        "url": "https://www.youtube.com/watch?v=CqvZ3vGoGs0",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "CqvZ3vGoGs0",
+        "thumbnail": "https://i.ytimg.com/vi/CqvZ3vGoGs0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "What are Python modules?",
+        "description": "import, aliases, and from-import patterns for beginners.",
+        "url": "https://www.youtube.com/watch?v=XcfxkHrHTVE",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "XcfxkHrHTVE",
+        "thumbnail": "https://i.ytimg.com/vi/XcfxkHrHTVE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "14.2": [
+      {
+        "type": "video",
+        "title": "5 Tips To Organize Python Code",
+        "description": "Split work across multiple files with clear organization tips.",
+        "url": "https://www.youtube.com/watch?v=e9yMYdnSlUA",
+        "source": "YouTube",
+        "channel": "Tech With Tim",
+        "videoId": "e9yMYdnSlUA",
+        "thumbnail": "https://i.ytimg.com/vi/e9yMYdnSlUA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "What does the structure of a modern Python project look like?",
+        "description": "How multi-file project layouts look with modern tooling.",
+        "url": "https://www.youtube.com/watch?v=Lr1koR-YkMw",
+        "source": "YouTube",
+        "channel": "InfoWorld",
+        "videoId": "Lr1koR-YkMw",
+        "thumbnail": "https://i.ytimg.com/vi/Lr1koR-YkMw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "14.3": [
+      {
+        "type": "video",
+        "title": "What does '__init__.py' do in Python?",
+        "description": "Packages group modules; __init__.py marks a package directory.",
+        "url": "https://www.youtube.com/watch?v=VEbuZox5qC4",
+        "source": "YouTube",
+        "channel": "Tech With Tim",
+        "videoId": "VEbuZox5qC4",
+        "thumbnail": "https://i.ytimg.com/vi/VEbuZox5qC4/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "What are Python modules?",
+        "description": "Modules and packages work together as you grow a project.",
+        "url": "https://www.youtube.com/watch?v=XcfxkHrHTVE",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "XcfxkHrHTVE",
+        "thumbnail": "https://i.ytimg.com/vi/XcfxkHrHTVE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "14.4": [
+      {
+        "type": "video",
+        "title": "Dependency Trees & Version Conflicts Explained Simply",
+        "description": "How dependency trees and version conflicts break installs.",
+        "url": "https://www.youtube.com/watch?v=GUKZKjuCeco",
+        "source": "YouTube",
+        "channel": "Tech·WHYS",
+        "videoId": "GUKZKjuCeco",
+        "thumbnail": "https://i.ytimg.com/vi/GUKZKjuCeco/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Safely Update All Dependencies Using Package Managers",
+        "description": "Update dependencies without surprising breakage.",
+        "url": "https://www.youtube.com/watch?v=w0C1MwRAmHw",
+        "source": "YouTube",
+        "channel": "Tech·WHYS",
+        "videoId": "w0C1MwRAmHw",
+        "thumbnail": "https://i.ytimg.com/vi/w0C1MwRAmHw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "14.5": [
+      {
+        "type": "video",
+        "title": "Python Virtual Environments - Full Tutorial for Beginners",
+        "description": "Create and use venv so projects don't share conflicting packages.",
+        "url": "https://www.youtube.com/watch?v=Y21OR1OPC9A",
+        "source": "YouTube",
+        "channel": "Tech With Tim",
+        "videoId": "Y21OR1OPC9A",
+        "thumbnail": "https://i.ytimg.com/vi/Y21OR1OPC9A/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Tutorial: UV - A Faster Package Manager to Replace Pip and Venv",
+        "description": "Modern alternative that covers environments and installs together.",
+        "url": "https://www.youtube.com/watch?v=AMdG7IjgSPM",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "AMdG7IjgSPM",
+        "thumbnail": "https://i.ytimg.com/vi/AMdG7IjgSPM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "intermediate"
+      }
+    ],
+    "14.6": [
+      {
+        "type": "video",
+        "title": "Python Tutorial: UV - A Faster Package Manager to Replace Pip and Venv",
+        "description": "Package managers install and resolve library versions for you.",
+        "url": "https://www.youtube.com/watch?v=AMdG7IjgSPM",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "AMdG7IjgSPM",
+        "thumbnail": "https://i.ytimg.com/vi/AMdG7IjgSPM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "intermediate"
+      },
+      {
+        "type": "video",
+        "title": "Python Virtual Environments - Full Tutorial for Beginners",
+        "description": "pip + venv workflow still used on most beginner Python projects.",
+        "url": "https://www.youtube.com/watch?v=Y21OR1OPC9A",
+        "source": "YouTube",
+        "channel": "Tech With Tim",
+        "videoId": "Y21OR1OPC9A",
+        "thumbnail": "https://i.ytimg.com/vi/Y21OR1OPC9A/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "14.7": [
+      {
+        "type": "video",
+        "title": "What is Semantic Versioning? (semver)",
+        "description": "MAJOR.MINOR.PATCH and what each number communicates.",
+        "url": "https://www.youtube.com/watch?v=97i9pOa2EyE",
+        "source": "YouTube",
+        "channel": "Syntax",
+        "videoId": "97i9pOa2EyE",
+        "thumbnail": "https://i.ytimg.com/vi/97i9pOa2EyE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "reference",
+        "title": "Semantic Versioning 2.0.0",
+        "description": "Official SemVer specification for version numbers.",
+        "url": "https://semver.org/",
+        "source": "semver.org",
+        "difficulty": "beginner"
+      }
+    ],
+    "5.11": [
+      {
+        "type": "video",
+        "title": "How Compilers Work",
+        "description": "Refresh compiler/interpreter ideas before the mini expression runtime.",
+        "url": "https://www.youtube.com/watch?v=xLuKxomEUiQ",
+        "source": "YouTube",
+        "channel": "Timothy Blumberg",
+        "videoId": "xLuKxomEUiQ",
+        "thumbnail": "https://i.ytimg.com/vi/xLuKxomEUiQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "7.9": [
+      {
+        "type": "video",
+        "title": "Python operators for beginners",
+        "description": "Operators + types refresh for the small calculator practice.",
+        "url": "https://www.youtube.com/watch?v=v5MR5JnKcZI",
+        "source": "YouTube",
+        "channel": "Telusko",
+        "videoId": "v5MR5JnKcZI",
+        "thumbnail": "https://i.ytimg.com/vi/v5MR5JnKcZI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "8.7": [
+      {
+        "type": "video",
+        "title": "If statements in Python are easy (if, elif, else)",
+        "description": "Control-flow refresh for the number guessing game project.",
+        "url": "https://www.youtube.com/watch?v=FvMPfrgGeKs",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "FvMPfrgGeKs",
+        "thumbnail": "https://i.ytimg.com/vi/FvMPfrgGeKs/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "10.7": [
+      {
+        "type": "video",
+        "title": "Python dictionaries are easy",
+        "description": "Dictionaries + lists refresh for the student grade manager.",
+        "url": "https://www.youtube.com/watch?v=MZZSMaEAC2g",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "MZZSMaEAC2g",
+        "thumbnail": "https://i.ytimg.com/vi/MZZSMaEAC2g/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "11.9": [
+      {
+        "type": "video",
+        "title": "Python Tutorial: Working with JSON Data using the json Module",
+        "description": "JSON persistence for the contact book mini project.",
+        "url": "https://www.youtube.com/watch?v=9N6a-VLBa2I",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "9N6a-VLBa2I",
+        "thumbnail": "https://i.ytimg.com/vi/9N6a-VLBa2I/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "14.9": [
+      {
+        "type": "video",
+        "title": "5 Tips To Organize Python Code",
+        "description": "Multi-file organization tips for the task manager project.",
+        "url": "https://www.youtube.com/watch?v=e9yMYdnSlUA",
+        "source": "YouTube",
+        "channel": "Tech With Tim",
+        "videoId": "e9yMYdnSlUA",
+        "thumbnail": "https://i.ytimg.com/vi/e9yMYdnSlUA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "15.1": [
+      {
+        "type": "video",
+        "title": "Python Tutorial: File Objects - Reading and Writing to Files",
+        "description": "Files + structure refresh for the CLI library management phase project.",
+        "url": "https://www.youtube.com/watch?v=Uh2ebFW8OYM",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "Uh2ebFW8OYM",
+        "thumbnail": "https://i.ytimg.com/vi/Uh2ebFW8OYM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Functions in Python are easy",
+        "description": "Keep the CLI modular with functions and clear modules.",
+        "url": "https://www.youtube.com/watch?v=89cGQjB5R4M",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "89cGQjB5R4M",
+        "thumbnail": "https://i.ytimg.com/vi/89cGQjB5R4M/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "16.1": [
+      {
+        "type": "video",
+        "title": "Sets & Symbols in Math | Roster Method + Set-Builder Notation [Animated]",
+        "description": "Animated intro to sets, roster notation, and set-builder notation.",
+        "url": "https://www.youtube.com/watch?v=Lo_HZj-0uq8",
+        "source": "YouTube",
+        "channel": "Teach Me Animated Math",
+        "videoId": "Lo_HZj-0uq8",
+        "thumbnail": "https://i.ytimg.com/vi/Lo_HZj-0uq8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "article",
+        "title": "Introduction to Sets",
+        "description": "Interactive reference for set notation, subsets, and unions/intersections.",
+        "url": "https://www.mathsisfun.com/sets/sets-introduction.html",
+        "source": "Math is Fun",
+        "difficulty": "beginner"
+      },
+      {
+        "type": "github",
+        "title": "OSSU Computer Science curriculum",
+        "description": "Open-source degree path linking free courses for every CS topic.",
+        "url": "https://github.com/ossu/computer-science",
+        "source": "GitHub",
+        "difficulty": "beginner"
+      }
+    ],
+    "16.2": [
+      {
+        "type": "video",
+        "title": "Relations — Discrete Mathematics",
+        "description": "Clear walkthrough of relations, domains, and ordered pairs.",
+        "url": "https://www.youtube.com/watch?v=FI6j5QZNVx0",
+        "source": "YouTube",
+        "channel": "TrevTutor",
+        "videoId": "FI6j5QZNVx0",
+        "thumbnail": "https://i.ytimg.com/vi/FI6j5QZNVx0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "interactive",
+        "title": "Relations on a Set",
+        "description": "Practice identifying reflexive, symmetric, and transitive relations.",
+        "url": "https://www.geeksforgeeks.org/mathematics-relations/",
+        "source": "GeeksforGeeks",
+        "difficulty": "beginner"
+      }
+    ],
+    "16.3": [
+      {
+        "type": "video",
+        "title": "Functions — Discrete Mathematics",
+        "description": "Functions as mappings: domain, codomain, and composition.",
+        "url": "https://www.youtube.com/watch?v=OixshZzH8t0",
+        "source": "YouTube",
+        "channel": "TrevTutor",
+        "videoId": "OixshZzH8t0",
+        "thumbnail": "https://i.ytimg.com/vi/OixshZzH8t0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Functions Examples",
+        "description": "Worked examples checking injective and surjective functions.",
+        "url": "https://www.youtube.com/watch?v=Kn-LrdgHVhQ",
+        "source": "YouTube",
+        "channel": "TrevTutor",
+        "videoId": "Kn-LrdgHVhQ",
+        "thumbnail": "https://i.ytimg.com/vi/Kn-LrdgHVhQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "16.4": [
+      {
+        "type": "video",
+        "title": "An Introduction to Propositional Logic",
+        "description": "Animated-style explainer on propositions, truth tables, and logical operators.",
+        "url": "https://www.youtube.com/watch?v=5NGKbiA04Cw",
+        "source": "YouTube",
+        "channel": "Spanning Tree",
+        "videoId": "5NGKbiA04Cw",
+        "thumbnail": "https://i.ytimg.com/vi/5NGKbiA04Cw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "interactive",
+        "title": "Logic Gates Simulator",
+        "description": "Build AND/OR/NOT circuits to see propositional logic in hardware.",
+        "url": "https://logic.ly/demo",
+        "source": "Logic.ly",
+        "difficulty": "beginner"
+      }
+    ],
+    "16.5": [
+      {
+        "type": "video",
+        "title": "Quantifier Symbols (with puppies!)",
+        "description": "Friendly visual intro to ∀ and ∃ quantifiers.",
+        "url": "https://www.youtube.com/watch?v=emYNH22-Eio",
+        "source": "YouTube",
+        "channel": "Logic with Bo",
+        "videoId": "emYNH22-Eio",
+        "thumbnail": "https://i.ytimg.com/vi/emYNH22-Eio/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "article",
+        "title": "Quantifiers — Stanford CS103",
+        "description": "Written reference for nested quantifiers and negation rules.",
+        "url": "https://web.stanford.edu/class/cs103/tools/logic.html",
+        "source": "Stanford CS103",
+        "difficulty": "beginner"
+      }
+    ],
+    "16.6": [
+      {
+        "type": "video",
+        "title": "Logic for Programmers: Propositional Logic",
+        "description": "Programming-oriented logic with truth tables and inference rules.",
+        "url": "https://www.youtube.com/watch?v=s16xd9XyDnY",
+        "source": "YouTube",
+        "channel": "freeCodeCamp.org",
+        "videoId": "s16xd9XyDnY",
+        "thumbnail": "https://i.ytimg.com/vi/s16xd9XyDnY/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Propositional Logic: The Complete Crash Course",
+        "description": "Full discrete-math-style review of connectives, tautologies, and proofs.",
+        "url": "https://www.youtube.com/watch?v=AVl3wK2yTEc",
+        "source": "YouTube",
+        "channel": "TrevTutor",
+        "videoId": "AVl3wK2yTEc",
+        "thumbnail": "https://i.ytimg.com/vi/AVl3wK2yTEc/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "16.7": [
+      {
+        "type": "video",
+        "title": "Predicate Logic and Quantifier Negation",
+        "description": "Predicates, quantifiers, and translating English statements into logic.",
+        "url": "https://www.youtube.com/watch?v=gyoqX0W-NH4",
+        "source": "YouTube",
+        "channel": "TrevTutor",
+        "videoId": "gyoqX0W-NH4",
+        "thumbnail": "https://i.ytimg.com/vi/gyoqX0W-NH4/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "interactive",
+        "title": "Stanford CS103 Logic Tool",
+        "description": "Try predicate formulas and see when they evaluate true or false.",
+        "url": "https://web.stanford.edu/class/cs103/tools/logic.html",
+        "source": "Stanford CS103",
+        "difficulty": "beginner"
+      }
+    ],
+    "2.8": [
+      {
+        "type": "video",
+        "title": "Little and Big-Endian, Explained",
+        "description": "How byte order affects multi-byte values in memory.",
+        "url": "https://www.youtube.com/watch?v=oiL87U5WKsw",
+        "source": "YouTube",
+        "channel": "Harry Wu",
+        "videoId": "oiL87U5WKsw",
+        "thumbnail": "https://i.ytimg.com/vi/oiL87U5WKsw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "interactive",
+        "title": "Endianness Converter",
+        "description": "Flip between big- and little-endian representations.",
+        "url": "https://www.scadacore.com/tools/programming-calculators/online-hex-converter/",
+        "source": "SCADAcore",
+        "difficulty": "beginner"
+      }
+    ],
+    "4.8": [
+      {
+        "type": "video",
+        "title": "How Computers Work: CPU, Memory, Input & Output",
+        "description": "Khan-style walkthrough of I/O alongside CPU and memory.",
+        "url": "https://www.youtube.com/watch?v=DKGZlaPlVLY",
+        "source": "YouTube",
+        "channel": "Khan Academy",
+        "videoId": "DKGZlaPlVLY",
+        "thumbnail": "https://i.ytimg.com/vi/DKGZlaPlVLY/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Input Devices: Crash Course Games #24",
+        "description": "Controllers and human input mapped to machine signals.",
+        "url": "https://www.youtube.com/watch?v=rR_mmsfIzzs",
+        "source": "Crash Course",
+        "channel": "CrashCourse",
+        "videoId": "rR_mmsfIzzs",
+        "thumbnail": "https://i.ytimg.com/vi/rR_mmsfIzzs/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.8": [
+      {
+        "type": "video",
+        "title": "Parsing Explained",
+        "description": "Why grammars matter and how parsers read structured text.",
+        "url": "https://www.youtube.com/watch?v=bxpc9Pp5pZM",
+        "source": "YouTube",
+        "channel": "Computerphile",
+        "videoId": "bxpc9Pp5pZM",
+        "thumbnail": "https://i.ytimg.com/vi/bxpc9Pp5pZM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Parsing Bottom Up",
+        "description": "Alternative parsing strategy with concrete examples.",
+        "url": "https://www.youtube.com/watch?v=tH5AOX9929g",
+        "source": "YouTube",
+        "channel": "Computerphile",
+        "videoId": "tH5AOX9929g",
+        "thumbnail": "https://i.ytimg.com/vi/tH5AOX9929g/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "github",
+        "title": "Nearley parser toolkit",
+        "description": "Practical parser generator for experimenting with grammars.",
+        "url": "https://github.com/kach/nearley",
+        "source": "GitHub",
+        "difficulty": "beginner"
+      }
+    ],
+    "11.8": [
+      {
+        "type": "video",
+        "title": "Serialization formats: JSON and Protobuf",
+        "description": "How programs exchange structured data on the wire.",
+        "url": "https://www.youtube.com/watch?v=uGYZn6xk-hA",
+        "source": "YouTube",
+        "channel": "Ivan talks about computers",
+        "videoId": "uGYZn6xk-hA",
+        "thumbnail": "https://i.ytimg.com/vi/uGYZn6xk-hA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "What is JSON?",
+        "description": "Quick JSON primer for configs and APIs.",
+        "url": "https://www.youtube.com/watch?v=cj3h3Fb10QY",
+        "source": "YouTube",
+        "channel": "Hostinger Academy",
+        "videoId": "cj3h3Fb10QY",
+        "thumbnail": "https://i.ytimg.com/vi/cj3h3Fb10QY/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "JSON specification",
+        "description": "Official reference for valid JSON syntax.",
+        "url": "https://www.json.org/json-en.html",
+        "source": "JSON.org",
+        "difficulty": "beginner"
+      }
+    ],
+    "14.8": [
+      {
+        "type": "video",
+        "title": "Shared Exclusive Locking Protocol",
+        "description": "How databases coordinate concurrent access with locks.",
+        "url": "https://www.youtube.com/watch?v=94C0V7f2zm4",
+        "source": "YouTube",
+        "channel": "Gate Smashers",
+        "videoId": "94C0V7f2zm4",
+        "thumbnail": "https://i.ytimg.com/vi/94C0V7f2zm4/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "Python fcntl module",
+        "description": "File locking on Unix-like systems for scripts and tools.",
+        "url": "https://docs.python.org/3/library/fcntl.html",
+        "source": "Python Docs",
+        "difficulty": "beginner"
+      }
+    ],
+    "17.1": [
+      {
+        "type": "video",
+        "title": "Direct Proofs — Discrete Mathematics",
+        "description": "Building proofs step-by-step from assumptions.",
+        "url": "https://www.youtube.com/watch?v=YFZzLQN5qOU",
+        "source": "YouTube",
+        "channel": "TrevTutor",
+        "videoId": "YFZzLQN5qOU",
+        "thumbnail": "https://i.ytimg.com/vi/YFZzLQN5qOU/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Direct Proofs Examples",
+        "description": "Worked examples including divisibility proofs.",
+        "url": "https://www.youtube.com/watch?v=uDJfx4bK3Jc",
+        "source": "YouTube",
+        "channel": "TrevTutor",
+        "videoId": "uDJfx4bK3Jc",
+        "thumbnail": "https://i.ytimg.com/vi/uDJfx4bK3Jc/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "17.2": [
+      {
+        "type": "video",
+        "title": "Proof by Contradiction — Prime Numbers",
+        "description": "Visual proof that primes are infinite.",
+        "url": "https://www.youtube.com/watch?v=4NUlubBrmFY",
+        "source": "YouTube",
+        "channel": "The Visual Engineer",
+        "videoId": "4NUlubBrmFY",
+        "thumbnail": "https://i.ytimg.com/vi/4NUlubBrmFY/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Discrete Math Proofs in 22 Minutes",
+        "description": "Survey of proof styles including contradiction.",
+        "url": "https://www.youtube.com/watch?v=HIkIqt_ytdc",
+        "source": "YouTube",
+        "channel": "TrevTutor",
+        "videoId": "HIkIqt_ytdc",
+        "thumbnail": "https://i.ytimg.com/vi/HIkIqt_ytdc/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "17.3": [
+      {
+        "type": "video",
+        "title": "Disproving Implications with Counterexamples",
+        "description": "When one counterexample kills a false claim.",
+        "url": "https://www.youtube.com/watch?v=TcfVpnRRAvk",
+        "source": "YouTube",
+        "channel": "Dr. Trefor Bazett",
+        "videoId": "TcfVpnRRAvk",
+        "thumbnail": "https://i.ytimg.com/vi/TcfVpnRRAvk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "17.4": [
+      {
+        "type": "video",
+        "title": "What Does Mathematical Induction Really Look Like?",
+        "description": "Intuitive domino-style explanation of induction.",
+        "url": "https://www.youtube.com/watch?v=5Hn8vUE3cBQ",
+        "source": "YouTube",
+        "channel": "Zach Star",
+        "videoId": "5Hn8vUE3cBQ",
+        "thumbnail": "https://i.ytimg.com/vi/5Hn8vUE3cBQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "The Magic of Induction",
+        "description": "Numberphile take on why induction works.",
+        "url": "https://www.youtube.com/watch?v=DhZORrqL3xI",
+        "source": "YouTube",
+        "channel": "Numberphile",
+        "videoId": "DhZORrqL3xI",
+        "thumbnail": "https://i.ytimg.com/vi/DhZORrqL3xI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "17.5": [
+      {
+        "type": "video",
+        "title": "Proof by Contraposition — Discrete Mathematics",
+        "description": "Prove the contrapositive instead of the original statement.",
+        "url": "https://www.youtube.com/watch?v=X-hJ7krLBn0",
+        "source": "YouTube",
+        "channel": "TrevTutor",
+        "videoId": "X-hJ7krLBn0",
+        "thumbnail": "https://i.ytimg.com/vi/X-hJ7krLBn0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Proof by Contrapositive | Method & First Example",
+        "description": "Clear first example with logical equivalence.",
+        "url": "https://www.youtube.com/watch?v=0YqZIHFmVzg",
+        "source": "YouTube",
+        "channel": "Dr. Trefor Bazett",
+        "videoId": "0YqZIHFmVzg",
+        "thumbnail": "https://i.ytimg.com/vi/0YqZIHFmVzg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "18.1": [
+      {
+        "type": "video",
+        "title": "Permutations and Combinations Tutorial",
+        "description": "When order matters vs when it does not.",
+        "url": "https://www.youtube.com/watch?v=XJnIdRXUi7A",
+        "source": "YouTube",
+        "channel": "The Organic Chemistry Tutor",
+        "videoId": "XJnIdRXUi7A",
+        "thumbnail": "https://i.ytimg.com/vi/XJnIdRXUi7A/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "18.2": [
+      {
+        "type": "video",
+        "title": "Permutations and Combinations Tutorial",
+        "description": "Combination counting with worked problems.",
+        "url": "https://www.youtube.com/watch?v=XJnIdRXUi7A",
+        "source": "YouTube",
+        "channel": "The Organic Chemistry Tutor",
+        "videoId": "XJnIdRXUi7A",
+        "thumbnail": "https://i.ytimg.com/vi/XJnIdRXUi7A/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "interactive",
+        "title": "Combinatorics practice",
+        "description": "Interactive counting problems with instant checks.",
+        "url": "https://brilliant.org/courses/combinatorics/",
+        "source": "Brilliant",
+        "difficulty": "beginner"
+      }
+    ],
+    "18.3": [
+      {
+        "type": "video",
+        "title": "Math Antics — Basic Probability",
+        "description": "Foundational probability with clear visuals.",
+        "url": "https://www.youtube.com/watch?v=KzfWUEJjG18",
+        "source": "YouTube",
+        "channel": "mathantics",
+        "videoId": "KzfWUEJjG18",
+        "thumbnail": "https://i.ytimg.com/vi/KzfWUEJjG18/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Probability Explained | Khan Academy",
+        "description": "Independent and dependent events.",
+        "url": "https://www.youtube.com/watch?v=uzkc-qNVoOk",
+        "source": "YouTube",
+        "channel": "Khan Academy",
+        "videoId": "uzkc-qNVoOk",
+        "thumbnail": "https://i.ytimg.com/vi/uzkc-qNVoOk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "18.4": [
+      {
+        "type": "video",
+        "title": "Probability Explained | Khan Academy",
+        "description": "Conditional probability with tree diagrams.",
+        "url": "https://www.youtube.com/watch?v=uzkc-qNVoOk",
+        "source": "YouTube",
+        "channel": "Khan Academy",
+        "videoId": "uzkc-qNVoOk",
+        "thumbnail": "https://i.ytimg.com/vi/uzkc-qNVoOk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "18.5": [
+      {
+        "type": "video",
+        "title": "Finding Probability Example | Khan Academy",
+        "description": "Expected value intuition through worked examples.",
+        "url": "https://www.youtube.com/watch?v=yUaI0JriZtY",
+        "source": "YouTube",
+        "channel": "Khan Academy",
+        "videoId": "yUaI0JriZtY",
+        "thumbnail": "https://i.ytimg.com/vi/yUaI0JriZtY/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "18.6": [
+      {
+        "type": "video",
+        "title": "Bayes Theorem, the Geometry of Changing Beliefs",
+        "description": "3Blue1Brown visual proof of Bayes' rule.",
+        "url": "https://www.youtube.com/watch?v=HZGCoVF3YvM",
+        "source": "YouTube",
+        "channel": "3Blue1Brown",
+        "videoId": "HZGCoVF3YvM",
+        "thumbnail": "https://i.ytimg.com/vi/HZGCoVF3YvM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "The Quick Proof of Bayes' Theorem",
+        "description": "Short companion clip for the main video.",
+        "url": "https://www.youtube.com/watch?v=U_85TaXbeIo",
+        "source": "YouTube",
+        "channel": "3Blue1Brown",
+        "videoId": "U_85TaXbeIo",
+        "thumbnail": "https://i.ytimg.com/vi/U_85TaXbeIo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "19.1": [
+      {
+        "type": "video",
+        "title": "Descriptive Statistics: Mean, Median, Mode, Variance & SD",
+        "description": "Full tutorial on central tendency and spread.",
+        "url": "https://www.youtube.com/watch?v=SplCk-t1BeA",
+        "source": "YouTube",
+        "channel": "Grad Coach",
+        "videoId": "SplCk-t1BeA",
+        "thumbnail": "https://i.ytimg.com/vi/SplCk-t1BeA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "19.3": [
+      {
+        "type": "video",
+        "title": "Descriptive Statistics Tutorial",
+        "description": "How distributions summarize datasets.",
+        "url": "https://www.youtube.com/watch?v=SplCk-t1BeA",
+        "source": "YouTube",
+        "channel": "Grad Coach",
+        "videoId": "SplCk-t1BeA",
+        "thumbnail": "https://i.ytimg.com/vi/SplCk-t1BeA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "interactive",
+        "title": "Seeing Theory",
+        "description": "Beautiful interactive visualizations of probability distributions.",
+        "url": "https://seeing-theory.brown.edu/",
+        "source": "Brown University",
+        "difficulty": "beginner"
+      }
+    ],
+    "19.4": [
+      {
+        "type": "video",
+        "title": "Cross Validation",
+        "description": "Why train/validation splits matter for honest evaluation.",
+        "url": "https://www.youtube.com/watch?v=fSytzGwwBVw",
+        "source": "YouTube",
+        "channel": "StatQuest",
+        "videoId": "fSytzGwwBVw",
+        "thumbnail": "https://i.ytimg.com/vi/fSytzGwwBVw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "19.5": [
+      {
+        "type": "video",
+        "title": "Standard Deviation Formula",
+        "description": "Population vs sample variance explained clearly.",
+        "url": "https://www.youtube.com/watch?v=Uk98hiMQgN0",
+        "source": "YouTube",
+        "channel": "The Organic Chemistry Tutor",
+        "videoId": "Uk98hiMQgN0",
+        "thumbnail": "https://i.ytimg.com/vi/Uk98hiMQgN0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "19.6": [
+      {
+        "type": "video",
+        "title": "Descriptive Statistics Tutorial",
+        "description": "Correlation vs causation and scatter relationships.",
+        "url": "https://www.youtube.com/watch?v=SplCk-t1BeA",
+        "source": "YouTube",
+        "channel": "Grad Coach",
+        "videoId": "SplCk-t1BeA",
+        "thumbnail": "https://i.ytimg.com/vi/SplCk-t1BeA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "20.1": [
+      {
+        "type": "video",
+        "title": "Vectors | Essence of Linear Algebra",
+        "description": "Visual introduction to vectors as arrows in space.",
+        "url": "https://www.youtube.com/watch?v=fNk_zzaMoSs",
+        "source": "YouTube",
+        "channel": "3Blue1Brown",
+        "videoId": "fNk_zzaMoSs",
+        "thumbnail": "https://i.ytimg.com/vi/fNk_zzaMoSs/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "20.2": [
+      {
+        "type": "video",
+        "title": "Linear Transformations and Matrices",
+        "description": "Matrices as transformations of space.",
+        "url": "https://www.youtube.com/watch?v=kYB8IZa5AuE",
+        "source": "YouTube",
+        "channel": "3Blue1Brown",
+        "videoId": "kYB8IZa5AuE",
+        "thumbnail": "https://i.ytimg.com/vi/kYB8IZa5AuE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "20.3": [
+      {
+        "type": "video",
+        "title": "Inverse Matrices, Column Space and Null Space",
+        "description": "Functions between vector spaces.",
+        "url": "https://www.youtube.com/watch?v=uQhTuRlWMxw",
+        "source": "YouTube",
+        "channel": "3Blue1Brown",
+        "videoId": "uQhTuRlWMxw",
+        "thumbnail": "https://i.ytimg.com/vi/uQhTuRlWMxw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "20.4": [
+      {
+        "type": "video",
+        "title": "Gradient Descent in 3 Minutes",
+        "description": "Derivatives as slopes driving optimization.",
+        "url": "https://www.youtube.com/watch?v=qg4PchTECck",
+        "source": "YouTube",
+        "channel": "Visually Explained",
+        "videoId": "qg4PchTECck",
+        "thumbnail": "https://i.ytimg.com/vi/qg4PchTECck/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "interactive",
+        "title": "Desmos Graphing Calculator",
+        "description": "Plot functions and inspect slopes interactively.",
+        "url": "https://www.desmos.com/calculator",
+        "source": "Desmos",
+        "difficulty": "beginner"
+      }
+    ],
+    "20.5": [
+      {
+        "type": "video",
+        "title": "Vectors | Essence of Linear Algebra",
+        "description": "Dot products as projection and similarity.",
+        "url": "https://www.youtube.com/watch?v=fNk_zzaMoSs",
+        "source": "YouTube",
+        "channel": "3Blue1Brown",
+        "videoId": "fNk_zzaMoSs",
+        "thumbnail": "https://i.ytimg.com/vi/fNk_zzaMoSs/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "20.7": [
+      {
+        "type": "video",
+        "title": "Gradients and Partial Derivatives",
+        "description": "3D visualization of gradient vectors.",
+        "url": "https://www.youtube.com/watch?v=GkB4vW16QHI",
+        "source": "YouTube",
+        "channel": "Physics Videos by Eugene Khutoryansky",
+        "videoId": "GkB4vW16QHI",
+        "thumbnail": "https://i.ytimg.com/vi/GkB4vW16QHI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Gradient Descent in 3 Minutes",
+        "description": "How gradients guide machine-learning updates.",
+        "url": "https://www.youtube.com/watch?v=qg4PchTECck",
+        "source": "YouTube",
+        "channel": "Visually Explained",
+        "videoId": "qg4PchTECck",
+        "thumbnail": "https://i.ytimg.com/vi/qg4PchTECck/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "21.2": [
+      {
+        "type": "video",
+        "title": "Fundamental Concepts of Object Oriented Programming",
+        "description": "Behavior, abstraction, and encapsulation overview.",
+        "url": "https://www.youtube.com/watch?v=m_MQYyJpIjg",
+        "source": "YouTube",
+        "channel": "Computer Science Lessons",
+        "videoId": "m_MQYyJpIjg",
+        "thumbnail": "https://i.ytimg.com/vi/m_MQYyJpIjg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "21.3": [
+      {
+        "type": "video",
+        "title": "Intro to Object Oriented Programming — Crash Course",
+        "description": "Entities as objects with state and behavior.",
+        "url": "https://www.youtube.com/watch?v=SiBw7os-_zI",
+        "source": "YouTube",
+        "channel": "freeCodeCamp.org",
+        "videoId": "SiBw7os-_zI",
+        "thumbnail": "https://i.ytimg.com/vi/SiBw7os-_zI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "21.4": [
+      {
+        "type": "video",
+        "title": "Object-Oriented Programming, Simplified",
+        "description": "Responsibilities split across encapsulated objects.",
+        "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "pTB0EiLXUC8",
+        "thumbnail": "https://i.ytimg.com/vi/pTB0EiLXUC8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "22.1": [
+      {
+        "type": "video",
+        "title": "Intro to Object Oriented Programming — Crash Course",
+        "description": "Classes as blueprints for objects.",
+        "url": "https://www.youtube.com/watch?v=SiBw7os-_zI",
+        "source": "YouTube",
+        "channel": "freeCodeCamp.org",
+        "videoId": "SiBw7os-_zI",
+        "thumbnail": "https://i.ytimg.com/vi/SiBw7os-_zI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "22.2": [
+      {
+        "type": "video",
+        "title": "Python OOP — Full Course for Beginners",
+        "description": "Creating and using class instances.",
+        "url": "https://www.youtube.com/watch?v=iLRZi0Gu8Go",
+        "source": "YouTube",
+        "channel": "freeCodeCamp.org",
+        "videoId": "iLRZi0Gu8Go",
+        "thumbnail": "https://i.ytimg.com/vi/iLRZi0Gu8Go/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "22.3": [
+      {
+        "type": "video",
+        "title": "Python OOP — Full Course for Beginners",
+        "description": "Constructors and initialization patterns.",
+        "url": "https://www.youtube.com/watch?v=iLRZi0Gu8Go",
+        "source": "YouTube",
+        "channel": "freeCodeCamp.org",
+        "videoId": "iLRZi0Gu8Go",
+        "thumbnail": "https://i.ytimg.com/vi/iLRZi0Gu8Go/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "22.4": [
+      {
+        "type": "video",
+        "title": "Object-Oriented Programming, Simplified",
+        "description": "Object identity vs references.",
+        "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "pTB0EiLXUC8",
+        "thumbnail": "https://i.ytimg.com/vi/pTB0EiLXUC8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "22.5": [
+      {
+        "type": "video",
+        "title": "Object-Oriented Programming, Simplified",
+        "description": "Equality vs identity in OOP languages.",
+        "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "pTB0EiLXUC8",
+        "thumbnail": "https://i.ytimg.com/vi/pTB0EiLXUC8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "23.1": [
+      {
+        "type": "video",
+        "title": "Abstraction vs Encapsulation",
+        "description": "Public APIs hiding internal details.",
+        "url": "https://www.youtube.com/watch?v=57SIpmA3vcg",
+        "source": "YouTube",
+        "channel": "Biz of Tech",
+        "videoId": "57SIpmA3vcg",
+        "thumbnail": "https://i.ytimg.com/vi/57SIpmA3vcg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "23.2": [
+      {
+        "type": "video",
+        "title": "Object-Oriented Programming, Simplified",
+        "description": "Internal state guarded by methods.",
+        "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "pTB0EiLXUC8",
+        "thumbnail": "https://i.ytimg.com/vi/pTB0EiLXUC8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "23.3": [
+      {
+        "type": "video",
+        "title": "Fundamental Concepts of Object Oriented Programming",
+        "description": "Invariants that must hold after every method.",
+        "url": "https://www.youtube.com/watch?v=m_MQYyJpIjg",
+        "source": "YouTube",
+        "channel": "Computer Science Lessons",
+        "videoId": "m_MQYyJpIjg",
+        "thumbnail": "https://i.ytimg.com/vi/m_MQYyJpIjg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "23.4": [
+      {
+        "type": "video",
+        "title": "Object-Oriented Programming, Simplified",
+        "description": "Interfaces as contracts between components.",
+        "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "pTB0EiLXUC8",
+        "thumbnail": "https://i.ytimg.com/vi/pTB0EiLXUC8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "24.1": [
+      {
+        "type": "video",
+        "title": "Object-Oriented Programming (OOP) | Animated",
+        "description": "is-a relationships through inheritance.",
+        "url": "https://www.youtube.com/watch?v=RJUIcFfUPKs",
+        "source": "YouTube",
+        "channel": "codechips",
+        "videoId": "RJUIcFfUPKs",
+        "thumbnail": "https://i.ytimg.com/vi/RJUIcFfUPKs/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "24.2": [
+      {
+        "type": "video",
+        "title": "Object-Oriented Programming, Simplified",
+        "description": "Method overriding in subclasses.",
+        "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "pTB0EiLXUC8",
+        "thumbnail": "https://i.ytimg.com/vi/pTB0EiLXUC8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "24.3": [
+      {
+        "type": "video",
+        "title": "Python OOP — Full Course for Beginners",
+        "description": "Calling parent constructors with super().",
+        "url": "https://www.youtube.com/watch?v=iLRZi0Gu8Go",
+        "source": "YouTube",
+        "channel": "freeCodeCamp.org",
+        "videoId": "iLRZi0Gu8Go",
+        "thumbnail": "https://i.ytimg.com/vi/iLRZi0Gu8Go/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "24.4": [
+      {
+        "type": "video",
+        "title": "Object-Oriented Programming, Simplified",
+        "description": "Polymorphism and dynamic dispatch.",
+        "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "pTB0EiLXUC8",
+        "thumbnail": "https://i.ytimg.com/vi/pTB0EiLXUC8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "24.5": [
+      {
+        "type": "video",
+        "title": "Object-Oriented Programming, Simplified",
+        "description": "Abstract classes and interface patterns.",
+        "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "pTB0EiLXUC8",
+        "thumbnail": "https://i.ytimg.com/vi/pTB0EiLXUC8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "25.1": [
+      {
+        "type": "video",
+        "title": "Composition over Inheritance Explained",
+        "description": "has-a relationships with real analogies.",
+        "url": "https://www.youtube.com/watch?v=HNzP1aLAffM",
+        "source": "YouTube",
+        "channel": "Metaphorically Speaking",
+        "videoId": "HNzP1aLAffM",
+        "thumbnail": "https://i.ytimg.com/vi/HNzP1aLAffM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "25.2": [
+      {
+        "type": "video",
+        "title": "The Flaws of Inheritance",
+        "description": "Association between loosely coupled objects.",
+        "url": "https://www.youtube.com/watch?v=hxGOiiR9ZKg",
+        "source": "YouTube",
+        "channel": "CodeAesthetic",
+        "videoId": "hxGOiiR9ZKg",
+        "thumbnail": "https://i.ytimg.com/vi/hxGOiiR9ZKg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "25.3": [
+      {
+        "type": "video",
+        "title": "Inheritance vs Composition",
+        "description": "Aggregation without strong ownership.",
+        "url": "https://www.youtube.com/watch?v=EqHX7DAL0Jk",
+        "source": "YouTube",
+        "channel": "Machine tired of learning",
+        "videoId": "EqHX7DAL0Jk",
+        "thumbnail": "https://i.ytimg.com/vi/EqHX7DAL0Jk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "25.4": [
+      {
+        "type": "video",
+        "title": "The Flaws of Inheritance",
+        "description": "Composition for stronger encapsulation.",
+        "url": "https://www.youtube.com/watch?v=hxGOiiR9ZKg",
+        "source": "YouTube",
+        "channel": "CodeAesthetic",
+        "videoId": "hxGOiiR9ZKg",
+        "thumbnail": "https://i.ytimg.com/vi/hxGOiiR9ZKg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "25.5": [
+      {
+        "type": "video",
+        "title": "Inheritance vs Composition",
+        "description": "Delegation as forwarding behavior.",
+        "url": "https://www.youtube.com/watch?v=EqHX7DAL0Jk",
+        "source": "YouTube",
+        "channel": "Machine tired of learning",
+        "videoId": "EqHX7DAL0Jk",
+        "thumbnail": "https://i.ytimg.com/vi/EqHX7DAL0Jk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "26.1": [
+      {
+        "type": "video",
+        "title": "SOLID Principles Explained",
+        "description": "Single Responsibility — one reason to change.",
+        "url": "https://www.youtube.com/watch?v=V3TUEeB0kW0",
+        "source": "YouTube",
+        "channel": "Awesome",
+        "videoId": "V3TUEeB0kW0",
+        "thumbnail": "https://i.ytimg.com/vi/V3TUEeB0kW0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "26.2": [
+      {
+        "type": "video",
+        "title": "SOLID Principles: Do You Really Understand Them?",
+        "description": "Open/closed without modifying existing code.",
+        "url": "https://www.youtube.com/watch?v=kF7rQmSRlq0",
+        "source": "YouTube",
+        "channel": "Alex Hyett",
+        "videoId": "kF7rQmSRlq0",
+        "thumbnail": "https://i.ytimg.com/vi/kF7rQmSRlq0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "26.3": [
+      {
+        "type": "video",
+        "title": "SOLID Principles Explained",
+        "description": "Liskov substitution and safe subtypes.",
+        "url": "https://www.youtube.com/watch?v=V3TUEeB0kW0",
+        "source": "YouTube",
+        "channel": "Awesome",
+        "videoId": "V3TUEeB0kW0",
+        "thumbnail": "https://i.ytimg.com/vi/V3TUEeB0kW0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "26.4": [
+      {
+        "type": "video",
+        "title": "SOLID Principles: Do You Really Understand Them?",
+        "description": "Interface segregation for focused APIs.",
+        "url": "https://www.youtube.com/watch?v=kF7rQmSRlq0",
+        "source": "YouTube",
+        "channel": "Alex Hyett",
+        "videoId": "kF7rQmSRlq0",
+        "thumbnail": "https://i.ytimg.com/vi/kF7rQmSRlq0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "26.5": [
+      {
+        "type": "video",
+        "title": "SOLID Principles Explained",
+        "description": "Dependency inversion and abstractions.",
+        "url": "https://www.youtube.com/watch?v=V3TUEeB0kW0",
+        "source": "YouTube",
+        "channel": "Awesome",
+        "videoId": "V3TUEeB0kW0",
+        "thumbnail": "https://i.ytimg.com/vi/V3TUEeB0kW0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "27.1": [
+      {
+        "type": "video",
+        "title": "JavaScript Clean Code Course",
+        "description": "Naming that reveals intent.",
+        "url": "https://www.youtube.com/watch?v=626BcUO84og",
+        "source": "YouTube",
+        "channel": "freeCodeCamp.org",
+        "videoId": "626BcUO84og",
+        "thumbnail": "https://i.ytimg.com/vi/626BcUO84og/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "27.2": [
+      {
+        "type": "video",
+        "title": "Code Smells & Refactoring Techniques",
+        "description": "Removing duplication safely.",
+        "url": "https://www.youtube.com/watch?v=FHWwtpsKGMM",
+        "source": "YouTube",
+        "channel": "programmerCave",
+        "videoId": "FHWwtpsKGMM",
+        "thumbnail": "https://i.ytimg.com/vi/FHWwtpsKGMM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "27.3": [
+      {
+        "type": "video",
+        "title": "A Few Common Code Smells",
+        "description": "Splitting long methods into focused units.",
+        "url": "https://www.youtube.com/watch?v=KGsnhdcBvd0",
+        "source": "YouTube",
+        "channel": "The Shaggy Dev",
+        "videoId": "KGsnhdcBvd0",
+        "thumbnail": "https://i.ytimg.com/vi/KGsnhdcBvd0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "27.4": [
+      {
+        "type": "video",
+        "title": "Code Smells & Refactoring Techniques",
+        "description": "Breaking up god objects.",
+        "url": "https://www.youtube.com/watch?v=FHWwtpsKGMM",
+        "source": "YouTube",
+        "channel": "programmerCave",
+        "videoId": "FHWwtpsKGMM",
+        "thumbnail": "https://i.ytimg.com/vi/FHWwtpsKGMM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "27.5": [
+      {
+        "type": "video",
+        "title": "Code Smells & Refactoring Techniques",
+        "description": "Reducing tight coupling between modules.",
+        "url": "https://www.youtube.com/watch?v=FHWwtpsKGMM",
+        "source": "YouTube",
+        "channel": "programmerCave",
+        "videoId": "FHWwtpsKGMM",
+        "thumbnail": "https://i.ytimg.com/vi/FHWwtpsKGMM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "27.6": [
+      {
+        "type": "video",
+        "title": "A Few Common Code Smells",
+        "description": "Grouping related behavior for cohesion.",
+        "url": "https://www.youtube.com/watch?v=KGsnhdcBvd0",
+        "source": "YouTube",
+        "channel": "The Shaggy Dev",
+        "videoId": "KGsnhdcBvd0",
+        "thumbnail": "https://i.ytimg.com/vi/KGsnhdcBvd0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "27.7": [
+      {
+        "type": "video",
+        "title": "A Few Common Code Smells",
+        "description": "Catalog of smells and how to fix them.",
+        "url": "https://www.youtube.com/watch?v=KGsnhdcBvd0",
+        "source": "YouTube",
+        "channel": "The Shaggy Dev",
+        "videoId": "KGsnhdcBvd0",
+        "thumbnail": "https://i.ytimg.com/vi/KGsnhdcBvd0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "27.8": [
+      {
+        "type": "video",
+        "title": "JavaScript Clean Code Course",
+        "description": "Refactoring in small, tested steps.",
+        "url": "https://www.youtube.com/watch?v=626BcUO84og",
+        "source": "YouTube",
+        "channel": "freeCodeCamp.org",
+        "videoId": "626BcUO84og",
+        "thumbnail": "https://i.ytimg.com/vi/626BcUO84og/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "github",
+        "title": "Refactoring catalog (Martin Fowler)",
+        "description": "Canonical reference for safe refactorings.",
+        "url": "https://github.com/wycats/artifice",
+        "source": "GitHub",
+        "difficulty": "beginner"
+      }
+    ],
+    "28.1": [
+      {
+        "type": "video",
+        "title": "10 Design Patterns Explained in 10 Minutes",
+        "description": "Factory pattern overview.",
+        "url": "https://www.youtube.com/watch?v=tv-_1er1mWI",
+        "source": "YouTube",
+        "channel": "Fireship",
+        "videoId": "tv-_1er1mWI",
+        "thumbnail": "https://i.ytimg.com/vi/tv-_1er1mWI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "28.2": [
+      {
+        "type": "video",
+        "title": "10 Design Patterns Explained in 10 Minutes",
+        "description": "Builder pattern for complex objects.",
+        "url": "https://www.youtube.com/watch?v=tv-_1er1mWI",
+        "source": "YouTube",
+        "channel": "Fireship",
+        "videoId": "tv-_1er1mWI",
+        "thumbnail": "https://i.ytimg.com/vi/tv-_1er1mWI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "28.3": [
+      {
+        "type": "video",
+        "title": "10 Design Patterns Explained in 10 Minutes",
+        "description": "Adapter for incompatible interfaces.",
+        "url": "https://www.youtube.com/watch?v=tv-_1er1mWI",
+        "source": "YouTube",
+        "channel": "Fireship",
+        "videoId": "tv-_1er1mWI",
+        "thumbnail": "https://i.ytimg.com/vi/tv-_1er1mWI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "28.4": [
+      {
+        "type": "video",
+        "title": "10 Design Patterns Explained in 10 Minutes",
+        "description": "Facade simplifying subsystems.",
+        "url": "https://www.youtube.com/watch?v=tv-_1er1mWI",
+        "source": "YouTube",
+        "channel": "Fireship",
+        "videoId": "tv-_1er1mWI",
+        "thumbnail": "https://i.ytimg.com/vi/tv-_1er1mWI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "28.5": [
+      {
+        "type": "video",
+        "title": "10 Design Patterns Explained in 10 Minutes",
+        "description": "Decorator for extending behavior.",
+        "url": "https://www.youtube.com/watch?v=tv-_1er1mWI",
+        "source": "YouTube",
+        "channel": "Fireship",
+        "videoId": "tv-_1er1mWI",
+        "thumbnail": "https://i.ytimg.com/vi/tv-_1er1mWI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "28.6": [
+      {
+        "type": "video",
+        "title": "Strategy Pattern, The Best Software Design Pattern",
+        "description": "Swapping algorithms at runtime.",
+        "url": "https://www.youtube.com/watch?v=E9-4uaoncVY",
+        "source": "YouTube",
+        "channel": "Jono Williams",
+        "videoId": "E9-4uaoncVY",
+        "thumbnail": "https://i.ytimg.com/vi/E9-4uaoncVY/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "28.7": [
+      {
+        "type": "video",
+        "title": "Design Patterns: Factory, Observer, Strategy",
+        "description": "Observer for event-driven updates.",
+        "url": "https://www.youtube.com/watch?v=NP7RmrHn1Q0",
+        "source": "YouTube",
+        "channel": "ByteMonk",
+        "videoId": "NP7RmrHn1Q0",
+        "thumbnail": "https://i.ytimg.com/vi/NP7RmrHn1Q0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "28.8": [
+      {
+        "type": "video",
+        "title": "10 Design Patterns Explained in 10 Minutes",
+        "description": "Dependency injection basics.",
+        "url": "https://www.youtube.com/watch?v=tv-_1er1mWI",
+        "source": "YouTube",
+        "channel": "Fireship",
+        "videoId": "tv-_1er1mWI",
+        "thumbnail": "https://i.ytimg.com/vi/tv-_1er1mWI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "28.9": [
+      {
+        "type": "video",
+        "title": "Design Patterns in Java Every Developer Should Know",
+        "description": "Repository pattern for data access.",
+        "url": "https://www.youtube.com/watch?v=NP7RmrHn1Q0",
+        "source": "YouTube",
+        "channel": "ByteMonk",
+        "videoId": "NP7RmrHn1Q0",
+        "thumbnail": "https://i.ytimg.com/vi/NP7RmrHn1Q0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "github",
+        "title": "Design patterns in Python",
+        "description": "Readable pattern examples to study and adapt.",
+        "url": "https://github.com/faif/python-patterns",
+        "source": "GitHub",
+        "difficulty": "beginner"
+      }
+    ],
+    "29.1": [
+      {
+        "type": "video",
+        "title": "UML Class Diagrams",
+        "description": "Capturing requirements as model elements.",
+        "url": "https://www.youtube.com/watch?v=6XrL5jXmTwM",
+        "source": "YouTube",
+        "channel": "Lucid Software",
+        "videoId": "6XrL5jXmTwM",
+        "thumbnail": "https://i.ytimg.com/vi/6XrL5jXmTwM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "29.2": [
+      {
+        "type": "video",
+        "title": "UML Class Diagrams",
+        "description": "Entity modeling with classes and attributes.",
+        "url": "https://www.youtube.com/watch?v=6XrL5jXmTwM",
+        "source": "YouTube",
+        "channel": "Lucid Software",
+        "videoId": "6XrL5jXmTwM",
+        "thumbnail": "https://i.ytimg.com/vi/6XrL5jXmTwM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "29.3": [
+      {
+        "type": "video",
+        "title": "UML Class Diagrams",
+        "description": "Relationships: association, aggregation, composition.",
+        "url": "https://www.youtube.com/watch?v=6XrL5jXmTwM",
+        "source": "YouTube",
+        "channel": "Lucid Software",
+        "videoId": "6XrL5jXmTwM",
+        "thumbnail": "https://i.ytimg.com/vi/6XrL5jXmTwM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "29.4": [
+      {
+        "type": "video",
+        "title": "UML Class Diagrams",
+        "description": "Interfaces on class diagrams.",
+        "url": "https://www.youtube.com/watch?v=6XrL5jXmTwM",
+        "source": "YouTube",
+        "channel": "Lucid Software",
+        "videoId": "6XrL5jXmTwM",
+        "thumbnail": "https://i.ytimg.com/vi/6XrL5jXmTwM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "29.5": [
+      {
+        "type": "video",
+        "title": "UML Class Diagrams",
+        "description": "Full UML class diagram walkthrough.",
+        "url": "https://www.youtube.com/watch?v=6XrL5jXmTwM",
+        "source": "YouTube",
+        "channel": "Lucid Software",
+        "videoId": "6XrL5jXmTwM",
+        "thumbnail": "https://i.ytimg.com/vi/6XrL5jXmTwM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "tool",
+        "title": "PlantUML online editor",
+        "description": "Text-to-diagram UML for quick iteration.",
+        "url": "https://www.plantuml.com/plantuml/uml/",
+        "source": "PlantUML",
+        "difficulty": "beginner"
+      }
+    ],
+    "29.6": [
+      {
+        "type": "video",
+        "title": "UML Sequence Diagrams — Georgia Tech",
+        "description": "Sequence diagrams for object interactions.",
+        "url": "https://www.youtube.com/watch?v=XIQKt5Bs7II",
+        "source": "YouTube",
+        "channel": "Udacity",
+        "videoId": "XIQKt5Bs7II",
+        "thumbnail": "https://i.ytimg.com/vi/XIQKt5Bs7II/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "How to Make a UML Sequence Diagram",
+        "description": "Step-by-step sequence diagram tutorial.",
+        "url": "https://www.youtube.com/watch?v=pCK6prSq8aw",
+        "source": "YouTube",
+        "channel": "Lucid Software",
+        "videoId": "pCK6prSq8aw",
+        "thumbnail": "https://i.ytimg.com/vi/pCK6prSq8aw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "29.7": [
+      {
+        "type": "video",
+        "title": "UML Behavioral Diagrams — Sequence",
+        "description": "State machines and behavioral modeling intro.",
+        "url": "https://www.youtube.com/watch?v=XIQKt5Bs7II",
+        "source": "YouTube",
+        "channel": "Udacity",
+        "videoId": "XIQKt5Bs7II",
+        "thumbnail": "https://i.ytimg.com/vi/XIQKt5Bs7II/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ]
+  },
+  "phases": {},
+  "projects": {}
+}

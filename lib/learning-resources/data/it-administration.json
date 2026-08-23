@@ -1,0 +1,456 @@
+{
+  "lessons": {
+    "1.1": [
+      {
+        "type": "article",
+        "title": "Microsoft troubleshooting methodology",
+        "description": "",
+        "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/windows-tips-and-tricks/basic-troubleshooting-guide-for-windows",
+        "source": "learn.microsoft.com"
+      },
+      {
+        "type": "github",
+        "title": "bregman-arie/devops-exercises",
+        "description": "",
+        "url": "https://github.com/bregman-arie/devops-exercises",
+        "source": "GitHub"
+      }
+    ],
+    "2.1": [
+      {
+        "type": "documentation",
+        "title": "Microsoft disk error troubleshooting",
+        "description": "",
+        "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-server/backup-and-storage/troubleshoot-data-corruption-and-disk-errors",
+        "source": "learn.microsoft.com"
+      },
+      {
+        "type": "reference",
+        "title": "CompTIA A+",
+        "description": "Use it as optional validation, not a substitute for diagnosis.",
+        "url": "https://www.comptia.org/en/certifications/a/",
+        "source": "comptia.org"
+      },
+      {
+        "type": "github",
+        "title": "bregman-arie/devops-exercises",
+        "description": "Use only the endpoint/system exercises that match your isolated lab.",
+        "url": "https://github.com/bregman-arie/devops-exercises",
+        "source": "GitHub"
+      }
+    ],
+    "3.1": [
+      {
+        "type": "documentation",
+        "title": "BitLocker operations guide",
+        "description": "",
+        "url": "https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/operations-guide",
+        "source": "learn.microsoft.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Microsoft Sysinternals",
+        "description": "",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/",
+        "source": "learn.microsoft.com"
+      },
+      {
+        "type": "github",
+        "title": "AutomatedLab/AutomatedLab",
+        "description": "Inspect how reproducible Windows labs describe machines and roles; manual understanding comes first.",
+        "url": "https://github.com/AutomatedLab/AutomatedLab",
+        "source": "GitHub"
+      }
+    ],
+    "4.1": [
+      {
+        "type": "video",
+        "title": "Systemd Explained: How to Manage Linux Services Easily",
+        "description": "A public, embeddable service-management walkthrough.",
+        "url": "https://www.youtube.com/watch?v=Kzpm-rGAXos",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Kzpm-rGAXos/hqdefault.jpg",
+        "videoId": "Kzpm-rGAXos",
+        "embedSupported": true
+      },
+      {
+        "type": "documentation",
+        "title": "Ubuntu Server",
+        "description": "",
+        "url": "https://ubuntu.com/server/docs/",
+        "source": "ubuntu.com"
+      },
+      {
+        "type": "tool",
+        "title": "SadServers",
+        "description": "",
+        "url": "https://sadservers.com/",
+        "source": "sadservers.com"
+      }
+    ],
+    "5.1": [
+      {
+        "type": "video",
+        "title": "What is DNS?",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=K9YWlljNsNw",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/K9YWlljNsNw/hqdefault.jpg",
+        "videoId": "K9YWlljNsNw",
+        "embedSupported": true
+      },
+      {
+        "type": "documentation",
+        "title": "Cisco DNS configuration",
+        "description": "",
+        "url": "https://www.cisco.com/c/en/us/td/docs/routers/ios/config/17-x/ip-addressing/b-ip-addressing/m_configuring_dns.html",
+        "source": "cisco.com"
+      },
+      {
+        "type": "github",
+        "title": "bregman-arie/devops-exercises networking questions",
+        "description": "Practice reasoning before looking at answers.",
+        "url": "https://github.com/bregman-arie/devops-exercises/tree/master/topics/network",
+        "source": "GitHub"
+      },
+      {
+        "type": "reference",
+        "title": "`Networks.md`",
+        "description": "",
+        "url": "./Networks.md"
+      }
+    ],
+    "6.1": [
+      {
+        "type": "video",
+        "title": "Virtualization Explained",
+        "description": "Verified public and embeddable.",
+        "url": "https://www.youtube.com/watch?v=UBVVq-xz5i0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/UBVVq-xz5i0/hqdefault.jpg",
+        "videoId": "UBVVq-xz5i0",
+        "embedSupported": true
+      },
+      {
+        "type": "documentation",
+        "title": "Hyper-V networking",
+        "description": "",
+        "url": "https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/plan/plan-hyper-v-networking-in-windows-server",
+        "source": "learn.microsoft.com"
+      },
+      {
+        "type": "reference",
+        "title": "Proxmox VE documentation",
+        "description": "",
+        "url": "https://pve.proxmox.com/pve-docs/",
+        "source": "pve.proxmox.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Corsinvest/awesome-proxmox-ve",
+        "description": "",
+        "url": "https://github.com/Corsinvest/awesome-proxmox-ve",
+        "source": "GitHub"
+      }
+    ],
+    "7.1": [
+      {
+        "type": "documentation",
+        "title": "Windows Server administration",
+        "description": "",
+        "url": "https://learn.microsoft.com/en-us/windows-server/administration/overview",
+        "source": "learn.microsoft.com"
+      },
+      {
+        "type": "github",
+        "title": "AutomatedLab/AutomatedLab",
+        "description": "Compare its declarative Windows lab examples with your manual role checklist.",
+        "url": "https://github.com/AutomatedLab/AutomatedLab",
+        "source": "GitHub"
+      },
+      {
+        "type": "reference",
+        "title": "`DevOps.md`",
+        "description": "",
+        "url": "./DevOps.md"
+      }
+    ],
+    "8.1": [
+      {
+        "type": "video",
+        "title": "Active Directory Explained in 5 Minutes",
+        "description": "Verified public and embeddable.",
+        "url": "https://www.youtube.com/watch?v=OfXJlmuoc20",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/OfXJlmuoc20/hqdefault.jpg",
+        "videoId": "OfXJlmuoc20",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Josh Madakor's VirtualBox Active Directory homelab",
+        "description": "Verified public and embeddable; adapt names and network settings to this isolated lab.",
+        "url": "https://www.youtube.com/watch?v=MHsI8hJmggI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/MHsI8hJmggI/hqdefault.jpg",
+        "videoId": "MHsI8hJmggI",
+        "embedSupported": true
+      },
+      {
+        "type": "documentation",
+        "title": "AD DS overview",
+        "description": "",
+        "url": "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview",
+        "source": "learn.microsoft.com"
+      },
+      {
+        "type": "github",
+        "title": "AutomatedLab/AutomatedLab",
+        "description": "A real PowerShell-based lab project for later reproducibility, not a shortcut around AD fundamentals.",
+        "url": "https://github.com/AutomatedLab/AutomatedLab",
+        "source": "GitHub"
+      }
+    ],
+    "9.1": [
+      {
+        "type": "video",
+        "title": "How Kerberos Works",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=1yWW7VQUX0A",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/1yWW7VQUX0A/hqdefault.jpg",
+        "videoId": "1yWW7VQUX0A",
+        "embedSupported": true
+      },
+      {
+        "type": "documentation",
+        "title": "Kerberos authentication overview",
+        "description": "",
+        "url": "https://learn.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview",
+        "source": "learn.microsoft.com"
+      },
+      {
+        "type": "github",
+        "title": "AutomatedLab/AutomatedLab",
+        "description": "Inspect its domain examples only after you can explain every generated component.",
+        "url": "https://github.com/AutomatedLab/AutomatedLab",
+        "source": "GitHub"
+      }
+    ],
+    "10.1": [
+      {
+        "type": "documentation",
+        "title": "Microsoft Entra ID Beginner's Tutorial",
+        "description": "Microsoft Mechanics; verified public and embeddable.",
+        "url": "https://www.youtube.com/watch?v=0qZzcK1mHwA",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/0qZzcK1mHwA/hqdefault.jpg",
+        "videoId": "0qZzcK1mHwA",
+        "embedSupported": true
+      },
+      {
+        "type": "documentation",
+        "title": "Entra versus AD",
+        "description": "",
+        "url": "https://learn.microsoft.com/en-us/entra/fundamentals/compare",
+        "source": "learn.microsoft.com"
+      },
+      {
+        "type": "github",
+        "title": "Microsoft Graph PowerShell training",
+        "description": "Use a disposable tenant only and keep tokens outside the repository.",
+        "url": "https://github.com/microsoftgraph/msgraph-training-powershell",
+        "source": "GitHub"
+      }
+    ],
+    "11.1": [
+      {
+        "type": "video",
+        "title": "What is RAID 0, 1, 5, and 10?",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=U-OCdTeZLac",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/U-OCdTeZLac/hqdefault.jpg",
+        "videoId": "U-OCdTeZLac",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "NIST contingency planning",
+        "description": "",
+        "url": "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final",
+        "source": "csrc.nist.gov"
+      },
+      {
+        "type": "github",
+        "title": "restic/restic",
+        "description": "Inspect a mature encrypted backup tool and use generated lab data for any experiment.",
+        "url": "https://github.com/restic/restic",
+        "source": "GitHub"
+      }
+    ],
+    "12.1": [
+      {
+        "type": "documentation",
+        "title": "PostgreSQL server administration",
+        "description": "",
+        "url": "https://www.postgresql.org/docs/18/admin.html",
+        "source": "postgresql.org"
+      },
+      {
+        "type": "video",
+        "title": "Odoo.sh projects, staging, and backups",
+        "description": "Verified public and embeddable; product tier and features can differ.",
+        "url": "https://www.youtube.com/watch?v=vsqzfA3ERD8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/vsqzfA3ERD8/hqdefault.jpg",
+        "videoId": "vsqzfA3ERD8",
+        "embedSupported": true
+      },
+      {
+        "type": "documentation",
+        "title": "Odoo Docker",
+        "description": "",
+        "url": "https://hub.docker.com/_/odoo",
+        "source": "hub.docker.com"
+      },
+      {
+        "type": "reference",
+        "title": "`ODOO.md`",
+        "description": "",
+        "url": "./ODOO.md"
+      }
+    ],
+    "13.1": [
+      {
+        "type": "reference",
+        "title": "NIST Cybersecurity Framework 2.0",
+        "description": "",
+        "url": "https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20",
+        "source": "nist.gov"
+      },
+      {
+        "type": "video",
+        "title": "CISA ransomware response tech tip",
+        "description": "Verified public and embeddable.",
+        "url": "https://www.youtube.com/watch?v=J6UdZakG2Ns",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/J6UdZakG2Ns/hqdefault.jpg",
+        "videoId": "J6UdZakG2Ns",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "`ICT_Cybersecurity.md`",
+        "description": "",
+        "url": "./ICT_Cybersecurity.md"
+      },
+      {
+        "type": "github",
+        "title": "bregman-arie/devops-exercises",
+        "description": "Choose only defensive system, identity, and troubleshooting prompts.",
+        "url": "https://github.com/bregman-arie/devops-exercises",
+        "source": "GitHub"
+      }
+    ],
+    "14.1": [
+      {
+        "type": "documentation",
+        "title": "Windows Admin Center",
+        "description": "",
+        "url": "https://learn.microsoft.com/en-us/windows-server/manage/windows-admin-center/overview",
+        "source": "learn.microsoft.com"
+      },
+      {
+        "type": "github",
+        "title": "louislam/uptime-kuma",
+        "description": "",
+        "url": "https://github.com/louislam/uptime-kuma",
+        "source": "GitHub"
+      }
+    ],
+    "15.1": [
+      {
+        "type": "documentation",
+        "title": "PowerShell 101",
+        "description": "",
+        "url": "https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/00-introduction",
+        "source": "learn.microsoft.com"
+      },
+      {
+        "type": "github",
+        "title": "bregman-arie/devops-exercises",
+        "description": "",
+        "url": "https://github.com/bregman-arie/devops-exercises",
+        "source": "GitHub"
+      },
+      {
+        "type": "reference",
+        "title": "`Git.md`",
+        "description": "",
+        "url": "./Git.md"
+      }
+    ],
+    "16.1": [
+      {
+        "type": "reference",
+        "title": "PeopleCert ITIL family",
+        "description": "",
+        "url": "https://www.peoplecert.org/products/itil-certification-family",
+        "source": "peoplecert.org"
+      },
+      {
+        "type": "github",
+        "title": "grokability/snipe-it",
+        "description": "Inspect how a real asset system models assignment and lifecycle; do not import real assets into a public lab.",
+        "url": "https://github.com/grokability/snipe-it",
+        "source": "GitHub"
+      }
+    ],
+    "17.1": [
+      {
+        "type": "documentation",
+        "title": "Azure shared responsibility",
+        "description": "",
+        "url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility",
+        "source": "learn.microsoft.com"
+      },
+      {
+        "type": "reference",
+        "title": "`Cloud.md`",
+        "description": "",
+        "url": "./Cloud.md"
+      },
+      {
+        "type": "github",
+        "title": "Azure quickstart templates",
+        "description": "Read examples critically and validate current service guidance before deploying anything.",
+        "url": "https://github.com/Azure/azure-quickstart-templates",
+        "source": "GitHub"
+      }
+    ],
+    "18.1": [
+      {
+        "type": "reference",
+        "title": "complete IT Administration capstone",
+        "description": "",
+        "url": "../guides/Projects.md#it-admin-main-portfolio-project"
+      },
+      {
+        "type": "reference",
+        "title": "IT Administrator interview track",
+        "description": "",
+        "url": "../guides/Interview.md#track-i"
+      },
+      {
+        "type": "reference",
+        "title": "CompTIA A+",
+        "description": "",
+        "url": "https://www.comptia.org/en/certifications/a/",
+        "source": "comptia.org"
+      }
+    ]
+  },
+  "phases": {},
+  "projects": {}
+}

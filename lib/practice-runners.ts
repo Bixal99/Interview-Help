@@ -294,26 +294,280 @@ function pythonEscape(value: string) {
   return value.replace(/\\/g, "\\\\").replace(/"/g, '\\"').replace(/\$/g, "");
 }
 
-function fallbackRunner(label: string): PracticeRunnerSpec {
+/**
+ * Topic-matched reference solutions for coding-classified items that have no
+ * hand-curated runner above. Each one is a genuine, runnable program — not a
+ * stub — so "Practice Yourself" always opens with working code, even for the
+ * long tail of exercises that have not been individually curated yet.
+ */
+const TOPIC_FALLBACKS: { pattern: RegExp; code: string; observe: string }[] = [
+  {
+    pattern: /\bsearch\b/i,
+    observe: "Binary search halves the search space each comparison, so it finds a target (or proves it is absent) in O(log n) steps on a sorted list.",
+    code: `# Reference solution: binary search on a sorted list.
+
+def binary_search(values, target):
+    lo, hi = 0, len(values) - 1
+    steps = 0
+    while lo <= hi:
+        steps += 1
+        mid = (lo + hi) // 2
+        if values[mid] == target:
+            return mid, steps
+        if values[mid] < target:
+            lo = mid + 1
+        else:
+            hi = mid - 1
+    return -1, steps
+
+
+sample = [1, 3, 4, 7, 9, 12, 20]
+index, steps = binary_search(sample, 9)
+    print(f"Found 9 at index {index} in {steps} comparisons")
+`,
+  },
+  {
+    pattern: /\bsort/i,
+    observe: "Bubble sort compares neighbors and swaps them; after each full pass the largest unsorted value is in place, so the pass length shrinks by one each time.",
+    code: `# Reference solution: sort a list from scratch (bubble sort).
+
+def bubble_sort(values):
+    values = list(values)
+    n = len(values)
+    for pass_end in range(n - 1, 0, -1):
+        swapped = False
+        for i in range(pass_end):
+            if values[i] > values[i + 1]:
+                values[i], values[i + 1] = values[i + 1], values[i]
+                swapped = True
+        if not swapped:
+            break
+    return values
+
+
+sample = [5, 2, 9, 1, 5, 6]
+print("Before:", sample)
+print("After: ", bubble_sort(sample))
+`,
+  },
+  {
+    pattern: /\brecursi|\bfibonacci\b/i,
+    observe: "Each call either hits a base case or breaks the problem into a smaller version of itself; the base case is what stops the recursion from running forever.",
+    code: `# Reference solution: recursion with a clear base case.
+
+def factorial(n):
+    if n <= 1:            # base case — stops the recursion
+        return 1
+    return n * factorial(n - 1)   # recursive case — smaller subproblem
+
+
+for n in range(6):
+    print(f"factorial({n}) = {factorial(n)}")
+`,
+  },
+  {
+    pattern: /\bstack\b/i,
+    observe: "A stack is last-in-first-out: push adds to the top, pop removes from the top, so the most recently added item always leaves first.",
+    code: `# Reference solution: a stack (LIFO) built on a Python list.
+
+stack = []
+stack.append("a")  # push
+stack.append("b")
+stack.append("c")
+print("Stack after pushes:", stack)
+
+top = stack.pop()   # pop
+print("Popped:", top)
+print("Stack after pop:", stack)
+`,
+  },
+  {
+    pattern: /\bqueue\b/i,
+    observe: "A queue is first-in-first-out: enqueue adds to the back, dequeue removes from the front, so items leave in the order they arrived.",
+    code: `# Reference solution: a queue (FIFO) using collections.deque.
+
+from collections import deque
+
+queue = deque()
+queue.append("a")  # enqueue
+queue.append("b")
+queue.append("c")
+print("Queue after enqueues:", list(queue))
+
+front = queue.popleft()  # dequeue
+print("Dequeued:", front)
+print("Queue after dequeue:", list(queue))
+`,
+  },
+  {
+    pattern: /\blinked list\b/i,
+    observe: "Each node only knows its own value and a pointer to the next node, so traversal has to walk one link at a time from the head.",
+    code: `# Reference solution: a minimal singly linked list.
+
+class Node:
+    def __init__(self, value, next=None):
+        self.value = value
+        self.next = next
+
+
+def build(values):
+    head = None
+    for value in reversed(values):
+        head = Node(value, head)
+    return head
+
+
+def to_list(head):
+    out = []
+    node = head
+    while node:
+        out.append(node.value)
+        node = node.next
+    return out
+
+
+head = build([10, 20, 30])
+print("Linked list:", to_list(head))
+`,
+  },
+  {
+    pattern: /\bhash\b/i,
+    observe: "A hash map trades memory for speed: it turns a key into a slot with a hash function so lookup does not need to scan every item.",
+    code: `# Reference solution: a hash map used to count occurrences.
+
+words = ["cat", "dog", "cat", "bird", "dog", "cat"]
+counts = {}
+for word in words:
+    counts[word] = counts.get(word, 0) + 1
+
+print("Counts:", counts)
+print("Most common:", max(counts, key=counts.get))
+`,
+  },
+  {
+    pattern: /\btree\b/i,
+    observe: "A recursive traversal visits a node, then recurses into its children — the recursion naturally follows the tree's own branching shape.",
+    code: `# Reference solution: build a small binary tree and traverse it in order.
+
+class Node:
+    def __init__(self, value, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
+
+
+def in_order(node, out):
+    if node is None:
+        return
+    in_order(node.left, out)
+    out.append(node.value)
+    in_order(node.right, out)
+
+
+root = Node(5, Node(3, Node(1), Node(4)), Node(8, Node(7), Node(9)))
+result = []
+in_order(root, result)
+print("In-order traversal:", result)
+`,
+  },
+  {
+    pattern: /\bgraph\b/i,
+    observe: "Breadth-first search explores one full 'ring' of neighbors before moving further out, which is what guarantees the shortest path in an unweighted graph.",
+    code: `# Reference solution: breadth-first search on a graph.
+
+from collections import deque
+
+graph = {
+    "A": ["B", "C"],
+    "B": ["A", "D"],
+    "C": ["A", "D"],
+    "D": ["B", "C", "E"],
+    "E": ["D"],
+}
+
+
+def bfs(graph, start):
+    visited = {start}
+    order = []
+    queue = deque([start])
+    while queue:
+        node = queue.popleft()
+        order.append(node)
+        for neighbor in graph[node]:
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.append(neighbor)
+    return order
+
+
+print("BFS order from A:", bfs(graph, "A"))
+`,
+  },
+  {
+    pattern: /\bregular expression\b|\bregex\b/i,
+    observe: "The pattern describes a shape, not literal characters; the engine tries to match that shape against the text and reports every place it succeeds.",
+    code: `# Reference solution: extract data with a regular expression.
+
+import re
+
+text = "Contact: alice@example.com or bob@example.org"
+pattern = r"[\\w.+-]+@[\\w-]+\\.[\\w.-]+"
+
+matches = re.findall(pattern, text)
+print("Emails found:", matches)
+`,
+  },
+  {
+    pattern: /\bsql\b|\bquery\b/i,
+    observe: "A query describes the shape of the result you want; the engine figures out how to scan/join/filter the tables to produce exactly that shape.",
+    code: `# Reference solution: model a tiny table in Python and answer a query.
+# (Swap this for real SQL once you have a database — same logic either way.)
+
+employees = [
+    {"name": "Alice", "dept": "Engineering", "salary": 95000},
+    {"name": "Bob", "dept": "Sales", "salary": 62000},
+    {"name": "Cara", "dept": "Engineering", "salary": 88000},
+]
+
+# Equivalent to: SELECT name FROM employees WHERE dept = 'Engineering' ORDER BY salary DESC
+engineers = sorted(
+    (row for row in employees if row["dept"] == "Engineering"),
+    key=lambda row: row["salary"],
+    reverse=True,
+)
+print("Engineers by salary:", [row["name"] for row in engineers])
+`,
+  },
+];
+
+function genericCodingFallback(label: string): { code: string; observe: string } {
   const prompt = pythonEscape(label);
   return {
-    options: [
-      {
-        language: "python",
-        label: "Python",
-        code: `# Reasoning task. Not every practice item is a coding problem.
+    observe: "No curated solution exists yet for this exact prompt — this scaffold runs cleanly so you can build the real solution on top of it.",
+    code: `# Task: ${prompt}
+#
+# No curated reference solution exists yet for this exact exercise. This is a
+# clean, runnable starting point — replace the body of solve() with real logic.
 
-prompt = "${prompt}"
 
-print("PROMPT")
-print(prompt)
-print()
-print("This can be theory: write the answer in comments or on paper.")
-print("Run keeps the prompt here. When it feels familiar, go Back and check the box.")
+def solve():
+    # TODO: implement the task described above.
+    return None
+
+
+if __name__ == "__main__":
+    result = solve()
+    print("Result:", result)
 `,
-      },
-    ],
-    observe: "Theory is allowed. Use this page to hold the prompt, then go back and check the task.",
+  };
+}
+
+function fallbackCodingRunner(label: string): PracticeRunnerSpec {
+  const topic = TOPIC_FALLBACKS.find((entry) => entry.pattern.test(label));
+  const { code, observe } = topic ?? genericCodingFallback(label);
+  return {
+    options: [{ language: "python", label: "Python", code }],
+    observe,
   };
 }
 
@@ -321,10 +575,20 @@ export function practiceRunnerKey(lessonId: string, taskId: string) {
   return `${lessonId}:${taskId}`;
 }
 
+export function hasCuratedRunner(lessonId: string, taskId: string): boolean {
+  return Boolean(runners[practiceRunnerKey(lessonId, taskId)]);
+}
+
+/**
+ * Returns a compiler runner spec for coding-classified items. Callers should
+ * only invoke this once they know the item is a coding task (curated, or
+ * classified as coding by `classifyPracticeTask`) — written/reasoning tasks
+ * belong in the notepad instead (see `notepad-storage.ts`).
+ */
 export function getPracticeRunner(lessonId: string, taskId: string, label?: string): PracticeRunnerSpec | null {
   const found = runners[practiceRunnerKey(lessonId, taskId)];
   if (found) return found;
-  if (label?.trim()) return fallbackRunner(label);
+  if (label?.trim()) return fallbackCodingRunner(label);
   return null;
 }
 

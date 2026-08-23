@@ -1,0 +1,656 @@
+{
+  "lessons": {
+    "8.1": [
+      {
+        "type": "video",
+        "title": "If statements in Python are easy (if, elif, else) 🤔",
+        "description": "Best video for if else — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=FvMPfrgGeKs",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "FvMPfrgGeKs",
+        "thumbnail": "https://i.ytimg.com/vi/FvMPfrgGeKs/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "If Else Statements in Python | Python for Beginners",
+        "description": "Alternative explanation of if else.",
+        "url": "https://www.youtube.com/watch?v=-BOBedcjySI",
+        "source": "YouTube",
+        "channel": "Alex The Analyst",
+        "videoId": "-BOBedcjySI",
+        "thumbnail": "https://i.ytimg.com/vi/-BOBedcjySI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "8.5": [
+      {
+        "type": "video",
+        "title": "#22 Python Tutorial for Beginners | Break Continue Pass in Python",
+        "description": "Best video for break continue — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=yCZBnjF4_tU",
+        "source": "YouTube",
+        "channel": "Telusko",
+        "videoId": "yCZBnjF4_tU",
+        "thumbnail": "https://i.ytimg.com/vi/yCZBnjF4_tU/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python break continue pass ⛔",
+        "description": "Alternative explanation of break continue.",
+        "url": "https://www.youtube.com/watch?v=97NdNoA3XUQ",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "97NdNoA3XUQ",
+        "thumbnail": "https://i.ytimg.com/vi/97NdNoA3XUQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "8.2": [
+      {
+        "type": "video",
+        "title": "Python For Beginners - Nested IF Statements Explained",
+        "description": "Best video for Nested Conditions — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=JYPQxNq-I24",
+        "source": "YouTube",
+        "channel": "TeachingCS",
+        "videoId": "JYPQxNq-I24",
+        "thumbnail": "https://i.ytimg.com/vi/JYPQxNq-I24/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Excel - Creating a Nested IF Function",
+        "description": "Alternative explanation of Nested Conditions.",
+        "url": "https://www.youtube.com/watch?v=9jmcJd8kDyw",
+        "source": "YouTube",
+        "channel": "Chris Menard",
+        "videoId": "9jmcJd8kDyw",
+        "thumbnail": "https://i.ytimg.com/vi/9jmcJd8kDyw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "7.7": [
+      {
+        "type": "video",
+        "title": "Learn type casting in 7 minutes! 💱",
+        "description": "Best video for Type Conversion — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=Qtq83lAoogM",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "Qtq83lAoogM",
+        "thumbnail": "https://i.ytimg.com/vi/Qtq83lAoogM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Type Casting | C Programming Tutorial",
+        "description": "Alternative explanation of Type Conversion.",
+        "url": "https://www.youtube.com/watch?v=xKOPZ4mEH3I",
+        "source": "YouTube",
+        "channel": "Portfolio Courses",
+        "videoId": "xKOPZ4mEH3I",
+        "thumbnail": "https://i.ytimg.com/vi/xKOPZ4mEH3I/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "8.3": [
+      {
+        "type": "video",
+        "title": "Learn Python for loops in 5 minutes! 🔁",
+        "description": "Best video for for loops — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=KWgYha0clzw",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "KWgYha0clzw",
+        "thumbnail": "https://i.ytimg.com/vi/KWgYha0clzw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python For Loops - Python Tutorial for Absolute Beginners",
+        "description": "Alternative explanation of for loops.",
+        "url": "https://www.youtube.com/watch?v=94UHCEmprCY",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "94UHCEmprCY",
+        "thumbnail": "https://i.ytimg.com/vi/94UHCEmprCY/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "7.6": [
+      {
+        "type": "video",
+        "title": "#11 Python Tutorial for Beginners | Operators in Python",
+        "description": "Best video for Operators — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=v5MR5JnKcZI",
+        "source": "YouTube",
+        "channel": "Telusko",
+        "videoId": "v5MR5JnKcZI",
+        "thumbnail": "https://i.ytimg.com/vi/v5MR5JnKcZI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Logical operators in Python are easy 🔣",
+        "description": "Alternative explanation of Operators.",
+        "url": "https://www.youtube.com/watch?v=W7luvtXeQTA",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "W7luvtXeQTA",
+        "thumbnail": "https://i.ytimg.com/vi/W7luvtXeQTA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "9.1": [
+      {
+        "type": "video",
+        "title": "Functions in Python are easy 📞",
+        "description": "Best video for Functions — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=89cGQjB5R4M",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "89cGQjB5R4M",
+        "thumbnail": "https://i.ytimg.com/vi/89cGQjB5R4M/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Functions - Visually Explained",
+        "description": "Alternative explanation of Functions.",
+        "url": "https://www.youtube.com/watch?v=KW6qncswzHw",
+        "source": "YouTube",
+        "channel": "Visually Explained",
+        "videoId": "KW6qncswzHw",
+        "thumbnail": "https://i.ytimg.com/vi/KW6qncswzHw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "9.2": [
+      {
+        "type": "video",
+        "title": "Beginner Python Tutorial 84 - Arguments and Parameters",
+        "description": "Best video for Parameters — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=i_ZEaE5vfE0",
+        "source": "YouTube",
+        "channel": "Caleb Curry",
+        "videoId": "i_ZEaE5vfE0",
+        "thumbnail": "https://i.ytimg.com/vi/i_ZEaE5vfE0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Functions with Arguments in Python | Parameters vs Arguments | Python Tutorials for Beginners #lec60",
+        "description": "Alternative explanation of Parameters.",
+        "url": "https://www.youtube.com/watch?v=uY8QPE0dcSs",
+        "source": "YouTube",
+        "channel": "Jenny's Lectures CS IT",
+        "videoId": "uY8QPE0dcSs",
+        "thumbnail": "https://i.ytimg.com/vi/uY8QPE0dcSs/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "9.4": [
+      {
+        "type": "video",
+        "title": "69 🐍 Python Local vs Global Variables Explained | Variable Scope Made Easy",
+        "description": "Best video for Local Scope — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=at-HLtgFfd8",
+        "source": "YouTube",
+        "channel": "OrionVexa",
+        "videoId": "at-HLtgFfd8",
+        "thumbnail": "https://i.ytimg.com/vi/at-HLtgFfd8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Scope of Variables - Local vs Global",
+        "description": "Alternative explanation of Local Scope.",
+        "url": "https://www.youtube.com/watch?v=elMQ5YtZPxA",
+        "source": "YouTube",
+        "channel": "Neso Academy",
+        "videoId": "elMQ5YtZPxA",
+        "thumbnail": "https://i.ytimg.com/vi/elMQ5YtZPxA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "9.3": [
+      {
+        "type": "video",
+        "title": "Python return statement 🔙",
+        "description": "Best video for Return Values — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=ZnBQfF5JFDM",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "ZnBQfF5JFDM",
+        "thumbnail": "https://i.ytimg.com/vi/ZnBQfF5JFDM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python For Beginners - The Return Statement Explained",
+        "description": "Alternative explanation of Return Values.",
+        "url": "https://www.youtube.com/watch?v=1Ur-r4MgGfE",
+        "source": "YouTube",
+        "channel": "TeachingCS",
+        "videoId": "1Ur-r4MgGfE",
+        "thumbnail": "https://i.ytimg.com/vi/1Ur-r4MgGfE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "8.6": [
+      {
+        "type": "video",
+        "title": "Boolean Logic & Logic Gates: Crash Course Computer Science #3",
+        "description": "Best video for Boolean Conditions — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=gI-qXk7XojA",
+        "source": "YouTube",
+        "channel": "CrashCourse",
+        "videoId": "gI-qXk7XojA",
+        "thumbnail": "https://i.ytimg.com/vi/gI-qXk7XojA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Logic Gates, Truth Tables, Boolean Algebra AND, OR, NOT, NAND & NOR",
+        "description": "Alternative explanation of Boolean Conditions.",
+        "url": "https://www.youtube.com/watch?v=JQBRzsPhw2w",
+        "source": "YouTube",
+        "channel": "The Organic Chemistry Tutor",
+        "videoId": "JQBRzsPhw2w",
+        "thumbnail": "https://i.ytimg.com/vi/JQBRzsPhw2w/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "9.5": [
+      {
+        "type": "video",
+        "title": "Scope of Variables - Local vs Global",
+        "description": "Best video for Global Scope — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=elMQ5YtZPxA",
+        "source": "YouTube",
+        "channel": "Neso Academy",
+        "videoId": "elMQ5YtZPxA",
+        "thumbnail": "https://i.ytimg.com/vi/elMQ5YtZPxA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Tutorial: Variable Scope - Understanding the LEGB rule and global/nonlocal statements",
+        "description": "Alternative explanation of Global Scope.",
+        "url": "https://www.youtube.com/watch?v=QVdf0LgmICw",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "QVdf0LgmICw",
+        "thumbnail": "https://i.ytimg.com/vi/QVdf0LgmICw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "9.7": [
+      {
+        "type": "video",
+        "title": "What are &quot;Pure Functions&quot; and &quot;Side Effects&quot;?",
+        "description": "Best video for Pure Functions — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=4IIWib5MZKg",
+        "source": "YouTube",
+        "channel": "Academind",
+        "videoId": "4IIWib5MZKg",
+        "thumbnail": "https://i.ytimg.com/vi/4IIWib5MZKg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Functional JavaScript Tutorial - #3 Side Effects & Pure Functions",
+        "description": "Alternative explanation of Pure Functions.",
+        "url": "https://www.youtube.com/watch?v=r8fUwk5gLNM",
+        "source": "YouTube",
+        "channel": "Zaiste Programming",
+        "videoId": "r8fUwk5gLNM",
+        "thumbnail": "https://i.ytimg.com/vi/r8fUwk5gLNM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "9.6": [
+      {
+        "type": "video",
+        "title": "The Call Stack",
+        "description": "Best video for Call Stack — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=Q2sFmqvpBe0",
+        "source": "YouTube",
+        "channel": "Computer Science Lessons",
+        "videoId": "Q2sFmqvpBe0",
+        "thumbnail": "https://i.ytimg.com/vi/Q2sFmqvpBe0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "How Assembly Functions Work - The Stack Explained",
+        "description": "Alternative explanation of Call Stack.",
+        "url": "https://www.youtube.com/watch?v=u_-oQx_4jvo",
+        "source": "YouTube",
+        "channel": "Mxy",
+        "videoId": "u_-oQx_4jvo",
+        "thumbnail": "https://i.ytimg.com/vi/u_-oQx_4jvo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "10.2": [
+      {
+        "type": "video",
+        "title": "Python tuples 📋",
+        "description": "Best video for Tuples — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=w6hL_dszMxk",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "w6hL_dszMxk",
+        "thumbnail": "https://i.ytimg.com/vi/w6hL_dszMxk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Lists vs Tuples vs Sets - Visually Explained",
+        "description": "Alternative explanation of Tuples.",
+        "url": "https://www.youtube.com/watch?v=11WrzU81q68",
+        "source": "YouTube",
+        "channel": "Visually Explained",
+        "videoId": "11WrzU81q68",
+        "thumbnail": "https://i.ytimg.com/vi/11WrzU81q68/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "10.1": [
+      {
+        "type": "video",
+        "title": "Python lists, sets, and tuples explained 🍍",
+        "description": "Best video for Lists Arrays — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=gOMW_n2-2Mw",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "gOMW_n2-2Mw",
+        "thumbnail": "https://i.ytimg.com/vi/gOMW_n2-2Mw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "How to Use Lists in Python",
+        "description": "Alternative explanation of Lists Arrays.",
+        "url": "https://www.youtube.com/watch?v=9OeznAkyQz4",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "9OeznAkyQz4",
+        "thumbnail": "https://i.ytimg.com/vi/9OeznAkyQz4/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "10.4": [
+      {
+        "type": "video",
+        "title": "Python Lists vs Tuples vs Sets - Visually Explained",
+        "description": "Best video for Sets — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=11WrzU81q68",
+        "source": "YouTube",
+        "channel": "Visually Explained",
+        "videoId": "11WrzU81q68",
+        "thumbnail": "https://i.ytimg.com/vi/11WrzU81q68/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "What are Sets in Python? Python Tutorial for Absolute Beginners | Mosh",
+        "description": "Alternative explanation of Sets.",
+        "url": "https://www.youtube.com/watch?v=t9j8lCUGZXo",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "t9j8lCUGZXo",
+        "thumbnail": "https://i.ytimg.com/vi/t9j8lCUGZXo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "10.3": [
+      {
+        "type": "video",
+        "title": "Python dictionaries are easy 📙",
+        "description": "Best video for Dictionaries — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=MZZSMaEAC2g",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "MZZSMaEAC2g",
+        "thumbnail": "https://i.ytimg.com/vi/MZZSMaEAC2g/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Tutorial for Beginners 5: Dictionaries - Working with Key-Value Pairs",
+        "description": "Alternative explanation of Dictionaries.",
+        "url": "https://www.youtube.com/watch?v=daefaLgNkw0",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "daefaLgNkw0",
+        "thumbnail": "https://i.ytimg.com/vi/daefaLgNkw0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "11.2": [
+      {
+        "type": "video",
+        "title": "Python F-strings - Visually Explained",
+        "description": "Best video for String Formatting — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=H_TPIAEJl68",
+        "source": "YouTube",
+        "channel": "Visually Explained",
+        "videoId": "H_TPIAEJl68",
+        "thumbnail": "https://i.ytimg.com/vi/H_TPIAEJl68/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Quick Tip: F-Strings - How to Use Them and Advanced String Formatting",
+        "description": "Alternative explanation of String Formatting.",
+        "url": "https://www.youtube.com/watch?v=nghuHvKLhJA",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "nghuHvKLhJA",
+        "thumbnail": "https://i.ytimg.com/vi/nghuHvKLhJA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "10.5": [
+      {
+        "type": "video",
+        "title": "Learn Python LIST COMPREHENSIONS in 10 minutes! 📃",
+        "description": "Best video for List Comprehensions — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=YlY2g2xrl6Q",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "YlY2g2xrl6Q",
+        "thumbnail": "https://i.ytimg.com/vi/YlY2g2xrl6Q/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "List Comprehensions - Visually Explained",
+        "description": "Alternative explanation of List Comprehensions.",
+        "url": "https://www.youtube.com/watch?v=DUnY6l482Lk",
+        "source": "YouTube",
+        "channel": "Visually Explained",
+        "videoId": "DUnY6l482Lk",
+        "thumbnail": "https://i.ytimg.com/vi/DUnY6l482Lk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "10.6": [
+      {
+        "type": "video",
+        "title": "Immutable vs Mutable Objects in Python",
+        "description": "Best video for Mutability — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=p9ppfvHv2Us",
+        "source": "YouTube",
+        "channel": "Real Python",
+        "videoId": "p9ppfvHv2Us",
+        "thumbnail": "https://i.ytimg.com/vi/p9ppfvHv2Us/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "What is a Variable in Python? Mutable vs Immutable",
+        "description": "Alternative explanation of Mutability.",
+        "url": "https://www.youtube.com/watch?v=8EOdCDy_fcs",
+        "source": "YouTube",
+        "channel": "Joseph Loves Python",
+        "videoId": "8EOdCDy_fcs",
+        "thumbnail": "https://i.ytimg.com/vi/8EOdCDy_fcs/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "11.4": [
+      {
+        "type": "video",
+        "title": "Write files using Python! ✍",
+        "description": "Best video for File Writing — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=1IYrmTTKOoI",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "1IYrmTTKOoI",
+        "thumbnail": "https://i.ytimg.com/vi/1IYrmTTKOoI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Tutorial: File Objects - Reading and Writing to Files",
+        "description": "Alternative explanation of File Writing.",
+        "url": "https://www.youtube.com/watch?v=Uh2ebFW8OYM",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "Uh2ebFW8OYM",
+        "thumbnail": "https://i.ytimg.com/vi/Uh2ebFW8OYM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "11.3": [
+      {
+        "type": "video",
+        "title": "Python Tutorial: File Objects - Reading and Writing to Files",
+        "description": "Best video for File Reading — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=Uh2ebFW8OYM",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "Uh2ebFW8OYM",
+        "thumbnail": "https://i.ytimg.com/vi/Uh2ebFW8OYM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python File Handling for Beginners",
+        "description": "Alternative explanation of File Reading.",
+        "url": "https://www.youtube.com/watch?v=BRrem1k3904",
+        "source": "YouTube",
+        "channel": "Dave Gray",
+        "videoId": "BRrem1k3904",
+        "thumbnail": "https://i.ytimg.com/vi/BRrem1k3904/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "11.1": [
+      {
+        "type": "video",
+        "title": "String methods in Python are easy! 〰️",
+        "description": "Best video for String Methods — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=tb6EYiHtcXU",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "tb6EYiHtcXU",
+        "thumbnail": "https://i.ytimg.com/vi/tb6EYiHtcXU/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "ALL 47 STRING METHODS IN PYTHON EXPLAINED",
+        "description": "Alternative explanation of String Methods.",
+        "url": "https://www.youtube.com/watch?v=bnSYeYFRCaA",
+        "source": "YouTube",
+        "channel": "Indently",
+        "videoId": "bnSYeYFRCaA",
+        "thumbnail": "https://i.ytimg.com/vi/bnSYeYFRCaA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "11.5": [
+      {
+        "type": "video",
+        "title": "Python Tutorial: CSV Module - How to Read, Parse, and Write CSV Files",
+        "description": "Best video for CSV Files — watch after this lesson.",
+        "url": "https://www.youtube.com/watch?v=q5uM4VKywbA",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "q5uM4VKywbA",
+        "thumbnail": "https://i.ytimg.com/vi/q5uM4VKywbA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Learn HOW to Read CSV Files in Python!",
+        "description": "Alternative explanation of CSV Files.",
+        "url": "https://www.youtube.com/watch?v=H-hagjt65cE",
+        "source": "YouTube",
+        "channel": "Earthly",
+        "videoId": "H-hagjt65cE",
+        "thumbnail": "https://i.ytimg.com/vi/H-hagjt65cE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ]
+  },
+  "phases": {},
+  "projects": {}
+}

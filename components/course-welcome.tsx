@@ -1,5 +1,5 @@
 import { PracticeRichText } from "@/components/practice-rich-text";
-import type { BeginnerIntro, BeginnerTerm } from "@/lib/learning-model";
+import type { BeginnerIntro } from "@/lib/learning-model";
 
 export function Emphasis({ text }: { text: string }) {
   const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g);
@@ -12,34 +12,6 @@ export function Emphasis({ text }: { text: string }) {
         if (italic) return <em key={index}><PracticeRichText text={italic[1]} /></em>;
         return <PracticeRichText key={index} text={part} />;
       })}
-    </>
-  );
-}
-
-function TermTable({ heading, items }: { heading: string; items: BeginnerTerm[] }) {
-  if (items.length === 0) return null;
-  return (
-    <>
-      <h3 className="mt-8 text-xl font-bold uppercase tracking-wide sm:text-2xl">{heading}</h3>
-      <table className="ih-glossary-table">
-        <caption className="sr-only">Word and meaning, in the order you will meet them</caption>
-        <thead>
-          <tr>
-            <th scope="col">Word</th>
-            <th scope="col">Meaning</th>
-          </tr>
-        </thead>
-        <tbody>
-          {items.map((item) => (
-            <tr key={item.term}>
-              <th scope="row">{item.term}</th>
-              <td>
-                <Emphasis text={item.meaning} />
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
     </>
   );
 }
@@ -61,8 +33,6 @@ export function CourseWelcome({
               <Emphasis text={paragraph} />
             </p>
           ))}
-          <TermTable heading="Everyday words" items={intro.everydayTerms} />
-          <TermTable heading="Words you will meet often" items={intro.terms} />
           {intro.closingParagraphs.map((paragraph) => (
             <p key={paragraph.slice(0, 64)} className="mt-6 text-lg leading-relaxed">
               <Emphasis text={paragraph} />

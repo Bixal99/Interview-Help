@@ -5,6 +5,8 @@ import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BrandWordmark } from "@/components/brand-mark";
+import { CourseProgressBar } from "@/components/course-progress-bar";
+import { useCourseChromeProgress } from "@/components/course-chrome-progress";
 import { SITE_NAME } from "@/lib/brand";
 import type { SearchHit } from "@/lib/learning-model";
 import { LandingSearch } from "./landing-search";
@@ -23,6 +25,8 @@ function linkIsOn(href: string, pathname: string) {
 
 export function LandingHeader({ hits }: { hits?: SearchHit[] }) {
   const pathname = usePathname();
+  const courseProgress = useCourseChromeProgress();
+  const inLesson = Boolean(courseProgress);
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -50,6 +54,7 @@ export function LandingHeader({ hits }: { hits?: SearchHit[] }) {
   }, [open]);
 
   useEffect(() => {
+    if (inLesson) return;
     const handler = (event: KeyboardEvent) => {
       if (!(event.ctrlKey || event.metaKey) || event.key.toLowerCase() !== "k") return;
       event.preventDefault();
@@ -63,7 +68,7 @@ export function LandingHeader({ hits }: { hits?: SearchHit[] }) {
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, []);
+  }, [inLesson]);
 
   return (
     <>
@@ -86,12 +91,24 @@ export function LandingHeader({ hits }: { hits?: SearchHit[] }) {
         </nav>
 
         <div className="ih-landing-nav-end">
-          <div className="ih-landing-nav-desktop-tools hidden lg:flex">
-            <LandingSearch hits={hits} />
-            <Link href="/courses" className="ih-landing-cta ih-landing-nav-cta">
-              Start learning
-            </Link>
-          </div>
+          {inLesson && courseProgress ? (
+            <div className="ih-landing-nav-lesson-progress">
+              <CourseProgressBar
+                slug={courseProgress.slug}
+                lessonCount={courseProgress.lessonCount}
+                projectCount={courseProgress.projectCount}
+                variant="nav"
+                gateHref={courseProgress.gateHref}
+              />
+            </div>
+          ) : (
+            <div className="ih-landing-nav-desktop-tools hidden lg:flex">
+              <LandingSearch hits={hits} />
+              <Link href="/courses" className="ih-landing-cta ih-landing-nav-cta">
+                Start learning
+              </Link>
+            </div>
+          )}
           <button
             type="button"
             className="ih-landing-menu"
@@ -107,7 +124,19 @@ export function LandingHeader({ hits }: { hits?: SearchHit[] }) {
 
       {open ? (
         <nav id="landing-menu" className="ih-landing-nav-mobile" aria-label="Mobile">
-          <LandingSearch hits={hits} />
+          {inLesson && courseProgress ? (
+            <div className="mb-4 lg:hidden">
+              <CourseProgressBar
+                slug={courseProgress.slug}
+                lessonCount={courseProgress.lessonCount}
+                projectCount={courseProgress.projectCount}
+                variant="nav"
+                gateHref={courseProgress.gateHref}
+              />
+            </div>
+          ) : (
+            <LandingSearch hits={hits} />
+          )}
           <div className="flex flex-col gap-1">
             {nav.map((item) => (
               <Link
@@ -120,9 +149,11 @@ export function LandingHeader({ hits }: { hits?: SearchHit[] }) {
               </Link>
             ))}
           </div>
-          <Link href="/courses" onClick={() => setOpen(false)} className="ih-landing-cta mt-5 w-full">
-            Start learning
-          </Link>
+          {!inLesson ? (
+            <Link href="/courses" onClick={() => setOpen(false)} className="ih-landing-cta mt-5 w-full">
+              Start learning
+            </Link>
+          ) : null}
         </nav>
       ) : null}
       </header>

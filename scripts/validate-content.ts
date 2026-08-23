@@ -3,6 +3,7 @@ import path from "node:path";
 import { contentRegistry, guideRegistry, roadmapRegistry, templateRegistry } from "../lib/course-catalog";
 import { extractFencedBlocks, extractHeadings, extractYouTubeInfo, markdownRouteMap, resolveMarkdownSourcePath } from "../lib/content-utils";
 import { DATA_ROOT, PROJECT_ROOT, projectPath } from "../lib/paths";
+import { auditProjectCatalogs } from "./audit-projects";
 
 const warnings: string[] = [];
 const errors: string[] = [];
@@ -46,6 +47,9 @@ for (const entry of contentRegistry) {
   if (entry.sourcePath.toLowerCase().endsWith("/readme.md")) errors.push(`${entry.sourcePath}: folder README must not be registered`);
   if (!markdownRouteMap[path.basename(entry.sourcePath).toLowerCase()]) errors.push(`${entry.sourcePath}: route mapping is missing`);
 }
+for (const course of roadmapRegistry) {
+  if (!fs.existsSync(projectPath(course.projectSourcePath))) errors.push(`${course.projectSourcePath}: registered project catalog is missing`);
+}
 
 if (!fs.existsSync(path.join(DATA_ROOT, "Job_Tracker.xlsx"))) errors.push("data/Job_Tracker.xlsx: canonical Job Tracker is missing");
 if (!templateRegistry.some((entry) => entry.sourcePath === "content/templates/Master_CV_Template.md")) errors.push("content/templates/Master_CV_Template.md: template is not registered");
@@ -65,7 +69,11 @@ for (const entry of contentRegistry) {
 }
 if (fs.existsSync(path.join(PROJECT_ROOT, "Job_Tracker.xlsx"))) errors.push("Job_Tracker.xlsx: duplicate canonical spreadsheet remains at the repository root");
 
-const documents = [...contentRegistry.map((entry) => entry.sourcePath), ...indexPaths];
+const documents = [
+  ...contentRegistry.map((entry) => entry.sourcePath),
+  ...roadmapRegistry.map((entry) => entry.projectSourcePath),
+  ...indexPaths,
+];
 for (const sourcePath of documents) {
   if (!fs.existsSync(projectPath(sourcePath))) continue;
   const source = sourceAt(sourcePath);
@@ -115,11 +123,11 @@ for (const sourcePath of ["content/roadmaps/CS.md", "content/roadmaps/Git.md", "
 if (!mermaidCount) errors.push("content/: no Mermaid diagrams were detected");
 if (!youtubeCount) errors.push("content/: no YouTube resources were detected");
 
-// CS Stories IV–V: flag lingering Title Case lean section labels (compact-note anti-pattern)
+// CS Units IV–V: flag lingering Title Case lean section labels (compact-note anti-pattern)
 {
   const cs = sourceAt("content/roadmaps/CS.md");
-  const start = cs.indexOf("# PHASE 21 -");
-  const end = cs.indexOf("# PHASE 49 -");
+  const start = cs.indexOf("# CHAPTER 21 -");
+  const end = cs.indexOf("# CHAPTER 49 -");
   if (start >= 0 && end > start) {
     const chunk = cs.slice(start, end);
     const antiPattern =
@@ -130,7 +138,7 @@ if (!youtubeCount) errors.push("content/: no YouTube resources were detected");
     }
     if (found.size) {
       warnings.push(
-        `content/roadmaps/CS.md: ${found.size} Title Case lean section label(s) in Stories IV–V still use compact-note form (use ALL-CAPS canonical kickers): ${[...found].join(", ")}`,
+        `content/roadmaps/CS.md: ${found.size} Title Case lean section label(s) in Units IV–V still use compact-note form (use ALL-CAPS canonical kickers): ${[...found].join(", ")}`,
       );
     }
   }
@@ -142,7 +150,11 @@ for (const entry of [...roadmapRegistry, ...guideRegistry]) {
   if (!extractHeadings(sourceAt(entry.sourcePath)).some((heading) => heading.text)) errors.push(`${entry.sourcePath}: searchable headings are missing`);
 }
 
+const projectAudit = auditProjectCatalogs(PROJECT_ROOT);
+errors.push(...projectAudit.errors);
+
 console.log(`Validated ${contentRegistry.length} registered content files, ${headingCount} headings, ${phaseCount} phases, ${mermaidCount} Mermaid diagrams, and ${youtubeCount} YouTube links.`);
+console.log(`Audited ${projectAudit.projectCount} chapter projects covering ${projectAudit.lessonCount} lessons.`);
 warnings.slice(0, 30).forEach((warning) => console.warn(`WARN ${warning}`));
 if (warnings.length > 30) console.warn(`WARN …and ${warnings.length - 30} additional warnings`);
 errors.forEach((error) => console.error(`ERROR ${error}`));

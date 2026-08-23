@@ -1,0 +1,1066 @@
+{
+  "lessons": {
+    "1.1": [
+      {
+        "type": "video",
+        "title": "Cloud Computing Explained: The Most Important Concepts To Know (Be A Better Dev)",
+        "description": "Start here for the clearest visual model of the cloud engineer's ground floor before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=ZaA0kNm18pE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ZaA0kNm18pE/hqdefault.jpg",
+        "videoId": "ZaA0kNm18pE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "What Does a Cloud Engineer ACTUALLY Do? (Tech With Soleyman)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=kriafQfqGZE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/kriafQfqGZE/hqdefault.jpg",
+        "videoId": "kriafQfqGZE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "AWS Networking Basics For Programmers | Hands On (Travis Media)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=2doSoMN2xvI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/2doSoMN2xvI/hqdefault.jpg",
+        "videoId": "2doSoMN2xvI",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "SadServers troubleshooting scenarios",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://sadservers.com/",
+        "source": "sadservers.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Microsoft Learn: describe cloud concepts",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/",
+        "source": "learn.microsoft.com"
+      },
+      {
+        "type": "github",
+        "title": "bregman-arie/devops-exercises",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/bregman-arie/devops-exercises",
+        "source": "GitHub"
+      }
+    ],
+    "2.1": [
+      {
+        "type": "video",
+        "title": "Virtual Machines vs Containers (PowerCert Animated Videos)",
+        "description": "Start here for the clearest visual model of virtualization and cloud service models before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=eyNBf1sqdBQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/eyNBf1sqdBQ/hqdefault.jpg",
+        "videoId": "eyNBf1sqdBQ",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "IaaS vs PaaS vs SaaS cloud service models (Adam Marczak - Azure for Everyone)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=9CVBohl6w0Q",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/9CVBohl6w0Q/hqdefault.jpg",
+        "videoId": "9CVBohl6w0Q",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Cloud Computing In 6 Minutes (Simplilearn)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=M988_fsOSWo",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/M988_fsOSWo/hqdefault.jpg",
+        "videoId": "M988_fsOSWo",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Microsoft Learn sandbox modules",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://learn.microsoft.com/en-us/training/",
+        "source": "learn.microsoft.com"
+      },
+      {
+        "type": "documentation",
+        "title": "NIST definition of cloud computing",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://csrc.nist.gov/publications/detail/sp/800-145/final",
+        "source": "csrc.nist.gov"
+      },
+      {
+        "type": "github",
+        "title": "kelseyhightower/kubernetes-the-hard-way",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/kelseyhightower/kubernetes-the-hard-way",
+        "source": "GitHub"
+      }
+    ],
+    "3.1": [
+      {
+        "type": "video",
+        "title": "AWS Shared Responsibility Model for Beginners (BeSA Cloud Academy)",
+        "description": "Start here for the clearest visual model of providers, regions, zones, and shared responsibility before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=WopTpel6DUY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/WopTpel6DUY/hqdefault.jpg",
+        "videoId": "WopTpel6DUY",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Microsoft Azure Fundamentals - Shared Responsibility Model (Avinash Seth)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=xMZNpJ-xho0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/xMZNpJ-xho0/hqdefault.jpg",
+        "videoId": "xMZNpJ-xho0",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "AWS Fundamentals - Shared Responsibility Model (Julie Elkins)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=5XSq8OAeavg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/5XSq8OAeavg/hqdefault.jpg",
+        "videoId": "5XSq8OAeavg",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "CloudPing latency comparison",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://www.cloudping.info/",
+        "source": "cloudping.info"
+      },
+      {
+        "type": "documentation",
+        "title": "AWS global infrastructure",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://aws.amazon.com/about-aws/global-infrastructure/",
+        "source": "aws.amazon.com"
+      },
+      {
+        "type": "github",
+        "title": "awsdocs/aws-doc-sdk-examples",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/awsdocs/aws-doc-sdk-examples",
+        "source": "GitHub"
+      }
+    ],
+    "4.1": [
+      {
+        "type": "video",
+        "title": "AWS IAM Core Concepts You NEED to Know (Be A Better Dev)",
+        "description": "Start here for the clearest visual model of identity and access management before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=_ZCTvmaPgao",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/_ZCTvmaPgao/hqdefault.jpg",
+        "videoId": "_ZCTvmaPgao",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "AWS IAM Basics (Tiny Technical Tutorials)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=hAk-7ImN6iM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/hAk-7ImN6iM/hqdefault.jpg",
+        "videoId": "hAk-7ImN6iM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Cloud IAM Deep Dive: AWS, Entra ID, GCP (CyberXplain Academy)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=iPoJL8EY27E",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/iPoJL8EY27E/hqdefault.jpg",
+        "videoId": "iPoJL8EY27E",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "AWS policy simulator",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://policysim.aws.amazon.com/",
+        "source": "policysim.aws.amazon.com"
+      },
+      {
+        "type": "documentation",
+        "title": "AWS IAM best practices",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html",
+        "source": "docs.aws.amazon.com"
+      },
+      {
+        "type": "github",
+        "title": "cloud-custodian/cloud-custodian",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/cloud-custodian/cloud-custodian",
+        "source": "GitHub"
+      }
+    ],
+    "5.1": [
+      {
+        "type": "video",
+        "title": "AWS VPC & Subnets For Beginners (Sam Meech-Ward)",
+        "description": "Start here for the clearest visual model of cloud networking: vpcs, subnets, routes, and private access before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=TUTqYEZZUdc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/TUTqYEZZUdc/hqdefault.jpg",
+        "videoId": "TUTqYEZZUdc",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Amazon VPC Basics (Tiny Technical Tutorials)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=7_NNlnH7sAg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/7_NNlnH7sAg/hqdefault.jpg",
+        "videoId": "7_NNlnH7sAg",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "AWS VPC vs Real Network (Network Educative)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=9pbD4L5M-mY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/9pbD4L5M-mY/hqdefault.jpg",
+        "videoId": "9pbD4L5M-mY",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "AWS Networking workshops",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://networking.workshop.aws/",
+        "source": "networking.workshop.aws"
+      },
+      {
+        "type": "documentation",
+        "title": "AWS VPC documentation",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html",
+        "source": "docs.aws.amazon.com"
+      },
+      {
+        "type": "github",
+        "title": "aws-samples/aws-vpc-networking-workshops",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/aws-samples/aws-vpc-networking-workshops",
+        "source": "GitHub"
+      }
+    ],
+    "6.1": [
+      {
+        "type": "video",
+        "title": "Horizontal Scaling, Load Balancing, Immutable Infrastructure (Sam Meech-Ward)",
+        "description": "Start here for the clearest visual model of compute, images, load balancing, and autoscaling before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=FEbfvTZCYQQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/FEbfvTZCYQQ/hqdefault.jpg",
+        "videoId": "FEbfvTZCYQQ",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "AWS Auto Scaling Groups and Load Balancers (Sam Meech-Ward)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=AmQeeB4ygZc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/AmQeeB4ygZc/hqdefault.jpg",
+        "videoId": "AmQeeB4ygZc",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "AWS Auto Scaling Group Introduction (Cloud Guru)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=s-H2kbGWWe4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/s-H2kbGWWe4/hqdefault.jpg",
+        "videoId": "s-H2kbGWWe4",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "AWS Well-Architected performance labs",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://www.wellarchitectedlabs.com/performance-efficiency/",
+        "source": "wellarchitectedlabs.com"
+      },
+      {
+        "type": "documentation",
+        "title": "AWS EC2 Auto Scaling concepts",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html",
+        "source": "docs.aws.amazon.com"
+      },
+      {
+        "type": "github",
+        "title": "aws-samples/amazon-ec2-auto-scaling-group-examples",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/aws-samples/amazon-ec2-auto-scaling-group-examples",
+        "source": "GitHub"
+      }
+    ],
+    "7.1": [
+      {
+        "type": "video",
+        "title": "Amazon S3: Data Durability and Global Resiliency (Amazon Web Services)",
+        "description": "Start here for the clearest visual model of object, block, and file storage before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=9vhEqjR2zsc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/9vhEqjR2zsc/hqdefault.jpg",
+        "videoId": "9vhEqjR2zsc",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Bucket options in Cloud Storage (Google Cloud Tech)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=8DMOJ6Lgm7s",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/8DMOJ6Lgm7s/hqdefault.jpg",
+        "videoId": "8DMOJ6Lgm7s",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "System Design of S3 and Azure Blob (Code And Joy)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=U_FkdTdJrqo",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/U_FkdTdJrqo/hqdefault.jpg",
+        "videoId": "U_FkdTdJrqo",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "MinIO object storage quickstart",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://min.io/docs/minio/container/index.html",
+        "source": "min.io"
+      },
+      {
+        "type": "documentation",
+        "title": "AWS storage services overview",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://aws.amazon.com/products/storage/",
+        "source": "aws.amazon.com"
+      },
+      {
+        "type": "github",
+        "title": "minio/minio",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/minio/minio",
+        "source": "GitHub"
+      }
+    ],
+    "8.1": [
+      {
+        "type": "video",
+        "title": "7 Must-know Strategies to Scale Your Database (ByteByteGo)",
+        "description": "Start here for the clearest visual model of managed databases, nosql, replication, and caching before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=_1IKwnbscQU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/_1IKwnbscQU/hqdefault.jpg",
+        "videoId": "_1IKwnbscQU",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Database Replication & Sharding Explained (Hayk Simonyan)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=jLEp1XI_L6Q",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/jLEp1XI_L6Q/hqdefault.jpg",
+        "videoId": "jLEp1XI_L6Q",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How do NoSQL databases work? (Simply Explained)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=0buKQHokLK8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/0buKQHokLK8/hqdefault.jpg",
+        "videoId": "0buKQHokLK8",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "SQLBolt interactive SQL",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://sqlbolt.com/",
+        "source": "sqlbolt.com"
+      },
+      {
+        "type": "documentation",
+        "title": "AWS database services",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://aws.amazon.com/products/databases/",
+        "source": "aws.amazon.com"
+      },
+      {
+        "type": "github",
+        "title": "aws-samples/aws-database-migration-samples",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/aws-samples/aws-database-migration-samples",
+        "source": "GitHub"
+      }
+    ],
+    "9.1": [
+      {
+        "type": "video",
+        "title": "What Is A CDN? How Does It Work? (ByteByteGo)",
+        "description": "Start here for the clearest visual model of dns, load balancing, cdn, and edge delivery before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=RI9np1LWzqw",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/RI9np1LWzqw/hqdefault.jpg",
+        "videoId": "RI9np1LWzqw",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "What is a Content Delivery Network? (IBM Technology)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=Bsq5cKkS33I",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Bsq5cKkS33I/hqdefault.jpg",
+        "videoId": "Bsq5cKkS33I",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "What is a Load Balancer? (IBM Technology)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=sCR3SAVdyCc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/sCR3SAVdyCc/hqdefault.jpg",
+        "videoId": "sCR3SAVdyCc",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "WebPageTest",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://www.webpagetest.org/",
+        "source": "webpagetest.org"
+      },
+      {
+        "type": "documentation",
+        "title": "Cloudflare CDN learning center",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://www.cloudflare.com/learning/cdn/what-is-a-cdn/",
+        "source": "cloudflare.com"
+      },
+      {
+        "type": "github",
+        "title": "varnishcache/varnish-cache",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/varnishcache/varnish-cache",
+        "source": "GitHub"
+      }
+    ],
+    "10.1": [
+      {
+        "type": "video",
+        "title": "Event-Driven Architecture: Explained in 7 Minutes (Alex Hyett)",
+        "description": "Start here for the clearest visual model of serverless and event-driven architecture before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=gOuAqRaDdHA",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/gOuAqRaDdHA/hqdefault.jpg",
+        "videoId": "gOuAqRaDdHA",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "AWS SQS vs SNS vs EventBridge (Be A Better Dev)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=RoKAEzdcr7k",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/RoKAEzdcr7k/hqdefault.jpg",
+        "videoId": "RoKAEzdcr7k",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Cloud Pub/Sub in a minute (Google Cloud Tech)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=jLI-84UjZLE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/jLI-84UjZLE/hqdefault.jpg",
+        "videoId": "jLI-84UjZLE",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Serverless Land workshops",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://serverlessland.com/learn",
+        "source": "serverlessland.com"
+      },
+      {
+        "type": "documentation",
+        "title": "AWS serverless decision guide",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://docs.aws.amazon.com/decision-guides/latest/serverless-or-containers-on-aws-how-to-choose/welcome.html",
+        "source": "docs.aws.amazon.com"
+      },
+      {
+        "type": "github",
+        "title": "aws-samples/serverless-patterns",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/aws-samples/serverless-patterns",
+        "source": "GitHub"
+      }
+    ],
+    "11.1": [
+      {
+        "type": "video",
+        "title": "Containers on AWS Overview: ECS, EKS, Fargate, ECR (TechWorld with Nana)",
+        "description": "Start here for the clearest visual model of containers and managed kubernetes before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=AYAh6YDXuho",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/AYAh6YDXuho/hqdefault.jpg",
+        "videoId": "AYAh6YDXuho",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Kubernetes Explained in 6 Minutes (ByteByteGo)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=TlHvYWVUZyc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/TlHvYWVUZyc/hqdefault.jpg",
+        "videoId": "TlHvYWVUZyc",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "What is Managed Kubernetes AKS, EKS, GKE (Cloud Security Podcast)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=0_c4vblP_7U",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/0_c4vblP_7U/hqdefault.jpg",
+        "videoId": "0_c4vblP_7U",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Killercoda Kubernetes scenarios",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://killercoda.com/kubernetes",
+        "source": "killercoda.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Kubernetes concepts",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://kubernetes.io/docs/concepts/",
+        "source": "kubernetes.io"
+      },
+      {
+        "type": "github",
+        "title": "kubernetes/examples",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/kubernetes/examples",
+        "source": "GitHub"
+      }
+    ],
+    "12.1": [
+      {
+        "type": "video",
+        "title": "Terraform explained in 15 mins (TechWorld with Nana)",
+        "description": "Start here for the clearest visual model of infrastructure as code with terraform and native tools before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=l5k1ai_GBDE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/l5k1ai_GBDE/hqdefault.jpg",
+        "videoId": "l5k1ai_GBDE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Complete Terraform Course - Beginner to Pro (DevOps Directive)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=7xngnjfIlK4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/7xngnjfIlK4/hqdefault.jpg",
+        "videoId": "7xngnjfIlK4",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Terraform remote state backends explained (Learn @ Qodea)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=jSoMQCBxp7E",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/jSoMQCBxp7E/hqdefault.jpg",
+        "videoId": "jSoMQCBxp7E",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "HashiCorp Terraform tutorials",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://developer.hashicorp.com/terraform/tutorials",
+        "source": "developer.hashicorp.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Terraform language documentation",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://developer.hashicorp.com/terraform/language",
+        "source": "developer.hashicorp.com"
+      },
+      {
+        "type": "github",
+        "title": "hashicorp/terraform",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/hashicorp/terraform",
+        "source": "GitHub"
+      }
+    ],
+    "13.1": [
+      {
+        "type": "video",
+        "title": "Azure Landing Zones - Blueprint and Best Practices (Microsoft Mechanics)",
+        "description": "Start here for the clearest visual model of landing zones, accounts, governance, and policy before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=VTnqUDMchXA",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/VTnqUDMchXA/hqdefault.jpg",
+        "videoId": "VTnqUDMchXA",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Azure Governance Explained (Mike in the Cloud)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=1I40-HIq7Qs",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/1I40-HIq7Qs/hqdefault.jpg",
+        "videoId": "1I40-HIq7Qs",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "What Is A Cloud Landing Zone? (Cloud Stack Studio)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=N0_jxxGvJW4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/N0_jxxGvJW4/hqdefault.jpg",
+        "videoId": "N0_jxxGvJW4",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Azure landing zone sandbox",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/",
+        "source": "learn.microsoft.com"
+      },
+      {
+        "type": "documentation",
+        "title": "AWS Control Tower landing zone",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://docs.aws.amazon.com/controltower/latest/userguide/getting-started-with-control-tower.html",
+        "source": "docs.aws.amazon.com"
+      },
+      {
+        "type": "github",
+        "title": "awslabs/landing-zone-accelerator-on-aws",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/awslabs/landing-zone-accelerator-on-aws",
+        "source": "GitHub"
+      }
+    ],
+    "14.1": [
+      {
+        "type": "video",
+        "title": "Secrets Management: Secure Credentials and Avoid Data Leaks (IBM Technology)",
+        "description": "Start here for the clearest visual model of secrets, encryption, and key management before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=BqekRTA6VCs",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/BqekRTA6VCs/hqdefault.jpg",
+        "videoId": "BqekRTA6VCs",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Encryption with Cloud KMS Keys (Google Cloud Tech)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=WKZC93y-aWI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/WKZC93y-aWI/hqdefault.jpg",
+        "videoId": "WKZC93y-aWI",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "AWS Key Management Service (Digital Cloud Training)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=zSUUBAxjIbk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/zSUUBAxjIbk/hqdefault.jpg",
+        "videoId": "zSUUBAxjIbk",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Gitleaks",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://github.com/gitleaks/gitleaks",
+        "source": "GitHub"
+      },
+      {
+        "type": "documentation",
+        "title": "AWS KMS concepts",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html",
+        "source": "docs.aws.amazon.com"
+      },
+      {
+        "type": "github",
+        "title": "external-secrets/external-secrets",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/external-secrets/external-secrets",
+        "source": "GitHub"
+      }
+    ],
+    "15.1": [
+      {
+        "type": "video",
+        "title": "Observability vs APM vs Monitoring (IBM Technology)",
+        "description": "Start here for the clearest visual model of cloud observability and operations before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=CAQ_a2-9UOI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/CAQ_a2-9UOI/hqdefault.jpg",
+        "videoId": "CAQ_a2-9UOI",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Metrics, Logs and Traces (Tech Upskill)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=aJpzr8648XE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/aJpzr8648XE/hqdefault.jpg",
+        "videoId": "aJpzr8648XE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Observability vs Monitoring vs Logging vs Alerting (Cloud Native Consulting)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=TYE2u7QZNVA",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/TYE2u7QZNVA/hqdefault.jpg",
+        "videoId": "TYE2u7QZNVA",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Grafana Play",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://play.grafana.org/",
+        "source": "play.grafana.org"
+      },
+      {
+        "type": "documentation",
+        "title": "OpenTelemetry documentation",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://opentelemetry.io/docs/",
+        "source": "opentelemetry.io"
+      },
+      {
+        "type": "github",
+        "title": "open-telemetry/opentelemetry-demo",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/open-telemetry/opentelemetry-demo",
+        "source": "GitHub"
+      }
+    ],
+    "16.1": [
+      {
+        "type": "video",
+        "title": "Cybersecurity and Zero Trust (IBM Technology)",
+        "description": "Start here for the clearest visual model of cloud security, governance, and compliance before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=FMMWSLIcaME",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/FMMWSLIcaME/hqdefault.jpg",
+        "videoId": "FMMWSLIcaME",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "What is Zero Trust Network Access? (The CISO Perspective)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=DLQAbJm4gFM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/DLQAbJm4gFM/hqdefault.jpg",
+        "videoId": "DLQAbJm4gFM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Accelerating Zero Trust (Varonis)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=LCRSuIz5D24",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/LCRSuIz5D24/hqdefault.jpg",
+        "videoId": "LCRSuIz5D24",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "flaws.cloud",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "http://flaws.cloud/",
+        "source": "flaws.cloud"
+      },
+      {
+        "type": "documentation",
+        "title": "AWS Security Pillar",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/welcome.html",
+        "source": "docs.aws.amazon.com"
+      },
+      {
+        "type": "github",
+        "title": "cloud-custodian/cloud-custodian",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/cloud-custodian/cloud-custodian",
+        "source": "GitHub"
+      }
+    ],
+    "17.1": [
+      {
+        "type": "video",
+        "title": "Disaster Recovery of Workloads on AWS (AWS Events)",
+        "description": "Start here for the clearest visual model of reliability, high availability, and disaster recovery before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=cJZw5mrxryA",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/cJZw5mrxryA/hqdefault.jpg",
+        "videoId": "cJZw5mrxryA",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Disaster Recovery vs High Availability vs Resiliency (SoftWiz Circle)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=gbsG1i3zqHM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/gbsG1i3zqHM/hqdefault.jpg",
+        "videoId": "gbsG1i3zqHM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "High Availability and Disaster Recovery on AWS (Pluralsight)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=ci1Nv2iVo6s",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ci1Nv2iVo6s/hqdefault.jpg",
+        "videoId": "ci1Nv2iVo6s",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "AWS Well-Architected reliability labs",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://www.wellarchitectedlabs.com/reliability/",
+        "source": "wellarchitectedlabs.com"
+      },
+      {
+        "type": "documentation",
+        "title": "AWS Reliability Pillar",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html",
+        "source": "docs.aws.amazon.com"
+      },
+      {
+        "type": "github",
+        "title": "aws-samples/aws-resilience-hub-tools",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/aws-samples/aws-resilience-hub-tools",
+        "source": "GitHub"
+      }
+    ],
+    "18.1": [
+      {
+        "type": "video",
+        "title": "Cloud Cost Optimization Strategy Explained - FinOps (Abhishek.Veeramalla)",
+        "description": "Start here for the clearest visual model of finops and cloud cost engineering before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=B3kC9gBqO88",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/B3kC9gBqO88/hqdefault.jpg",
+        "videoId": "B3kC9gBqO88",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Cloud Cost Management Explained (Harness)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=1d72POCv3Dg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/1d72POCv3Dg/hqdefault.jpg",
+        "videoId": "1d72POCv3Dg",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "FinOps in GCP (TechTrapture)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=cR7P4i-yTvU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/cR7P4i-yTvU/hqdefault.jpg",
+        "videoId": "cR7P4i-yTvU",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Infracost get started",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://www.infracost.io/docs/",
+        "source": "infracost.io"
+      },
+      {
+        "type": "documentation",
+        "title": "FinOps Framework",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://www.finops.org/framework/",
+        "source": "finops.org"
+      },
+      {
+        "type": "github",
+        "title": "infracost/infracost",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/infracost/infracost",
+        "source": "GitHub"
+      }
+    ],
+    "19.1": [
+      {
+        "type": "video",
+        "title": "Multi vs Hybrid vs Single Cloud (SAP LeanIX)",
+        "description": "Start here for the clearest visual model of hybrid cloud, multi-cloud, and migration before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=8Iveev7-fsU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/8Iveev7-fsU/hqdefault.jpg",
+        "videoId": "8Iveev7-fsU",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "6 Cloud Migration Strategies (IT k Funde)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=H_ShSkRTNnM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/H_ShSkRTNnM/hqdefault.jpg",
+        "videoId": "H_ShSkRTNnM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Migration of a Containerized Legacy Application (HashiCorp)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=fLZX5Qdjhfk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/fLZX5Qdjhfk/hqdefault.jpg",
+        "videoId": "fLZX5Qdjhfk",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Azure Cloud Adoption Framework",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/",
+        "source": "learn.microsoft.com"
+      },
+      {
+        "type": "documentation",
+        "title": "AWS migration strategy",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html",
+        "source": "docs.aws.amazon.com"
+      },
+      {
+        "type": "github",
+        "title": "GoogleCloudPlatform/cloud-foundation-fabric",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/GoogleCloudPlatform/cloud-foundation-fabric",
+        "source": "GitHub"
+      }
+    ],
+    "20.1": [
+      {
+        "type": "video",
+        "title": "How to Answer System Design Interview Questions (Exponent)",
+        "description": "Start here for the clearest visual model of cloud projects, architecture interviews, and career proof before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=L9TfZdODuFQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/L9TfZdODuFQ/hqdefault.jpg",
+        "videoId": "L9TfZdODuFQ",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "AWS Cloud Interview Questions That Catch Senior Engineers (Cloud With Raj)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=8idaesu3tRM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/8idaesu3tRM/hqdefault.jpg",
+        "videoId": "8idaesu3tRM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Top Cloud Infrastructure Interview Questions (tutoriaLinux)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=yulGNwmync0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/yulGNwmync0/hqdefault.jpg",
+        "videoId": "yulGNwmync0",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Cloud Resume Challenge",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://cloudresumechallenge.dev/",
+        "source": "cloudresumechallenge.dev"
+      },
+      {
+        "type": "documentation",
+        "title": "AWS Well-Architected Framework",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
+        "source": "docs.aws.amazon.com"
+      },
+      {
+        "type": "github",
+        "title": "acantril/learn-cantrill-io-labs",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/acantril/learn-cantrill-io-labs",
+        "source": "GitHub"
+      }
+    ]
+  },
+  "phases": {},
+  "projects": {}
+}

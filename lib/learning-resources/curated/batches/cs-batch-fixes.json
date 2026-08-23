@@ -1,0 +1,82 @@
+{
+  "lessons": {
+    "10.5": [
+      {
+        "type": "video",
+        "title": "How to Loop over Lists in Python",
+        "description": "Iterate over list elements — core iteration pattern for collections.",
+        "url": "https://www.youtube.com/watch?v=9ueMumuFv6g",
+        "source": "YouTube",
+        "channel": "Programming with Mosh",
+        "videoId": "9ueMumuFv6g",
+        "thumbnail": "https://i.ytimg.com/vi/9ueMumuFv6g/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Iterate over Python dictionaries using 'for' loop",
+        "description": "Loop over dictionary keys and values when iterating collections.",
+        "url": "https://www.youtube.com/watch?v=0x_7s2h9Q3c",
+        "source": "YouTube",
+        "channel": "ModernPython",
+        "videoId": "0x_7s2h9Q3c",
+        "thumbnail": "https://i.ytimg.com/vi/0x_7s2h9Q3c/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "10.6": [
+      {
+        "type": "video",
+        "title": "Nesting Dictionaries and Lists in Python",
+        "description": "Combine lists and dictionaries inside one another for nested data.",
+        "url": "https://www.youtube.com/watch?v=lffEqO_5Bfk",
+        "source": "YouTube",
+        "channel": "StudySession",
+        "videoId": "lffEqO_5Bfk",
+        "thumbnail": "https://i.ytimg.com/vi/lffEqO_5Bfk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Nested Dictionaries in Python",
+        "description": "Walkthrough of dictionaries nested inside lists and other dictionaries.",
+        "url": "https://www.youtube.com/watch?v=jakXbai-Wic",
+        "source": "YouTube",
+        "channel": "Jenny's Lectures CS IT",
+        "videoId": "jakXbai-Wic",
+        "thumbnail": "https://i.ytimg.com/vi/jakXbai-Wic/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "11.4": [
+      {
+        "type": "video",
+        "title": "Python Tutorial: Working with JSON Data using the json Module",
+        "description": "Load, parse, and write JSON files with Python's json module.",
+        "url": "https://www.youtube.com/watch?v=9N6a-VLBa2I",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "9N6a-VLBa2I",
+        "thumbnail": "https://i.ytimg.com/vi/9N6a-VLBa2I/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Requests Tutorial: Read JSON from Web APIs",
+        "description": "Fetch and parse JSON from HTTP responses — common real-world usage.",
+        "url": "https://www.youtube.com/watch?v=tb8gHvYlCFs",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "tb8gHvYlCFs",
+        "thumbnail": "https://i.ytimg.com/vi/tb8gHvYlCFs/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "intermediate"
+      }
+    ]
+  }
+}

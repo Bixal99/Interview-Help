@@ -106,7 +106,7 @@ export function TryPlayground({ language }: { language: PlaygroundLanguage }) {
         : heading && !genericTitles.test(heading)
           ? heading
           : "Try it Yourself";
-    document.title = `${plainFormula(label)} · Quarry`;
+    document.title = plainFormula(label);
   }, [heading, importedTitle, isPractice, isProject]);
 
   function persistSource(next: PlaygroundSource) {

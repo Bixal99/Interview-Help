@@ -1,0 +1,1034 @@
+{
+  "lessons": {
+    "1.1": [
+      {
+        "type": "video",
+        "title": "Algorithms - Input & Output",
+        "description": "Identify inputs and outputs in algorithms before writing any code.",
+        "url": "https://www.youtube.com/watch?v=szSz8b49RbE",
+        "source": "YouTube",
+        "channel": "Revise Computer Science",
+        "videoId": "szSz8b49RbE",
+        "thumbnail": "https://i.ytimg.com/vi/szSz8b49RbE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Input and output devices",
+        "description": "Concrete view of how computers take input and produce output.",
+        "url": "https://www.youtube.com/watch?v=NkoS2JXaBuM",
+        "source": "YouTube",
+        "channel": "Micro:bit Educational Foundation",
+        "videoId": "NkoS2JXaBuM",
+        "thumbnail": "https://i.ytimg.com/vi/NkoS2JXaBuM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "2.3": [
+      {
+        "type": "video",
+        "title": "Understanding Binary, Hexadecimal, Decimal",
+        "description": "Clear walkthrough of hex as a compact way to write binary values.",
+        "url": "https://www.youtube.com/watch?v=ZL-LhaaMTTE",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "ZL-LhaaMTTE",
+        "thumbnail": "https://i.ytimg.com/vi/ZL-LhaaMTTE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Read and Write in Hexadecimal, The Easy Way!",
+        "description": "Practice converting and reading hexadecimal numbers.",
+        "url": "https://www.youtube.com/watch?v=bt4zavZCrLg",
+        "source": "YouTube",
+        "channel": "Max's Tech",
+        "videoId": "bt4zavZCrLg",
+        "thumbnail": "https://i.ytimg.com/vi/bt4zavZCrLg/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "3.4": [
+      {
+        "type": "video",
+        "title": "Understanding Logic Gates",
+        "description": "AND, OR, NOT and how gates build digital computation.",
+        "url": "https://www.youtube.com/watch?v=INEtYZqtjTo",
+        "source": "YouTube",
+        "channel": "Spanning Tree",
+        "videoId": "INEtYZqtjTo",
+        "thumbnail": "https://i.ytimg.com/vi/INEtYZqtjTo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Boolean Logic & Logic Gates: Crash Course Computer Science #3",
+        "description": "Animated overview connecting transistors to gate behavior.",
+        "url": "https://www.youtube.com/watch?v=gI-qXk7XojA",
+        "source": "YouTube",
+        "channel": "CrashCourse",
+        "videoId": "gI-qXk7XojA",
+        "thumbnail": "https://i.ytimg.com/vi/gI-qXk7XojA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "interactive",
+        "title": "CircuitVerse Logic Circuit Simulator",
+        "description": "Build and simulate logic gates interactively.",
+        "url": "https://circuitverse.org/",
+        "source": "CircuitVerse",
+        "difficulty": "beginner"
+      }
+    ],
+    "5.6": [
+      {
+        "type": "video",
+        "title": "Just In Time (JIT) Compilers - Computerphile",
+        "description": "Why JIT can be faster than pure interpretation under the right conditions.",
+        "url": "https://www.youtube.com/watch?v=d7KHAVaX_Rs",
+        "source": "YouTube",
+        "channel": "Computerphile",
+        "videoId": "d7KHAVaX_Rs",
+        "thumbnail": "https://i.ytimg.com/vi/d7KHAVaX_Rs/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "intermediate"
+      },
+      {
+        "type": "video",
+        "title": "Just-In-Time (JIT) Compilers Explained",
+        "description": "Accessible overview of compile-at-runtime behavior.",
+        "url": "https://www.youtube.com/watch?v=KVvGVPc7QM8",
+        "source": "YouTube",
+        "channel": "The Coding Gopher",
+        "videoId": "KVvGVPc7QM8",
+        "thumbnail": "https://i.ytimg.com/vi/KVvGVPc7QM8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "6.3": [
+      {
+        "type": "video",
+        "title": "Command Line Crash Course For Beginners",
+        "description": "Navigate the terminal with core commands every developer needs.",
+        "url": "https://www.youtube.com/watch?v=uwAqEzhyjtw",
+        "source": "YouTube",
+        "channel": "Traversy Media",
+        "videoId": "uwAqEzhyjtw",
+        "thumbnail": "https://i.ytimg.com/vi/uwAqEzhyjtw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "How to use the Command Line | Terminal Basics for Beginners",
+        "description": "Short intro to why the command line is the seat of power on your machine.",
+        "url": "https://www.youtube.com/watch?v=5XgBd6rjuDQ",
+        "source": "YouTube",
+        "channel": "Jesse Showalter",
+        "videoId": "5XgBd6rjuDQ",
+        "thumbnail": "https://i.ytimg.com/vi/5XgBd6rjuDQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "8.4": [
+      {
+        "type": "video",
+        "title": "While loops in Python are easy!",
+        "description": "Execute code while a condition remains true — core while-loop pattern.",
+        "url": "https://www.youtube.com/watch?v=rRTjPnVooxE",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "rRTjPnVooxE",
+        "thumbnail": "https://i.ytimg.com/vi/rRTjPnVooxE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "While Loops in Python | Python for Beginners",
+        "description": "Second pass on while loops with beginner-friendly examples.",
+        "url": "https://www.youtube.com/watch?v=ECduJk00mUU",
+        "source": "YouTube",
+        "channel": "Alex The Analyst",
+        "videoId": "ECduJk00mUU",
+        "thumbnail": "https://i.ytimg.com/vi/ECduJk00mUU/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "11.6": [
+      {
+        "type": "video",
+        "title": "Python Tutorial: Pathlib - The Modern Way to Handle File Paths",
+        "description": "Prefer pathlib over string path concatenation for portable file paths.",
+        "url": "https://www.youtube.com/watch?v=yxa-DJuuTBI",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "yxa-DJuuTBI",
+        "thumbnail": "https://i.ytimg.com/vi/yxa-DJuuTBI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "pathlib — Object-oriented filesystem paths",
+        "description": "Official Python docs for Path, PurePath, and filesystem operations.",
+        "url": "https://docs.python.org/3/library/pathlib.html",
+        "source": "Python Docs",
+        "difficulty": "beginner"
+      }
+    ],
+    "11.7": [
+      {
+        "type": "video",
+        "title": "Text Files Vs Binary Files",
+        "description": "Differences between text and binary files with clear examples.",
+        "url": "https://www.youtube.com/watch?v=v7IpCq5YL68",
+        "source": "YouTube",
+        "channel": "Dr. Mukund Kulkarni",
+        "videoId": "v7IpCq5YL68",
+        "thumbnail": "https://i.ytimg.com/vi/v7IpCq5YL68/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "BINARY vs TEXT File Serialization",
+        "description": "How text vs binary formats affect how programs store data.",
+        "url": "https://www.youtube.com/watch?v=Lq9KXnU4_yE",
+        "source": "YouTube",
+        "channel": "The Cherno",
+        "videoId": "Lq9KXnU4_yE",
+        "thumbnail": "https://i.ytimg.com/vi/Lq9KXnU4_yE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "intermediate"
+      }
+    ],
+    "11.8": [
+      {
+        "type": "video",
+        "title": "Serialization - A Crash Course",
+        "description": "Turn in-memory structures into a storable/transmittable format.",
+        "url": "https://www.youtube.com/watch?v=uS37TujnLRw",
+        "source": "YouTube",
+        "channel": "0612 TV w/ NERDfirst",
+        "videoId": "uS37TujnLRw",
+        "thumbnail": "https://i.ytimg.com/vi/uS37TujnLRw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Serialization and Deserialization for backend engineers",
+        "description": "Why serialization matters when data moves between systems.",
+        "url": "https://www.youtube.com/watch?v=vzg90tY3uM0",
+        "source": "YouTube",
+        "channel": "Sriniously",
+        "videoId": "vzg90tY3uM0",
+        "thumbnail": "https://i.ytimg.com/vi/vzg90tY3uM0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "intermediate"
+      }
+    ],
+    "12.1": [
+      {
+        "type": "video",
+        "title": "Syntax vs Runtime vs Logic Errors Explained",
+        "description": "Focus on syntax errors: caught before the program can even run.",
+        "url": "https://www.youtube.com/watch?v=3Gb2thJENdQ",
+        "source": "YouTube",
+        "channel": "Tech·WHYS",
+        "videoId": "3Gb2thJENdQ",
+        "thumbnail": "https://i.ytimg.com/vi/3Gb2thJENdQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Syntax Errors vs Logical Errors",
+        "description": "Contrast syntax mistakes with deeper logical mistakes.",
+        "url": "https://www.youtube.com/watch?v=ELkk3dAZOOk",
+        "source": "YouTube",
+        "channel": "CSE Society",
+        "videoId": "ELkk3dAZOOk",
+        "thumbnail": "https://i.ytimg.com/vi/ELkk3dAZOOk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "12.2": [
+      {
+        "type": "video",
+        "title": "Syntax vs Runtime vs Logic Errors Explained",
+        "description": "Focus on runtime errors that appear only when code executes.",
+        "url": "https://www.youtube.com/watch?v=3Gb2thJENdQ",
+        "source": "YouTube",
+        "channel": "Tech·WHYS",
+        "videoId": "3Gb2thJENdQ",
+        "thumbnail": "https://i.ytimg.com/vi/3Gb2thJENdQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Learn Python EXCEPTION HANDLING in 5 minutes!",
+        "description": "Runtime exceptions interrupt flow — see try/except patterns.",
+        "url": "https://www.youtube.com/watch?v=V_NXT2-QIlE",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "V_NXT2-QIlE",
+        "thumbnail": "https://i.ytimg.com/vi/V_NXT2-QIlE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "12.3": [
+      {
+        "type": "video",
+        "title": "Syntax vs Runtime vs Logic Errors Explained",
+        "description": "Focus on logical bugs: code runs but produces wrong results.",
+        "url": "https://www.youtube.com/watch?v=3Gb2thJENdQ",
+        "source": "YouTube",
+        "channel": "Tech·WHYS",
+        "videoId": "3Gb2thJENdQ",
+        "thumbnail": "https://i.ytimg.com/vi/3Gb2thJENdQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Syntax Errors vs Logical Errors",
+        "description": "How to recognize and tackle logical errors specifically.",
+        "url": "https://www.youtube.com/watch?v=ELkk3dAZOOk",
+        "source": "YouTube",
+        "channel": "CSE Society",
+        "videoId": "ELkk3dAZOOk",
+        "thumbnail": "https://i.ytimg.com/vi/ELkk3dAZOOk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "12.4": [
+      {
+        "type": "video",
+        "title": "Learn Python EXCEPTION HANDLING in 5 minutes!",
+        "description": "try / except / finally for handling exceptions cleanly.",
+        "url": "https://www.youtube.com/watch?v=V_NXT2-QIlE",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "V_NXT2-QIlE",
+        "thumbnail": "https://i.ytimg.com/vi/V_NXT2-QIlE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Tutorial: Using Try/Except Blocks for Error Handling",
+        "description": "Deeper exception handling with practical Python examples.",
+        "url": "https://www.youtube.com/watch?v=NIWwJbo-9_8",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "NIWwJbo-9_8",
+        "thumbnail": "https://i.ytimg.com/vi/NIWwJbo-9_8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "12.5": [
+      {
+        "type": "video",
+        "title": "How to Validate User Inputs in Python",
+        "description": "Check and reject bad input before it corrupts program state.",
+        "url": "https://www.youtube.com/watch?v=LUWyA3m_-r0",
+        "source": "YouTube",
+        "channel": "Fabio Musanni - Programming Channel",
+        "videoId": "LUWyA3m_-r0",
+        "thumbnail": "https://i.ytimg.com/vi/LUWyA3m_-r0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Basics to input validation",
+        "description": "Length and type checks as foundational validation techniques.",
+        "url": "https://www.youtube.com/watch?v=i0m1id6jfK8",
+        "source": "YouTube",
+        "channel": "IGCSE Computer Science",
+        "videoId": "i0m1id6jfK8",
+        "thumbnail": "https://i.ytimg.com/vi/i0m1id6jfK8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "12.6": [
+      {
+        "type": "video",
+        "title": "python: what is assert? (beginner)",
+        "description": "What assert does, how it works, and when it helps catch bugs.",
+        "url": "https://www.youtube.com/watch?v=v1MtwCPTmBI",
+        "source": "YouTube",
+        "channel": "anthonywritescode",
+        "videoId": "v1MtwCPTmBI",
+        "thumbnail": "https://i.ytimg.com/vi/v1MtwCPTmBI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "HOW You Should Be Using ASSERT In Python To Catch ERRORS",
+        "description": "Practical patterns for using assert to catch invariant violations.",
+        "url": "https://www.youtube.com/watch?v=96mDQrlceEk",
+        "source": "YouTube",
+        "channel": "Indently",
+        "videoId": "96mDQrlceEk",
+        "thumbnail": "https://i.ytimg.com/vi/96mDQrlceEk/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "12.7": [
+      {
+        "type": "video",
+        "title": "The Fail Fast Principle",
+        "description": "Surface errors early instead of letting bad state spread.",
+        "url": "https://www.youtube.com/watch?v=_SlnC4v-PK8",
+        "source": "YouTube",
+        "channel": "ArjanCodes",
+        "videoId": "_SlnC4v-PK8",
+        "thumbnail": "https://i.ytimg.com/vi/_SlnC4v-PK8/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "intermediate"
+      },
+      {
+        "type": "article",
+        "title": "Fail Fast",
+        "description": "Written reference for the fail-fast mindset in software design.",
+        "url": "https://martinfowler.com/ieeeSoftware/failFast.pdf",
+        "source": "Martin Fowler",
+        "difficulty": "intermediate"
+      }
+    ],
+    "13.1": [
+      {
+        "type": "video",
+        "title": "Master Stack Traces: Find and Fix Code Errors Fast",
+        "description": "Read error messages and stack traces to locate the failing line.",
+        "url": "https://www.youtube.com/watch?v=1TOnh_a5c3g",
+        "source": "YouTube",
+        "channel": "Tech·WHYS",
+        "videoId": "1TOnh_a5c3g",
+        "thumbnail": "https://i.ytimg.com/vi/1TOnh_a5c3g/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "How to read Java stack traces efficiently",
+        "description": "Transferable skill: scan stack traces from bottom to top for the root cause.",
+        "url": "https://www.youtube.com/watch?v=PFSJlZgNJXM",
+        "source": "YouTube",
+        "channel": "Marco Behler",
+        "videoId": "PFSJlZgNJXM",
+        "thumbnail": "https://i.ytimg.com/vi/PFSJlZgNJXM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "13.2": [
+      {
+        "type": "video",
+        "title": "Stop Wasting Time: Debugging Like a Pro (Reproduce, Isolate, Fix)",
+        "description": "Reproduce → isolate → fix: the systematic bug workflow.",
+        "url": "https://www.youtube.com/watch?v=NZwd15LIBk4",
+        "source": "YouTube",
+        "channel": "Learn In Minutes",
+        "videoId": "NZwd15LIBk4",
+        "thumbnail": "https://i.ytimg.com/vi/NZwd15LIBk4/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "7 DEBUGGING Mistakes You're Making as a Developer",
+        "description": "Common debugging pitfalls that hide reproducible cases.",
+        "url": "https://www.youtube.com/watch?v=y_gxpbCbyXI",
+        "source": "YouTube",
+        "channel": "Learn In Minutes",
+        "videoId": "y_gxpbCbyXI",
+        "thumbnail": "https://i.ytimg.com/vi/y_gxpbCbyXI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "13.3": [
+      {
+        "type": "video",
+        "title": "Python Logging - Tutorial",
+        "description": "Replace print-debugging with proper logging levels and messages.",
+        "url": "https://www.youtube.com/watch?v=urrfJgHwIJA",
+        "source": "YouTube",
+        "channel": "Tech With Tim",
+        "videoId": "urrfJgHwIJA",
+        "thumbnail": "https://i.ytimg.com/vi/urrfJgHwIJA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Tutorial: Logging Basics",
+        "description": "Log to files, set levels, and format log output.",
+        "url": "https://www.youtube.com/watch?v=-ARI4Cz-awo",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "-ARI4Cz-awo",
+        "thumbnail": "https://i.ytimg.com/vi/-ARI4Cz-awo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "13.4": [
+      {
+        "type": "video",
+        "title": "Debugging in VS Code — Breakpoints, Step Through, Watch Variables",
+        "description": "Set breakpoints and pause execution where bugs hide.",
+        "url": "https://www.youtube.com/watch?v=OU4d_0XazAI",
+        "source": "YouTube",
+        "channel": "CodeStartPython",
+        "videoId": "OU4d_0XazAI",
+        "thumbnail": "https://i.ytimg.com/vi/OU4d_0XazAI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Visual Studio Debugging: Step Into vs Step Over vs Step Out",
+        "description": "Debugger stepping commands used alongside breakpoints.",
+        "url": "https://www.youtube.com/watch?v=xF8EAffCUKE",
+        "source": "YouTube",
+        "channel": "Tutor Things",
+        "videoId": "xF8EAffCUKE",
+        "thumbnail": "https://i.ytimg.com/vi/xF8EAffCUKE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "13.5": [
+      {
+        "type": "video",
+        "title": "Master Stack Traces: Find and Fix Code Errors Fast",
+        "description": "Use stack traces to see the call chain that led to a failure.",
+        "url": "https://www.youtube.com/watch?v=1TOnh_a5c3g",
+        "source": "YouTube",
+        "channel": "Tech·WHYS",
+        "videoId": "1TOnh_a5c3g",
+        "thumbnail": "https://i.ytimg.com/vi/1TOnh_a5c3g/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "The Call Stack",
+        "description": "Mental model for how stack frames relate to stack traces.",
+        "url": "https://www.youtube.com/watch?v=Q2sFmqvpBe0",
+        "source": "YouTube",
+        "channel": "Computer Science Lessons",
+        "videoId": "Q2sFmqvpBe0",
+        "thumbnail": "https://i.ytimg.com/vi/Q2sFmqvpBe0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "13.6": [
+      {
+        "type": "video",
+        "title": "Debugging in VS Code — Breakpoints, Step Through, Watch Variables",
+        "description": "Watch expressions and variables while paused in the debugger.",
+        "url": "https://www.youtube.com/watch?v=OU4d_0XazAI",
+        "source": "YouTube",
+        "channel": "CodeStartPython",
+        "videoId": "OU4d_0XazAI",
+        "thumbnail": "https://i.ytimg.com/vi/OU4d_0XazAI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Stop Wasting Time: Debugging Like a Pro (Reproduce, Isolate, Fix)",
+        "description": "Inspect state carefully while isolating the failing case.",
+        "url": "https://www.youtube.com/watch?v=NZwd15LIBk4",
+        "source": "YouTube",
+        "channel": "Learn In Minutes",
+        "videoId": "NZwd15LIBk4",
+        "thumbnail": "https://i.ytimg.com/vi/NZwd15LIBk4/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "13.7": [
+      {
+        "type": "video",
+        "title": "Visual Studio Debugging: Step Into vs Step Over vs Step Out",
+        "description": "Step Into, Over, and Out — control how deep you walk through calls.",
+        "url": "https://www.youtube.com/watch?v=xF8EAffCUKE",
+        "source": "YouTube",
+        "channel": "Tutor Things",
+        "videoId": "xF8EAffCUKE",
+        "thumbnail": "https://i.ytimg.com/vi/xF8EAffCUKE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Debugging in VS Code — Breakpoints, Step Through, Watch Variables",
+        "description": "Practice stepping through Python in VS Code's debugger.",
+        "url": "https://www.youtube.com/watch?v=OU4d_0XazAI",
+        "source": "YouTube",
+        "channel": "CodeStartPython",
+        "videoId": "OU4d_0XazAI",
+        "thumbnail": "https://i.ytimg.com/vi/OU4d_0XazAI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "14.1": [
+      {
+        "type": "video",
+        "title": "Python Tutorial for Beginners 9: Import Modules",
+        "description": "Import modules and explore the Python standard library.",
+        "url": "https://www.youtube.com/watch?v=CqvZ3vGoGs0",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "CqvZ3vGoGs0",
+        "thumbnail": "https://i.ytimg.com/vi/CqvZ3vGoGs0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "What are Python modules?",
+        "description": "import, aliases, and from-import patterns for beginners.",
+        "url": "https://www.youtube.com/watch?v=XcfxkHrHTVE",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "XcfxkHrHTVE",
+        "thumbnail": "https://i.ytimg.com/vi/XcfxkHrHTVE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "14.2": [
+      {
+        "type": "video",
+        "title": "5 Tips To Organize Python Code",
+        "description": "Split work across multiple files with clear organization tips.",
+        "url": "https://www.youtube.com/watch?v=e9yMYdnSlUA",
+        "source": "YouTube",
+        "channel": "Tech With Tim",
+        "videoId": "e9yMYdnSlUA",
+        "thumbnail": "https://i.ytimg.com/vi/e9yMYdnSlUA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "What does the structure of a modern Python project look like?",
+        "description": "How multi-file project layouts look with modern tooling.",
+        "url": "https://www.youtube.com/watch?v=Lr1koR-YkMw",
+        "source": "YouTube",
+        "channel": "InfoWorld",
+        "videoId": "Lr1koR-YkMw",
+        "thumbnail": "https://i.ytimg.com/vi/Lr1koR-YkMw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "14.3": [
+      {
+        "type": "video",
+        "title": "What does '__init__.py' do in Python?",
+        "description": "Packages group modules; __init__.py marks a package directory.",
+        "url": "https://www.youtube.com/watch?v=VEbuZox5qC4",
+        "source": "YouTube",
+        "channel": "Tech With Tim",
+        "videoId": "VEbuZox5qC4",
+        "thumbnail": "https://i.ytimg.com/vi/VEbuZox5qC4/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "What are Python modules?",
+        "description": "Modules and packages work together as you grow a project.",
+        "url": "https://www.youtube.com/watch?v=XcfxkHrHTVE",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "XcfxkHrHTVE",
+        "thumbnail": "https://i.ytimg.com/vi/XcfxkHrHTVE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "14.4": [
+      {
+        "type": "video",
+        "title": "Dependency Trees & Version Conflicts Explained Simply",
+        "description": "How dependency trees and version conflicts break installs.",
+        "url": "https://www.youtube.com/watch?v=GUKZKjuCeco",
+        "source": "YouTube",
+        "channel": "Tech·WHYS",
+        "videoId": "GUKZKjuCeco",
+        "thumbnail": "https://i.ytimg.com/vi/GUKZKjuCeco/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Safely Update All Dependencies Using Package Managers",
+        "description": "Update dependencies without surprising breakage.",
+        "url": "https://www.youtube.com/watch?v=w0C1MwRAmHw",
+        "source": "YouTube",
+        "channel": "Tech·WHYS",
+        "videoId": "w0C1MwRAmHw",
+        "thumbnail": "https://i.ytimg.com/vi/w0C1MwRAmHw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "14.5": [
+      {
+        "type": "video",
+        "title": "Python Virtual Environments - Full Tutorial for Beginners",
+        "description": "Create and use venv so projects don't share conflicting packages.",
+        "url": "https://www.youtube.com/watch?v=Y21OR1OPC9A",
+        "source": "YouTube",
+        "channel": "Tech With Tim",
+        "videoId": "Y21OR1OPC9A",
+        "thumbnail": "https://i.ytimg.com/vi/Y21OR1OPC9A/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Python Tutorial: UV - A Faster Package Manager to Replace Pip and Venv",
+        "description": "Modern alternative that covers environments and installs together.",
+        "url": "https://www.youtube.com/watch?v=AMdG7IjgSPM",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "AMdG7IjgSPM",
+        "thumbnail": "https://i.ytimg.com/vi/AMdG7IjgSPM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "intermediate"
+      }
+    ],
+    "14.6": [
+      {
+        "type": "video",
+        "title": "Python Tutorial: UV - A Faster Package Manager to Replace Pip and Venv",
+        "description": "Package managers install and resolve library versions for you.",
+        "url": "https://www.youtube.com/watch?v=AMdG7IjgSPM",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "AMdG7IjgSPM",
+        "thumbnail": "https://i.ytimg.com/vi/AMdG7IjgSPM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "intermediate"
+      },
+      {
+        "type": "video",
+        "title": "Python Virtual Environments - Full Tutorial for Beginners",
+        "description": "pip + venv workflow still used on most beginner Python projects.",
+        "url": "https://www.youtube.com/watch?v=Y21OR1OPC9A",
+        "source": "YouTube",
+        "channel": "Tech With Tim",
+        "videoId": "Y21OR1OPC9A",
+        "thumbnail": "https://i.ytimg.com/vi/Y21OR1OPC9A/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "14.7": [
+      {
+        "type": "video",
+        "title": "What is Semantic Versioning? (semver)",
+        "description": "MAJOR.MINOR.PATCH and what each number communicates.",
+        "url": "https://www.youtube.com/watch?v=97i9pOa2EyE",
+        "source": "YouTube",
+        "channel": "Syntax",
+        "videoId": "97i9pOa2EyE",
+        "thumbnail": "https://i.ytimg.com/vi/97i9pOa2EyE/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "reference",
+        "title": "Semantic Versioning 2.0.0",
+        "description": "Official SemVer specification for version numbers.",
+        "url": "https://semver.org/",
+        "source": "semver.org",
+        "difficulty": "beginner"
+      }
+    ],
+    "14.8": [
+      {
+        "type": "video",
+        "title": "What is NPM's package-lock.json?",
+        "description": "Lock files pin exact dependency versions for reproducible installs.",
+        "url": "https://www.youtube.com/watch?v=dwd6uiucmIY",
+        "source": "YouTube",
+        "channel": "Tom Gregory",
+        "videoId": "dwd6uiucmIY",
+        "thumbnail": "https://i.ytimg.com/vi/dwd6uiucmIY/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "package-lock.json file explained",
+        "description": "Short explanation of why lockfiles belong in source control.",
+        "url": "https://www.youtube.com/watch?v=NaIIqJaF4hM",
+        "source": "YouTube",
+        "channel": "Traversy Media",
+        "videoId": "NaIIqJaF4hM",
+        "thumbnail": "https://i.ytimg.com/vi/NaIIqJaF4hM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "package-lock.json | npm Docs",
+        "description": "Official docs on what lock files record and guarantee.",
+        "url": "https://docs.npmjs.com/cli/v12/configuring-npm/package-lock-json/",
+        "source": "npm Docs",
+        "difficulty": "beginner"
+      }
+    ],
+    "1.7": [
+      {
+        "type": "video",
+        "title": "Intro to Algorithms: Crash Course Computer Science #13",
+        "description": "Refresh algorithms before the written practice exercises.",
+        "url": "https://www.youtube.com/watch?v=rL8X2mlNHPM",
+        "source": "Crash Course",
+        "channel": "CrashCourse",
+        "videoId": "rL8X2mlNHPM",
+        "thumbnail": "https://i.ytimg.com/vi/rL8X2mlNHPM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "2.9": [
+      {
+        "type": "video",
+        "title": "Representing Numbers and Letters with Binary: Crash Course CS #4",
+        "description": "Review binary/hex/encoding ideas before mixed practice.",
+        "url": "https://www.youtube.com/watch?v=1GSjbWt0c9M",
+        "source": "Crash Course",
+        "channel": "CrashCourse",
+        "videoId": "1GSjbWt0c9M",
+        "thumbnail": "https://i.ytimg.com/vi/1GSjbWt0c9M/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "3.8": [
+      {
+        "type": "interactive",
+        "title": "CircuitVerse Logic Circuit Simulator",
+        "description": "Draw and test gate diagrams for the practice checkpoint.",
+        "url": "https://circuitverse.org/",
+        "source": "CircuitVerse",
+        "difficulty": "beginner"
+      }
+    ],
+    "4.10": [
+      {
+        "type": "video",
+        "title": "The Fetch-Execute Cycle: What's Your Computer Actually Doing?",
+        "description": "Trace fetch-decode-execute before the diagram practice.",
+        "url": "https://www.youtube.com/watch?v=Z5JC9Ve1sfI",
+        "source": "YouTube",
+        "channel": "Tom Scott",
+        "videoId": "Z5JC9Ve1sfI",
+        "thumbnail": "https://i.ytimg.com/vi/Z5JC9Ve1sfI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "5.11": [
+      {
+        "type": "video",
+        "title": "How Compilers Work",
+        "description": "Refresh compiler/interpreter ideas before the mini expression runtime.",
+        "url": "https://www.youtube.com/watch?v=xLuKxomEUiQ",
+        "source": "YouTube",
+        "channel": "Timothy Blumberg",
+        "videoId": "xLuKxomEUiQ",
+        "thumbnail": "https://i.ytimg.com/vi/xLuKxomEUiQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "6.8": [
+      {
+        "type": "video",
+        "title": "Command Line Crash Course For Beginners",
+        "description": "Terminal + editor skills for building your developer workspace lab.",
+        "url": "https://www.youtube.com/watch?v=uwAqEzhyjtw",
+        "source": "YouTube",
+        "channel": "Traversy Media",
+        "videoId": "uwAqEzhyjtw",
+        "thumbnail": "https://i.ytimg.com/vi/uwAqEzhyjtw/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "7.9": [
+      {
+        "type": "video",
+        "title": "Python operators for beginners",
+        "description": "Operators + types refresh for the small calculator practice.",
+        "url": "https://www.youtube.com/watch?v=v5MR5JnKcZI",
+        "source": "YouTube",
+        "channel": "Telusko",
+        "videoId": "v5MR5JnKcZI",
+        "thumbnail": "https://i.ytimg.com/vi/v5MR5JnKcZI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "8.7": [
+      {
+        "type": "video",
+        "title": "If statements in Python are easy (if, elif, else)",
+        "description": "Control-flow refresh for the number guessing game project.",
+        "url": "https://www.youtube.com/watch?v=FvMPfrgGeKs",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "FvMPfrgGeKs",
+        "thumbnail": "https://i.ytimg.com/vi/FvMPfrgGeKs/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "9.8": [
+      {
+        "type": "video",
+        "title": "Functions in Python are easy",
+        "description": "Functions refresh for the modular calculator project.",
+        "url": "https://www.youtube.com/watch?v=89cGQjB5R4M",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "89cGQjB5R4M",
+        "thumbnail": "https://i.ytimg.com/vi/89cGQjB5R4M/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "10.7": [
+      {
+        "type": "video",
+        "title": "Python dictionaries are easy",
+        "description": "Dictionaries + lists refresh for the student grade manager.",
+        "url": "https://www.youtube.com/watch?v=MZZSMaEAC2g",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "MZZSMaEAC2g",
+        "thumbnail": "https://i.ytimg.com/vi/MZZSMaEAC2g/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "11.9": [
+      {
+        "type": "video",
+        "title": "Python Tutorial: Working with JSON Data using the json Module",
+        "description": "JSON persistence for the contact book mini project.",
+        "url": "https://www.youtube.com/watch?v=9N6a-VLBa2I",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "9N6a-VLBa2I",
+        "thumbnail": "https://i.ytimg.com/vi/9N6a-VLBa2I/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "12.8": [
+      {
+        "type": "video",
+        "title": "Syntax vs Runtime vs Logic Errors Explained",
+        "description": "Error taxonomy refresh before repairing broken programs.",
+        "url": "https://www.youtube.com/watch?v=3Gb2thJENdQ",
+        "source": "YouTube",
+        "channel": "Tech·WHYS",
+        "videoId": "3Gb2thJENdQ",
+        "thumbnail": "https://i.ytimg.com/vi/3Gb2thJENdQ/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "13.8": [
+      {
+        "type": "video",
+        "title": "Debugging in VS Code — Breakpoints, Step Through, Watch Variables",
+        "description": "Debugger toolkit for the deliberately broken application lab.",
+        "url": "https://www.youtube.com/watch?v=OU4d_0XazAI",
+        "source": "YouTube",
+        "channel": "CodeStartPython",
+        "videoId": "OU4d_0XazAI",
+        "thumbnail": "https://i.ytimg.com/vi/OU4d_0XazAI/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "14.9": [
+      {
+        "type": "video",
+        "title": "5 Tips To Organize Python Code",
+        "description": "Multi-file organization tips for the task manager project.",
+        "url": "https://www.youtube.com/watch?v=e9yMYdnSlUA",
+        "source": "YouTube",
+        "channel": "Tech With Tim",
+        "videoId": "e9yMYdnSlUA",
+        "thumbnail": "https://i.ytimg.com/vi/e9yMYdnSlUA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "15.1": [
+      {
+        "type": "video",
+        "title": "Python Tutorial: File Objects - Reading and Writing to Files",
+        "description": "Files + structure refresh for the CLI library management phase project.",
+        "url": "https://www.youtube.com/watch?v=Uh2ebFW8OYM",
+        "source": "YouTube",
+        "channel": "Corey Schafer",
+        "videoId": "Uh2ebFW8OYM",
+        "thumbnail": "https://i.ytimg.com/vi/Uh2ebFW8OYM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "Functions in Python are easy",
+        "description": "Keep the CLI modular with functions and clear modules.",
+        "url": "https://www.youtube.com/watch?v=89cGQjB5R4M",
+        "source": "YouTube",
+        "channel": "Bro Code",
+        "videoId": "89cGQjB5R4M",
+        "thumbnail": "https://i.ytimg.com/vi/89cGQjB5R4M/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ]
+  },
+  "phases": {},
+  "projects": {}
+}

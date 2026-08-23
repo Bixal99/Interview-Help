@@ -8,92 +8,92 @@ export const courseChapters: Record<string, CourseChapter[]> = {
   "computer-science": [
     {
       id: "story-1",
-      title: "I. Before you write code",
-      summary: "Before you write clever **programs**, you need a picture of what a computer actually does with the text you type: how **source code** becomes running instructions, where a variable lives in **memory**, and how information is represented as bits underneath it all.",
+      title: "I. Before You Write Code",
+      summary: "Before you learn programming, you need to understand what you are actually programming: what a computer actually does with information, how bits stand for numbers, words, and pictures, how logic becomes hardware, and how your source code becomes a running program.",
       phaseIds: range(1, 5),
     },
     {
       id: "story-2",
-      title: "II. Learning to control the machine",
-      summary: "This is how a **program** starts, remembers values, makes decisions, repeats work, and splits jobs into reusable pieces. You learn to run a **script**, read an error, and organize **code** so you are not copying the same lines forever.",
+      title: "II. Learning to Control the Machine",
+      summary: "We finally understand what happens underneath; now it is our turn to give the computer instructions. Set up a real workspace, then learn how a **program** remembers values, makes decisions, repeats work, and splits jobs into reusable pieces - and how to find out why it went wrong.",
       phaseIds: range(6, 15),
     },
     {
       id: "story-3",
-      title: "III. The mathematical language of CS",
-      summary: "How computer scientists reason instead of guessing: sets and logic, proof, counting and probability, statistics, and just enough linear algebra and calculus to read the notation later phases use without flinching.",
+      title: "III. The Mathematical Language of CS",
+      summary: "Computer scientists need ways to reason precisely about logic, uncertainty, scale and correctness: sets and **logic**, **proof**, counting and probability, statistics, and just enough linear algebra and calculus to read the notation later phases use without flinching.",
       phaseIds: range(16, 20),
     },
     {
       id: "story-4",
-      title: "IV. Organizing large software",
-      summary: "Plain lists of instructions get messy once a **program** has to remember many related facts at once. Here you see why people group data and behavior into **objects**, the four classic **pillars**, **SOLID**, well-known **patterns**, and how to design under interview pressure.",
+      title: "IV. Organizing Large Software",
+      summary: "Hundreds of functions and variables quickly become difficult to understand, so we need better ways to organize software. Here you see why people group data and behavior into **objects**, the four classic **pillars**, **SOLID**, well-known **patterns**, and how to design under interview pressure.",
       phaseIds: range(21, 30),
     },
     {
       id: "story-5",
-      title: "V. Data structures & algorithms",
-      summary: "How information is arranged so a **program** can find, insert, or order it quickly: **lists**, **stacks**, **trees**, **hash maps**, **sorting**, **graphs**, and the repeating **algorithm** patterns behind interview problems. You build these by hand so they are mechanisms, not vocabulary.",
+      title: "V. Data Structures & Algorithms",
+      summary: "Two programs can produce the same result while one takes milliseconds and another takes hours. Learn how information is arranged so a **program** can find, insert, or order it quickly: **lists**, **stacks**, **trees**, **hash maps**, **sorting**, **graphs**, and the repeating **algorithm** patterns behind interview problems.",
       phaseIds: range(31, 48),
     },
     {
       id: "story-6",
-      title: "VI. Inside the computer",
-      summary: "What is actually running your **code** on a machine: the fetch-decode-execute cycle, memory and virtual memory, what makes a programming language a language, **processes** versus **threads**, and why programs **deadlock**.",
+      title: "VI. Inside the Computer",
+      summary: "We have mostly treated the computer as a box; now lift the hood. What is actually running your **code**: instruction sets and assembly, memory and virtual memory, how programming languages are built, what an operating system does, processes versus threads, and why programs **deadlock**.",
       phaseIds: range(49, 54),
     },
     {
       id: "story-7",
-      title: "VII. Connecting computers",
-      summary: "How one computer talks to another: addressing and layers, TCP/UDP and sockets, DNS, and the everyday protocols (HTTP and REST APIs) that applications actually speak.",
+      title: "VII. Connecting Computers",
+      summary: "Nearly every application we use depends on computers talking to other computers. How one machine reaches another: addressing and layers, TCP/UDP and sockets, DNS, and the everyday protocols (HTTP and REST APIs) that applications actually speak.",
       phaseIds: range(55, 59),
     },
     {
       id: "story-8",
-      title: "VIII. Data that survives",
-      summary: "How to store and query information in a **database** without losing it: relational modeling, SQL, indexes and B-trees, transactions and ACID, and how databases scale.",
+      title: "VIII. Data That Survives",
+      summary: "Applications usually need something important behind them: persistent, structured information. How to store and query it in a **database** without losing it: relational modeling, SQL, indexes and B-trees, transactions and ACID, and how databases scale.",
       phaseIds: range(60, 65),
     },
     {
       id: "story-9",
-      title: "IX. Security & human-centered software",
-      summary: "How to protect what you built and the people using it: threats and trust boundaries, cryptography, authentication, the common web attacks, and designing software people can actually use.",
+      title: "IX. Security & Human-Centered Software",
+      summary: "Storing valuable information creates a responsibility: protecting it and the people using it. Threats and trust boundaries, cryptography, authentication, the common web attacks, and designing software people can actually use.",
       phaseIds: range(66, 71),
     },
     {
       id: "story-10",
-      title: "X. Professional software engineering",
-      summary: "How real engineering teams build and operate software: Git and collaboration, requirements, testing, architecture, CI/CD, containers, cloud fundamentals, and observability.",
+      title: "X. Professional Software Engineering",
+      summary: "Real software is rarely built by one person. How real engineering teams collaborate with Git, agree on requirements, test their work, structure architecture, automate releases, deploy to the cloud, and watch over production systems.",
       phaseIds: range(72, 80),
     },
     {
       id: "story-11",
-      title: "XI. System design & distributed systems",
-      summary: "What happens when a single **server** is no longer enough: scaling, caching, async and event-driven systems, the CAP theorem, consensus, reliability patterns, and full system-design walkthroughs.",
+      title: "XI. System Design & Distributed Systems",
+      summary: "Everything we build can reach a point where one machine is not enough. What changes at scale: scaling, caching, async and event-driven systems, the CAP theorem, consensus, reliability patterns, and full system-design walkthroughs.",
       phaseIds: range(81, 88),
     },
     {
       id: "story-12",
-      title: "XII. Other core CS areas",
-      summary: "What else a well-rounded computer scientist should understand: the shape of AI/ML, specialized computing platforms, and the ethics and societal impact of the systems you build.",
+      title: "XII. Other Core CS Areas",
+      summary: "Computer Science is bigger than backend systems and databases: the shape of AI/ML, specialized computing platforms, and the ethics and societal impact of the systems you build.",
       phaseIds: range(89, 91),
     },
     {
       id: "story-13",
-      title: "XIII. Maintaining real software",
-      summary: "Most engineering work happens inside existing systems: reading before writing, changing legacy code safely, and communicating decisions clearly.",
+      title: "XIII. Maintaining Real Software",
+      summary: "In your first engineering job nobody is likely to hand you an empty folder - you will inherit code. Reading before writing, changing legacy code safely, and communicating decisions clearly.",
       phaseIds: range(92, 94),
     },
     {
       id: "story-14",
-      title: "XIV. Grand capstone",
-      summary: "Stop studying isolated concepts and build the system: plan, build, break, measure, harden, and release one production-style application that uses everything above.",
+      title: "XIV. Grand Capstone",
+      summary: "One fair test of 94 chapters: start with a real problem and build the complete system. Plan, build, break, measure, harden, and release one production-style application that uses everything above.",
       phaseIds: range(95, 98),
     },
     {
       id: "story-15",
-      title: "XV. Interview & job readiness",
-      summary: "Prove you can think and communicate like an engineer: coding interview method, fundamentals review, low-level design, system design, behavioral stories, and a full mock-interview loop.",
+      title: "XV. Interview & Job Readiness",
+      summary: "The final challenge is communicating your ability when another engineer is evaluating you: coding interview method, fundamentals review, low-level design, system design, behavioral stories, and a full mock-interview loop.",
       phaseIds: range(99, 105),
     },
   ],
@@ -588,6 +588,14 @@ export const learningPaths: LearningPath[] = [
 ];
 
 export const learningPathById = Object.fromEntries(learningPaths.map((path) => [path.id, path]));
+
+export function chapterForPhase(slug: string, phaseId: string, phaseIds: string[]) {
+  return chaptersFor(slug, phaseIds).find((chapter) => chapter.phaseIds.includes(phaseId)) ?? null;
+}
+
+export function chapterTitleForPhase(slug: string, phaseId: string, phaseIds: string[]) {
+  return chapterForPhase(slug, phaseId, phaseIds)?.title ?? null;
+}
 
 export function chaptersFor(slug: string, phaseIds: string[]): CourseChapter[] {
   const configured = courseChapters[slug];

@@ -1,0 +1,795 @@
+{
+  "lessons": {
+    "1.1": [
+      {
+        "type": "video",
+        "title": "Cybersecurity for Beginners | Google Cybersecurity Certificate",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=_DVVNOGYtmU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/_DVVNOGYtmU/hqdefault.jpg",
+        "videoId": "_DVVNOGYtmU",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Harvard CS50’s Intro to Cybersecurity - Full University Course",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=9HOpanT0GRs",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/9HOpanT0GRs/hqdefault.jpg",
+        "videoId": "9HOpanT0GRs",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How I Would Learn Cyber Security if I Could Start Over (Cyber with Ben)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=b12JrM-6DBY",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/b12JrM-6DBY/hqdefault.jpg",
+        "videoId": "b12JrM-6DBY",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "HADESS Cybersecurity Learning Path 2026",
+        "description": "",
+        "url": "https://hadess.io/cybersecurity-learning-path/",
+        "source": "hadess.io"
+      },
+      {
+        "type": "github",
+        "title": "lissy93/personal-security-checklist",
+        "description": "",
+        "url": "https://github.com/lissy93/personal-security-checklist",
+        "source": "GitHub"
+      }
+    ],
+    "1.2": [
+      {
+        "type": "video",
+        "title": "Everything you NEED to know as Cybersecurity Beginner (Tech with Jono)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=X-O1-l0gP5Q",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/X-O1-l0gP5Q/hqdefault.jpg",
+        "videoId": "X-O1-l0gP5Q",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "How to Get Into Cybersecurity in 2026 (InfoSec Job Board)",
+        "description": "",
+        "url": "https://www.infosecjobboard.com/blog/how-to-get-into-cybersecurity-2026",
+        "source": "infosecjobboard.com"
+      },
+      {
+        "type": "reference",
+        "title": "Infosec Learning Roadmap (Coursera)",
+        "description": "",
+        "url": "https://www.coursera.org/resources/infosec-learning-roadmap",
+        "source": "coursera.org"
+      }
+    ],
+    "2.1": [
+      {
+        "type": "video",
+        "title": "Computer Networking Course - Network Engineering (freeCodeCamp)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=qiQR5rTSshw",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/qiQR5rTSshw/hqdefault.jpg",
+        "videoId": "qiQR5rTSshw",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Every Networking Concept Explained In 20 Minutes (TechWorld with Nana)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=xj_GjnD4uyI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/xj_GjnD4uyI/hqdefault.jpg",
+        "videoId": "xj_GjnD4uyI",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Computer Networking Full Course (Kunal Kushwaha)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=IPvYjXCsTg8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/IPvYjXCsTg8/hqdefault.jpg",
+        "videoId": "IPvYjXCsTg8",
+        "embedSupported": true
+      }
+    ],
+    "2.2": [
+      {
+        "type": "reference",
+        "title": "Best Hands-On Cybersecurity Labs 2026",
+        "description": "",
+        "url": "https://thecybersecuritytrail.com/guide/best-hands-on-cybersecurity-labs-practice-platforms-in-2026/",
+        "source": "thecybersecuritytrail.com"
+      }
+    ],
+    "3.1": [
+      {
+        "type": "video",
+        "title": "Introduction to Linux - Full Course for Beginners (freeCodeCamp)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=sWbUDq4S6Y8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/sWbUDq4S6Y8/hqdefault.jpg",
+        "videoId": "sWbUDq4S6Y8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "The 50 Most Popular Linux & Terminal Commands (freeCodeCamp)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=ZtqBQ68cfJc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ZtqBQ68cfJc/hqdefault.jpg",
+        "videoId": "ZtqBQ68cfJc",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Introduction to Linux & Terminal Commands (Kunal Kushwaha)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=iwolPf6kN-k",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/iwolPf6kN-k/hqdefault.jpg",
+        "videoId": "iwolPf6kN-k",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "OverTheWire Bandit",
+        "description": "Free terminal fundamentals",
+        "url": "https://overthewire.org/wargames/bandit/",
+        "source": "overthewire.org"
+      },
+      {
+        "type": "github",
+        "title": "brootware/awesome-cyber-security-university",
+        "description": "",
+        "url": "https://github.com/brootware/awesome-cyber-security-university",
+        "source": "GitHub"
+      }
+    ],
+    "4.1": [
+      {
+        "type": "reference",
+        "title": "Cryptography for Developers",
+        "description": "",
+        "url": "https://cryptography-for-devs.github.io/",
+        "source": "cryptography-for-devs.github.io"
+      },
+      {
+        "type": "github",
+        "title": "nakov/Practical-Cryptography-for-Developers-Book",
+        "description": "",
+        "url": "https://github.com/nakov/Practical-Cryptography-for-Developers-Book",
+        "source": "GitHub"
+      },
+      {
+        "type": "reference",
+        "title": "Learn Cryptography in a Single Post (PyShine)",
+        "description": "",
+        "url": "https://pyshine.com/Learn-Cryptography-in-One-Post-Complete-Tutorial-Symmetric-Asymmetric-Hashing-TLS-Quick-Start/",
+        "source": "pyshine.com"
+      }
+    ],
+    "5.1": [
+      {
+        "type": "reference",
+        "title": "OWASP Cheat Sheet Series",
+        "description": "",
+        "url": "https://cheatsheetseries.owasp.org/",
+        "source": "cheatsheetseries.owasp.org"
+      }
+    ],
+    "5.2": [
+      {
+        "type": "reference",
+        "title": "OWASP Top 10 A01 Broken Access Control",
+        "description": "",
+        "url": "https://owasp.org/Top10/2021/",
+        "source": "owasp.org"
+      }
+    ],
+    "6.1": [
+      {
+        "type": "reference",
+        "title": "Vibe Engines Security Engineer Roadmap",
+        "description": "",
+        "url": "https://vibeengines.com/roadmap/security-engineer",
+        "source": "vibeengines.com"
+      }
+    ],
+    "6.2": [
+      {
+        "type": "reference",
+        "title": "MITRE ATT&CK Navigator",
+        "description": "",
+        "url": "https://attack.mitre.org/",
+        "source": "attack.mitre.org"
+      },
+      {
+        "type": "reference",
+        "title": "MITRE ATT&CK to Detection Rule Practitioner Guide (2026)",
+        "description": "",
+        "url": "https://www.decryptiondigest.com/blog/how-to-read-mitre-attack-technique-write-detection-rule",
+        "source": "decryptiondigest.com"
+      },
+      {
+        "type": "github",
+        "title": "redcanaryco/atomic-red-team",
+        "description": "",
+        "url": "https://github.com/redcanaryco/atomic-red-team",
+        "source": "GitHub"
+      }
+    ],
+    "7.1": [
+      {
+        "type": "reference",
+        "title": "OWASP Top 10:2021",
+        "description": "",
+        "url": "https://owasp.org/Top10/2021/",
+        "source": "owasp.org"
+      },
+      {
+        "type": "reference",
+        "title": "SQL Injection Prevention Cheat Sheet",
+        "description": "",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+        "source": "cheatsheetseries.owasp.org"
+      },
+      {
+        "type": "reference",
+        "title": "PortSwigger Web Security Academy",
+        "description": "Free and best-in-class",
+        "url": "https://portswigger.net/web-security",
+        "source": "portswigger.net"
+      },
+      {
+        "type": "github",
+        "title": "juice-shop/juice-shop",
+        "description": "",
+        "url": "https://github.com/juice-shop/juice-shop",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "swisskyrepo/PayloadsAllTheThings",
+        "description": "",
+        "url": "https://github.com/swisskyrepo/PayloadsAllTheThings",
+        "source": "GitHub"
+      },
+      {
+        "type": "video",
+        "title": "Ethical Hacking 101: Web App Penetration Testing (freeCodeCamp)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=2_lswM1S264",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/2_lswM1S264/hqdefault.jpg",
+        "videoId": "2_lswM1S264",
+        "embedSupported": true
+      }
+    ],
+    "7.2": [
+      {
+        "type": "reference",
+        "title": "OWASP A10 SSRF",
+        "description": "",
+        "url": "https://owasp.org/Top10/2021/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/",
+        "source": "owasp.org"
+      },
+      {
+        "type": "github",
+        "title": "HackTricks-wiki/hacktricks",
+        "description": "",
+        "url": "https://github.com/HackTricks-wiki/hacktricks",
+        "source": "GitHub"
+      }
+    ],
+    "8.2": [
+      {
+        "type": "github",
+        "title": "decalage2/awesome-security-hardening",
+        "description": "",
+        "url": "https://github.com/decalage2/awesome-security-hardening",
+        "source": "GitHub"
+      }
+    ],
+    "9.1": [
+      {
+        "type": "github",
+        "title": "decalage2/awesome-security-hardening",
+        "description": "",
+        "url": "https://github.com/decalage2/awesome-security-hardening",
+        "source": "GitHub"
+      }
+    ],
+    "9.2": [
+      {
+        "type": "github",
+        "title": "fabacab/awesome-cybersecurity-blueteam",
+        "description": "",
+        "url": "https://github.com/fabacab/awesome-cybersecurity-blueteam",
+        "source": "GitHub"
+      }
+    ],
+    "11.1": [
+      {
+        "type": "video",
+        "title": "Penetration Testing Methodology | Ethical Hacking for Beginners",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=Sy_c-s5fkcc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Sy_c-s5fkcc/hqdefault.jpg",
+        "videoId": "Sy_c-s5fkcc",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Simple Penetration Testing Tutorial for Beginners (Loi Liang Yang)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=B7tTQ272OHE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/B7tTQ272OHE/hqdefault.jpg",
+        "videoId": "B7tTQ272OHE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Penetration Testing with Nmap (Nielsen Networking)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=wlqUO09J-nw",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/wlqUO09J-nw/hqdefault.jpg",
+        "videoId": "wlqUO09J-nw",
+        "embedSupported": true
+      },
+      {
+        "type": "github",
+        "title": "HackTricks-wiki/hacktricks",
+        "description": "",
+        "url": "https://github.com/HackTricks-wiki/hacktricks",
+        "source": "GitHub"
+      },
+      {
+        "type": "github",
+        "title": "danielmiessler/SecLists",
+        "description": "",
+        "url": "https://github.com/danielmiessler/SecLists",
+        "source": "GitHub"
+      }
+    ],
+    "11.2": [
+      {
+        "type": "video",
+        "title": "Penetration Testing with Metasploit overview (Nielsen Networking)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=Keld6Wi8aZ4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Keld6Wi8aZ4/hqdefault.jpg",
+        "videoId": "Keld6Wi8aZ4",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "Ethical Hacking Learning Roadmap (Coursera)",
+        "description": "",
+        "url": "https://www.coursera.org/resources/ethical-hacking-learning-roadmap",
+        "source": "coursera.org"
+      }
+    ],
+    "12.2": [
+      {
+        "type": "github",
+        "title": "meirwah/awesome-incident-response",
+        "description": "",
+        "url": "https://github.com/meirwah/awesome-incident-response",
+        "source": "GitHub"
+      }
+    ],
+    "13.1": [
+      {
+        "type": "reference",
+        "title": "How to Become a SOC Analyst in 2026",
+        "description": "",
+        "url": "https://www.infosecjobboard.com/blog/how-to-become-soc-analyst-2026",
+        "source": "infosecjobboard.com"
+      },
+      {
+        "type": "github",
+        "title": "fabacab/awesome-cybersecurity-blueteam",
+        "description": "",
+        "url": "https://github.com/fabacab/awesome-cybersecurity-blueteam",
+        "source": "GitHub"
+      }
+    ],
+    "13.2": [
+      {
+        "type": "github",
+        "title": "SigmaHQ/sigma",
+        "description": "",
+        "url": "https://github.com/SigmaHQ/sigma",
+        "source": "GitHub"
+      },
+      {
+        "type": "reference",
+        "title": "Sigma Rules - Vendor-Agnostic Detection 2026",
+        "description": "",
+        "url": "https://ringsafe.in/sigma-rules-vendor-agnostic-detection/",
+        "source": "ringsafe.in"
+      },
+      {
+        "type": "reference",
+        "title": "MITRE ATT&CK to Detection Rule Guide",
+        "description": "",
+        "url": "https://www.decryptiondigest.com/blog/how-to-read-mitre-attack-technique-write-detection-rule",
+        "source": "decryptiondigest.com"
+      },
+      {
+        "type": "github",
+        "title": "redcanaryco/atomic-red-team",
+        "description": "",
+        "url": "https://github.com/redcanaryco/atomic-red-team",
+        "source": "GitHub"
+      }
+    ],
+    "14.1": [
+      {
+        "type": "reference",
+        "title": "SANS: Getting Started in DFIR",
+        "description": "",
+        "url": "https://www.sans.org/mlp/start-in-dfir",
+        "source": "sans.org"
+      },
+      {
+        "type": "reference",
+        "title": "DFIR Diva free IR training plan",
+        "description": "",
+        "url": "https://dfirdiva.com/free-incident-response-training-plan/",
+        "source": "dfirdiva.com"
+      },
+      {
+        "type": "github",
+        "title": "meirwah/awesome-incident-response",
+        "description": "",
+        "url": "https://github.com/meirwah/awesome-incident-response",
+        "source": "GitHub"
+      }
+    ],
+    "14.2": [
+      {
+        "type": "reference",
+        "title": "SANS: How to start learning malware analysis",
+        "description": "",
+        "url": "https://www.sans.org/blog/how-you-can-start-learning-malware-analysis",
+        "source": "sans.org"
+      },
+      {
+        "type": "reference",
+        "title": "Getting Into DFIR - DFIR Diva",
+        "description": "",
+        "url": "https://dfirdiva.com/getting-into-dfir/",
+        "source": "dfirdiva.com"
+      }
+    ],
+    "15.1": [
+      {
+        "type": "reference",
+        "title": "Cloud Security Guide 2026 (RingSafe)",
+        "description": "",
+        "url": "https://ringsafe.in/cloud-security-guide/",
+        "source": "ringsafe.in"
+      },
+      {
+        "type": "reference",
+        "title": "Cloud IAM Best Practices 2026",
+        "description": "",
+        "url": "https://www.infodivelabs.com/blog/cloud-iam-aws-azure-gcp",
+        "source": "infodivelabs.com"
+      },
+      {
+        "type": "reference",
+        "title": "AWS least privilege when the amount of work grows blog",
+        "description": "",
+        "url": "https://aws.amazon.com/blogs/security/strategies-for-achieving-least-privilege-at-scale-part-1/",
+        "source": "aws.amazon.com"
+      },
+      {
+        "type": "github",
+        "title": "HackTricks-wiki/hacktricks-cloud",
+        "description": "",
+        "url": "https://github.com/HackTricks-wiki/hacktricks-cloud",
+        "source": "GitHub"
+      }
+    ],
+    "15.2": [
+      {
+        "type": "reference",
+        "title": "Vibe Engines Security Engineer Roadmap",
+        "description": "",
+        "url": "https://vibeengines.com/roadmap/security-engineer",
+        "source": "vibeengines.com"
+      }
+    ],
+    "16.1": [
+      {
+        "type": "reference",
+        "title": "Kubernetes Security Fundamentals",
+        "description": "",
+        "url": "https://k8s-security.guru/kubernetes-security/fundamentals/intro/",
+        "source": "k8s-security.guru"
+      },
+      {
+        "type": "reference",
+        "title": "K8s Security Checklist 2026",
+        "description": "",
+        "url": "https://www.cloudanix.com/blog/kubernetes-security-checklist-2026-hardening-eks-aks-gke",
+        "source": "cloudanix.com"
+      },
+      {
+        "type": "reference",
+        "title": "Container security best practices 2026",
+        "description": "",
+        "url": "https://www.adayptus.com/blog/kubernetes-container-security-best-practices",
+        "source": "adayptus.com"
+      },
+      {
+        "type": "github",
+        "title": "sottlmarek/DevSecOps",
+        "description": "",
+        "url": "https://github.com/sottlmarek/DevSecOps",
+        "source": "GitHub"
+      }
+    ],
+    "16.2": [
+      {
+        "type": "github",
+        "title": "sottlmarek/DevSecOps",
+        "description": "",
+        "url": "https://github.com/sottlmarek/DevSecOps",
+        "source": "GitHub"
+      }
+    ],
+    "18.1": [
+      {
+        "type": "reference",
+        "title": "Cybersecurity Certifications 2026 paths",
+        "description": "How GRC intersects careers",
+        "url": "https://hackerdna.com/blog/cybersecurity-certifications",
+        "source": "hackerdna.com"
+      }
+    ],
+    "19.1": [
+      {
+        "type": "reference",
+        "title": "TryHackMe",
+        "description": "",
+        "url": "https://tryhackme.com/",
+        "source": "tryhackme.com"
+      },
+      {
+        "type": "reference",
+        "title": "Best labs comparison 2026",
+        "description": "",
+        "url": "https://thecybersecuritytrail.com/guide/best-hands-on-cybersecurity-labs-practice-platforms-in-2026/",
+        "source": "thecybersecuritytrail.com"
+      },
+      {
+        "type": "github",
+        "title": "juice-shop/juice-shop",
+        "description": "",
+        "url": "https://github.com/juice-shop/juice-shop",
+        "source": "GitHub"
+      }
+    ],
+    "19.2": [
+      {
+        "type": "reference",
+        "title": "Cybersecurity Certifications 2026",
+        "description": "",
+        "url": "https://hackerdna.com/blog/cybersecurity-certifications",
+        "source": "hackerdna.com"
+      },
+      {
+        "type": "reference",
+        "title": "Ethical hacking certs comparison 2026",
+        "description": "",
+        "url": "https://securityelites.com/ethical-hacking-certifications/",
+        "source": "securityelites.com"
+      }
+    ],
+    "20.1": [
+      {
+        "type": "video",
+        "title": "Complete CyberSecurity Roadmap 2026 (Sheryians)",
+        "description": "",
+        "url": "https://www.youtube.com/watch?v=U-mAqnc6ZkI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/U-mAqnc6ZkI/hqdefault.jpg",
+        "videoId": "U-mAqnc6ZkI",
+        "embedSupported": true
+      },
+      {
+        "type": "reference",
+        "title": "How to Become a SOC Analyst 2026",
+        "description": "",
+        "url": "https://www.infosecjobboard.com/blog/how-to-become-soc-analyst-2026",
+        "source": "infosecjobboard.com"
+      }
+    ],
+    "20.2": [
+      {
+        "type": "reference",
+        "title": "Vibe Engines Security Engineer Roadmap",
+        "description": "",
+        "url": "https://vibeengines.com/roadmap/security-engineer",
+        "source": "vibeengines.com"
+      }
+    ],
+    "3.2": [
+      {
+        "type": "documentation",
+        "title": "Microsoft Windows Internals",
+        "description": "Official deep-dive for investigating Windows systems.",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/learn/windows-internals",
+        "source": "Microsoft",
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "SSL, TLS, HTTPS Explained",
+        "description": "Security context for OS-level investigation.",
+        "url": "https://www.youtube.com/watch?v=j9QmMEWmcfo",
+        "source": "YouTube",
+        "channel": "ByteByteGo",
+        "videoId": "j9QmMEWmcfo",
+        "thumbnail": "https://i.ytimg.com/vi/j9QmMEWmcfo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "4.2": [
+      {
+        "type": "video",
+        "title": "TLS / SSL — The Complete Sequence",
+        "description": "Certificates and trust chains step-by-step.",
+        "url": "https://www.youtube.com/watch?v=LJDsdSh1CYM",
+        "source": "YouTube",
+        "channel": "Practical Networking",
+        "videoId": "LJDsdSh1CYM",
+        "thumbnail": "https://i.ytimg.com/vi/LJDsdSh1CYM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "SSL/TLS Explained in 7 Minutes",
+        "description": "Quick visual overview of HTTPS.",
+        "url": "https://www.youtube.com/watch?v=67Kfsmy_frM",
+        "source": "YouTube",
+        "channel": "Sematext",
+        "videoId": "67Kfsmy_frM",
+        "thumbnail": "https://i.ytimg.com/vi/67Kfsmy_frM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "8.1": [
+      {
+        "type": "video",
+        "title": "What is TCP/IP?",
+        "description": "Firewalls sit at network boundaries.",
+        "url": "https://www.youtube.com/watch?v=PpsEaqJV_A0",
+        "source": "YouTube",
+        "channel": "Techquickie",
+        "videoId": "PpsEaqJV_A0",
+        "thumbnail": "https://i.ytimg.com/vi/PpsEaqJV_A0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "NIST firewall guidelines",
+        "description": "IDS/IPS and VPN placement reference.",
+        "url": "https://csrc.nist.gov/publications/detail/sp/800-41/rev-1/final",
+        "source": "NIST",
+        "difficulty": "beginner"
+      }
+    ],
+    "10.1": [
+      {
+        "type": "documentation",
+        "title": "CVSS v4 specification",
+        "description": "Scoring vulnerabilities beyond the headline number.",
+        "url": "https://www.first.org/cvss/v4.0/specification-document",
+        "source": "FIRST",
+        "difficulty": "beginner"
+      },
+      {
+        "type": "tool",
+        "title": "NVD vulnerability database",
+        "description": "Search CVEs and CVSS vectors.",
+        "url": "https://nvd.nist.gov/",
+        "source": "NIST NVD",
+        "difficulty": "beginner"
+      }
+    ],
+    "10.2": [
+      {
+        "type": "documentation",
+        "title": "CISA patch management guide",
+        "description": "Prioritization and exception workflows.",
+        "url": "https://www.cisa.gov/resources-tools/resources/patch-management",
+        "source": "CISA",
+        "difficulty": "beginner"
+      }
+    ],
+    "12.1": [
+      {
+        "type": "documentation",
+        "title": "Microsoft Active Directory overview",
+        "description": "AD and Kerberos enough to reason about attacks.",
+        "url": "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview",
+        "source": "Microsoft",
+        "difficulty": "beginner"
+      },
+      {
+        "type": "github",
+        "title": "BloodHound AD analysis",
+        "description": "Map AD attack paths for defensive review.",
+        "url": "https://github.com/SpecterOps/BloodHound",
+        "source": "GitHub",
+        "difficulty": "beginner"
+      }
+    ],
+    "17.1": [
+      {
+        "type": "documentation",
+        "title": "YARA documentation",
+        "description": "Write rules for static malware detection.",
+        "url": "https://yara.readthedocs.io/",
+        "source": "YARA",
+        "difficulty": "beginner"
+      },
+      {
+        "type": "github",
+        "title": "YARA rules repository",
+        "description": "Community rules to study and adapt.",
+        "url": "https://github.com/Yara-Rules/rules",
+        "source": "GitHub",
+        "difficulty": "beginner"
+      }
+    ],
+    "17.2": [
+      {
+        "type": "documentation",
+        "title": "Cuckoo Sandbox docs",
+        "description": "Safe dynamic analysis hygiene.",
+        "url": "https://cuckoo.readthedocs.io/",
+        "source": "Cuckoo Sandbox",
+        "difficulty": "beginner"
+      }
+    ],
+    "18.2": [
+      {
+        "type": "documentation",
+        "title": "NIST Risk Management Framework",
+        "description": "Risk registers and practical compliance.",
+        "url": "https://csrc.nist.gov/projects/risk-management",
+        "source": "NIST",
+        "difficulty": "beginner"
+      }
+    ]
+  },
+  "phases": {},
+  "projects": {}
+}

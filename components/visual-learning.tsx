@@ -9,12 +9,14 @@ export type VisualResource = {
   title: string;
   href: string;
   note?: string;
+  embedSupported?: boolean;
+  videoId?: string;
 };
 
 function resourceToVideo(resource: VisualResource): VideoResource | null {
+  if (resource.embedSupported === false) return null;
   const info = extractYouTubeInfo(resource.href);
-  if (!info?.videoId && info?.kind !== "playlist") return null;
-  if (!info) return null;
+  if (!info?.videoId || info.kind === "playlist") return null;
   return { href: resource.href, title: resource.title, info };
 }
 
@@ -63,10 +65,12 @@ export function VisualLearning({
   resources,
   sourcePath,
   embedYouTube = true,
+  heading = "Visual Learning",
 }: {
   resources: VisualResource[];
   sourcePath: string;
   embedYouTube?: boolean;
+  heading?: string;
 }) {
   if (resources.length === 0) return null;
 
@@ -75,7 +79,7 @@ export function VisualLearning({
 
   return (
     <section className="ih-visual">
-      <h2 className="ih-lesson-kicker">Visual Learning</h2>
+      <h2 className="ih-lesson-kicker">{heading}</h2>
       {videos.length > 0 ? (
         <div className="ih-visual-videos">
           {videos.map((item, index) => {
@@ -90,7 +94,13 @@ export function VisualLearning({
                   </div>
                 </div>
                 {item.note ? <p className="ih-visual-lead"><PracticeRichText text={item.note} /></p> : null}
-                {embedYouTube ? <LessonVideo videos={[video]} compact /> : null}
+                {embedYouTube ? (
+                  <LessonVideo
+                    videos={[video]}
+                    compact
+                    embedSupported={item.embedSupported !== false}
+                  />
+                ) : null}
               </article>
             );
           })}

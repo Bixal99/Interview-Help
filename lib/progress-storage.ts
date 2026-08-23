@@ -1,5 +1,6 @@
 import { remapProgressId } from "./legacy-routes";
-import type { CourseProgressState, LearningProgress, PathStep } from "./learning-model";
+import { csLegacyLessonAliases, csProgressV5LessonMap } from "./cs-curriculum-compat";
+import type { ChapterRequirementLookup, CourseProgressState, LearningProgress, PathStep } from "./learning-model";
 import { pathForCourse, sequentialPath } from "./learning-paths";
 
 export const PROGRESS_KEY = "interview-help-progress-v1";
@@ -21,7 +22,7 @@ export function emptyCourseProgress(): CourseProgressState {
 }
 
 export function emptyProgress(): LearningProgress {
-  return { version: 4, courses: {} };
+  return { version: 5, courses: {} };
 }
 
 export function parseProgress(raw: string | null): string[] {
@@ -86,13 +87,55 @@ function foldOopCourse(progress: LearningProgress, remapCsNumeric: boolean): Lea
   if (remappedCs && remappedOop) courses[CS_SLUG] = mergeCourseState(remappedCs, remappedOop);
   else if (remappedCs) courses[CS_SLUG] = remappedCs;
   else if (remappedOop) courses[CS_SLUG] = remappedOop;
-  return { ...progress, version: 4, courses };
+  return { ...progress, version: progress.version < 4 ? 4 : progress.version, courses };
+}
+
+const canonicalLessonByLegacySlug = new Map(
+  Object.entries(csLegacyLessonAliases).flatMap(([lessonId, aliases]) => aliases.map((alias) => [alias.toLowerCase(), lessonId] as const)),
+);
+
+function migratedLessonIds(value: string) {
+  const direct = csProgressV5LessonMap[value];
+  if (direct) return direct;
+  if (/^(?:chapter|phase)-(?:opening|roadmap|summary)|^(?:closing-)?transition\b/i.test(value)) return [];
+  const byAlias = canonicalLessonByLegacySlug.get(value.toLowerCase());
+  return byAlias ? [byAlias] : [];
+}
+
+function migrateCsStateToV5(state: CourseProgressState): CourseProgressState {
+  const migrateList = (items: string[]) => unique(items.flatMap(migratedLessonIds));
+  const migrateExercises = (items: string[]) => unique(items.flatMap((item) => {
+    const match = /^(.+):practice$/.exec(item);
+    return match ? migratedLessonIds(match[1]).map((id) => `${id}:practice`) : [];
+  }));
+  const currentLessonId = state.currentLessonId?.startsWith("project:")
+    ? state.currentLessonId
+    : state.currentLessonId
+      ? migratedLessonIds(state.currentLessonId)[0]
+      : undefined;
+  return {
+    ...state,
+    currentLessonId,
+    visitedLessons: migrateList(state.visitedLessons),
+    completedLessons: migrateList(state.completedLessons),
+    completedExercises: migrateExercises(state.completedExercises),
+  };
+}
+
+function upgradeToV5(progress: LearningProgress): LearningProgress {
+  if (progress.version === 5) return progress;
+  const cs = progress.courses[CS_SLUG];
+  return {
+    ...progress,
+    version: 5,
+    courses: cs ? { ...progress.courses, [CS_SLUG]: migrateCsStateToV5(cs) } : progress.courses,
+  };
 }
 
 function asProgress(value: unknown): LearningProgress | null {
   if (!value || typeof value !== "object") return null;
   const record = value as Partial<LearningProgress>;
-  if (![2, 3, 4].includes(record.version as number) || !record.courses || typeof record.courses !== "object") return null;
+  if (![2, 3, 4, 5].includes(record.version as number) || !record.courses || typeof record.courses !== "object") return null;
   const progress: LearningProgress = {
     version: record.version as LearningProgress["version"],
     activePath: typeof record.activePath === "string" ? record.activePath : undefined,
@@ -103,7 +146,16 @@ function asProgress(value: unknown): LearningProgress | null {
   // introduced the 15-story/105-phase renumbering, so their CS-numeric ids
   // (not the OOP-course ids, which always go through their own remap) need
   // the phase-number remap applied once on the way in.
-  return foldOopCourse(progress, (record.version as number) < 4);
+  const legacyOop = (record.version as number) < 4 && progress.courses[OOP_SLUG]
+    ? remapCourseState(progress.courses[OOP_SLUG], true)
+    : undefined;
+  const upgraded = upgradeToV5(foldOopCourse(progress, (record.version as number) < 4));
+  if (legacyOop) {
+    upgraded.courses[CS_SLUG] = upgraded.courses[CS_SLUG]
+      ? mergeCourseState(upgraded.courses[CS_SLUG], legacyOop)
+      : legacyOop;
+  }
+  return upgraded;
 }
 
 export function parseProgressV2(raw: string | null): LearningProgress {
@@ -144,7 +196,7 @@ export function migrateV1Progress(
     next.courses[slug] = state;
   }
   if (leftover.length) next.legacyIds = leftover;
-  return foldOopCourse(next, true);
+  return upgradeToV5(foldOopCourse(next, true));
 }
 
 export function courseState(progress: LearningProgress, slug: string): CourseProgressState {
@@ -178,11 +230,41 @@ export function isProjectComplete(progress: LearningProgress, slug: string, phas
   });
 }
 
-export function canEnterPhase(progress: LearningProgress, steps: PathStep[], course: string, phaseId: string) {
+export function canEnterPhase(
+  progress: LearningProgress,
+  steps: PathStep[],
+  course: string,
+  phaseId: string,
+  requirements?: ChapterRequirementLookup,
+) {
   const index = steps.findIndex((step) => step.course === course && step.phaseId === phaseId);
   if (index <= 0) return true;
   const previous = steps[index - 1];
-  return isProjectComplete(progress, previous.course, previous.phaseId);
+  const requirement = requirements?.[previous.course]?.[previous.phaseId];
+  if (!requirement) return true;
+  const state = courseState(progress, previous.course);
+  const lessonsDone = requirement.lessons.every((lesson) => state.completedLessons.includes(lesson.id));
+  const projectDone = !requirement.projectRequired || isProjectComplete(progress, previous.course, previous.phaseId);
+  return lessonsDone && projectDone;
+}
+
+export function requiredHrefForPhase(
+  progress: LearningProgress,
+  steps: PathStep[],
+  course: string,
+  phaseId: string,
+  requirements?: ChapterRequirementLookup,
+) {
+  const index = steps.findIndex((step) => step.course === course && step.phaseId === phaseId);
+  if (index <= 0) return undefined;
+  const previous = steps[index - 1];
+  const requirement = requirements?.[previous.course]?.[previous.phaseId];
+  if (!requirement) return undefined;
+  const state = courseState(progress, previous.course);
+  const firstLesson = requirement.lessons.find((lesson) => !state.completedLessons.includes(lesson.id));
+  if (firstLesson) return firstLesson.href;
+  if (requirement.projectRequired && !isProjectComplete(progress, previous.course, previous.phaseId)) return requirement.projectHref;
+  return undefined;
 }
 
 export function nextStep(steps: PathStep[], course: string, phaseId: string) {
@@ -221,16 +303,27 @@ export function resumeHref(
   };
 }
 
-export function phasesDone(state: CourseProgressState) {
-  const ids = [...state.completedProjects, ...state.completedPhases];
-  const unique = new Set(ids.map((id) => id.trim().toLowerCase().replace(/^phase-/, "").replace(/^0+(?=\d)/, "") || "0"));
-  return unique.size;
+/** Count of completed lessons (unique ids stored in progress). */
+export function lessonsDone(state: CourseProgressState) {
+  return state.completedLessons.length;
 }
 
-/** Progress counts completed phase projects only — a phase advances when its project is done. */
-export function coursePercent(state: CourseProgressState, phaseCount: number) {
-  if (!phaseCount) return 0;
-  return Math.min(100, Math.round((phasesDone(state) / phaseCount) * 100));
+/** Chapters fully cleared when every lesson in the phase is complete. */
+export function phasesDone(state: CourseProgressState, lessonIdsByPhase?: Record<string, string[]>) {
+  if (!lessonIdsByPhase) {
+    return new Set(state.completedProjects.map((id) => id.trim().toLowerCase().replace(/^phase-/, "").replace(/^0+(?=\d)/, "") || "0")).size;
+  }
+  return Object.entries(lessonIdsByPhase).filter(([phaseId, ids]) =>
+    ids.length > 0 && ids.every((id) => state.completedLessons.includes(id)) && state.completedProjects.some((id) => id === phaseId),
+  ).length;
+}
+
+/** Progress counts every required lesson and chapter project. */
+export function coursePercent(state: CourseProgressState, lessonCount: number, projectCount = 0) {
+  const required = lessonCount + projectCount;
+  if (!required) return 0;
+  const projects = Math.min(projectCount, new Set(state.completedProjects.map((id) => id.trim().toLowerCase())).size);
+  return Math.min(100, Math.round(((lessonsDone(state) + projects) / required) * 100));
 }
 
 export function validateImportedProgress(value: unknown): LearningProgress {

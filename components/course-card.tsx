@@ -5,7 +5,8 @@ import type { MouseEvent } from "react";
 import { CourseIdentityIcon } from "@/components/icons/app-icon";
 import { useLearningProgress } from "@/components/progress-client";
 import { ICON_SIZE } from "@/lib/icons";
-import { phasesDone } from "@/lib/progress-storage";
+import type { CourseProgressState } from "@/lib/learning-model";
+import { lessonsDone } from "@/lib/progress-storage";
 
 function onGlow(event: MouseEvent<HTMLElement>) {
   const box = event.currentTarget.getBoundingClientRect();
@@ -13,18 +14,46 @@ function onGlow(event: MouseEvent<HTMLElement>) {
   event.currentTarget.style.setProperty("--y", `${event.clientY - box.top}px`);
 }
 
-function CourseTileProgress({ slug, phaseCount }: { slug: string; phaseCount: number }) {
+function courseStarted(state: CourseProgressState) {
+  return Boolean(
+    state.currentPhaseId ||
+      state.completedLessons.length > 0 ||
+      state.visitedLessons.length > 0,
+  );
+}
+
+function continueHrefFor(slug: string, state: CourseProgressState) {
+  const phaseId = state.currentPhaseId;
+  if (!phaseId) return `/courses/${slug}`;
+  const lessonId = state.currentLessonId;
+  if (lessonId?.startsWith("project:")) return `/projects/${slug}/phase/${phaseId}`;
+  if (lessonId) return `/courses/${slug}/phase/${phaseId}/${lessonId}`;
+  return `/courses/${slug}/phase/${phaseId}`;
+}
+
+function CourseTileProgress({
+  slug,
+  lessonCount,
+  projectCount,
+  started,
+}: {
+  slug: string;
+  lessonCount: number;
+  projectCount: number;
+  started: boolean;
+}) {
   const { ready, percent, course } = useLearningProgress();
-  // Keep SSR and the first client paint identical (0%); fill in after hydration.
-  const value = ready ? percent(slug, phaseCount) : 0;
-  const done = ready ? phasesDone(course(slug)) : 0;
+  const value = ready ? percent(slug, lessonCount, projectCount) : 0;
+  const state = course(slug);
+  const done = ready ? lessonsDone(state) : 0;
+  const projectsDone = ready ? Math.min(projectCount, new Set(state.completedProjects).size) : 0;
 
   return (
     <div className="ih-course-tile-progress">
       <div className="ih-course-tile-progress-meta">
-        <span>{value}% done</span>
+        <span>{started ? "Continue where you left off" : `${value}% done`}</span>
         <span>
-          {done} / {phaseCount} phases
+          {done + projectsDone} / {lessonCount + projectCount} required items
         </span>
       </div>
       <div
@@ -33,7 +62,7 @@ function CourseTileProgress({ slug, phaseCount }: { slug: string; phaseCount: nu
         aria-valuemin={0}
         aria-valuemax={100}
         aria-valuenow={value}
-        aria-label={`${done} of ${phaseCount} phases complete`}
+        aria-label={`${done} of ${lessonCount} lessons and ${projectsDone} of ${projectCount} projects complete`}
       >
         <span style={{ width: `${value}%` }} />
       </div>
@@ -57,10 +86,15 @@ export function CourseCard({
   index?: number;
 }) {
   const number = String(index + 1).padStart(2, "0");
-  const phaseCount = course.phaseCount ?? 0;
+  const lessonCount = course.lessonCount ?? 0;
+  const projectCount = course.phaseCount ?? 0;
+  const { ready, course: courseStateFor } = useLearningProgress();
+  const state = courseStateFor(course.slug);
+  const started = ready && courseStarted(state);
+  const href = started ? continueHrefFor(course.slug, state) : `/courses/${course.slug}`;
 
   return (
-    <Link href={`/courses/${course.slug}`} className="ih-course-tile" onMouseMove={onGlow}>
+    <Link href={href} className={`ih-course-tile${started ? " is-started" : ""}`} onMouseMove={onGlow}>
       <div className="ih-course-tile-top">
         <span className="ih-course-tile-index" aria-hidden="true">
           {number}
@@ -78,14 +112,16 @@ export function CourseCard({
           ))}
         </ul>
       ) : null}
-      {phaseCount > 0 ? <CourseTileProgress slug={course.slug} phaseCount={phaseCount} /> : null}
+      {lessonCount > 0 ? (
+        <CourseTileProgress slug={course.slug} lessonCount={lessonCount} projectCount={projectCount} started={started} />
+      ) : null}
       <div className="ih-course-tile-foot">
         <p>
-          {course.phaseCount ? `${course.phaseCount} phases` : null}
+          {course.phaseCount ? `${course.phaseCount} chapters` : null}
           {course.phaseCount && course.lessonCount ? " · " : null}
           {course.lessonCount ? `${course.lessonCount} lessons` : null}
         </p>
-        <span className="ih-course-start">Start</span>
+        <span className="ih-course-start">{started ? "Continue learning" : "Start"}</span>
       </div>
     </Link>
   );

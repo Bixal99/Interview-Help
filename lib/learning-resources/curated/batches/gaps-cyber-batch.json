@@ -1,0 +1,160 @@
+{
+  "lessons": {
+    "3.2": [
+      {
+        "type": "documentation",
+        "title": "Microsoft Windows Internals",
+        "description": "Official deep-dive for investigating Windows systems.",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/learn/windows-internals",
+        "source": "Microsoft",
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "SSL, TLS, HTTPS Explained",
+        "description": "Security context for OS-level investigation.",
+        "url": "https://www.youtube.com/watch?v=j9QmMEWmcfo",
+        "source": "YouTube",
+        "channel": "ByteByteGo",
+        "videoId": "j9QmMEWmcfo",
+        "thumbnail": "https://i.ytimg.com/vi/j9QmMEWmcfo/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "4.2": [
+      {
+        "type": "video",
+        "title": "TLS / SSL — The Complete Sequence",
+        "description": "Certificates and trust chains step-by-step.",
+        "url": "https://www.youtube.com/watch?v=LJDsdSh1CYM",
+        "source": "YouTube",
+        "channel": "Practical Networking",
+        "videoId": "LJDsdSh1CYM",
+        "thumbnail": "https://i.ytimg.com/vi/LJDsdSh1CYM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "video",
+        "title": "SSL/TLS Explained in 7 Minutes",
+        "description": "Quick visual overview of HTTPS.",
+        "url": "https://www.youtube.com/watch?v=67Kfsmy_frM",
+        "source": "YouTube",
+        "channel": "Sematext",
+        "videoId": "67Kfsmy_frM",
+        "thumbnail": "https://i.ytimg.com/vi/67Kfsmy_frM/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      }
+    ],
+    "8.1": [
+      {
+        "type": "video",
+        "title": "What is TCP/IP?",
+        "description": "Firewalls sit at network boundaries.",
+        "url": "https://www.youtube.com/watch?v=PpsEaqJV_A0",
+        "source": "YouTube",
+        "channel": "Techquickie",
+        "videoId": "PpsEaqJV_A0",
+        "thumbnail": "https://i.ytimg.com/vi/PpsEaqJV_A0/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "documentation",
+        "title": "NIST firewall guidelines",
+        "description": "IDS/IPS and VPN placement reference.",
+        "url": "https://csrc.nist.gov/publications/detail/sp/800-41/rev-1/final",
+        "source": "NIST",
+        "difficulty": "beginner"
+      }
+    ],
+    "10.1": [
+      {
+        "type": "documentation",
+        "title": "CVSS v4 specification",
+        "description": "Scoring vulnerabilities beyond the headline number.",
+        "url": "https://www.first.org/cvss/v4.0/specification-document",
+        "source": "FIRST",
+        "difficulty": "beginner"
+      },
+      {
+        "type": "tool",
+        "title": "NVD vulnerability database",
+        "description": "Search CVEs and CVSS vectors.",
+        "url": "https://nvd.nist.gov/",
+        "source": "NIST NVD",
+        "difficulty": "beginner"
+      }
+    ],
+    "10.2": [
+      {
+        "type": "documentation",
+        "title": "CISA patch management guide",
+        "description": "Prioritization and exception workflows.",
+        "url": "https://www.cisa.gov/resources-tools/resources/patch-management",
+        "source": "CISA",
+        "difficulty": "beginner"
+      }
+    ],
+    "12.1": [
+      {
+        "type": "documentation",
+        "title": "Microsoft Active Directory overview",
+        "description": "AD and Kerberos enough to reason about attacks.",
+        "url": "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview",
+        "source": "Microsoft",
+        "difficulty": "beginner"
+      },
+      {
+        "type": "github",
+        "title": "BloodHound AD analysis",
+        "description": "Map AD attack paths for defensive review.",
+        "url": "https://github.com/SpecterOps/BloodHound",
+        "source": "GitHub",
+        "difficulty": "beginner"
+      }
+    ],
+    "17.1": [
+      {
+        "type": "documentation",
+        "title": "YARA documentation",
+        "description": "Write rules for static malware detection.",
+        "url": "https://yara.readthedocs.io/",
+        "source": "YARA",
+        "difficulty": "beginner"
+      },
+      {
+        "type": "github",
+        "title": "YARA rules repository",
+        "description": "Community rules to study and adapt.",
+        "url": "https://github.com/Yara-Rules/rules",
+        "source": "GitHub",
+        "difficulty": "beginner"
+      }
+    ],
+    "17.2": [
+      {
+        "type": "documentation",
+        "title": "Cuckoo Sandbox docs",
+        "description": "Safe dynamic analysis hygiene.",
+        "url": "https://cuckoo.readthedocs.io/",
+        "source": "Cuckoo Sandbox",
+        "difficulty": "beginner"
+      }
+    ],
+    "18.2": [
+      {
+        "type": "documentation",
+        "title": "NIST Risk Management Framework",
+        "description": "Risk registers and practical compliance.",
+        "url": "https://csrc.nist.gov/projects/risk-management",
+        "source": "NIST",
+        "difficulty": "beginner"
+      }
+    ]
+  },
+  "phases": {},
+  "projects": {}
+}

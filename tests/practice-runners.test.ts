@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { getPracticeRunner, lessonHasPracticeRunners, practiceRunnerKey } from "../lib/practice-runners";
+import { getPracticeRunner, hasCuratedRunner, lessonHasPracticeRunners, practiceRunnerKey } from "../lib/practice-runners";
 
 describe("practice runners", () => {
   it("maps lesson 1.1 tasks to prepared playground code", () => {
@@ -27,6 +27,22 @@ describe("practice runners", () => {
 
     const fib = getPracticeRunner("2.1", "task-3");
     expect(fib?.options[0]?.code).toMatch(/O\(2ⁿ\)/);
-    expect(getPracticeRunner("3.1", "task-1", "State the time complexity")?.options[0]?.code).toContain("PROMPT");
+
+    expect(hasCuratedRunner("1.1", "task-1")).toBe(true);
+    expect(hasCuratedRunner("3.1", "task-1")).toBe(false);
+  });
+
+  it("falls back to a topic-matched, runnable reference solution for un-curated coding items", () => {
+    const sorting = getPracticeRunner("3.1", "task-1", "Implement a function that sorts this list");
+    expect(sorting?.options[0]?.code).toMatch(/def bubble_sort/);
+
+    const searching = getPracticeRunner("3.1", "task-2", "Write a function to search a sorted array");
+    expect(searching?.options[0]?.code).toMatch(/def binary_search/);
+  });
+
+  it("falls back to a clean, runnable starter when no topic matches", () => {
+    const generic = getPracticeRunner("3.1", "task-9", "Write a program that reverses a string");
+    expect(generic?.options[0]?.code).toMatch(/def solve\(\):/);
+    expect(generic?.options[0]?.code).toContain("Write a program that reverses a string");
   });
 });

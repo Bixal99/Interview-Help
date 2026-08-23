@@ -5,12 +5,14 @@ describe("content utilities", () => {
   it("generates stable GitHub-style heading slugs", () => {
     expect(githubSlug("Phase 4 - Branching & Rebase")).toBe("phase-4-branching-rebase");
     expect(githubSlug("$O(n \\log n)$")).toBe("on-log-n");
+    expect(githubSlug("Big-Ω")).toBe("big-omega");
+    expect(githubSlug("Big-Θ")).toBe("big-theta");
   });
 
   it("extracts real headings but preserves hashes inside code fences", () => {
-    const markdown = "# Course\n```bash\n# not a heading\n```\n# PHASE 1 - Start\n## 1.1 Topic";
+    const markdown = "# Course\n```bash\n# not a heading\n```\n# CHAPTER 1 - Start\n## Lesson 1.1 Topic";
     const headings = extractHeadings(markdown);
-    expect(headings.map((item) => item.text)).toEqual(["Course", "PHASE 1 - Start", "1.1 Topic"]);
+    expect(headings.map((item) => item.text)).toEqual(["Course", "CHAPTER 1 - Start", "Lesson 1.1 Topic"]);
     expect(headings[1].phase).toBe(1);
   });
 

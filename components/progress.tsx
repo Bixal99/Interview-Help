@@ -44,7 +44,7 @@ export function CourseProgress({ slug, phaseIds, compact = false }: { slug: stri
   const percent = phaseIds.length ? Math.round((count / phaseIds.length) * 100) : 0;
   return (
     <div aria-label={`${percent}% course progress`}>
-      <div className="mb-1.5 flex items-center justify-between text-xs text-muted"><span>{compact ? "Progress" : `${count} of ${phaseIds.length} phases complete`}</span><span className="font-medium text-ink">{percent}%</span></div>
+      <div className="mb-1.5 flex items-center justify-between text-xs text-muted"><span>{compact ? "Progress" : `${count} of ${phaseIds.length} chapters complete`}</span><span className="font-medium text-ink">{percent}%</span></div>
       <div className="h-1.5 overflow-hidden rounded-full bg-ink/8"><div className="h-full rounded-full bg-cobalt transition-[width] duration-300" style={{ width: `${percent}%` }} /></div>
     </div>
   );

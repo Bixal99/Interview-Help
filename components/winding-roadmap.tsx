@@ -1,13 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useId, useMemo, useState } from "react";
+import { useEffect, useId, useMemo, useState, type ReactNode } from "react";
 import { AppIcon } from "@/components/icons/app-icon";
-import { PracticeRichText } from "@/components/practice-rich-text";
 import type { ProgressCourseView } from "@/components/progress-dashboard";
-import { phaseProgressPercent, trailStatuses, type TrailStatus } from "@/lib/progress-map";
-import { windingLayout, windingMetrics, windingPath, windingTerminals } from "@/lib/winding-layout";
+import {
+  frontierLessonIdSet,
+  lessonDotStatus,
+  lessonTrailFillLength,
+  trailStatuses,
+  type LessonDotStatus,
+  type TrailStatus,
+} from "@/lib/progress-map";
+import { windingLayout, windingMetrics, windingPath, windingSegmentLessonPoints, windingTerminals } from "@/lib/winding-layout";
 import { useLearningProgress } from "@/components/progress-client";
+import { coursePercent } from "@/lib/progress-storage";
 
 function nodePaint(status: TrailStatus, isSelected: boolean) {
   if (status === "cleared") return { fill: "#04AA6D", stroke: "#04AA6D", number: "#fff" };
@@ -28,36 +35,129 @@ export function WindingRoadmap({
   continueHref,
   continueLabel,
   showIntro = true,
+  toolbar,
 }: {
   course: ProgressCourseView;
   continueHref: string;
   continueLabel: string;
   showIntro?: boolean;
+  toolbar?: ReactNode;
 }) {
   const { course: courseState } = useLearningProgress();
   const maskId = useId().replace(/:/g, "");
   const [selected, setSelected] = useState(0);
 
   const state = courseState(course.slug);
-  const phases = useMemo(() => course.chapters.flatMap((chapter) => chapter.phases), [course]);
+  const phases = useMemo(
+    () =>
+      course.chapters.flatMap((chapter) =>
+        chapter.phases.map((phase) => ({
+          id: phase.id,
+          hasProject: phase.hasProject,
+          lessonIds: phase.lessonIds,
+          lessons: phase.lessons,
+          title: phase.title,
+          goal: phase.goal,
+          href: phase.href,
+          unitTitle: chapter.title,
+          chapterNumber: phase.number,
+        })),
+      ),
+    [course],
+  );
+  const allLessonIds = useMemo(() => phases.flatMap((phase) => phase.lessonIds), [phases]);
   const statuses = useMemo(
-    () => trailStatuses(phases, state.completedProjects, state.completedPhases, state.currentPhaseId),
+    () => trailStatuses(phases, state.completedLessons, state.currentPhaseId, state.currentLessonId, state.completedProjects),
     [phases, state],
   );
   const layout = useMemo(() => windingLayout(phases.length), [phases.length]);
   const pathD = useMemo(() => windingPath(layout.points, layout.cols), [layout.points, layout.cols]);
   const metrics = useMemo(() => windingMetrics(layout.points), [layout.points]);
   const terminals = useMemo(() => windingTerminals(layout.points, layout.cols), [layout.points, layout.cols]);
+  const frontierIds = useMemo(
+    () => frontierLessonIdSet(phases, state.completedLessons, state.currentPhaseId, state.currentLessonId),
+    [phases, state.completedLessons, state.currentPhaseId, state.currentLessonId],
+  );
+  const lessonDots = useMemo(() => {
+    const dots: {
+      key: string;
+      x: number;
+      y: number;
+      status: LessonDotStatus;
+      lessonId: string;
+      lessonTitle: string;
+      phaseId: string;
+      href: string;
+    }[] = [];
+    if (!layout.points.length) return dots;
+
+    const endPoint = terminals?.end ?? layout.points[layout.points.length - 1];
+    for (let index = 0; index < phases.length; index += 1) {
+      const phase = phases[index];
+      if (!phase?.lessonIds.length) continue;
+      const from = layout.points[index];
+      const to = index + 1 < layout.points.length ? layout.points[index + 1] : endPoint;
+      if (!from || !to) continue;
+      const positions = windingSegmentLessonPoints(from, to, phase.lessonIds.length);
+      phase.lessonIds.forEach((lessonId, lessonIndex) => {
+        const point = positions[lessonIndex];
+        const lesson = phase.lessons[lessonIndex];
+        if (!point || !lesson) return;
+        dots.push({
+          key: `${phase.id}-${lessonId}`,
+          x: point.x,
+          y: point.y,
+          lessonId,
+          lessonTitle: lesson.title,
+          phaseId: phase.id,
+          href: `/courses/${course.slug}/phase/${phase.id}/${lesson.slug}`,
+          status: lessonDotStatus(
+            lessonId,
+            phase.lessonIds,
+            state.completedLessons,
+            state.currentLessonId,
+            state.currentPhaseId,
+            phase.id,
+            lesson.slug,
+            frontierIds,
+          ),
+        });
+      });
+    }
+    return dots;
+  }, [
+    layout.points,
+    phases,
+    state.completedLessons,
+    state.currentLessonId,
+    state.currentPhaseId,
+    terminals,
+    frontierIds,
+    course.slug,
+  ]);
   const liveIndex = useMemo(() => {
-    if (statuses.length && statuses.every((status) => status === "cleared")) return statuses.length - 1;
     const here = statuses.findIndex((status) => status === "here");
     return here >= 0 ? here : 0;
   }, [statuses]);
-  const pathPercent = phaseProgressPercent(statuses);
+  const pathPercent = coursePercent(state, allLessonIds.length, phases.filter((phase) => phase.hasProject).length);
+  const fillLength = useMemo(
+    () =>
+      lessonTrailFillLength(
+        phases,
+        state.completedLessons,
+        metrics.lengths,
+        metrics.total,
+        state.currentPhaseId,
+        state.currentLessonId,
+      ),
+    [phases, state.completedLessons, state.currentPhaseId, state.currentLessonId, metrics.lengths, metrics.total],
+  );
   const current = phases[selected] ?? phases[0];
   const currentStatus = statuses[selected] ?? "locked";
-  const allDone = statuses.length > 0 && statuses.every((status) => status === "cleared");
-  const fillLength = allDone ? metrics.total : (metrics.lengths[liveIndex] ?? 0);
+  const allDone = allLessonIds.length > 0 && phases.every((phase) =>
+    phase.lessonIds.every((id) => state.completedLessons.includes(id)) &&
+    (!phase.hasProject || state.completedProjects.some((id) => id === phase.id)),
+  );
   const dashOffset = Math.max(0, metrics.total - fillLength);
 
   useEffect(() => {
@@ -65,6 +165,27 @@ export function WindingRoadmap({
   }, [course.slug, liveIndex]);
 
   if (!current) return null;
+
+  const currentLessonDone = current.lessonIds.filter((id) => state.completedLessons.includes(id)).length;
+  const currentLessonTotal = current.lessonIds.length;
+  const focusLesson = (() => {
+    const byCurrent = current.lessons.find(
+      (lesson) =>
+        lesson.id === state.currentLessonId ||
+        lesson.slug === state.currentLessonId ||
+        (state.currentLessonId && lesson.id.toLowerCase() === state.currentLessonId.toLowerCase()),
+    );
+    if (byCurrent) return byCurrent;
+    const firstOpen = current.lessons.find((lesson) => !state.completedLessons.includes(lesson.id));
+    return firstOpen ?? current.lessons[current.lessons.length - 1] ?? null;
+  })();
+  const continueLessonHref = focusLesson
+    ? `/courses/${course.slug}/phase/${current.id}/${focusLesson.slug}`
+    : current.href;
+  const currentProjectDone = state.completedProjects.some((id) => id === current.id);
+  const continueStepHref = currentLessonDone === currentLessonTotal && current.hasProject && !currentProjectDone
+    ? `/projects/${course.slug}/phase/${current.id}`
+    : continueLessonHref;
 
   return (
     <section className="ih-winding" aria-label={`${course.shortName} roadmap`}>
@@ -74,7 +195,7 @@ export function WindingRoadmap({
             <p className="ih-winding-kicker">Course roadmap</p>
             <h2>{course.shortName}</h2>
             <p className="ih-winding-percent">
-              {pathPercent}% complete · now on phase {liveIndex + 1} of {phases.length}
+              {pathPercent}% complete · now on chapter {liveIndex + 1} of {phases.length}
             </p>
           </div>
           <div className="ih-winding-actions">
@@ -88,20 +209,45 @@ export function WindingRoadmap({
 
       <aside className={`ih-winding-card is-${currentStatus}`}>
         <div className="ih-winding-card-copy">
-          <p className="ih-winding-card-kicker">{toneLabel(currentStatus)} · Phase {selected + 1}</p>
-          <h3>{current.title}</h3>
-          {current.goal ? <p className="ih-winding-card-sub"><PracticeRichText text={current.goal} /></p> : null}
+          <div className="ih-winding-card-head">
+            <span className="ih-winding-card-status">{toneLabel(currentStatus)}</span>
+            <p className="ih-winding-card-chapter">
+              <span className="ih-winding-card-chapter-num">Chapter {current.chapterNumber}</span>
+              <span className="ih-winding-card-chapter-name">{current.title}</span>
+            </p>
+          </div>
+          <h3 className="ih-winding-card-title">
+            {focusLesson ? (
+              <>
+                <span className="ih-winding-card-lesson-id">{focusLesson.id}</span>
+                {focusLesson.title}
+              </>
+            ) : (
+              current.title
+            )}
+          </h3>
           {currentStatus === "locked" ? (
-            <p className="ih-winding-card-sub">Clear the previous phase project to open this stop.</p>
+            <p className="ih-winding-card-sub">Finish the lessons in the previous chapter to open this stop.</p>
+          ) : currentLessonTotal > 0 ? (
+            <p className="ih-winding-card-sub">
+              <span className="ih-winding-card-progress-count">
+                {currentLessonDone}
+                <span className="ih-winding-card-progress-sep">/</span>
+                {currentLessonTotal}
+              </span>
+              <span className="ih-winding-card-progress-label">lessons completed</span>
+            </p>
           ) : null}
         </div>
         {currentStatus === "locked" ? null : (
-          <Link href={current.href} className="ih-winding-open">
-            Open phase
+          <Link href={continueStepHref} className="ih-winding-open">
+            Continue
             <AppIcon name="next" size={16} />
           </Link>
         )}
       </aside>
+
+      {toolbar}
 
       <div className="ih-winding-stage">
         <svg
@@ -126,19 +272,13 @@ export function WindingRoadmap({
               />
             </mask>
           </defs>
-          <path
-            d={pathD}
-            fill="none"
-            stroke="#EEF1F3"
-            strokeWidth="14"
-            strokeLinecap="round"
-          />
+          <path d={pathD} fill="none" stroke="#EEF1F3" strokeWidth="14" strokeLinecap="round" />
           <path
             d={pathD}
             fill="none"
             stroke="#E7E9EB"
             strokeWidth="6"
-            strokeDasharray="14 6"
+            strokeDasharray="10 3"
             strokeLinecap="round"
           />
           <path
@@ -154,7 +294,7 @@ export function WindingRoadmap({
             fill="none"
             stroke="#04AA6D"
             strokeWidth="6"
-            strokeDasharray="14 6"
+            strokeDasharray="10 3"
             strokeLinecap="round"
             className="ih-winding-ants"
             mask={metrics.total ? `url(#${maskId})` : undefined}
@@ -202,16 +342,13 @@ export function WindingRoadmap({
             const paint = nodePaint(status, isSelected);
             return (
               <g key={phases[index]?.id ?? index}>
-                {isSelected || status === "here" ? (
-                  <circle cx={point.x} cy={point.y} r="40" fill="none" stroke="#04AA6D" strokeWidth="1.5" className="ih-winding-pulse" />
-                ) : null}
                 <circle
                   cx={point.x}
                   cy={point.y}
                   r="22"
                   fill={paint.fill}
                   stroke={paint.stroke}
-                  strokeWidth="3"
+                  strokeWidth={isSelected || status === "here" ? "3.5" : "3"}
                   strokeDasharray={status === "locked" ? "4 3" : undefined}
                 />
                 <text
@@ -230,12 +367,63 @@ export function WindingRoadmap({
           })}
         </svg>
 
+        {lessonDots.map((dot) => {
+          const tipSide =
+            dot.y < 72
+              ? dot.x < layout.width * 0.5
+                ? "is-tip-right"
+                : "is-tip-left"
+              : dot.x < layout.width * 0.18
+                ? "is-tip-right"
+                : dot.x > layout.width * 0.82
+                  ? "is-tip-left"
+                  : "is-tip-up";
+          const tipTitle = dot.lessonTitle.replace(/[\u2013\u2014]/g, ",").replace(/\s{2,}/g, " ").trim();
+          const tipLabel = `${dot.lessonId} ${tipTitle}`;
+          const tip = (
+            <>
+              <span className="ih-winding-lesson-mark" aria-hidden="true" />
+              <span className="ih-winding-lesson-tip">
+                <b>{dot.lessonId}</b> {tipTitle}
+              </span>
+            </>
+          );
+          const style = {
+            left: `${(dot.x / layout.width) * 100}%`,
+            top: `${(dot.y / layout.height) * 100}%`,
+          };
+          if (dot.status === "locked") {
+            return (
+              <span
+                key={dot.key}
+                className={`ih-winding-lesson-hit is-locked ${tipSide}`}
+                style={style}
+                tabIndex={0}
+                aria-label={tipLabel}
+              >
+                {tip}
+              </span>
+            );
+          }
+          return (
+            <Link
+              key={dot.key}
+              href={dot.href}
+              className={`ih-winding-lesson-hit is-${dot.status} ${tipSide}`}
+              style={style}
+              aria-label={tipLabel}
+            >
+              {tip}
+            </Link>
+          );
+        })}
+
         {layout.points.map((point, index) => {
           const status = statuses[index] ?? "locked";
           const phase = phases[index];
           const isSelected = index === selected;
-          const xRatio = point.x / layout.width;
-          const capSide = xRatio < 0.3 ? "is-cap-left" : xRatio > 0.7 ? "is-cap-right" : "is-cap-mid";
+          const capSide =
+            point.x < layout.width * 0.28 ? "is-cap-left" : point.x > layout.width * 0.72 ? "is-cap-right" : "";
           return (
             <button
               key={`${phase.id}-pin`}
@@ -245,7 +433,7 @@ export function WindingRoadmap({
                 left: `${(point.x / layout.width) * 100}%`,
                 top: `${(point.y / layout.height) * 100}%`,
               }}
-              aria-label={`${toneLabel(status)} phase ${index + 1}: ${phase.title}`}
+              aria-label={`${toneLabel(status)} chapter ${index + 1}: ${phase.title}`}
               aria-pressed={isSelected}
               onClick={() => setSelected(index)}
             >

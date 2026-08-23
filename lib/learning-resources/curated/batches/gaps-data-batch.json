@@ -1,0 +1,28 @@
+{
+  "lessons": {
+    "20.4": [
+      {
+        "type": "video",
+        "title": "Descriptive Statistics Tutorial",
+        "description": "Behavioral interview prep with data storytelling.",
+        "url": "https://www.youtube.com/watch?v=SplCk-t1BeA",
+        "source": "YouTube",
+        "channel": "Grad Coach",
+        "videoId": "SplCk-t1BeA",
+        "thumbnail": "https://i.ytimg.com/vi/SplCk-t1BeA/hqdefault.jpg",
+        "embedSupported": true,
+        "difficulty": "beginner"
+      },
+      {
+        "type": "article",
+        "title": "STAR method for interviews",
+        "description": "Structure behavioral answers with evidence.",
+        "url": "https://www.themuse.com/advice/star-interview-method",
+        "source": "The Muse",
+        "difficulty": "beginner"
+      }
+    ]
+  },
+  "phases": {},
+  "projects": {}
+}

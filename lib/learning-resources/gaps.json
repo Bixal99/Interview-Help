@@ -1,0 +1,146 @@
+[
+  {
+    "course": "computer-science",
+    "phaseId": "2",
+    "lessonId": "2.9",
+    "title": "PRACTICE — Mixed"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "3",
+    "lessonId": "3.8",
+    "title": "PRACTICE — Diagram / By Hand"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "4",
+    "lessonId": "4.10",
+    "title": "PRACTICE — Trace / Diagram"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "6",
+    "lessonId": "6.8",
+    "title": "LAB — Build Your Developer Workspace"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "9",
+    "lessonId": "9.8",
+    "title": "MINI PROJECT — Modular Calculator"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "12",
+    "lessonId": "12.8",
+    "title": "PRACTICE — Repair Broken Programs"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "13",
+    "lessonId": "13.8",
+    "title": "LAB — Debug a Deliberately Broken Application"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "16",
+    "lessonId": "16.8",
+    "title": "PRACTICE — Mostly By Hand"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "17",
+    "lessonId": "17.6",
+    "title": "PRACTICE — Written Proofs"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "18",
+    "lessonId": "18.7",
+    "title": "PRACTICE — Hand Calculations + Small Simulation"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "19",
+    "lessonId": "19.2",
+    "title": "Variance"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "19",
+    "lessonId": "19.7",
+    "title": "MINI LAB — Analyze a Small Dataset"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "20",
+    "lessonId": "20.6",
+    "title": "Matrix Transformations"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "20",
+    "lessonId": "20.8",
+    "title": "VISUAL LAB — 2D Vector Transformations"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "21",
+    "lessonId": "21.5",
+    "title": "PRACTICE — Model a School on Paper"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "22",
+    "lessonId": "22.6",
+    "title": "MINI PROJECT — Bank Account System"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "23",
+    "lessonId": "23.5",
+    "title": "Information Hiding"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "23",
+    "lessonId": "23.6",
+    "title": "MINI PROJECT — Digital Wallet"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "24",
+    "lessonId": "24.6",
+    "title": "PRACTICE — Employee Hierarchy"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "25",
+    "lessonId": "25.6",
+    "title": "PRACTICE — Redesign Inheritance Using Composition"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "26",
+    "lessonId": "26.6",
+    "title": "REFACTORING LAB — Fix a Poorly Designed Ordering System"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "27",
+    "lessonId": "27.9",
+    "title": "LAB — Clean Up Legacy Code"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "28",
+    "lessonId": "28.10",
+    "title": "DESIGN EXERCISE — Decide Which Pattern Fits Which Problem"
+  },
+  {
+    "course": "computer-science",
+    "phaseId": "29",
+    "lessonId": "29.8",
+    "title": "DESIGN PROJECT — Elevator System"
+  }
+]

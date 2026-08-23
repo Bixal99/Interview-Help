@@ -33,9 +33,8 @@ export function LessonChrome({
   next: Neighbor | null;
   children: React.ReactNode;
 }) {
-  const { ready, visit, projectDone, completeLesson } = useLearningProgress();
+  const { ready, visit } = useLearningProgress();
   const buildProject = Boolean(isLastLesson && projectHref);
-  const nextDisabled = !buildProject && Boolean(next?.requiresProject && !projectDone(slug, phaseId));
   const proceedHref = buildProject ? projectHref! : next?.href;
   const proceedLabel = buildProject ? "Build Project" : "Next";
   const pager = (
@@ -44,21 +43,18 @@ export function LessonChrome({
       backLabel="Previous"
       proceedHref={proceedHref}
       proceedLabel={proceedLabel}
-      proceedDisabled={nextDisabled}
-      hint={nextDisabled ? "Complete the project to continue." : undefined}
     />
   );
 
   useEffect(() => {
     if (!ready) return;
-    visit(slug, phaseId, lessonSlug);
-    completeLesson(slug, lessonId);
-  }, [ready, slug, phaseId, lessonId, lessonSlug, visit, completeLesson]);
+    visit(slug, phaseId, lessonId);
+  }, [ready, slug, phaseId, lessonId, visit]);
 
   return (
     <article className="ih-lesson">
-      <h1>{lessonId} {title}</h1>
       {pager}
+      <h1>{lessonId} {title}</h1>
       <div className="ih-lesson-body">
         {isFirstLesson && knowFirst ? <BeforeYouStart text={knowFirst} /> : null}
         {children}

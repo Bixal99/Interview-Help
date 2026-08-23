@@ -1,0 +1,1066 @@
+{
+  "lessons": {
+    "1.1": [
+      {
+        "type": "video",
+        "title": "DevOps vs SRE vs Platform Engineering (ByteByteGo)",
+        "description": "Start here for the clearest visual model of devops as a delivery system before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=an8SrFtJBdM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/an8SrFtJBdM/hqdefault.jpg",
+        "videoId": "an8SrFtJBdM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "If I Would Start DevOps from Zero (TechWorld with Nana)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=Cpy20DnIDTI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Cpy20DnIDTI/hqdefault.jpg",
+        "videoId": "Cpy20DnIDTI",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "What Is DevOps? (Simplilearn)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=Xrgk023l4lI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Xrgk023l4lI/hqdefault.jpg",
+        "videoId": "Xrgk023l4lI",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "DORA Quick Check",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://dora.dev/quickcheck/",
+        "source": "dora.dev"
+      },
+      {
+        "type": "documentation",
+        "title": "Google Cloud DevOps capabilities",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://cloud.google.com/architecture/devops",
+        "source": "cloud.google.com"
+      },
+      {
+        "type": "github",
+        "title": "bregman-arie/devops-exercises",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/bregman-arie/devops-exercises",
+        "source": "GitHub"
+      }
+    ],
+    "2.1": [
+      {
+        "type": "video",
+        "title": "Linux File Permissions in 5 Minutes (Travis Media)",
+        "description": "Start here for the clearest visual model of linux, the shell, files, permissions, and services before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=LnKoncbQBsM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/LnKoncbQBsM/hqdefault.jpg",
+        "videoId": "LnKoncbQBsM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "systemd on Linux: Intro and Unit Files (tutoriaLinux)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=N1vgvhiyq0E",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/N1vgvhiyq0E/hqdefault.jpg",
+        "videoId": "N1vgvhiyq0E",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Linux Permissions Crash Course (Learn Linux TV)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=4e669hSjaX8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/4e669hSjaX8/hqdefault.jpg",
+        "videoId": "4e669hSjaX8",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "OverTheWire Bandit",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://overthewire.org/wargames/bandit/",
+        "source": "overthewire.org"
+      },
+      {
+        "type": "documentation",
+        "title": "Linux man pages",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://www.kernel.org/doc/man-pages/",
+        "source": "kernel.org"
+      },
+      {
+        "type": "github",
+        "title": "snori74/linuxupskillchallenge",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/snori74/linuxupskillchallenge",
+        "source": "GitHub"
+      }
+    ],
+    "3.1": [
+      {
+        "type": "video",
+        "title": "Network Troubleshooting for Beginners (IT k Funde)",
+        "description": "Start here for the clearest visual model of systems and network troubleshooting before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=vgisbCjtHz4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/vgisbCjtHz4/hqdefault.jpg",
+        "videoId": "vgisbCjtHz4",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Linux Networking Commands for DevOps (TrainWithShubham)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=EjiX1cjm_H8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/EjiX1cjm_H8/hqdefault.jpg",
+        "videoId": "EjiX1cjm_H8",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Process, Monitoring, Networking and Disk Management (Abhishek.Veeramalla)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=H9DAWegYpag",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/H9DAWegYpag/hqdefault.jpg",
+        "videoId": "H9DAWegYpag",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "SadServers",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://sadservers.com/",
+        "source": "sadservers.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Red Hat monitoring and performance",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/monitoring_and_managing_system_status_and_performance/",
+        "source": "docs.redhat.com"
+      },
+      {
+        "type": "github",
+        "title": "bregman-arie/devops-exercises",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/bregman-arie/devops-exercises",
+        "source": "GitHub"
+      }
+    ],
+    "4.1": [
+      {
+        "type": "video",
+        "title": "Git Merge vs Rebase (ByteByteGo)",
+        "description": "Start here for the clearest visual model of git, collaboration, and change history before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=0chZFIZLR_0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/0chZFIZLR_0/hqdefault.jpg",
+        "videoId": "0chZFIZLR_0",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Why Trunk Based Development Matters (Interview DOT)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=1h2rpoi5YeE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/1h2rpoi5YeE/hqdefault.jpg",
+        "videoId": "1h2rpoi5YeE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Gitflow Explained (The Modern Coder)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=Aa8RpP0sf-Y",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Aa8RpP0sf-Y/hqdefault.jpg",
+        "videoId": "Aa8RpP0sf-Y",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Learn Git Branching",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://learngitbranching.js.org/",
+        "source": "learngitbranching.js.org"
+      },
+      {
+        "type": "documentation",
+        "title": "Pro Git book",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://git-scm.com/book/en/v2",
+        "source": "git-scm.com"
+      },
+      {
+        "type": "github",
+        "title": "skills/introduction-to-github",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/skills/introduction-to-github",
+        "source": "GitHub"
+      }
+    ],
+    "5.1": [
+      {
+        "type": "video",
+        "title": "10 Real-Time Corporate Python Automation Scripts (DevOps Shack)",
+        "description": "Start here to see repetitive operational work become small, inspectable Python programs before studying the safety mechanics",
+        "url": "https://www.youtube.com/watch?v=PiRNGGSCaIs",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/PiRNGGSCaIs/hqdefault.jpg",
+        "videoId": "PiRNGGSCaIs",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How Ansible Works in DevOps (iTrainU Institute)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=buik9olK5OE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/buik9olK5OE/hqdefault.jpg",
+        "videoId": "buik9olK5OE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Create a DevOps User with Ansible (LinuxCert Guru)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=qCzmIwSWahA",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/qCzmIwSWahA/hqdefault.jpg",
+        "videoId": "qCzmIwSWahA",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Exercism Bash track",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://exercism.org/tracks/bash",
+        "source": "exercism.org"
+      },
+      {
+        "type": "documentation",
+        "title": "Google Shell Style Guide",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://google.github.io/styleguide/shellguide.html",
+        "source": "google.github.io"
+      },
+      {
+        "type": "github",
+        "title": "koalaman/shellcheck",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/koalaman/shellcheck",
+        "source": "GitHub"
+      }
+    ],
+    "6.1": [
+      {
+        "type": "video",
+        "title": "Nexus Repository Manager Explained (Fusionpact)",
+        "description": "Start here for the clearest visual model of builds, dependencies, artifacts, and registries before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=87Nd0kx4ZG0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/87Nd0kx4ZG0/hqdefault.jpg",
+        "videoId": "87Nd0kx4ZG0",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Dependency Management Fundamentals (Develocity)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=I4HICQ-KoV4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/I4HICQ-KoV4/hqdefault.jpg",
+        "videoId": "I4HICQ-KoV4",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Versioning Build Artifacts (CloudBeesTV)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=zYHfufu7Clk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/zYHfufu7Clk/hqdefault.jpg",
+        "videoId": "zYHfufu7Clk",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "GitHub Packages quickstart",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://docs.github.com/en/packages/quickstart",
+        "source": "docs.github.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Reproducible Builds",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://reproducible-builds.org/docs/",
+        "source": "reproducible-builds.org"
+      },
+      {
+        "type": "github",
+        "title": "actions/upload-artifact",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/actions/upload-artifact",
+        "source": "GitHub"
+      }
+    ],
+    "7.1": [
+      {
+        "type": "video",
+        "title": "DevOps CI/CD Explained in 100 Seconds (Fireship)",
+        "description": "Start here for the clearest visual model of continuous integration before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=scEDHsr3APg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/scEDHsr3APg/hqdefault.jpg",
+        "videoId": "scEDHsr3APg",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Making CI/CD Builds Faster (The Linux Foundation)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=_Dk6X-S1AJM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/_Dk6X-S1AJM/hqdefault.jpg",
+        "videoId": "_Dk6X-S1AJM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "GitLab CI/CD Pipelines (Uplatz)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=zmrnljuPIn4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/zmrnljuPIn4/hqdefault.jpg",
+        "videoId": "zmrnljuPIn4",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "GitHub Skills",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://skills.github.com/",
+        "source": "skills.github.com"
+      },
+      {
+        "type": "documentation",
+        "title": "GitHub Actions documentation",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://docs.github.com/en/actions",
+        "source": "docs.github.com"
+      },
+      {
+        "type": "github",
+        "title": "actions/starter-workflows",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/actions/starter-workflows",
+        "source": "GitHub"
+      }
+    ],
+    "8.1": [
+      {
+        "type": "video",
+        "title": "Top 5 Most-Used Deployment Strategies (ByteByteGo)",
+        "description": "Start here for the clearest visual model of continuous delivery and deployment strategies before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=AWVTKBUnoIg",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/AWVTKBUnoIg/hqdefault.jpg",
+        "videoId": "AWVTKBUnoIg",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Blue-Green vs Canary vs Rolling (CodeLucky)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=H5z70EBtEow",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/H5z70EBtEow/hqdefault.jpg",
+        "videoId": "H5z70EBtEow",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Why a CI/CD Rollback Strategy Matters (Server Logic Simplified)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=oTTAu_OcJD4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/oTTAu_OcJD4/hqdefault.jpg",
+        "videoId": "oTTAu_OcJD4",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Killercoda rolling updates",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://killercoda.com/kubernetes/scenario/rolling-updates",
+        "source": "killercoda.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Argo Rollouts concepts",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://argo-rollouts.readthedocs.io/en/stable/concepts/",
+        "source": "argo-rollouts.readthedocs.io"
+      },
+      {
+        "type": "github",
+        "title": "argoproj/argo-rollouts",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/argoproj/argo-rollouts",
+        "source": "GitHub"
+      }
+    ],
+    "9.1": [
+      {
+        "type": "video",
+        "title": "100+ Docker Concepts You Need to Know (Fireship)",
+        "description": "Start here for the clearest visual model of docker and container engineering before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=rIrNIzy6U_g",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/rIrNIzy6U_g/hqdefault.jpg",
+        "videoId": "rIrNIzy6U_g",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Containerization Explained (IBM Technology)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=0qotVMX-J5s",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/0qotVMX-J5s/hqdefault.jpg",
+        "videoId": "0qotVMX-J5s",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Docker Networking (NetworkChuck)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=bKFMS5C4CG0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/bKFMS5C4CG0/hqdefault.jpg",
+        "videoId": "bKFMS5C4CG0",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Play with Docker",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://labs.play-with-docker.com/",
+        "source": "labs.play-with-docker.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Docker manuals",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://docs.docker.com/manuals/",
+        "source": "docs.docker.com"
+      },
+      {
+        "type": "github",
+        "title": "moby/moby",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/moby/moby",
+        "source": "GitHub"
+      }
+    ],
+    "10.1": [
+      {
+        "type": "video",
+        "title": "Kubernetes Components Explained (TechWorld with Nana)",
+        "description": "Start here for the clearest visual model of kubernetes operations before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=Krpb44XR0bk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Krpb44XR0bk/hqdefault.jpg",
+        "videoId": "Krpb44XR0bk",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Kubernetes Architecture in 6 Minutes (ByteByteGo)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=TlHvYWVUZyc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/TlHvYWVUZyc/hqdefault.jpg",
+        "videoId": "TlHvYWVUZyc",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Kubernetes ConfigMap and Secret as Kubernetes Volumes | Demo (TechWorld with Nana)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=FAnQTgr04mU",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/FAnQTgr04mU/hqdefault.jpg",
+        "videoId": "FAnQTgr04mU",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Killercoda Kubernetes",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://killercoda.com/kubernetes",
+        "source": "killercoda.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Kubernetes documentation",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://kubernetes.io/docs/home/",
+        "source": "kubernetes.io"
+      },
+      {
+        "type": "github",
+        "title": "kubernetes/kubernetes",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/kubernetes/kubernetes",
+        "source": "GitHub"
+      }
+    ],
+    "11.1": [
+      {
+        "type": "video",
+        "title": "Terraform Explained in 15 Minutes (TechWorld with Nana)",
+        "description": "Start here for the clearest visual model of terraform and infrastructure lifecycle before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=l5k1ai_GBDE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/l5k1ai_GBDE/hqdefault.jpg",
+        "videoId": "l5k1ai_GBDE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How Terraform Works (ByteMonk)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=mhJaoyx-afs",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/mhJaoyx-afs/hqdefault.jpg",
+        "videoId": "mhJaoyx-afs",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Terraform Infrastructure Drift Detection (env zero)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=-aE7nuAN48g",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/-aE7nuAN48g/hqdefault.jpg",
+        "videoId": "-aE7nuAN48g",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "HashiCorp Terraform tutorials",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://developer.hashicorp.com/terraform/tutorials",
+        "source": "developer.hashicorp.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Terraform documentation",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://developer.hashicorp.com/terraform/docs",
+        "source": "developer.hashicorp.com"
+      },
+      {
+        "type": "github",
+        "title": "hashicorp/terraform",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/hashicorp/terraform",
+        "source": "GitHub"
+      }
+    ],
+    "12.1": [
+      {
+        "type": "video",
+        "title": "Ansible in 100 Seconds (Fireship)",
+        "description": "Start here for the clearest visual model of ansible and configuration management before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=xRMPKQweySE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/xRMPKQweySE/hqdefault.jpg",
+        "videoId": "xRMPKQweySE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Ansible Playbook Basics (Alta3 Research)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=p9bda0-TIRc",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/p9bda0-TIRc/hqdefault.jpg",
+        "videoId": "p9bda0-TIRc",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Ansible Desired State and Idempotency (Packet Pushers)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=ZHitVBLH0z8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ZHitVBLH0z8/hqdefault.jpg",
+        "videoId": "ZHitVBLH0z8",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Ansible community guide",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://docs.ansible.com/ansible/latest/community/index.html",
+        "source": "docs.ansible.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Ansible documentation",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://docs.ansible.com/ansible/latest/index.html",
+        "source": "docs.ansible.com"
+      },
+      {
+        "type": "github",
+        "title": "ansible/ansible",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/ansible/ansible",
+        "source": "GitHub"
+      }
+    ],
+    "13.1": [
+      {
+        "type": "video",
+        "title": "AWS Tutorial for Beginners (Kevin Stratvert)",
+        "description": "Start here for the clearest visual model of cloud infrastructure for devops before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=Nzv-tzU-UAw",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Nzv-tzU-UAw/hqdefault.jpg",
+        "videoId": "Nzv-tzU-UAw",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Best VPC Explanation for Beginners (Abhishek.Veeramalla)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=ngDkstGcAbI",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/ngDkstGcAbI/hqdefault.jpg",
+        "videoId": "ngDkstGcAbI",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "AWS IAM Core Concepts (Be A Better Dev)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=_ZCTvmaPgao",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/_ZCTvmaPgao/hqdefault.jpg",
+        "videoId": "_ZCTvmaPgao",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "LocalStack getting started",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://docs.localstack.cloud/getting-started/",
+        "source": "docs.localstack.cloud"
+      },
+      {
+        "type": "documentation",
+        "title": "AWS DevOps guidance",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://docs.aws.amazon.com/whitepapers/latest/introduction-devops-aws/welcome.html",
+        "source": "docs.aws.amazon.com"
+      },
+      {
+        "type": "github",
+        "title": "localstack/localstack",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/localstack/localstack",
+        "source": "GitHub"
+      }
+    ],
+    "14.1": [
+      {
+        "type": "video",
+        "title": "Learn Observability with OpenTelemetry (Abhishek.Veeramalla)",
+        "description": "Start here for the clearest visual model of observability: metrics, logs, traces, and alerts before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=cYAE0ZhT43c",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/cYAE0ZhT43c/hqdefault.jpg",
+        "videoId": "cYAE0ZhT43c",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "OpenTelemetry for Hybrid Cloud Monitoring (IBM Technology)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=hLvwoow3XTk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/hLvwoow3XTk/hqdefault.jpg",
+        "videoId": "hLvwoow3XTk",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How Prometheus and Grafana Work (Cloud Champ)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=dGBpBhKRvdE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/dGBpBhKRvdE/hqdefault.jpg",
+        "videoId": "dGBpBhKRvdE",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Prometheus demo service",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://demo.promlabs.com/",
+        "source": "demo.promlabs.com"
+      },
+      {
+        "type": "documentation",
+        "title": "OpenTelemetry documentation",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://opentelemetry.io/docs/",
+        "source": "opentelemetry.io"
+      },
+      {
+        "type": "github",
+        "title": "open-telemetry/opentelemetry-demo",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/open-telemetry/opentelemetry-demo",
+        "source": "GitHub"
+      }
+    ],
+    "15.1": [
+      {
+        "type": "video",
+        "title": "SLO vs SLI vs SLA vs Error Budget (Tech Tutorials with Piyush)",
+        "description": "Start here for the clearest visual model of sre, slis, slos, error budgets, and toil before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=Akri1BlGp10",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Akri1BlGp10/hqdefault.jpg",
+        "videoId": "Akri1BlGp10",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Understanding SLI, SLO, SLA and Error Budgeting (Simple Thinker)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=XEOg17OKMKw",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/XEOg17OKMKw/hqdefault.jpg",
+        "videoId": "XEOg17OKMKw",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "SRE Principles with Real Examples (Let's Crack IT)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=vK88U8BOdE8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/vK88U8BOdE8/hqdefault.jpg",
+        "videoId": "vK88U8BOdE8",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "OpenSLO",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://openslo.com/",
+        "source": "openslo.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Google SRE Workbook - SLOs",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://sre.google/workbook/implementing-slos/",
+        "source": "sre.google"
+      },
+      {
+        "type": "github",
+        "title": "dastergon/awesome-sre",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/dastergon/awesome-sre",
+        "source": "GitHub"
+      }
+    ],
+    "16.1": [
+      {
+        "type": "video",
+        "title": "SBOM: Software Supply Chain Transparency (RSAC Cybersecurity)",
+        "description": "Start here for the clearest visual model of devsecops and software supply-chain security before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=rZPLfs7PwOM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/rZPLfs7PwOM/hqdefault.jpg",
+        "videoId": "rZPLfs7PwOM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "SBOMs: What Are They? (GitHub)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=QwFnmytSEiE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/QwFnmytSEiE/hqdefault.jpg",
+        "videoId": "QwFnmytSEiE",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "CI/CD Pipeline Security Explained (Tech Explained)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=wSe1z9XLZ88",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/wSe1z9XLZ88/hqdefault.jpg",
+        "videoId": "wSe1z9XLZ88",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "GitHub Skills",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://skills.github.com/",
+        "source": "skills.github.com"
+      },
+      {
+        "type": "documentation",
+        "title": "SLSA framework",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://slsa.dev/",
+        "source": "slsa.dev"
+      },
+      {
+        "type": "github",
+        "title": "sigstore/cosign",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/sigstore/cosign",
+        "source": "GitHub"
+      }
+    ],
+    "17.1": [
+      {
+        "type": "video",
+        "title": "Internal Developer Platform Reference Architecture (Virtual Elephant)",
+        "description": "Start here for the clearest visual model of gitops and platform engineering before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=N3GSgeY2zaM",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/N3GSgeY2zaM/hqdefault.jpg",
+        "videoId": "N3GSgeY2zaM",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "ArgoCD and Tekton for GitOps (IBM Technology)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=nOtxRNQAKXA",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/nOtxRNQAKXA/hqdefault.jpg",
+        "videoId": "nOtxRNQAKXA",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Kubernetes Platform Engineering and IDP (Cloud With Raj)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=GuAz4KZL9fk",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/GuAz4KZL9fk/hqdefault.jpg",
+        "videoId": "GuAz4KZL9fk",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Killercoda Argo CD",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://killercoda.com/argoproj",
+        "source": "killercoda.com"
+      },
+      {
+        "type": "documentation",
+        "title": "OpenGitOps principles",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://opengitops.dev/",
+        "source": "opengitops.dev"
+      },
+      {
+        "type": "github",
+        "title": "argoproj/argo-cd",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/argoproj/argo-cd",
+        "source": "GitHub"
+      }
+    ],
+    "18.1": [
+      {
+        "type": "video",
+        "title": "Postmortems, Learning and Blameless Culture (Conf42)",
+        "description": "Start here for the clearest visual model of incident response, postmortems, and chaos engineering before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=Gdm96CtmrL0",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/Gdm96CtmrL0/hqdefault.jpg",
+        "videoId": "Gdm96CtmrL0",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Blameless Postmortem Culture (Conf42)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=6bAqj6B4m-Q",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/6bAqj6B4m-Q/hqdefault.jpg",
+        "videoId": "6bAqj6B4m-Q",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "How to Do Post-Mortems (Wix Engineering)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=YAaWyf1arg8",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/YAaWyf1arg8/hqdefault.jpg",
+        "videoId": "YAaWyf1arg8",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Killercoda Chaos Mesh",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://killercoda.com/chaos-mesh",
+        "source": "killercoda.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Google incident response guide",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://sre.google/workbook/incident-response/",
+        "source": "sre.google"
+      },
+      {
+        "type": "github",
+        "title": "chaos-mesh/chaos-mesh",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/chaos-mesh/chaos-mesh",
+        "source": "GitHub"
+      }
+    ],
+    "19.1": [
+      {
+        "type": "video",
+        "title": "Resume Projects for Cloud and DevOps Jobs (Vishakha Sadhwani)",
+        "description": "Start here for the clearest visual model of devops projects and portfolio evidence before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=X6Kw2_wZr1E",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/X6Kw2_wZr1E/hqdefault.jpg",
+        "videoId": "X6Kw2_wZr1E",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Five DevOps Projects for a Strong Resume (BashOps)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=BcFtozm7UUo",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/BcFtozm7UUo/hqdefault.jpg",
+        "videoId": "BcFtozm7UUo",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "End-to-End DevOps Project (Prathamxdev)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=oq3DoG_yabs",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/oq3DoG_yabs/hqdefault.jpg",
+        "videoId": "oq3DoG_yabs",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "Cloud Resume Challenge",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://cloudresumechallenge.dev/",
+        "source": "cloudresumechallenge.dev"
+      },
+      {
+        "type": "documentation",
+        "title": "CNCF Landscape",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://landscape.cncf.io/",
+        "source": "landscape.cncf.io"
+      },
+      {
+        "type": "github",
+        "title": "NotHarshhaa/DevOps-Projects",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/NotHarshhaa/DevOps-Projects",
+        "source": "GitHub"
+      }
+    ],
+    "20.1": [
+      {
+        "type": "video",
+        "title": "How to Answer System Design Interview Questions (Exponent)",
+        "description": "Start here for the clearest visual model of devops interviews and career mastery before the detailed internal steps",
+        "url": "https://www.youtube.com/watch?v=L9TfZdODuFQ",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/L9TfZdODuFQ/hqdefault.jpg",
+        "videoId": "L9TfZdODuFQ",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "Real DevOps Interview: Troubleshooting and Design (InfraWithVishal)",
+        "description": "Use this second to compare terminology and see the same pressure from another engineering angle",
+        "url": "https://www.youtube.com/watch?v=DGjbi2alZK4",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/DGjbi2alZK4/hqdefault.jpg",
+        "videoId": "DGjbi2alZK4",
+        "embedSupported": true
+      },
+      {
+        "type": "video",
+        "title": "System Design Basics for Interviews (Kiki's Bytes)",
+        "description": "Use this after the theory to connect the model to an implementation or provider-specific case",
+        "url": "https://www.youtube.com/watch?v=FxAom29OEKE",
+        "source": "YouTube",
+        "thumbnail": "https://i.ytimg.com/vi/FxAom29OEKE/hqdefault.jpg",
+        "videoId": "FxAom29OEKE",
+        "embedSupported": true
+      },
+      {
+        "type": "interactive",
+        "title": "SadServers",
+        "description": "Turn the chapter into observable behavior instead of console tourism",
+        "url": "https://sadservers.com/",
+        "source": "sadservers.com"
+      },
+      {
+        "type": "documentation",
+        "title": "Google SRE resources",
+        "description": "Use the primary source for current limits, semantics, and supported configuration",
+        "url": "https://sre.google/resources/",
+        "source": "sre.google"
+      },
+      {
+        "type": "github",
+        "title": "rohitg00/devops-interview-questions",
+        "description": "Inspect how the concept is represented in real code and configuration",
+        "url": "https://github.com/rohitg00/devops-interview-questions",
+        "source": "GitHub"
+      }
+    ]
+  },
+  "phases": {},
+  "projects": {}
+}

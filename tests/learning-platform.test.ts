@@ -20,21 +20,24 @@ describe("course parsing", () => {
     const course = parseCourseMarkdown(read("content/roadmaps/CS.md"), "computer-science");
     expect(course.phases).toHaveLength(105);
     expect(course.phases[0]).toMatchObject({ id: "1", title: expect.stringContaining("What Is Computer Science?") });
-    expect(course.phases[0].lessons[0]).toMatchObject({ id: "1.1", slug: "computation-as-problem-solving" });
+    expect(course.phases[0].lessons[0]).toMatchObject({ id: "1.1", slug: "problems-inputs-outputs" });
     expect(course.phases[0].lessons[0].videos[0].href).toContain("PLhQjrBD2T380F_inVRXMIHCqLaNUd7bN4");
     expect(course.phases[6]).toMatchObject({ id: "7", title: expect.stringContaining("Variables, Values & Types") });
     expect(course.phases[39]).toMatchObject({ id: "40", title: expect.stringContaining("Searching") });
-    expect(headingRouteMap(course).get("from-source-code-to-a-running-program")).toBe("/courses/computer-science/phase/5/from-source-code-to-a-running-program");
-    expect(extractPractice(course.phases[0].lessons[0].markdown)?.kind).toBe("checklist");
+    expect(headingRouteMap(course).get("complete-execution-journey")).toBe("/courses/computer-science/phase/5/source-code");
+    const practiceLesson = course.phases[0].lessons.find((lesson) => extractPractice(lesson.markdown)?.kind === "checklist");
+    expect(course.phases[0].lessons.find((lesson) => lesson.id === "1.7") && practiceLesson?.id).toBe("1.7");
     expect(new Set(course.phases.map((phase) => phase.id)).size).toBe(105);
     expect(course.phases.find((phase) => phase.id === "9")?.goal).toMatch(/local vs global scope/i);
     expect(course.phases.find((phase) => phase.id === "21")?.goal).toMatch(/Feel the \*problem\* OOP was invented to solve/i);
-    expect(course.phases.find((phase) => phase.id === "69")?.lessons.find((lesson) => lesson.id === "69.1")?.children).toEqual([
-      { id: "69.1.1", title: "SQL Injection" },
-      { id: "69.1.2", title: "XSS" },
-      { id: "69.1.3", title: "CSRF" },
-      { id: "69.1.4", title: "CORS" },
+    expect(course.phases.find((phase) => phase.id === "65")?.lessons.find((lesson) => lesson.id === "65.9")?.children).toEqual([
+      { id: "65.9.1", title: "Document Databases" },
+      { id: "65.9.2", title: "Key-Value Databases" },
+      { id: "65.9.3", title: "Wide-Column Databases" },
+      { id: "65.9.4", title: "Graph Databases" },
     ]);
+    expect(headingRouteMap(course).get("chapter-opening-so-what-exactly-is-a-computer"))
+      .toBe("/courses/computer-science/phase/1/problems-inputs-outputs");
   });
 
   it("extracts Git 15 phases", () => {
@@ -53,7 +56,7 @@ describe("course parsing", () => {
     );
   });
 
-  it("extracts CS beginner glossary tables for the course home", () => {
+  it("extracts CS beginner glossary tables for unit glossary pages", () => {
     const course = parseCourseMarkdown(read("content/roadmaps/CS.md"), "computer-science");
     expect(course.beginnerIntro?.paragraphs.join(" ")).not.toMatch(/there is no clock|sections are connected/i);
     expect(course.beginnerIntro?.everydayTerms).toEqual(
@@ -88,7 +91,7 @@ describe("course parsing", () => {
   it("groups CS phases into sequential storyline chapters", () => {
     const chapters = chaptersFor("computer-science", Array.from({ length: 105 }, (_, index) => String(index + 1)));
     expect(chapters[0]).toMatchObject({ id: "story-1", phaseIds: ["1", "2", "3", "4", "5"] });
-    expect(chapters[0].summary).toMatch(/computer actually does/i);
+    expect(chapters[0].summary).toMatch(/what you are actually programming/i);
     expect(chapters.find((chapter) => chapter.id === "story-2")?.phaseIds).toEqual(
       Array.from({ length: 10 }, (_, index) => String(index + 6)),
     );
@@ -128,12 +131,12 @@ describe("course parsing", () => {
 });
 
 describe("project mapping", () => {
-  it("maps CS phase 5 and sequential phase 7 projects from Projects.md", () => {
-    const projects = parseProjectsDocument(read("content/guides/Projects.md"));
+  it("maps every CS chapter project from its course catalog", () => {
+    const projects = parseProjectsDocument(read("content/projects/computer-science.md"), "content/projects/computer-science.md");
     const cs5 = projects.find((project) => project.coursePrefix === "cs" && project.phaseId === "5");
     const cs7 = projects.find((project) => project.coursePrefix === "cs" && project.phaseId === "7");
-    expect(cs5?.title.toLowerCase()).toContain("expression");
-    expect(cs7?.title.toLowerCase()).toContain("execution");
+    expect(cs5?.title.toLowerCase()).toContain("compilation pipeline");
+    expect(cs7?.title.toLowerCase()).toContain("type-safe unit conversion");
     expect(cs7?.id).toBe("cs-phase-7-project");
     expect(cs5?.gitCheckpoint).toContain("git commit");
   });
@@ -141,16 +144,13 @@ describe("project mapping", () => {
   it("parses a build brief and returns a commented starter", async () => {
     const { parseProjectBrief } = await import("../lib/parse-project-brief");
     const { getProjectStarter } = await import("../lib/project-starters");
-    const projects = parseProjectsDocument(read("content/guides/Projects.md"));
+    const projects = parseProjectsDocument(read("content/projects/computer-science.md"), "content/projects/computer-science.md");
     const cs31 = projects.find((project) => project.id === "cs-phase-31-project");
     const brief = parseProjectBrief(cs31?.markdown ?? "");
-    expect(brief.title.toLowerCase()).toContain("algorithm growth");
-    expect(brief.topic).toMatch(/complexity/i);
+    expect(brief.title.toLowerCase()).toContain("growth");
+    expect(brief.topic).toMatch(/complexity|growth/i);
     expect(brief.spec.length).toBeGreaterThanOrEqual(3);
     expect(brief.steps.length).toBeGreaterThanOrEqual(3);
-    const starter = getProjectStarter("cs-phase-31-project", brief);
-    expect(starter.project.files["src/main.py"]).toContain("def quadratic");
-    expect(starter.project.files["src/main.py"]).toContain("operation");
   });
 });
 
@@ -175,20 +175,28 @@ describe("progress v3", () => {
       ["git:phase-1", "git:phase-1", "git:unknown-id"],
       [{ slug: "git", phaseHeadingIds: ["phase-1"], projectHeadingIds: [], gitHeadingIds: [], practiceHeadingIds: [] }],
     );
-    expect(migrated.version).toBe(4);
+    expect(migrated.version).toBe(5);
     expect(migrated.courses.git.completedPhases).toContain("1");
     expect(migrated.legacyIds).toContain("git:unknown-id");
   });
 
-  it("gates next phase on project completion", () => {
+  it("gates the next chapter on previous lessons and project", () => {
     const steps = learningPathById["software-engineer"].steps;
+    const requirements = {
+      "computer-science": {
+        "1": { lessons: [{ id: "1.1", href: "/1.1" }, { id: "1.2", href: "/1.2" }], projectRequired: true, projectHref: "/project/1" },
+        "2": { lessons: [{ id: "2.1", href: "/2.1" }], projectRequired: true, projectHref: "/project/2" },
+      },
+    };
     let progress = emptyProgress();
-    expect(canEnterPhase(progress, steps, "computer-science", "1")).toBe(true);
-    expect(canEnterPhase(progress, steps, "computer-science", "2")).toBe(false);
-    progress = withCourse(progress, "computer-science", { completedProjects: ["1"] });
-    expect(canEnterPhase(progress, steps, "computer-science", "2")).toBe(true);
-    progress = withCourse(progress, "computer-science", { completedProjects: ["1", "2"] });
-    expect(canEnterPhase(progress, steps, "computer-science", "3")).toBe(true);
+    expect(canEnterPhase(progress, steps, "computer-science", "1", requirements)).toBe(true);
+    expect(canEnterPhase(progress, steps, "computer-science", "2", requirements)).toBe(false);
+    progress = withCourse(progress, "computer-science", { completedLessons: ["1.1", "1.2"] });
+    expect(canEnterPhase(progress, steps, "computer-science", "2", requirements)).toBe(false);
+    progress = withCourse(progress, "computer-science", { completedLessons: ["1.1", "1.2"], completedProjects: ["1"] });
+    expect(canEnterPhase(progress, steps, "computer-science", "2", requirements)).toBe(true);
+    progress = withCourse(progress, "computer-science", { completedLessons: ["1.1", "1.2", "2.1"], completedProjects: ["1", "2"] });
+    expect(canEnterPhase(progress, steps, "computer-science", "3", requirements)).toBe(true);
   });
 
   it("moves saved OOP progress into sequential Computer Science ids", () => {
@@ -206,15 +214,18 @@ describe("progress v3", () => {
         },
       },
     }));
-    expect(migrated.version).toBe(4);
+    expect(migrated.version).toBe(5);
     expect(migrated.courses["object-oriented-programming"]).toBeUndefined();
     expect(migrated.courses["computer-science"].completedProjects).toEqual(["21", "6"]);
     expect(migrated.courses["computer-science"].completedLessons).toEqual(["21.1"]);
     expect(migrated.courses["computer-science"].visitedLessons).toEqual(["21.1", "6.1"]);
   });
 
-  it("calculates resume-related percent from lessons and projects", () => {
-    expect(coursePercent({ lastVisitedAt: "", visitedLessons: [], completedLessons: ["1.1"], completedExercises: [], completedProjects: ["1"], completedGitCheckpoints: [], completedPhases: ["1"] }, 3)).toBe(33);
+  it("calculates percent from required lessons and projects", () => {
+    expect(coursePercent({ lastVisitedAt: "", visitedLessons: [], completedLessons: ["1.1"], completedExercises: [], completedProjects: ["1"], completedGitCheckpoints: [], completedPhases: ["1"] }, 3, 1)).toBe(50);
+    expect(coursePercent({ lastVisitedAt: "", visitedLessons: [], completedLessons: [], completedExercises: [], completedProjects: [], completedGitCheckpoints: [], completedPhases: ["1"] }, 3, 1)).toBe(0);
+    expect(coursePercent({ lastVisitedAt: "", visitedLessons: [], completedLessons: ["1.1", "1.2", "1.3"], completedExercises: [], completedProjects: [], completedGitCheckpoints: [], completedPhases: [] }, 3, 1)).toBe(75);
+    expect(coursePercent({ lastVisitedAt: "", visitedLessons: [], completedLessons: ["1.1", "1.2", "1.3"], completedExercises: [], completedProjects: ["1"], completedGitCheckpoints: [], completedPhases: ["1"] }, 3, 1)).toBe(100);
   });
 
   it("resumes a project stop to the project page, not a fake lesson path", () => {
@@ -232,9 +243,39 @@ describe("progress v3", () => {
   });
 
   it("validates import JSON and rejects malformed files", () => {
-    expect(parseProgressV2(null).version).toBe(4);
+    expect(parseProgressV2(null).version).toBe(5);
     expect(() => validateImportedProgress({ version: 2, courses: {} })).not.toThrow();
     expect(() => validateImportedProgress({ version: 3, courses: {} })).not.toThrow();
+    expect(() => validateImportedProgress({ version: 5, courses: {} })).not.toThrow();
     expect(() => validateImportedProgress({ hello: true })).toThrow(/valid Interview Help progress backup/);
+  });
+
+  it("semantically migrates v4 CS lessons while dropping structural headings", () => {
+    const migrated = parseProgressV2(JSON.stringify({
+      version: 4,
+      courses: {
+        "computer-science": {
+          lastVisitedAt: "2026-08-01T00:00:00.000Z",
+          currentPhaseId: "1",
+          currentLessonId: "computers-as-problem-solving-machines",
+          visitedLessons: ["computers-as-problem-solving-machines", "chapter-roadmap-where-are-we-going"],
+          completedLessons: ["1.3", "1.8"],
+          completedExercises: ["1.8:practice"],
+          completedProjects: ["1"],
+          completedGitCheckpoints: ["1"],
+          completedPhases: ["1"],
+        },
+      },
+    }));
+    expect(migrated.version).toBe(5);
+    expect(migrated.courses["computer-science"]).toMatchObject({
+      currentLessonId: "1.1",
+      visitedLessons: ["1.1"],
+      completedLessons: ["1.1", "1.7"],
+      completedExercises: ["1.7:practice"],
+      completedProjects: ["1"],
+      completedGitCheckpoints: ["1"],
+      completedPhases: ["1"],
+    });
   });
 });

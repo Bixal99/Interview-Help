@@ -108,7 +108,7 @@ function migrateCsStateToV5(state: CourseProgressState): CourseProgressState {
     const match = /^(.+):practice$/.exec(item);
     return match ? migratedLessonIds(match[1]).map((id) => `${id}:practice`) : [];
   }));
-  const currentLessonId = state.currentLessonId?.startsWith("project:")
+  const currentLessonId = state.currentLessonId?.startsWith("project:") || state.currentLessonId?.startsWith("phase:") || state.currentLessonId?.startsWith("glossary:")
     ? state.currentLessonId
     : state.currentLessonId
       ? migratedLessonIds(state.currentLessonId)[0]
@@ -292,13 +292,19 @@ export function resumeHref(
   if (!state.currentPhaseId) return null;
   const lessonId = state.currentLessonId;
   const projectStop = Boolean(lessonId?.startsWith("project:"));
+  const phaseStop = Boolean(lessonId?.startsWith("phase:"));
+  const glossaryStop = Boolean(lessonId?.startsWith("glossary:"));
   return {
     slug,
     phaseId: state.currentPhaseId,
-    lessonId: projectStop ? undefined : lessonId,
+    lessonId: (projectStop || phaseStop || glossaryStop) ? undefined : lessonId,
     href: projectStop
       ? `/projects/${slug}/phase/${state.currentPhaseId}`
-      : firstLessonHref(slug, state.currentPhaseId, lessonId),
+      : phaseStop
+        ? `/courses/${slug}/phase/${state.currentPhaseId}`
+        : glossaryStop
+          ? `/courses/${slug}/unit/${lessonId!.slice("glossary:".length)}/glossary`
+          : firstLessonHref(slug, state.currentPhaseId, lessonId),
     lastVisitedAt: state.lastVisitedAt,
   };
 }

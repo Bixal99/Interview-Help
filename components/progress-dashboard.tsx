@@ -32,7 +32,10 @@ export type ProgressCourseView = {
 };
 
 function resumeHrefFor(slug: string, phaseId: string, lessonId?: string) {
-  return lessonId ? `/courses/${slug}/phase/${phaseId}/${lessonId}` : `/courses/${slug}/phase/${phaseId}`;
+  if (!lessonId || lessonId.startsWith("phase:")) return `/courses/${slug}/phase/${phaseId}`;
+  if (lessonId.startsWith("project:")) return `/projects/${slug}/phase/${phaseId}`;
+  if (lessonId.startsWith("glossary:")) return `/courses/${slug}/unit/${lessonId.slice("glossary:".length)}/glossary`;
+  return `/courses/${slug}/phase/${phaseId}/${lessonId}`;
 }
 
 const SELECTED_KEY = "ih-progress-campaign";

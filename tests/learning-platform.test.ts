@@ -242,6 +242,34 @@ describe("progress v3", () => {
     });
   });
 
+  it("resumes a phase checkpoint stop to the phase page, not a fake lesson path", () => {
+    const progress = withCourse(emptyProgress(), "odoo", {
+      currentPhaseId: "1",
+      currentLessonId: "phase:1",
+    });
+    const hrefFor = (slug: string, phaseId: string, lessonId?: string) =>
+      lessonId ? `/courses/${slug}/phase/${phaseId}/${lessonId}` : `/courses/${slug}/phase/${phaseId}`;
+    expect(resumeHref(progress, hrefFor)).toMatchObject({
+      slug: "odoo",
+      phaseId: "1",
+      href: "/courses/odoo/phase/1",
+    });
+  });
+
+  it("resumes a glossary stop to the unit glossary page, not a fake lesson path", () => {
+    const progress = withCourse(emptyProgress(), "odoo", {
+      currentPhaseId: "3",
+      currentLessonId: "glossary:story-1",
+    });
+    const hrefFor = (slug: string, phaseId: string, lessonId?: string) =>
+      lessonId ? `/courses/${slug}/phase/${phaseId}/${lessonId}` : `/courses/${slug}/phase/${phaseId}`;
+    expect(resumeHref(progress, hrefFor)).toMatchObject({
+      slug: "odoo",
+      phaseId: "3",
+      href: "/courses/odoo/unit/story-1/glossary",
+    });
+  });
+
   it("validates import JSON and rejects malformed files", () => {
     expect(parseProgressV2(null).version).toBe(5);
     expect(() => validateImportedProgress({ version: 2, courses: {} })).not.toThrow();

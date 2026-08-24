@@ -27,8 +27,9 @@ function continueHrefFor(slug: string, state: CourseProgressState) {
   if (!phaseId) return `/courses/${slug}`;
   const lessonId = state.currentLessonId;
   if (lessonId?.startsWith("project:")) return `/projects/${slug}/phase/${phaseId}`;
-  if (lessonId) return `/courses/${slug}/phase/${phaseId}/${lessonId}`;
-  return `/courses/${slug}/phase/${phaseId}`;
+  if (!lessonId || lessonId.startsWith("phase:")) return `/courses/${slug}/phase/${phaseId}`;
+  if (lessonId.startsWith("glossary:")) return `/courses/${slug}/unit/${lessonId.slice("glossary:".length)}/glossary`;
+  return `/courses/${slug}/phase/${phaseId}/${lessonId}`;
 }
 
 function CourseTileProgress({

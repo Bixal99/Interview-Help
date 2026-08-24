@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { ExerciseBlock } from "@/components/exercise-block";
 import { GateBanner } from "@/components/gate-banner";
 import { LessonChrome } from "@/components/lesson-chrome";
@@ -17,6 +17,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ course: string; phase: string; lesson: string }> }): Promise<Metadata> {
   const { course, phase, lesson } = await params;
+  if (lesson.startsWith("phase:") || lesson === phase) return {};
   const view = getLessonView(course, phase, lesson);
   if (!view) return {};
   const title = sectionDocumentTitle(view.lesson.id, view.lesson.title);
@@ -28,6 +29,9 @@ export async function generateMetadata({ params }: { params: Promise<{ course: s
 
 export default async function LessonPage({ params }: { params: Promise<{ course: string; phase: string; lesson: string }> }) {
   const { course, phase, lesson } = await params;
+  if (lesson.startsWith("phase:") || lesson === phase) {
+    redirect(`/courses/${course}/phase/${phase}`);
+  }
   const view = getLessonView(course, phase, lesson);
   if (!view) notFound();
   const phaseIds = view.nav.chapters.flatMap((chapter) => chapter.phases.map((item) => item.id));

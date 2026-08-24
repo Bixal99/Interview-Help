@@ -13,6 +13,8 @@ export type NotepadImportPayload = {
   draftKey?: string;
   showAnswerInitial?: boolean;
   initialNotes?: string;
+  starterCode?: string;
+  language?: string;
   completeProject?: { slug: string; phaseId: string };
 };
 

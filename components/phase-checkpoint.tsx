@@ -45,7 +45,7 @@ export function PhaseCheckpoint({
             <h1 className="ih-checkpoint-title">{tidyTitle(phaseTitle)}</h1>
           </header>
           <div className="ih-checkpoint-art-slot w-full shrink-0 lg:w-[34rem] xl:w-[36rem]">
-            <PhaseCheckpointArt number={phaseNumber} title={phaseTitle} />
+            <PhaseCheckpointArt number={phaseNumber} title={phaseTitle} courseSlug={courseSlug} />
           </div>
         </div>
       </div>

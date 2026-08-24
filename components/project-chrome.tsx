@@ -97,6 +97,8 @@ export function ProjectChrome({
             backHref: pathname,
             prevHref: pathname,
             showAnswerInitial: true,
+            starterCode: csInfo.starterCode,
+            language: csInfo.language || "python",
             completeProject: { slug, phaseId },
           },
           href

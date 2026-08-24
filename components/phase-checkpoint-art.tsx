@@ -6,52 +6,154 @@ import { CheckpointTerminal } from "@/components/checkpoint-terminal";
 import { ComplexityArt } from "@/components/complexity-art";
 import { WhatIsArt } from "@/components/what-is-art";
 
+import { BinaryArt } from "./checkpoint-arts/binary-art";
+import { CircuitArt } from "./checkpoint-arts/circuit-art";
+import { CollectionsArt } from "./checkpoint-arts/collections-art";
+import { ConsolidationArt } from "./checkpoint-arts/consolidation-art";
+import { DatabaseArt } from "./checkpoint-arts/database-art";
+import { DebuggingArt } from "./checkpoint-arts/debugging-art";
+import { ErrorsArt } from "./checkpoint-arts/errors-art";
+import { GraphArt } from "./checkpoint-arts/graph-art";
+import { HardwareCpuArt } from "./checkpoint-arts/hardware-cpu-art";
+import { HashArt } from "./checkpoint-arts/hash-art";
+import { MathDiscreteArt } from "./checkpoint-arts/math-discrete-art";
+import { MemoryArt } from "./checkpoint-arts/memory-art";
+import { ModulesArt } from "./checkpoint-arts/modules-art";
+import { NetworkArt } from "./checkpoint-arts/network-art";
+import { OdooApiArt } from "./checkpoint-arts/odoo-api-art";
+import { OdooDevopsArt } from "./checkpoint-arts/odoo-devops-art";
+import { OdooErpArt } from "./checkpoint-arts/odoo-erp-art";
+import { OdooOrmArt } from "./checkpoint-arts/odoo-orm-art";
+import { OdooOwlArt } from "./checkpoint-arts/odoo-owl-art";
+import { OdooSecurityArt } from "./checkpoint-arts/odoo-security-art";
+import { OdooViewsArt } from "./checkpoint-arts/odoo-views-art";
+import { OopDeepArt } from "./checkpoint-arts/oop-deep-art";
+import { OsArt } from "./checkpoint-arts/os-art";
+import { SecurityArt } from "./checkpoint-arts/security-art";
+import { SortingArt } from "./checkpoint-arts/sorting-art";
+import { StringsFilesArt } from "./checkpoint-arts/strings-files-art";
+import { SystemArt } from "./checkpoint-arts/system-art";
+import { TreeArt } from "./checkpoint-arts/tree-art";
+import { VariablesArt } from "./checkpoint-arts/variables-art";
+
 type ArtKind =
   | "what-is"
   | "terminal"
   | "run"
   | "complexity"
+  | "binary"
+  | "circuit"
+  | "hardware"
+  | "variables"
+  | "control"
+  | "functions"
+  | "collections"
+  | "strings-files"
+  | "errors"
+  | "debugging"
+  | "modules"
+  | "consolidation"
+  | "math-discrete"
+  | "oop-deep"
+  | "memory"
   | "graph"
   | "tree"
   | "hash"
-  | "list"
   | "recursion"
-  | "search"
-  | "objects"
-  | "functions"
-  | "control"
+  | "sorting"
   | "os"
   | "network"
-  | "web"
   | "database"
   | "security"
   | "system"
   | "testing"
+  | "odoo-erp"
+  | "odoo-orm"
+  | "odoo-views"
+  | "odoo-security"
+  | "odoo-owl"
+  | "odoo-api"
+  | "odoo-devops"
   | "default";
 
-function checkpointArtKind(title: string): ArtKind {
+function checkpointArtKind(title: string, phaseNumber?: string, courseSlug?: string): ArtKind {
   const text = title.toLowerCase();
-  if (/what is computer science|^what is cs\b/.test(text)) return "what-is";
-  if (/\bgraphs?\b|bfs|dfs|shortest path|dijkstra/.test(text)) return "graph";
+  const num = phaseNumber ? parseInt(phaseNumber, 10) : 0;
+
+  // 1. Odoo-specific Course Routing
+  if (courseSlug === "odoo" || /odoo|erp|addon|manifest|recordset/.test(text)) {
+    if (num >= 53 && num <= 58) return "odoo-owl";
+    if (num >= 44 && num <= 52) return "odoo-api";
+    if ((num >= 73 && num <= 88) || (num >= 91 && num <= 95) || num === 8) return "odoo-devops";
+    if ((num >= 22 && num <= 26) || (num >= 40 && num <= 43)) return "odoo-views";
+    if (num >= 27 && num <= 31) return "odoo-security";
+    if ((num >= 1 && num <= 3) || num === 89 || (num >= 36 && num <= 39)) return "odoo-erp";
+    if (num === 72 || num === 5) return "terminal";
+    if (num >= 60 && num <= 65) return "database";
+    if (num >= 66 && num <= 71) return "testing";
+    if (/owl|frontend|client action|component|widget|dashboard/.test(text)) return "odoo-owl";
+    if (/api|controller|webhook|json-rpc|xml-rpc|rest|auth/.test(text)) return "odoo-api";
+    if (/docker|deployment|nginx|pgbouncer|backup|upgrade|migration|ci|pipeline|operations|monitoring/.test(text)) return "odoo-devops";
+    if (/view|kanban|form|search|tree|qweb|report/.test(text)) return "odoo-views";
+    if (/security|rule|acl|access|company|multi-company/.test(text)) return "odoo-security";
+    if (/business|flow|order|sale|purchase|inventory|invoice|accounting|crm|partner/.test(text)) return "odoo-erp";
+    return "odoo-orm";
+  }
+
+  // 2. Computer Science Course Exact Chapter Mapping
+  if (courseSlug === "computer-science" || !courseSlug) {
+    if (num === 1 || /what is computer science|^what is cs\b/.test(text)) return "what-is";
+    if (num === 2 || /represent information|binary|bit|byte|ascii|hex|number base|encoding|float/.test(text)) return "binary";
+    if (num === 3 || /\blogic\b|digital computation|logic gate|gate|boolean/.test(text)) return "circuit";
+    if (num === 4 || /computer hardware|inside the cpu|alu|cpu architecture|registers/.test(text)) return "hardware";
+    if (num === 5 || /from source code|how programs run|source.*running program|compiler.*interpreter|runtime/.test(text)) return "run";
+    if (num === 6 || /development environment|terminal|shell|cli|command line/.test(text)) return "terminal";
+    if (num === 7 || /variables, values & types|type system/.test(text)) return "variables";
+    if (num === 8 || /control flow|conditionals|decision/.test(text)) return "control";
+    if (num === 9 || /functions & scope|call stack/.test(text)) return "functions";
+    if (num === 10 || /collections\b|arrays & collections/.test(text)) return "collections";
+    if (num === 11 || /strings & files/.test(text)) return "strings-files";
+    if (num === 12 || /errors & defensive/.test(text)) return "errors";
+    if (num === 13 || /debugging/.test(text)) return "debugging";
+    if (num === 14 || /modules, packages/.test(text)) return "modules";
+    if (num === 15 || /programming consolidation/.test(text)) return "consolidation";
+    if ((num >= 16 && num <= 20) || /discrete math|proof|probability|statistics|linear algebra|calculus/.test(text)) return "math-discrete";
+    if ((num >= 21 && num <= 30) || /object thinking|class|object|encapsul|inherit|polymorph|composit|solid|pattern|oop|low-level design/.test(text)) return "oop-deep";
+    if (num === 31 || /complexity analysis|big o/.test(text)) return "complexity";
+    if (num >= 32 && num <= 34 || /arrays|linked list|stack|queue/.test(text)) return "collections";
+    if (num === 35 || /recursion/.test(text)) return "recursion";
+    if (num === 36 || /hashing|hash table/.test(text)) return "hash";
+    if (num >= 37 && num <= 38 || /\btrees?\b|heaps?|priority queue|\bbst\b/.test(text)) return "tree";
+    if (num >= 39 && num <= 40 || /sorting|searching|binary search/.test(text)) return "sorting";
+    if (num === 41 || /\bgraphs?\b|bfs|dfs|shortest path|dijkstra/.test(text)) return "graph";
+    if (num >= 42 && num <= 48 || /algorithmic patterns|greedy|backtrack|dynamic programming|lru cache/.test(text)) return "complexity";
+    if (num >= 49 && num <= 50 || /memory|pointer|address|virtual address/.test(text)) return "memory";
+    if (num >= 51 && num <= 54 || /operating systems|concurrency|mutex|syscall|systems programming/.test(text)) return "os";
+    if (num >= 55 && num <= 59 || /networking|tcp|udp|sockets|dns|http|api design/.test(text)) return "network";
+    if (num >= 60 && num <= 65 || /database|sql|data modeling|internals|transactions|acid/.test(text)) return "database";
+    if (num >= 66 && num <= 69 || /security|cryptography|auth|jwt|owasp/.test(text)) return "security";
+    if (num >= 70 && num <= 71 || /human-computer|graphics/.test(text)) return "what-is";
+    if (num >= 72 && num <= 80 || /git|requirements|testing|ci\/cd|containers|docker|cloud|observability/.test(text)) return "testing";
+    if (num >= 81 && num <= 88 || /system design|scaling|caching|distributed|consensus|raft/.test(text)) return "system";
+    if (num >= 89 && num <= 91 || /artificial intelligence|ethics/.test(text)) return "complexity";
+    if (num >= 92 && num <= 105 || /capstone|interview|mock/.test(text)) return "testing";
+  }
+
+  // 3. Fallbacks
+  if (/variables, values & types|type system/.test(text)) return "variables";
+  if (/functions & scope|call stack/.test(text)) return "functions";
+  if (/strings & files/.test(text)) return "strings-files";
+  if (/errors & defensive/.test(text)) return "errors";
+  if (/debugging/.test(text)) return "debugging";
+  if (/modules, packages/.test(text)) return "modules";
+  if (/collections|arrays|buffer/.test(text)) return "collections";
+  if (/control flow|conditionals|decision|loops/.test(text)) return "control";
+  if (/hardware|cpu architecture|alu/.test(text)) return "hardware";
+  if (/logic gate|boolean|circuit|transistor|\blogic\b/.test(text)) return "circuit";
+  if (/represent information|binary|bit|byte|ascii|hex|number base|encoding|float/.test(text)) return "binary";
   if (/how programs run|source, interpreter/.test(text)) return "run";
-  if (/control flow|conditionals|loops and iteration/.test(text)) return "control";
-  if (/complex|big o|notation|time & space/.test(text)) return "complexity";
-  if (/\bhash/.test(text)) return "hash";
-  if (/recur/.test(text)) return "recursion";
-  if (/\btrees?\b|heap|hierarch|binary search tree|\bbst\b/.test(text)) return "tree";
-  if (/sort|binary search|\border\b/.test(text)) return "search";
-  if (/stack|queue|linked list|array|linear data/.test(text)) return "list";
-  if (/operat(?:ing)? system|\bprocess\b|\bthread\b|deadlock|scheduler/.test(text)) return "os";
-  if (/tcp|packet|dns|routing|computer network|\bnetworks\b/.test(text)) return "network";
-  if (/database|sql|schema|data model|warehouse/.test(text)) return "database";
-  if (/auth|security|encrypt|xss|csrf|cyber/.test(text)) return "security";
-  if (/http|api|web|browser|html|css|frontend/.test(text)) return "web";
-  if (/distribut|system design|scalab|load balanc/.test(text)) return "system";
-  if (/test|interview|mock/.test(text)) return "testing";
-  if (/class|object|encapsul|inherit|polymorph|composit|solid|pattern|oop|low-level design/.test(text)) return "objects";
-  if (/function|module/.test(text)) return "functions";
-  if (/execut|source code|compil|interpreter|running program|how programs run|git|shell|command/.test(text)) return "terminal";
-  return "default";
+
+  return "binary";
 }
 
 function Frame({
@@ -86,264 +188,90 @@ function TerminalArt({ title }: { title: string }) {
   return <CheckpointTerminal title={title} />;
 }
 
-function GraphArt() {
-  return (
-    <Frame label="A graph of connected nodes">
-      <line x1="90" y1="90" x2="180" y2="70" stroke="#282A35" strokeWidth="4" />
-      <line x1="180" y1="70" x2="280" y2="100" stroke="#282A35" strokeWidth="4" />
-      <line x1="90" y1="90" x2="140" y2="180" stroke="#282A35" strokeWidth="4" />
-      <line x1="180" y1="70" x2="210" y2="190" stroke="#04AA6D" strokeWidth="5" />
-      <line x1="280" y1="100" x2="210" y2="190" stroke="#282A35" strokeWidth="4" />
-      <line x1="140" y1="180" x2="210" y2="190" stroke="#282A35" strokeWidth="4" />
-      <circle cx="90" cy="90" r="22" fill="#04AA6D" />
-      <circle cx="180" cy="70" r="22" fill="#FFF4A3" />
-      <circle cx="280" cy="100" r="22" fill="#96D4FA" />
-      <circle cx="140" cy="180" r="22" fill="#FFC0C7" />
-      <circle cx="210" cy="190" r="22" fill="#04AA6D" />
-      <text x="28" y="36" fill="#282A35" fontSize="13" fontWeight="700" fontFamily="Poppins, sans-serif">nodes + edges</text>
-    </Frame>
-  );
-}
-
-function TreeArt() {
-  return (
-    <Frame label="A tree of parent and child nodes">
-      <line x1="180" y1="70" x2="100" y2="130" stroke="#282A35" strokeWidth="4" />
-      <line x1="180" y1="70" x2="260" y2="130" stroke="#282A35" strokeWidth="4" />
-      <line x1="100" y1="130" x2="70" y2="200" stroke="#282A35" strokeWidth="4" />
-      <line x1="100" y1="130" x2="130" y2="200" stroke="#282A35" strokeWidth="4" />
-      <line x1="260" y1="130" x2="230" y2="200" stroke="#282A35" strokeWidth="4" />
-      <line x1="260" y1="130" x2="300" y2="200" stroke="#282A35" strokeWidth="4" />
-      <circle cx="180" cy="62" r="22" fill="#04AA6D" />
-      <circle cx="100" cy="130" r="20" fill="#FFF4A3" />
-      <circle cx="260" cy="130" r="20" fill="#96D4FA" />
-      <circle cx="70" cy="200" r="16" fill="#FFC0C7" />
-      <circle cx="130" cy="200" r="16" fill="#D9EEE1" />
-      <circle cx="230" cy="200" r="16" fill="#FFC0C7" />
-      <circle cx="300" cy="200" r="16" fill="#D9EEE1" />
-    </Frame>
-  );
-}
-
-function HashArt() {
-  return (
-    <Frame label="Keys mapping into hash buckets">
-      <rect x="36" y="56" width="100" height="36" fill="#FFF4A3" />
-      <rect x="36" y="108" width="100" height="36" fill="#96D4FA" />
-      <rect x="36" y="160" width="100" height="36" fill="#FFC0C7" />
-      <text x="86" y="80" textAnchor="middle" fill="#282A35" fontSize="13" fontWeight="700">key</text>
-      <text x="86" y="132" textAnchor="middle" fill="#282A35" fontSize="13" fontWeight="700">key</text>
-      <text x="86" y="184" textAnchor="middle" fill="#282A35" fontSize="13" fontWeight="700">key</text>
-      <path d="M148 74 H190" stroke="#04AA6D" strokeWidth="4" />
-      <path d="M148 126 H190" stroke="#04AA6D" strokeWidth="4" />
-      <path d="M148 178 H190" stroke="#04AA6D" strokeWidth="4" />
-      <rect x="190" y="40" width="130" height="180" fill="#fff" />
-      <rect x="190" y="40" width="10" height="180" fill="#04AA6D" />
-      <rect x="214" y="58" width="88" height="28" fill="#D9EEE1" />
-      <rect x="214" y="102" width="88" height="28" fill="#D9EEE1" />
-      <rect x="214" y="146" width="88" height="28" fill="#D9EEE1" />
-      <text x="28" y="32" fill="#282A35" fontSize="13" fontWeight="700" fontFamily="Poppins, sans-serif">hash map</text>
-    </Frame>
-  );
-}
-
-function ListArt() {
-  return (
-    <Frame label="Linked boxes in a line">
-      <rect x="36" y="100" width="70" height="54" fill="#04AA6D" />
-      <rect x="128" y="100" width="70" height="54" fill="#FFF4A3" />
-      <rect x="220" y="100" width="70" height="54" fill="#96D4FA" />
-      <polygon points="112,127 124,127 124,121 140,130 124,139 124,133 112,133" fill="#282A35" />
-      <polygon points="204,127 216,127 216,121 232,130 216,139 216,133 204,133" fill="#282A35" />
-      <text x="28" y="36" fill="#282A35" fontSize="13" fontWeight="700" fontFamily="Poppins, sans-serif">next → next</text>
-    </Frame>
-  );
-}
-
 function RecursionArt() {
   return (
-    <Frame label="Stacked function frames">
-      <rect x="70" y="48" width="220" height="48" fill="#96D4FA" />
-      <rect x="88" y="104" width="184" height="48" fill="#FFF4A3" />
-      <rect x="106" y="160" width="148" height="48" fill="#04AA6D" />
-      <text x="180" y="78" textAnchor="middle" fill="#282A35" fontSize="14" fontWeight="700">f(3)</text>
-      <text x="180" y="134" textAnchor="middle" fill="#282A35" fontSize="14" fontWeight="700">f(2)</text>
-      <text x="180" y="190" textAnchor="middle" fill="#fff" fontSize="14" fontWeight="700">f(1)</text>
-    </Frame>
-  );
-}
-
-function SearchArt() {
-  return (
-    <Frame label="A sorted list with the middle item marked">
-      {[0, 1, 2, 3, 4, 5, 6].map((index) => (
-        <rect key={index} x={40 + index * 42} y="110" width="36" height="48" fill={index === 3 ? "#04AA6D" : "#fff"} />
-      ))}
-      <text x="190" y="92" textAnchor="middle" fill="#04AA6D" fontSize="13" fontWeight="700">mid</text>
-      <polygon points="190,100 184,108 196,108" fill="#04AA6D" />
-      <text x="28" y="36" fill="#282A35" fontSize="13" fontWeight="700" fontFamily="Poppins, sans-serif">sorted search</text>
-    </Frame>
-  );
-}
-
-function ObjectsArt() {
-  return (
-    <Frame label="A class blueprint and two objects">
-      <rect x="40" y="56" width="130" height="150" fill="#fff" />
-      <rect x="40" y="56" width="130" height="36" fill="#04AA6D" />
-      <text x="105" y="80" textAnchor="middle" fill="#fff" fontSize="14" fontWeight="700">Class</text>
-      <rect x="56" y="108" width="98" height="14" fill="#D9EEE1" />
-      <rect x="56" y="132" width="98" height="14" fill="#D9EEE1" />
-      <rect x="56" y="156" width="70" height="14" fill="#FFF4A3" />
-      <rect x="196" y="80" width="112" height="56" fill="#96D4FA" />
-      <rect x="196" y="150" width="112" height="56" fill="#FFC0C7" />
-      <text x="252" y="114" textAnchor="middle" fill="#282A35" fontSize="13" fontWeight="700">obj</text>
-      <text x="252" y="184" textAnchor="middle" fill="#282A35" fontSize="13" fontWeight="700">obj</text>
-    </Frame>
-  );
-}
-
-function OsArt() {
-  return (
-    <Frame label="A CPU with two running processes">
-      <rect x="118" y="48" width="124" height="80" fill="#04AA6D" />
-      <text x="180" y="96" textAnchor="middle" fill="#fff" fontSize="16" fontWeight="700">CPU</text>
-      <rect x="40" y="160" width="120" height="56" fill="#FFF4A3" />
-      <rect x="200" y="160" width="120" height="56" fill="#96D4FA" />
-      <text x="100" y="194" textAnchor="middle" fill="#282A35" fontSize="13" fontWeight="700">proc A</text>
-      <text x="260" y="194" textAnchor="middle" fill="#282A35" fontSize="13" fontWeight="700">proc B</text>
-    </Frame>
-  );
-}
-
-function NetworkArt() {
-  return (
-    <Frame label="Two machines sending a packet">
-      <rect x="36" y="88" width="90" height="70" fill="#04AA6D" />
-      <rect x="234" y="88" width="90" height="70" fill="#96D4FA" />
-      <rect x="48" y="100" width="66" height="36" fill="#fff" />
-      <rect x="246" y="100" width="66" height="36" fill="#fff" />
-      <line x1="126" y1="123" x2="234" y2="123" stroke="#282A35" strokeWidth="4" strokeDasharray="8 6" />
-      <rect x="156" y="108" width="48" height="28" fill="#FFF4A3" />
-      <text x="180" y="200" textAnchor="middle" fill="#282A35" fontSize="13" fontWeight="700">packet</text>
-    </Frame>
-  );
-}
-
-function WebArt() {
-  return (
-    <Frame label="A browser window">
-      <rect x="40" y="48" width="280" height="168" fill="#fff" />
-      <rect x="40" y="48" width="280" height="36" fill="#282A35" />
-      <circle cx="58" cy="66" r="5" fill="#ff5f56" />
-      <circle cx="74" cy="66" r="5" fill="#ffbd2e" />
-      <circle cx="90" cy="66" r="5" fill="#04AA6D" />
-      <rect x="110" y="58" width="190" height="16" fill="#E7E9EB" />
-      <rect x="58" y="104" width="110" height="84" fill="#D9EEE1" />
-      <rect x="184" y="104" width="116" height="36" fill="#96D4FA" />
-      <rect x="184" y="152" width="116" height="36" fill="#FFF4A3" />
-    </Frame>
-  );
-}
-
-function DatabaseArt() {
-  return (
-    <Frame label="A data table">
-      <rect x="48" y="56" width="264" height="160" fill="#fff" />
-      <rect x="48" y="56" width="264" height="36" fill="#04AA6D" />
-      <line x1="136" y1="56" x2="136" y2="216" stroke="#E7E9EB" strokeWidth="3" />
-      <line x1="224" y1="56" x2="224" y2="216" stroke="#E7E9EB" strokeWidth="3" />
-      <line x1="48" y1="120" x2="312" y2="120" stroke="#E7E9EB" strokeWidth="3" />
-      <line x1="48" y1="168" x2="312" y2="168" stroke="#E7E9EB" strokeWidth="3" />
-      <rect x="160" y="128" width="48" height="28" fill="#FFF4A3" />
-    </Frame>
-  );
-}
-
-function SecurityArt() {
-  return (
-    <Frame label="A lock">
-      <rect x="130" y="118" width="100" height="86" fill="#04AA6D" />
-      <path d="M150 118 V90 a30 30 0 0 1 60 0 V118" fill="none" stroke="#FFF4A3" strokeWidth="12" />
-      <circle cx="180" cy="154" r="10" fill="#fff" />
-      <rect x="176" y="160" width="8" height="22" fill="#fff" />
-    </Frame>
-  );
-}
-
-function SystemArt() {
-  return (
-    <Frame label="Stacked servers">
-      <rect x="70" y="48" width="220" height="48" fill="#04AA6D" />
-      <rect x="70" y="108" width="220" height="48" fill="#96D4FA" />
-      <rect x="70" y="168" width="220" height="48" fill="#FFF4A3" />
-      <circle cx="96" cy="72" r="7" fill="#fff" />
-      <circle cx="96" cy="132" r="7" fill="#282A35" />
-      <circle cx="96" cy="192" r="7" fill="#282A35" />
+    <Frame label="Stacked function frames" caption="Recursive call stack execution">
+      <rect x={70} y={48} width={220} height={48} fill="#96D4FA" />
+      <rect x={88} y={104} width={184} height={48} fill="#FFF4A3" />
+      <rect x={106} y={160} width={148} height={48} fill="#04AA6D" />
+      <text x={180} y={78} textAnchor="middle" fill="#282A35" fontSize={14} fontWeight={700}>f(3)</text>
+      <text x={180} y={134} textAnchor="middle" fill="#282A35" fontSize={14} fontWeight={700}>f(2)</text>
+      <text x={180} y={190} textAnchor="middle" fill="#fff" fontSize={14} fontWeight={700}>f(1)</text>
     </Frame>
   );
 }
 
 function TestingArt() {
   return (
-    <Frame label="Checks on a list">
-      <rect x="48" y="56" width="264" height="48" fill="#fff" />
-      <rect x="48" y="116" width="264" height="48" fill="#fff" />
-      <rect x="48" y="176" width="264" height="48" fill="#fff" />
-      <rect x="60" y="68" width="24" height="24" fill="#04AA6D" />
-      <rect x="60" y="128" width="24" height="24" fill="#04AA6D" />
-      <rect x="60" y="188" width="24" height="24" fill="#FFF4A3" />
-      <rect x="102" y="74" width="180" height="12" fill="#D9EEE1" />
-      <rect x="102" y="134" width="150" height="12" fill="#D9EEE1" />
-      <rect x="102" y="194" width="168" height="12" fill="#E7E9EB" />
+    <Frame label="Checks on a list" caption="Automated test suite verification">
+      <rect x={48} y={56} width={264} height={48} fill="#fff" />
+      <rect x={48} y={116} width={264} height={48} fill="#fff" />
+      <rect x={48} y={176} width={264} height={48} fill="#fff" />
+      <rect x={60} y={68} width={24} height={24} fill="#04AA6D" />
+      <rect x={60} y={128} width={24} height={24} fill="#04AA6D" />
+      <rect x={60} y={188} width={24} height={24} fill="#FFF4A3" />
+      <rect x={102} y={74} width={180} height={12} fill="#D9EEE1" />
+      <rect x={102} y={134} width={150} height={12} fill="#D9EEE1" />
+      <rect x={102} y={194} width={168} height={12} fill="#E7E9EB" />
     </Frame>
   );
 }
-
-function DefaultArt({ number }: { number: string }) {
-  return (
-    <Frame label="Section card">
-      <rect x="36" y="40" width="128" height="128" fill="#04AA6D" />
-      <text x="100" y="118" textAnchor="middle" fill="#fff" fontSize="52" fontWeight="700" fontFamily="Poppins, sans-serif">{number}</text>
-      <rect x="180" y="40" width="144" height="58" fill="#FFF4A3" />
-      <rect x="180" y="110" width="144" height="58" fill="#96D4FA" />
-      <rect x="36" y="188" width="288" height="14" fill="#fff" />
-      <rect x="36" y="214" width="200" height="14" fill="#FFC0C7" />
-    </Frame>
-  );
-}
-
-const ART: Record<Exclude<ArtKind, "what-is" | "terminal" | "run" | "control" | "functions">, (number: string) => ReactNode> = {
-  complexity: () => <ComplexityArt />,
-  graph: () => <GraphArt />,
-  tree: () => <TreeArt />,
-  hash: () => <HashArt />,
-  list: () => <ListArt />,
-  recursion: () => <RecursionArt />,
-  search: () => <SearchArt />,
-  objects: () => <ObjectsArt />,
-  os: () => <OsArt />,
-  network: () => <NetworkArt />,
-  web: () => <WebArt />,
-  database: () => <DatabaseArt />,
-  security: () => <SecurityArt />,
-  system: () => <SystemArt />,
-  testing: () => <TestingArt />,
-  default: (number) => <DefaultArt number={number} />,
-};
 
 export function PhaseCheckpointArt({
   number,
   title,
+  courseSlug,
 }: {
   number: string;
   title: string;
+  courseSlug?: string;
 }) {
-  const kind = checkpointArtKind(title);
+  const kind = checkpointArtKind(title, number, courseSlug);
+
+  // Dedicated interactive artworks
   if (kind === "what-is") return <WhatIsArt />;
   if (kind === "terminal") return <TerminalArt title={title} />;
   if (kind === "run") return <CheckpointRun />;
   if (kind === "control") return <CheckpointControl />;
   if (kind === "functions") return <CheckpointFunctions />;
-  return ART[kind](number);
+  if (kind === "complexity") return <ComplexityArt />;
+  if (kind === "variables") return <VariablesArt />;
+  if (kind === "collections") return <CollectionsArt />;
+  if (kind === "strings-files") return <StringsFilesArt />;
+  if (kind === "errors") return <ErrorsArt />;
+  if (kind === "debugging") return <DebuggingArt />;
+  if (kind === "modules") return <ModulesArt />;
+  if (kind === "consolidation") return <ConsolidationArt />;
+  if (kind === "math-discrete") return <MathDiscreteArt />;
+  if (kind === "oop-deep") return <OopDeepArt />;
+
+  // Computer Science animated artworks
+  if (kind === "binary") return <BinaryArt />;
+  if (kind === "circuit") return <CircuitArt />;
+  if (kind === "hardware") return <HardwareCpuArt />;
+  if (kind === "memory") return <MemoryArt />;
+  if (kind === "tree") return <TreeArt />;
+  if (kind === "graph") return <GraphArt />;
+  if (kind === "hash") return <HashArt />;
+  if (kind === "sorting") return <SortingArt />;
+  if (kind === "os") return <OsArt />;
+  if (kind === "network") return <NetworkArt />;
+  if (kind === "database") return <DatabaseArt />;
+  if (kind === "security") return <SecurityArt />;
+  if (kind === "system") return <SystemArt />;
+
+  // Odoo ERP animated artworks
+  if (kind === "odoo-erp") return <OdooErpArt />;
+  if (kind === "odoo-orm") return <OdooOrmArt />;
+  if (kind === "odoo-views") return <OdooViewsArt />;
+  if (kind === "odoo-security") return <OdooSecurityArt />;
+  if (kind === "odoo-owl") return <OdooOwlArt />;
+  if (kind === "odoo-api") return <OdooApiArt />;
+  if (kind === "odoo-devops") return <OdooDevopsArt />;
+
+  // Fallback vector illustrations
+  if (kind === "recursion") return <RecursionArt />;
+  if (kind === "testing") return <TestingArt />;
+
+  return <BinaryArt />;
 }

@@ -14,37 +14,25 @@ const CODE = [
 ];
 
 type Node = "start" | "check" | "branch" | "even" | "odd" | "step" | "done";
-type Frame = { line: number; node: Node; i: number; yes: boolean | null; trace: string[] };
+type Frame = { line: number; node: Node; i: number; yes: boolean | null; trace: string[]; x: number; y: number };
 
 const FRAMES: Frame[] = [
-  { line: 1, node: "start", i: 0, yes: null, trace: [] },
-  { line: 2, node: "check", i: 0, yes: true, trace: [] },
-  { line: 3, node: "branch", i: 0, yes: true, trace: [] },
-  { line: 4, node: "even", i: 0, yes: true, trace: ["even"] },
-  { line: 7, node: "step", i: 0, yes: null, trace: ["even"] },
-  { line: 2, node: "check", i: 1, yes: true, trace: ["even"] },
-  { line: 3, node: "branch", i: 1, yes: false, trace: ["even"] },
-  { line: 6, node: "odd", i: 1, yes: false, trace: ["even", "odd"] },
-  { line: 7, node: "step", i: 1, yes: null, trace: ["even", "odd"] },
-  { line: 2, node: "check", i: 2, yes: true, trace: ["even", "odd"] },
-  { line: 3, node: "branch", i: 2, yes: true, trace: ["even", "odd"] },
-  { line: 4, node: "even", i: 2, yes: true, trace: ["even", "odd", "even"] },
-  { line: 7, node: "step", i: 2, yes: null, trace: ["even", "odd", "even"] },
-  { line: 2, node: "check", i: 3, yes: false, trace: ["even", "odd", "even"] },
-  { line: -1, node: "done", i: 3, yes: false, trace: ["even", "odd", "even", "done"] },
-  { line: -1, node: "done", i: 3, yes: false, trace: ["even", "odd", "even", "done"] },
-  { line: -1, node: "done", i: 3, yes: false, trace: ["even", "odd", "even", "done"] },
+  { line: 1, node: "start", i: 0, yes: null, trace: [], x: 250, y: 34 },
+  { line: 2, node: "check", i: 0, yes: true, trace: [], x: 250, y: 90 },
+  { line: 3, node: "branch", i: 0, yes: true, trace: [], x: 250, y: 182 },
+  { line: 4, node: "even", i: 0, yes: true, trace: ["even"], x: 108, y: 252 },
+  { line: 7, node: "step", i: 0, yes: null, trace: ["even"], x: 250, y: 328 },
+  { line: 2, node: "check", i: 1, yes: true, trace: ["even"], x: 250, y: 90 },
+  { line: 3, node: "branch", i: 1, yes: false, trace: ["even"], x: 250, y: 182 },
+  { line: 6, node: "odd", i: 1, yes: false, trace: ["even", "odd"], x: 392, y: 252 },
+  { line: 7, node: "step", i: 1, yes: null, trace: ["even", "odd"], x: 250, y: 328 },
+  { line: 2, node: "check", i: 2, yes: true, trace: ["even", "odd"], x: 250, y: 90 },
+  { line: 3, node: "branch", i: 2, yes: true, trace: ["even", "odd"], x: 250, y: 182 },
+  { line: 4, node: "even", i: 2, yes: true, trace: ["even", "odd", "even"], x: 108, y: 252 },
+  { line: 7, node: "step", i: 2, yes: null, trace: ["even", "odd", "even"], x: 250, y: 328 },
+  { line: 2, node: "check", i: 3, yes: false, trace: ["even", "odd", "even"], x: 250, y: 90 },
+  { line: -1, node: "done", i: 3, yes: false, trace: ["even", "odd", "even", "done"], x: 475, y: 90 },
 ];
-
-const TOKEN: Record<Node, { x: number; y: number }> = {
-  start: { x: 250, y: 18 },
-  check: { x: 250, y: 64 },
-  branch: { x: 250, y: 156 },
-  even: { x: 108, y: 232 },
-  odd: { x: 392, y: 232 },
-  step: { x: 250, y: 308 },
-  done: { x: 500, y: 76 },
-};
 
 function useFrame(length: number, ms: number) {
   const [frame, setFrame] = useState(0);
@@ -84,8 +72,8 @@ function Arrow({ x, y, dir, on }: { x: number; y: number; dir: "r" | "l" | "d" |
 }
 
 export function CheckpointControl() {
-  const now = FRAMES[useFrame(FRAMES.length, 720)];
-  const pos = TOKEN[now.node];
+  const frameIdx = useFrame(FRAMES.length, 900);
+  const now = FRAMES[frameIdx];
   const n = now.node;
   const yesCheck = n === "check" && now.yes === true;
   const noCheck = (n === "check" && now.yes === false) || n === "done";
@@ -165,9 +153,10 @@ export function CheckpointControl() {
             <text x="348" y="176" fill={toOdd ? "#FFC0C7" : "#8b908f"} fontSize="11" fontWeight="700">no</text>
             <text x="44" y="210" fill={looping ? "#04AA6D" : "#8b908f"} fontSize="11" fontWeight="700" transform="rotate(-90 44 210)">loop</text>
 
-            <g className="ih-flow-token" style={{ transform: `translate(${(pos.x / 620) * 100}%, ${(pos.y / 360) * 100}%)` }}>
-              <circle r="7" fill="#04AA6D" />
-              <circle r="13" fill="#04AA6D" opacity="0.22" />
+            {/* Glowing animated orb that follows the flowchart wire */}
+            <g style={{ transition: "all 0.5s ease-in-out" }}>
+              <circle cx={now.x} cy={now.y} r="14" fill="#04AA6D" opacity="0.35" />
+              <circle cx={now.x} cy={now.y} r="8" fill="#04AA6D" stroke="#FFFFFF" strokeWidth="2" />
             </g>
           </svg>
           <div className="ih-flow-trace">

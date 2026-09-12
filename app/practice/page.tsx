@@ -9,7 +9,7 @@ export default function PracticePage() {
   const courses = getCourseSummaries();
   return (
     <InnerPage title="Practice" description="Exercises stay in the lesson that already contains them. Spoken drills are in the Interview Playbook. Nothing is invented here.">
-      <p><Link href="/interview" className="btn-next">Open interview practice</Link></p>
+      <p><Link href="/courses" className="btn-next">Open courses</Link></p>
       <ul className="mt-8 space-y-2">
         {courses.map((course) => (
           <li key={course.slug}><Link href={`/courses/${course.slug}`} className="underline">{course.shortName}</Link></li>

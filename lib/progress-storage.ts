@@ -1,7 +1,9 @@
-import { remapProgressId } from "./legacy-routes";
-import { csLegacyLessonAliases, csProgressV5LessonMap } from "./cs-curriculum-compat";
 import type { ChapterRequirementLookup, CourseProgressState, LearningProgress, PathStep } from "./learning-model";
 import { pathForCourse, sequentialPath } from "./learning-paths";
+
+function remapProgressId(id: string, _fromOop?: boolean) {
+  return id;
+}
 
 export const PROGRESS_KEY = "interview-help-progress-v1";
 export const PROGRESS_KEY_V2 = "interview-help-progress-v2";
@@ -90,16 +92,9 @@ function foldOopCourse(progress: LearningProgress, remapCsNumeric: boolean): Lea
   return { ...progress, version: progress.version < 4 ? 4 : progress.version, courses };
 }
 
-const canonicalLessonByLegacySlug = new Map(
-  Object.entries(csLegacyLessonAliases).flatMap(([lessonId, aliases]) => aliases.map((alias) => [alias.toLowerCase(), lessonId] as const)),
-);
-
 function migratedLessonIds(value: string) {
-  const direct = csProgressV5LessonMap[value];
-  if (direct) return direct;
   if (/^(?:chapter|phase)-(?:opening|roadmap|summary)|^(?:closing-)?transition\b/i.test(value)) return [];
-  const byAlias = canonicalLessonByLegacySlug.get(value.toLowerCase());
-  return byAlias ? [byAlias] : [];
+  return [value];
 }
 
 function migrateCsStateToV5(state: CourseProgressState): CourseProgressState {
@@ -243,9 +238,9 @@ export function canEnterPhase(
   const requirement = requirements?.[previous.course]?.[previous.phaseId];
   if (!requirement) return true;
   const state = courseState(progress, previous.course);
-  const lessonsDone = requirement.lessons.every((lesson) => state.completedLessons.includes(lesson.id));
   const projectDone = !requirement.projectRequired || isProjectComplete(progress, previous.course, previous.phaseId);
-  return lessonsDone && projectDone;
+  if (requirement.projectRequired) return projectDone;
+  return requirement.lessons.every((lesson) => state.completedLessons.includes(lesson.id));
 }
 
 export function requiredHrefForPhase(

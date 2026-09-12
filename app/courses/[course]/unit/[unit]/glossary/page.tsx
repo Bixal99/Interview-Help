@@ -36,7 +36,7 @@ export default async function UnitGlossaryPage({
         unitTitle={view.chapter.title}
         unitId={view.chapter.id}
         courseSlug={view.course.slug}
-        phaseId={view.prev?.phaseId ?? view.chapter.phaseIds[view.chapter.phaseIds.length - 1]!}
+        phaseId={view.chapter.phaseIds[view.chapter.phaseIds.length - 1]!}
         courseName={view.course.shortName}
         sections={view.sections}
         prev={view.prev}

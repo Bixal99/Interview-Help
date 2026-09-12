@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CourseCard } from "@/components/course-card";
 import { getCourseSummaries } from "@/lib/content";
 
-export const metadata: Metadata = { title: "Tutorials", description: "Every Quarry course, as a tutorial index." };
+export const metadata: Metadata = { title: "Courses", description: "Every course in the library." };
 
 export default function CoursesPage() {
   const courses = getCourseSummaries();
@@ -12,22 +12,22 @@ export default function CoursesPage() {
     <main id="main-content" className="ih-studio ih-courses-page">
       <div className="ih-studio-shell">
         <header className="ih-studio-hero">
-          <h1>Tutorials</h1>
+          <h1>Courses</h1>
           <p className="ih-studio-lead">
-            Select a tutorial to get started.
+            Select a course to get started.
           </p>
           <ul className="ih-studio-stats">
             <li>
               <b>{courses.length}</b>
-              <span>roadmaps</span>
+              <span>COURSES</span>
             </li>
             <li>
               <b>{phases}</b>
-              <span>phases</span>
+              <span>CHAPTERS</span>
             </li>
             <li>
               <b>{lessons}</b>
-              <span>lessons</span>
+              <span>LESSONS</span>
             </li>
           </ul>
         </header>

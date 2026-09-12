@@ -36,9 +36,13 @@ export function chapterLearnLine(goal?: string) {
 /** Split "Unit I. Before You Write Code" into badge + name for checkpoint headers. */
 export function parseUnitHeading(unitTitle: string) {
   const display = unitDisplayTitle(unitTitle);
-  const match = /^Unit\s+([IVXLCDM]+)\.\s*(.+)$/i.exec(display);
-  if (match) {
-    return { mark: `Unit ${match[1]}`, name: match[2].trim() };
+  const dotted = /^Unit\s+([IVXLCDM]+)\.\s*(.+)$/i.exec(display);
+  if (dotted) {
+    return { mark: `Unit ${dotted[1]}`, name: dotted[2].trim() };
+  }
+  const colon = /^(?:UNIT|Unit)\s+([IVXLCDM]+)\s*:\s*(.+)$/i.exec(display);
+  if (colon) {
+    return { mark: `Unit ${colon[1]}`, name: colon[2].trim() };
   }
   return { mark: null, name: display };
 }

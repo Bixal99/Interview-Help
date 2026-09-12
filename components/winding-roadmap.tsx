@@ -3,10 +3,8 @@
 import Link from "next/link";
 import { useEffect, useId, useMemo, useState, type ReactNode } from "react";
 import { AppIcon } from "@/components/icons/app-icon";
-import type { ProgressCourseView } from "@/components/progress-dashboard";
+import type { ProgressCourseView, ProgressMapStop } from "@/components/progress-dashboard";
 import {
-  frontierLessonIdSet,
-  lessonDotStatus,
   lessonTrailFillLength,
   trailStatuses,
   type LessonDotStatus,
@@ -28,6 +26,29 @@ function toneLabel(status: TrailStatus) {
   if (status === "here") return "Current";
   if (status === "open") return "Open";
   return "Locked";
+}
+
+function stopIsDone(stop: ProgressMapStop, completedLessons: string[], completedProjects: string[], phaseId: string) {
+  if (stop.kind === "project") return completedProjects.some((id) => id === phaseId || id === stop.completeId);
+  return completedLessons.includes(stop.completeId);
+}
+
+function stopDotStatus(
+  stops: ProgressMapStop[],
+  index: number,
+  completedLessons: string[],
+  completedProjects: string[],
+  phaseId: string,
+  phaseLocked: boolean,
+  phaseHere: boolean,
+): LessonDotStatus {
+  if (phaseLocked) return "locked";
+  const stop = stops[index];
+  if (!stop) return "locked";
+  if (stopIsDone(stop, completedLessons, completedProjects, phaseId)) return "cleared";
+  const firstOpen = stops.findIndex((item) => !stopIsDone(item, completedLessons, completedProjects, phaseId));
+  if (phaseHere && firstOpen === index) return "here";
+  return "locked";
 }
 
 export function WindingRoadmap({
@@ -61,6 +82,7 @@ export function WindingRoadmap({
           href: phase.href,
           unitTitle: chapter.title,
           chapterNumber: phase.number,
+          stops: phase.stops,
         })),
       ),
     [course],
@@ -74,10 +96,6 @@ export function WindingRoadmap({
   const pathD = useMemo(() => windingPath(layout.points, layout.cols), [layout.points, layout.cols]);
   const metrics = useMemo(() => windingMetrics(layout.points), [layout.points]);
   const terminals = useMemo(() => windingTerminals(layout.points, layout.cols), [layout.points, layout.cols]);
-  const frontierIds = useMemo(
-    () => frontierLessonIdSet(phases, state.completedLessons, state.currentPhaseId, state.currentLessonId),
-    [phases, state.completedLessons, state.currentPhaseId, state.currentLessonId],
-  );
   const lessonDots = useMemo(() => {
     const dots: {
       key: string;
@@ -94,32 +112,32 @@ export function WindingRoadmap({
     const endPoint = terminals?.end ?? layout.points[layout.points.length - 1];
     for (let index = 0; index < phases.length; index += 1) {
       const phase = phases[index];
-      if (!phase?.lessonIds.length) continue;
+      const stops = phase?.stops ?? [];
+      if (!stops.length) continue;
       const from = layout.points[index];
       const to = index + 1 < layout.points.length ? layout.points[index + 1] : endPoint;
       if (!from || !to) continue;
-      const positions = windingSegmentLessonPoints(from, to, phase.lessonIds.length);
-      phase.lessonIds.forEach((lessonId, lessonIndex) => {
-        const point = positions[lessonIndex];
-        const lesson = phase.lessons[lessonIndex];
-        if (!point || !lesson) return;
+      const positions = windingSegmentLessonPoints(from, to, stops.length);
+      const phaseStatus = statuses[index] ?? "locked";
+      stops.forEach((stop, stopIndex) => {
+        const point = positions[stopIndex];
+        if (!point) return;
         dots.push({
-          key: `${phase.id}-${lessonId}`,
+          key: `${phase.id}-${stop.kind}-${stop.id}`,
           x: point.x,
           y: point.y,
-          lessonId,
-          lessonTitle: lesson.title,
+          lessonId: stop.id,
+          lessonTitle: stop.title,
           phaseId: phase.id,
-          href: `/courses/${course.slug}/phase/${phase.id}/${lesson.slug}`,
-          status: lessonDotStatus(
-            lessonId,
-            phase.lessonIds,
+          href: stop.href,
+          status: stopDotStatus(
+            stops,
+            stopIndex,
             state.completedLessons,
-            state.currentLessonId,
-            state.currentPhaseId,
+            state.completedProjects,
             phase.id,
-            lesson.slug,
-            frontierIds,
+            phaseStatus === "locked",
+            phaseStatus === "here",
           ),
         });
       });
@@ -132,8 +150,8 @@ export function WindingRoadmap({
     state.currentLessonId,
     state.currentPhaseId,
     terminals,
-    frontierIds,
-    course.slug,
+    statuses,
+    state.completedProjects,
   ]);
   const liveIndex = useMemo(() => {
     const here = statuses.findIndex((status) => status === "here");
@@ -180,11 +198,11 @@ export function WindingRoadmap({
     return firstOpen ?? current.lessons[current.lessons.length - 1] ?? null;
   })();
   const continueLessonHref = focusLesson
-    ? `/courses/${course.slug}/phase/${current.id}/${focusLesson.slug}`
+    ? `/courses/${course.slug}/chapter/${current.id}/${focusLesson.slug === "content" ? "content" : focusLesson.slug}`
     : current.href;
   const currentProjectDone = state.completedProjects.some((id) => id === current.id);
   const continueStepHref = currentLessonDone === currentLessonTotal && current.hasProject && !currentProjectDone
-    ? `/projects/${course.slug}/phase/${current.id}`
+    ? `/courses/${course.slug}/chapter/${current.id}/project`
     : continueLessonHref;
 
   return (
@@ -272,30 +290,21 @@ export function WindingRoadmap({
               />
             </mask>
           </defs>
-          <path d={pathD} fill="none" stroke="#EEF1F3" strokeWidth="14" strokeLinecap="round" />
           <path
             d={pathD}
             fill="none"
-            stroke="#E7E9EB"
-            strokeWidth="6"
-            strokeDasharray="10 3"
-            strokeLinecap="round"
-          />
-          <path
-            d={pathD}
-            fill="none"
-            stroke="#C5CBD1"
-            strokeWidth="2"
-            strokeDasharray="0 16"
-            strokeLinecap="round"
+            stroke="#D8DDE2"
+            strokeWidth="5"
+            strokeDasharray="12 10"
+            strokeLinecap="butt"
           />
           <path
             d={pathD}
             fill="none"
             stroke="#04AA6D"
-            strokeWidth="6"
-            strokeDasharray="10 3"
-            strokeLinecap="round"
+            strokeWidth="5"
+            strokeDasharray="12 10"
+            strokeLinecap="butt"
             className="ih-winding-ants"
             mask={metrics.total ? `url(#${maskId})` : undefined}
           />
@@ -439,7 +448,7 @@ export function WindingRoadmap({
             >
               {isSelected ? (
                 <span className={`ih-winding-caption ih-winding-caption-float ${capSide}`}>
-                  <em>Phase {index + 1}</em>
+                  <em>Chapter {index + 1}</em>
                   <strong>{phase.title}</strong>
                 </span>
               ) : null}
@@ -451,7 +460,7 @@ export function WindingRoadmap({
       {current ? (
         <div className={`ih-winding-caption-dock is-${currentStatus}`} aria-live="polite">
           <span className="ih-winding-caption">
-            <em>Phase {selected + 1}</em>
+            <em>Chapter {selected + 1}</em>
             <strong>{current.title}</strong>
           </span>
         </div>

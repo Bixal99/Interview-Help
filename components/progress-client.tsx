@@ -133,23 +133,54 @@ export function ProgressProvider({
       state.currentPhaseId === phaseId &&
       state.currentLessonId === lessonId &&
       state.visitedLessons.includes(lessonId);
-    if (alreadyHere) return;
+    const visitingProject = lessonId.startsWith("project:");
+    const projectLessons = visitingProject
+      ? (requirementsRef.current?.[slug]?.[phaseId]?.lessons.map((lesson) => lesson.id) ?? [])
+      : [];
 
+    if (alreadyHere) {
+      if (visitingProject && !isProjectComplete(current, slug, phaseId)) {
+        apply(
+          withCourse(current, slug, {
+            completedProjects: [...new Set([...state.completedProjects, phaseId])],
+            completedPhases: [...new Set([...state.completedPhases, phaseId])],
+            completedLessons: [...new Set([...state.completedLessons, ...projectLessons])],
+          }),
+        );
+      }
+      return;
+    }
+
+    const previousIsProject = Boolean(previousLessonId?.startsWith("project:"));
     const shouldCompletePrevious = Boolean(
       previousLessonId &&
         previousLessonId !== lessonId &&
-        !previousLessonId.startsWith("project:") &&
+        !previousIsProject &&
         !previousLessonId.startsWith("glossary:") &&
         !previousLessonId.startsWith("phase:"),
     );
+    const finishedPhaseIds = [
+      ...(visitingProject ? [phaseId] : []),
+      ...(previousIsProject && state.currentPhaseId ? [state.currentPhaseId] : []),
+    ];
+    const finishedLessons = projectLessons;
+    const completedLessons = [...new Set([
+      ...state.completedLessons,
+      ...(shouldCompletePrevious ? [previousLessonId!] : []),
+      ...finishedLessons,
+    ])];
 
     apply(
       withCourse(current, slug, {
         currentPhaseId: phaseId,
         currentLessonId: lessonId,
         visitedLessons: [...new Set([...state.visitedLessons, lessonId])],
-        ...(shouldCompletePrevious
-          ? { completedLessons: [...new Set([...state.completedLessons, previousLessonId!])] }
+        ...(completedLessons.length !== state.completedLessons.length ? { completedLessons } : {}),
+        ...(finishedPhaseIds.length
+          ? {
+              completedProjects: [...new Set([...state.completedProjects, ...finishedPhaseIds])],
+              completedPhases: [...new Set([...state.completedPhases, ...finishedPhaseIds])],
+            }
           : {}),
       }),
     );

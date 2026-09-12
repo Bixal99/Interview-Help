@@ -6,6 +6,15 @@ import { useLearningProgress } from "./progress-client";
 import { WindingRoadmap } from "./winding-roadmap";
 import { trailStatuses } from "@/lib/progress-map";
 import { coursePercent, lessonsDone } from "@/lib/progress-storage";
+import { resumeHrefFor } from "@/lib/resume-href";
+
+export type ProgressMapStop = {
+  id: string;
+  title: string;
+  href: string;
+  completeId: string;
+  kind: "topic" | "exercise" | "project";
+};
 
 export type ProgressCourseView = {
   slug: string;
@@ -27,16 +36,10 @@ export type ProgressCourseView = {
       href: string;
       lessonIds: string[];
       lessons: { id: string; slug: string; title: string }[];
+      stops: ProgressMapStop[];
     }[];
   }[];
 };
-
-function resumeHrefFor(slug: string, phaseId: string, lessonId?: string) {
-  if (!lessonId || lessonId.startsWith("phase:")) return `/courses/${slug}/phase/${phaseId}`;
-  if (lessonId.startsWith("project:")) return `/projects/${slug}/phase/${phaseId}`;
-  if (lessonId.startsWith("glossary:")) return `/courses/${slug}/unit/${lessonId.slice("glossary:".length)}/glossary`;
-  return `/courses/${slug}/phase/${phaseId}/${lessonId}`;
-}
 
 const SELECTED_KEY = "ih-progress-campaign";
 

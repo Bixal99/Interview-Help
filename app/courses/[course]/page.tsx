@@ -5,11 +5,12 @@ import { CourseProgressBar } from "@/components/course-progress-bar";
 import { CourseToc } from "@/components/course-toc";
 import { CourseWelcome } from "@/components/course-welcome";
 import { Pager } from "@/components/pager";
-import { courseCatalog } from "@/lib/course-catalog";
-import { getCourseHome } from "@/lib/content";
+import { getCourseCatalog, getCourseHome } from "@/lib/content";
 import { lessonCountForNav, phaseCountWithProjects } from "@/lib/navigation";
 
-export function generateStaticParams() { return courseCatalog.map((course) => ({ course: course.slug })); }
+export function generateStaticParams() {
+  return getCourseCatalog().map((course) => ({ course: course.slug }));
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ course: string }> }): Promise<Metadata> {
   const { course: slug } = await params;
@@ -24,9 +25,10 @@ export default async function CourseHomePage({ params }: { params: Promise<{ cou
   if (!course) notFound();
   const lessonCount = lessonCountForNav(course.nav);
   const projectCount = phaseCountWithProjects(course.nav);
+
   return (
     <main id="main-content">
-      <div className="ih-band px-4 py-6 sm:px-8 lg:px-12">
+      <div className="ih-band ih-course-home-band px-4 py-6 sm:px-8 lg:px-12">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
           <h1 className="text-3xl font-bold uppercase tracking-wide sm:text-4xl lg:text-6xl">{course.shortName} Tutorial</h1>
           <div className="w-full max-w-md shrink-0 lg:w-[22rem]">

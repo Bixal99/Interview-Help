@@ -8,7 +8,7 @@ export type VideoResource = {
 
 export type CodeExample = FencedBlock;
 
-export type LessonChild = { id: string; title: string };
+export type LessonChild = { id: string; title: string; children?: LessonChild[] };
 
 export type Lesson = {
   id: string;
@@ -57,6 +57,13 @@ export type BeginnerIntro = {
   terms: BeginnerTerm[];
 };
 
+export type CourseChapter = {
+  id: string;
+  title: string;
+  summary: string;
+  phaseIds: string[];
+};
+
 export type ParsedCourse = {
   slug: string;
   title: string;
@@ -64,13 +71,7 @@ export type ParsedCourse = {
   teaserMarkdown: string;
   beginnerIntro: BeginnerIntro | null;
   phases: Phase[];
-};
-
-export type CourseChapter = {
-  id: string;
-  title: string;
-  summary: string;
-  phaseIds: string[];
+  units?: CourseChapter[];
 };
 
 export type PathStep = {

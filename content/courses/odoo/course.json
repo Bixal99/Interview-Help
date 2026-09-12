@@ -1,0 +1,11 @@
+{
+  "title": "Odoo",
+  "shortName": "Odoo",
+  "description": "ERP development with modules, ORM, XML, OWL, PostgreSQL, integrations, and delivery.",
+  "icon": "odoo",
+  "difficulty": "Specialized",
+  "skills": ["Python", "ORM", "OWL"],
+  "prerequisites": "Programming fundamentals, OOP, and Git",
+  "accent": "#2F5D8A",
+  "technologies": ["python", "postgresql", "odoo"]
+}

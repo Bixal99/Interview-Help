@@ -175,6 +175,15 @@ body {
 .markdown-body h1 { margin: 2.4rem 0 .9rem; font-size: 2rem; line-height: 1.2; font-weight: 700; }
 .markdown-body h1:first-child { margin-top: 0; }
 .markdown-body h2 { margin: 2.1rem 0 .75rem; font-size: 1.45rem; line-height: 1.3; font-weight: 700; }
+@keyframes ih-heading-arrive {
+  0% { box-shadow: inset 0 -3px 0 rgba(4, 170, 109, 0); background-color: transparent; }
+  30% { box-shadow: inset 0 -3px 0 #04AA6D; background-color: rgba(4, 170, 109, 0.08); }
+  100% { box-shadow: inset 0 -3px 0 rgba(4, 170, 109, 0); background-color: transparent; }
+}
+.ih-heading-arrive {
+  border-radius: 2px;
+  animation: ih-heading-arrive 0.75s ease;
+}
 .markdown-body h3 { margin: 1.7rem 0 .6rem; font-size: 1.18rem; font-weight: 650; }
 .markdown-body h4 { margin: 1.4rem 0 .5rem; font-size: 1.05rem; font-weight: 650; }
 .markdown-body p { margin: .9rem 0; color: rgb(var(--ink) / .92); }
@@ -210,9 +219,43 @@ body {
   height: auto;
 }
 .markdown-body .mermaid svg,
-.ih-w3 .ih-lesson-body .mermaid svg {
+.ih-w3 .ih-lesson-body .mermaid svg,
+.ih-w3 .ih-mermaid-canvas svg {
   max-width: 100%;
   height: auto;
+}
+.ih-w3 .ih-mermaid-figure {
+  margin: 1.75rem 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  width: 100%;
+  max-width: 100%;
+}
+.ih-w3 .ih-mermaid-canvas {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow-x: auto;
+  min-height: 8rem;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+.ih-w3 .ih-mermaid-figure figcaption {
+  display: block;
+  width: 100%;
+  margin: 0.7rem 0 0;
+  font-size: 0.95rem;
+  font-style: normal;
+  text-align: center;
+}
+.ih-w3 .ih-mermaid-figure figcaption strong {
+  color: #1A1A1A;
+  font-weight: 800;
+}
+.ih-w3 .ih-mermaid-figure figcaption span {
+  color: #6b7280;
+  font-weight: 400;
 }
 
 .code-shell {
@@ -265,9 +308,23 @@ body {
 .ih-w3 .ih-tutorial {
   display: grid;
   grid-template-columns: 19.5rem minmax(0, 1fr);
+  transition: grid-template-columns 0.28s ease;
 }
 .ih-w3 .ih-tutorial.is-collapsed {
   grid-template-columns: 3.4rem minmax(0, 1fr);
+}
+.ih-w3 .ih-tutorial.is-chapter-lock,
+.ih-w3 .ih-tutorial.is-chapter-lock.is-collapsed {
+  grid-template-columns: 0 minmax(0, 1fr);
+}
+.ih-w3 .ih-tutorial.is-chapter-lock .ih-index {
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  border-right-width: 0;
+}
+.ih-w3 .ih-tutorial.is-chapter-lock details.ih-index {
+  display: none;
 }
 @media (max-width: 1023px) {
   .ih-w3 .ih-tutorial,
@@ -286,6 +343,12 @@ body {
   min-height: 0;
   overflow-x: hidden;
   overflow-y: auto;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+.ih-w3 .ih-index-scroll.is-folded {
+  opacity: 0;
+  pointer-events: none;
 }
 .ih-w3 .ih-index-fold {
   display: flex;
@@ -348,6 +411,10 @@ body {
   font-weight: 500;
   line-height: 1.35;
   white-space: nowrap;
+  transition:
+    background 0.16s ease,
+    color 0.16s ease,
+    box-shadow 0.16s ease;
 }
 .ih-w3 .ih-index-num {
   flex: 0 0 auto;
@@ -409,6 +476,18 @@ body {
   color: #000;
   background: #ccc;
 }
+.ih-w3 .ih-index-reveal {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.22s ease;
+}
+.ih-w3 .ih-index-reveal.is-open {
+  grid-template-rows: 1fr;
+}
+.ih-w3 .ih-index-reveal > * {
+  min-height: 0;
+  overflow: hidden;
+}
 .ih-w3 .ih-index-sub {
   margin: 0;
   padding: 0 0 0.2rem;
@@ -420,6 +499,13 @@ body {
   gap: 0.35rem;
   padding: 5px 16px 5px 2.1rem;
   font-size: 14px;
+}
+.ih-w3 .ih-index-subsub a {
+  padding-left: 3.15rem;
+  font-size: 13px;
+}
+.ih-w3 .ih-index-subsub .ih-index-subsub a {
+  padding-left: 4.05rem;
 }
 .ih-w3 .ih-index-done {
   display: flex;
@@ -984,7 +1070,8 @@ body {
   display: none;
 }
 .ih-w3 .ih-video-block {
-  width: 100%;
+  width: min(100%, 48rem);
+  margin-inline: auto;
 }
 .ih-w3 .ih-video-fallback {
   position: relative;
@@ -1256,10 +1343,21 @@ body {
   }
 }
 .ih-w3 .ih-video-block.is-compact {
+  width: min(100%, 44rem);
   margin-top: 0.15rem;
 }
 .ih-w3 .ih-video-block.is-compact .ih-video {
   box-shadow: 4px 4px 0 #04AA6D;
+}
+.ih-w3 .ih-video-block.is-compact .ih-video-play {
+  width: 3.35rem;
+  height: 3.35rem;
+  margin: -1.675rem 0 0 -1.675rem;
+}
+.ih-w3 .ih-video-block.is-compact .ih-video-play::after {
+  left: 1.2rem;
+  top: 0.95rem;
+  border-width: 0.7rem 0 0.7rem 1.1rem;
 }
 .ih-w3 .ih-resource-row {
   display: flex;
@@ -2244,6 +2342,145 @@ body {
   }
 }
 .ih-w3 .ih-band { color: #fff; }
+.ih-w3 .ih-course-home-band {
+  position: sticky;
+  top: 4.75rem;
+  z-index: 40;
+  box-shadow: 0 8px 20px rgb(40 42 53 / 0.18);
+}
+.ih-w3 .ih-chapter-lock {
+  display: grid;
+  place-items: center;
+  min-height: calc(100dvh - 4.9rem);
+  padding: 2.5rem 1.25rem 3.5rem;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(4, 170, 109, 0.1), transparent 58%),
+    #fff;
+}
+.ih-w3 .ih-chapter-lock-card {
+  width: min(100%, 42rem);
+  text-align: center;
+}
+.ih-w3 .ih-chapter-lock-kicker {
+  margin: 0 0 0.85rem;
+  color: #04AA6D;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.ih-w3 .ih-chapter-lock-chapter {
+  margin: 0;
+  color: #1A1A1A;
+  font-size: clamp(2.1rem, 5vw, 3.15rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+.ih-w3 .ih-chapter-lock-title {
+  margin: 0.35rem 0 0;
+  color: #1A1A1A;
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  text-transform: none;
+}
+.ih-w3 .ih-chapter-lock-copy {
+  margin: 1.1rem 0 0;
+  color: #505050;
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.5;
+  text-transform: none;
+}
+.ih-w3 .ih-chapter-lock-place {
+  margin: 1.6rem 0 0;
+  padding: 1.15rem 1.2rem 1.25rem;
+  border: 1px solid #282A35;
+  background: #fff;
+  box-shadow: 4px 4px 0 #04AA6D;
+  text-align: left;
+}
+.ih-w3 .ih-chapter-lock-place-kicker {
+  margin: 0;
+  color: #04AA6D;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.ih-w3 .ih-chapter-lock-place-chapter {
+  margin: 0.45rem 0 0;
+  color: #1A1A1A;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.ih-w3 .ih-chapter-lock-place-name {
+  margin: 0.15rem 0 0;
+  color: #1A1A1A;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.ih-w3 .ih-chapter-lock-place-stop {
+  margin: 0.45rem 0 0;
+  color: #505050;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.ih-w3 .ih-chapter-lock-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem 1rem;
+  margin-top: 1.4rem;
+  flex-wrap: nowrap;
+}
+.ih-w3 .ih-chapter-lock-hint {
+  margin: 0;
+  color: #707070;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.ih-w3 .ih-chapter-lock-go {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 0.45rem;
+  margin-top: 0;
+  padding: 0.78rem 1.15rem;
+  border: 1px solid #282A35;
+  background: #04AA6D;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 4px 4px 0 #282A35;
+}
+@media (max-width: 52rem) {
+  .ih-w3 .ih-chapter-lock-actions {
+    flex-wrap: wrap;
+  }
+  .ih-w3 .ih-chapter-lock-hint {
+    white-space: normal;
+  }
+}
+.ih-w3 .ih-chapter-lock-go:hover {
+  background: #038f5c;
+  transform: translateX(4px);
+}
+.ih-w3 .ih-chapter-lock .ih-pager {
+  justify-content: center;
+}
 .ih-w3 .ih-checkpoint-band {
   position: relative;
   isolation: isolate;
@@ -2259,11 +2496,18 @@ body {
 }
 .ih-w3 .ih-checkpoint-unit {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: 0.7rem 1rem;
+  gap: 0.7rem 0.85rem;
   margin: 0 0 1.75rem;
-  max-width: 42rem;
+  max-width: none;
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .ih-w3 .ih-checkpoint-unit {
+    flex-wrap: wrap;
+    white-space: normal;
+  }
 }
 .ih-w3 .ih-checkpoint-unit-mark {
   display: inline-flex;
@@ -2280,10 +2524,10 @@ body {
 }
 .ih-w3 .ih-checkpoint-unit-name {
   color: rgba(255, 255, 255, 0.72);
-  font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+  font-size: clamp(0.82rem, 1.35vw, 1.02rem);
   font-weight: 600;
-  letter-spacing: 0.12em;
-  line-height: 1.35;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 .ih-w3 .ih-checkpoint-meta {
@@ -2293,13 +2537,13 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: clamp(9rem, 22vw, 12rem);
-  height: clamp(3.25rem, 5vw, 4rem);
-  padding: 0 1.35rem;
+  min-width: clamp(11rem, 26vw, 15rem);
+  height: clamp(3.75rem, 6vw, 4.75rem);
+  padding: 0 1.55rem;
   background: #04AA6D;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 5px 5px 0 rgba(0, 0, 0, 0.35);
   color: #fff;
-  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-size: clamp(1.15rem, 2.1vw, 1.45rem);
   font-weight: 800;
   letter-spacing: 0.14em;
   line-height: 1;
@@ -3647,10 +3891,10 @@ body {
   transition: stroke-dashoffset 0.7s ease-out;
 }
 .ih-w3 .ih-winding-ants {
-  animation: ih-winding-ants 0.2s linear infinite;
+  animation: ih-winding-ants 0.32s linear infinite;
 }
 @keyframes ih-winding-ants {
-  to { stroke-dashoffset: -13; }
+  to { stroke-dashoffset: -22; }
 }
 .ih-w3 .ih-winding-lesson-dot.is-here {
   filter: drop-shadow(0 0 2px rgba(4, 170, 109, 0.45));
@@ -3810,14 +4054,23 @@ body {
     0 0 0 2px #fff,
     0 0 0 5px rgba(4, 170, 109, 0.22);
 }
+.ih-w3 .ih-winding-lesson-hit.is-here {
+  z-index: 10;
+}
 .ih-w3 .ih-winding-lesson-hit.is-here.is-tip-up .ih-winding-lesson-tip {
   bottom: calc(100% + 44px);
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
 }
 .ih-w3 .ih-winding-lesson-hit.is-here.is-tip-left .ih-winding-lesson-tip {
   right: calc(100% + 34px);
+  opacity: 1;
+  transform: translate(0, -50%) scale(1);
 }
 .ih-w3 .ih-winding-lesson-hit.is-here.is-tip-right .ih-winding-lesson-tip {
   left: calc(100% + 34px);
+  opacity: 1;
+  transform: translate(0, -50%) scale(1);
 }
 .ih-w3 .ih-winding-lesson-hit.is-tip-up:hover .ih-winding-lesson-tip,
 .ih-w3 .ih-winding-lesson-hit.is-tip-up:focus-visible .ih-winding-lesson-tip {
@@ -6897,6 +7150,9 @@ body {
   padding: 0;
   list-style: none;
 }
+.ih-progress-page .ih-studio-stats {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
 .ih-studio-stats li {
   display: grid;
   gap: 0.15rem;
@@ -6916,6 +7172,8 @@ body {
   color: #505050;
   font-size: 0.78rem;
   font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 .ih-beats {
   display: grid;
@@ -7649,6 +7907,7 @@ body {
 }
 @media (max-width: 639px) {
   .ih-studio-stats { grid-template-columns: 1fr; }
+  .ih-progress-page .ih-studio-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ih-studio-section-head { grid-template-columns: auto 1fr; }
   .ih-studio-count { display: none; }
   .ih-studio-hero { box-shadow: 5px 5px 0 #282A35; }
@@ -7663,6 +7922,9 @@ body {
   .ih-course-tile { box-shadow: 5px 5px 0 #282A35; }
 }
 @media (prefers-reduced-motion: reduce) {
+  .ih-heading-arrive {
+    animation: none;
+  }
   .ih-project-card:hover,
   .ih-q-card:hover,
   .ih-q-card.is-open,

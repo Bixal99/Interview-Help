@@ -1,27 +1,18 @@
 import type { MetadataRoute } from "next";
-import { courseCatalog } from "@/lib/course-catalog";
-import { getAllGlossaryParams, getAllLessonParams, getAllPhaseParams, getAllProjectParams } from "@/lib/content";
+import { getCourseCatalog, listCourseDocs, listLinearStops } from "@/lib/content";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://interview-help.vercel.app";
-  const routes = ["", "/courses", "/projects", "/interview", "/search", "/about", "/cv-template", "/progress", "/paths", "/practice"];
-  const coursePages = courseCatalog.flatMap((course) => [
-    { url: `${base}/courses/${course.slug}`, lastModified: new Date() },
-    { url: `${base}/courses/${course.slug}/learn`, lastModified: new Date() },
-  ]);
-  const phases = getAllPhaseParams().map((item) => ({ url: `${base}/courses/${item.course}/phase/${item.phase}`, lastModified: new Date() }));
-  const lessons = getAllLessonParams().map((item) => ({ url: `${base}/courses/${item.course}/phase/${item.phase}/${item.lesson}`, lastModified: new Date() }));
-  const projects = getAllProjectParams().map((item) => ({ url: `${base}/projects/${item.course}/phase/${item.phase}`, lastModified: new Date() }));
-  const glossaries = getAllGlossaryParams().map((item) => ({
-    url: `${base}/courses/${item.course}/unit/${item.unit}/glossary`,
-    lastModified: new Date(),
-  }));
+  const routes = ["", "/courses", "/search", "/about", "/cv-template", "/progress"];
+  const coursePages = getCourseCatalog().flatMap((course) => {
+    const docs = listCourseDocs(course.slug).map((doc) => ({ url: `${base}${doc.href}`, lastModified: new Date() }));
+    const extras = listLinearStops(course.slug)
+      .filter((stop) => stop.kind === "checkpoint" || stop.href.endsWith("/solution"))
+      .map((stop) => ({ url: `${base}${stop.href}`, lastModified: new Date() }));
+    return [{ url: `${base}/courses/${course.slug}`, lastModified: new Date() }, ...docs, ...extras];
+  });
   return [
     ...routes.map((route) => ({ url: `${base}${route}`, lastModified: new Date() })),
     ...coursePages,
-    ...phases,
-    ...lessons,
-    ...projects,
-    ...glossaries,
   ];
 }

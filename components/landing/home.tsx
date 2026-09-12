@@ -55,9 +55,9 @@ export function LandingHome({
               </Link>
             </div>
             <p className="ih-hero-stats">
-              <span>{stats.courseCount} roadmaps</span>
-              <span>{stats.lessonCount.toLocaleString("en-US")} lessons</span>
-              <span>{stats.projectCount.toLocaleString("en-US")} chapter projects</span>
+              <span>{stats.courseCount} COURSES</span>
+              <span>{stats.lessonCount.toLocaleString("en-US")} LESSONS</span>
+              <span>{stats.projectCount.toLocaleString("en-US")} CHAPTER PROJECTS</span>
             </p>
           </div>
           <HeroStage />
@@ -68,7 +68,7 @@ export function LandingHome({
         <div className="ih-landing-inner">
           <h2>Courses we teach</h2>
           <p className="ih-landing-lead is-single">
-            {stats.courseCount} tutorials from the repository. Each card opens that course&apos;s home page.
+            {stats.courseCount} courses from the repository. Each card opens that course&apos;s table of contents.
           </p>
           <LandingCourses courses={courses} />
         </div>

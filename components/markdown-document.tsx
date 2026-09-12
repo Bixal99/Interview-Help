@@ -10,9 +10,10 @@ import { PlaygroundBlock } from "./code-playground/playground-block";
 import { LessonDiagram, isVisualDiagram } from "./lesson-diagram";
 import { MermaidDiagram } from "./mermaid-diagram";
 import { ProgressToggle } from "./progress";
+import { LessonVideo } from "./lesson-video";
 import { VisualLearning, type VisualResource } from "./visual-learning";
 import { PracticeRichText } from "@/components/practice-rich-text";
-import { convertMarkdownHref, githubSlug } from "@/lib/content-utils";
+import { convertMarkdownHref, extractYouTubeInfo, githubSlug } from "@/lib/content-utils";
 import { withMarkdownMath } from "@/lib/format-math";
 import { getExercise } from "@/lib/code-playground/exercises";
 import { parseFenceInfo } from "@/lib/code-playground/fence-meta";
@@ -115,58 +116,131 @@ type DocSegment =
   | { kind: "markdown"; text: string }
   | { kind: "visual"; heading: string; resources: VisualResource[] };
 
+function youtubeIdFromThumb(src: string): string | null {
+  const match = /(?:img\.youtube\.com|i\.ytimg\.com)\/vi\/([^/]+)\//i.exec(src);
+  return match?.[1] ?? null;
+}
+
+function extractRelevantResourceVideos(block: string): VisualResource[] {
+  const resources: VisualResource[] = [];
+  const seen = new Set<string>();
+  for (const match of block.matchAll(/\[([^\]]*)\]\((https?:\/\/(?:www\.)?(?:youtube\.com\/watch\?[^)\s]+|youtu\.be\/[^)\s]+))\)/g)) {
+    const href = match[2];
+    const info = extractYouTubeInfo(href);
+    if (!info?.videoId || seen.has(info.videoId)) continue;
+    seen.add(info.videoId);
+    resources.push({
+      kind: "Video",
+      title: match[1].trim() || "Watch on YouTube",
+      href,
+      videoId: info.videoId,
+    });
+  }
+  for (const match of block.matchAll(/!\[([^\]]*)\]\((https?:\/\/(?:img\.youtube\.com|i\.ytimg\.com)\/vi\/([^/]+)\/[^)]+)\)/g)) {
+    const videoId = match[3];
+    if (!videoId || seen.has(videoId)) continue;
+    seen.add(videoId);
+    const href = `https://www.youtube.com/watch?v=${videoId}`;
+    resources.push({
+      kind: "Video",
+      title: match[1].trim() || "Watch on YouTube",
+      href,
+      videoId,
+    });
+  }
+  return resources;
+}
+
 function segmentMarkdown(markdown: string): DocSegment[] {
   const source = markdown.replace(/\r\n/g, "\n");
   const segments: DocSegment[] = [];
-  const regex = /(?:^|\n)(\*\*(?:SEE IT BEFORE YOU MEMORIZE IT|LEARNING RESOURCES:?)\*\*[^\n]*)\n+((?:(?:[ \t]*[-*]\s+.+\n*)|(?:\|.+\n*))+)/gi;
-  let lastIndex = 0;
-  let match: RegExpExecArray | null;
+  const seeItRegex = /(?:^|\n)(\*\*(?:SEE IT BEFORE YOU MEMORIZE IT|LEARNING RESOURCES:?)\*\*[^\n]*)\n+((?:(?:[ \t]*[-*]\s+.+\n*)|(?:\|.+\n*))+)/gi;
+  const relevantRegex = /(?:^|\n)(###\s+RELEVANT RESOURCES\b[^\n]*)\n([\s\S]*?)(?=(?:\n###\s+RELEVANT RESOURCES\b|\n##\s+|\n#\s+|$))/gi;
 
-  while ((match = regex.exec(source)) !== null) {
-    const matchStart = match.index + (match[0].startsWith("\n") ? 1 : 0);
-    if (matchStart > lastIndex) {
-      const prevText = source.slice(lastIndex, matchStart).trim();
-      if (prevText) {
-        segments.push({ kind: "markdown", text: prevText });
+  type RawHit = { start: number; end: number; heading: string; block: string; mode: "seeit" | "relevant" };
+  const hits: RawHit[] = [];
+  let match: RegExpExecArray | null;
+  while ((match = seeItRegex.exec(source)) !== null) {
+    const startIdx = match.index + (match[0].startsWith("\n") ? 1 : 0);
+    hits.push({
+      start: startIdx,
+      end: match.index + match[0].length,
+      heading: match[1].replace(/\*/g, "").replace(/:$/, "").trim(),
+      block: match[0].trim(),
+      mode: "seeit",
+    });
+  }
+  while ((match = relevantRegex.exec(source)) !== null) {
+    const startIdx = match.index + (match[0].startsWith("\n") ? 1 : 0);
+    hits.push({
+      start: startIdx,
+      end: match.index + match[0].length,
+      heading: match[1].replace(/^###\s+/, "").trim(),
+      block: match[0].trim(),
+      mode: "relevant",
+    });
+  }
+  hits.sort((a, b) => a.start - b.start);
+
+  let lastIndex = 0;
+  for (const hit of hits) {
+    if (hit.start < lastIndex) continue;
+    if (hit.start > lastIndex) {
+      const prevText = source.slice(lastIndex, hit.start).trim();
+      if (prevText) segments.push({ kind: "markdown", text: prevText });
+    }
+    if (hit.mode === "seeit") {
+      const resources = extractSeeItResources(hit.block);
+      if (resources.length > 0) {
+        segments.push({
+          kind: "visual",
+          heading: hit.heading,
+          resources: resources.map(learningResourceToVisual),
+        });
+      } else {
+        segments.push({ kind: "markdown", text: hit.block });
+      }
+    } else {
+      const resources = extractRelevantResourceVideos(hit.block);
+      if (resources.length > 0) {
+        // Surface youtube items as a visual segment, then keep authored headings/tables
+        // with thumb links stripped so a/img does not double-embed.
+        segments.push({ kind: "visual", heading: hit.heading, resources });
+        const remainder = hit.block
+          .replace(/\[!\[[^\]]*\]\(https?:\/\/(?:img\.youtube\.com|i\.ytimg\.com)\/vi\/[^)]+\)\]\(https?:\/\/[^)]+\)/g, "")
+          .replace(/!\[[^\]]*\]\(https?:\/\/(?:img\.youtube\.com|i\.ytimg\.com)\/vi\/[^)]+\)/g, "")
+          .replace(/\*\*Watch on YouTube:\*\*\s*\[[^\]]+\]\(https?:\/\/[^)]+\)/g, "")
+          .trim();
+        if (remainder) segments.push({ kind: "markdown", text: remainder });
+      } else {
+        segments.push({ kind: "markdown", text: hit.block });
       }
     }
-    const headingRaw = match[1].replace(/\*/g, "").replace(/:$/, "").trim();
-    const fullBlock = match[0].trim();
-    const resources = extractSeeItResources(fullBlock);
-    if (resources.length > 0) {
-      segments.push({
-        kind: "visual",
-        heading: headingRaw,
-        resources: resources.map(learningResourceToVisual),
-      });
-    } else {
-      segments.push({ kind: "markdown", text: fullBlock });
-    }
-    lastIndex = match.index + match[0].length;
+    lastIndex = hit.end;
   }
 
   if (lastIndex < source.length) {
     const remainingText = source.slice(lastIndex).trim();
-    if (remainingText) {
-      segments.push({ kind: "markdown", text: remainingText });
-    }
+    if (remainingText) segments.push({ kind: "markdown", text: remainingText });
   }
-
-  if (segments.length === 0) {
-    segments.push({ kind: "markdown", text: source });
-  }
-
+  if (segments.length === 0) segments.push({ kind: "markdown", text: source });
   return segments;
 }
 
 export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYouTube = true }: { markdown: string; sourcePath: string; progressScope?: string; embedYouTube?: boolean }) {
+  let mermaidFigure = 0;
   const Heading = (tag: "h1" | "h2" | "h3" | "h4") => {
     function MarkdownHeading({ children, id, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
       const text = textContent(children);
       const headingId = id ?? githubSlug(text);
       const phaseNumber = tag === "h1" ? /^(?:PHASE|CHAPTER)\s+(\d+)\b/i.exec(text)?.[1] : undefined;
       const isTrackable = Boolean(progressScope && (/^(?:PHASE|CHAPTER)\s+\d+/i.test(text) || /^(Practice|Phase Project|Chapter Project|Git Checkpoint)/i.test(text)));
-      return React.createElement(tag, { ...props, id: headingId }, <>{phaseNumber && <span id={`phase-${phaseNumber}`} aria-hidden="true" />}<span className="flex items-start gap-3"><a href={`#${headingId}`} className="min-w-0 flex-1 !text-inherit !no-underline">{children}</a>{isTrackable && <ProgressToggle id={`${progressScope}:${headingId}`} />}</span></>);
+      const shortTitle = /^CHAPTER\s+\d+\s+MASTERY CHECK\b/i.test(text)
+        ? "Mastery Check"
+        : /^CHAPTER\s+\d+\s+SUMMARY\b/i.test(text)
+          ? "Summary"
+          : null;
+      return React.createElement(tag, { ...props, id: headingId }, <>{phaseNumber && <span id={`phase-${phaseNumber}`} aria-hidden="true" />}<span className="flex items-start gap-3"><a href={`#${headingId}`} className="min-w-0 flex-1 !text-inherit !no-underline">{shortTitle ?? children}</a>{isTrackable && <ProgressToggle id={`${progressScope}:${headingId}`} />}</span></>);
     }
     return MarkdownHeading;
   };
@@ -216,6 +290,26 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYou
     },
     a({ href = "", children, ...props }) {
       const mapped = convertMarkdownHref(href, sourcePath);
+      if (embedYouTube) {
+        const info = extractYouTubeInfo(mapped);
+        const bits = Array.isArray(children) ? children : [children];
+        const thumb = bits.find((child) => {
+          if (!isValidElement<{ src?: string }>(child)) return false;
+          const src = String(child.props.src ?? "");
+          return Boolean(youtubeIdFromThumb(src));
+        });
+        if (info?.videoId && (thumb || /youtube\.com\/watch|youtu\.be\//i.test(mapped))) {
+          // Prefer embedding thumbnail-link pattern; plain "Watch on YouTube" text links stay links unless thumb present.
+          if (thumb || (isValidElement(bits[0]) && (bits[0] as React.ReactElement).type === "img")) {
+            return (
+              <LessonVideo
+                videos={[{ href: mapped, title: textContent(children) || "Watch on YouTube", info }]}
+                compact
+              />
+            );
+          }
+        }
+      }
       const external = /^https?:\/\//i.test(mapped);
       const download = mapped.startsWith("/downloads/");
       return (
@@ -230,6 +324,24 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYou
           <span>{children}</span>
         </a>
       );
+    },
+    img({ src = "", alt = "", ...props }) {
+      if (embedYouTube) {
+        const videoId = youtubeIdFromThumb(String(src));
+        if (videoId) {
+          const href = `https://www.youtube.com/watch?v=${videoId}`;
+          const info = extractYouTubeInfo(href);
+          if (info) {
+            return (
+              <LessonVideo
+                videos={[{ href, title: alt || "Watch on YouTube", info }]}
+                compact
+              />
+            );
+          }
+        }
+      }
+      return <img src={src} alt={alt} {...props} />;
     },
     pre({ children }) {
       const child = Array.isArray(children) ? children[0] : children;
@@ -248,7 +360,10 @@ export function MarkdownDocument({ markdown, sourcePath, progressScope, embedYou
         const exercise = getExercise(playgroundId);
         if (exercise) return <PlaygroundBlock exercise={exercise} mode="inline" />;
       }
-      if (language === "mermaid") return <MermaidDiagram source={source} />;
+      if (language === "mermaid") {
+        mermaidFigure += 1;
+        return <MermaidDiagram source={source} figure={mermaidFigure} />;
+      }
       if (language === "text" || language === "plaintext") {
         const diagram = isVisualDiagram(source) ? <LessonDiagram source={source} /> : null;
         if (diagram) return diagram;

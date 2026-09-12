@@ -8,7 +8,7 @@ import { LandingHeader } from "@/components/landing/header";
 import { PageTransition } from "@/components/page-transition";
 
 function isPhaseCheckpoint(pathname: string) {
-  return /^\/courses\/[^/]+\/phase\/[^/]+$/.test(pathname);
+  return /^\/courses\/[^/]+\/unit\/[^/]+\/chapter\/[^/]+$/.test(pathname);
 }
 
 function isPlayground(pathname: string) {
@@ -18,6 +18,10 @@ function isPlayground(pathname: string) {
 /** Course home, lessons, checkpoints, and course projects — no marketing footer. */
 function isInsideCourse(pathname: string) {
   return /^\/courses\/[^/]+/.test(pathname) || /^\/projects\/[^/]+/.test(pathname);
+}
+
+function isTutorialWalk(pathname: string) {
+  return /^\/courses\/[^/]+\/unit\//.test(pathname);
 }
 
 export function AppChrome({ children }: { children: React.ReactNode }) {
@@ -42,7 +46,7 @@ export function AppChrome({ children }: { children: React.ReactNode }) {
       <CourseChromeProgressBridge>
         <div className="ih-w3 min-h-screen">
           <LandingHeader />
-          {page}
+          {isTutorialWalk(pathname) ? children : page}
         </div>
       </CourseChromeProgressBridge>
     );

@@ -3,8 +3,7 @@ import { BrandWordmark } from "@/components/brand-mark";
 import { SITE_NAME } from "@/lib/brand";
 
 const learn = [
-  { href: "/courses", label: "Tutorials" },
-  { href: "/projects", label: "Projects" },
+  { href: "/courses", label: "Courses" },
   { href: "/about", label: "About" },
 ];
 
@@ -23,11 +22,11 @@ export function LandingFooter() {
           <div>
             <p className="ih-landing-foot-kicker">Start learning</p>
             <h2 className="ih-landing-foot-headline">
-              Pick a tutorial. Dig into the next lesson.
+              Pick a course. Dig into the next chapter.
             </h2>
           </div>
           <Link href="/courses" className="ih-landing-cta ih-landing-foot-browse">
-            Browse tutorials
+            Browse courses
           </Link>
         </div>
 

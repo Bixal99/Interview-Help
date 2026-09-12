@@ -152,13 +152,11 @@ npm run dev
 
 ```text
 quarry/
-├── app/                         # Routes (courses, projects, interview, progress, playground)
+├── app/                         # Routes (courses, progress, playground)
 ├── components/                  # Landing, winding graph, lesson / project chrome
-├── lib/                         # Catalog, Markdown parse, progress, playground
+├── lib/                         # Catalog, course tree, progress, playground
 ├── content/
-│   ├── roadmaps/                # Eleven course sources
-│   ├── guides/                  # Shared project workflow · Interview.md
-│   ├── projects/                # Eleven chapter-project catalogs
+│   ├── courses/                 # One folder per course (odoo today)
 │   └── templates/               # CV template
 ├── data/                        # Job tracker spreadsheet
 ├── scripts/                     # validate-content
@@ -192,14 +190,11 @@ Fonts: **Poppins** (display) · **Source Sans 3** (body) · **JetBrains Mono** (
 
 ## Content source
 
-Markdown under `content/` is canonical.
+Course trees live under [`content/courses/`](./content/courses/). Each folder is one course. Odoo is at [`content/courses/odoo/`](./content/courses/odoo/). Add another folder with the same Unit/Chapter shape to register a new course.
 
 | Path | Role |
 |:---|:---|
-| [`content/roadmaps`](./content/roadmaps) | Course source |
-| [`content/guides/Projects.md`](./content/guides/Projects.md) | Shared project workflow and legacy anchor index |
-| [`content/projects`](./content/projects) | Required chapter-project briefs, grouped by course and unit |
-| [`content/guides/Interview.md`](./content/guides/Interview.md) | Interview drills |
+| [`content/courses/odoo/`](./content/courses/odoo/) | Odoo unit/chapter study tree |
 | [`content/templates`](./content/templates) | CV template |
 | [`data/Job_Tracker.xlsx`](./data/Job_Tracker.xlsx) | Job tracker (`/downloads/job-tracker`) |
 

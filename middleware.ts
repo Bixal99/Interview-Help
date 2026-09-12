@@ -1,19 +1,25 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { rewriteLegacyPath } from "./lib/legacy-routes";
+import { retiredCourseSlugs } from "./lib/retired-courses";
 
 export function middleware(request: NextRequest) {
-  const destination = rewriteLegacyPath(request.nextUrl.pathname);
-  if (!destination || destination === request.nextUrl.pathname) return NextResponse.next();
-  const url = request.nextUrl.clone();
-  url.pathname = destination;
-  return NextResponse.redirect(url, 308);
+  const pathname = request.nextUrl.pathname;
+
+  const retired = retiredCourseSlugs.find(
+    (slug) => pathname === `/courses/${slug}` || pathname.startsWith(`/courses/${slug}/`) || pathname.startsWith(`/projects/${slug}/`),
+  );
+  if (retired) {
+    const url = request.nextUrl.clone();
+    url.pathname = "/courses";
+    return NextResponse.redirect(url, 308);
+  }
+
+  return NextResponse.next();
 }
 
 export const config = {
   matcher: [
-    "/courses/object-oriented-programming",
-    "/courses/object-oriented-programming/:path*",
-    "/projects/object-oriented-programming/:path*",
+    "/courses/:path*",
+    "/projects/:path*",
   ],
 };

@@ -1,13 +1,3 @@
-import cs from "./sidebar-aliases/computer-science.json";
-import git from "./sidebar-aliases/git.json";
-import web from "./sidebar-aliases/web-development.json";
-import ai from "./sidebar-aliases/artificial-intelligence.json";
-import data from "./sidebar-aliases/data.json";
-import networks from "./sidebar-aliases/networks.json";
-import cyber from "./sidebar-aliases/cybersecurity.json";
-import itAdmin from "./sidebar-aliases/it-administration.json";
-import cloud from "./sidebar-aliases/cloud.json";
-import devops from "./sidebar-aliases/devops.json";
 import odoo from "./sidebar-aliases/odoo.json";
 import { shortenForSidebar, shortenUnitForSidebar } from "./sidebar-shorten";
 
@@ -20,16 +10,6 @@ export type SidebarAliasMap = {
 };
 
 const catalogs: Record<string, SidebarAliasMap> = {
-  "computer-science": cs,
-  git,
-  "web-development": web,
-  "artificial-intelligence": ai,
-  data,
-  networks,
-  cybersecurity: cyber,
-  "it-administration": itAdmin,
-  cloud,
-  devops,
   odoo,
 };
 
@@ -43,13 +23,12 @@ function lookup(courseSlug: string, bucket: keyof SidebarAliasMap, id: string): 
 
 /** Compact unit/chapter-group label for the tutorial sidebar only. */
 export function sidebarUnitLabel(courseSlug: string, chapterId: string, title: string) {
-  const alias = lookup(courseSlug, "units", chapterId);
-  return alias ?? shortenUnitForSidebar(title);
+  return catalogs[courseSlug] ? title : lookup(courseSlug, "units", chapterId) ?? shortenUnitForSidebar(title);
 }
 
 /** Compact phase/chapter label for the tutorial sidebar only. */
 export function sidebarPhaseLabel(courseSlug: string, phaseId: string, title: string) {
-  return lookup(courseSlug, "phases", phaseId) ?? shortenForSidebar(title);
+  return catalogs[courseSlug] ? title : lookup(courseSlug, "phases", phaseId) ?? shortenForSidebar(title);
 }
 
 /** Compact lesson / story / checkpoint label for the tutorial sidebar only. */

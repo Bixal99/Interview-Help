@@ -1,4 +1,9 @@
+import fs from "node:fs";
+import path from "node:path";
+import { cache } from "react";
 import type { CourseIconName } from "./icons";
+import { COURSE_ICON_BY_SLUG } from "./icons";
+import { CONTENT_ROOT } from "./paths";
 
 export type CourseDefinition = {
   slug: string;
@@ -14,9 +19,9 @@ export type CourseDefinition = {
   prerequisites: string;
   projectPrefix: string;
   projectSourcePath: string;
-  next?: string;
   accent: string;
   technologies?: string[];
+  treeCourse: true;
 };
 
 export type ContentEntry = {
@@ -27,44 +32,122 @@ export type ContentEntry = {
   type: "roadmap" | "guide" | "template";
 };
 
-export const roadmapRegistry: CourseDefinition[] = [
-  { slug: "computer-science", title: "Computer Science", sourcePath: "content/roadmaps/CS.md", projectSourcePath: "content/projects/computer-science.md", route: "/courses/computer-science", type: "roadmap", shortName: "Computer Science", icon: "computerScience", description: "Foundations, programming, OOP, then data structures, systems, databases, design, and interview mastery.", difficulty: "Foundation → advanced", skills: ["Python", "OOP", "DSA", "Systems"], prerequisites: "No prior computer science required", projectPrefix: "cs", next: "git", accent: "#2F5D8A" },
-  { slug: "git", title: "Git and Git Workflows", sourcePath: "content/roadmaps/Git.md", projectSourcePath: "content/projects/git.md", route: "/courses/git", type: "roadmap", shortName: "Git", icon: "git", description: "Safe everyday Git, internals, recovery, collaboration, releases, and repository trust.", difficulty: "Beginner → professional", skills: ["Git", "Recovery", "CI"], prerequisites: "Ability to create and edit text files", projectPrefix: "git", next: "web-development", accent: "#2F5D8A" },
-  { slug: "web-development", title: "Web Development", sourcePath: "content/roadmaps/Web.md", projectSourcePath: "content/projects/web-development.md", route: "/courses/web-development", type: "roadmap", shortName: "Web Development", icon: "web", description: "Browser fundamentals, frontend, backend, APIs, security, testing, and deployment.", difficulty: "Beginner → production", skills: ["Frontend", "APIs", "Backend"], prerequisites: "Programming fundamentals and Git basics", projectPrefix: "web", next: "projects", accent: "#2F5D8A" },
-  { slug: "artificial-intelligence", title: "Artificial Intelligence", sourcePath: "content/roadmaps/AI.md", projectSourcePath: "content/projects/artificial-intelligence.md", route: "/courses/artificial-intelligence", type: "roadmap", shortName: "AI & ML", icon: "ai", description: "Classical ML through deep learning, transformers, RAG, agents, evaluation, and MLOps.", difficulty: "Intermediate", skills: ["Python", "ML", "LLMs"], prerequisites: "Programming, data, and useful math foundations", projectPrefix: "ai", next: "projects", accent: "#2F5D8A" },
-  { slug: "data", title: "Data", sourcePath: "content/roadmaps/Data.md", projectSourcePath: "content/projects/data.md", route: "/courses/data", type: "roadmap", shortName: "Data", icon: "data", description: "Analytics, SQL, statistics, pipelines, warehouses, Spark, Kafka, and data interviews.", difficulty: "Beginner → advanced", skills: ["SQL", "Analytics", "Pipelines"], prerequisites: "No prior data experience required", projectPrefix: "data", next: "artificial-intelligence", accent: "#2F5D8A" },
-  { slug: "networks", title: "Computer Networks", sourcePath: "content/roadmaps/Networks.md", projectSourcePath: "content/projects/networks.md", route: "/courses/networks", type: "roadmap", shortName: "Networks", icon: "networks", description: "Packets, protocols, routing, DNS, HTTP, security, operations, and network design.", difficulty: "Foundation → advanced", skills: ["TCP/IP", "DNS", "HTTP"], prerequisites: "Basic computer literacy", projectPrefix: "networks", next: "cloud", accent: "#2F5D8A" },
-  { slug: "cybersecurity", title: "ICT and Cybersecurity", sourcePath: "content/roadmaps/ICT_Cybersecurity.md", projectSourcePath: "content/projects/cybersecurity.md", route: "/courses/cybersecurity", type: "roadmap", shortName: "Cybersecurity", icon: "cybersecurity", description: "Defensive foundations, authorized labs, AppSec, cloud security, detection, and response.", difficulty: "Foundation → career", skills: ["Defense", "AppSec", "SOC"], prerequisites: "Start at Chapter 1; pair with Networks", projectPrefix: "cyber", next: "projects", accent: "#2F5D8A" },
-  { slug: "it-administration", title: "IT Administration", sourcePath: "content/roadmaps/IT_Administration.md", projectSourcePath: "content/projects/it-administration.md", route: "/courses/it-administration", type: "roadmap", shortName: "IT Administration", icon: "itAdministration", description: "Windows and Linux servers, Active Directory, Microsoft 365, networks, ERP, security, support, and tested recovery.", difficulty: "Beginner to job-ready", skills: ["Windows/Linux", "Active Directory", "Microsoft 365"], prerequisites: "Basic computer literacy", projectPrefix: "it-admin", next: "networks", accent: "#2F5D8A" },
-  { slug: "cloud", title: "Cloud Engineering", sourcePath: "content/roadmaps/Cloud.md", projectSourcePath: "content/projects/cloud.md", route: "/courses/cloud", type: "roadmap", shortName: "Cloud", icon: "cloud", description: "Provider-aware architecture, IAM, networking, reliability, security, FinOps, and migration.", difficulty: "Intermediate", skills: ["AWS/Azure/GCP", "IaC", "FinOps"], prerequisites: "Linux and networking foundations", projectPrefix: "cloud", next: "devops", accent: "#2F5D8A" },
-  { slug: "devops", title: "DevOps", sourcePath: "content/roadmaps/DevOps.md", projectSourcePath: "content/projects/devops.md", route: "/courses/devops", type: "roadmap", shortName: "DevOps", icon: "devops", description: "Linux, CI/CD, containers, Kubernetes, IaC, SRE, GitOps, and incident response.", difficulty: "Intermediate", skills: ["CI/CD", "Kubernetes", "SRE"], prerequisites: "Linux, troubleshooting, and Git", projectPrefix: "devops", next: "projects", accent: "#2F5D8A" },
-  { slug: "odoo", title: "Odoo", sourcePath: "content/roadmaps/ODOO.md", projectSourcePath: "content/projects/odoo.md", route: "/courses/odoo", type: "roadmap", shortName: "Odoo", icon: "odoo", description: "ERP development with modules, ORM, XML, OWL, PostgreSQL, integrations, and delivery.", difficulty: "Specialized", skills: ["Python", "ORM", "OWL"], prerequisites: "Programming fundamentals, OOP, and Git", projectPrefix: "odoo", next: "projects", accent: "#2F5D8A" },
-];
+export type CourseMetaFile = {
+  title?: string;
+  shortName?: string;
+  description?: string;
+  icon?: CourseIconName;
+  difficulty?: string;
+  skills?: string[];
+  prerequisites?: string;
+  accent?: string;
+  technologies?: string[];
+};
 
-export const guideRegistry: ContentEntry[] = [
-  { slug: "projects", title: "Projects Playbook", sourcePath: "content/guides/Projects.md", route: "/projects", type: "guide" },
-  { slug: "interview", title: "Interview Playbook", sourcePath: "content/guides/Interview.md", route: "/interview", type: "guide" },
-];
+export function coursesRoot() {
+  return path.join(CONTENT_ROOT, "courses");
+}
+
+export function courseRoot(slug: string) {
+  return path.join(coursesRoot(), slug);
+}
+
+function titleFromSlug(slug: string) {
+  return slug
+    .split("-")
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+}
+
+function readMeta(slug: string): CourseMetaFile {
+  const file = path.join(courseRoot(slug), "course.json");
+  if (!fs.existsSync(file)) return {};
+  try {
+    return JSON.parse(fs.readFileSync(file, "utf8")) as CourseMetaFile;
+  } catch {
+    return {};
+  }
+}
+
+export const listCourseSlugs = cache((): string[] => {
+  const root = coursesRoot();
+  if (!fs.existsSync(root)) return [];
+  return fs
+    .readdirSync(root, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && !entry.name.startsWith("."))
+    .map((entry) => entry.name)
+    .sort();
+});
+
+export function loadCourseDefinition(slug: string): CourseDefinition {
+  const meta = readMeta(slug);
+  const name = meta.shortName || meta.title || titleFromSlug(slug);
+  const icon = meta.icon ?? COURSE_ICON_BY_SLUG[slug] ?? "odoo";
+  return {
+    slug,
+    title: meta.title || name,
+    sourcePath: `content/courses/${slug}/README.md`,
+    route: `/courses/${slug}`,
+    type: "roadmap",
+    shortName: name,
+    icon,
+    description: meta.description || `${name} course.`,
+    difficulty: meta.difficulty || "",
+    skills: meta.skills ?? [],
+    prerequisites: meta.prerequisites || "",
+    projectPrefix: slug,
+    projectSourcePath: "",
+    accent: meta.accent || "#2F5D8A",
+    technologies: meta.technologies,
+    treeCourse: true,
+  };
+}
+
+export const getCourseCatalog = cache((): CourseDefinition[] => listCourseSlugs().map(loadCourseDefinition));
+
+/** @deprecated use getCourseCatalog() */
+export const courseCatalog = {
+  get length() {
+    return getCourseCatalog().length;
+  },
+  map: <T>(fn: (course: CourseDefinition, index: number, array: CourseDefinition[]) => T) => getCourseCatalog().map(fn),
+  find: (fn: (course: CourseDefinition, index: number, array: CourseDefinition[]) => unknown) => getCourseCatalog().find(fn),
+  flatMap: <T>(fn: (course: CourseDefinition, index: number, array: CourseDefinition[]) => T | T[]) => getCourseCatalog().flatMap(fn),
+  filter: (fn: (course: CourseDefinition, index: number, array: CourseDefinition[]) => unknown) => getCourseCatalog().filter(fn),
+  some: (fn: (course: CourseDefinition, index: number, array: CourseDefinition[]) => unknown) => getCourseCatalog().some(fn),
+  [Symbol.iterator]() {
+    return getCourseCatalog()[Symbol.iterator]();
+  },
+};
+
+export const guideRegistry: ContentEntry[] = [];
 
 export const templateRegistry: ContentEntry[] = [
   { slug: "master-cv-template", title: "Master CV Template", sourcePath: "content/templates/Master_CV_Template.md", route: "/cv-template", type: "template" },
 ];
 
-export const contentRegistry: ContentEntry[] = [...roadmapRegistry, ...guideRegistry, ...templateRegistry];
-export const courseBarLabels: Record<string, string> = {
-  "computer-science": "CS",
-  git: "Git",
-  "web-development": "Web",
-  "artificial-intelligence": "AI",
-  data: "Data",
-  networks: "Networks",
-  cloud: "Cloud",
-  devops: "DevOps",
-  cybersecurity: "Cyber",
-  "it-administration": "IT",
-  odoo: "Odoo",
+export const getContentRegistry = cache((): ContentEntry[] => [...getCourseCatalog(), ...guideRegistry, ...templateRegistry]);
+
+export const contentRegistry = {
+  map: <T>(fn: (entry: ContentEntry, index: number, array: ContentEntry[]) => T) => getContentRegistry().map(fn),
+  [Symbol.iterator]() {
+    return getContentRegistry()[Symbol.iterator]();
+  },
 };
 
-export const courseCatalog = roadmapRegistry;
-export const catalogBySlug = Object.fromEntries(courseCatalog.map((course) => [course.slug, course]));
-export const contentBySlug = Object.fromEntries(contentRegistry.map((entry) => [entry.slug, entry]));
+export const roadmapRegistry = courseCatalog;
+
+export function catalogBySlug(): Record<string, CourseDefinition> {
+  return Object.fromEntries(getCourseCatalog().map((course) => [course.slug, course]));
+}
+
+export function contentBySlug(): Record<string, ContentEntry> {
+  return Object.fromEntries(getContentRegistry().map((entry) => [entry.slug, entry]));
+}
+
+export function courseBarLabels(): Record<string, string> {
+  return Object.fromEntries(getCourseCatalog().map((course) => [course.slug, course.shortName]));
+}
+
+export { retiredCourseSlugs } from "./retired-courses";

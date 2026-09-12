@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   output: process.env.VERCEL ? undefined : "standalone",
   outputFileTracingIncludes: {
     "/downloads/job-tracker": ["./data/Job_Tracker.xlsx"],
+    "/*": ["./content/courses/**/*"],
   },
   outputFileTracingExcludes: {
     "/*": [

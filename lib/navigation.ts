@@ -1,6 +1,6 @@
 import type { ParsedCourse } from "./learning-model";
 import { chaptersFor } from "./learning-paths";
-import { lessonPath, phasePath, projectPathFor } from "./parse-course";
+import { lessonPath, phasePath, projectPathFor } from "./course-routes";
 import { glossaryPath } from "./unit-glossary";
 import type { ProjectArtifactKind } from "./parse-project-brief";
 
@@ -15,19 +15,23 @@ export type Neighbor = {
   requiresProject?: boolean;
 };
 
+export type CourseNavTopic = { id: string; title: string; children?: CourseNavTopic[] };
 export type CourseNavLesson = {
   id: string;
   slug: string;
   kind: "lesson" | "story-project" | "story-checkpoint";
   title: string;
-  children: { id: string; title: string }[];
+  children: CourseNavTopic[];
 };
 export type CourseNavPhase = {
   id: string;
   number: string;
   title: string;
   goal?: string;
+  unit?: number;
   hasProject: boolean;
+  hasExercise?: boolean;
+  exerciseTitle?: string;
   projectTitle?: string;
   projectKind?: ProjectArtifactKind;
   lessons: CourseNavLesson[];
@@ -37,7 +41,11 @@ export type CourseNavChapter = {
   title: string;
   summary: string;
   phases: CourseNavPhase[];
-  glossaryHref: string;
+  glossaryHref?: string;
+  unitExerciseHref?: string;
+  unitExerciseTitle?: string;
+  unitProjectHref?: string;
+  unitProjectTitle?: string;
 };
 export type CourseNav = {
   slug: string;
@@ -90,6 +98,7 @@ export function coursePages(course: ParsedCourse): Page[] {
   const chapters = chaptersFor(
     course.slug,
     course.phases.map((phase) => phase.id),
+    course.units,
   );
   const chapterByLastPhase = new Map(
     chapters

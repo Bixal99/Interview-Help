@@ -7,6 +7,7 @@ import { useLearningProgress } from "@/components/progress-client";
 import { ICON_SIZE } from "@/lib/icons";
 import type { CourseProgressState } from "@/lib/learning-model";
 import { lessonsDone } from "@/lib/progress-storage";
+import { resumeHrefFor } from "@/lib/resume-href";
 
 function onGlow(event: MouseEvent<HTMLElement>) {
   const box = event.currentTarget.getBoundingClientRect();
@@ -25,11 +26,7 @@ function courseStarted(state: CourseProgressState) {
 function continueHrefFor(slug: string, state: CourseProgressState) {
   const phaseId = state.currentPhaseId;
   if (!phaseId) return `/courses/${slug}`;
-  const lessonId = state.currentLessonId;
-  if (lessonId?.startsWith("project:")) return `/projects/${slug}/phase/${phaseId}`;
-  if (!lessonId || lessonId.startsWith("phase:")) return `/courses/${slug}/phase/${phaseId}`;
-  if (lessonId.startsWith("glossary:")) return `/courses/${slug}/unit/${lessonId.slice("glossary:".length)}/glossary`;
-  return `/courses/${slug}/phase/${phaseId}/${lessonId}`;
+  return resumeHrefFor(slug, phaseId, state.currentLessonId);
 }
 
 function CourseTileProgress({

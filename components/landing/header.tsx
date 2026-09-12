@@ -12,13 +12,13 @@ import type { SearchHit } from "@/lib/learning-model";
 import { LandingSearch } from "./landing-search";
 
 const nav = [
-  { href: "/courses", label: "Tutorials" },
-  { href: "/projects", label: "Projects" },
-  { href: "/interview", label: "Interview" },
+  { href: "/", label: "Home" },
+  { href: "/courses", label: "Courses" },
   { href: "/progress", label: "Progress" },
 ];
 
 function linkIsOn(href: string, pathname: string) {
+  if (href === "/") return pathname === "/";
   if (href === "/courses") return pathname === "/courses" || pathname.startsWith("/courses/");
   return pathname === href || pathname.startsWith(`${href}/`);
 }

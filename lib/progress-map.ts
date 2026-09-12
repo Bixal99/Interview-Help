@@ -84,7 +84,11 @@ export function currentLessonFlatIndex(
       const local = phase.lessonIds.findIndex(
         (id) => id === currentLessonId || id.toLowerCase() === currentLessonId.toLowerCase(),
       );
-      return local >= 0 ? offset + local : offset;
+      if (local >= 0) return offset + local;
+      if (currentLessonId.startsWith("project:") || currentLessonId.startsWith("glossary:")) {
+        return offset + Math.max(phase.lessonIds.length - 1, 0);
+      }
+      return offset;
     }
     // No lesson id yet — sit on the furthest contiguous completed lesson in this chapter.
     let local = -1;

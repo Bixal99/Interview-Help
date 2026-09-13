@@ -34,7 +34,7 @@ export function CourseHomeBandActions({
           backHref="/courses"
           backLabel="Back"
           proceedHref={continueHref}
-          proceedLabel={started ? "Continue learning" : "Start"}
+          proceedLabel={started ? "Continue" : "Start"}
         />
       </div>
     </div>

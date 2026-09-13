@@ -40,7 +40,7 @@ export default function ProgressPage() {
             ...(exercise
               ? [{
                   id: "E",
-                  title: phase.exerciseTitle ?? exercise.title,
+                  title: "Chapter Exercise",
                   href: chapterLeafPath(course.slug, phase.id, "exercise", phase.unit),
                   completeId: exercise.id,
                   kind: "exercise" as const,
@@ -49,7 +49,7 @@ export default function ProgressPage() {
             ...(phase.hasProject
               ? [{
                   id: "P",
-                  title: phase.projectTitle ?? "Project",
+                  title: "Chapter Project",
                   href: chapterLeafPath(course.slug, phase.id, "project", phase.unit),
                   completeId: phase.id,
                   kind: "project" as const,

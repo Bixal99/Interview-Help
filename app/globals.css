@@ -5569,7 +5569,7 @@ body {
   min-height: 100vh;
   background: #F1F1F1;
   color: #1A1A1A;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Poppins", ui-sans-serif, system-ui, sans-serif;
 }
 .ih-landing ::selection { background: rgb(4 170 109 / .28); }
 .ih-landing :focus-visible { outline: 3px solid #04AA6D; outline-offset: 3px; }

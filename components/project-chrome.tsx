@@ -3,7 +3,7 @@
 import { Check } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { tryPlaygroundHref, writeTryItCode } from "@/lib/code-playground/try-it-storage";
+import { tryPlaygroundHref, toPlaygroundLanguage, writeTryItCode } from "@/lib/code-playground/try-it-storage";
 import { notepadHref, writeNotepadEntry } from "@/lib/code-playground/notepad-storage";
 import { getCSProjectInfo } from "@/lib/cs-projects-registry";
 import type { WhatComesNext } from "@/lib/lesson-sections";
@@ -90,8 +90,8 @@ export function ProjectChrome({
         const href = notepadHref();
         writeNotepadEntry(
           {
-            prompt: csInfo.problemStatement || csInfo.projectTitle,
-            modelAnswer: csInfo.solutionMarkdown,
+            prompt: csInfo.problemStatement || csInfo.projectTitle || title,
+            modelAnswer: csInfo.solutionMarkdown ?? "",
             title: csInfo.projectTitle,
             kicker: `Chapter ${csInfo.chapter} Project`,
             backHref: pathname,
@@ -106,11 +106,12 @@ export function ProjectChrome({
         router.push(href);
         return;
       } else {
-        const href = tryPlaygroundHref(csInfo.language || "python");
+        const language = toPlaygroundLanguage(csInfo.language || "python") ?? "python";
+        const href = tryPlaygroundHref(language);
         writeTryItCode(
-          csInfo.language || "python",
+          language,
           {
-            source: csInfo.starterCode,
+            source: csInfo.starterCode ?? "",
             title: `Chapter ${csInfo.chapter} · ${csInfo.projectTitle}`,
             instructions: csInfo.problemStatement || csInfo.projectTitle,
             observe: `Run this solution to verify all requirements for ${csInfo.projectTitle}.`,

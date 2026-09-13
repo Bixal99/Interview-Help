@@ -28,52 +28,116 @@ function collectTopicSlugs(topics: CourseNavTopic[]): string[] {
   return topics.flatMap((topic) => [topicSlug(topic.id, topic.title), ...collectTopicSlugs(topic.children ?? [])]);
 }
 
-function useActiveTopicSlug(slugs: string[], enabled: boolean) {
-  const [hash, setHash] = useState("");
-  const [visible, setVisible] = useState("");
+function collectTopicEntries(topics: CourseNavTopic[]): { id: string; slug: string }[] {
+  return topics.flatMap((topic) => [
+    { id: topic.id, slug: topicSlug(topic.id, topic.title) },
+    ...collectTopicEntries(topic.children ?? []),
+  ]);
+}
+
+function scrollParentOf(node: HTMLElement): HTMLElement | Window {
+  let current = node.parentElement;
+  while (current && current !== document.body && current !== document.documentElement) {
+    const style = getComputedStyle(current);
+    const oy = style.overflowY;
+    if ((oy === "auto" || oy === "scroll" || oy === "overlay") && current.scrollHeight > current.clientHeight + 1) {
+      return current;
+    }
+    current = current.parentElement;
+  }
+  return window;
+}
+
+/** Keep sidebar highlight + URL hash on the heading currently in the reading band. */
+function useActiveTopicSlug(
+  entries: { id: string; slug: string }[],
+  enabled: boolean,
+  navSlug: string,
+) {
+  const [active, setActive] = useState("");
+  const slugs = useMemo(() => entries.map((entry) => entry.slug), [entries]);
+  const topicBySlug = useMemo(
+    () => new Map(entries.map((entry) => [entry.slug, entry.id])),
+    [entries],
+  );
 
   useEffect(() => {
-    let ignoreUntil = window.location.hash ? Date.now() + 900 : 0;
-    const read = () => {
-      setHash(window.location.hash.replace(/^#/, ""));
-      ignoreUntil = Date.now() + 900;
-    };
-    read();
-    window.addEventListener("hashchange", read);
-
     if (!enabled || !slugs.length) {
-      return () => window.removeEventListener("hashchange", read);
+      setActive("");
+      return;
     }
 
-    const nodes = slugs
-      .map((id) => document.getElementById(id))
-      .filter((node): node is HTMLElement => Boolean(node));
+    let ignoreUntil = 0;
+    let ticking = false;
+    let scroller: HTMLElement | Window = window;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (Date.now() < ignoreUntil) return;
-        const hit = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((left, right) => left.boundingClientRect.top - right.boundingClientRect.top)[0];
-        const id = hit?.target.id;
-        if (!id) return;
-        setVisible(id);
-        if (window.location.hash.replace(/^#/, "") !== id) {
-          history.replaceState(null, "", `#${id}`);
-          setHash(id);
-          window.dispatchEvent(new HashChangeEvent("hashchange"));
-        }
-      },
-      { rootMargin: "-18% 0px -68% 0px", threshold: [0, 0.25, 1] },
-    );
-    for (const node of nodes) observer.observe(node);
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("hashchange", read);
+    const remember = (slug: string) => {
+      const topicId = topicBySlug.get(slug);
+      try {
+        if (topicId) sessionStorage.setItem(`ih-topic:${navSlug}:${slug}`, topicId);
+      } catch {
+        // Ignore storage refusals.
+      }
     };
-  }, [enabled, slugs]);
 
-  return hash || visible;
+    const applySlug = (slug: string, writeHash: boolean) => {
+      if (!slug || !slugs.includes(slug)) return;
+      setActive(slug);
+      remember(slug);
+      if (!writeHash) return;
+      if (window.location.hash.replace(/^#/, "") === slug) {
+        window.dispatchEvent(new HashChangeEvent("hashchange"));
+        return;
+      }
+      history.replaceState(null, "", `#${slug}`);
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    };
+
+    const updateFromScroll = () => {
+      ticking = false;
+      if (Date.now() < ignoreUntil) return;
+      const marker = 120;
+      let current = slugs[0] ?? "";
+      for (const id of slugs) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        if (el.getBoundingClientRect().top <= marker) current = id;
+      }
+      if (current) applySlug(current, true);
+    };
+
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(updateFromScroll);
+    };
+
+    const onHash = () => {
+      const hash = window.location.hash.replace(/^#/, "");
+      if (hash && slugs.includes(hash)) {
+        ignoreUntil = Date.now() + 700;
+        applySlug(hash, false);
+      }
+    };
+
+    const first = slugs.map((id) => document.getElementById(id)).find(Boolean);
+    if (first) scroller = scrollParentOf(first);
+
+    onHash();
+    if (!window.location.hash) updateFromScroll();
+
+    if (scroller === window) window.addEventListener("scroll", onScroll, { passive: true });
+    else (scroller as HTMLElement).addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("hashchange", onHash);
+
+    return () => {
+      if (scroller === window) window.removeEventListener("scroll", onScroll);
+      else (scroller as HTMLElement).removeEventListener("scroll", onScroll);
+      window.removeEventListener("hashchange", onHash);
+    };
+  }, [enabled, slugs, topicBySlug, navSlug]);
+
+  return active;
 }
 
 export function sidebarOpenKey(slug: string) {
@@ -137,6 +201,11 @@ function TopicBranch({
           tabIndex={locked ? -1 : undefined}
           onClick={(event) => {
             if (locked) return;
+            try {
+              sessionStorage.setItem(`ih-topic:${navSlug}:${slug}`, topic.id);
+            } catch {
+              // Ignore storage refusals.
+            }
             if (pathname.replace(/\/$/, "") !== contentHref.replace(/\/$/, "")) return;
             const heading = document.getElementById(slug);
             if (!heading) return;
@@ -214,11 +283,11 @@ function PhaseBlock({
   const onChild = childHrefs.includes(pathname) || childHrefs.some((href) => pathname.startsWith(`${href}/`)) || pathname === contentHref || pathname.startsWith(`${contentHref}/`);
   const onPhase = pathname === phaseHref;
   const hasKids = childHrefs.length > 0 || phase.lessons.some((lesson) => lesson.slug === "content" && lesson.children.length > 0);
-  const topicSlugs = useMemo(
-    () => phase.lessons.filter((lesson) => lesson.slug === "content").flatMap((lesson) => collectTopicSlugs(lesson.children)),
+  const topicEntries = useMemo(
+    () => phase.lessons.filter((lesson) => lesson.slug === "content").flatMap((lesson) => collectTopicEntries(lesson.children)),
     [phase.lessons],
   );
-  const activeSlug = useActiveTopicSlug(topicSlugs, trackScroll && onChild);
+  const activeSlug = useActiveTopicSlug(topicEntries, trackScroll && onChild, navSlug);
   const [open, setOpen] = useState(onChild || onPhase);
 
   useEffect(() => {

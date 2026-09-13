@@ -1,7 +1,8 @@
 import { MarkdownDocument } from "@/components/markdown-document";
+import { ContentHashResume } from "@/components/content-hash-resume";
 import { Pager } from "@/components/pager";
 import { ProgressVisit } from "@/components/progress-visit";
-import { stripInlineTableOfContents } from "@/lib/content-utils";
+import { prepareChapterContentMarkdown } from "@/lib/content-utils";
 
 export function CourseDocPage({
   slug,
@@ -24,12 +25,13 @@ export function CourseDocPage({
   stripToc?: boolean;
   trackHash?: boolean;
 }) {
-  const body = stripToc ? stripInlineTableOfContents(markdown) : markdown;
+  const body = stripToc ? prepareChapterContentMarkdown(markdown) : markdown;
   return (
     <article className="ih-lesson">
       {phaseId && stopId ? (
         <ProgressVisit slug={slug} phaseId={phaseId} stopId={stopId} trackHash={trackHash} />
       ) : null}
+      {trackHash ? <ContentHashResume /> : null}
       <Pager
         backHref={prev?.href ?? "/courses"}
         backLabel={prev?.label ?? "Back"}

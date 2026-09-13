@@ -35,7 +35,7 @@ type ProgressApi = {
   requiredHref: (slug: string, phaseId: string, phaseIds: string[]) => string | undefined;
   projectDone: (slug: string, phaseId: string) => boolean;
   visit: (slug: string, phaseId: string, lessonId: string) => void;
-  setAnchor: (slug: string, anchor?: string) => void;
+  setPlace: (slug: string, place: { anchor?: string; topicId?: string }) => void;
   completeLesson: (slug: string, lessonId: string) => void;
   toggleProject: (slug: string, phaseId: string) => void;
   toggleGit: (slug: string, phaseId: string) => void;
@@ -150,6 +150,7 @@ export function ProgressProvider({
           currentPhaseId: phaseId,
           currentLessonId: `${phaseId}.1`,
           currentAnchor: state.currentPhaseId === phaseId ? state.currentAnchor : undefined,
+          currentTopicId: state.currentPhaseId === phaseId ? state.currentTopicId : undefined,
           visitedLessons: [...new Set([...state.visitedLessons, lessonId])],
         }),
       );
@@ -196,15 +197,26 @@ export function ProgressProvider({
       ...(shouldCompletePrevious ? [previousLessonId!] : []),
       ...finishedLessons,
     ])];
+    const onContent = lessonId.endsWith(".1") || lessonId === "content";
+    const hash =
+      typeof window !== "undefined" && onContent
+        ? window.location.hash.replace(/^#/, "").trim() || undefined
+        : undefined;
+    let topicId: string | undefined;
+    if (onContent && hash && typeof window !== "undefined") {
+      try {
+        topicId = window.sessionStorage.getItem(`ih-topic:${slug}:${hash}`) || undefined;
+      } catch {
+        topicId = undefined;
+      }
+    }
 
     apply(
       withCourse(current, slug, {
         currentPhaseId: phaseId,
         currentLessonId: lessonId,
-        currentAnchor:
-          typeof window !== "undefined" && (lessonId.endsWith(".1") || lessonId === "content")
-            ? window.location.hash.replace(/^#/, "").trim() || undefined
-            : undefined,
+        currentAnchor: onContent ? hash : undefined,
+        currentTopicId: onContent ? topicId : undefined,
         visitedLessons: [...new Set([...state.visitedLessons, lessonId])],
         ...(completedLessons.length !== state.completedLessons.length ? { completedLessons } : {}),
         ...(finishedPhaseIds.length
@@ -217,13 +229,14 @@ export function ProgressProvider({
     );
   }, [apply, ready]);
 
-  const setAnchor = useCallback((slug: string, anchor?: string) => {
+  const setPlace = useCallback((slug: string, place: { anchor?: string; topicId?: string }) => {
     if (!hydratedRef.current) return;
     const current = progressRef.current;
     const state = courseState(current, slug);
-    const next = anchor?.replace(/^#/, "").trim() || undefined;
-    if (state.currentAnchor === next) return;
-    apply(withCourse(current, slug, { currentAnchor: next }));
+    const anchor = place.anchor?.replace(/^#/, "").trim() || undefined;
+    const topicId = place.topicId?.trim() || undefined;
+    if (state.currentAnchor === anchor && state.currentTopicId === topicId) return;
+    apply(withCourse(current, slug, { currentAnchor: anchor, currentTopicId: topicId }));
   }, [apply]);
 
   const completeLesson = useCallback((slug: string, lessonId: string) => {
@@ -245,7 +258,7 @@ export function ProgressProvider({
       requiredHrefForPhase(progress, stepsFor(progress, slug, phaseIds), slug, phaseId, requirementsRef.current),
     projectDone: (slug, phaseId) => isProjectComplete(progress, slug, phaseId),
     visit,
-    setAnchor,
+    setPlace,
     completeLesson,
     toggleProject: (slug, phaseId) => {
       if (!hydratedRef.current) return;
@@ -298,7 +311,7 @@ export function ProgressProvider({
         },
       });
     },
-  }), [progress, ready, visit, setAnchor, completeLesson, apply]);
+  }), [progress, ready, visit, setPlace, completeLesson, apply]);
 
   return <ProgressContext.Provider value={api}>{children}</ProgressContext.Provider>;
 }

@@ -89,8 +89,10 @@ export type CourseProgressState = {
   lastVisitedAt: string;
   currentPhaseId?: string;
   currentLessonId?: string;
-  /** Heading hash on the content page (e.g. 17-erp-vs-crm) so Continue returns to that section. */
+  /** Heading hash on the content page so Continue returns to that section. */
   currentAnchor?: string;
+  /** Topic id like 1.4.1 for lock-screen / map labels. */
+  currentTopicId?: string;
   visitedLessons: string[];
   completedLessons: string[];
   completedExercises: string[];

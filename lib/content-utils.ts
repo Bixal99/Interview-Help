@@ -187,6 +187,17 @@ export function stripInlineTableOfContents(markdown: string) {
   );
 }
 
+/**
+ * Chapter pages already sit under a unit in the sidebar — drop the repeated
+ * `# UNIT …` banner and promote `## CHAPTER N: …` to the page H1.
+ */
+export function prepareChapterContentMarkdown(markdown: string) {
+  let next = stripInlineTableOfContents(markdown);
+  next = next.replace(/^\s*#\s+UNIT\s+[IVXLCDM]+\s*:[^\n]*\r?\n+/i, "");
+  next = next.replace(/^(\s*)##(\s+CHAPTER\s+\d+\s*:)/im, "$1#$2");
+  return next;
+}
+
 export function stripMarkdown(value: string): string {
   return plainFormula(
     value

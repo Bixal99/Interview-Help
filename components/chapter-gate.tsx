@@ -11,7 +11,8 @@ function chapterName(title: string) {
   return title.replace(/^(?:CHAPTER|CH)\s*\d+\s*[:.–-]\s*/i, "").trim() || title;
 }
 
-function stopKind(lessonId?: string, anchor?: string) {
+function stopKind(lessonId?: string, topicId?: string, anchor?: string) {
+  if (topicId) return `Section ${topicId}`;
   if (anchor) {
     const section = sectionLabelFromAnchor(anchor);
     return section ? `Section ${section}` : "Content";
@@ -19,19 +20,15 @@ function stopKind(lessonId?: string, anchor?: string) {
   if (!lessonId) return null;
   if (lessonId.startsWith("project:")) return "Project";
   if (lessonId === "exercise" || /\.2$/.test(lessonId)) return "Exercise";
-  if (lessonId.startsWith("phase:")) return "Content";
   if (lessonId.startsWith("glossary:")) return "Glossary";
-  if (/\.1$/.test(lessonId) || lessonId === "content") return "Content";
   return "Content";
 }
 
-/** Heading slugs drop the dot ("1.7 Title" → "17-title"); recover "1.7" when we can. */
+/** Heading slugs drop dots ("1.4.1 Title" → "141-title"); recover when unambiguous. */
 function sectionLabelFromAnchor(anchor: string) {
   const raw = anchor.replace(/^#/, "");
-  const dotted = /^(\d+)\.(\d+)\b/.exec(raw);
-  if (dotted) return `${dotted[1]}.${dotted[2]}`;
-  const flat = /^(\d)(\d+)(?=-|$)/.exec(raw);
-  if (flat) return `${flat[1]}.${flat[2]}`;
+  const dotted = /^(\d+(?:\.\d+)+)\b/.exec(raw);
+  if (dotted) return dotted[1];
   return null;
 }
 
@@ -87,7 +84,7 @@ export function ChapterGate({
   const leftName = left ? chapterName(left.title) : null;
   const leftStop =
     left?.id === state.currentPhaseId
-      ? stopKind(state.currentLessonId, state.currentAnchor)
+      ? stopKind(state.currentLessonId, state.currentTopicId, state.currentAnchor)
       : "Content";
 
   return (

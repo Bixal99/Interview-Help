@@ -13,10 +13,10 @@ export function ProgressVisit({
   slug: string;
   phaseId: string;
   stopId: string;
-  /** When true, keep currentAnchor in sync with the content heading hash (e.g. 1.7). */
+  /** When true, keep currentAnchor in sync with the content heading hash. */
   trackHash?: boolean;
 }) {
-  const { ready, visit, setAnchor } = useLearningProgress();
+  const { ready, visit, setPlace } = useLearningProgress();
 
   useEffect(() => {
     if (!ready) return;
@@ -27,12 +27,17 @@ export function ProgressVisit({
     if (!ready || !trackHash) return;
     const sync = () => {
       const hash = window.location.hash.replace(/^#/, "").trim();
-      setAnchor(slug, hash || undefined);
+      if (!hash) {
+        setPlace(slug, {});
+        return;
+      }
+      const topicId = window.sessionStorage.getItem(`ih-topic:${slug}:${hash}`) || undefined;
+      setPlace(slug, { anchor: hash, topicId });
     };
     sync();
     window.addEventListener("hashchange", sync);
     return () => window.removeEventListener("hashchange", sync);
-  }, [ready, trackHash, slug, setAnchor]);
+  }, [ready, trackHash, slug, setPlace]);
 
   return null;
 }

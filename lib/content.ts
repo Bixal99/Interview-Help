@@ -11,7 +11,7 @@ import {
 import { extractHeadings, stripMarkdown, type Heading } from "./content-utils";
 import { chaptersFor } from "./learning-paths";
 import type { ChapterRequirementLookup, ParsedCourse, SearchHit } from "./learning-model";
-import { firstLessonHref, firstPhaseHref, lessonCountForNav, type CourseNav } from "./navigation";
+import { firstLessonHref, firstPhaseHref, writtenProgressCounts, type CourseNav } from "./navigation";
 import { lessonPath, projectPathFor } from "./course-routes";
 import { parseProjectBrief } from "./parse-project-brief";
 import { lookupFromCourses } from "./progress-lookup";
@@ -82,14 +82,18 @@ export const getCourseSummaries = cache((): CourseSummary[] => {
   const labels = courseBarLabels();
   return getCourses().map((course) => {
     const nav = toCourseNav(course);
-    const phaseCount = nav.chapters.reduce((sum, chapter) => sum + chapter.phases.length, 0);
+    const written = writtenProgressCounts(nav);
+    const phaseCount = nav.chapters.reduce(
+      (sum, chapter) => sum + chapter.phases.filter((phase) => phase.onDisk).length,
+      0,
+    );
     return {
       ...bySlug[course.slug],
       title: course.title,
       barLabel: labels[course.slug] ?? course.shortName,
       phaseCount,
       chapterCount: phaseCount,
-      lessonCount: lessonCountForNav(nav),
+      lessonCount: written.lessonCount,
     };
   });
 });
@@ -160,6 +164,7 @@ export function toCourseNav(course: NonNullable<ReturnType<typeof getParsedCours
           const phase = phaseMap[id];
           if (!phase) return [];
           const unit = Number.isFinite(unitNumber) ? unitNumber : Number(id);
+          const onDisk = existsOnDisk(course.slug, unit, Number(phase.id));
           const exercise = phase.lessons.find((lesson) => lesson.slug === "exercise");
           return [{
             id: phase.id,
@@ -167,6 +172,7 @@ export function toCourseNav(course: NonNullable<ReturnType<typeof getParsedCours
             title: phase.title,
             goal: phase.goal,
             unit,
+            onDisk,
             hasProject: Boolean(phase.project),
             hasExercise: Boolean(exercise),
             exerciseTitle: exercise?.title,

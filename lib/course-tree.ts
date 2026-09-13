@@ -314,6 +314,20 @@ function beginnerIntroFromHome(markdown: string, description: string): BeginnerI
   };
 }
 
+const ODOO_WELCOME: BeginnerIntro = {
+  heading: "Welcome",
+  paragraphs: [
+    "This comprehensive Odoo Engineering course is designed to take learners from the fundamentals of ERP systems and Odoo to advanced, production-ready development skills.",
+    "The course is structured into 24 units, 96 chapters, and hundreds of focused topics, covering business fundamentals, Odoo architecture, backend development, frontend development with OWL, APIs and integrations, security, testing, deployment, performance optimization, and professional engineering practices.",
+    "The learning path follows a progressive approach, beginning with how ERP systems support real business processes before moving into Odoo’s technical architecture and development workflow. Each section builds on the previous one, helping learners develop both a strong conceptual foundation and practical engineering ability.",
+    "The course also covers real-world development practices such as debugging, code quality, maintainable module design, production deployment, code reviews, capstone projects, and interview preparation.",
+    "By the end of the course, learners will have the knowledge and practical skills required to confidently build, customize, integrate, maintain, and deploy professional Odoo solutions.",
+  ],
+  closingParagraphs: [],
+  everydayTerms: [],
+  terms: [],
+};
+
 export const buildParsedCourse = cache((slug: string): ParsedCourse => {
   const definition = loadCourseDefinition(slug);
   const roadmap = getCourseRoadmap(slug);
@@ -409,7 +423,7 @@ export const buildParsedCourse = cache((slug: string): ParsedCourse => {
     title: firstHeading(home, roadmap.title || definition.title),
     introMarkdown: home,
     teaserMarkdown: "",
-    beginnerIntro: beginnerIntroFromHome(home, definition.description),
+    beginnerIntro: slug === "odoo" ? ODOO_WELCOME : beginnerIntroFromHome(home, definition.description),
     phases,
     units: unitsAsChapters(slug),
   };

@@ -105,8 +105,13 @@ export function ProgressDashboard({ courses }: { courses: ProgressCourseView[] }
   }, [active, activeState, phaseList]);
   const here = phaseList.find((_, index) => statuses[index] === "here") ?? phaseList[0];
   const continueHref =
-    current?.slug === active?.slug && current.href
-      ? current.href
+    active && activeState?.currentPhaseId
+      ? resumeHrefFor(
+          active.slug,
+          activeState.currentPhaseId,
+          activeState.currentLessonId,
+          activeState.currentAnchor,
+        )
       : here?.href ?? `/courses/${active?.slug ?? ""}`;
   const totalLessons = courses.reduce((sum, item) => sum + item.lessonCount, 0);
   const totalProjects = courses.reduce((sum, item) => sum + item.phaseCount, 0);

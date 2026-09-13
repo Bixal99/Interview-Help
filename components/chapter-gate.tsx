@@ -11,13 +11,28 @@ function chapterName(title: string) {
   return title.replace(/^(?:CHAPTER|CH)\s*\d+\s*[:.–-]\s*/i, "").trim() || title;
 }
 
-function stopKind(lessonId?: string) {
+function stopKind(lessonId?: string, anchor?: string) {
+  if (anchor) {
+    const section = sectionLabelFromAnchor(anchor);
+    return section ? `Section ${section}` : "Content";
+  }
   if (!lessonId) return null;
   if (lessonId.startsWith("project:")) return "Project";
   if (lessonId === "exercise" || /\.2$/.test(lessonId)) return "Exercise";
-  if (lessonId.startsWith("phase:")) return "Chapter start";
+  if (lessonId.startsWith("phase:")) return "Content";
   if (lessonId.startsWith("glossary:")) return "Glossary";
+  if (/\.1$/.test(lessonId) || lessonId === "content") return "Content";
   return "Content";
+}
+
+/** Heading slugs drop the dot ("1.7 Title" → "17-title"); recover "1.7" when we can. */
+function sectionLabelFromAnchor(anchor: string) {
+  const raw = anchor.replace(/^#/, "");
+  const dotted = /^(\d+)\.(\d+)\b/.exec(raw);
+  if (dotted) return `${dotted[1]}.${dotted[2]}`;
+  const flat = /^(\d)(\d+)(?=-|$)/.exec(raw);
+  if (flat) return `${flat[1]}.${flat[2]}`;
+  return null;
 }
 
 export function ChapterGate({
@@ -61,11 +76,19 @@ export function ChapterGate({
   })();
   const left = chapters.find((chapter) => chapter.id === leftId) ?? chapters[0];
   const continueHref = left
-    ? resumeHrefFor(slug, left.id, left.id === state.currentPhaseId ? state.currentLessonId : undefined)
+    ? resumeHrefFor(
+        slug,
+        left.id,
+        left.id === state.currentPhaseId ? state.currentLessonId : `${left.id}.1`,
+        left.id === state.currentPhaseId ? state.currentAnchor : undefined,
+      )
     : startHref;
   const lockedName = chapterName(phaseTitle);
   const leftName = left ? chapterName(left.title) : null;
-  const leftStop = left?.id === state.currentPhaseId ? stopKind(state.currentLessonId) : null;
+  const leftStop =
+    left?.id === state.currentPhaseId
+      ? stopKind(state.currentLessonId, state.currentAnchor)
+      : "Content";
 
   return (
     <div className="ih-chapter-lock">

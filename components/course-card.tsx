@@ -26,7 +26,7 @@ function courseStarted(state: CourseProgressState) {
 function continueHrefFor(slug: string, state: CourseProgressState) {
   const phaseId = state.currentPhaseId;
   if (!phaseId) return `/courses/${slug}`;
-  return resumeHrefFor(slug, phaseId, state.currentLessonId);
+  return resumeHrefFor(slug, phaseId, state.currentLessonId, state.currentAnchor);
 }
 
 function CourseTileProgress({

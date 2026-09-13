@@ -12,6 +12,7 @@ export function CourseDocPage({
   prev,
   next,
   stripToc = false,
+  trackHash = false,
 }: {
   slug: string;
   phaseId?: string;
@@ -21,11 +22,14 @@ export function CourseDocPage({
   prev?: { href: string; label: string } | null;
   next?: { href: string; label: string } | null;
   stripToc?: boolean;
+  trackHash?: boolean;
 }) {
   const body = stripToc ? stripInlineTableOfContents(markdown) : markdown;
   return (
     <article className="ih-lesson">
-      {phaseId && stopId ? <ProgressVisit slug={slug} phaseId={phaseId} stopId={stopId} /> : null}
+      {phaseId && stopId ? (
+        <ProgressVisit slug={slug} phaseId={phaseId} stopId={stopId} trackHash={trackHash} />
+      ) : null}
       <Pager
         backHref={prev?.href ?? "/courses"}
         backLabel={prev?.label ?? "Back"}

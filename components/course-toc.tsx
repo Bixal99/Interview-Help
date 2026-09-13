@@ -98,11 +98,6 @@ export function CourseToc({ nav }: { nav: CourseNav }) {
           <h3 className="mb-4 text-2xl font-bold uppercase tracking-wide text-[#04AA6D] sm:text-3xl">
             {unitDisplayTitle(chapter.title)}
           </h3>
-          {chapter.summary && (
-            <p className="mb-5 text-[15px] leading-relaxed text-ink sm:text-base">
-              <Emphasis text={chapter.summary} />
-            </p>
-          )}
           <div className="grid gap-5">
             {chapter.phases.map((phase) => (
               <PhaseCard key={phase.id} navSlug={nav.slug} phase={phase} />

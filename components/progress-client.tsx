@@ -35,6 +35,7 @@ type ProgressApi = {
   requiredHref: (slug: string, phaseId: string, phaseIds: string[]) => string | undefined;
   projectDone: (slug: string, phaseId: string) => boolean;
   visit: (slug: string, phaseId: string, lessonId: string) => void;
+  setAnchor: (slug: string, anchor?: string) => void;
   completeLesson: (slug: string, lessonId: string) => void;
   toggleProject: (slug: string, phaseId: string) => void;
   toggleGit: (slug: string, phaseId: string) => void;
@@ -129,6 +130,32 @@ export function ProgressProvider({
     const current = progressRef.current;
     const state = courseState(current, slug);
     const previousLessonId = state.currentLessonId;
+    const visitingPhase = lessonId.startsWith("phase:");
+    if (visitingPhase) {
+      // Checkpoint splash must not replace a real resume stop (content / exercise / project).
+      if (
+        state.currentPhaseId === phaseId &&
+        state.currentLessonId &&
+        !state.currentLessonId.startsWith("phase:")
+      ) {
+        if (!state.visitedLessons.includes(lessonId)) {
+          apply(withCourse(current, slug, {
+            visitedLessons: [...new Set([...state.visitedLessons, lessonId])],
+          }));
+        }
+        return;
+      }
+      apply(
+        withCourse(current, slug, {
+          currentPhaseId: phaseId,
+          currentLessonId: `${phaseId}.1`,
+          currentAnchor: state.currentPhaseId === phaseId ? state.currentAnchor : undefined,
+          visitedLessons: [...new Set([...state.visitedLessons, lessonId])],
+        }),
+      );
+      return;
+    }
+
     const alreadyHere =
       state.currentPhaseId === phaseId &&
       state.currentLessonId === lessonId &&
@@ -174,6 +201,10 @@ export function ProgressProvider({
       withCourse(current, slug, {
         currentPhaseId: phaseId,
         currentLessonId: lessonId,
+        currentAnchor:
+          typeof window !== "undefined" && (lessonId.endsWith(".1") || lessonId === "content")
+            ? window.location.hash.replace(/^#/, "").trim() || undefined
+            : undefined,
         visitedLessons: [...new Set([...state.visitedLessons, lessonId])],
         ...(completedLessons.length !== state.completedLessons.length ? { completedLessons } : {}),
         ...(finishedPhaseIds.length
@@ -185,6 +216,15 @@ export function ProgressProvider({
       }),
     );
   }, [apply, ready]);
+
+  const setAnchor = useCallback((slug: string, anchor?: string) => {
+    if (!hydratedRef.current) return;
+    const current = progressRef.current;
+    const state = courseState(current, slug);
+    const next = anchor?.replace(/^#/, "").trim() || undefined;
+    if (state.currentAnchor === next) return;
+    apply(withCourse(current, slug, { currentAnchor: next }));
+  }, [apply]);
 
   const completeLesson = useCallback((slug: string, lessonId: string) => {
     if (!hydratedRef.current) return;
@@ -205,6 +245,7 @@ export function ProgressProvider({
       requiredHrefForPhase(progress, stepsFor(progress, slug, phaseIds), slug, phaseId, requirementsRef.current),
     projectDone: (slug, phaseId) => isProjectComplete(progress, slug, phaseId),
     visit,
+    setAnchor,
     completeLesson,
     toggleProject: (slug, phaseId) => {
       if (!hydratedRef.current) return;
@@ -257,7 +298,7 @@ export function ProgressProvider({
         },
       });
     },
-  }), [progress, ready, visit, completeLesson, apply]);
+  }), [progress, ready, visit, setAnchor, completeLesson, apply]);
 
   return <ProgressContext.Provider value={api}>{children}</ProgressContext.Provider>;
 }

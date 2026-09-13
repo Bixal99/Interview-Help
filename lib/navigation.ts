@@ -29,6 +29,7 @@ export type CourseNavPhase = {
   title: string;
   goal?: string;
   unit?: number;
+  onDisk?: boolean;
   hasProject: boolean;
   hasExercise?: boolean;
   exerciseTitle?: string;
@@ -79,6 +80,20 @@ export function lessonIdsByPhase(nav: CourseNav) {
 
 export function lessonCountForNav(nav: CourseNav) {
   return Object.values(lessonIdsByPhase(nav)).reduce((sum, ids) => sum + ids.length, 0);
+}
+
+/** Progress % should only count chapters that exist on disk (not roadmap placeholders). */
+export function writtenProgressCounts(nav: CourseNav) {
+  let lessonCount = 0;
+  let projectCount = 0;
+  for (const chapter of nav.chapters) {
+    for (const phase of chapter.phases) {
+      if (!phase.onDisk) continue;
+      lessonCount += regularLessonIds(phase).length;
+      if (phase.hasProject) projectCount += 1;
+    }
+  }
+  return { lessonCount, projectCount };
 }
 
 type Page = {

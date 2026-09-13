@@ -89,6 +89,8 @@ export type CourseProgressState = {
   lastVisitedAt: string;
   currentPhaseId?: string;
   currentLessonId?: string;
+  /** Heading hash on the content page (e.g. 17-erp-vs-crm) so Continue returns to that section. */
+  currentAnchor?: string;
   visitedLessons: string[];
   completedLessons: string[];
   completedExercises: string[];

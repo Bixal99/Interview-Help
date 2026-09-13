@@ -40,6 +40,7 @@ export default async function ChapterContentPage({
       prev={view.prev}
       next={view.next}
       stripToc
+      trackHash
     />
   );
 }

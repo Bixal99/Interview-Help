@@ -41,11 +41,24 @@ function stopDotStatus(
   phaseId: string,
   phaseLocked: boolean,
   phaseHere: boolean,
+  currentAnchor?: string,
 ): LessonDotStatus {
   if (phaseLocked) return "locked";
   const stop = stops[index];
   if (!stop) return "locked";
   if (stopIsDone(stop, completedLessons, completedProjects, phaseId)) return "cleared";
+  if (phaseHere && currentAnchor) {
+    const hash = currentAnchor.replace(/^#/, "");
+    const anchorIndex = stops.findIndex((item) => {
+      const tip = item.href.split("#")[1];
+      return tip === hash || item.id === hash;
+    });
+    if (anchorIndex >= 0) {
+      if (index < anchorIndex) return "cleared";
+      if (index === anchorIndex) return "here";
+      return "locked";
+    }
+  }
   const firstOpen = stops.findIndex((item) => !stopIsDone(item, completedLessons, completedProjects, phaseId));
   if (phaseHere && firstOpen === index) return "here";
   return "locked";
@@ -138,6 +151,7 @@ export function WindingRoadmap({
             phase.id,
             phaseStatus === "locked",
             phaseStatus === "here",
+            state.currentPhaseId === phase.id ? state.currentAnchor : undefined,
           ),
         });
       });
@@ -147,6 +161,7 @@ export function WindingRoadmap({
     layout.points,
     phases,
     state.completedLessons,
+    state.currentAnchor,
     state.currentLessonId,
     state.currentPhaseId,
     terminals,
@@ -201,9 +216,19 @@ export function WindingRoadmap({
     ? `/courses/${course.slug}/chapter/${current.id}/${focusLesson.slug === "content" ? "content" : focusLesson.slug}`
     : current.href;
   const currentProjectDone = state.completedProjects.some((id) => id === current.id);
-  const continueStepHref = currentLessonDone === currentLessonTotal && current.hasProject && !currentProjectDone
-    ? `/courses/${course.slug}/chapter/${current.id}/project`
-    : continueLessonHref;
+  const continueStepHref = (() => {
+    if (currentLessonDone === currentLessonTotal && current.hasProject && !currentProjectDone) {
+      return `/courses/${course.slug}/chapter/${current.id}/project`;
+    }
+    if (
+      state.currentPhaseId === current.id &&
+      state.currentAnchor &&
+      (!state.currentLessonId || state.currentLessonId.endsWith(".1") || state.currentLessonId === "content")
+    ) {
+      return `/courses/${course.slug}/chapter/${current.id}/content#${state.currentAnchor.replace(/^#/, "")}`;
+    }
+    return continueLessonHref;
+  })();
 
   return (
     <section className="ih-winding" aria-label={`${course.shortName} roadmap`}>

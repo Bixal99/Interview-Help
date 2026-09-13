@@ -278,7 +278,7 @@ export function stepsFor(progress: LearningProgress, course: string, phaseIds: s
 
 export function resumeHref(
   progress: LearningProgress,
-  firstLessonHref: (slug: string, phaseId: string, lessonId?: string) => string,
+  firstLessonHref: (slug: string, phaseId: string, lessonId?: string, anchor?: string) => string,
 ) {
   const entries = Object.entries(progress.courses).sort((a, b) => b[1].lastVisitedAt.localeCompare(a[1].lastVisitedAt));
   const latest = entries[0];
@@ -293,13 +293,14 @@ export function resumeHref(
     slug,
     phaseId: state.currentPhaseId,
     lessonId: (projectStop || phaseStop || glossaryStop) ? undefined : lessonId,
+    anchor: state.currentAnchor,
     href: projectStop
-      ? `/projects/${slug}/phase/${state.currentPhaseId}`
+      ? `/courses/${slug}/chapter/${state.currentPhaseId}/project`
       : phaseStop
-        ? `/courses/${slug}/phase/${state.currentPhaseId}`
+        ? firstLessonHref(slug, state.currentPhaseId, `${state.currentPhaseId}.1`, state.currentAnchor)
         : glossaryStop
           ? `/courses/${slug}/unit/${lessonId!.slice("glossary:".length)}/glossary`
-          : firstLessonHref(slug, state.currentPhaseId, lessonId),
+          : firstLessonHref(slug, state.currentPhaseId, lessonId, state.currentAnchor),
     lastVisitedAt: state.lastVisitedAt,
   };
 }

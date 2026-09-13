@@ -3,7 +3,7 @@ import { ProgressDashboard, type ProgressCourseView, type ProgressMapStop } from
 import { getCourseNav, getCourseSummaries } from "@/lib/content";
 import { githubSlug } from "@/lib/content-utils";
 import { chapterContentPath, chapterLeafPath, phasePath } from "@/lib/course-routes";
-import { lessonCountForNav, type CourseNavTopic } from "@/lib/navigation";
+import { writtenProgressCounts, type CourseNavTopic } from "@/lib/navigation";
 
 export const metadata: Metadata = { title: "Progress", description: "Walk each roadmap lesson by lesson and see where you left off." };
 
@@ -20,13 +20,14 @@ function topicStops(topics: CourseNavTopic[], contentHref: string, contentLesson
 export default function ProgressPage() {
   const courses: ProgressCourseView[] = getCourseSummaries().map((course) => {
     const nav = getCourseNav(course.slug);
+    const written = nav ? writtenProgressCounts(nav) : { lessonCount: 0, projectCount: 0 };
     return {
       slug: course.slug,
       shortName: course.shortName,
       barLabel: course.barLabel,
       description: course.description,
-      lessonCount: nav ? lessonCountForNav(nav) : 0,
-      phaseCount: nav?.chapters.reduce((sum, chapter) => sum + chapter.phases.length, 0) ?? 0,
+      lessonCount: written.lessonCount,
+      phaseCount: written.projectCount,
       chapters: (nav?.chapters ?? []).map((chapter) => ({
         id: chapter.id,
         title: chapter.title,

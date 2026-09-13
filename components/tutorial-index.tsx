@@ -61,6 +61,7 @@ function useActiveTopicSlug(slugs: string[], enabled: boolean) {
         if (window.location.hash.replace(/^#/, "") !== id) {
           history.replaceState(null, "", `#${id}`);
           setHash(id);
+          window.dispatchEvent(new HashChangeEvent("hashchange"));
         }
       },
       { rootMargin: "-18% 0px -68% 0px", threshold: [0, 0.25, 1] },

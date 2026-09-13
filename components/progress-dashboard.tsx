@@ -6,7 +6,7 @@ import { useLearningProgress } from "./progress-client";
 import { WindingRoadmap } from "./winding-roadmap";
 import { trailStatuses } from "@/lib/progress-map";
 import { coursePercent, lessonsDone } from "@/lib/progress-storage";
-import { resumeHrefFor } from "@/lib/resume-href";
+import { resumeHrefFromState, resumeHrefFor } from "@/lib/resume-href";
 
 export type ProgressMapStop = {
   id: string;
@@ -106,12 +106,7 @@ export function ProgressDashboard({ courses }: { courses: ProgressCourseView[] }
   const here = phaseList.find((_, index) => statuses[index] === "here") ?? phaseList[0];
   const continueHref =
     active && activeState?.currentPhaseId
-      ? resumeHrefFor(
-          active.slug,
-          activeState.currentPhaseId,
-          activeState.currentLessonId,
-          activeState.currentAnchor,
-        )
+      ? resumeHrefFromState(active.slug, activeState, here?.href ?? `/courses/${active.slug}`)
       : here?.href ?? `/courses/${active?.slug ?? ""}`;
   const totalLessons = courses.reduce((sum, item) => sum + item.lessonCount, 0);
   const totalProjects = courses.reduce((sum, item) => sum + item.phaseCount, 0);

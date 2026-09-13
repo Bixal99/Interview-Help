@@ -31,7 +31,7 @@ export function CourseDocPage({
       {phaseId && stopId ? (
         <ProgressVisit slug={slug} phaseId={phaseId} stopId={stopId} trackHash={trackHash} />
       ) : null}
-      {trackHash ? <ContentHashResume /> : null}
+      {trackHash ? <ContentHashResume slug={slug} /> : null}
       <Pager
         backHref={prev?.href ?? "/courses"}
         backLabel={prev?.label ?? "Back"}

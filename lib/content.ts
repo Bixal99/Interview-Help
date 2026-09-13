@@ -11,7 +11,7 @@ import {
 import { extractHeadings, stripMarkdown, type Heading } from "./content-utils";
 import { chaptersFor } from "./learning-paths";
 import type { ChapterRequirementLookup, ParsedCourse, SearchHit } from "./learning-model";
-import { firstLessonHref, firstPhaseHref, writtenProgressCounts, type CourseNav } from "./navigation";
+import { firstLessonHref, firstPhaseHref, lessonCountForNav, writtenProgressCounts, type CourseNav } from "./navigation";
 import { lessonPath, projectPathFor } from "./course-routes";
 import { parseProjectBrief } from "./parse-project-brief";
 import { lookupFromCourses } from "./progress-lookup";
@@ -33,9 +33,15 @@ import { glossaryPath, buildUnitGlossary } from "./unit-glossary";
 export type CourseSummary = CourseDefinition & {
   title: string;
   barLabel: string;
+  /** Chapters listed on the course TOC (includes roadmap placeholders). */
   phaseCount: number;
   chapterCount: number;
+  /** Lessons listed on the course TOC (includes roadmap placeholders). */
   lessonCount: number;
+  /** Written chapter projects — used for progress % (not placeholders). */
+  projectCount: number;
+  /** Written lessons on disk — used for progress %. */
+  writtenLessonCount: number;
 };
 
 export type Course = CourseDefinition & ParsedCourse & {
@@ -83,17 +89,16 @@ export const getCourseSummaries = cache((): CourseSummary[] => {
   return getCourses().map((course) => {
     const nav = toCourseNav(course);
     const written = writtenProgressCounts(nav);
-    const phaseCount = nav.chapters.reduce(
-      (sum, chapter) => sum + chapter.phases.filter((phase) => phase.onDisk).length,
-      0,
-    );
+    const phaseCount = nav.chapters.reduce((sum, chapter) => sum + chapter.phases.length, 0);
     return {
       ...bySlug[course.slug],
       title: course.title,
       barLabel: labels[course.slug] ?? course.shortName,
       phaseCount,
       chapterCount: phaseCount,
-      lessonCount: written.lessonCount,
+      lessonCount: lessonCountForNav(nav),
+      projectCount: written.projectCount,
+      writtenLessonCount: written.lessonCount,
     };
   });
 });

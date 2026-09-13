@@ -13,6 +13,7 @@ import {
 import { windingLayout, windingMetrics, windingPath, windingSegmentLessonPoints, windingTerminals } from "@/lib/winding-layout";
 import { useLearningProgress } from "@/components/progress-client";
 import { coursePercent } from "@/lib/progress-storage";
+import { resumeHrefFromState } from "@/lib/resume-href";
 
 function nodePaint(status: TrailStatus, isSelected: boolean) {
   if (status === "cleared") return { fill: "#04AA6D", stroke: "#04AA6D", number: "#fff" };
@@ -220,12 +221,8 @@ export function WindingRoadmap({
     if (currentLessonDone === currentLessonTotal && current.hasProject && !currentProjectDone) {
       return `/courses/${course.slug}/chapter/${current.id}/project`;
     }
-    if (
-      state.currentPhaseId === current.id &&
-      state.currentAnchor &&
-      (!state.currentLessonId || state.currentLessonId.endsWith(".1") || state.currentLessonId === "content")
-    ) {
-      return `/courses/${course.slug}/chapter/${current.id}/content#${state.currentAnchor.replace(/^#/, "")}`;
+    if (state.currentPhaseId === current.id) {
+      return resumeHrefFromState(course.slug, state, continueLessonHref);
     }
     return continueLessonHref;
   })();

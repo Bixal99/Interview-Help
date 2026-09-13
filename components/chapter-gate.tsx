@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { AppIcon } from "@/components/icons/app-icon";
 import { useLearningProgress } from "@/components/progress-client";
-import { resumeHrefFor } from "@/lib/resume-href";
+import { resumeAnchorFor, resumeHrefFromState, resumeHrefFor } from "@/lib/resume-href";
 
 export type GateChapter = { id: string; number: string; title: string };
 
@@ -73,18 +73,15 @@ export function ChapterGate({
   })();
   const left = chapters.find((chapter) => chapter.id === leftId) ?? chapters[0];
   const continueHref = left
-    ? resumeHrefFor(
-        slug,
-        left.id,
-        left.id === state.currentPhaseId ? state.currentLessonId : `${left.id}.1`,
-        left.id === state.currentPhaseId ? state.currentAnchor : undefined,
-      )
+    ? left.id === state.currentPhaseId
+      ? resumeHrefFromState(slug, state, startHref)
+      : resumeHrefFor(slug, left.id, `${left.id}.1`)
     : startHref;
   const lockedName = chapterName(phaseTitle);
   const leftName = left ? chapterName(left.title) : null;
   const leftStop =
     left?.id === state.currentPhaseId
-      ? stopKind(state.currentLessonId, state.currentTopicId, state.currentAnchor)
+      ? stopKind(state.currentLessonId, state.currentTopicId, resumeAnchorFor(slug, state))
       : "Content";
 
   return (
@@ -94,7 +91,7 @@ export function ChapterGate({
         <p className="ih-chapter-lock-chapter">Chapter {phaseNumber}</p>
         <h1 className="ih-chapter-lock-title">{lockedName}</h1>
         <p className="ih-chapter-lock-copy">
-          This chapter is still ahead. Chapters open one at a time, after you finish the one you are on.
+          This chapter is still ahead. Finish the one you are on first.
         </p>
         {left ? (
           <div className="ih-chapter-lock-place">
@@ -111,8 +108,10 @@ export function ChapterGate({
               : "Start the first chapter."}
           </p>
           <Link href={continueHref} className="ih-chapter-lock-go">
-            {left ? `Continue Chapter ${left.number}` : "Start learning"}
-            <AppIcon name="next" size={16} />
+            <span className="ih-chapter-lock-go-label">
+              {left ? `Continue Chapter ${left.number}` : "Start learning"}
+              <AppIcon name="next" size={16} />
+            </span>
           </Link>
         </div>
       </div>

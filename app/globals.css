@@ -2449,6 +2449,8 @@ body {
   white-space: nowrap;
 }
 .ih-w3 .ih-chapter-lock-go {
+  position: relative;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2456,7 +2458,7 @@ body {
   gap: 0.45rem;
   margin-top: 0;
   padding: 0.78rem 1.15rem;
-  border: 1px solid #282A35;
+  border: 0;
   background: #04AA6D;
   color: #fff;
   font-size: 0.95rem;
@@ -2464,7 +2466,26 @@ body {
   letter-spacing: 0.02em;
   text-decoration: none;
   white-space: nowrap;
-  box-shadow: 4px 4px 0 #282A35;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.ih-w3 .ih-chapter-lock-go > * {
+  position: relative;
+  z-index: 1;
+}
+.ih-w3 .ih-chapter-lock-go-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.ih-w3 .ih-chapter-lock-go::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #00c37a;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.35s ease;
+  z-index: 0;
 }
 @media (max-width: 52rem) {
   .ih-w3 .ih-chapter-lock-actions {
@@ -2475,8 +2496,25 @@ body {
   }
 }
 .ih-w3 .ih-chapter-lock-go:hover {
-  background: #038f5c;
-  transform: translateX(4px);
+  color: #fff;
+  transform: translateX(6px);
+  box-shadow: -6px 6px 0 #000;
+}
+.ih-w3 .ih-chapter-lock-go:hover::before {
+  transform: scaleX(1);
+}
+.ih-w3 .ih-chapter-lock-go:focus-visible {
+  outline: 3px solid #04AA6D;
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ih-w3 .ih-chapter-lock-go,
+  .ih-w3 .ih-chapter-lock-go::before {
+    transition: none;
+  }
+  .ih-w3 .ih-chapter-lock-go:hover {
+    transform: none;
+  }
 }
 .ih-w3 .ih-chapter-lock .ih-pager {
   justify-content: center;
@@ -5290,15 +5328,10 @@ body {
 }
 .ih-w3 .ih-pager {
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
   width: 100%;
-}
-.ih-w3 .ih-pager:not(.ih-pager-start-only) > .ih-pager-btn,
-.ih-w3 .ih-pager:not(.ih-pager-start-only) > .ih-pager-end {
-  flex: 1 1 0;
-  min-width: 0;
 }
 @media (max-width: 480px) {
   .ih-w3 .ih-pager {
@@ -5327,13 +5360,8 @@ body {
 .ih-w3 .ih-pager-end {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: flex-end;
   gap: 0.5rem;
-}
-.ih-w3 .ih-pager:not(.ih-pager-start-only) > .ih-pager-end .ih-pager-btn {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
 }
 .ih-w3 .ih-pager-hint {
   font-size: 0.875rem;
@@ -5355,20 +5383,17 @@ body {
   justify-content: center;
   min-height: 3.1rem;
   min-width: 8.5rem;
-  padding: 0.75rem 1rem;
-  font-size: 0.95rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
-  text-align: center;
-  white-space: nowrap;
   transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .ih-w3 .ih-pager-label {
   position: relative;
   z-index: 1;
-  line-height: 1.15;
 }
 .ih-w3 .ih-pager-btn::before {
   content: "";

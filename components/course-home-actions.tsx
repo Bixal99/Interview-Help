@@ -2,7 +2,7 @@
 
 import { Pager } from "./pager";
 import { useLearningProgress } from "./progress-client";
-import { resumeHrefFor } from "@/lib/resume-href";
+import { resumeHrefFromState } from "@/lib/resume-href";
 
 export function CourseHomeActions({
   slug,
@@ -18,7 +18,7 @@ export function CourseHomeActions({
   );
   const continueHref =
     ready && started && state.currentPhaseId
-      ? resumeHrefFor(slug, state.currentPhaseId, state.currentLessonId, state.currentAnchor)
+      ? resumeHrefFromState(slug, state, startHref)
       : startHref;
 
   return (

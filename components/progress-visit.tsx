@@ -27,10 +27,7 @@ export function ProgressVisit({
     if (!ready || !trackHash) return;
     const sync = () => {
       const hash = window.location.hash.replace(/^#/, "").trim();
-      if (!hash) {
-        setPlace(slug, {});
-        return;
-      }
+      if (!hash) return;
       const topicId = window.sessionStorage.getItem(`ih-topic:${slug}:${hash}`) || undefined;
       setPlace(slug, { anchor: hash, topicId });
     };

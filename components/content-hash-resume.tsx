@@ -1,13 +1,26 @@
 "use client";
 
 import { useEffect } from "react";
+import { useLearningProgress } from "@/components/progress-client";
+import { pinContentTopic } from "@/lib/content-place";
+import { resumeAnchorFor } from "@/lib/resume-href";
 import { scrollToHeading } from "@/lib/scroll-to-heading";
 
-/** After content mounts, jump to the URL hash so Continue lands on the exact section. */
-export function ContentHashResume() {
+/** After content mounts, jump to the saved section — URL hash first, then stored place. */
+export function ContentHashResume({ slug }: { slug: string }) {
+  const { ready, course } = useLearningProgress();
+
   useEffect(() => {
-    const hash = window.location.hash.replace(/^#/, "").trim();
+    if (!ready) return;
+    const urlHash = window.location.hash.replace(/^#/, "").trim();
+    const hash = urlHash || resumeAnchorFor(slug, course(slug));
     if (!hash) return;
+
+    if (!urlHash) {
+      history.replaceState(null, "", `#${hash}`);
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    }
+    pinContentTopic(hash, 2000);
 
     let attempts = 0;
     let raf = 0;
@@ -17,6 +30,7 @@ export function ContentHashResume() {
       if (cancelled) return;
       const node = document.getElementById(hash);
       if (node) {
+        pinContentTopic(hash, 1800);
         scrollToHeading(node);
         return;
       }
@@ -29,7 +43,7 @@ export function ContentHashResume() {
       cancelled = true;
       cancelAnimationFrame(raf);
     };
-  }, []);
+  }, [ready, slug]);
 
   return null;
 }

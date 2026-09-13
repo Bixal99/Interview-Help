@@ -23,6 +23,7 @@ import {
   withCourse,
 } from "@/lib/progress-storage";
 import { phaseIdKey } from "@/lib/progress-map";
+import { hashForTopicId, rememberTopicPlace, topicIdForHash } from "@/lib/content-place";
 
 const EVENT = "interview-help-progress";
 
@@ -165,14 +166,32 @@ export function ProgressProvider({
     const projectLessons = visitingProject
       ? (requirementsRef.current?.[slug]?.[phaseId]?.lessons.map((lesson) => lesson.id) ?? [])
       : [];
+    const onContent = lessonId.endsWith(".1") || lessonId === "content";
+    const urlHash =
+      typeof window !== "undefined" && onContent
+        ? window.location.hash.replace(/^#/, "").trim()
+        : "";
+    const samePhase = state.currentPhaseId === phaseId;
+    const hash = onContent ? urlHash || (samePhase ? state.currentAnchor : undefined) : undefined;
+    let topicId: string | undefined;
+    if (onContent && hash) {
+      topicId = topicIdForHash(slug, hash) || (samePhase && hash === state.currentAnchor ? state.currentTopicId : undefined);
+      if (topicId) rememberTopicPlace(slug, hash, topicId);
+    }
 
     if (alreadyHere) {
-      if (visitingProject && !isProjectComplete(current, slug, phaseId)) {
+      const placeChanged = Boolean(hash && (hash !== state.currentAnchor || topicId !== state.currentTopicId));
+      if (placeChanged || (visitingProject && !isProjectComplete(current, slug, phaseId))) {
         apply(
           withCourse(current, slug, {
-            completedProjects: [...new Set([...state.completedProjects, phaseId])],
-            completedPhases: [...new Set([...state.completedPhases, phaseId])],
-            completedLessons: [...new Set([...state.completedLessons, ...projectLessons])],
+            ...(placeChanged ? { currentAnchor: hash, currentTopicId: topicId } : {}),
+            ...(visitingProject && !isProjectComplete(current, slug, phaseId)
+              ? {
+                  completedProjects: [...new Set([...state.completedProjects, phaseId])],
+                  completedPhases: [...new Set([...state.completedPhases, phaseId])],
+                  completedLessons: [...new Set([...state.completedLessons, ...projectLessons])],
+                }
+              : {}),
           }),
         );
       }
@@ -197,20 +216,6 @@ export function ProgressProvider({
       ...(shouldCompletePrevious ? [previousLessonId!] : []),
       ...finishedLessons,
     ])];
-    const onContent = lessonId.endsWith(".1") || lessonId === "content";
-    const hash =
-      typeof window !== "undefined" && onContent
-        ? window.location.hash.replace(/^#/, "").trim() || undefined
-        : undefined;
-    let topicId: string | undefined;
-    if (onContent && hash && typeof window !== "undefined") {
-      try {
-        topicId = window.sessionStorage.getItem(`ih-topic:${slug}:${hash}`) || undefined;
-      } catch {
-        topicId = undefined;
-      }
-    }
-
     apply(
       withCourse(current, slug, {
         currentPhaseId: phaseId,
@@ -233,9 +238,13 @@ export function ProgressProvider({
     if (!hydratedRef.current) return;
     const current = progressRef.current;
     const state = courseState(current, slug);
-    const anchor = place.anchor?.replace(/^#/, "").trim() || undefined;
-    const topicId = place.topicId?.trim() || undefined;
+    const incomingAnchor = place.anchor?.replace(/^#/, "").trim() || undefined;
+    const incomingTopic = place.topicId?.trim() || undefined;
+    if (!incomingAnchor && !incomingTopic) return;
+    const anchor = incomingAnchor ?? (incomingTopic ? hashForTopicId(slug, incomingTopic) : undefined) ?? state.currentAnchor;
+    const topicId = incomingTopic ?? (incomingAnchor ? topicIdForHash(slug, incomingAnchor) : undefined) ?? state.currentTopicId;
     if (state.currentAnchor === anchor && state.currentTopicId === topicId) return;
+    if (anchor && topicId) rememberTopicPlace(slug, anchor, topicId);
     apply(withCourse(current, slug, { currentAnchor: anchor, currentTopicId: topicId }));
   }, [apply]);
 

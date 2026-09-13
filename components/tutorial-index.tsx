@@ -17,6 +17,7 @@ import {
 } from "@/lib/sidebar-labels";
 import { regularLessonIds } from "@/lib/navigation";
 import { phaseIdKey } from "@/lib/progress-map";
+import { pinContentTopic, rememberTopicPlace, TOPIC_PIN_EVENT } from "@/lib/content-place";
 import { scrollToHeading } from "@/lib/scroll-to-heading";
 import { useOptionalProgress } from "./progress-client";
 
@@ -70,14 +71,11 @@ function useActiveTopicSlug(
     let ignoreUntil = 0;
     let ticking = false;
     let scroller: HTMLElement | Window = window;
+    const marker = 110;
 
     const remember = (slug: string) => {
       const topicId = topicBySlug.get(slug);
-      try {
-        if (topicId) sessionStorage.setItem(`ih-topic:${navSlug}:${slug}`, topicId);
-      } catch {
-        // Ignore storage refusals.
-      }
+      if (topicId) rememberTopicPlace(navSlug, slug, topicId);
     };
 
     const applySlug = (slug: string, writeHash: boolean) => {
@@ -93,16 +91,32 @@ function useActiveTopicSlug(
       window.dispatchEvent(new HashChangeEvent("hashchange"));
     };
 
-    const updateFromScroll = () => {
-      ticking = false;
-      if (Date.now() < ignoreUntil) return;
-      const marker = 120;
-      let current = slugs[0] ?? "";
+    const headingAtMarker = () => {
+      let current = "";
       for (const id of slugs) {
         const el = document.getElementById(id);
         if (!el) continue;
         if (el.getBoundingClientRect().top <= marker) current = id;
       }
+      return current;
+    };
+
+    const updateFromScroll = () => {
+      ticking = false;
+      if (Date.now() < ignoreUntil) return;
+      const hash = window.location.hash.replace(/^#/, "");
+      if (hash && slugs.includes(hash)) {
+        const target = document.getElementById(hash);
+        if (target) {
+          const top = target.getBoundingClientRect().top;
+          if (top > 0 && top < 240) {
+            setActive(hash);
+            remember(hash);
+            return;
+          }
+        }
+      }
+      const current = headingAtMarker();
       if (current) applySlug(current, true);
     };
 
@@ -115,25 +129,37 @@ function useActiveTopicSlug(
     const onHash = () => {
       const hash = window.location.hash.replace(/^#/, "");
       if (hash && slugs.includes(hash)) {
-        ignoreUntil = Date.now() + 700;
+        ignoreUntil = Date.now() + 1600;
         applySlug(hash, false);
       }
+    };
+
+    const onPin = (event: Event) => {
+      const detail = (event as CustomEvent<{ hash?: string; until?: number }>).detail;
+      if (detail?.until) ignoreUntil = Math.max(ignoreUntil, detail.until);
+      const hash = detail?.hash ?? "";
+      if (hash && slugs.includes(hash)) applySlug(hash, false);
     };
 
     const first = slugs.map((id) => document.getElementById(id)).find(Boolean);
     if (first) scroller = scrollParentOf(first);
 
     onHash();
-    if (!window.location.hash) updateFromScroll();
+    if (!window.location.hash) {
+      const visible = headingAtMarker();
+      if (visible) setActive(visible);
+    }
 
     if (scroller === window) window.addEventListener("scroll", onScroll, { passive: true });
     else (scroller as HTMLElement).addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("hashchange", onHash);
+    window.addEventListener(TOPIC_PIN_EVENT, onPin);
 
     return () => {
       if (scroller === window) window.removeEventListener("scroll", onScroll);
       else (scroller as HTMLElement).removeEventListener("scroll", onScroll);
       window.removeEventListener("hashchange", onHash);
+      window.removeEventListener(TOPIC_PIN_EVENT, onPin);
     };
   }, [enabled, slugs, topicBySlug, navSlug]);
 
@@ -178,6 +204,7 @@ function TopicBranch({
   depth: number;
 }) {
   const pathname = usePathname();
+  const progress = useOptionalProgress();
   const kids = topic.children ?? [];
   const slug = topicSlug(topic.id, topic.title);
   const childSlugs = collectTopicSlugs(kids);
@@ -201,11 +228,9 @@ function TopicBranch({
           tabIndex={locked ? -1 : undefined}
           onClick={(event) => {
             if (locked) return;
-            try {
-              sessionStorage.setItem(`ih-topic:${navSlug}:${slug}`, topic.id);
-            } catch {
-              // Ignore storage refusals.
-            }
+            rememberTopicPlace(navSlug, slug, topic.id);
+            progress?.setPlace(navSlug, { anchor: slug, topicId: topic.id });
+            pinContentTopic(slug, 1800);
             if (pathname.replace(/\/$/, "") !== contentHref.replace(/\/$/, "")) return;
             const heading = document.getElementById(slug);
             if (!heading) return;

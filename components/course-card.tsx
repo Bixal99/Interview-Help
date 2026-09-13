@@ -7,7 +7,7 @@ import { useLearningProgress } from "@/components/progress-client";
 import { ICON_SIZE } from "@/lib/icons";
 import type { CourseProgressState } from "@/lib/learning-model";
 import { lessonsDone } from "@/lib/progress-storage";
-import { resumeHrefFor } from "@/lib/resume-href";
+import { resumeHrefFromState } from "@/lib/resume-href";
 
 function onGlow(event: MouseEvent<HTMLElement>) {
   const box = event.currentTarget.getBoundingClientRect();
@@ -26,7 +26,7 @@ function courseStarted(state: CourseProgressState) {
 function continueHrefFor(slug: string, state: CourseProgressState) {
   const phaseId = state.currentPhaseId;
   if (!phaseId) return `/courses/${slug}`;
-  return resumeHrefFor(slug, phaseId, state.currentLessonId, state.currentAnchor);
+  return resumeHrefFromState(slug, state, `/courses/${slug}`);
 }
 
 function CourseTileProgress({
@@ -79,13 +79,17 @@ export function CourseCard({
     barLabel?: string;
     phaseCount?: number;
     lessonCount?: number;
+    projectCount?: number;
+    writtenLessonCount?: number;
     skills?: string[];
   };
   index?: number;
 }) {
   const number = String(index + 1).padStart(2, "0");
+  const chapterCount = course.phaseCount ?? 0;
   const lessonCount = course.lessonCount ?? 0;
-  const projectCount = course.phaseCount ?? 0;
+  const progressLessons = course.writtenLessonCount ?? lessonCount;
+  const progressProjects = course.projectCount ?? 0;
   const { ready, course: courseStateFor } = useLearningProgress();
   const state = courseStateFor(course.slug);
   const started = ready && courseStarted(state);
@@ -110,14 +114,19 @@ export function CourseCard({
           ))}
         </ul>
       ) : null}
-      {lessonCount > 0 ? (
-        <CourseTileProgress slug={course.slug} lessonCount={lessonCount} projectCount={projectCount} started={started} />
+      {progressLessons > 0 || progressProjects > 0 ? (
+        <CourseTileProgress
+          slug={course.slug}
+          lessonCount={progressLessons}
+          projectCount={progressProjects}
+          started={started}
+        />
       ) : null}
       <div className="ih-course-tile-foot">
         <p>
-          {course.phaseCount ? `${course.phaseCount} chapters` : null}
-          {course.phaseCount && course.lessonCount ? " · " : null}
-          {course.lessonCount ? `${course.lessonCount} lessons` : null}
+          {chapterCount ? `${chapterCount} chapters` : null}
+          {chapterCount && lessonCount ? " · " : null}
+          {lessonCount ? `${lessonCount} lessons` : null}
         </p>
         <span className="ih-course-start">{started ? "Continue learning" : "Start"}</span>
       </div>

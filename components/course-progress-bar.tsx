@@ -30,8 +30,6 @@ export function CourseProgressBar({
   const band = variant === "band";
   const inline = variant === "inline";
   const nav = variant === "nav";
-  const tocHref = `/courses/${slug}`;
-
   useEffect(() => {
     if (!resetOpen) return;
     const onKey = (event: KeyboardEvent) => {
@@ -45,7 +43,7 @@ export function CourseProgressBar({
     try {
       resetCourse(slug);
       setResetOpen(false);
-      router.push(tocHref);
+      router.replace("/courses");
     } catch (error) {
       window.alert(error instanceof Error ? error.message : "Could not reset progress.");
     }
@@ -69,7 +67,7 @@ export function CourseProgressBar({
         <p className="ih-confirm-kicker">Progress</p>
         <h2 id="ih-course-reset-title">Reset this course?</h2>
         <p id="ih-course-reset-copy">
-          This clears your progress for this roadmap in this browser and returns you to the table of contents.
+          This clears your progress for this roadmap in this browser and returns you to Courses.
         </p>
         <div className="ih-confirm-actions">
           <button type="button" className="ih-confirm-cancel" onClick={() => setResetOpen(false)}>

@@ -1,0 +1,6409 @@
+{
+  "title": "ODOO DEVELOPMENT & ENGINEERING",
+  "subtitle": "Zero Knowledge → ERP Understanding → Odoo Development → Full-Stack Odoo → Production Engineering → Odoo Engineer",
+  "introMarkdown": "# ODOO DEVELOPMENT & ENGINEERING\n> Zero Knowledge → ERP Understanding → Odoo Development\n> → Full-Stack Odoo → Production Engineering → Odoo Engineer",
+  "units": [
+    {
+      "number": 1,
+      "roman": "I",
+      "title": "UNDERSTAND THE BUSINESS BEFORE THE CODE",
+      "chapters": [
+        {
+          "number": 1,
+          "title": "WHAT IS ERP?",
+          "topics": [
+            {
+              "id": "1.1",
+              "title": "Business Processes",
+              "children": [
+                {
+                  "id": "1.1.1",
+                  "title": "What Is a Business Process?"
+                },
+                {
+                  "id": "1.1.2",
+                  "title": "Process Inputs"
+                },
+                {
+                  "id": "1.1.3",
+                  "title": "Process Activities"
+                },
+                {
+                  "id": "1.1.4",
+                  "title": "Process Outputs"
+                },
+                {
+                  "id": "1.1.5",
+                  "title": "Process Owners"
+                }
+              ]
+            },
+            {
+              "id": "1.2",
+              "title": "Departments",
+              "children": [
+                {
+                  "id": "1.2.1",
+                  "title": "Sales"
+                },
+                {
+                  "id": "1.2.2",
+                  "title": "Purchasing"
+                },
+                {
+                  "id": "1.2.3",
+                  "title": "Warehouse"
+                },
+                {
+                  "id": "1.2.4",
+                  "title": "Finance"
+                },
+                {
+                  "id": "1.2.5",
+                  "title": "HR"
+                },
+                {
+                  "id": "1.2.6",
+                  "title": "Operations"
+                }
+              ]
+            },
+            {
+              "id": "1.3",
+              "title": "Cross-Department Workflows"
+            },
+            {
+              "id": "1.4",
+              "title": "Master Data",
+              "children": [
+                {
+                  "id": "1.4.1",
+                  "title": "Customers"
+                },
+                {
+                  "id": "1.4.2",
+                  "title": "Vendors"
+                },
+                {
+                  "id": "1.4.3",
+                  "title": "Products"
+                },
+                {
+                  "id": "1.4.4",
+                  "title": "Employees"
+                },
+                {
+                  "id": "1.4.5",
+                  "title": "Accounts"
+                }
+              ]
+            },
+            {
+              "id": "1.5",
+              "title": "Transactions"
+            },
+            {
+              "id": "1.6",
+              "title": "Single Source of Truth"
+            },
+            {
+              "id": "1.7",
+              "title": "ERP vs CRM"
+            },
+            {
+              "id": "1.8",
+              "title": "ERP vs Standalone Business Software"
+            },
+            {
+              "id": "1.9",
+              "title": "Business Process Mapping"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "title": "UNDERSTANDING ODOO",
+          "topics": [
+            {
+              "id": "2.1",
+              "title": "What Odoo Is"
+            },
+            {
+              "id": "2.2",
+              "title": "Odoo Ecosystem"
+            },
+            {
+              "id": "2.3",
+              "title": "Community Edition"
+            },
+            {
+              "id": "2.4",
+              "title": "Enterprise Edition"
+            },
+            {
+              "id": "2.5",
+              "title": "Odoo Online"
+            },
+            {
+              "id": "2.6",
+              "title": "Odoo.sh"
+            },
+            {
+              "id": "2.7",
+              "title": "On-Premise Odoo"
+            },
+            {
+              "id": "2.8",
+              "title": "Odoo Apps"
+            },
+            {
+              "id": "2.9",
+              "title": "Modules / Addons"
+            },
+            {
+              "id": "2.10",
+              "title": "Users"
+            },
+            {
+              "id": "2.11",
+              "title": "Companies"
+            },
+            {
+              "id": "2.12",
+              "title": "Shared Business Records"
+            },
+            {
+              "id": "2.13",
+              "title": "Standard vs Custom Modules"
+            },
+            {
+              "id": "2.14",
+              "title": "Odoo Studio Concept"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "title": "CORE BUSINESS APPLICATIONS",
+          "topics": [
+            {
+              "id": "3.1",
+              "title": "Contacts"
+            },
+            {
+              "id": "3.2",
+              "title": "CRM"
+            },
+            {
+              "id": "3.3",
+              "title": "Sales"
+            },
+            {
+              "id": "3.4",
+              "title": "Purchase"
+            },
+            {
+              "id": "3.5",
+              "title": "Inventory"
+            },
+            {
+              "id": "3.6",
+              "title": "Accounting / Invoicing"
+            },
+            {
+              "id": "3.7",
+              "title": "Employees / HR"
+            },
+            {
+              "id": "3.8",
+              "title": "Projects"
+            },
+            {
+              "id": "3.9",
+              "title": "Timesheets"
+            },
+            {
+              "id": "3.10",
+              "title": "Manufacturing"
+            },
+            {
+              "id": "3.11",
+              "title": "Maintenance"
+            },
+            {
+              "id": "3.12",
+              "title": "Website"
+            },
+            {
+              "id": "3.13",
+              "title": "eCommerce"
+            },
+            {
+              "id": "3.14",
+              "title": "Point of Sale"
+            },
+            {
+              "id": "3.15",
+              "title": "Helpdesk"
+            },
+            {
+              "id": "3.16",
+              "title": "End-to-End Document Flow"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "roman": "II",
+      "title": "HOW ODOO ACTUALLY WORKS",
+      "chapters": [
+        {
+          "number": 4,
+          "title": "ODOO ARCHITECTURE",
+          "topics": [
+            {
+              "id": "4.1",
+              "title": "Three-Tier Architecture"
+            },
+            {
+              "id": "4.2",
+              "title": "Browser"
+            },
+            {
+              "id": "4.3",
+              "title": "Odoo Web Client"
+            },
+            {
+              "id": "4.4",
+              "title": "HTTP Request"
+            },
+            {
+              "id": "4.5",
+              "title": "Odoo Application Server"
+            },
+            {
+              "id": "4.6",
+              "title": "Python Runtime"
+            },
+            {
+              "id": "4.7",
+              "title": "ORM"
+            },
+            {
+              "id": "4.8",
+              "title": "PostgreSQL"
+            },
+            {
+              "id": "4.9",
+              "title": "Filestore"
+            },
+            {
+              "id": "4.10",
+              "title": "Addons"
+            },
+            {
+              "id": "4.11",
+              "title": "Registry"
+            },
+            {
+              "id": "4.12",
+              "title": "HTTP Layer"
+            },
+            {
+              "id": "4.13",
+              "title": "Sessions"
+            },
+            {
+              "id": "4.14",
+              "title": "Workers"
+            },
+            {
+              "id": "4.15",
+              "title": "Cron Workers"
+            },
+            {
+              "id": "4.16",
+              "title": "Long-Polling / WebSocket Concepts"
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "title": "DEVELOPMENT ENVIRONMENT",
+          "topics": [
+            {
+              "id": "5.1",
+              "title": "Python Environment"
+            },
+            {
+              "id": "5.2",
+              "title": "Python Virtual Environments"
+            },
+            {
+              "id": "5.3",
+              "title": "Python Dependencies"
+            },
+            {
+              "id": "5.4",
+              "title": "PostgreSQL Setup"
+            },
+            {
+              "id": "5.5",
+              "title": "PostgreSQL User"
+            },
+            {
+              "id": "5.6",
+              "title": "Odoo Source"
+            },
+            {
+              "id": "5.7",
+              "title": "Git Clone"
+            },
+            {
+              "id": "5.8",
+              "title": "Odoo Configuration File"
+            },
+            {
+              "id": "5.9",
+              "title": "addons_path"
+            },
+            {
+              "id": "5.10",
+              "title": "Custom Addons Directory"
+            },
+            {
+              "id": "5.11",
+              "title": "Database Creation"
+            },
+            {
+              "id": "5.12",
+              "title": "Developer Mode"
+            },
+            {
+              "id": "5.13",
+              "title": "Developer Mode with Assets"
+            },
+            {
+              "id": "5.14",
+              "title": "Logging"
+            },
+            {
+              "id": "5.15",
+              "title": "IDE Setup"
+            },
+            {
+              "id": "5.16",
+              "title": "Debugger Setup"
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "title": "ODOO SOURCE CODE STRUCTURE",
+          "topics": [
+            {
+              "id": "6.1",
+              "title": "odoo/"
+            },
+            {
+              "id": "6.2",
+              "title": "addons/"
+            },
+            {
+              "id": "6.3",
+              "title": "Core Framework"
+            },
+            {
+              "id": "6.4",
+              "title": "api.py Concepts"
+            },
+            {
+              "id": "6.5",
+              "title": "fields.py Concepts"
+            },
+            {
+              "id": "6.6",
+              "title": "models.py Concepts"
+            },
+            {
+              "id": "6.7",
+              "title": "HTTP"
+            },
+            {
+              "id": "6.8",
+              "title": "Services"
+            },
+            {
+              "id": "6.9",
+              "title": "Tools"
+            },
+            {
+              "id": "6.10",
+              "title": "Registry"
+            },
+            {
+              "id": "6.11",
+              "title": "Modules Loader"
+            },
+            {
+              "id": "6.12",
+              "title": "Reading Official Addons"
+            },
+            {
+              "id": "6.13",
+              "title": "Tracing Model Definitions"
+            },
+            {
+              "id": "6.14",
+              "title": "Tracing XML IDs"
+            },
+            {
+              "id": "6.15",
+              "title": "Tracing Methods"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "roman": "III",
+      "title": "YOUR FIRST ODOO MODULE",
+      "chapters": [
+        {
+          "number": 7,
+          "title": "MODULE ANATOMY",
+          "topics": [
+            {
+              "id": "7.1",
+              "title": "Addon Directory"
+            },
+            {
+              "id": "7.2",
+              "title": "__manifest__.py"
+            },
+            {
+              "id": "7.3",
+              "title": "__init__.py"
+            },
+            {
+              "id": "7.4",
+              "title": "models/"
+            },
+            {
+              "id": "7.5",
+              "title": "views/"
+            },
+            {
+              "id": "7.6",
+              "title": "security/"
+            },
+            {
+              "id": "7.7",
+              "title": "data/"
+            },
+            {
+              "id": "7.8",
+              "title": "demo/"
+            },
+            {
+              "id": "7.9",
+              "title": "static/"
+            },
+            {
+              "id": "7.10",
+              "title": "controllers/"
+            },
+            {
+              "id": "7.11",
+              "title": "wizard/"
+            },
+            {
+              "id": "7.12",
+              "title": "report/"
+            },
+            {
+              "id": "7.13",
+              "title": "i18n/"
+            },
+            {
+              "id": "7.14",
+              "title": "tests/"
+            },
+            {
+              "id": "7.15",
+              "title": "README"
+            },
+            {
+              "id": "7.16",
+              "title": "Coding Conventions"
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "title": "MODULE LIFECYCLE",
+          "topics": [
+            {
+              "id": "8.1",
+              "title": "Module Discovery"
+            },
+            {
+              "id": "8.2",
+              "title": "Manifest Metadata"
+            },
+            {
+              "id": "8.3",
+              "title": "Dependencies"
+            },
+            {
+              "id": "8.4",
+              "title": "Installation"
+            },
+            {
+              "id": "8.5",
+              "title": "Initialization"
+            },
+            {
+              "id": "8.6",
+              "title": "Registry Loading"
+            },
+            {
+              "id": "8.7",
+              "title": "Upgrade"
+            },
+            {
+              "id": "8.8",
+              "title": "Uninstall"
+            },
+            {
+              "id": "8.9",
+              "title": "Data Load Order"
+            },
+            {
+              "id": "8.10",
+              "title": "application Flag"
+            },
+            {
+              "id": "8.11",
+              "title": "installable Flag"
+            },
+            {
+              "id": "8.12",
+              "title": "auto_install"
+            },
+            {
+              "id": "8.13",
+              "title": "External Dependencies"
+            },
+            {
+              "id": "8.14",
+              "title": "Module Version"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "roman": "IV",
+      "title": "MODELING BUSINESS DATA",
+      "chapters": [
+        {
+          "number": 9,
+          "title": "MODELS",
+          "topics": [
+            {
+              "id": "9.1",
+              "title": "models.Model"
+            },
+            {
+              "id": "9.2",
+              "title": "models.AbstractModel"
+            },
+            {
+              "id": "9.3",
+              "title": "models.TransientModel"
+            },
+            {
+              "id": "9.4",
+              "title": "_name"
+            },
+            {
+              "id": "9.5",
+              "title": "_description"
+            },
+            {
+              "id": "9.6",
+              "title": "_rec_name"
+            },
+            {
+              "id": "9.7",
+              "title": "_order"
+            },
+            {
+              "id": "9.8",
+              "title": "_inherit"
+            },
+            {
+              "id": "9.9",
+              "title": "_inherits Introduction"
+            },
+            {
+              "id": "9.10",
+              "title": "Automatic Fields"
+            },
+            {
+              "id": "9.11",
+              "title": "id"
+            },
+            {
+              "id": "9.12",
+              "title": "create_date"
+            },
+            {
+              "id": "9.13",
+              "title": "create_uid"
+            },
+            {
+              "id": "9.14",
+              "title": "write_date"
+            },
+            {
+              "id": "9.15",
+              "title": "write_uid"
+            },
+            {
+              "id": "9.16",
+              "title": "Reserved Field Names"
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "title": "FIELDS",
+          "topics": [
+            {
+              "id": "10.1",
+              "title": "Char"
+            },
+            {
+              "id": "10.2",
+              "title": "Text"
+            },
+            {
+              "id": "10.3",
+              "title": "Html"
+            },
+            {
+              "id": "10.4",
+              "title": "Integer"
+            },
+            {
+              "id": "10.5",
+              "title": "Float"
+            },
+            {
+              "id": "10.6",
+              "title": "Boolean"
+            },
+            {
+              "id": "10.7",
+              "title": "Date"
+            },
+            {
+              "id": "10.8",
+              "title": "Datetime"
+            },
+            {
+              "id": "10.9",
+              "title": "Selection"
+            },
+            {
+              "id": "10.10",
+              "title": "Monetary"
+            },
+            {
+              "id": "10.11",
+              "title": "Binary"
+            },
+            {
+              "id": "10.12",
+              "title": "Image"
+            },
+            {
+              "id": "10.13",
+              "title": "Many2one Introduction"
+            },
+            {
+              "id": "10.14",
+              "title": "Field string"
+            },
+            {
+              "id": "10.15",
+              "title": "required"
+            },
+            {
+              "id": "10.16",
+              "title": "readonly"
+            },
+            {
+              "id": "10.17",
+              "title": "default"
+            },
+            {
+              "id": "10.18",
+              "title": "help"
+            },
+            {
+              "id": "10.19",
+              "title": "index"
+            },
+            {
+              "id": "10.20",
+              "title": "copy"
+            },
+            {
+              "id": "10.21",
+              "title": "groups"
+            },
+            {
+              "id": "10.22",
+              "title": "tracking"
+            },
+            {
+              "id": "10.23",
+              "title": "translate"
+            },
+            {
+              "id": "10.24",
+              "title": "company_dependent"
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "title": "RELATIONSHIPS",
+          "topics": [
+            {
+              "id": "11.1",
+              "title": "Many2one"
+            },
+            {
+              "id": "11.2",
+              "title": "One2many"
+            },
+            {
+              "id": "11.3",
+              "title": "Many2many"
+            },
+            {
+              "id": "11.4",
+              "title": "Inverse Fields"
+            },
+            {
+              "id": "11.5",
+              "title": "Related Fields"
+            },
+            {
+              "id": "11.6",
+              "title": "Relational Commands"
+            },
+            {
+              "id": "11.7",
+              "title": "Command.create()"
+            },
+            {
+              "id": "11.8",
+              "title": "Command.update()"
+            },
+            {
+              "id": "11.9",
+              "title": "Command.delete()"
+            },
+            {
+              "id": "11.10",
+              "title": "Command.unlink()"
+            },
+            {
+              "id": "11.11",
+              "title": "Command.link()"
+            },
+            {
+              "id": "11.12",
+              "title": "Command.clear()"
+            },
+            {
+              "id": "11.13",
+              "title": "Command.set()"
+            },
+            {
+              "id": "11.14",
+              "title": "Relationship Ownership"
+            },
+            {
+              "id": "11.15",
+              "title": "Cascading Behavior"
+            },
+            {
+              "id": "11.16",
+              "title": "ondelete"
+            },
+            {
+              "id": "11.17",
+              "title": "Referential Integrity"
+            }
+          ]
+        },
+        {
+          "number": 12,
+          "title": "COMPUTED & DYNAMIC FIELDS",
+          "topics": [
+            {
+              "id": "12.1",
+              "title": "compute"
+            },
+            {
+              "id": "12.2",
+              "title": "@api.depends"
+            },
+            {
+              "id": "12.3",
+              "title": "@api.depends_context"
+            },
+            {
+              "id": "12.4",
+              "title": "Stored Computed Fields"
+            },
+            {
+              "id": "12.5",
+              "title": "Non-Stored Computed Fields"
+            },
+            {
+              "id": "12.6",
+              "title": "inverse"
+            },
+            {
+              "id": "12.7",
+              "title": "Custom Search Methods"
+            },
+            {
+              "id": "12.8",
+              "title": "Related Fields"
+            },
+            {
+              "id": "12.9",
+              "title": "Default Values"
+            },
+            {
+              "id": "12.10",
+              "title": "default_get()"
+            },
+            {
+              "id": "12.11",
+              "title": "copy()"
+            },
+            {
+              "id": "12.12",
+              "title": "Compute Dependencies"
+            },
+            {
+              "id": "12.13",
+              "title": "Recompute Behavior"
+            },
+            {
+              "id": "12.14",
+              "title": "Performance of Stored vs Non-Stored Fields"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "roman": "V",
+      "title": "MASTERING THE ODOO ORM",
+      "chapters": [
+        {
+          "number": 13,
+          "title": "ENVIRONMENT & RECORDSETS",
+          "topics": [
+            {
+              "id": "13.1",
+              "title": "env"
+            },
+            {
+              "id": "13.2",
+              "title": "self"
+            },
+            {
+              "id": "13.3",
+              "title": "Recordsets"
+            },
+            {
+              "id": "13.4",
+              "title": "Empty Recordsets"
+            },
+            {
+              "id": "13.5",
+              "title": "Singleton Records"
+            },
+            {
+              "id": "13.6",
+              "title": "Multiple Records"
+            },
+            {
+              "id": "13.7",
+              "title": "env.user"
+            },
+            {
+              "id": "13.8",
+              "title": "env.company"
+            },
+            {
+              "id": "13.9",
+              "title": "env.companies"
+            },
+            {
+              "id": "13.10",
+              "title": "env.context"
+            },
+            {
+              "id": "13.11",
+              "title": "Context"
+            },
+            {
+              "id": "13.12",
+              "title": "with_context()"
+            },
+            {
+              "id": "13.13",
+              "title": "with_user()"
+            },
+            {
+              "id": "13.14",
+              "title": "with_company()"
+            },
+            {
+              "id": "13.15",
+              "title": "sudo()"
+            },
+            {
+              "id": "13.16",
+              "title": "with_env()"
+            },
+            {
+              "id": "13.17",
+              "title": "Recordset Immutability"
+            }
+          ]
+        },
+        {
+          "number": 14,
+          "title": "CRUD",
+          "topics": [
+            {
+              "id": "14.1",
+              "title": "create()",
+              "children": [
+                {
+                  "id": "14.1.1",
+                  "title": "Single Record Creation"
+                },
+                {
+                  "id": "14.1.2",
+                  "title": "Multiple Record Creation"
+                },
+                {
+                  "id": "14.1.3",
+                  "title": "@api.model_create_multi"
+                }
+              ]
+            },
+            {
+              "id": "14.2",
+              "title": "browse()"
+            },
+            {
+              "id": "14.3",
+              "title": "search()"
+            },
+            {
+              "id": "14.4",
+              "title": "search_fetch()"
+            },
+            {
+              "id": "14.5",
+              "title": "fetch()"
+            },
+            {
+              "id": "14.6",
+              "title": "read()"
+            },
+            {
+              "id": "14.7",
+              "title": "write()"
+            },
+            {
+              "id": "14.8",
+              "title": "unlink()"
+            },
+            {
+              "id": "14.9",
+              "title": "copy()"
+            },
+            {
+              "id": "14.10",
+              "title": "exists()"
+            },
+            {
+              "id": "14.11",
+              "title": "Display Name Concepts"
+            },
+            {
+              "id": "14.12",
+              "title": "CRUD Return Values"
+            },
+            {
+              "id": "14.13",
+              "title": "CRUD Side Effects"
+            },
+            {
+              "id": "14.14",
+              "title": "Bulk CRUD"
+            }
+          ]
+        },
+        {
+          "number": 15,
+          "title": "DOMAINS & SEARCHING",
+          "topics": [
+            {
+              "id": "15.1",
+              "title": "Domain Syntax"
+            },
+            {
+              "id": "15.2",
+              "title": "Comparison Operators"
+            },
+            {
+              "id": "15.3",
+              "title": "= / !="
+            },
+            {
+              "id": "15.4",
+              "title": "> / >= / < / <="
+            },
+            {
+              "id": "15.5",
+              "title": "in / not in"
+            },
+            {
+              "id": "15.6",
+              "title": "like / not like"
+            },
+            {
+              "id": "15.7",
+              "title": "ilike / not ilike"
+            },
+            {
+              "id": "15.8",
+              "title": "=like / =ilike"
+            },
+            {
+              "id": "15.9",
+              "title": "child_of"
+            },
+            {
+              "id": "15.10",
+              "title": "parent_of"
+            },
+            {
+              "id": "15.11",
+              "title": "AND"
+            },
+            {
+              "id": "15.12",
+              "title": "OR"
+            },
+            {
+              "id": "15.13",
+              "title": "NOT"
+            },
+            {
+              "id": "15.14",
+              "title": "search_count()"
+            },
+            {
+              "id": "15.15",
+              "title": "search_read()"
+            },
+            {
+              "id": "15.16",
+              "title": "Ordering"
+            },
+            {
+              "id": "15.17",
+              "title": "Limit"
+            },
+            {
+              "id": "15.18",
+              "title": "Offset"
+            },
+            {
+              "id": "15.19",
+              "title": "Dynamic Domains"
+            }
+          ]
+        },
+        {
+          "number": 16,
+          "title": "RECORDSET OPERATIONS",
+          "topics": [
+            {
+              "id": "16.1",
+              "title": "Iteration"
+            },
+            {
+              "id": "16.2",
+              "title": "filtered()"
+            },
+            {
+              "id": "16.3",
+              "title": "filtered_domain()"
+            },
+            {
+              "id": "16.4",
+              "title": "mapped()"
+            },
+            {
+              "id": "16.5",
+              "title": "sorted()"
+            },
+            {
+              "id": "16.6",
+              "title": "ensure_one()"
+            },
+            {
+              "id": "16.7",
+              "title": "Recordset Membership"
+            },
+            {
+              "id": "16.8",
+              "title": "Recordset Union"
+            },
+            {
+              "id": "16.9",
+              "title": "Recordset Intersection"
+            },
+            {
+              "id": "16.10",
+              "title": "Recordset Difference"
+            },
+            {
+              "id": "16.11",
+              "title": "Batch Operations"
+            },
+            {
+              "id": "16.12",
+              "title": "Avoiding Per-Record Queries"
+            }
+          ]
+        },
+        {
+          "number": 17,
+          "title": "ORM INTERNALS & PERFORMANCE",
+          "topics": [
+            {
+              "id": "17.1",
+              "title": "Prefetching"
+            },
+            {
+              "id": "17.2",
+              "title": "Prefetch Sets"
+            },
+            {
+              "id": "17.3",
+              "title": "ORM Cache"
+            },
+            {
+              "id": "17.4",
+              "title": "Transactions"
+            },
+            {
+              "id": "17.5",
+              "title": "Flush"
+            },
+            {
+              "id": "17.6",
+              "title": "flush_model()"
+            },
+            {
+              "id": "17.7",
+              "title": "flush_recordset()"
+            },
+            {
+              "id": "17.8",
+              "title": "Cache Invalidation"
+            },
+            {
+              "id": "17.9",
+              "title": "invalidate_model()"
+            },
+            {
+              "id": "17.10",
+              "title": "invalidate_recordset()"
+            },
+            {
+              "id": "17.11",
+              "title": "modified()"
+            },
+            {
+              "id": "17.12",
+              "title": "N+1 Queries"
+            },
+            {
+              "id": "17.13",
+              "title": "Batch Creation"
+            },
+            {
+              "id": "17.14",
+              "title": "Batch Updates"
+            },
+            {
+              "id": "17.15",
+              "title": "Aggregation"
+            },
+            {
+              "id": "17.16",
+              "title": "read_group()"
+            },
+            {
+              "id": "17.17",
+              "title": "Raw SQL"
+            },
+            {
+              "id": "17.18",
+              "title": "SQL Wrapper Concepts"
+            },
+            {
+              "id": "17.19",
+              "title": "ORM vs SQL"
+            },
+            {
+              "id": "17.20",
+              "title": "Security Implications of SQL"
+            },
+            {
+              "id": "17.21",
+              "title": "Algorithmic Complexity"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "roman": "VI",
+      "title": "BUSINESS RULES & WORKFLOWS",
+      "chapters": [
+        {
+          "number": 18,
+          "title": "BUSINESS METHODS",
+          "topics": [
+            {
+              "id": "18.1",
+              "title": "Model Methods"
+            },
+            {
+              "id": "18.2",
+              "title": "Recordset Methods"
+            },
+            {
+              "id": "18.3",
+              "title": "@api.model"
+            },
+            {
+              "id": "18.4",
+              "title": "@api.model_create_multi"
+            },
+            {
+              "id": "18.5",
+              "title": "create() Override"
+            },
+            {
+              "id": "18.6",
+              "title": "write() Override"
+            },
+            {
+              "id": "18.7",
+              "title": "unlink() Override"
+            },
+            {
+              "id": "18.8",
+              "title": "copy() Override"
+            },
+            {
+              "id": "18.9",
+              "title": "super()"
+            },
+            {
+              "id": "18.10",
+              "title": "Return Values"
+            },
+            {
+              "id": "18.11",
+              "title": "Business Actions"
+            },
+            {
+              "id": "18.12",
+              "title": "Private Methods"
+            },
+            {
+              "id": "18.13",
+              "title": "Public Methods"
+            },
+            {
+              "id": "18.14",
+              "title": "Method Design"
+            }
+          ]
+        },
+        {
+          "number": 19,
+          "title": "CONSTRAINTS & VALIDATION",
+          "topics": [
+            {
+              "id": "19.1",
+              "title": "Business Validation"
+            },
+            {
+              "id": "19.2",
+              "title": "Python Constraints"
+            },
+            {
+              "id": "19.3",
+              "title": "@api.constrains"
+            },
+            {
+              "id": "19.4",
+              "title": "SQL Constraints"
+            },
+            {
+              "id": "19.5",
+              "title": "ValidationError"
+            },
+            {
+              "id": "19.6",
+              "title": "UserError"
+            },
+            {
+              "id": "19.7",
+              "title": "AccessError"
+            },
+            {
+              "id": "19.8",
+              "title": "MissingError"
+            },
+            {
+              "id": "19.9",
+              "title": "Validation Timing"
+            },
+            {
+              "id": "19.10",
+              "title": "Constraint Performance"
+            },
+            {
+              "id": "19.11",
+              "title": "Database vs Application Constraints"
+            }
+          ]
+        },
+        {
+          "number": 20,
+          "title": "ONCHANGE & UI LOGIC",
+          "topics": [
+            {
+              "id": "20.1",
+              "title": "@api.onchange"
+            },
+            {
+              "id": "20.2",
+              "title": "Defaults"
+            },
+            {
+              "id": "20.3",
+              "title": "default_get()"
+            },
+            {
+              "id": "20.4",
+              "title": "Context Defaults"
+            },
+            {
+              "id": "20.5",
+              "title": "Dynamic Forms"
+            },
+            {
+              "id": "20.6",
+              "title": "Returning Warnings"
+            },
+            {
+              "id": "20.7",
+              "title": "Onchange Limitations"
+            },
+            {
+              "id": "20.8",
+              "title": "Onchange vs Compute"
+            },
+            {
+              "id": "20.9",
+              "title": "Onchange vs Constraint"
+            }
+          ]
+        },
+        {
+          "number": 21,
+          "title": "STATES & WORKFLOWS",
+          "topics": [
+            {
+              "id": "21.1",
+              "title": "State Fields"
+            },
+            {
+              "id": "21.2",
+              "title": "Draft"
+            },
+            {
+              "id": "21.3",
+              "title": "Confirmed"
+            },
+            {
+              "id": "21.4",
+              "title": "Approved"
+            },
+            {
+              "id": "21.5",
+              "title": "Done"
+            },
+            {
+              "id": "21.6",
+              "title": "Cancelled"
+            },
+            {
+              "id": "21.7",
+              "title": "Legal State Transitions"
+            },
+            {
+              "id": "21.8",
+              "title": "Workflow Buttons"
+            },
+            {
+              "id": "21.9",
+              "title": "Workflow Validation"
+            },
+            {
+              "id": "21.10",
+              "title": "Immutable States"
+            },
+            {
+              "id": "21.11",
+              "title": "Reopening Records"
+            },
+            {
+              "id": "21.12",
+              "title": "Auditability"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "roman": "VII",
+      "title": "BUILDING THE USER INTERFACE",
+      "chapters": [
+        {
+          "number": 22,
+          "title": "XML FOUNDATIONS",
+          "topics": [
+            {
+              "id": "22.1",
+              "title": "XML Syntax"
+            },
+            {
+              "id": "22.2",
+              "title": "XML Declaration"
+            },
+            {
+              "id": "22.3",
+              "title": "<odoo>"
+            },
+            {
+              "id": "22.4",
+              "title": "<data>"
+            },
+            {
+              "id": "22.5",
+              "title": "<record>"
+            },
+            {
+              "id": "22.6",
+              "title": "External IDs"
+            },
+            {
+              "id": "22.7",
+              "title": "ref()"
+            },
+            {
+              "id": "22.8",
+              "title": "eval"
+            },
+            {
+              "id": "22.9",
+              "title": "Data Files"
+            },
+            {
+              "id": "22.10",
+              "title": "XML Loading"
+            },
+            {
+              "id": "22.11",
+              "title": "noupdate"
+            }
+          ]
+        },
+        {
+          "number": 23,
+          "title": "FORM & LIST VIEWS",
+          "topics": [
+            {
+              "id": "23.1",
+              "title": "Form Views"
+            },
+            {
+              "id": "23.2",
+              "title": "List Views"
+            },
+            {
+              "id": "23.3",
+              "title": "Field Display"
+            },
+            {
+              "id": "23.4",
+              "title": "Buttons"
+            },
+            {
+              "id": "23.5",
+              "title": "Groups"
+            },
+            {
+              "id": "23.6",
+              "title": "Sheets"
+            },
+            {
+              "id": "23.7",
+              "title": "Notebook"
+            },
+            {
+              "id": "23.8",
+              "title": "Pages"
+            },
+            {
+              "id": "23.9",
+              "title": "Widgets"
+            },
+            {
+              "id": "23.10",
+              "title": "Decorations"
+            },
+            {
+              "id": "23.11",
+              "title": "Header"
+            },
+            {
+              "id": "23.12",
+              "title": "Statusbar"
+            },
+            {
+              "id": "23.13",
+              "title": "Smart Buttons"
+            },
+            {
+              "id": "23.14",
+              "title": "Invisible / Readonly Logic"
+            },
+            {
+              "id": "23.15",
+              "title": "Editable Lists"
+            }
+          ]
+        },
+        {
+          "number": 24,
+          "title": "SEARCH, KANBAN & ANALYTICAL VIEWS",
+          "topics": [
+            {
+              "id": "24.1",
+              "title": "Search Views"
+            },
+            {
+              "id": "24.2",
+              "title": "Filters"
+            },
+            {
+              "id": "24.3",
+              "title": "Group By"
+            },
+            {
+              "id": "24.4",
+              "title": "Search Panels"
+            },
+            {
+              "id": "24.5",
+              "title": "Kanban"
+            },
+            {
+              "id": "24.6",
+              "title": "Kanban Templates"
+            },
+            {
+              "id": "24.7",
+              "title": "Calendar"
+            },
+            {
+              "id": "24.8",
+              "title": "Pivot"
+            },
+            {
+              "id": "24.9",
+              "title": "Graph"
+            },
+            {
+              "id": "24.10",
+              "title": "Activity Views"
+            },
+            {
+              "id": "24.11",
+              "title": "Cohort Concepts"
+            },
+            {
+              "id": "24.12",
+              "title": "Dashboard Concepts"
+            }
+          ]
+        },
+        {
+          "number": 25,
+          "title": "ACTIONS & MENUS",
+          "topics": [
+            {
+              "id": "25.1",
+              "title": "Actions"
+            },
+            {
+              "id": "25.2",
+              "title": "Action Bindings"
+            },
+            {
+              "id": "25.3",
+              "title": "Window Actions"
+            },
+            {
+              "id": "25.4",
+              "title": "ir.actions.act_window"
+            },
+            {
+              "id": "25.5",
+              "title": "URL Actions"
+            },
+            {
+              "id": "25.6",
+              "title": "Server Actions"
+            },
+            {
+              "id": "25.7",
+              "title": "Report Actions"
+            },
+            {
+              "id": "25.8",
+              "title": "Client Actions"
+            },
+            {
+              "id": "25.9",
+              "title": "Scheduled Actions"
+            },
+            {
+              "id": "25.10",
+              "title": "Menus"
+            },
+            {
+              "id": "25.11",
+              "title": "Parent Menus"
+            },
+            {
+              "id": "25.12",
+              "title": "Menu Sequence"
+            },
+            {
+              "id": "25.13",
+              "title": "Context"
+            },
+            {
+              "id": "25.14",
+              "title": "Domains"
+            },
+            {
+              "id": "25.15",
+              "title": "Navigation"
+            }
+          ]
+        },
+        {
+          "number": 26,
+          "title": "VIEW INHERITANCE",
+          "topics": [
+            {
+              "id": "26.1",
+              "title": "inherit_id"
+            },
+            {
+              "id": "26.2",
+              "title": "XPath"
+            },
+            {
+              "id": "26.3",
+              "title": "position"
+            },
+            {
+              "id": "26.4",
+              "title": "before"
+            },
+            {
+              "id": "26.5",
+              "title": "after"
+            },
+            {
+              "id": "26.6",
+              "title": "inside"
+            },
+            {
+              "id": "26.7",
+              "title": "replace"
+            },
+            {
+              "id": "26.8",
+              "title": "attributes"
+            },
+            {
+              "id": "26.9",
+              "title": "Adding Elements"
+            },
+            {
+              "id": "26.10",
+              "title": "Removing Elements Safely"
+            },
+            {
+              "id": "26.11",
+              "title": "Moving Elements"
+            },
+            {
+              "id": "26.12",
+              "title": "View Priority"
+            },
+            {
+              "id": "26.13",
+              "title": "View Resolution"
+            },
+            {
+              "id": "26.14",
+              "title": "Debugging Inherited Views"
+            },
+            {
+              "id": "26.15",
+              "title": "Avoiding Brittle XPath"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "roman": "VIII",
+      "title": "SECURITY & MULTI-COMPANY",
+      "chapters": [
+        {
+          "number": 27,
+          "title": "USERS & GROUPS",
+          "topics": [
+            {
+              "id": "27.1",
+              "title": "Users"
+            },
+            {
+              "id": "27.2",
+              "title": "Internal Users"
+            },
+            {
+              "id": "27.3",
+              "title": "Portal Users"
+            },
+            {
+              "id": "27.4",
+              "title": "Public User"
+            },
+            {
+              "id": "27.5",
+              "title": "Groups"
+            },
+            {
+              "id": "27.6",
+              "title": "Group Membership"
+            },
+            {
+              "id": "27.7",
+              "title": "Implied Groups"
+            },
+            {
+              "id": "27.8",
+              "title": "Application Categories"
+            },
+            {
+              "id": "27.9",
+              "title": "Permission Design"
+            },
+            {
+              "id": "27.10",
+              "title": "Role Design"
+            }
+          ]
+        },
+        {
+          "number": 28,
+          "title": "ACCESS CONTROL LISTS",
+          "topics": [
+            {
+              "id": "28.1",
+              "title": "ACL Concepts"
+            },
+            {
+              "id": "28.2",
+              "title": "ir.model.access"
+            },
+            {
+              "id": "28.3",
+              "title": "ir.model.access.csv"
+            },
+            {
+              "id": "28.4",
+              "title": "Read Permission"
+            },
+            {
+              "id": "28.5",
+              "title": "Write Permission"
+            },
+            {
+              "id": "28.6",
+              "title": "Create Permission"
+            },
+            {
+              "id": "28.7",
+              "title": "Unlink Permission"
+            },
+            {
+              "id": "28.8",
+              "title": "Group ACLs"
+            },
+            {
+              "id": "28.9",
+              "title": "Additive Permissions"
+            },
+            {
+              "id": "28.10",
+              "title": "Default-Deny Thinking"
+            }
+          ]
+        },
+        {
+          "number": 29,
+          "title": "RECORD RULES",
+          "topics": [
+            {
+              "id": "29.1",
+              "title": "ir.rule"
+            },
+            {
+              "id": "29.2",
+              "title": "domain_force"
+            },
+            {
+              "id": "29.3",
+              "title": "Global Rules"
+            },
+            {
+              "id": "29.4",
+              "title": "Group Rules"
+            },
+            {
+              "id": "29.5",
+              "title": "Rule Composition"
+            },
+            {
+              "id": "29.6",
+              "title": "Row-Level Security"
+            },
+            {
+              "id": "29.7",
+              "title": "User-Based Rules"
+            },
+            {
+              "id": "29.8",
+              "title": "Company-Based Rules"
+            },
+            {
+              "id": "29.9",
+              "title": "Ownership Rules"
+            },
+            {
+              "id": "29.10",
+              "title": "Multi-Group Interactions"
+            }
+          ]
+        },
+        {
+          "number": 30,
+          "title": "SECURITY CONTEXT & SAFE PRIVILEGE",
+          "topics": [
+            {
+              "id": "30.1",
+              "title": "sudo()"
+            },
+            {
+              "id": "30.2",
+              "title": "with_user()"
+            },
+            {
+              "id": "30.3",
+              "title": "Access Checks"
+            },
+            {
+              "id": "30.4",
+              "title": "check_access()"
+            },
+            {
+              "id": "30.5",
+              "title": "Field Security"
+            },
+            {
+              "id": "30.6",
+              "title": "View / Menu Groups"
+            },
+            {
+              "id": "30.7",
+              "title": "Public Method Security"
+            },
+            {
+              "id": "30.8",
+              "title": "Unsafe Raw SQL"
+            },
+            {
+              "id": "30.9",
+              "title": "Controller Security"
+            },
+            {
+              "id": "30.10",
+              "title": "Security Bypass Risks"
+            },
+            {
+              "id": "30.11",
+              "title": "Least Privilege"
+            },
+            {
+              "id": "30.12",
+              "title": "Avoiding Unnecessary sudo()"
+            },
+            {
+              "id": "30.13",
+              "title": "Input Validation"
+            }
+          ]
+        },
+        {
+          "number": 31,
+          "title": "MULTI-COMPANY DEVELOPMENT",
+          "topics": [
+            {
+              "id": "31.1",
+              "title": "res.company"
+            },
+            {
+              "id": "31.2",
+              "title": "company_id"
+            },
+            {
+              "id": "31.3",
+              "title": "company_ids"
+            },
+            {
+              "id": "31.4",
+              "title": "env.company"
+            },
+            {
+              "id": "31.5",
+              "title": "env.companies"
+            },
+            {
+              "id": "31.6",
+              "title": "with_company()"
+            },
+            {
+              "id": "31.7",
+              "title": "Company-Dependent Fields"
+            },
+            {
+              "id": "31.8",
+              "title": "_check_company"
+            },
+            {
+              "id": "31.9",
+              "title": "Multi-Company Domains"
+            },
+            {
+              "id": "31.10",
+              "title": "Cross-Company Security"
+            },
+            {
+              "id": "31.11",
+              "title": "Shared Records"
+            },
+            {
+              "id": "31.12",
+              "title": "Company-Specific Sequences"
+            },
+            {
+              "id": "31.13",
+              "title": "Multi-Company Defaults"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "roman": "IX",
+      "title": "EXTENDING EXISTING ODOO",
+      "chapters": [
+        {
+          "number": 32,
+          "title": "MODEL INHERITANCE",
+          "topics": [
+            {
+              "id": "32.1",
+              "title": "Extension Inheritance"
+            },
+            {
+              "id": "32.2",
+              "title": "_inherit"
+            },
+            {
+              "id": "32.3",
+              "title": "Classical Inheritance"
+            },
+            {
+              "id": "32.4",
+              "title": "Method Overriding"
+            },
+            {
+              "id": "32.5",
+              "title": "Field Extension"
+            },
+            {
+              "id": "32.6",
+              "title": "super()"
+            },
+            {
+              "id": "32.7",
+              "title": "Multiple Inheritance"
+            },
+            {
+              "id": "32.8",
+              "title": "Method Resolution Order"
+            },
+            {
+              "id": "32.9",
+              "title": "Extension Conflicts"
+            }
+          ]
+        },
+        {
+          "number": 33,
+          "title": "DELEGATION & MIXINS",
+          "topics": [
+            {
+              "id": "33.1",
+              "title": "_inherits"
+            },
+            {
+              "id": "33.2",
+              "title": "Delegated Fields"
+            },
+            {
+              "id": "33.3",
+              "title": "Delegation vs Extension"
+            },
+            {
+              "id": "33.4",
+              "title": "AbstractModel"
+            },
+            {
+              "id": "33.5",
+              "title": "Mixins"
+            },
+            {
+              "id": "33.6",
+              "title": "Reusable Model Behavior"
+            },
+            {
+              "id": "33.7",
+              "title": "Composition"
+            },
+            {
+              "id": "33.8",
+              "title": "mail.thread"
+            },
+            {
+              "id": "33.9",
+              "title": "mail.activity.mixin"
+            },
+            {
+              "id": "33.10",
+              "title": "portal.mixin Concepts"
+            }
+          ]
+        },
+        {
+          "number": 34,
+          "title": "VIEW INHERITANCE IN REAL MODULES",
+          "topics": [
+            {
+              "id": "34.1",
+              "title": "Finding Parent Views"
+            },
+            {
+              "id": "34.2",
+              "title": "External IDs"
+            },
+            {
+              "id": "34.3",
+              "title": "XPath Targeting"
+            },
+            {
+              "id": "34.4",
+              "title": "Adding Fields"
+            },
+            {
+              "id": "34.5",
+              "title": "Modifying Attributes"
+            },
+            {
+              "id": "34.6",
+              "title": "Replacing Elements"
+            },
+            {
+              "id": "34.7",
+              "title": "Moving Elements"
+            },
+            {
+              "id": "34.8",
+              "title": "View Priority"
+            },
+            {
+              "id": "34.9",
+              "title": "Conflicting Inheritances"
+            },
+            {
+              "id": "34.10",
+              "title": "Debugging Inheritance Conflicts"
+            }
+          ]
+        },
+        {
+          "number": 35,
+          "title": "EXTENDING OFFICIAL APPLICATIONS",
+          "topics": [
+            {
+              "id": "35.1",
+              "title": "res.partner"
+            },
+            {
+              "id": "35.2",
+              "title": "product.template"
+            },
+            {
+              "id": "35.3",
+              "title": "product.product"
+            },
+            {
+              "id": "35.4",
+              "title": "crm.lead"
+            },
+            {
+              "id": "35.5",
+              "title": "sale.order"
+            },
+            {
+              "id": "35.6",
+              "title": "sale.order.line"
+            },
+            {
+              "id": "35.7",
+              "title": "purchase.order"
+            },
+            {
+              "id": "35.8",
+              "title": "stock.picking"
+            },
+            {
+              "id": "35.9",
+              "title": "stock.move"
+            },
+            {
+              "id": "35.10",
+              "title": "account.move"
+            },
+            {
+              "id": "35.11",
+              "title": "hr.employee"
+            },
+            {
+              "id": "35.12",
+              "title": "project.project"
+            },
+            {
+              "id": "35.13",
+              "title": "Existing Workflows"
+            },
+            {
+              "id": "35.14",
+              "title": "Extension Points"
+            },
+            {
+              "id": "35.15",
+              "title": "Upgrade-Safe Customization"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "roman": "X",
+      "title": "ADVANCED BUSINESS FEATURES",
+      "chapters": [
+        {
+          "number": 36,
+          "title": "WIZARDS & TRANSIENTMODEL",
+          "topics": [
+            {
+              "id": "36.1",
+              "title": "TransientModel"
+            },
+            {
+              "id": "36.2",
+              "title": "Wizard Fields"
+            },
+            {
+              "id": "36.3",
+              "title": "Wizard Views"
+            },
+            {
+              "id": "36.4",
+              "title": "target=\"new\""
+            },
+            {
+              "id": "36.5",
+              "title": "active_model"
+            },
+            {
+              "id": "36.6",
+              "title": "active_id"
+            },
+            {
+              "id": "36.7",
+              "title": "active_ids"
+            },
+            {
+              "id": "36.8",
+              "title": "Context"
+            },
+            {
+              "id": "36.9",
+              "title": "Defaults"
+            },
+            {
+              "id": "36.10",
+              "title": "Multi-Step Wizards"
+            },
+            {
+              "id": "36.11",
+              "title": "Wizard Security"
+            }
+          ]
+        },
+        {
+          "number": 37,
+          "title": "SEQUENCES",
+          "topics": [
+            {
+              "id": "37.1",
+              "title": "ir.sequence"
+            },
+            {
+              "id": "37.2",
+              "title": "next_by_code()"
+            },
+            {
+              "id": "37.3",
+              "title": "Prefix"
+            },
+            {
+              "id": "37.4",
+              "title": "Suffix"
+            },
+            {
+              "id": "37.5",
+              "title": "Padding"
+            },
+            {
+              "id": "37.6",
+              "title": "Date-Based Sequences"
+            },
+            {
+              "id": "37.7",
+              "title": "Company-Specific Sequences"
+            },
+            {
+              "id": "37.8",
+              "title": "Business References"
+            },
+            {
+              "id": "37.9",
+              "title": "Concurrency Considerations"
+            }
+          ]
+        },
+        {
+          "number": 38,
+          "title": "SCHEDULED ACTIONS / CRON",
+          "topics": [
+            {
+              "id": "38.1",
+              "title": "ir.cron"
+            },
+            {
+              "id": "38.2",
+              "title": "Scheduling"
+            },
+            {
+              "id": "38.3",
+              "title": "Intervals"
+            },
+            {
+              "id": "38.4",
+              "title": "Cron Methods"
+            },
+            {
+              "id": "38.5",
+              "title": "Batch Processing"
+            },
+            {
+              "id": "38.6",
+              "title": "Progress"
+            },
+            {
+              "id": "38.7",
+              "title": "Failure Handling"
+            },
+            {
+              "id": "38.8",
+              "title": "Idempotency"
+            },
+            {
+              "id": "38.9",
+              "title": "Cron Security"
+            },
+            {
+              "id": "38.10",
+              "title": "Long-Running Jobs"
+            },
+            {
+              "id": "38.11",
+              "title": "Transaction Boundaries"
+            }
+          ]
+        },
+        {
+          "number": 39,
+          "title": "AUTOMATION & SERVER ACTIONS",
+          "topics": [
+            {
+              "id": "39.1",
+              "title": "Automated Actions"
+            },
+            {
+              "id": "39.2",
+              "title": "Triggers"
+            },
+            {
+              "id": "39.3",
+              "title": "Conditions"
+            },
+            {
+              "id": "39.4",
+              "title": "Server Actions"
+            },
+            {
+              "id": "39.5",
+              "title": "Evaluation Context"
+            },
+            {
+              "id": "39.6",
+              "title": "Action Chaining"
+            },
+            {
+              "id": "39.7",
+              "title": "Webhook Automation Concepts"
+            },
+            {
+              "id": "39.8",
+              "title": "Maintainability"
+            },
+            {
+              "id": "39.9",
+              "title": "Security"
+            },
+            {
+              "id": "39.10",
+              "title": "When to Use Code Instead"
+            }
+          ]
+        },
+        {
+          "number": 40,
+          "title": "MAIL, CHATTER & ACTIVITIES",
+          "topics": [
+            {
+              "id": "40.1",
+              "title": "mail.thread"
+            },
+            {
+              "id": "40.2",
+              "title": "mail.activity.mixin"
+            },
+            {
+              "id": "40.3",
+              "title": "Messages"
+            },
+            {
+              "id": "40.4",
+              "title": "Followers"
+            },
+            {
+              "id": "40.5",
+              "title": "Tracking"
+            },
+            {
+              "id": "40.6",
+              "title": "Activities"
+            },
+            {
+              "id": "40.7",
+              "title": "Activity Types"
+            },
+            {
+              "id": "40.8",
+              "title": "Notifications"
+            },
+            {
+              "id": "40.9",
+              "title": "Email Templates"
+            },
+            {
+              "id": "40.10",
+              "title": "Sending Mail"
+            },
+            {
+              "id": "40.11",
+              "title": "Incoming Mail Concepts"
+            },
+            {
+              "id": "40.12",
+              "title": "Mail Aliases"
+            },
+            {
+              "id": "40.13",
+              "title": "Mail Queue"
+            },
+            {
+              "id": "40.14",
+              "title": "Subtypes"
+            }
+          ]
+        },
+        {
+          "number": 41,
+          "title": "REPORTS & QWEB",
+          "topics": [
+            {
+              "id": "41.1",
+              "title": "QWeb"
+            },
+            {
+              "id": "41.2",
+              "title": "QWeb Templates"
+            },
+            {
+              "id": "41.3",
+              "title": "t-if"
+            },
+            {
+              "id": "41.4",
+              "title": "t-foreach"
+            },
+            {
+              "id": "41.5",
+              "title": "t-field"
+            },
+            {
+              "id": "41.6",
+              "title": "t-esc / t-out"
+            },
+            {
+              "id": "41.7",
+              "title": "Report Actions"
+            },
+            {
+              "id": "41.8",
+              "title": "Report Templates"
+            },
+            {
+              "id": "41.9",
+              "title": "PDF Reports"
+            },
+            {
+              "id": "41.10",
+              "title": "HTML Reports"
+            },
+            {
+              "id": "41.11",
+              "title": "Paper Formats"
+            },
+            {
+              "id": "41.12",
+              "title": "Custom Report Data"
+            },
+            {
+              "id": "41.13",
+              "title": "Translatable Reports"
+            },
+            {
+              "id": "41.14",
+              "title": "Barcodes"
+            },
+            {
+              "id": "41.15",
+              "title": "Report Attachments"
+            }
+          ]
+        },
+        {
+          "number": 42,
+          "title": "DATA FILES, IMPORT & EXPORT",
+          "topics": [
+            {
+              "id": "42.1",
+              "title": "XML Data"
+            },
+            {
+              "id": "42.2",
+              "title": "CSV Data"
+            },
+            {
+              "id": "42.3",
+              "title": "External IDs"
+            },
+            {
+              "id": "42.4",
+              "title": "env.ref()"
+            },
+            {
+              "id": "42.5",
+              "title": "noupdate"
+            },
+            {
+              "id": "42.6",
+              "title": "Demo Data"
+            },
+            {
+              "id": "42.7",
+              "title": "Seed Data"
+            },
+            {
+              "id": "42.8",
+              "title": "Import"
+            },
+            {
+              "id": "42.9",
+              "title": "Export"
+            },
+            {
+              "id": "42.10",
+              "title": "Data Load Order"
+            },
+            {
+              "id": "42.11",
+              "title": "XML Data Operations"
+            },
+            {
+              "id": "42.12",
+              "title": "Updating Existing Records"
+            },
+            {
+              "id": "42.13",
+              "title": "Reference Integrity"
+            },
+            {
+              "id": "42.14",
+              "title": "Large Imports"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "roman": "XI",
+      "title": "INTERNATIONALIZATION & LOCALIZATION",
+      "chapters": [
+        {
+          "number": 43,
+          "title": "INTERNATIONALIZATION & LOCALIZATION",
+          "topics": [
+            {
+              "id": "43.1",
+              "title": "Translatable Strings"
+            },
+            {
+              "id": "43.2",
+              "title": "_() Translation Function"
+            },
+            {
+              "id": "43.3",
+              "title": "Translatable Fields"
+            },
+            {
+              "id": "43.4",
+              "title": "i18n/"
+            },
+            {
+              "id": "43.5",
+              "title": ".po Files"
+            },
+            {
+              "id": "43.6",
+              "title": ".pot Templates"
+            },
+            {
+              "id": "43.7",
+              "title": "Exporting Translations"
+            },
+            {
+              "id": "43.8",
+              "title": "Importing Translations"
+            },
+            {
+              "id": "43.9",
+              "title": "Languages"
+            },
+            {
+              "id": "43.10",
+              "title": "Locale / Formatting"
+            },
+            {
+              "id": "43.11",
+              "title": "Dates & Times"
+            },
+            {
+              "id": "43.12",
+              "title": "Numbers"
+            },
+            {
+              "id": "43.13",
+              "title": "Currencies"
+            },
+            {
+              "id": "43.14",
+              "title": "Translatable QWeb"
+            },
+            {
+              "id": "43.15",
+              "title": "Localization Modules"
+            },
+            {
+              "id": "43.16",
+              "title": "Accounting Localization Concept"
+            },
+            {
+              "id": "43.17",
+              "title": "Country-Specific Behavior"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "roman": "XII",
+      "title": "WEB DEVELOPMENT WITH ODOO",
+      "chapters": [
+        {
+          "number": 44,
+          "title": "HTTP CONTROLLERS",
+          "topics": [
+            {
+              "id": "44.1",
+              "title": "http.Controller"
+            },
+            {
+              "id": "44.2",
+              "title": "@http.route"
+            },
+            {
+              "id": "44.3",
+              "title": "request"
+            },
+            {
+              "id": "44.4",
+              "title": "Request Environment"
+            },
+            {
+              "id": "44.5",
+              "title": "route type=\"http\""
+            },
+            {
+              "id": "44.6",
+              "title": "route type=\"json\""
+            },
+            {
+              "id": "44.7",
+              "title": "HTTP Methods"
+            },
+            {
+              "id": "44.8",
+              "title": "Parameters"
+            },
+            {
+              "id": "44.9",
+              "title": "Responses"
+            },
+            {
+              "id": "44.10",
+              "title": "Authentication"
+            },
+            {
+              "id": "44.11",
+              "title": "auth=\"user\""
+            },
+            {
+              "id": "44.12",
+              "title": "auth=\"public\""
+            },
+            {
+              "id": "44.13",
+              "title": "auth=\"none\""
+            },
+            {
+              "id": "44.14",
+              "title": "CSRF"
+            },
+            {
+              "id": "44.15",
+              "title": "Sessions"
+            },
+            {
+              "id": "44.16",
+              "title": "Cookies Concepts"
+            },
+            {
+              "id": "44.17",
+              "title": "Error Handling"
+            },
+            {
+              "id": "44.18",
+              "title": "Controller Inheritance"
+            },
+            {
+              "id": "44.19",
+              "title": "Controller Security"
+            }
+          ]
+        },
+        {
+          "number": 45,
+          "title": "WEBSITE DEVELOPMENT",
+          "topics": [
+            {
+              "id": "45.1",
+              "title": "Website Architecture"
+            },
+            {
+              "id": "45.2",
+              "title": "Website Pages"
+            },
+            {
+              "id": "45.3",
+              "title": "QWeb Templates"
+            },
+            {
+              "id": "45.4",
+              "title": "Dynamic Content"
+            },
+            {
+              "id": "45.5",
+              "title": "Website Controllers"
+            },
+            {
+              "id": "45.6",
+              "title": "Frontend Assets"
+            },
+            {
+              "id": "45.7",
+              "title": "Website Forms"
+            },
+            {
+              "id": "45.8",
+              "title": "Form Validation"
+            },
+            {
+              "id": "45.9",
+              "title": "Snippets Concepts"
+            },
+            {
+              "id": "45.10",
+              "title": "SEO Basics"
+            },
+            {
+              "id": "45.11",
+              "title": "Routing"
+            },
+            {
+              "id": "45.12",
+              "title": "Multi-Website"
+            },
+            {
+              "id": "45.13",
+              "title": "Website-Specific Records"
+            }
+          ]
+        },
+        {
+          "number": 46,
+          "title": "PORTAL DEVELOPMENT",
+          "topics": [
+            {
+              "id": "46.1",
+              "title": "Portal Users"
+            },
+            {
+              "id": "46.2",
+              "title": "Portal Controllers"
+            },
+            {
+              "id": "46.3",
+              "title": "Customer Pages"
+            },
+            {
+              "id": "46.4",
+              "title": "Portal Layout"
+            },
+            {
+              "id": "46.5",
+              "title": "Portal Security"
+            },
+            {
+              "id": "46.6",
+              "title": "Customer-Owned Records"
+            },
+            {
+              "id": "46.7",
+              "title": "Pagination"
+            },
+            {
+              "id": "46.8",
+              "title": "Search"
+            },
+            {
+              "id": "46.9",
+              "title": "Filters"
+            },
+            {
+              "id": "46.10",
+              "title": "Sort"
+            },
+            {
+              "id": "46.11",
+              "title": "Access Tokens"
+            },
+            {
+              "id": "46.12",
+              "title": "Chatter in Portal"
+            },
+            {
+              "id": "46.13",
+              "title": "Downloads"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "roman": "XIII",
+      "title": "APIS & INTEGRATIONS",
+      "chapters": [
+        {
+          "number": 47,
+          "title": "EXTERNAL API CONCEPTS",
+          "topics": [
+            {
+              "id": "47.1",
+              "title": "Client / Server"
+            },
+            {
+              "id": "47.2",
+              "title": "Resources"
+            },
+            {
+              "id": "47.3",
+              "title": "Endpoints"
+            },
+            {
+              "id": "47.4",
+              "title": "HTTP Methods"
+            },
+            {
+              "id": "47.5",
+              "title": "JSON"
+            },
+            {
+              "id": "47.6",
+              "title": "Authentication"
+            },
+            {
+              "id": "47.7",
+              "title": "Authorization"
+            },
+            {
+              "id": "47.8",
+              "title": "Status Codes"
+            },
+            {
+              "id": "47.9",
+              "title": "Headers"
+            },
+            {
+              "id": "47.10",
+              "title": "Pagination"
+            },
+            {
+              "id": "47.11",
+              "title": "Rate Limits"
+            },
+            {
+              "id": "47.12",
+              "title": "API Contracts"
+            },
+            {
+              "id": "47.13",
+              "title": "Idempotency"
+            }
+          ]
+        },
+        {
+          "number": 48,
+          "title": "EXTERNAL ODOO ACCESS",
+          "topics": [
+            {
+              "id": "48.1",
+              "title": "External API Architecture"
+            },
+            {
+              "id": "48.2",
+              "title": "Integration Users"
+            },
+            {
+              "id": "48.3",
+              "title": "Authentication"
+            },
+            {
+              "id": "48.4",
+              "title": "Calling Models"
+            },
+            {
+              "id": "48.5",
+              "title": "CRUD Remotely"
+            },
+            {
+              "id": "48.6",
+              "title": "Calling Methods"
+            },
+            {
+              "id": "48.7",
+              "title": "Domains"
+            },
+            {
+              "id": "48.8",
+              "title": "Permissions"
+            },
+            {
+              "id": "48.9",
+              "title": "Context"
+            },
+            {
+              "id": "48.10",
+              "title": "Error Handling"
+            },
+            {
+              "id": "48.11",
+              "title": "Version Compatibility"
+            },
+            {
+              "id": "48.12",
+              "title": "API Keys"
+            }
+          ]
+        },
+        {
+          "number": 49,
+          "title": "BUILDING API ENDPOINTS",
+          "topics": [
+            {
+              "id": "49.1",
+              "title": "API Routes"
+            },
+            {
+              "id": "49.2",
+              "title": "Request Parsing"
+            },
+            {
+              "id": "49.3",
+              "title": "Input Validation"
+            },
+            {
+              "id": "49.4",
+              "title": "Serialization"
+            },
+            {
+              "id": "49.5",
+              "title": "Response Design"
+            },
+            {
+              "id": "49.6",
+              "title": "Authentication"
+            },
+            {
+              "id": "49.7",
+              "title": "Authorization"
+            },
+            {
+              "id": "49.8",
+              "title": "Pagination"
+            },
+            {
+              "id": "49.9",
+              "title": "Filtering"
+            },
+            {
+              "id": "49.10",
+              "title": "Sorting"
+            },
+            {
+              "id": "49.11",
+              "title": "Error Responses"
+            },
+            {
+              "id": "49.12",
+              "title": "Consistent Error Schema"
+            },
+            {
+              "id": "49.13",
+              "title": "API Versioning Concepts"
+            },
+            {
+              "id": "49.14",
+              "title": "Logging"
+            }
+          ]
+        },
+        {
+          "number": 50,
+          "title": "WEBHOOKS",
+          "topics": [
+            {
+              "id": "50.1",
+              "title": "Incoming Webhooks"
+            },
+            {
+              "id": "50.2",
+              "title": "Outgoing Events"
+            },
+            {
+              "id": "50.3",
+              "title": "Payload Validation"
+            },
+            {
+              "id": "50.4",
+              "title": "Signatures"
+            },
+            {
+              "id": "50.5",
+              "title": "Secrets"
+            },
+            {
+              "id": "50.6",
+              "title": "Timestamp Validation"
+            },
+            {
+              "id": "50.7",
+              "title": "Replay Attacks"
+            },
+            {
+              "id": "50.8",
+              "title": "Idempotency"
+            },
+            {
+              "id": "50.9",
+              "title": "Retries"
+            },
+            {
+              "id": "50.10",
+              "title": "Duplicate Events"
+            },
+            {
+              "id": "50.11",
+              "title": "Audit Logging"
+            },
+            {
+              "id": "50.12",
+              "title": "Dead-Letter Concepts"
+            }
+          ]
+        },
+        {
+          "number": 51,
+          "title": "THIRD-PARTY INTEGRATIONS",
+          "topics": [
+            {
+              "id": "51.1",
+              "title": "REST APIs"
+            },
+            {
+              "id": "51.2",
+              "title": "API Authentication"
+            },
+            {
+              "id": "51.3",
+              "title": "OAuth Concepts"
+            },
+            {
+              "id": "51.4",
+              "title": "Mapping External Data"
+            },
+            {
+              "id": "51.5",
+              "title": "Data Ownership"
+            },
+            {
+              "id": "51.6",
+              "title": "Synchronization"
+            },
+            {
+              "id": "51.7",
+              "title": "One-Way Sync"
+            },
+            {
+              "id": "51.8",
+              "title": "Two-Way Sync"
+            },
+            {
+              "id": "51.9",
+              "title": "Incremental Sync"
+            },
+            {
+              "id": "51.10",
+              "title": "Scheduled Sync"
+            },
+            {
+              "id": "51.11",
+              "title": "Retries / Backoff"
+            },
+            {
+              "id": "51.12",
+              "title": "Rate Limiting"
+            },
+            {
+              "id": "51.13",
+              "title": "Conflict Resolution"
+            },
+            {
+              "id": "51.14",
+              "title": "Error Handling"
+            },
+            {
+              "id": "51.15",
+              "title": "Integration Logs"
+            }
+          ]
+        },
+        {
+          "number": 52,
+          "title": "PAYMENT INTEGRATIONS",
+          "topics": [
+            {
+              "id": "52.1",
+              "title": "Payment Architecture"
+            },
+            {
+              "id": "52.2",
+              "title": "Payment Providers"
+            },
+            {
+              "id": "52.3",
+              "title": "Payment Transactions"
+            },
+            {
+              "id": "52.4",
+              "title": "Checkout Flow"
+            },
+            {
+              "id": "52.5",
+              "title": "Redirects"
+            },
+            {
+              "id": "52.6",
+              "title": "Tokens"
+            },
+            {
+              "id": "52.7",
+              "title": "Callbacks"
+            },
+            {
+              "id": "52.8",
+              "title": "Webhooks"
+            },
+            {
+              "id": "52.9",
+              "title": "Payment Status"
+            },
+            {
+              "id": "52.10",
+              "title": "Pending Payments"
+            },
+            {
+              "id": "52.11",
+              "title": "Failure Handling"
+            },
+            {
+              "id": "52.12",
+              "title": "Refund Concepts"
+            },
+            {
+              "id": "52.13",
+              "title": "Security"
+            },
+            {
+              "id": "52.14",
+              "title": "Idempotency"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "roman": "XIV",
+      "title": "MODERN ODOO FRONTEND",
+      "chapters": [
+        {
+          "number": 53,
+          "title": "ODOO JAVASCRIPT ARCHITECTURE",
+          "topics": [
+            {
+              "id": "53.1",
+              "title": "Web Client"
+            },
+            {
+              "id": "53.2",
+              "title": "JavaScript Modules"
+            },
+            {
+              "id": "53.3",
+              "title": "Native JS Modules"
+            },
+            {
+              "id": "53.4",
+              "title": "Frontend Environment"
+            },
+            {
+              "id": "53.5",
+              "title": "Components"
+            },
+            {
+              "id": "53.6",
+              "title": "Registries"
+            },
+            {
+              "id": "53.7",
+              "title": "Services"
+            },
+            {
+              "id": "53.8",
+              "title": "Hooks"
+            },
+            {
+              "id": "53.9",
+              "title": "Backend ↔ Frontend Communication"
+            },
+            {
+              "id": "53.10",
+              "title": "ORM Service"
+            },
+            {
+              "id": "53.11",
+              "title": "RPC"
+            },
+            {
+              "id": "53.12",
+              "title": "Actions"
+            },
+            {
+              "id": "53.13",
+              "title": "Frontend Debugging"
+            }
+          ]
+        },
+        {
+          "number": 54,
+          "title": "OWL FUNDAMENTALS",
+          "topics": [
+            {
+              "id": "54.1",
+              "title": "Components"
+            },
+            {
+              "id": "54.2",
+              "title": "Templates"
+            },
+            {
+              "id": "54.3",
+              "title": "Props"
+            },
+            {
+              "id": "54.4",
+              "title": "State"
+            },
+            {
+              "id": "54.5",
+              "title": "Events"
+            },
+            {
+              "id": "54.6",
+              "title": "Lifecycle"
+            },
+            {
+              "id": "54.7",
+              "title": "Composition"
+            },
+            {
+              "id": "54.8",
+              "title": "Subcomponents"
+            },
+            {
+              "id": "54.9",
+              "title": "Reactive UI"
+            },
+            {
+              "id": "54.10",
+              "title": "Event Handlers"
+            },
+            {
+              "id": "54.11",
+              "title": "Conditional Rendering"
+            },
+            {
+              "id": "54.12",
+              "title": "Loops"
+            }
+          ]
+        },
+        {
+          "number": 55,
+          "title": "SERVICES, REGISTRIES & HOOKS",
+          "topics": [
+            {
+              "id": "55.1",
+              "title": "Registries"
+            },
+            {
+              "id": "55.2",
+              "title": "Registry Categories"
+            },
+            {
+              "id": "55.3",
+              "title": "Services"
+            },
+            {
+              "id": "55.4",
+              "title": "Service Dependencies"
+            },
+            {
+              "id": "55.5",
+              "title": "useService()"
+            },
+            {
+              "id": "55.6",
+              "title": "ORM Service"
+            },
+            {
+              "id": "55.7",
+              "title": "RPC Service"
+            },
+            {
+              "id": "55.8",
+              "title": "Notification Service"
+            },
+            {
+              "id": "55.9",
+              "title": "Action Service"
+            },
+            {
+              "id": "55.10",
+              "title": "Router Concepts"
+            },
+            {
+              "id": "55.11",
+              "title": "Hooks"
+            },
+            {
+              "id": "55.12",
+              "title": "useBus"
+            },
+            {
+              "id": "55.13",
+              "title": "useAssets"
+            },
+            {
+              "id": "55.14",
+              "title": "Custom Hooks"
+            }
+          ]
+        },
+        {
+          "number": 56,
+          "title": "ASSETS & FRONTEND RESOURCES",
+          "topics": [
+            {
+              "id": "56.1",
+              "title": "Asset Bundles"
+            },
+            {
+              "id": "56.2",
+              "title": "JavaScript Assets"
+            },
+            {
+              "id": "56.3",
+              "title": "SCSS / CSS"
+            },
+            {
+              "id": "56.4",
+              "title": "XML Templates"
+            },
+            {
+              "id": "56.5",
+              "title": "Manifest Assets"
+            },
+            {
+              "id": "56.6",
+              "title": "Bundle Ordering"
+            },
+            {
+              "id": "56.7",
+              "title": "Lazy Loading"
+            },
+            {
+              "id": "56.8",
+              "title": "Asset Debugging"
+            },
+            {
+              "id": "56.9",
+              "title": "Cache Busting Concepts"
+            }
+          ]
+        },
+        {
+          "number": 57,
+          "title": "EXTENDING & PATCHING THE WEB CLIENT",
+          "topics": [
+            {
+              "id": "57.1",
+              "title": "Patching Code"
+            },
+            {
+              "id": "57.2",
+              "title": "patch()"
+            },
+            {
+              "id": "57.3",
+              "title": "Patching Components"
+            },
+            {
+              "id": "57.4",
+              "title": "Extending Components"
+            },
+            {
+              "id": "57.5",
+              "title": "Extending Registries"
+            },
+            {
+              "id": "57.6",
+              "title": "Custom Field Widgets"
+            },
+            {
+              "id": "57.7",
+              "title": "View Extensions"
+            },
+            {
+              "id": "57.8",
+              "title": "Upgrade Safety"
+            },
+            {
+              "id": "57.9",
+              "title": "Conflict Risks"
+            },
+            {
+              "id": "57.10",
+              "title": "When Not to Patch"
+            }
+          ]
+        },
+        {
+          "number": 58,
+          "title": "CLIENT ACTIONS & ADVANCED FRONTEND",
+          "topics": [
+            {
+              "id": "58.1",
+              "title": "Client Actions"
+            },
+            {
+              "id": "58.2",
+              "title": "Action Registry"
+            },
+            {
+              "id": "58.3",
+              "title": "OWL Client Components"
+            },
+            {
+              "id": "58.4",
+              "title": "Loading Server Data"
+            },
+            {
+              "id": "58.5",
+              "title": "Custom Dashboards"
+            },
+            {
+              "id": "58.6",
+              "title": "Generic Components"
+            },
+            {
+              "id": "58.7",
+              "title": "Dialogs"
+            },
+            {
+              "id": "58.8",
+              "title": "Notifications"
+            },
+            {
+              "id": "58.9",
+              "title": "Error Handling"
+            },
+            {
+              "id": "58.10",
+              "title": "Error Boundaries"
+            },
+            {
+              "id": "58.11",
+              "title": "Odoo Editor Concepts"
+            },
+            {
+              "id": "58.12",
+              "title": "Mobile Web APIs"
+            },
+            {
+              "id": "58.13",
+              "title": "Responsive Odoo UI"
+            },
+            {
+              "id": "58.14",
+              "title": "Accessibility"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "roman": "XV",
+      "title": "FILES, ATTACHMENTS & MEDIA",
+      "chapters": [
+        {
+          "number": 59,
+          "title": "ATTACHMENTS & FILESTORE",
+          "topics": [
+            {
+              "id": "59.1",
+              "title": "ir.attachment"
+            },
+            {
+              "id": "59.2",
+              "title": "Binary Fields"
+            },
+            {
+              "id": "59.3",
+              "title": "Image Fields"
+            },
+            {
+              "id": "59.4",
+              "title": "Database vs Filestore"
+            },
+            {
+              "id": "59.5",
+              "title": "Attachment Relationships"
+            },
+            {
+              "id": "59.6",
+              "title": "Uploads"
+            },
+            {
+              "id": "59.7",
+              "title": "Downloads"
+            },
+            {
+              "id": "59.8",
+              "title": "MIME Types"
+            },
+            {
+              "id": "59.9",
+              "title": "File Names"
+            },
+            {
+              "id": "59.10",
+              "title": "Attachment Access"
+            },
+            {
+              "id": "59.11",
+              "title": "Attachment Security"
+            },
+            {
+              "id": "59.12",
+              "title": "Public / Private Files"
+            },
+            {
+              "id": "59.13",
+              "title": "Access Tokens"
+            },
+            {
+              "id": "59.14",
+              "title": "Large File Considerations"
+            },
+            {
+              "id": "59.15",
+              "title": "Image Processing Concepts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "roman": "XVI",
+      "title": "POSTGRESQL & PERFORMANCE",
+      "chapters": [
+        {
+          "number": 60,
+          "title": "ODOO DATABASE STRUCTURE",
+          "topics": [
+            {
+              "id": "60.1",
+              "title": "Models → Tables"
+            },
+            {
+              "id": "60.2",
+              "title": "Fields → Columns"
+            },
+            {
+              "id": "60.3",
+              "title": "Many2one Foreign Keys"
+            },
+            {
+              "id": "60.4",
+              "title": "Many2many Relation Tables"
+            },
+            {
+              "id": "60.5",
+              "title": "Foreign Keys"
+            },
+            {
+              "id": "60.6",
+              "title": "Metadata Tables"
+            },
+            {
+              "id": "60.7",
+              "title": "ir_model"
+            },
+            {
+              "id": "60.8",
+              "title": "ir_model_fields"
+            },
+            {
+              "id": "60.9",
+              "title": "ir_model_data"
+            },
+            {
+              "id": "60.10",
+              "title": "Inspecting the Schema"
+            }
+          ]
+        },
+        {
+          "number": 61,
+          "title": "POSTGRESQL FOR ODOO DEVELOPERS",
+          "topics": [
+            {
+              "id": "61.1",
+              "title": "SELECT"
+            },
+            {
+              "id": "61.2",
+              "title": "WHERE"
+            },
+            {
+              "id": "61.3",
+              "title": "JOIN"
+            },
+            {
+              "id": "61.4",
+              "title": "GROUP BY"
+            },
+            {
+              "id": "61.5",
+              "title": "Aggregates"
+            },
+            {
+              "id": "61.6",
+              "title": "Subqueries"
+            },
+            {
+              "id": "61.7",
+              "title": "CTE Concepts"
+            },
+            {
+              "id": "61.8",
+              "title": "Constraints"
+            },
+            {
+              "id": "61.9",
+              "title": "psql"
+            },
+            {
+              "id": "61.10",
+              "title": "Database Inspection"
+            },
+            {
+              "id": "61.11",
+              "title": "Information Schema"
+            }
+          ]
+        },
+        {
+          "number": 62,
+          "title": "TRANSACTIONS & CONCURRENCY",
+          "topics": [
+            {
+              "id": "62.1",
+              "title": "Transactions"
+            },
+            {
+              "id": "62.2",
+              "title": "Commit"
+            },
+            {
+              "id": "62.3",
+              "title": "Rollback"
+            },
+            {
+              "id": "62.4",
+              "title": "Isolation"
+            },
+            {
+              "id": "62.5",
+              "title": "Locks"
+            },
+            {
+              "id": "62.6",
+              "title": "Row Locks"
+            },
+            {
+              "id": "62.7",
+              "title": "Deadlocks"
+            },
+            {
+              "id": "62.8",
+              "title": "Concurrent Updates"
+            },
+            {
+              "id": "62.9",
+              "title": "Lost Update Concepts"
+            },
+            {
+              "id": "62.10",
+              "title": "Savepoints"
+            },
+            {
+              "id": "62.11",
+              "title": "Retry Patterns"
+            }
+          ]
+        },
+        {
+          "number": 63,
+          "title": "INDEXES & QUERY PLANS",
+          "topics": [
+            {
+              "id": "63.1",
+              "title": "Indexes"
+            },
+            {
+              "id": "63.2",
+              "title": "B-Tree Intuition"
+            },
+            {
+              "id": "63.3",
+              "title": "Selectivity"
+            },
+            {
+              "id": "63.4",
+              "title": "Composite Indexes"
+            },
+            {
+              "id": "63.5",
+              "title": "EXPLAIN"
+            },
+            {
+              "id": "63.6",
+              "title": "EXPLAIN ANALYZE"
+            },
+            {
+              "id": "63.7",
+              "title": "Query Plans"
+            },
+            {
+              "id": "63.8",
+              "title": "Sequential Scan"
+            },
+            {
+              "id": "63.9",
+              "title": "Index Scan"
+            },
+            {
+              "id": "63.10",
+              "title": "When to Add an Index"
+            },
+            {
+              "id": "63.11",
+              "title": "Over-Indexing"
+            }
+          ]
+        },
+        {
+          "number": 64,
+          "title": "ORM PERFORMANCE",
+          "topics": [
+            {
+              "id": "64.1",
+              "title": "Query Counts"
+            },
+            {
+              "id": "64.2",
+              "title": "Batch Operations"
+            },
+            {
+              "id": "64.3",
+              "title": "Prefetch"
+            },
+            {
+              "id": "64.4",
+              "title": "Cache"
+            },
+            {
+              "id": "64.5",
+              "title": "N+1 Problems"
+            },
+            {
+              "id": "64.6",
+              "title": "Computed Field Costs"
+            },
+            {
+              "id": "64.7",
+              "title": "Stored Computations"
+            },
+            {
+              "id": "64.8",
+              "title": "Efficient Domains"
+            },
+            {
+              "id": "64.9",
+              "title": "Algorithms & Complexity"
+            },
+            {
+              "id": "64.10",
+              "title": "Database Indexes from Models"
+            },
+            {
+              "id": "64.11",
+              "title": "read_group()"
+            },
+            {
+              "id": "64.12",
+              "title": "Avoiding Loops over Queries"
+            }
+          ]
+        },
+        {
+          "number": 65,
+          "title": "PROFILING & OPTIMIZATION",
+          "topics": [
+            {
+              "id": "65.1",
+              "title": "Odoo Profiler"
+            },
+            {
+              "id": "65.2",
+              "title": "SQL Profiling"
+            },
+            {
+              "id": "65.3",
+              "title": "Query Collector"
+            },
+            {
+              "id": "65.4",
+              "title": "Periodic Collector"
+            },
+            {
+              "id": "65.5",
+              "title": "Finding Bottlenecks"
+            },
+            {
+              "id": "65.6",
+              "title": "Measuring Before Optimizing"
+            },
+            {
+              "id": "65.7",
+              "title": "Benchmarking"
+            },
+            {
+              "id": "65.8",
+              "title": "Baselines"
+            },
+            {
+              "id": "65.9",
+              "title": "Performance Regression"
+            },
+            {
+              "id": "65.10",
+              "title": "Memory Considerations"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "roman": "XVII",
+      "title": "TESTING & DEBUGGING",
+      "chapters": [
+        {
+          "number": 66,
+          "title": "ODOO LOGGING & DEBUGGING",
+          "topics": [
+            {
+              "id": "66.1",
+              "title": "Log Levels"
+            },
+            {
+              "id": "66.2",
+              "title": "Server Logs"
+            },
+            {
+              "id": "66.3",
+              "title": "Stack Traces"
+            },
+            {
+              "id": "66.4",
+              "title": "Python Debugger"
+            },
+            {
+              "id": "66.5",
+              "title": "Breakpoints"
+            },
+            {
+              "id": "66.6",
+              "title": "Odoo Shell"
+            },
+            {
+              "id": "66.7",
+              "title": "Browser Developer Tools"
+            },
+            {
+              "id": "66.8",
+              "title": "Developer Mode"
+            },
+            {
+              "id": "66.9",
+              "title": "Reproducing Bugs"
+            },
+            {
+              "id": "66.10",
+              "title": "Root Cause Analysis"
+            },
+            {
+              "id": "66.11",
+              "title": "Minimal Reproduction"
+            }
+          ]
+        },
+        {
+          "number": 67,
+          "title": "PYTHON TESTS",
+          "topics": [
+            {
+              "id": "67.1",
+              "title": "Test Module Structure"
+            },
+            {
+              "id": "67.2",
+              "title": "TransactionCase"
+            },
+            {
+              "id": "67.3",
+              "title": "Savepoint / Transaction Concepts"
+            },
+            {
+              "id": "67.4",
+              "title": "Test Data"
+            },
+            {
+              "id": "67.5",
+              "title": "setUp()"
+            },
+            {
+              "id": "67.6",
+              "title": "Assertions"
+            },
+            {
+              "id": "67.7",
+              "title": "Test Tags"
+            },
+            {
+              "id": "67.8",
+              "title": "Running Selected Tests"
+            },
+            {
+              "id": "67.9",
+              "title": "Form Helper Concepts"
+            },
+            {
+              "id": "67.10",
+              "title": "Deterministic Tests"
+            }
+          ]
+        },
+        {
+          "number": 68,
+          "title": "TESTING BUSINESS LOGIC",
+          "topics": [
+            {
+              "id": "68.1",
+              "title": "CRUD Tests"
+            },
+            {
+              "id": "68.2",
+              "title": "Computed Field Tests"
+            },
+            {
+              "id": "68.3",
+              "title": "Constraint Tests"
+            },
+            {
+              "id": "68.4",
+              "title": "Workflow Tests"
+            },
+            {
+              "id": "68.5",
+              "title": "Cron Tests"
+            },
+            {
+              "id": "68.6",
+              "title": "Wizard Tests"
+            },
+            {
+              "id": "68.7",
+              "title": "Edge Cases"
+            },
+            {
+              "id": "68.8",
+              "title": "Regression Tests"
+            },
+            {
+              "id": "68.9",
+              "title": "Error Tests"
+            }
+          ]
+        },
+        {
+          "number": 69,
+          "title": "TESTING SECURITY",
+          "topics": [
+            {
+              "id": "69.1",
+              "title": "User Context"
+            },
+            {
+              "id": "69.2",
+              "title": "ACL Tests"
+            },
+            {
+              "id": "69.3",
+              "title": "Record Rule Tests"
+            },
+            {
+              "id": "69.4",
+              "title": "sudo() Tests"
+            },
+            {
+              "id": "69.5",
+              "title": "Field Security Tests"
+            },
+            {
+              "id": "69.6",
+              "title": "Multi-Company Tests"
+            },
+            {
+              "id": "69.7",
+              "title": "Portal Access Tests"
+            },
+            {
+              "id": "69.8",
+              "title": "Public Access Tests"
+            },
+            {
+              "id": "69.9",
+              "title": "Permission Regression"
+            }
+          ]
+        },
+        {
+          "number": 70,
+          "title": "WEB & FRONTEND TESTING",
+          "topics": [
+            {
+              "id": "70.1",
+              "title": "HTTP Tests"
+            },
+            {
+              "id": "70.2",
+              "title": "Controller Tests"
+            },
+            {
+              "id": "70.3",
+              "title": "browser_js"
+            },
+            {
+              "id": "70.4",
+              "title": "Test Tours"
+            },
+            {
+              "id": "70.5",
+              "title": "Integration Tours"
+            },
+            {
+              "id": "70.6",
+              "title": "JavaScript Unit Tests"
+            },
+            {
+              "id": "70.7",
+              "title": "HOOT"
+            },
+            {
+              "id": "70.8",
+              "title": "@odoo/hoot-dom"
+            },
+            {
+              "id": "70.9",
+              "title": "Web Test Helpers"
+            },
+            {
+              "id": "70.10",
+              "title": "Mock Server"
+            },
+            {
+              "id": "70.11",
+              "title": "Mocking RPC"
+            },
+            {
+              "id": "70.12",
+              "title": "End-to-End Flows"
+            }
+          ]
+        },
+        {
+          "number": 71,
+          "title": "PERFORMANCE & REGRESSION TESTING",
+          "topics": [
+            {
+              "id": "71.1",
+              "title": "Query Count Tests"
+            },
+            {
+              "id": "71.2",
+              "title": "assertQueryCount()"
+            },
+            {
+              "id": "71.3",
+              "title": "--log-sql"
+            },
+            {
+              "id": "71.4",
+              "title": "Performance Budgets"
+            },
+            {
+              "id": "71.5",
+              "title": "Regression Detection"
+            },
+            {
+              "id": "71.6",
+              "title": "Repeatable Benchmarks"
+            },
+            {
+              "id": "71.7",
+              "title": "Large Dataset Tests"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "roman": "XVIII",
+      "title": "CLI & DEVELOPER TOOLING",
+      "chapters": [
+        {
+          "number": 72,
+          "title": "ODOO CLI & DEVELOPER COMMANDS",
+          "topics": [
+            {
+              "id": "72.1",
+              "title": "odoo-bin / odoo"
+            },
+            {
+              "id": "72.2",
+              "title": "Configuration File"
+            },
+            {
+              "id": "72.3",
+              "title": "Database Selection"
+            },
+            {
+              "id": "72.4",
+              "title": "-i Install"
+            },
+            {
+              "id": "72.5",
+              "title": "-u Upgrade"
+            },
+            {
+              "id": "72.6",
+              "title": "--addons-path"
+            },
+            {
+              "id": "72.7",
+              "title": "--dev"
+            },
+            {
+              "id": "72.8",
+              "title": "--log-level"
+            },
+            {
+              "id": "72.9",
+              "title": "--log-sql"
+            },
+            {
+              "id": "72.10",
+              "title": "--test-enable"
+            },
+            {
+              "id": "72.11",
+              "title": "--test-tags"
+            },
+            {
+              "id": "72.12",
+              "title": "--stop-after-init"
+            },
+            {
+              "id": "72.13",
+              "title": "shell"
+            },
+            {
+              "id": "72.14",
+              "title": "scaffold"
+            },
+            {
+              "id": "72.15",
+              "title": "Database Commands"
+            },
+            {
+              "id": "72.16",
+              "title": "Neutralize Concepts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "roman": "XIX",
+      "title": "DEPLOYMENT & OPERATIONS",
+      "chapters": [
+        {
+          "number": 73,
+          "title": "ODOO CONFIGURATION",
+          "topics": [
+            {
+              "id": "73.1",
+              "title": "odoo.conf"
+            },
+            {
+              "id": "73.2",
+              "title": "addons_path"
+            },
+            {
+              "id": "73.3",
+              "title": "db_host"
+            },
+            {
+              "id": "73.4",
+              "title": "db_port"
+            },
+            {
+              "id": "73.5",
+              "title": "db_user"
+            },
+            {
+              "id": "73.6",
+              "title": "db_password"
+            },
+            {
+              "id": "73.7",
+              "title": "dbfilter"
+            },
+            {
+              "id": "73.8",
+              "title": "Logging"
+            },
+            {
+              "id": "73.9",
+              "title": "Proxy Mode"
+            },
+            {
+              "id": "73.10",
+              "title": "Secrets"
+            },
+            {
+              "id": "73.11",
+              "title": "Environment-Specific Configuration"
+            },
+            {
+              "id": "73.12",
+              "title": "Resource Limits"
+            }
+          ]
+        },
+        {
+          "number": 74,
+          "title": "LINUX DEPLOYMENT",
+          "topics": [
+            {
+              "id": "74.1",
+              "title": "Linux User"
+            },
+            {
+              "id": "74.2",
+              "title": "Filesystem Layout"
+            },
+            {
+              "id": "74.3",
+              "title": "Python Environment"
+            },
+            {
+              "id": "74.4",
+              "title": "Source Deployment"
+            },
+            {
+              "id": "74.5",
+              "title": "Addons"
+            },
+            {
+              "id": "74.6",
+              "title": "File Permissions"
+            },
+            {
+              "id": "74.7",
+              "title": "PostgreSQL"
+            },
+            {
+              "id": "74.8",
+              "title": "systemd"
+            },
+            {
+              "id": "74.9",
+              "title": "Service Management"
+            },
+            {
+              "id": "74.10",
+              "title": "Logs"
+            },
+            {
+              "id": "74.11",
+              "title": "Deployment User Security"
+            }
+          ]
+        },
+        {
+          "number": 75,
+          "title": "REVERSE PROXY & HTTPS",
+          "topics": [
+            {
+              "id": "75.1",
+              "title": "Reverse Proxy"
+            },
+            {
+              "id": "75.2",
+              "title": "Nginx"
+            },
+            {
+              "id": "75.3",
+              "title": "Domains"
+            },
+            {
+              "id": "75.4",
+              "title": "DNS"
+            },
+            {
+              "id": "75.5",
+              "title": "TLS / HTTPS"
+            },
+            {
+              "id": "75.6",
+              "title": "Certificates"
+            },
+            {
+              "id": "75.7",
+              "title": "Proxy Headers"
+            },
+            {
+              "id": "75.8",
+              "title": "WebSocket / Long-Lived Connections"
+            },
+            {
+              "id": "75.9",
+              "title": "Static Content"
+            },
+            {
+              "id": "75.10",
+              "title": "Secure Production Exposure"
+            }
+          ]
+        },
+        {
+          "number": 76,
+          "title": "WORKERS & PRODUCTION CONFIGURATION",
+          "topics": [
+            {
+              "id": "76.1",
+              "title": "Development Mode"
+            },
+            {
+              "id": "76.2",
+              "title": "Multi-Processing"
+            },
+            {
+              "id": "76.3",
+              "title": "Workers"
+            },
+            {
+              "id": "76.4",
+              "title": "Worker Sizing"
+            },
+            {
+              "id": "76.5",
+              "title": "CPU Considerations"
+            },
+            {
+              "id": "76.6",
+              "title": "Memory Limits"
+            },
+            {
+              "id": "76.7",
+              "title": "Request Time Limits"
+            },
+            {
+              "id": "76.8",
+              "title": "Cron Workers"
+            },
+            {
+              "id": "76.9",
+              "title": "Long-Polling / WebSocket Worker Concepts"
+            },
+            {
+              "id": "76.10",
+              "title": "Capacity Planning"
+            }
+          ]
+        },
+        {
+          "number": 77,
+          "title": "POSTGRESQL OPERATIONS",
+          "topics": [
+            {
+              "id": "77.1",
+              "title": "Database Users"
+            },
+            {
+              "id": "77.2",
+              "title": "Connections"
+            },
+            {
+              "id": "77.3",
+              "title": "Connection Limits"
+            },
+            {
+              "id": "77.4",
+              "title": "Maintenance"
+            },
+            {
+              "id": "77.5",
+              "title": "VACUUM Concepts"
+            },
+            {
+              "id": "77.6",
+              "title": "ANALYZE"
+            },
+            {
+              "id": "77.7",
+              "title": "Monitoring"
+            },
+            {
+              "id": "77.8",
+              "title": "Basic Tuning"
+            },
+            {
+              "id": "77.9",
+              "title": "Disk Usage"
+            },
+            {
+              "id": "77.10",
+              "title": "Slow Queries"
+            }
+          ]
+        },
+        {
+          "number": 78,
+          "title": "BACKUPS & DISASTER RECOVERY",
+          "topics": [
+            {
+              "id": "78.1",
+              "title": "Database Backup"
+            },
+            {
+              "id": "78.2",
+              "title": "Filestore Backup"
+            },
+            {
+              "id": "78.3",
+              "title": "Configuration Backup"
+            },
+            {
+              "id": "78.4",
+              "title": "Restore"
+            },
+            {
+              "id": "78.5",
+              "title": "Backup Scheduling"
+            },
+            {
+              "id": "78.6",
+              "title": "Off-Site Backups"
+            },
+            {
+              "id": "78.7",
+              "title": "Encryption"
+            },
+            {
+              "id": "78.8",
+              "title": "Retention"
+            },
+            {
+              "id": "78.9",
+              "title": "Recovery Testing"
+            },
+            {
+              "id": "78.10",
+              "title": "Recovery Point Objective"
+            },
+            {
+              "id": "78.11",
+              "title": "Recovery Time Objective"
+            },
+            {
+              "id": "78.12",
+              "title": "Disaster Recovery Plan"
+            }
+          ]
+        },
+        {
+          "number": 79,
+          "title": "ODOO.SH",
+          "topics": [
+            {
+              "id": "79.1",
+              "title": "Odoo.sh Architecture"
+            },
+            {
+              "id": "79.2",
+              "title": "Projects"
+            },
+            {
+              "id": "79.3",
+              "title": "Git Integration"
+            },
+            {
+              "id": "79.4",
+              "title": "Branches"
+            },
+            {
+              "id": "79.5",
+              "title": "Development"
+            },
+            {
+              "id": "79.6",
+              "title": "Staging"
+            },
+            {
+              "id": "79.7",
+              "title": "Production"
+            },
+            {
+              "id": "79.8",
+              "title": "Builds"
+            },
+            {
+              "id": "79.9",
+              "title": "Logs"
+            },
+            {
+              "id": "79.10",
+              "title": "Shell Access"
+            },
+            {
+              "id": "79.11",
+              "title": "Database Management"
+            },
+            {
+              "id": "79.12",
+              "title": "Backups"
+            }
+          ]
+        },
+        {
+          "number": 80,
+          "title": "DOCKER FOR ODOO",
+          "topics": [
+            {
+              "id": "80.1",
+              "title": "Images"
+            },
+            {
+              "id": "80.2",
+              "title": "Containers"
+            },
+            {
+              "id": "80.3",
+              "title": "Volumes"
+            },
+            {
+              "id": "80.4",
+              "title": "Networking"
+            },
+            {
+              "id": "80.5",
+              "title": "Environment Variables"
+            },
+            {
+              "id": "80.6",
+              "title": "Odoo Container"
+            },
+            {
+              "id": "80.7",
+              "title": "PostgreSQL Container"
+            },
+            {
+              "id": "80.8",
+              "title": "Persistent Filestore"
+            },
+            {
+              "id": "80.9",
+              "title": "Docker Compose"
+            },
+            {
+              "id": "80.10",
+              "title": "Custom Addons Mounts"
+            },
+            {
+              "id": "80.11",
+              "title": "Configuration"
+            },
+            {
+              "id": "80.12",
+              "title": "Container Logs"
+            }
+          ]
+        },
+        {
+          "number": 81,
+          "title": "MONITORING & PRODUCTION TROUBLESHOOTING",
+          "topics": [
+            {
+              "id": "81.1",
+              "title": "Application Logs"
+            },
+            {
+              "id": "81.2",
+              "title": "PostgreSQL Logs"
+            },
+            {
+              "id": "81.3",
+              "title": "CPU"
+            },
+            {
+              "id": "81.4",
+              "title": "Memory"
+            },
+            {
+              "id": "81.5",
+              "title": "Disk"
+            },
+            {
+              "id": "81.6",
+              "title": "Database Connections"
+            },
+            {
+              "id": "81.7",
+              "title": "Slow Requests"
+            },
+            {
+              "id": "81.8",
+              "title": "Failed Jobs"
+            },
+            {
+              "id": "81.9",
+              "title": "Error Monitoring"
+            },
+            {
+              "id": "81.10",
+              "title": "Health Checks"
+            },
+            {
+              "id": "81.11",
+              "title": "Alerting Concepts"
+            },
+            {
+              "id": "81.12",
+              "title": "Incident Diagnosis"
+            },
+            {
+              "id": "81.13",
+              "title": "Incident Timeline"
+            },
+            {
+              "id": "81.14",
+              "title": "Root Cause Analysis"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "roman": "XX",
+      "title": "UPGRADES, MIGRATIONS & MAINTENANCE",
+      "chapters": [
+        {
+          "number": 82,
+          "title": "MODULE VERSIONING",
+          "topics": [
+            {
+              "id": "82.1",
+              "title": "Manifest Version"
+            },
+            {
+              "id": "82.2",
+              "title": "Semantic Change Thinking"
+            },
+            {
+              "id": "82.3",
+              "title": "Release Changes"
+            },
+            {
+              "id": "82.4",
+              "title": "Compatibility"
+            },
+            {
+              "id": "82.5",
+              "title": "Dependencies"
+            },
+            {
+              "id": "82.6",
+              "title": "Version Control Strategy"
+            },
+            {
+              "id": "82.7",
+              "title": "Changelog"
+            },
+            {
+              "id": "82.8",
+              "title": "Release Notes"
+            }
+          ]
+        },
+        {
+          "number": 83,
+          "title": "SCHEMA CHANGES",
+          "topics": [
+            {
+              "id": "83.1",
+              "title": "Adding Fields"
+            },
+            {
+              "id": "83.2",
+              "title": "Renaming Fields"
+            },
+            {
+              "id": "83.3",
+              "title": "Changing Field Types"
+            },
+            {
+              "id": "83.4",
+              "title": "Changing Relationships"
+            },
+            {
+              "id": "83.5",
+              "title": "Removing Fields"
+            },
+            {
+              "id": "83.6",
+              "title": "Constraints"
+            },
+            {
+              "id": "83.7",
+              "title": "Defaults"
+            },
+            {
+              "id": "83.8",
+              "title": "Required Fields"
+            },
+            {
+              "id": "83.9",
+              "title": "Index Changes"
+            },
+            {
+              "id": "83.10",
+              "title": "Safe Schema Evolution"
+            }
+          ]
+        },
+        {
+          "number": 84,
+          "title": "DATA MIGRATIONS",
+          "topics": [
+            {
+              "id": "84.1",
+              "title": "Migration Scripts"
+            },
+            {
+              "id": "84.2",
+              "title": "Pre-Migration"
+            },
+            {
+              "id": "84.3",
+              "title": "Post-Migration"
+            },
+            {
+              "id": "84.4",
+              "title": "Transforming Records"
+            },
+            {
+              "id": "84.5",
+              "title": "Renaming Data"
+            },
+            {
+              "id": "84.6",
+              "title": "Preserving Relationships"
+            },
+            {
+              "id": "84.7",
+              "title": "Validation"
+            },
+            {
+              "id": "84.8",
+              "title": "Large Dataset Considerations"
+            },
+            {
+              "id": "84.9",
+              "title": "Batching"
+            },
+            {
+              "id": "84.10",
+              "title": "Idempotent Migrations"
+            },
+            {
+              "id": "84.11",
+              "title": "Rollback Planning"
+            }
+          ]
+        },
+        {
+          "number": 85,
+          "title": "ODOO VERSION UPGRADES",
+          "topics": [
+            {
+              "id": "85.1",
+              "title": "Version Differences"
+            },
+            {
+              "id": "85.2",
+              "title": "Deprecated APIs"
+            },
+            {
+              "id": "85.3",
+              "title": "Framework Changes"
+            },
+            {
+              "id": "85.4",
+              "title": "Module Compatibility"
+            },
+            {
+              "id": "85.5",
+              "title": "Database Upgrade"
+            },
+            {
+              "id": "85.6",
+              "title": "Upgrade Scripts"
+            },
+            {
+              "id": "85.7",
+              "title": "Upgrade Utilities"
+            },
+            {
+              "id": "85.8",
+              "title": "Frontend Migration"
+            },
+            {
+              "id": "85.9",
+              "title": "XML / View Migration"
+            },
+            {
+              "id": "85.10",
+              "title": "Asset Migration"
+            },
+            {
+              "id": "85.11",
+              "title": "Post-Upgrade Testing"
+            }
+          ]
+        },
+        {
+          "number": 86,
+          "title": "MODULE HOOKS",
+          "topics": [
+            {
+              "id": "86.1",
+              "title": "Hooks Concept"
+            },
+            {
+              "id": "86.2",
+              "title": "pre_init_hook"
+            },
+            {
+              "id": "86.3",
+              "title": "post_init_hook"
+            },
+            {
+              "id": "86.4",
+              "title": "uninstall_hook"
+            },
+            {
+              "id": "86.5",
+              "title": "Environment During Hooks"
+            },
+            {
+              "id": "86.6",
+              "title": "Data Initialization"
+            },
+            {
+              "id": "86.7",
+              "title": "Appropriate Uses"
+            },
+            {
+              "id": "86.8",
+              "title": "Avoiding Hook Abuse"
+            }
+          ]
+        },
+        {
+          "number": 87,
+          "title": "UPGRADE-SAFE CUSTOMIZATION",
+          "topics": [
+            {
+              "id": "87.1",
+              "title": "Never Modify Core Directly"
+            },
+            {
+              "id": "87.2",
+              "title": "Extension Points"
+            },
+            {
+              "id": "87.3",
+              "title": "Model Inheritance"
+            },
+            {
+              "id": "87.4",
+              "title": "View Inheritance"
+            },
+            {
+              "id": "87.5",
+              "title": "Stable Overrides"
+            },
+            {
+              "id": "87.6",
+              "title": "Dependency Management"
+            },
+            {
+              "id": "87.7",
+              "title": "Avoiding Hard-Coding"
+            },
+            {
+              "id": "87.8",
+              "title": "Configuration-Driven Design"
+            },
+            {
+              "id": "87.9",
+              "title": "Stable XML IDs"
+            },
+            {
+              "id": "87.10",
+              "title": "Future-Proof Design"
+            }
+          ]
+        },
+        {
+          "number": 88,
+          "title": "LEGACY MODULE MAINTENANCE",
+          "topics": [
+            {
+              "id": "88.1",
+              "title": "Read Before Changing"
+            },
+            {
+              "id": "88.2",
+              "title": "Trace Dependencies"
+            },
+            {
+              "id": "88.3",
+              "title": "Trace Execution"
+            },
+            {
+              "id": "88.4",
+              "title": "Reproduce Existing Behavior"
+            },
+            {
+              "id": "88.5",
+              "title": "Characterization Tests"
+            },
+            {
+              "id": "88.6",
+              "title": "Backward Compatibility"
+            },
+            {
+              "id": "88.7",
+              "title": "Safe Refactoring"
+            },
+            {
+              "id": "88.8",
+              "title": "Deprecation"
+            },
+            {
+              "id": "88.9",
+              "title": "Technical Debt"
+            },
+            {
+              "id": "88.10",
+              "title": "Incremental Modernization"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "roman": "XXI",
+      "title": "FUNCTIONAL ODOO FOR DEVELOPERS",
+      "chapters": [
+        {
+          "number": 89,
+          "title": "CORE FUNCTIONAL APPLICATIONS",
+          "topics": [
+            {
+              "id": "89.1",
+              "title": "Contacts",
+              "children": [
+                {
+                  "id": "89.1.1",
+                  "title": "res.partner"
+                },
+                {
+                  "id": "89.1.2",
+                  "title": "Customers"
+                },
+                {
+                  "id": "89.1.3",
+                  "title": "Vendors"
+                },
+                {
+                  "id": "89.1.4",
+                  "title": "Addresses"
+                },
+                {
+                  "id": "89.1.5",
+                  "title": "Commercial Entities"
+                }
+              ]
+            },
+            {
+              "id": "89.2",
+              "title": "CRM",
+              "children": [
+                {
+                  "id": "89.2.1",
+                  "title": "Leads"
+                },
+                {
+                  "id": "89.2.2",
+                  "title": "Opportunities"
+                },
+                {
+                  "id": "89.2.3",
+                  "title": "Pipeline"
+                },
+                {
+                  "id": "89.2.4",
+                  "title": "Stages"
+                },
+                {
+                  "id": "89.2.5",
+                  "title": "CRM → Sales"
+                }
+              ]
+            },
+            {
+              "id": "89.3",
+              "title": "Sales",
+              "children": [
+                {
+                  "id": "89.3.1",
+                  "title": "Quotations"
+                },
+                {
+                  "id": "89.3.2",
+                  "title": "Sales Orders"
+                },
+                {
+                  "id": "89.3.3",
+                  "title": "Sale Order Lines"
+                },
+                {
+                  "id": "89.3.4",
+                  "title": "Pricelists"
+                },
+                {
+                  "id": "89.3.5",
+                  "title": "Discounts"
+                },
+                {
+                  "id": "89.3.6",
+                  "title": "Taxes"
+                },
+                {
+                  "id": "89.3.7",
+                  "title": "Delivery"
+                },
+                {
+                  "id": "89.3.8",
+                  "title": "Invoicing"
+                }
+              ]
+            },
+            {
+              "id": "89.4",
+              "title": "Purchase",
+              "children": [
+                {
+                  "id": "89.4.1",
+                  "title": "RFQ"
+                },
+                {
+                  "id": "89.4.2",
+                  "title": "Purchase Orders"
+                },
+                {
+                  "id": "89.4.3",
+                  "title": "Vendor Pricelists"
+                },
+                {
+                  "id": "89.4.4",
+                  "title": "Receipts"
+                },
+                {
+                  "id": "89.4.5",
+                  "title": "Vendor Bills"
+                }
+              ]
+            },
+            {
+              "id": "89.5",
+              "title": "Inventory",
+              "children": [
+                {
+                  "id": "89.5.1",
+                  "title": "Products"
+                },
+                {
+                  "id": "89.5.2",
+                  "title": "Product Variants"
+                },
+                {
+                  "id": "89.5.3",
+                  "title": "Warehouses"
+                },
+                {
+                  "id": "89.5.4",
+                  "title": "Locations"
+                },
+                {
+                  "id": "89.5.5",
+                  "title": "Stock Moves"
+                },
+                {
+                  "id": "89.5.6",
+                  "title": "Pickings"
+                },
+                {
+                  "id": "89.5.7",
+                  "title": "Routes"
+                },
+                {
+                  "id": "89.5.8",
+                  "title": "Reordering Rules"
+                },
+                {
+                  "id": "89.5.9",
+                  "title": "Lots"
+                },
+                {
+                  "id": "89.5.10",
+                  "title": "Serial Numbers"
+                },
+                {
+                  "id": "89.5.11",
+                  "title": "Packages"
+                },
+                {
+                  "id": "89.5.12",
+                  "title": "Inventory Adjustments"
+                }
+              ]
+            },
+            {
+              "id": "89.6",
+              "title": "Accounting Concepts",
+              "children": [
+                {
+                  "id": "89.6.1",
+                  "title": "Chart of Accounts"
+                },
+                {
+                  "id": "89.6.2",
+                  "title": "Journals"
+                },
+                {
+                  "id": "89.6.3",
+                  "title": "Journal Entries"
+                },
+                {
+                  "id": "89.6.4",
+                  "title": "account.move"
+                },
+                {
+                  "id": "89.6.5",
+                  "title": "account.move.line"
+                },
+                {
+                  "id": "89.6.6",
+                  "title": "Receivable"
+                },
+                {
+                  "id": "89.6.7",
+                  "title": "Payable"
+                },
+                {
+                  "id": "89.6.8",
+                  "title": "Taxes"
+                },
+                {
+                  "id": "89.6.9",
+                  "title": "Fiscal Positions"
+                },
+                {
+                  "id": "89.6.10",
+                  "title": "Reconciliation"
+                }
+              ]
+            },
+            {
+              "id": "89.7",
+              "title": "Invoicing",
+              "children": [
+                {
+                  "id": "89.7.1",
+                  "title": "Customer Invoices"
+                },
+                {
+                  "id": "89.7.2",
+                  "title": "Vendor Bills"
+                },
+                {
+                  "id": "89.7.3",
+                  "title": "Credit Notes"
+                },
+                {
+                  "id": "89.7.4",
+                  "title": "Payments"
+                },
+                {
+                  "id": "89.7.5",
+                  "title": "Payment State"
+                }
+              ]
+            },
+            {
+              "id": "89.8",
+              "title": "Employees"
+            },
+            {
+              "id": "89.9",
+              "title": "Recruitment"
+            },
+            {
+              "id": "89.10",
+              "title": "Time Off"
+            },
+            {
+              "id": "89.11",
+              "title": "Attendances"
+            },
+            {
+              "id": "89.12",
+              "title": "Projects"
+            },
+            {
+              "id": "89.13",
+              "title": "Timesheets"
+            },
+            {
+              "id": "89.14",
+              "title": "Manufacturing",
+              "children": [
+                {
+                  "id": "89.14.1",
+                  "title": "Bills of Materials"
+                },
+                {
+                  "id": "89.14.2",
+                  "title": "Manufacturing Orders"
+                },
+                {
+                  "id": "89.14.3",
+                  "title": "Components"
+                },
+                {
+                  "id": "89.14.4",
+                  "title": "Work Centers"
+                },
+                {
+                  "id": "89.14.5",
+                  "title": "Work Orders"
+                },
+                {
+                  "id": "89.14.6",
+                  "title": "Inventory Integration"
+                }
+              ]
+            },
+            {
+              "id": "89.15",
+              "title": "Maintenance"
+            },
+            {
+              "id": "89.16",
+              "title": "Helpdesk Concept"
+            },
+            {
+              "id": "89.17",
+              "title": "Website"
+            },
+            {
+              "id": "89.18",
+              "title": "eCommerce",
+              "children": [
+                {
+                  "id": "89.18.1",
+                  "title": "Products"
+                },
+                {
+                  "id": "89.18.2",
+                  "title": "Cart"
+                },
+                {
+                  "id": "89.18.3",
+                  "title": "Checkout"
+                },
+                {
+                  "id": "89.18.4",
+                  "title": "Delivery"
+                },
+                {
+                  "id": "89.18.5",
+                  "title": "Payment"
+                }
+              ]
+            },
+            {
+              "id": "89.19",
+              "title": "Point of Sale",
+              "children": [
+                {
+                  "id": "89.19.1",
+                  "title": "POS Session"
+                },
+                {
+                  "id": "89.19.2",
+                  "title": "POS Orders"
+                },
+                {
+                  "id": "89.19.3",
+                  "title": "Payments"
+                },
+                {
+                  "id": "89.19.4",
+                  "title": "Inventory Integration"
+                }
+              ]
+            },
+            {
+              "id": "89.20",
+              "title": "End-to-End Business Flow",
+              "children": [
+                {
+                  "id": "89.20.1",
+                  "title": "Lead → Opportunity"
+                },
+                {
+                  "id": "89.20.2",
+                  "title": "Opportunity → Quotation"
+                },
+                {
+                  "id": "89.20.3",
+                  "title": "Quotation → Sale"
+                },
+                {
+                  "id": "89.20.4",
+                  "title": "Sale → Delivery"
+                },
+                {
+                  "id": "89.20.5",
+                  "title": "Sale → Invoice"
+                },
+                {
+                  "id": "89.20.6",
+                  "title": "Purchase → Receipt"
+                },
+                {
+                  "id": "89.20.7",
+                  "title": "Purchase → Vendor Bill"
+                },
+                {
+                  "id": "89.20.8",
+                  "title": "Manufacturing → Stock"
+                },
+                {
+                  "id": "89.20.9",
+                  "title": "Payment → Reconciliation"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "roman": "XXII",
+      "title": "REAL ODOO ENGINEERING",
+      "chapters": [
+        {
+          "number": 90,
+          "title": "REQUIREMENTS → ERP DESIGN",
+          "topics": [
+            {
+              "id": "90.1",
+              "title": "Stakeholder Interviews"
+            },
+            {
+              "id": "90.2",
+              "title": "Business Requirements"
+            },
+            {
+              "id": "90.3",
+              "title": "Functional Requirements"
+            },
+            {
+              "id": "90.4",
+              "title": "Non-Functional Requirements"
+            },
+            {
+              "id": "90.5",
+              "title": "Business Process Mapping"
+            },
+            {
+              "id": "90.6",
+              "title": "As-Is Process"
+            },
+            {
+              "id": "90.7",
+              "title": "Pain Points"
+            },
+            {
+              "id": "90.8",
+              "title": "To-Be Process"
+            },
+            {
+              "id": "90.9",
+              "title": "Data Requirements"
+            },
+            {
+              "id": "90.10",
+              "title": "Roles"
+            },
+            {
+              "id": "90.11",
+              "title": "Permissions"
+            },
+            {
+              "id": "90.12",
+              "title": "Integrations"
+            },
+            {
+              "id": "90.13",
+              "title": "Reporting Requirements"
+            },
+            {
+              "id": "90.14",
+              "title": "Acceptance Criteria"
+            },
+            {
+              "id": "90.15",
+              "title": "Edge Cases"
+            },
+            {
+              "id": "90.16",
+              "title": "Change Requests"
+            }
+          ]
+        },
+        {
+          "number": 91,
+          "title": "ODOO SOLUTION ARCHITECTURE",
+          "topics": [
+            {
+              "id": "91.1",
+              "title": "Module Boundaries"
+            },
+            {
+              "id": "91.2",
+              "title": "Model Ownership"
+            },
+            {
+              "id": "91.3",
+              "title": "Dependencies"
+            },
+            {
+              "id": "91.4",
+              "title": "Shared Models"
+            },
+            {
+              "id": "91.5",
+              "title": "Integration Boundaries"
+            },
+            {
+              "id": "91.6",
+              "title": "Security Architecture"
+            },
+            {
+              "id": "91.7",
+              "title": "Multi-Company Architecture"
+            },
+            {
+              "id": "91.8",
+              "title": "Data Flow"
+            },
+            {
+              "id": "91.9",
+              "title": "Reusability"
+            },
+            {
+              "id": "91.10",
+              "title": "Configuration"
+            },
+            {
+              "id": "91.11",
+              "title": "Reporting"
+            },
+            {
+              "id": "91.12",
+              "title": "Performance"
+            },
+            {
+              "id": "91.13",
+              "title": "Deployment"
+            },
+            {
+              "id": "91.14",
+              "title": "Upgrade Strategy"
+            }
+          ]
+        },
+        {
+          "number": 92,
+          "title": "CONFIGURATION VS CUSTOMIZATION VS INTEGRATION",
+          "topics": [
+            {
+              "id": "92.1",
+              "title": "Standard Odoo"
+            },
+            {
+              "id": "92.2",
+              "title": "Configuration"
+            },
+            {
+              "id": "92.3",
+              "title": "Studio Concepts"
+            },
+            {
+              "id": "92.4",
+              "title": "Custom Module"
+            },
+            {
+              "id": "92.5",
+              "title": "Third-Party Module"
+            },
+            {
+              "id": "92.6",
+              "title": "External Integration"
+            },
+            {
+              "id": "92.7",
+              "title": "Data Ownership"
+            },
+            {
+              "id": "92.8",
+              "title": "Upgrade Costs"
+            },
+            {
+              "id": "92.9",
+              "title": "Maintenance Costs"
+            },
+            {
+              "id": "92.10",
+              "title": "User Training Costs"
+            },
+            {
+              "id": "92.11",
+              "title": "Technical Debt"
+            },
+            {
+              "id": "92.12",
+              "title": "Choosing the Simplest Correct Solution"
+            }
+          ]
+        },
+        {
+          "number": 93,
+          "title": "MAINTAINABLE ODOO CODE",
+          "topics": [
+            {
+              "id": "93.1",
+              "title": "Naming"
+            },
+            {
+              "id": "93.2",
+              "title": "Small Methods"
+            },
+            {
+              "id": "93.3",
+              "title": "Separation of Concerns"
+            },
+            {
+              "id": "93.4",
+              "title": "Cohesion"
+            },
+            {
+              "id": "93.5",
+              "title": "Low Coupling"
+            },
+            {
+              "id": "93.6",
+              "title": "Reusable Mixins"
+            },
+            {
+              "id": "93.7",
+              "title": "Configuration over Hard-Coding"
+            },
+            {
+              "id": "93.8",
+              "title": "Constants"
+            },
+            {
+              "id": "93.9",
+              "title": "Error Handling"
+            },
+            {
+              "id": "93.10",
+              "title": "Logging"
+            },
+            {
+              "id": "93.11",
+              "title": "Documentation"
+            },
+            {
+              "id": "93.12",
+              "title": "Upgrade Safety"
+            },
+            {
+              "id": "93.13",
+              "title": "Performance Awareness"
+            },
+            {
+              "id": "93.14",
+              "title": "Security Awareness"
+            },
+            {
+              "id": "93.15",
+              "title": "Testability"
+            },
+            {
+              "id": "93.16",
+              "title": "Avoiding Premature Abstraction"
+            }
+          ]
+        },
+        {
+          "number": 94,
+          "title": "GIT, COLLABORATION & CODE REVIEW",
+          "topics": [
+            {
+              "id": "94.1",
+              "title": "Repository"
+            },
+            {
+              "id": "94.2",
+              "title": "Branches"
+            },
+            {
+              "id": "94.3",
+              "title": "Commits"
+            },
+            {
+              "id": "94.4",
+              "title": "Commit Messages"
+            },
+            {
+              "id": "94.5",
+              "title": "Pull Requests"
+            },
+            {
+              "id": "94.6",
+              "title": "Merge"
+            },
+            {
+              "id": "94.7",
+              "title": "Rebase Concepts"
+            },
+            {
+              "id": "94.8",
+              "title": "Conflict Resolution"
+            },
+            {
+              "id": "94.9",
+              "title": "Release Branches"
+            },
+            {
+              "id": "94.10",
+              "title": "Tags"
+            },
+            {
+              "id": "94.11",
+              "title": "Code Review for Correctness"
+            },
+            {
+              "id": "94.12",
+              "title": "Security Review"
+            },
+            {
+              "id": "94.13",
+              "title": "ORM Performance Review"
+            },
+            {
+              "id": "94.14",
+              "title": "Upgrade-Safety Review"
+            },
+            {
+              "id": "94.15",
+              "title": "Test Review"
+            },
+            {
+              "id": "94.16",
+              "title": "Documentation Review"
+            },
+            {
+              "id": "94.17",
+              "title": "CI Concepts"
+            },
+            {
+              "id": "94.18",
+              "title": "Automated Tests in CI"
+            },
+            {
+              "id": "94.19",
+              "title": "Linting / Static Quality Checks"
+            },
+            {
+              "id": "94.20",
+              "title": "Staging Workflow"
+            },
+            {
+              "id": "94.21",
+              "title": "Production Release Workflow"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "roman": "XXIII",
+      "title": "GRAND ODOO ENGINEERING CAPSTONE",
+      "chapters": [
+        {
+          "number": 95,
+          "title": "PRODUCTION ERP ENGINEERING",
+          "topics": [
+            {
+              "id": "95.1",
+              "title": "Problem Discovery"
+            },
+            {
+              "id": "95.2",
+              "title": "Business Requirements"
+            },
+            {
+              "id": "95.3",
+              "title": "Process Maps"
+            },
+            {
+              "id": "95.4",
+              "title": "Architecture"
+            },
+            {
+              "id": "95.5",
+              "title": "Module Boundaries"
+            },
+            {
+              "id": "95.6",
+              "title": "Data Models"
+            },
+            {
+              "id": "95.7",
+              "title": "Relational Design"
+            },
+            {
+              "id": "95.8",
+              "title": "ORM"
+            },
+            {
+              "id": "95.9",
+              "title": "Business Rules"
+            },
+            {
+              "id": "95.10",
+              "title": "Security"
+            },
+            {
+              "id": "95.11",
+              "title": "Multi-Company"
+            },
+            {
+              "id": "95.12",
+              "title": "Views"
+            },
+            {
+              "id": "95.13",
+              "title": "Workflows"
+            },
+            {
+              "id": "95.14",
+              "title": "Wizards"
+            },
+            {
+              "id": "95.15",
+              "title": "Chatter & Activities"
+            },
+            {
+              "id": "95.16",
+              "title": "Automation"
+            },
+            {
+              "id": "95.17",
+              "title": "Reports"
+            },
+            {
+              "id": "95.18",
+              "title": "Attachments"
+            },
+            {
+              "id": "95.19",
+              "title": "Translations"
+            },
+            {
+              "id": "95.20",
+              "title": "Website"
+            },
+            {
+              "id": "95.21",
+              "title": "Portal"
+            },
+            {
+              "id": "95.22",
+              "title": "API"
+            },
+            {
+              "id": "95.23",
+              "title": "Webhooks"
+            },
+            {
+              "id": "95.24",
+              "title": "External Integration"
+            },
+            {
+              "id": "95.25",
+              "title": "OWL Dashboard"
+            },
+            {
+              "id": "95.26",
+              "title": "PostgreSQL Optimization"
+            },
+            {
+              "id": "95.27",
+              "title": "Automated Tests"
+            },
+            {
+              "id": "95.28",
+              "title": "Security Tests"
+            },
+            {
+              "id": "95.29",
+              "title": "Performance Tests"
+            },
+            {
+              "id": "95.30",
+              "title": "Migration Strategy"
+            },
+            {
+              "id": "95.31",
+              "title": "Backup Strategy"
+            },
+            {
+              "id": "95.32",
+              "title": "Deployment"
+            },
+            {
+              "id": "95.33",
+              "title": "Monitoring"
+            },
+            {
+              "id": "95.34",
+              "title": "README"
+            },
+            {
+              "id": "95.35",
+              "title": "Architecture Diagram"
+            },
+            {
+              "id": "95.36",
+              "title": "Technical Documentation"
+            },
+            {
+              "id": "95.37",
+              "title": "Functional Documentation"
+            },
+            {
+              "id": "95.38",
+              "title": "User Roles Matrix"
+            },
+            {
+              "id": "95.39",
+              "title": "API Documentation"
+            },
+            {
+              "id": "95.40",
+              "title": "Deployment Documentation"
+            },
+            {
+              "id": "95.41",
+              "title": "Disaster Recovery Documentation"
+            },
+            {
+              "id": "95.42",
+              "title": "Test Evidence"
+            },
+            {
+              "id": "95.43",
+              "title": "Performance Baseline"
+            },
+            {
+              "id": "95.44",
+              "title": "Security Review"
+            },
+            {
+              "id": "95.45",
+              "title": "Upgrade Review"
+            },
+            {
+              "id": "95.46",
+              "title": "Final Production Readiness Review"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "roman": "XXIV",
+      "title": "INTERVIEW & ODOO ENGINEER READINESS",
+      "chapters": [
+        {
+          "number": 96,
+          "title": "ODOO ENGINEER JOB READINESS",
+          "topics": [
+            {
+              "id": "96.1",
+              "title": "ERP Fundamentals"
+            },
+            {
+              "id": "96.2",
+              "title": "Odoo Functional Knowledge"
+            },
+            {
+              "id": "96.3",
+              "title": "Odoo Architecture"
+            },
+            {
+              "id": "96.4",
+              "title": "Module Anatomy"
+            },
+            {
+              "id": "96.5",
+              "title": "Python"
+            },
+            {
+              "id": "96.6",
+              "title": "Models"
+            },
+            {
+              "id": "96.7",
+              "title": "Fields"
+            },
+            {
+              "id": "96.8",
+              "title": "Relationships"
+            },
+            {
+              "id": "96.9",
+              "title": "ORM"
+            },
+            {
+              "id": "96.10",
+              "title": "Recordsets"
+            },
+            {
+              "id": "96.11",
+              "title": "Domains"
+            },
+            {
+              "id": "96.12",
+              "title": "Computed Fields"
+            },
+            {
+              "id": "96.13",
+              "title": "Constraints"
+            },
+            {
+              "id": "96.14",
+              "title": "Workflows"
+            },
+            {
+              "id": "96.15",
+              "title": "XML"
+            },
+            {
+              "id": "96.16",
+              "title": "Views"
+            },
+            {
+              "id": "96.17",
+              "title": "Actions"
+            },
+            {
+              "id": "96.18",
+              "title": "Security"
+            },
+            {
+              "id": "96.19",
+              "title": "Multi-Company"
+            },
+            {
+              "id": "96.20",
+              "title": "Inheritance"
+            },
+            {
+              "id": "96.21",
+              "title": "Mixins"
+            },
+            {
+              "id": "96.22",
+              "title": "Wizards"
+            },
+            {
+              "id": "96.23",
+              "title": "Cron / Automation"
+            },
+            {
+              "id": "96.24",
+              "title": "Chatter"
+            },
+            {
+              "id": "96.25",
+              "title": "QWeb / Reports"
+            },
+            {
+              "id": "96.26",
+              "title": "Internationalization"
+            },
+            {
+              "id": "96.27",
+              "title": "Controllers"
+            },
+            {
+              "id": "96.28",
+              "title": "APIs"
+            },
+            {
+              "id": "96.29",
+              "title": "Webhooks"
+            },
+            {
+              "id": "96.30",
+              "title": "Integrations"
+            },
+            {
+              "id": "96.31",
+              "title": "OWL"
+            },
+            {
+              "id": "96.32",
+              "title": "JavaScript Framework"
+            },
+            {
+              "id": "96.33",
+              "title": "PostgreSQL"
+            },
+            {
+              "id": "96.34",
+              "title": "Performance"
+            },
+            {
+              "id": "96.35",
+              "title": "Testing"
+            },
+            {
+              "id": "96.36",
+              "title": "Debugging"
+            },
+            {
+              "id": "96.37",
+              "title": "CLI"
+            },
+            {
+              "id": "96.38",
+              "title": "Deployment"
+            },
+            {
+              "id": "96.39",
+              "title": "Odoo.sh"
+            },
+            {
+              "id": "96.40",
+              "title": "Docker"
+            },
+            {
+              "id": "96.41",
+              "title": "Upgrades"
+            },
+            {
+              "id": "96.42",
+              "title": "Migrations"
+            },
+            {
+              "id": "96.43",
+              "title": "Requirements Analysis"
+            },
+            {
+              "id": "96.44",
+              "title": "Solution Architecture"
+            },
+            {
+              "id": "96.45",
+              "title": "Live Module Design"
+            },
+            {
+              "id": "96.46",
+              "title": "Live Debugging"
+            },
+            {
+              "id": "96.47",
+              "title": "Code Review"
+            },
+            {
+              "id": "96.48",
+              "title": "Portfolio Walkthrough"
+            },
+            {
+              "id": "96.49",
+              "title": "Python / OOP Interview"
+            },
+            {
+              "id": "96.50",
+              "title": "ORM Interview"
+            },
+            {
+              "id": "96.51",
+              "title": "Security Interview"
+            },
+            {
+              "id": "96.52",
+              "title": "Functional Odoo Interview"
+            },
+            {
+              "id": "96.53",
+              "title": "PostgreSQL Interview"
+            },
+            {
+              "id": "96.54",
+              "title": "OWL Interview"
+            },
+            {
+              "id": "96.55",
+              "title": "Integration Interview"
+            },
+            {
+              "id": "96.56",
+              "title": "Deployment Interview"
+            },
+            {
+              "id": "96.57",
+              "title": "Architecture Interview"
+            },
+            {
+              "id": "96.58",
+              "title": "Live Coding"
+            },
+            {
+              "id": "96.59",
+              "title": "Live Debugging"
+            },
+            {
+              "id": "96.60",
+              "title": "System Design"
+            },
+            {
+              "id": "96.61",
+              "title": "Portfolio Defense"
+            },
+            {
+              "id": "96.62",
+              "title": "Final Mock Odoo Engineer Interview"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

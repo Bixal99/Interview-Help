@@ -27,7 +27,7 @@ import {
   neighborsForStop,
   resolveUnitForChapter,
 } from "./course-tree";
-import { existsOnDisk, getCourseRoadmap } from "./course-roadmap";
+import { existsOnDisk, getCourseRoadmap, roadmapRelPath } from "./course-roadmap";
 import { glossaryPath, buildUnitGlossary } from "./unit-glossary";
 
 export type CourseSummary = CourseDefinition & {
@@ -301,7 +301,7 @@ export function getTocView(slug: string) {
     nav: toCourseNav(course),
     roadmap,
     existingChapters,
-    sourcePath: `content/courses/${slug}/Table of Content/Roadmap.md`,
+    sourcePath: roadmapRelPath(slug),
     prev: neighbors.prev,
     next: neighbors.next,
   };

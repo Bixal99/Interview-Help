@@ -6,7 +6,7 @@ Course trees live under [`courses/`](courses/). Each folder is one course:
 content/courses/{slug}/
   course.json
   README.md
-  Table of Content/Roadmap.md
+  Table of Content/curriculum.json (or Roadmap.md)
   Unit N/Chapter M/Content.md
   Unit N/Chapter M/Exercise.md
   Unit N/Chapter M/Project.md

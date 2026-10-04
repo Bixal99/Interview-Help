@@ -136,15 +136,34 @@ export function parseCourseRoadmapMarkdown(markdown: string, fallbackTitle = "Co
 }
 
 export function roadmapRelPath(slug: string) {
+  const toc = path.join(courseRoot(slug), "Table of Content");
+  if (fs.existsSync(path.join(toc, "curriculum.json"))) {
+    return path.posix.join("content", "courses", slug, "Table of Content", "curriculum.json");
+  }
   return path.posix.join("content", "courses", slug, "Table of Content", "Roadmap.md");
 }
 
+function parseCourseRoadmapJson(raw: string, fallbackTitle = "Course"): CourseRoadmap {
+  const parsed = JSON.parse(raw) as Partial<CourseRoadmap>;
+  return {
+    title: typeof parsed.title === "string" && parsed.title.trim() ? parsed.title : fallbackTitle,
+    subtitle: typeof parsed.subtitle === "string" ? parsed.subtitle : "",
+    introMarkdown: typeof parsed.introMarkdown === "string" ? parsed.introMarkdown : "",
+    units: Array.isArray(parsed.units) ? (parsed.units as CourseRoadmapUnit[]) : [],
+  };
+}
+
 export const getCourseRoadmap = cache((slug: string): CourseRoadmap => {
-  const file = path.join(courseRoot(slug), "Table of Content", "Roadmap.md");
-  if (!fs.existsSync(file)) {
+  const toc = path.join(courseRoot(slug), "Table of Content");
+  const jsonFile = path.join(toc, "curriculum.json");
+  if (fs.existsSync(jsonFile)) {
+    return parseCourseRoadmapJson(fs.readFileSync(jsonFile, "utf8"), slug);
+  }
+  const mdFile = path.join(toc, "Roadmap.md");
+  if (!fs.existsSync(mdFile)) {
     return { title: slug, subtitle: "", introMarkdown: "", units: [] };
   }
-  return parseCourseRoadmapMarkdown(fs.readFileSync(file, "utf8"), slug);
+  return parseCourseRoadmapMarkdown(fs.readFileSync(mdFile, "utf8"), slug);
 });
 
 export function allChapters(slug: string): CourseRoadmapChapter[] {
@@ -170,7 +189,9 @@ export function findRoadmapChapter(slug: string, chapter: number) {
 
 export function existsOnDisk(slug: string, unit: number, chapter: number): boolean {
   const contentPath = path.join(courseRoot(slug), `Unit ${unit}`, `Chapter ${chapter}`, "Content.md");
-  return fs.existsSync(contentPath);
+  if (!fs.existsSync(contentPath)) return false;
+  // Empty Content.md is scaffolding only — not published chapter content.
+  return fs.readFileSync(contentPath, "utf8").trim().length > 0;
 }
 
 export function placeholderChapterMarkdown(slug: string, chapter: number): string {

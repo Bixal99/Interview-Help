@@ -91,9 +91,12 @@ export const readCourseSource = cache((sourcePath: string) => {
 
 export const listCourseDocs = cache((slug: string): CourseDoc[] => {
   const docs: CourseDoc[] = [];
-  const roadmap = rel(slug, "Table of Content", "Roadmap.md");
-  if (fs.existsSync(path.join(PROJECT_ROOT, roadmap))) {
-    docs.push({ kind: "toc", sourcePath: roadmap, href: courseHomePath(slug), title: "Table of Contents" });
+  const tocJson = rel(slug, "Table of Content", "curriculum.json");
+  const tocMd = rel(slug, "Table of Content", "Roadmap.md");
+  if (fs.existsSync(path.join(PROJECT_ROOT, tocJson))) {
+    docs.push({ kind: "toc", sourcePath: tocJson, href: courseHomePath(slug), title: "Table of Contents" });
+  } else if (fs.existsSync(path.join(PROJECT_ROOT, tocMd))) {
+    docs.push({ kind: "toc", sourcePath: tocMd, href: courseHomePath(slug), title: "Table of Contents" });
   }
 
   for (const { unit, dirName: unitDir } of unitDirs(slug)) {
@@ -106,21 +109,24 @@ export const listCourseDocs = cache((slug: string): CourseDoc[] => {
       ];
       for (const item of files) {
         const sourcePath = rel(slug, unitDir, chapterDir, item.file);
-        if (!fs.existsSync(path.join(PROJECT_ROOT, sourcePath))) continue;
+        const fullPath = path.join(PROJECT_ROOT, sourcePath);
+        if (!fs.existsSync(fullPath)) continue;
+        // Empty markdown is folder scaffolding only — not publishable docs yet.
+        if (!fs.readFileSync(fullPath, "utf8").trim()) continue;
         docs.push({ kind: item.kind, sourcePath, href: item.href, title: item.title, unit, chapter });
       }
     }
 
     const summary = rel(slug, unitDir, "Conclusion", "Summary.md");
-    if (fs.existsSync(path.join(PROJECT_ROOT, summary))) {
+    if (fs.existsSync(path.join(PROJECT_ROOT, summary)) && fs.readFileSync(path.join(PROJECT_ROOT, summary), "utf8").trim()) {
       docs.push({ kind: "unit-summary", sourcePath: summary, href: unitDocPath(slug, unit, "summary"), title: `Unit ${unit} Summary`, unit });
     }
     const unitExercise = rel(slug, unitDir, "Exercise", "Exercise.md");
-    if (fs.existsSync(path.join(PROJECT_ROOT, unitExercise))) {
+    if (fs.existsSync(path.join(PROJECT_ROOT, unitExercise)) && fs.readFileSync(path.join(PROJECT_ROOT, unitExercise), "utf8").trim()) {
       docs.push({ kind: "unit-exercise", sourcePath: unitExercise, href: unitDocPath(slug, unit, "exercise"), title: `Unit ${unit} Exercise`, unit });
     }
     const unitProject = rel(slug, unitDir, "Project", "Project.md");
-    if (fs.existsSync(path.join(PROJECT_ROOT, unitProject))) {
+    if (fs.existsSync(path.join(PROJECT_ROOT, unitProject)) && fs.readFileSync(path.join(PROJECT_ROOT, unitProject), "utf8").trim()) {
       docs.push({ kind: "unit-project", sourcePath: unitProject, href: unitDocPath(slug, unit, "project"), title: `Unit ${unit} Project`, unit });
     }
   }

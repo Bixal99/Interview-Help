@@ -139,7 +139,7 @@ ODOO/
 ├── README.md                              # Project overview (this file)
 └── Unit 1/                                # Unit I: Understand the Business Before the Code
     ├── Table of Content/
-    │   └── Roadmap.md                     # Full curriculum table of contents
+    │   └── curriculum.json                # Full curriculum table of contents
     ├── Chapter 1/                         # What Is ERP?
     │   ├── Content.md                     # Chapter teaching material
     │   ├── Exercise.md                    # Chapter exercise + complete solution
@@ -182,7 +182,7 @@ Future units (`Unit 2/`, `Unit 3/`, etc.) will follow the same chapter pattern: 
 
 The master roadmap lives at:
 
-📄 [Table of Content/Roadmap.md](Table%20of%20Content/Roadmap.md)
+📄 [Table of Content/curriculum.json](Table%20of%20Content/curriculum.json)
 
 ---
 
@@ -372,7 +372,7 @@ Structured review of all topics, live coding/debugging exercises, mock interview
 2. **Follow the roadmap sequentially** — Later units assume knowledge from earlier chapters.
 3. **Use the per-chapter structure** — Read each topic in `Content.md` (theory plus embedded **Relevant Resources** at the bottom of each section), then complete `Exercise.md` and `Project.md`. Use `Resources.md` as a chapter-wide reference when needed.
 4. **Finish each unit** — Complete the unit `Conclusion/`, `Exercise/`, and `Project/` before starting the next unit.
-5. **Use the table of contents** — Open [Roadmap.md](Table%20of%20Content/Roadmap.md) to jump to specific topics.
+5. **Use the table of contents** — Open [curriculum.json](Table%20of%20Content/curriculum.json) for the full topic tree, or browse Units/Chapters in this folder.
 6. **Practice alongside reading** — Set up a local Odoo dev environment (Unit II, Chapter 5) and build modules as you learn.
 7. **Track your progress** — Check off chapters as you complete them; revisit ORM and security units before interviews.
 8. **Build the capstone** — Unit XXIII is designed as a portfolio-worthy production project.

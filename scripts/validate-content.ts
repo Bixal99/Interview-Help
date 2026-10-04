@@ -34,7 +34,7 @@ for (const course of catalog) {
   const chapters = allChapters(course.slug);
   const parsed = buildParsedCourse(course.slug);
   const navChapters = chaptersFor(course.slug, parsed.phases.map((phase) => phase.id), parsed.units);
-  if (!roadmap.units.length) errors.push(`${course.slug}: Roadmap.md has no units`);
+  if (!roadmap.units.length) errors.push(`${course.slug}: curriculum has no units`);
   if (parsed.phases.length !== chapters.length) {
     errors.push(`${course.slug}: parsed chapters ${parsed.phases.length} != roadmap ${chapters.length}`);
   }
